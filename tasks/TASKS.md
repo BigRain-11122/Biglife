@@ -16,6 +16,7 @@
   ③ `Tools/sync_rings.py` 不存在 + `census/export/citizens-light.jsonl` 万行零 `recent_ring`/`recent_ring_date` 字段（2026-09-23 23:3x grep 实测零命中）——判据4（进化批落环后自动镜像 recent_ring≤80字·无年轮=空串·万人字段齐备）完全未落地；今日 C-00014~16、C-00017~19 两批年轮均未进行为面。
   验收=三缺口闭合后：`pool_audit.py` 报全桶达标或欠深清单、`pool_gen.py --append --target 8 --sprite-target 6` 原样可跑且 PASS 才 commit、evolve 落环后 export `recent_ring` 当轮齐备。
   证据：cognition/README.md v1.2 迭代判据/维护段、Tools/ 目录清单（本单立单时实测无 pool_audit/sync_rings）、pool_gen.py argparse 段与 got[:6]/got[:5] 截断行。
+  **【23:33 轮内更新】** 单据陈述以立单观察时点为准，随后有外部会话（并发实例或交互侧，无 round.lock/无心跳记录）于 23:24:51–23:25:52 在**未提交工作树**落地 `Tools/pool_audit.py`（门禁完整设计：欠深桶/零重复/零数字/行长/禁词/同版本双跑确定性）与 `Tools/sync_rings.py`（增量镜像 recent_ring·自带 --via 尾标），并改写 `pool_gen.py`（--target/--sprite-target 落地+state/pool.lock 单写锁+像素灵禁词）与 `make_digests.py`/`cognition/README.md`/`docs/CODEX.md`；至本轮末仍未提交、编辑仍在途。**本单收口动作改为**：下轮验证外部实现与 v1.2 判据功能等效（判据先行），确认其 commit 归属与尾标后关单；若外部会话 30 分钟内未提交，由 OSLoop 认领按「先验证后提交」收口（档案不毁字节，不重写其文件）。
 
 ## 已结
 
