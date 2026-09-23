@@ -85,7 +85,7 @@ def derive_context():
         ctx, src = "weekend", "clock"
     return ctx, src
 
-def draw_line(cid, ctx, pools, rows, date=None):
+def draw_line(cid, ctx, pools, rows, date=None, slot=None):
     date = date or datetime.date.today().isoformat()
     r = rows.get(cid)
     if not r: return None
@@ -97,7 +97,8 @@ def draw_line(cid, ctx, pools, rows, date=None):
         if not bucket:
             bucket = pools.get("axes", {}).get("烟火", {}).get(ctx) or []
     if not bucket: return None
-    seed = hashlib.md5((cid + "|" + date + "|" + ctx).encode("utf-8")).hexdigest()
+    key = cid + "|" + date + "|" + ctx if slot is None else cid + "|" + date + "|s" + str(slot) + "|" + ctx
+    seed = hashlib.md5(key.encode("utf-8")).hexdigest()
     return bucket[int(seed[:8], 16) % len(bucket)]
 
 def main():
@@ -106,6 +107,9 @@ def main():
     ap.add_argument("--context", default=None)
     ap.add_argument("--auto", action="store_true")
     ap.add_argument("--demo-auto", action="store_true")
+    ap.add_argument("--tier", choices=["barks", "standard"], default="barks",
+                    help="barks=day-granular (v1); standard=45-min slot granular, "
+                         "line stable within each slot = engine 45min cooldown tier (v2)")
     args = ap.parse_args()
     with open(POOL, encoding="utf-8") as f:
         pools = json.load(f)
@@ -113,6 +117,10 @@ def main():
     ctx, src = derive_context() if (args.auto or args.demo_auto) else (args.context, "manual")
     if ctx not in CONTEXTS:
         print(f"unknown context: {ctx}"); sys.exit(2)
+    slot = None
+    if args.tier == "standard":
+        now = datetime.datetime.now()
+        slot = (now.hour * 60 + now.minute) // 45
     ids = []
     if args.demo_auto:
         by_d = {}
@@ -122,13 +130,13 @@ def main():
             ids.append(rs[hash(d + str(datetime.date.today())) % len(rs)]["id"])
     else:
         ids = [x.strip() for x in args.ids.split(",") if x.strip()]
-    print(f"ctx={ctx} (src={src})")
+    print(f"ctx={ctx} (src={src})" + (f" tier=standard slot={slot}" if slot is not None else " tier=barks"))
     for cid in ids:
-        line = draw_line(cid, ctx, pools, rows)
+        line = draw_line(cid, ctx, pools, rows, slot=slot)
         if line is None:
             print(f"{cid}: (pool empty)")
         else:
-            print(f"{cid} {rows[cid]['name']} [{rows[cid].get('axis') or 'sprite'}]: {line}")
+            print(f"{cid} {rows[cid]['name']} [{'sprite' if rows[cid].get('species') == 'sprite' else (rows[cid].get('axis') or '烟火')}]: {line}")
 
 if __name__ == "__main__":
     main()
