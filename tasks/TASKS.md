@@ -13,6 +13,7 @@
 - [ ] **T-20260923-07**（迭代批·2026-09-23 已接线）OS 循环持续任务（CODEX §十四 人口生态自迭代律）：①语言线池轮=先 `Tools/pool_audit.py` 看欠深桶（六轴<8/像素灵<6），有欠深才 `pool_gen.py --append --target 8 --sprite-target 6`，audit PASS 才 commit，全达标自停（已入 OSLoop mandate 第 2 项）；②确定性回归=pool_audit 内建同版本双跑逐字节一致；③spotlight 抽验（只提所喂事实·≥2 例/月）——结果记此单证据行。
   - [2026-09-23 23:55 @BigLife-OSLoop] 语言线闸实跑：pool_audit verdict=PASS（硬项 0 失败·确定性 168 对零漂移），但 84 桶全欠深（axes 72 桶均 6/8·sprite 12 桶均 4/6）→ **pool_gen 补深留单下轮执行**（本轮预算不足 84 次 LLM 调用·mandate 预算律「勿硬撑」；下轮：pool_gen --append --target 8 --sprite-target 6 → 复跑 audit → PASS 才 commit）。
   - [2026-09-23 23:55 @BigLife-OSLoop] spotlight 月度抽验 2/2 例：C-00010 顾阿凤「侬晓得伐，今朝粢饭加辣点儿嘞！」、C-00022 何雨欣「今晚的流量小高潮，我就是那盏不熄的灯。」——均零编造零越权（纯人设日常，未提清单外具体事、未声称执行集团任务），验收线 6「只提所喂事实」PASS。
+  - [2026-09-23 23:59 @BigLife-OSLoop] 池轮补深收口：pool_gen --append --target 8 --sprite-target 6 实跑 TOTAL=648 FAIL=NONE（72桶×8+12桶×6）→ 复跑 pool_audit verdict=PASS（hard_fails 0·84/84 全达标·确定性 168 对零漂移）→ 语言线水位 8/6 达标自停（自终止律）。实跑抓到并当轮修复第 5 缺口：--append 预载去重把 sprite 的 ctx→list 当 ctx→dict 用必崩（T-08 上轮仅 --help 实测未实跑 append；崩在任何生成前=零写入零污染）；同轮补 save_pools 每桶原子落盘（原实现全跑完才一次性写盘，预算杀=零落盘，「做多少收多少」不成立；现断点续跑成立，契约不变：水位跳桶/软帽/单写锁保留）。QC 巡检（每 6 轮）R6 到期，下轮执行。
 
 ## 已结
 

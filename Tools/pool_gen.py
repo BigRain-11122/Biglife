@@ -99,6 +99,14 @@ def gen_sprite_bucket(ctx_desc, n=4):
              and not any(b in l for b in banned)]
     return lines
 
+def save_pools(pools):
+    """Atomic save, called per bucket: a budget-killed round keeps finished
+    buckets on disk, so --append resumes instead of losing the whole run."""
+    tmp = POOL + ".tmp"
+    with open(tmp, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(pools, f, ensure_ascii=False, indent=1)
+    os.replace(tmp, POOL)
+
 def acquire_lock(max_age=1800):
     """Single pool-writer lock (stale after max_age seconds)."""
     try:
@@ -130,8 +138,11 @@ def main():
     all_lines = set()
     for v in pools.values():
         for ax in v.values():
-            for ctx in ax.values():
-                all_lines.update(ctx)
+            if isinstance(ax, list):  # sprite buckets are ctx->list, axes are ctx->dict
+                all_lines.update(ax)
+            else:
+                for ctx in ax.values():
+                    all_lines.update(ctx)
     fails = []
     for axis, adesc in AXES.items():
         pools["axes"].setdefault(axis, {})
@@ -149,6 +160,7 @@ def main():
                 if len(got) >= args.target: break
             got = got[:args.target]
             pools["axes"][axis][ctx] = got
+            save_pools(pools)
             if len(got) < 4:
                 fails.append(f"{axis}/{ctx}={len(got)}")
             print(f"bucket {axis}/{ctx}: {len(got)}")
@@ -166,11 +178,11 @@ def main():
             if len(got) >= args.sprite_target: break
         got = got[:args.sprite_target]
         pools["sprite"][ctx] = got
+        save_pools(pools)
         if len(got) < 3:
             fails.append(f"sprite/{ctx}={len(got)}")
         print(f"bucket sprite/{ctx}: {len(got)}")
-    with open(POOL, "w", encoding="utf-8", newline="\n") as f:
-        json.dump(pools, f, ensure_ascii=False, indent=1)
+    save_pools(pools)
     try:
         if os.path.isfile(LOCK):
             os.remove(LOCK)
