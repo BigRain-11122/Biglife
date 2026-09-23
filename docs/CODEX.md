@@ -160,11 +160,16 @@
 4. **覆盖率**：物种/城区/年龄段/派系四维分布达标率 100%（配额即法）；展示级手写锚（census/anchors）覆盖全部物种派系×城区。
 5. 宣称分级（governance §10.2）：QC 报告带 ✓/🟡/⬜ 实测标记，禁 ✓ 掩 🟡。
 
-## 十二、消费契约（服务面交付）
+## 十二、消费契约（服务面交付）——v1.1（2026-09-23 认知层批）
 
-- **引擎导出面**：`census/export/citizens-light.jsonl`（轻字段：id/name/species/district/block/profession/age/gender/axis/creed/quip——M2 NPC 引擎与 CityWatch 人口面板只读消费）。
+- **引擎导出面**：`census/export/citizens-light.jsonl`（v1.1 新增 `brain_digest`（大脑摘要≤200字：轴/信条/三特质/职业/口头禅/钩子）与 `behavior_hint`（作息节奏短语）——M2 NPC 引擎与 CityWatch 人口面板只读消费）。
+- **城市认知面（2026-09-23 CEO 令「规划好，落地执行，科学执行」·本批新增登记）**：
+  - **台词池** `cognition/pools.json`：思想六轴×12 真实情境+像素灵专属池的预生成短句（每桶≥4条）。**诚实纪律：池=情境型口气，事实门=真实激活**——池句只含情境感零具体事实（禁数字/人名/日期/金额），情境桶只由真实数据触发（真实时间/天气/行情/令/节日）。
+  - **确定性抽词** `cognition/README.md` 契约+`Tools/draw.py`：同一(id,日期,情境)→同一句（哈希确定性，零 LLM 零 token）。
+  - **聚光灯应答** `Tools/spotlight.py`：被看居民的事实级应答（大脑摘要+真实事件→≤40 字，本地 LLM，禁编造未喂事实）。
+  - 五层大脑总契约=`cognition/README.md`（行为查表层①池层②聚光灯③年轮④大事件⑤——CEO 同窗对话立法）。
 - **人设资产包**：BigStream/BigDomain/Biggame 按各自任务单引用（跨仓写禁令——交付走 git 与任务板，禁直写对方仓）。
-- 数据面变更（新字段/新导出面）= T2 + 7 天否决窗，先登记后产出（FluxVerse 事件登记簿同律）。
+- 数据面变更（新字段/新导出面）= T2 + 7 天否决窗，先登记后产出（FluxVerse 事件登记簿同律）。本节 v1.1 三新面（brain_digest/台词池/抽词·聚光灯契约）按此登记，否决窗至 2026-09-30。
 
 ## 十三、配额总表（万人版 v1·生成即锁）
 
