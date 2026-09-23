@@ -89,6 +89,11 @@ def real_signals():
                 # weather_temp_c) - the nested-dict branch never matched, so prompts said
                 # 天气数据暂缺 while real weather existed (a ring then invented rain).
                 sig["weather"] = "%s %s°C" % (r.get("weather_kind"), r.get("weather_temp_c"))
+            wind = r.get("weather_wind_ms")
+            if wind:
+                # gap #9 (2026-09-24): wind_ms flat key never reached prompts -> rings
+                # invented wind strength (C-00067 first offense, C-00074 recurrence).
+                sig["weather"] += " wind %sm/s" % wind
         except Exception:
             pass
     return sig
@@ -121,7 +126,7 @@ def build_prompt(cid, text, sig):
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n"
             f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n"
             f"现在真实北京时间 {sig['now']}，上海实况天气：{wx}。\n"
-            f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历（如「天阴着」），禁止出现「天气预报说/预报/听说」等消息源归属字样。\n"
+            f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历（如「天阴着」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许写「风轻轻的/风不大」，风速数据缺失则完全不提风），禁止出现「天气预报说/预报/听说」等消息源归属字样。\n"
             f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节），只输出这几句话本身。")
 
 def add_ring(path, cid, line, anchor_note):
@@ -217,7 +222,7 @@ def main():
         prompt = (f"你是叙事编剧。城市真实事件：\n{ev}\n"
                   f"居民甲「{ids[0]}」人设：{persona_digest(texts[0])['traits']}，职业{persona_digest(texts[0])['prof']}。\n"
                   f"居民乙「{ids[1]}」人设：{persona_digest(texts[1])['traits']}，职业{persona_digest(texts[1])['prof']}。\n"
-                  f"硬约束（锚定律从严）：台词中提及的具体事必须逐字来自事件清单原文短语，不得添加清单外的具体事实。台词中禁止出现「居民甲」「居民乙」字样，直接以台词本身呈现；提及天气只许描述此刻实况亲历，禁止「天气预报说/预报/听说」等消息源归属字样。\n"
+                  f"硬约束（锚定律从严）：台词中提及的具体事必须逐字来自事件清单原文短语，不得添加清单外的具体事实。台词中禁止出现「居民甲」「居民乙」字样，直接以台词本身呈现；提及天气只许描述此刻实况亲历，提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许「风轻轻的/风不大」，缺风速则不提风），禁止「天气预报说/预报/听说」等消息源归属字样。\n"
                   f"围绕其中一件真实事件，写两句话：甲对乙说的一句（20-40字），乙回的一句（20-40字）。输出两行，每行一句，不要序号。")
         try:
             resp = llm(prompt)
