@@ -262,8 +262,10 @@ def main():
         n += 1
     if paths:
         commit_files(paths, "citizen evolution: %s (%s)%s" % (", ".join(due[:n]), today(), via))
+        save_cursor(cursor)  # before sync: sync_rings mirrors only cursor-listed citizens
         sync_light(args.via)
-    save_cursor(cursor)
+    else:
+        save_cursor(cursor)
     print("OK evolved=%d of %d due" % (n, len(due)))
 
 if __name__ == "__main__":
