@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.2 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.3 - BigLife citizen evolution engine.
 
 Grows citizen cards by feeding REAL city signals into a LOCAL LLM (Ollama
 qwen2.5:7b-instruct, zero token, local-first L2). Honesty law (docs/CODEX.md 9):
@@ -9,6 +9,9 @@ v0.2 gap #12 (2026-09-24): deterministic honesty gate - LLM rule-following has a
 ceiling (C-00092 wind / C-00093 time escaped negative-ized prompts), so wind
 scale / time-of-day / rain / placeholder bans are enforced by machine check
 before a ring can touch a card; violations regenerate (<=2), else skip silently.
+v0.3 gap #13 (2026-09-24): celestial ban - the feed never carries moon/star data,
+so moonlight-style claims are always unanchored (C-00095 recurrence of R21
+C-00073 first strike); banned in gate + both prompts.
 Ollama down => silent skip exit 0 (probe contract #4). Targeted git commits
 only (governance 6.2 - never add -A).
 
@@ -114,9 +117,10 @@ def llm(prompt):
 def ring_violations(line, sig):
     """gap #12 honesty gate: machine-check an LLM ring against the fed signals.
 
-    Prompt-side bans have a compliance ceiling, so the four recurring violation
-    families (wind scale, time-of-day words, invented rain, meet placeholders)
-    are verified deterministically against sig (weather串/now) before落环."""
+    Prompt-side bans have a compliance ceiling, so the five recurring violation
+    families (wind scale, time-of-day words, invented rain, meet placeholders,
+    invented moon/celestial) are verified deterministically against sig
+    (weather串/now) before落环."""
     v = []
     wx = sig.get("weather") or ""
     m = re.search(r"wind\s+([0-9.]+)\s*m/s", wx)
@@ -130,6 +134,11 @@ def ring_violations(line, sig):
         v.append("wind-nodata")
     if not re.search(r"rain|drizzle|shower|雨", wx, re.I) and "雨" in line:
         v.append("rain-invented")
+    # gap #13: the feed never carries celestial data -> moon/star scenes are
+    # always unanchored (honesty line: 只提所喂事实); token list avoids
+    # 星期/岁月 false positives while covering the observed fabrication modes.
+    if re.search(r"月色|月光|月亮|月圆|看月|赏月|星象|星空|繁星|星光", line):
+        v.append("moon-invented")
     hm = re.search(r"\s(\d{2}):\d{2}", sig.get("now") or "")
     if hm:
         h = int(hm.group(1))
@@ -171,7 +180,7 @@ def build_prompt(cid, text, sig):
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n"
             f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n"
             f"现在真实北京时间 {sig['now']}，上海实况天气：{wx}。\n"
-            f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历（如「天阴着」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许写「风轻轻的/风不大」，喂入风速>3m/s 只许写「风不小/风挺大」类如实量级措辞（此时严禁写「风不大/风轻轻的」），风速数据缺失则完全不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止出现「天气预报说/预报/听说」等消息源归属字样。人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的，如『广场人流峰值时绕场三圈』），条件未被事件清单或实况坐实时严禁触发该场景，严禁用『还是/照例/依旧』等惯常化措辞把条件行为写成惯常延续，只能写无条件的人设日常；提及时间只许锚定喂入的当前时刻，严禁编造开工/收班/时刻表/『再过几小时』等时间细节，严禁使用与当前时刻不符的时段词（如凌晨时辰写『今早/早晨/晨光/清晨』、白天写『今晚/深夜』）。\n"
+            f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历（如「天阴着」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许写「风轻轻的/风不大」，喂入风速>3m/s 只许写「风不小/风挺大」类如实量级措辞（此时严禁写「风不大/风轻轻的」），风速数据缺失则完全不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止出现「天气预报说/预报/听说」等消息源归属字样。喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象。人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的，如『广场人流峰值时绕场三圈』），条件未被事件清单或实况坐实时严禁触发该场景，严禁用『还是/照例/依旧』等惯常化措辞把条件行为写成惯常延续，只能写无条件的人设日常；提及时间只许锚定喂入的当前时刻，严禁编造开工/收班/时刻表/『再过几小时』等时间细节，严禁使用与当前时刻不符的时段词（如凌晨时辰写『今早/早晨/晨光/清晨』、白天写『今晚/深夜』）。\n"
             f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节），只输出这几句话本身。")
 
 def add_ring(path, cid, line, anchor_note):
@@ -267,7 +276,7 @@ def main():
         prompt = (f"你是叙事编剧。城市真实事件：\n{ev}\n"
                   f"居民甲「{ids[0]}」人设：{persona_digest(texts[0])['traits']}，职业{persona_digest(texts[0])['prof']}。\n"
                   f"居民乙「{ids[1]}」人设：{persona_digest(texts[1])['traits']}，职业{persona_digest(texts[1])['prof']}。\n"
-                  f"硬约束（锚定律从严）：台词中提及的具体事必须逐字来自事件清单原文短语，不得添加清单外的具体事实。台词中禁止出现「居民甲」「居民乙」字样，直接以台词本身呈现；提及天气只许描述此刻实况亲历，提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许「风轻轻的/风不大」，喂入风速>3m/s 只许「风不小/风挺大」类如实量级措辞（此时严禁「风不大/风轻轻的」），缺风速则不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止「天气预报说/预报/听说」等消息源归属字样；人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的），条件未被事件清单或实况坐实时严禁触发该场景，严禁惯常化措辞绕过，只能写无条件的人设日常；禁止编造开工/收班/时刻表/『再过几小时』等时间细节，禁止使用与当前时刻不符的时段词（如凌晨时辰写『今早/早晨/晨光/清晨』）。\n"
+                  f"硬约束（锚定律从严）：台词中提及的具体事必须逐字来自事件清单原文短语，不得添加清单外的具体事实。台词中禁止出现「居民甲」「居民乙」字样，直接以台词本身呈现；提及天气只许描述此刻实况亲历，提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许「风轻轻的/风不大」，喂入风速>3m/s 只许「风不小/风挺大」类如实量级措辞（此时严禁「风不大/风轻轻的」），缺风速则不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止「天气预报说/预报/听说」等消息源归属字样；喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象；人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的），条件未被事件清单或实况坐实时严禁触发该场景，严禁惯常化措辞绕过，只能写无条件的人设日常；禁止编造开工/收班/时刻表/『再过几小时』等时间细节，禁止使用与当前时刻不符的时段词（如凌晨时辰写『今早/早晨/晨光/清晨』）。\n"
                   f"围绕其中一件真实事件，写两句话：甲对乙说的一句（20-40字），乙回的一句（20-40字）。输出两行，每行一句，不要序号。")
         try:
             resp = gated_llm(prompt, sig)
