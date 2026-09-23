@@ -10,6 +10,12 @@
 - [ ] **T-20260923-05**（v2 路线·已部分落地 2026-09-23 认知层批）台词池：barks 池已产（cognition/pools.json·六轴×12情境+像素灵池）；待续=标准台词层（45min 冷却级）与城市大事播报层（大事件模板）——消费契约见 CODEX §十二 v1.1。
 - [ ] **T-20260923-06** 素材面：居民像素立绘需求出现时走集团 Art Assets AA 登记制（候选 AA-016 现代人物生成器 L2 直用通道），禁双建禁双购。
 - [ ] **T-20260923-07**（认知层批·2026-09-23 立）OS 循环低频任务：①台词池扩容/换季维护（`Tools/pool_gen.py --append` 幂等·CODEX §十二 v1.1 诚实纪律）；②draw.py 确定性回归抽查（同参两跑逐字节一致）；③spotlight 抽验（只提所喂事实·≥2 例/月）。
+- [ ] **T-20260923-08**（认知层 v1.2 迭代契约·工具缺口修复·2026-09-23 OSLoop 轮立单）cognition/README.md v1.2 迭代判据点名的三件实现缺口，致语言线池轮与行为线镜像均无法按文档执行：
+  ① `Tools/pool_audit.py` 不存在——判据2 点名「语言线唯一门禁」（欠深桶判定 六轴<8/像素灵<6 + 全库零重复/零数字/行长4-24/禁词零命中 + 抽词确定性双跑内建回归）；无门禁则池轮禁 commit（判据2 门禁条款）。
+  ② `Tools/pool_gen.py` usage 文档承诺 `--target 8 --sprite-target 6`（v1.2 判据1 池深度水位），argparse 实未实现该二参，且 append 逻辑硬编码 `got[:6]`/`got[:5]` 截断——按文档命令原样跑会 unrecognized arguments。
+  ③ `Tools/sync_rings.py` 不存在 + `census/export/citizens-light.jsonl` 万行零 `recent_ring`/`recent_ring_date` 字段（2026-09-23 23:3x grep 实测零命中）——判据4（进化批落环后自动镜像 recent_ring≤80字·无年轮=空串·万人字段齐备）完全未落地；今日 C-00014~16、C-00017~19 两批年轮均未进行为面。
+  验收=三缺口闭合后：`pool_audit.py` 报全桶达标或欠深清单、`pool_gen.py --append --target 8 --sprite-target 6` 原样可跑且 PASS 才 commit、evolve 落环后 export `recent_ring` 当轮齐备。
+  证据：cognition/README.md v1.2 迭代判据/维护段、Tools/ 目录清单（本单立单时实测无 pool_audit/sync_rings）、pool_gen.py argparse 段与 got[:6]/got[:5] 截断行。
 
 ## 已结
 
