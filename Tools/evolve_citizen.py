@@ -1,0 +1,250 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""evolve_citizen.py v0.1 - BigLife citizen evolution engine.
+
+Grows citizen cards by feeding REAL city signals into a LOCAL LLM (Ollama
+qwen2.5:7b-instruct, zero token, local-first L2). Honesty law (docs/CODEX.md 9):
+every new ring line carries an [anchor] note pointing at the real event.
+Ollama down => silent skip exit 0 (probe contract #4). Targeted git commits
+only (governance 6.2 - never add -A).
+
+Usage:
+  python -X utf8 evolve_citizen.py --batch 3          # evolve N due citizens
+  python -X utf8 evolve_citizen.py --force C-00010     # ignore cooldown
+  python -X utf8 evolve_citizen.py --meet C-00010 C-00025   # two-citizen encounter
+"""
+import argparse, datetime, glob, json, os, re, subprocess, sys, urllib.request
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+CO = os.path.dirname(HERE)
+CENSUS = os.path.join(CO, "census")
+STATE_DIR = os.path.join(CO, "state")
+CURSOR = os.path.join(STATE_DIR, "evolve-cursor.json")
+ROOT = os.path.abspath(os.path.join(CO, "..", ".."))
+FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
+OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
+MODEL = os.environ.get("BIGLIFE_MODEL", "qwen2.5:7b-instruct")
+COOLDOWN_DAYS = 7
+
+def today():
+    return datetime.date.today().isoformat()
+
+def find_card(cid):
+    for sub in ("registry", "anchors", "reserved"):
+        d = os.path.join(CENSUS, sub)
+        if os.path.isdir(d):
+            p = os.path.join(d, cid + ".md")
+            if os.path.isfile(p):
+                return p
+            for root, _, files in os.walk(d):
+                if cid + ".md" in files:
+                    return os.path.join(root, cid + ".md")
+    return None
+
+def load_cursor():
+    if os.path.isfile(CURSOR):
+        with open(CURSOR, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+def save_cursor(c):
+    os.makedirs(STATE_DIR, exist_ok=True)
+    with open(CURSOR, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(c, f, ensure_ascii=False, indent=1)
+
+def real_signals():
+    """Collect REAL city signals: FluxVerse world events tail + world state (read-only)."""
+    sig = {"events": [], "weather": "", "now": datetime.datetime.now().strftime("%Y-%m-%d %H:%M")}
+    files = sorted(glob.glob(os.path.join(FV_WORLD, "*.jsonl")), key=os.path.getmtime, reverse=True)
+    if files:
+        try:
+            with open(files[0], encoding="utf-8", errors="replace") as f:
+                lines = f.readlines()[-30:]
+            for ln in lines:
+                try:
+                    e = json.loads(ln)
+                except Exception:
+                    continue
+                parts = []
+                for k in ("type", "zone", "actor", "text", "summary", "msg", "title"):
+                    if e.get(k):
+                        parts.append(str(e[k])[:60])
+                if parts:
+                    sig["events"].append(" / ".join(parts))
+            sig["events"] = sig["events"][-8:]
+        except Exception:
+            pass
+    ws = os.path.join(FV_WORLD, "world-state.json")
+    if os.path.isfile(ws):
+        try:
+            with open(ws, encoding="utf-8") as f:
+                st = json.load(f)
+            r = st.get("reality") or st
+            w = r.get("weather") or {}
+            if isinstance(w, dict) and (w.get("temperature") or w.get("condition") or w.get("desc")):
+                sig["weather"] = " ".join(str(x) for x in (w.get("temperature"), w.get("condition"), w.get("desc")) if x).strip()
+        except Exception:
+            pass
+    return sig
+
+def llm(prompt):
+    req = urllib.request.Request(
+        OLLAMA.rstrip("/") + "/api/generate",
+        data=json.dumps({"model": MODEL, "prompt": prompt, "stream": False,
+                         "options": {"temperature": 0.8, "num_predict": 120}}).encode("utf-8"),
+        headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=90) as r:
+        return json.loads(r.read().decode("utf-8")).get("response", "").strip()
+
+def persona_digest(text):
+    """Pull key persona fields from a card for the LLM prompt."""
+    def grab(label, limit=140):
+        m = re.search(r"\*\*" + label + r"\*\*\s*(.+)", text)
+        return m.group(1).strip()[:limit] if m else ""
+    return {
+        "species": grab("物种", 40), "prof": grab("职业", 80), "traits": grab("性格", 100),
+        "creed": grab("信条", 60), "language": grab("语言", 80), "behavior": grab("行为", 90),
+    }
+
+def build_prompt(cid, text, sig):
+    p = persona_digest(text)
+    ev = "\n".join("- " + e for e in sig["events"]) or "- （今日无新城市事件）"
+    wx = sig["weather"] or "（天气数据暂缺）"
+    return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
+            f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
+            f"语言风格：{p['language']}；日常：{p['behavior']}。\n"
+            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n"
+            f"现在真实北京时间 {sig['now']}，上海实况天气：{wx}。\n"
+            f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节，可自然提及以上真实事件之一），只输出这几句话本身。")
+
+def add_ring(path, cid, line, anchor_note):
+    with open(path, encoding="utf-8") as f:
+        text = f.read()
+    date = today()
+    ring = f"**年轮**"
+    entry = f"- {date} 「{line}」 [锚] {anchor_note}"
+    if ring in text:
+        m = re.search(r"(\*\*年轮\*\*\n(?:- .*\n)+)", text)
+        if m:
+            text = text.replace(m.group(1), m.group(1) + entry + "\n", 1)
+        else:
+            text = re.sub(r"\*\*年轮\*\*\n", ring + "\n" + entry + "\n", text, count=1)
+    else:
+        text = re.sub(r"(\n\*\*进化\*\*)", "\n" + ring + "\n" + entry + r"\n\1", text, count=1)
+    count = len(re.findall(r"(?:^|\n)- \d{4}-\d{2}-\d{2} ", text))
+    text = re.sub(r"\*\*进化\*\* .*", f"**进化** v1.{count} · 出生 2026-09-23 · 年轮 {count} 圈 · 锚定律见 docs/CODEX.md §九", text, count=1)
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(text)
+
+def due_citizens(cursor, batch, force=None):
+    all_ids = []
+    for sub in ("anchors", "registry"):
+        d = os.path.join(CENSUS, sub)
+        if os.path.isdir(d):
+            for root, _, files in os.walk(d):
+                for fn in files:
+                    if fn.endswith(".md") and fn.startswith("C-"):
+                        all_ids.append(fn[:-3])
+    all_ids.sort()
+    if force:
+        return [c for c in all_ids if c in force]
+    t = datetime.date.today()
+    due = []
+    for cid in all_ids:
+        c = cursor.get(cid)
+        if not c or not c.get("next"):
+            due.append(cid)  # never evolved yet: anchors first (born earliest)
+        else:
+            try:
+                if datetime.date.fromisoformat(c["next"]) <= t:
+                    due.append(cid)
+            except Exception:
+                due.append(cid)
+    return due[:batch]
+
+def commit_files(paths, msg):
+    try:
+        subprocess.run(["git", "-C", CO, "add", "--"] + paths, check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(["git", "-C", CO, "commit", "-q", "-m", msg, "--"] + paths, check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        return True
+    except Exception:
+        return False
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--batch", type=int, default=3)
+    ap.add_argument("--force", nargs="*", default=None)
+    ap.add_argument("--meet", nargs=2, default=None)
+    args = ap.parse_args()
+    cursor = load_cursor()
+    sig = real_signals()
+    anchor_note = "城市实况 " + today() + "（FluxVerse 事件流+真实时间天气）"
+
+    if args.meet:
+        ids = args.meet
+        texts = []
+        for cid in ids:
+            p = find_card(cid)
+            if not p:
+                print("skip: card not found", cid); return
+            with open(p, encoding="utf-8") as f:
+                texts.append(f.read())
+        ev = "\n".join("- " + e for e in sig["events"]) or "- （今日无新城市事件）"
+        prompt = (f"你是叙事编剧。城市真实事件：\n{ev}\n"
+                  f"居民甲「{ids[0]}」人设：{persona_digest(texts[0])['traits']}，职业{persona_digest(texts[0])['prof']}。\n"
+                  f"居民乙「{ids[1]}」人设：{persona_digest(texts[1])['traits']}，职业{persona_digest(texts[1])['prof']}。\n"
+                  f"围绕其中一件真实事件，写两句话：甲对乙说的一句（20-40字），乙回的一句（20-40字）。输出两行，每行一句，不要序号。")
+        try:
+            resp = llm(prompt)
+        except Exception:
+            print("ollama down; meet skipped"); return
+        lines = [l.strip() for l in resp.splitlines() if l.strip()][:2]
+        while len(lines) < 2:
+            lines.append("（那天的桥上风大，谁也没多说什么。）")
+        paths = []
+        for cid, line in zip(ids, lines):
+            p = find_card(cid)
+            other = ids[1] if cid == ids[0] else ids[0]
+            add_ring(p, cid, f"与 {other} 相遇：{line}", anchor_note)
+            paths.append(p)
+        commit_files(paths, "citizen evolution: encounter " + " ".join(ids))
+        print("OK meet:", " ".join(ids))
+        return
+
+    due = due_citizens(cursor, args.batch, args.force)
+    if not due:
+        print("no due citizens; cooldown healthy")
+        return
+    n = 0
+    paths = []
+    for cid in due:
+        p = find_card(cid)
+        if not p:
+            continue
+        with open(p, encoding="utf-8") as f:
+            text = f.read()
+        if "成长中" in text and not args.force:
+            continue
+        try:
+            line = llm(build_prompt(cid, text, sig))
+        except Exception:
+            print("ollama down; batch paused at", n)
+            break
+        line = re.sub(r"\s+", " ", line).strip().strip('「」"“”')[:90]
+        if len(line) < 8:
+            line = "今天照常出摊/上岗，江上的光点还是那么多。"
+        add_ring(p, cid, line, anchor_note)
+        paths.append(p)
+        cursor[cid] = {"v": 1, "last": today(),
+                       "next": (datetime.date.today() + datetime.timedelta(days=COOLDOWN_DAYS)).isoformat(),
+                       "n": cursor.get(cid, {}).get("n", 0) + 1}
+        n += 1
+    if paths:
+        commit_files(paths, "citizen evolution: %s (%s)" % (", ".join(due[:n]), today()))
+    save_cursor(cursor)
+    print("OK evolved=%d of %d due" % (n, len(due)))
+
+if __name__ == "__main__":
+    main()

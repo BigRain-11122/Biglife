@@ -1,0 +1,40 @@
+{
+  "version": "v1.0",
+  "total": 10000,
+  "districts": [
+    {"id": "NS", "name": "北外滩·治理岸", "quota": 1200, "blocks": ["脑环广场街区", "档案馆区", "历史立面群", "白玉兰塔区"]},
+    {"id": "QT", "name": "QUANT 城", "quota": 2500, "blocks": ["扭塔算力街区", "K线广场", "回测田", "风控高地"]},
+    {"id": "GM", "name": "GAME 城", "quota": 2800, "blocks": ["八号楼街区", "游戏楼街区", "X026 城门区", "像素匠人巷"]},
+    {"id": "MD", "name": "MEDIA 城", "quota": 2000, "blocks": ["信号塔街区", "七段街区", "选题馆街区"]},
+    {"id": "RV", "name": "江面与光桥", "quota": 500, "blocks": ["渡轮航道", "光桥市集", "江岸滩涂"]},
+    {"id": "OR", "name": "外环感知网", "quota": 1000, "blocks": ["感知塔站", "机器站宿舍", "边缘街区"]}
+  ],
+  "species": [
+    {"id": "carbon", "name": "碳基市民", "quota": 7500,
+     "factions": [
+       {"id": "lilong", "name": "弄堂派", "weight": 0.28, "dialects": ["上海话", "吴侬软语"]},
+       {"id": "newcomer", "name": "新市民派", "weight": 0.30, "dialects": ["川渝腔", "东北腔", "中原腔", "湘腔", "粤腔", "江淮官话"]},
+       {"id": "commuter", "name": "通勤族", "weight": 0.22, "dialects": ["普通话", "上海话", "吴侬软语", "江淮官话"]},
+       {"id": "native", "name": "原生代", "weight": 0.20, "dialects": ["网络世代语", "普通话"]}]},
+    {"id": "silicon", "name": "硅基民", "quota": 2000,
+     "factions": [
+       {"id": "photonsoul", "name": "光机魂系", "weight": 0.30, "dialects": ["程序语义", "上海话"]},
+       {"id": "compiled", "name": "编译系", "weight": 0.45, "dialects": ["程序语义", "普通话"]},
+       {"id": "elf", "name": "精灵系", "weight": 0.25, "dialects": ["网络世代语", "程序语义"]}]},
+    {"id": "sprite", "name": "像素灵", "quota": 500,
+     "factions": [
+       {"id": "finch", "name": "消息雀", "weight": 0.22, "home": "全城驿站与檐口"},
+       {"id": "radiocat", "name": "电波猫", "weight": 0.25, "home": "弄堂与三城屋顶"},
+       {"id": "nightlamp", "name": "守夜灯灵", "weight": 0.15, "home": "夜城街巷"},
+       {"id": "koi", "name": "数据锦鲤", "weight": 0.15, "home": "黄浦江三流数据道"},
+       {"id": "rainfrog", "name": "雨声蛙", "weight": 0.13, "home": "江岸滩涂"},
+       {"id": "chimefly", "name": "风铃蝶", "weight": 0.10, "home": "塔脚花园与桥头"}]}
+  ],
+  "age_bands": [
+    {"id": "child", "label": "少年", "range": [6, 17], "share": 0.12},
+    {"id": "young", "label": "青年", "range": [18, 39], "share": 0.38},
+    {"id": "mid", "label": "中年", "range": [40, 64], "share": 0.32},
+    {"id": "old", "label": "老年", "range": [65, 96], "share": 0.18}
+  ],
+  "gender": {"male": 0.49, "female": 0.51}
+}

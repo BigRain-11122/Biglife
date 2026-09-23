@@ -1,0 +1,13 @@
+# Runtime & local state
+state/
+logs/
+*.log
+
+# Codely runtime (mirrors HQ gitignore law)
+.codely-cli/settings.local.json
+.codely-cli/auto-saves/
+.codely-cli/scheduled_tasks.json
+
+# Python
+__pycache__/
+*.pyc
