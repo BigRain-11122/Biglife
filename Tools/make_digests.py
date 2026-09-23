@@ -38,6 +38,17 @@ def grab(text, label):
     m = re.search(r"\*\*" + label + r"\*\* (.+)", text)
     return m.group(1).strip() if m else ""
 
+def latest_ring(text):
+    """Newest ring entry from a card: (date, inner text) or (None, None)."""
+    m = re.search(r"\*\*年轮\*\*\n((?:- .*\n?)+)", text)
+    if not m:
+        return None, None
+    entries = re.findall(r"- (\d{4}-\d{2}-\d{2}) 「(.*?)」", m.group(1))
+    if not entries:
+        return None, None
+    d, t = entries[-1]
+    return d, t.strip()
+
 def main():
     with open(LIGHT, encoding="utf-8") as f:
         rows = [json.loads(l) for l in f if l.strip()]
@@ -49,6 +60,9 @@ def main():
             bad += 1
             r["brain_digest"] = ""
             r["behavior_hint"] = ""
+            r["recent_ring_date"] = ""
+            r["recent_ring"] = ""
+            r["v"] = 1.2
             out.append(r)
             continue
         with open(p, encoding="utf-8") as fh:
@@ -87,7 +101,10 @@ def main():
         if len(digest) > 200: digest = digest[:200]
         r["brain_digest"] = digest
         r["behavior_hint"] = hint
-        r["v"] = 1.1
+        rd, rt = latest_ring(t)
+        r["recent_ring_date"] = rd or ""
+        r["recent_ring"] = (rt or "")[:80]
+        r["v"] = 1.2
         out.append(r)
     with open(LIGHT, "w", encoding="utf-8", newline="\n") as f:
         for r in out:
@@ -95,8 +112,12 @@ def main():
     missing_digest = sum(1 for r in out if not r.get("brain_digest"))
     missing_hint = sum(1 for r in out if not r.get("behavior_hint"))
     overlong = sum(1 for r in out if len(r.get("brain_digest", "")) > 200)
-    print(f"rows={len(out)} no_card={bad} missing_digest={missing_digest} missing_hint={missing_hint} overlong={overlong}")
-    sys.exit(1 if (bad or missing_digest or overlong) else 0)
+    no_ringfield = sum(1 for r in out if "recent_ring" not in r or "recent_ring_date" not in r)
+    ring_rows = sum(1 for r in out if r.get("recent_ring"))
+    print(f"rows={len(out)} no_card={bad} missing_digest={missing_digest} "
+          f"missing_hint={missing_hint} overlong={overlong} "
+          f"no_ringfield={no_ringfield} ring_rows={ring_rows}")
+    sys.exit(1 if (bad or missing_digest or overlong or no_ringfield) else 0)
 
 if __name__ == "__main__":
     main()

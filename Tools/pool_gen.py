@@ -8,13 +8,18 @@ Honesty law (cognition/README): pool = context-flavored tone, zero concrete
 facts - no digits, no names, no dates; facts enter only via spotlight/ring,
 and pool contexts are only ACTIVATED by real data (the fact gate).
 Local Ollama only (qwen2.5:7b-instruct, zero token).
-Usage: python -X utf8 pool_gen.py [--append]
+Iteration (CODEX §14 language line): --target/--sprite-target set bucket depth;
+buckets already at target are SKIPPED (self-terminating growth; floor/cap
+enforced). Growth reopens only on new contexts / festivals / CEO order.
+Single-instance lock: state/pool.lock (stale after 30 min).
+Usage: python -X utf8 pool_gen.py [--append] [--target 8] [--sprite-target 6]
 """
-import argparse, json, os, re, sys, urllib.request
+import argparse, json, os, re, sys, time, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
 POOL = os.path.join(CO, "cognition", "pools.json")
+LOCK = os.path.join(CO, "state", "pool.lock")
 OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
 MODEL = os.environ.get("BIGLIFE_MODEL", "qwen2.5:7b-instruct")
 
@@ -88,13 +93,36 @@ def gen_sprite_bucket(ctx_desc, n=4):
               f"写 {n} 条这类小生灵会发出的「话」——可以用拟声（喵呜/叮/啾）带一点短句意思，每条 4-16 字；"
               f"禁数字、禁人名地名；每行一条共 {n} 行，不要编号。")
     raw = llm(prompt)
-    lines = [l for l in clean_lines(raw) if 4 <= len(l) <= 24 and not re.search(r"[0-9]", l)]
+    banned = ["CEO", "Jason", "公司", "集团", "总部", "董事长", "经理"]
+    lines = [l for l in clean_lines(raw)
+             if 4 <= len(l) <= 24 and not re.search(r"[0-9]", l)
+             and not any(b in l for b in banned)]
     return lines
+
+def acquire_lock(max_age=1800):
+    """Single pool-writer lock (stale after max_age seconds)."""
+    try:
+        if os.path.isfile(LOCK) and (time.time() - os.path.getmtime(LOCK)) < max_age:
+            return False
+        os.makedirs(os.path.dirname(LOCK), exist_ok=True)
+        with open(LOCK, "w") as f:
+            f.write(str(os.getpid()))
+        return True
+    except Exception:
+        return True  # never block growth on a broken lock
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--append", action="store_true")
+    ap.add_argument("--target", type=int, default=6, help="lines per axes bucket (floor 4, cap 12)")
+    ap.add_argument("--sprite-target", dest="sprite_target", type=int, default=4,
+                    help="lines per sprite bucket (floor 3, cap 10)")
     args = ap.parse_args()
+    args.target = max(4, min(12, args.target))
+    args.sprite_target = max(3, min(10, args.sprite_target))
+    if args.append and not acquire_lock():
+        print("pool round already running (lock held); skip")
+        sys.exit(0)
     pools = {"axes": {}, "sprite": {}}
     if args.append and os.path.isfile(POOL):
         with open(POOL, encoding="utf-8") as f:
@@ -108,37 +136,46 @@ def main():
     for axis, adesc in AXES.items():
         pools["axes"].setdefault(axis, {})
         for ctx, cdesc in CONTEXTS.items():
-            need = 4
-            got = [l for l in pools["axes"][axis].get(ctx, []) if valid(l)]
-            if len(got) >= 6 and not args.append:
-                pools["axes"][axis][ctx] = got[:6]; continue
+            pools["axes"][axis].setdefault(ctx, [])
+            got = [l for l in pools["axes"][axis][ctx] if valid(l)]
+            if len(got) >= args.target:
+                pools["axes"][axis][ctx] = got[:args.target]
+                print(f"bucket {axis}/{ctx}: {len(got)} (at target)")
+                continue
             for attempt in range(3):
                 fresh = [l for l in gen_bucket(adesc, cdesc) if l not in all_lines]
                 got = got + fresh
                 all_lines.update(fresh)
-                if len(got) >= 6: break
-            got = got[:6]
+                if len(got) >= args.target: break
+            got = got[:args.target]
             pools["axes"][axis][ctx] = got
-            if len(got) < need:
+            if len(got) < 4:
                 fails.append(f"{axis}/{ctx}={len(got)}")
             print(f"bucket {axis}/{ctx}: {len(got)}")
     for ctx, cdesc in SPRITE_CONTEXTS.items():
         pools["sprite"].setdefault(ctx, [])
         got = [l for l in pools["sprite"].get(ctx, []) if 4 <= len(l) <= 24]
-        if len(got) >= 3 and not args.append:
-            pools["sprite"][ctx] = got[:5]; continue
+        if len(got) >= args.sprite_target:
+            pools["sprite"][ctx] = got[:args.sprite_target]
+            print(f"bucket sprite/{ctx}: {len(got)} (at target)")
+            continue
         for attempt in range(2):
             fresh = [l for l in gen_sprite_bucket(cdesc) if l not in all_lines]
             got = got + fresh
             all_lines.update(fresh)
-            if len(got) >= 3: break
-        got = got[:5]
+            if len(got) >= args.sprite_target: break
+        got = got[:args.sprite_target]
         pools["sprite"][ctx] = got
         if len(got) < 3:
             fails.append(f"sprite/{ctx}={len(got)}")
         print(f"bucket sprite/{ctx}: {len(got)}")
     with open(POOL, "w", encoding="utf-8", newline="\n") as f:
         json.dump(pools, f, ensure_ascii=False, indent=1)
+    try:
+        if os.path.isfile(LOCK):
+            os.remove(LOCK)
+    except Exception:
+        pass
     # QC summary
     total = sum(len(c) for ax in pools["axes"].values() for c in ax.values()) + sum(len(c) for c in pools["sprite"].values())
     print(f"TOTAL={total} FAIL_BUCKETS={fails if fails else 'NONE'}")

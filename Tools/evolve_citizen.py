@@ -174,6 +174,19 @@ def commit_files(paths, msg):
     except Exception:
         return False
 
+def sync_light(via):
+    """Behavior line (CODEX §14): mirror the new rings into the export face.
+
+    Zero LLM, best-effort: failures never block the evolution batch itself.
+    """
+    try:
+        cmd = [sys.executable, "-X", "utf8", os.path.join(HERE, "sync_rings.py")]
+        if via:
+            cmd += ["--via", via]
+        subprocess.run(cmd, timeout=300, check=False)
+    except Exception:
+        pass
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--batch", type=int, default=3)
@@ -215,6 +228,7 @@ def main():
             add_ring(p, cid, f"与 {other} 相遇：{line}", anchor_note)
             paths.append(p)
         commit_files(paths, "citizen evolution: encounter " + " ".join(ids) + via)
+        sync_light(args.via)
         print("OK meet:", " ".join(ids))
         return
 
@@ -248,6 +262,7 @@ def main():
         n += 1
     if paths:
         commit_files(paths, "citizen evolution: %s (%s)%s" % (", ".join(due[:n]), today(), via))
+        sync_light(args.via)
     save_cursor(cursor)
     print("OK evolved=%d of %d due" % (n, len(due)))
 
