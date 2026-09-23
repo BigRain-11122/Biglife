@@ -14,6 +14,7 @@
   - [2026-09-23 23:55 @BigLife-OSLoop] 语言线闸实跑：pool_audit verdict=PASS（硬项 0 失败·确定性 168 对零漂移），但 84 桶全欠深（axes 72 桶均 6/8·sprite 12 桶均 4/6）→ **pool_gen 补深留单下轮执行**（本轮预算不足 84 次 LLM 调用·mandate 预算律「勿硬撑」；下轮：pool_gen --append --target 8 --sprite-target 6 → 复跑 audit → PASS 才 commit）。
   - [2026-09-23 23:55 @BigLife-OSLoop] spotlight 月度抽验 2/2 例：C-00010 顾阿凤「侬晓得伐，今朝粢饭加辣点儿嘞！」、C-00022 何雨欣「今晚的流量小高潮，我就是那盏不熄的灯。」——均零编造零越权（纯人设日常，未提清单外具体事、未声称执行集团任务），验收线 6「只提所喂事实」PASS。
   - [2026-09-23 23:59 @BigLife-OSLoop] 池轮补深收口：pool_gen --append --target 8 --sprite-target 6 实跑 TOTAL=648 FAIL=NONE（72桶×8+12桶×6）→ 复跑 pool_audit verdict=PASS（hard_fails 0·84/84 全达标·确定性 168 对零漂移）→ 语言线水位 8/6 达标自停（自终止律）。实跑抓到并当轮修复第 5 缺口：--append 预载去重把 sprite 的 ctx→list 当 ctx→dict 用必崩（T-08 上轮仅 --help 实测未实跑 append；崩在任何生成前=零写入零污染）；同轮补 save_pools 每桶原子落盘（原实现全跑完才一次性写盘，预算杀=零落盘，「做多少收多少」不成立；现断点续跑成立，契约不变：水位跳桶/软帽/单写锁保留）。QC 巡检（每 6 轮）R6 到期，下轮执行。
+  - [2026-09-24 00:20 @BigLife-OSLoop] 迭代批实录：①年轮线 C-00026/27/28 三环落卡（4b9e358·sync aab526f rows=3·ring_citizens=19）；②QC 巡检 R6 实跑 problems=0（万卡全过·QC-REPORT 随轮入库）；③相遇轮 GM 对 C-00020×C-00021 双卡互引（9e42ee3）——验真=U153-D05/C408 均逐字坐实于 FluxVerse 活跃流（world-events.jsonl L127/L823·只读核查）零编造 PASS；实弹抓到 meet 面**第 6 缺口**：meet prompt「居民甲/乙」占位标签被 LLM 原样写进台词（d6d043d 相遇件无此缺陷=T-02 收紧只盖了事件真实性、没盖称谓自然性）→ 双修：prompt 加「禁止出现居民甲/乙字样」硬约束 + 两卡人称自然化（台词内容逐字保留·原句存史 9e42ee3）→ sync 复跑 rows=2·QC 复扫 problems=0。语言线 09-24 00:00 轮已达标自停，本轮语言线合规跳过。
 
 ## 已结
 
