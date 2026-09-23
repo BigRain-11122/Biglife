@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.1 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.2 - BigLife citizen evolution engine.
 
 Grows citizen cards by feeding REAL city signals into a LOCAL LLM (Ollama
 qwen2.5:7b-instruct, zero token, local-first L2). Honesty law (docs/CODEX.md 9):
 every new ring line carries an [anchor] note pointing at the real event.
+v0.2 gap #12 (2026-09-24): deterministic honesty gate - LLM rule-following has a
+ceiling (C-00092 wind / C-00093 time escaped negative-ized prompts), so wind
+scale / time-of-day / rain / placeholder bans are enforced by machine check
+before a ring can touch a card; violations regenerate (<=2), else skip silently.
 Ollama down => silent skip exit 0 (probe contract #4). Targeted git commits
 only (governance 6.2 - never add -A).
 
@@ -106,6 +110,47 @@ def llm(prompt):
         headers={"Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=90) as r:
         return json.loads(r.read().decode("utf-8")).get("response", "").strip()
+
+def ring_violations(line, sig):
+    """gap #12 honesty gate: machine-check an LLM ring against the fed signals.
+
+    Prompt-side bans have a compliance ceiling, so the four recurring violation
+    families (wind scale, time-of-day words, invented rain, meet placeholders)
+    are verified deterministically against sig (weather串/now) before落环."""
+    v = []
+    wx = sig.get("weather") or ""
+    m = re.search(r"wind\s+([0-9.]+)\s*m/s", wx)
+    if m:
+        wind = float(m.group(1))
+        if wind > 3 and re.search(r"风不大|风轻轻的", line):
+            v.append("wind-under")
+        if wind <= 3 and re.search(r"风不小|风挺大|风好大", line):
+            v.append("wind-over")
+    elif re.search(r"风不大|风轻轻的|风不小|风挺大|风好大", line):
+        v.append("wind-nodata")
+    if not re.search(r"rain|drizzle|shower|雨", wx, re.I) and "雨" in line:
+        v.append("rain-invented")
+    hm = re.search(r"\s(\d{2}):\d{2}", sig.get("now") or "")
+    if hm:
+        h = int(hm.group(1))
+        if h <= 5 and re.search(r"今早|早上|早晨|清晨|晨光", line):
+            v.append("time-morning")
+        if 6 <= h <= 17 and re.search(r"今晚|深夜|夜深", line):
+            v.append("time-night")
+    if "居民甲" in line or "居民乙" in line:
+        v.append("placeholder")
+    return v
+
+def gated_llm(prompt, sig, max_regens=2):
+    """Generate with the honesty gate: regenerate on violations (<= max_regens),
+    then give up -> None (caller skips; citizen stays due for the next round)."""
+    line = ""
+    for _ in range(1 + max_regens):
+        line = llm(prompt)
+        if not ring_violations(line, sig):
+            return line
+    print("gate: persistent violations", ring_violations(line, sig))
+    return None
 
 def persona_digest(text):
     """Pull key persona fields from a card for the LLM prompt."""
@@ -225,9 +270,11 @@ def main():
                   f"硬约束（锚定律从严）：台词中提及的具体事必须逐字来自事件清单原文短语，不得添加清单外的具体事实。台词中禁止出现「居民甲」「居民乙」字样，直接以台词本身呈现；提及天气只许描述此刻实况亲历，提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许「风轻轻的/风不大」，喂入风速>3m/s 只许「风不小/风挺大」类如实量级措辞（此时严禁「风不大/风轻轻的」），缺风速则不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止「天气预报说/预报/听说」等消息源归属字样；人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的），条件未被事件清单或实况坐实时严禁触发该场景，严禁惯常化措辞绕过，只能写无条件的人设日常；禁止编造开工/收班/时刻表/『再过几小时』等时间细节，禁止使用与当前时刻不符的时段词（如凌晨时辰写『今早/早晨/晨光/清晨』）。\n"
                   f"围绕其中一件真实事件，写两句话：甲对乙说的一句（20-40字），乙回的一句（20-40字）。输出两行，每行一句，不要序号。")
         try:
-            resp = llm(prompt)
+            resp = gated_llm(prompt, sig)
         except Exception:
             print("ollama down; meet skipped"); return
+        if resp is None:
+            print("gate: meet skipped (honesty gate)"); return
         lines = [l.strip() for l in resp.splitlines() if l.strip()][:2]
         while len(lines) < 2:
             lines.append("（那天的桥上风大，谁也没多说什么。）")
@@ -257,10 +304,13 @@ def main():
         if "成长中" in text and not args.force:
             continue
         try:
-            line = llm(build_prompt(cid, text, sig))
+            line = gated_llm(build_prompt(cid, text, sig), sig)
         except Exception:
             print("ollama down; batch paused at", n)
             break
+        if line is None:
+            print("gate: skip", cid, "(stays due)")
+            continue
         line = re.sub(r"\s+", " ", line).strip().strip('「」"“”')[:90]
         if len(line) < 8:
             line = "今天照常出摊/上岗，江上的光点还是那么多。"
