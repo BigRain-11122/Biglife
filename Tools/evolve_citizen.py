@@ -12,6 +12,7 @@ Usage:
   python -X utf8 evolve_citizen.py --batch 3          # evolve N due citizens
   python -X utf8 evolve_citizen.py --force C-00010     # ignore cooldown
   python -X utf8 evolve_citizen.py --meet C-00010 C-00025   # two-citizen encounter
+  --via BigLife-OSLoop  # committer-identity tail on every commit (cph4/versioning.md 4.1)
 """
 import argparse, datetime, glob, json, os, re, subprocess, sys, urllib.request
 
@@ -178,7 +179,9 @@ def main():
     ap.add_argument("--batch", type=int, default=3)
     ap.add_argument("--force", nargs="*", default=None)
     ap.add_argument("--meet", nargs=2, default=None)
+    ap.add_argument("--via", default=None, help="committer-identity tail, e.g. BigLife-OSLoop")
     args = ap.parse_args()
+    via = (" [via %s]" % args.via) if args.via else ""
     cursor = load_cursor()
     sig = real_signals()
     anchor_note = "城市实况 " + today() + "（FluxVerse 事件流+真实时间天气）"
@@ -211,7 +214,7 @@ def main():
             other = ids[1] if cid == ids[0] else ids[0]
             add_ring(p, cid, f"与 {other} 相遇：{line}", anchor_note)
             paths.append(p)
-        commit_files(paths, "citizen evolution: encounter " + " ".join(ids))
+        commit_files(paths, "citizen evolution: encounter " + " ".join(ids) + via)
         print("OK meet:", " ".join(ids))
         return
 
@@ -244,7 +247,7 @@ def main():
                        "n": cursor.get(cid, {}).get("n", 0) + 1}
         n += 1
     if paths:
-        commit_files(paths, "citizen evolution: %s (%s)" % (", ".join(due[:n]), today()))
+        commit_files(paths, "citizen evolution: %s (%s)%s" % (", ".join(due[:n]), today(), via))
     save_cursor(cursor)
     print("OK evolved=%d of %d due" % (n, len(due)))
 
