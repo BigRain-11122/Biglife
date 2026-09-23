@@ -84,6 +84,11 @@ def real_signals():
             w = r.get("weather") or {}
             if isinstance(w, dict) and (w.get("temperature") or w.get("condition") or w.get("desc")):
                 sig["weather"] = " ".join(str(x) for x in (w.get("temperature"), w.get("condition"), w.get("desc")) if x).strip()
+            elif r.get("weather_kind"):
+                # gap #7 (2026-09-24): world-state.json keeps weather FLAT (weather_kind/
+                # weather_temp_c) - the nested-dict branch never matched, so prompts said
+                # 天气数据暂缺 while real weather existed (a ring then invented rain).
+                sig["weather"] = "%s %s°C" % (r.get("weather_kind"), r.get("weather_temp_c"))
         except Exception:
             pass
     return sig
