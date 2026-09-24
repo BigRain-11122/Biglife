@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.4.1 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.4.2 - BigLife citizen evolution engine.
 
 Grows citizen cards by feeding REAL city signals into a LOCAL LLM (Ollama
 qwen2.5:7b-instruct, zero token, local-first L2). Honesty law (docs/CODEX.md 9):
@@ -16,6 +16,11 @@ v0.4 (2026-09-24, T-20260924-02): signal-lamp state ban - the feed never carries
 traffic-light data either, so "红灯刚亮" style state assertions are always
 unanchored (4th escape of #10: C-00073->79->89->100); closed-list completion
 markers keep a verbatim quote of the card line 「红灯亮起时永远第一个到岗」legal.
+v0.4.2 gap #15 (2026-09-24): trading-session state ban - the feed never carries
+market session data either (dev-loop round closes are not market sessions), so
+"行情收得清清" style session assertions are always unanchored (C-00184
+recurrence of R51 C-00139 first strike); closed markers keep card habit quotes
+like 「收盘才想起」 legal.
 Batch commit titles now list actually-evolved IDs (gate skips had leaked planned
 IDs into titles: title said C-00101,C-00102 while C-00102,C-00103 evolved).
 v0.4.1 gap #14 (2026-09-24): 今夜 was missing from the 6-17 night-word ban
@@ -153,6 +158,14 @@ def ring_violations(line, sig):
     # within one clause, so verbatim card quote 「红灯亮起时永远第一个到岗」 passes.
     if re.search(r"(红灯|绿灯)[^，。！？；;]{0,6}(刚亮|亮了|正亮|又亮)|(刚亮|亮了|正亮|又亮)[^，。！？；;]{0,6}(红灯|绿灯)", line):
         v.append("signal-state")
+    # v0.4.2 gap #15 (2026-09-24): the feed also carries no trading-session data
+    # (bigmoney "round close" commits are dev-loop rounds, not market sessions)
+    # -> present-tense session assertions are always unanchored (C-00139 first
+    # strike R51, C-00184 recurrence 「行情收得清清」). Closed marker list
+    # (这会儿/刚/了/得) keeps card-verbatim habit quotes like 「收盘才想起」
+    # (C-00139 fix) and 开盘前/收盘后 style persona lines legal.
+    if re.search(r"(开盘|收盘|行情收)[^，。！？；;]{0,4}(这会儿|刚|了|得)|(刚|这会儿)[^，。！？；;]{0,2}(开盘|收盘|行情收)", line):
+        v.append("session-state")
     hm = re.search(r"\s(\d{2}):\d{2}", sig.get("now") or "")
     if hm:
         h = int(hm.group(1))
@@ -196,7 +209,7 @@ def build_prompt(cid, text, sig):
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n"
             f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n"
             f"现在真实北京时间 {sig['now']}，上海实况天气：{wx}。\n"
-            f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历（如「天阴着」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许写「风轻轻的/风不大」，喂入风速>3m/s 只许写「风不小/风挺大」类如实量级措辞（此时严禁写「风不大/风轻轻的」），风速数据缺失则完全不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止出现「天气预报说/预报/听说」等消息源归属字样。喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象。城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」——此类状态恒无锚）。人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的，如『广场人流峰值时绕场三圈』），条件未被事件清单或实况坐实时严禁触发该场景，严禁用『还是/照例/依旧』等惯常化措辞把条件行为写成惯常延续，只能写无条件的人设日常；提及时间只许锚定喂入的当前时刻，严禁编造开工/收班/时刻表/『再过几小时』等时间细节，严禁使用与当前时刻不符的时段词（如凌晨时辰写『今早/早晨/晨光/清晨』、白天写『今晚/今夜/深夜』）。\n"
+            f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历（如「天阴着」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许写「风轻轻的/风不大」，喂入风速>3m/s 只许写「风不小/风挺大」类如实量级措辞（此时严禁写「风不大/风轻轻的」），风速数据缺失则完全不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止出现「天气预报说/预报/听说」等消息源归属字样。喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象。城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」——此类状态恒无锚）。城市事件流也从无行情开盘/收盘等交易场次数据，严禁对开盘/收盘/行情收做当下状态断言（如「开盘这会儿/行情收得清清」——场次状态恒无锚；人设原文习惯自述如「收盘才想起」不受此限）。人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的，如『广场人流峰值时绕场三圈』），条件未被事件清单或实况坐实时严禁触发该场景，严禁用『还是/照例/依旧』等惯常化措辞把条件行为写成惯常延续，只能写无条件的人设日常；提及时间只许锚定喂入的当前时刻，严禁编造开工/收班/时刻表/『再过几小时』等时间细节，严禁使用与当前时刻不符的时段词（如凌晨时辰写『今早/早晨/晨光/清晨』、白天写『今晚/今夜/深夜』）。\n"
             f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节），只输出这几句话本身。")
 
 def add_ring(path, cid, line, anchor_note):
@@ -292,7 +305,7 @@ def main():
         prompt = (f"你是叙事编剧。城市真实事件：\n{ev}\n"
                   f"居民甲「{ids[0]}」人设：{persona_digest(texts[0])['traits']}，职业{persona_digest(texts[0])['prof']}。\n"
                   f"居民乙「{ids[1]}」人设：{persona_digest(texts[1])['traits']}，职业{persona_digest(texts[1])['prof']}。\n"
-                  f"硬约束（锚定律从严）：台词中提及的具体事必须逐字来自事件清单原文短语，不得添加清单外的具体事实。台词中禁止出现「居民甲」「居民乙」字样，直接以台词本身呈现；提及天气只许描述此刻实况亲历，提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许「风轻轻的/风不大」，喂入风速>3m/s 只许「风不小/风挺大」类如实量级措辞（此时严禁「风不大/风轻轻的」），缺风速则不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止「天气预报说/预报/听说」等消息源归属字样；喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象；城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」）；人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的），条件未被事件清单或实况坐实时严禁触发该场景，严禁惯常化措辞绕过，只能写无条件的人设日常；禁止编造开工/收班/时刻表/『再过几小时』等时间细节，禁止使用与当前时刻不符的时段词（如凌晨时辰写『今早/早晨/晨光/清晨』、白天写『今晚/今夜/深夜』）。\n"
+                  f"硬约束（锚定律从严）：台词中提及的具体事必须逐字来自事件清单原文短语，不得添加清单外的具体事实。台词中禁止出现「居民甲」「居民乙」字样，直接以台词本身呈现；提及天气只许描述此刻实况亲历，提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许「风轻轻的/风不大」，喂入风速>3m/s 只许「风不小/风挺大」类如实量级措辞（此时严禁「风不大/风轻轻的」），缺风速则不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止「天气预报说/预报/听说」等消息源归属字样；喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象；城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」）；城市事件流也从无行情交易场次数据，严禁对开盘/收盘/行情收做当下状态断言；人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的），条件未被事件清单或实况坐实时严禁触发该场景，严禁惯常化措辞绕过，只能写无条件的人设日常；禁止编造开工/收班/时刻表/『再过几小时』等时间细节，禁止使用与当前时刻不符的时段词（如凌晨时辰写『今早/早晨/晨光/清晨』、白天写『今晚/今夜/深夜』）。\n"
                   f"围绕其中一件真实事件，写两句话：甲对乙说的一句（20-40字），乙回的一句（20-40字）。输出两行，每行一句，不要序号。")
         try:
             resp = gated_llm(prompt, sig)
