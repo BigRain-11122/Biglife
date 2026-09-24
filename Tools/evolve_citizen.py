@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.14 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.15 - BigLife citizen evolution engine.
 
 Grows citizen cards by feeding REAL city signals into a LOCAL LLM (Ollama
 qwen2.5:7b-instruct, zero token, local-first L2). Honesty law (docs/CODEX.md 9):
@@ -84,6 +84,11 @@ R142 C-00458 晨练 first strike). Token 晨风 added to gate + morning-side pro
 examples (#14/#20 同法). 晨练 stays OUT of the flat token list: 254 census-card
 persona hits + R142 sanctioned nominal repair 「晨练的光带又备好了」 would be
 killed by a flat ban (first-strike-fix protocol stays for any 晨练 scene claim).
+v0.15 gap #23 (2026-09-25): 阳光 escaped the cloud-side sky-mismatch token
+list (R156 C-00503 wrote 今朝阳光正好 at 04:06 against a cloud feed; variant
+recurrence of the gap #19 sky-type-pairing family after its #19 gate close,
+so the token face widens per the recurrence protocol). Token 阳光 added to the
+cloud-ban gate list + batch prompt sunny-family example (#19/#22 同法).
 Ollama down => silent skip exit 0 (probe contract #4). Targeted git commits
 only (governance 6.2 - never add -A).
 
@@ -218,7 +223,7 @@ def ring_violations(line, sig):
     # words (清爽/阴凉) and unrelated card quotes legal.
     if re.search(r"clear|晴", wx, re.I) and re.search(r"天阴|阴着|阴天|多云", line):
         v.append("sky-mismatch")
-    if re.search(r"cloud|阴", wx, re.I) and re.search(r"天晴|晴着|天清|晴空|晴朗", line):
+    if re.search(r"cloud|阴", wx, re.I) and re.search(r"天晴|晴着|天清|晴空|晴朗|阳光", line):
         v.append("sky-mismatch")
     # gap #16: feed weather never carries typhoon and the event stream has no
     # typhoon events -> bare 台风 scene words are always unanchored (C-00202
@@ -455,7 +460,7 @@ def build_prompt(cid, text, sig):
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
             f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n"
             f"现在真实北京时间 {sig['now']}，上海实况天气：{wx}。\n"
-            f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历且天空类型必须与喂入天气串一致（喂入 clear/晴 严禁「天阴着/阴天/多云」等阴系措辞，喂入 cloud/阴 严禁「天清/天晴」等晴系措辞），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许写「风轻轻的/风不大」，喂入风速>3m/s 只许写「风不小/风挺大」类如实量级措辞（此时严禁写「风不大/风也不大/风轻轻的」），风速数据缺失则完全不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止出现「天气预报说/预报/听说」等消息源归属字样。实况与事件流从无台风数据，严禁提及任何台风场景（如「台风夜/台风刚过」）——「台风季」季节概念读法除外。喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象。城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」——此类状态恒无锚）。城市事件流也从无行情开盘/收盘等交易场次数据，严禁对开盘/收盘/行情收做当下状态断言（如「开盘这会儿/行情收得清清」——场次状态恒无锚；人设原文习惯自述如「收盘才想起」不受此限）。人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的，如『广场人流峰值时绕场三圈』），条件未被事件清单或实况坐实时严禁触发该场景，严禁用『还是/照例/依旧』等惯常化措辞把条件行为写成惯常延续，只能写无条件的人设日常；提及时间只许锚定喂入的当前时刻，严禁编造开工/收班/时刻表/『再过几小时』等时间细节，严禁使用与当前时刻不符的时段词（如凌晨时辰写『今早/今晨/早晨/晨光/清晨/晨风』、白天写『今晚/今夜/深夜』）；当前时刻未到放学时点（15 时前）严禁把放学写成已完成的事（如『今早放学绕路看了眼』——放学时刻无数据锚），只能写放学后的打算（如『放学还得绕路去看』）；只许写你卡面人设与你自己的生活，严禁写入不属于你人设的任何行为或场景（如你的人设没有学生身份就严禁提及『放学』类校园生活）。\n"
+            f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历且天空类型必须与喂入天气串一致（喂入 clear/晴 严禁「天阴着/阴天/多云」等阴系措辞，喂入 cloud/阴 严禁「天清/天晴/阳光」等晴系措辞），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许写「风轻轻的/风不大」，喂入风速>3m/s 只许写「风不小/风挺大」类如实量级措辞（此时严禁写「风不大/风也不大/风轻轻的」），风速数据缺失则完全不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止出现「天气预报说/预报/听说」等消息源归属字样。实况与事件流从无台风数据，严禁提及任何台风场景（如「台风夜/台风刚过」）——「台风季」季节概念读法除外。喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象。城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」——此类状态恒无锚）。城市事件流也从无行情开盘/收盘等交易场次数据，严禁对开盘/收盘/行情收做当下状态断言（如「开盘这会儿/行情收得清清」——场次状态恒无锚；人设原文习惯自述如「收盘才想起」不受此限）。人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的，如『广场人流峰值时绕场三圈』），条件未被事件清单或实况坐实时严禁触发该场景，严禁用『还是/照例/依旧』等惯常化措辞把条件行为写成惯常延续，只能写无条件的人设日常；提及时间只许锚定喂入的当前时刻，严禁编造开工/收班/时刻表/『再过几小时』等时间细节，严禁使用与当前时刻不符的时段词（如凌晨时辰写『今早/今晨/早晨/晨光/清晨/晨风』、白天写『今晚/今夜/深夜』）；当前时刻未到放学时点（15 时前）严禁把放学写成已完成的事（如『今早放学绕路看了眼』——放学时刻无数据锚），只能写放学后的打算（如『放学还得绕路去看』）；只许写你卡面人设与你自己的生活，严禁写入不属于你人设的任何行为或场景（如你的人设没有学生身份就严禁提及『放学』类校园生活）。\n"
             f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节），只输出这几句话本身。")
 
 def add_ring(path, cid, line, anchor_note):
