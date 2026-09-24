@@ -9,6 +9,9 @@ Input: census/export/citizen-needs.jsonl (auto-regen via needs.py if missing)
 Four laws = cph4/research/R-20260924-resident-behavior.md section 1:
 1) needs->behavior chain  2) population rhythm  3) weather reaction
 4) personality split (species / age band / hash(id) quirks).
+T-20260924-16d step 2 (contract cognition/NEEDS-CRASH.md): crash overlay -
+needs-face crash rows map to three visible negative states by axis;
+recovering rows keep state + flag; law-8.3 caps truncate deterministically.
 Zero LLM, zero API. Same (persona, time window, weather, needs snapshot)
 => byte-identical output. Usage: python -X utf8 behavior.py [--qc]
 """
@@ -24,8 +27,19 @@ RAIN_KINDS = ("rain", "snow", "shower", "drizzle", "typhoon")
 TRADER_RE = re.compile(r"交易|量化|风控|行情|回测|操盘|盘口|瞭望|对冲|期货")
 STATES = {"sleep", "home", "work", "commute", "school", "meal", "social", "explore",
           "exercise", "run", "shelter", "indoors", "night_shift", "night_light",
-          "charge"}
+          "charge"} | {"slump", "grumble", "fumble"}
 QUIRKS = ("", "slow", "umbrella", "night_run")
+
+# T-20260924-16d step 2 (contract cognition/NEEDS-CRASH.md §二.2 + §四.5):
+# axis -> negative state map; caps per SILICON-LIFE law-8.3 - whole-city
+# crash population <= CITY_CAP, per-district visible crash <= CRASH_CAP;
+# overflow truncates deterministically by (axis strength, hash(id)). Both
+# thresholds parameterized = CEO one-line retune face.
+NEG_STATES = {"slump", "grumble", "fumble"}
+NEG_OF_AXIS = {"anwen": "fumble", "shengji": "slump",
+               "shejiao": "grumble", "haoqi": "slump"}
+CRASH_CAP = 0.05   # same-district same-clock visible crash residents
+CITY_CAP = 0.03    # whole-city crash population (anti Oblivion cascade)
 
 
 def shash(cid):
@@ -79,8 +93,10 @@ def band(age):
     return "elder"
 
 
-def derive(r, nk, top, sig, w, weekend):
-    """Law 1/2/4 -> (state, slot, visible); law 3 weather override last."""
+def derive(r, nk, top, sig, w, weekend, crash=None, cax=None, vis_ok=True):
+    """Law 1/2/4 -> (state, slot, visible); law 3 weather override last;
+    T-16d crash overlay after weather law (negative visibility is deliberate,
+    density bounded by CRASH_CAP - QC rain-ratio counts non-crash rows only)."""
     sp = r.get("species") or ""
     b = band(r.get("age"))
     d = r.get("district") or ""
@@ -174,9 +190,29 @@ def derive(r, nk, top, sig, w, weekend):
         else:
             st, slot, vis = "indoors", "窗后/廊道内", 0
 
-    return {"id": r.get("id"), "state": st, "slot": slot, "visible": vis,
-            "quirk": q, "v": 1,
-            "ctx": "tw=%s,wx=%s,wd=%d" % (w, wx or "na", 1 if weekend else 0)}
+    o = {"id": r.get("id"), "state": st, "slot": slot, "visible": vis,
+         "quirk": q, "v": 1,
+         "ctx": "tw=%s,wx=%s,wd=%d" % (w, wx or "na", 1 if weekend else 0)}
+    # T-20260924-16d: crash overlay (contract §二.2). grumble = visible at
+    # stall/plaza; slump/fumble keep the (weather-adjusted) base slot with a
+    # tag; recovering keeps state, adds flag only. vis_ok=False = district
+    # CRASH_CAP truncation -> stay crash-state but visible=0.
+    if crash == "crash" and cax in NEG_OF_AXIS \
+       and str(r.get("id")) not in needs.HONORED_IDS:
+        st2 = NEG_OF_AXIS[cax]
+        o["state"] = st2
+        o["crash_axis"] = cax
+        if st2 == "grumble":
+            o["slot"] = "摊位/广场·抱怨"
+            o["visible"] = 1 if vis_ok else 0
+        else:
+            o["slot"] = slot + ("·带错" if st2 == "fumble" else "·怠工")
+            if not vis_ok:
+                o["visible"] = 0
+    elif crash == "recovering" and cax in NEG_OF_AXIS \
+         and str(r.get("id")) not in needs.HONORED_IDS:
+        o["recovering"] = cax
+    return o
 
 
 def load_needs(sig, hb, rows):
@@ -200,9 +236,62 @@ def load_needs(sig, hb, rows):
     def get(r):
         o = nmap.get(r.get("id"))
         if o and set((o.get("needs") or {}).keys()) == set(needs.NEED_KEYS):
-            return o["needs"], o.get("top") or "anwen"
-        return needs.derive(r, sig, hb)  # deterministic same-snapshot fallback
+            return (o["needs"], o.get("top") or "anwen",
+                    o.get("crash"), o.get("crash_axis"))
+        # same-snapshot fallback; derive_full with default reg_rows keeps the
+        # legacy needs values byte-identical while exposing the crash pair
+        return needs.derive_full(r, sig, hb)
     return get
+
+
+def crash_caps(rows, getn, sig, w, weekend):
+    """Law-8.3 truncation plan (pure): returns (city_keep, dist_vis_ok) id
+    sets. City overflow (CITY_CAP) reverts to base behavior in final_row;
+    district visible overflow (CRASH_CAP) keeps the crash state at visible=0.
+    Order key = (axis strength desc, hash(id)) - deterministic."""
+    cands = []
+    for r in rows:
+        nk, _top, crash, cax = getn(r)
+        if crash == "crash" and cax in NEG_OF_AXIS \
+           and str(r.get("id")) not in needs.HONORED_IDS:
+            cands.append((r, nk, _top, cax))
+    if not cands:
+        return set(), set()
+    kmax = int(CITY_CAP * len(rows))
+    if len(cands) > kmax:
+        cands = sorted(cands, key=lambda t: (-t[1].get(t[3], 0),
+                                             shash(t[0].get("id") or "")))[:kmax]
+    city_keep = {str(t[0].get("id")) for t in cands}
+    dist_pop = {}
+    for r in rows:
+        d = r.get("district") or "?"
+        dist_pop[d] = dist_pop.get(d, 0) + 1
+    vis_by_d = {}
+    for r, nk, top, cax in cands:
+        if NEG_OF_AXIS[cax] != "grumble":
+            base = derive(r, nk, top, sig, w, weekend)
+            if base["visible"] != 1:
+                continue  # slump/fumble inherit base visibility only
+        vis_by_d.setdefault(r.get("district") or "?", []).append(
+            (-nk.get(cax, 0), shash(r.get("id") or ""), str(r.get("id"))))
+    dist_vis_ok = set()
+    for d, lst in vis_by_d.items():
+        lst.sort()
+        dist_vis_ok.update(x[2] for x in lst[:int(CRASH_CAP * dist_pop.get(d, 0))])
+    return city_keep, dist_vis_ok
+
+
+def final_row(r, getn, city_keep, dist_vis_ok, sig, w, weekend):
+    """Write-face row: base derive + crash overlay under the caps plan."""
+    nk, top, crash, cax = getn(r)
+    eff, vis_ok = crash, True
+    if crash == "crash":
+        cid = str(r.get("id"))
+        if cid in city_keep:
+            vis_ok = cid in dist_vis_ok
+        else:
+            eff = None  # CITY_CAP overflow -> base behavior, no crash state
+    return derive(r, nk, top, sig, w, weekend, eff, cax, vis_ok)
 
 
 def main():
@@ -217,10 +306,10 @@ def main():
         with open(needs.LIGHT, encoding="utf-8") as f:
             rows = [json.loads(l) for l in f if l.strip()]
         getn = load_needs(sig, hb, rows)
+        city_keep, dist_vis_ok = crash_caps(rows, getn, sig, w, weekend)
         out = []
         for r in rows:
-            nk, top = getn(r)
-            out.append(derive(r, nk, top, sig, w, weekend))
+            out.append(final_row(r, getn, city_keep, dist_vis_ok, sig, w, weekend))
         tmp = OUT_BEH + ".tmp"
         with open(tmp, "w", encoding="utf-8", newline="\n") as f:
             for o in out:
@@ -240,29 +329,64 @@ def main():
         if o.get("id") != r.get("id") or o.get("state") not in STATES \
            or o.get("visible") not in (0, 1) or o.get("quirk") not in QUIRKS:
             bad += 1
+        # T-16d: crash overlay schema (crash_axis pairing + honored exclusion)
+        st = o.get("state")
+        if st in NEG_STATES:
+            if o.get("crash_axis") not in NEG_OF_AXIS:
+                bad += 1
+            if str(r.get("id")) in needs.HONORED_IDS:
+                bad += 1
+        rec = o.get("recovering")
+        if rec is not None:
+            if rec not in NEG_OF_AXIS or st in NEG_STATES:
+                bad += 1
+            if str(r.get("id")) in needs.HONORED_IDS:
+                bad += 1
     # determinism: rebuild a spread sample through the same pure pipeline
     if not qc_only:
         getn = load_needs(sig, hb, rows)
+        city_keep, dist_vis_ok = crash_caps(rows, getn, sig, w, weekend)
         for i in range(0, len(rows), 97):
             r = rows[i]
-            nk, top = getn(r)
-            if json.dumps(derive(r, nk, top, sig, w, weekend),
+            if json.dumps(final_row(r, getn, city_keep, dist_vis_ok, sig, w, weekend),
                           ensure_ascii=False) != json.dumps(brows[i], ensure_ascii=False):
                 bad += 1
     # law 3 invariant: rainy road-visible (non-shelter) <= ~30% of cover-bound
+    # (crash overlay rows are a separate bounded population - excluded)
     if sig["weather"] in RAIN_KINDS:
         shelter = sum(1 for o in brows if o["state"] == "shelter")
-        road = sum(1 for o in brows if o["visible"] == 1 and o["state"] != "shelter")
+        road = sum(1 for o in brows if o["visible"] == 1
+                   and o["state"] != "shelter" and o["state"] not in NEG_STATES)
         bound = shelter + road
         if bound and road / bound > 0.31:
             print("QC FAIL rain road ratio %.2f" % (road / bound))
+            bad += 1
+    # T-16d law-8.3 caps self-check on the written face
+    ncrash = sum(1 for o in brows if o["state"] in NEG_STATES)
+    nrec = sum(1 for o in brows if o.get("recovering") is not None)
+    if ncrash > int(CITY_CAP * len(rows)):
+        print("QC FAIL crash city cap %d" % ncrash)
+        bad += 1
+    dist_pop = {}
+    for r in rows:
+        d = r.get("district") or "?"
+        dist_pop[d] = dist_pop.get(d, 0) + 1
+    vis_crash_d = {}
+    for r, o in zip(rows, brows):
+        if o.get("state") in NEG_STATES and o.get("visible") == 1:
+            d = r.get("district") or "?"
+            vis_crash_d[d] = vis_crash_d.get(d, 0) + 1
+    for d, n in vis_crash_d.items():
+        if n > int(CRASH_CAP * dist_pop.get(d, 0)):
+            print("QC FAIL crash district cap %s %d" % (d, n))
             bad += 1
     dist = {}
     for o in brows:
         dist[o["state"]] = dist.get(o["state"], 0) + 1
     top3 = sorted(dist.items(), key=lambda kv: -kv[1])[:3]
-    print("rows=%d bad=%d tw=%s wx=%s wd=%d top3=%s" %
-          (len(brows), bad, w, sig["weather"] or "na", sig["now"].weekday(), top3))
+    print("rows=%d bad=%d tw=%s wx=%s wd=%d top3=%s crash=%d recovering=%d" %
+          (len(brows), bad, w, sig["weather"] or "na", sig["now"].weekday(), top3,
+           ncrash, nrec))
     sys.exit(1 if bad else 0)
 
 
