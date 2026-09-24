@@ -19,6 +19,15 @@ CO = os.path.dirname(HERE)
 POOL = os.path.join(CO, "cognition", "pools.json")
 GREET = os.path.join(CO, "cognition", "greetings.json")
 GKEYS = ["first_meet", "reunion", "smalltalk", "farewell"]
+NEG = os.path.join(CO, "cognition", "pools-negative.json")
+NEEDS_FACE = os.path.join(CO, "census", "export", "citizen-needs.jsonl")
+# T-20260924-16d step 3 (contract cognition/NEEDS-CRASH.md sec.2.3): negative
+# speech face. crash -> negative bucket, recovering -> recovery bucket;
+# non-crash routing unchanged. Law-8.3 caps mirror behavior.py truncation
+# (city CITY_CAP, then district CRASH_CAP, overflow by (strength, hash)).
+CRASH_AXES = ("anwen", "shengji", "shejiao", "haoqi")
+CRASH_CAP = 0.05   # same-district visible crash residents (speech face)
+CITY_CAP = 0.03    # whole-city crash population
 LIGHT = os.path.join(CO, "census", "export", "citizens-light.jsonl")
 ROOT = os.path.abspath(os.path.join(CO, "..", ".."))
 FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
@@ -134,6 +143,88 @@ def faq_pair(cid, greets, rows, date=None):
     seed = hashlib.md5((cid + "|" + date + "|faq").encode("utf-8")).hexdigest()
     return bucket[int(seed[:8], 16) % len(bucket)]
 
+def _shash(s):
+    # stable hash (python hash() is process-randomized - behavior.py same law)
+    return int(hashlib.md5(s.encode("utf-8")).hexdigest()[:8], 16)
+
+def load_crash(rows):
+    """Needs-face crash state (R3 regen face; missing -> regen via needs.py,
+    behavior.py precedent). Returns {id: (crash, crash_axis, strength)}."""
+    if not os.path.isfile(NEEDS_FACE):
+        try:
+            import subprocess
+            subprocess.run([sys.executable, "-X", "utf8",
+                           os.path.join(HERE, "needs.py")],
+                          check=True, capture_output=True, timeout=180)
+        except Exception:
+            pass
+    face = {}
+    if not os.path.isfile(NEEDS_FACE):
+        return face
+    with open(NEEDS_FACE, encoding="utf-8") as f:
+        for l in f:
+            if not l.strip(): continue
+            d = json.loads(l)
+            c, ax = d.get("crash"), d.get("crash_axis")
+            if c in ("crash", "recovering") and ax in CRASH_AXES:
+                face[str(d.get("id"))] = (c, ax, float((d.get("needs") or {}).get(ax) or 0))
+    return face
+
+def neg_visible_plan(rows, face):
+    """Law-8.3 speech-face truncation (pure): ids whose crash state stays
+    visible on the speech face. City CITY_CAP first, then per-district
+    CRASH_CAP; overflow truncated by (axis strength desc, hash(id)) -
+    truncated crash residents fall back to the normal pools so both faces
+    stay density-consistent. Honored seats excluded (needs.py same law)."""
+    cands = [(cid, ax, st) for cid, (c, ax, st) in face.items()
+             if c == "crash" and cid in rows
+             and cid not in ("C-00001", "C-00002", "C-00003")]
+    if not cands:
+        return set()
+    kmax = int(CITY_CAP * len(rows))
+    if len(cands) > kmax:
+        cands = sorted(cands, key=lambda t: (-t[2], _shash(t[0])))[:kmax]
+    dist_pop = {}
+    for r in rows.values():
+        d = r.get("district") or "?"
+        dist_pop[d] = dist_pop.get(d, 0) + 1
+    vis_by_d = {}
+    for cid, ax, st in cands:
+        d = rows[cid].get("district") or "?"
+        vis_by_d.setdefault(d, []).append((-st, _shash(cid), cid))
+    ok = set()
+    for d, lst in vis_by_d.items():
+        lst.sort()
+        ok.update(x[2] for x in lst[:int(CRASH_CAP * dist_pop.get(d, 0))])
+    return ok
+
+def neg_line(cid, neg, face, plan_ok, rows, date=None, slot=None):
+    """T-16d crash/recovering speech routing (NEEDS-CRASH.md sec.2.3).
+    Returns (line, tag) or None -> caller falls back to the normal pools.
+    Law-8.3 slot cooldown: adjacent slots never both draw the negative /
+    recovery face (parity of the slot ordinal - standard tier = 45-min
+    slot index, barks tier = day-of-year); same (id, slot) => same line."""
+    ent = face.get(cid)
+    if not ent: return None
+    c, ax, _st = ent
+    r = rows.get(cid)
+    if not r: return None
+    date = date or datetime.date.today().isoformat()
+    ordinal = slot if slot is not None else datetime.date.fromisoformat(date).timetuple().tm_yday
+    if ordinal % 2: return None
+    if c == "crash":
+        if cid not in plan_ok: return None
+        fam = "sprite" if r.get("species") == "sprite" else ax
+        bucket = (neg.get("negative") or {}).get(fam) or []
+        tag = "neg:" + fam
+    else:
+        bucket = neg.get("recovering") or []
+        tag = "recovering"
+    if not bucket: return None
+    key = cid + "|" + date + ("|s" + str(slot) if slot is not None else "") + "|" + tag
+    seed = hashlib.md5(key.encode("utf-8")).hexdigest()
+    return bucket[int(seed[:8], 16) % len(bucket)], tag
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ids", default="")
@@ -165,6 +256,17 @@ def main():
         return
     with open(POOL, encoding="utf-8") as f:
         pools = json.load(f)
+    # T-20260924-16d step 3: negative speech face (crash/recovering routing).
+    neg = None; cface = {}; plan_ok = set()
+    try:
+        with open(NEG, encoding="utf-8") as f:
+            neg = json.load(f)
+    except Exception:
+        neg = None
+    if neg:
+        cface = load_crash(rows)
+        if cface:
+            plan_ok = neg_visible_plan(rows, cface)
     ctx, src = derive_context() if (args.auto or args.demo_auto) else (args.context, "manual")
     if ctx not in CONTEXTS:
         print(f"unknown context: {ctx}"); sys.exit(2)
@@ -199,6 +301,11 @@ def main():
         if mood_st is not None and src == "clock":
             use_ctx = mood_ctx_lottery(ctx, src, mood_st["weights"],
                                        cid + "|" + date + "|" + ("s" + str(slot) if slot is not None else "") + "|" + mood_st["mood"])
+        nl = neg_line(cid, neg, cface, plan_ok, rows, date=date, slot=slot) if neg else None
+        if nl is not None:
+            line, ftag = nl
+            print(f"{cid} {rows[cid]['name']} [{ftag}]: {line}")
+            continue
         line = draw_line(cid, use_ctx, pools, rows, slot=slot)
         if line is None:
             print(f"{cid}: (pool empty)")
