@@ -61,11 +61,20 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--id", required=True)
     ap.add_argument("--ask", default="")
-    ap.add_argument("--max", type=int, default=40)
+    ap.add_argument("--max", type=int, default=None,
+                    help="缺省=城市情绪导演 spotlight_max（≤40 只可收紧永不越顶）；显式传参覆盖")
     args = ap.parse_args()
     r = get_row(args.id)
     if not r:
         print(f"no citizen {args.id}"); sys.exit(2)
+    # 城市情绪导演阈值接线（T-16c·契约=cognition/MOOD-DIRECTOR.md）：缺省上限随导演态浮动
+    eff_max = args.max
+    if eff_max is None:
+        try:
+            from mood_director import current_state
+            eff_max = int(current_state()["spotlight_max"])
+        except Exception:
+            eff_max = 40
     dig = r.get("brain_digest") or (r.get("creed") or "")
     sig = real_signals()
     ev = "\n".join("- " + e for e in sig["events"]) or "- （今日无新城市事件）"
@@ -86,7 +95,7 @@ def main():
               f"你的身份摘要：{dig}。\n{mem}"
               f"当前真实城市情况——北京时间 {sig['now']}，上海实况 {sig['weather'] or '（暂缺）'}。\n"
               f"最近真实城市事件（你只能提及这些真实事件或你自己的日常，禁编造任何未列出的事实，禁声称执行集团任务）：\n{ev}\n{ask}"
-              f"用你的口吻说一句符合你性格的话（不超过 {args.max} 字），只输出这句话本身。")
+              f"用你的口吻说一句符合你性格的话（不超过 {eff_max} 字），只输出这句话本身。")
     line = ""
     for attempt in range(3):
         req = urllib.request.Request(
@@ -96,7 +105,7 @@ def main():
             headers={"Content-Type": "application/json"})
         with urllib.request.urlopen(req, timeout=90) as resp:
             line = json.loads(resp.read().decode("utf-8")).get("response", "")
-        line = re.sub(r"\s+", " ", line).strip().strip('「」"“”')[:args.max + 10]
+        line = re.sub(r"\s+", " ", line).strip().strip('「」"“”')[:eff_max + 10]
         # QC gate: citizens speak Chinese - stray ASCII-letter artifacts (model glitches) are rejected
         if line and not re.search(r"[A-Za-z]", line) and len(line) >= 4:
             break

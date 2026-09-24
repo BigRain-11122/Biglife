@@ -168,6 +168,16 @@ def main():
     ctx, src = derive_context() if (args.auto or args.demo_auto) else (args.context, "manual")
     if ctx not in CONTEXTS:
         print(f"unknown context: {ctx}"); sys.exit(2)
+    # 城市情绪导演接线（T-16c·契约=cognition/MOOD-DIRECTOR.md）：导演态只调桶选择——
+    # clock 档加权抽签（事件/天气/手动=事实门优先不改写）；线级确定性不动（同(id,日期,ctx)恒同句）。
+    mood_st = None
+    if args.auto or args.demo_auto:
+        try:
+            sys.path.insert(0, HERE)
+            from mood_director import current_state, mood_ctx_lottery
+            mood_st = current_state()
+        except Exception:
+            mood_st = None
     slot = None
     if args.tier == "standard":
         now = datetime.datetime.now()
@@ -181,13 +191,21 @@ def main():
             ids.append(rs[hash(d + str(datetime.date.today())) % len(rs)]["id"])
     else:
         ids = [x.strip() for x in args.ids.split(",") if x.strip()]
-    print(f"ctx={ctx} (src={src})" + (f" tier=standard slot={slot}" if slot is not None else " tier=barks"))
+    head = f"ctx={ctx} (src={src}" + (f" mood={mood_st['mood']}" if mood_st else "") + ")"
+    print(head + (f" tier=standard slot={slot}" if slot is not None else " tier=barks"))
+    date = datetime.date.today().isoformat()
     for cid in ids:
-        line = draw_line(cid, ctx, pools, rows, slot=slot)
+        use_ctx = ctx
+        if mood_st is not None and src == "clock":
+            use_ctx = mood_ctx_lottery(ctx, src, mood_st["weights"],
+                                       cid + "|" + date + "|" + ("s" + str(slot) if slot is not None else "") + "|" + mood_st["mood"])
+        line = draw_line(cid, use_ctx, pools, rows, slot=slot)
         if line is None:
             print(f"{cid}: (pool empty)")
         else:
-            print(f"{cid} {rows[cid]['name']} [{'sprite' if rows[cid].get('species') == 'sprite' else (rows[cid].get('axis') or '烟火')}]: {line}")
+            tag = 'sprite' if rows[cid].get('species') == 'sprite' else (rows[cid].get('axis') or '烟火')
+            mark = f"{tag}|{use_ctx}←mood" if use_ctx != ctx else tag
+            print(f"{cid} {rows[cid]['name']} [{mark}]: {line}")
 
 if __name__ == "__main__":
     main()
