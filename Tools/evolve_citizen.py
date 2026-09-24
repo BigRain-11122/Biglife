@@ -332,7 +332,7 @@ def main():
             other = ids[1] if cid == ids[0] else ids[0]
             add_ring(p, cid, f"与 {other} 相遇：{line}", anchor_note)
             paths.append(p)
-        commit_files(paths, "citizen evolution: encounter " + " ".join(ids) + via)
+        commit_files(paths, "相遇 %s: %s%s" % (today(), " ".join(ids), via))
         sync_light(args.via)
         print("OK meet:", " ".join(ids))
         return
@@ -371,7 +371,7 @@ def main():
                        "n": cursor.get(cid, {}).get("n", 0) + 1}
         n += 1
     if paths:
-        commit_files(paths, "citizen evolution: %s (%s)%s" % (", ".join(done), today(), via))
+        commit_files(paths, "年轮 %s: %s%s" % (today(), ", ".join(done), via))
         save_cursor(cursor)  # before sync: sync_rings mirrors only cursor-listed citizens
         sync_light(args.via)
     else:

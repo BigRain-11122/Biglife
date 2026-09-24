@@ -64,8 +64,8 @@ def main():
         with open(LIGHT, "w", encoding="utf-8", newline="\n") as f:
             for r in rows:
                 f.write(json.dumps(r, ensure_ascii=False) + "\n")
-        msg = "behavior line: sync recent_ring rows=%d ring_citizens=%d (%s)" % (
-            changed, len(cursor), datetime.date.today())
+        msg = "行为线 %s: 镜像 rows=%d ring=%d" % (
+            datetime.date.today(), changed, len(cursor))
         if args.via:
             msg += " [via %s]" % args.via
         ok = commit_light(msg)
