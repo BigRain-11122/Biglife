@@ -7,7 +7,7 @@ global dup, length/digit/banned-word cleanliness, and same-version draw
 determinism (in-process double draw, byte-identical). Exit 1 on hard fail;
 under-target buckets are listed as the pool-round reopen signal (OS loop
 reads this output). Zero LLM, fully deterministic.
-Usage: python -X utf8 pool_audit.py [--target 8] [--sprite-target 6]
+Usage: python -X utf8 pool_audit.py [--target 15] [--sprite-target 10]
 """
 import argparse, json, os, re, sys
 
@@ -104,8 +104,8 @@ def determinism(pools):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--target", type=int, default=8)
-    ap.add_argument("--sprite-target", dest="starget", type=int, default=6)
+    ap.add_argument("--target", type=int, default=15)
+    ap.add_argument("--sprite-target", dest="starget", type=int, default=10)
     args = ap.parse_args()
     with open(POOL, encoding="utf-8") as f:
         pools = json.load(f)

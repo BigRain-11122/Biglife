@@ -53,7 +53,7 @@
 
 法源=CODEX §十四 人口生态自迭代律；判据先行、机器可验（`Tools/pool_audit.py` 为语言线唯一门禁）：
 
-1. **池深度水位**：六轴桶目标 8 条（下限 4·上限 12）；像素灵桶目标 6 条（下限 3·上限 10）——**达标自停**（不为长而长）；重开触发=FluxVerse 新事件族映射新情境桶/城市节日令/CEO 令。
+1. **池深度水位**：六轴桶目标 15 条（下限 4·上限 15）；像素灵桶目标 10 条（下限 3·上限 10）——**达标自停**（不为长而长）；重开触发=FluxVerse 新事件族映射新情境桶/城市节日令/CEO 令。（v1.8·2026-09-24 集团令池水位 648→1200+·T2 登记 CODEX §十二·否决窗至 10-01；旧水位 8/6=648 已锁历史）
 2. **池轮门禁**：池轮（OS 循环每日至多 1 次）必过 pool_audit（全库零重复/零数字/行长 4-24/禁词零命中/确定性回归）才可 commit。
 3. **确定性**：同（id,日期,情境,池版本）双跑逐字节一致（pool_audit 内建回归）；池 append-only 永不改旧行；**跨版本允许抽取漂移**（语言在长）。
 4. **行为面**：`recent_ring`（≤80 字）+`recent_ring_date` 镜像每位居民最近年轮——进化批落环后 `Tools/sync_rings.py` 自动同步（零 LLM）；万人字段齐备（无年轮=空串）。
@@ -71,7 +71,7 @@
 
 ## 维护
 
-- **语言线池轮**：OS 循环（mandate 第 2 项·任务板 T-07）——先 `pool_audit.py` 看欠深桶（六轴<8/像素灵<6），有欠深才 `pool_gen.py --append --target 8 --sprite-target 6`，PASS 才 commit；换季/新情境=重开触发。
+- **语言线池轮**：OS 循环（mandate 第 2 项·任务板 T-07）——先 `pool_audit.py` 看欠深桶（六轴<15/像素灵<10），有欠深才 `pool_gen.py --append --target 15 --sprite-target 10`，PASS 才 commit（分批补深·做多少收多少·欠深清单=下轮重开信号）；换季/新情境=重开触发。
 - **行为线**：随进化批自动同步（`Tools/sync_rings.py`，evolve_citizen 落环后自调）；全量重生成走 `Tools/make_digests.py`（v1.2 含 recent_ring 面）。
 - **动机需求面（V2-A·2026-09-24 硅基生命批）**：`Tools/needs.py` 按需重生成 `census/export/citizen-needs.jsonl`（R3 再生面·gitignored·3 秒万人）——CityWatch v2/M2 引擎消费前跑一次即可；进化/聚光灯 prompt 已带最近年轮（V2-C 记忆检索）；正典与判据=`docs/SILICON-LIFE.md`。
 - 大脑摘要：户口批生成（`Tools/make_digests.py`），年轮不进摘要（摘要=先天+身份；年轮=记忆，镜像进 recent_ring）。

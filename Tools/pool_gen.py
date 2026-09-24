@@ -12,7 +12,7 @@ Iteration (CODEX §14 language line): --target/--sprite-target set bucket depth;
 buckets already at target are SKIPPED (self-terminating growth; floor/cap
 enforced). Growth reopens only on new contexts / festivals / CEO order.
 Single-instance lock: state/pool.lock (stale after 30 min).
-Usage: python -X utf8 pool_gen.py [--append] [--target 8] [--sprite-target 6]
+Usage: python -X utf8 pool_gen.py [--append] [--target 15] [--sprite-target 10]
 """
 import argparse, json, os, re, sys, time, urllib.request
 
@@ -122,11 +122,11 @@ def acquire_lock(max_age=1800):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--append", action="store_true")
-    ap.add_argument("--target", type=int, default=6, help="lines per axes bucket (floor 4, cap 12)")
-    ap.add_argument("--sprite-target", dest="sprite_target", type=int, default=4,
+    ap.add_argument("--target", type=int, default=15, help="lines per axes bucket (floor 4, cap 15)")
+    ap.add_argument("--sprite-target", dest="sprite_target", type=int, default=10,
                     help="lines per sprite bucket (floor 3, cap 10)")
     args = ap.parse_args()
-    args.target = max(4, min(12, args.target))
+    args.target = max(4, min(15, args.target))
     args.sprite_target = max(3, min(10, args.sprite_target))
     if args.append and not acquire_lock():
         print("pool round already running (lock held); skip")
