@@ -1,0 +1,18 @@
+{
+  "v": 1,
+  "note": "T-20260924-16a 智能物件注册表（P-71 消费件·v1.7 心智栈增量 1）：城市事实源→「可满足的需求」映射。needs.py 只做查表应用——新增一类事实源（新天气型/新事件型如机队状态/赛果）=本表追加行，零改 Tools/needs.py。行语义：fact=event:X（事件型在流中即触发）·weather:X（当前天气型匹配触发）·event:any_of+args.of（任一命中触发一次）·meta:event_types_ge+args.min（事件型数下限）·species/district=居民过滤。判据：同快照双跑逐字节一致（R123 frozen 基线 diff 实证）。",
+  "rows": [
+    {"fact": "weather:typhoon", "needs": {"anwen": 1}},
+    {"fact": "weather:gale", "needs": {"anwen": 1}},
+    {"fact": "weather:wind", "needs": {"anwen": 1}},
+    {"fact": "weather:storm", "needs": {"anwen": 1}},
+    {"fact": "weather:typhoon", "species": "sprite", "needs": {"anwen": 1}},
+    {"fact": "weather:gale", "species": "sprite", "needs": {"anwen": 1}},
+    {"fact": "weather:wind", "species": "sprite", "needs": {"anwen": 1}},
+    {"fact": "weather:storm", "species": "sprite", "needs": {"anwen": 1}},
+    {"fact": "event:WEATHER_ALERT", "needs": {"anwen": 1}},
+    {"fact": "event:any_of", "args": {"of": ["MARKET_OPEN", "MARKET_CLOSE"]}, "district": "QT", "needs": {"shengji": 1}},
+    {"fact": "event:any_of", "args": {"of": ["FESTIVAL", "CITY_FESTIVAL"]}, "needs": {"shejiao": 1}},
+    {"fact": "meta:event_types_ge", "args": {"min": 5}, "needs": {"haoqi": 1}}
+  ]
+}
