@@ -2,6 +2,7 @@
 铁律（违反=门禁项）：①诚实律——一切宣称带证据指针；②轮首 git status 非净则只定向 add 本轮产出文件，禁 git add -A（governance §6）；③CEO 令以 orders/ 与集团 docs/orders.md 为准，禁伪造令、禁冒充（人设权 CEO 保留席见 docs/CODEX.md §十）；④禁直写兄弟公司仓（FluxVerse 事件流只读）；⑤无人值守轮一切 commit 尾标加 [via BigLife-OSLoop]（cph4/versioning.md §4.1 提交者身份律）。
 迭代总纲（CEO 令 2026-09-23「形成一个不断迭代的居民库和行为啊，语言啊什么的」·法源=docs/CODEX.md §十四 人口生态自迭代律）：年轮线每轮转·语言线达标自停·行为线随环自动同步。
 按序自领（做完一件收尾一件；超预算未完成的留单下轮，勿硬撑）：
+0.【每轮·轮首】git pull --ff-only origin main（远端 Biglife.git 已接通·无新提交即秒过；失败不阻塞留档）。
 1.【每轮·年轮线·居民进化批】python -X utf8 Tools/evolve_citizen.py --batch 3 --via BigLife-OSLoop
    ——脚本读真实城市事件（FluxVerse world 只读+真实北京时间/天气）喂本地 Ollama qwen2.5:7b，给到期居民写「年轮」（必带 [锚] 注脚，锚定律=docs/CODEX.md §九），定向 commit；落环后自动跑 sync_rings（行为线收口，勿手动重复）；Ollama 挂=脚本静默跳过，不修不报障。
 2.【每日至多 1 次·语言线·池轮】先跑 python -X utf8 Tools/pool_audit.py ——若报「全桶达标」=本轮跳过（自终止律：不为长而长）；若有欠深桶（六轴<8 / 像素灵<6）：python -X utf8 Tools/pool_gen.py --append --target 8 --sprite-target 6，跑完必再跑 pool_audit.py，判 PASS 才 commit（cognition/pools.json + cognition/README.md 迭代判据=门禁）；预算不够做完 72 桶就留单下轮（--append 幂等，做多少收多少）。
@@ -11,4 +12,4 @@
 6.【基因轮·低频】以上都无单时：为 genes/ 补充 5-10 条新基因（新口头禅/新钩子物件/新转折点），先登记后使用，禁破坏既有卡。
 7.【月度·聚光灯抽验】每月 ≥2 例：python -X utf8 Tools/spotlight.py 抽两位居民验「只提所喂事实」（cognition/README.md 验收线 6），结果记 tasks/TASKS.md T-07 证据行。
 8.【每日·决策轮上报+审核】（集团决策轮=cph4/decision.md·进化台账 P-32）——每日 23:00 前的一轮：把本司 open 问题/需集团拍板项追加一行到本仓根 HQ-FEEDBACK.md（当日无问题=写一行「日清：无待报」防漏报）；每日 00:00 后的首轮：查集团 docs/decisions.md 有无涉本司新决策——有则先审核（意见回执落同文件）再执行，无则照常自转。
-收尾纪律：有实质产出=定向 commit（路径限定+尾标 [via BigLife-OSLoop]）；state/ 与 logs/ 不入库；轮末在 state/heartbeat.txt 留一行（脚本自动）+ 本轮任务板实录加计量行「tokens: local=<本轮 LLM 调用次数> api=0 api_reason=-」（本地算力律=SILICON-LIFE 律三·token-economy 计量先行）；单轮无产出也属正常（冷却健康/池已达标），零产出零 commit 不算事故。
+收尾纪律：有实质产出=定向 commit（路径限定+尾标 [via BigLife-OSLoop]）后 `git push`（远端已接通·FLEET-OPS L8 轮末推送律·失败留档下轮重试）；state/ 与 logs/ 不入库；轮末在 state/heartbeat.txt 留一行（脚本自动）+ 本轮任务板实录加计量行「tokens: local=<本轮 LLM 调用次数> api=0 api_reason=-」（本地算力律=SILICON-LIFE 律三·token-economy 计量先行）；单轮无产出也属正常（冷却健康/池已达标），零产出零 commit 不算事故。
