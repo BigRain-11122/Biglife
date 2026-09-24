@@ -4,6 +4,7 @@
 > 定位：**超体宇宙城的人口与人设资产生产公司**——「专门生产超体元宇宙城市的所有居民」。CEO 开线令（2026-09-23）：「和其他的子公司一样，成立的时候梳理好流程和规则，然后迭代，自我进化。要像别的子公司一样完善。」
 > 开线：2026-09-23。蓝图=`BLUEPRINT.md`（生产管线+进化路线）；人口正典=`docs/CODEX.md`（物种谱系/户籍/命名/语言/服装/思想/进化诸律）；调研=`docs/research/R-20260923-citizen-design.md`。
 > 治理：FluxGroup governance §2 登记；反馈=本仓根 `HQ-FEEDBACK.md`（按集团 evolution §7 面制）；令牌=本仓 `orders/` + 集团 `docs/orders.md`。
+> 调研面：`docs/research/`——消费方=SILICON-LIFE/CODEX/心智栈；遵集团 `cph4/research-protocol.md` v1.0（ledger P-65·2026-09-24 接线）：新调研件必带结论应用表，近 30 天存量补表中。
 
 ## 结构
 
