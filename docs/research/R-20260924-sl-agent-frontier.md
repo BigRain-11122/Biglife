@@ -130,3 +130,19 @@
 [7] AutoGen, arXiv:2308.08155；CAMEL, arXiv:2303.17760 [内置]；Sims smart terrain [内置·兄弟报告维基污染转内置]
 [8] 千人模拟, arXiv:2411.10109 [已验·多源：arXiv 摘要/Stanford AI4PB「1,052 real individuals」/scispace「two-hour」/geometor「GSS 85%」/StanfordHCI/genagents 开源]；Sleep-time Compute, arXiv:2504.13171 [已验·题录+letta-ai/sleep-time-compute]；Park dissertation 2025（population-scale）[已验·官网]；Mem0/Zep [内置·未验]
 [勘误] 调研中曾误记「100 天 10 秒」卷积调度论文与千人模拟的 arXiv 编号（2504.06416 与 2503.09990 抓取实为扩散模型与量子物理论文）；千人模拟正确编号 2411.10109 已多源验证；「100 天 10 秒」论文未能定位可靠来源，相关建议已改标为工程推断（B10）。本文件为本次任务唯一写入物，未运行修改性代码、未做 git 操作。
+
+## 九、结论应用表（P-65 存量补表·2026-09-24 补立·溯源=CEO 令 09-24 ~19:10 调研行程与结论应用律·消费方=SILICON-LIFE §四路线图/CODEX §十二/cognition 心智栈）
+
+| 结论 | 落点（四选一） | 状态 |
+|---|---|---|
+| 缺口判定三件：动机层（最高优先）/反思层/感知局部律+记忆检索（§0.3/§D） | ②法文修改：`docs/SILICON-LIFE.md` §四 V2 路线图+`docs/CODEX.md` §十二 L211——V2-A 动机层✓（`Tools/needs.py`·v1.4 登记·R3 再生面）/V2-B 反思层✓（evolve_citizen v0.5·T-20260924-04·R73 交付）/V2-C 记忆检索✓（进化/聚光灯 prompt 带最近年轮）/V2-D 感知局部律✓（v0.6 视点序·T-04·R74 交付） | 已闭环（四件全落地·法文双注册） |
+| Sims 需求效用层·需求禁虚构（§7 可搬 A2） | ②法文修改：`CODEX.md` §十二 V2-A 行（确定性派生=实况×人设·零 LLM·与 R-20260923 §四.7 禁编造需求动机同律） | 已闭环（needs.py 在役·同快照双跑判据在册） |
+| Reflexion 一行教训（§3 可搬 A4） | ②法文修改+①任务单：`docs/global-benchmarks.md` 执行标准表行 1（GA reflection 消融→`evolve_citizen.py` v0.5 `reflect_due`/`reflect_violations`/`add_reflection`·[锚] 合规·溯源门双断言） | 已闭环（✓在律·12/12 断言·首批 3 环卡约 09-30 自然到期） |
+| 涌现燃料=持久记忆+关系扩散+异步批处理非更大模型（§0.2 GA/Sid） | ②法文修改：`SILICON-LIFE.md` 体征 11 社会性（相遇轮在役·关系图生长中 ◑）+年轮=记忆流（[锚] 定律） | 部分闭环：相遇轮/年轮在役；relationship_edges 独立边表模块未建→候选待认领（V5 涌现观察域前置·两周窗 10-08 复核） |
+| 席位制与 inZOI 同题印证+设备端小模型/零服务器同向（§0.1/§5/§8.3） | ②法文修改：`docs/global-benchmarks.md` ①视野面（NVIDIA ACE/Inworld/GA 对标·09-24 官方页直验）+`SILICON-LIFE.md` 律三本地算力律 | 已闭环（基准面在册·周期活性 7 天·下次到期 10-01） |
+| 万人扩展正路=批处理+压缩（§0.5/B10） | ②法文修改：`Tools/batch-policy.json` 批 6（CODEX §十二 v1.7·15:45 极限令派工）+10min OS 轮节律+年轮压缩 | 已闭环（evolved=307 实证·GA 逐人反面教材已避） |
+| OCC 情绪状态机·表驱动零模型（§6 可搬 A1） | ①任务单：未立单——候选（消费端路由加权不改池行·池 append-only 兼容） | 待认领（两周窗 10-08 复核·逾期未认领按悬空清退律转判负留痕） |
+| Sleep-time 作业（§8.2 可搬 A5）/MemGPT 记忆整理作业（B6）/行为脚本模板库（B8）/居民提案 V3 辩论剧本（B9）/千人访谈档案扩 brain_digest（B11） | ①任务单：未立单——V3 城市议员→V5 涌现观察路线图域候选（`SILICON-LIFE.md` §四）；OS 轮批节律既载年轮/反思/同步三作业 | 待认领（路线图有主域·两周窗 10-08 复核·逾期即判负留痕） |
+| 不可搬三条：GA 逐观察评分/Project Sid 千级云 API/ACE 语音表情全栈（§C 12-15） | ④判负留痕：token 五律+零 API 红线+`SILICON-LIFE.md` 律三本地算力律（C 12-15 逐条已按律排否·语音栈另立项注记在 §C） | 已闭环（法面在正典·判负留痕生效） |
+
+（补表纪律：本表逐行 rg 实证仓内法文落点后落笔·零编造映射；「待认领」行=候选非悬空·两周复核窗 2026-10-08（件龄 09-24+14 天）·逾期未认领即按悬空清退律转 ④ 判负留痕。）
