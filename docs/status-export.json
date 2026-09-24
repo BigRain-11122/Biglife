@@ -1,10 +1,10 @@
 {
-  "export_ts": "2026-09-25T04:08:03+08:00",
+  "export_ts": "2026-09-25T04:18:58+08:00",
   "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
   "depts": [
     {
       "n": "年轮进化线",
-      "t": "R156 批 8 落 5 环（C-00499~C-00503·ea6064e·sync 13ba1cf rows=5·抽验 5 环=4 PASS+1 修）；修卡 C-00503「今朝阳光正好」→「今朝天阴着」（晴系措辞对 cloud 实况=天气型错配·双证=needs live cloud+world-state weather_kind=cloud·原句存史 ea6064e·sync 复跑 rows=1 镜像跟上）；缺口 #23 收口 gate v0.15（cloud 禁晴系清单补「阳光」token+prompt 例举同步·sky-mismatch 族 gap #19 变体复发·实弹 5/5：cloud×阳光必拦/cloud×天晴仍拦/阴直读不误伤/clear×阳光不误伤/clear×天阴仍拦）；门拦留冷却 3 位（C-00480/C-00492 rain-invented+time-morning·C-00498 wind-under+time-morning·persistent=门禁正确）；QC 修后复扫 problems=0（evolved=494）；R133 相遇轮 C-00423×C-00426 双卡互引（09-25）",
+      "t": "R157 批 8 两跑 GPU 连阻零落环（R126 根因在案·批位 stays due·零写入零污染）；R156 批 8 落 5 环（C-00499~C-00503·ea6064e·sync 13ba1cf rows=5·抽验 5 环=4 PASS+1 修）；修卡 C-00503「今朝阳光正好」→「今朝天阴着」（晴系措辞对 cloud 实况=天气型错配·双证=needs live cloud+world-state weather_kind=cloud·原句存史 ea6064e·sync 复跑 rows=1 镜像跟上）；缺口 #23 收口 gate v0.15（cloud 禁晴系清单补「阳光」token+prompt 例举同步·sky-mismatch 族 gap #19 变体复发·实弹 5/5：cloud×阳光必拦/cloud×天晴仍拦/阴直读不误伤/clear×阳光不误伤/clear×天阴仍拦）；门拦留冷却 3 位（C-00480/C-00492 rain-invented+time-morning·C-00498 wind-under+time-morning·persistent=门禁正确）；QC 修后复扫 problems=0（evolved=494）；R133 相遇轮 C-00423×C-00426 双卡互引（09-25）",
       "s": 1
     },
     {
@@ -24,7 +24,7 @@
     },
     {
       "n": "QC 巡检线",
-      "t": "R150 正式巡检 problems=0（cards=10003·evolved=475）+R154 修后复扫 0（evolved=485）+R155 抽验 4/4 零修复（evolved=489）·下到期 R156",
+      "t": "R157 正式巡检补跑 problems=0（cards=10003·evolved=494·R156 到期补跑）+R150 正式 problems=0（evolved=475）+R156 修后复扫 0（evolved=494）·下到期 R163",
       "s": 1
     },
     {
