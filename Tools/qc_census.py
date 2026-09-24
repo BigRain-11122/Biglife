@@ -18,6 +18,7 @@ def main():
     files = []
     for sub in ("anchors", "registry"):
         files += glob.glob(os.path.join(CENSUS, sub, "**", "*.md"), recursive=True)
+    files += glob.glob(os.path.join(CENSUS, "reserved", "C-*.md"))  # honored seat cards
     evolved = 0
     for p in sorted(files):
         fn = os.path.basename(p)[:-3]

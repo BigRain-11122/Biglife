@@ -21,6 +21,9 @@ def find_card(cid, district=None):
         p = os.path.join(CENSUS, "anchors", cid + ".md")
         if os.path.isfile(p):
             return p
+        p = os.path.join(CENSUS, "reserved", cid + ".md")  # honored seats C-00001~03
+        if os.path.isfile(p):
+            return p
     subs = ["anchors"] if cid <= "C-00029" else ["registry"]
     for sub in subs:
         d = os.path.join(CENSUS, sub)
