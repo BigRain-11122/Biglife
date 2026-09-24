@@ -10,4 +10,4 @@
 5.【任务板】tasks/TASKS.md 有 open 单先做单（集团转办件最优先，认领时置 in-progress 署名+时间）。
 6.【基因轮·低频】以上都无单时：为 genes/ 补充 5-10 条新基因（新口头禅/新钩子物件/新转折点），先登记后使用，禁破坏既有卡。
 7.【月度·聚光灯抽验】每月 ≥2 例：python -X utf8 Tools/spotlight.py 抽两位居民验「只提所喂事实」（cognition/README.md 验收线 6），结果记 tasks/TASKS.md T-07 证据行。
-收尾纪律：有实质产出=定向 commit（路径限定+尾标 [via BigLife-OSLoop]）；state/ 与 logs/ 不入库；轮末在 state/heartbeat.txt 留一行（脚本自动）；单轮无产出也属正常（冷却健康/池已达标），零产出零 commit 不算事故。
+收尾纪律：有实质产出=定向 commit（路径限定+尾标 [via BigLife-OSLoop]）；state/ 与 logs/ 不入库；轮末在 state/heartbeat.txt 留一行（脚本自动）+ 本轮任务板实录加计量行「tokens: local=<本轮 LLM 调用次数> api=0 api_reason=-」（本地算力律=SILICON-LIFE 律三·token-economy 计量先行）；单轮无产出也属正常（冷却健康/池已达标），零产出零 commit 不算事故。
