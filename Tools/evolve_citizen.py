@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.10 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.11 - BigLife citizen evolution engine.
 
 Grows citizen cards by feeding REAL city signals into a LOCAL LLM (Ollama
 qwen2.5:7b-instruct, zero token, local-first L2). Honesty law (docs/CODEX.md 9):
@@ -62,6 +62,13 @@ effective = max(CLI --batch, policy). The OSLoop launcher text (--batch 3) lives
 in a session-scoped cron hosted on bm-a and is unreachable from this repo, so
 the in-repo policy file carries the order. --force/--reflect faces unaffected;
 quality gates untouched (诚实门/audit/QC/fleet §10 - 令④三闸不动).
+v0.11 gap #19 (2026-09-24): sky-type pairing - a ring must not recast the fed
+sky state (R123 C-00389 first strike, R125 C-00409 recurrence both wrote 「天阴着」
+against a clear feed). Narrow two-char tokens per direction (clear bans
+天阴/阴着/阴天/多云; cloud bans 天晴/晴着/天清/晴空/晴朗) keep body-sense
+words and unrelated card quotes legal; missing weather = unverifiable, no call.
+The batch prompt's old example 「如「天阴着」」 was itself the clear-day bias
+source and is removed. Banned in gate + both prompts.
 Ollama down => silent skip exit 0 (probe contract #4). Targeted git commits
 only (governance 6.2 - never add -A).
 
