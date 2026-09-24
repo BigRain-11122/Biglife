@@ -7,6 +7,9 @@ real time / event types) x persona (axis/age/district/species) -> four need
 intensities in [0,2]. Zero LLM, zero API. Output: census/export/
 citizen-needs.jsonl (R3 regenerable face - gitignored, run on demand by
 consumers: CityWatch v2 / M2 engine / OSLoop).
+T-20260924-16d step 1: additive crash/crash_axis fields - pure-threshold
+crash state per contract cognition/NEEDS-CRASH.md v1.0; honored seats
+C-00001~03 stay crash=null (CEO persona-reserved face).
 Same (city snapshot, time bucket, persona) => byte-identical output.
 Usage: python -X utf8 needs.py [--qc]
 """
@@ -20,6 +23,13 @@ ROOT = os.path.abspath(os.path.join(CO, "..", ".."))
 FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
 
 NEED_KEYS = ["anwen", "shengji", "shejiao", "haoqi"]  # 安稳/生计/社交/好奇
+
+# T-20260924-16d (contract cognition/NEEDS-CRASH.md v1.0): crash thresholds,
+# all parameterized - CEO can retune with one line (engine recalibrates by
+# measured distribution, recorded in task log).
+CRASH_T = 2.0    # crash: axis at top band with no registry satisfaction this round
+RECOVER_T = 1.5  # recovering: high axis newly satisfied by a registry hit
+HONORED_IDS = {"C-00001", "C-00002", "C-00003"}  # CEO reserved seats: crash always null
 
 REGISTRY = os.path.join(CO, "cognition", "fact-needs-registry.json")
 
@@ -69,8 +79,26 @@ def city_signals():
 def cap2(x):
     return max(0, min(2, int(x)))
 
-def derive(r, sig, hb, reg_rows=()):
-    """Deterministic per-citizen needs. hb = hour bucket (0-7, 3h slots).
+def crash_state(r, needs, satisfied):
+    """T-20260924-16d contract §一: pure-threshold crash derivation, zero LLM.
+    crash = axis >= CRASH_T with no registry satisfaction this round;
+    recovering = axis >= RECOVER_T with registry satisfaction this round;
+    honored seats C-00001~03 stay null (persona-reserved face). Ties resolve
+    by (value desc, NEED_KEYS order) - deterministic."""
+    if str(r.get("id")) in HONORED_IDS:
+        return None, None
+    hot = [(needs[k], -NEED_KEYS.index(k), k) for k in NEED_KEYS
+           if needs[k] >= CRASH_T and k not in satisfied]
+    if hot:
+        return "crash", max(hot)[2]
+    warm = [(needs[k], -NEED_KEYS.index(k), k) for k in NEED_KEYS
+            if needs[k] >= RECOVER_T and k in satisfied]
+    if warm:
+        return "recovering", max(warm)[2]
+    return None, None
+
+def derive_full(r, sig, hb, reg_rows=()):
+    """Deterministic per-citizen needs + crash state. hb = hour bucket (0-7, 3h slots).
     Persona/time base rules below; all fact-sourced adjustments (weather /
     event types / event density) come from the registry lookup so new fact
     sources need zero changes here (T-20260924-16a)."""
@@ -105,6 +133,7 @@ def derive(r, sig, hb, reg_rows=()):
     if sp == "carbon" and isinstance(age, int) and age <= 17:
         qi += 1
     needs = {"anwen": an, "shengji": sj, "shejiao": sh, "haoqi": qi}
+    satisfied = set()
     for row in reg_rows:
         fact = str(row.get("fact", ""))
         args = row.get("args") or {}
@@ -129,9 +158,18 @@ def derive(r, sig, hb, reg_rows=()):
         for k, v in (row.get("needs") or {}).items():
             if k in needs:
                 needs[k] += int(v)
+                if int(v) > 0:
+                    satisfied.add(k)
     needs = {k: cap2(v) for k, v in needs.items()}
     top = max(NEED_KEYS, key=lambda k: (needs[k], -NEED_KEYS.index(k))) if max(needs.values()) > 0 else "anwen"
-    return needs, top
+    crash, crash_axis = crash_state(r, needs, satisfied)
+    return needs, top, crash, crash_axis
+
+def derive(r, sig, hb, reg_rows=()):
+    """Legacy 2-tuple face; behavior.py L204 imports this - signature frozen
+    (T-20260924-16d keeps the needs vector semantics byte-identical)."""
+    n, top, _crash, _axis = derive_full(r, sig, hb, reg_rows)
+    return n, top
 
 def hb_slot_hour(hb):
     return hb * 3 + 1  # representative hour of the 3h bucket
@@ -146,8 +184,9 @@ def main():
             rows = [json.loads(l) for l in f if l.strip()]
         out = []
         for r in rows:
-            needs, top = derive(r, sig, hb, reg_rows)
-            out.append({"id": r["id"], "needs": needs, "top": top, "v": 1,
+            nv, top, crash, crash_axis = derive_full(r, sig, hb, reg_rows)
+            out.append({"id": r["id"], "needs": nv, "top": top,
+                        "crash": crash, "crash_axis": crash_axis, "v": 1,
                         "ctx": "hb=%d,wx=%s,ev=%d,wd=%d" % (hb, sig["weather"] or "na",
                                                             len(sig["events"]), sig["now"].weekday())})
         with open(OUT, "w", encoding="utf-8", newline="\n") as f:
@@ -164,9 +203,18 @@ def main():
         if any((not isinstance(v, int)) or v < 0 or v > 2 for v in nk.values()):
             bad += 1; continue
         if o.get("top") not in NEED_KEYS:
-            bad += 1
+            bad += 1; continue
+        c, ca = o.get("crash"), o.get("crash_axis")
+        if c not in (None, "crash", "recovering"):
+            bad += 1; continue
+        if (c is None) != (ca is None) or (ca is not None and ca not in NEED_KEYS):
+            bad += 1; continue
+        if o.get("id") in HONORED_IDS and c is not None:
+            bad += 1; continue
+    ncrash = sum(1 for o in rows if o.get("crash") == "crash")
+    nrec = sum(1 for o in rows if o.get("crash") == "recovering")
     print(f"rows={len(rows)} bad={bad} ctx_hb={hb} weather={sig['weather'] or 'na'} "
-          f"events={sorted(sig['events'])[:6]}")
+          f"events={sorted(sig['events'])[:6]} crash={ncrash} recovering={nrec}")
     # export face is 10003 rows since v1.9 honored seats C-00001~03 joined
     sys.exit(1 if (bad or len(rows) != 10003) else 0)
 
