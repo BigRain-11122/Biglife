@@ -320,6 +320,16 @@ def main():
             else:
                 for ctx in ax.values():
                     all_lines.update(ctx)
+    if os.path.isfile(GREET):  # cross-face dedup: greet/faq lines must never enter pools (audit hard fail)
+        with open(GREET, encoding="utf-8") as f:
+            greets = json.load(f)
+        for ax in greets.get("greet", {}).get("axes", {}).values():
+            for b in ax.values(): all_lines.update(b)
+        for b in greets.get("greet", {}).get("sprite", {}).values():
+            all_lines.update(b)
+        for b in greets.get("faq", {}).values():
+            for p in b:
+                all_lines.update((p.get("q", ""), p.get("a", "")))
     fails = []
     for axis, adesc in AXES.items():
         pools["axes"].setdefault(axis, {})
