@@ -17,6 +17,8 @@ import argparse, datetime, glob, hashlib, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
 POOL = os.path.join(CO, "cognition", "pools.json")
+GREET = os.path.join(CO, "cognition", "greetings.json")
+GKEYS = ["first_meet", "reunion", "smalltalk", "farewell"]
 LIGHT = os.path.join(CO, "census", "export", "citizens-light.jsonl")
 ROOT = os.path.abspath(os.path.join(CO, "..", ".."))
 FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
@@ -101,6 +103,37 @@ def draw_line(cid, ctx, pools, rows, date=None, slot=None):
     seed = hashlib.md5(key.encode("utf-8")).hexdigest()
     return bucket[int(seed[:8], 16) % len(bucket)]
 
+def load_greetings():
+    with open(GREET, encoding="utf-8") as f:
+        return json.load(f)
+
+def greet_line(cid, gkey, greets, rows, date=None):
+    """Same (id, date, gkey) => byte-identical greet (GREETINGS.md sec.4)."""
+    date = date or datetime.date.today().isoformat()
+    r = rows.get(cid)
+    if not r: return None
+    if r.get("species") == "sprite":
+        bucket = greets.get("greet", {}).get("sprite", {}).get(gkey) or []
+    else:
+        axis = r.get("axis") or "烟火"
+        bucket = greets.get("greet", {}).get("axes", {}).get(axis, {}).get(gkey) or []
+        if not bucket:
+            bucket = greets.get("greet", {}).get("axes", {}).get("烟火", {}).get(gkey) or []
+    if not bucket: return None
+    seed = hashlib.md5((cid + "|" + date + "|greet|" + gkey).encode("utf-8")).hexdigest()
+    return bucket[int(seed[:8], 16) % len(bucket)]
+
+def faq_pair(cid, greets, rows, date=None):
+    """Same (id, date) => byte-identical faq pair (GREETINGS.md sec.4)."""
+    date = date or datetime.date.today().isoformat()
+    r = rows.get(cid)
+    if not r: return None
+    fam = "sprite" if r.get("species") == "sprite" else (r.get("axis") or "烟火")
+    bucket = greets.get("faq", {}).get(fam) or greets.get("faq", {}).get("烟火") or []
+    if not bucket: return None
+    seed = hashlib.md5((cid + "|" + date + "|faq").encode("utf-8")).hexdigest()
+    return bucket[int(seed[:8], 16) % len(bucket)]
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ids", default="")
@@ -110,10 +143,28 @@ def main():
     ap.add_argument("--tier", choices=["barks", "standard"], default="barks",
                     help="barks=day-granular (v1); standard=45-min slot granular, "
                          "line stable within each slot = engine 45min cooldown tier (v2)")
+    ap.add_argument("--face", choices=["greet", "faq"], default=None,
+                    help="social faces (GREETINGS.md v1.0): greet needs --gkey, faq pairs by id+date")
+    ap.add_argument("--gkey", choices=GKEYS, default="smalltalk",
+                    help="social timepoint for --face greet")
     args = ap.parse_args()
+    rows = load_rows()
+    ids = [x.strip() for x in args.ids.split(",") if x.strip()]
+    if args.face:
+        greets = load_greetings()
+        if args.face == "greet":
+            print(f"face=greet gkey={args.gkey}")
+            for cid in ids:
+                line = greet_line(cid, args.gkey, greets, rows) if cid in rows else None
+                print(f"{cid} {rows[cid]['name']}: {line}" if line else f"{cid}: (greet bucket empty)")
+        else:
+            print("face=faq")
+            for cid in ids:
+                p = faq_pair(cid, greets, rows) if cid in rows else None
+                print(f"{cid} {rows[cid]['name']} 问：{p['q']} 答：{p['a']}" if p else f"{cid}: (faq bucket empty)")
+        return
     with open(POOL, encoding="utf-8") as f:
         pools = json.load(f)
-    rows = load_rows()
     ctx, src = derive_context() if (args.auto or args.demo_auto) else (args.context, "manual")
     if ctx not in CONTEXTS:
         print(f"unknown context: {ctx}"); sys.exit(2)

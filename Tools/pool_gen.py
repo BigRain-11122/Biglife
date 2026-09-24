@@ -119,18 +119,195 @@ def acquire_lock(max_age=1800):
     except Exception:
         return True  # never block growth on a broken lock
 
+# --- greetings face (T-20260924-06③; contract = cognition/GREETINGS.md v1.0) ---
+GREET = os.path.join(CO, "cognition", "greetings.json")
+GKEYS = {
+    "first_meet": "初次见面，头一回打照面打招呼",
+    "reunion": "老熟人重逢，久别再见的寒暄",
+    "smalltalk": "街坊日常寒暄，碰面搭话闲聊",
+    "farewell": "道别再见，回头见的那种告别",
+}
+ENV_CHARS = "雨风雪月星"
+ENV_TOKENS = ("今早", "今晚", "今夜", "清晨", "早晨", "早上", "早安", "晚安",
+              "晚上", "深夜", "夜深", "晨光", "黄昏", "傍晚", "凌晨", "半夜",
+              "正午", "晌午", "中午")
+GREET_TARGET, GREET_FLOOR = 10, 6
+FAQ_TARGET, FAQ_FLOOR = 3, 2
+
+def greet_valid(line):
+    if not (4 <= len(line) <= 24): return False
+    if re.search(r"[0-9]", line): return False
+    if re.search(r"(19|20)\d{2}年", line): return False
+    if any(b in line for b in ["CEO", "Jason", "公司", "集团", "总部", "董事长", "经理"]):
+        return False
+    if re.match(r"^[A-Za-z]+[\"'“”]", line): return False
+    if re.search(r"(user|assistant|system)[\"'“”‘’]", line): return False
+    if any(c in line for c in ENV_CHARS): return False
+    if any(t in line for t in ENV_TOKENS): return False
+    return True
+
+def gen_greet_bucket(axis_desc, scene_desc, n=6, sprite=False):
+    if sprite:
+        prompt = (f"你是赛博像素城市里的小生灵（光猫、灯灵、光鸟这类像素精灵）。"
+                  f"社交场景：{scene_desc}。\n写 {n} 条这类小生灵打招呼、寒暄或道别时会发出的「话」——"
+                  f"可以用拟声（喵呜/叮/啾）带一点短句意思，每条 4-16 字；禁数字、禁人名地名；"
+                  f"严禁天气词（雨、风、雪）、天体词（月、星）、时段问候词（今早、清晨、早上好、晚安这类）；"
+                  f"每行一条共 {n} 行，行首不要编号。")
+    else:
+        prompt = (f"你是赛博像素城市「超体宇宙城」的市民台词生成器。这类市民的思想气质：{axis_desc}。"
+                  f"社交场景：{scene_desc}。\n写 {n} 条这类市民在这个场景下打招呼、寒暄或道别的短句。"
+                  f"硬规则：每条 4-16 字；口语化、有生活气；这是纯社交口气，不携带环境事实——"
+                  f"严禁天气词（雨、风、雪）、天体词（月、星）、时段问候词（今早、清晨、早上好、晚安这类）；"
+                  f"禁数字、人名、地名、日期、金额、公司名；每行一条共 {n} 行，行首不要编号。")
+    raw = llm(prompt)
+    return [l for l in clean_lines(raw) if greet_valid(l)]
+
+def gen_faq_bucket(axis_desc, n=3, sprite=False):
+    who = ("你是赛博像素城市里的小生灵（光猫、灯灵、光鸟这类像素精灵）"
+           if sprite else
+           f"你是赛博像素城市「超体宇宙城」的市民台词生成器。这类市民的思想气质：{axis_desc}")
+    prompt = (who + f"。\n写 {n} 组「常问应答」——街坊或来参观的人常问的日常小问题，和口语化的回答。"
+              f"硬规则：问句 4-16 字（真的会问的日常小问题，不谈公事），回答 4-20 字；"
+              f"问答都不带环境词（雨、风、雪、月、星、今早、晚安这类），不带数字、人名、地名、公司名；"
+              f"每组两行：一行以「问：」开头，一行以「答：」开头，共 {n} 组，不要其他说明。")
+    raw = llm(prompt)
+    pairs, q = [], None
+    for ln in raw.splitlines():
+        s = re.sub(r"^[0-9一二三四五六七八九十]+[、.．)）]?\s*", "", ln.strip())
+        if s.startswith("问：") or s.startswith("问:"):
+            q = s.split("：", 1)[-1].split(":", 1)[-1].strip(" 「」“”\"'")
+        elif (s.startswith("答：") or s.startswith("答:")) and q is not None:
+            a = s.split("：", 1)[-1].split(":", 1)[-1].strip(" 「」“”\"'")
+            if 4 <= len(q) <= 20 and greet_valid(q) and greet_valid(a):
+                pairs.append({"q": q, "a": a})
+            q = None
+    seen, uniq = set(), []
+    for p in pairs:
+        if p["q"] not in seen:
+            seen.add(p["q"]); uniq.append(p)
+    return uniq
+
+def save_greetings(greets):
+    tmp = GREET + ".tmp"
+    with open(tmp, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(greets, f, ensure_ascii=False, indent=1)
+    os.replace(tmp, GREET)
+
+def gen_greetings(all_lines, deadline=None, resume=False):
+    greets = {"greet": {"axes": {}, "sprite": {}}, "faq": {}}
+    if resume and os.path.isfile(GREET):
+        with open(GREET, encoding="utf-8") as f:
+            greets = json.load(f)
+        for ax in greets.get("greet", {}).get("axes", {}).values():
+            for b in ax.values(): all_lines.update(b)
+        for b in greets.get("greet", {}).get("sprite", {}).values():
+            all_lines.update(b)
+        for b in greets.get("faq", {}).values():
+            for p in b:
+                all_lines.update((p.get("q", ""), p.get("a", "")))
+    fails, stopped = [], False
+    for axis, adesc in AXES.items():
+        greets["greet"]["axes"].setdefault(axis, {})
+        for gk, sdesc in GKEYS.items():
+            if deadline and time.time() > deadline:
+                stopped = True; break
+            bucket = greets["greet"]["axes"][axis].setdefault(gk, [])
+            got = [l for l in bucket if greet_valid(l)]
+            if len(got) < GREET_TARGET:
+                for _ in range(3):
+                    fresh = [l for l in gen_greet_bucket(adesc, sdesc) if l not in all_lines]
+                    got = got + fresh; all_lines.update(fresh)
+                    if len(got) >= GREET_TARGET: break
+                got = got[:GREET_TARGET]
+                greets["greet"]["axes"][axis][gk] = got
+                save_greetings(greets)
+                if len(got) < GREET_FLOOR: fails.append(f"greet/{axis}/{gk}={len(got)}")
+                print(f"greet {axis}/{gk}: {len(got)}")
+            else:
+                greets["greet"]["axes"][axis][gk] = got[:GREET_TARGET]
+                print(f"greet {axis}/{gk}: {len(got)} (at target)")
+        if stopped: break
+    if not stopped:
+        for gk, sdesc in GKEYS.items():
+            if deadline and time.time() > deadline:
+                stopped = True; break
+            bucket = greets["greet"]["sprite"].setdefault(gk, [])
+            got = [l for l in bucket if greet_valid(l)]
+            if len(got) < GREET_TARGET:
+                for _ in range(3):
+                    fresh = [l for l in gen_greet_bucket(None, sdesc, sprite=True) if l not in all_lines]
+                    got = got + fresh; all_lines.update(fresh)
+                    if len(got) >= GREET_TARGET: break
+                got = got[:GREET_TARGET]
+                greets["greet"]["sprite"][gk] = got
+                save_greetings(greets)
+                if len(got) < GREET_FLOOR: fails.append(f"greet/sprite/{gk}={len(got)}")
+                print(f"greet sprite/{gk}: {len(got)}")
+            else:
+                greets["greet"]["sprite"][gk] = got[:GREET_TARGET]
+                print(f"greet sprite/{gk}: {len(got)} (at target)")
+    if not stopped:
+        for fam, adesc in list(AXES.items()) + [("sprite", None)]:
+            if deadline and time.time() > deadline:
+                stopped = True; break
+            bucket = greets["faq"].setdefault(fam, [])
+            got = [p for p in bucket if isinstance(p, dict) and "q" in p and "a" in p]
+            if len(got) < FAQ_TARGET:
+                for _ in range(3):
+                    for p in gen_faq_bucket(adesc, sprite=(fam == "sprite")):
+                        if p["q"] in all_lines or p["a"] in all_lines: continue
+                        got.append(p); all_lines.update((p["q"], p["a"]))
+                    if len(got) >= FAQ_TARGET: break
+                got = got[:FAQ_TARGET]
+                greets["faq"][fam] = got
+                save_greetings(greets)
+                if len(got) < FAQ_FLOOR: fails.append(f"faq/{fam}={len(got)}")
+                print(f"faq {fam}: {len(got)}")
+            else:
+                greets["faq"][fam] = got[:FAQ_TARGET]
+                print(f"faq {fam}: {len(got)} (at target)")
+    if stopped:
+        save_greetings(greets)
+    return greets, fails, stopped
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--append", action="store_true")
     ap.add_argument("--target", type=int, default=15, help="lines per axes bucket (floor 4, cap 15)")
     ap.add_argument("--sprite-target", dest="sprite_target", type=int, default=10,
                     help="lines per sprite bucket (floor 3, cap 10)")
+    ap.add_argument("--greetings", action="store_true",
+                    help="generate the greetings face (greet+faq; GREETINGS.md contract v1.0)")
+    ap.add_argument("--budget", type=int, default=0,
+                    help="soft seconds budget; stop cleanly between buckets (0=off)")
     args = ap.parse_args()
     args.target = max(4, min(15, args.target))
     args.sprite_target = max(3, min(10, args.sprite_target))
     if args.append and not acquire_lock():
         print("pool round already running (lock held); skip")
         sys.exit(0)
+    if args.greetings:
+        all_lines = set()
+        if os.path.isfile(POOL):
+            with open(POOL, encoding="utf-8") as f:
+                pools = json.load(f)
+            for v in pools.values():
+                for ax in v.values():
+                    if isinstance(ax, list): all_lines.update(ax)
+                    else:
+                        for ctx in ax.values(): all_lines.update(ctx)
+        deadline = time.time() + args.budget if args.budget > 0 else None
+        greets, fails, stopped = gen_greetings(all_lines, deadline, resume=args.append)
+        total = (sum(len(b) for ax in greets["greet"]["axes"].values() for b in ax.values())
+                 + sum(len(b) for b in greets["greet"]["sprite"].values())
+                 + sum(2 * len(b) for b in greets["faq"].values()))
+        try:
+            if os.path.isfile(LOCK): os.remove(LOCK)
+        except Exception:
+            pass
+        print(f"GREETINGS_TOTAL={total} FAIL_BUCKETS={fails if fails else 'NONE'}"
+              + (" BUDGET_STOP=resume-next-greetings-round" if stopped else ""))
+        sys.exit(1 if fails else 0)
     pools = {"axes": {}, "sprite": {}}
     if args.append and os.path.isfile(POOL):
         with open(POOL, encoding="utf-8") as f:

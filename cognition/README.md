@@ -73,6 +73,7 @@
 
 - **语言线池轮**：OS 循环（mandate 第 2 项·任务板 T-07）——先 `pool_audit.py` 看欠深桶（六轴<15/像素灵<10），有欠深才 `pool_gen.py --append --target 15 --sprite-target 10`，PASS 才 commit（分批补深·做多少收多少·欠深清单=下轮重开信号）；换季/新情境=重开触发。
 - **问候库（T-20260924-06③）**：契约=`cognition/GREETINGS.md` v1.0（2026-09-24 立判据先行——先契约后生成）；生成轮起按其 §五 纪律执行（每日至多 1 次·audit PASS 才 commit），验收实录随轮记入本节。
+- **问候库首轮实录（2026-09-24 R100）**：`pool_gen --greetings --append` 单轮全量 **322 条**（greet 28 桶×10 + faq 7 桶×3 组）∈ 令面 [200,500] **达标自停**；audit PASS（hard 0·问候面零环境词零数字·面内+跨面零重复·greet 确定性 25 对双跑零漂移）；draw 路由抽验=锚民烟火默认桶/像素灵 sprite 桶/求新桶；实弹抓到 role-artifact（`user"` 前缀入桶）当轮双修=validator 角色残留禁令+--append 回滤重灌（复位 322·复跑 PASS）。
 - **行为线**：随进化批自动同步（`Tools/sync_rings.py`，evolve_citizen 落环后自调）；全量重生成走 `Tools/make_digests.py`（v1.2 含 recent_ring 面）。
 - **动机需求面（V2-A·2026-09-24 硅基生命批）**：`Tools/needs.py` 按需重生成 `census/export/citizen-needs.jsonl`（R3 再生面·gitignored·3 秒万人）——CityWatch v2/M2 引擎消费前跑一次即可；进化/聚光灯 prompt 已带最近年轮（V2-C 记忆检索）；正典与判据=`docs/SILICON-LIFE.md`。
 - 大脑摘要：户口批生成（`Tools/make_digests.py`），年轮不进摘要（摘要=先天+身份；年轮=记忆，镜像进 recent_ring）。
