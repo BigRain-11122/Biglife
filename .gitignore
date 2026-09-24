@@ -3,9 +3,10 @@ state/
 logs/
 *.log
 
-# R3 regenerable export faces (rebuild on demand via Tools/needs.py / behavior.py, ~3s/10k)
+# R3 regenerable export faces (rebuild on demand via Tools/needs.py / behavior.py / atlas_manifest.py, ~3s/10k)
 census/export/citizen-needs.jsonl
 census/export/citizen-behavior.jsonl
+census/export/citizen-atlas.jsonl
 
 # Codely runtime (mirrors HQ gitignore law)
 .codely-cli/settings.local.json
