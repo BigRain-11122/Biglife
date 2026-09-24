@@ -1,0 +1,6 @@
+{
+  "batch": 6,
+  "source": "集团令 2026-09-24 ~15:45 本地算力极限使用令（token-economy §3.3 · ledger P-54 派工「BigLife 批上调+问候库」）",
+  "registered": "2026-09-24",
+  "note": "策略面下限：effective_batch = max(CLI --batch, 本值)。启动器文本（--batch 3·会话级 cron 宿 bm-a）不可达，故以仓内策略文件承令。三闸不动：诚实门/audit/QC 全保留。一周计量回访后按供给侧占用复核此值。"
+}

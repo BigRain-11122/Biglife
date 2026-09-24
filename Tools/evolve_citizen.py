@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.9 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.10 - BigLife citizen evolution engine.
 
 Grows citizen cards by feeding REAL city signals into a LOCAL LLM (Ollama
 qwen2.5:7b-instruct, zero token, local-first L2). Honesty law (docs/CODEX.md 9):
@@ -56,6 +56,12 @@ of R78 C-00210 first strike (same imported phrase family). Deterministic
 anchor: the word must appear in THIS card's own text (sig['card_text'] injected
 per call site; absent key -> check off, so other gates/callers are unaffected).
 Banned in gate + both prompts.
+v0.10 (2026-09-24, group order ~15:45 本地算力极限使用令, token-economy §3.3 /
+ledger P-54 "BigLife 批上调+问候库"): batch floor via Tools/batch-policy.json -
+effective = max(CLI --batch, policy). The OSLoop launcher text (--batch 3) lives
+in a session-scoped cron hosted on bm-a and is unreachable from this repo, so
+the in-repo policy file carries the order. --force/--reflect faces unaffected;
+quality gates untouched (诚实门/audit/QC/fleet §10 - 令④三闸不动).
 Ollama down => silent skip exit 0 (probe contract #4). Targeted git commits
 only (governance 6.2 - never add -A).
 
@@ -484,6 +490,17 @@ def sync_light(via):
     except Exception:
         pass
 
+def load_batch_policy():
+    """Batch floor from Tools/batch-policy.json (group order 2026-09-24 ~15:45).
+
+    Missing/corrupt file = 0 = policy off (CLI value stands). Zero-LLM, pure config.
+    """
+    try:
+        with open(os.path.join(HERE, "batch-policy.json"), encoding="utf-8") as f:
+            return int(json.load(f).get("batch", 0))
+    except Exception:
+        return 0
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--batch", type=int, default=None)
@@ -536,6 +553,11 @@ def main():
 
     if args.batch is None and not args.reflect:
         args.batch = 3  # bare invocation keeps the legacy default
+    pol = load_batch_policy()
+    if pol and args.batch:
+        # 2026-09-24 本地算力极限使用令（token-economy §3.3）：策略面批下限承令，
+        # effective = max(CLI --batch, Tools/batch-policy.json)；--force/--reflect 面不受影响
+        args.batch = max(args.batch, pol)
     if not args.batch:
         if args.reflect:
             reflect_step(cursor, via)
