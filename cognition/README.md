@@ -10,7 +10,7 @@
 |---|---|---|---|---|
 | ① | 行为查表层 | 人设卡行为字段×真实时间/天气→动作（引擎只读，M2 消费 behavior_hint） | 零 | 契约立（behavior_hint 入导出面） |
 | ② | 台词池层 | 六思想轴×12 真实情境预生成短句，居民按轴取用（barks=日粒·standard=45 分钟槽粒冷却级） | 生成一次·消费零 | `pools.json` + `Tools/draw.py --tier` |
-| ③ | 聚光灯层 | 被看/被事件触及的居民实时应答（大脑摘要+真实事件→本地 LLM） | 224ms/句·仅少数 | `Tools/spotlight.py` |
+| ③ | 聚光灯层 | 被看/被事件触及的居民实时应答（大脑摘要+最近年轮+真实事件→本地 LLM·V2-C 记忆检索 2026-09-24 起） | 224ms/句·仅少数 | `Tools/spotlight.py` |
 | ④ | 年轮进化层 | 每人 7 天冷却写 1-2 句真实记忆（[锚]定律） | 极低频 | 已运行（evolve_citizen.py） |
 | ⑤ | 大事件反应层 | 真实大事件→全城反应：多数按轴取池+每城区抽少数聚光灯 | 事件驱动 | `Tools/city_broadcast.py`（v2·②+③ 编排面） |
 
@@ -72,6 +72,7 @@
 
 - **语言线池轮**：OS 循环（mandate 第 2 项·任务板 T-07）——先 `pool_audit.py` 看欠深桶（六轴<8/像素灵<6），有欠深才 `pool_gen.py --append --target 8 --sprite-target 6`，PASS 才 commit；换季/新情境=重开触发。
 - **行为线**：随进化批自动同步（`Tools/sync_rings.py`，evolve_citizen 落环后自调）；全量重生成走 `Tools/make_digests.py`（v1.2 含 recent_ring 面）。
+- **动机需求面（V2-A·2026-09-24 硅基生命批）**：`Tools/needs.py` 按需重生成 `census/export/citizen-needs.jsonl`（R3 再生面·gitignored·3 秒万人）——CityWatch v2/M2 引擎消费前跑一次即可；进化/聚光灯 prompt 已带最近年轮（V2-C 记忆检索）；正典与判据=`docs/SILICON-LIFE.md`。
 - 大脑摘要：户口批生成（`Tools/make_digests.py`），年轮不进摘要（摘要=先天+身份；年轮=记忆，镜像进 recent_ring）。
 - 聚光灯抽验：月度 ≥2 例（T-07）。
 

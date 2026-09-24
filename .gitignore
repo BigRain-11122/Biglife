@@ -3,6 +3,9 @@ state/
 logs/
 *.log
 
+# R3 regenerable export faces (rebuild on demand via Tools/needs.py, ~3s/10k)
+census/export/citizen-needs.jsonl
+
 # Codely runtime (mirrors HQ gitignore law)
 .codely-cli/settings.local.json
 .codely-cli/auto-saves/

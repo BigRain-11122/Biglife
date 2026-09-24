@@ -18,6 +18,9 @@ FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", 
 OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
 MODEL = os.environ.get("BIGLIFE_MODEL", "qwen2.5:7b-instruct")
 
+sys.path.insert(0, HERE)
+from make_digests import find_card
+
 def get_row(cid):
     with open(LIGHT, encoding="utf-8") as f:
         for l in f:
@@ -67,8 +70,20 @@ def main():
     sig = real_signals()
     ev = "\n".join("- " + e for e in sig["events"]) or "- （今日无新城市事件）"
     ask = ("\n有人问你：「" + args.ask + "」" + "\n") if args.ask else ""
+    # V2-C memory retrieval (SILICON-LIFE.md life sign #7): the looked-at
+    # citizen speaks WITH their own past, not as an amnesiac.
+    mem = ""
+    p = find_card(args.id, r.get("district"))
+    if p:
+        with open(p, encoding="utf-8") as fh:
+            mt = re.search(r"\*\*年轮\*\*\n((?:- .*\n?)+)", fh.read())
+        if mt:
+            ents = re.findall(r"- (\d{4}-\d{2}-\d{2}) 「(.*?)」", mt.group(1))
+            if ents:
+                mem = "\n".join("- %s：%s" % (d, t.strip()[:60]) for d, t in ents[-3:])
+                mem = "你最近的记忆（亲历过的日子，可自然提及，不必强提）：\n" + mem + "\n"
     prompt = (f"你是超体宇宙城（赛博像素数字城市）的硅基生命居民「{r['name']}」（{r['id']}）。"
-              f"你的身份摘要：{dig}。\n"
+              f"你的身份摘要：{dig}。\n{mem}"
               f"当前真实城市情况——北京时间 {sig['now']}，上海实况 {sig['weather'] or '（暂缺）'}。\n"
               f"最近真实城市事件（你只能提及这些真实事件或你自己的日常，禁编造任何未列出的事实，禁声称执行集团任务）：\n{ev}\n{ask}"
               f"用你的口吻说一句符合你性格的话（不超过 {args.max} 字），只输出这句话本身。")
