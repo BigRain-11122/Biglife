@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.4.2 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.5 - BigLife citizen evolution engine.
 
 Grows citizen cards by feeding REAL city signals into a LOCAL LLM (Ollama
 qwen2.5:7b-instruct, zero token, local-first L2). Honesty law (docs/CODEX.md 9):
@@ -23,6 +23,13 @@ recurrence of R51 C-00139 first strike); closed markers keep card habit quotes
 like 「收盘才想起」 legal.
 Batch commit titles now list actually-evolved IDs (gate skips had leaked planned
 IDs into titles: title said C-00101,C-00102 while C-00102,C-00103 evolved).
+v0.5 (2026-09-24, T-20260924-04 item 1): V2-B reflection layer (SILICON-LIFE
+four-gap item) - once a cursor citizen holds >=3 rings, distill ONE <=40-char
+life lesson from the ring originals into a new 反思 section (placed right before
+进化). Deterministic traceability gate (lesson must carry a verbatim >=4-char
+fragment of its own ring corpus), 7-day cooldown like the ring line, at most 1
+citizen per round. Zero natural triggers until the first 3-ring cards appear
+(~09-30), so the mechanism ships ahead of the data (机制先立·数据后到).
 v0.4.1 gap #14 (2026-09-24): 今夜 was missing from the 6-17 night-word ban
 tokens, so C-00122 wrote 今夜风挺大 inside the morning window (06:33) - token
 added to gate + night-side examples in both batch/meet prompts.
@@ -33,6 +40,7 @@ Usage:
   python -X utf8 evolve_citizen.py --batch 3          # evolve N due citizens
   python -X utf8 evolve_citizen.py --force C-00010     # ignore cooldown
   python -X utf8 evolve_citizen.py --meet C-00010 C-00025   # two-citizen encounter
+  python -X utf8 evolve_citizen.py --reflect            # V2-B: <=1 reflection per round
   --via BigLife-OSLoop  # committer-identity tail on every commit (cph4/versioning.md 4.1)
 """
 import argparse, datetime, glob, json, os, re, subprocess, sys, urllib.request
@@ -47,6 +55,7 @@ FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", 
 OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
 MODEL = os.environ.get("BIGLIFE_MODEL", "qwen2.5:7b-instruct")
 COOLDOWN_DAYS = 7
+REFLECT_MIN_RINGS = 3   # V2-B: a reflection needs a life to look back on
 
 def today():
     return datetime.date.today().isoformat()
@@ -190,6 +199,109 @@ def gated_llm(prompt, sig, max_regens=2):
     print("gate: persistent violations", ring_violations(line, sig))
     return None
 
+def rings_of(text):
+    """All ring entries of a card (batch + meet rings alike): (corpus, entries)."""
+    m = re.search(r"\*\*年轮\*\*\n((?:- .*\n?)+)", text)
+    if not m:
+        return "", []
+    ents = re.findall(r"- (\d{4}-\d{2}-\d{2}) 「(.*?)」", m.group(1))
+    return m.group(1), ents
+
+def reflect_due(cursor):
+    """V2-B due list (T-20260924-04): cursor-only scan so never-evolved cards
+    can't false-trigger; n >= 3 rings; 7-day cooldown like the ring line;
+    at most 1 citizen per round (low frequency by design)."""
+    t = datetime.date.today()
+    due = []
+    for cid, c in cursor.items():
+        if not isinstance(c, dict) or c.get("n", 0) < REFLECT_MIN_RINGS:
+            continue
+        nxt = c.get("reflect_next")
+        try:
+            ok = (not nxt) or datetime.date.fromisoformat(nxt) <= t
+        except Exception:
+            ok = True
+        if ok:
+            due.append(cid)
+    due.sort()
+    return due[:1]
+
+def reflect_violations(lesson, rings_corpus):
+    """V2-B traceability gate: <=40 chars AND at least one verbatim >=4-char
+    Chinese fragment of the citizen's own ring corpus (教训句锚定自环)."""
+    v = []
+    if len(lesson) > 40:
+        v.append("lesson-too-long")
+    grams = {lesson[i:i + 4] for i in range(len(lesson) - 3)
+             if re.fullmatch(r"[\u4e00-\u9fff]{4}", lesson[i:i + 4])}
+    if not grams or not any(g in rings_corpus for g in grams):
+        v.append("lesson-untraceable")
+    return v
+
+def build_reflect_prompt(cid, ents):
+    mem = "\n".join("- %s：%s" % (d, t.strip()) for d, t in ents)
+    return (f"你是超体宇宙城的叙事市民「{cid}」。以下是你年轮里的全部真实经历（原文）：\n{mem}\n"
+            f"请从这些亲身经历中提炼 1 句你「人生的教训」。硬约束：不超过 40 字；教训里的关键短语必须逐字取自上面年轮原文"
+            f"（可以拼接原文短语），严禁编造年轮中没有的事、人名、地点、事件；只输出这一句教训本身，不要引号，不要解释。")
+
+def add_reflection(path, lesson, note):
+    with open(path, encoding="utf-8") as f:
+        text = f.read()
+    entry = f"- {today()} 「{lesson}」 [锚] {note}"
+    sec = "**反思**"
+    if sec in text:
+        m = re.search(r"(\*\*反思\*\*\n(?:- .*\n)+)", text)
+        if m:
+            text = text.replace(m.group(1), m.group(1) + entry + "\n", 1)
+        else:
+            text = re.sub(r"\*\*反思\*\*\n", sec + "\n" + entry + "\n", text, count=1)
+    else:
+        # V2-B placement: new section sits right before 进化 (SILICON-LIFE four-gap item)
+        text = re.sub(r"(\n\*\*进化\*\*)", "\n" + sec + "\n" + entry + r"\n\1", text, count=1)
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(text)
+
+def reflect_step(cursor, via):
+    """V2-B (T-20260924-04 ①): distill ONE <=40-char life lesson from all of a
+    citizen's rings into the 反思 section. Zero natural triggers until the first
+    3-ring cards appear (~09-30), so shipping the mechanism is zero-risk."""
+    due = reflect_due(cursor)
+    if not due:
+        print("reflect: none due (rings<3 or cooldown healthy)")
+        return
+    cid = due[0]
+    p = find_card(cid)
+    if not p:
+        print("reflect: card not found", cid)
+        return
+    with open(p, encoding="utf-8") as f:
+        text = f.read()
+    corpus, ents = rings_of(text)
+    if len(ents) < REFLECT_MIN_RINGS:
+        print("reflect: cursor/card ring-count mismatch, skip", cid)
+        return
+    lesson = ""
+    for _ in range(3):  # <=2 regens, same contract as gated_llm
+        try:
+            lesson = llm(build_reflect_prompt(cid, ents))
+        except Exception:
+            print("ollama down; reflect skipped")
+            return
+        lesson = re.sub(r"\s+", " ", lesson).strip().strip('「」"“”')
+        if not reflect_violations(lesson, corpus):
+            break
+    v = reflect_violations(lesson, corpus)
+    if v:
+        print("gate: reflect skip", cid, "(stays due)", v)
+        return
+    add_reflection(p, lesson, "本卡年轮区（V2-B 反思层·提炼自年轮原文）")
+    c = cursor.setdefault(cid, {})
+    c["reflected"] = c.get("reflected", 0) + 1
+    c["reflect_next"] = (datetime.date.today() + datetime.timedelta(days=COOLDOWN_DAYS)).isoformat()
+    commit_files([p], "反思 %s: %s%s" % (today(), cid, via))
+    save_cursor(cursor)
+    print("OK reflect", cid, ":", lesson)
+
 def persona_digest(text):
     """Pull key persona fields from a card for the LLM prompt."""
     def grab(label, limit=140):
@@ -292,9 +404,11 @@ def sync_light(via):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--batch", type=int, default=3)
+    ap.add_argument("--batch", type=int, default=None)
     ap.add_argument("--force", nargs="*", default=None)
     ap.add_argument("--meet", nargs=2, default=None)
+    ap.add_argument("--reflect", action="store_true",
+                    help="V2-B reflection layer: at most 1 due citizen per round")
     ap.add_argument("--via", default=None, help="committer-identity tail, e.g. BigLife-OSLoop")
     args = ap.parse_args()
     via = (" [via %s]" % args.via) if args.via else ""
@@ -337,9 +451,17 @@ def main():
         print("OK meet:", " ".join(ids))
         return
 
+    if args.batch is None and not args.reflect:
+        args.batch = 3  # bare invocation keeps the legacy default
+    if not args.batch:
+        if args.reflect:
+            reflect_step(cursor, via)
+        return
     due = due_citizens(cursor, args.batch, args.force)
     if not due:
         print("no due citizens; cooldown healthy")
+        if args.reflect:
+            reflect_step(cursor, via)
         return
     n = 0
     done = []  # v0.4: title must list actually-evolved IDs, not the planned due slice
@@ -377,6 +499,8 @@ def main():
     else:
         save_cursor(cursor)
     print("OK evolved=%d of %d due" % (n, len(due)))
+    if args.reflect:
+        reflect_step(cursor, via)
 
 if __name__ == "__main__":
     main()
