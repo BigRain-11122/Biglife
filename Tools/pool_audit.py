@@ -116,6 +116,52 @@ def greet_determinism(g):
         if p1 is None: empty += 1
     return len(sample), pairs, bad, empty
 
+# --- negative face (T-20260924-16d; contract = cognition/NEEDS-CRASH.md §三) ---
+NEG = os.path.join(CO, "cognition", "pools-negative.json")
+NEG_KEYS = ["anwen", "shengji", "shejiao", "haoqi", "sprite"]
+NEG_TARGET, NEG_FLOOR = 8, 6
+
+def neg_clean(l):
+    if not (4 <= len(l) <= 40): return "len"
+    if re.search(r"[0-9]", l): return "digit"
+    if re.search(r"(19|20)\d{2}年", l): return "year"
+    if any(b in l for b in BANNED): return "banned"
+    if re.match(r"^[A-Za-z]+[\"'“”]", l): return "role-artifact"
+    if re.search(r"(user|assistant|system)[\"'“”‘’]", l): return "role-artifact"
+    if any(c in l for c in ENV_CHARS): return "env-char"
+    if any(t in l for t in ENV_TOKENS): return "env-token"
+    return None
+
+def audit_negative(n, plines, gset):
+    hard, under, seen = [], [], {}
+    neg_lines = rec_lines = at = 0
+    def chk(l, where):
+        bad = neg_clean(l)
+        if bad: hard.append(f"{bad} {l!r} ({where})")
+        if l in plines: hard.append(f"cross-face dup(pool) {l!r} ({where})")
+        if l in gset: hard.append(f"cross-face dup(greet) {l!r} ({where})")
+        if l in seen: hard.append(f"dup {l!r} ({seen[l]} vs {where})")
+        else: seen[l] = where
+    for k in NEG_KEYS:
+        b = n.get("negative", {}).get(k)
+        if b is None:
+            hard.append(f"missing negative/{k}"); continue
+        neg_lines += len(b)
+        if len(b) >= NEG_TARGET: at += 1
+        else: under.append(f"negative/{k}={len(b)}")
+        for l in b: chk(l, f"negative/{k}")
+        if len(b) < NEG_FLOOR: hard.append(f"negative/{k} below floor ({len(b)})")
+    b = n.get("recovering")
+    if b is None:
+        hard.append("missing recovering bucket")
+    else:
+        rec_lines = len(b)
+        if len(b) >= NEG_TARGET: at += 1
+        else: under.append(f"recovering={len(b)}")
+        for l in b: chk(l, "recovering")
+        if len(b) < NEG_FLOOR: hard.append(f"recovering below floor ({len(b)})")
+    return neg_lines, rec_lines, at, hard, under
+
 def audit_pools(pools, target, starget):
     hard, under, seen = [], [], {}
     axes_lines = sprite_lines = 0
@@ -217,16 +263,36 @@ def main():
     else:
         glines = fpairs = flines = g_at = f_at = gn = gpairs = gbad = gempty = 0
         hard.append("greetings face missing (cognition/greetings.json)")
+    # negative face (NEEDS-CRASH.md §三; gate lands with the data file)
+    gset = set()
+    if os.path.isfile(GREET):
+        with open(GREET, encoding="utf-8") as f:
+            gg = json.load(f)
+        for ax in gg.get("greet", {}).get("axes", {}).values():
+            for b in ax.values(): gset.update(b)
+        for b in gg.get("greet", {}).get("sprite", {}).values(): gset.update(b)
+        for b in gg.get("faq", {}).values():
+            for p in b:
+                gset.update((p.get("q", ""), p.get("a", "")))
+    if os.path.isfile(NEG):
+        with open(NEG, encoding="utf-8") as f:
+            neg = json.load(f)
+        nlines, rlines, n_at, nhard, nunder = audit_negative(neg, pool_line_set(pools), gset)
+        hard += nhard; under += nunder
+    else:
+        nlines = rlines = n_at = 0
+        hard.append("negative face missing (cognition/pools-negative.json)")
     print("== pool_audit (language line machine gate) ==")
     print(f"axes buckets 72: lines={al} at_target={ax_ok}")
     print(f"sprite buckets 12: lines={sl} at_target={sp_ok}")
     print(f"total lines: {total}")
     print(f"greet buckets 28: lines={glines} at_target={g_at}")
     print(f"faq buckets 7: pairs={fpairs} lines={flines} at_target={f_at}")
+    print(f"negative face: lines={nlines} recovering={rlines} at_target={n_at}/6")
     print(f"hard_fails: {len(hard)}")
     for h in hard[:10]:
         print("  HARD:", h)
-    print(f"under_target (pool {args.target}/{args.starget} + greet {GREET_TARGET} + faq {FAQ_TARGET}): "
+    print(f"under_target (pool {args.target}/{args.starget} + greet {GREET_TARGET} + faq {FAQ_TARGET} + neg {NEG_TARGET}): "
           f"{'NONE - SELF_TERMINATE' if not under else ' '.join(under)}")
     print(f"determinism: {pairs} pairs double-drawn, mismatch={bad}, empty_draw={empty} "
           f"({n_ids} ids x 12 ctx)")

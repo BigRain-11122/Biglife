@@ -270,6 +270,95 @@ def gen_greetings(all_lines, deadline=None, resume=False):
         save_greetings(greets)
     return greets, fails, stopped
 
+# --- negative face (T-20260924-16d step 4; contract = cognition/NEEDS-CRASH.md §三) ---
+NEG = os.path.join(CO, "cognition", "pools-negative.json")
+NEG_AXES = {
+    "anwen": "安稳欠账、心神不宁，手上老出小错的烦躁劲儿",
+    "shengji": "生计没着落、蔫头耷脑提不起劲的没劲",
+    "shejiao": "没人搭话、憋闷得忍不住嘟囔两句的怨气",
+    "haoqi": "兴致受挫、干什么都提不起劲头的蔫劲儿",
+}
+NEG_TARGET, NEG_FLOOR = 8, 6
+
+def neg_valid(line):
+    if not (4 <= len(line) <= 40): return False
+    if re.search(r"[0-9]", line): return False
+    if re.search(r"(19|20)\d{2}年", line): return False
+    if any(b in line for b in ["CEO", "Jason", "公司", "集团", "总部", "董事长", "经理"]): return False
+    if re.match(r"^[A-Za-z]+[\"'“”]", line): return False
+    if re.search(r"(user|assistant|system)[\"'“”‘’]", line): return False
+    if any(c in line for c in ENV_CHARS): return False
+    if any(t in line for t in ENV_TOKENS): return False
+    return True
+
+def gen_neg_bucket(kind, desc, n=6, sprite=False):
+    if sprite:
+        prompt = (f"你是赛博像素城市里的小生灵（光猫、灯灵、光鸟这类像素精灵），正蔫蔫的没精神。\n"
+                  f"写 {n} 条这时候会发出的「话」——用拟声（喵呜/叮/啾）带一点没劲的短句意思，每条 4-16 字；"
+                  f"禁数字、禁人名地名、禁天气词（雨风雪）、禁天体词（月星）、禁时段词（今早、晚安这类）；"
+                  f"每行一条共 {n} 行，行首不要编号。")
+    elif kind == "negative":
+        prompt = (f"你是赛博像素城市「超体宇宙城」的市民台词生成器。这类市民正处在需求长期得不到满足的负面状态：{desc}。\n"
+                  f"写 {n} 条这类市民这时候随口嘟囔、叹气或自言自语的短句。硬规则：每条 5-24 字；"
+                  f"口语化，有小情绪但不哭惨不绝望、不骂人不怨具体的谁；零事实——不提任何具体事情和缘由、"
+                  f"禁数字、人名、地名、日期、公司名；严禁天气词（雨风雪）、天体词（月星）、时段词（今早、晚安这类）；"
+                  f"负面要轻、要风格化，像生活里的小牢骚；每行一条共 {n} 行，行首不要编号。")
+    else:  # recovering
+        prompt = (f"你是赛博像素城市「超体宇宙城」的市民台词生成器。这类市民刚熬过一段不顺心的日子，心里松快了些。\n"
+                  f"写 {n} 条这时候随口说的、转好口吻的短句（缓过来了、又有劲了这类口气）。硬规则：每条 5-24 字；"
+                  f"口语化有生活气；零事实——不提任何具体事情和缘由、禁数字、人名、地名、日期、公司名；"
+                  f"严禁天气词（雨风雪）、天体词（月星）、时段词（今早、晚安这类）；不表功勋不谈公事；"
+                  f"每行一条共 {n} 行，行首不要编号。")
+    raw = llm(prompt)
+    return [l for l in clean_lines(raw) if neg_valid(l)]
+
+def save_negs(negs):
+    tmp = NEG + ".tmp"
+    with open(tmp, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(negs, f, ensure_ascii=False, indent=1)
+    os.replace(tmp, NEG)
+
+def gen_negative(all_lines, deadline=None, resume=False):
+    negs = {"negative": {k: [] for k in list(NEG_AXES) + ["sprite"]}, "recovering": []}
+    if resume and os.path.isfile(NEG):
+        with open(NEG, encoding="utf-8") as f:
+            negs = json.load(f)
+        for b in negs.get("negative", {}).values():
+            all_lines.update(b)
+        all_lines.update(negs.get("recovering", []))
+    fails, stopped = [], False
+    plan = [(k, d, False) for k, d in NEG_AXES.items()] + [("sprite", None, True), ("__recover__", None, False)]
+    for key, desc, sprite in plan:
+        if deadline and time.time() > deadline:
+            stopped = True; break
+        bucket = negs["recovering"] if key == "__recover__" else negs["negative"].setdefault(key, [])
+        got = [l for l in bucket if neg_valid(l)]
+        if len(got) < NEG_TARGET:
+            for _ in range(3):
+                fresh = [l for l in gen_neg_bucket("recovering" if key == "__recover__" else "negative",
+                                                   desc, sprite=sprite) if l not in all_lines]
+                got = got + fresh; all_lines.update(fresh)
+                if len(got) >= NEG_TARGET: break
+            got = got[:NEG_TARGET]
+            if key == "__recover__":
+                negs["recovering"] = got
+            else:
+                negs["negative"][key] = got
+            save_negs(negs)
+            label = "recovering" if key == "__recover__" else "negative/" + key
+            if len(got) < NEG_FLOOR:
+                fails.append(f"{label}={len(got)}")
+            print(f"neg {label}: {len(got)}")
+        else:
+            if key == "__recover__":
+                negs["recovering"] = got[:NEG_TARGET]
+            else:
+                negs["negative"][key] = got[:NEG_TARGET]
+            print(f"neg {'recovering' if key == '__recover__' else 'negative/' + key}: {len(got)} (at target)")
+    if stopped:
+        save_negs(negs)
+    return negs, fails, stopped
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--append", action="store_true")
@@ -278,6 +367,8 @@ def main():
                     help="lines per sprite bucket (floor 3, cap 10)")
     ap.add_argument("--greetings", action="store_true",
                     help="generate the greetings face (greet+faq; GREETINGS.md contract v1.0)")
+    ap.add_argument("--negative", action="store_true",
+                    help="generate the negative/recovering face (NEEDS-CRASH.md §三; T-20260924-16d)")
     ap.add_argument("--budget", type=int, default=0,
                     help="soft seconds budget; stop cleanly between buckets (0=off)")
     args = ap.parse_args()
@@ -307,6 +398,36 @@ def main():
             pass
         print(f"GREETINGS_TOTAL={total} FAIL_BUCKETS={fails if fails else 'NONE'}"
               + (" BUDGET_STOP=resume-next-greetings-round" if stopped else ""))
+        sys.exit(1 if fails else 0)
+    if args.negative:
+        all_lines = set()
+        if os.path.isfile(POOL):
+            with open(POOL, encoding="utf-8") as f:
+                pools = json.load(f)
+            for v in pools.values():
+                for ax in v.values():
+                    if isinstance(ax, list): all_lines.update(ax)
+                    else:
+                        for ctx in ax.values(): all_lines.update(ctx)
+        if os.path.isfile(GREET):  # cross-face dedup vs greet/faq (audit hard fail)
+            with open(GREET, encoding="utf-8") as f:
+                greets = json.load(f)
+            for ax in greets.get("greet", {}).get("axes", {}).values():
+                for b in ax.values(): all_lines.update(b)
+            for b in greets.get("greet", {}).get("sprite", {}).values():
+                all_lines.update(b)
+            for b in greets.get("faq", {}).values():
+                for p in b:
+                    all_lines.update((p.get("q", ""), p.get("a", "")))
+        deadline = time.time() + args.budget if args.budget > 0 else None
+        negs, fails, stopped = gen_negative(all_lines, deadline, resume=args.append)
+        total = sum(len(b) for b in negs["negative"].values()) + len(negs["recovering"])
+        try:
+            if os.path.isfile(LOCK): os.remove(LOCK)
+        except Exception:
+            pass
+        print(f"NEGATIVE_TOTAL={total} FAIL_BUCKETS={fails if fails else 'NONE'}"
+              + (" BUDGET_STOP=resume-next-round" if stopped else ""))
         sys.exit(1 if fails else 0)
     pools = {"axes": {}, "sprite": {}}
     if args.append and os.path.isfile(POOL):
