@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.5 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.6 - BigLife citizen evolution engine.
 
 Grows citizen cards by feeding REAL city signals into a LOCAL LLM (Ollama
 qwen2.5:7b-instruct, zero token, local-first L2). Honesty law (docs/CODEX.md 9):
@@ -30,6 +30,11 @@ life lesson from the ring originals into a new 反思 section (placed right befo
 fragment of its own ring corpus), 7-day cooldown like the ring line, at most 1
 citizen per round. Zero natural triggers until the first 3-ring cards appear
 (~09-30), so the mechanism ships ahead of the data (机制先立·数据后到).
+v0.6 (2026-09-24, T-20260924-04 item 2): V2-D perception locality (SILICON-LIFE
+four-gap item) - perception has a viewpoint: each resident's event feed lists
+own-district events FIRST, other districts after (stable/deterministic order).
+Same 8 events, same bytes for every district - 零编造不降级; river/outer districts
+have no stream zone of their own, so they keep the stream order untouched.
 v0.4.1 gap #14 (2026-09-24): 今夜 was missing from the 6-17 night-word ban
 tokens, so C-00122 wrote 今夜风挺大 inside the morning window (06:33) - token
 added to gate + night-side examples in both batch/meet prompts.
@@ -85,7 +90,7 @@ def save_cursor(c):
 
 def real_signals():
     """Collect REAL city signals: FluxVerse world events tail + world state (read-only)."""
-    sig = {"events": [], "weather": "", "now": datetime.datetime.now().strftime("%Y-%m-%d %H:%M")}
+    sig = {"events": [], "event_zones": [], "weather": "", "now": datetime.datetime.now().strftime("%Y-%m-%d %H:%M")}
     files = sorted(glob.glob(os.path.join(FV_WORLD, "*.jsonl")), key=os.path.getmtime, reverse=True)
     if files:
         try:
@@ -101,8 +106,12 @@ def real_signals():
                     if e.get(k):
                         parts.append(str(e[k])[:60])
                 if parts:
+                    # V2-D: keep each event's zone aligned with it so the feed
+                    # order can be rebuilt per resident district (viewpoint).
+                    sig["event_zones"].append(str(e.get("zone") or ""))
                     sig["events"].append(" / ".join(parts))
             sig["events"] = sig["events"][-8:]
+            sig["event_zones"] = sig["event_zones"][-8:]
         except Exception:
             pass
     ws = os.path.join(FV_WORLD, "world-state.json")
@@ -312,9 +321,44 @@ def persona_digest(text):
         "creed": grab("信条", 60), "language": grab("语言", 80), "behavior": grab("行为", 90),
     }
 
+# V2-D (T-20260924-04 item 2): city districts -> event-stream zones. The stream
+# carries exactly gaming/governance/media/quant; 江面与光桥 (RV) and 外环感知网 (OR)
+# have no zone of their own, so their residents simply keep the stream order -
+# honest (no zone is invented for them), and the feed is never degraded.
+DISTRICT_ZONES = (
+    ("QUANT 城", "quant"),
+    ("MEDIA 城", "media"),
+    ("GAME 城", "gaming"),
+    ("北外滩·治理岸", "governance"),
+)
+
+def citizen_zone(text):
+    """A card's 城区 line -> the event-stream zone it perceives as 'local'."""
+    m = re.search(r"\*\*城区\*\*\s*([^｜\n]+)", text)
+    if not m:
+        return ""
+    district = m.group(1).strip()
+    for name, zone in DISTRICT_ZONES:
+        if name in district:
+            return zone
+    return ""
+
+def viewpoint_events(text, sig):
+    """V2-D viewpoint order: own-district events FIRST, other districts after
+    (stable sort -> deterministic for a given feed + district). The visible
+    SET never changes - same 8 events, same bytes, 零编造不降级; only the order
+    is the resident's. No local zone / zone-data mismatch -> stream order kept."""
+    evs = sig.get("events") or []
+    zones = sig.get("event_zones") or []
+    zone = citizen_zone(text)
+    if not zone or len(zones) != len(evs):
+        return list(evs)
+    order = sorted(range(len(evs)), key=lambda i: (zones[i] != zone, i))
+    return [evs[i] for i in order]
+
 def build_prompt(cid, text, sig):
     p = persona_digest(text)
-    ev = "\n".join("- " + e for e in sig["events"]) or "- （今日无新城市事件）"
+    ev = "\n".join("- " + e for e in viewpoint_events(text, sig)) or "- （今日无新城市事件）"
     wx = sig["weather"] or "（天气数据暂缺）"
     # V2-C memory retrieval (SILICON-LIFE.md life sign #7): carry the newest
     # rings so the citizen writes today WITH continuity instead of repeating.
