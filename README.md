@@ -26,6 +26,11 @@ life/BigLife/
 
 1. 本 README → 2. `docs/CODEX.md`（居民是什么样、按什么律生产） → 3. `BLUEPRINT.md`（怎么生产怎么进化） → 4. 集团 `AI.md`。
 
+## 技能
+
+- `verify-citizen-ring`（`Tools/skills/verify-citizen-ring/SKILL.md`）：年轮批核卡/抽验/修卡作业规程——违禁判读 10 族速查+face-only 判定+修卡原句存史+修后 sync/QC 收口；触发=OSLoop 批后核卡（T-02 面）/发现环文本违禁需修卡/验证某位居民的年轮（R270 建·集团技能动员令 P-2026-09-26-01）。
+- `extend-gene-pool`（`Tools/skills/extend-gene-pool/SKILL.md`）：基因轮低频补充规程——预检三查（库内唯一性/机审门触发词族字符级扫描/跨面撞句双向扫描）+纯尾追加+终验；触发=OSLoop 基因轮（每 8-10 轮）/任务板空档补基因/新增口头禅与钩子物件（R270 建）。
+
 ## 正名程序（CEO 定名后一次执行·2026-09-24 定名=BigLife 同名转正）
 
 **执行状态（2026-09-24）**：步骤 1 免（定名与原代号同字·零目录替换）——步骤 2/3 已执行（全局「临时代号」标记清除+BRAND §8 locked）——步骤 4 已预接线（remote 已配·待 CEO 建 `BigRain-11122/BigLife` 私库后 `git push -u origin main` 即通）。主干已对齐 main（versioning §2 零成本窗口）。若 CEO 翻案另给名，按下列程序单点替换：
