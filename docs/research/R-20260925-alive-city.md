@@ -16,7 +16,11 @@
 - **定义**：城市有物理存在感——日夜循环、水面、光影、声音。
 - **现状**：FluxVerse 在建（09-25 ~18:00「水面效果与日夜循环精修令」transferred DevLoop·集团 orders.md 在案）——本层=兄弟司主责，本司消费面（年轮实况天气/时间喂入已依赖此层）。
 - **初判**：非本司缺口；依赖接口=world-state 实况键组（R245 空窗事件证明单点依赖风险已实测）。
-- **待盘细项**：声景面（城市声音对居民行为的反向触发）——下轮小步。
+- **分步⑤ 实证（2026-09-26 R280·双仓只读扫描·B/C 级实件·零 LLM）——声轴双轨盘点（「待盘细项」收口）**：
+  - **城市环境音景（FluxVerse 域·只读）✓资产基座在案·「未开工」预判证伪**：`City/Assets/Audio/` 41 件（weather 风声/雨环×4/蟋蟀夜曲+ambience busy_cyberworld+signature s1_zone_warning 等）+音频层第一正典 `docs/research/R-20260923-audio-assets.md` v1.0（09-23 CEO 音频资产令溯源·需求音景图/许可台账/自产签名轨道/消费接线四节·逐件台账=City/Assets/Audio/AUDIO-LEDGER.md）——P-09 水面日夜精修令清单不含声件=该令范围限水面/日夜，声轴自有独立线已在。
+  - **居民声面（本司域）✓已落件在产·超出初判**：`cognition/VOICE-POOL.md` v1.0 声纹池总契约（溯源=09-25 CEO 定向开工令 O-20260925-1138-bm-c·CODEX §十二 v3.9 T2 登记·否决窗至 10-02）——声纹=确定性派生同律（md5(id) 分带 pitch/rate/vol·零个体文件数据行制）：`Tools/voice_manifest.py`→`census/export/citizen-voice.jsonl` 10003 行 R3 再生面+`Tools/voice_synth.ps1` SAPI SSML 产线（v0 单基音诚实标注+分带调制·荣誉席 3 行 blocked=家人声音不出产线）+样例包 8 片锚民+**piper 神经声通道已实证**（`census/export/voice-pilot-piper/` 8 片 wav+manifest.json·zh_CN-huayan-medium·自然语速 3.7s vs SAPI 11.1s·hf-mirror 断点续传本地装机零云端）——余项=kokoro ONNX 多声源终解（8 zh 基音含男声·VOICE-POOL §四既有挂账次窗件）。
+  - **缺口精化（原「城市声音→居民行为反向触发」待盘细项）三件**：①多声源终解=既有挂账件（kokoro·非本件新立）；②**声景→居民行为反向触发=零系统**——音资产面+声纹面=表达面与资产面已备，但声音→行为消费链（警报→避险/叫卖→围观类）behavior.py 输入零声音键（输入=needs+时间+weather 三源·L2 现状行在册）→**「读面接线」级新候补**（与 L3 分步④四断点同族·待研后立·设计权衡面：声音触发行为的拟真增益 vs 确定性边界）；③消费接线=M4 参观端语音气泡/CityWatch 城市声景（FluxVerse 消费面·导出面已备·R3 再生律消费前重生成·VOICE-POOL §四消费方三写在案）。
+- **结论**：L1 声轴双轨**面已开**（城市音景=兄弟司 41 件基座+居民声=本司产线在产）·缺纵向接线（反向触发候补=读面接线级）——维持「非本司独立缺口」初判；反向触发候补入 L3 断点族清单待研。
 
 ### L2 行为层（作息/通勤/饭点——已建→生活循环深化=本司主责）
 - **定义**：居民有可信的日常行为节律。
@@ -65,6 +69,7 @@
 | 结论 | 落点 | 状态 |
 |---|---|---|
 | （骨架占位·结论随逐层盘点收口填入——无表=未交付律·表先行） | — | 调研中 R275 |
+| L1 声轴双轨（城市音景=FluxVerse 资产基座 41 件+居民声=本司声纹产线在产） | ①任务单（声景→行为反向触发=「读面接线」级候补·待研后立·随 L3 断点族批呈；kokoro 多声源=VOICE-POOL §四既有挂账件不重复立单） | 实证毕·方案待研 |
 | L2 生活循环深化（五环补环）=本司主责 | ①任务单（五环覆盖度实证已收口 R277：休闲△窄门/休息✗零态/社交△单态→补环三候选成形·立单待 CEO/集团优先级） | 调研中 |
 | L3 层间连接断点收口 | ①任务单（互链断点实证已收口 R279：崩溃态全链 ✓/情绪三消费点 ✓/流言零消费/关系仓内零消费——「读面接线」级候选 4 件+情绪→行为面设计权衡·待研后立） | 实证毕·方案待研 |
 | L4 意义层目标系统候选 | ①任务单（阈值派生范式·**目标语句实证已收口 R278**：出师母题真例 6/1424=声音在·兑现态零=状态机缺·母题单一=需个体化——候选精化=个体化派生+跨环进展记账双面·待研后立） | 实证毕·方案待研 |
@@ -74,8 +79,8 @@
 ## 四、源分级（A-D+M）
 
 - **A 仓内正典**：CODEX §十二/§十四、SILICON-LIFE 12 体征/七律（本地算力律）、cognition/README（判据面）。
-- **B 仓内实件**：Tools/behavior.py·rumor_chain.py·mood_director.py·relations_manifest.py·evolve_citizen.py（年轮+[锚]）·needs.py、census/export/citizen-behavior.jsonl 导出面、cognition/mood-calendar.json。
-- **C 集团件**：docs/orders.md（P-20260925-15 落册 483b796）、cph4/research/R-20260924-silicon-aliveness（承接件）、R-20260925-bl-saturation-direction（双机分工面）、research-protocol v1.0。
+- **B 仓内实件**：Tools/behavior.py·rumor_chain.py·mood_director.py·relations_manifest.py·evolve_citizen.py（年轮+[锚]）·needs.py·voice_manifest.py/voice_synth.ps1（VOICE-POOL 声纹产线）、census/export/citizen-behavior.jsonl 导出面、cognition/mood-calendar.json·cognition/VOICE-POOL.md。
+- **C 集团件**：docs/orders.md（P-20260925-15 落册 483b796）、cph4/research/R-20260924-silicon-aliveness（承接件）、R-20260925-bl-saturation-direction（双机分工面）、research-protocol v1.0、FluxVerse docs/research/R-20260923-audio-assets+City/Assets/Audio 41 件（兄弟司声轴正典与资产·只读）。
 - **D 外部源**：竞品锚五件（模拟人生/RimWorld/动物森友会/模拟城市/Second Life）——**待研·本轮零直采零编造**。
 - **M 待证**：L4 目标系统的 7b 生成质量（目标语句的编造风险面）；L5 留痕累积的存储规模（万民×长线记忆的体量成本）。
 
@@ -85,3 +90,4 @@
 - 2026-09-26 R277（@BigLife-OSLoop）：分步②收口——L2 五环覆盖度实证扫描（behavior.py derive() 全路径只读盘点）：起居✓浅粒/工作✓全/社交△单态/休闲△窄门/休息✗零专属态（新发现·初判精化）+补环三候选（休闲扩容/休息新建/社交位扩容·全阈值派生零新系统）——L1/L3/L4/L5 待盘细项+竞品锚=后续轮小步续。
 - 2026-09-26 R278（@BigLife-OSLoop）：分步③收口——L4 年轮目标语句实证扫描（1424 行全库确定性扫描零 LLM·三方对账 ✓）：长线目标句 9/1424（真例 6 全「出师」共基因母题+3 FP）·中线 0·短线意图 135——缺口形状三证（声音在/兑现态零/母题单一）→目标系统候选精化（个体化派生+跨环进展记账双面·阈值派生待研）——L1 声景/L3 互链断点/L5 响应面规格+竞品锚=后续轮小步续。
 - 2026-09-26 R279（@BigLife-OSLoop）：分步④收口——L3 三引擎互链断点扫描（全仓 rg 消费点实证·零 LLM）：崩溃态全链 ✓（needs→behavior overlay→draw 负面台词面·律八③双帽）+情绪导演三消费点 ✓（draw/spotlight/citizen_qa）+流言链零消费点（断点①②）+关系面仓内零消费（断点③④）+情绪→行为面设计权衡（断点⑤候选）——4 断点全「读面接线」级·候选件待研后立——L1 声景/L5 响应面规格+竞品锚=后续轮小步续。
+- 2026-09-26 R280（@BigLife-OSLoop）：分步⑤收口——L1 声轴双轨盘点（双仓只读·零 LLM）：城市环境音景=FluxVerse City/Assets/Audio 41 件+音频层第一正典 R-20260923-audio-assets v1.0 在案（「未开工」预判证伪）+居民声=本司 VOICE-POOL v1.0 产线在产（citizen-voice.jsonl 10003 行 R3 再生面+SAPI 分带 v0+piper 神经声 8 片实证·kokoro 多声源=既有挂账）——缺口精化三件（多声源既有挂账/声景→行为反向触发=零系统·读面接线级候补入 L3 断点族/消费接线=FluxVerse M4·CityWatch 面）——余=L5 响应面规格+竞品锚+应用表终稿=后续轮小步续（窗→10-02 余 6 天）。
