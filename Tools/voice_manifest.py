@@ -7,7 +7,7 @@ is an R3 regenerable face (gitignored) - consumers regenerate before use (~secon
 
 Honored seats (C-00001~03) are emitted with blocked=true (CEO persona-reserved).
 
-Contract: cognition/VOICE-POOL.md v1.0 (CODEX 12th section T2 v3.3).
+Contract: cognition/VOICE-POOL.md v1.0 (CODEX 12th section T2 v3.9).
 Usage: python -X utf8 voice_manifest.py [--qc]
 """
 import argparse, hashlib, json, os, re, sys

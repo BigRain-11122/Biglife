@@ -9,7 +9,7 @@ lives in the export face census/export/citizen-persona.jsonl (R3, gitignored).
 
 md5(id) banding, no python hash(), double-run byte-identical (QC built in).
 Honored seats C-00001~03 are blocked (CEO persona-reserved, never derived).
-Contract: cognition/PERSONA-v2.md v1.0 (CODEX 12th section T2 v3.9).
+Contract: cognition/PERSONA-v2.md v1.0 (CODEX 12th section T2 v3.12).
 
 Usage: python -X utf8 persona_enrich.py [--qc]
 """

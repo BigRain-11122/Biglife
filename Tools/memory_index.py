@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """memory_index.py - city-wide ring memory index + deterministic recall (v1).
 
-AI-foundation piece under order O-20260925-1202-bm-c (CODEX 12th T2 v3.10):
+AI-foundation piece under order O-20260925-1202-bm-c (CODEX 12th T2 v3.13):
 until now the QA layer only ever saw a citizen's LAST 3 rings; this index
 recalls the most question-relevant memories instead. BM25-lite scoring:
 2-char shingle overlap * recency boost, zero LLM, zero new deps, deterministic
