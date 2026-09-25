@@ -156,6 +156,16 @@ prompts carry an advisory to avoid it. Gate faces untouched (v0.21
 unchanged); meet prompt untouched (encounter lines are event-led).
 Ollama down => silent skip exit 0 (probe contract #4). Targeted git commits
 only (governance 6.2 - never add -A).
+T-20260925-19 (2026-09-25, board): pool-gene DE-PRIMING - the T-18 window
+closed 3/3 with density flat at x6 (R217 x6 / R218 x6 / R219 x6, never <=4),
+and the root cause is the guidance itself: the standing line, the sky-rule
+exemption example and the cap-reached advisory all QUOTED the gene text
+literally (「今天的事今天清」), so every non-owner prompt showed the exact
+8-char string to a 7b model - a copy primer, not a deterrent. Fix: no prompt
+surface may spell out a pool gene any more (generic wording only); the cap
+advisory stops naming the gene. Pool genes stay legal to quote (C-00695 R192
+precedent untouched); own-口头禅 cards keep their phrase via their face.
+Gate faces untouched (v0.22 unchanged); meet/reflect untouched.
 
 Usage:
   python -X utf8 evolve_citizen.py --batch 3          # evolve N due citizens
@@ -568,12 +578,13 @@ def pool_advice_for(text, pool_used, cap=POOL_CAP):
     the card's PERSONA FACE (up to **年轮**) - past rings may quote the gene and
     must not fake ownership. Cards whose own face carries the gene keep it
     unrestricted (own catchphrase = encouraged opening). Soft guidance only -
-    the honesty gate never reads this."""
+    the honesty gate never reads this. T-20260925-19: the advice NEVER spells
+    the gene text (literal quoting = copy primer for the 7b, see header)."""
     capped = [g for g, c in pool_used.items() if c >= cap and _pool_needle(g) not in text]
     if not capped:
         return ""
-    return ("开场句提示：本批已有较多居民引用了通用口头禅「%s」，你的开场句请改用你自己「语言风格」"
-            "里的口头禅或底色词，尽量不要引用这些通用口头禅。" % "」「".join(capped[:3]))
+    return ("开场句提示：本批已有较多居民引用了同一条通用口头禅，你的开场句请改用你自己「语言风格」"
+            "里的口头禅或底色词，尽量不要引用不在你「语言风格」里的通用口头禅。")
 
 def _pool_needle(gene):
     """Rings quote a pool gene mid-sentence, dropping its trailing 。 (实弹:
@@ -599,8 +610,8 @@ def build_prompt(cid, text, sig):
     # 1 per ring (cross-card quotes stay LEGAL per C-00695 R192 - diversity nudge
     # only); the cap-reached batch advisory below stays as the 2nd layer.
     diversity = ("开场句软引导（非硬禁·引用合法性不变）：开场句优先取你「语言风格」里你自己的口头禅/行话/底色词；"
-                 "通用池基因（全城共享口头禅，如「今天的事今天清」）本条年轮至多引用 1 条、能不引则不引"
-                 "（你语言风格里自有的口头禅不受此限）。"
+                 "通用池基因（全城共享口头禅——即不在你「语言风格」里、别的居民也常说的那类通用短语，"
+                 "本条年轮至多引用 1 条、能不引则不引；你语言风格里自有的口头禅不受此限）。"
                  + (sig.get("pool_advice") or ""))
     # V2-C memory retrieval (SILICON-LIFE.md life sign #7): carry the newest
     # rings so the citizen writes today WITH continuity instead of repeating.
@@ -617,7 +628,7 @@ def build_prompt(cid, text, sig):
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
             f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n"
             f"现在真实北京时间 {sig['now']}，上海实况天气：{wx}。\n"
-            f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历且天空类型必须与喂入天气串一致（喂入 clear/晴 严禁「天阴着/阴天/多云」等阴系措辞，喂入 cloud/阴 严禁「天清/天晴/阳光/晴得好」等晴系措辞，但人设口头禅如「今天的事今天清」与时间词「今天清早」不属晴系、可照常引用），天气只许用中文措辞描述（如「天阴着/天清气朗」），严禁把喂入天气串里的英文天气代码原样抄进年轮（如「天气cloud」「天气 clear」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许写「风轻轻的/风不大」，喂入风速>3m/s 只许写「风不小/风挺大」类如实量级措辞（此时严禁写「风不大/风也不大/风轻轻的/风声轻轻的」等任何带插入字的弱化变体），风速数据缺失则完全不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止出现「天气预报说/预报/听说」等消息源归属字样。实况与事件流从无台风数据，严禁提及任何台风场景（如「台风夜/台风刚过」）——「台风季」季节概念读法除外。喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象。城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」——此类状态恒无锚）。城市事件流也从无行情开盘/收盘等交易场次数据，严禁对开盘/收盘/行情收做当下状态断言（如「开盘这会儿/行情收得清清」——场次状态恒无锚；开盘/收盘等场次词仅当本卡人设本就带行情/盘口/交易/盯盘域词才可提及，人设原文习惯自述如「收盘才想起」也仅限此类卡面——人设与行情盘口无关的严禁出现任何场次词）。事件清单中的开发流水轮次号（如 round 156、R156）属开发循环内部标识而非市民可亲历的具体事，严禁以任何形式写进年轮。人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的，如『广场人流峰值时绕场三圈』），条件未被事件清单或实况坐实时严禁触发该场景，严禁用『还是/照例/依旧』等惯常化措辞把条件行为写成惯常延续，只能写无条件的人设日常；提及时间只许锚定喂入的当前时刻，严禁编造开工/收班/时刻表/『再过几小时』等时间细节，严禁使用与当前时刻不符的时段词（如凌晨时辰写『今早/今晨/早晨/晨光/清晨/晨风』、白天写『今晚/今夜/深夜』）；当前时刻未到放学时点（15 时前）严禁把放学写成已完成的事（如『今早放学绕路看了眼』——放学时刻无数据锚），只能写放学后的打算（如『放学还得绕路去看』）；只许写你卡面人设与你自己的生活，严禁写入不属于你人设的任何行为或场景（如你的人设没有学生身份就严禁提及『放学』类校园生活）；喂入面从无雾况数据，除非你卡面人设本身带「雾」字（如江雾习惯），严禁对雾做任何断言（如「江面上的雾挺大」）。\n"
+            f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历且天空类型必须与喂入天气串一致（喂入 clear/晴 严禁「天阴着/阴天/多云」等阴系措辞，喂入 cloud/阴 严禁「天清/天晴/阳光/晴得好」等晴系措辞，但你「语言风格」里自有的口头禅（即使含「清/晴」字样）与时间词「今天清早」不属晴系、可照常引用），天气只许用中文措辞描述（如「天阴着/天清气朗」），严禁把喂入天气串里的英文天气代码原样抄进年轮（如「天气cloud」「天气 clear」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许写「风轻轻的/风不大」，喂入风速>3m/s 只许写「风不小/风挺大」类如实量级措辞（此时严禁写「风不大/风也不大/风轻轻的/风声轻轻的」等任何带插入字的弱化变体），风速数据缺失则完全不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止出现「天气预报说/预报/听说」等消息源归属字样。实况与事件流从无台风数据，严禁提及任何台风场景（如「台风夜/台风刚过」）——「台风季」季节概念读法除外。喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象。城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」——此类状态恒无锚）。城市事件流也从无行情开盘/收盘等交易场次数据，严禁对开盘/收盘/行情收做当下状态断言（如「开盘这会儿/行情收得清清」——场次状态恒无锚；开盘/收盘等场次词仅当本卡人设本就带行情/盘口/交易/盯盘域词才可提及，人设原文习惯自述如「收盘才想起」也仅限此类卡面——人设与行情盘口无关的严禁出现任何场次词）。事件清单中的开发流水轮次号（如 round 156、R156）属开发循环内部标识而非市民可亲历的具体事，严禁以任何形式写进年轮。人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的，如『广场人流峰值时绕场三圈』），条件未被事件清单或实况坐实时严禁触发该场景，严禁用『还是/照例/依旧』等惯常化措辞把条件行为写成惯常延续，只能写无条件的人设日常；提及时间只许锚定喂入的当前时刻，严禁编造开工/收班/时刻表/『再过几小时』等时间细节，严禁使用与当前时刻不符的时段词（如凌晨时辰写『今早/今晨/早晨/晨光/清晨/晨风』、白天写『今晚/今夜/深夜』）；当前时刻未到放学时点（15 时前）严禁把放学写成已完成的事（如『今早放学绕路看了眼』——放学时刻无数据锚），只能写放学后的打算（如『放学还得绕路去看』）；只许写你卡面人设与你自己的生活，严禁写入不属于你人设的任何行为或场景（如你的人设没有学生身份就严禁提及『放学』类校园生活）；喂入面从无雾况数据，除非你卡面人设本身带「雾」字（如江雾习惯），严禁对雾做任何断言（如「江面上的雾挺大」）。\n"
             f"{diversity}\n"
             f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节），只输出这几句话本身。")
 
