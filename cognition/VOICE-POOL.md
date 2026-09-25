@@ -30,9 +30,10 @@
 3. 样例包：SSML 串=参数确定性拼装（引擎音频面=SAPI 出·不作逐字节判据·如实标注）；每片 ≤15 秒。
 4. 诚实边界：台词文本=导出面字段直读（信条+名）零 LLM 零编造；blocked 席零产物。
 
-## 四、升级路（M 待证→装机实证后升 v0.1）
+## 四、升级路（M→部分实证·O-20260925-1416 加速令）
 
-- **本地多声源**：kokoro/piper zh 声纹（CPU/GPU 本地推理·hf-mirror 通道）——装机场=C 机；实证判据=≥4 基音×分带组合听感区分 5/5 盲测。**云端 TTS=禁**（本地算力律）。
+- **piper 通道已实证（2026-09-25 试点·census/export/voice-pilot-piper/ 8 片）**：zh_CN-huayan-medium 63MB 模型经 hf-mirror 断点续传落位 K:\Fluxgroup\.tools\piper-voices\（隔离 venv K:\Fluxgroup\.tools\tts-venv\ 零污染主环境）——**神经声质量显著优于 SAPI**（自然语速：顾阿凤同文本 SAPI 11.1s vs piper 3.7s=拼接停顿消除）；per-citizen length_scale=100/(100+rate) 派生自声纹 manifest（确定性）；坑=piper stdin 按 GBK locale 解码须 PYTHONUTF8=1。
+- **余项（kokoro 终解）**：piper 中文库单声源（huayan 女声）——多声源终解=kokoro ONNX（8 zh 基音含男声·挂账次窗装机实证）；**云端 TTS=禁**（本地算力律·P-2026-09-25-09 节流令同向）。
 - 消费方：M4 参观端（居民语音气泡）/CityWatch（城市声景）/BigStream（内容素材引用走任务单）。
 
 ## 五、验收实录

@@ -16,7 +16,7 @@ Usage:
   python -X utf8 citizen_qa.py --serve [--port 8792]
   python -X utf8 citizen_qa.py --qc
 """
-import argparse, datetime, glob, json, os, re, sys, urllib.request
+import argparse, datetime, glob, hashlib, json, os, re, sys, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
@@ -27,7 +27,39 @@ FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", 
 OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
 MODEL = os.environ.get("BIGLIFE_MODEL", "qwen2.5:7b-instruct")
 MAXLEN = 60
-WHITELIST = {"C-%05d" % i for i in range(10, 30)}
+WHITELIST = {"C-%05d" % i for i in range(10, 30)}   # anchor core (v1.2: rotation adds daily 100)
+_ROT_CACHE = {}
+
+def rotation_pool():
+    """Daily rotation of 100 ring-rich citizens (order O-20260925-1416-bm-c item 2).
+
+    Pool = citizens with a non-empty recent_ring (excludes honored seats);
+    deterministic per day via md5(date) offset; anchors always included.
+    """
+    day = datetime.date.today().isoformat()
+    if day in _ROT_CACHE:
+        return _ROT_CACHE[day]
+    pool = []
+    try:
+        with open(LIGHT, encoding="utf-8") as f:
+            for ln in f:
+                if '"faction": "honored"' in ln:
+                    continue
+                r = json.loads(ln)
+                if r.get("recent_ring"):
+                    pool.append((r.get("recent_ring_date") or "", r["id"]))
+    except Exception:
+        pool = []
+    pool.sort(key=lambda x: (x[0], x[1]))
+    ids = [p[1] for p in pool]
+    picked = set()
+    if ids:
+        off = int(hashlib.md5(day.encode("utf-8")).hexdigest()[:8], 16) % len(ids)
+        n = min(100, len(ids))
+        picked = set(ids[(off + i) % len(ids)] for i in range(n))
+    wl = WHITELIST | picked
+    _ROT_CACHE[day] = wl
+    return wl
 HONORED = {"C-00001", "C-00002", "C-00003"}
 DEFLECT = "\u8fd9\u4e8b\u6211\u4e00\u65f6\u8bf4\u4e0d\u4e0a\u6765\uff0c\u6539\u5929\u8ddf\u4f60\u7ec6\u804a\u3002"
 
@@ -218,6 +250,14 @@ def qc():
     if not ("C-00010" in WHITELIST and "C-00426" not in WHITELIST
             and HONORED & WHITELIST == set()):
         fails.append("whitelist scope")
+    wl1 = rotation_pool()
+    wl2 = rotation_pool()
+    if wl1 != wl2:
+        fails.append("rotation determinism")
+    if HONORED & wl1:
+        fails.append("honored in rotation")
+    if not (len(wl1) >= 100 and "C-00010" in wl1):
+        fails.append("rotation size/anchors: %d" % len(wl1))
     if fails:
         print("QC FAIL: " + "; ".join(fails))
         return 1
@@ -229,8 +269,8 @@ def ask_once(cid, questions, want_json):
         msg = "rejected: honored seat (CEO persona-reserved)"
         print(json.dumps({"id": cid, "error": msg}, ensure_ascii=False) if want_json else msg)
         sys.exit(3)
-    if cid not in WHITELIST:
-        msg = "rejected: citizen not in QA whitelist (see cognition/QA-WHITELIST.md)"
+    if cid not in rotation_pool():
+        msg = "rejected: citizen not in QA whitelist (anchor core + daily rotation, see cognition/QA-WHITELIST.md)"
         print(json.dumps({"id": cid, "error": msg}, ensure_ascii=False) if want_json else msg)
         sys.exit(2)
     row = get_row(cid)
@@ -296,8 +336,8 @@ def serve(port):
                 if cid in HONORED:
                     self._send(403, {"id": cid, "error": "honored seat (CEO persona-reserved)"})
                     return
-                if cid not in WHITELIST:
-                    self._send(403, {"id": cid, "error": "not in QA whitelist"})
+                if cid not in rotation_pool():
+                    self._send(403, {"id": cid, "error": "not in QA whitelist (anchor core + daily rotation)"})
                     return
                 row = get_row(cid)
                 if not row:

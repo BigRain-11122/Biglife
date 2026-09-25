@@ -1,0 +1,74 @@
+[
+  {
+    "id": "C-00010",
+    "name": "顾阿凤",
+    "text": "灶上留一壶，路过的都是客。我是顾阿凤。",
+    "length_scale": 1.163,
+    "engine": "piper-zh_CN-huayan-medium",
+    "file": "C-00010.wav",
+    "bytes": 163372
+  },
+  {
+    "id": "C-00011",
+    "name": "朱鸿奎",
+    "text": "差之毫秒，谬以全城。我是朱鸿奎。",
+    "length_scale": 1.053,
+    "engine": "piper-zh_CN-huayan-medium",
+    "file": "C-00011.wav",
+    "bytes": 146476
+  },
+  {
+    "id": "C-00013",
+    "name": "林之恒",
+    "text": "城市不会忘记，除非我们偷懒。我是林之恒。",
+    "length_scale": 0.98,
+    "engine": "piper-zh_CN-huayan-medium",
+    "file": "C-00013.wav",
+    "bytes": 167468
+  },
+  {
+    "id": "C-00015",
+    "name": "陈雅雯",
+    "text": "红灯是为所有人亮的，包括我。我是陈雅雯。",
+    "length_scale": 0.98,
+    "engine": "piper-zh_CN-huayan-medium",
+    "file": "C-00015.wav",
+    "bytes": 168492
+  },
+  {
+    "id": "C-00017",
+    "name": "归档者-07",
+    "text": "参数不收敛，天理难容。我是归档者-07。",
+    "length_scale": 1.01,
+    "engine": "piper-zh_CN-huayan-medium",
+    "file": "C-00017.wav",
+    "bytes": 154668
+  },
+  {
+    "id": "C-00019",
+    "name": "老晶振",
+    "text": "机器不坏是本事，坏了能修是人品。我是老晶振。",
+    "length_scale": 0.99,
+    "engine": "piper-zh_CN-huayan-medium",
+    "file": "C-00019.wav",
+    "bytes": 172076
+  },
+  {
+    "id": "C-00028",
+    "name": "十四号路灯",
+    "text": "灯不问来路，只管照路。我是十四号路灯。",
+    "length_scale": 0.82,
+    "engine": "piper-zh_CN-huayan-medium",
+    "file": "C-00028.wav",
+    "bytes": 139308
+  },
+  {
+    "id": "C-00029",
+    "name": "咪喱",
+    "text": "蹭饭是门艺术，报恩是门手艺。我是咪喱。",
+    "length_scale": 0.855,
+    "engine": "piper-zh_CN-huayan-medium",
+    "file": "C-00029.wav",
+    "bytes": 153644
+  }
+]
