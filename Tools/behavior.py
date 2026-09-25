@@ -18,6 +18,12 @@ Zero LLM, zero API. Same (persona, time window, weather, needs snapshot)
 the derivation inputs (window bucket, weather_kind) are unchanged since the
 last QC-passing run (state/behavior-last.json); on change it refreshes the
 needs face first so weather-linked needs rows match, then regenerates + QC.
+T-20260926-03a (2026-09-26, R-20260925-alive-city L2 step a): rest-ring
+separation - the two physiological rest windows (siesta 13:00-14:59,
+pre-sleep 21:30-22:59) split carbon home residents out of generic "home"
+into rest_nap / rest_eve (threshold-pure; silicon charge / sprite roost keep
+their own species rest forms; honored seats C-00001~03 excluded); --auto
+regen key adds rest_win so window-edge flips trigger regeneration too.
 """
 import hashlib, json, os, re, subprocess, sys
 
@@ -34,7 +40,11 @@ RAIN_KINDS = ("rain", "snow", "shower", "drizzle", "typhoon")
 TRADER_RE = re.compile(r"交易|量化|风控|行情|回测|操盘|盘口|瞭望|对冲|期货")
 STATES = {"sleep", "home", "work", "commute", "school", "meal", "social", "explore",
           "exercise", "run", "shelter", "indoors", "night_shift", "night_light",
-          "charge"} | {"slump", "grumble", "fumble"}
+          "charge"} | {"slump", "grumble", "fumble"} | {"rest_nap", "rest_eve"}
+# T-20260926-03a: rest ring - two windows, minute-of-day, threshold-pure
+REST_STATES = {"rest_nap", "rest_eve"}
+NAP_WIN = (780, 900)    # 13:00-14:59 siesta (afternoon rest)
+EVE_WIN = (1290, 1380)  # 21:30-22:59 pre-sleep wind-down
 QUIRKS = ("", "slow", "umbrella", "night_run")
 
 # T-20260924-16d step 2 (contract cognition/NEEDS-CRASH.md §二.2 + §四.5):
@@ -100,7 +110,7 @@ def band(age):
     return "elder"
 
 
-def derive(r, nk, top, sig, w, weekend, crash=None, cax=None, vis_ok=True):
+def derive(r, nk, top, sig, w, weekend, crash=None, cax=None, vis_ok=True, m=None):
     """Law 1/2/4 -> (state, slot, visible); law 3 weather override last;
     T-16d crash overlay after weather law (negative visibility is deliberate,
     density bounded by CRASH_CAP - QC rain-ratio counts non-crash rows only)."""
@@ -186,6 +196,20 @@ def derive(r, nk, top, sig, w, weekend, crash=None, cax=None, vis_ok=True):
             else:
                 st, slot, vis = "home", "宅户", 0
 
+    # T-20260926-03a: rest-ring separation (R-20260925-alive-city L2 - the
+    # rest ring had zero dedicated state, folded into "home" indistinguishably).
+    # Carbon home residents inside the two windows become rest_nap/rest_eve;
+    # silicon (charge) and sprite (roost) keep their own species rest forms;
+    # honored seats C-00001~03 stay as-is (pre-registered judge 3). rest
+    # states are vis=0 so the weather law below (vis==1 only) never touches
+    # them; crash overlay after still takes deliberate precedence.
+    if m is not None and st == "home" and sp not in ("silicon", "sprite") \
+       and str(r.get("id")) not in needs.HONORED_IDS:
+        if NAP_WIN[0] <= m < NAP_WIN[1]:
+            st, slot, vis = "rest_nap", "家户·歇晌", 0
+        elif EVE_WIN[0] <= m < EVE_WIN[1]:
+            st, slot, vis = "rest_eve", "家户·睡前", 0
+
     # law 3: rain/snow drives street-visible citizens under cover;
     # road-visible keeps <=30% of clear-same-clock (umbrella quirk only),
     # sheltered spots stay visible
@@ -251,7 +275,7 @@ def load_needs(sig, hb, rows):
     return get
 
 
-def crash_caps(rows, getn, sig, w, weekend):
+def crash_caps(rows, getn, sig, w, weekend, m=None):
     """Law-8.3 truncation plan (pure): returns (city_keep, dist_vis_ok) id
     sets. City overflow (CITY_CAP) reverts to base behavior in final_row;
     district visible overflow (CRASH_CAP) keeps the crash state at visible=0.
@@ -276,7 +300,7 @@ def crash_caps(rows, getn, sig, w, weekend):
     vis_by_d = {}
     for r, nk, top, cax in cands:
         if NEG_OF_AXIS[cax] != "grumble":
-            base = derive(r, nk, top, sig, w, weekend)
+            base = derive(r, nk, top, sig, w, weekend, m=m)
             if base["visible"] != 1:
                 continue  # slump/fumble inherit base visibility only
         vis_by_d.setdefault(r.get("district") or "?", []).append(
@@ -288,7 +312,7 @@ def crash_caps(rows, getn, sig, w, weekend):
     return city_keep, dist_vis_ok
 
 
-def final_row(r, getn, city_keep, dist_vis_ok, sig, w, weekend):
+def final_row(r, getn, city_keep, dist_vis_ok, sig, w, weekend, m=None):
     """Write-face row: base derive + crash overlay under the caps plan."""
     nk, top, crash, cax = getn(r)
     eff, vis_ok = crash, True
@@ -298,7 +322,7 @@ def final_row(r, getn, city_keep, dist_vis_ok, sig, w, weekend):
             vis_ok = cid in dist_vis_ok
         else:
             eff = None  # CITY_CAP overflow -> base behavior, no crash state
-    return derive(r, nk, top, sig, w, weekend, eff, cax, vis_ok)
+    return derive(r, nk, top, sig, w, weekend, eff, cax, vis_ok, m=m)
 
 
 def main():
@@ -306,12 +330,16 @@ def main():
     auto = "--auto" in sys.argv and not qc_only
     sig = needs.city_signals()
     now = sig["now"]
-    w = window(now.hour * 60 + now.minute)
+    mnow = now.hour * 60 + now.minute
+    w = window(mnow)
     weekend = now.weekday() >= 5
     hb = now.hour // 3
+    rest_win = "nap" if NAP_WIN[0] <= mnow < NAP_WIN[1] else \
+               ("eve" if EVE_WIN[0] <= mnow < EVE_WIN[1] else "")
 
-    # T-20260925-11 (D-20260925-08) regen rhythm: bucket or weather change is
-    # the only trigger; pure check (clock + world-state + state face), zero LLM.
+    # T-20260925-11 (D-20260925-08) regen rhythm: bucket / weather / rest-
+    # window change is the only trigger (rest_win added by T-20260926-03a -
+    # window edges are finer than buckets); pure check, zero LLM.
     if auto:
         last = None
         if os.path.exists(STATE_BEH):
@@ -322,9 +350,10 @@ def main():
                 last = None
         wx_now = sig["weather"] or ""
         if last and last.get("time_bucket") == w \
-           and last.get("weather_kind") == wx_now and os.path.exists(OUT_BEH):
-            print("behavior auto: bucket=%s wx=%s unchanged - skip regen"
-                  % (w, wx_now or "na"))
+           and last.get("weather_kind") == wx_now \
+           and last.get("rest_win", "") == rest_win and os.path.exists(OUT_BEH):
+            print("behavior auto: bucket=%s wx=%s rest=%s unchanged - skip regen"
+                  % (w, wx_now or "na", rest_win or "na"))
             sys.exit(0)
         # inputs changed (or bootstrap): refresh needs face first so
         # weather-linked needs rows match this run, then regen + QC below
@@ -338,10 +367,11 @@ def main():
         with open(needs.LIGHT, encoding="utf-8") as f:
             rows = [json.loads(l) for l in f if l.strip()]
         getn = load_needs(sig, hb, rows)
-        city_keep, dist_vis_ok = crash_caps(rows, getn, sig, w, weekend)
+        city_keep, dist_vis_ok = crash_caps(rows, getn, sig, w, weekend, mnow)
         out = []
         for r in rows:
-            out.append(final_row(r, getn, city_keep, dist_vis_ok, sig, w, weekend))
+            out.append(final_row(r, getn, city_keep, dist_vis_ok, sig, w,
+                                weekend, mnow))
         tmp = OUT_BEH + ".tmp"
         with open(tmp, "w", encoding="utf-8", newline="\n") as f:
             for o in out:
@@ -374,13 +404,22 @@ def main():
                 bad += 1
             if str(r.get("id")) in needs.HONORED_IDS:
                 bad += 1
+        # T-20260926-03a: rest-ring schema - honored seats never rest-states
+        # (judge 3), rest only inside its own window, home-based vis=0
+        if st in REST_STATES:
+            if str(r.get("id")) in needs.HONORED_IDS or o.get("visible") != 0:
+                bad += 1
+            if not ((st == "rest_nap" and NAP_WIN[0] <= mnow < NAP_WIN[1]) or
+                    (st == "rest_eve" and EVE_WIN[0] <= mnow < EVE_WIN[1])):
+                bad += 1
     # determinism: rebuild a spread sample through the same pure pipeline
     if not qc_only:
         getn = load_needs(sig, hb, rows)
-        city_keep, dist_vis_ok = crash_caps(rows, getn, sig, w, weekend)
+        city_keep, dist_vis_ok = crash_caps(rows, getn, sig, w, weekend, mnow)
         for i in range(0, len(rows), 97):
             r = rows[i]
-            if json.dumps(final_row(r, getn, city_keep, dist_vis_ok, sig, w, weekend),
+            if json.dumps(final_row(r, getn, city_keep, dist_vis_ok, sig, w,
+                                    weekend, mnow),
                           ensure_ascii=False) != json.dumps(brows[i], ensure_ascii=False):
                 bad += 1
     # law 3 invariant: rainy road-visible (non-shelter) <= ~30% of cover-bound
@@ -426,6 +465,7 @@ def main():
         tmp = STATE_BEH + ".tmp"
         with open(tmp, "w", encoding="utf-8", newline="\n") as f:
             json.dump({"time_bucket": w, "weather_kind": sig["weather"] or "",
+                       "rest_win": rest_win,
                        "ts": now.strftime("%Y-%m-%dT%H:%M:%S+08:00")},
                       f, ensure_ascii=False)
         os.replace(tmp, STATE_BEH)
