@@ -12,7 +12,7 @@ Iteration (CODEX §14 language line): --target/--sprite-target set bucket depth;
 buckets already at target are SKIPPED (self-terminating growth; floor/cap
 enforced). Growth reopens only on new contexts / festivals / CEO order.
 Single-instance lock: state/pool.lock (stale after 30 min).
-Usage: python -X utf8 pool_gen.py [--append] [--target 15] [--sprite-target 10]
+Usage: python -X utf8 pool_gen.py [--append] [--target 18] [--sprite-target 12]
 """
 import argparse, json, os, re, sys, time, urllib.request
 
@@ -131,7 +131,7 @@ ENV_CHARS = "雨风雪月星"
 ENV_TOKENS = ("今早", "今晚", "今夜", "清晨", "早晨", "早上", "早安", "晚安",
               "晚上", "深夜", "夜深", "晨光", "黄昏", "傍晚", "凌晨", "半夜",
               "正午", "晌午", "中午")
-GREET_TARGET, GREET_FLOOR = 10, 6
+GREET_TARGET, GREET_FLOOR = 17, 6  # 10→17：2026-09-25 CEO 定向开工令 O-20260925-1138-bm-c 派工 T-20260925-07 问候库 301→500 顶（28×17+7×3=497）·CODEX §十二 v3.6
 FAQ_TARGET, FAQ_FLOOR = 3, 2
 
 def greet_valid(line):
@@ -362,9 +362,9 @@ def gen_negative(all_lines, deadline=None, resume=False):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--append", action="store_true")
-    ap.add_argument("--target", type=int, default=15, help="lines per axes bucket (floor 4, cap 15)")
-    ap.add_argument("--sprite-target", dest="sprite_target", type=int, default=10,
-                    help="lines per sprite bucket (floor 3, cap 10)")
+    ap.add_argument("--target", type=int, default=18, help="lines per axes bucket (floor 4, cap 18)")
+    ap.add_argument("--sprite-target", dest="sprite_target", type=int, default=12,
+                    help="lines per sprite bucket (floor 3, cap 12)")
     ap.add_argument("--greetings", action="store_true",
                     help="generate the greetings face (greet+faq; GREETINGS.md contract v1.0)")
     ap.add_argument("--negative", action="store_true",
@@ -372,8 +372,9 @@ def main():
     ap.add_argument("--budget", type=int, default=0,
                     help="soft seconds budget; stop cleanly between buckets (0=off)")
     args = ap.parse_args()
-    args.target = max(4, min(15, args.target))
-    args.sprite_target = max(3, min(10, args.sprite_target))
+    # 水位 15/10→18/12：2026-09-25 CEO 定向开工令 O-20260925-1138-bm-c 派工 T-20260925-07（CODEX §十二 v3.6）
+    args.target = max(4, min(18, args.target))
+    args.sprite_target = max(3, min(12, args.sprite_target))
     if args.append and not acquire_lock():
         print("pool round already running (lock held); skip")
         sys.exit(0)

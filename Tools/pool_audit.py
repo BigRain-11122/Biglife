@@ -7,7 +7,7 @@ global dup, length/digit/banned-word cleanliness, and same-version draw
 determinism (in-process double draw, byte-identical). Exit 1 on hard fail;
 under-target buckets are listed as the pool-round reopen signal (OS loop
 reads this output). Zero LLM, fully deterministic.
-Usage: python -X utf8 pool_audit.py [--target 15] [--sprite-target 10]
+Usage: python -X utf8 pool_audit.py [--target 18] [--sprite-target 12]
 """
 import argparse, json, os, re, sys
 
@@ -27,7 +27,8 @@ ENV_CHARS = "雨风雪月星"
 ENV_TOKENS = ("今早", "今晚", "今夜", "清晨", "早晨", "早上", "早安", "晚安",
               "晚上", "深夜", "夜深", "晨光", "黄昏", "傍晚", "凌晨", "半夜",
               "正午", "晌午", "中午")
-GREET_TARGET, GREET_FLOOR = 10, 6
+# greet target 10→17：2026-09-25 CEO 定向开工令 O-20260925-1138-bm-c 派工 T-20260925-07「问候库 301→500 顶」（28×17+7×3=497）·CODEX §十二 v3.6
+GREET_TARGET, GREET_FLOOR = 17, 6
 FAQ_TARGET, FAQ_FLOOR = 3, 2
 
 def g_clean(l):
@@ -246,8 +247,8 @@ def determinism(pools):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--target", type=int, default=15)
-    ap.add_argument("--sprite-target", dest="starget", type=int, default=10)
+    ap.add_argument("--target", type=int, default=18)
+    ap.add_argument("--sprite-target", dest="starget", type=int, default=12)
     args = ap.parse_args()
     with open(POOL, encoding="utf-8") as f:
         pools = json.load(f)
