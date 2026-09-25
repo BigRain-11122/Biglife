@@ -9,13 +9,12 @@ census/export/citizen-behavior.jsonl
 census/export/citizen-atlas.jsonl
 census/export/citizen-voice.jsonl
 census/export/citizen-tasks.jsonl
+census/export/citizen-persona.jsonl
 census/export/voice-cache/
-
 # Codely runtime (mirrors HQ gitignore law)
 .codely-cli/settings.local.json
 .codely-cli/auto-saves/
 .codely-cli/scheduled_tasks.json
-
 # Python
 __pycache__/
 *.pyc
