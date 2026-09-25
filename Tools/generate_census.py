@@ -154,6 +154,7 @@ def make_citizen(rng, cid, district, species, band=None):
         gender = "无定" if rng.random() < 0.5 else ("男" if rng.random() < 0.6 else "女")
         years = rng.randrange(2, 40) if faction == "elf" else (rng.randrange(8, 60) if faction == "compiled" else rng.randrange(20, 90))
         age_label = f"编译纪 {years} 年"
+        age = years  # T-20260926-04: int age must reach the light face
         band = "young" if years <= 8 else ("mid" if years <= 25 else "old")
         name = silicon_name(rng)
     else:
@@ -161,6 +162,7 @@ def make_citizen(rng, cid, district, species, band=None):
         gender = "无定"
         seasons = rng.randrange(1, 60)
         age_label = f"第 {seasons} 数据季"
+        age = seasons  # T-20260926-04: int age must reach the light face
         band = "mid"
         name = sprite_name(rng)
 
@@ -273,7 +275,7 @@ def make_citizen(rng, cid, district, species, band=None):
 
     return {
         "id": cid, "name": name, "species": species, "faction": faction, "gender": gender,
-        "age_label": age_label, "district": district, "block": block,
+        "age": age, "age_label": age_label, "district": district, "block": block,
         "prof": prof_line,         "prof_name": (prof["name"] if prof else SPRITE_ROLE_BY_FACTION[faction]["name"]),
         "traits": [t1, t2, t3], "creed": creed, "thought": thought, "language": language,
         "wardrobe": wardrobe, "life": life, "behavior": behavior, "hook": hook, "hook_scope": hook_scope,
@@ -538,7 +540,7 @@ def main():
             f.write(text)
         lights.append({
             "id": f"C-{c['id']:05d}", "name": c["name"], "species": c["species"], "faction": c["faction"],
-            "gender": {"M": "男", "F": "女"}.get(c["gender"], c["gender"]), "age": c["age_label"],
+            "gender": {"M": "男", "F": "女"}.get(c["gender"], c["gender"]), "age": c["age"], "age_note": c["age_label"],
             "district": c["district"], "block": c["block"], "profession": c["prof_name"],
             "axis": c["axis"], "creed": c["creed"], "hook": c["hook"] + c.get("hook_scope", ""), "v": 1,
         })
