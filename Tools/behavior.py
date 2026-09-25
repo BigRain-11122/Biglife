@@ -37,6 +37,15 @@ eve/night windows untouched (step-c red line). Crash rows keep the
 pre-leisure base (crash gate) so the law-8.3 caps plan stays byte-identical
 (the crash_caps probe passes the crash flag for the same reason); honored
 seats never leisure (judge 3).
+T-20260926-03c (2026-09-26, R-20260925-alive-city L2 step c): social venue
+family - the social ring carried a single venue per window (day 广场聚集 /
+eve 广场/江边); slot-only expansion maps hash(id)%4 to three new gathering
+venues (茶馆/弄堂口/骑楼) + original plaza slots (25% each, bounded by
+design). state/vis/quirk/ctx keys untouched, STATES whitelist unchanged;
+honored seats keep the base slot (judge 3); elder faces, night window, rain
+override and crash overlay all zero-touch (grumble re-slots anyway; slump/
+fumble suffix the family base deterministically); caps probe is slot-blind
+so the law-8.3 plan stays byte-identical.
 """
 import hashlib, json, os, re, subprocess, sys
 
@@ -89,6 +98,17 @@ def quirk_of(h):
     if r < 13:
         return "night_run"   # 3% night runner
     return ""
+
+
+# T-20260926-03c: social venue family - slot-only hash%4 mapping; h%4==3 keeps
+# the window's original plaza slot; honored seats keep the base slot (judge 3)
+SOCIAL_VENUES = ("茶馆·听说书喝茶", "弄堂口·闲话家常", "骑楼·廊下聚集")
+
+
+def social_slot(h, base_slot, cid):
+    if str(cid) in needs.HONORED_IDS or h % 4 == 3:
+        return base_slot
+    return SOCIAL_VENUES[h % 4]
 
 
 def window(m):
@@ -189,7 +209,7 @@ def derive(r, nk, top, sig, w, weekend, crash=None, cax=None, vis_ok=True, m=Non
             elif nk["haoqi"] >= 2:
                 st, slot, vis = "explore", "探索位·新街区", 1
             elif nk["shejiao"] >= 1:
-                st, slot, vis = "social", "广场聚集", 1
+                st, slot, vis = "social", social_slot(h, "广场聚集", r.get("id")), 1
             elif not hon and crash != "crash" and b == "child" \
                     and weekend and h % 2 == 0:
                 st, slot, vis = "leisure_play", "街角·游戏场", 1
@@ -216,7 +236,7 @@ def derive(r, nk, top, sig, w, weekend, crash=None, cax=None, vis_ok=True, m=Non
             elif b == "elder":
                 st, slot, vis = "home", "宅户", 0
             elif b == "young" or nk["shejiao"] >= 1:
-                st, slot, vis = "social", "广场/江边", 1
+                st, slot, vis = "social", social_slot(h, "广场/江边", r.get("id")), 1
             elif nk["haoqi"] >= 2:
                 st, slot, vis = "explore", "探索位·新街区", 1
             elif nk["anwen"] >= 2:
@@ -457,6 +477,17 @@ def main():
                 bad += 1
             elif st == "leisure_stroll" and band(r.get("age")) not in ("mid",
                                                                       "young"):
+                bad += 1
+        # T-20260926-03c: social venue family - slot-only closed set, exact
+        # hash%4 map, honored seats keep the base plaza slot (judge 4)
+        if st == "social":
+            cid = str(r.get("id"))
+            tw = (o.get("ctx") or "").split("tw=")[-1].split(",")[0]
+            base = "广场聚集" if tw == "day" else "广场/江边"
+            if cid in needs.HONORED_IDS or shash(cid) % 4 == 3:
+                if o.get("slot") != base:
+                    bad += 1
+            elif o.get("slot") != SOCIAL_VENUES[shash(cid) % 4]:
                 bad += 1
     # determinism: rebuild a spread sample through the same pure pipeline
     if not qc_only:
