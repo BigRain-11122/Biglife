@@ -21,6 +21,8 @@ ADIR = os.path.join(ROOT, 'tasks', 'archive')
 
 OPENERS = ('迭代批实录', '进化批实录', '相遇轮实录', '语言线闸实跑', '池轮补深收口')
 DATE_RE = re.compile(rb'^[ \t]*- \[(\d{4})-(\d{2})-(\d{2})[^\]]*\][ \t]*(.*)$')
+CLOSED_HEAD_RE = re.compile(rb'^- \[x\] ')
+BOUNDARY_RE = re.compile(rb'^(?:- \[|#)')
 
 
 def classify(line, cutoff):
@@ -40,9 +42,104 @@ def classify(line, cutoff):
     return None
 
 
+def closed_blocks(lines):
+    """已结单整块扫描（分步②）：标题行起，至下一顶级行（- [ 或节标题）前。
+    尾部纯空行收缩出块（节间版式随板保留）。归档指针行（分步②产物）不算块身=幂等关键。
+    返回 [(start, end), ...]。"""
+    blocks, i, n = [], 0, len(lines)
+    ptr_head = '  - 【详情已归档】'.encode('utf-8')
+    while i < n:
+        if CLOSED_HEAD_RE.match(lines[i]):
+            j = i + 1
+            while j < n and not BOUNDARY_RE.match(lines[j]) and not lines[j].startswith(ptr_head):
+                j += 1
+            end = j
+            while end > i + 1 and lines[end - 1].strip() == b'':
+                end -= 1
+            if end > i + 1:
+                blocks.append((i, end))
+            i = j
+        else:
+            i += 1
+    return blocks
+
+
+def run_closed_blocks(raw, eol, lines, dry_run):
+    """分步②主流程：已结单整块详情逐字移月件，板面留单头行+一行指针。
+    断言④同契约：非移动行零漂移 + [ ]/[x] 计数保全 + 移动行数=月件新增行数 + 抽验 10 行逐字命中。"""
+    blocks = closed_blocks(lines)
+    ptr_head = '  - 【详情已归档】'.encode('utf-8')
+    moved = set()
+    month_of = {}
+    block_at = {}
+    for (s, e) in blocks:
+        head_txt = lines[s].decode('utf-8', 'replace')
+        m = re.search(r'T-(\d{4})-(\d{2})', head_txt)
+        month = (m.group(1) + '-' + m.group(2)) if m else datetime.date.today().strftime('%Y-%m')
+        block_at[s] = (e, month)
+        for k in range(s + 1, e):
+            moved.add(k)
+            month_of[k] = month
+    # 线性合并：块头行保留 + 追加一行指针；块身行逐字入月件集
+    final, arc, ptr_idx = [], {}, set()
+    for i, l in enumerate(lines):
+        if i in block_at:
+            e, month = block_at[i]
+            final.append(l)
+            ptr = ('  - 【详情已归档】%d 行单内详情已逐字移至 tasks/archive/TASKS-%s.md'
+                   '——T-20260926-05 拆月归档分步②（原文保全·检索走 rg 全文）') % (e - i - 1, month)
+            final.append(ptr.encode('utf-8') + eol)
+            ptr_idx.add(len(final) - 1)
+        elif i in moved:
+            arc.setdefault(month_of[i], []).append(l if l.endswith((b'\n',)) else l + eol)
+        else:
+            final.append(l)
+    new_raw = b''.join(final)
+    # 断言④-1 非移动行零漂移（仅排除本次新增指针行·存量指针行属非移动行）
+    expect = [l for i, l in enumerate(lines) if i not in moved]
+    got = [l for k, l in enumerate(final) if k not in ptr_idx]
+    assert expect == got, 'non-moved line drift!'
+    # 断言④-2 检查框计数保全（单头行保留 → [x] 计数不变；块内顶级 [ ] 不可吞 → 计数不变）
+    assert new_raw.count(b'- [ ]') == raw.count(b'- [ ]'), 'open checkbox drift!'
+    assert new_raw.count(b'- [x]') == raw.count(b'- [x]'), 'closed checkbox drift!'
+    # 断言④-3 移动行数=月件新增行数
+    total = sum(len(v) for v in arc.values())
+    assert total == len(moved), 'moved count != archive lines!'
+    # 断言④-4 抽验 ≤10 行原文逐字命中各自月件
+    arc_raw = {m: b''.join(v) for m, v in arc.items()}
+    movable = sorted(moved)
+    step = max(1, len(movable) // 10)
+    sample = movable[::step][:10]
+    for i in sample:
+        assert lines[i].rstrip(b'\r\n') in arc_raw[month_of[i]], 'sample miss: line %d' % i
+    print('archive_tasks --closed-blocks: blocks=%d moved_lines=%d board %d -> %d bytes' % (
+        len(blocks), len(moved), len(raw), len(new_raw)))
+    for m in sorted(arc):
+        print('  -> tasks/archive/TASKS-%s.md  +%d lines' % (m, len(arc[m])))
+    print('  samples verbatim hit: %d/%d' % (len(sample), len(sample)))
+    if dry_run:
+        print('  (dry-run: nothing written)')
+        return 0
+    os.makedirs(ADIR, exist_ok=True)
+    for m in sorted(arc_raw):
+        path = os.path.join(ADIR, 'TASKS-%s.md' % m)
+        hdr = b''
+        if not os.path.exists(path) or os.path.getsize(path) == 0:
+            hdr = ('# BigLife 任务板月度归档 %s（T-20260926-05 拆月归档·token 止血令④）\n'
+                   '> 原文保全铁律：本件内容系 tasks/TASKS.md 已结单详情/实录行逐字移入·零删改；检索走 rg 全文。\n\n'
+                   % m).encode('utf-8').replace(b'\n', eol)
+        with open(path, 'ab') as f:
+            f.write(hdr + arc_raw[m])
+    with open(BOARD, 'wb') as f:
+        f.write(new_raw)
+    print('  written: board + %d archive file(s)' % len(arc_raw))
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--before', default=None, help='YYYY-MM-DD（默认=今日·移该日之前实录行）')
+    ap.add_argument('--closed-blocks', action='store_true', help='分步②：已结单整块详情逐字移月件（板面留单头+指针）')
     ap.add_argument('--dry-run', action='store_true')
     args = ap.parse_args()
     cutoff = args.before or datetime.date.today().isoformat()
@@ -51,6 +148,10 @@ def main():
         raw = f.read()
     eol = b'\r\n' if b'\r\n' in raw else b'\n'
     lines = raw.splitlines(keepends=True)
+
+    if args.closed_blocks:
+        return run_closed_blocks(raw, eol, lines, args.dry_run)
+
     flags = [classify(l, cutoff) for l in lines]
 
     # 组 run：相邻实录行（允许行间纯空行·版式随行保全）
