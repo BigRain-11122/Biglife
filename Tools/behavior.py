@@ -24,6 +24,19 @@ pre-sleep 21:30-22:59) split carbon home residents out of generic "home"
 into rest_nap / rest_eve (threshold-pure; silicon charge / sprite roost keep
 their own species rest forms; honored seats C-00001~03 excluded); --auto
 regen key adds rest_win so window-edge flips trigger regeneration too.
+T-20260926-03b (2026-09-26, R-20260925-alive-city L2 step b): leisure-ring
+expansion - the leisure ring was a narrow special-case set (exercise / run /
+explore / night_light); everyone else fell through to "home". Three new
+threshold-pure states intercept only that fall-through, carbon face only,
+hash(id)-gated bounded density, all vis=1 ("life in progress" observable):
+leisure_play (day x weekend x child x h%2), leisure_park (day x elder x
+h%2, post-lunch stroll - nap-window coexistence with rest_nap by design),
+leisure_stroll (day x (weekend or shengji<1) x mid/young x h%4). Insertion
+order: school/work > explore > social > leisure family > home fallback;
+eve/night windows untouched (step-c red line). Crash rows keep the
+pre-leisure base (crash gate) so the law-8.3 caps plan stays byte-identical
+(the crash_caps probe passes the crash flag for the same reason); honored
+seats never leisure (judge 3).
 """
 import hashlib, json, os, re, subprocess, sys
 
@@ -40,7 +53,10 @@ RAIN_KINDS = ("rain", "snow", "shower", "drizzle", "typhoon")
 TRADER_RE = re.compile(r"交易|量化|风控|行情|回测|操盘|盘口|瞭望|对冲|期货")
 STATES = {"sleep", "home", "work", "commute", "school", "meal", "social", "explore",
           "exercise", "run", "shelter", "indoors", "night_shift", "night_light",
-          "charge"} | {"slump", "grumble", "fumble"} | {"rest_nap", "rest_eve"}
+          "charge"} | {"slump", "grumble", "fumble"} | {"rest_nap", "rest_eve"} \
+    | {"leisure_play", "leisure_park", "leisure_stroll"}
+# T-20260926-03b: leisure ring - pure threshold fall-through interception
+LEISURE_STATES = {"leisure_play", "leisure_park", "leisure_stroll"}
 # T-20260926-03a: rest ring - two windows, minute-of-day, threshold-pure
 REST_STATES = {"rest_nap", "rest_eve"}
 NAP_WIN = (780, 900)    # 13:00-14:59 siesta (afternoon rest)
@@ -158,16 +174,28 @@ def derive(r, nk, top, sig, w, weekend, crash=None, cax=None, vis_ok=True, m=Non
             else:
                 st, slot, vis = "commute", "通勤街面", 1
         elif w == "day":
+            hon = str(r.get("id")) in needs.HONORED_IDS
             if not weekend and b == "child":
                 st, slot, vis = "school", "学堂", 0
             elif b == "elder":
-                st, slot, vis = "home", "宅户·白天", 0
+                # T-20260926-03b: half the elders take the post-lunch park
+                # stroll instead of home; dawn/empk morning exercise untouched.
+                if not hon and crash != "crash" and h % 2 == 0:
+                    st, slot, vis = "leisure_park", "公园·遛弯消食", 1
+                else:
+                    st, slot, vis = "home", "宅户·白天", 0
             elif not weekend and b in ("mid", "young") and nk["shengji"] >= 1:
                 st, slot, vis = "work", "工位/楼内窗影", 0
             elif nk["haoqi"] >= 2:
                 st, slot, vis = "explore", "探索位·新街区", 1
             elif nk["shejiao"] >= 1:
                 st, slot, vis = "social", "广场聚集", 1
+            elif not hon and crash != "crash" and b == "child" \
+                    and weekend and h % 2 == 0:
+                st, slot, vis = "leisure_play", "街角·游戏场", 1
+            elif not hon and crash != "crash" and b in ("mid", "young") \
+                    and (weekend or nk["shengji"] < 1) and h % 4 == 0:
+                st, slot, vis = "leisure_stroll", "街巷·闲逛", 1
             else:
                 st, slot, vis = "home", "宅户", 0
         elif w == "meal":
@@ -300,7 +328,10 @@ def crash_caps(rows, getn, sig, w, weekend, m=None):
     vis_by_d = {}
     for r, nk, top, cax in cands:
         if NEG_OF_AXIS[cax] != "grumble":
-            base = derive(r, nk, top, sig, w, weekend, m=m)
+            # T-20260926-03b: probe with the crash flag so the leisure gate
+            # (crash rows keep the pre-leisure base) matches the final
+            # overlay base - caps plan stays byte-identical (judge 2).
+            base = derive(r, nk, top, sig, w, weekend, "crash", cax, m=m)
             if base["visible"] != 1:
                 continue  # slump/fumble inherit base visibility only
         vis_by_d.setdefault(r.get("district") or "?", []).append(
@@ -411,6 +442,21 @@ def main():
                 bad += 1
             if not ((st == "rest_nap" and NAP_WIN[0] <= mnow < NAP_WIN[1]) or
                     (st == "rest_eve" and EVE_WIN[0] <= mnow < EVE_WIN[1])):
+                bad += 1
+        # T-20260926-03b: leisure-ring schema - day window only, vis=1
+        # observable, honored seats never leisure, band/weekend gating per
+        # contract (judge 4)
+        if st in LEISURE_STATES:
+            if str(r.get("id")) in needs.HONORED_IDS or o.get("visible") != 1 \
+               or w != "day":
+                bad += 1
+            elif st == "leisure_play" and not (band(r.get("age")) == "child"
+                                               and weekend):
+                bad += 1
+            elif st == "leisure_park" and band(r.get("age")) != "elder":
+                bad += 1
+            elif st == "leisure_stroll" and band(r.get("age")) not in ("mid",
+                                                                      "young"):
                 bad += 1
     # determinism: rebuild a spread sample through the same pure pipeline
     if not qc_only:
