@@ -10,8 +10,12 @@ consumers: CityWatch v2 / M2 engine / OSLoop).
 T-20260924-16d step 1: additive crash/crash_axis fields - pure-threshold
 crash state per contract cognition/NEEDS-CRASH.md v1.0; honored seats
 C-00001~03 stay crash=null (CEO persona-reserved face).
+T-20260925-12: --tasks candidate task face - pure table lookup over the
+live needs face (strength >= 1 -> one row per (citizen, axis), axis ->
+asset-face mapping per D-20260925-11); output census/export/
+citizen-tasks.jsonl (R3 regenerable face - gitignored).
 Same (city snapshot, time bucket, persona) => byte-identical output.
-Usage: python -X utf8 needs.py [--qc]
+Usage: python -X utf8 needs.py [--qc] [--tasks]
 """
 import datetime, glob, json, os, re, sys
 
@@ -19,10 +23,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
 LIGHT = os.path.join(CO, "census", "export", "citizens-light.jsonl")
 OUT = os.path.join(CO, "census", "export", "citizen-needs.jsonl")
+TASKS_OUT = os.path.join(CO, "census", "export", "citizen-tasks.jsonl")  # T-20260925-12 R3 face
 ROOT = os.path.abspath(os.path.join(CO, "..", ".."))
 FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
 
 NEED_KEYS = ["anwen", "shengji", "shejiao", "haoqi"]  # 安稳/生计/社交/好奇
+
+# T-20260925-12 (D-20260925-11 unlock; R-20260924-bl-value-system table
+# row 1): axis -> asset face for candidate task derivation. 安稳->履历盘点 /
+# 生计->台词产出 / 社交->问候演出 / 好奇->讲师候选.
+AXIS_FACE = {"anwen": "ledger", "shengji": "lines", "shejiao": "greet",
+             "haoqi": "lecturer"}
 
 # T-20260924-16d (contract cognition/NEEDS-CRASH.md v1.0): crash thresholds,
 # all parameterized - CEO can retune with one line (engine recalibrates by
@@ -174,24 +185,70 @@ def derive(r, sig, hb, reg_rows=()):
 def hb_slot_hour(hb):
     return hb * 3 + 1  # representative hour of the 3h bucket
 
+def generate_needs(sig, hb):
+    """Write the needs face (extracted from main so --tasks can regenerate a
+    missing face first; behavior identical to the previous inline block)."""
+    reg_rows = load_registry()
+    with open(LIGHT, encoding="utf-8") as f:
+        rows = [json.loads(l) for l in f if l.strip()]
+    out = []
+    for r in rows:
+        nv, top, crash, crash_axis = derive_full(r, sig, hb, reg_rows)
+        out.append({"id": r["id"], "needs": nv, "top": top,
+                    "crash": crash, "crash_axis": crash_axis, "v": 1,
+                    "ctx": "hb=%d,wx=%s,ev=%d,wd=%d" % (hb, sig["weather"] or "na",
+                                                        len(sig["events"]), sig["now"].weekday())})
+    with open(OUT, "w", encoding="utf-8", newline="\n") as f:
+        for o in out:
+            f.write(json.dumps(o, ensure_ascii=False) + "\n")
+
+
+def write_tasks_face():
+    """T-20260925-12: candidate task face - pure table lookup over the live
+    needs face, zero LLM. One row per (citizen, axis) with strength >= 1;
+    id ascending, NEED_KEYS order within a citizen - deterministic double
+    run byte-identical. Honored seats derive by the same rule (data
+    derivation only; the CEO persona-reserved face is never written here)."""
+    out = []
+    n_in = 0
+    bad = 0
+    with open(OUT, encoding="utf-8") as f:
+        for l in f:
+            if not l.strip():
+                continue
+            n_in += 1
+            try:
+                o = json.loads(l)
+            except Exception:
+                bad += 1
+                continue
+            cid = str(o.get("id") or "")
+            nv = o.get("needs") or {}
+            if not cid or set(nv.keys()) != set(NEED_KEYS):
+                bad += 1
+                continue
+            for k in NEED_KEYS:
+                v = nv.get(k)
+                if isinstance(v, int) and 1 <= v <= 2:
+                    out.append({"id": cid, "axis": k, "face": AXIS_FACE[k],
+                                "strength": v})
+    out.sort(key=lambda t: (t["id"], NEED_KEYS.index(t["axis"])))
+    with open(TASKS_OUT, "w", encoding="utf-8", newline="\n") as f:
+        for t in out:
+            f.write(json.dumps(t, ensure_ascii=False) + "\n")
+    return n_in, bad, len(out)
+
+
 def main():
     qc_only = "--qc" in sys.argv
+    tasks_mode = "--tasks" in sys.argv
     sig = city_signals()
     hb = sig["now"].hour // 3
-    if not qc_only:
-        reg_rows = load_registry()
-        with open(LIGHT, encoding="utf-8") as f:
-            rows = [json.loads(l) for l in f if l.strip()]
-        out = []
-        for r in rows:
-            nv, top, crash, crash_axis = derive_full(r, sig, hb, reg_rows)
-            out.append({"id": r["id"], "needs": nv, "top": top,
-                        "crash": crash, "crash_axis": crash_axis, "v": 1,
-                        "ctx": "hb=%d,wx=%s,ev=%d,wd=%d" % (hb, sig["weather"] or "na",
-                                                            len(sig["events"]), sig["now"].weekday())})
-        with open(OUT, "w", encoding="utf-8", newline="\n") as f:
-            for o in out:
-                f.write(json.dumps(o, ensure_ascii=False) + "\n")
+    # T-20260925-12: --tasks reads the live needs face; regenerate it first
+    # only when missing (R3 contract). Plain runs keep regenerating as before.
+    if not qc_only and not (tasks_mode and os.path.exists(OUT)):
+        generate_needs(sig, hb)
+    tasks_stats = write_tasks_face() if tasks_mode else None
     # QC pass (always)
     bad = 0
     with open(OUT, encoding="utf-8") as f:
@@ -215,6 +272,11 @@ def main():
     nrec = sum(1 for o in rows if o.get("crash") == "recovering")
     print(f"rows={len(rows)} bad={bad} ctx_hb={hb} weather={sig['weather'] or 'na'} "
           f"events={sorted(sig['events'])[:6]} crash={ncrash} recovering={nrec}")
+    if tasks_stats is not None:
+        n_in, bad_t, n_tasks = tasks_stats
+        print(f"tasks face: in={n_in} bad_tasks={bad_t} tasks={n_tasks} "
+              f"out={os.path.basename(TASKS_OUT)}")
+        sys.exit(1 if (bad or len(rows) != 10003 or bad_t or n_in != 10003) else 0)
     # export face is 10003 rows since v1.9 honored seats C-00001~03 joined
     sys.exit(1 if (bad or len(rows) != 10003) else 0)
 

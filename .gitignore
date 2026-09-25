@@ -8,6 +8,7 @@ census/export/citizen-needs.jsonl
 census/export/citizen-behavior.jsonl
 census/export/citizen-atlas.jsonl
 census/export/citizen-voice.jsonl
+census/export/citizen-tasks.jsonl
 census/export/voice-cache/
 
 # Codely runtime (mirrors HQ gitignore law)
