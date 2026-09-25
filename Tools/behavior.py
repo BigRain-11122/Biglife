@@ -13,7 +13,11 @@ T-20260924-16d step 2 (contract cognition/NEEDS-CRASH.md): crash overlay -
 needs-face crash rows map to three visible negative states by axis;
 recovering rows keep state + flag; law-8.3 caps truncate deterministically.
 Zero LLM, zero API. Same (persona, time window, weather, needs snapshot)
-=> byte-identical output. Usage: python -X utf8 behavior.py [--qc]
+=> byte-identical output. Usage: python -X utf8 behavior.py [--qc] [--auto]
+--auto (T-20260925-11, group decision D-20260925-08 regen rhythm): skip when
+the derivation inputs (window bucket, weather_kind) are unchanged since the
+last QC-passing run (state/behavior-last.json); on change it refreshes the
+needs face first so weather-linked needs rows match, then regenerates + QC.
 """
 import hashlib, json, os, re, subprocess, sys
 
@@ -22,6 +26,9 @@ sys.path.insert(0, HERE)
 import needs  # V2-A sibling: LIGHT / OUT / NEED_KEYS / city_signals() / derive()
 
 OUT_BEH = os.path.join(needs.CO, "census", "export", "citizen-behavior.jsonl")
+# T-20260925-11 (D-20260925-08): regen-rhythm state face - last passing run's
+# {time_bucket, weather_kind, ts}; state/ is gitignored (runtime face).
+STATE_BEH = os.path.join(needs.CO, "state", "behavior-last.json")
 
 RAIN_KINDS = ("rain", "snow", "shower", "drizzle", "typhoon")
 TRADER_RE = re.compile(r"交易|量化|风控|行情|回测|操盘|盘口|瞭望|对冲|期货")
@@ -296,11 +303,36 @@ def final_row(r, getn, city_keep, dist_vis_ok, sig, w, weekend):
 
 def main():
     qc_only = "--qc" in sys.argv
+    auto = "--auto" in sys.argv and not qc_only
     sig = needs.city_signals()
     now = sig["now"]
     w = window(now.hour * 60 + now.minute)
     weekend = now.weekday() >= 5
     hb = now.hour // 3
+
+    # T-20260925-11 (D-20260925-08) regen rhythm: bucket or weather change is
+    # the only trigger; pure check (clock + world-state + state face), zero LLM.
+    if auto:
+        last = None
+        if os.path.exists(STATE_BEH):
+            try:
+                with open(STATE_BEH, encoding="utf-8") as f:
+                    last = json.load(f)
+            except Exception:
+                last = None
+        wx_now = sig["weather"] or ""
+        if last and last.get("time_bucket") == w \
+           and last.get("weather_kind") == wx_now and os.path.exists(OUT_BEH):
+            print("behavior auto: bucket=%s wx=%s unchanged - skip regen"
+                  % (w, wx_now or "na"))
+            sys.exit(0)
+        # inputs changed (or bootstrap): refresh needs face first so
+        # weather-linked needs rows match this run, then regen + QC below
+        try:
+            subprocess.run([sys.executable, "-X", "utf8",
+                            os.path.join(HERE, "needs.py")], cwd=HERE, timeout=180)
+        except Exception:
+            pass
 
     if not qc_only:
         with open(needs.LIGHT, encoding="utf-8") as f:
@@ -387,6 +419,16 @@ def main():
     print("rows=%d bad=%d tw=%s wx=%s wd=%d top3=%s crash=%d recovering=%d" %
           (len(brows), bad, w, sig["weather"] or "na", sig["now"].weekday(), top3,
            ncrash, nrec))
+    # T-20260925-11: record the passing inputs only - a failed QC leaves the
+    # old state so the next tick retries the regeneration
+    if auto and not bad:
+        os.makedirs(os.path.dirname(STATE_BEH), exist_ok=True)
+        tmp = STATE_BEH + ".tmp"
+        with open(tmp, "w", encoding="utf-8", newline="\n") as f:
+            json.dump({"time_bucket": w, "weather_kind": sig["weather"] or "",
+                       "ts": now.strftime("%Y-%m-%dT%H:%M:%S+08:00")},
+                      f, ensure_ascii=False)
+        os.replace(tmp, STATE_BEH)
     sys.exit(1 if bad else 0)
 
 

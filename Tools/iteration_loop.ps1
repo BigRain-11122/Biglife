@@ -70,6 +70,13 @@ try {
 
 try {
     Log "BigLife os-loop round start $stamp"
+    # T-20260925-11 (group decision D-20260925-08): behavior regen rhythm -
+    # deterministic bucket/weather change check each tick; rerun only on
+    # change; failure is non-blocking for the agent round.
+    try {
+        $behAuto = & python -X utf8 (Join-Path $Project 'Tools\behavior.py') --auto 2>&1
+        Log "behavior-auto: $behAuto"
+    } catch { Log "behavior-auto failed (non-blocking): $_" }
     $codelyPath = (Get-Command codely -ErrorAction SilentlyContinue).Source
     if (-not $codelyPath) { Log 'FATAL: codely not on PATH for this context'; Beat 'error codely missing'; exit 2 }
     $promptFile = Join-Path $Project 'Tools\iteration_prompt.txt'
