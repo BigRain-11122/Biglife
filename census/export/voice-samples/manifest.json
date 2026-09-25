@@ -1,0 +1,90 @@
+[
+  {
+    "id": "C-00010",
+    "name": "顾阿凤",
+    "species": "carbon",
+    "pitch": -2,
+    "rate": -14,
+    "vol": 93,
+    "text": "灶上留一壶，路过的都是客。我是顾阿凤。",
+    "file": "C-00010.wav",
+    "bytes": 489322
+  },
+  {
+    "id": "C-00011",
+    "name": "朱鸿奎",
+    "species": "carbon",
+    "pitch": -8,
+    "rate": -5,
+    "vol": 80,
+    "text": "差之毫秒，谬以全城。我是朱鸿奎。",
+    "file": "C-00011.wav",
+    "bytes": 288166
+  },
+  {
+    "id": "C-00013",
+    "name": "林之恒",
+    "species": "carbon",
+    "pitch": 2,
+    "rate": 2,
+    "vol": 86,
+    "text": "城市不会忘记，除非我们偷懒。我是林之恒。",
+    "file": "C-00013.wav",
+    "bytes": 238350
+  },
+  {
+    "id": "C-00015",
+    "name": "陈雅雯",
+    "species": "carbon",
+    "pitch": 3,
+    "rate": 2,
+    "vol": 84,
+    "text": "红灯是为所有人亮的，包括我。我是陈雅雯。",
+    "file": "C-00015.wav",
+    "bytes": 241102
+  },
+  {
+    "id": "C-00017",
+    "name": "归档者-07",
+    "species": "silicon",
+    "pitch": 0,
+    "rate": -1,
+    "vol": 85,
+    "text": "参数不收敛，天理难容。我是归档者-07。",
+    "file": "C-00017.wav",
+    "bytes": 266748
+  },
+  {
+    "id": "C-00019",
+    "name": "老晶振",
+    "species": "silicon",
+    "pitch": -7,
+    "rate": 1,
+    "vol": 83,
+    "text": "机器不坏是本事，坏了能修是人品。我是老晶振。",
+    "file": "C-00019.wav",
+    "bytes": 286810
+  },
+  {
+    "id": "C-00028",
+    "name": "十四号路灯",
+    "species": "sprite",
+    "pitch": 9,
+    "rate": 22,
+    "vol": 93,
+    "text": "灯不问来路，只管照路。我是十四号路灯。",
+    "file": "C-00028.wav",
+    "bytes": 91460
+  },
+  {
+    "id": "C-00029",
+    "name": "咪喱",
+    "species": "sprite",
+    "pitch": 10,
+    "rate": 17,
+    "vol": 90,
+    "text": "蹭饭是门艺术，报恩是门手艺。我是咪喱。",
+    "file": "C-00029.wav",
+    "bytes": 118948
+  }
+]
