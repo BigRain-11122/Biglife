@@ -594,11 +594,14 @@ def build_prompt(cid, text, sig):
     p = persona_digest(text)
     ev = "\n".join("- " + e for e in viewpoint_events(text, sig)) or "- （今日无新城市事件）"
     wx = sig["weather"] or "（天气数据暂缺）"
-    # T-20260925-01 soft guidance (NOT a gate): open with your OWN catchphrase,
-    # keep generic pool catchphrases light; per-batch advisory appended by the
-    # caller once a pool gene hits the cross-quote cap.
-    diversity = ("开场句多样性软引导（非硬禁）：开场句请优先取你「语言风格」里你自己的口头禅或底色词，"
-                 "与你人设无关的通用口头禅尽量少引用。" + (sig.get("pool_advice") or ""))
+    # T-20260925-01/T-20260925-18 soft guidance (NOT a gate): open with your OWN
+    # catchphrase; standing per-prompt constraint caps generic pool-gene quotes at
+    # 1 per ring (cross-card quotes stay LEGAL per C-00695 R192 - diversity nudge
+    # only); the cap-reached batch advisory below stays as the 2nd layer.
+    diversity = ("开场句软引导（非硬禁·引用合法性不变）：开场句优先取你「语言风格」里你自己的口头禅/行话/底色词；"
+                 "通用池基因（全城共享口头禅，如「今天的事今天清」）本条年轮至多引用 1 条、能不引则不引"
+                 "（你语言风格里自有的口头禅不受此限）。"
+                 + (sig.get("pool_advice") or ""))
     # V2-C memory retrieval (SILICON-LIFE.md life sign #7): carry the newest
     # rings so the citizen writes today WITH continuity instead of repeating.
     mem = ""
