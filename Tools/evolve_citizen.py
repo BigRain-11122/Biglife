@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.27 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.28 - BigLife citizen evolution engine.
+v0.28 (2026-09-27, T-20260926-19 分步②b): V3 city-councilor --propose mode -
+batch-coupled proposal face (ring_ref 同源强绑定, curiosity=2 sampling, <=3/day
+rarity cap, proposals.jsonl append-only; contract = cognition/PROPOSALS.md;
+honesty gate v0.35 unchanged - proposal_violations only ADDS the anchor /
+voice checks for the proposal text, batch/meet/reflect faces byte-identical).
 
 Grows citizen cards by feeding REAL city signals into a LOCAL LLM (Ollama
 qwen2.5:7b-instruct, zero token, local-first L2). Honesty law (docs/CODEX.md 9):
@@ -341,6 +346,7 @@ Usage:
   python -X utf8 evolve_citizen.py --force C-00010     # ignore cooldown
   python -X utf8 evolve_citizen.py --meet C-00010 C-00025   # two-citizen encounter
   python -X utf8 evolve_citizen.py --reflect            # V2-B: <=1 reflection per round
+  python -X utf8 evolve_citizen.py --batch 3 --propose # +V3 councilor proposals (<=3/day)
   --via BigLife-OSLoop  # committer-identity tail on every commit (cph4/versioning.md 4.1)
 """
 import argparse, datetime, glob, json, os, re, subprocess, sys, urllib.request
@@ -357,6 +363,9 @@ MODEL = os.environ.get("BIGLIFE_MODEL", "qwen2.5:7b-instruct")
 COOLDOWN_DAYS = 7
 REFLECT_MIN_RINGS = 3   # V2-B: a reflection needs a life to look back on
 POOL_CAP = 2            # T-20260925-01: soft per-batch cap for cross-card pool-gene quotes
+PROPOSALS = os.path.join(CO, "cognition", "proposals.jsonl")
+PROPOSE_CAP = 3        # T-20260926-19: 议员采样 <=3/日 (珍稀律·防提案通胀·PROPOSALS.md §一)
+SUGGEST_MARKERS = ("建议", "提议", "不妨", "希望", "应该", "可以", "想要", "打算", "申请", "不如", "盼")
 
 def today():
     return datetime.date.today().isoformat()
@@ -1107,6 +1116,155 @@ def load_batch_policy():
     except Exception:
         return 0
 
+# ---------------- V3 城市议员 (T-20260926-19 分步②b·PROPOSALS.md 契约) ----------------
+# 家族内接线 (禁新脚本双建): --propose 是批面附加旗标, 提案与年轮同批生成 (判据③
+# ring_ref 同源强绑定 = 只从本批落环者里采样), 数据面 cognition/proposals.jsonl
+# (CODEX §十二 v3.33 先登记后产出律已满足), 生成面复用本仓 7b + 同 [锚] 律同机审门
+# (ring_violations 全项复用 + 提案节锚定/语态两断言)。荣誉席 blocked (人设权 CEO
+# 保留面), <=3/日珍稀律跨跑幂等 (按当日 proposal_id 前缀计数)。
+
+def propose_candidates(done, t):
+    """好奇位采样 (契约§二): 本批落环者 ∩ needs 好奇维=2 (V2-A 现役面零新接线),
+    荣誉席 blocked, 当日已落提案计入 <=3/日 上限。"""
+    if not done:
+        return []
+    try:
+        import rumor_chain as rc
+        blocked = set(rc.RESERVED)
+    except Exception:
+        blocked = {"C-00001", "C-00002", "C-00003"}
+    haoqi = {}
+    try:
+        with open(os.path.join(CENSUS, "export", "citizen-needs.jsonl"), encoding="utf-8") as f:
+            for ln in f:
+                try:
+                    r = json.loads(ln)
+                    haoqi[r.get("id")] = (r.get("needs") or {}).get("haoqi", 0)
+                except Exception:
+                    continue
+    except Exception:
+        pass
+    room = PROPOSE_CAP
+    if os.path.isfile(PROPOSALS):
+        with open(PROPOSALS, encoding="utf-8") as f:
+            room -= sum(1 for ln in f if ('"PR-%s-' % t.replace("-", "")) in ln)
+    if room <= 0:
+        return []
+    return [c for c in done if c not in blocked and haoqi.get(c) == 2][:room]
+
+def anchor_event(line, evs):
+    """判据① [锚] 校验 (年轮 [锚] 同源): 提案须逐字引用喂入事件清单原文的一个
+    >=4 字短语。Returns (event, fragment) of the LONGEST match, else (None, None)。"""
+    best = (None, "")
+    for e in evs:
+        payload = e.split(" / ")[-1]
+        for s in range(len(payload) - 3):
+            for n in range(s + 4, len(payload) + 1):
+                frag = payload[s:n]
+                if frag in line and n - s > len(best[1]):
+                    best = (e, frag)
+    return best if best[1] else (None, None)
+
+def proposal_violations(line, sig, evs):
+    """机审门提案节 (契约§一 gate 字段): 年轮诚实门全项 (ring_violations 复用)
+    + 锚定校验 (anchor-missing) + 建议/计划语态闭集标记 (voice-missing — AGENCY
+    意图句律同源的确定性代理, 非状态断言)。"""
+    v = ring_violations(line, sig)
+    if anchor_event(line, evs)[1] is None:
+        v.append("anchor-missing")
+    if not any(m in line for m in SUGGEST_MARKERS):
+        v.append("voice-missing")
+    return v
+
+def face_hit_of(line, text):
+    """契约§一 face_hit 标记: 提案是否咬合本卡 face (人设域 4 字滑窗确定性代理)。"""
+    face = text.split("**年轮**", 1)[0]
+    return any(line[i:i + 4] in face for i in range(len(line) - 3))
+
+def hot_today():
+    """契约§三 试点喂入: 当日惊奇分高事件 (surprise_log 同源只读派生, 零新算)。"""
+    try:
+        import surprise_log as sl
+        row, _ = sl.derive_day(sl.beijing_today())
+        return row["events"][:3], row["day_max"]
+    except Exception:
+        return [], 0
+
+def build_propose_prompt(cid, text, sig, evs, hot):
+    """提案生成 prompt (进化批家族扩展·同 [锚] 律): 依托真实事件 + 建议语态 +
+    人设域内, 只输出一句话。"""
+    p = persona_digest(text)
+    ev = "\n".join("- " + e for e in evs) or "- （今日无新城市事件）"
+    hot_blk = ""
+    if hot:
+        hot_blk = ("城里今天惊奇度最高的几件事（类目名，供选材参考；具体内容以下面清单原文为准）：\n"
+                   + "\n".join("- %s（惊奇分 %d）" % (h["token"], h["surprise"]) for h in hot) + "\n")
+    return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」，今天被轮值选为城市议会的议员。"
+            f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
+            f"语言风格：{p['language']}；日常：{p['behavior']}。\n"
+            f"城市真实事件清单（你提的建议只能围绕这里面真实发生的事）：\n{ev}\n{hot_blk}"
+            f"请以你自己的口吻，向这座城提一条一句话建议（30-80 字），三条规矩："
+            f"①建议必须依托清单里某一件真实事件，并逐字引用该事件原文中的一个短语；"
+            f"②用建议或计划的口吻（如「建议…」「不妨…」「希望…」），不得写成已经发生的陈述；"
+            f"③只谈你人设领域内的事，不得声称集团任务由你执行，不得编造清单外的任何具体事。"
+            f"只输出这一句话本身。")
+
+def propose_step(cursor, via, done, sig):
+    """V3 提案批内面: 每席 <=3 次生成尝试 (gated_llm 同款 <=2 重生成), 全项过门才
+    append (先登记后产出·[锚]/门/溯源三面全过才算落·PROPOSALS.md §六分步③判据);
+    Ollama 断连 = 静默跳过 (R319 判例)。零落环批不产提案 (ring_ref 无从绑定)。"""
+    t = today()
+    cands = propose_candidates(done, t)
+    if not cands:
+        print("propose: no candidate (curiosity=2 ∩ fresh rings, or daily cap reached)")
+        return
+    hot, day_max = hot_today()
+    made, first_v = [], None
+    for cid in cands:
+        p = find_card(cid)
+        if not p:
+            continue
+        with open(p, encoding="utf-8") as f:
+            text = f.read()
+        days = re.findall(r"(?:^|\n)- (\d{4}-\d{2}-\d{2}) ", text)
+        if t not in days:
+            continue  # 判据③: 提案长在自己年轮上 — 本日无环无从绑定, 诚实跳过
+        evs = viewpoint_events(text, sig)
+        prompt = build_propose_prompt(cid, text, sig, evs, hot)
+        sig["card_text"] = text  # gap #18 family: card-scoped gate checks need the face
+        line = None
+        try:
+            for _ in range(3):
+                cand = re.sub(r"\s+", " ", llm(prompt)).strip().strip('「」"“”')[:80]
+                v = proposal_violations(cand, sig, evs)
+                if not v:
+                    line = cand
+                    break
+                first_v = v
+        except Exception:
+            print("ollama down; propose skipped at", cid)
+            break
+        if line is None:
+            print("propose: gate: skip", cid, "(stays rare; next window)", first_v)
+            continue
+        frag = anchor_event(line, evs)[1]
+        rec = {"proposal_id": "PR-%s-%s" % (t.replace("-", ""), cid[-4:]),
+               "citizen_id": cid,
+               "ring_ref": "环%d @ %s" % (len(days), t),
+               "anchor": "「%s」 城市实况 %s（FluxVerse 事件流）" % (frag, t),
+               "text": line,
+               "face_hit": face_hit_of(line, text),
+               "surprise": day_max,
+               "gate": "pass", "status": "open",
+               "created_at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M")}
+        os.makedirs(os.path.dirname(PROPOSALS), exist_ok=True)
+        with open(PROPOSALS, "a", encoding="utf-8", newline="\n") as f:
+            f.write(json.dumps(rec, ensure_ascii=False, sort_keys=True) + "\n")
+        made.append(rec["proposal_id"])
+    if made:
+        commit_files([PROPOSALS], "提案 %s: %s%s" % (t, " ".join(made), via))
+    print("OK proposals=%d" % len(made))
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--batch", type=int, default=None)
@@ -1114,6 +1272,9 @@ def main():
     ap.add_argument("--meet", nargs=2, default=None)
     ap.add_argument("--reflect", action="store_true",
                     help="V2-B reflection layer: at most 1 due citizen per round")
+    ap.add_argument("--propose", action="store_true",
+                    help="V3 city councilors (T-20260926-19): <=3 curiosity=2 citizens "
+                         "with a fresh ring THIS batch each append one gated proposal")
     ap.add_argument("--via", default=None, help="committer-identity tail, e.g. BigLife-OSLoop")
     args = ap.parse_args()
     via = (" [via %s]" % args.via) if args.via else ""
@@ -1234,6 +1395,9 @@ def main():
     else:
         save_cursor(cursor)
     print("OK evolved=%d of %d due" % (n, len(due)))
+    if args.propose:
+        # T-20260926-19 分步②b: 提案与年轮同批生成 (ring_ref 同源强绑定·判据③)
+        propose_step(cursor, via, done, sig)
     if args.reflect:
         reflect_step(cursor, via)
 
