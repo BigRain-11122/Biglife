@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""升华律三色盘点器 v1.0 —— O-20260926-2225-bm-c 执行八件之④（存量三色盘点）
+"""升华律三色盘点器 v1.1 —— O-20260926-2225-bm-c 执行八件之④（存量三色盘点+补链批「注记行」判据面）
 
 判别口径（2026-09-26 R384 定谳·T-20260926-18 分步④）：
   ✅ 双底座齐 = 卡面含显式「赛博后身」链（令 §一.5 叙事链中环法定格式：
@@ -41,6 +41,8 @@ FUTURE_FORMS = {
     "渡轮船长", "热搜观测员", "弄堂小囡", "白玉兰园艺师", "档案修护师", "渡轮检票员", "老克勒咖啡主",
 }
 SPRITE_PREFIX = "像素灵"
+# v1.1（2026-09-27 R426·T-18 步⑨分步④）：补链批「注记行」判据面标记（Tools/sublimate_chain.py 同源引用·禁双建）
+NOTE_MARK = "**升华链**（升华令 §二.8 追加注记·原文保全）"
 DISTRICTS = ["GM", "MD", "NS", "OR", "QT", "RV"]
 
 
@@ -64,6 +66,8 @@ def scan():
                 "id": os.path.basename(p)[:-3], "district": d, "species": species,
                 "prof": prof, "name": prof_name(prof),
                 "chain": chain_any, "chain_prof": chain_prof,
+                "note": NOTE_MARK in t, "variant": "复古后身" in prof,
+                "sprite": species.startswith(SPRITE_PREFIX),
             })
     for sub in ("reserved", "anchors"):
         for p in sorted(glob.glob(os.path.join(REG, "..", sub, "*.md"))):
@@ -74,87 +78,103 @@ def scan():
 
 
 def classify(rows):
-    ok, half, bad, review, sprites = [], [], [], [], []
+    ok, half, review, sprites = [], [], [], []
+    noted_res, noted_spr, variant = [], [], []
     chain_outside = 0
     for r in rows:
         if r["chain"] and not r["chain_prof"]:
             chain_outside += 1
         if r["chain"]:
             ok.append(r)
-        elif r["species"].startswith(SPRITE_PREFIX):
+        elif r["note"]:
+            (noted_spr if r["sprite"] else noted_res).append(r)
+        elif r["sprite"]:
             sprites.append(r)
+        elif r["variant"]:
+            variant.append(r)
         elif r["name"] in FUTURE_FORMS:
             half.append(r)
         else:
             review.append(r)
-    return ok, half, review, sprites, chain_outside
+    return ok, half, review, sprites, noted_res, noted_spr, variant, chain_outside
 
 
 def main():
     rows, excluded = scan()
-    ok, half, review, sprites, chain_outside = classify(rows)
+    ok, half, review, sprites, noted_res, noted_spr, variant, chain_outside = classify(rows)
     n = len(rows)
-    by_sp, ok_by_sp, ok_by_d = {}, {}, {}
+    by_sp, ok_by_sp, ok_by_d, noted_by_sp, noted_by_d = {}, {}, {}, {}, {}
     for r in rows:
         by_sp[r["species"]] = by_sp.get(r["species"], 0) + 1
-        ok_by_d[r["district"]] = ok_by_d.get(r["district"], 0) + (1 if r["chain"] else 0)
-        if r["chain"]:
+        done = r["chain"] or r["note"]
+        ok_by_d[r["district"]] = ok_by_d.get(r["district"], 0) + (1 if done else 0)
+        if r["note"] and not r["chain"]:
+            noted_by_sp[r["species"]] = noted_by_sp.get(r["species"], 0) + 1
+            noted_by_d[r["district"]] = noted_by_d.get(r["district"], 0) + 1
+        if done:
             ok_by_sp[r["species"]] = ok_by_sp.get(r["species"], 0) + 1
-    half_res = n - len(sprites) - len(ok) - len(review)
+    half_res = len(half)
+    noted = len(noted_res) + len(noted_spr)
     lines = []
     a = lines.append
-    a("# R-20260926-sublimation-census · 存量三色盘点报告（升华律执行令 §二.4）")
+    a("# R-20260926-sublimation-census · 存量三色盘点报告（升华律执行令 §二.4·v1.1）")
     a("")
-    a("- 令源=O-20260926-2225-bm-c（硅基居民升华律执行令 v1.2）·盘点窗 ≤2026-09-28 12:00·盘点批次=R384（2026-09-26）")
+    a("- 令源=O-20260926-2225-bm-c（硅基居民升华律执行令 v1.2/v1.3）·盘点窗 ≤2026-09-28 12:00·盘点批次=R384（2026-09-26）·v1.1 复跑=R426（2026-09-27·补链批判据面）")
     a("- 盘点体=census/registry 六城区生成卡 %d 张（荣誉席 census/reserved %d 张+手写锚 census/anchors %d 张=非生成面恒排除·令 §三 红线荣誉席零触碰）"
       % (n, sum(1 for x in excluded if x <= "C-00009"), sum(1 for x in excluded if x > "C-00009")))
-    a("- 判别口径=✅显式「赛博后身」链 / ⚠️未来形态在册·中链不显式 / ❌只写现实态零未来形态（79 模板逐模板判读定谳=全数硅基城本位·❌=0）")
-    a("- 工具=`Tools/sublimate_audit.py`（确定性·零 LLM·复跑幂等）·复跑=python -X utf8 Tools/sublimate_audit.py")
+    a("- 判别口径 v1.1=✅原生链（显式「赛博后身」链）/ ✅注记链（升华令 §二.8 追加注记行=Tools/sublimate_chain.py 补链批）/ ⚠️未来形态在册·链与注记均无 / ❌只写现实态零未来形态（79 模板逐模板判读定谳=全数硅基城本位·❌=0）")
+    a("- 基线（R384·2026-09-26）=✅1595·⚠️居民 7886（含复古后身变体 227）·⚠️生灵族 499·REVIEW 0——v1.1 收口判据（契约判据⑤）=⚠️ 单调递减·8385→0（变体桶定谳后）")
+    a("- 工具=`Tools/sublimate_audit.py` v1.1（确定性·零 LLM·复跑幂等·报告覆写=git 史保全基线版）·复跑=python -X utf8 Tools/sublimate_audit.py")
     a("")
-    a("## 一、三色总盘")
+    a("## 一、三色总盘（v1.1 注记行判据面）")
     a("")
     a("| 色 | 判据 | 张数 | 占比 |")
     a("|---|---|---|---|")
-    a("| ✅ 双底座齐 | 显式「赛博后身」链 | %d | %.1f%% |" % (len(ok), 100.0 * len(ok) / n))
-    a("| ⚠️ 半升华·居民 | 未来形态在册·中链不显式 | %d | %.1f%% |" % (half_res, 100.0 * half_res / n))
-    a("| ⚠️ 半升华·生灵族（像素灵） | 物种名自带现实原型词根·链 0·生灵册步⑥收口 | %d | %.1f%% |" % (len(sprites), 100.0 * len(sprites) / n))
-    a("| ❌ 纯现实 | 只写现实态零未来形态 | %d | 0.0%% |" % len([]))
+    a("| ✅ 原生链 | 显式「赛博后身」链（职业行） | %d | %.1f%% |" % (len(ok), 100.0 * len(ok) / n))
+    a("| ✅ 注记链·居民 | 升华令 §二.8 追加注记行（补链批） | %d | %.1f%% |" % (len(noted_res), 100.0 * len(noted_res) / n))
+    a("| ✅ 注记链·生灵族 | 物种域注记（《城市生灵册》#N 指针·非个体链） | %d | %.1f%% |" % (len(noted_spr), 100.0 * len(noted_spr) / n))
+    a("| ⚠️ 半升华·居民余量 | 未来形态在册·链与注记均无 | %d | %.1f%% |" % (half_res, 100.0 * half_res / n))
+    a("| ⚠️ 复古后身变体 | REVIEW 定谳桶单列（合法亚型候选·不入补链首批） | %d | %.1f%% |" % (len(variant), 100.0 * len(variant) / n))
+    a("| ⚠️ 半升华·生灵族（像素灵）余量 | 物种域注记待落 | %d | %.1f%% |" % (len(sprites), 100.0 * len(sprites) / n))
+    a("| ❌ 纯现实 | 只写现实态零未来形态 | 0 | 0.0%% |")
     a("| REVIEW 复核桶 | 未知职业模板（不误染❌） | %d | %.2f%% |" % (len(review), 100.0 * len(review) / n))
     a("")
-    a("- 令内预告对照：~1602/10003 vs 实测 %d/%d（偏差 -7·以全库扫描实测为准=R383 基准初扫口径延续）" % (len(ok), n))
+    a("- 令内预告对照：~1602/10003 vs 原生链实测 %d/%d（R383/R384 口径延续）" % (len(ok), n))
     a("- 链位置自检：链在职业行=%d 卡中链在行外=%d（链均落 prof 法定行·口径自洽）" % (len(ok) - chain_outside, chain_outside))
+    a("- 补链收口进度（判据⑤单调递减）：注记累计=%d（居民 %d+生灵 %d）·⚠️ 余量=%d（居民 %d+变体 %d+生灵 %d）·收口目标=8385→0"
+      % (noted, len(noted_res), len(noted_spr), half_res + len(variant) + len(sprites), half_res, len(variant), len(sprites)))
     a("- 未来原生族（城生城长第一代）=令 §一.6 合法族如实注记：计入本线、不豁免补链义务（补链=追加注记式保原文）")
     a("")
-    a("## 二、分物种盘（✅链承载 vs 总数）")
+    a("## 二、分物种盘（链+注记 承载 vs 总数）")
     a("")
-    a("| 物种 | 总数 | ✅链 | ⚠️无链 |")
-    a("|---|---|---|---|")
+    a("| 物种 | 总数 | ✅原生链 | ✅注记链 | 无链无注记 |")
+    a("|---|---|---|---|---|")
     for k in sorted(by_sp, key=lambda k: -by_sp[k]):
-        a("| %s | %d | %d | %d |" % (k, by_sp[k], ok_by_sp.get(k, 0), by_sp[k] - ok_by_sp.get(k, 0)))
+        dn = ok_by_sp.get(k, 0) + noted_by_sp.get(k, 0)
+        a("| %s | %d | %d | %d | %d |" % (k, by_sp[k], ok_by_sp.get(k, 0), noted_by_sp.get(k, 0), by_sp[k] - dn))
     a("")
-    a("## 三、分城区盘（✅链承载）")
+    a("## 三、分城区盘（链+注记 承载）")
     a("")
-    a("| 城区 | 卡数 | ✅链 |")
-    a("|---|---|---|")
+    a("| 城区 | 卡数 | 原生链 | 注记链 | 余量 |")
+    a("|---|---|---|---|---|")
     tot_d = {}
     for r in rows:
         tot_d[r["district"]] = tot_d.get(r["district"], 0) + 1
     for d in DISTRICTS:
-        a("| %s | %d | %d |" % (d, tot_d.get(d, 0), ok_by_d.get(d, 0)))
+        dn = ok_by_d.get(d, 0) + noted_by_d.get(d, 0)
+        a("| %s | %d | %d | %d | %d |" % (d, tot_d.get(d, 0), ok_by_d.get(d, 0), noted_by_d.get(d, 0), tot_d.get(d, 0) - dn))
     a("")
     a("## 四、结论与接续")
     a("")
     a("1. ❌纯现实=0：CEO 例「送快递的」式纯现实态在 9980 生成卡中零存在（79 职业模板逐模板判读定谳表内建于脚本·最弱锚=老克勒咖啡主/渡轮检票员族仍具城内复古叙事锚）。")
-    a("2. 主工作量=⚠️ 8385 张（居民 7886+生灵 499）分批补链：令 §二.8 追加注记式保原文·随 P-13 Phase1 ≤10-02；链格=「未来形态——现实原型的（赛博）后身——升华一句话」。")
-    a("3. 像素灵 499=生灵族按律②生灵登记门单列（物种名自带现实原型词根·消息雀先例在册）·收口件=《城市生灵册》步⑥。")
+    a("2. 补链批产线（T-18 步⑨分步④·Tools/sublimate_chain.py v0）：分批律 ≤500 张/轮·追加注记式保原文（git diff 每卡 +1/-0）·复跑幂等·收口判据=⚠️ 8385→0 单调递减（居民 7886+生灵 499·窗随 P-13 Phase1 ≤10-02；复古后身变体桶单列 REVIEW 定谳后收口·不入首批）；链格=「未来形态——现实原型的（赛博）后身——升华一句话」。")
+    a("3. 像素灵 499=生灵族按律②生灵登记门单列（物种名自带现实原型词根·消息雀先例在册）·收口件=《城市生灵册》步⑥——补链批走物种域注记（《城市生灵册》#1-#6 册号映射·非个体链）。")
     a("4. REVIEW 复核桶 %d 张=未知模板零存在·生成门步①接线后新卡违律计数入 QC-REPORT。" % len(review))
     a("")
     report = "\n".join(lines) + "\n"
     io.open(REPORT, "w", encoding="utf-8", newline="\n").write(report)
-    print("sublimate_audit: cards=%d ok=%d half_res=%d sprites=%d bad=0 review=%d excluded_reserved=%d excluded_anchors=%d"
-          % (n, len(ok), half_res, len(sprites), len(review),
-             sum(1 for x in excluded if x < "C-00010"),
-             sum(1 for x in excluded if x >= "C-00010")))
+    print("sublimate_audit v1.1: cards=%d ok=%d noted_res=%d noted_spr=%d half_res=%d variant=%d sprites=%d bad=0 review=%d"
+          % (n, len(ok), len(noted_res), len(noted_spr), half_res, len(variant), len(sprites), len(review)))
     print("report -> %s" % os.path.relpath(REPORT, ROOT))
     if review:
         print("REVIEW ids:", ",".join(r["id"] for r in review[:20]))
