@@ -104,7 +104,7 @@ def main():
               f"- 卡片总数：{len(ids)}（在册 {len(names)} 名）",
               f"- 已进化（有年轮）：{evolved}",
               f"- 异常数：{len(problems)}", "",
-              f"- 升华门拒入册计数：{gate_n}（生成门/生灵门 fail-fast·T-20260926-18 步①②）", ""]
+              f"- 升华门拒入册计数：{gate_n}（生成门/生灵门/灵族门 fail-fast·T-20260926-18 步①②③）", ""]
     schema_rows = schema_bad = 0
     if schema_mode:
         schema_rows, schema_bad, per = schema_scan(problems)

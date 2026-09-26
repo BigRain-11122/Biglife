@@ -492,13 +492,37 @@ def sublimate_gate(c, text):
     return []
 
 
-def record_sublimate_refusal(c, missing):
+def record_sublimate_refusal(c, missing, gate="sublimate"):
     # 违律计数（令 §一.1「违律计数入 QC-REPORT」）：qc_census 随巡检并入报告。state/ 运行面不入库。
     os.makedirs(os.path.join(CO, "state"), exist_ok=True)
     with open(os.path.join(CO, "state", "sublimate-gate.jsonl"), "a", encoding="utf-8", newline="\n") as f:
         f.write(json.dumps({"ts": datetime.datetime.now().isoformat(timespec="seconds"),
-                            "id": f"C-{c['id']:05d}", "species": c["species"],
+                            "id": f"C-{c['id']:05d}", "species": c["species"], "gate": gate,
                             "missing": missing}, ensure_ascii=False) + "\n")
+
+
+# 灵族门（升华律 v1.3 §二.3 灵族登记门·T-20260926-18 步③机制面·正典=docs/spirit-races-book.md）
+SPIRIT_SPECIES = ("artifact-spirit", "memory-spirit", "imagery-spirit")  # 器灵/记忆灵/意象灵（新个体入册面；像素灵=census 既有物种收编·不占新配额·志 §四判读）
+SPIRIT_QUOTA = 100  # 稀缺律：灵族个体总量 ≤ census 1% ≈ 100 硬顶（计数器满=准入 QC 硬拒）
+SPIRIT_ELEMENTS = ("认祖源", "数据源", "城市角色", "传说句", "升华形态", "羁绊", "行为卡")  # 四要素+升华三问（志 §一.1/§一.6·「**要素**」标记面）
+SPIRIT_HORROR = ("恐怖", "厉鬼", "索命", "怨灵", "恶灵", "勾魂")  # 温暖律禁词闭集（卡面零容忍·禁令自述句只在判据面 docs 不入卡）
+SPIRIT_DEATH_CLAIM = ("真实死者", "我是死者", "生前是真人")  # 法务隔离律禁宣称闭集（灵族永不宣称「我是某真实死者」）
+
+def spirit_gate(c, text, spirit_count):
+    """入城门 fail-fast：灵族登记门（准入六律·任一不过=拒绝入册·志 §一）。
+    仅对新个体入册面三物种生效（存量 carbon/silicon/sprite 恒过=零漂移）；
+    一次性入册批沿 add_honored_seats 先例可 import 本函数复检（配额计数自 census 实测传入）。"""
+    if c.get("species") not in SPIRIT_SPECIES:
+        return []
+    miss = []
+    if spirit_count >= SPIRIT_QUOTA:
+        miss.append(f"配额满(稀缺律{SPIRIT_QUOTA})")
+    for el in SPIRIT_ELEMENTS:
+        if f"**{el}**" not in text:
+            miss.append(el)
+    miss += [f"温暖律:{w}" for w in SPIRIT_HORROR if w in text]
+    miss += [f"法务隔离:{w}" for w in SPIRIT_DEATH_CLAIM if w in text]
+    return miss
 
 
 def main():
@@ -576,6 +600,7 @@ def main():
     build_households(rng, citizens)
     build_relations(rng, citizens)
 
+    spirit_n = 0  # 灵族配额计数器（稀缺律执法面·志 §四·当前登记 0/100）
     for c in citizens:
         text = render_card(c)
         rhits = political_redline.scan_text(text)
@@ -587,8 +612,15 @@ def main():
             record_sublimate_refusal(c, svio)
             print(f"SUBLIMATE REFUSED: C-{c['id']:05d} missing={svio}")
             sys.exit(6)
+        svio = spirit_gate(c, text, spirit_n)
+        if svio:  # 入城门 fail-fast：灵族登记门准入六律不过=拒绝入册零写盘（T-18 步③·配额计数器执法）
+            record_sublimate_refusal(c, svio, gate="spirit")
+            print(f"SPIRIT REFUSED: C-{c['id']:05d} missing={svio}")
+            sys.exit(7)
         with open(os.path.join(regdir, c["district"], f"C-{c['id']:05d}.md"), "w", encoding="utf-8", newline="\n") as f:
             f.write(text)
+        if c.get("species") in SPIRIT_SPECIES:
+            spirit_n += 1
         lights.append({
             "id": f"C-{c['id']:05d}", "name": c["name"], "species": c["species"], "faction": c["faction"],
             "gender": {"M": "男", "F": "女"}.get(c["gender"], c["gender"]), "age": c["age"], "age_note": c["age_label"],
