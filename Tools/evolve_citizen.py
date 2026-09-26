@@ -941,6 +941,11 @@ def build_prompt(cid, text, sig):
     # string -> the prompt is byte-identical to the pre-wiring build.
     rumor = (sig.get("rumor") or "").strip()
     rumor_blk = (rumor + "\n") if rumor else ""
+    # T-20260926-11 (L5 城市年谱·消费点 A): optional 本周城市大事 block. Empty
+    # chronicle / no in-window rows -> "" and the prompt is byte-identical to
+    # the pre-wiring build (zero-drift law, same as the rumor block).
+    cd = (sig.get("city_digest") or "").strip()
+    city_blk = (cd + "\n") if cd else ""
     # T-20260925-01/T-20260925-18 soft guidance (NOT a gate): open with your OWN
     # catchphrase; standing per-prompt constraint caps generic pool-gene quotes at
     # 1 per ring (cross-card quotes stay LEGAL per C-00695 R192 - diversity nudge
@@ -962,7 +967,7 @@ def build_prompt(cid, text, sig):
     return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
             f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
-            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}"
+            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}{city_blk}"
             f"现在真实北京时间 {sig['now']}，今天{sig.get('weekday','')}（{'周末' if sig.get('weekend') else '工作日'}），上海实况天气：{wx}。\n"
             f"今天属于上面标明的工作日/周末：你人设里凡以「周末」或「工作日」为前置条件的习惯，只许写与今天同侧的进行态或完成态，另一侧只许作为未来打算句提及，写错侧视为编造。\n"
             f"今天日期是 {sig.get('day')} 号（{sig.get('day_parity')}）：你人设里凡以「单日/双日/逢单/逢双」等日期奇偶为前置条件的习惯，只许写与今天同侧的进行态或完成态；另一侧严禁写成今天已发生或正在发生，只许以规则自述（人设原文规则句可原样引用）、按规则的自然推论或未来打算句式提及，严禁借引用断言今天发生了错侧动作，写错侧视为编造；同样严禁把你卡面没有奇偶前置的习惯硬捆绑到单日/双日名下——卡面没有的规则不得借日期之名新造，日期奇偶只许与你人设原文里真带奇偶字样的规则搭配。\n"
@@ -1136,6 +1141,14 @@ def main():
             sig["card_text"] = text  # gap #18: persona-import gate anchor
             sig["pool_advice"] = pool_advice_for(face, pool_used)  # T-20260925-01 advisory
             sig["rumor"] = rumor_line_for(cid, sig)  # T-20260926-10 分步①: L3 断点① 流言->年轮候选面
+            # T-20260926-11 (L5 城市年谱·消费点 A): city-level digest, batch-level
+            # (与 cid 无关, 每批一次). 谱未落盘/无窗内行 -> "" -> prompt 零漂移.
+            if "city_digest" not in sig:
+                try:
+                    import city_chronicle
+                    sig["city_digest"] = city_chronicle.city_digest(datetime.datetime.now())
+                except Exception:
+                    sig["city_digest"] = ""
             line = gated_llm(build_prompt(cid, text, sig), sig)
         except Exception:
             print("ollama down; batch paused at", n)
