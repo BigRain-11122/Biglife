@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "kind": "voice-role-map",
+  "law_source": "orders/O-20260926-2225-bm-c.md v1.3 第五连 配音律（人各一声·声音法务隔离）",
+  "registered": "2026-09-27",
+  "registered_by": "T-20260926-18 步⑦第 3 件",
+  "source": {
+    "package": "kokoro-multi-lang-v1_0",
+    "path": "K:/Fluxgroup/.tools/kokoro/",
+    "license": "Apache-2.0 开放权重·合成设计声·零真人录音克隆",
+    "total_sids": 53,
+    "authoritative_sid_map": "Tools/kokoro_synth.py SID_MAP（sid 45-52 具名 zh 基音·k2-fsa 官方权威表）"
+  },
+  "legal": {
+    "synthetic_only": true,
+    "clone_real_voice": "P-09 法务闸·未授权一律不启用",
+    "design_not_imitation": "型位按设计锚取声=禁模仿真人嗓音（影射五型安全距离第三条）；T4 公有域二型同样不宣称还原史实嗓音",
+    "honored_blocked": ["C-00001", "C-00002", "C-00003"]
+  },
+  "layers": {
+    "production": {
+      "scope": "生产层=8 zh 基音（sid 45-52）唯一生产池",
+      "voices": [
+        {"sid": 45, "name": "zf_xiaobei", "band": "zh 女声池", "pilot_evidence": "C-00029 speed 0.855（无定→zf 律）"},
+        {"sid": 46, "name": "zf_xiaoni", "band": "zh 女声池", "pilot_evidence": "C-00015 0.98（女）/C-00017 1.01（无定）"},
+        {"sid": 47, "name": "zf_xiaoxiao", "band": "zh 女声池", "pilot_evidence": "C-00010 1.163（女·老年）/C-00028 0.82（无定）"},
+        {"sid": 48, "name": "zf_xiaoyi", "band": "zh 女声池", "pilot_evidence": "未入试点（8 zh 池合法位·md5 池选可达）"},
+        {"sid": 49, "name": "zm_yunjian", "band": "zh 男声池", "pilot_evidence": "C-00011 1.053（男）"},
+        {"sid": 50, "name": "zm_yunxi", "band": "zh 男声池", "pilot_evidence": "C-00019 0.99（男·老年）"},
+        {"sid": 51, "name": "zm_yunxia", "band": "zh 男声池", "pilot_evidence": "C-00013 0.98（男）"},
+        {"sid": 52, "name": "zm_yunyang", "band": "zh 男声池", "pilot_evidence": "未入试点（型 6 默认位·听感首验=承载方案件 2 盲测批）"}
+      ],
+      "resident_law_ref": "cognition/VOICE-POOL.md §一（性别→池：女/无定→zf·男→zm；md5(id) 池内定选；rate 带→speed 派生）——本表引用·单一源零双建"
+    },
+    "archetype_defaults": [
+      {"archetype_id": "STYLE-T4-LIBAI", "label": "文言诗性", "voice_anchor": "苍劲吟诵/中低/缓/豪逸", "sid": 49, "voice": "zm_yunjian", "speed": 0.95, "speed_band": [0.80, 0.95], "band_name": "缓"},
+      {"archetype_id": "STYLE-EVOC-THOUGHT-EXPERIMENTER", "label": "思想实验腔", "voice_anchor": "温和学者/中/中速/好奇温厚", "sid": 50, "voice": "zm_yunxi", "speed": 1.00, "speed_band": [0.96, 1.04], "band_name": "中速"},
+      {"archetype_id": "STYLE-EVOC-DAOIST-DRILLMASTER", "label": "道门口令短促", "voice_anchor": "沉稳正气/中低/短促顿挫/凛然安定", "sid": 51, "voice": "zm_yunxia", "speed": 1.10, "speed_band": [1.05, 1.15], "band_name": "短促"},
+      {"archetype_id": "STYLE-EVOC-OPERA-VETERAN", "label": "戏文腔·沙哑戏韵", "voice_anchor": "沙哑戏韵/低/念白顿挫/苍劲诙谐", "sid": 49, "voice": "zm_yunjian", "speed": 0.80, "speed_band": [0.80, 0.95], "band_name": "缓（拖腔底位）"},
+      {"archetype_id": "STYLE-EVOC-ANTHEM-BARD", "label": "歌词排比豪迈", "voice_anchor": "醇厚歌者/中低宽/中缓长气息/豪迈温热", "sid": 50, "voice": "zm_yunxi", "speed": 0.88, "speed_band": [0.85, 0.95], "band_name": "中缓长气息"},
+      {"archetype_id": "STYLE-EVOC-TERMINAL-UNIT", "label": "极简机械短句", "voice_anchor": "低沉金属质感/低/匀速/平直", "sid": 52, "voice": "zm_yunyang", "speed": 0.93, "speed_band": [0.90, 1.00], "band_name": "匀速"},
+      {"archetype_id": "STYLE-T4-SUNWUKONG", "label": "古典白话泼猴", "voice_anchor": "明快少年感亮音/高/快跳透/欢腾得意", "sid": 47, "voice": "zf_xiaoxiao", "speed": 1.15, "speed_band": [1.10, 1.20], "band_name": "快"}
+    ],
+    "reserved": {
+      "sids": "0-44（45 位非 zh 基音）",
+      "status": "parked·v1 全量不启用·点单制",
+      "honest_note": "本地无具名档案（SID_MAP 权威表仅载 45-52）；kokoro v1_0=en-zh 双语模型·非 zh 基音念 zh 文本口音质量未验证=M 级待证",
+      "candidate_bands": ["M4 参观端国际访客化身", "BigStream 多语内容线", "v1_1（103 声纹）升级替换池"],
+      "enable_gate": "听感验证窗（盲测 ≥5/5）+T2 登记+消费方任务单 三前置缺一不启用"
+    }
+  },
+  "honesty_notes": [
+    "基音色 5/7 非全互异：4 男基音承 6 男锚型=8 zh 池结构性窄门——型 4/型 5 与型 1/型 2 分别共基音·以 (sid,speed)+emotion_path 组合承异（②件 §五.5 组合互异机制延续）；全互异解除路=预留层听感验证窗+v1_1 扩池",
+    "音色质感标签（沙哑/低沉/明亮）无本地听感档案：v1 按性别带+speed 锚定谳·质感=型级风格载荷由台词面承载（kokoro 无 pitch/timbre 调制参数·VOICE-POOL §一 诚实标注）·听感校准=承载方案件 2 盲测批",
+    "型卡覆盖律（本表唯一新机制）：带 style_dna 型标记的影射/致敬居民卡（⑧册入城批起）声=型默认位替代 md5 池选；非型卡照走 md5 池选·接线=步⑦第 4 件「字段入契约」随件（届时 T2 登记·否决窗 7 天）"
+  ]
+}
