@@ -21,6 +21,7 @@
 import argparse
 import glob
 import hashlib
+import heapq
 import json
 import os
 import re
@@ -29,6 +30,9 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CENSUS_DIR = os.path.join(ROOT, 'census')
 OUT_PATH = os.path.join(ROOT, 'census', 'export', 'citizen-relations.jsonl')
+# T-20260926-10 step 4 (--meet-suggest) read faces
+LIGHT_PATH = os.path.join(ROOT, 'census', 'export', 'citizens-light.jsonl')
+HONOR_MARK = '荣誉席'
 
 DISTRICT_PREFIX = '**城区**'
 RELATION_PREFIX = '**关系**'
@@ -225,9 +229,153 @@ def cmd_qc(cards):
     return 0 if bad == 0 and rows == n1 else 1
 
 
+def load_recent():
+    """light face -> {cid: recent_ring_date} for story-face members
+    (recent_ring non-empty; T-10 step 4 join face). Honored seats carry a
+    recent_ring too but the suggest layers exclude them structurally."""
+    rec = {}
+    if not os.path.exists(LIGHT_PATH):
+        return rec
+    with open(LIGHT_PATH, encoding='utf-8') as fh:
+        for ln in fh:
+            if not ln.strip():
+                continue
+            o = json.loads(ln)
+            if o.get('recent_ring') and o.get('recent_ring_date'):
+                rec[str(o.get('id'))] = str(o.get('recent_ring_date'))
+    return rec
+
+
+def cmd_suggest(cards, limit):
+    """T-20260926-10 step 4 (--meet-suggest, contract R343): deterministic
+    meet candidate pairs = relations adjacency (household > meet > block
+    priority) joined with the light story face (both members recent_ring
+    non-empty; block layer 双非空-only for volume - 2.8M full listing
+    infeasible). Pure read, zero LLM; the selection right stays in the loop:
+    this prints candidates only (evolve_citizen --meet zero-touch). Honored
+    seats excluded structurally (district 荣誉席 mark + pair-side check).
+    """
+    def compute():
+        rec = load_recent()
+        if not rec:
+            return None
+        honored = {cid for cid, c in cards.items()
+                   if HONOR_MARK in (c['district'] or '')}
+        hh_g, blk_g, meet_pairs = {}, {}, {}
+        for cid in sorted(cards):
+            c = cards[cid]
+            if c['household'] and not c['alone']:
+                hh_g.setdefault(c['household'], []).append(cid)
+            bn = block_name(c['district'])
+            if bn:
+                blk_g.setdefault(bn, []).append(cid)
+            for other, date in c['meets']:
+                a, b = (cid, other) if cid < other else (other, cid)
+                if (a, b) not in meet_pairs or date < meet_pairs[(a, b)]:
+                    meet_pairs[(a, b)] = date
+
+        def usable(cid):
+            return cid not in honored and cid in rec
+
+        def gen(groups, rel):
+            for src, members in sorted(groups.items()):
+                ms = [x for x in members if usable(x)]
+                for i, a in enumerate(ms):
+                    for b in ms[i + 1:]:
+                        yield a, b, rel, src
+
+        def meet_gen():
+            for (a, b), date in sorted(meet_pairs.items()):
+                if usable(a) and usable(b):
+                    yield a, b, 'meet', date
+
+        def key(t):
+            a, b = t[0], t[1]
+            d = max(rec[a], rec[b])
+            return (-int(d.replace('-', '')),
+                    hashlib.md5((a + b).encode('utf-8')).hexdigest())
+
+        out = []
+        for name, g in (('household', gen(hh_g, 'household')),
+                        ('meet', meet_gen()),
+                        ('block', gen(blk_g, 'block'))):
+            room = limit - len(out)
+            if room <= 0:
+                break
+            out.extend(heapq.nsmallest(room, g, key=key))
+        return rec, honored, out
+
+    first = compute()
+    if first is None:
+        print('meet-suggest FAIL: story face empty (light face / recent_ring)')
+        return 1
+    rec, honored, out = first
+    second = compute()[2]
+    m1 = hashlib.md5(json.dumps(out, ensure_ascii=False)
+                     .encode('utf-8')).hexdigest()
+    m2 = hashlib.md5(json.dumps(second, ensure_ascii=False)
+                     .encode('utf-8')).hexdigest()
+
+    bad = 0
+    if m1 != m2:
+        bad += 1
+        print('meet-suggest QC FAIL: double-run mismatch')
+    # 判据：输出对必为真实 relations 行（cards 谓词 = 行发射判据 cmd_qc 同源）
+    def pair_ok(a, b, rel, src):
+        ca, cb = cards[a], cards[b]
+        if rel == 'household':
+            return (ca['household'] == src == cb['household']
+                    and not ca['alone'] and not cb['alone'])
+        if rel == 'block':
+            return block_name(ca['district']) == src == block_name(cb['district'])
+        return any(o == b and d == src for o, d in ca['meets']) or \
+               any(o == a and d == src for o, d in cb['meets'])
+    verify = sum(1 for a, b, rel, src in out if pair_ok(a, b, rel, src))
+    if verify != len(out):
+        bad += 1
+        print('meet-suggest QC FAIL: pair not a real relations row')
+    if any(a in honored or b in honored for a, b, rel, src in out):
+        bad += 1
+        print('meet-suggest QC FAIL: honored seat in pair')
+    if any(a not in rec or b not in rec for a, b, rel, src in out):
+        bad += 1
+        print('meet-suggest QC FAIL: story-face violation')
+    disk_bad = -1  # n/a when the face is absent
+    if os.path.exists(OUT_PATH) and out:
+        want = set('{"a":"%s","b":"%s","rel":"%s","src":%s}\n'
+                   % (a, b, rel, json.dumps(src, ensure_ascii=False))
+                   for a, b, rel, src in out)
+        found = set()
+        with open(OUT_PATH, encoding='utf-8') as fh:
+            for ln in fh:
+                if ln in want:
+                    found.add(ln)
+                    if len(found) == len(want):
+                        break
+        disk_bad = len(want) - len(found)
+        if disk_bad:
+            bad += 1
+            print('meet-suggest QC FAIL: disk row missing %d' % disk_bad)
+    print('meet-suggest limit=%d pairs=%d md5=%s honored_excluded=%d'
+          % (limit, len(out), m1, len(honored)))
+    for i, (a, b, rel, src) in enumerate(out, 1):
+        print('%2d [%s] %s × %s src=%s ring=%s/%s'
+              % (i, rel, a, b, src, rec[a], rec[b]))
+    print('QC verify=%d/%d disk=%s double_run=%s'
+          % (verify, len(out),
+             'OK' if disk_bad == 0 else ('FAIL' if disk_bad > 0 else 'n/a'),
+             'OK' if m1 == m2 else 'FAIL'))
+    print('QC %s' % ('PASS' if bad == 0 else 'FAIL'))
+    return 0 if bad == 0 else 1
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--qc', action='store_true', help='run QC gate (double-run MD5 + full row scan)')
+    ap.add_argument('--meet-suggest', action='store_true',
+                    help='T-10④: deterministic meet candidate pairs (household>meet>block x story face)')
+    ap.add_argument('--limit', type=int, default=10,
+                    help='meet-suggest candidate cap (default 10)')
     args = ap.parse_args()
     cards = load_cards()
     if not cards:
@@ -235,6 +383,8 @@ def main():
         return 1
     if args.qc:
         return cmd_qc(cards)
+    if args.meet_suggest:
+        return cmd_suggest(cards, args.limit)
     cmd_run(cards)
     return 0
 

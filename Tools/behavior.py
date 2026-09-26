@@ -46,6 +46,16 @@ honored seats keep the base slot (judge 3); elder faces, night window, rain
 override and crash overlay all zero-touch (grumble re-slots anyway; slump/
 fumble suffix the family base deterministically); caps probe is slot-blind
 so the law-8.3 plan stays byte-identical.
+T-20260926-10 step 3 (2026-09-26, R-20260925-alive-city L3 breakpoint 3,
+contract R343): relations read-face - non-alone household members key the
+social venue on md5(household src) (same-household co-location), citizens
+without a household pair on md5(block) from the light face (same-street
+gathering, zero extra I/O); the %4==3 keep-the-base branch migrates with
+the new key. Relations face absent -> documented degradation to the legacy
+md5(id) map (load_needs fallback pattern). Slot-only: state/vis/quirk/ctx
+keys untouched, venue value range stays the v3.21 closed set; honored seats
+keep the base slot (double guard: social_slot check + honored rows
+structurally absent from the household/block manifest faces).
 """
 import hashlib, json, os, re, subprocess, sys
 
@@ -105,10 +115,53 @@ def quirk_of(h):
 SOCIAL_VENUES = ("茶馆·听说书喝茶", "弄堂口·闲话家常", "骑楼·廊下聚集")
 
 
-def social_slot(h, base_slot, cid):
-    if str(cid) in needs.HONORED_IDS or h % 4 == 3:
+# T-20260926-10 step 3 (contract R343): relations read-face - household
+# co-location key over same-block fallback; slot-only, closed venue set.
+REL_FACE = os.path.join(needs.CO, "census", "export", "citizen-relations.jsonl")
+_HH_SRC = None  # lazy read-face cache (deterministic, per-process)
+
+
+def load_household_src():
+    """cid -> household src (H-号) for paired (non-独居) members; {} when the
+    relations face is absent/corrupt (degradation -> legacy md5(id) map)."""
+    if not os.path.exists(REL_FACE):
+        return {}
+    hh = {}
+    try:
+        with open(REL_FACE, encoding="utf-8") as f:
+            for ln in f:
+                if '"rel":"household"' not in ln:
+                    continue
+                o = json.loads(ln)
+                hh[str(o.get("a"))] = o.get("src")
+                hh[str(o.get("b"))] = o.get("src")
+    except Exception:
+        return {}
+    return hh
+
+
+def social_key(cid, blk, h):
+    """Venue key hash: household src > block > legacy md5(id) (T-10 step 3)."""
+    global _HH_SRC
+    if _HH_SRC is None:
+        _HH_SRC = load_household_src()
+    if not _HH_SRC:          # relations face absent -> legacy map, documented
+        return h
+    src = _HH_SRC.get(str(cid))
+    if src:                   # non-独居 household member -> household key
+        return shash(src)
+    if blk and "荣誉席" not in blk:  # no household pair -> same-block key
+        return shash(blk)
+    return h
+
+
+def social_slot(h, base_slot, cid, blk=None):
+    if str(cid) in needs.HONORED_IDS:
         return base_slot
-    return SOCIAL_VENUES[h % 4]
+    k = social_key(cid, blk, h)
+    if k % 4 == 3:
+        return base_slot
+    return SOCIAL_VENUES[k % 4]
 
 
 def window(m):
@@ -209,7 +262,7 @@ def derive(r, nk, top, sig, w, weekend, crash=None, cax=None, vis_ok=True, m=Non
             elif nk["haoqi"] >= 2:
                 st, slot, vis = "explore", "探索位·新街区", 1
             elif nk["shejiao"] >= 1:
-                st, slot, vis = "social", social_slot(h, "广场聚集", r.get("id")), 1
+                st, slot, vis = "social", social_slot(h, "广场聚集", r.get("id"), r.get("block")), 1
             elif not hon and crash != "crash" and b == "child" \
                     and weekend and h % 2 == 0:
                 st, slot, vis = "leisure_play", "街角·游戏场", 1
@@ -236,7 +289,7 @@ def derive(r, nk, top, sig, w, weekend, crash=None, cax=None, vis_ok=True, m=Non
             elif b == "elder":
                 st, slot, vis = "home", "宅户", 0
             elif b == "young" or nk["shejiao"] >= 1:
-                st, slot, vis = "social", social_slot(h, "广场/江边", r.get("id")), 1
+                st, slot, vis = "social", social_slot(h, "广场/江边", r.get("id"), r.get("block")), 1
             elif nk["haoqi"] >= 2:
                 st, slot, vis = "explore", "探索位·新街区", 1
             elif nk["anwen"] >= 2:
@@ -478,16 +531,19 @@ def main():
             elif st == "leisure_stroll" and band(r.get("age")) not in ("mid",
                                                                       "young"):
                 bad += 1
-        # T-20260926-03c: social venue family - slot-only closed set, exact
-        # hash%4 map, honored seats keep the base plaza slot (judge 4)
+        # T-20260926-03c/10③: social venue family - slot-only closed set,
+        # household/block key (relations read-face, legacy md5(id) on face
+        # absence); honored seats keep the base plaza slot (judge 3/4)
         if st == "social":
             cid = str(r.get("id"))
             tw = (o.get("ctx") or "").split("tw=")[-1].split(",")[0]
             base = "广场聚集" if tw == "day" else "广场/江边"
-            if cid in needs.HONORED_IDS or shash(cid) % 4 == 3:
-                if o.get("slot") != base:
-                    bad += 1
-            elif o.get("slot") != SOCIAL_VENUES[shash(cid) % 4]:
+            if cid in needs.HONORED_IDS:
+                want = base
+            else:
+                k = social_key(cid, r.get("block"), shash(cid))
+                want = base if k % 4 == 3 else SOCIAL_VENUES[k % 4]
+            if o.get("slot") != want:
                 bad += 1
     # determinism: rebuild a spread sample through the same pure pipeline
     if not qc_only:
