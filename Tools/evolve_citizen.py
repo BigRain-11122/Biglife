@@ -281,6 +281,23 @@ Census scan: 10 hits = the violation itself + 1 clear-window legal (C-01672
 R318) + 8 historical 前朝 rings (not retro, #41 precedent) - zero face
 catchphrases 零误伤, no lookbehind needed. Batch prompt 晴系 generic token
 list gains 清朗 (no literal example - T-19 law).
+v0.34 gap #51 insertion close (2026-09-26 R377): 天气 + <=4-char insertion +
+清 (「天气倒是挺清」/「天气这会儿还清着呢」 C-02122/C-02123 same-batch strikes
+R376 -> close per the recurrence protocol, R286 修卡 -> R287 #39 收口 same
+route). The v0.32 merged 天气清 pattern gains the #46-shape <=4-char
+insertion window. Lookahead (?![爽凉清早晨]): the R377 whole-registry
+census caught 天气清清爽爽 (59 hits) slipping a bare (?![爽凉]) - the
+doubled 清清 puts a second 清 right after the match, so the body-sense
+families need 爽/凉/清 exempt, plus 清早/清晨 time words (#27 family, prompt
+law: 含「清」字的时间词不属晴系); 口头禅「今天的事今天清」 needs no
+lookbehind (the pattern requires literal 天气, #27 precedent). Census
+verdict: remaining hits = 清朗/清气朗 forms (already flat-list banned,
+historical not retro) + 真清/今天清/挺清 pre-#51 sky claims (historical,
+#41 not-retro precedent) + clear-fed rings (check off) - zero FP on legal
+families. Clear-fed lines never reach the check; historical rings not
+retro-repaired (#41 precedent). Batch prompt 晴系措辞 clause gains the
+insertion-form wording (天气清 含天气后隔字变体); meet prompt untouched
+(no token list face).
 T-20260925-19 (2026-09-25, board): pool-gene DE-PRIMING - the T-18 window
 closed 3/3 with density flat at x6 (R217 x6 / R218 x6 / R219 x6, never <=4),
 and the root cause is the guidance itself: the standing line, the sky-rule
@@ -659,13 +676,25 @@ def ring_violations(line, sig):
     #   (c) verbatim card FACE fragment (>=4 chars spanning the token, rings
     #       stripped) - 晴天卖伞骨 rule-quote gene family stays legal;
     #   (d) verbatim fed-event fragment.
+    # v0.34 gap #51 insertion close (2026-09-26 R377): 天气 + <=4-char
+    # insertion + 清 (天气倒是挺清 / 天气这会儿还清着呢, C-02122/C-02123
+    # same-batch strikes R376 -> close per the recurrence protocol, the
+    # R286 修卡 -> R287 #39 收口 same route). #46-shape <=4-char window on
+    # the merged 天气清 pattern. Lookahead (?![爽凉清早晨]) - the R377
+    # census caught 天气清清爽爽 (59 registry hits) slipping a bare
+    # (?![爽凉]): the doubled 清清 puts a second 清 right after the match,
+    # so the body-sense families need 爽/凉/清 all exempt, plus 清早/清晨
+    # time words (#27 today-clear-early family, prompt law: 含「清」字的
+    # 时间词不属晴系). 口头禅「今天的事今天清」 unmatched (needs literal
+    # 天气 - #27 precedent); clear-fed lines never reach the check;
+    # historical rings not retro-repaired (#41 precedent).
     # Clear-fed lines never reach the check; ct absent -> check off
     # (#18/#24/#25 + v0.30/#40 design).
     if ct is not None and wx and not re.search(r"clear|晴", wx, re.I):
         face32 = re.sub(r"\*\*年轮\*\*\n(?:- .*\n?)+", "", ct)
         ev32 = "\n".join(sig.get("events") or [])
         hit32 = False
-        for m in re.finditer(r"晴天|天气清(?![清爽])|天头[^，。！？；;\n]{0,2}清|晒得", line):
+        for m in re.finditer(r"晴天|天气[^，。！？；;\n]{0,4}清(?![爽凉清早晨])|天头[^，。！？；;\n]{0,2}清|晒得", line):
             i = m.start()
             if any(line[s:e] in src for src in (face32, ev32)
                    for s in range(max(0, i - 11), i + 1)
@@ -975,7 +1004,7 @@ def build_prompt(cid, text, sig):
             f"现在真实北京时间 {sig['now']}，今天{sig.get('weekday','')}（{'周末' if sig.get('weekend') else '工作日'}），上海实况天气：{wx}。\n"
             f"今天属于上面标明的工作日/周末：你人设里凡以「周末」或「工作日」为前置条件的习惯，只许写与今天同侧的进行态或完成态，另一侧只许作为未来打算句提及，写错侧视为编造。\n"
             f"今天日期是 {sig.get('day')} 号（{sig.get('day_parity')}）：你人设里凡以「单日/双日/逢单/逢双」等日期奇偶为前置条件的习惯，只许写与今天同侧的进行态或完成态；另一侧严禁写成今天已发生或正在发生，只许以规则自述（人设原文规则句可原样引用）、按规则的自然推论或未来打算句式提及，严禁借引用断言今天发生了错侧动作，写错侧视为编造；同样严禁把你卡面没有奇偶前置的习惯硬捆绑到单日/双日名下——卡面没有的规则不得借日期之名新造，日期奇偶只许与你人设原文里真带奇偶字样的规则搭配。\n"
-            f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历且天空类型必须与喂入天气串一致（喂入 clear/晴 严禁「天阴着/阴天/多云」等阴系措辞，喂入 cloud/阴 严禁「天清/天晴/晴天/天气清/阳光/太阳/晴得好/清气朗/清朗/晒得」等晴系措辞，且喂入 cloud/阴 时严禁把任何带「晒」字的动作（不论晒的对象是什么）写成当下的天气适配句或意图句，无论适配语前置还是后置均不许与「正好/适合/该……了」类当下适配语共现——阴天无日可晒，此类句=变相晴断言；你人设原文自带「晒」字字样的只许规则自述式引用，且严禁与任何适配语搭配，喂入 clear/晴 时晒日动作不受此限，但你「语言风格」里自有的口头禅（即使含「清/晴」字样）与含「清」字的时间词不属晴系、可照常引用（但凌晨时辰的时间词仍受下方时段词禁令约束）），天气只许用中文措辞描述（如「天阴着/天清气朗」），严禁把喂入天气串里的英文天气代码原样抄进年轮（如「天气cloud」「天气 clear」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许写「风轻轻的/风不大」，喂入风速>3m/s 只许写「风不小/风挺大」类如实量级措辞（此时严禁写「风不大/风也不大/风轻轻的/风声轻轻的」等任何带插入字的弱化变体，也严禁「微风/和风/清风/风轻」等弱化名词），风速数据缺失则完全不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止出现「天气预报说/预报/听说」等消息源归属字样。实况与事件流从无台风数据，严禁提及任何台风场景（如「台风夜/台风刚过」）——「台风季」季节概念读法除外。喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象。城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」——此类状态恒无锚）。城市事件流也从无行情开盘/收盘等交易场次数据，严禁对开盘/收盘/行情收做当下状态断言（如「开盘这会儿/行情收得清清」——场次状态恒无锚；开盘/收盘等场次词仅当本卡人设本就带行情/盘口/交易/盯盘域词才可提及，人设原文习惯自述如「收盘才想起」也仅限此类卡面——人设与行情盘口无关的严禁出现任何场次词）。事件清单中的开发流水轮次号（如 round 156、R156）属开发循环内部标识而非市民可亲历的具体事，严禁以任何形式写进年轮。人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的，如『广场人流峰值时绕场三圈』），条件未被事件清单或实况坐实时严禁触发该场景，严禁用『还是/照例/依旧』等惯常化措辞把条件行为写成惯常延续，只能写无条件的人设日常；提及时间只许锚定喂入的当前时刻，严禁编造开工/收班/时刻表/『再过几小时』等时间细节，严禁使用与当前时刻不符的时段词（如凌晨时辰写『今早/今晨/早晨/晨光/清晨/清早/晨风』、白天写『今晚/今夜/深夜』）；当前时刻未到放学时点（15 时前）严禁把放学写成已完成的事（如『今早放学绕路看了眼』——放学时刻无数据锚），只能写放学后的打算（如『放学还得绕路去看』）；只许写你卡面人设与你自己的生活，严禁写入不属于你人设的任何行为或场景（如你的人设没有学生身份就严禁提及『放学』类校园生活）；喂入面从无雾况数据，除非你卡面人设本身带「雾」字（如江雾习惯），严禁对雾做任何断言（如「江面上的雾挺大」）。\n"
+            f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历且天空类型必须与喂入天气串一致（喂入 clear/晴 严禁「天阴着/阴天/多云」等阴系措辞，喂入 cloud/阴 严禁「天清/天晴/晴天/天气清（含「天气」二字后面隔了几个字才落「清」字的插入变体）/阳光/太阳/晴得好/清气朗/清朗/晒得」等晴系措辞，且喂入 cloud/阴 时严禁把任何带「晒」字的动作（不论晒的对象是什么）写成当下的天气适配句或意图句，无论适配语前置还是后置均不许与「正好/适合/该……了」类当下适配语共现——阴天无日可晒，此类句=变相晴断言；你人设原文自带「晒」字字样的只许规则自述式引用，且严禁与任何适配语搭配，喂入 clear/晴 时晒日动作不受此限，但你「语言风格」里自有的口头禅（即使含「清/晴」字样）、含「清」字的时间词（如清早/清晨）与「清爽/清清爽爽/清凉」类体感词都不属晴系、可照常引用（但凌晨时辰的时间词仍受下方时段词禁令约束）），天气只许用中文措辞描述（如「天阴着/天清气朗」），严禁把喂入天气串里的英文天气代码原样抄进年轮（如「天气cloud」「天气 clear」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许写「风轻轻的/风不大」，喂入风速>3m/s 只许写「风不小/风挺大」类如实量级措辞（此时严禁写「风不大/风也不大/风轻轻的/风声轻轻的」等任何带插入字的弱化变体，也严禁「微风/和风/清风/风轻」等弱化名词），风速数据缺失则完全不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止出现「天气预报说/预报/听说」等消息源归属字样。实况与事件流从无台风数据，严禁提及任何台风场景（如「台风夜/台风刚过」）——「台风季」季节概念读法除外。喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象。城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」——此类状态恒无锚）。城市事件流也从无行情开盘/收盘等交易场次数据，严禁对开盘/收盘/行情收做当下状态断言（如「开盘这会儿/行情收得清清」——场次状态恒无锚；开盘/收盘等场次词仅当本卡人设本就带行情/盘口/交易/盯盘域词才可提及，人设原文习惯自述如「收盘才想起」也仅限此类卡面——人设与行情盘口无关的严禁出现任何场次词）。事件清单中的开发流水轮次号（如 round 156、R156）属开发循环内部标识而非市民可亲历的具体事，严禁以任何形式写进年轮。人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的，如『广场人流峰值时绕场三圈』），条件未被事件清单或实况坐实时严禁触发该场景，严禁用『还是/照例/依旧』等惯常化措辞把条件行为写成惯常延续，只能写无条件的人设日常；提及时间只许锚定喂入的当前时刻，严禁编造开工/收班/时刻表/『再过几小时』等时间细节，严禁使用与当前时刻不符的时段词（如凌晨时辰写『今早/今晨/早晨/晨光/清晨/清早/晨风』、白天写『今晚/今夜/深夜』）；当前时刻未到放学时点（15 时前）严禁把放学写成已完成的事（如『今早放学绕路看了眼』——放学时刻无数据锚），只能写放学后的打算（如『放学还得绕路去看』）；只许写你卡面人设与你自己的生活，严禁写入不属于你人设的任何行为或场景（如你的人设没有学生身份就严禁提及『放学』类校园生活）；喂入面从无雾况数据，除非你卡面人设本身带「雾」字（如江雾习惯），严禁对雾做任何断言（如「江面上的雾挺大」）。\n"
             f"{diversity}\n"
             f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节），只输出这几句话本身。")
 
