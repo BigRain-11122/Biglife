@@ -34,6 +34,23 @@ def load_rings(cid, district):
     ents = re.findall(r"- (\d{4}-\d{2}-\d{2}) 「(.*?)」", m.group(1))
     return [{"date": d, "text": t.strip()} for d, t in ents]
 
+def ring_importance(text):
+    """Deterministic importance weight (zero LLM) - Generative-Agents-style third
+    retrieval factor (order O-20260925-2320-bm-c / R-20260925-resident-full-intelligence).
+
+    Base 1.0; +0.7 anchored to real city/fleet/CEO events; +0.5 meet events;
+    +0.2 richer memories (>40 chars). Honest note: the paper scores importance
+    via LLM (1-10) - we use deterministic proxies for the 10k scale (compute law).
+    """
+    imp = 1.0
+    if ("CEO_ORDER" in text) or ("城市事件流" in text) or ("城市实况" in text) or ("机队" in text):
+        imp += 0.7
+    if ("与 C-" in text) or ("相遇" in text):
+        imp += 0.5
+    if len(text) > 40:
+        imp += 0.2
+    return imp
+
 def recall(question, rings, topk=3, now=None):
     if not rings:
         return []
@@ -50,7 +67,8 @@ def recall(question, rings, topk=3, now=None):
         except Exception:
             days = 999
         recency = 1.0 / (1.0 + math.log1p(max(days, 0)))
-        scored.append((overlap * (1.0 + recency), overlap, r))
+        importance = ring_importance(r["text"])
+        scored.append((overlap * recency * importance, overlap, r))
     scored.sort(key=lambda x: (-x[0], -x[1], x[2]["date"]))
     return [s[2] for s in scored[:topk]]
 

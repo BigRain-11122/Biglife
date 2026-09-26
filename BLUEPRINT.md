@@ -58,6 +58,18 @@ census/ 户籍库（产品本体：anchors 手写锚 + registry 万人卡 + expo
 | v1.4（定向批 09-25） | 对话面 v0：问答白名单 harness（v4 居民问答提前铺底·bm-c 产线） | --qc 断言 PASS+实弹 3 民×2 问零编造 |
 | v2 | 台词池（barks 分层·问候池预生成）供引擎 M2 消费 | 池文件+引擎只读契约 |
 | v3 | 人设资产包对外（BigStream/BigDomain 首单交付） | 任务单回执 |
+| **Phase1（智能化升维 09-25·R-20260925-resident-full-intelligence）** | 九维盘点+四特征判据注册+四组组织建行+memory v1.5 检索三要素 | 本批收口 ✓ |
+| **Phase2** | agency v0（GOAP 式确定性自发动作）+kokoro 多声源终解+首里程碑「被点名即活」四面齐演示 | 呈 CEO 检查点 |
+| **Phase3** | 嵌入检索（bge-m3·P-07 对齐）+反思层（高层记忆合成·LLM 低频）+互聊 M2 消费接线 | 判据随单 |
+
+> 五层大脑一句话电影类比（R- 件 §一·叙事自检面）：①行为查表=楚门的日程表；②台词池=森友会村民口头禅；③聚光灯/问答=Free Guy 的 NPC 醒来那一刻；④年轮=Her 的记忆成长；⑤大事件反应=头脑特工队全城情绪台。
+
+## 八、居民智能指挥部（升维批组织面·O-20260925-1940-bm-c·判据先行·人名=CEO 保留面）
+
+- **记忆与成长组**：年轮/记忆检索/生命史连续——判据=召回相关 top3 实测+evolved 覆盖率日报（现役件：memory_index/evolve_citizen/sync_rings）。
+- **社会与关系组**：关系网/互聊/群体涌现——判据=互链卡 ≥10 对+M2 互聊消费回执（现役件：relations_manifest/rumor_chain/mood_director）。
+- **表达与多模态组**：台词/语音/形象联动——判据=被访民三模态齐（现役件：draw/voice_manifest+voice_synth+piper 试点/atlas_manifest）。
+- **评估与诚实组**：智能判据/拟真度防火墙/QC——判据=四特征判据面+机审门回归+承建自报不采信（现役件：qc_census/机审门 v0.24/SILICON-LIFE 律八）。
 | v4 | 参观端联动（荣誉市民/居民问答白名单） | M4 里程碑同步 |
 
 ## 六、治理与红线
