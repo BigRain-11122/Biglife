@@ -269,6 +269,19 @@ surface may spell out a pool gene any more (generic wording only); the cap
 advisory stops naming the gene. Pool genes stay legal to quote (C-00695 R192
 precedent untouched); own-口头禅 cards keep their phrase via their face.
 Gate faces untouched (v0.22 unchanged); meet/reflect untouched.
+T-20260926-10 step1 (2026-09-26 R335, L3 断点① read-face wiring, authority =
+group decision D-20260926-07): rumor_chain output now feeds the BATCH prompt as
+an optional candidate fact (断点① 流言->年轮). rumor_line_for(cid, sig) picks one
+trigger-filtered fed event (RUMOR-CHAIN 判据4 R40 discipline: the rumor face
+carries zero weather/celestial/time-of-day tokens), md5-ranks it, then builds a
+2-hop chain seeded AT the due citizen (md5 确定性, cool_min=0 - prompt face, not
+a timeline face). A 1-in-3 md5 hash gate keeps the fire rate bounded (频率纪律,
+same family as POOL_CAP). The prompt block is OPTIONAL material: retell voice,
+verbatim quote of the closed-set-distorted text only, no added details. Omitted
+case (hash miss / no clean event / chain guard) -> empty string -> prompt
+byte-identical to the pre-wiring build (冻结快照等价); meet/reflect faces
+untouched; gate v0.31 unchanged (rumor payload is a substring of the fed event,
+so every existing event-substring exemption keeps its anchor).
 
 Usage:
   python -X utf8 evolve_citizen.py --batch 3          # evolve N due citizens
@@ -799,10 +812,71 @@ def note_pool_use(line, text, pool_genes, pool_used):
         if needle and needle in line and needle not in text:
             pool_used[g] = pool_used.get(g, 0) + 1
 
+# T-20260926-10 分步① (L3 断点①): the rumor face must stay inside the R40
+# trigger-free discipline (RUMOR-CHAIN 契约判据4) - events carrying any of
+# these tokens never enter the rumor candidate pool (they stay in the plain
+# event list, which the gate already polices). A second dev-identifier filter
+# (round 轮次号 / R\d 档号 / X\d 台账号 / #\d 单号) keeps OS_TICK & ledger
+# bookkeeping lines out of the rumor pool - the prompt bans 轮次号 from rings,
+# so the rumor face never hands the 7b one to copy.
+RUMOR_TRIGGERS = ("雨", "雪", "晴", "阴", "云", "风", "雾", "霜", "雷", "雹",
+                  "台风", "月", "星", "太阳", "晒",
+                  "今早", "今晨", "早晨", "清晨", "清早", "晨光", "晨风",
+                  "今晚", "今夜", "深夜", "夜深", "晌", "放学", "开盘", "收盘", "行情")
+RUMOR_DEV_ID = re.compile(r"round\s*\d+|R\d{2,}|X\d{3,}|#\d+")
+
+def rumor_line_for(cid, sig):
+    """L3 断点① (T-20260926-10 分步①·D-20260926-07): rumor_chain 产出喂入
+    年轮批 prompt 候选事实面. Pure read-face, zero new systems: same (feed,
+    now, cid) -> byte-identical line (md5 派生); 1-in-3 md5 hash gate bounds
+    the fire rate (频率纪律); 荣誉席 never auto-seeded. Omitted case -> ""
+    -> build_prompt output byte-identical to the pre-wiring version."""
+    try:
+        import rumor_chain as rc
+    except Exception:
+        return ""
+    if cid in rc.RESERVED:
+        return ""
+    if rc.m_int(cid, today(), "rumor") % 3:
+        return ""
+    evs = [e for e in (sig.get("events") or [])
+           if not any(t in e for t in RUMOR_TRIGGERS) and not RUMOR_DEV_ID.search(e)]
+    if not evs:
+        return ""
+    evs.sort(key=lambda e: rc.m(cid, e))          # md5 榜序确定性选件
+    payload = evs[0].split(" / ")[-1]             # 事本体=事件串尾字段（type/zone/actor 为元数据）
+    if len(payload) < 6:
+        return ""
+    if not rc.CENSUS:
+        rc.CENSUS = rc.load_census()
+    if cid not in dict(rc.CENSUS):
+        return ""
+    try:
+        at = datetime.datetime.strptime(sig.get("now") or "", "%Y-%m-%d %H:%M")
+    except ValueError:
+        at = datetime.datetime.now().replace(second=0, microsecond=0)
+    try:
+        ch = rc.build_chain(evs[0], payload, cid, 2, 0, at)  # cool=0: prompt 面, 非时间线面
+    except Exception:
+        return ""
+    hops = ch.get("hops") or []
+    if len(hops) < 2:
+        return ""
+    h1, h2 = hops[0], hops[1]
+    return ("城中传闻（同样属于可引用的喂入素材，可提可不提）：最近城里在传一件事——"
+            "你把「%s」讲给了 %s 听，%s 又转述给了 %s。"
+            "年轮若提及此事，只许以传闻转述口吻逐字引用上面引号内的文本，"
+            "不得给传闻添加任何细节，也不得声称传闻之外的任何具体事。"
+            % (h1["text"], h1["to"], h1["to"], h2["to"]))
+
 def build_prompt(cid, text, sig):
     p = persona_digest(text)
     ev = "\n".join("- " + e for e in viewpoint_events(text, sig)) or "- （今日无新城市事件）"
     wx = sig["weather"] or "（天气数据暂缺）"
+    # T-20260926-10 分步① (L3 断点①): optional rumor candidate block. Empty
+    # string -> the prompt is byte-identical to the pre-wiring build.
+    rumor = (sig.get("rumor") or "").strip()
+    rumor_blk = (rumor + "\n") if rumor else ""
     # T-20260925-01/T-20260925-18 soft guidance (NOT a gate): open with your OWN
     # catchphrase; standing per-prompt constraint caps generic pool-gene quotes at
     # 1 per ring (cross-card quotes stay LEGAL per C-00695 R192 - diversity nudge
@@ -824,7 +898,7 @@ def build_prompt(cid, text, sig):
     return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
             f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
-            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n"
+            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}"
             f"现在真实北京时间 {sig['now']}，今天{sig.get('weekday','')}（{'周末' if sig.get('weekend') else '工作日'}），上海实况天气：{wx}。\n"
             f"今天属于上面标明的工作日/周末：你人设里凡以「周末」或「工作日」为前置条件的习惯，只许写与今天同侧的进行态或完成态，另一侧只许作为未来打算句提及，写错侧视为编造。\n"
             f"今天日期是 {sig.get('day')} 号（{sig.get('day_parity')}）：你人设里凡以「单日/双日/逢单/逢双」等日期奇偶为前置条件的习惯，只许写与今天同侧的进行态或完成态；另一侧严禁写成今天已发生或正在发生，只许以规则自述（人设原文规则句可原样引用）、按规则的自然推论或未来打算句式提及，严禁借引用断言今天发生了错侧动作，写错侧视为编造。\n"
@@ -997,6 +1071,7 @@ def main():
         try:
             sig["card_text"] = text  # gap #18: persona-import gate anchor
             sig["pool_advice"] = pool_advice_for(face, pool_used)  # T-20260925-01 advisory
+            sig["rumor"] = rumor_line_for(cid, sig)  # T-20260926-10 分步①: L3 断点① 流言->年轮候选面
             line = gated_llm(build_prompt(cid, text, sig), sig)
         except Exception:
             print("ollama down; batch paused at", n)
