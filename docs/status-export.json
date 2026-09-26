@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-27T05:57:01+08:00",
+ "export_ts": "2026-09-27T07:06:30+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R428 批 10 due 落 5 环（C-02478/C-02479/C-02481/C-02482/C-02484·批 03e50f44+sync cfa362b9 rows=5·ring=2473·今日新写环 242=R427 237+本批 5 接账=registry 行口径直数实测·批题头 join(done)=实落一致持续实证）——5 席 persistent 门拦留冷（C-02445/C-02449/C-02483 time-morning+C-02470 wind-under+time-morning+C-02480 sky-mismatch·凌晨档结构性 stays due）·propose 随批零候选诚实早退（落环 5 席好奇=2∩空集）·**R428 T-18 步⑨分步④ 补链批3 交付（居民面第三批 500 张 C-05058..C-07816·commit a6311668 500 files +1/-0 幂等·≤500/轮守约·sublimate_audit v1.1 复跑：noted_res=1500 对账·⚠️ 居民余量 6659→6159 单调递减·bad=0·总余量 6885=居民 6159+变体 227+像素灵 499·批4 起依序 ≤500/轮）**",
+   "t": "R435 批 10 due 落 10 环（C-02545~C-02554 十席·批 4d24b9eb+sync 59c8a6c4 rows=10·ring=2548·今日新写环 317=R434 307+本批 10 接账=registry 直数实测·批题头 join(done)=实落一致持续实证）零 persistent 留冷——**缺旗复核（诚实律·R419/R425/R429 判例族）=批面未带 --propose 旗标（mandate 文本步骤 1 原文无此旗）→citizen-needs 实测 4 席好奇=2 提案窗错过（C-02546/C-02549/C-02553/C-02554·同批强绑定不可补）·due 队列 10/10 全耗尽零补批面=复核+记档兜底**·**T-18 步⑨分步④ 补链批10 交付（居民面第十批 500 张 OR C-01290..C-06471·commit 1b3f8ba9·git diff 500 卡全 +1/-0 幂等·≤500/轮守约·sublimate_audit v1.1 复跑对账：noted_res=5000 十批对账=500×10·half_res 3159→2659 单调递减 -500·bad=0·review=0·总余量 3385=居民 2659+变体 227+像素灵 499·报告随轮刷新）+QC 修后复扫 problems=0（cards=10003·evolved=2548 三方自洽·不占巡检名额·下到期 R439 维持）**",
    "s": 1
   },
   {
@@ -24,7 +24,7 @@
   },
   {
    "n": "QC 巡检线",
-   "t": "R361 正式巡检 problems=0（cards=10003·evolved=2018·三方自洽·QC-REPORT 随轮入库·下到期 R367=R361+6）·R362 零复扫需（下到期照跑）·R363 修后复扫 problems=0（evolved=2031 三方自洽·修卡不占巡检名额）·R364 修后复扫 problems=0（evolved=2039 三方自洽·修卡不占巡检名额）·R365 修后复扫 problems=0（evolved=2047 三方自洽·修卡 2 张不占巡检名额·下到期 R367=R361+6）·R366 零修复零复扫需（核卡 7/7 PASS 零修复）·**R367 正式巡检 problems=0（cards=10003·evolved=2061 三方自洽·修卡 C-02067 落于巡检前=扫描面含修后卡·QC-REPORT 随轮入库·下到期 R373=R367+6）**·R368 修后复扫 problems=0（evolved=2068 三方自洽·修卡 C-02077 不占巡检名额·下到期 R373 维持）·**R369 修后复扫 problems=0（evolved=2075 三方自洽·修卡 C-02079 不占巡检名额·下到期 R373 维持）**·R370 核卡 6/6 PASS 零修复零复扫需（evolved=2081 三方自洽·下到期 R373 维持）·R371 核卡 7/7 PASS 零修复零复扫需（evolved=2088 三方自洽·下到期 R373 维持）·R372 核卡 6/6 PASS 零修复零复扫需（evolved=2094 三方自洽·下到期 R373 维持）·**R373 正式巡检 problems=0（cards=10003·evolved=2100 三方自洽·QC-REPORT 随轮入库·下到期 R379=R373+6）**·R374 修后复扫 problems=0（evolved=2106 三方自洽·修卡 C-02113 不占巡检名额·下到期 R379 维持）·**诚实记档：needs 面首个周六晚 hb=6 crash 候选波 9499**（周末+晚窗 shejiao 全员 +2×注册表 FESTIVAL 满足源恒缺=既有语义首演·与 T-13 零关联·behavior 律八③ caps 兜底 crash=300=CITY_CAP·recovering=501·QC bad=0——观察件·CRASH_T/RECOVER_T=CEO 一行调参面·今晚日清轮呈报）·R375 核卡 4/4 PASS 零修复零复扫需（evolved=2110 三方自洽·下到期 R379 维持）·R376 修后复扫 problems=0（evolved=2115 三方自洽·修卡 2 张不占巡检名额·下到期 R379 维持）·R377 核卡 5/5 PASS 零修复零复扫需（evolved=2120 三方自洽=registry 2097+anchors 20+reserved 3·下到期 R379 维持）·R378 零复扫需（核卡 4/4 PASS 零修复）·**R379 正式巡检 problems=0（cards=10003·evolved=2129 三方自洽·QC-REPORT 随轮入库·下到期 R385=R379+6）**·R380 修后复扫 problems=0（evolved=2135 三方自洽·修卡 C-02132 不占巡检名额）·R381 修后复扫 problems=0（evolved=2140 三方自洽·修卡 C-02149 不占巡检名额·下到期 R385 维持）·R382 零复扫需（批 10 环·门拦零修复）·R383 零复扫需（批未跑·承令整合窗）·R384 修后复扫 problems=0（evolved=2160 三方自洽·修卡 C-02166 不占巡检名额）·**R385 正式巡检 problems=0（cards=10003·evolved=2170 三方自洽·QC-REPORT 随轮入库·下到期 R391=R385+6）**·R386 零复扫需（批 10 环零门拦·核卡 10/10 PASS 零修复·下到期 R391 维持）·R387 零复扫需（批 10 环零门拦·核卡 10/10 PASS 零修复·下到期 R391 维持）·**R388 --schema 实弹 51883 行 bad=0（T-20260926-17 分步②③ 关结·QC-REPORT 含 Schema 结构层随轮入库·既有断言回归 problems=0·下到期 R391 维持）**·R397 到期正式巡检 problems=0（cards=10003·evolved=2268·QC-REPORT 随轮入库 7dfceb73·下到期 R403=R397+6）·**R403 正式巡检 problems=0（cards=10003·evolved=2311 三方自洽·QC-REPORT 随轮入库·下到期 R409=R403+6）**·**R409 到期正式巡检 problems=0（cards=10003·evolved=2339 三方自洽·QC-REPORT 随轮入库·下到期 R415=R409+6）**·政治红线扫描器首跑全量八面 hits_total=0（T2 v3.36·基线在案·此后入城门必过）·**R415 正式巡检 problems=0（cards=10003·evolved=2378 三方自洽·QC-REPORT 随轮入库·下到期 R421=R415+6）**·R416 --schema 复跑 51883 行 bad=0（T-17 验收回写·与 R388 交付值一致在役实证）·R421 正式巡检 problems=0（cards=10003·evolved=2435 三方自洽·QC-REPORT 随轮入库·下到期 R427=R421+6）·R424 修后复扫 problems=0（evolved=2450 三方自洽·灵族门步③接线复扫不占巡检名额·QC-REPORT 升华门拒入册计数行标签并入灵族门·下到期 R427 维持）·**R427 到期正式巡检 problems=0**（cards=10003·evolved=2468 三方自洽·QC-REPORT 随轮入库·升华链批2 修后复扫 problems=0 不占巡检名额·下到期 R433=R427+6）",
+   "t": "R361 正式巡检 problems=0（cards=10003·evolved=2018·三方自洽·QC-REPORT 随轮入库·下到期 R367=R361+6）·R362 零复扫需（下到期照跑）·R363 修后复扫 problems=0（evolved=2031 三方自洽·修卡不占巡检名额）·R364 修后复扫 problems=0（evolved=2039 三方自洽·修卡不占巡检名额）·R365 修后复扫 problems=0（evolved=2047 三方自洽·修卡 2 张不占巡检名额·下到期 R367=R361+6）·R366 零修复零复扫需（核卡 7/7 PASS 零修复）·**R367 正式巡检 problems=0（cards=10003·evolved=2061 三方自洽·修卡 C-02067 落于巡检前=扫描面含修后卡·QC-REPORT 随轮入库·下到期 R373=R367+6）**·R368 修后复扫 problems=0（evolved=2068 三方自洽·修卡 C-02077 不占巡检名额·下到期 R373 维持）·**R369 修后复扫 problems=0（evolved=2075 三方自洽·修卡 C-02079 不占巡检名额·下到期 R373 维持）**·R370 核卡 6/6 PASS 零修复零复扫需（evolved=2081 三方自洽·下到期 R373 维持）·R371 核卡 7/7 PASS 零修复零复扫需（evolved=2088 三方自洽·下到期 R373 维持）·R372 核卡 6/6 PASS 零修复零复扫需（evolved=2094 三方自洽·下到期 R373 维持）·**R373 正式巡检 problems=0（cards=10003·evolved=2100 三方自洽·QC-REPORT 随轮入库·下到期 R379=R373+6）**·R374 修后复扫 problems=0（evolved=2106 三方自洽·修卡 C-02113 不占巡检名额·下到期 R379 维持）·**诚实记档：needs 面首个周六晚 hb=6 crash 候选波 9499**（周末+晚窗 shejiao 全员 +2×注册表 FESTIVAL 满足源恒缺=既有语义首演·与 T-13 零关联·behavior 律八③ caps 兜底 crash=300=CITY_CAP·recovering=501·QC bad=0——观察件·CRASH_T/RECOVER_T=CEO 一行调参面·今晚日清轮呈报）·R375 核卡 4/4 PASS 零修复零复扫需（evolved=2110 三方自洽·下到期 R379 维持）·R376 修后复扫 problems=0（evolved=2115 三方自洽·修卡 2 张不占巡检名额·下到期 R379 维持）·R377 核卡 5/5 PASS 零修复零复扫需（evolved=2120 三方自洽=registry 2097+anchors 20+reserved 3·下到期 R379 维持）·R378 零复扫需（核卡 4/4 PASS 零修复）·**R379 正式巡检 problems=0（cards=10003·evolved=2129 三方自洽·QC-REPORT 随轮入库·下到期 R385=R379+6）**·R380 修后复扫 problems=0（evolved=2135 三方自洽·修卡 C-02132 不占巡检名额）·R381 修后复扫 problems=0（evolved=2140 三方自洽·修卡 C-02149 不占巡检名额·下到期 R385 维持）·R382 零复扫需（批 10 环·门拦零修复）·R383 零复扫需（批未跑·承令整合窗）·R384 修后复扫 problems=0（evolved=2160 三方自洽·修卡 C-02166 不占巡检名额）·**R385 正式巡检 problems=0（cards=10003·evolved=2170 三方自洽·QC-REPORT 随轮入库·下到期 R391=R385+6）**·R386 零复扫需（批 10 环零门拦·核卡 10/10 PASS 零修复·下到期 R391 维持）·R387 零复扫需（批 10 环零门拦·核卡 10/10 PASS 零修复·下到期 R391 维持）·**R388 --schema 实弹 51883 行 bad=0（T-20260926-17 分步②③ 关结·QC-REPORT 含 Schema 结构层随轮入库·既有断言回归 problems=0·下到期 R391 维持）**·R397 到期正式巡检 problems=0（cards=10003·evolved=2268·QC-REPORT 随轮入库 7dfceb73·下到期 R403=R397+6）·**R403 正式巡检 problems=0（cards=10003·evolved=2311 三方自洽·QC-REPORT 随轮入库·下到期 R409=R403+6）**·**R409 到期正式巡检 problems=0（cards=10003·evolved=2339 三方自洽·QC-REPORT 随轮入库·下到期 R415=R409+6）**·政治红线扫描器首跑全量八面 hits_total=0（T2 v3.36·基线在案·此后入城门必过）·**R415 正式巡检 problems=0（cards=10003·evolved=2378 三方自洽·QC-REPORT 随轮入库·下到期 R421=R415+6）**·R416 --schema 复跑 51883 行 bad=0（T-17 验收回写·与 R388 交付值一致在役实证）·R421 正式巡检 problems=0（cards=10003·evolved=2435 三方自洽·QC-REPORT 随轮入库·下到期 R427=R421+6）·R424 修后复扫 problems=0（evolved=2450 三方自洽·灵族门步③接线复扫不占巡检名额·QC-REPORT 升华门拒入册计数行标签并入灵族门·下到期 R427 维持）·**R427 到期正式巡检 problems=0**（cards=10003·evolved=2468 三方自洽·QC-REPORT 随轮入库·升华链批2 修后复扫 problems=0 不占巡检名额·下到期 R433=R427+6）·R435 修后复扫 problems=0（evolved=2548 三方自洽·补链批10 后复扫不占巡检名额·下到期 R439 维持）",
    "s": 1
   },
   {
@@ -116,15 +116,15 @@
    "户籍卡"
   ],
   [
-   "2473",
+   "2548",
    "年轮居民"
   ],
   [
-   "242",
+   "317",
    "今日新写环"
   ],
   [
-   "318/250",
+   "324/252",
    "基因库（口头禅/钩子物件）"
   ],
   [
