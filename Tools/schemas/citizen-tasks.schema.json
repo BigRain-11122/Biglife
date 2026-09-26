@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "biglife:citizen-tasks.v1.json",
+  "title": "citizen-tasks.jsonl row (R3 regen face, Tools/needs.py --tasks T-20260925-12·FACE map axis→face)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "axis", "face", "strength"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^C-\\d{5}$"},
+    "axis": {"enum": ["anwen", "shengji", "shejiao", "haoqi"]},
+    "face": {"enum": ["ledger", "lines", "greet", "lecturer"]},
+    "strength": {"type": "integer", "minimum": 1, "maximum": 2}
+  }
+}

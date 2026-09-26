@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "biglife:citizen-needs.v1.json",
+  "title": "citizen-needs.jsonl row (R3 regen face, Tools/needs.py V2-A + crash T-20260924-16d)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "needs", "top", "crash", "crash_axis", "v", "ctx"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^C-\\d{5}$"},
+    "needs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["anwen", "shengji", "shejiao", "haoqi"],
+      "properties": {
+        "anwen": {"type": "integer", "minimum": 0, "maximum": 2},
+        "shengji": {"type": "integer", "minimum": 0, "maximum": 2},
+        "shejiao": {"type": "integer", "minimum": 0, "maximum": 2},
+        "haoqi": {"type": "integer", "minimum": 0, "maximum": 2}
+      }
+    },
+    "top": {"enum": ["anwen", "shengji", "shejiao", "haoqi"]},
+    "crash": {"enum": [null, "crash", "recovering"]},
+    "crash_axis": {"enum": [null, "anwen", "shengji", "shejiao", "haoqi"]},
+    "v": {"type": "number", "minimum": 1},
+    "ctx": {"type": "string", "minLength": 1}
+  }
+}

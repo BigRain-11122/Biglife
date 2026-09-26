@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "biglife:citizen-behavior.v1.json",
+  "title": "citizen-behavior.jsonl row (R3 regen face, Tools/behavior.py V2-A'·state whitelist = STATES∪LEISURE∪REST∪NEG)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "state", "slot", "visible", "quirk", "v", "ctx"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^C-\\d{5}$"},
+    "state": {"enum": ["sleep", "home", "work", "commute", "school", "meal",
+                        "social", "explore", "exercise", "run", "shelter",
+                        "indoors", "night_shift", "night_light", "charge",
+                        "leisure_play", "leisure_park", "leisure_stroll",
+                        "rest_nap", "rest_eve", "slump", "grumble", "fumble"]},
+    "slot": {"type": "string", "minLength": 1},
+    "visible": {"type": "integer", "enum": [0, 1]},
+    "quirk": {"type": "string"},
+    "recovering": {"enum": ["anwen", "shengji", "shejiao", "haoqi"],
+                    "description": "optional: crash-contract recovering rows (T-20260924-16d)"},
+    "crash_axis": {"enum": ["anwen", "shengji", "shejiao", "haoqi"],
+                    "description": "optional: crash rows carry the crashed axis"},
+    "v": {"type": "number", "minimum": 1},
+    "ctx": {"type": "string", "minLength": 1}
+  }
+}
