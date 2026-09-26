@@ -7,7 +7,7 @@ Uniqueness triple-check (CODEX 11): name / hook pair / trait-profession-district
 ASCII-safe console output; all files written UTF-8 (no BOM).
 Usage: python generate_census.py [--seed 20260923] [--out census]
 """
-import json, hashlib, os, random, sys, argparse
+import json, hashlib, os, random, sys, argparse, datetime
 import political_redline  # 入城门政治红线扫描器（T-20260926-18 步⑦第 5 件·CODEX §十二 v3.36）
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -464,6 +464,43 @@ def render_anchor(a):
     }
     return "\n".join(lines), light
 
+def sublimate_gate(c, text):
+    """入城门 fail-fast：升华律 v1.3 生成门/生灵门（T-20260926-18 步①②机制面）。
+    碳基/硅基新居民 prof 缺「赛博后身」双底座链=拒绝入册（存量 ✅1595 链全在职业行=
+    严格口径零漂移·⚠️8385 补链排程 P-13 Phase1 ≤10-02·本门只对新入册生效）；
+    像素灵缺生灵三问（升华形态链+行为卡+羁绊）=拒绝入册（令 §一.5 生灵登记门同律）。"""
+    prof = ""
+    has_act = has_rel = False
+    for ln in text.splitlines():
+        if ln.startswith("**职业** "):
+            prof = ln[len("**职业** "):].strip()
+        elif ln.startswith("**行为** ") and len(ln.strip()) > len("**行为**"):
+            has_act = True
+        elif ln.startswith("**关系** ") and len(ln.strip()) > len("**关系**"):
+            has_rel = True
+    if c["species"] == "sprite":
+        miss = []
+        if "——" not in prof:
+            miss.append("升华形态链")
+        if not has_act:
+            miss.append("行为卡")
+        if not has_rel:
+            miss.append("羁绊")
+        return miss
+    if "赛博后身" not in prof:
+        return ["双底座链"]
+    return []
+
+
+def record_sublimate_refusal(c, missing):
+    # 违律计数（令 §一.1「违律计数入 QC-REPORT」）：qc_census 随巡检并入报告。state/ 运行面不入库。
+    os.makedirs(os.path.join(CO, "state"), exist_ok=True)
+    with open(os.path.join(CO, "state", "sublimate-gate.jsonl"), "a", encoding="utf-8", newline="\n") as f:
+        f.write(json.dumps({"ts": datetime.datetime.now().isoformat(timespec="seconds"),
+                            "id": f"C-{c['id']:05d}", "species": c["species"],
+                            "missing": missing}, ensure_ascii=False) + "\n")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--seed", type=int, default=20260923)
@@ -545,6 +582,11 @@ def main():
         if rhits:  # 入城门 fail-fast：政治红线违律=拒绝入册零写盘（活户籍防护不破）
             print(f"REDLINE REFUSED: C-{c['id']:05d} terms={[h['term'] for h in rhits]}")
             sys.exit(5)
+        svio = sublimate_gate(c, text)
+        if svio:  # 入城门 fail-fast：升华律生成门/生灵门缺项=拒绝入册零写盘（T-18 步①②·零静默改写）
+            record_sublimate_refusal(c, svio)
+            print(f"SUBLIMATE REFUSED: C-{c['id']:05d} missing={svio}")
+            sys.exit(6)
         with open(os.path.join(regdir, c["district"], f"C-{c['id']:05d}.md"), "w", encoding="utf-8", newline="\n") as f:
             f.write(text)
         lights.append({

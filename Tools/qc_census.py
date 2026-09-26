@@ -94,11 +94,17 @@ def main():
             evolved += 1
             if "[锚]" not in text:
                 problems.append(f"{fn}: ring without anchor")
+    gate_p = os.path.join(os.path.dirname(CENSUS), "state", "sublimate-gate.jsonl")
+    gate_n = 0
+    if os.path.isfile(gate_p):  # 升华门违律计数入 QC-REPORT（T-20260926-18 步①②机制面）
+        with open(gate_p, encoding="utf-8") as f:
+            gate_n = sum(1 for ln in f if ln.strip())
     report = ["# QC 报告 —— 万人户籍不变量巡检", "",
               f"- 巡检时间：{datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}",
               f"- 卡片总数：{len(ids)}（在册 {len(names)} 名）",
               f"- 已进化（有年轮）：{evolved}",
-              f"- 异常数：{len(problems)}", ""]
+              f"- 异常数：{len(problems)}", "",
+              f"- 升华门拒入册计数：{gate_n}（生成门/生灵门 fail-fast·T-20260926-18 步①②）", ""]
     schema_rows = schema_bad = 0
     if schema_mode:
         schema_rows, schema_bad, per = schema_scan(problems)
