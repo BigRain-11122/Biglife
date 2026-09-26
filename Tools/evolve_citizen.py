@@ -231,6 +231,19 @@ family and clear/晴 freedom unchanged. PROMPT TEXT only; the narrow-gate
 candidate (晒-char + fit-modifier co-occurrence + non-clear feed + quote/
 list-substring dual exemption, R287-style FP census first) filed as board
 ticket T-20260926-09 for a later round, not rushed in here.
+v0.30 gap #44 gate (2026-09-26 R328, T-20260926-09 delivered): the v0.29
+window closed 2/2 batches with escapes (C-01720 R326 true escape + C-01728
+avoidance-form co-occurrence) -> R327 verdict: prompt not self-sufficient,
+GATE STANDS. Narrow deterministic check in ring_violations: 晒-char +
+fit-modifier (正好/适合/该…了) co-occurrence in one clause against a present
+non-clear feed => "sun-fit" reject. Three exemptions (R328 census, 11 registry
+hits all classified, zero unexplained): avoidance/negation forms (躲开/不/
+防/免/没/无 + 晒 - C-01728/C-01549/C-01738 legal), verbatim card FACE
+rule-quote (rings stripped - C-01492/C-01457 red line; fit-modifier
+adaptations still flagged per prompt law), verbatim fed-event substring.
+Clear-fed lines never reach the check (C-01684/C-01685); pre-#44 historical
+rings (C-01019/C-01455/C-01492) not retro-repaired (原文保全, #41 precedent).
+Batch + meet both covered via the shared ring_violations; prompts unchanged.
 Ollama down => silent skip exit 0 (probe contract #4). Targeted git commits
 only (governance 6.2 - never add -A).
 T-20260925-19 (2026-09-25, board): pool-gene DE-PRIMING - the T-18 window
@@ -505,6 +518,38 @@ def ring_violations(line, sig):
     # violations themselves (零误伤); Chinese body-sense words stay untouched.
     if re.search(r"天气\s*(?:cloud|clear|rain|snow|overcast|mist|fog|drizzle|showers?)", line, re.I):
         v.append("weather-token-leak")
+    # v0.30 gap #44 (2026-09-26 R328, T-20260926-09): sun-basking fit lines
+    # under non-clear feeds. The v0.28/v0.29 prompt pins did not self-sustain
+    # (C-01690/C-01699/C-01700/C-01705 R323-324 + C-01720 R326 -> R327 verdict:
+    # gate stands). Narrow assertion: 「晒」 co-occurring with a fit-modifier
+    # (正好/适合/该…了, either order, one clause) against a PRESENT non-clear
+    # feed = disguised sun claim (阴天无日可晒). Three exemptions, all verified
+    # by the R328 census (11 registry hits fully classified):
+    #   (a) avoidance/negation forms (躲开/避开/不/防/免/没/无 + 晒) - C-01728
+    #       「正好躲开晒」, C-01549 「正好盖新楼不晒」 stay legal;
+    #   (b) verbatim card rule-quote - the matched span appears verbatim on the
+    #       card FACE (rings stripped), the C-01492/C-01457 「随缘（不来就
+    #       晒太阳）」 red line; their fit-modifier adaptations stay flagged
+    #       (prompt law: 自带「晒」字样严禁配适配语);
+    #   (c) verbatim fed-event substring (anchor-law legal quote face).
+    # Census: clear-fed hits (C-01684/C-01685 R323 clear window) never reach
+    # the check; pre-#44 historical rings (C-01019/C-01455/C-01492 R290
+    # ruling) are NOT retro-repaired (原文保全 - the gate faces the future,
+    # #41 precedent). ct absent (other callers) -> check off, #18/#24/#25 design.
+    if ct is not None and wx and not re.search(r"clear|晴", wx, re.I):
+        face = re.sub(r"\*\*年轮\*\*\n(?:- .*\n?)+", "", ct)
+        ev = "\n".join(sig.get("events") or [])
+        for m in re.finditer(r"正好[^，。！？；;\n]{0,12}晒|晒[^，。！？；;\n]{0,8}正好|适合[^，。！？；;\n]{0,12}晒|晒[^，。！？；;\n]{0,8}适合|该[^，。！？；;\n]{0,10}晒[^，。！？；;\n]{0,4}了", line):
+            span = m.group(0)
+            if re.search(r"(躲开|避开|不|防|免|没得?|无)晒|防晒", span):
+                continue  # (a) avoidance/negation form
+            if span in face:
+                continue  # (b) verbatim card face rule-quote
+            i = span.index("晒")
+            if any(span[s:i + 1] in ev for s in range(max(0, i - 11), i - 2)):
+                continue  # (c) verbatim fed-event substring (>=4-char 晒-fragment)
+            v.append("sun-fit")
+            break
     return v
 
 def gated_llm(prompt, sig, max_regens=2):
