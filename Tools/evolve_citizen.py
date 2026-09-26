@@ -535,7 +535,7 @@ def ring_violations(line, sig):
     # under non-clear feeds. The v0.28/v0.29 prompt pins did not self-sustain
     # (C-01690/C-01699/C-01700/C-01705 R323-324 + C-01720 R326 -> R327 verdict:
     # gate stands). Narrow assertion: 「晒」 co-occurring with a fit-modifier
-    # (正好/适合/该…了, either order, one clause) against a PRESENT non-clear
+    # (正好/适合/合适/该…了, either order, one clause) against a PRESENT non-clear
     # feed = disguised sun claim (阴天无日可晒). Three exemptions, all verified
     # by the R328 census (11 registry hits fully classified):
     #   (a) avoidance/negation forms (躲开/避开/不/防/免/没/无 + 晒) - C-01728
@@ -549,12 +549,19 @@ def ring_violations(line, sig):
     # the check; pre-#44 historical rings (C-01019/C-01455/C-01492 R290
     # ruling) are NOT retro-repaired (原文保全 - the gate faces the future,
     # #41 precedent). ct absent (other callers) -> check off, #18/#24/#25 design.
+    # v0.30.1 (2026-09-26 R333): fit-modifier widened with 合适 - C-01789
+    # 「晒衣服正合适」 same-clause lexicon escape (适配语闭集过窄), R329 C-01747
+    # pre-registered "复发即复审" trigger. Census: 1 ring hit = the violation
+    # itself, zero FP (R331 C-01767 「晒衣服怕是要晚点」 no-fit form untouched;
+    # exemption (a) pre-window +1 char so 晒-first negations 「不晒…正合适」
+    # stay legal, symmetric with the 正好-first forms).
     if ct is not None and wx and not re.search(r"clear|晴", wx, re.I):
         face = re.sub(r"\*\*年轮\*\*\n(?:- .*\n?)+", "", ct)
         ev = "\n".join(sig.get("events") or [])
-        for m in re.finditer(r"正好[^，。！？；;\n]{0,12}晒|晒[^，。！？；;\n]{0,8}正好|适合[^，。！？；;\n]{0,12}晒|晒[^，。！？；;\n]{0,8}适合|该[^，。！？；;\n]{0,10}晒[^，。！？；;\n]{0,4}了", line):
+        for m in re.finditer(r"正好[^，。！？；;\n]{0,12}晒|晒[^，。！？；;\n]{0,8}正好|适合[^，。！？；;\n]{0,12}晒|晒[^，。！？；;\n]{0,8}适合|合适[^，。！？；;\n]{0,12}晒|晒[^，。！？；;\n]{0,8}合适|该[^，。！？；;\n]{0,10}晒[^，。！？；;\n]{0,4}了", line):
             span = m.group(0)
-            if re.search(r"(躲开|避开|不|防|免|没得?|无)晒|防晒", span):
+            chk = line[max(0, m.start() - 1):m.end()]  # (a) pre-window: 不/没 right before a 晒-first span
+            if re.search(r"(躲开|避开|不|防|免|没得?|无)晒|防晒", chk):
                 continue  # (a) avoidance/negation form
             if span in face:
                 continue  # (b) verbatim card face rule-quote
