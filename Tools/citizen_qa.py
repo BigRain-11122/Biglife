@@ -4,6 +4,9 @@
 v1 (order O-20260925-1202-bm-c, CODEX 12th T2 v3.10) upgrades over v0:
   - memory recall via Tools/memory_index.py (question-relevant top-3 rings
     instead of the last 3) - full life memory, honestly fed;
+  - v1.1 (order O-20260926-0942-bm-c, T2 v3.24): recall candidates include
+    the citizen's own reflections (memory_index v1.6, importance x1.5),
+    tagged in-prompt as personal life insight (never as [anchor] fact);
   - persona v2 fields (modal particle / address term / likes / trait lines)
     from census/export/citizen-persona.jsonl (R3 face, regen hint if missing);
   - city mood via Tools/mood_director.py (graceful if absent);
@@ -65,7 +68,7 @@ DEFLECT = "\u8fd9\u4e8b\u6211\u4e00\u65f6\u8bf4\u4e0d\u4e0a\u6765\uff0c\u6539\u5
 
 sys.path.insert(0, HERE)
 from make_digests import find_card
-from memory_index import load_rings, recall
+from memory_index import load_reflections, load_rings, recall
 
 def get_row(cid):
     with open(LIGHT, encoding="utf-8") as f:
@@ -156,8 +159,14 @@ def build_prompt(row, sig, mem, history, question, persona, mood):
     ev = "\n".join("- " + e for e in sig["events"]) or "- \uff08\u4eca\u65e5\u65e0\u65b0\u57ce\u5e02\u4e8b\u4ef6\uff09"
     memtxt = ""
     if mem:
-        memtxt = "\n\u4f60\u7684\u76f8\u5173\u8bb0\u5fc6\uff08\u53ef\u81ea\u7136\u63d0\u53ca\uff0c\u7981\u6539\u52a8\u5176\u4e2d\u4e8b\u5b9e\uff09\uff1a\n" + \
-                 "\n".join("- %s\uff1a%s" % (m["date"], m["text"][:70]) for m in mem) + "\n"
+        # v1.6: reflection candidates carry kind=reflection -> tagged as own
+        # life insight (derived content, never rendered as [anchor] fact)
+        mlines = []
+        for m in mem:
+            tag = "\uff08\u4f60\u81ea\u5df1\u7684\u4eba\u751f\u611f\u609f\uff09" if m.get("kind") == "reflection" else ""
+            mlines.append("- %s\uff1a%s%s" % (m["date"], m["text"][:70], tag))
+        memtxt = "\n\u4f60\u7684\u76f8\u5173\u8bb0\u5fc6\u4e0e\u611f\u609f\uff08\u53ef\u81ea\u7136\u63d0\u53ca\uff0c\u7981\u6539\u52a8\u5176\u4e2d\u4e8b\u5b9e\uff09\uff1a\n" + \
+                   "\n".join(mlines) + "\n"
     pers = ""
     if persona:
         bits = []
@@ -201,7 +210,7 @@ def llm(prompt, temp):
 
 def answer(row, sig, history, question, persona, mood):
     rings = load_rings(row["id"], row.get("district"))
-    mem = recall(question, rings, topk=3)
+    mem = recall(question, rings, topk=3, reflections=load_reflections(row["id"]))
     if not mem:
         mem = rings[-3:]
     h = datetime.datetime.now().hour
@@ -247,6 +256,11 @@ def qc():
                                               "habits": ["h1"], "trait_expr": []}, "")
     if "\u4e2a\u6027\u7ec6\u8282" not in p3 or "m" not in p3:
         fails.append("persona wiring")
+    # v1.6 wiring: reflection-kind entries get the insight tag, plain rings never do
+    p4 = build_prompt(row, sig, [{"date": "2026-09-26", "text": "\u987e\u5ba2\u5982\u6d41\uff0c\u73cd\u60dc\u773c\u524d\u3002", "kind": "reflection"}], [], "q", None, "")
+    p5 = build_prompt(row, sig, [{"date": "2026-09-26", "text": "\u987e\u5ba2\u5982\u6d41\uff0c\u73cd\u60dc\u773c\u524d\u3002"}], [], "q", None, "")
+    if "\uff08\u4f60\u81ea\u5df1\u7684\u4eba\u751f\u611f\u609f\uff09" not in p4 or "\uff08\u4f60\u81ea\u5df1\u7684\u4eba\u751f\u611f\u609f\uff09" in p5:
+        fails.append("reflection tag wiring")
     if not ("C-00010" in WHITELIST and "C-00426" not in WHITELIST
             and HONORED & WHITELIST == set()):
         fails.append("whitelist scope")
@@ -261,7 +275,7 @@ def qc():
     if fails:
         print("QC FAIL: " + "; ".join(fails))
         return 1
-    print("QC PASS (%d gate cases + prompt determinism + persona wiring + whitelist scope)" % len(cases))
+    print("QC PASS (%d gate cases + prompt determinism + persona wiring + reflection tag + whitelist scope)" % len(cases))
     return 0
 
 def ask_once(cid, questions, want_json):

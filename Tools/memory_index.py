@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-"""memory_index.py - city-wide ring memory index + deterministic recall (v1).
+"""memory_index.py - city-wide memory recall: rings + reflections (v1.6).
 
-AI-foundation piece under order O-20260925-1202-bm-c (CODEX 12th T2 v3.13):
-until now the QA layer only ever saw a citizen's LAST 3 rings; this index
-recalls the most question-relevant memories instead. BM25-lite scoring:
-2-char shingle overlap * recency boost, zero LLM, zero new deps, deterministic
-for the same (question, ring set).
+AI-foundation piece under orders O-20260925-1202-bm-c (CODEX 12th T2 v3.13),
+O-20260925-2320-bm-c (retrieval three factors: recency x relevance x importance),
+O-20260926-0942-bm-c (T2 v3.24): until now the QA layer only ever saw a citizen's
+LAST 3 rings; this index recalls the most question-relevant memories instead.
+v1.6 closes the Generative-Agents three-leg loop record->reflect->retrieve:
+the citizen's own reflections (Tools/reflect_citizen.py, census/reflections.jsonl,
+committed append-only) join the recall candidates with importance x1.5.
+BM25-lite scoring: 2-char shingle overlap * recency boost * importance,
+zero LLM, zero new deps, deterministic for the same (question, candidate set).
 
 Usage:
   python -X utf8 memory_index.py --id C-00010 --q "台风那年的事"
@@ -17,6 +21,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 from make_digests import find_card
+
+REFLECTIONS_FILE = os.path.join(CO, "census", "reflections.jsonl")
+REFLECTION_WEIGHT = 1.5  # v1.6: higher-level memories outrank equal rings
 
 def shingles(text):
     t = re.sub(r"\s+", "", text)
@@ -33,6 +40,31 @@ def load_rings(cid, district):
         return []
     ents = re.findall(r"- (\d{4}-\d{2}-\d{2}) 「(.*?)」", m.group(1))
     return [{"date": d, "text": t.strip()} for d, t in ents]
+
+def load_reflections(cid):
+    """Own higher-level insights (reflection leg) as recall candidates (v1.6).
+
+    Source: census/reflections.jsonl (reflect_citizen.py output, committed
+    append-only, zero-fabrication by construction). Marked kind="reflection"
+    so consumers render them as derived insights, never as [anchor] facts.
+    Honored seats are blocked upstream in reflect_citizen, no guard needed.
+    """
+    out = []
+    if not cid or not os.path.isfile(REFLECTIONS_FILE):
+        return out
+    with open(REFLECTIONS_FILE, encoding="utf-8") as f:
+        for ln in f:
+            ln = ln.strip()
+            if not ln:
+                continue
+            try:
+                r = json.loads(ln)
+            except Exception:
+                continue
+            if r.get("id") == cid and r.get("insight"):
+                out.append({"date": str(r.get("date", "")),
+                            "text": r["insight"], "kind": "reflection"})
+    return out
 
 def ring_importance(text):
     """Deterministic importance weight (zero LLM) - Generative-Agents-style third
@@ -51,13 +83,18 @@ def ring_importance(text):
         imp += 0.2
     return imp
 
-def recall(question, rings, topk=3, now=None):
-    if not rings:
+def recall(question, rings, topk=3, now=None, reflections=None):
+    """v1.6: rings + own reflections compete in one pool; reflections carry
+    importance x1.5 (higher-level memories, Generative Agents Sec. 3.2).
+    Same (score, overlap, date) ties keep insertion order (rings first) -
+    stable sort keeps this deterministic."""
+    cand = list(rings or []) + list(reflections or [])
+    if not cand:
         return []
     now = now or datetime.date.today()
     qs = shingles(question)
     scored = []
-    for r in rings:
+    for r in cand:
         ts = shingles(r["text"])
         overlap = len(qs & ts)
         if overlap == 0:
@@ -68,6 +105,8 @@ def recall(question, rings, topk=3, now=None):
             days = 999
         recency = 1.0 / (1.0 + math.log1p(max(days, 0)))
         importance = ring_importance(r["text"])
+        if r.get("kind") == "reflection":
+            importance *= REFLECTION_WEIGHT
         scored.append((overlap * recency * importance, overlap, r))
     scored.sort(key=lambda x: (-x[0], -x[1], x[2]["date"]))
     return [s[2] for s in scored[:topk]]
@@ -95,10 +134,39 @@ def qc():
     if not recall("台风", rings):
         # no match -> empty is CORRECT here, guard inverted: recall must not fabricate
         pass
+    # v1.6: reflections join the pool with importance x1.5
+    refl = [{"date": "2026-09-23", "text": "灯灵值得帮，日子才亮堂", "kind": "reflection"}]
+    out3 = recall("灯灵", rings, topk=3, reflections=refl)
+    if not any(r.get("kind") == "reflection" for r in out3):
+        fails.append("reflection-join")
+    # equal overlap + equal date: x1.5 must outrank the plain ring
+    ring_eq = {"date": "2026-09-26", "text": "顾客来买粢饭团，笑呵呵"}
+    refl_eq = {"date": "2026-09-26", "text": "顾客如流，珍惜眼前。", "kind": "reflection"}
+    m_eq = recall("顾客", [ring_eq], topk=2, reflections=[refl_eq])
+    if not m_eq or m_eq[0].get("kind") != "reflection":
+        fails.append("reflection-weight-1.5")
+    # zero-overlap reflection must not surface
+    if any(r.get("kind") == "reflection" for r in
+           recall("记账", [ring_eq], topk=2,
+                  reflections=[{"date": "2026-09-26", "text": "灯灵巡夜", "kind": "reflection"}])):
+        fails.append("reflection-zero-overlap")
+    # determinism with reflections merged
+    if recall("灯灵", rings, topk=3, reflections=refl) != out3:
+        fails.append("reflection-determinism")
+    # no-reflections call keeps v1.5 semantics (regression)
+    if recall("旧笔记账", rings, topk=2)[0]["text"] != out2[0]["text"]:
+        fails.append("no-refl-regression")
+    # real committed file: own reflections load with kind tag, others stay empty
+    live = load_reflections("C-00010")
+    if not live or not any("顾客如流" in r["text"] for r in live) \
+            or not all(r.get("kind") == "reflection" for r in live):
+        fails.append("load-reflections-live")
+    if load_reflections("C-00999"):
+        fails.append("load-reflections-foreign")
     if fails:
         print("QC FAIL: " + "; ".join(fails))
         return 1
-    print("QC PASS (ranking/topk/determinism/zero-overlap)")
+    print("QC PASS (ranking/topk/determinism/zero-overlap + reflection join/1.5-weight/no-refl-regression)")
     return 0
 
 def main():
@@ -114,7 +182,8 @@ def main():
     if not a.id:
         print("need --id"); sys.exit(2)
     rings = load_rings(a.id, a.district or None)
-    out = recall(a.q, rings, topk=a.topk) if a.q else rings[-a.topk:]
+    refl = load_reflections(a.id)
+    out = recall(a.q, rings, topk=a.topk, reflections=refl) if a.q else rings[-a.topk:]
     print(json.dumps({"id": a.id, "q": a.q, "recall": out}, ensure_ascii=False))
 
 if __name__ == "__main__":
