@@ -33,7 +33,7 @@
 ## 四、升级路（M→部分实证·O-20260925-1416 加速令）
 
 - **piper 通道已实证（2026-09-25 试点·census/export/voice-pilot-piper/ 8 片）**：zh_CN-huayan-medium 63MB 模型经 hf-mirror 断点续传落位 K:\Fluxgroup\.tools\piper-voices\（隔离 venv K:\Fluxgroup\.tools\tts-venv\ 零污染主环境）——**神经声质量显著优于 SAPI**（自然语速：顾阿凤同文本 SAPI 11.1s vs piper 3.7s=拼接停顿消除）；per-citizen length_scale=100/(100+rate) 派生自声纹 manifest（确定性）；坑=piper stdin 按 GBK locale 解码须 PYTHONUTF8=1。
-- **余项（kokoro 终解）**：piper 中文库单声源（huayan 女声）——多声源终解=kokoro ONNX（8 zh 基音含男声·挂账次窗装机实证）；**云端 TTS=禁**（本地算力律·P-2026-09-25-09 节流令同向）。
+- **kokoro 终解实况（2026-09-26 落实批·O-20260926-0942）**：模型 kokoro-v1.0.onnx 可下（hf-mirror 断点续传·20MB/310MB 缓行续存）·**声纹库 voices-v1.0.bin=HF 401 授权墙**（Kokoro-82M 家族 gated=需账号同意协议·匿名通道无解·29B 错页实证）——三选一呈 CEO：①有 HF 账号则 token 接线（唯一物理件=同意协议）②公共镜像另寻（onnx-community 镜像探测被断·ModelScope API 未探得）③维持 piper 第二基音+参数调制现状；**云端 TTS=禁**（本地算力律·P-09 节流令同向）。
 - 消费方：M4 参观端（居民语音气泡）/CityWatch（城市声景）/BigStream（内容素材引用走任务单）。
 
 ## 五、验收实录

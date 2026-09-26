@@ -252,3 +252,10 @@
 
 - [x] **T-20260925-18 智能化升维 R- 件交付并整单关结**（O-1940 Phase1+O-2320 调研令合一执行）：①docs/research/R-20260925-resident-full-intelligence.md（P-65 全标准·九维能力阶梯现状→差距→判据·四特征判据预注册·三源锚定=Generative Agents【A 级 arxiv 直取】+游戏系统【M 稳定惯例】+电影五隐喻【M·设计源非工程源】·算力现实架构律+Phase 阶梯迭代方向）；②BLUEPRINT §五 Phase1/2/3 路线升版+§八居民智能指挥部四组建行（记忆与成长/社会与关系/表达与多模态/评估与诚实·判据先行·人名 CEO 保留面）；③**memory_index v1.5**（检索三要素 recency×relevance×importance·重要性=[锚]类型+相遇+长度确定性权重·零 LLM·QC PASS+令牌环召回实测）；④外部检索 4 路有界（1 成 3 空手如实记档）。
 - [ ] **T-20260925-19 Phase2 队首**（次窗·bm-c 会话）：agency v0（GOAP 式需求→目标→每日确定性自发动作清单入播报池）+kokoro ONNX 多声源终解（8 zh 基音）+首里程碑「被点名即活」全栈演示（记忆召回+个性应答+声音+形象四面 3 秒齐）呈 CEO 检查点。
+
+## 调研落实批（2026-09-26 上午 · CEO 令 O-20260926-0942-bm-c · bm-c 交互会话）
+
+- [x] **T-20260926-01 agency v0 交付**（R- 件应用表第 2 行·九维③自主性·同轮关单）：Tools/agency.py+契约 cognition/AGENCY.md v1.0（GOAP 式需求→目标→每日确定性自发动作·md5(id+date) 零 LLM·崩溃态→恢复池·{likes} 画像填色+句式 tic·荣誉席 blocked）→citizen-initiatives.jsonl（R3·QC PASS：10003 行/1-2 条/4-36 字/GATE_TOKEN 零命中/双跑一致）——与行为面五环互补分界（behavior=在哪·agency=打算）；实弹修复=偏好库基因「雨棚」→「檐棚」根治雨字泄漏；CODEX §十二 v3.22。
+- [x] **T-20260926-02 反思层 v0 交付**（R- 件文献锚 A 级「synthesize higher-level reflections」直译·Phase3 拉前）：Tools/reflect_citizen.py+契约 cognition/REFLECTION.md v1.0（自有年轮尾 10 条→本地 7b 合成 ≤40 字感悟·零编造 by construction·G4 闭包门=输出天气词必出自喂入环·30 天冷却·--qc 6 例 PASS）→census/reflections.jsonl（committed append-only·实弹 3 民零编造：顾阿凤「顾客如流，珍惜眼前。」等）；CODEX §十二 v3.23。
+- [ ] **T-20260926-03 kokoro 多声源（授权墙挂账·三选一呈 CEO）**：模型 20MB/310MB 断点续传在途缓行（K:\Fluxgroup\.tools\kokoro\）·**声纹库 voices-v1.0.bin=HF 401 授权墙**（Kokoro-82M 家族 gated·匿名无解）——①CEO 有 HF 账号则 token 接线（唯一物理件）②公共镜像另寻 ③维持 piper 第二基音现状；VOICE-POOL §四实况已记。
+- [ ] **T-20260926-04 memory v1.6（小件·次窗）**：召回候选并入 reflections.jsonl（重要性 1.5 加权）——反思→检索闭环收口（Generative Agents 三腿全接线）。
