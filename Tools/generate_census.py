@@ -8,6 +8,7 @@ ASCII-safe console output; all files written UTF-8 (no BOM).
 Usage: python generate_census.py [--seed 20260923] [--out census]
 """
 import json, hashlib, os, random, sys, argparse
+import political_redline  # 入城门政治红线扫描器（T-20260926-18 步⑦第 5 件·CODEX §十二 v3.36）
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
@@ -488,6 +489,10 @@ def main():
     for a in ANCHORS["citizens"]:
         REG.try_name(a["name"])
         text, light = render_anchor(a)
+        rhits = political_redline.scan_text(text)
+        if rhits:  # 入城门 fail-fast：政治红线违律=拒绝入册零写盘（升华律 v1.3 政治红线律）
+            print(f"REDLINE REFUSED: anchor C-{a['cid']:05d} terms={[h['term'] for h in rhits]}")
+            sys.exit(5)
         with open(os.path.join(anchdir, f"C-{a['cid']:05d}.md"), "w", encoding="utf-8", newline="\n") as f:
             f.write(text)
         lights.append(light)
@@ -536,6 +541,10 @@ def main():
 
     for c in citizens:
         text = render_card(c)
+        rhits = political_redline.scan_text(text)
+        if rhits:  # 入城门 fail-fast：政治红线违律=拒绝入册零写盘（活户籍防护不破）
+            print(f"REDLINE REFUSED: C-{c['id']:05d} terms={[h['term'] for h in rhits]}")
+            sys.exit(5)
         with open(os.path.join(regdir, c["district"], f"C-{c['id']:05d}.md"), "w", encoding="utf-8", newline="\n") as f:
             f.write(text)
         lights.append({
