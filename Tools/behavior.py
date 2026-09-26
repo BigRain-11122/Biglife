@@ -56,8 +56,22 @@ md5(id) map (load_needs fallback pattern). Slot-only: state/vis/quirk/ctx
 keys untouched, venue value range stays the v3.21 closed set; honored seats
 keep the base slot (double guard: social_slot check + honored rows
 structurally absent from the household/block manifest faces).
+T-20260926-13 (2026-09-26, R-20260925-alive-city L1 soundscape reverse-
+trigger candidate, D-20260926-07 breakpoint-family, contract R360): sig
+["sound"] tier = alarm (CEO_ORDER / WEATHER_ALERT within 30 min of now) >
+fest (GAME_STAGE same window) > none; dev-flow types (OS_TICK*/GATE_PASS/
+COMMIT/HEARTBEAT) never enter the tier (R350 chronicle same judgment);
+world-events read-only (iron law 4), zero LLM. Reaction is slot-only on the
+free-action visible non-crash face (social/explore/exercise/run/night_light
+/leisure family), 25% bounded by hash(id)%4==0 (v3.21 slot-only paradigm);
+honored seats C-00001~03 never. Priority = crash overlay > weather override
+> soundscape (lowest - rain-sheltered rows keep the override slot); a
+silent window (tier none, or a sig without the key - backward compatible)
+is byte-identical zero drift by construction. --auto regen key adds the
+sound tier (T-20260925-11 rhythm spirit: reaction windows are finer than
+buckets, rest_win precedent).
 """
-import hashlib, json, os, re, subprocess, sys
+import datetime, glob, hashlib, json, os, re, subprocess, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -162,6 +176,62 @@ def social_slot(h, base_slot, cid, blk=None):
     if k % 4 == 3:
         return base_slot
     return SOCIAL_VENUES[k % 4]
+
+
+# T-20260926-13 (contract R360, D-20260926-07 L1 candidate): soundscape
+# reverse-trigger - read-face tier on event type + 30-min ts window.
+SOUND_ALARM_TYPES = ("CEO_ORDER", "WEATHER_ALERT")   # -> 街头·驻足望塔
+SOUND_FEST_TYPES = ("GAME_STAGE",)                   # -> 街角·循声围看
+SOUND_DEV_TYPES = ("OS_TICK", "OS_TICK_START", "OS_TICK_DONE", "GATE_PASS",
+                   "COMMIT", "HEARTBEAT")            # dev flow never tiers
+SOUND_WIN_MIN = 30
+SOUND_EV_TAIL = 300   # read depth: covers the window with wide margin
+SOUND_SLOTS = {"alarm": "街头·驻足望塔", "fest": "街角·循声围看"}
+# free-action visible face: unstructured out-and-about states only - the
+# structured pair (work/school/commute/meal/night_shift/charge), the rest
+# pair (sleep/home/rest_*) and the weather override pair (shelter/indoors)
+# are all excluded by construction (crash NEG_STATES likewise)
+SOUND_FREE_STATES = {"social", "explore", "exercise", "run", "night_light",
+                     "leisure_play", "leisure_park", "leisure_stroll"}
+
+
+def sound_tier(now, events=None):
+    """alarm/fest/none closed set. events=None -> newest world-events face
+    (tail read, iron law 4 read-only); a raw-event list is the QC battery
+    hook. Beijing time = ts_utc + 8h (city_chronicle parse same source).
+    alarm outranks fest (chronicle weight 8 > 3); future-stamped and
+    window-stale events never tier. Zero LLM, deterministic."""
+    if events is None:
+        events = []
+        try:
+            files = sorted(glob.glob(os.path.join(needs.FV_WORLD,
+                                                  "world-events*.jsonl")),
+                           key=os.path.getmtime, reverse=True)
+            if files:
+                with open(files[0], encoding="utf-8", errors="replace") as f:
+                    events = [json.loads(ln) for ln in
+                              f.readlines()[-SOUND_EV_TAIL:] if ln.strip()]
+        except Exception:
+            events = []
+    tier = "none"
+    for e in events:
+        t = str(e.get("type") or "")
+        if t in SOUND_DEV_TYPES:
+            continue
+        if t not in SOUND_ALARM_TYPES and t not in SOUND_FEST_TYPES:
+            continue
+        try:
+            ev = datetime.datetime.strptime(str(e.get("ts_utc")),
+                                            "%Y-%m-%dT%H:%M:%SZ") \
+                + datetime.timedelta(hours=8)
+        except Exception:
+            continue
+        d = (now - ev).total_seconds() / 60.0
+        if 0 <= d <= SOUND_WIN_MIN:
+            if t in SOUND_ALARM_TYPES:
+                return "alarm"
+            tier = "fest"
+    return tier
 
 
 def window(m):
@@ -342,8 +412,18 @@ def derive(r, nk, top, sig, w, weekend, crash=None, cax=None, vis_ok=True, m=Non
             if not vis_ok:
                 o["visible"] = 0
     elif crash == "recovering" and cax in NEG_OF_AXIS \
-         and str(r.get("id")) not in needs.HONORED_IDS:
+       and str(r.get("id")) not in needs.HONORED_IDS:
         o["recovering"] = cax
+    # T-20260926-13: soundscape reaction - slot-only, lowest priority
+    # (crash overlay > weather override > this). Free-action visible
+    # non-crash rows only (NEG_STATES / shelter / indoors fail the state
+    # gate automatically), 25% bounded hash gate, honored seats never;
+    # silent window (tier none / key absent) = zero drift by construction.
+    snd = sig.get("sound") or "none"
+    if snd in SOUND_SLOTS and o["state"] in SOUND_FREE_STATES \
+       and o.get("visible") == 1 and h % 4 == 0 \
+       and str(r.get("id")) not in needs.HONORED_IDS:
+        o["slot"] = SOUND_SLOTS[snd]
     return o
 
 
@@ -434,6 +514,7 @@ def main():
     auto = "--auto" in sys.argv and not qc_only
     sig = needs.city_signals()
     now = sig["now"]
+    sig["sound"] = sound_tier(now)   # T-20260926-13: soundscape read-face tier
     mnow = now.hour * 60 + now.minute
     w = window(mnow)
     weekend = now.weekday() >= 5
@@ -455,9 +536,11 @@ def main():
         wx_now = sig["weather"] or ""
         if last and last.get("time_bucket") == w \
            and last.get("weather_kind") == wx_now \
-           and last.get("rest_win", "") == rest_win and os.path.exists(OUT_BEH):
-            print("behavior auto: bucket=%s wx=%s rest=%s unchanged - skip regen"
-                  % (w, wx_now or "na", rest_win or "na"))
+           and last.get("rest_win", "") == rest_win \
+           and last.get("sound", "none") == (sig.get("sound") or "none") \
+           and os.path.exists(OUT_BEH):
+            print("behavior auto: bucket=%s wx=%s rest=%s snd=%s unchanged - skip regen"
+                  % (w, wx_now or "na", rest_win or "na", sig.get("sound") or "none"))
             sys.exit(0)
         # inputs changed (or bootstrap): refresh needs face first so
         # weather-linked needs rows match this run, then regen + QC below
@@ -541,10 +624,55 @@ def main():
             if cid in needs.HONORED_IDS:
                 want = base
             else:
-                k = social_key(cid, r.get("block"), shash(cid))
-                want = base if k % 4 == 3 else SOCIAL_VENUES[k % 4]
+                sndq = sig.get("sound") or "none"
+                if sndq in SOUND_SLOTS and shash(cid) % 4 == 0:
+                    want = SOUND_SLOTS[sndq]   # T-20260926-13 reaction row
+                else:
+                    k = social_key(cid, r.get("block"), shash(cid))
+                    want = base if k % 4 == 3 else SOCIAL_VENUES[k % 4]
             if o.get("slot") != want:
                 bad += 1
+        # T-20260926-13: soundscape face schema - a reaction row must sit on
+        # the active tier's exact slot and the free/vis/hash/non-honored gate;
+        # a gate-eligible row under an active tier must carry the reaction
+        # slot; a silent window must carry zero reaction slots (judge 2/4)
+        sndq = sig.get("sound") or "none"
+        if o.get("slot") in SOUND_SLOTS.values():
+            if o.get("slot") != SOUND_SLOTS.get(sndq) \
+               or o.get("state") not in SOUND_FREE_STATES \
+               or o.get("visible") != 1 \
+               or shash(r.get("id") or "") % 4 != 0 \
+               or str(r.get("id")) in needs.HONORED_IDS:
+                bad += 1
+        elif sndq != "none" and o.get("state") in SOUND_FREE_STATES \
+             and o.get("visible") == 1 \
+             and shash(r.get("id") or "") % 4 == 0 \
+             and str(r.get("id")) not in needs.HONORED_IDS:
+            bad += 1
+    # T-20260926-13: tier unit battery (pure, in-memory) - closed set, ts
+    # window discipline, dev-flow exclusion, alarm-over-fest priority
+    t0 = datetime.datetime(2026, 9, 26, 18, 0, 0)   # Beijing clock = 10:00Z
+    for evs, want in (
+        ([], "none"),
+        ([{"ts_utc": "2026-09-26T09:35:00Z", "type": "OS_TICK_START"}], "none"),
+        ([{"ts_utc": "2026-09-26T09:35:00Z", "type": "GATE_PASS"}], "none"),
+        ([{"ts_utc": "2026-09-26T09:35:00Z", "type": "COMMIT"}], "none"),
+        ([{"ts_utc": "2026-09-26T09:40:00Z", "type": "RESIDENT_SAY"}], "none"),
+        ([{"ts_utc": "2026-09-26T09:40:00Z", "type": "GAME_STAGE"}], "fest"),
+        ([{"ts_utc": "2026-09-26T09:29:30Z", "type": "GAME_STAGE"}], "none"),
+        ([{"ts_utc": "2026-09-26T10:00:30Z", "type": "GAME_STAGE"}], "none"),
+        ([{"ts_utc": "2026-09-26T09:50:00Z", "type": "CEO_ORDER"}], "alarm"),
+        ([{"ts_utc": "2026-09-26T09:50:00Z", "type": "WEATHER_ALERT"}], "alarm"),
+        ([{"ts_utc": "2026-09-26T09:40:00Z", "type": "GAME_STAGE"},
+          {"ts_utc": "2026-09-26T09:50:00Z", "type": "CEO_ORDER"}], "alarm"),
+        ([{"ts_utc": "bad-stamp", "type": "CEO_ORDER"}], "none"),
+    ):
+        if sound_tier(t0, evs) != want:
+            print("QC FAIL sound_tier %s want=%s" % (evs, want))
+            bad += 1
+    if (sig.get("sound") or "none") not in ("alarm", "fest", "none"):
+        print("QC FAIL sound tier closed set %s" % (sig.get("sound"),))
+        bad += 1
     # determinism: rebuild a spread sample through the same pure pipeline
     if not qc_only:
         getn = load_needs(sig, hb, rows)
@@ -598,7 +726,7 @@ def main():
         tmp = STATE_BEH + ".tmp"
         with open(tmp, "w", encoding="utf-8", newline="\n") as f:
             json.dump({"time_bucket": w, "weather_kind": sig["weather"] or "",
-                       "rest_win": rest_win,
+                       "rest_win": rest_win, "sound": sig.get("sound") or "none",
                        "ts": now.strftime("%Y-%m-%dT%H:%M:%S+08:00")},
                       f, ensure_ascii=False)
         os.replace(tmp, STATE_BEH)
