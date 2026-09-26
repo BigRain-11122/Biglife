@@ -149,3 +149,11 @@ A 4+research 6｜B 8+1+5+1=15｜C 21+6=27｜D 10｜E 9 项（reserved 4 件红�
 ### 分步④收口计数（R268）
 
 索引 35 条目全列（v1.1~v3.17·v3.4/v3.5 弃用号不在册=正确）；撞号双让路 3 组（v3.9~v3.11 先行 vs v3.6~v3.8 后落）注记承收候选 #2。**T-20260925-20 待办余**=分步③全域同义词余扫（终裁窗 09-27~28·SILICON-LIFE↔CODEX 条款重复度/cognition 契约间重叠+候选 #8 缩写词汇观察项随扫）→ 09-30 治理日首窗对账 U178 首跑。
+
+### 分步③ 全域同义词余扫（终裁窗 09-27~28·R421 当窗交付·2026-09-27）
+
+- **扫描面 A（SILICON-LIFE ↔ CODEX 条款重复度）**：CODEX §十五头行自declare「硅基生命智能律（指针节）·唯一正典=docs/SILICON-LIFE.md v1.0·本节只录核心法条」=上位吸收已内建（「状态表=该件 §一」「该件 §三」行内指针全在册）；T0 禁语清单三载（SILICON-LIFE 律二② L51／CODEX §十五1 L219／CODEX 数字传承节 L231）逐字同文但均带「该件 §一」「§十五 1 同源」标记=**自觉同源双载非冲突**（同步义务=改 SILICON-LIFE 须三载同改·已由指针节机制承载）→ 定谳：常态非缺口·零动作。
+- **扫描面 B（cognition 契约间重叠）**：13 契约域分区实测清晰（判据 README／问候 GREETINGS／画像 PERSONA-v2／声纹 VOICE-POOL／QA 白名单／AGENCY／needs 崩溃 NEEDS-CRASH／情绪导演 MOOD-DIRECTOR／提案 PROPOSALS／反思 REFLECTION／流言 RUMOR-CHAIN／风格 STYLE-FIELDS／价值台账试点 value-ledger-pilot）——零同条款双载；交叉引用全带指针（PROPOSALS→锚定律 CODEX §九同源；MOOD-DIRECTOR→mood-calendar.json「法源指针律：表行无法源指针=QC 拒收」内建）；池水位双载（README L58 现役 18/12 ↔ GREETINGS L19 旧水位锁历史）=分步②候选 #3 已定谳维持 → 定谳：零新增冲突。
+- **扫描面 C（步⑦交付后新型 md↔json 双载三对）**：docs/voice-role-map.md ↔ cognition/voice-role-map.json、docs/style-dna-archetypes.md ↔ cognition/style-dna-archetypes.json 头行均自declare「机器可读本件（字段入契约消费源）=json·本文=定谳与判据面」=分工双载零冲突；cognition/STYLE-FIELDS.md ↔ docs/style-dna-archetypes.md §一 五维规格双表=两 md 均声明「字段权威源（单源引用·零双建）=cognition/style-dna-archetypes.json field_spec」=同义词归并已内建 → 定谳：常态非缺口·零动作。
+- **候选 #8（缩写词汇观察项·R245 登记）**：定性=池内容观察项非规则文档冲突，归口池内容审计线常态化承收（T-20260926-18 步⑦切片① R403 交付：1958 条逐字重复零 PASS 在案）——不入清理整合定谳面。
+- **定谳结论**：全域余扫**零新增真实冲突·零新增归并动作**（分步② 7/7 定谳维持无复发）；U188 四则适用面全数命中「上位吸收／同义词归并已内建」态。原文保全铁律零触碰（本节=纯追加）。**T-20260925-20 分步①②③④全毕**——余=09-30 治理日首窗对账 U178 首跑。
