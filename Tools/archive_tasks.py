@@ -182,6 +182,7 @@ def main():
     out = []
     arc = {}
     ptr_head = '  - 【实录已归档】'.encode('utf-8')
+    ptr_idx = set()
     for i, l in enumerate(lines):
         r = run_starts.get(i)
         if r is not None:
@@ -190,6 +191,7 @@ def main():
             ptr = '  - 【实录已归档】%d 行批实录（%s）已逐字移至 %s——T-20260926-05 拆月归档（原文保全·检索走 rg 全文）' % (
                 n, '、'.join(months), '、'.join('tasks/archive/TASKS-%s.md' % m for m in months))
             out.append(ptr.encode('utf-8') + eol)
+            ptr_idx.add(len(out) - 1)
             last_m = None
             for k in r:
                 if flags[k]:
@@ -203,9 +205,9 @@ def main():
     new_raw = b''.join(out)
     arc_raw = {m: b''.join(v) for m, v in arc.items()}
 
-    # 断言④-1 非移动行序逐字节零漂移
+    # 断言④-1 非移动行序逐字节零漂移（仅排除本次新增指针行·存量指针行属非移动行——与分步②同法）
     expect = [l for i, l in enumerate(lines) if i not in moved]
-    got = [l for l in out if not l.startswith(ptr_head)]
+    got = [l for k, l in enumerate(out) if k not in ptr_idx]
     assert expect == got, 'non-moved line drift!'
 
     # 断言④-2 检查框行计数保全（open/closed 单头零触碰实证）
