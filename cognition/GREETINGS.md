@@ -45,4 +45,5 @@
 ## 七、登记与验收
 
 - CODEX §十二 v2.0 T2 登记（否决窗至 2026-10-01·与 v1.7/v1.8 同令窗）
+- style_dna/voice_profile 字段入契约（T-18 步⑦第 4 件·2026-09-27）：契约=`cognition/STYLE-FIELDS.md` v1.0（CODEX §十二 v3.35）——greet/faq 条目生成期 style_dna 注入引导（prompt 面非门禁面）·条目本体零结构变更·存量 518 条零触碰·问候轴族签名开场=复测判据④保留面。
 - 验收实录＝生成轮起记入 `cognition/README.md` 维护节（首轮生成前本契约为唯一判据源）

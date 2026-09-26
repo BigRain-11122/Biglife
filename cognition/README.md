@@ -68,6 +68,7 @@
 1. **barks 层（既有·不变）**：日粒度——同 (id, 日期, 情境) → 逐字节一致（引擎气泡日用）。
 2. **标准台词层 standard（45min 冷却级·`draw.py --tier standard`）**：45 分钟槽粒度（`slot=⌊当日分钟⌋/45`·每日 32 槽）——同 (id, 日期, slot, 情境) → 逐字节一致；**槽内零变句=引擎天然 45 分钟台词冷却**；槽间轮换（语言在长）。抽桶路由与 barks 同（六轴/像素灵/锚民烟火默认）。
 3. **播报层 broadcast（大事件模板·`Tools/city_broadcast.py`）**：大事件→全城反应清单（stdout JSON·引擎按需消费）——①头条=情境口气模板零事实（7 事件族：typhoon/heatwave/coldsnap/market_open/market_close/ceo_order/festival）；②多数居民=轴桶零 LLM 抽词（契约同层②）；③每城区≤N 位聚光灯事实级应答（spotlight 继承·≤40 字·诚实律）；触发=derive_context 真实事实门（事件>天气>时钟·FluxVerse 只读），**无大事件=播报层静默**（自终止律）；聚光灯选人=同 (城区,日期,事件) 确定性哈希。
+4. **风格字段层（style_dna 注入引导·T-18 步⑦第 4 件·2026-09-27）**：契约=`cognition/STYLE-FIELDS.md` v1.0（CODEX §十二 v3.35）——条目生成期 style_dna 注入引导（prompt 面非门禁面·机审门零触碰）·条目本体零结构变更·存量 1440 条零触碰；千篇一律禁令执法点＝生成期预检＋开场分化判据（R-20260927-pool-homogeneity-audit §四复测② worst 桶同开场 ≤3/18·B 片留单）＋同池同风格违律计数入 QC-REPORT。
 
 验收判据（机器可验·2026-09-24 实录全 PASS）：①standard 同槽双跑逐字节一致；②barks 回归零漂移（seed 不变）；③播报清单 7 组（六轴+像素灵）采样路由正确；④头条零数字零专名（池洁净律同源）；⑤自动门=无大事件时 event=null 静默。证据：三路由实测（求新 C-00030→求新桶/像素灵 C-00028→sprite 桶/锚民 C-00010→烟火默认桶）、typhoon 模板 7 组采样、auto 判 ambient night 静默、spotlight 接线单点 C-00010「侬晓得伐，今朝的豆浆加糖伐？」。
 
