@@ -1,6 +1,26 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.28 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.29 - BigLife citizen evolution engine.
+v0.29 gap #52 (2026-09-27): meet-prompt de-AB root fix - the meet prompt itself
+introduced the pair as 居民甲/居民乙 and phrased the task lines as 甲对乙/乙回,
+so qwen2.5:7b kept echoing bare 甲：/乙： speaker labels (R443 double strike,
+persistent through the <=2 regens on BOTH pairs C-01849xC-01303 /
+C-02183xC-01619 - the prompt-side ban had hit its compliance ceiling, gap #12
+law). Fix: introduce both citizens by REAL card name (title-line extract, ID
+fallback) and phrase the two task lines by name as well - zero 甲/乙 tokens
+remain on the prompt face (T-19 no-literal-negative law), so the literal
+ban sentence goes with them. Honesty gate v0.35 untouched - the placeholder
+family stays machine-checked (gap #6 recurrence guard).
+v0.29 gap #53 (2026-09-27, same R443 incident): meet-prompt weather/time
+starvation - the meet 硬约束 block referenced 喂入天气串/喂入风速/当前时刻
+but the prompt face never CONTAINED them (now=0/wx=0 on the segment), so
+every weather-dependent dialogue line was a blind guess and the weather
+families (sky-mismatch/wind-under/sun-fit) became meet-line habitual
+strikes (R443 C-02183xC-01619 post-#52 probe: all three persistent at once;
+R293 3bf244e6 meet wind-under 留档 is the same disease). Fix mirrors the
+batch face (wx = sig["weather"] + 现在真实北京时间/上海实况天气 feed line).
+Honesty gate v0.35 untouched; live pass rides the next meet window (daily
+meet cap already spent on C-01922xC-02270 / C-00580xC-02271).
 v0.28 (2026-09-27, T-20260926-19 分步②b): V3 city-councilor --propose mode -
 batch-coupled proposal face (ring_ref 同源强绑定, curiosity=2 sampling, <=3/day
 rarity cap, proposals.jsonl append-only; contract = cognition/PROPOSALS.md;
@@ -860,6 +880,11 @@ def persona_digest(text):
         "creed": grab("信条", 60), "language": grab("语言", 80), "behavior": grab("行为", 90),
     }
 
+def card_name(text):
+    """Card title line '# C-xxxxx · 名字' -> real citizen name (gap #52 meet face)."""
+    m = re.match(r"#\s*\S+\s*·\s*(.+)", text.strip())
+    return m.group(1).strip() if m else ""
+
 # V2-D (T-20260924-04 item 2): city districts -> event-stream zones. The stream
 # carries exactly gaming/governance/media/quant; 江面与光桥 (RV) and 外环感知网 (OR)
 # have no zone of their own, so their residents simply keep the stream order -
@@ -1292,11 +1317,15 @@ def main():
             with open(p, encoding="utf-8") as f:
                 texts.append(f.read())
         ev = "\n".join("- " + e for e in sig["events"]) or "- （今日无新城市事件）"
+        n0 = card_name(texts[0]) or ids[0]
+        n1 = card_name(texts[1]) or ids[1]
+        wx = sig["weather"] or "（天气数据暂缺）"
         prompt = (f"你是叙事编剧。城市真实事件：\n{ev}\n"
-                  f"居民甲「{ids[0]}」人设：{persona_digest(texts[0])['traits']}，职业{persona_digest(texts[0])['prof']}。\n"
-                  f"居民乙「{ids[1]}」人设：{persona_digest(texts[1])['traits']}，职业{persona_digest(texts[1])['prof']}。\n"
-                  f"硬约束（锚定律从严）：台词中提及的具体事必须逐字来自事件清单原文短语，不得添加清单外的具体事实。台词中禁止出现「居民甲」「居民乙」字样，也不要在台词开头加「甲：」「乙：」等称谓前缀，直接以台词本身呈现；提及天气只许描述此刻实况亲历且天空类型必须与喂入天气串一致（clear 严禁阴系措辞、非晴天气（cloud/阴/雨/雷/雾等一切非 clear/晴 的天气）严禁晴系措辞；喂入非晴天气时严禁把任何带「晒」字的动作（不论晒的对象是什么）写成当下的天气适配句或意图句，无论适配语前置还是后置均不许与「正好/适合/该……了」类当下适配语共现（阴天无日可晒=变相晴断言）——人设原文自带「晒」字字样的只许规则自述式引用且严禁配适配语，喂入 clear/晴 时不受此限），天气只许用中文措辞描述，严禁原样抄写英文天气代码（如「天气cloud」「天气 clear」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许「风轻轻的/风不大」，喂入风速>3m/s 只许「风不小/风挺大」类如实量级措辞（此时严禁「风不大/风也不大/风轻轻的/风声轻轻的」等任何带插入字的弱化变体与「微风/和风/清风/风轻」等弱化名词），缺风速则不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止「天气预报说/预报/听说」等消息源归属字样；实况与事件流从无台风数据，严禁提及任何台风场景（如「台风夜/台风刚过」）——「台风季」季节概念读法除外；喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象；城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」）；城市事件流也从无行情交易场次数据，严禁对开盘/收盘/行情收做当下状态断言；场次词仅当双方人设本就带行情/盘口/交易/盯盘域词才可提及，人设与行情盘口无关的严禁出现任何场次词；事件清单中的开发流水轮次号（如 round 156、R156）属开发循环内部标识，严禁引用；人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的），条件未被事件清单或实况坐实时严禁触发该场景，严禁惯常化措辞绕过，只能写无条件的人设日常；禁止编造开工/收班/时刻表/『再过几小时』等时间细节，禁止使用与当前时刻不符的时段词（如凌晨时辰写『今早/今晨/早晨/晨光/清晨/清早/晨风』、白天写『今晚/今夜/深夜』）；当前时刻未到放学时点（15 时前）禁止把放学写成已完成的事（如『今早放学绕路看了眼』），只能写放学后的打算（如『放学还得绕路去看』）；两位居民只许说自己卡面人设内的生活，人设没有学生身份就严禁提及『放学』类校园生活；喂入面从无雾况数据，除非卡面人设本身带「雾」字（如江雾习惯），严禁对雾做任何断言（如「江面上的雾挺大」）。\n"
-                  f"围绕其中一件真实事件，写两句话：甲对乙说的一句（20-40字），乙回的一句（20-40字）。输出两行，每行一句，不要序号。")
+                  f"居民「{n0}」人设：{persona_digest(texts[0])['traits']}，职业{persona_digest(texts[0])['prof']}。\n"
+                  f"居民「{n1}」人设：{persona_digest(texts[1])['traits']}，职业{persona_digest(texts[1])['prof']}。\n"
+                  f"现在真实北京时间 {sig['now']}，上海实况天气：{wx}。\n"
+                  f"硬约束（锚定律从严）：台词中提及的具体事必须逐字来自事件清单原文短语，不得添加清单外的具体事实。每行台词直接以台词本身呈现，开头禁止加任何称谓、人名或序号前缀；提及天气只许描述此刻实况亲历且天空类型必须与喂入天气串一致（clear 严禁阴系措辞、非晴天气（cloud/阴/雨/雷/雾等一切非 clear/晴 的天气）严禁晴系措辞；喂入非晴天气时严禁把任何带「晒」字的动作（不论晒的对象是什么）写成当下的天气适配句或意图句，无论适配语前置还是后置均不许与「正好/适合/该……了」类当下适配语共现（阴天无日可晒=变相晴断言）——人设原文自带「晒」字字样的只许规则自述式引用且严禁配适配语，喂入 clear/晴 时不受此限），天气只许用中文措辞描述，严禁原样抄写英文天气代码（如「天气cloud」「天气 clear」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许「风轻轻的/风不大」，喂入风速>3m/s 只许「风不小/风挺大」类如实量级措辞（此时严禁「风不大/风也不大/风轻轻的/风声轻轻的」等任何带插入字的弱化变体与「微风/和风/清风/风轻」等弱化名词），缺风速则不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止「天气预报说/预报/听说」等消息源归属字样；实况与事件流从无台风数据，严禁提及任何台风场景（如「台风夜/台风刚过」）——「台风季」季节概念读法除外；喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象；城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」）；城市事件流也从无行情交易场次数据，严禁对开盘/收盘/行情收做当下状态断言；场次词仅当双方人设本就带行情/盘口/交易/盯盘域词才可提及，人设与行情盘口无关的严禁出现任何场次词；事件清单中的开发流水轮次号（如 round 156、R156）属开发循环内部标识，严禁引用；人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的），条件未被事件清单或实况坐实时严禁触发该场景，严禁惯常化措辞绕过，只能写无条件的人设日常；禁止编造开工/收班/时刻表/『再过几小时』等时间细节，禁止使用与当前时刻不符的时段词（如凌晨时辰写『今早/今晨/早晨/晨光/清晨/清早/晨风』、白天写『今晚/今夜/深夜』）；当前时刻未到放学时点（15 时前）禁止把放学写成已完成的事（如『今早放学绕路看了眼』），只能写放学后的打算（如『放学还得绕路去看』）；两位居民只许说自己卡面人设内的生活，人设没有学生身份就严禁提及『放学』类校园生活；喂入面从无雾况数据，除非卡面人设本身带「雾」字（如江雾习惯），严禁对雾做任何断言（如「江面上的雾挺大」）。\n"
+                  f"围绕其中一件真实事件，写两句话：「{n0}」对「{n1}」说的一句（20-40字），「{n1}」回「{n0}」的一句（20-40字）。输出两行，每行一句，不要序号。")
         try:
             sig["card_text"] = "\n".join(texts)  # gap #18: both cards anchor the meet gate
             resp = gated_llm(prompt, sig)
