@@ -94,7 +94,9 @@ def dump(rows, path):
 def qc(rows, bad):
     fails = []
     if bad: fails.append("bad_light_rows=%d" % bad)
-    if len(rows) != 10003: fails.append("rows=%d" % len(rows))
+    # baseline follows citizens-light rows (C-10017~ intake raised it past the old 10003 hardcode)
+    n_light = sum(1 for ln in open(LIGHT, encoding="utf-8") if ln.strip())
+    if len(rows) != n_light: fails.append("rows=%d light=%d" % (len(rows), n_light))
     blocked = [r for r in rows if r["blocked"]]
     if len(blocked) != 3: fails.append("blocked=%d" % len(blocked))
     for r in rows:

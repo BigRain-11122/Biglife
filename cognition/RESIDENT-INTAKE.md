@@ -79,6 +79,31 @@ MiniGame 生产泵（:13/:33/:53）新席落位→styleprobe 新件清单+设计
 
 ①契约先行（**本件·R493**）→ ②**首批 10 席注册落籍**（下轮整轮预算优先：Tools/resident_intake.py 一次性件〔mirror_intake.py 先例族·--qc 断言电池+三门 import 复检+同输入双跑一致〕+生灵册 #12 登记+INDEX.md 文化街区层节·T2 v3.48 随件）→ ③AI 接线收口（认知栈再生跑验+QA 轮值验证+声位引擎分句逐席定谳表+窗面数据就绪声明）→ ④滚动合流回执（随批常设·令文件 §七 append-only）。**首件窗 ≤48h（09-29 前·首批交付面）**·在飞 10 席随清单到齐滚动补。
 
+## 声位引擎分句逐席定谳表 v1（分步③·2026-09-27 R497）
+
+承 §四.3——首批 10 席逐席定谳（卡面声位出生行原文保全·本表=生效口径单源）：
+
+| 席 | ID | 名 | 族/物种 | 出生基线（kokoro） | 定谳 |
+|---|---|---|---|---|---|
+| #1 | C-10017 | 灯伯 | 器灵 artifact-spirit | sid 47 · zf_xiaoxiao · 1.075 | kokoro 现役（器灵=合成音律） |
+| #2 | C-10018 | 汤玉珍 | 人类 carbon | sid 45 · zf_xiaobei · 1.124 | kokoro 现役；piper huayan 候选通道 parked |
+| #3 | C-10019 | 阿澄 | 仿生人 silicon | sid 49 · zm_yunjian · 1.01 | kokoro 现役；piper huayan 候选通道 parked |
+| #4 | C-10020 | 蓝拾遗 | 记忆灵 memory-spirit | sid 47 · zf_xiaoxiao · 1.053 | kokoro 现役（与 C-10017 同 sid 异 speed=组合互异合规） |
+| #5 | C-10021 | 瓦当 | 生灵·雀 sprite finch | sid 48 · zf_xiaoyi · 0.82 | kokoro 现役（碰撞对保留出生位） |
+| #6 | C-10022 | 苗守成 | 人类 carbon | sid 51 · zm_yunxia · 1.163 | kokoro 现役；piper huayan 候选通道 parked |
+| #7 | C-10023 | 林小满 | 人类 carbon | sid 45 · zf_xiaobei · 0.855 | kokoro 现役；piper huayan 候选通道 parked |
+| #8 | C-10024 | 铆师傅 | 机器人 silicon·compiled | sid 46 · zf_xiaoni · 1.053 | kokoro 现役（机器人=居民族成员·合成音同律） |
+| #9 | C-10025 | 小铜尾 | 生灵·狐 sprite copperfox | sid 46 · zf_xiaoni · 0.82 | kokoro 现役（与 C-10024 同 sid 异 speed=组合互异合规） |
+| #10 | C-10026 | 小霁 | 意象灵 imagery-spirit | sid 48 · zf_xiaoyi · 0.82 | **碰撞收口：生效 speed=1.06**（卡面定谳注记随件·出生行原文保全） |
+
+- **碰撞收口判据**：10 席 (sid,speed) 组合两两互异（R497 全表实测 10/10 唯一）——C-10021/C-10026 出生位全同（md5 同池同档合法命运）→小霁侧定谳生效 speed 0.82→1.06（雨霁意象·轻扬档）·瓦当保留出生位·出生行零改写（追加注记式）。
+- **piper huayan 候选通道评估**（人类/仿生人/机器人 5 席）：kokoro=现役唯一已实证合成通道（8 zh 基音试点 8/8·T2 v3.25）·piper zh 装机实证+盲测 5/5 判据未达=T-20260925-13 ① 承接 **parked**·换轨=卡面声位行追加注记式（原文保全）。
+
+## 分步③ 窗面数据就绪声明（2026-09-27 R497）
+
+AI 落实五面数据侧全就绪：①认知栈正式再生跑验全过（needs/persona/agency/behavior rows=10020 bad=0·memory_index/citizen_qa --qc 全 PASS=K8 正式面）；②K9 QA 白名单+轮值池 QC PASS（新席首环后自动入轮值池=v1.2 机制零代码）；③声位=定谳表 v1 生效口径（碰撞收口毕）；④窗面渲染（硅基生命元宇宙.html 居民面 rmbg 透明件）=MiniGame/Biggame 他司域**禁双建**·本司数据供面=citizens-light/atlas/voice R3 再生面（消费方再生即得）；⑤滚动合流常设待第二批 10 席清单到齐（分步④）。
+
 ## 更新记录
 
 - 2026-09-27 R493 首版（T-20260927-04 分步①契约先行：令 §一~§六全量并录+判据 K1-K12 预注册+八街区映射定谳+引擎分句承接+滚动合流常设化·零 LLM 纯确定性文本）。
+- 2026-09-27 R497 分步③ AI 接线收口（声位引擎分句逐席定谳表 v1+碰撞收口 C-10026 生效 speed=1.06+认知栈五面再生跑验+K9 QA 轮值验证+窗面数据就绪声明·T2 v3.49·零 LLM 纯确定性）。
