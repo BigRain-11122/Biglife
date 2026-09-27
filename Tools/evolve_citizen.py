@@ -1,6 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.32 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.33 - BigLife citizen evolution engine.
+v0.33 gap #56 residual gate close (2026-09-27, R479; R478 parked the
+whole-round census item): C-02918 first strike (「今天正好出来走走」
+rain-fed, card fixed R478, original preserved in batch commit bdae850d) is
+the day-subject fit - [day-noun ... 正好/适合 ... outdoor] in ONE clause =
+把今天当适合外出的理由, a veiled fair-weather assertion. The R478 flat
+bare-fit hypothesis was FALSIFIED by the R479 rescan (107 fit+outdoor
+clauses): the bare mass = cross-clause weather acknowledgments (天气X的，
+正好出去转转), schedule-fit reasons (周末了正好多逛逛/开档前正好去江边
+转转), rain-conditioned (借把伞/雨不大/等雨停) and negation (正好不出去
+走走) shapes - all stay legal via the in-clause reason/sky exemption plus
+the (?<![不别]) lookbehind; the v0.32 这天/天儿 substitution domain owns
+its own hits (exempted here, no double coverage). FP census (R479):
+registry would-fire 0 / face 0 / pools-greet 0 - 零误伤; fixtures 15/15
+incl. C-02739 「今天正好是单日」 date-parity probe and the C-02918
+original. No-subject bare forms (meet ring C-02270 shape) stay out -
+first-strike scope, widens on recurrence only (#46/#51 protocol). Meet
+prompt gains the narrowed clause (weather IS fed to meets, #44 precedent);
+batch prompt v0.30 flat clause stays as soft guidance.
 v0.32 gap #55 + #56 gate close (2026-09-27, R476; #55 parked whole-round from
 R475, #56 first-struck by this round's own batch): 清清 - the #27/#52 清系
 family with the sky morpheme dropped AND the char doubled (「没想到还是清清的」
@@ -621,6 +639,26 @@ def ring_violations(line, sig):
     # (outdoor-activity word list, whole-round budget, #51 protocol).
     if wx and not re.search(r"clear|晴|cloud|overcast|阴|多云", wx, re.I) and re.search(r"天[气儿](挺好|正好|贼好|好(?!坏)|挺适合)|(?<![今白明昨前那每半一当后後])天(挺好|正好|贼好|好(?!坏)|挺适合)|好天气", line):
         v.append("sky-mismatch")
+    # v0.33 gap #56 residual close (2026-09-27 R478 first strike C-02918
+    # 「今天正好出来走走」 rain-fed; card fixed R478, original in batch
+    # commit bdae850d; R478's 97-clause census rescanned R479 = 107
+    # fit+outdoor clauses, flat bare-fit hypothesis falsified - see header).
+    # Day-subject fit only: [day-noun ... 正好/适合 ... outdoor] in ONE
+    # clause under a non-clear-non-cloud feed. In-clause reason/sky morpheme
+    # exemption (雨雪阴雾雷晴/天气/天儿/这天/云/伞/雨衣/周末/下班/收工/收摊/
+    # 开档/收市/放学/交班/得空/有空/难得/赶上/顺路/捎带) keeps the
+    # census-observed legal shapes legal; (?<![不别]) keeps the negation
+    # reading (正好不出去走走, C-02886 shape) out; the v0.32 这天/天儿
+    # domain owns its own hits (C-02023/C-01920/C-02179, no double append).
+    # FP census (R479): registry 0 / face 0 / pools-greet 0; fixtures 15/15.
+    if wx and not re.search(r"clear|晴|cloud|overcast|阴|多云", wx, re.I):
+        for cl in re.split(r"[，。！？；;\n]", line):
+            if re.search(r"[雨雪阴雾雷晴]|天气|天儿|这天|云|伞|雨衣|周末|下班|收工|收摊|开档|收市|放学|交班|得空|有空|难得|赶上|顺路|捎带", cl):
+                continue
+            if re.search(r"(?:今天|今儿|今个儿|今天个|今早|今晨)[^，。！？；;\n]{0,4}(?:正好|正适合|挺适合|贼适合|挺合适|正合适)[^，。！？；;\n]{0,12}(?<![不别])(?:外出|走走|散步|溜达|遛弯|逛逛|逛街|转转|出去|出来)", cl):
+                if "sky-mismatch" not in v:
+                    v.append("sky-mismatch")
+                break
     # v0.32 gap #55 close (2026-09-27 R475 first strike): 清清 - the #27/#52
     # 清系 family with the sky morpheme dropped AND the char doubled
     # (「没想到还是清清的」 C-02894, rain feed; card fixed same round, original
@@ -1423,7 +1461,7 @@ def main():
                   f"居民「{n0}」人设：{persona_digest(texts[0])['traits']}，职业{persona_digest(texts[0])['prof']}。\n"
                   f"居民「{n1}」人设：{persona_digest(texts[1])['traits']}，职业{persona_digest(texts[1])['prof']}。\n"
                   f"现在真实北京时间 {sig['now']}，上海实况天气：{wx}。\n"
-                  f"硬约束（锚定律从严）：台词中提及的具体事必须逐字来自事件清单原文短语，不得添加清单外的具体事实。每行台词直接以台词本身呈现，开头禁止加任何称谓、人名或序号前缀；提及天气只许描述此刻实况亲历且天空类型必须与喂入天气串一致（clear 严禁阴系措辞、非晴天气（cloud/阴/雨/雷/雾等一切非 clear/晴 的天气）严禁晴系措辞，含天气挺好/天气正好/天气好/好天气/天气挺适合/这天挺好/这天挺适合这类不带天空字或省略天气字的好天气正面评估断言·同属晴系变体，也含拿「清清的」当天气或天色谓语的天字省略形（描写江水水色除外）；喂入非晴天气时严禁把任何带「晒」字的动作（不论晒的对象是什么）写成当下的天气适配句或意图句，无论适配语前置还是后置均不许与「正好/适合/该……了」类当下适配语共现（阴天无日可晒=变相晴断言）——人设原文自带「晒」字字样的只许规则自述式引用且严禁配适配语，喂入 clear/晴 时不受此限），天气只许用中文措辞描述，严禁原样抄写英文天气代码（如「天气cloud」「天气 clear」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许「风轻轻的/风不大」，喂入风速>3m/s 只许「风不小/风挺大」类如实量级措辞（此时严禁「风不大/风也不大/风轻轻的/风声轻轻的」等任何带插入字的弱化变体与「微风/和风/清风/风轻」等弱化名词），缺风速则不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止「天气预报说/预报/听说」等消息源归属字样；实况与事件流从无台风数据，严禁提及任何台风场景（如「台风夜/台风刚过」）——「台风季」季节概念读法除外；喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象；城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」）；城市事件流也从无行情交易场次数据，严禁对开盘/收盘/行情收做当下状态断言；场次词仅当双方人设本就带行情/盘口/交易/盯盘域词才可提及，人设与行情盘口无关的严禁出现任何场次词；事件清单中的开发流水轮次号（如 round 156、R156）属开发循环内部标识，严禁引用；人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的），条件未被事件清单或实况坐实时严禁触发该场景，严禁惯常化措辞绕过，只能写无条件的人设日常；禁止编造开工/收班/时刻表/『再过几小时』等时间细节，禁止使用与当前时刻不符的时段词（如凌晨时辰写『今早/今晨/早晨/晨光/清晨/清早/晨风』、白天写『今晚/今夜/深夜』）；当前时刻未到放学时点（15 时前）禁止把放学写成已完成的事（如『今早放学绕路看了眼』），只能写放学后的打算（如『放学还得绕路去看』）；两位居民只许说自己卡面人设内的生活，人设没有学生身份就严禁提及『放学』类校园生活；喂入面从无雾况数据，除非卡面人设本身带「雾」字（如江雾习惯），严禁对雾做任何断言（如「江面上的雾挺大」）。\n"
+                  f"硬约束（锚定律从严）：台词中提及的具体事必须逐字来自事件清单原文短语，不得添加清单外的具体事实。每行台词直接以台词本身呈现，开头禁止加任何称谓、人名或序号前缀；提及天气只许描述此刻实况亲历且天空类型必须与喂入天气串一致（clear 严禁阴系措辞、非晴天气（cloud/阴/雨/雷/雾等一切非 clear/晴 的天气）严禁晴系措辞，含天气挺好/天气正好/天气好/好天气/天气挺适合/这天挺好/这天挺适合这类不带天空字或省略天气字的好天气正面评估断言·同属晴系变体，非晴天气下「今天/今儿正好/挺适合+外出/走走/转转」类把今天当适合外出理由的适配句同禁（雨直读、等雨停、带伞等雨条件句除外），也含拿「清清的」当天气或天色谓语的天字省略形（描写江水水色除外）；喂入非晴天气时严禁把任何带「晒」字的动作（不论晒的对象是什么）写成当下的天气适配句或意图句，无论适配语前置还是后置均不许与「正好/适合/该……了」类当下适配语共现（阴天无日可晒=变相晴断言）——人设原文自带「晒」字字样的只许规则自述式引用且严禁配适配语，喂入 clear/晴 时不受此限），天气只许用中文措辞描述，严禁原样抄写英文天气代码（如「天气cloud」「天气 clear」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许「风轻轻的/风不大」，喂入风速>3m/s 只许「风不小/风挺大」类如实量级措辞（此时严禁「风不大/风也不大/风轻轻的/风声轻轻的」等任何带插入字的弱化变体与「微风/和风/清风/风轻」等弱化名词），缺风速则不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止「天气预报说/预报/听说」等消息源归属字样；实况与事件流从无台风数据，严禁提及任何台风场景（如「台风夜/台风刚过」）——「台风季」季节概念读法除外；喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象；城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」）；城市事件流也从无行情交易场次数据，严禁对开盘/收盘/行情收做当下状态断言；场次词仅当双方人设本就带行情/盘口/交易/盯盘域词才可提及，人设与行情盘口无关的严禁出现任何场次词；事件清单中的开发流水轮次号（如 round 156、R156）属开发循环内部标识，严禁引用；人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的），条件未被事件清单或实况坐实时严禁触发该场景，严禁惯常化措辞绕过，只能写无条件的人设日常；禁止编造开工/收班/时刻表/『再过几小时』等时间细节，禁止使用与当前时刻不符的时段词（如凌晨时辰写『今早/今晨/早晨/晨光/清晨/清早/晨风』、白天写『今晚/今夜/深夜』）；当前时刻未到放学时点（15 时前）禁止把放学写成已完成的事（如『今早放学绕路看了眼』），只能写放学后的打算（如『放学还得绕路去看』）；两位居民只许说自己卡面人设内的生活，人设没有学生身份就严禁提及『放学』类校园生活；喂入面从无雾况数据，除非卡面人设本身带「雾」字（如江雾习惯），严禁对雾做任何断言（如「江面上的雾挺大」）。\n"
                   f"围绕其中一件真实事件，写两句话：「{n0}」对「{n1}」说的一句（20-40字），「{n1}」回「{n0}」的一句（20-40字）。输出两行，每行一句，不要序号。")
         try:
             sig["card_text"] = "\n".join(texts)  # gap #18: both cards anchor the meet gate
