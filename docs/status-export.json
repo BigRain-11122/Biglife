@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-27T08:09:10+08:00",
+ "export_ts": "2026-09-27T08:16:06+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R441 批 10 due 落 8 环（C-02584/C-02591 双 rain-invented 留冷后过门+C-02600~C-02605 六席首环·批 67ea33ce+sync 34e23eff rows=8·ring=2597·今日新写环 366=R440 358+本批 8 接账=registry 直数实测）——2 席 persistent 门拦留冷：C-02566（rain-invented 长线）/C-02595（rain-invented）vs 实况无雨=结构性拦截（零程序动作零卡面改动·stays due 下轮自然再试）·propose 随批零候选诚实早退（日帽 3/3 在册·零窗损·R398/R400 判例同型）·**T-18 步⑨分步④ 补链批16/17 交付（批16 居民面收口 159 张 C-06061..C-09999·noted_res 7500→7659=居民段全毕 half_res=0·commit 5b91394c；批17 像素灵物种域注记首批 341 张 C-00168..C-08556·noted_spr=341·commit ec9c36a8·两批合计 500/轮配额守约·git 500 卡全 +1/-0 幂等·sublimate_audit v1.1 复跑对账 cards=9980 ok=1595 noted_res=7659 noted_spr=341 variant=227 sprites=158 bad=0 review=0·余量 385=像素灵 158+变体 227〔REVIEW 定谳桶单列·不入首批〕·报告 docs/research/R-20260926-sublimation-census.md 随轮刷新）**·QC 加跑 problems=0（cards=10003·evolved=2597 三方自洽·非到期=R439 正式巡检在案·不占巡检名额·下到期 R445 维持）·基因轮族距内跳过（R439 刚兑现 cp330/ho254/tp122）",
+   "t": "R442 批 10 due 落 8 环（C-02606~C-02613 八席·批 079b654a+sync d5ab4c31 rows=8·ring=2605·今日新写环 374=R441 366+本批 8 接账）——2 席 persistent 门拦留冷：C-02566（rain-invented 长线）/C-02595（rain-invented）vs 实况无雨=结构性拦截（零程序动作零卡面改动·stays due 下轮自然再试）·propose 随批零候选诚实早退（日帽 3/3 在册·零窗损·R398/R400 判例同型）·**T-18 步⑨分步④ 补链批18 像素灵收口交付（158 张 C-08609..C-09742·--scope sprites·noted_spr 341→499·commit 68201f7c·git 158 卡全 +1/-0 幂等·sublimate_audit v1.1 复跑对账 cards=9980 ok=1595 noted_res=7659 noted_spr=499 half_res=0 sprites=0 variant=227 bad=0 review=0·分步④ eligible 面 8158 全毕（居民段 7659+像素灵 499）·余=变体 227 复古后身 REVIEW 定谳桶单列·报告 docs/research/R-20260926-sublimation-census.md 随轮刷新）**·QC 修后复扫 problems=0（cards=10003·evolved=2605 三方自洽·不占巡检名额·下到期 R445）·基因轮族距内跳过（R439 刚兑现 cp330/ho254/tp122）",
    "s": 1
   },
   {
@@ -116,11 +116,11 @@
    "户籍卡"
   ],
   [
-   "2597",
+   "2605",
    "年轮居民"
   ],
   [
-   "366",
+   "374",
    "今日新写环"
   ],
   [
