@@ -7,6 +7,8 @@
 ②open/in-progress 单头/状态/交付行零触碰（只动「批实录」行族：迭代批实录/进化批实录/相遇轮实录/语言线闸实跑/池轮补深收口开头）
 ③滚动律=次日首轮裸跑（默认 cutoff=今日·移今日之前全部实录行·幂等零匹配即零动作）
 ④验收内建断言（任一不过即中止零写盘）：非移动行序逐字节零漂移 + 检查框行计数保全 + 移动行数=月件新增行数 + 抽验 10 行原文逐字命中月件
+⑤实录族全形判据（T-20260928-01 修面 v0.2）：正典形=OPENERS 开头（缩进随旧例）；缺标记形/补记形=列 0 `- [日期…]` 且 **R### 粗体轮注或落款 @BigLife-OSLoop；无 - 前缀形=列 0 `[日期…]` 同三判据之一。
+   缩进任务体行（status/交付/证据行）恒非实录=零误吞（判据②红线：open/in-progress 单头/状态/交付行零触碰）。
 红线：CEO 人设权保留面/荣誉席卡面/QC·sync·census 户籍面零涉（本件只读写 tasks/ 两文件）。
 用法：python -X utf8 Tools/archive_tasks.py [--before 2026-09-26] [--dry-run]
 """
@@ -21,24 +23,43 @@ ADIR = os.path.join(ROOT, 'tasks', 'archive')
 
 OPENERS = ('迭代批实录', '进化批实录', '相遇轮实录', '语言线闸实跑', '池轮补深收口')
 DATE_RE = re.compile(rb'^[ \t]*- \[(\d{4})-(\d{2})-(\d{2})[^\]]*\][ \t]*(.*)$')
+BARE_DATE_RE = re.compile(rb'^\[(\d{4})-(\d{2})-(\d{2})[^\]]*\][ \t]*(.*)$')
+ROUND_NOTE_RE = re.compile(r'\*\*R\d+ ')
 CLOSED_HEAD_RE = re.compile(rb'^- \[x\] ')
 BOUNDARY_RE = re.compile(rb'^(?:- \[|#)')
 
 
 def classify(line, cutoff):
-    """返回行日期（属实录行族且早于 cutoff），否则 None。"""
+    """返回行日期（属实录行族且早于 cutoff），否则 None。
+    T-20260928-01：判据兼容实录族全形（补记行/无 `- ` 前缀行/缺标记行）；
+    缩进任务体行（status/交付/证据行）缩进即豁免——列 0 判据是误吞防线。"""
     m = DATE_RE.match(line)
-    if not m:
+    if m:
+        date = (m.group(1) + b'-' + m.group(2) + b'-' + m.group(3)).decode('ascii')
+        if date >= cutoff:
+            return None
+        try:
+            rest = m.group(4).decode('utf-8')
+            head = line[:m.start(4)].decode('utf-8', 'replace')
+        except UnicodeDecodeError:
+            return None
+        if rest.startswith(OPENERS):
+            return date
+        if line.startswith(b'- [') and (ROUND_NOTE_RE.match(rest) or '@BigLife-OSLoop' in head):
+            return date
         return None
-    date = (m.group(1) + b'-' + m.group(2) + b'-' + m.group(3)).decode('ascii')
-    if date >= cutoff:
-        return None
-    try:
-        rest = m.group(4).decode('utf-8')
-    except UnicodeDecodeError:
-        return None
-    if rest.startswith(OPENERS):
-        return date
+    m = BARE_DATE_RE.match(line)
+    if m:
+        date = (m.group(1) + b'-' + m.group(2) + b'-' + m.group(3)).decode('ascii')
+        if date >= cutoff:
+            return None
+        try:
+            rest = m.group(4).decode('utf-8')
+            head = line[:m.start(4)].decode('utf-8', 'replace')
+        except UnicodeDecodeError:
+            return None
+        if rest.startswith(OPENERS) or ROUND_NOTE_RE.match(rest) or '@BigLife-OSLoop' in head:
+            return date
     return None
 
 
