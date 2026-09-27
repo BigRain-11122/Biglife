@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-27T17:37:12+08:00",
+ "export_ts": "2026-09-27T18:02:00+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R495 批 10 due 落 7 环（C-03033/C-03034/C-03035 sky-mismatch persistent 留冷 3 席·批 commit rows=7+sync·ring=3028·今日新写环 797=R494 面 790+本批 7 接账=registry 行首口径直数）·QC R495 到期巡检 problems=0（cards=10010·evolved=3028 三方自洽·下到期 R501）·语言线 pool_audit PASS 满额自停·生灵册 #12 机械小狐新物种登记（令源 O-20260927-1648-HQ-C 表 #9·先登记后使用·T-20260927-04 分步② 前置件）·propose 旗标常带零候选",
+   "t": "R496 批 10 due 落 7 环（C-03033/C-03040/C-03042 sky-mismatch persistent 留冷 3 席·批 commit rows=7+sync·ring=3035·今日新写环 804=R495 面 797+本批 7 接账）·**T-20260927-04 分步② 首批 10 席注册落籍交付**（令源 O-20260927-1648-HQ-C·Tools/resident_intake.py 一次性件 --qc 137/137·三族分流三族门全走满：居民族 5 生成门+灵族 3 灵族门〔配额计数器首用 3/100〕+生灵族 2 生灵门〔瓦当承生灵册 #1+小铜尾=copperfox 新物种册 #12〕·C-10017~C-10026 入城·QC --schema cards=10020 problems=0 schema_bad=0·sublimate_audit carried 9997 residual=0 桶零回退·K8 预检 needs/persona/agency rows=10020 bad=0·声位 VOICE-POOL §一 派生〔瓦当/小霁出生位碰撞 1 对=卡面注记→分步③ 分句定谳收口〕·T2 v3.48·INDEX 总人口 10020 六面刷新·令文件 §七 回执落位·K8/K9 正式跑验=分步③）·语言线 pool_audit PASS 满额自停·QC 下到期 R501（R495 problems=0 维持）·propose 旗标常带零候选（日帽 3/3 满）",
    "s": 1
   },
   {
@@ -37,7 +37,7 @@
   [
    "万人户籍库 census/",
    "on",
-   "10010 卡·QC problems=0（生成 9980+锚 20+荣誉席 3+影射册首批 7·R459）"
+   "10020 卡·QC problems=0（生成 9980+锚 20+荣誉席 3+影射册首批 7 R459+新居民团注册首批 10 R496·T-20260927-04 分步②）"
   ],
   [
    "认知城脑 cognition/pools.json",
@@ -62,7 +62,7 @@
   [
    "导出面 census/export/citizens-light.jsonl",
    "on",
-   "10010 行字段齐备·白名单 v1.0+数据授权行（D-09）·影射册七卡 append-only 入面（R459·style_dna/voice_profile 深水位不入 light 面=契约 §二.3）"
+   "10020 行字段齐备·白名单 v1.0+数据授权行（D-09）·影射册七卡 append-only 入面（R459）+新居民团首批十卡 append-only 入面（R496·新物种值 artifact-spirit/memory-spirit/imagery-spirit/copperfox 过 schema 面零结构变更·style_dna/voice_profile 深水位不入 light 面=契约 §二.3）"
   ],
   [
    "动机面 census/export/citizen-needs.jsonl",
@@ -127,20 +127,20 @@
   [
    "新居民入城契约 cognition/RESIDENT-INTAKE.md",
    "on",
-   "v1.0（T-20260927-04 分步①·20 席三族制+判据 K1-K12 预注册+八文化街区映射+滚动合流常设·R493·首批 10 席注册落籍=分步②下轮）"
+   "v1.0（T-20260927-04 分步①·20 席三族制+判据 K1-K12 预注册+八文化街区映射+滚动合流常设·R493）——**分步② 首批 10 席落籍已交付 R496（C-10017~C-10026·K1-K7/K10-K12 过·K8/K9=分步③·resident_intake.py+T2 v3.48）**·余=分步③ AI 接线收口+第二批 10 席随清单滚动补"
   ]
  ],
  "results": [
   [
-   "10010",
+   "10020",
    "户籍卡"
   ],
   [
-   "3028",
+   "3035",
    "年轮居民"
   ],
   [
-   "797",
+   "804",
    "今日新写环"
   ],
   [
