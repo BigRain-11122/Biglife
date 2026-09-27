@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-27T16:36:09+08:00",
+ "export_ts": "2026-09-27T16:57:00+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R491 批 10 due 落 8 环（C-02949/C-03002/C-03005=R490 面 persistent 留冷 3 席自然再试过门+C-03006/C-03007/C-03008/C-03009/C-03011 五首环·批 cc306d9c+sync d1d62c48 rows=8·ring=3003·今日新写环 772=registry 行口径直数实测〔R490 面 764+本批 8 接账吻合·stdout rows_changed=8 与 sync ring_synced=8 一致·registry evolved 直数 2980+锚 20+荣誉席 3=3003 三方对账〕）·2 席 persistent 门拦留冷（C-02997/C-03010 sky-mismatch·结构性拦截零程序动作零卡面改动·stays due 下轮自然再试）·propose 旗标常带零候选诚实早退（stdout no candidate·落环 8 席好奇=2∩空集·R398/R400 判例族同型·采样链路正常非缺陷）·核卡抽验 2/2 PASS 零修复（C-02949 王浩宇：底色「好咯」+口头禅「出锅喽——」逐字领句+「播报气象就像讲故事一样」=职业 face「把真实上海天气讲成评书」域内化+「今天是个好天气」C-00066 主观正向族豁免〔机审门批内放行=gate 权威佐证〕；C-03002 随机数-7：底色「缓存满了」「发版」逐字+「门神」行为 face 域内化+「江水清清」U229 江水色令白名单族〔现状 face「阳台正对江面」域吻合〕+「爽朗」v0.34 前瞻豁免族·双卡 [锚] 2/2 齐·零天体零时段违禁零占位词）·QC 免巡（R489 到期巡检 problems=0 在案·evolved 2995→3003·下到期 R495=R489+6）·语言线 audit 例份今日已用自停（池 1440 满额·R489 PASS 维持）·基因轮下到期 ≥R496（R488 刚兑现 892577b5·cp366/ho266/tp134）·相遇轮今日例份满维持（R429 双对落地+R443 三探针全拦·下场窗 09-28）·反思批日帽 3/3 满·聚光灯 9 月 2/2 满·尾查零新令（orders 15:14:06/decisions 15:14:19 双维持零漂移·council-pending 维持=C-20260927-01 意见窗至 09-29 12:00·席6 意见 BL03 在案·过会前零执行维持）",
+   "t": "R492 批 10 due 落 7 环（C-03012~C-03018 七席·批 c9a6c8a8+sync c814b5c6 rows=7·ring=3010·今日新写环 779=R491 面 772+本批 7 接账=registry 行口径直数）·3 席 persistent 门拦留冷（C-02997/C-03010/C-03019 sky-mismatch·结构性拦截零程序动作零卡面改动·stays due 下轮自然再试）·propose 旗标常带零候选诚实早退（stdout no candidate·日帽 3/3 满=R402 三条在册=零窗损）·核卡抽验 2/2 PASS 零修复（C-03012 路喜喜 RV：口头禅「退退退」+「我送走的老主顾比这城里一半的楼岁数都大」逐字领句+「风挺大」档内坐实〔gate 权威〕+棋摊 face 自洽；C-03016 阿凌·斯 MD：口头禅「茶凉了再倒就是」逐字+更新日志=commit 事件流域 own-work·双卡 [锚] 2/2 齐·机审门 v0.36 批内全审）·QC 免巡（R489 problems=0 在案·下到期 R495=R489+6）·语言线 pool_audit 实跑 verdict=PASS 满额自停（池 1440·确定性 192+25 零漂移）·相遇/反思/基因轮/聚光灯例份满维持（R429 相遇/R402 反思/R488 基因轮/9 月聚光 2/2）·**尾查捕获集团令 09-27 ~16:20〔外部审查·硅基生命体〕poolgen 再次停转令→同轮承接同轮收口**（T-20260927-03：根因三路排查=poolgen 全仓 Tools 零引用·poolgen_run.log 系一次性捕获件·真根因=pool_gen 拉取式架构〔水位 18/12=1440 满额自停=设计态非故障〕→修=补上从未存在的 cron 注册：schtasks 任务 BigLife-PoolGenLoop〔PT1H·静默 VBS·幂等〕+Tools/poolgen_loop.ps1 tick〔pool_gen --append 幂等·at-target 零生成+pools.json 字节零漂移 git 净态实证·欠深有界补深 budget 300 软顶·每跑必落戳·异常捕获入 err log·双锁〕+Tools/register_poolgen_loop.ps1·种子戳 16:49:41+首自动火 17:06:00=判据双戳间隔 ~16min <24h 达成·T2=CODEX §十二 v3.47·回执 F-20260927-BL04）·尾查 decisions.md 15:14:19 维持（council-pending C-20260927-01 意见窗至 09-29 12:00·席6 意见 BL03 在案·过会前零执行维持）",
    "s": 1
   },
   {
@@ -14,7 +14,7 @@
   },
   {
    "n": "语言线·台词池",
-   "t": "**水位扩容达标：池 1440+问候 518**（T-07 双面 R204 一次全量收口·CEO 定向令 O-20260925-1138 承令·pool_gen 84+28 桶 FAIL=NONE·audit PASS hard 0·under_target NONE-SELF_TERMINATE·确定性 192+25 零漂移）·批策略 10 生效·**09-26 ~16:20 外部审查令回应（orders.md 21:11:27 落册·@BigLife·T-20260926-14 同轮收口）**：排查定谳=非故障——poolgen_run.log 停在 9/24 16:12 系水位达标自停（自终止律=迭代总纲原文「语言线达标自停」·audit 每轮实跑 PASS·under_target NONE·该文件=state/ 一次性运行捕获件非常驻任务日志〔Tools 全仓零引用〕·err 0 字节零报错·零故障零修复）·手动触发承令执行 21:15:22（CEO 令胜自停默认：pool_gen --append --target 18 --sprite-target 12→84 桶全 at target·TOTAL=1440·FAIL=NONE·exit=0·零新条目=水位满额诚实结果·追加式 9/24 史保全）·判据②=census 新条目=年轮线全日在产（今日新写环 781·年轮居民 2110·本批 4 环 acb56d3c）——回执 F-20260926-BL08",
+   "t": "**水位扩容达标：池 1440+问候 518**（T-07 双面 R204 一次全量收口·CEO 定向令 O-20260925-1138 承令·pool_gen 84+28 桶 FAIL=NONE·audit PASS hard 0·under_target NONE-SELF_TERMINATE·确定性 192+25 零漂移）·批策略 10 生效·**09-26 ~16:20 外部审查令回应（orders.md 21:11:27 落册·@BigLife·T-20260926-14 同轮收口）**：排查定谳=非故障——poolgen_run.log 停在 9/24 16:12 系水位达标自停（自终止律=迭代总纲原文「语言线达标自停」·audit 每轮实跑 PASS·under_target NONE·该文件=state/ 一次性运行捕获件非常驻任务日志〔Tools 全仓零引用〕·err 0 字节零报错·零故障零修复）·手动触发承令执行 21:15:22（CEO 令胜自停默认：pool_gen --append --target 18 --sprite-target 12→84 桶全 at target·TOTAL=1440·FAIL=NONE·exit=0·零新条目=水位满额诚实结果·追加式 9/24 史保全）·判据②=census 新条目=年轮线全日在产（今日新写环 781·年轮居民 2110·本批 4 环 acb56d3c）——回执 F-20260926-BL08·**09-27 ~16:20 二次令（做成自循环而非一次性·判据=连续戳 <24h）同轮收口 R492**：根因=poolgen 从未有 cron 注册（拉取式·audit 满额态零调用·R375 已定谳非故障·本次令=自循环面升格）→schtasks BigLife-PoolGenLoop 每小时自循环 tick 注册在役（Tools/poolgen_loop.ps1+register_poolgen_loop.ps1·种子戳 16:49:41+首火 17:06=双戳间隔 ~16min 达成·pool_gen --append 幂等 at-target 零生成字节零漂移·欠深 budget 300 软顶·异常捕获入 poolgen_err.log·T2 v3.47·回执 F-20260927-BL04）",
    "s": 2
   },
   {
@@ -131,11 +131,11 @@
    "户籍卡"
   ],
   [
-   "3003",
+   "3010",
    "年轮居民"
   ],
   [
-   "772",
+   "779",
    "今日新写环"
   ],
   [
