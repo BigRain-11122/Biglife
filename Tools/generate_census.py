@@ -9,6 +9,7 @@ Usage: python generate_census.py [--seed 20260923] [--out census]
 """
 import json, hashlib, os, random, sys, argparse, datetime
 import political_redline  # 入城门政治红线扫描器（T-20260926-18 步⑦第 5 件·CODEX §十二 v3.36）
+import sublimate_audit  # 复古后身合法亚型白名单单源（R453 定谳·T-18 步⑨变体桶定谳件·CODEX §十二 v3.45）
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
@@ -467,7 +468,8 @@ def render_anchor(a):
 def sublimate_gate(c, text):
     """入城门 fail-fast：升华律 v1.3 生成门/生灵门（T-20260926-18 步①②机制面）。
     碳基/硅基新居民 prof 缺「赛博后身」双底座链=拒绝入册（存量 ✅1595 链全在职业行=
-    严格口径零漂移·⚠️8385 补链排程 P-13 Phase1 ≤10-02·本门只对新入册生效）；
+    严格口径零漂移·⚠️8385 补链批 R426~R442 全毕+复古亚型 227 R453 定谳收口=8385→0 达成）；
+    复古后身=合法亚型白名单（R453 定谳·8bit 乐师模板族·sublimate_audit.VARIANT_LEGAL 单源引用·白名单外照拒）；
     像素灵缺生灵三问（升华形态链+行为卡+羁绊）=拒绝入册（令 §一.5 生灵登记门同律）。"""
     prof = ""
     has_act = has_rel = False
@@ -487,7 +489,9 @@ def sublimate_gate(c, text):
         if not has_rel:
             miss.append("羁绊")
         return miss
-    if "赛博后身" not in prof:
+    # R453 定谳：复古后身=（赛博）后身合法亚型（限注册模板族白名单·单源 VARIANT_LEGAL）；
+    # 白名单外复古后身=照拒·新卡法定中环「（赛博）后身」口径不变（亚型不扩通例·防规避漂移）。
+    if "赛博后身" not in prof and not ("复古后身" in prof and prof.split("：")[0].strip() in sublimate_audit.VARIANT_LEGAL):
         return ["双底座链"]
     return []
 
