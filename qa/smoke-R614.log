@@ -1,0 +1,6 @@
+——BigLife 数据面自验（T-20260928-05 第二十二证·2026-09-29 04:4x）——
+[1] poolgen 跑通: tick 2026-09-29 04:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（state/poolgen_run.log 尾行·03:06→04:06 间隔 60min <24h 连戳判据持续满足）
+[2] census 新条目: R614 批 10 due 落 7 环（C-03783/C-03794/C-03795/C-03796/C-03798/C-03799/C-03800·批 commit ce335557·ring=3778→3791）·核卡抽验 2/2 PASS 零修复（C-03795 风挺大=wind 11.2m/s 实况坐实/C-03798 口头禅直引豁免 C-00230 族）
+[3] 位置字段非 null: citizen-behavior.jsonl rows=10030 slot_null=0（实测 2026-09-29 04:4x）
+[4] 行为链再生: sync_rings rows=7（批 13176590）ring=3791·R614 批零修卡零复扫（QC 免巡·下到期 ≈R618）
+[5] heartbeat 3h 内: 上轮 2026-09-29 04:26:47 done·0.24h·本轮轮末刷新——五项全勾 PASS（真实运行输出·逐条可复跑）
