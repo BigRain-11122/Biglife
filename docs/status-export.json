@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-29T05:41:00+08:00",
+ "export_ts": "2026-09-29T05:58:23+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R618 批 10 due 落 6 环（rows_changed=6 ring_synced=6·ring=3806→3812·4 席 persistent 留冷 C-03728/03748/03807/03816 time-morning/sky-mismatch 门·凌晨档结构性拦零程序动作）·09-29 新写环 124（行级直数=R617 118+本批 6）·**T-20260929-01 分步③ buddy 卡面社交边族交付（relations_manifest v1.2·T2 v3.52·卡面「关系」节出生分配社交提及 10 类闭集确定性派生·colleague 职业派生=拒+rumor 持久边=parked 双候选评估定谳·R3 再生 rows=2841090〔block 2822314+buddy 15131+household 3629+meet 16 账平〕--qc PASS）**·T-07 Bonsai GPU 探针本轮未跑（预算让位分步③·回执 F-20260929-BL01 已前置·单 open 至窗后收口）·T-09 lowpoly 批 2 库内呈报维持（待 CEO 过目后出库·呈报面随日清窗）",
+   "t": "R619 批 10 due 落 5 环（rows_changed=5 ring_synced=5·ring=3812→3817·5 席 persistent 留冷 C-03728/03807/03810/03823/03826 time-morning/sky-mismatch 门·凌晨档结构性拦零程序动作）·09-29 新写环 129（行级直数=R618 124+本批 5）·**T-20260929-01 分步④ 观测面交付：社交边计数/类型分布/meet 网络对数入本件 results 区（盘面直数实测 rows=2841090=block 2822314+buddy 15131+household 3629+meet 16 账平·md5 882f65a5=R618 再生件零漂移）**·T-07 Bonsai GPU 探针随轮第十三探=6831/12282MiB util 3%（空窗未开·余 5.32GB<5.94GB 权重·让路律不抢）·T-09 lowpoly 批 2 库内呈报维持（待 CEO 过目后出库·呈报面随日清窗）",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "随进环批自动同步 recent_ring（R618 批 sync rows=6·ring=3812）+behavior.py v3.7 --auto 再生节律/社交位族 v3.27/休闲环 v3.20/休息环 v3.18/声景反向 v3.30 在役（L2 补环三步全毕+T-13 关结）",
+   "t": "随进环批自动同步 recent_ring（R619 批 sync rows=5·ring=3817）+behavior.py v3.7 --auto 再生节律/社交位族 v3.27/休闲环 v3.20/休息环 v3.18/声景反向 v3.30 在役（L2 补环三步全毕+T-13 关结）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "QC R618 到期正式巡检 problems=0（cards=10030·evolved=3812·QC-REPORT 随轮入库·下到期 ≈R624）·smoke R618 第二十六证五项全勾+红线行+QC 行+分步③ 回归行（poolgen tick 05:06:02 TOTAL=1440·R618 本批 6 环·light=10030 守卫过·sync rows=6 ring=3812·heartbeat 轮末刷新）",
+   "t": "QC 免巡窗（R618 到期巡检 problems=0·cards=10030·QC-REPORT 在库·下到期 ≈R624）·smoke R619 第二十七证五项全勾+红线行+分步④ 观测面行（poolgen tick 05:06:02 连戳维持·R619 本批 5 环·light=10030 守卫过·sync rows=5 ring=3817·heartbeat 轮末刷新）",
    "s": 1
   },
   {
@@ -102,7 +102,7 @@
   [
    "关系面 census/export/citizen-relations.jsonl",
    "on",
-   "R3 再生面·T-20260925-09 R210 交付（Tools/relations_manifest.py 三源→一面·纯解析零 LLM·--qc bad=0·荣誉席 block 源排除·家户独居否定规则·消费前重生成·T2 v3.14）·R616 再生刷新 meet 边 4→16 账平（T-20260929-01 分步①·CEO 方向令关系网主线·md5 d7fd6a92·rows=2825959）·**v1.1 meet 边强度面（分步②·T2 v3.51）：meet 行型 {a,b,rel,src,count,last}——count=相遇次数（年轮互引行按日期去重直数）·last=最近一次·src=首次日期语义零变·block/household 行型零改动·纯追加字段消费方零 breaking·--qc PASS md5 120abce8·rows=2825959（block 2822314+household 3629+meet 16）**"
+   "R3 再生面·T-20260925-09 R210 交付（Tools/relations_manifest.py 三源→一面·纯解析零 LLM·--qc bad=0·荣誉席 block 源排除·家户独居否定规则·消费前重生成·T2 v3.14）·R616 再生刷新 meet 边 4→16 账平（T-20260929-01 分步①·CEO 方向令关系网主线·md5 d7fd6a92·rows=2825959）·**v1.1 meet 边强度面（分步②·T2 v3.51）：meet 行型 {a,b,rel,src,count,last}——count=相遇次数（年轮互引行按日期去重直数）·last=最近一次·src=首次日期语义零变·block/household 行型零改动·纯追加字段消费方零 breaking·--qc PASS md5 120abce8·rows=2825959（block 2822314+household 3629+meet 16）**·**v1.2 buddy 边族（分步③·T2 v3.52）：卡面「关系」节出生分配社交提及 10 类闭集确定性派生（多类型「、」归并·工友=真同职场边）·R3 再生 rows=2841090（block 2822314+buddy 15131+household 3629+meet 16 账平·md5 882f65a5·--qc PASS）**·**分步④ 观测面（R619）：社交边计数/类型分布/meet 网络对数入 status-export results 区（盘面直数）**"
   ],
   [
    "反思面 census/reflections.jsonl",
@@ -141,12 +141,12 @@
    "户籍卡"
   ],
   [
-   "3806",
-   "3812"
+   "3812",
+   "3817"
   ],
   [
-   "118",
-   "124"
+   "124",
+   "129"
   ],
   [
    "456/298",
@@ -155,6 +155,18 @@
   [
    "518",
    "问候库"
+  ],
+  [
+   "2841090",
+   "社交边总数（citizen-relations R3·block 2822314+buddy 15131+household 3629+meet 16 账平·md5 882f65a5）"
+  ],
+  [
+   "15131",
+   "buddy 边 10 类分布（茶友1612/忘年交1574/对手1533/牌友1520/邻居1515/常客1490/老搭档1490/老主顾1482/棋友1466/工友1461·提及 15143/对 15131）"
+  ],
+  [
+   "16",
+   "meet 网络对数（count 全 1·初遇诚实现状）"
   ]
  ]
 }
