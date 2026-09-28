@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-29T05:20:10+08:00",
+ "export_ts": "2026-09-29T05:41:00+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R617 批 10 due 落 5 环（C-03748/03805/03814/03815/03817·批 54ba3e71+sync 8edf21c4 rows=5·ring=3801→3806·5 席 persistent 留冷 C-03728/03807/03809/03810/03816 time-morning/sky-mismatch 门·凌晨档结构性拦零程序动作）·09-29 新写环 118（行级直数=R616 113+本批 5）·**T-20260929-01 分步② meet 边强度升级 v2 交付（relations_manifest v1.1·T2 v3.51·meet 行 +count/last 强度面·R3 再生 rows=2825959 --qc PASS）**·T-07 Bonsai GPU 探针第十七=6830/12282 MiB 空窗未开（回执 F-20260929-BL01 已前置·单 open 至窗后收口）·T-09 lowpoly 批 2 库内呈报维持（待 CEO 过目后出库·呈报面随日清窗）",
+   "t": "R618 批 10 due 落 6 环（rows_changed=6 ring_synced=6·ring=3806→3812·4 席 persistent 留冷 C-03728/03748/03807/03816 time-morning/sky-mismatch 门·凌晨档结构性拦零程序动作）·09-29 新写环 124（行级直数=R617 118+本批 6）·**T-20260929-01 分步③ buddy 卡面社交边族交付（relations_manifest v1.2·T2 v3.52·卡面「关系」节出生分配社交提及 10 类闭集确定性派生·colleague 职业派生=拒+rumor 持久边=parked 双候选评估定谳·R3 再生 rows=2841090〔block 2822314+buddy 15131+household 3629+meet 16 账平〕--qc PASS）**·T-07 Bonsai GPU 探针本轮未跑（预算让位分步③·回执 F-20260929-BL01 已前置·单 open 至窗后收口）·T-09 lowpoly 批 2 库内呈报维持（待 CEO 过目后出库·呈报面随日清窗）",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "随进环批自动同步 recent_ring（R617 批 sync rows=5·ring=3806）+behavior.py v3.7 --auto 再生节律/社交位族 v3.27/休闲环 v3.20/休息环 v3.18/声景反向 v3.30 在役（L2 补环三步全毕+T-13 关结）",
+   "t": "随进环批自动同步 recent_ring（R618 批 sync rows=6·ring=3812）+behavior.py v3.7 --auto 再生节律/社交位族 v3.27/休闲环 v3.20/休息环 v3.18/声景反向 v3.30 在役（L2 补环三步全毕+T-13 关结）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "QC 免巡（R612 problems=0 在案·下到期 ≈R618）·smoke R617 第二十五证五项全勾+红线行（poolgen tick 05:06:02 TOTAL=1440·R617 本批 5 环·light=10030 轮首守卫过·sync rows=5 ring=3806·heartbeat 轮末刷新）",
+   "t": "QC R618 到期正式巡检 problems=0（cards=10030·evolved=3812·QC-REPORT 随轮入库·下到期 ≈R624）·smoke R618 第二十六证五项全勾+红线行+QC 行+分步③ 回归行（poolgen tick 05:06:02 TOTAL=1440·R618 本批 6 环·light=10030 守卫过·sync rows=6 ring=3812·heartbeat 轮末刷新）",
    "s": 1
   },
   {
@@ -141,12 +141,12 @@
    "户籍卡"
   ],
   [
-   "3801",
-   "3806"
+   "3806",
+   "3812"
   ],
   [
-   "113",
-   "118"
+   "118",
+   "124"
   ],
   [
    "456/298",

@@ -1,0 +1,11 @@
+# smoke-R618 · 2026-09-29 05:3x · [via BigLife-OSLoop]
+五项自验（charter=docs/qa-smoke-test-charter.md v1.0·数据面自验适配·证据随行）
+[1] poolgen tick/池链通：tick 05:06:02 src=auto 维持（TOTAL=1440 FAIL_BUCKETS=NONE·pool_audit 本轮复证 PASS 满额 1440+518·确定性 192+25 对零漂移·err.log 零异常）✔
+[2] census 新条目：本批 6 环（54ba3e71 后批·C-03748/03805/03814/03815/03817 之外的 6/10 落环=rows_changed=6 ring_synced=6·4 席 time-morning 门拦留冷·[锚] 注脚随批）✔
+[3] 位置字段非 null：镜像 sync 随批 rows=6（脚本回读 committed rows_changed=6 ring_synced=6）✔
+[4] 行为链 sync：--auto 随批已跑（sync_rings 自动收口·脚本内建）✔
+[5] heartbeat 3h 内：05:23:00 round done exit=0（R617 收口行·<3h）·轮末 alive 行随本收尾刷新 ✔
+[+] CEO 令 04:37 判据红线（轮首断言）：registry C-*.md 计数不变 + citizens-light 行数=10030 不变（本轮 QC 实测 cards=10030·批量注册冻结维持·轮首 pull 工作区净）✔
+[+] QC R618 到期正式巡检：qc_census cards=10030 evolved=3812 problems=0（QC-REPORT 随轮入库·下到期 ≈R624）✔
+[+] T-20260929-01 分步③ 关系面回归：relations_manifest v1.2 再生 rows=2841090（block 2822314+buddy 15131+household 3629+meet 16 账平）·--qc PASS（双跑 MD5 一致+disk==re-derive+buddy 行 src 与卡面类型集三方一致 bad=0·md5 882f65a5）·meet-suggest QC PASS（verify 10/10 disk=OK）✔
+五项全勾+红线零触发+QC 巡检+分步③ 回归全绿。

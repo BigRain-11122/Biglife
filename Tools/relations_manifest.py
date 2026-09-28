@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""relations_manifest.py v1.1 — 关系面 manifest（T-20260925-09 分步②·契约=R209 认领行判据先行）
+"""relations_manifest.py v1.2 — 关系面 manifest（T-20260925-09 分步②·契约=R209 认领行判据先行·v1.2=T-20260929-01 分步③）
 
-三源→一面（纯解析确定性·零 LLM·只读 census 卡面+年轮·FluxVerse 零触碰）：
+四源→一面（纯解析确定性·零 LLM·只读 census 卡面+年轮·FluxVerse 零触碰）：
   ① 家户共址 rel=household：卡面「关系」字段「家户 H-*（描述）」同 H 号跨卡两两成对（src=H 号）
      ——判据③零编造规则：双成员描述均非「独居」才成对（独居=卡面自否认同户；P-0 批次
      6 巨型家户 H-GM1137/H-QT2251/H-MD1660/H-NS0498/H-OR0229/H-RV2371 共 4578 成员
@@ -10,12 +10,16 @@
   ② 街区共域 rel=block：卡头「城区」字段值全串等值跨卡两两成对（字段与「物种」同行以 ｜ 分隔、
      值含街区段=同街区；荣誉席卡头自注「不入城区分布」→ 排除·人设权保守面；src=街区名=末段）
   ③ 年轮互链 rel=meet：年轮行「与 C-* 相遇」跨卡互引（单向提及亦记·双向互引去重成单行·src=首次日期〔v1.0 语义零变〕）
+  ④ 卡面社交 rel=buddy（v1.2·T-20260929-01 分步③定谳采纳件）：卡面「关系」节出生分配社交提及
+     「类型 C-xxxxx」（10 类闭集=茶友/忘年交/对手/牌友/邻居/常客/老搭档/老主顾/棋友/工友——工友=真
+     同职场边）确定性派生；单向提及亦记·双向提及并边；src=类型词（多类型对 12 例='、'升序归并串）。
+     范围外如实记：族外变体 1 例（铆师傅·batch-2 自由文本关系面）不入 buddy 面——开放词表禁盲收。
 
 输出 census/export/citizen-relations.jsonl（R3 再生面·gitignored）：
-  行型 block/household={a,b,rel,src}；meet={a,b,rel,src,count,last}——v1.1 强度面（T-20260929-01 分步②·
+  行型 block/household/buddy={a,b,rel,src}；meet={a,b,rel,src,count,last}——v1.1 强度面（T-20260929-01 分步②·
   T2=CODEX §十二 v3.51）：count=相遇次数〔双方年轮互引行按日期去重直数派生〕·last=最近一次日期·
   纯确定性零 LLM·对消费方=纯追加字段（src 语义不变·读 src/count 前值零 breaking）
-  · a<b 规范对序 · (a,rel,b) 主键去重 · (a,rel,b) 升序确定性排序
+  · a<b 规范对序 · (a,rel,b) 主键去重 · (a,rel,b) 升序确定性排序（rel 发射序=block<buddy<household<meet）
 
 审判据：①纯解析确定性零 LLM ②同输入双跑逐字节一致（MD5）③关系零编造（三源外零数据源·
   H/C 号域校验·a<b 对偶自反不重复成行）④QC 门（schema 白名单+rel 闭集+引用 ID 存在性全查+
@@ -43,12 +47,16 @@ H_RE = re.compile(r'家户 (H-[A-Z0-9]+)(?:（([^）]*)）)?')
 MEET_RE = re.compile(r'与 (C-\d{5}) 相遇')
 RING_RE = re.compile(r'^- (\d{4}-\d{2}-\d{2}) ')
 CID_RE = re.compile(r'^C-\d{5}$')
-REL_SET = ('block', 'household', 'meet')  # 闭集（升序=发射序）
+REL_SET = ('block', 'buddy', 'household', 'meet')  # 闭集（升序=发射序）
 ALONE_DESC = '独居'
+# v1.2 buddy 面：出生分配 10 类闭集 + 卡面「类型 C-id」提及解析（量测实测 15143 提及/0 悬空/0 自指）
+BUD_FAM = ('茶友', '忘年交', '对手', '牌友', '邻居', '常客', '老搭档', '老主顾', '棋友', '工友')
+BUD_RE = re.compile(r'([\u4e00-\u9fa5]{1,4})(?:·[\u4e00-\u9fa5]+)? (C-\d{5})(?:·[\u4e00-\u9fa5]+)?')
+BUD_SEP = '、'
 
 
 def load_cards():
-    """只读解析全部户籍卡（含 census/reserved/ 荣誉席）→ {cid: {district, household, alone, meets}}"""
+    """只读解析全部户籍卡（含 census/reserved/ 荣誉席）→ {cid: {district, household, alone, buddies, meets}}"""
     cards = {}
     for path in sorted(glob.glob(os.path.join(CENSUS_DIR, '**', 'C-*.md'), recursive=True)):
         cid = os.path.splitext(os.path.basename(path))[0]
@@ -57,6 +65,7 @@ def load_cards():
         district = None
         household = None
         alone = False
+        buddies = []
         meets = []
         with open(path, encoding='utf-8') as fh:
             for line in fh:
@@ -68,6 +77,9 @@ def load_cards():
                     if m:
                         household = m.group(1)
                         alone = (m.group(2) or '') == ALONE_DESC
+                    for bm in BUD_RE.finditer(s):  # v1.2 卡面社交提及（闭集过滤·自指排除）
+                        if bm.group(1) in BUD_FAM and bm.group(2) != cid:
+                            buddies.append((bm.group(2), bm.group(1)))
                 elif RING_RE.match(s):
                     dm = MEET_RE.search(s)
                     if dm:
@@ -75,7 +87,8 @@ def load_cards():
                         other = dm.group(1)
                         if other != cid:
                             meets.append((other, date))
-        cards[cid] = {'district': district, 'household': household, 'alone': alone, 'meets': meets}
+        cards[cid] = {'district': district, 'household': household, 'alone': alone,
+                      'buddies': buddies, 'meets': meets}
     return cards
 
 
@@ -90,7 +103,7 @@ def block_name(district_value):
 def derive_rows(cards):
     """按 (a, rel, b) 升序流式产出 (a, b, rel, src)——不全局物化（万卡街区对 ~2.4M 行控内存）。
 
-    a 升序外层；rel 按 REL_SET 序（block/household/meet）；每源内 b 升序。
+    a 升序外层；rel 按 REL_SET 序（block/buddy/household/meet）；每源内 b 升序。
     """
     ids = sorted(cards)
     hh_groups = {}
@@ -123,15 +136,27 @@ def derive_rows(cards):
     for (a, b), dates in meet_dates.items():
         mt_pairs.setdefault(a, []).append((b, min(dates), len(dates), max(dates)))
 
+    # v1.2 buddy：卡面社交提及→(a,b) 类型集（单向亦记·双向并边·多类型 '、' 升序归并）
+    bud_types = {}
+    for cid in ids:
+        for other, typ in cards[cid]['buddies']:
+            a, b = (cid, other) if cid < other else (other, cid)
+            bud_types.setdefault((a, b), set()).add(typ)
+    bd_pairs = {}
+    for (a, b), types in bud_types.items():
+        bd_pairs.setdefault(a, []).append((b, BUD_SEP.join(sorted(types))))
+
     for a in ids:
         emit = []
         for b in sorted(blk_pairs.get(a, ())):
             emit.append(('block', b, block_name(cards[a]['district']), None))
+        for b, src in sorted(bd_pairs.get(a, ())):
+            emit.append(('buddy', b, src, None))
         for b in sorted(hh_pairs.get(a, ())):
             emit.append(('household', b, cards[a]['household'], None))
         for b, first, cnt, last in sorted(mt_pairs.get(a, ())):
             emit.append(('meet', b, first, (cnt, last)))
-        # rel 发射序=REL_SET（block<household<meet 与逐源 b 升序天然满足 (a,rel,b) 全序）
+        # rel 发射序=REL_SET（block<buddy<household<meet 与逐源 b 升序天然满足 (a,rel,b) 全序）
         for rel, b, src, extra in emit:
             yield a, b, rel, src, extra
 
@@ -161,14 +186,15 @@ def derive_md5(cards):
 
 def cmd_run(cards):
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
-    stats = {'block': 0, 'household': 0, 'meet': 0}
+    stats = {'block': 0, 'buddy': 0, 'household': 0, 'meet': 0}
     with open(OUT_PATH, 'w', encoding='utf-8', newline='\n') as fh:
         for chunk in serialize(derive_rows(cards)):
             fh.write(chunk)
             stats[chunk.split('"rel":"', 1)[1].split('"', 1)[0]] += 1
     md5, total = derive_md5(cards)  # 双跑第二遍=判据②（同输入双跑一致由 --qc 复核落锤）
-    print('relations rows=%d block=%d household=%d meet=%d md5=%s' %
-          (sum(stats.values()), stats['block'], stats['household'], stats['meet'], md5))
+    print('relations rows=%d block=%d buddy=%d household=%d meet=%d md5=%s' %
+          (sum(stats.values()), stats['block'], stats['buddy'],
+           stats['household'], stats['meet'], md5))
     print('written:', os.path.relpath(OUT_PATH, ROOT))
 
 
@@ -229,6 +255,11 @@ def cmd_qc(cards):
             ca, cb = cards[a], cards[b]
             if rel == 'block':
                 if block_name(ca['district']) != src or block_name(cb['district']) != src:
+                    bad += 1
+            elif rel == 'buddy':  # v1.2：src 与卡面提及类型集三方一致（双向并集·升序归并复derive）
+                types = {t for o, t in ca['buddies'] if o == b} | \
+                        {t for o, t in cb['buddies'] if o == a}
+                if not types or src != BUD_SEP.join(sorted(types)):
                     bad += 1
             elif rel == 'household':
                 if ca['household'] != src or cb['household'] != src or ca['alone'] or cb['alone']:
