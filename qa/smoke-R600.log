@@ -1,0 +1,23 @@
+# BigLife QA Smoke Test — R600（2026-09-29 01:30·T-20260928-05 常设随轮件·第十证）
+# 章程=docs/qa-smoke-test-charter.md v1.0 BigLife 节（数据面自验：census 最新条目+行为链样例·log 面即证据面·逐条可复跑）
+
+[1/5] poolgen 跑通（tick 戳连续 <24h 判据）
+=== 2026-09-29 01:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+（state/poolgen_run.log 尾行实测·schtasks BigLife-PoolGenLoop 每小时自循环·09-27 16:49 种子戳起连戳链维持）→ PASS
+
+[2/5] census 新条目（本批新环）
+年轮批 10 due 落 5 环：C-03711, C-03715, C-03732, C-03733, C-03734
+（git log 实证：d89cc2eb「年轮 2026-09-29: C-03711, C-03715, C-03732, C-03733, C-03734 [via BigLife-OSLoop]」·registry 五卡 diff +4/-1 各一环）→ PASS
+
+[3/5] 位置字段非 null（behavior/atlas slot）
+python 实测 census/export/citizen-behavior.jsonl：behavior slot_null=0 rows=10030 → PASS
+
+[4/5] 行为链再生（随批 sync）
+git log 实证：e5224e79「行为线 2026-09-29: 镜像 rows=5 ring=3723 [via BigLife-OSLoop]」
+（census/export/citizens-light.jsonl +5/-5·recent_ring 镜像随年轮批自动收口）→ PASS
+
+[5/5] heartbeat 3h 内
+state/heartbeat.txt 尾行「2026-09-29 01:19:52 os-loop: round done exit=0」（R599）·间隔 ~0.2h <3h → PASS
+
+五项全勾（5/5）·QC 正式巡检同轮 problems=0（cards=10030·evolved=3723）
+tokens: local=22 api=0 api_reason=-
