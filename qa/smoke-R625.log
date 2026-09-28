@@ -1,0 +1,7 @@
+# smoke-R625 · 2026-09-29 07:16 · [via BigLife-OSLoop]
+五项自验（charter=docs/qa-smoke-test-charter.md v1.0·数据面自检适配·证据随行）：
+[1] poolgen 跑通：池链通：tick 07:06:02 src=auto 维持（24h 连戳 06:06→07:06·TOTAL=1440 FAIL_BUCKETS=NONE·err.log 零异常）；pool_audit 本轮实跑 PASS 满额 1440+518（axes 72/72+sprite 12/12+greet 28/28+faq 7/7+neg 6/6·hard_fails=0·under_target NONE-SELF_TERMINATE·确定性 192 对+greet 25 对双拉零漂移）。
+[2] census 新条目：本批 10 due 落 10 环零留冷（rows_changed=10 ring_synced=10·C-03873~C-03882 十席首环·批 32b25d63）；【锚】注脚随批·核卡抽验 2/2 PASS 零修复（C-03873 OR 卡「看云不用门票，今早风挺大，江水还是不要两个色，干净的蓝白就好。」口头禅逐字领句+晨窗风况坐实+C-03882 QT 卡阮玉兰「夜里冷，喝口热的再走。工作日嘛，巡线去。」口头禅逐字+工作日实况坐实·registry 直读 [锚] 2/2 齐备）。
+[3] 位置字段非 null：light rows=10030 实测（python 全量直数·unique=10030·block_null=0 主口径维持·宽口径 3 行=荣誉席 C-00001~03 district 空=保留席正典形态维持）；behavior rows=10030 slot_null=0 实测；镜像 sync 随批 rows=10（commit 0fc712c4 ring=3876·全盘 recent_ring 非空直数 3876 题头一致账平）。
+[4] 行为链 sync：--auto 随批已跑（sync_rings 自动收口·脚本内建·commit 0fc712c4 ring=3876·零手动重复）。
+[5] heartbeat：R624 round done 07:08:40 → 本轮 alive 07:16（间隔 ~0.13h·新鲜）；停造人令轮首双闸过（light 10030/unique 10030·ID 封顶 C-10036 越顶 0·注册冻结维持）。
