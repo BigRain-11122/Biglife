@@ -1,0 +1,7 @@
+== BigLife smoke R610 (2026-09-29 04:0x) ==
+[1] poolgen tick: === 2026-09-29 03:06:03 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] census 本批环: C-03768/C-03773/C-03780(修)/C-03781/C-03784 · QC evolved=3773 problems=0
+[3] slot_null=0 rows=10030
+[4] 行为链 sync: 批 rows=5 ring=3773 + 修卡 rows=1 · recent_ring 镜像同步 committed
+[5] heartbeat age=0.31h (轮末刷新)
+五项全勾
