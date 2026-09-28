@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-29T01:30:34+08:00",
+ "export_ts": "2026-09-29T01:37:34+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R599 批 10 due 落 7 环（ring=3718·3 席门拦留冷）+R600 批 10 due 落 5 环（C-03711/03715/03732/03733/03734·批 d89cc2eb+sync e5224e79 rows=5·ring=3723·5 席 persistent 留冷）·09-29 新写环 37（行级直数=R597 7+R598 6+R599 7+R600 5+相遇双环 2+第二批落籍 10）·QC R600 正式巡检 problems=0（cards=10030·evolved=3723）·T-07 Bonsai 三件字节锚全合（模型 5,946,648,928+llama-bin.zip 257,322,810+cudart.zip 391,443,627·prism-b10743-adfffbe 档·labbench/bonsai2·部署+速度+共存+对照=下轮序·回执窗 09-30 13:00）·反思批 09-29 2 席落池（reflections 14·日帽 2/3）·T-09 lowpoly 批 2 维持 open（CEO 令域）",
+   "t": "R600 批 10 due 落 5 环（C-03711/03715/03732/03733/03734·批 d89cc2eb+sync e5224e79 rows=5·ring=3723·5 席 persistent 留冷）+R601 批 10 due 落 6 环（C-03731/03735/03736/03737/03738/03739·批 964cf2f0+sync 3cc9d97e rows=6·ring=3729·4 席 persistent 留冷）+相遇轮 RV 城区 C-00105×C-00107 双环互引（02d59553+sync 04127d4f）·09-29 新写环 45（行级直数=R597 7+R598 6+R599 7+R600 5+相遇 2+第二批落籍 10+R601 批 6+相遇 2）·QC R600 正式巡检 problems=0（cards=10030·evolved=3723·下到期 ≈R606）·T-07 Bonsai 三件字节锚 R600 全合（模型 5,946,648,928+llama-bin.zip 257,322,810+cudart.zip 391,443,627·labbench/bonsai2·R601 部署探针 GPU 余 5.5GB 空窗未开续排·回执窗 09-30 13:00）·反思批 09-29 2 席落池（reflections 14·日帽 2/3）·T-09 lowpoly 批 2 维持 open（CEO 令域）",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "随进环批自动同步 recent_ring（R600 批 sync rows=5 ring=3723）+behavior.py v3.7 --auto 再生节律/社交位族 v3.27/休闲环 v3.20/休息环 v3.18/声景反向 v3.30 在役（L2 补环三步全毕+T-13 关结）",
+   "t": "随进环批自动同步 recent_ring（R601 批 sync rows=6+相遇 rows=2·ring=3729）+behavior.py v3.7 --auto 再生节律/社交位族 v3.27/休闲环 v3.20/休息环 v3.18/声景反向 v3.30 在役（L2 补环三步全毕+T-13 关结）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "QC R600 正式巡检 problems=0（cards=10030·evolved=3723·R595 后第 5 轮补跑·下到期 ≈R606）·smoke R600 第十证五项全勾（poolgen tick 01:06:02 TOTAL=1440·本批 5 环·slot_null=0 rows=10030·sync rows=5 ring=3723·heartbeat 轮末刷新）",
+   "t": "QC R600 正式巡检 problems=0（cards=10030·evolved=3723·R595 后第 5 轮补跑·下到期 ≈R606）·smoke R600 第十证+R601 第十一证五项全勾（poolgen tick 01:06:02 TOTAL=1440·R601 本批 6 环+相遇 2 环·slot_null=0 rows=10030·sync rows=6+2 ring=3729·heartbeat 轮末刷新）",
    "s": 1
   },
   {
@@ -136,12 +136,12 @@
    "户籍卡"
   ],
   [
-   "3718",
-   "3723"
+   "3723",
+   "3729"
   ],
   [
-   "32",
-   "37"
+   "37",
+   "45"
   ],
   [
    "444/294",

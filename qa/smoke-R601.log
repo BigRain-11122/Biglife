@@ -1,0 +1,23 @@
+# BigLife QA Smoke Test — R601（2026-09-29 01:4x·T-20260928-05 常设随轮件·第十一证）
+# 章程=docs/qa-smoke-test-charter.md v1.0 BigLife 节（数据面自验：census 最新条目+行为链样例·log 面即证据面·逐条可复跑）
+
+[1/5] poolgen 跑通（tick 戳连续 <24h 判据）
+=== 2026-09-29 01:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+（state/poolgen_run.log 尾行实测·双戳 00:06:02→01:06:02 间隔 1h <24h·schtasks BigLife-PoolGenLoop 每小时自循环维持）→ PASS
+
+[2/5] census 新条目（本批新环）
+年轮批 10 due 落 6 环：C-03731, C-03735, C-03736, C-03737, C-03738, C-03739 + 相遇轮双环：C-00105 × C-00107（RV 城区·双卡互引）
+（git log 实证：964cf2f0「年轮 2026-09-29: C-03731, C-03735, C-03736, C-03737, C-03738, C-03739 [via BigLife-OSLoop]」+02d59553「相遇 2026-09-29: C-00105 C-00107 [via BigLife-OSLoop]」）→ PASS
+
+[3/5] 位置字段非 null（behavior/atlas slot）
+python 实测 census/export/citizen-behavior.jsonl：slot_null=0 rows=10030（keys=ctx/id/quirk/slot/state/v/visible）→ PASS
+
+[4/5] 行为链再生（随批 sync）
+git log 实证：3cc9d97e「行为线 2026-09-29: 镜像 rows=6 ring=3729」+04127d4f「行为线 2026-09-29: 镜像 rows=2 ring=3729」
+（citizens-light recent_ring 镜像随年轮批+相遇批自动收口·ring 计数 3723→3729〔年轮批 6 新环民入计·相遇双席原已有环计数不变〕）→ PASS
+
+[5/5] heartbeat 3h 内
+state/heartbeat.txt 尾行「2026-09-29 01:31:42 os-loop: round done exit=0」（R600）·间隔 ~0.2h <3h·本轮轮末再刷 → PASS
+
+五项全勾（5/5）·池 audit 同轮 PASS（1440/518 满额自停·under_target NONE）·QC 免巡（R600 正式巡检 0 异常·下到期 ≈R606）
+tokens: local=12 api=0 api_reason=-
