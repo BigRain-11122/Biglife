@@ -1,0 +1,55 @@
+# BigLife QA Smoke Test — R587 首证（2026-09-28 09:38:36 · 章程=集团 docs/qa-smoke-test-charter.md v1.0 BigLife 节）
+# 本司适配定谳=数据面自验（非 GUI 司·章程 BigLife 节证据要求=census 最新条目+行为链样例·log 面即证据面）
+# 生成方式=逐条实跑采集（本文件由 .codely-cli/append_r587.py 于 09:38:36 生成·可复跑复核）·自验造假=诚实律红线 P1
+
+[1] poolgen 脚本跑通一轮 ✓
+--- state/poolgen_run.log tail（实读）---
+=== 2026-09-28 07:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-09-28 08:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-09-28 09:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+--- pool_audit 实跑（生成时刻 09:38:36）---
+== pool_audit (language line machine gate) ==
+axes buckets 72: lines=1296 at_target=72
+sprite buckets 12: lines=144 at_target=12
+total lines: 1440
+greet buckets 28: lines=476 at_target=28
+faq buckets 7: pairs=21 lines=42 at_target=7
+negative face: lines=40 recovering=8 at_target=6/6
+hard_fails: 0
+under_target (pool 18/12 + greet 17 + faq 3 + neg 8): NONE - SELF_TERMINATE
+determinism: 192 pairs double-drawn, mismatch=0, empty_draw=0 (16 ids x 12 ctx)
+greet determinism: 25 pairs double-drawn, mismatch=0, empty_draw=0 (5 ids x 4 gkey + faq)
+verdict: PASS
+
+[2] 居民 census 有新条目（时间戳更新）✓
+--- 本轮年轮批真实输出（批 e53fcc62+sync d08e5488·2026-09-28）---
+committed rows_changed=10 ring_synced=10
+OK evolved=10 of 10 due
+--- 最新 10 条年轮（卡面原文逐字实读）---
+C-03610 - 2026-09-28 「火候到了自然就香，今早江水不要两个色，就干净的蓝白色就好了！」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03611 - 2026-09-28 「明儿又是新的一天，交完今天这份片子立刻满血复活。天气预报说今天雨不停，得穿得暖和点。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03612 - 2026-09-28 「火候到了自然就香，今早巡夜发现补光多了些，得去查查灯。茶杯还是那只，喝出新滋味了。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03613 - 2026-09-28 「灯还是老灯亮堂，今早电话响个不停，又是一周一早的忙碌开始。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03614 - 2026-09-28 「好咯，今早摸了摸窗台的温度计，灵光一下，不出错的日子，就是最风光的日子。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03615 - 2026-09-28 「一句话的事，今天这毛毛雨还真不小。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03616 - 2026-09-28 「灶上留一壶，路过的都是客。今天早上风挺大，替打盹的摊主多亮了会灯，心里挺踏实。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03617 - 2026-09-28 「江水都不急我急啥，今天雨声加班费正好多赚点。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03618 - 2026-09-28 「这单我送，别跟我抢。今早雨水清清爽，江面波光粼粼的，心情不错。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03619 - 2026-09-28 「数据是新黄浦江，人还是要沿江散步。今早雨后空气挺清新，弄堂里的故事都湿漉漉的，得慢慢听。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+
+[3] 居民有位置字段（不是 null）✓
+--- census/export/citizen-behavior.jsonl（实读：rows=10020·slot=null 计数=0）---
+{"id": "C-03610", "state": "work", "slot": "工位/楼内窗影", "visible": 0, "quirk": "umbrella", "v": 1, "ctx": "tw=day,wx=rain,wd=0"}
+（位置面=citizen-atlas.jsonl 2,037,763B 同步在役·R3 再生面消费前重生成=契约行）
+
+[4] 居民一天的行为链能生成（起床→上班→回家）✓
+--- 行为面再生在产实证（state/behavior-last.json 实读）---
+{"time_bucket": "day", "weather_kind": "rain", "rest_win": "", "sound": "alarm", "ts": "2026-09-28T09:33:02+08:00"}
+（链路=needs→behavior 五环 v3.7 --auto：桶/天气/rest_win 窗缘变更触发再生·启动器每 tick 接线·state 白名单 20 态〔起居/工作/社交/休闲/休息〕·本轮实况 rain/day/alarm=声景反向触发窗内）
+
+[5] heartbeat.txt 在 3h 内更新过 ✓
+--- state/heartbeat.txt tail（实读）---
+BigLife-OSLoop alive: R586批10环全过零门拦(C-03591/C-03596两席R584/R585长线留冷过门+八席首环·批22e942f9+sync da58caee·ring=3593→3603·09-28新写环346=reg345+anc1)+gate#62还插入形收口v0.41(R584首犯C-03590/R585留单·本轮兑现commit f8cd8592·好评族门第一支加还?窄补·FP普查R584基线零误伤·断言15/15+双prompt同步+py_compile过)+核卡2/2零修复(C-03591体感句合法族+光带own-work/C-03605底色缓存满了逐字直引·rain埋点09:20:57坐实)+例份面满合规跳过(语言R536/R575·相遇R532+R578超用记档·反思3/3·聚光9月2/2·基因轮R585后≈R593·QC下到期R591)+尾查捕获集团orders 09:20:25双新令=Self-Drive v2.0零空闲令+v2.1生态机制(P-20260928-02)同轮承令(立单T-20260928-02/03+state/queue三队列30/30当轮建main/tech/explore各10条全真实件零造活+ack F-20260928-BL02/BL03·首提案下轮交·首回访10-05)+external-audit 09:21:34漂移核验=他司域P2零本司派工+decisions 00:10:41维持(委员会C-20260927-02意见窗至09-29·F-20260928-BL01在案·过会前零执行)+styleprobe零新到(名册3/10维持·第二批清单未到)+poolgen tick 09:06:01连戳链维持(TOTAL=1440 FAIL=NONE)+HQ日清未到窗+status-export R586刷新(ring 3603/环346/基因438/292·json回读校验过) tokens: local=10 api=0 api_reason=-
+2026-09-28 09:26:59 os-loop: round done exit=0
+
+[Self-judge 对照章程 BigLife 五项清单] 1✓ 2✓ 3✓ 4✓ 5✓ —— 五项全勾，缺项=无 → R587 smoke PASS

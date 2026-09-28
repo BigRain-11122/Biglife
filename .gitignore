@@ -21,3 +21,6 @@ census/export/voice-cache/
 # Python
 __pycache__/
 *.pyc
+
+# QA smoke evidence (charter qa-smoke-test v1.0: qa/ 证据入库复查·白名单豁免 *.log)
+!qa/*.log
