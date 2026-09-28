@@ -157,3 +157,10 @@ A 4+research 6｜B 8+1+5+1=15｜C 21+6=27｜D 10｜E 9 项（reserved 4 件红�
 - **扫描面 C（步⑦交付后新型 md↔json 双载三对）**：docs/voice-role-map.md ↔ cognition/voice-role-map.json、docs/style-dna-archetypes.md ↔ cognition/style-dna-archetypes.json 头行均自declare「机器可读本件（字段入契约消费源）=json·本文=定谳与判据面」=分工双载零冲突；cognition/STYLE-FIELDS.md ↔ docs/style-dna-archetypes.md §一 五维规格双表=两 md 均声明「字段权威源（单源引用·零双建）=cognition/style-dna-archetypes.json field_spec」=同义词归并已内建 → 定谳：常态非缺口·零动作。
 - **候选 #8（缩写词汇观察项·R245 登记）**：定性=池内容观察项非规则文档冲突，归口池内容审计线常态化承收（T-20260926-18 步⑦切片① R403 交付：1958 条逐字重复零 PASS 在案）——不入清理整合定谳面。
 - **定谳结论**：全域余扫**零新增真实冲突·零新增归并动作**（分步② 7/7 定谳维持无复发）；U188 四则适用面全数命中「上位吸收／同义词归并已内建」态。原文保全铁律零触碰（本节=纯追加）。**T-20260925-20 分步①②③④全毕**——余=09-30 治理日首窗对账 U178 首跑。
+
+### 效能三令·规则瘦身款4 分步②（T-20260928-06·R599·2026-09-29·判据窗 09-29 复查）
+
+- **盘点面**：docs/ 实测 13 件（12 md+1 json）+research/ 目录（P-65 调研域·不计）。
+- **分类定谳**：①规则/契约类=**5 恰达上限未超**——CODEX.md（正典·T2/CEO 保留面零触碰）、SILICON-LIFE.md（总纲正典）、global-benchmarks.md（全球视野执行标准·更新窗 10-01）、bigstream-material-interface.md（跨司供货合同·滚动 ≤10-02）、resident-generation-plan.md（五律承载方案·CODEX §十二 T2 活指针在册故不可移）；②册面/数据注册类=6——名人影射册/城市生灵册/职业升华册/灵族志+style-dna-archetypes.md/voice-role-map.md（md↔json 双载定谳面·本件分步③扫描面 C 已判）=工具消费面（cognition 契约族同口径）；③报告台账类=1——本件（09-30 对账后归档候选第一顺位）；④接口数据类=1——status-export.json（T-20260924-08 轮维护面）。
+- **结论**：上限 5 未超→**零迁移零合并**（原文保全铁律零触碰·无需 docs/_archive/ 动作）；根面注记：README=导航面／BLUEPRINT=纲领面（与 CODEX 三级互指）／HQ-FEEDBACK=决策轮台账／orders/=CEO 令档案登记制／cognition/=26 件工具消费契约族（实测计数）／Tools/=代码面（契约在头注）。
+- 证据：Get-ChildItem 实测清单+cognition 26 件计数+本 commit（R599·本节=纯追加）。

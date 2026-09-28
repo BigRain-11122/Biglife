@@ -1,0 +1,7 @@
+BigLife QA Smoke Test 第九证（R599·2026-09-29 01:20·T-20260928-05 数据面五项·log 面即证据面·全实跑）
+[1] poolgen 跑通：tick 2026-09-29 01:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（state/poolgen_run.log 尾三行实测 23:06:15→00:06:02→01:06:02·连续戳 <24h 判据链维持）
+[2] census 新条目：R599 批 7 新环=C-03719/C-03722/C-03723/C-03724/C-03725/C-03726/C-03727（批 b4922688·ring=3711→3718·3 席 persistent 门拦留冷如实记）
+[3] 位置字段非 null：behavior 实测 rows=10030 slot_null=0（python json 逐行计数实跑 01:1x）
+[4] 行为链再生：本批 sync rows=7 ring=3718（commit 5e248de9）·--auto v3.7 随启动器 tick 在役
+[5] heartbeat 3h 内：R598 01:01:15 在案+R599 轮末刷新（间隔 <3h）
+五项全勾 PASS·连续九轮无缺项（连续两轮不过=CPH4 接管红线·未触发）
