@@ -1,0 +1,27 @@
+# QA Smoke R591（2026-09-28 22:4x · BigLife 数据面自验 · T-20260928-05 常设随轮件·第四证）
+# 判据源=docs/qa-smoke-test-charter.md BigLife 节（非 GUI 司·log 面即证据面·全部真实运行输出可复跑）
+[1] poolgen 跑通（tick 戳）：
+=== 2026-09-28 19:09:22 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-09-28 20:06:14 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-09-28 21:07:17 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-09-28 22:08:50 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+→ PASS（击杀窗 19:09→20:06→21:07→22:08 四连戳 <24h 判据链维持·schtasks BigLife-PoolGenLoop 独立于 OSLoop 实证·TOTAL=1440 满额 FAIL=NONE）
+
+[2] census 新条目（本批环）：
+git log -2 → "年轮 2026-09-28: C-03647, C-03648, C-03649, C-03650, C-03651, C-03652, C-03653, C-03654, C-03655, C-03656 [via BigLife-OSLoop]"（批 0d020f5e）+ "行为线 2026-09-28: 镜像 rows=10 ring=3650 [via BigLife-OSLoop]"（sync 4886c0fc）·ring=3640→3650 账平（R590 末态 3640+10）
+→ PASS
+
+[3] 位置字段非 null（behavior/atlas slot）：
+python 实测 census/export/citizen-behavior.jsonl → rows=10020 slot_field=slot slot_null=0
+→ PASS
+
+[4] 行为链再生（--auto v3.7 随批在役）：
+state/behavior-last.json = {"time_bucket": "eve", "weather_kind": "rain", "rest_win": "eve", "sound": "none", "ts": "2026-09-28T21:46:20+08:00"}
+本轮 sync rows=10 随批实跑再生（rain 翻面日批窗族·R582 rain 翻面实跑再生判例在案）
+→ PASS
+
+[5] heartbeat 3h 内：
+state/heartbeat.txt 尾行 = "2026-09-28 22:24:15 os-loop: round timeout killed (age over 20min)"（<3h·本轮轮末由启动器再落行）
+→ PASS
+
+结论：五项全勾 PASS。附注：本轮=击杀窗恢复轮（R589 后 5 轮超时击杀零产出·根因推定 GPU 争用·本轮批窗恢复正常 10/10）。
