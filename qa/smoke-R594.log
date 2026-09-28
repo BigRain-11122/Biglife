@@ -1,0 +1,7 @@
+=== BigLife QA Smoke R594 2026-09-28 23:20:40 ===
+[1] poolgen tick: 2026-09-28 23:06:15 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE -> PASS
+[2] census new entries: batch 10 rings C-03677~C-03686 (be68c6e7 + sync cbaa5b94) -> PASS
+[3] behavior slot null-count: 0 (rows=10020) -> PASS
+[4] behavior chain regen: v3.7 --auto in-service, sync rows=10 ring=3680 -> PASS
+[5] heartbeat: 2026-09-28 23:11:52 (<3h) -> PASS
+VERDICT: 5/5
