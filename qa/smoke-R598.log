@@ -1,0 +1,7 @@
+qa/smoke R598 2026-09-29 @BigLife-OSLoop
+[1] poolgen tick last: === 2026-09-29 00:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] census new rings this batch: C-03707,C-03716,C-03717,C-03718,C-03720,C-03721 (commit 0eb17a85, ring 3705->3711)
+[3] behavior rows=10030 slot_null=0 -> PASS
+[4] behavior chain regen: sync rows=6 ring=3711 commit b1b5c692 -> PASS
+[5] heartbeat age 0.14h (<3h) -> PASS
+smoke: 5/5 PASS

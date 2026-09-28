@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-29T00:05:03+08:00",
+ "export_ts": "2026-09-29T00:59:18+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R594 批 10 due 落 10 环全过零门拦零留冷（C-03677~C-03686 十席首环·批 be68c6e7+sync cbaa5b94 rows=10·ring=3670→3680·09-28 新写环 423=账面接算 403+20·light recent 直数 422+C-03254 同日双环案差 1 账平）·R593 缺位补记（批 10 环 C-03667~C-03676·b0eb47a8+sync f49d96f3 ring=3660→3670·实录/心跳 rich 行缺位=轮龄耗尽推定如实记）·T-20260927-04 第二批 10 席供给清单到齐捕获（85500cad 落 orders/O-20260927-1648-HQ-C.md §五滚动行：批 9 全球五席+波 11 五席·QC 16/16·证据指针=MiniGame commit 4803c3d0 machine/C）——本机证据面 sp_b9g_*/sp_w11_* 零命中（machine/C 域件未落本机·名册面正式件维持 3/10）·注册输入面=令文自带 10 席视觉记忆点描述可用·注册已落籍=R595（C-10027~36 十席·QC 10030 problems=0·23:42）·原排程=下轮整轮预算件（R496 首批范式）·T-09 lowpoly 批 2 维持 open（CEO 令域）·T-07 Bonsai GPU 空窗续排",
+   "t": "R597 批 10 due 落 7 环（C-03707 等·批 4e1d6dd3+sync 24f22361·ring=3705·3 位门拦留到期）+R598 批 10 due 落 6 环（C-03707 留冷过门+C-03716~18/20/21·批 0eb17a85+sync b1b5c692·ring=3711·4 席 persistent 留冷）·09-29 新写环 25（行级直数=R597 批 7+R598 批 6+R596 相遇双环 2+第二批落籍环 10）·R595 第二批 10 席落籍在册（C-10027~36·census 10030·QC 23:42 problems=0）·T-09 lowpoly 批 2 维持 open（CEO 令域）·T-07 Bonsai GPU 探针 R598（util 3%·余 ~5.8GB·仍紧于 27B 部署包络·续排空窗）",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "随进环批自动同步 recent_ring（R588 批 sync rows=9 ring=3622·09-28 新写环 365=行级直数）+behavior.py v3.7 --auto 再生节律/社交位族 v3.27/休闲环 v3.20/休息环 v3.18/声景反向 v3.30 在役（L2 补环三步全毕+T-13 关结）",
+   "t": "随进环批自动同步 recent_ring（R598 批 sync rows=6 ring=3711）+behavior.py v3.7 --auto 再生节律/社交位族 v3.27/休闲环 v3.20/休息环 v3.18/声景反向 v3.30 在役（L2 补环三步全毕+T-13 关结）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "QC R591 到期巡检 problems=0（cards=10020·evolved=3650）·R592 免巡（下到期 R597=R591+6）·smoke R592 第五证五项全勾（slot 源=behavior 面核正 slot_null=0 实测·诚实律记档）",
+   "t": "QC R595 23:42 修后复扫 problems=0（cards=10030·第二批落籍随批）·正式巡检下到期 ≈R601（R591 巡检后 R595 已跑·间隔账如实记）·smoke R598 第八证五项全勾（slot_null=0 rows=10030·poolgen tick 00:06:02·heartbeat 0.14h）",
    "s": 1
   },
   {
@@ -37,7 +37,7 @@
   [
    "万人户籍库 census/",
    "on",
-   "10020 卡·QC problems=0（生成 9980+锚 20+荣誉席 3+影射册首批 7 R459+新居民团注册首批 10 R496·T-20260927-04 分步②）"
+   "10030 卡·QC problems=0（生成 9980+锚 20+荣誉席 3+影射册首批 7 R459+新居民团首批 10 R496+第二批 10 R595·T-20260927-04 分步②④）"
   ],
   [
    "认知城脑 cognition/pools.json",
@@ -62,7 +62,7 @@
   [
    "导出面 census/export/citizens-light.jsonl",
    "on",
-   "10020 行字段齐备·白名单 v1.0+数据授权行（D-09）·影射册七卡 append-only 入面（R459）+新居民团首批十卡 append-only 入面（R496·新物种值 artifact-spirit/memory-spirit/imagery-spirit/copperfox 过 schema 面零结构变更·style_dna/voice_profile 深水位不入 light 面=契约 §二.3）"
+   "10030 行字段齐备·白名单 v1.0+数据授权行（D-09）·影射册七卡 append-only 入面（R459）+新居民团两批二十卡 append-only 入面（R496/R595·新物种值过 schema 面零结构变更·style_dna/voice_profile 深水位不入 light 面=契约 §二.3）"
   ],
   [
    "动机面 census/export/citizen-needs.jsonl",
@@ -132,16 +132,16 @@
  ],
  "results": [
   [
-   "10020",
+   "10030",
    "户籍卡"
   ],
   [
-   "3670",
-   "3680"
+   "3705",
+   "3711"
   ],
   [
-   "413",
-   "423"
+   "7",
+   "25"
   ],
   [
    "438/292",
