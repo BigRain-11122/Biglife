@@ -1,0 +1,21 @@
+# QA Smoke Test 自验 — R606（2026-09-29 02:5x @BigLife-OSLoop）
+# 章程=docs/qa-smoke-test-charter.md v1.0 · 本司适配=数据面自验（log 面即证据面）· 五项全勾
+
+[1] poolgen 跑通（tick 戳）: PASS
+    state/poolgen_run.log 尾行 === 2026-09-29 02:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+    连续戳 01:06:02→02:06:02 间隔 60min <24h（T-20260927-03 判据持续满足）
+
+[2] census 新条目（本批环）: PASS
+    R606 年轮批 10 due 落 5 环（C-03730/03762/03763/03764/03766·commit f920f4e8·ring=3755）
+    +T-09 lowpoly 批 2 化身原创件落件（Tools/lowpoly_batch2.py+docs/research/lowpoly-avatars-batch2-20260929.png·QC 四判据 PASS·md5 d15d2b34·库内件待 CEO 过目）
+
+[3] 位置字段非 null: PASS
+    citizen-behavior.jsonl 实测 rows=10030 slot_null=0（本轮 python 实跑输出）
+
+[4] 行为链再生（--auto 随批）: PASS
+    批 sync rows=5 ring=3755（commit e77b7954·落环后自动收口未手动重复）
+
+[5] heartbeat 3h 内: PASS
+    state/heartbeat.txt 尾行 2026-09-29 02:39:13 os-loop: round done exit=0（<3h·轮末再刷新）
+
+结论: 5/5 全勾 · 连续第十五证 · 可复跑命令在案（rg 本文件命令行）
