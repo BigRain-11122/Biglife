@@ -1,0 +1,7 @@
+== QA Smoke Test R592 (2026-09-28 22:53) BigLife 数据面自验五项（T-20260928-05 常设随轮件·第五证）==
+1. poolgen 跑通: state/poolgen_run.log 末戳 2026-09-28 22:08:50 tick src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE [PASS]（19:09→20:06→21:07→22:08 连戳 <24h 判据链·schtasks 独立环）
+2. census 新条目: 本批 10 环 C-03657~C-03666（批 c2d47152+sync 73e7c1ab·ring=3650→3660·09-28 新写环 403=行级直数 reg 402+anc 1）[PASS]
+3. 位置字段非 null: census/export/citizen-behavior.jsonl rows=10020 slot_null=0 [PASS]（辅助面 citizens-light district/block=10020 行·block_null=0·district_null=3=荣誉席三席既有态非缺陷·R587 先例口径 slot 源=behavior 面实测核正如实记）
+4. 行为链再生: Tools/behavior.py --auto v3.7 实跑输出「bucket=eve wx=rain rest=eve snd=none unchanged - skip regen」=跨桶/天气触发检测在役·与 state/behavior-last.json（2026-09-28T21:46:20+08:00 eve rain）一致免跑合法 [PASS]
+5. heartbeat 3h 内: state/heartbeat.txt 末行 2026-09-28 22:42:33 round done exit=0·距采集 ~11min [PASS]
+—— 五项全勾·证据=真实运行输出·初稿第 3 项曾误指 atlas 面无 slot 字段·复测核正 slot 源=behavior 面（诚实律记档）
