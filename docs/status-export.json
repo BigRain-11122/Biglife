@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-29T05:15:00+08:00",
+ "export_ts": "2026-09-29T05:20:10+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R616 批 10 due 落 4 环（C-03808/03811/03812/03813·批 292998d3+sync ead0039c rows=4·ring=3797→3801·6 席 persistent 留冷 C-03728/03748/03805/03807/03809/03810 time-morning/sky-mismatch 门·凌晨档结构性拦零程序动作）·09-29 新写环 113（行级直数=R615 109+本批 4）·**T-20260929-01 关系网主线承接（CEO 令 04:37 方向令·任务块正文+方案 v1 落位+分步① R3 再生 meet 边 4→16 账平）**·T-07 Bonsai GPU 探针第十六=6809/12282 MiB 空窗未开（回执 F-20260929-BL01 已前置·单 open 至窗后收口）·T-09 lowpoly 批 2 库内呈报维持（待 CEO 过目后出库·呈报面随日清窗）",
+   "t": "R617 批 10 due 落 5 环（C-03748/03805/03814/03815/03817·批 54ba3e71+sync 8edf21c4 rows=5·ring=3801→3806·5 席 persistent 留冷 C-03728/03807/03809/03810/03816 time-morning/sky-mismatch 门·凌晨档结构性拦零程序动作）·09-29 新写环 118（行级直数=R616 113+本批 5）·**T-20260929-01 分步② meet 边强度升级 v2 交付（relations_manifest v1.1·T2 v3.51·meet 行 +count/last 强度面·R3 再生 rows=2825959 --qc PASS）**·T-07 Bonsai GPU 探针第十七=6830/12282 MiB 空窗未开（回执 F-20260929-BL01 已前置·单 open 至窗后收口）·T-09 lowpoly 批 2 库内呈报维持（待 CEO 过目后出库·呈报面随日清窗）",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "随进环批自动同步 recent_ring（R614 批 sync rows=7·ring=3791）+behavior.py v3.7 --auto 再生节律/社交位族 v3.27/休闲环 v3.20/休息环 v3.18/声景反向 v3.30 在役（L2 补环三步全毕+T-13 关结）",
+   "t": "随进环批自动同步 recent_ring（R617 批 sync rows=5·ring=3806）+behavior.py v3.7 --auto 再生节律/社交位族 v3.27/休闲环 v3.20/休息环 v3.18/声景反向 v3.30 在役（L2 补环三步全毕+T-13 关结）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "QC 免巡（R612 problems=0 在案·下到期 ≈R618）·smoke R616 第二十四证五项全勾+红线行（poolgen tick 05:06:02 TOTAL=1440·R616 本批 4 环·light=10030 轮首守卫过·sync rows=4 ring=3801·heartbeat 轮末刷新）",
+   "t": "QC 免巡（R612 problems=0 在案·下到期 ≈R618）·smoke R617 第二十五证五项全勾+红线行（poolgen tick 05:06:02 TOTAL=1440·R617 本批 5 环·light=10030 轮首守卫过·sync rows=5 ring=3806·heartbeat 轮末刷新）",
    "s": 1
   },
   {
@@ -102,7 +102,7 @@
   [
    "关系面 census/export/citizen-relations.jsonl",
    "on",
-   "R3 再生面·T-20260925-09 R210 交付（Tools/relations_manifest.py 三源→一面·纯解析零 LLM·--qc bad=0·荣誉席 block 源排除·家户独居否定规则·消费前重生成·T2 v3.14）·R616 再生刷新 meet 边 4→16 账平（T-20260929-01 分步①·CEO 方向令关系网主线·md5 d7fd6a92·rows=2825959）"
+   "R3 再生面·T-20260925-09 R210 交付（Tools/relations_manifest.py 三源→一面·纯解析零 LLM·--qc bad=0·荣誉席 block 源排除·家户独居否定规则·消费前重生成·T2 v3.14）·R616 再生刷新 meet 边 4→16 账平（T-20260929-01 分步①·CEO 方向令关系网主线·md5 d7fd6a92·rows=2825959）·**v1.1 meet 边强度面（分步②·T2 v3.51）：meet 行型 {a,b,rel,src,count,last}——count=相遇次数（年轮互引行按日期去重直数）·last=最近一次·src=首次日期语义零变·block/household 行型零改动·纯追加字段消费方零 breaking·--qc PASS md5 120abce8·rows=2825959（block 2822314+household 3629+meet 16）**"
   ],
   [
    "反思面 census/reflections.jsonl",
@@ -141,12 +141,12 @@
    "户籍卡"
   ],
   [
-   "3797",
-   "3801"
+   "3801",
+   "3806"
   ],
   [
-   "109",
-   "113"
+   "113",
+   "118"
   ],
   [
    "456/298",

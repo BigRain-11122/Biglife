@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""relations_manifest.py v1.0 — 关系面 manifest（T-20260925-09 分步②·契约=R209 认领行判据先行）
+"""relations_manifest.py v1.1 — 关系面 manifest（T-20260925-09 分步②·契约=R209 认领行判据先行）
 
 三源→一面（纯解析确定性·零 LLM·只读 census 卡面+年轮·FluxVerse 零触碰）：
   ① 家户共址 rel=household：卡面「关系」字段「家户 H-*（描述）」同 H 号跨卡两两成对（src=H 号）
@@ -9,10 +9,13 @@
      99.7% 自标独居=家户位复用瑕疵，同户对将与卡面直接矛盾故排除·缺描述词=无否认照常成对）
   ② 街区共域 rel=block：卡头「城区」字段值全串等值跨卡两两成对（字段与「物种」同行以 ｜ 分隔、
      值含街区段=同街区；荣誉席卡头自注「不入城区分布」→ 排除·人设权保守面；src=街区名=末段）
-  ③ 年轮互链 rel=meet：年轮行「与 C-* 相遇」跨卡互引（单向提及亦记·双向互引去重成单行·src=最早日期）
+  ③ 年轮互链 rel=meet：年轮行「与 C-* 相遇」跨卡互引（单向提及亦记·双向互引去重成单行·src=首次日期〔v1.0 语义零变〕）
 
 输出 census/export/citizen-relations.jsonl（R3 再生面·gitignored）：
-  行型 {a,b,rel,src} · a<b 规范对序 · (a,rel,b) 主键去重 · (a,rel,b) 升序确定性排序
+  行型 block/household={a,b,rel,src}；meet={a,b,rel,src,count,last}——v1.1 强度面（T-20260929-01 分步②·
+  T2=CODEX §十二 v3.51）：count=相遇次数〔双方年轮互引行按日期去重直数派生〕·last=最近一次日期·
+  纯确定性零 LLM·对消费方=纯追加字段（src 语义不变·读 src/count 前值零 breaking）
+  · a<b 规范对序 · (a,rel,b) 主键去重 · (a,rel,b) 升序确定性排序
 
 审判据：①纯解析确定性零 LLM ②同输入双跑逐字节一致（MD5）③关系零编造（三源外零数据源·
   H/C 号域校验·a<b 对偶自反不重复成行）④QC 门（schema 白名单+rel 闭集+引用 ID 存在性全查+
@@ -110,39 +113,41 @@ def derive_rows(cards):
         for i, a in enumerate(members):
             blk_pairs.setdefault(a, []).extend(members[i + 1:])
 
-    # meet：双向提及合并→(a,b) 最早日期；单向提及亦记
-    meet_pairs = {}
+    # meet：双向提及合并→(a,b) 日期集（v1.1 强度面：src=首次·count=去重日期数·last=最近）
+    meet_dates = {}
     for cid in ids:
         for other, date in cards[cid]['meets']:
             a, b = (cid, other) if cid < other else (other, cid)
-            key = (a, b)
-            if key not in meet_pairs or date < meet_pairs[key]:
-                meet_pairs[key] = date
+            meet_dates.setdefault((a, b), set()).add(date)
     mt_pairs = {}
-    for (a, b), date in meet_pairs.items():
-        mt_pairs.setdefault(a, []).append((b, date))
+    for (a, b), dates in meet_dates.items():
+        mt_pairs.setdefault(a, []).append((b, min(dates), len(dates), max(dates)))
 
     for a in ids:
         emit = []
         for b in sorted(blk_pairs.get(a, ())):
-            emit.append(('block', b, block_name(cards[a]['district'])))
+            emit.append(('block', b, block_name(cards[a]['district']), None))
         for b in sorted(hh_pairs.get(a, ())):
-            emit.append(('household', b, cards[a]['household']))
-        for b, date in sorted(mt_pairs.get(a, ())):
-            emit.append(('meet', b, date))
+            emit.append(('household', b, cards[a]['household'], None))
+        for b, first, cnt, last in sorted(mt_pairs.get(a, ())):
+            emit.append(('meet', b, first, (cnt, last)))
         # rel 发射序=REL_SET（block<household<meet 与逐源 b 升序天然满足 (a,rel,b) 全序）
-        for rel, b, src in emit:
-            yield a, b, rel, src
+        for rel, b, src, extra in emit:
+            yield a, b, rel, src, extra
 
 
 def serialize(rows):
     cache = {}
-    for a, b, rel, src in rows:
+    for a, b, rel, src, extra in rows:
         sj = cache.get(src)
         if sj is None:
             sj = json.dumps(src, ensure_ascii=False)
             cache[src] = sj
-        yield '{"a":"%s","b":"%s","rel":"%s","src":%s}\n' % (a, b, rel, sj)
+        line = '{"a":"%s","b":"%s","rel":"%s","src":%s' % (a, b, rel, sj)
+        if extra is not None:  # v1.1 meet 强度面（纯追加字段·消费方零 breaking）
+            cnt, last = extra
+            line += ',"count":%d,"last":%s' % (cnt, json.dumps(last, ensure_ascii=False))
+        yield line + '}\n'
 
 
 def derive_md5(cards):
@@ -197,11 +202,20 @@ def cmd_qc(cards):
             except Exception:
                 bad += 1
                 continue
-            if sorted(r.keys()) != ['a', 'b', 'rel', 'src']:
+            keys = sorted(r.keys())
+            if keys not in (['a', 'b', 'rel', 'src'],
+                            ['a', 'b', 'count', 'last', 'rel', 'src']):
                 bad += 1
                 continue
             a, b, rel, src = r['a'], r['b'], r['rel'], r['src']
             if rel not in REL_SET or not CID_RE.match(a) or not CID_RE.match(b) or not a < b:
+                bad += 1
+                continue
+            if rel == 'meet':
+                if keys != ['a', 'b', 'count', 'last', 'rel', 'src']:
+                    bad += 1
+                    continue
+            elif keys != ['a', 'b', 'rel', 'src']:
                 bad += 1
                 continue
             if a not in cards or b not in cards:
@@ -219,10 +233,11 @@ def cmd_qc(cards):
             elif rel == 'household':
                 if ca['household'] != src or cb['household'] != src or ca['alone'] or cb['alone']:
                     bad += 1
-            else:  # meet
-                ok = any(o == b and d == src for o, d in ca['meets']) or \
-                     any(o == a and d == src for o, d in cb['meets'])
-                if not ok:
+            else:  # meet（v1.1 强度面复核：src/count/last 与年轮互引行直数三方一致）
+                dates = {d for o, d in ca['meets'] if o == b} | \
+                        {d for o, d in cb['meets'] if o == a}
+                if (not dates or src != min(dates) or r['last'] != max(dates)
+                        or r['count'] != len(dates)):
                     bad += 1
     print('QC rows=%d derived=%d bad=%d double_run=%s' % (rows, n1, bad, 'OK' if m1 == m2 else 'FAIL'))
     print('QC %s' % ('PASS' if bad == 0 and rows == n1 else 'FAIL'))
@@ -342,17 +357,27 @@ def cmd_suggest(cards, limit):
         print('meet-suggest QC FAIL: story-face violation')
     disk_bad = -1  # n/a when the face is absent
     if os.path.exists(OUT_PATH) and out:
-        want = set('{"a":"%s","b":"%s","rel":"%s","src":%s}\n'
-                   % (a, b, rel, json.dumps(src, ensure_ascii=False))
-                   for a, b, rel, src in out)
-        found = set()
+        want_exact = set()
+        want_prefix = ()  # v1.1 meet 行带 count/last 尾字段→前缀匹配；block/hh=整行匹配
+        for a, b, rel, src in out:
+            sj = json.dumps(src, ensure_ascii=False)
+            if rel == 'meet':
+                want_prefix += ('{"a":"%s","b":"%s","rel":"meet","src":%s,'
+                                % (a, b, sj),)
+            else:
+                want_exact.add('{"a":"%s","b":"%s","rel":"%s","src":%s}\n'
+                               % (a, b, rel, sj))
+        need = len(want_exact) + len(want_prefix)
+        found = 0
         with open(OUT_PATH, encoding='utf-8') as fh:
             for ln in fh:
-                if ln in want:
-                    found.add(ln)
-                    if len(found) == len(want):
-                        break
-        disk_bad = len(want) - len(found)
+                if ln in want_exact:
+                    found += 1
+                elif want_prefix and ln.startswith(want_prefix):
+                    found += 1
+                if found == need:
+                    break
+        disk_bad = need - found
         if disk_bad:
             bad += 1
             print('meet-suggest QC FAIL: disk row missing %d' % disk_bad)
