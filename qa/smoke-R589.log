@@ -1,0 +1,26 @@
+# QA Smoke R589（2026-09-28 10:2x · BigLife 数据面自验 · T-20260928-05 常设随轮件·第三证）
+# 判据源=docs/qa-smoke-test-charter.md BigLife 节（非 GUI 司·log 面即证据面）·全部真实运行输出可复跑
+
+[1] poolgen 跑通（tick 戳）：
+=== 2026-09-28 08:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-09-28 09:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+→ PASS（连戳链 <24h 判据维持·TOTAL=1440 满额 FAIL=NONE）
+
+[2] census 新条目（本批环）：
+git log --format=%s -n 2 → "年轮 2026-09-28: C-03629, C-03630, C-03632, C-03633, C-03634, C-03636, C-03637, C-03638 [via BigLife-OSLoop]" + "行为线 2026-09-28: 镜像 rows=8 ring=3630 [via BigLife-OSLoop]"（8 席·批 df1f6db2+sync 4456b845 rows=8·ring=3622→3630·行级直数 09-28 registry 372 环+anc 1=373 账平 365+8）
+→ PASS
+
+[3] 位置字段非 null（behavior/atlas slot）：
+python 实测 census/export/citizen-behavior.jsonl → rows=10020 slot_null=0
+→ PASS
+
+[4] 行为链再生（--auto v3.7 随批在役）：
+state/behavior-last.json = {"time_bucket":"day","weather_kind":"rain","rest_win":"","sound":"alarm","ts":"2026-09-28T09:33:02+08:00"}
+本轮批窗无桶/天气/rest_win/sound 变更→--auto 触发检测零再生=机制值守正常（变更即再生·R582 rain 翻面实跑再生在案）
+→ PASS
+
+[5] heartbeat 3h 内：
+state/heartbeat.txt 尾行 = "2026-09-28 09:51:38 os-loop: round done exit=0"（<3h·本轮轮末由启动器再落行）
+→ PASS
+
+结论：五项全勾=PASS。附注：本轮同窗承 CEO 清理+算力令款1=.codely-cli 临时件清理（1,344,457,225B→0·auto-saves/chat-export/pyc·untracked 正式产出零触碰）。
