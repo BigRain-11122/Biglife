@@ -1,0 +1,12 @@
+== smoke R627 2026-09-29 07:2x~07:4x @BigLife-OSLoop ==
+[x] ① poolgen 跑通：tick 2026-09-29 07:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（06:06→07:06 间隔 60min <24h 判据持续满足·连戳链维持）
+[x] ② census 新条目：本批 9 环 C-03893~C-03902 除 C-03897（commit 084a8b14·批题头 join(done)=实落一致·ring 3886→3895·1 席 persistent 留冷 C-03897 wind-under/sky-mismatch stays due 下轮自然再试·零程序动作零卡面改动）
+[x] ③ 位置字段非 null：behavior slot_null=0（rows=10030 实测·本轮 python 全量直数）
+[x] ④ 行为链再生：sync_rings 批内自动收口 rows=9 ring_synced=9（commit 28ddbfa1·镜像 rows=9 ring=3895）
+[x] ⑤ heartbeat 3h 内：07:29:19 os-loop round done exit=0（<1h）
+[x] 判据红线行：停造人令轮首双闸实测过（light_rows=10030·unique=10030·ID 封顶 C-10036 越顶 0·registry 自 00:06 起 git diff-filter=A 零新增·注册冻结维持）
+[x] QC 免巡行：R624 problems=0 在案·下到期 ≈R630
+[x] 池 audit 行：PASS 全桶达标（1440+518 满额·hard_fails=0·确定性 192+25 对零漂移）→自终止律跳过 pool_gen
+[x] 核卡抽验行：C-03893（MD 分片）/C-03902（GM 分片）2/2 PASS——09-29 环各 1 圈+[锚] 注脚齐备·分片路径直读
+[x] GPU 探针行：used=6816/12282MiB util 3%——空窗未开（第二十三探针同族·余 ~5.47GB<权重 5.94GB·让路律不抢）
+verdict: PASS 5/5
