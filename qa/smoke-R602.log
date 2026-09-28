@@ -1,0 +1,23 @@
+# BigLife QA Smoke Test — R602（2026-09-29 01:5x·T-20260928-05 常设随轮件·第十二证）
+# 章程=docs/qa-smoke-test-charter.md v1.0 BigLife 节（数据面自验：census 最新条目+行为链样例·log 面即证据面·逐条可复跑）
+
+[1/5] poolgen 跑通（tick 戳连续 <24h 判据）
+=== 2026-09-29 01:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+（state/poolgen_run.log 尾行实测·连戳链 00:06:02→01:06:02 间隔 1h <24h·schtasks BigLife-PoolGenLoop 每小时自循环维持）→ PASS
+
+[2/5] census 新条目（本批新环）
+年轮批 10 due 落 5 环：C-03740, C-03741, C-03742, C-03744, C-03745（5 席 persistent 门拦留到期：C-03708/C-03728/C-03729/C-03730/C-03743·晨窗 vs 实况结构性拦截）
+（git log 实证：5e9d6e68「年轮 2026-09-29: C-03740, C-03741, C-03742, C-03744, C-03745 [via BigLife-OSLoop]」）→ PASS
+
+[3/5] 位置字段非 null（behavior/atlas slot）
+python 实测 census/export/citizen-behavior.jsonl：slot_null=0 rows=10030 → PASS
+
+[4/5] 行为链再生（随批 sync）
+git log 实证：76f66be9「行为线 2026-09-29: 镜像 rows=5 ring=3734 [via BigLife-OSLoop]」
+（citizens-light recent_ring 镜像随年轮批自动收口·ring 计数 3729→3734·sync_rings 勿手动重复=mandate 口径）→ PASS
+
+[5/5] heartbeat 3h 内
+state/heartbeat.txt 尾行「2026-09-29 01:40:01 os-loop: round done exit=0」（R601）·间隔 ~0.2h <3h·本轮轮末再刷 → PASS
+
+五项全勾（5/5）·反思批同轮落 1 席（C-00105 史军「天气好时，不妨出去走走，享受自然。」·reflections 14→15·G4 闭包门·09-29 日帽 3/3 满）·QC 免巡（R600 正式巡检 0 异常·下到期 ≈R606）
+tokens: local=21 api=0 api_reason=-（下限口径：批 5 环首过各 1=5+5 persistent 各 3 尝试=15+反思 1 席=1·gated_llm max_regens=2 码证；扫描/smoke/export/实录=纯确定性零 LLM）
