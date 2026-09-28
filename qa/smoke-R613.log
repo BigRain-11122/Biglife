@@ -1,0 +1,7 @@
+qa/smoke-R613.log — BigLife 数据面自验（T-20260928-05 第二十一证·2026-09-29 04:25）
+[1] poolgen 跑通: tick 2026-09-29 04:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（state/poolgen_run.log 尾行·03:06→04:06 间隔 60min <24h 连戳判据持续满足）
+[2] census 新条目: R613 批 10 due 落 6 环 C-03782/C-03788/C-03790/C-03791/C-03792/C-03793（批 commit 5b98317f·ring=3784）+核卡修卡 1（C-03782 gap#64·777f4498）
+[3] 位置字段非 null: citizen-behavior.jsonl rows=10030 slot_null=0（实测 2026-09-29 04:24:49）
+[4] 行为链再生: sync_rings rows=6（批 db9ac992）+rows=1（修卡 66e09954）ring=3784·QC 修后复扫 problems=0
+[5] heartbeat 3h 内: 上戳 2026-09-29 04:10:45（0.24h 前轮 done）·本戳轮末刷新
+五项全勾 PASS（真实运行输出·逐条可复跑）
