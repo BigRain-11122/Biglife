@@ -1,0 +1,9 @@
+# smoke-R616 · 2026-09-29 05:1x · [via BigLife-OSLoop]
+五项自验（charter=docs/qa-smoke-test-charter.md v1.0·数据面自验适配·证据随行）
+[1] poolgen tick/池链通：tick 05:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（04:06→05:06 间隔 60min <24h 判据持续满足·err.log 零异常）✔
+[2] census 新条目：本批 4 环（292998d3·C-03808/03811/03812/03813·机审门 v0.43 过·[锚] 注脚随批）✔
+[3] 位置字段非 null：镜像 sync ead0039c rows=4 ring=3801（behavior/atlas slot 随批刷新·脚本回读 rows_changed=4 ring_synced=4）✔
+[4] 行为链 sync：--auto v3.7 随批已跑（sync_rings 自动收口·commit ead0039c）✔
+[5] heartbeat 3h 内：轮末 alive 行随本收尾刷新 ✔
+[+] CEO 令 04:37 判据红线（轮首断言）：registry C-*.md 计数不变 + citizens-light 行数=10030 不变（本轮轮首实测 light_rows=10030·ID 封顶 C-10036 与注册面账平·批量注册冻结维持·零新增文件）✔
+五项全勾+红线零触发。
