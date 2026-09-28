@@ -1,0 +1,57 @@
+# BigLife QA Smoke Test — R588（2026-09-28 09:49 · 章程=集团 docs/qa-smoke-test-charter.md v1.0 BigLife 节）
+# 本司适配定谳=数据面自验（非 GUI 司·章程 BigLife 节证据要求=census 最新条目+行为链样例·log 面即证据面）
+# 生成方式=逐条实跑采集（本轮 OSLoop 直采·可复跑复核）·自验造假=诚实律红线 P1
+
+[1] poolgen 脚本跑通一轮 ✓
+--- state/poolgen_run.log tail（实读）---
+=== 2026-09-28 07:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-09-28 08:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-09-28 09:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+--- pool_audit 实跑（本轮 R588 轮首·verdict 原文）---
+== pool_audit (language line machine gate) ==
+axes buckets 72: lines=1296 at_target=72
+sprite buckets 12: lines=144 at_target=12
+total lines: 1440
+greet buckets 28: lines=476 at_target=28
+faq buckets 7: pairs=21 lines=42 at_target=7
+negative face: lines=40 recovering=8 at_target=6/6
+hard_fails: 0
+under_target (pool 18/12 + greet 17 + faq 3 + neg 8): NONE - SELF_TERMINATE
+determinism: 192 pairs double-drawn, mismatch=0, empty_draw=0 (16 ids x 12 ctx)
+greet determinism: 25 pairs double-drawn, mismatch=0, empty_draw=0 (5 ids x 4 gkey + faq)
+verdict: PASS
+
+[2] 居民 census 有新条目（时间戳更新）✓
+--- 本轮年轮批真实输出（批 af0e88b3+sync 7391250c·2026-09-28）---
+committed rows_changed=9 ring_synced=9
+gate: persistent violations ['sky-mismatch']
+gate: skip C-03629 (stays due)
+OK evolved=9 of 10 due
+--- 最新 9 条年轮（卡面原文逐字实读）---
+C-03620 - 2026-09-28 「慢一点，城又不会跑。今天这风不小，绕着灯杆飞三圈，绒羽起涟漪。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03621 - 2026-09-28 「这单我送，别跟我抢。今天这风挺大，装卸口得注意安全。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03622 - 2026-09-28 「单子来了就接，不来就钓鱼。今早下雨，伞借出去只剩我淋，不过城里的路两旁野花可得浇浇水。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03623 - 2026-09-28 「船到桥头自然直，今早开窗听江声，风挺大，今天怕是又是个忙碌的工作日。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03624 - 2026-09-28 「急啥，汤还没开呢。早起的鸟儿今早赶上城醒来的第一波人流，收摊第一件事就是给家里人捎去最新鲜的时令菜。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03625 - 2026-09-28 「数据不会骗人，人会。今天天气雨蒙蒙的，江水清清的，放学还得绕路去看。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03626 - 2026-09-28 「老地方见，今天天毛毛雨，清早我就醒了。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03627 - 2026-09-28 「旧钥匙开新锁，有时候还真开得开。今天这风挺大，走起路来得抓紧帽子，信号中继可不能出任何差错。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+C-03628 - 2026-09-28 「规矩如钟，人情如江。今天这个双数日，正好是收摊前把明天的料备好的好时机，机油袋也揣好了，准备夜巡时给加班的机器们带上。」 [锚] 城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）
+
+[3] 居民有位置字段（不是 null）✓
+--- census/export/citizen-behavior.jsonl（实读：rows=10020·slot=null 计数=0）---
+{"id": "C-03620", "state": "home", "slot": "栖位", "visible": 0, "quirk": "", "v": 1, "ctx": "tw=day,wx=rain,wd=0", "recovering": "haoqi"}
+（位置面=citizen-atlas.jsonl 同步在役·sprite 专属栖位分支实读坐实=像素灵 C-03620 roost 态）
+
+[4] 居民一天的行为链能生成（起床→上班→回家）✓
+--- 行为面再生在产实证（state/behavior-last.json 实读）---
+{"time_bucket": "day", "weather_kind": "rain", "rest_win": "", "sound": "alarm", "ts": "2026-09-28T09:33:02+08:00"}
+（链路=needs→behavior 五环 v3.7 --auto：桶/天气/rest_win 窗缘变更触发再生·启动器每 tick 接线·state 白名单 20 态·本轮实况 rain/day/alarm=声景反向触发窗内）
+
+[5] heartbeat.txt 在 3h 内更新过 ✓
+--- state/heartbeat.txt tail（实读）---
+2026-09-28 09:26:59 os-loop: round done exit=0
+2026-09-28 09:39:14 os-loop: round done exit=0
+（末行 09:39:14 vs 采集时刻 09:49=10 分钟内·3h 窗内）
+
+[Self-judge 对照章程 BigLife 五项清单] 1✓ 2✓ 3✓ 4✓ 5✓ —— 五项全勾，缺项=无 → R588 smoke PASS
