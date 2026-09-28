@@ -1,0 +1,13 @@
+# smoke-R620 · 2026-09-29 06:1x · [via BigLife-OSLoop]
+五项自验（charter=docs/qa-smoke-test-charter.md v1.0·数据面自验适配·证据随行）
+[1] poolgen tick/池链通：tick 06:06:02 src=auto 维持（<1h 连戳 05:06→06:06·TOTAL=1440 FAIL_BUCKETS=NONE·pool_audit 本轮实跑 PASS 满额 1440+518·err.log 零异常字节）✔
+[2] census 新条目：本批 10 环（10 due 落 10=rows_changed=10 ring_synced=10·5 席 persistent 晨窗过门 C-03728/03807/03810/03823/03826+5 席首环 C-03829~C-03833·[锚] 注脚随批·核卡抽验 2/2 PASS 零修复）✔
+[3] 位置字段非 null：镜像 sync 随批 rows=10（脚本回读 committed rows_changed=10 ring_synced=10）✔
+[4] 行为链 sync：--auto 随批已跑（sync_rings 自动收口·脚本内建·commit d36c4de7 ring=3827）✔
+[5] heartbeat 3h 内：06:00:10 R619 round done exit=0（<3h·轮末 alive 行随本收尾刷新）✔
+[+] CEO 令 04:37 判据红线（轮首断言）：light_rows=10030+ID 封顶 C-10036 双闸实测过（越顶 ID rg 零命中·批量注册冻结维持·轮首 pull 工作区净）✔
+[+] QC 免巡窗：R618 到期巡检 problems=0 在库·下到期 ≈R624（本轮非到期轮零动作）✔
+[+] 新写环三方账平行：全盘 rg 直数 143=批环口径 139（R619 面 129+本批 10）+相遇互引环 4（C-00105×C-00107 02d59553+C-03747×C-03753 14232667）·git 全量插入 145−修卡置换 2（1bf8df11 C-03780+777f4498 C-03782）=143 账平 ✔
+[+] T-20260928-07 Bonsai GPU 探针随轮：used=6825/12282MiB util=3%——空窗未开（余 ~5.46GB<5.94GB 权重·让路律不抢·单 open 至 09-30 13:00 窗后收口）✔
+[+] 集团双典尾查：orders.md 04:37:49/decisions.md 03:20:29 mtime 维持=R615~R619 已核同值·本仓 orders/ 零新件（newest=O-20260928-1410-HQ-C 维持）——零新令零新决策 ✔
+五项全勾+红线零触发+QC 免巡+新写环账平+GPU 探针行全绿。
