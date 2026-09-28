@@ -1,0 +1,17 @@
+# QA Smoke Test 自验 — R607（2026-09-29 02:5x @BigLife-OSLoop）
+# 章程=docs/qa-smoke-test-charter.md v1.0 · 本司适配=数据面自验（log 面即证据面）· 五项全勾
+
+[1] poolgen 跑通（tick 戳）: PASS
+    state/poolgen_run.log 尾行 === 2026-09-29 02:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+    连续戳 01:06:02→02:06:02 间隔 60min <24h（T-20260927-03 判据持续满足）· err.log 零异常
+[2] census 新条目（本批环）: PASS
+    R607 年轮批 10 due 落 5 环（C-03765/C-03767/C-03769/C-03770/C-03771·commit 8593629e·ring=3760）
+    5 席 persistent 门拦留到期（time-morning 族·机审门健康拦截非事故）
+[3] 位置字段非 null: PASS
+    citizen-behavior.jsonl 实测 rows=10030 slot_null=0（本轮 python 实跑输出）
+[4] 行为链再生（--auto 随批）: PASS
+    批 sync rows=5 ring=3760（commit bdf8a446·落环后自动收口未手动重复）
+[5] heartbeat 3h 内: PASS
+    state/heartbeat.txt 尾行 2026-09-29 02:52:30 os-loop: round done exit=0（<3h·轮末再刷新）
+
+结论: 5/5 全勾 · 连续第十六证 · 可复跑命令在案（rg 本文件命令行）
