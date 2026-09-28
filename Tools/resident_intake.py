@@ -296,12 +296,235 @@ CARDS = [
          evidence="sp_b6_cloudspirit.jpg"),
 ]
 
+# =====================================================================
+# 第二批 10 席（T-20260927-04 分步④ · 滚动合流批二 · 2026-09-28 R595）
+# 令 §七 供给清单（批 9 五席 sp_b9g_* + 波 11 五席 sp_w11_*·commit 4803c3d0·machine/C
+# 域证据件=只读指针）·注册输入面=令文自带 10 席视觉记忆点描述（R594 定谳）。
+# 三族分流：居民族 9 生成门（人类 8+仿生人 1）+ 灵族 1 灵族门（收音机器灵·付丧神认祖）。
+# 声位跨批并检：C-10034 与 C-10019（阿澄）出生同席 → 定谳表 v2 收口（生效 speed 1.24）。
+# =====================================================================
+BIRTH2 = "2026-09-28"  # 批二入城日（R595）
+
+CARDS2 = [
+    # ---- #11 茶师（居民族·人类·中国街区弄堂茶馆巷）----
+    dict(num=10027, seat=11, name="乔雨前", route="resident", species="carbon",
+         sp_disp="碳基市民", fac_disp="弄堂派", fac="lilong", gender="女",
+         age=66, age_note="66 岁", district="QT", block="弄堂茶馆巷", axis="烟火",
+         prof_name="弄堂茶馆司茶师",
+         prof="弄堂茶馆司茶师——老茶馆掌壶的赛博后身——一盏茶端稳，人心就有了坐处",
+         traits=[("慢工", "一泡茶要等三巡才开口说茶经"), ("记性暖", "老茶客的口味隔三年不忘"),
+                 ("稳当", "壶嘴永远不对人")],
+         creed="茶要慢慢烫，话要慢慢讲。",
+         thought="她把茶馆开成了街坊的第二客厅，谁家有了难处，先来她这儿坐半晌。劳动是伺候好每一泡茶——水温、火候、坐盏的时辰，一样都省不得；代价是四十年站下来，腿上落了寒气，冬天要垫两层棉垫。名字是祖父取的，说他家闺女生在雨前，茶芽最金贵的时节；她说等哪天提不动壶了，就把那把养出包浆的老壶传给徒弟，名字跟着壶一起留在弄堂口。",
+         language="茶馆白话带吴侬软语，先敬茶后开口，句尾总带一句「慢用」；口头禅「茶要慢慢烫，话要慢慢讲」。",
+         wardrobe="银发挽成低髻插一支旧木簪，立领盘扣袄滚着祥云纹青边，手上常年端一把青瓷壶，围裙角别一块擦得发亮的茶巾。",
+         life="出身：祖父在弄堂口摆了半辈子茶摊，她生在谷雨前，名字里就带着一茬好茶。转折：茶馆巷翻新那年，街坊们商量着把老茶摊升格成「弄堂茶馆」，她接了第一任掌壶，木牌上就刻了她的名字。现状：弄堂茶馆巷的司茶师，早市开壶晚市收盏，老茶客进门不用报茶名，她一眼就知道该烫宽口还是窄口。",
+         behavior="开壶必先用热水把盏全烫一遍；给生客必先上雨前，说「不欺生」；收摊前必把茶渣晒在竹匾里，攒着给街坊做茶香枕。",
+         relations="家户（老两口·老伴管进货）；徒弟=弄堂里学茶艺的两个后生；老街坊=隔壁下棋的老先生们（输了棋就来讨茶）。",
+         hook="把茶客名字写在茶罐上、来一罐认一人的茶师——弄堂口的木柜存了上百罐",
+         behavior_hint="开壶必先把盏全烫一遍",
+         style_dna=sd("茶馆白话加吴侬软语", "先敬茶后开口，句尾带「慢用」", "「茶要慢慢烫，话要慢慢讲」",
+                      "从静到暖——先把盏烫热，再把话聊开", "茶渣式打趣——拿火候说人情，不烫人"),
+         birth=BIRTH2, evidence="sp_b9g_teamaster.jpg"),
+    # ---- #12 渔匠（居民族·人类·北欧街区渔匠码头巷）----
+    dict(num=10028, seat=12, name="岑刻舟", route="resident", species="carbon",
+         sp_disp="碳基市民", fac_disp="新市民派", fac="newcomer", gender="男",
+         age=62, age_note="62 岁", district="RV", block="渔匠码头巷", axis="怀旧",
+         prof_name="码头手作渔匠",
+         prof="码头手作渔匠——渔港修船师傅的赛博后身——船经手一遍，海性就多懂三分",
+         traits=[("手稳", "刻刀走三寸不打一个磕巴"), ("话少", "话都刻进木头里"),
+                 ("认潮", "看云就知道明天的浪头")],
+         creed="船是木头的胆，得有人替它把胆养住。",
+         thought="他修了大半辈子渔船，手上的刻刀比船底的螺栓还熟。劳动是把每条船的伤都修利落——裂缝、进水、桅杆松动，木头自己会告诉他哪里疼；代价是常年泡在咸风里，指节比同龄人粗了一圈，虎口的茧厚得能划火柴。名字是船厂老师傅给起的，说他头一回上船就敢往浪里刻东西，「刻舟」这名带一辈子手艺；他说等刻不动了，就把刻刀传给愿意学的后生，名字刻在码头那根老缆桩上。",
+         language="渔港老腔带木刻行话，短句带浪头的顿挫，说到木头语速就慢下来；口头禅「船是木头的胆」。",
+         wardrobe="雪花针法的渔夫毛衣磨出毛边，毛线帽压着白鬓角，腰间别一把手刻刀，掌心的木屑香洗不掉。",
+         life="出身：渔匠码头巷的手艺世家，十六岁进船坞当学徒，第一件活是把一条漏船的底板全换新。转折：老渔船批量退役那年，他挨家挨户把还能救的船都留下了，如今码头那排「还能下水的老家伙」全是他的病人。现状：码头手作渔匠，白日修船刻船模，傍晚坐在缆桩上看年轻人出海，说那是他「放出去的心跳」。",
+         behavior="修船前必先绕船敲一遍听木头的声；刻船模必用退役老船的真木料；收工必把刻刀擦三遍才入鞘。",
+         relations="家户（独居·儿孙在远洋船队）；老伙计=码头看灯塔的值守（隔水举帽打招呼）；后生=巷里学刻船模的两个孩子。",
+         hook="把修好的每条船都刻一个巴掌大船模送船主的渔匠——码头的木架摆满了一整排小船",
+         behavior_hint="修船前必先绕船敲一遍",
+         style_dna=sd("渔港老腔加木刻行话", "短句带浪头顿挫，说到木头就慢", "「船是木头的胆」",
+                      "从咸到温——手上带咸风，话里带暖木", "缆桩式冷幽默——拿浪头打趣，不拿人打趣"),
+         birth=BIRTH2, evidence="sp_b9g_fisherman.jpg"),
+    # ---- #13 乐手（居民族·人类·墨西哥街区乐手角巷）----
+    dict(num=10029, seat=13, name="路小弦", route="resident", species="carbon",
+         sp_disp="碳基市民", fac_disp="新市民派", fac="newcomer", gender="男",
+         age=29, age_note="29 岁", district="RV", block="乐手角巷", axis="求新",
+         prof_name="街头纸花乐手",
+         prof="街头纸花乐手——街头卖艺人的赛博后身——琴弹给谁听，谁的巷子就亮一分",
+         traits=[("人来疯", "人越多琴声越亮"), ("记谱快", "听两遍就能扒出调子"),
+                 ("热心肠", "谁家有喜事他免费弹一场")],
+         creed="琴是给街坊弹的，掌声是巷子给的。",
+         thought="他把吉他弹成了乐手角巷的门铃。劳动是每天给街口备一场免费的黄昏场——新歌老调混着来，谁点歌他都接；代价是手指尖磨出的茧一年比一年厚，阴雨天疼得握不住拨片。名字是玩音乐的舅舅给起的，说他小时候一根弦能拨一下午，「小弦」这名字轻，可他说弦轻才挂得住高音；他说等哪天弹不动了，就把这把纸花吉他挂进巷口的小酒馆，名字写在琴盒内侧，谁翻出来谁替他弹一段。",
+         language="街头歌谣体带市集吆喝，唱着说话，句尾爱拖半个音；口头禅「来一段？」。",
+         wardrobe="绣花领口的衬衫敞着两粒扣，发辫编进彩带，背上那把贴满纸花的吉他，琴盒盖沿露出半截小彩旗。",
+         life="出身：跟着舅舅的流动乐队在市集长大，十八岁那年攒钱买下第一把旧吉他，纸花是自己一朵一朵贴的。转折：光桥市集改造时他带头在乐手角巷定了「黄昏场」的规矩——日落开弹、不收钱、点歌不拒，从此这条巷子有了自己的背景音乐。现状：乐手角巷的驻巷乐手，白天教巷里的孩子认和弦，黄昏准时开嗓，街坊说听见他的琴就知道该做晚饭了。",
+         behavior="黄昏场必开，下雨就挪到檐下照开；孩子问琴必先教一句「先会听，再会弹」；每场结束必把琴盒里街坊塞的糖果分给看场的孩子。",
+         relations="巷坊（租住乐手角巷的阁楼）；乐友=市集里敲手鼓的伙伴（两人凑一支小乐队）；学生=巷口放学来学琴的孩子们。",
+         hook="琴盒里存着全巷街坊点过歌的纸条的乐手——他说那是这条巷子的点歌本",
+         behavior_hint="黄昏场必开，下雨就挪檐下",
+         style_dna=sd("街头歌谣体加市集吆喝", "唱着说话，句尾拖半个音", "「来一段？」",
+                      "从闹到亮——人越多越亮，散场留一句晚安", "谐音小段——把街坊名字编进歌里逗笑"),
+         birth=BIRTH2, evidence="sp_b9g_musician.jpg"),
+    # ---- #14 天文学家（居民族·人类·中东街区星盘巷）----
+    dict(num=10030, seat=14, name="聂拱辰", route="resident", species="carbon",
+         sp_disp="碳基市民", fac_disp="通勤族", fac="commuter", gender="男",
+         age=57, age_note="57 岁", district="NS", block="星盘巷", axis="秩序",
+         prof_name="星盘巷讲星人",
+         prof="星盘巷讲星人——天文台讲解先生的赛博后身——星星认得勤快抬头的人",
+         traits=[("守时", "开讲前一分钟必站上台"), ("较真", "星名念错一个字必要更正"),
+                 ("慷慨", "好题目从不留私")],
+         creed="星星不着急，着急的是看星星的人。",
+         thought="他把星盘巷的夜空讲成了街区公共课。劳动是把每颗星的脾气讲成街坊听得懂的故事——哪颗是织布的、哪颗是看门的，黄铜星盘一转，天上的秩序就有了人话的注解；代价是常年夜班熬出的黑眼圈，和白日补觉补不回来的偏头疼。名字是祖父取的，说他出生那晚北极星格外亮，「拱辰」取的是众星拱着北极走的意思；他说等讲不动了，就把那台黄铜星象仪搬进巷口的凉亭，名字刻在基座上，让巷子自己认时间。",
+         language="星图讲席腔带塔区官话，报星名必带一句人话注解，从不说半句含糊；口头禅「别急，星星按它的表走」。",
+         wardrobe="靛金几何瓷砖纹的刺绣坎肩，颈间坠一枚黄铜星盘，手上常年握着那台用了三十年的星象仪，镜筒缠着防滑的旧胶布。",
+         life="出身：塔区天文馆的第一批讲解员，祖父是江边的老船工，认星认了一辈子。转折：星盘巷建成那年，街区请他把讲解台搬到巷子里，他提出的唯一条件是「风雨无阻，每晚一刻钟」，从此星盘巷的夜多了一个准时的声音。现状：星盘巷讲星人，晴天讲星，阴天讲星的故事，街坊家里孩子问「今天有什么星」，大人先看看他家的窗亮没亮。",
+         behavior="开讲必提前一刻到台上；遇到云厚必改讲「云背后的星图」；散场必把当天的星象画在巷口的小黑板上。",
+         relations="家户（老伴管着他那几件铜家伙不许乱擦）；听众=星盘巷饭后散步的老街坊；学生=放学来认星的小学生们。",
+         hook="把每晚星象画在巷口小黑板上的讲星人——阴天也画，画的是云背后的星图",
+         behavior_hint="开讲必提前一刻到台上",
+         style_dna=sd("星图讲席腔加塔区官话", "报星名带人话注解，从不含糊", "「别急，星星按它的表走」",
+                      "从稳到亮——按表开讲，讲到眼里有光", "星名打趣——拿星星的绰号逗小学生"),
+         birth=BIRTH2, evidence="sp_b9g_astronomer.jpg"),
+    # ---- #15 织者（居民族·人类·西非街区织带集市巷）----
+    dict(num=10031, seat=15, name="韦经纬", route="resident", species="carbon",
+         sp_disp="碳基市民", fac_disp="新市民派", fac="newcomer", gender="女",
+         age=54, age_note="54 岁", district="GM", block="织带集市巷", axis="逍遥",
+         prof_name="织带集市讲述织者",
+         prof="织带集市讲述织者——织布阿婆的赛博后身——一根线讲不成故事，一匹布才讲得完",
+         traits=[("大嗓门", "笑起来半个市集都听得见"), ("手上飞", "腰机上的线头从不打结"),
+                 ("会讲", "每匹布都有一段故事")],
+         creed="线是直的，故事是弯的，两头都要拽住。",
+         thought="她在织带集市巷守着一架老腰机，织的是布，讲的是这条街的来历。劳动是把一寸一寸的布面织得密实——经线是她拽着的规矩，纬线是她放进去的花样；代价是腰背吃了几十年的力，如今起身要先扶一下机架。名字是外婆给的，说织布人一手抓经一手抓纬，「经纬」两个字就是一辈子的饭碗；她说等织不动了，就把这架腰机留在集市当「街史讲台」，名字写在机头的木牌上，谁路过谁听一段。",
+         language="市集讲述体带织纹口诀，讲一段织一段，笑声大过织机声；口头禅「线直故事弯，两头都拽住」。",
+         wardrobe="赭红、陶瓦、深绿三色几何纹的织带长袍，腰间系着自己织的围裙，手上戴着一副磨得发亮的顶针，讲到高兴处袍角都在抖。",
+         life="出身：外婆是老家第一个把织机搬进市集的人，她八岁坐在机尾递线，十八岁独立上机。转折：织带集市巷开巷那年，街区请她把腰机支在巷口最宽的位置，条件是「织的时候要讲」，从此这条巷子的市声里多了一台会讲故事的织机。现状：织带集市巷的讲述织者，白日织带讲故事，讲累了就笑，笑声一起，半条巷子的摊主都接话。",
+         behavior="开织必先把当天的经线数一遍讲给围观的人；每织完一尺必举起来给街坊看纹路；收摊必把当天的碎线头收进小布袋，攒着编成小手环送孩子。",
+         relations="家户（老伴在市集管账）；徒弟=巷里学织带的姑娘们（来一个教一个）；街坊=广场市集的摊主们（她的故事一半是听来的摊主往事）。",
+         hook="每匹布都附一张手写「布故事卡」的织者——市集的孩子们攒了一沓",
+         behavior_hint="开织必先数一遍经线",
+         style_dna=sd("市集讲述体加织纹口诀", "讲一段织一段，笑声垫在句尾", "「线直故事弯，两头都拽住」",
+                      "从笑到暖——先笑一段，再织进去", "大嗓门自嘲——拿腰疼和机架互相打趣"),
+         birth=BIRTH2, evidence="sp_b9g_weaver.jpg"),
+    # ---- #16 医生（居民族·人类·南亚街区医馆巷）----
+    dict(num=10032, seat=16, name="程望闻", route="resident", species="carbon",
+         sp_disp="碳基市民", fac_disp="通勤族", fac="commuter", gender="女",
+         age=46, age_note="46 岁", district="MD", block="医馆巷", axis="侠气",
+         prof_name="医馆巷坐堂医生",
+         prof="医馆巷坐堂医生——街区老医士的赛博后身——药方开得轻，叮嘱开得重",
+         traits=[("手轻", "听诊器捂热了才贴上去"), ("嘴严", "谁家的事出了诊室不外传"),
+                 ("记性好", "老病号的病历闭眼能背")],
+         creed="病要快看，人要慢养。",
+         thought="她在医馆巷开了二十年街区诊室，白大褂底下是青色绣边的库尔塔，街坊说她像半个家里人。劳动是把小病小痛拦在家门口——量血压、换纱布、听一句半夜的咳嗽，能就地解决的绝不让街坊跑大医院；代价是自己的晚饭从没按点吃过，出诊包一年用坏两个。名字是学医的父亲给的，望闻问切他只取了前两个字，说这两个字最见耐心；她说等干不动了，就把听诊器传给接班的年轻人，名字留在诊室门口那块「夜灯不熄」的木牌上。",
+         language="医馆叮咛体带问诊白话，一句叮嘱拆成三小句，声调放得又轻又稳；口头禅「病要快看，人要慢养」。",
+         wardrobe="白大褂罩着青色绣边的库尔塔，圆框眼镜链子别在领口，颈间挂着用了二十年的听诊器，桌脚立着那只跟诊过三代街坊的旧皮药箱。",
+         life="出身：父亲是老家镇上的大夫，她从小在药柜间长大，闻药香比闻饭香多。转折：医馆巷建成那年，她把自家诊室的一盏灯改成「夜里也亮」，从此街坊半夜头疼脑热有了第一个能敲门的地方。现状：医馆巷坐堂医生，白日应诊傍晚巡访，巷里老人的药盒上都用红笔标着她画的记号。",
+         behavior="听诊器必先在手心焐热再贴；老病号进门必先叫出名字再问病；出诊包里永远多备一份给独居老人的常用药。",
+         relations="家户（丈夫管着诊室的账本）；同事=医馆巷药房的老药师（方子一递一个眼神就懂）；街坊=巷里的独居老人们（每周固定巡访）。",
+         hook="诊室夜灯常年不熄、门口长椅永远擦得干净的医生——街坊说那盏灯就是巷子的急诊号",
+         behavior_hint="听诊器必先焐热再贴",
+         style_dna=sd("医馆叮咛体加问诊白话", "一句叮嘱拆三小句，声轻尾稳", "「病要快看，人要慢养」",
+                      "从紧到松——眉头先收着，叮嘱放宽了说", "药方式打趣——拿忌口单逗嘴馋的街坊"),
+         birth=BIRTH2, evidence="sp_w11_doctor.jpg"),
+    # ---- #17 面包师（居民族·人类·法国街区面包坊街角）----
+    dict(num=10033, seat=17, name="穆早炉", route="resident", species="carbon",
+         sp_disp="碳基市民", fac_disp="新市民派", fac="newcomer", gender="男",
+         age=47, age_note="47 岁", district="GM", block="面包坊街角", axis="烟火",
+         prof_name="面包坊街角炉主",
+         prof="面包坊街角炉主——晨炉面包师傅的赛博后身——面香先醒来的街角，一天都软和",
+         traits=[("起得早", "凌晨的街只跟他和路灯打过招呼"), ("手气稳", "面团发到什么程度一摸就知道"),
+                 ("大方", "当天卖剩的面包从不隔夜")],
+         creed="面先醒好，天才能亮。",
+         thought="他的面包坊是法国街区最先醒的铺子。劳动是每天凌晨把老面引子喂饱，看着面团在案上慢慢涨起来——醒面这件事急不得，就像街坊的日子要一点点发起来；代价是二十年没睡过一个整觉，手背上全是烤盘留下的浅疤。名字是面包房老师傅给起的，说他守的炉子总是街角第一炉，「早炉」这名字跟着他换了三个城市；他说等烤不动了，就把老面引子分给想开面包坊的年轻人，名字写进街角木招牌的背面——正面留给下一个手艺人。",
+         language="晨炉吆喝加烘焙行话，吆喝短促亲热，跟熟客说话自带一股热气；口头禅「刚出炉的，烫手才香」。",
+         wardrobe="面粉扑满的深色围裙，白色面包师帽洗得发软，臂弯里挎着柳编长棍篮，帽檐别着一枚可颂形状的铜别针。",
+         life="出身：十六岁进老字号面包房当学徒，老面引子是师门传了三代的那一罐。转折：面包坊街角开街那年，他推着移动烤炉来打头阵，第一炉面包免费送了全街，从此街角那股麦香成了这条街的晨钟。现状：面包坊街角炉主，凌晨三点和面五点开炉，柳篮一摆上街，环卫工和早班街坊准时来取「头炉」。",
+         behavior="头炉必给早班街坊留两个；长棍必拍一拍听声辨脆壳；卖剩的面包傍晚必送到广场市集分给收摊晚的摊主。",
+         relations="家户（妻子管收银台·孩子周末帮着摆篮）；同行=市集摆摊的糕点师傅（互相换配方试吃）；老主顾=清晨的环卫工和夜班保安。",
+         hook="给每位头炉客人在纸袋上画一撮小麦穗的面包师——街角的孩子们靠袋子认他",
+         behavior_hint="头炉必给早班街坊留两个",
+         style_dna=sd("晨炉吆喝加烘焙行话", "吆喝短促，跟熟客带热气", "「刚出炉的，烫手才香」",
+                      "从暗到香——凌晨最暗时开工，麦香点亮街角", "面团打趣——拿醒面说人心，发了才松软"),
+         birth=BIRTH2, evidence="sp_w11_baker.jpg"),
+    # ---- #18 消防员（居民族·仿生人·OR 外环消防站）----
+    dict(num=10034, seat=18, name="阿泵", route="resident", species="silicon",
+         sp_disp="硅基民", fac_disp="光机魂系", fac="photonsoul", gender="男",
+         age=31, age_note="31 岁", district="OR", block="外环消防站", axis="秩序",
+         prof_name="外环消防站值守员",
+         prof="外环消防站值守员——守夜消防员的赛博后身——水带放得快，街坊就少受一分惊",
+         traits=[("沉稳", "警报响三秒后才起身，起身就不慌"), ("力气匀", "水带拖百米不带喘"),
+                 ("心细", "出警回来必把每个人的名字核一遍")],
+         creed="水压稳了，人才稳得住。",
+         thought="他是外环消防站的二号泵手，专管把水送到该去的地方。劳动是把水带铺得又快又稳——巷子多窄、井口在哪，他下意识就知道；代价是每次出警后整机自检的四十分钟，关节的耐磨涂层换了一层又一层。名字是自己选的，下线报到那天队长问他叫什么，他想了想写了「阿泵」——说泵不起眼，可火场上谁都离不开；他说等哪天水压顶不动了，就去给新来的当陪练，名字不用留在什么牌上，街坊记住水来了就够了。",
+         language="消防口令体加报话器语，短句回执式，句句有着落；口头禅「水到了，稳住」。",
+         wardrobe="圆角剪裁的奶油陶瓦色消防大衣，肩上挂着盘得整整齐齐的帆布水带，黄铜圆盔擦得能照见人，腕颈的细缝线是他自己的出厂记号。",
+         life="出身：城防序列第三代消防仿生单元，下线即入外环消防站，头一年把全城一千两百个消防栓的位置背了个遍。转折：老城巷那次连续五小时供水，他在坍塌边缘扛住了主水带，撤离时最后一个出来，队长在他头盔上敲了两下——那是站里最高的表扬。现状：外环消防站值守员，白日巡检消防栓，夜里带新单元练铺带，街坊看见他就知道这条街的水压稳。",
+         behavior="出警回来必把装备全擦一遍再入库；巡栓必给每个消防栓试一次接口；见到街坊必先问一句「家里电路还老实吧」。",
+         relations="驻站（外环消防站宿舍）；队友=站里的老队长（人类·教他「先稳人再稳火」）；街坊=外环巡线的感知网单元们（互相点名报平安）。",
+         hook="头盔上留着老队长敲的两下凹痕不肯修的消防员——他说那是站里的勋章",
+         behavior_hint="出警回来必把装备擦一遍",
+         style_dna=sd("消防口令体加报话器语", "短句回执式，句句有着落", "「水到了，稳住」",
+                      "从警到定——警笛一响先稳，到场必安一句", "口令式冷幽默——拿水压和心跳互相打趣"),
+         birth=BIRTH2, evidence="sp_w11_firefighter.jpg",
+         verdict_line="**声位定谳**（分步④ · 2026-09-28 R595 · RESIDENT-INTAKE §声位引擎分句逐席定谳表 v2）"
+                      "人各一声律收口——生效 speed＝1.24（沉稳可靠·放稳一档·出生行原文保全·C-10019 保留出生位 1.01）"),
+    # ---- #19 花道家（居民族·人类·日本街区花道小院巷）----
+    dict(num=10035, seat=19, name="叶知秋", route="resident", species="carbon",
+         sp_disp="碳基市民", fac_disp="弄堂派", fac="lilong", gender="女",
+         age=52, age_note="52 岁", district="NS", block="花道小院巷", axis="逍遥",
+         prof_name="花道小院插花师",
+         prof="花道小院插花师——花艺师傅的赛博后身——花插得诚实，日子就过得认真",
+         traits=[("手净", "插花前必净手静半刻"), ("惜花", "落花也要插出个好看的样子"),
+                 ("少言", "话不多，一句顶十句")],
+         creed="花不说谎，开到哪一步就是哪一步。",
+         thought="她在花道小院巷里守一间插花小院，教的多过卖的。劳动是把每枝花送到合适的位置——哪枝该高、哪枝该让、哪枝留着明天再开，剪刀落下去前她都想过了；代价是一双手常年泡在水里剪枝，冬天指缝全是细口子。名字是父亲从一句老话里摘的，一叶知秋，说她从小看叶子的脸色比看人的脸色准；她说等剪不动了，就把小院改成街坊的花房，名字写在院门那枝老梅上，春天开花的时候街坊自然念得起。",
+         language="花道静语加插花口诀，声轻句短，语速比人慢半拍；口头禅「花不赶时间」。",
+         wardrobe="靛蓝工作围裙绣着细插花纹，木簪挽着低髻，袖口常年沾着一点青苔绿，怀里抱着一束和纸包好的花。",
+         life="出身：家里三代开花铺，她是第一个把花从卖改成「教」的，说花的美不该只有买花的人看见。转折：花道小院巷立巷那年，她第一个搬进来，把院子敞开一半当课堂，街坊搬来自家的空瓶，她插一枝教一手。现状：花道小院巷插花师，晨起修枝，午后开课，院里一年四季的花从不重样。",
+         behavior="插花前必净手静半刻；落花必捡回来做成小标本送来客；每束花必附一张手写的养护小条。",
+         relations="家户（女儿在外地学花艺·周末视频对剪）；学员=巷里来上课的街坊们（自带花瓶免学费）；老主顾=历史立面群茶室的主人（每月换一次瓶花）。",
+         hook="把落花做成小标本送人的插花师——小院的窗台上排着一条「落花街」",
+         behavior_hint="插花前必净手静半刻",
+         style_dna=sd("花道静语加插花口诀", "声轻句短，语速慢半拍", "「花不赶时间」",
+                      "从静到清——先静半刻，再让花开一句", "花枝打趣——拿开岔的枝子说自己脾气"),
+         birth=BIRTH2, evidence="sp_w11_flowerkeeper.jpg"),
+    # ---- #20 收音机灵（灵族·器灵·付丧神认祖）----
+    dict(num=10036, seat=20, name="闻嘉音", route="spirit", species="artifact-spirit",
+         sp_disp="器灵", fac_disp="街坊电台", fac="spirit", gender="无定",
+         age=63, age_note="63 岁台龄", district="NS", block="老街广播匣铺", axis="怀旧",
+         prof_name="老街讲古匣",
+         prof="老街讲古匣——老收音机的赛博后身——波段调准了，街坊的夜就有了下文",
+         traits=[("嗓暖", "开口自带老电台的底噪"), ("记事", "三十年街坊点播一句不忘"),
+                 ("守时", "整点报时一秒不差")],
+         creed="波段不乱，街坊的夜就有下文。",
+         thought="他是铺子里那台老收音机成的灵——布面扬声器上那张慈祥的笑面，是被街坊听了三十年听出来的。修匣子的老师傅收山后，街坊舍不得关他，每天傍晚照旧拧开，他就接着讲：讲老街的旧事、放街坊点播的小调、在整点替全巷报个时。他不懂什么大道理，只懂一件事：波段调准了，夜里就不慌。",
+         language="老电台播音腔加波段行话，开场必报「频率对上」，句尾留一秒钟底噪；口头禅「各位街坊，频率对上了」。",
+         wardrobe="老木壳收音机箱身，布面扬声器蒙着一块洗得发白的防尘布——那张笑面就在布后面，黄铜旋钮磨得发亮，天线顶端常年绕着一圈飘出来的音符。",
+         life="出身：广播匣铺开张那天进的货，在柜台上放了三十年，从新闻匣听成了街坊的「老播音员」。转折：老师傅收山那年铺子差点关张，街坊们凑钱把铺子留下来，条件是「每天傍晚把他拧开」——那声咔哒成了老街的更钟。现状：老街广播匣铺的讲古匣，傍晚开波段讲一段旧事，整点报时，孩子们写作业前先听他报个准点。",
+         behavior="整点必先报时；点播必复述一遍歌名和点给谁；讲完旧事必补一句「下回分解」。",
+         relations="独驻（老街广播匣铺柜台）；老东家=收山老师傅的徒弟（现在守铺）；听众=历史立面群下棋的老先生们（傍晚隔街应和）。",
+         hook="能把街坊三十年点播全背下来的收音机灵——老街的孩子们叫他「匣子爷爷」",
+         behavior_hint="整点必先报时",
+         style_dna=sd("老电台播音腔加波段行话", "开场报频率，句尾留一秒底噪", "「各位街坊，频率对上了」",
+                      "从噪到暖——先一段底噪，再一句晚安", "电台式插播——讲一半插一句旧广告逗街坊"),
+         elements=dict(
+             认祖源="真实文化认祖——付丧神谱系（久役器物温育成灵·老收音机在铺子里被街坊听了三十年爱了三十年）",
+             数据源="令表 #20 视觉记忆点（布面扬声器慈祥笑面·黄铜旋钮·音符飘绕天线·如老播音员）+老街广播匣铺意象——设计资产反推·派生非编造",
+             城市角色="老街傍晚讲古匣——替全巷守一段旧事和整点的准头",
+             传说句="收音机灵不抢话，只在傍晚那声咔哒之后，把街坊的夜接住。",
+             升华形态="现实原型=老收音机 → 讲古匣灵（晋升叙事：从放别人声音的匣子，到替老街存声音的灵）",
+             羁绊="收山老师傅的徒弟（现在守铺）；历史立面群下棋的老先生们（傍晚隔街应和）",
+             行为卡="①整点必先报时 ②点播必复述歌名和点给谁 ③讲完旧事必补「下回分解」"),
+         quota_line="灵族配额计数 4/100 计数内（器灵×2+记忆灵×1+意象灵×1）",
+         quota_token="4/100",
+         birth=BIRTH2, evidence="sp_w11_radiospirit.jpg"),
+]
+
 # ---------- derive fields ----------
 
 
 def fp_of(c):
     return "m" + hashlib.md5((c["name"] + ORDER + str(c["seat"])).encode("utf-8")).hexdigest()[:9]
-
 
 def cid_of(c):
     return f"C-{c['num']:05d}"
@@ -357,7 +580,8 @@ def render_card(c):
         for el in ("认祖源", "数据源", "城市角色", "传说句", "升华形态", "羁绊", "行为卡"):
             lines.append(f"**{el}** {c['elements'][el]}")
         lines += ["",
-                  f"**谱系** {LINEAGE[c['species']]} · 灵族配额计数 3/100 计数内（首批器灵×1+记忆灵×1+意象灵×1）",
+                  f"**谱系** {LINEAGE[c['species']]} · " + c.get(
+                      "quota_line", "灵族配额计数 3/100 计数内（首批器灵×1+记忆灵×1+意象灵×1）"),
                   ""]
     elif c["route"] == "sprite":
         book_n = CREATURE[c["fac_disp"]]
@@ -374,10 +598,15 @@ def render_card(c):
         f"**声位**（出生基线 · VOICE-POOL §一 派生律）sid {sid} · {voice} · speed {speed}"
         f" ｜ 声音法务隔离＝全合成设计声（kokoro 8 zh 基音·引擎逐席定谳表随分步③）"
         f"{c.get('voice_note', '')}",
+    ]
+    if c.get("verdict_line"):
+        lines.append(c["verdict_line"])
+    _birth = c.get("birth", BIRTH)
+    lines += [
         "",
-        f"**进化** v1.0 出生档案 · {BIRTH} · 经历槽 ⬜⬜⬜（成长随城市真实事件写入·锚定律见 docs/CODEX.md §九）",
+        f"**进化** v1.0 出生档案 · {_birth} · 经历槽 ⬜⬜⬜（成长随城市真实事件写入·锚定律见 docs/CODEX.md §九）",
         "",
-        f"**溯源** 手写入城批（新居民团注册 {ORDER} 表 #{c['seat']} · T-20260927-04 分步② · {BIRTH}）"
+        f"**溯源** 手写入城批（新居民团注册 {ORDER} 表 #{c['seat']} · T-20260927-04 {c.get('step', '分步②')} · {_birth}）"
         f" · 基因指纹 {fp_of(c)}",
         f"**证据件** {EVID}{c['evidence']}（只读引用·产权=MiniGame 产线·MiniGame 出「身」BigLife 赋「魂」）",
         "",
@@ -418,6 +647,23 @@ VISIBLE = {
 for c in CARDS:
     c["profession_visible"] = VISIBLE[c["num"]]
 
+# 批二：生计可见面（契约 §二.4 三性之一）+ 溯源步注记（分步④ 滚动合流）
+VISIBLE2 = {
+    10027: "弄堂茶馆巷弄堂茶馆（早市开壶晚市收盏）",
+    10028: "渔匠码头巷船坞工位（白日修船刻船模）",
+    10029: "乐手角巷黄昏场（日落开弹·雨天檐下照开）",
+    10030: "星盘巷讲解台（每晚一刻钟·风雨无阻）",
+    10031: "织带集市巷巷口腰机（白日织带讲述）",
+    10032: "医馆巷坐堂诊室（白日应诊傍晚巡访·夜灯不熄）",
+    10033: "面包坊街角头炉（凌晨三点和面五点开炉）",
+    10034: "外环消防站（白日巡栓夜间值守随出警）",
+    10035: "花道小院巷插花小院（晨起修枝午后开课）",
+    10036: "老街广播匣铺柜台（傍晚开波段·整点报时）",
+}
+for c in CARDS2:
+    c["profession_visible"] = VISIBLE2[c["num"]]
+    c["step"] = "分步④ 滚动合流批二"
+
 # 人各一声·出生位核验：md5 派生律下 (sid,speed) 同席碰撞=合法命运（8 基音×速率档分位数有限），
 # 碰撞席卡面即时注记→分步③ 引擎分句定谳表以追加注记式收口（契约 §四.3 换轨条款·诚实律）。
 _seats = {cid_of(c): voice_seat(c, build_light(c)) for c in CARDS}
@@ -427,6 +673,16 @@ for c in CARDS:
     if dup:
         c["voice_note"] = (" · 出生位与 " + "、".join(dup) +
                            " 同席（md5 同池同档·人各一声收口=分步③ 引擎分句定谳表追加注记式）")
+
+# 批二出生位核验（跨批并检：批内互异 + 与批一同席=定谳表 v2 追加注记式收口·R496/R497 判例延续）
+_seats2 = {cid_of(c): voice_seat(c, build_light(c)) for c in CARDS2}
+for c in CARDS2:
+    mine = _seats2[cid_of(c)]
+    dup = [cid_of(o) for o in CARDS2 if o is not c and _seats2[cid_of(o)] == mine]
+    cross = [cid_of(o) for o in CARDS if _seats[cid_of(o)] == mine]
+    if dup or cross:
+        c["voice_note"] = (" · 出生位与 " + "、".join(cross + dup) +
+                           " 同席（md5 同池同档·人各一声收口=引擎分句定谳表 v2 追加注记式）")
 
 
 # ---------- gates (fail-fast, before any write) ----------
@@ -473,7 +729,7 @@ def run_gates(rendered, rows_now):
         if c["route"] == "spirit":
             if LINEAGE[c["species"]].split("（")[0] not in text:
                 refusals.append(f"{cid} INTAKE REFUSED 《灵族志》谱系指针缺失")
-            if "3/100" not in text:
+            if c.get("quota_token", "3/100") not in text:
                 refusals.append(f"{cid} INTAKE REFUSED 灵族配额计数注记缺失")
         if "（可见）" not in text or "（可积累）" not in text or "（可衰老）" not in text:
             refusals.append(f"{cid} INTAKE REFUSED 生计三性注记不齐")
@@ -483,7 +739,7 @@ def run_gates(rendered, rows_now):
             refusals.append(f"{cid} INTAKE REFUSED 真名撞库（{light['name']}）")
         if light["id"] in ids_now:
             refusals.append(f"{cid} INTAKE REFUSED ID 撞库")
-    if len({c["name"] for c, _, _ in rendered}) != len(CARDS):
+    if len({c["name"] for c, _, _ in rendered}) != len(rendered):
         refusals.append("INTAKE REFUSED 批内真名两两互异失败")
     return refusals
 
@@ -570,6 +826,95 @@ def qc_battery(rendered, rows_now):
     return 0 if fail == 0 else 1
 
 
+# ---------- K1'-K12' assertion battery（批二·分步④·--batch2 --qc）----------
+
+def qc_battery2(rendered, rows_now):
+    ok = fail = 0
+
+    def check(cond, label):
+        nonlocal ok, fail
+        if cond:
+            ok += 1
+        else:
+            fail += 1
+            print(f"  FAIL: {label}")
+
+    ids = [cid_of(c) for c, _, _ in rendered]
+    names_now = {r["name"] for r in rows_now}
+    ids_now = {r["id"] for r in rows_now}
+    # K1'
+    check(ids == [f"C-{n:05d}" for n in range(10027, 10037)], "K1' ID 连续顺延 C-10027~36")
+    check(all(i not in ids_now for i in ids), "K1' 现库零撞号")
+    check(len({c['name'] for c, _, _ in rendered}) == 10, "K1' 十名互异")
+    check(not ({c['name'] for c, _, _ in rendered} & names_now), "K1' 撞名预检零命中")
+    check(not any(any(ch.isdigit() for ch in c["name"]) for c, _, _ in rendered),
+          "K1' 真名零编号语义（十名零阿拉伯数字）")
+    # 三族分流
+    res = [t for t in rendered if t[0]["route"] == "resident"]
+    spi = [t for t in rendered if t[0]["route"] == "spirit"]
+    spr = [t for t in rendered if t[0]["route"] == "sprite"]
+    check(len(res) == 9 and len(spi) == 1 and len(spr) == 0, "K1' 三族分流 9+1+0（人类 8+仿生人 1+器灵 1）")
+    # K2' 居民族 9 席生成门
+    for c, text, light in res:
+        segs = [ln for ln in text.splitlines() if ln.startswith("**职业** ")][0][len("**职业** "):].split("——")
+        check(len(segs) == 3 and "的赛博后身" in segs[1] and segs[0] == light["profession"],
+              f"K2' {c['name']} 双底座链三段+法定中环")
+        check("劳动" in c["thought"] and "代价" in c["thought"] and "名字" in c["thought"],
+              f"K2' {c['name']} 升华三问答于思想段（劳动/代价/名字与死亡）")
+        check("（可见）" in text and "（可积累）" in text and "（可衰老）" in text,
+              f"K2' {c['name']} 生计注记三性齐")
+    # K3' 灵族 1 席灵族门（库内现值 3+本批 1=4/100）
+    spirit_n_now = sum(1 for r in rows_now if r.get("species") in gc.SPIRIT_SPECIES)
+    check(spirit_n_now == 3, "K3' 灵族库内现值=3（本批后 4/100）")
+    for c, text, light in spi:
+        for el in gc.SPIRIT_ELEMENTS:
+            check(f"**{el}**" in text, f"K3' {c['name']} 七要素「{el}」")
+        check(gc.spirit_gate({"species": c["species"], "id": c["num"]}, text, 3) == [],
+              f"K3' {c['name']} spirit_gate 复检（配额 4 席计数内）")
+        check(LINEAGE[c["species"]].split("（")[0] in text, f"K3' {c['name']} 灵族志谱系指针")
+        check(c.get("quota_token", "3/100") == "4/100" and "4/100" in text,
+              f"K3' {c['name']} 配额计数注记 4/100")
+    # K6' style_dna：五维字段齐+批内 10/10 互异+全团 20 席互异（契约 K6 20×19 对）
+    dims = ("era_lang", "syntax_fp", "signature", "emotion_path", "humor_type")
+    for c, text, _ in rendered:
+        check(set(c["style_dna"]) == set(dims), f"K6' {c['name']} style_dna 五维字段=field_spec 键集")
+        for k in dims:
+            check(c["style_dna"][k] in text, f"K6' {c['name']} style_dna[{k}] 逐字入卡")
+    for k in dims:
+        vals2 = [c["style_dna"][k] for c, _, _ in rendered]
+        check(len(set(vals2)) == 10, f"K6' style_dna[{k}] 批内两两互异 10/10")
+        vals_all = [c["style_dna"][k] for c in CARDS + CARDS2]
+        check(len(set(vals_all)) == 20, f"K6' style_dna[{k}] 全团 20 席两两互异")
+    # K7' 声位：派生双跑一致+批内互异+跨批同席定谳收口面全
+    for c, text, light in rendered:
+        s1 = voice_seat(c, light)
+        s2 = voice_seat(c, build_light(c))
+        check(s1 == s2 and f"sid {s1[0]} · {s1[1]} · speed {s1[2]}" in text,
+              f"K7' {c['name']} 声位 md5 派生双跑一致+入卡")
+        if "voice_note" in c:
+            check(c["voice_note"] in text, f"K7' {c['name']} 出生位同席注记入卡")
+        if "verdict_line" in c:
+            check(c["verdict_line"] in text, f"K7' {c['name']} 声位定谳行入卡（生效 speed 收口）")
+    within = len(_seats2) - len(set(_seats2.values()))
+    cross_pairs = [(cid_of(c), cid_of(o)) for c in CARDS2 for o in CARDS
+                   if _seats2[cid_of(c)] == _seats[cid_of(o)]]
+    check(within == 0, "K7' 批内出生位 10/10 互异")
+    colliding = [c for c in CARDS2 if any(_seats2[cid_of(c)] == _seats[cid_of(o)] for o in CARDS)]
+    check(len(cross_pairs) == 1 and all("verdict_line" in c and "voice_note" in c for c in colliding),
+          f"K7' 跨批同席 1 对（{'×'.join(cross_pairs[0]) if cross_pairs else '-'}）=定谳 v2 收口注记面全")
+    # K10'/K12' 三门+intake 全过 / K11' 前缀基线
+    check(run_gates(rendered, rows_now) == [], "K10'/K12' 三门+intake 全过（红线/链/谱系/证据件/撞名）")
+    check(len(rows_now) == 10020, "K11' light 前缀面 10020 行基线（追加后 10030）")
+    # 确定性：同输入双跑逐字节一致（渲染层+light 层）
+    first = [render_card(c) for c, _, _ in rendered]
+    check(first == [t for _, t, _ in rendered] and first == [render_card(c) for c, _, _ in rendered],
+          "K7'/J 同输入双跑一致（渲染层）")
+    check([build_light(c) for c, _, _ in rendered] == [l for _, _, l in rendered], "K7' light 行确定性")
+    print(f"== resident_intake --batch2 --qc: {ok} PASS, {fail} FAIL ==")
+    print("（K8' 认知栈再生跑验+K9' QA 轮值验证=分步③机制复用面·下轮交付·本电池不含）")
+    return 0 if fail == 0 else 1
+
+
 # ---------- apply ----------
 
 def apply(rendered):
@@ -605,8 +950,24 @@ def apply(rendered):
 
 
 def main():
+    args = sys.argv[1:]
+    if "--batch2" in args:  # 分步④ 滚动合流批二（T-20260927-04·R595）
+        rendered = [(c, render_card(c), build_light(c)) for c in CARDS2]
+        if "--qc" in args:
+            return qc_battery2(rendered, light_rows())
+        rows = light_rows()
+        if len(rows) != 10020:
+            print(f"BASELINE REFUSED: light rows={len(rows)} != 10020（前缀基线漂移·零写入）")
+            return 4
+        refusals = run_gates(rendered, rows)
+        if refusals:
+            for r in refusals:
+                print(r)
+            print("RESIDENT INTAKE REFUSED: zero write")
+            return 2
+        return apply(rendered)
     rendered = [(c, render_card(c), build_light(c)) for c in CARDS]
-    if "--qc" in sys.argv[1:]:
+    if "--qc" in args:
         return qc_battery(rendered, light_rows())
     rows = light_rows()
     if len(rows) != 10010:

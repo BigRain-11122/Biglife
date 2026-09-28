@@ -1,0 +1,7 @@
+BigLife QA Smoke R595 (2026-09-29 00:1x @BigLife-OSLoop)
+1. poolgen tick: === 2026-09-28 23:06:15 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+2. 本批环: 击杀轮批 8 环 C-03688/C-03689/C-03691~C-03696 入库 01e26adf+sync 14812b1d ring=3688 (C-03687/C-03690 门拦留冷 stays due)
+3. 位置字段: light rows=10030 block_null=0 (append-only 新 10 行 block 全非空)
+4. 行为链: sync 14812b1d rows=8 ring=3688 随批在役; behavior-last 埋点见 state/
+5. heartbeat 末行: 2026-09-28 23:43:04 os-loop: round timeout killed (age over 20min)
+--- 注册面: cards=10030 QC problems=0 (23:42) 灵族配额 4/100
