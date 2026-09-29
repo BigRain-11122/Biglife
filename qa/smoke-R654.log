@@ -1,0 +1,9 @@
+BigLife QA Smoke Test 自验 R654 · 2026-09-29 12:51 · 数据面自验（章程 BigLife 节=非 GUI 司·log 面即证据面）
+[1] poolgen 跑通: PASS — state/poolgen_run.log tick 12:06:02 TOTAL=1440 FAIL_BUCKETS=NONE（连戳链 11:06→12:06 间隔 60min <24h 判据持续满足）
+[2] census 新条目: PASS — 本批 6 环（C-04063/C-04064/C-04065/C-04066/C-04067/C-04068 六席首环·批 aac6951b）·ring 4053→4059
+[3] 位置字段非 null: PASS — light block_null=0 rows=10030·behavior slot_null=0 实测
+[4] 行为链再生: PASS — sync_rings rows=6 ring_synced=6（commit c6ac64ce·R654 批自动收口）
+[5] heartbeat 3h 内: PASS — 轮末刷新（2026-09-29 12:51）
+[红线] 停造人令双闸: PASS — light_rows=10030 unique=10030 ID 封顶 C-10036 over_cap=0（注册冻结维持）
+[转办承接] T-20260929-03 分步① N2 供给规格盘 v0 落件（docs/n2-supply-spec.md·a32a582c）+基因轮 R654 兑现（d736bc6d）
+结论: 5/5 全勾 — smoke 第六十一证
