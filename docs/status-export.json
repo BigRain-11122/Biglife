@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-30T06:24:15+08:00",
+ "export_ts": "2026-09-30T06:37:15+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R737 批3环（C-04429〔time-morning 第14轮过门归位〕+C-04449〔typhoon+time 归位〕+C-04566 首环·批 b2c9878e+sync 09f42c16·ring 4550→4553）——7 席 rain 族 persistent 留冷 stays due（诚实门禁健康态）·核卡 3/3 PASS（口头禅逐字领句+[锚] 3/3+晨时域内）。**CEO P0 停造人强冻令升级条款同轮承接**（集团 orders.md 05:38：砍注册代码路径=generate_census/resident_intake/mirror_intake 三码闸读 state/registry-freeze.lock〔--force/--batch2/--qc 亦拒·实弹 exit 4 零写盘〕+queue 硬停〔滚动合流后续波次禁动·第二批 C-10027~36 已于 09-29 R595 落籍在库=滞记勘正〕+registry 写冻结；判据=12h 新增 0 新 ID·回执 F-20260930-BL02·证据 qa/freeze-guard-R737.log）。年轮线主产线不受冻结面影响（只写既有卡·零新增 ID）",
+   "t": "R738 批3环（C-04567〔OR 数据清洗工〕+C-04568〔QT 时空校准师〕+C-04569〔OR〕三枚首环·批 0a3bc044+sync b70b652e·ring 4553→4556）——7 席 rain 族 persistent 留冷 stays due 维持（诚实门禁健康态）。**CEO P0 停造人强冻令判据窗监测中**（令点 05:38 起 12h→09-30 17:38 到期复核：本轮双闸 python 实测 light rows/unique=10030·ID 封顶 C-10036·over_cap=0·三码闸 exit 4 在役·强冻点后 A-filter 零新卡——判据面现行满足态）·年轮线主产线照转（只写既有卡·零新增 ID）",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "R737 sync 09f42c16 rows=3 ring_synced=3（ring 4550→4553·批后自动收口）·meet 对 19 盘面维持",
+   "t": "R738 sync b70b652e rows=3 ring_synced=3（ring 4553→4556·批后自动收口）·meet 对 19 盘面维持",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "R737 smoke 第一百三十九证五项全勾（qa/smoke-R737.log：tick 连戳/09-30 环 158 账平/light 双闸 10030·ring=4553/冻结闸 exit 4 在役/强冻点后零新卡 A-filter 直证）+停造人升级条款证据件 qa/freeze-guard-R737.log（三码闸实弹+queue 硬停+registry-freeze.lock 在盘·判据新增 ID=0 现行满足态）+QC 免巡≈R739（R733 problems=0 在案）+GPU 探针 6931/12282MiB util5% 空窗未开（Bonsai 收口窗 09-30 13:00）",
+   "t": "R738 smoke 第一百四十证五项全勾（qa/smoke-R738.log：tick 连戳/09-30 环 161 账平/light 双闸 10030·ring=4556/冻结闸 exit 4 在役/强冻点后零新卡 A-filter 直证）+QC 免巡≈R739（R733 problems=0 在案）+GPU 探针本轮免（Bonsai 收口窗 09-30 13:00 未至·R737 探针先例 6931/12282MiB util5% 空窗未开维持）",
    "s": 1
   },
   {
@@ -151,12 +151,12 @@
    "户籍卡"
   ],
   [
-   "4550",
-   "4553"
+   "4553",
+   "4556"
   ],
   [
-   "158",
-   "09-30 新写环（全域直数 158=R736 面 155+R737 批 3 账平零差·python 全 census 域 [锚] 当日行直数·sync ring=4553）"
+   "161",
+   "09-30 新写环（全域直数 161=R737 面 158+R738 批 3 账平零差·python 全 census 域 [锚] 当日行直数·sync ring=4556）"
   ],
   [
    "537/328",
