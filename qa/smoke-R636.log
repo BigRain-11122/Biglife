@@ -1,0 +1,11 @@
+# QA Smoke Test — R636 (2026-09-29 ~09:2x)
+# BigLife 数据面自验五项（工程=docs/qa-smoke-test-charter.md 本司面每轮 commit 后自验）
+[1] poolgen 跑步机 tick 2026-09-29 09:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE —— PASS（08:06→09:06 间隔 60min <24h 连戳判据持续满足）
+[2] census 新条目 本批 10 due 落 7 环（C-03957 过门+C-03970/C-03971/C-03972/C-03973/C-03974/C-03975 六席首环·批 c0af988f）ring 3960→3967 —— PASS
+[3] 位置字段面 null: light block_null=0/10030 · behavior slot_null=0/10030（宽口径 block|district 3 行豁解保留中止典形态·历史既有非本批引入） —— PASS
+[4] 行为链再生 sync_rings 随批自动收口 rows=7 ring_synced=7（commit dc9bfe55） —— PASS
+[5] heartbeat 3h 内 09:20:12 round done exit=0（R635 收尾）·本轮 R636 轮末刷新 —— PASS
+红线行：造人令轮首双闸实测过 light_rows=10030 unique=10030 ID 封顶 C-10036 越界 0（注册冻结维持·判据未触发态）
+QC 行：R636 到期巡检实跑 cards=10030 evolved=3967 problems=0（QC-REPORT 随轮入库·下到期 ≈R642）
+核卡行：抽验 2/2 零修复（C-03970 口头禅「茶凉了再倒就是」逐字领句+行情定价 face 内化·C-03975 口头禅「毫秒也是时间」逐字领句+像素小学界面域内合成·[锚] 2/2 齐备）
+GPU 探针行（T-20260924-08 轮末例行·T-20260928-07 第三十二探针）：used=6642/12282MiB util 3% —— 空窗未开（余 ~5.64GB<权重 5.94GB·让路律不抢·回执 F-20260929-BL01 已前置）
