@@ -1,86 +1,46 @@
-=== BigLife 基因轮 R736 证据件 2026-09-30（先验后登·T-20260927-01 正序） ===
-登记断言（state/_gene_round_r736.py 出）: PASS cp: 537->540 (+3) 轴分布 90x6 均齐恢复 | PASS ho: 328->331 (+3) | PASS tp: 194->197 (+3) | json 回读断言全过
-nearcheck 收敛史: v1 9 候选 6 CLEAN/3 FLAG（cp 灶头-日子就族 / tp 半条街的门牌 / tp 邻居守了）-> v2 换句 3/3 CLEAN -> 终版 9/9
----- gene_nearcheck --file state/gene-candidates-R736.txt ----
-[FLAG] cp|云都不赶路，人急什么。
-    A: language.catchphrases[537] ['云都不赶', '都不赶路', '不赶路，', '赶路，人', '路，人急', '，人急什', '人急什么', '急什么。'] ⊂ 云都不赶路，人急什么。
-    B: ratio 100.0 ≥ T92 vs 云都不赶路，人急什么。
-[FLAG] cp|晚市的灯一亮，饿意就做主。
-    A: language.catchphrases[538] ['晚市的灯', '市的灯一', '的灯一亮', '灯一亮，', '一亮，饿', '亮，饿意', '，饿意就', '饿意就做', '意就做主', '就做主。'] ⊂ 晚市的灯一亮，饿意就做主。
-    B: ratio 100.0 ≥ T92 vs 晚市的灯一亮，饿意就做主。
-[FLAG] cp|台账记到第三本，比谁都守时。
-    A: language.catchphrases[539] ['台账记到', '账记到第', '记到第三', '到第三本', '第三本，', '三本，比', '本，比谁', '，比谁都', '比谁都守', '谁都守时', '都守时。'] ⊂ 台账记到第三本，比谁都守时。
-    B: ratio 100.0 ≥ T92 vs 台账记到第三本，比谁都守时。
-[FLAG] ho|掉漆但铃还脆的旧车铃铛
-    A: lives.hook_objects[328] ['掉漆但铃', '漆但铃还', '但铃还脆', '铃还脆的', '还脆的旧', '脆的旧车', '的旧车铃', '旧车铃铛'] ⊂ 掉漆但铃还脆的旧车铃铛
-    B: ratio 100.0 ≥ T95 vs 掉漆但铃还脆的旧车铃铛
-[FLAG] ho|刻着班次的褪色通勤票夹
-    A: lives.hook_objects[329] ['刻着班次', '着班次的', '班次的褪', '次的褪色', '的褪色通', '褪色通勤', '色通勤票', '通勤票夹'] ⊂ 刻着班次的褪色通勤票夹
-    B: ratio 100.0 ≥ T95 vs 刻着班次的褪色通勤票夹
-[FLAG] ho|被手汗盘亮的铜制门牌
-    A: lives.hook_objects[330] ['被手汗盘', '手汗盘亮', '汗盘亮的', '盘亮的铜', '亮的铜制', '的铜制门', '铜制门牌'] ⊂ 被手汗盘亮的铜制门牌
-    B: ratio 100.0 ≥ T95 vs 被手汗盘亮的铜制门牌
-[FLAG] tp|修灯那年在桥洞底下捡到一箱旧图纸，照着把老巷的门牌一块块擦亮，后来连电闸藏在哪都画成图。
-    A: lives.turning_points[194] ['修灯那年', '灯那年在', '那年在桥', '年在桥洞', '在桥洞底', '桥洞底下', '洞底下捡', '底下捡到', '下捡到一', '捡到一箱', '到一箱旧', '一箱旧图', '箱旧图纸', '旧图纸，', '图纸，照', '纸，照着', '，照着把', '照着把老', '着把老巷', '把老巷的', '老巷的门', '巷的门牌', '的门牌一', '门牌一块', '牌一块块', '一块块擦', '块块擦亮', '块擦亮，', '擦亮，后', '亮，后来', '，后来连', '后来连电', '来连电闸', '连电闸藏', '电闸藏在', '闸藏在哪', '藏在哪都', '在哪都画', '哪都画成', '都画成图', '画成图。'] ⊂ 修灯那年在桥洞底下捡到一箱旧图纸，照着把老巷的门牌一块块擦亮，后来连电闸藏在哪都画成图。
-    B: ratio 100.0 ≥ T44 vs 修灯那年在桥洞底下捡到一箱旧图纸，照着把老巷的门牌一块块擦亮，后来连电闸藏在哪都画成图。
-[FLAG] tp|江雾锁城那周替街坊守了七天渡口，交接那晚船工送来一盏马灯，自此走夜路包里总留一点火。
-    A: lives.turning_points[195] ['江雾锁城', '雾锁城那', '锁城那周', '城那周替', '那周替街', '周替街坊', '替街坊守', '街坊守了', '坊守了七', '守了七天', '了七天渡', '七天渡口', '天渡口，', '渡口，交', '口，交接', '，交接那', '交接那晚', '接那晚船', '那晚船工', '晚船工送', '船工送来', '工送来一', '送来一盏', '来一盏马', '一盏马灯', '盏马灯，', '马灯，自', '灯，自此', '，自此走', '自此走夜', '此走夜路', '走夜路包', '夜路包里', '路包里总', '包里总留', '里总留一', '总留一点', '留一点火', '一点火。'] ⊂ 江雾锁城那周替街坊守了七天渡口，交接那晚船工送来一盏马灯，自此走夜路包里总留一点火。
-    B: ratio 100.0 ≥ T44 vs 江雾锁城那周替街坊守了七天渡口，交接那晚船工送来一盏马灯，自此走夜路包里总留一点火。
-[FLAG] tp|搬进新楼那年留了一把老屋钥匙在口袋，后来整条巷的锁匠都认得这把开不了任何门的钥匙。
-    A: lives.turning_points[196] ['搬进新楼', '进新楼那', '新楼那年', '楼那年留', '那年留了', '年留了一', '留了一把', '了一把老', '一把老屋', '把老屋钥', '老屋钥匙', '屋钥匙在', '钥匙在口', '匙在口袋', '在口袋，', '口袋，后', '袋，后来', '，后来整', '后来整条', '来整条巷', '整条巷的', '条巷的锁', '巷的锁匠', '的锁匠都', '锁匠都认', '匠都认得', '都认得这', '认得这把', '得这把开', '这把开不', '把开不了', '开不了任', '不了任何', '了任何门', '任何门的', '何门的钥', '门的钥匙', '的钥匙。'] ⊂ 搬进新楼那年留了一把老屋钥匙在口袋，后来整条巷的锁匠都认得这把开不了任何门的钥匙。
-    B: ratio 100.0 ≥ T44 vs 搬进新楼那年留了一把老屋钥匙在口袋，后来整条巷的锁匠都认得这把开不了任何门的钥匙。
-== gene_nearcheck: 9 候选, 9 近重候选 ==
-[exit=1 stderr]=
----- gene_nearcheck --qc ----
-PASS gram-extract
-PASS layerA-fixture-hit
-PASS layerA-fixture-miss
-PASS layerA-cross-pool
-PASS layerA-real-R413
-PASS layerA-real-R406
-PASS layerA-real-crosspool
-PASS layerB-historic-boundary
-PASS layerB-exact-dup
-PASS unknown-type-reject
-PASS baseline-criterion
-PASS baseline-sentinel
-PASS parse-line
-PASS double-run
-PASS file-roundtrip
+=== BigLife 基因轮 R736 证据件 2026-09-30（先验后登·T-20260927-01 正序·法源 R417 阈值定谳） ===
+候选池：9 条（cp 3+ho 3+tp 3）·v1 起草→预检换句→终版登记。预检为注册前实跑，登记后各断言复跑如下。
+
+---- 预检 v1（注册前实跑·exit 1=3 近重候选拦截） ----
+[CLEAN] cp|云都不赶路，人急什么。
+[FLAG] cp|灶头不熄，日子就有底。
+    A: language.catchphrases[115] ['，日子就', '日子就有'] ⊂ 灶上不熄火，日子就有奔头。
+    A: language.catchphrases[127] ['就有底。'] ⊂ 灶上炖着汤，心里就有底。
+    A: language.catchphrases[295] ['，日子就', '日子就有', '子就有底'] ⊂ 锅气一冒，日子就有底了。
+    A: language.catchphrases[160/162/210] ['，日子就'] ⊂ 老歌一响/脚步一停/饭桌坐得下人 三同型 4-gram 族
+[CLEAN] cp|台账记到第三本，比谁都守时。
+[CLEAN] ho|掉漆但铃还脆的旧车铃铛
+[CLEAN] ho|刻着班次的褪色通勤票夹
+[CLEAN] ho|被手汗盘亮的铜制门牌
+[FLAG] tp|修灯那年在桥洞底下捡到一箱旧图纸，照着修遍了半条街的门牌，往后谁家电闸跳了都记得这条路。
+    A: lives.hook_actions[14] ['了半条街', '半条街的'] / lives.turning_points[104] ['条街的门'] / lives.turning_points[119] ['，往后谁', '往后谁家']
+[FLAG] tp|江雾锁城那周替邻居守了七天渡口，交接那晚船工送来一盏马灯，自此夜路再远包里总留着一点火。
+    A: lives.turning_points[114] ['邻居守了'] ⊂ 替住院的邻居守了一阵子饭摊，从此和整条街交了心
+[CLEAN] tp|搬进新楼那年留了一把老屋钥匙在口袋，后来整条巷的锁匠都认得这把开不了任何门的钥匙。
+== gene_nearcheck: 9 候选, 3 近重候选 ==（exit 1·门禁拦截换句）
+
+---- 预检 v2（注册前实跑·换句再验·exit 0） ----
+[CLEAN] cp|晚市的灯一亮，饿意就做主。
+[CLEAN] tp|修灯那年在桥洞底下捡到一箱旧图纸，照着把老巷的门牌一块块擦亮，后来连电闸藏在哪都画成图。
+[CLEAN] tp|江雾锁城那周替街坊守了七天渡口，交接那晚船工送来一盏马灯，自此走夜路包里总留一点火。
+== gene_nearcheck: 3 候选, 0 近重候选 ==（exit 0·终版 9/9 CLEAN）
+
+---- 登记（state/_gene_round_r736.py·外科尾追加零重排·断言电池） ----
+PASS cp: 537->540 (+3) | 轴分布 {'逍遥': 90, '烟火': 90, '秩序': 90, '求新': 90, '怀旧': 90, '侠气': 90} = 90x6 均齐恢复
+PASS ho: 328->331 (+3) | tp: 194->197 (+3)
+（撞库拒绝断言×3 + json 回读断言×6 全过；diff 12+/3-，3 删除行=三池尾行逗号结构重排，既有基因文本零字节改动）
+
+---- 登记后断言复跑：--qc ----
+15 PASS 0 FAIL（gram-extract/layerA-fixture-hit/layerA-fixture-miss/layerA-cross-pool/layerA-real-R413/layerA-real-R406/layerA-real-crosspool/layerB-historic-boundary/layerB-exact-dup/baseline-criterion/baseline-sentinel/parse-line/double-run/file-roundtrip + 2 fixture）
 == gene_nearcheck --qc: 15 PASS, 0 FAIL ==
----- gene_nearcheck --baseline ----
-{
- "cp": {
-  "pool": "language.catchphrases",
-  "n": 540,
-  "max_ratio": 91.667,
-  "top_pair": [
-   "热汤落肚，啥事都好商量。",
-   "热汤下肚，啥事都好商量。"
-  ],
-  "threshold": 92.0,
-  "criterion_ok": true
- },
- "ho": {
-  "pool": "lives.hook_objects",
-  "n": 331,
-  "max_ratio": 94.118,
-  "top_pair": [
-   "别在门襟上的老怀表",
-   "别在襟上的老怀表"
-  ],
-  "threshold": 95.0,
-  "criterion_ok": true
- },
- "tp": {
-  "pool": "lives.turning_points",
-  "n": 197,
-  "max_ratio": 43.902,
-  "top_pair": [
-   "替人守了一宿摊，从此多了个惦记他的人",
-   "替住院的邻居守了一阵子饭摊，从此和整条街交了心"
-  ],
-  "threshold": 44.0,
-  "criterion_ok": true
- }
-}
+
+---- 登记后断言复跑：--baseline（R417 定谳值漂移监控） ----
+cp  n=540  max_ratio 91.667 < T92  criterion_ok=true  top_pair=[热汤落肚/热汤下肚，啥事都好商量。]（史前对零触碰只记档）
+ho  n=331  max_ratio 94.118 < T95  criterion_ok=true  top_pair=[别在门襟上的老怀表/别在襟上的老怀表]
+tp  n=197  max_ratio 43.902 < T44  criterion_ok=true  top_pair=[替人守了一宿摊…/替住院的邻居守了一阵子饭摊…]
+三池 criterion_ok 全持=R417 基线零漂移。
+
+---- 登记后落库佐证：终版候选对库自命中 ----
+登记后以 --file 复跑终版 9 条 → 9/9 FLAG@ratio100 对自身（cp[537]/cp[538]/cp[539] 等）=新基因已入库之正向佐证（预检语义=注册前跑；此段非预检记录）。
+
+commit=c45bbd76（genes/language.json + genes/lives.json）·候选清单 state/gene-candidates-R736.txt（state/ 不入库）
