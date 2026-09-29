@@ -1,0 +1,11 @@
+BigLife QA smoke 第133证 (R729) 2026-09-30 04:46
+[1] poolgen tick: 04:06:02 连戳 TOTAL=1440 FAIL_BUCKETS=NONE 间隔60min<24h PASS
+[2] census 新条目: 本批5环 C-04514/C-04532/C-04533/C-04535/C-04538 (批 a3317ec2+sync 4cbd62fd ring 4522->4527) PASS
+[3] 位置字段非null: behavior slot_null=0/100 抽样+anchors home null(非reserved)=0/100 抽样 PASS
+[4] 行为链再生: sync_rings 随批 rows=5 ring=4527 (behavior --auto 随批在役) PASS
+[5] heartbeat 3h内: 04:39:46 round done (7min) PASS
+gate: 年轮批 evolve_citizen v0.43 机审门批内全审过门 (5席留冷: C-04429 time-morning 第18轮/C-04529 rain+time 第2轮/C-04534 session-state+time 首见/C-04536 time 首见/C-04537 sky 首见)
+红线: 停造人令双闸 light=10030 unique=10030 封顶C-10036 over_cap=0 注册冻结维持
+核卡: 2/2 PASS (C-04514 口头禅逐字领句+调色师face域内/C-04532 口头禅逐字领句+底色板正域内+门童face域内 [锚]2/2齐备)
+账平: 09-30 新写环全域直数 132=R728面127+本批5 零差
+关系面: --qc PASS rows=2841093 bad=0 double_run=OK (meet 19对 in-sync 维持)
