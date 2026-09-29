@@ -1,0 +1,12 @@
+# qa/smoke-R662.log —— BigLife 数据面自检（T-20260928-05 常设随轮件·2026-09-29 14:47 轮）
+[1] poolgen 跑通： tick 2026-09-29 14:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（13:06:03→14:06:02 间隔 60min<24h 连续判据持续满足·state/poolgen_run.log 尾行实测）→ PASS
+[2] census 新条目： 本批 10 环全落（C-04112 一席 R661 sky-mismatch 留冷归位+C-04118/04119/04120/04121/04122/04123/04124/04125/04126 九席首环·批 81b5da7d·[锚] 10/10 全中·ring 4110→4120·零 persistent 留冷）→ PASS
+[3] 位置字段非 null： census/export/citizen-behavior.jsonl rows=10030 slot_null=0（python 全量实测）→ PASS
+[4] 行为链再生： sync_rings rows=10 ring_synced=10 ring=4120（commit 4f818ccb·批后自动收口·勿手动重复）→ PASS
+[5] heartbeat 3h 内： 轮末刷新（state/heartbeat.txt 追加 R662 alive 行·距上轮 14:14:04 <35min）→ PASS
+[红线行] 停造人令轮首双闸： light=10030 unique=10030 block_null=0（批 sync 通道实测·工作区净态起跑）+ID 封顶 C-10036 越顶 0（本批落环全部为既有卡年轮升级·registry 新增=0·注册冻结维持）
+[账平行] 09-29 新写环全域直数 438=R661 面 428+本批 10 账平零差（python glob+re 全 census 域 md 直数实测）
+[核卡行] 2/2 PASS 零修复（C-04112 留冷归位席口头禅「清单第一」逐字领句+「清清爽爽」天况域内·C-04119 底色「搞七捻三」逐字领句+灵感点子 face 域内·[锚] 2/2 齐备·卡面直读）
+[基因行] R662 基因轮兑现 5c856477（nearcheck 五跑拦 7→5→2→1→0 换句终选 10/10 CLEAN+--qc 15/15+落库后基线三池 criterion_ok·cp 486→492 六轴 82×6/tp 174→176/ho 308→310·diff 13+/3- 纯尾追加·json.load 回读+计数断言过·既有基因零字节改动）
+[GPU 探针行] T-20260928-07 第五十八探针 used=9931/12282MiB util100%——空窗未开（余 ~2.3GB<权重 5.94GB·满载让路律不抢·回执 F-20260929-BL01 已前置·单 open 至 09-30 13:00 回执窗后收口）
+[尾查行] 集团 orders.md mtime 14:03:17→14:09:03 同态被破=尾行新增第 18 行 09-29 15:3x〔续行·City 3D 行人层首件 v4 L1（FluxVerse 1802090·活性 Phase 1 第 1/5 面）〕——**点名「公民级行为流接线（BigLife 线 citizen 数据）=跨线挂账」=消费面引用**（light jsonl 14:25 面已在役+behavior 镜像 10030 行随批刷新·FluxVerse 只读消费律维持·零新派工零程序动作·如实记档）·decisions.md 13:17:02 维持（D-20260929-07 在案·委员会零 pending）·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 维持）——五项全勾。
