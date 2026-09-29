@@ -1,0 +1,9 @@
+[smoke R708] 2026-09-29 23:4x @BigLife-OSLoop
+1. poolgen tick: 2026-09-29 23:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE (22:06->23:06 60min<24h chain OK)
+2. census new entries: batch 640f2124 10 rings (C-04404~C-04413 first rings) + sync 319f615f rows=10 ring=4397->4407
+3. position null: behavior rows=10030 slot_null=0 (fields=anchor/ctx/id/quirk/slot/state/v/visible·block 非行为面字段=量规误挂勘正) | light rows=10030 block_null=0 (main gauge) district_null=3 (honored seats canonical)
+4. behavior chain regen: sync auto after batch (rows_changed=10 ring_synced=10) OK
+5. heartbeat: this round alive line (fresh)
+red-line: light=10030 unique=same registry frozen (ID cap C-10036, A-filter zero since 00:06) OK
+account: rings_today_allcensus=725 = R707 face 715 + batch 10 (zero diff)
+verdict: 5/5 PASS
