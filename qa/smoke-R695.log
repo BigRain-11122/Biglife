@@ -1,0 +1,8 @@
+﻿=== BigLife smoke R695 2026-09-29 21:17:10 ===
+[1] poolgen tick: 2026-09-29 21:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE  -> OK
+[2] census 新条目: 本批 5 环 C-04354/C-04355/C-04356/C-04357/C-04358 (commit 7927b60c) -> OK
+[3] 位置字段非 null: behavior rows=10030 slot_null=0 (实测) -> OK
+[4] 行为链再生: sync_rings rows=5 ring=4342->4347 (commit 52e229e8) -> OK
+[5] heartbeat: 21:09:33 (<3h) -> OK
+[+] 停造人令双闸: light_rows=10030 unique=10030 ID 封顶 C-10036 越顶 0 -> OK
+[+] 09-29 新写环全域账平: 665 (registry 663 + anchors 相遇环 2) = R694 面 660 + 本批 5 零差
