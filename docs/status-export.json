@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-30T05:37:30+08:00",
+ "export_ts": "2026-09-30T06:24:15+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R734 批2环（C-04534 留冷过门归位+C-04559 首环·批 6ec57094+sync 0d755a13·ring 4546→4548）——8 席 persistent 门拦留冷（C-04429 time-morning 第22轮/C-04549 typhoon-invented+time-morning/C-04553/C-04554/C-04557/C-04560/C-04561/C-04562 rain-invented·凌晨档 vs 实况=结构性拦·诚实门禁健康态·零程序动作零卡面改动·stays due 下轮自然再试）。核卡 2/2 PASS 零修复（C-04534 池基因「看云不用门票」逐字领句+cloud 适配语域内/C-04559 本卡口头禅「稳住，别浪」逐字领句·[锚] 2/2 齐备·机审门实况 token 全过）。账平行：09-30 新写环全域直数 153=R733 面 151+本批 2 零差（python 全 census 域 [锚] 当日行直数·sync ring=4548 实测）",
+   "t": "R737 批3环（C-04429〔time-morning 第14轮过门归位〕+C-04449〔typhoon+time 归位〕+C-04566 首环·批 b2c9878e+sync 09f42c16·ring 4550→4553）——7 席 rain 族 persistent 留冷 stays due（诚实门禁健康态）·核卡 3/3 PASS（口头禅逐字领句+[锚] 3/3+晨时域内）。**CEO P0 停造人强冻令升级条款同轮承接**（集团 orders.md 05:38：砍注册代码路径=generate_census/resident_intake/mirror_intake 三码闸读 state/registry-freeze.lock〔--force/--batch2/--qc 亦拒·实弹 exit 4 零写盘〕+queue 硬停〔滚动合流后续波次禁动·第二批 C-10027~36 已于 09-29 R595 落籍在库=滞记勘正〕+registry 写冻结；判据=12h 新增 0 新 ID·回执 F-20260930-BL02·证据 qa/freeze-guard-R737.log）。年轮线主产线不受冻结面影响（只写既有卡·零新增 ID）",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "随年轮批自动同步 recent_ring（R734 批 sync rows_changed=2 ring_synced=2·ring=4548·commit 0d755a13·behavior.py v3.7 --auto 再生节律〔bucket=night wx=cloud snd=fest unchanged skip regen·10-01 国庆前夕声景〕/社交位族 v3.27/休闲环 v3.20/休伫环 v3.18/声景反向 v3.30 在役·anchor slot_null=0）",
+   "t": "R737 sync 09f42c16 rows=3 ring_synced=3（ring 4550→4553·批后自动收口）·meet 对 19 盘面维持",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "R734 smoke 第一百三十八证五项全勾（qa/smoke-R734.log：tick 05:06:02 连戳/今日环 153 账平/behavior slot_null=0 全量+anchors home null 全量直数=3 恰荣誉席 C-00001/2/3 非 reserved=0/sync rows=2/heartbeat 05:28:30 新鲜）+核卡行（2/2 PASS 零修复）+QC 免巡（R733 problems=0 在案·下到期 ≈R739·关系面 meet 19 对 in-sync 维持零触发）+尾查行（orders 09-29 19:50:39/decisions 09-29 13:17:02/ceo-review 09-30 04:37:44 零漂移维持·本仓 orders newest=O-20260927-1648-HQ-C 维持·零新令）+双闸实测过（light=10030·unique=10030·ID 封顶 C-10036·over_cap=0·block_null=0·注册冻结维持）+GPU 探针本轮免跑（Bonsai GPU 收口窗 09-30 13:00 未至·R727 起免探针先例）",
+   "t": "R737 smoke 第一百三十九证五项全勾（qa/smoke-R737.log：tick 连戳/09-30 环 158 账平/light 双闸 10030·ring=4553/冻结闸 exit 4 在役/强冻点后零新卡 A-filter 直证）+停造人升级条款证据件 qa/freeze-guard-R737.log（三码闸实弹+queue 硬停+registry-freeze.lock 在盘·判据新增 ID=0 现行满足态）+QC 免巡≈R739（R733 problems=0 在案）+GPU 探针 6931/12282MiB util5% 空窗未开（Bonsai 收口窗 09-30 13:00）",
    "s": 1
   },
   {
@@ -151,12 +151,12 @@
    "户籍卡"
   ],
   [
-   "4548",
-   "年轮环总数（R733 批4环 4542→4546+R734 批2环 4546→4548）"
+   "4550",
+   "4553"
   ],
   [
-   "153",
-   "09-30 新写环（全域直数 153=R733 面 151+R734 批 2 账平零差·python 全 census 域 [锚] 当日行直数·sync ring=4548）"
+   "158",
+   "09-30 新写环（全域直数 158=R736 面 155+R737 批 3 账平零差·python 全 census 域 [锚] 当日行直数·sync ring=4553）"
   ],
   [
    "537/328",

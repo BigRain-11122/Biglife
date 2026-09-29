@@ -950,6 +950,11 @@ def apply(rendered):
 
 
 def main():
+    # REGISTRY-FREEZE GUARD（CEO P0 2026-09-30 05:38 停造人强冻令升级条款·registry 写冻结）：
+    # freeze lock 在盘=新居民注册 intake 一律拒跑（--batch2/--qc 亦拒·先于一切写盘动作）。
+    if os.path.isfile(os.path.join(CO, "state", "registry-freeze.lock")):
+        print("REGISTRY-FROZEN: new-resident intake disabled per CEO P0 order 2026-09-30 05:38 (registry-freeze.lock). Unfreeze = CEO order removes the lock. Zero write.")
+        sys.exit(4)
     args = sys.argv[1:]
     if "--batch2" in args:  # 分步④ 滚动合流批二（T-20260927-04·R595）
         rendered = [(c, render_card(c), build_light(c)) for c in CARDS2]

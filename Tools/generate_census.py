@@ -530,6 +530,11 @@ def spirit_gate(c, text, spirit_count):
 
 
 def main():
+    # REGISTRY-FREEZE GUARD（CEO P0 2026-09-30 05:38 停造人强冻令升级条款·砍注册代码路径）：
+    # freeze lock 在盘=批量注册调用链一律拒跑（--force 亦拒·先于一切写盘动作）；解冻=CEO 令删锁。
+    if os.path.isfile(os.path.join(CO, "state", "registry-freeze.lock")):
+        print("REGISTRY-FROZEN: census batch registration call-chain disabled per CEO P0 order 2026-09-30 05:38 (registry-freeze.lock). Unfreeze = CEO order removes the lock. Zero write.")
+        sys.exit(4)
     ap = argparse.ArgumentParser()
     ap.add_argument("--seed", type=int, default=20260923)
     ap.add_argument("--out", default=os.path.join(CO, "census"))

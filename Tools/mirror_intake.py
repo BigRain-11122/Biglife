@@ -385,6 +385,11 @@ def apply(rendered):
     return 0
 
 def main():
+    # REGISTRY-FREEZE GUARD（CEO P0 2026-09-30 05:38 停造人强冻令升级条款·registry 写冻结）：
+    # freeze lock 在盘=镜像居民注册 intake 一律拒跑（--qc 亦拒·先于一切写盘动作）。
+    if os.path.isfile(os.path.join(CO, "state", "registry-freeze.lock")):
+        print("REGISTRY-FROZEN: mirror-resident intake disabled per CEO P0 order 2026-09-30 05:38 (registry-freeze.lock). Unfreeze = CEO order removes the lock. Zero write.")
+        sys.exit(4)
     rendered = [(c, render_card(c), build_light(c)) for c in CARDS]
     if "--qc" in sys.argv[1:]:
         with io.open(LIGHT, encoding="utf-8") as f:

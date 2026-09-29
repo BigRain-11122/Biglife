@@ -1,0 +1,44 @@
+=== BigLife 停造人强冻令升级条款执行证据件 R737（2026-09-30 06:2x·CEO P0 05:38 同轮承接） ===
+法源：集团 docs/orders.md 2026-09-30 05:38 行〔CEO决策-P0〕BigLife 停造人强冻令四犯·升级条款
+原文：「执行令内升级条款=砍注册代码路径：禁用census批量注册调用链+queue硬停+registry写冻结；判据=12h新增0新ID，再犯则Jason物理介入」
+
+---- ① 诚实查证（被点名 ID 实证=既有居民首环·非注册） ----
+git log --diff-filter=A -- census/registry/*/C-04559.md → 2026-09-23 22:41 07f1f1c5（初始生成批次）
+git log --diff-filter=A -- census/registry/*/C-04565.md → 2026-09-23 22:41 07f1f1c5（初始生成批次）
+→ C-04555/556/558/534/559/565 等被点名 ID 全部为 09-23 初始 10030 户籍既有居民；
+  05:34 的 C-04559 = R734 年轮线首环事件（批 6ec57094·commit 明文「年轮环(既有居民迭代·零新注册)」）。
+git log --diff-filter=A --since="2026-09-29 18:37" -- census/registry/ census/anchors/ census/reserved/
+→ 输出 0 行（强冻令起 census 三域零新增卡文件=新增 ID 0 实测直证）。
+每轮双闸行（R711~R737 连续实测）：light rows=10030 · unique=10030 · ID 封顶 C-10036 · over_cap=0。
+QC 全日稳定：cards=10030（R697/R709/R715/R721/R733 巡检值一致）。
+「近6h新增168 ID」判读面=年轮线批产 commit 中的既有居民 ID 字样（首环事件首次出现在 commit 面·非户籍新增）。
+**核验补记**：census 现量 10030 行·ID 上限=C-10036 已在库（新居民团两批二十卡 09-28/09-29 落籍）——
+即强冻令后本司零在册待注册增量（除滚动合流未来波次设计项·已挂起）·「新增 ID」唯一可能入口=三码闸工具·均已上锁。
+
+---- ② 砍注册代码路径（三码闸·锁在盘一律拒跑·--force/--batch2/--qc 亦拒） ----
+Tools/generate_census.py   main() 顶置 REGISTRY-FREEZE GUARD → 实弹验证：REGISTRY-FROZEN 输出·exit 4·零写盘
+Tools/resident_intake.py   main() 顶置同闸 → 实弹验证 --qc：REGISTRY-FROZEN 输出·exit 4·零写盘
+Tools/mirror_intake.py     main() 顶置同闸 → 实弹验证 --qc：REGISTRY-FROZEN 输出·exit 4·零写盘
+python -m py_compile 三工具 → exit 0（编译零错）
+锁文件=state/registry-freeze.lock（含法源/作用面/不冻面/判据监测/解冻条件·state/ 不入库·盘面在锁）
+
+---- ③ queue 硬停 ----
+state/queue/main.md #2「T-20260927-04 第二批 10 席注册落籍」→ 划线硬停标注（零执行直至 CEO 解冻令）
+  ——勘正（诚实律·本轮核验）：该项为 09-28 建档滞记——第二批 10 席 C-10027~C-10036 已于 2026-09-29 00:06
+  （R595·commit 1b529b71）落籍在库（light max=C-10036 实测·10030 行含新居民团两批二十卡）；
+  硬停标注面向=滚动合流后续波次（MiniGame 生产泵未来新席批量注册）一律禁动·已落籍存量零触碰。
+state/queue/explore.md #2「名人影射册滚动批机制设计」→ 挂起标注（产出面=未来注册管线·冻结期禁动）
+state/queue/tech.md → 无注册项（直读核验）
+tasks/TASKS.md T-20260927-04 → 追加「滚动合流面硬停行」（滚动合流=常设面·后续波次冻结·解冻后按原协议恢复）
+
+---- ④ registry 写冻结 ----
+state/registry-freeze.lock 在盘=三码闸生效态（见②）；解冻=CEO 一句话/新令删锁（禁自行删除·禁绕闸）。
+不冻面（明文）：既有 10030 居民年轮环/行为镜像/关系面/导出面（只写既有卡·零新增 ID）——年轮线主产线照转。
+
+---- ⑤ 判据=12h 新增 0 新 ID（监测面·自 05:38 令点起 12h 窗→09-30 17:38 到期复核） ----
+每轮双闸行实测（light rows/unique/over_cap）+ 每日 A-filter 直证（census 三域新增卡文件=0）。
+本回执落盘时点实测：light rows=10030 · unique=10030 · over_cap=0 · A-filter since 强冻点=0 行 → 新增 ID=0 ✓（判据现行满足态）
+监测口径建议（呈集团）：新增 ID 判据=census 域新增 .md 卡文件数+light rows/unique 增量；
+勿以 commit 消息中的居民 ID 字样计数（年轮线批产 commit 必然含既有居民 ID·首环事件=既有居民首次入 commit 面）。
+
+回执=F-20260930-BL02（HQ-FEEDBACK.md）·任务板行=tasks/TASKS.md T-20260927-04 硬停行·R737 轮批实录在案

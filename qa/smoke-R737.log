@@ -1,0 +1,7 @@
+=== BigLife smoke R737 五项 === 2026-09-30 06:24:13
+[PASS] poolgen tick: === 2026-09-30 06:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[PASS] 09-30 rings: 158 (expect 158)
+[PASS] light gate: rows=10030 unique=10030 over_cap=0 ring=4553
+[PASS] freeze guard: exit=4 REGISTRY-FROZEN=Y
+[PASS] zero new cards since freeze: PASS (0 rows)
+=== smoke R737: 5/5 PASS ===
