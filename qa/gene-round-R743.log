@@ -1,0 +1,56 @@
+=== BigLife 基因轮 R743 证据件 2026-09-30（先验后登·T-20260927-01 正序·法源 R417 阈值定谳） ===
+候选池：10 条（cp 6+ho 2+tp 2）·v1 起草→预检换句（3 轮）→终版登记。预检为注册前实跑，登记后各断言复跑如下。
+
+---- 预检 v1（注册前实跑·exit 1=4 近重候选拦截） ----
+[CLEAN] cp|江风不问去处，白帆自己有数。
+[CLEAN] cp|油星子蹦得欢，灶膛就旺。
+[CLEAN] cp|门牌号排得齐，找谁都不费劲。
+[CLEAN] cp|新玩意三天不上手，第四天准开窍。
+[FLAG] cp|老墙上的裂缝，都是旧年月写的信。 → cp[328] 老墙上的
+[FLAG] cp|路见不平先递伞，再论短长。 → cp[113]/cp[155] 路见不平
+[CLEAN] ho|焊了又焊的白铁皮漏斗
+[FLAG] ho|拴着红布条的老船桨 → ho[276]/ho[297] 红布条/布条的老
+[FLAG] tp|守灯塔的老师傅退休那年… → cp[260] 一盏灯。/tp[80] ，如今每/tp[179] 的老师傅
+[CLEAN] tp|头一回带学徒那年把师父教的火候口诀抄成小本…
+== gene_nearcheck: 10 候选, 4 近重候选 ==（exit 1·门禁拦截换句）
+
+---- 预检 v2（换句再验·exit 1=3 近重） ----
+[FLAG] cp|旧砖缝里冒出的草，自有它的活法。 → cp[234] 的活法。
+[CLEAN] cp|遇事不慌神，先递伞再说话。
+[FLAG] ho|缠着麻绳的桐油木桨 → ho[172]/ho[202] 着麻绳的
+[FLAG] tp|接过守渡口钥匙那晚跟着老站长… → tp[193] 那晚跟着
+== gene_nearcheck: 4 候选, 3 近重候选 ==（exit 1）
+
+---- 预检 v3（换句再验·exit 1=2 近重） ----
+[CLEAN] cp|砖缝里的草不问天气，照样扎根。
+[FLAG] ho|桐油擦得发亮的旧木桨 → ho[121/132/186/210/242] 得发亮的 + ho[230] 的旧木桨
+[FLAG] tp|…第二天就把全段暗礁… → tp[20] 第二天就
+== gene_nearcheck: 3 候选, 2 近重候选 ==（exit 1）
+
+---- 预检 v4（换句终验·exit 0） ----
+[CLEAN] ho|叶面磨白的蒲葵扇
+[CLEAN] tp|接过守渡口钥匙没出三天就把全段暗礁的名字背熟，后来起雾天摆渡，光听水声就知道船走到哪。
+== gene_nearcheck: 2 候选, 0 近重候选 ==（exit 0）
+
+---- 终版全量复跑（10 条合一·exit 0） ----
+== gene_nearcheck: 10 候选, 0 近重候选 ==（10/10 CLEAN）
+
+---- 登记（state/_gene_round_r743.py·外科尾追加零重排·断言电池） ----
+PASS cp: 540->546 (+6) | 轴分布 {'逍遥': 91, '烟火': 91, '秩序': 91, '求新': 91, '怀旧': 91, '侠气': 91} = 91x6 均齐
+PASS ho: 331->333 (+2) | tp: 197->199 (+2)
+（撞库拒绝断言 x10 + json 回读断言 x5 全过 + 三池前缀逐元素零字节改动=0）
+
+---- 登记后断言复跑：--qc ----
+15 PASS 0 FAIL（gram-extract/layerA-fixture-hit/layerA-fixture-miss/layerA-cross-pool/layerA-real-R413/layerA-real-R406/layerA-real-crosspool/layerB-historic-boundary/layerB-exact-dup/unknown-type-reject/baseline-criterion/baseline-sentinel/parse-line/double-run/file-roundtrip）
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+
+---- 登记后断言复跑：--baseline（R417 定谳值漂移监控） ----
+cp  n=546  max_ratio 91.667 < T92  criterion_ok=true  top_pair=[热汤落肚/热汤下肚，啥事都好商量。]（史前对零触碰只记档）
+ho  n=333  max_ratio 94.118 < T95  criterion_ok=true  top_pair=[别在门襟上的老怀表/别在襟上的老怀表]
+tp  n=199  max_ratio 43.902 < T44  criterion_ok=true  top_pair=[替人守了一宿摊…/替住院的邻居守了一阵子饭摊…]
+三池 criterion_ok 全持=R417 基线零漂移。
+
+---- 登记后落库佐证：终版候选对库自命中 ----
+登记后以 --file 复跑终版 10 条 → 10/10 FLAG@ratio100 对自身（cp[540..545]/ho[331..332]/tp[197..198]）=新基因已入库之正向佐证（预检语义=注册前跑；此段非预检记录）。
+
+commit=随轮 [via BigLife-OSLoop]（genes/language.json + genes/lives.json）·候选清单 state/gene-candidates-R743*.txt（state/ 不入库）·下次基因轮≈R751
