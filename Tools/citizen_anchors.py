@@ -1,18 +1,22 @@
 # -*- coding: utf-8 -*-
-"""citizen_anchors.py v1.0 — census 住宅/工位分配表生成器（O-2026-0929-019 ⑥ 派工·T-20260929-06 step②）
+"""citizen_anchors.py v1.1 — census 住宅/工位/社交 三锚点分配表生成器
+（O-2026-0929-019 ⑥ 派工·T-20260929-06 step②+step③ 数据源）
 
 契约（R3 再生面·gitignored·确定性零 LLM）:
   输入  = census/export/citizens-light.jsonl（只读·census 冻结面零触碰）
-  输出  = census/export/citizen-anchors.jsonl（一行一居民：住宅/工位两锚点）
+  输出  = census/export/citizen-anchors.jsonl（一行一居民：home/work/social 三锚点+win 时间窗）
   派生  = md5(id::biglife-anchors-v1) 确定性 seed——同居民永远同锚点（禁随机·同输入双跑字节一致）
+          v1.1 只新增 social 键与 win 键：home/work 坐标派生基零变化（升级零漂移）
   对位  = district/block 字段逐行镜像 light 面（O-019「与 district/block 既有字段对位」）
   坐标  = 分区级先行米制包络 v1（1 格=5m 定标·城域核心 320m）：每城区一个二维包络，
-          home=包络住宅带（x 向 0.08-0.42 分位）seeded 点位，work=包络工位带（x 向 0.58-0.92 分位）
-          seeded 点位——住宅/工位结构性 disjoint。包络表=BigLife 单源先行草案，
+          home=x 向 0.08-0.42 住宅带，social=x 向 0.44-0.56 中央社交带，
+          work=x 向 0.58-0.92 工位带——三带结构性 disjoint。包络表=BigLife 单源先行草案，
           待 FluxVerse 主体施工 R0-R6 分区坐标系对账窗校准（对位后升 v2 再生全表即可，行内零手改）。
-  荣誉席 = C-00001~03（faction=honored）= CEO 保留面：status=reserved，坐标零发明（home/work=null）。
-  消费方 = FluxVerse 城市重构 R0-R6 居民流/走进建筑（O-019 三锚点生活空间事实源）。
-  T2    = CODEX §十二 v3.54（新导出面·消费方通知走 T-20260923-01 字段变更程序族）。
+  时间窗= win=[start,end) 24h 制静态生活空间包络 v1（home [20,9] 跨午夜·work [9,18]·social [18,20]）；
+          通用包络——动态活动照旧由 behavior state/slot/ctx 表达，species/年龄个体化窗留 v2。
+  荣誉席 = C-00001~03（faction=honored）= CEO 保留面：status=reserved，坐标零发明（home/work/social=null）。
+  消费方 = FluxVerse 城市重构 R0-R6 居民流/走进建筑（O-019 ④三锚点生活空间事实源）。
+  T2    = CODEX §十二 v3.54/v3.55（新导出面+behavior 嵌入字段·消费方通知走 T-20260923-01 字段变更程序族）。
 """
 import hashlib
 import json
@@ -35,6 +39,10 @@ DISTRICT_ZONES = {
 }
 
 
+# 静态生活空间时间窗包络 v1（win=[start,end) 24h 制·home 跨午夜）
+WINS = {"home": [20, 9], "work": [9, 18], "social": [18, 20]}
+
+
 def _seed_point(cid, salt, zone, lo_frac, hi_frac):
     h = hashlib.md5(f"{cid}::{BASIS}::{salt}".encode("utf-8")).digest()
     x0, z0, x1, z1 = zone
@@ -53,17 +61,23 @@ def build_rows():
             if not district or district not in DISTRICT_ZONES:
                 rows.append({"id": cid, "district": district, "block": block,
                              "profession": prof,
-                             "home": None, "work": None, "status": "reserved",
-                             "note": "荣誉席=CEO 保留面·坐标零发明", "v": 1})
+                             "home": None, "work": None, "social": None,
+                             "win": None,
+                             "status": "reserved",
+                             "note": "荣誉席=CEO 保留面·坐标零发明", "v": 2})
                 continue
             zone = DISTRICT_ZONES[district]
             hx, hz = _seed_point(cid, "home", zone, 0.08, 0.42)
+            sx, sz = _seed_point(cid, "social", zone, 0.44, 0.56)
             wx, wz = _seed_point(cid, "work", zone, 0.58, 0.92)
             rows.append({"id": cid, "district": district, "block": block,
                          "profession": prof,
-                         "home": {"x": hx, "z": hz},
-                         "work": {"x": wx, "z": wz, "site": f"{prof}·{block}工位"},
-                         "status": "ok", "v": 1})
+                         "home": {"x": hx, "z": hz, "win": WINS["home"]},
+                         "social": {"x": sx, "z": sz, "win": WINS["social"],
+                                    "site": f"{block}·社交角"},
+                         "work": {"x": wx, "z": wz, "win": WINS["work"],
+                                  "site": f"{prof}·{block}工位"},
+                         "status": "ok", "v": 2})
     return rows
 
 
@@ -93,12 +107,17 @@ def qc():
                 errs.append(f"non-honored reserved {r['id']}"); break
             continue
         zone = DISTRICT_ZONES[r["district"]]
-        for a in (r["home"], r["work"]):
+        for k in ("home", "social", "work"):
+            a = r[k]
             if not (zone[0] <= a["x"] <= zone[2] and zone[1] <= a["z"] <= zone[3]):
                 errs.append(f"out-of-zone {r['id']}"); break
-        if r["home"] == r["work"]:
-            errs.append(f"home==work {r['id']}"); break
-        if not r["work"].get("site"):
+            if a.get("win") != WINS[k]:
+                errs.append(f"bad win {r['id']}"); break
+        if (r["home"]["x"], r["home"]["z"]) == (r["work"]["x"], r["work"]["z"]) \
+           or (r["home"]["x"], r["home"]["z"]) == (r["social"]["x"], r["social"]["z"]) \
+           or (r["work"]["x"], r["work"]["z"]) == (r["social"]["x"], r["social"]["z"]):
+            errs.append(f"anchor collision {r['id']}"); break
+        if not r["work"].get("site") or not r["social"].get("site"):
             errs.append(f"empty site {r['id']}"); break
     # 确定性：双跑逐字节一致 + 同 id 重派生稳定
     r2 = build_rows()

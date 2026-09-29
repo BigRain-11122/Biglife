@@ -81,6 +81,11 @@ OUT_BEH = os.path.join(needs.CO, "census", "export", "citizen-behavior.jsonl")
 # T-20260925-11 (D-20260925-08): regen-rhythm state face - last passing run's
 # {time_bucket, weather_kind, ts}; state/ is gitignored (runtime face).
 STATE_BEH = os.path.join(needs.CO, "state", "behavior-last.json")
+# T-20260929-06 step③ (O-2026-0929-019 ⑥): spatial anchor face - same-seed
+# triple (home/work/social + win) embedded per row from citizen_anchors
+# (single-source law: behavior rows never re-derive, they mirror the R3 face).
+import citizen_anchors  # noqa: E402  (sibling: same HERE dir, zero LLM)
+ANCHOR_FACE_V = 2  # bump forces one regen past the auto-skip on upgrade
 
 RAIN_KINDS = ("rain", "snow", "shower", "drizzle", "typhoon")
 TRADER_RE = re.compile(r"交易|量化|风控|行情|回测|操盘|盘口|瞭望|对冲|期货")
@@ -496,7 +501,21 @@ def crash_caps(rows, getn, sig, w, weekend, m=None):
     return city_keep, dist_vis_ok
 
 
-def final_row(r, getn, city_keep, dist_vis_ok, sig, w, weekend, m=None):
+def anchor_map():
+    """T-20260929-06 step③: id -> anchor triple from the citizen_anchors
+    single-source derivation (deterministic; honored seats -> None)."""
+    m = {}
+    for r in citizen_anchors.build_rows():
+        if r["status"] != "ok":
+            m[r["id"]] = None
+        else:
+            m[r["id"]] = {"home": r["home"], "work": r["work"],
+                          "social": r["social"]}
+    return m
+
+
+def final_row(r, getn, city_keep, dist_vis_ok, sig, w, weekend, m=None,
+              amap=None):
     """Write-face row: base derive + crash overlay under the caps plan."""
     nk, top, crash, cax = getn(r)
     eff, vis_ok = crash, True
@@ -506,7 +525,10 @@ def final_row(r, getn, city_keep, dist_vis_ok, sig, w, weekend, m=None):
             vis_ok = cid in dist_vis_ok
         else:
             eff = None  # CITY_CAP overflow -> base behavior, no crash state
-    return derive(r, nk, top, sig, w, weekend, eff, cax, vis_ok, m=m)
+    o = derive(r, nk, top, sig, w, weekend, eff, cax, vis_ok, m=m)
+    if amap is not None:
+        o["anchor"] = amap.get(r.get("id"))
+    return o
 
 
 def main():
@@ -534,7 +556,8 @@ def main():
             except Exception:
                 last = None
         wx_now = sig["weather"] or ""
-        if last and last.get("time_bucket") == w \
+        if last and last.get("v") == ANCHOR_FACE_V \
+           and last.get("time_bucket") == w \
            and last.get("weather_kind") == wx_now \
            and last.get("rest_win", "") == rest_win \
            and last.get("sound", "none") == (sig.get("sound") or "none") \
@@ -554,11 +577,12 @@ def main():
         with open(needs.LIGHT, encoding="utf-8") as f:
             rows = [json.loads(l) for l in f if l.strip()]
         getn = load_needs(sig, hb, rows)
+        amap = anchor_map()
         city_keep, dist_vis_ok = crash_caps(rows, getn, sig, w, weekend, mnow)
         out = []
         for r in rows:
             out.append(final_row(r, getn, city_keep, dist_vis_ok, sig, w,
-                                weekend, mnow))
+                                weekend, mnow, amap=amap))
         tmp = OUT_BEH + ".tmp"
         with open(tmp, "w", encoding="utf-8", newline="\n") as f:
             for o in out:
@@ -570,6 +594,7 @@ def main():
         rows = [json.loads(l) for l in f if l.strip()]
     with open(OUT_BEH, encoding="utf-8") as f:
         brows = [json.loads(l) for l in f if l.strip()]
+    amap_qc = anchor_map()
     bad = 0
     if len(brows) != len(rows):
         print("QC FAIL rows %d != light %d" % (len(brows), len(rows)))
@@ -649,6 +674,19 @@ def main():
              and shash(r.get("id") or "") % 4 == 0 \
              and str(r.get("id")) not in needs.HONORED_IDS:
             bad += 1
+        # T-20260929-06 step③: spatial anchor schema - non-honored rows must
+        # carry the same-seed triple mirrored from citizen_anchors (single-
+        # source law: byte-compared against the fresh re-derivation);
+        # honored seats carry null (reserved, zero-invention).
+        a = o.get("anchor")
+        if str(r.get("id")) in needs.HONORED_IDS:
+            if a is not None:
+                bad += 1
+        else:
+            if json.dumps(a, ensure_ascii=False, sort_keys=True) != \
+               json.dumps(amap_qc.get(r.get("id")), ensure_ascii=False,
+                          sort_keys=True):
+                bad += 1
     # T-20260926-13: tier unit battery (pure, in-memory) - closed set, ts
     # window discipline, dev-flow exclusion, alarm-over-fest priority
     t0 = datetime.datetime(2026, 9, 26, 18, 0, 0)   # Beijing clock = 10:00Z
@@ -680,7 +718,7 @@ def main():
         for i in range(0, len(rows), 97):
             r = rows[i]
             if json.dumps(final_row(r, getn, city_keep, dist_vis_ok, sig, w,
-                                    weekend, mnow),
+                                    weekend, mnow, amap=amap_qc),
                           ensure_ascii=False) != json.dumps(brows[i], ensure_ascii=False):
                 bad += 1
     # law 3 invariant: rainy road-visible (non-shelter) <= ~30% of cover-bound
@@ -727,6 +765,7 @@ def main():
         with open(tmp, "w", encoding="utf-8", newline="\n") as f:
             json.dump({"time_bucket": w, "weather_kind": sig["weather"] or "",
                        "rest_win": rest_win, "sound": sig.get("sound") or "none",
+                       "v": ANCHOR_FACE_V,
                        "ts": now.strftime("%Y-%m-%dT%H:%M:%S+08:00")},
                       f, ensure_ascii=False)
         os.replace(tmp, STATE_BEH)

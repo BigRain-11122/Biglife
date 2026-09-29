@@ -1,0 +1,19 @@
+# qa/smoke-R681 —— 五项自验（T-20260928-05 · 2026-09-29 19:0x）
+
+[1] 红线行：轮首 git status 净（仅 .codely-cli/ 未跟踪不入库·定向 add 本轮产出·禁 add -A 守住·尾标 [via BigLife-OSLoop]）。停造人令轮首双闸实测过（light_rows=10030·unique=10030·ID 封顶 C-10036 越顶 0·注册冻结维持）。——判定过
+
+[2] 核卡行：本批 6 卡 [锚] 6/6 齐（python 逐卡直数：C-04279「站直了别趴下」/C-04280「退退退…街坊的事」/C-04281「先试了再说」/C-04282「趁热吃」/C-04284「收摊了，明天见」/C-04285「老规矩错不了」六席环首句=本卡口头禅/行话逐字领句 6/6·天气句 face 域内·卡面直读）。——判定过
+
+[3] 留冷行：C-04162 rain+moon 十四轮同判 R668~R681+C-04259 rain 四轮+C-04263 rain 四轮+C-04283 rain 首见 stays due（诚实门禁健康态·零程序动作零卡面改动·下轮自然再试）；QC 免巡（R679 problems=0 在案·下到期 ≥R685）。——判定过
+
+[4] 例份面合规跳过：池 09-29 例份 R668 已耗（满额 1440+518 维持·poolgen tick 18:06:02 连戳）；相遇 09-29 3/3（R596/R601/R604）；反思 09-29 3/3（R600/R602）；聚光 9 月 2/2 满；基因轮 ≈R685；日清窗未至（晚间 23:00 前轮落行·lowpoly 批 2 呈报随窗）；OSS 借力新窗 21:40 首片（晚间轮）；T-05 ②文案批产 12+12 留下轮（窗 10-02 12:00 充裕）。——判定过
+
+[5] GPU 探针+尾查行：GPU 第七十六探针 9799/12282MiB util 13% 显存余 ~2.4GB<权重 5.94GB 空窗未开（F-20260929-BL01 回执已前置·单 open 至 09-30 13:00 窗后收口）；尾查=集团 decisions D-20260929-07 产品优先律已接线（本轮 prompt 首块）·C-20260929-01/02/03 委员会案转办@全司面涉司核验=本司云端生成面三径闸零涉（api=0 纯本地 Ollama·推理面零云）+GPU 周报分机行=F-BL01 件已含·lane 落位=Biggame 收执前不启计非本司闸·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 维持）·poolgen tick 18:06:02 连戳链维持（连续戳 <24h 判据持续满足）。——判定过
+
+附加证（非应项留勾）：
+- T-20260929-06 step③ 交付行：behavior 导出面空间锚点字段=Tools/citizen_anchors.py v1.1（三锚点 home/work/social+win 时间窗·BASIS seed 基不变·home/work 升级零漂移 10027/10027 实测·social=0.44-0.56 中央社交带三带 disjoint）+Tools/behavior.py anchor 字段嵌入（import 单源律·anchor_map→final_row·auto 再生 v=2 闸升级）——--qc 实跑输出「rows=10030 bad=0」+auto-skip 二次跑 skip=节律闸实证+抽验 C-00011 anchor 三键齐/荣誉席 C-00001 anchor=null 3 席·T2=CODEX §十二 v3.55·消费方通知=T-20260923-01 通知族行 v3.55。
+- 账平行：09-29 新写环全域直数 593=R680 面 587+本批 6 零差（python glob+re 全 census 域实测·sync ring=4275）。
+- smoke 五项实测：poolgen tick 18:06:02 连戳 ✓；census 本批 6 环（批 sync 脚本自动 commit·rows=6 ring 4269→4275）✓；light 双闸 rows=unique=10030 ✓；行为线 sync rows=6 随批在案 ✓；heartbeat 轮末刷新 ✓。
+红线行：轮首 git status 净即只定向 add 本轮产出（.codely-cli/ 不入库）·禁 git add -A 守住·[via BigLife-OSLoop] 尾标在列 commit·集团域只读未涉写·FluxVerse 事件流只读·禁伪造令·本地算力律 api=0
+
+== smoke-R681: 5/5 全勾 ==
