@@ -1,0 +1,30 @@
+qa/smoke-R687.log — BigLife 五项数据面自验（qa-smoke-test-charter BigLife 节·每轮 commit 后自验·真实运行输出）
+本轮: R687 @ 2026-09-29 19:5x（OSLoop）
+
+[1] poolgen 跑通: PASS
+    state/poolgen_run.log 尾行: === 2026-09-29 19:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+    （18:06→19:06 间隔 60min < 24h 连戳链维持·判据持续满足）
+
+[2] census 新条目（本批新环）: PASS
+    本批 5 环: C-04309（R686 sky 留冷归位）+C-04313/C-04314/C-04316/C-04317 四席首环
+    批 commit 7cb940b5（卡面 5 文件 +15/-5）·ring 4301→4306
+
+[3] 位置字段非 null: PASS
+    light rows=10030 block_null=0（python 实测）
+    behavior rows=10030 slot_null=0（python 实测）
+
+[4] 行为链再生（sync 收口）: PASS
+    sync commit 71f96f7e「行为线 2026-09-29: 镜像 rows=5 ring=4306」rows_changed=5 ring_synced=5
+
+[5] heartbeat 3h 内: PASS
+    state/heartbeat.txt 尾行 2026-09-29 19:50:26 os-loop: round done exit=0（<3h）
+
+附加行
+- 停造人令轮首双闸: light_rows=10030 unique=10030 ID 封顶 C-10036 over_cap=0（python 实测·注册冻结维持）
+- 账平行: 09-29 新写环全域直数 624（registry 622+anchors 2）= R686 面 619 + 本批 5 账平零差（python glob+re census 全域 [锚] 当日行直数）·registry 环行 4308 vs sync ring 4306=已知历史存量差 2 维持（R665 口径定谳）
+- 核卡抽验 2/2 PASS 零修复: C-04309（NS·濮俊）「旧钥匙开新锁，有时候还真开得开」=本卡自有出生口头禅逐字领句+清爽天气实况域内；C-04316（QT）「搭把手的事儿」=本卡自有出生口头禅逐字+「阴天必检查一遍屋里的灯」=本卡行为节直引·[锚] 注脚 2/2 齐备·批 diff 直读
+- GPU 第八十一探针（T-20260928-07 Bonsai）: 7207/12282MiB util 69%——空窗未开（余 ~5.07GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置·单 open 至 09-30 13:00 回执窗后收口）
+- 尾查: 集团 orders.md mtime 19:50:39=R686 已核 O-028~033 窗口值维持——O-032 委员会总责令/O-033 坚决清理顶层机制令双行均已委员会 executed·司域大件派单 P-13=@Biggame P3D_Spike 16GB+@BigStream media 10GB 零本司派工·O-033「Bonsai 候选冻结」与本司 observe 态一致零新动作·decisions.md 13:17:02 维持·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 09-29 00:05:03 维持）
+- 时间戳异相记档: R686 面 export_ts 20:02:00+heartbeat alive 行 20:07 vs 本轮 git 考古 R686 收尾 commit 49e6d938=19:50:13（本机钟同源·本轮 Get-Date 19:53:54 与批 commit 19:55:14 互证）=上轮标注钟超前 ~14min 如实在案（R626 判例·存史不回改·零数据面影响·本轮起按实测钟写已落实）
+
+verdict: PASS 5/5
