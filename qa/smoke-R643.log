@@ -1,0 +1,15 @@
+# QA Smoke Test · R643 (2026-09-29 ~10:3x-10:4x)
+# BigLife 数据面自检应项（工程=docs/qa-smoke-test-charter.md 本司面每轮 commit 后自检）
+
+[1] poolgen 跑步机：tick 2026-09-29 10:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE → PASS（09:06→10:06 间隔 60min 连跑判据持续满足）
+[2] census 新条目：本批 10 due 落 6 环（C-04013 归位+C-04016/C-04017/C-04018/C-04019/C-04020 五席首环·批 27205971）ring 4004→4010 → PASS
+[3] 位置字段 null：light block_null=0/10030 · behavior slot_null=0/10030（实测 rows=10030）→ PASS
+[4] 行为链再生：sync_rings 随批自动收口 rows=6 ring_synced=6（commit e9d9de40）→ PASS
+[5] heartbeat 3h 窗：10:30:51 round done exit=0（R642 收尾）；本轮 R643 轮末刷新 → PASS
+
+红线行：停造人令轮末双闸实测过 light_rows=10030 unique=10030 ID 封顶 C-10036 越顶 0（注册冻结维持）
+核卡行：C-04013 许天翼〔QT〕口头禅「汤要趁烫，话要慢讲」逐字+底色「好咯」领句+巡边域内（R642 wind-under 留冷归位实证）·C-04017 冯团团〔RV〕口头禅「单子来了就接，不来就钓鱼」逐字领句+信使驿站 face 域内·风况 12.6m/s「风挺大」域内·[锚] 注脚 2/2 齐备·批 diff 直读 → 2/2 PASS 零修复
+留冷行：4 席 persistent 门拦（C-03936/C-03959/C-03978/C-04002 rain-invented 同族·实况 cloud 23.8°C 无雨=结构性拦·根因 R640 已盘=卡面同源雨特质 vs 无雨实况平面禁·自然解锁面=逢雨天喂入〔C-03711 判例〕·零程序动作零卡面改动 stays due）
+免巡行：QC 到期巡检 R642 已跑（cards=10030 evolved=4004 problems=0 在案·下到期 ≈R648）·例份面合规跳过（池 audit PASS 满额自停 1440+518·09-29 例份 R628 已耗；相遇 3/3；反思 3/3；聚光 9 月 2/2；基因 ≈R645）
+GPU 探针行：T-20260928-07 第三十九探针 used=9000/12282MiB util 4% 空窗未开（余 ~3.28GB<权重 5.94GB·让路律不抢·回执 F-20260929-BL01 已前置·单 open 至 09-30 13:00 窗后收口）
+新令捕获行：集团 orders.md mtime 04:37:49→10:34:12（连续 23 轮同态被破）=O-2026-0929-001 治理域开源借力专项切片（三切片·切片②承 census 关系网+V3 议员/城市生命体征·消费方=BigLife/city-lab）→ 实测他窗在飞兑现（cph4/research R-20260929-gov-1 10:37:08+R-20260929-gov-2 10:36:58 已落·gov-2=T0 骨架采集中·gov-3 未落=进行中）→ 不重复造轮本司零动作·待研后按应用表定夺承接面
