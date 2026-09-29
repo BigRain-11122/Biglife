@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-29T18:52:00+08:00",
+ "export_ts": "2026-09-29T19:05:00+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R680 批 10 due 落 7 环（C-04272~C-04278 七席首环·批+sync 脚本自动收口 rows=7·ring 4262→4269·[锚] 7/7 齐备 python 逐卡直数）——3 席 persistent 门禁留冷（C-04162 rain+moon 十三轮同判 R668~R680+C-04259/C-04263 rain 三轮·诚实门禁健康·零程序动作 stays due）；**T-20260929-06 step② 交付=census 住宅/工位分配表生成器**（Tools/citizen_anchors.py v1.0·R3 再生面 citizen-anchors.jsonl 10030 行·md5(id) 确定性 seed 同居民永远同锚点·district/block 镜像 light·分区级先行米制包络 v1 待 R0-R6 对账窗·--qc 一一映射机检 PASS ok=10027 reserved=3·T2=CODEX §十二 v3.54·O-019 R3 前交付窗 P0 件）·GPU 第七十五探针空窗未开让路律维持（F-BL01 回执已前置·收口窗 09-30 13:00）",
+   "t": "R681 批10due落6环（C-04279~C-04285 六席首环·批 f731987c+sync d538db38·ring 4269→4275·[锚] 6/6 核卡全过）——4 席 persistent 门拦留冷（C-04162 十四轮+C-04259/C-04263 四轮+C-04283 首见·诚实门禁健康零程序动作）；**T-20260929-06 step③ 交付=behavior 空间锚点字段**（citizen_anchors v1.1 三锚点 home/work/social+win 时间窗·home/work 零漂移 10027/10027 实测·behavior.py 单源律嵌入 anchor 字段·QC rows=10030 bad=0·auto v=2 节律闸·荣誉席 null·T2=CODEX §十二 v3.55·O-019 ⑥ R3 前交付 P0 件·消费方=FluxVerse R0-R6 居民流）；GPU 第七十六探针空窗未开（F-BL01 收口窗 09-30 13:00）",
    "s": 1
   },
   {
