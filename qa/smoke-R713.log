@@ -1,0 +1,8 @@
+[gate] light_rows=10030 unique=10030 over_cap(C-10036)=0 block_null=0 -> PASS
+[1] poolgen tick -> 2026-09-30 01:06:02 -> PASS
+[2] census 今日(09-30)[锚]环数 line-scan=38（R712面29+本批7+相遇2=38 期望符合） -> PASS
+[3] behavior rows=10030 slot_null=0 -> PASS
+[4] 行为链镜像 sync: 本批 rows=7 + meet rows=2 ring 4428->4435（evolve_citizen committed rows_changed=7/2 ring_synced in-place） -> PASS
+[5] heartbeat 最新行 ts=2026-09-30 01:15:57（3h 内） -> PASS
+核卡抽验 2/2: C-04436/C-04444 口头禅语言域内逐字领句+face 域内+[锚]2/2（清清爽爽=云天爽形判例族 gate 放行·夜里时段匹配） -> PASS
+smoke R713 @ 2026-09-30 01:2x verdict=PASS(5/5) + gate PASS + 核卡 PASS
