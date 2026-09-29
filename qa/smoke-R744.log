@@ -1,0 +1,11 @@
+=== BigLife smoke R744 五项 === 2026-09-30 07:52
+[PASS] poolgen tick: === 2026-09-30 07:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（audit 复跑 PASS·under_target NONE-SELF-TERMINATE·hard_fails 0·批策 10 生效维持）
+[PASS] 09-30 rings: 179 (expect 179=R743 记 176+R744 批 3·python 全 census 域 [锚] 当日行数：anchors 20+GM 52+MD 33+NS 11+OR 18+QT 39+RV 6——GM/MD/NS 各 +1 零差)
+[PASS] light gate: rows=10030 unique=10030 over_cap=0 ring 4571→4574（max recent_ring v 面账平·anchors 面补扫口径 R665 判例族维持·sync ring=4574 实测）
+[PASS] freeze guard(3): generate_census:exit4Y resident_intake:exit4Y mirror_intake:exit4Y（--force 亦拒·REGISTRY-FROZEN 零写盘）
+[PASS] zero new cards since freeze: PASS (0 rows)（git A-filter since 09-30 05:38 强冻点）
+[PASS] 核卡 3/3: C-04586〔GM 帮工〕「江水都不急我急啥，今早打杂又学到新活儿了。」池基因逐字领句+own-activity（打杂学活）域内 / C-04583〔MD〕「回头说，明儿又是新的一天。天气挺适合出去走走，正好可以看看塔顶的云。」口头禅领句+cloud 适配句（塔顶的云）域内·R742/R743 sky×2 留冷过门归位 / C-04587〔NS〕「汤要趁烫，话要慢讲，这天正好适合多坐坐。」池基因逐字领句+cloud 域内。[锚] 3/3 齐备·机审门 v0.43 批内全审过门在案·卡面直读
+[PASS] P0 判据窗监测（令点 05:38 起 12h→09-30 17:38 到期复核）: 双闸 10030/10030·cap C-10036·over_cap=0·三码闸 exit 4 三脚本实弹在仓（--force 亦拒）·A-filter since 强冻点 0 行·账平 179 零差——判据面现行满足（窗内每轮随行）
+[PASS] 尾查: 集团 orders.md 09-30 05:38:08 维持（已承接 P0·零新漂移）·decisions.md 09-29 13:17:02 维持·ceo-review.md 09-30 07:43:41 新漂移=CPH4 Labs 夜巡点名+演练夹具记档行·零涉本司（BigLife 行维持 05:38 P0 同词在案）·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 维持）
+[INFO] 基因轮 R743 已兑现·下次 8-10 起算 ≥R751·QC 免巡 ≤R745（R739 problems=0 在案）·GPU 探针本轮免（Bonsai 收口窗 09-30 13:00 未至·R737 起免探针先例维持·F-20260929-BL01 呈单 open 至窗口后收口）
+=== smoke R744: 5/5 PASS ===
