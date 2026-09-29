@@ -1,0 +1,12 @@
+# BigLife QA Smoke Test 第一百二十一证（R716 · 2026-09-30 01:5x · 数据面自验应项 · T-20260928-05）
+[1] poolgen 跑通：tick 2026-09-30 01:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（09-30 例份已耗·quota 满合规不复跑·state/poolgen_run.log 直读维持）PASS
+[2] census 新条目：09-30 [锚] 环全域直数 63（R715 面 55+本批 8 账平零差·registry 43+anchors 20 python glob 逐行直数·批 b8bf0914 8 环）PASS
+[3] 位置字段非 null：light block_null=0 rows=10030 实测 PASS
+[4] 行为链再生：sync d9a08698 rows=8 ring_synced=8（ring 4450→4458·批后自动收口·批 3due→10 实落 8+2 persistent 门拦留冷）PASS
+[5] heartbeat 3h 内：轮末刷新 2026-09-30 01:5x PASS
+红线行：停造人双闸 light=10030 unique=10030 ID 封顶 C-10036 over_cap=0 注册冻结维持 PASS
+核卡行：本批抽验 2/2 PASS 零修复（C-04458 阮多多「桥上不问来路，落水都得拉一把」本卡信条逐字领句+「放学还得绕路去看那光点」行为节直引域内+「今天天气正好，江水清清的」适配语实况合法/C-04465 串行-7「出锅喽——」本卡自有口头禅逐字领句+「看看新上线的行情数据优化成果」=数据清洗工职业域内意向句+天气适配语合法·[锚] 2/2 齐备·机审门 v0.43 批内全审）
+留冷行：C-04429 time-morning 第 5 轮结构性拦（凌晨档 vs 实况·诚实门禁健康态·零程序动作）+C-04466 sky-mismatch 首轮留冷（下轮自然再试）——批产 8/10 落环
+GPU 探针行：第百六探针 6929/12282MiB util6% 空窗未开（余 ~5.35GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置·单 open 至 09-30 13:00 收口窗后收口）
+尾查行：orders 19:50:39/decisions 13:17:02 双维持=R715 核值态零漂移·ceo-review 01:37:14 维持 R715 记档态（Biggame 域零涉司）·本仓 orders/ 零新件 newest=O-20260927-1648-HQ-C 维持
+verdict: 5/5 PASS
