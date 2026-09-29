@@ -1,0 +1,8 @@
+# BigLife QA Smoke Test 证 #89（R683 · 2026-09-29 19:2x · T-20260928-05 常设随轮件·章程=docs/qa-smoke-test-charter.md v1.0 BigLife 五项数据面自验）
+[1] poolgen 跑通: PASS — state/poolgen_run.log 尾戳 2026-09-29 19:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（18:06→19:06 间隔 60min<24h 自循环判据持续满足）
+[2] census 新条目: PASS — 本批 6 环 C-04263/C-04292/C-04293/C-04294/C-04295/C-04296（批 commit 0f011027·sync 9efd902e rows_changed=6 ring_synced=6·ring 4280→4286）
+[3] 位置字段非 null: PASS — citizen-behavior.jsonl rows=10030 slot_null=0 实测；anchor=null 仅荣誉席 C-00001~03（reserved 正典形态·v=2 节律态 epk/cloud/alarm ts=19:13:02 在案）
+[4] 行为链再生: PASS — sync_rings 随批自动收口（commit 9efd902e 行为线 2026-09-29: 镜像 rows=6 ring=4286）
+[5] heartbeat 3h 内: PASS — state/heartbeat.txt 新鲜度 ~0.2h（19:10:23 round done 在案）
+停造人令轮首双闸: PASS — light_rows=10030 unique=10030 ID 封顶 C-10036 越顶 0（注册冻结维持）
+附: T-20260929-06 step⑤ 收口 — QC 全量巡 problems=0（cards=10030 evolved=4286）+citizen-assembly.jsonl --qc 复跑 PASS（R682 击杀窗残留 step④ 已定向收容 commit fb34f190）+09-29 新写环全域直数 604=R682 面 598+本批 6 账平零差

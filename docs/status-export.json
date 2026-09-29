@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-29T19:05:00+08:00",
+ "export_ts": "2026-09-29T19:26:00+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R681 批10due落6环（C-04279~C-04285 六席首环·批 f731987c+sync d538db38·ring 4269→4275·[锚] 6/6 核卡全过）——4 席 persistent 门拦留冷（C-04162 十四轮+C-04259/C-04263 四轮+C-04283 首见·诚实门禁健康零程序动作）；**T-20260929-06 step③ 交付=behavior 空间锚点字段**（citizen_anchors v1.1 三锚点 home/work/social+win 时间窗·home/work 零漂移 10027/10027 实测·behavior.py 单源律嵌入 anchor 字段·QC rows=10030 bad=0·auto v=2 节律闸·荣誉席 null·T2=CODEX §十二 v3.55·O-019 ⑥ R3 前交付 P0 件·消费方=FluxVerse R0-R6 居民流）；GPU 第七十六探针空窗未开（F-BL01 收口窗 09-30 13:00）",
+   "t": "R683 批10due落6环（C-04263 rain 族四轮留冷归位+C-04292~C-04296 五席首环·批 0f011027+sync 9efd902e·ring 4280→4286）——4 席 persistent 门拦留冷（C-04162 rain+moon 十五轮/C-04259 五轮/C-04283 二轮/C-04287 首见·诚实门禁健康零程序动作）；**T-20260929-06 整单关结（O-019/O-020 双令派工三件全交付）**：R682 击杀窗残留 step④ 全件本轮定向收容 commit fb34f190（citizen-assembly.jsonl 10030 行确定性形象档案·--qc PASS 同值）+step⑤ QC 全量巡 problems=0（cards=10030·evolved=4286）+回执 F-20260929-BL09——五步全毕 R679①/R680②/R681③/R682④/R683⑤·T2 v3.54/v3.55/v3.56 三登记+消费方知会 T-20260923-01 族；GPU 第七十八探针 7307/12282MiB util9% 空窗未开（F-BL01 收口窗 09-30 13:00）",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "随年轮批自动同步 recent_ring（R677 批 sync rows=8·ring=4248·commit f7156fd0）",
+   "t": "随年轮批自动同步 recent_ring（R683 批 sync rows=6·ring=4286·commit 9efd902e）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "R673 到期巡检已跑：cards=10030 evolved=4216 problems=0（编号/姓名唯一+必备段齐备+年轮锚定律全过·QC-REPORT 随轮入库·R676 export 滞值 4240 勘正为巡检时点值 4216）·下到期 ≈R679",
+   "t": "R683 任务收口 QC 全量巡实跑：cards=10030 evolved=4286 problems=0（T-06 step⑤ 收口证据·不占例行巡检名额）·例行下到期 ≈R685",
    "s": 1
   },
   {
@@ -138,6 +138,11 @@
    "census/export/citizen-anchors.jsonl",
    "on",
    "R3 再生面（gitignored·Tools/citizen_anchors.py 秒级再生）=住宅/工位分配表 10030 行·同居民永远同锚点·待 R0-R6 坐标对账窗校准 v2"
+  ],
+  [
+   "census/export/citizen-assembly.jsonl",
+   "on",
+   "R3 再生面（gitignored·Tools/citizen_assembly.py 秒级再生）=polygon 角色装配映射表 10030 行确定性形象档案（族源三分碳源 7517/硅源 2003/城源 507·年龄→AD-024 儿童件 1410·硅源 AD-018 变体 2003·atlas v2.4 五 hex 单源镜像·荣誉席 reserved 零代创·T2 v3.56·O-020 BigLife 总责·换装=数据驱动投影律）"
   ]
  ],
  "results": [
@@ -146,12 +151,12 @@
    "户籍卡"
   ],
   [
-   "4262",
-   "4269"
+   "4280",
+   "4286"
   ],
   [
-   "587",
-   "09-29 新写环（全 census 域直数 587=R679 面 580+本批 7·账平零差·含 registry 六城区子目录+anchors+reserved·sync ring=4269 实测）"
+   "604",
+   "09-29 新写环（全域直数 604=R682 面 598+本批 6 账平零差·实测=当日 [锚] 环行直数·sync ring=4286）"
   ],
   [
    "504/314",
@@ -176,6 +181,10 @@
   [
    "10030",
    "空间锚点分配表（citizen-anchors.jsonl R3 新面·住宅/工位 10027 行+荣誉席 reserved 3·md5 确定性 seed 双跑一致·T2 v3.54）"
+  ],
+  [
+   "10030",
+   "polygon 装配映射表（citizen-assembly.jsonl R3 新面·确定性形象档案·族源三分 7517/2003/507·儿童件 1410·双跑逐字节一致·T2 v3.56）"
   ]
  ]
 }
