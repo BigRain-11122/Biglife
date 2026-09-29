@@ -1,0 +1,13 @@
+== smoke R629 2026-09-29 07:5x~08:0x @BigLife-OSLoop ==
+[x] ① poolgen 跑通：tick 2026-09-29 08:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（07:06→08:06 间隔 60min <24h 判据持续满足·连戳链维持）
+[x] ② census 新条目：本批 10 环零留冷 C-03912~C-03921 十席首环（commit 0a59bf0a·批题头 join(done)=实落一致·ring 3905→3915）
+[x] ③ 位置字段非 null：behavior slot_null=0（rows=10030 实测·本轮 python 全量直数）
+[x] ④ 行为链再生：sync_rings 批内自动收口 rows=10 ring_synced=10（commit 1e5e8ee7·镜像 rows=10 ring=3915）
+[x] ⑤ heartbeat 3h 内：07:49:11 os-loop round done exit=0（<1h）
+[x] 判据红线行：停造人令轮首双闸实测过（light_rows=10030·unique=10030·ID 封顶 C-10036 越顶 0·registry A-filter 自 00:07 零新增·注册冻结维持）
+[x] QC 免巡行：R624 problems=0 在案·下到期 ≈R630
+[x] 池 audit 行：09-29 例份 R628 已耗 PASS 满额 1440+518（自终止律本轮跳过 audit 实跑不为长而长）
+[x] 基因轮行：R629 兑现（族距 8 到位）——候选 10 条（cp+6 六轴各 1·ho+2·tp+2）·nearcheck 七跑（3→3→3→1→0→1→0）六句位换句终选 10/10 CLEAN（含「心宽一寸」库内 100% 精确重复拦截=Layer B 立功）+查二触发词族零命中+查三跨面撞句扫描拦 1 换句（「，就知道」连词 4-gram）+--qc 15/15+基线哨兵三池零漂移（91.667/94.118/43.902 原值在位）
+[x] 核卡抽验行：C-03912（QT）/C-03918（GM）2/2 PASS——「火候到了自然就香，今早又早起喊人了」口头禅领句+晨窗坐实+「潮水的事交给潮水，今早江声依旧」晨窗域内·[锚] 注脚 2/2 齐备·批 diff 直读
+[x] GPU 探针行：used=6823/12282MiB util 3%——空窗未开（第二十五探针同族·余 ~5.46GB<权重 5.94GB·让路律不抢）
+verdict: PASS 5/5
