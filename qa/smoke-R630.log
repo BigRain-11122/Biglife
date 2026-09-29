@@ -1,0 +1,13 @@
+== smoke R630 2026-09-29 08:14~08:2x @BigLife-OSLoop ==
+[x] ①poolgen 跑通：tick 2026-09-29 08:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（07:06→08:06 间隔 60min <24h 判据持续满足·连戳链维持）
+[x] ②census 新条目：本批 8 环（C-03923/C-03924/C-03925/C-03927/C-03928/C-03929/C-03930/C-03931·commit 2d1d4ee5·批题头 join(done)=实落一致）·ring 3915→3923——2 席 persistent 门拦留冷（C-03922 rain-invented/C-03926 sky-mismatch·诚实门禁健康态·零程序动作零卡面改动）
+[x] ③位置字段非 null：behavior slot_null=0（rows=10030 全量直数）
+[x] ④行为链再生：sync_rings 批内自动收口 rows=8 ring_synced=8（commit e24fa6e4·镜像 rows=8 ring=3923）
+[x] ⑤heartbeat 3h 内：08:10:54 os-loop round done exit=0（~4min）
+[x] 判据红线行：停造人令轮首双闸实测过（light_rows=10030·unique=10030·ID 封顶 C-10036 越顶 0·注册冻结维持）
+[x] QC 到期巡检行：R630 到期实跑 problems=0（cards=10030·evolved=3923·QC-REPORT 随轮入库·下到期≈R636）
+[x] 池 audit 行：09-29 例份 R628 已耗（PASS 满额 1440+518·自终止律本轮跳过不为长而长）
+[x] 例份行：相遇 09-29 场额 3/3 满（R596/R601/R604）·反思 3/3（R600/R602）·聚光 9 月 2/2 满·基因轮 R629 刚兑现族距 8-10 起算 ≈R637
+[x] 核卡抽验行：C-03925（MD）/C-03927（GM）2/2 PASS——「今早市上的菜价还巴适得很」晨窗坐实+「这清早的风挺大」风况域内·[锚] 注脚 2/2 齐备·批 diff 直读
+[x] GPU 探针行：used=6838/12282MiB util 3%——空窗未开（第二十六探针同族·余 ~5.44GB<权重 5.94GB·让路律不抢·回执 F-20260929-BL01 已前置·T-20260928-07 单 open 至 09-30 13:00 回执窗后收口）
+verdict: PASS 5/5
