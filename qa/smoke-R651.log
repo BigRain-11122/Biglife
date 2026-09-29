@@ -1,0 +1,16 @@
+# QA Smoke Test · R651 (2026-09-29 ~12:2x)
+# BigLife 数据面自检五项（章程 docs/qa-smoke-test-charter.md 本司面每轮 commit 后自检）
+[1] poolgen 跑通：tick 2026-09-29 12:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE → PASS（11:06→12:06 间隔 60min 连跑判据持续满足）
+[2] census 新条目：本批 6 环（R650 Ollama 挂批暂停后自然重试兑现·批 35962929「C-04042, C-04044, C-04048, C-04049, C-04050, C-04051」·ring 4035→4041·C-04042 session-state/C-04044 sky-mismatch 两席留冷过门归位+四席首环）→ PASS
+[3] 位置字段非 null：light block_null=0/10030 · behavior slot_null=0/10030（本轮 python 实测 rows=10030）→ PASS
+[4] 行为链再生：sync 63de5498 rows=6 ring=4041（sync_rings 随环自动收口制·批脚本内置落环后自动跑）→ PASS
+[5] heartbeat 3h 内：12:10:53 round done（R650）→ 本轮 R651 轮末刷新 → PASS
+
+红线行：停造人令轮首双闸实测过 light_rows=10030 unique=10030 block_null=0 ID 封顶 C-10036 over_cap=0（python 实测·注册冻结维持·registry 零新增）
+批行：年轮批 mandate --batch 3·floor 10→effective=max(3,10)=10 due 落 6 环——4 席 persistent 门拦留冷（C-03936/C-03978/C-04033/C-04043 rain-invented 同族·实况无雨=结构性拦·根因 R640 已盘·自然解锁面=逢雨天喂入〔C-03711/C-03959 判例族·R647 已见无雨断言自洽新径〕·零程序动作零卡面改动 stays due）
+核卡行：核卡抽验 2/2 PASS 零修复（C-04048 刘豆豆 口头禅「先试了再说」逐字领句+行为「放学绕路看 commit 光点」域内改写+「挺适合」云窗合法态〔R644 C-04024 判例族·state/behavior-last.json weather_kind=cloud 只读坐实〕·C-04051 贺俊 口头禅「下一版一定更好」逐字领句+行为「台风季必把摊子多绑三道绳」域内改写+风况经机审门过门〔C-03364 判例族〕·[锚] 注脚 2/2 齐备·卡面直读）
+免巡行：QC 免巡（R649 到期巡检 problems=0 在案·每 6 轮律·下到期 ≈R655）
+例份行：池 audit PASS 满额自停（axes 72/72+sprite 12/12+greet 28/28+faq 7/7+neg 6/6·1440+518·hard_fails=0·确定性 192+25 对零漂移·09-29 例份 R628 已耗）·相遇 09-29 场额 3/3 满（R596/R601/R604）·反思 09-29 日帽 3/3 满（R600/R602）·聚光 9 月 2/2 满·基因轮 R645 兑现后族距 8-10 起算 ≈R653
+GPU 探针行：T-20260928-07 第四十六探针 used=11151/12282MiB util 7%——空窗未开（余 ~1.1GB≪权重 5.94GB·满载让路律不抢·回执 F-20260929-BL01 已前置·单 open 至 09-30 13:00 窗后收口）
+status-export 行：本轮刷新（本批 6 环实质状态变更·ring 4035→4041·09-29 新写环 批环口径更新·json 回读校验随 commit 前置）
+尾查行：集团双正典 mtime 漂移（orders.md 12:07:45/decisions.md 12:09:18）尾行核验=全数已知件维持——orders 尾行=09-29 ~12:0x 委员会常设化宪法令（P-2026-09-29-05·R650 已捕获·首班实跑 09-30 00:00）·decisions 尾=C-20260929-01/02/03 全 executed+票档归档 12:00 午班轮（C-20260927-02 组织精简案 6/7 赞成过会·归 HQ 秘书处）·零新涉本司派工·席6 零 pending 零动作·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 00:05:03 维持）
