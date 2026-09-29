@@ -1,0 +1,26 @@
+# qa/smoke-R694.log — QA Smoke Test 第一百证（2026-09-29 21:0x @BigLife-OSLoop）
+# 五项全勾（数据面自验·章程 BigLife 节证据要求=census 最新条目+行为链样例）
+
+[1] poolgen 跑通（tick 戳）
+  === 2026-09-29 21:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+  连戳链维持（19:06→20:06→21:06 间隔 60min <24h 判据持续满足）+本轮手动 pool_audit PASS 复证（under_target NONE-SELF_TERMINATE·确定性双抽零漂移）
+
+[2] census 新条目（本批 5 环）
+  批 9ddedb25 年轮环(既有居民迭代·零新注册) C-04349, C-04350, C-04351, C-04352, C-04353
+  +sync 7a6a5740 行为线镜像 rows=5 ring=4342（4337→4342）
+  核卡抽验 2/2 PASS 零修复（C-04349 口头禅「老地方见」逐字领句+C-04351「红灯面前没有老熟人」逐字领句·face 域内+[锚] 2/2·卡面直读）
+
+[3] 位置字段非 null
+  light block_null=0 rows=10030 实测（python jsonl 全量·unique=10030）
+
+[4] 行为链再生
+  sync_rings 自动收口 rows_changed=5 ring_synced=5（commit 7a6a5740 实证）
+
+[5] heartbeat 3h 内
+  state/heartbeat.txt LastWriteTime 2026-09-29 20:56:51（R693 收口行 0.2h 内·本批后轮末行随收）
+
+[红线行] 停造人令轮首双闸实测过：light_rows=10030 unique=10030 over_cap=0·注册冻结维持
+[账平行] 09-29 新写环全域直数 [锚] 行 660=R693 面 655+本批 5 零差（python glob+re 全 census 域实测）
+[门禁行] 5 席 rain 族 persistent 留冷（C-04162 廿五轮 R668~R694/C-04259/C-04283/C-04315/C-04326·诚实门禁零程序动作 stays due 下轮自然再试）
+[基因行] 基因轮 R694 到期兑现：cp+6=516 六轴 86x6/tp+2=184/ho+2=318（nearcheck v1拦7→查二换句2→终选 10/10 CLEAN+查二触发词族零命中+查三跨面 0/1958+qc 15/15+基线哨兵 91.667/94.118/43.902 零漂移+入库断言全过+diff 13+/3- 纯尾追加）
+verdict=PASS 5/5
