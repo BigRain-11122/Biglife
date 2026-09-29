@@ -1,0 +1,10 @@
+=== BigLife smoke R698 2026-09-29 21:5x ===
+[1] poolgen tick: 2026-09-29 21:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE -> OK
+[2] census 新条目: 本批 4 环 C-04364/C-04368/C-04369/C-04370 (commit c438b401) -> OK
+[3] 位置字段非 null: behavior rows=10030 slot_null=0 (双闸实测 light=10030 unique=10030 cap_ok=True) -> OK
+[4] 行为链再生: sync_rings rows=4 ring=4354->4358 (commit 9fbe4c33) -> OK
+[5] heartbeat: 21:47:56 (<3h) -> OK
+[+] 停造人令双闸: light_rows=10030 unique=10030 ID 封顶 C-10036 越顶 0 -> OK
+[+] 09-29 新写环全域账平: 676 (python 全 census 域 [锚] 直数) = R697 面 672 + 本批 4 零差
+[+] QC 免巡: R697 到期巡检 problems=0 在案 (例行下到期 ≈R703)
+[+] 日清窗: F-20260929-BL12 落 HQ-FEEDBACK (23:00 前置完成·lowpoly 批 2 呈报随窗)
