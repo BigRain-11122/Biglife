@@ -1,0 +1,7 @@
+== U307 B 片图鉴文案卡 QC (R685·T-20260929-05 step② slice-B) ==
+cards_total=24 B_slice=12
+WARN memo tokens low: A01 0/1
+WARN memo tokens low: B03 0/0
+nearcheck: B 片 12 口癖 gene_nearcheck 12/12 CLEAN (R685 实跑·零撞句)
+story_max=22
+verdict=PASS problems=0 warns=2

@@ -2,7 +2,7 @@
   "_meta": {
     "deliverable": "U307 吸嘟嘟主角图鉴文案卡（BigLife 文案供给面·人设域 U172=纯呈现层零管理权）",
     "task": "T-20260929-05 · 集团令 O-2026-0929-013 派单@BigLife · 回执窗 2026-10-02 12:00",
-    "slices": "A 片 12 款本文件已载；B 片 12 款下轮追加（拆步律）",
+    "slices": "A 片 12 款（R684 slice-A）+B 片 12 款（R685 slice-B）全量 24/24 已载",
     "sources": [
       "MiniGame/Design/evidence/characters/U307_主角候选批/U307_生成证据清单.json（24 款名+视觉记忆句柄·只读）",
       "MiniGame/Art Assets/资产银行/U307_主角母版库/ char_01~12.png + wchar_01~12.png（24/24 实存·CEO 保全令）",
@@ -24,6 +24,18 @@
     {"id": "A09", "name": "草莓折耳兔", "species": "草莓色折耳兔", "personality": "一半机警一半软乎", "memo": "一耳立一耳折+白围嘴（机警预警）", "story": "立着的耳朵听风，折着的耳朵存糖，两不耽误。", "catchphrase": "等等，我再听一耳朵。", "skill_ref": "竖耳预警·时间系"},
     {"id": "A10", "name": "星尘精灵嘟嘟", "species": "星尘精灵（嘟嘟近亲）", "personality": "自带光环的祝福派", "memo": "紫金渐变绒毛+金环+星瞳", "story": "打了个喷嚏，撒出去的却是三十颗星沙。", "catchphrase": "接好咯，星星的祝福！", "skill_ref": "星尘祝福·星沙系"},
     {"id": "A11", "name": "糖瓷可可熊", "species": "糖瓷材质小熊", "personality": "釉面温柔·兜底担当", "memo": "糖瓷釉材质对照款+奶白围嘴（治愈）", "story": "输了也不怕，它的熊抱能把你从败局里捞回来。", "catchphrase": "抱抱，还有机会。", "skill_ref": "熊抱护盾·护盾系"},
-    {"id": "A12", "name": "嘟嘟·吸吸嘴版", "species": "吸吸嘴嘟嘟", "personality": "说到做到的直球派", "memo": "嘴=软吸管·玩法直译", "story": "指哪儿吸哪儿，软管一抿星星就归位了。", "catchphrase": "吸气——就是现在！", "skill_ref": "吸管点吸·定吸系"}
+    {"id": "A12", "name": "嘟嘟·吸吸嘴版", "species": "吸吸嘴嘟嘟", "personality": "说到做到的直球派", "memo": "嘴=软吸管·玩法直译", "story": "指哪儿吸哪儿，软管一抿星星就归位了。", "catchphrase": "吸气——就是现在！", "skill_ref": "吸管点吸·定吸系"},
+    {"id": "B01", "name": "爆炸呆毛鸡", "species": "炸毛小鸡", "personality": "一惊一乍的开机派", "memo": "三根呆毛炸开比头高+超大腮红", "story": "呆毛比闹钟先醒，全队的一天由它炸响。", "catchphrase": "炸毛了！都给我醒醒！", "skill_ref": "呆毛爆气·风暴系"},
+    {"id": "B02", "name": "大嘴河马", "species": "大嘴小河马", "personality": "嘴比脑子快的爽快派", "memo": "巨嘴占身一半·吸嘟嘟直译", "story": "嘴一张就是半个屋，星星来了先坐满再说。", "catchphrase": "嘴到擒来！", "skill_ref": "巨嘴吞屏·风暴系"},
+    {"id": "B03", "name": "彩虹鬃小马", "species": "彩虹鬃小马", "personality": "走哪儿都自带排面的骄傲派", "memo": "彩虹鬃瀑布垂地（三倍长）", "story": "鬃毛一甩就是一道瀑布，走过的路都下过彩虹。", "catchphrase": "让开让开，彩虹来了！", "skill_ref": "彩虹引力·半径系"},
+    {"id": "B04", "name": "扇耳小象", "species": "巨耳小象", "personality": "耳朵比腿先到风的慢性子", "memo": "遮身巨扇耳+鼻卷金星", "story": "耳朵一扇，风就听话；鼻尖一卷，金星到手。", "catchphrase": "风来了，都别动。", "skill_ref": "扇耳风定·迟滞系"},
+    {"id": "B05", "name": "大围巾柴犬", "species": "围巾柴犬", "personality": "慢热但最讲义气的守护派", "memo": "拖地超长珊瑚围巾+飞机耳", "story": "围巾拖了三条街，裹住过全队打喷嚏的冬天。", "catchphrase": "围巾借你，别着凉。", "skill_ref": "围巾捞定·迟滞系"},
+    {"id": "B06", "name": "云朵巨尾松鼠", "species": "云尾小松鼠", "personality": "慢悠悠的云端漫步派", "memo": "云朵巨尾=身体三倍", "story": "尾巴铺开就是一朵云，输了的梦躺上去接着做。", "catchphrase": "来，尾巴上坐稳咯。", "skill_ref": "云尾卷吸·定吸系"},
+    {"id": "B07", "name": "水手小章鱼", "species": "水手小章鱼", "personality": "八只手一起忙的热心肠", "memo": "白水手帽+八短腿+吸盘腮红", "story": "八只手打八个结，台风天也没掉过一颗星。", "catchphrase": "八只手，包在我们身上！", "skill_ref": "八爪捞救·护盾系"},
+    {"id": "B08", "name": "彩虹喷水小鲸", "species": "喷彩虹小鲸", "personality": "爱凑热闹的小喷泉", "memo": "头顶彩虹喷柱", "story": "打个喷嚏顶出彩虹，全城跟着排队看雨后。", "catchphrase": "喷一口，彩虹管够！", "skill_ref": "喷泉星祝·星沙系"},
+    {"id": "B09", "name": "心形脸小猴", "species": "心形脸小猴", "personality": "蹦蹦跳跳的加时狂", "memo": "心形脸+弹簧尾举金星", "story": "弹簧尾一压一弹，够得着的金星从不缺席。", "catchphrase": "再给八秒，稳赢！", "skill_ref": "心动加时·时间系"},
+    {"id": "B10", "name": "巨眼镜小猫", "species": "大眼镜小猫", "personality": "慢条斯理的谜语派", "memo": "半脸金丝圆眼镜+问号尾", "story": "眼镜推到一半就出答案，尾巴还弯着问号。", "catchphrase": "谜底？喵，就在你指尖。", "skill_ref": "猫眼点吸·定吸系"},
+    {"id": "B11", "name": "草莓蝴蝶结兔", "species": "蝴蝶结小兔", "personality": "甜度超标的心软派", "memo": "比头大的巨型草莓蝴蝶结", "story": "蝴蝶结比头大一圈，装的全是留给你的糖。", "catchphrase": "结一紧，甜就跑不掉。", "skill_ref": "糖弹星雨·星沙系"},
+    {"id": "B12", "name": "喇叭嘴嘟嘟", "species": "喇叭嘴嘟嘟（嘟嘟近亲）", "personality": "一言不合就吹号的气氛担当", "memo": "金喇叭嘴鼓腮吹奏·嘟嘟声直译", "story": "鼓腮一吹全城开饭，嘟嘟声就是集结号。", "catchphrase": "嘟——集合咯！", "skill_ref": "喇叭声波·半径系"}
   ]
 }
