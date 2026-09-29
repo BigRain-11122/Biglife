@@ -1,0 +1,32 @@
+—— BigLife 五项数据面自检（qa-smoke-test-charter BigLife 节·每轮 commit 后自检·真实运行输出）——
+本轮: R689 @ 2026-09-29 20:1x~20:2x（OSLoop）
+
+[1] poolgen 跑通: PASS
+    state/poolgen_run.log 尾行: === 2026-09-29 20:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+    （tick 连戳链维持·TOTAL=1440 满额零欠深·判据持续满足）
+
+[2] census 新条目（本批新环）: PASS
+    本批 5 环: C-04323/C-04324/C-04325/C-04327/C-04328 五席首环
+    批 commit a13ad359「年轮环(既有居民迭代·零新注册)」（卡面 5 文件 +20/-5）·ring 4312→4317·5 席 rain-invented persistent 留冷（C-04162 廿轮/C-04259/C-04283/C-04315+C-04326 rain 首见）
+
+[3] 位置字段非 null: PASS
+    light rows=10030 block_null=0（python 实测）
+    behavior rows=10030 slot_null=0（python 实测）
+
+[4] 行为链再生（sync 收口）: PASS
+    批 sync commit bccb0184「行为线 2026-09-29: 镜像 rows=5 ring=4317」（rows_changed=5 ring_synced=5·evolve_citizen 落环后自动收口·勿手动重复）
+
+[5] heartbeat 3h 内: PASS
+    state/heartbeat.txt 尾行 2026-09-29 20:10:59 os-loop: round done exit=0（<3h·轮末 alive 行随收尾落）
+
+附加行
+- 停造人令轮首双闸: light_rows=10030 unique=10030 ID 封顶 C-10036 over_cap=0（python 实测·注册冻结维持）
+- 账平行: 09-29 新写环全域直数 635（registry 633+anchors 2）·R688 面 630+本批 5 账平零差（python glob+re census 全域 [锚] 当日行直数）·sync ring=4317
+- 核卡抽验 2/2: PASS 零修复——C-04323（QT）「对时了，放心。今天天气清清爽爽的，正好适合站在这里看看城里的变化。」=本卡口头禅领句+清爽天气域内（机审门 v0.43 适配语域过门·C-00066 判例族云窗合法态）·C-04328（GM）「茶凉了再倒就是，今儿个单日，正好添猫粮。」=face 直引（卡面行为节「每逢单日必给电波猫群添一次猫粮」逐字咬合·29 日奇数坐实）·[锚] 注脚 2/2 齐备
+- 例份面合规跳过全满: 池 09-29 例份 R668 已耗（audit PASS 满额 1440+518 维持）·QC 免巡（R685 problems=0+R688 修后复扫 0 在案·例行下到期 ≈R691）·相遇 09-29 场额 3/3（R596/R601/R604）·反思 09-29 日帽 3/3（R600/R602）·聚光 9 月 2/2 满·基因轮 R686 兑现后族距 8-10 起算 ≈R694·OSS 借力新窗 21:40 未至（晚间轮首片）
+- 任务板: T-20260929-05 板头复选框勘正 [ ]→[x]（R685 已 24/24 整单关结·status done 三行在案·F-20260929-BL10 回执·板头滞后对齐·纯记账勘正零内容改动）
+- GPU 第八十三探针（T-20260928-07 Bonsai）: 7095/12282MiB util 5%——空窗未开（余 ~5.19GB<权重 5.94GB·让路律·F-20260929-BL01 已前置·单 open 至 09-30 13:00 回执窗后收口）
+- 尾查: 集团 orders.md mtime 19:50:39=R686 已核值维持（O-028~033 零涉司新派工）·decisions.md 13:17:02 维持·ceo-review.md 19:38:11=R688 已核值维持（尾行 BigMoney 域非本司·本司末行=18:37 升级件已处置 BL11）·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 维持）
+- 时间戳按实测钟写（R627 判例）
+
+verdict: PASS 5/5
