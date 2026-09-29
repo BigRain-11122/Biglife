@@ -1,0 +1,11 @@
+[gate] light_rows=10030 unique=10030 over_cap(C-10036)=0 block_null=0 -> PASS
+[1] poolgen tick -> === 2026-09-30 02:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（01:06→02:06 间隔 60min<24h 判据持续满足） -> PASS
+[2] census 今日(09-30)[锚]环数 line-scan=88（R719面81+R720批7=88 期望符合·双域 registry分片+anchors） -> PASS
+[3] behavior rows=10030 slot_null=0 -> PASS
+[4] 行为链镜像 sync: 批 rows=7 ring 4476->4483（evolve_citizen committed rows_changed=7 ring_synced=7 in-place·20b5c0c7+0ad36dcd） -> PASS
+[5] heartbeat 最新 round done 行 ts=2026-09-30 02:34:20 + 本轮轮末刷新（脚本自动） -> PASS
+核卡抽验 2/2: C-04476 口头禅「看云不用门票」逐字领句+「今天这天色正好」适配语 cloud 域内·穿城信使职业域内 / C-04489 底色「帮帮忙」领句+「今天这天气还挺适合外出走走」适配语 cloud 合法+「看看新出的光织物」own-activity 意向句记档非门项·[锚] 2/2 齐备 -> PASS
+留冷 3 席: C-04429 time-morning 第9轮 / C-04467 wind-under+time-morning 第4轮 / C-04488 sky-mismatch+moon-invented 首见（凌晨档 vs 实况=结构性拦·诚实门禁健康态·零程序动作零卡面改动·stays due）
+尾查: 集团 orders.md 09-29 19:50:39 / decisions.md 09-29 13:17:02 双 mtime 零漂移维持；ceo-review.md 09-30 02:37:46 新漂移=BigMoney 域行零涉本司记档；本仓 orders/ 零新件 newest=O-20260927-1648-HQ-C 维持
+GPU 第110探针（T-20260928-07 Bonsai）6947/12282MiB util5% 空窗未开（余 ~5.33GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置·单 open 至 09-30 13:00 收口窗后收口）
+smoke R720 @ 2026-09-30 02:57:00 verdict=PASS(5/5) + gate PASS + 核卡 PASS
