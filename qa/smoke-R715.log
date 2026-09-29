@@ -1,0 +1,11 @@
+# BigLife QA Smoke Test 第一百二十证（R715 · 2026-09-30 01:5x · 数据面自验应项 · T-20260928-05）
+[1] poolgen 跑通：tick 2026-09-30 01:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（00:06→01:06 间隔 60min <24h 判据持续满足·state/poolgen_run.log 直读）PASS
+[2] census 新条目：09-30 [锚] 环全域直数 55（R714 面 46+本批 9 账平零差·双域 registry+anchors+reserved python glob+re 直数·批 3d19a0b4 9 环）+QC 轮首必跑兑现 problems=0（cards=10030·evolved=4441·QC-REPORT 随轮入库）PASS
+[3] 位置字段非 null：light block_null=0 rows=10030 实测（district 空 3=荣誉席正典形态）PASS
+[4] 行为链再生：sync 8152c125 rows=9 ring_synced=9（ring 4441→4450·批后自动收口）PASS
+[5] heartbeat 3h 内：轮末刷新 2026-09-30 01:5x PASS
+红线行：停造人双闸 light=10030 unique=10030 ID 封顶 C-10036 over_cap=0 注册冻结维持 PASS
+核卡行：本批抽验 2/2 PASS 零修复（C-04451「站直了别趴下」本卡自有口头禅逐字领句+路过游戏楼数亮窗行为节 face 直引域内·「天儿挺适合出去转转」适配语=实况 cloud 夜窗 C-00066 判例族合法·「得数到三百多」=本卡数窗惯习 own-activity 意向句记档非门项/C-04456「老地方见」本卡自有口头禅逐字领句+「天气挺适合出去走走」适配语 cloud 合法+「得劲」底色领句·[锚] 2/2 齐备·机审门 v0.43 批内全审）
+GPU 探针行：第百五探针 6940/12282MiB util1% 空窗未开（余 ~5.34GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置·单 open 至 09-30 13:00 收口窗后收口）
+尾查行：orders 19:50:39/decisions 13:17:02 双维持=R686/R609 核值态零漂移·ceo-review 01:37:14 新漂移=Biggame 域行零涉司记档·本仓 orders/ 零新件 newest=O-20260927-1648-HQ-C 维持
+verdict: 5/5 PASS
