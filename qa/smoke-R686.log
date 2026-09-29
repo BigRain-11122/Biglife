@@ -1,0 +1,29 @@
+qa/smoke-R686.log — BigLife 五项数据面自验（qa-smoke-test-charter BigLife 节·每轮 commit 后自验·真实运行输出）
+轮次: R686 @ 2026-09-29 19:4x~20:0x（OSLoop）
+
+[1] poolgen 跑通: PASS
+    state/poolgen_run.log 尾行: === 2026-09-29 19:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+    （18:06→19:06 间隔 60min < 24h 连戳链维持·判据持续满足）
+
+[2] census 新条目（本批新环）: PASS
+    本批 5 环: C-04297（R685 sky-mismatch 留冷归位）+C-04308/C-04310/C-04311/C-04312 四席首环
+    批 commit b323d130（卡面 5 文件 +20/-5）·ring 4296→4301
+
+[3] 位置字段非 null: PASS
+    light rows=10030 block_null=0（python 实测）
+    behavior rows=10030 slot_null=0（python 实测）
+
+[4] 行为链再生（sync 收口）: PASS
+    sync commit 6fd68e31「行为线 2026-09-29: 镜像 rows=5 ring=4301」rows_changed=5 ring_synced=5
+
+[5] heartbeat 3h 内: PASS
+    state/heartbeat.txt 尾行 2026-09-29 19:41:05 os-loop: round done exit=0（<3h）
+
+附加行:
+- 停造人令轮首双闸: light_rows=10030 unique=10030 ID 封顶 C-10036 over_cap=0（python 实测·注册冻结维持）
+- 账平行: 09-29 新写环全域直数 619 = R685 面 614 + 本批 5 账平零差（python glob+re 全 census 域 [锚] 当日行直数）
+- 核卡抽验 2/2 PASS 零修复: C-04308（QT 量化策略研究员「江水都不急我急啥」+平凡一天 face 域内）+C-04310（像素灵·电波猫「好东西遇到就是缘分，分一半是本分」信条直引+「挺适合」cloud 窗合法态〔C-00066 判例族·behavior-last weather_kind=cloud ts 19:13 只读坐实〕）·[锚] 注脚 2/2 齐备·批 diff 直读
+- 基因轮 R686 兑现: nearcheck v1 拦 7→v2 拦 1→v3 终选 10/10 CLEAN+查二 0+查三换句 1+qc 15/15+基线哨兵 91.667/94.118/43.902 零漂移（池量 510/316/182）+入库证 10/10 转近重·commit 704cfbb6（13+/3- 纯追加形）
+- GPU 第八十探针（T-20260928-07 Bonsai）: 7111/12282MiB util 8%——空窗未开（余 ~5.17GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置·单 open 至 09-30 13:00 回执窗后收口）
+- 尾查: 集团 orders.md mtime 19:12:29 漂移捕获 5 新行全数他司域/已交付件消费面引用（O-028 咻嘻队 V0.9.0 冲刺@Biggame·O-029 机队全面并行令点名本司三件=空间锚点/分配表/24 款人设卡批全已交付引用维持·O-030 四面保障常设件=值守轮双班执法面本司 OSLoop 在役·O-031 载体边界定谳·O-032 委员会总责件·O-033 清理层级令零本司派单）——零新涉本司派工；decisions.md 13:17:02 维持；本仓 orders/ 零新件
+verdict: PASS 5/5
