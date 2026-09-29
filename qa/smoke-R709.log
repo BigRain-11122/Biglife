@@ -1,0 +1,16 @@
+=== BigLife smoke R709 @ 2026-09-30 00:0x（每轮 commit 后自验·T-20260928-05·判据=真跑非文档）===
+[1] poolgen 跑通: PASS — state/poolgen_run.log 尾戳 2026-09-29 23:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（22:06→23:06 间隔 60min <24h 连戳判据持续满足·下一火 ~00:06 跨日（09-30）后下轮复核）
+[2] census 新条目: PASS — 本批 10 环 C-04414~C-04423 十席首环（批 3d6a5d1e·ring 4407→4417·「年轮环(既有居民迭代·零新注册)」模板在役）
+[3] 位置字段非 null: PASS — behavior slot_null=0 rows=10030 实测；citizen-anchors rows=10030；light block_null=0
+[4] 行为链再生: PASS — sync 6b540170 rows=10 ring_synced=10（ring 4407→4417·批后自动收口）
+[5] heartbeat 3h 内: PASS — 23:48:25 round done 在案·轮末脚本自动刷新
+--- 红线/例行行 ---
+[轮首双闸] 停造人令: PASS — light_rows=10030 unique=10030 ID 封顶 C-10036 over_cap=[] 注册冻结维持（python 实测）
+[QC 例行] R709 到期巡检兑现 problems=0（cards=10030·evolved=4417·QC-REPORT 随轮入库·例行下到期 ≈R715）
+[核卡] 2/2 PASS 零修复（C-04414 RV 光桥市集摊主口头禅「江水都不急我急啥」逐字领句+「江水清清」U229 水色白名单+出摊 face 域内/C-04420 QT 执灯行守夜灯灵「夜城一如既往的静」face 域内+风况域内·[锚] 2/2 齐备·批 diff+卡面直读）
+[账平] 09-29 新写环全域直数 735=R708 面 725+本批 10 零差（python glob+re 全 census 域环行直数·sync ring=4417 实测）
+[GPU 探针·T-20260928-07] 第百一探针 6947/12282MiB util 5% — 空窗未开（余 ~5.33GB<权重 5.94GB·让路律不抢·F-20260929-BL01 回执已前置·单 open 至 09-30 13:00 收口窗后收口·O-033「Bonsai 候选冻结」与 observe 态一致）
+[尾查] 集团 orders.md 19:50:39/decisions.md 13:17:02/ceo-review.md 23:37:50 三 mtime=R708 核值态零漂移维持（00:00 决策轮首班未落新行·零涉司新决策照常自转·本仓 orders/ 零新件 newest=O-20260927-1648-HQ-C 00:05:03 维持）
+[例份] 池 09-29 例份 R668 已耗（tick 23:06 连戳·09-30 新日窗下轮起可跑）·相遇 09-29 3/3 满（09-30 新日窗下轮起）·反思 09-29 3/3 满·聚光 9 月 2/2 满·基因轮 R702 兑现后族距 8-10 起算 ≈R710（下轮到期候选）·日清 09-29 F-BL12 已落
+tokens: local=10 api=0 api_reason=-（下限口径：批 10 due 落环各 1=10·零留冷零重试·gated_llm max_regens=2 码证；QC/核卡/账平/探针/smoke/export/实录=纯确定性零 LLM）
+verdict=5/5 PASS
