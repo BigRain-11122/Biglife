@@ -1,0 +1,14 @@
+=== BigLife QA Smoke Test R703 · 2026-09-29 22:58 ===
+判据=T-20260928-05（数据面自验五项·真跑非文档）
+[1] poolgen 跑通: tick 2026-09-29 22:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE ✓（连戳链 21:06→22:06 间隔 60min <24h 判据持续满足·下 tick 23:06 在窗）
+[2] census 新条目: 本批 3 环=C-04384(GM)/C-04385(NS)/C-04387(OR) 三席首环·批 commit 7c747196·批题头 join(done)=实落一致 ✓
+[3] 位置字段非 null: behavior rows=10030 slot_null=0 实测（python 逐行断言·anchors 10030 同 seed 律在役）✓
+[4] 行为链再生: sync_rings 随批自动收口 rows_changed=3 ring_synced=3·ring 4371→4374·commit bf4f4928 ✓
+[5] heartbeat 3h 内: 22:44:14 R702 round done 在案+本轮末 R703 刷新 ✓
+红线行: 停造人令双闸实测过（light_rows=10030·unique=10030·ID 封顶 C-10036·over_cap=0·注册冻结维持）✓
+账平行: 09-29 新写环全域直数 692=R702 面 689+本批 3 零差（python glob+re 全 census 域 [锚] 当日行直数·sync ring=4374）✓
+QC 行: R703 到期例行巡检兑现 problems=0（cards=10030·扫描时点 evolved=4371·编号/姓名唯一+必备段齐备+年轮锚定律全过·QC-REPORT 随轮入库·例行下到期 ≈R709）✓
+轮首拉取行: pull --ff-only 首试 publickey 拒（会话 HOME 解析 ssh config 未载·密钥双证在位）→GIT_SSH_COMMAND 显式密钥复测 Already up to date ✓（操作面修复非数据面·下轮轮首先显式）
+GPU 探针行: 第九十五探针 6928/12282MiB util 6% 空窗未开（余 ~5.35GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置·单 open 至 09-30 13:00 回执窗后收口）✓
+尾查行: 集团 orders.md 19:50:39/decisions.md 13:17:02/ceo-review.md 22:37:51 三 mtime=R702 核值态零漂移维持·本仓 orders newest=O-20260927-1648-HQ-C 维持（零新令）✓
+verdict: 5/5 PASS
