@@ -1,0 +1,25 @@
+# qa/smoke-R693.log — QA Smoke Test 第九十九证（2026-09-29 20:5x @BigLife-OSLoop）
+# 五项全勾（数据面自验·章程 BigLife 节证据要求=census 最新条目+行为链样例）
+
+[1] poolgen 跑通（tick 戳）
+  === 2026-09-29 20:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+  连戳链维持（19:06→20:06 间隔 60min <24h 判据持续满足）
+
+[2] census 新条目（本批 5 环）
+  批 60890d5b 年轮环(既有居民迭代·零新注册) C-04344, C-04345, C-04346, C-04347, C-04348
+  +sync 5b9ec9e5 行为线镜像 rows=5 ring=4337（4332→4337）
+  核卡抽验 5/5 PASS 零修复（口头禅逐字领句+face 域内+[锚] 5/5·C-04346/04347 双卡各自出生自有口头禅 R677 判例族）
+
+[3] 位置字段非 null
+  light block_null=0 rows=10030 实测；behavior rows=10030 anchor 非荣誉席 null=0 实测
+
+[4] 行为链再生
+  sync_rings 自动收口 rows_changed=5 ring_synced=5（commit 5b9ec9e5 实证）
+
+[5] heartbeat 3h 内
+  state/heartbeat.txt LastWriteTime 2026-09-29 20:46:53（0.12h 前轮 R692 收口行）
+
+[红线行] 停造人令轮首双闸实测过：light_rows=10030 unique=10030 over_cap=0·注册冻结维持
+[账平行] 09-29 新写环全域直数 [锚] 行 655=R692 面 650+本批 5 零差（python glob+re 全 census 域实测）
+[门禁行] 5 席 rain 族 persistent 留冷（C-04162 廿四轮/C-04259/C-04283/C-04315/C-04326·stays due 下轮自然再试）
+verdict=PASS 5/5
