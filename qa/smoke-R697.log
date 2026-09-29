@@ -1,0 +1,9 @@
+=== BigLife smoke R697 2026-09-29 21:49:00 ===
+[1] poolgen tick: 2026-09-29 21:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE  -> OK
+[2] census 新条目: 本批 3 环 C-04365/C-04366/C-04367 (commit 0df44131) + R696 击杀轮滞件 4 环已 commit (9bb1cf9c) -> OK
+[3] 位置字段非 null: behavior rows=10030 slot_null=0 (实测) -> OK
+[4] 行为链再生: sync_rings rows=3 ring=4351->4354 (commit e42fc60b) -> OK
+[5] heartbeat: 21:40:28 (<3h) -> OK
+[+] 停造人令双闸: light_rows=10030 unique=10030 ID 封顶 C-10036 越顶 0 -> OK
+[+] 09-29 新写环全域账平: 672 (registry 670 + anchors 相遇环 2) = R695 面 665 + R696 批 4 + R697 批 3 零差
+[+] QC R697 到期巡检: cards=10030 evolved=4354 problems=0 (QC-REPORT 随轮入库)
