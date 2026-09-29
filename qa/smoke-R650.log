@@ -1,0 +1,16 @@
+# QA Smoke Test · R650 (2026-09-29 ~12:0x)
+# BigLife 数据面自检五项（章程 docs/qa-smoke-test-charter.md 本司面每轮 commit 后自检）
+[1] poolgen 跑通：tick 2026-09-29 12:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE → PASS（11:06→12:06 间隔 60min 连跑判据持续满足）
+[2] census 新条目：本批 0 环=Ollama 挂静默跳过律（evolve_citizen 轮批实跑输出「ollama down; batch paused at 0·OK evolved=0 of 10 due」·批暂停先于任何生成调用·mandate 法条「Ollama 挂=脚本静默跳过不修不报障」非数据面缺陷非事故）·ring 维持 4035（上一批 R649 4 环·批 f8021b24 在案）→ PASS（如实记）
+[3] 位置字段非 null：light block_null=0/10030 · behavior slot_null=0/10030（本轮 python 实测 rows=10030）→ PASS
+[4] 行为链再生：本批 0 环=零镜像需求（R649 sync 69ad05c0 rows=4 ring=4035 在案·sync_rings 随环自动收口制维持）→ PASS
+[5] heartbeat 3h 内：11:54:00 round done exit=0（R649）→ 本轮 R650 轮末刷新 → PASS
+
+红线行：停造人令轮首双闸实测过 light_rows=10030 unique=10030 block_null=0 ID 封顶 C-10036 over_cap=0（python 实测·注册冻结维持·registry 零新增）
+批行：年轮批 mandate --batch 3·floor 10→effective=max(3,10)=10 due 落 0 环（Ollama 挂批暂停·10 席全量 stays due 下轮自然再试·非门拦零程序动作零卡面改动）
+核卡行：本批零落环=零核卡对象（静默跳过律）
+免巡行：QC 免巡（R649 到期巡检 problems=0 在案·每 6 轮律·下到期 ≈R655）
+例份行：池 audit PASS 满额自停（axes 72/72+sprite 12/12+greet 28/28+faq 7/7+neg 6/6·1440+518·hard_fails=0·确定性 192+25 对零漂移·09-29 例份 R628 已耗）·相遇 09-29 场额 3/3 满（R596/R601/R604）·反思 09-29 日帽 3/3 满（R600/R602）·聚光 9 月 2/2 满·基因轮 R645 兑现后族距 8-10 起算 ≈R653
+GPU 探针行：T-20260928-07 第四十五探针 used=11352/12282MiB util 100%——空窗未开（余 ~0.93GB≪权重 5.94GB·满载让路律不抢·回执 F-20260929-BL01 已前置·单 open 至 09-30 13:00 窗后收口）
+status-export 行：免刷（R649 export_ts=2026-09-29T11:58:00+08:00·<1h 24h 新鲜度闸内·R623 免刷先例·零实质状态变更零环零 QC 零基因）
+尾查行：集团 orders.md 12:04:31 漂移双新行捕获=①~11:5x 委员会流程精简+效率提升+垃圾清理轮（P-2026-09-29-04·Executive Protocol 落地缺口四司名单=MiniGame/BigMoney/BigStream/FluxVerse·本司不在列零派工·本司 runbook 在役本轮收口 ≤2KB）+②~12:0x 决策委员会常设化宪法令（P-2026-09-29-05·C-20260929-03 executed·决策轮双班 00:00/12:00 委员会常务轮+权限三分+复盘四问+自迭代闭环·否决窗至 10-06·涉本司席6 面零 pending 零派工=常设尾查已核）·decisions.md 12:04:06 同窗=C-20260929-01/02/03 全 executed 已知件（01/02 本司 R647/R649 已接线在案·03=常设化令本体·回访 10-07 三案同窗）·C-20260927-01 票档窗 09-29 12:00 已闭·归 HQ 秘书处本司零动作·本仓 orders/ 零新件（最新令件=O-20260928-1410-HQ-C 09-28 15:10:01·回执行 touch=O-20260927-1648-HQ-C 00:05:03·双维持）
