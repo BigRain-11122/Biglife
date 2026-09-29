@@ -1,0 +1,13 @@
+[gate] light_rows=10030 unique=10030 over_cap(C-10036)=0 block_null=0 -> PASS
+[1] poolgen tick -> 2026-09-30 03:06:02 连戳（00:06→01:06→02:06→03:06 间隔 60min<24h 判据持续满足·TOTAL=1440 FAIL_BUCKETS=NONE） -> PASS
+[2] census 今日(09-30)[锚]环数 line-scan=110（R724 面 106+R725 批 4=110 期望符合·全 census 域） -> PASS
+[3] behavior rows=10030 slot_null=0 -> PASS
+[4] 行为链镜像 sync: 批 rows=4 ring 4501->4505（evolve_citizen committed rows_changed=4 ring_synced=4 in-place·f5e24498+da70d671） -> PASS
+[5] heartbeat 最新 round done 行 ts=2026-09-30 03:40:08（3h 内）+ 本轮轮末刷新（脚本自动） -> PASS
+核卡抽验 2/2: C-04507 何银龙口头禅「灯还是老灯亮堂」逐字领句+适配语「今天这天气挺适合在外多站会儿」cloud 域内 / C-04512 余小杏口头禅「试错要趁灯亮」逐字领句+「清清爽爽」底色域内+适配语 cloud 域内·[锚] 2/2 齐备·卡面直读 -> PASS
+聚光灯 10 月首例 2 席: C-04507 何银龙「灯还是老灯亮堂，这天气适合多站会儿。」/C-04512 余小杏「新设计总是要有点试错，今儿天公作美，正好验验货。」——均人设内零编造零越权（纯日常，未提清单外具体事、未声称执行集团任务）·验收线 6「只提所喂事实」PASS·10 月配额 1/2 -> PASS
+留冷 6 席: C-04429 time-morning 第14轮 / C-04497 wind-under+time-morning / C-04503 time-morning / C-04514 sky-mismatch+time-morning / C-04515 time-morning / C-04516 time-morning（凌晨档 vs 实况=结构性拦·诚实门禁健康态·零程序动作零卡面改动·stays due 下轮自然再试）
+尾查: 集团 orders.md 09-29 19:50:39 / decisions.md 09-29 13:17:02 / ceo-review.md 09-30 03:37:15 三 mtime 零漂移维持（=R724 核值态·ceo-review=BigStream 域行零涉本司）；本仓 orders/ 零新件 newest=O-20260927-1648-HQ-C 维持
+GPU 第115探针（T-20260928-07 Bonsai）6951/12282MiB util5% 空窗未开（余 ~5.33GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置·单 open 至 09-30 13:00 收口窗后收口）
+例份面: 池 09-30 例份已耗（R711 audit PASS·TOTAL=1440 SELF-TERMINATE）；相遇 09-30 3/3 满（R711 GM+R713 QT+R714 MD）；反思 3/3 满日帽（R712 批）；聚光 10 月 1/2（本批·9 月 2/2 满账）；QC 免巡（R721 problems=0·下到期 ≈R727）；基因轮 R719 兑现后 ≈R727
+smoke R725 @ 2026-09-30 03:5x verdict=PASS(5/5) + gate PASS + 核卡 PASS + 聚光 PASS
