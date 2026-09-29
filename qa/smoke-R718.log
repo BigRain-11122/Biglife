@@ -1,0 +1,8 @@
+[gate] light_rows=10030 unique=10030 over_cap(C-10036)=0 block_null=0 -> PASS
+[1] poolgen tick -> === 2026-09-30 02:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE -> PASS
+[2] census 今日(09-30)[锚]环数 line-scan=76（R717面70+R718批6=76 期望符合·双域 registry+anchors） -> PASS
+[3] behavior rows=10030 slot_null=0 -> PASS
+[4] 行为链镜像 sync: 批 rows=6 ring 4465->4471（evolve_citizen committed rows_changed=6 ring_synced=6 in-place·501ff628） -> PASS
+[5] heartbeat 最新 round done 行 ts=2026-09-30 02:11:26 + 本轮轮末刷新 -> PASS
+核卡抽验 2/2: C-04472 口头禅「这物件比我懂年头」逐字领句+风况域内 / C-04477 口头禅「有意思，我想想」逐字领句+硅源 commit 光点 face 域内 -> PASS
+smoke R718 @ 2026-09-30 02:19:32 verdict=PASS(5/5) + gate PASS + 核卡 PASS
