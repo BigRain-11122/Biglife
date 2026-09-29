@@ -1,0 +1,13 @@
+[gate] light_rows=10030 unique=10030 over_cap(C-10036)=0 block_null=0 -> PASS
+[1] poolgen tick -> 2026-09-30 04:06:02 连戳（00:06→01:06→02:06→03:06→04:06 间隔 60min<24h 判据持续满足·TOTAL=1440 FAIL_BUCKETS=NONE） -> PASS
+[2] census 今日(09-30)[锚]环数 line-scan=115（R725 面 110+R726 批 5=115 期望符合·全 census 域 anchors 20+registry 95 python 直数） -> PASS
+[3] behavior rows=10030 slot_null=0 -> PASS
+[4] 行为链镜像 sync: 批 rows=5 ring 4505->4510（evolve_citizen committed rows_changed=5 ring_synced=5 in-place·f04a4c5a+aec75604） -> PASS
+[5] heartbeat 最新 round done 行 ts=2026-09-30 03:53:40（3h 内）+ 本轮轮末刷新（脚本自动） -> PASS
+核卡抽验 2/2: C-04518 布尔-9口头禅「别客气，就当自己家」逐字领句+适配语「这天气还挺适合在外环转转」cloud 域内+行为节「每月必去一次外环」呼应域内 / C-04519 范卡佳口头禅「搭把手的事儿」逐字领句+适配语「今天天气挺适合出去转转，江水清清的」cloud 域内·[锚] 2/2 齐备·卡面直读 -> PASS
+归位卡加验: C-04497 白余晖（R725 wind-under+time-morning 双拦留冷）过门归位——信条领句近逐字（要→得单字语气适配·人设域内零越权）+台风/晨间零提及=双拦过门实证·[锚] 齐备 -> PASS
+留冷 5 席: C-04429 time-morning 第15轮 / C-04514 sky-mismatch+time-morning / C-04515 time-morning / C-04516 time-morning / C-04520 sky-mismatch 首见（凌晨档 vs 实况=结构性拦·诚实门禁健康态·零程序动作零卡面改动·stays due 下轮自然再试）
+尾查: 集团 orders.md 09-29 19:50:39 / decisions.md 09-29 13:17:02 / ceo-review.md 09-30 03:37:15 三 mtime 零漂移维持（=R724/R725 核值态·ceo-review=BigStream 域行零涉本司）；本仓 orders/ 零新件 newest=O-20260927-1648-HQ-C 维持
+GPU 第116探针（T-20260928-07 Bonsai）6932/12282MiB util6% 空窗未开（余 ~5.35GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置·单 open 至 09-30 13:00 收口窗后收口）
+例份面: 池 09-30 例份已耗（R711 audit PASS·R724 复跑 SELF-TERMINATE·tick 04:06:02 连戳在役）；相遇 09-30 3/3 满（R711 GM+R713 QT+R714 MD）；反思 3/3 满日帽（R712 批）；聚光 10 月 1/2（R725 首例·月内随轮）；QC 免巡（R721 problems=0·下到期 ≈R727）；基因轮 R719 兑现后 ≈R727
+smoke R726 @ 2026-09-30 04:1x verdict=PASS(5/5) + gate PASS + 核卡 PASS
