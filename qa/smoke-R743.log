@@ -1,0 +1,11 @@
+=== BigLife smoke R743 五项 === 2026-09-30 07:32
+[PASS] poolgen tick: === 2026-09-30 07:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（audit 复跑 PASS·under_target NONE-SELF_TERMINATE·hard_fails 0）
+[PASS] 09-30 rings: 176 (expect 176=R742 面 174+R743 批 2·python 全 census 域 [锚] 当日行直数：anchors 20+GM 51+MD 32+NS 10+OR 18+QT 39+RV 6)
+[PASS] light gate: rows=10030 unique=10030 over_cap=0 ring 4569→4571（max recent_ring v 面·registry 4569+anchors 2 补扫口径 R665 判例族维持）
+[PASS] freeze guard(3): generate_census:exit4Y resident_intake:exit4Y mirror_intake:exit4Y（--force 亦拒·REGISTRY-FROZEN 零写盘）
+[PASS] zero new cards since freeze: PASS (0 rows)（git A-filter since 09-30 00:07 强冻点）
+[PASS] 核卡 2/2: C-04584 贾伟民「灶上有汤，自取」本卡自有出生口头禅逐字领句（R677 判例族）+「今天这天挺适合出去溜达溜达」=云窗适配语 C-00066 判例族合法 / C-04585 电位-9「汤要趁烫，话要慢讲」池基因逐字领句+「今早的城最真」起早性格行直引域内（R742 C-04580 同构）+「缓存满了」own-activity face 域内（C-03605 判例族）·[锚] 2/2 齐备·机审门批内全审过门
+[PASS] P0 判据窗监测（令点 05:38 起 12h→09-30 17:38 到期复核）: 双闸 10030/10030·cap C-10036·over_cap=0·三码闸 exit 4 三脚本实弹在役（--force 亦拒）·A-filter since 强冻点 0 行·账平 176 零差——判据面现行满足态
+[PASS] 尾查: 集团 orders.md 09-30 05:38:08 维持（已承接 P0 零新漂移）·decisions.md 09-29 13:17:02 维持·ceo-review.md 09-30 06:37:45 维持（R740 已核=BigCompute 域零涉司）·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 维持）
+[INFO] 基因轮 R743 兑现 +10 条（cp 540→546 六轴 91x6/ho 331→333/tp 197→199·qa/gene-round-R743.log）·behavior slot_null 未变（批后 sync rows=2）·GPU 探针本轮免（Bonsai 收口窗 09-30 13:00 未至·R737 起免探针先例维持）
+=== smoke R743: 5/5 PASS ===
