@@ -1,0 +1,12 @@
+[gate] light_rows=10030 unique=10030 over_cap(C-10036)=0 block_null=0 -> PASS
+[1] poolgen tick -> 2026-09-30 03:06:02 连戳（00:06→01:06→02:06→03:06 间隔 60min<24h 判据持续满足·TOTAL=1440 FAIL_BUCKETS=NONE） -> PASS
+[2] census 今日(09-30)[锚]环数 line-scan=106（R723 面 100+R724 批 6=106 期望符合·全 census 域） -> PASS
+[3] behavior rows=10030 slot_null=0 -> PASS
+[4] 行为链镜像 sync: 批 rows=6 ring 4495->4501（evolve_citizen committed rows_changed=6 ring_synced=6 in-place·e28a8268+ff01c187） -> PASS
+[5] heartbeat 最新 round done 行 ts=2026-09-30 03:28:05 + 本轮轮末刷新（脚本自动） -> PASS
+核卡抽验 2/2: C-04467 口头禅「我送走的老主顾，比这城里一半的楼岁数都大」逐字领句+「清清爽爽」底色域内+「今天天气清清爽爽的，正好出门溜达」适配语 cloud 域内 / C-04508 口头禅「新东西先看三天再用」逐字领句+「尝鲜穿件新光织物」own-activity 意向句记档非门项（R720 C-04489 判例族）·[锚] 2/2 齐备 -> PASS
+留冷 4 席: C-04429 time-morning 第13轮 / C-04497 time-morning / C-04503 time-morning / C-04507 wind-under+time-morning（凌晨档 vs 实况=结构性拦·诚实门禁健康态·零程序动作零卡面改动·stays due 下轮自然再试）
+尾查: 集团 orders.md 09-29 19:50:39 / decisions.md 09-29 13:17:02 双 mtime 零漂移维持；ceo-review.md 09-30 03:37:15 新漂移=BigStream 域行（LC-013 render 落盘）零涉本司记档；集团三新令（O-031 载体边界定谳/O-032 委员会总责/O-033 坚决清理）承接面核验=BigCompute 09-29 22:37 收讫在案·P-13 派单对象=Biggame/BigStream·本司零派工维持；本仓 orders/ 零新件 newest=O-20260927-1648-HQ-C 维持
+GPU 第114探针（T-20260928-07 Bonsai）6947/12282MiB util5% 空窗未开（余 ~5.33GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置·单 open 至 09-30 13:00 收口窗后收口）
+例份面: 池 audit 09-30 例份已耗（R711 audit PASS·TOTAL=1440 SELF-TERMINATE）·相遇 09-30 3/3 满·反思 3/3 满日帽·聚光 9 月 2/2 满（10 月新开）·QC 免巡（R721 problems=0·下到期 ≈R727）·基因轮 ≈R727
+smoke R724 @ 2026-09-30 03:4x verdict=PASS(5/5) + gate PASS + 核卡 PASS
