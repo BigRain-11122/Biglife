@@ -1,0 +1,12 @@
+# QA Smoke Test — R640 (2026-09-29 ~10:1x)
+# BigLife 数据面自验五项（工程=docs/qa-smoke-test-charter.md 本司面每轮 commit 后自验）
+[1] poolgen 跑步机 tick 2026-09-29 10:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE —— PASS（09:06→10:06 间隔 60min 连戳判据持续满足）
+[2] census 新条目 本批 10 due 落 6 环（C-03997/03998/03999/04000/04001/04003·批 7eaf463c）ring 3987→3993 —— PASS
+[3] 位置字段面 null: light block_null=0/10030 · behavior slot_null=0/10030（实测 rows=10030） —— PASS
+[4] 行为链再生 sync_rings 随批自动收口 rows=6 ring_synced=6（commit feff128c） —— PASS
+[5] heartbeat 3h 内 09:58:02 round done exit=0（R639 收尾）·本轮 R640 轮末刷新 —— PASS
+红线行：停造人令轮首双闸实测过 light_rows=10030 unique=10030 ID 封顶 C-10036 越顶 0（注册冻结维持·判据未触发态）
+核卡行：C-03997 GM 口头禅「先复核一遍」逐字领句+底色「上个头」呼应·C-03999 清早时词晨窗合法·C-04001 口头禅「慢慢来，比较快」逐字领句+「风挺大」风级措辞门禁坐实·[锚] 3/3 齐备（实抽 3 席超配额） —— PASS
+留冷行：4 席 persistent rain-invented（C-03936/03959/03978/C-04002）根因已盘=四席卡面行为段同源克隆自带「雨天单子最多，他们说雨声是加班费」雨特质·LLM 呼应卡面 vs 无雨实况平面禁=结构性拦·自然解锁面=逢雨天喂入（C-03711 同族 3 轮过门判例）·零程序动作零卡面改动 stays due
+免巡行：QC 免巡窗（R636 problems=0 在案·下到期 ≈R642）·例份面全满跳过（池 audit PASS 满额自停 1440+518·相遇 3/3·反思 3/3·聚光 9 月 2/2·基因 ≈R645）
+GPU 探针行：T-20260928-07 第三十六探针 6650/12282MiB 空窗未开（余 ~5.63GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置）
