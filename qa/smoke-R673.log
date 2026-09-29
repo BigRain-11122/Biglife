@@ -1,0 +1,36 @@
+=== qa/smoke-R673.log 2026-09-29 17:1x @BigLife-OSLoop（T-20260928-05 完章随轮实证第八十证）===
+
+五项清单（BigLife 适配=数据面自检·章程 docs/qa-smoke-test-charter.md BigLife 节）：
+[1] poolgen 跑通（tick 成链）
+--- state/poolgen_run.log tail ---
+=== 2026-09-29 17:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+✓ 判定过：tick <24h·exit=0·满额自停维持（16:06→17:06 间隔 60min）
+[2] census 最新条目（本批新环）
+--- git log（本批）---
+eacbc7c0 年轮 2026-09-29: C-04218, C-04220, C-04221, C-04222, C-04223, C-04224, C-04225 [via BigLife-OSLoop]
+56f0734f 行为线 2026-09-29: 镜像 rows=7 ring=4216 [via BigLife-OSLoop]
+✓ 判定过：本批 7 新环·7/10 due（C-04162 rain persistent 六轮同判 R668~R673+C-04211 rain 二轮+C-04219 sky-mismatch 新入列·均 stays due）
+[3] 位置字段非 null（behavior slot 实测）
+--- python 直数 ---
+behavior rows= 10030 slot null= 0
+✓ 判定过：slot 全非空
+[4] 行为链随批（--auto 随批在案）
+--- 本批 sync 实证 ---
+evolve_citizen 落环后自动 sync_rings：committed rows_changed=7 ring_synced=7（commit 56f0734f·ring 4209→4216）
+✓ 判定过：随批在案（零手动重复=mandate 原文·本轮自动门实证）
+[5] heartbeat 3h 内
+✓ 判定过：R672 轮末 heartbeat 随轮落 state/heartbeat.txt（16:59·与上轮 round done 16:59:38 间隔 <1h）
+
+附加证（非应项留档）：
+- 核卡抽验 2/2 PASS 零修复：C-04220（GM·口头禅「慢慢来，比较快。」逐字领句+天气域内坐实·[锚]）；C-04225（QT·「红灯面前没有老熟人」逐字领句+风况域内坐实·[锚]）——本批 [锚] 7/7 全齐备（python 逐卡直数）
+- QC R673 到期巡检实跑：cards=10030 evolved=4216 problems=0（编号/姓名唯一+必备段齐备+年轮锚定律全过·QC-REPORT 随轮入库）·下到期 ≈R679
+- 09-29 新写环全城直数账平：534=R672 面 527+本批 7（python glob+re 全 census 域·registry 532+anchors 2·账平零差额·sync ring=4216 实测）
+- 轮首值守人令双闸实测：light_rows=10030·unique=10030·ID 封顶 C-10036 越限 0·注册冻结维持
+- 尾查新令扫描：集团 orders.md mtime 16:32:11 维持（R670 已核·16:32 两行 City3D 线零涉司）；decisions.md 13:17:02 维持；本司 orders/ newest=O-20260927-1648-HQ-C 维持；poolgen tick 17:06:02 连链维持（TOTAL=1440 FAIL_BUCKETS=NONE）
+- GPU 第六十九探针：9130/12282 MiB util 16% 空窗未开（余 ~3.15GB<权重 5.94GB·让路律·F-BL01 回执窗 09-30 13:00 维持）
+- 例份面合规跳过：池 09-29 例份 R668 已耗（audit PASS 满额 1440+518·自终止例零动作）；相遇 3/3 满；反思 3/3 满；聚光 9 月 2/2 满；基因轮下窗 ≈R677
+- status-export R673 刷新：export_ts 2026-09-29T17:12:30+08:00 实测·ring 4209→4216·新写环 534·年轮/镜像/QC 三 dept 随轮（json 回读校验过）
+
+红线行：轮首 git status 非净零豁免（定向 add 本轮产出件·.codely-cli/ 不入库）·禁 git add -A 守住·[via BigLife-OSLoop] 尾标在一列 commit·集团域只读未触碰·FluxVerse 事件流只读·冒令零发生·本地算力例 api=0
+
+== smoke-R673: 5/5 全勾 ==
