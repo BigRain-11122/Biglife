@@ -14,6 +14,7 @@ census/export/citizen-initiatives.jsonl
 census/export/citizen-relations.jsonl
 census/export/citizen-goals.jsonl
 census/export/citizen-anchors.jsonl
+census/export/citizen-assembly.jsonl
 census/export/voice-cache/
 # Codely runtime (mirrors HQ gitignore law)
 .codely-cli/settings.local.json
