@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-30T04:58:00+08:00",
+ "export_ts": "2026-09-30T05:09:49+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R730 批6环（C-04529 rain+time 留冷过门归位+C-04537 sky-mismatch 留冷过门归位+C-04540/C-04541/C-04542/C-04543 四席首环·批 1b66879b+sync 74f226b7·ring 4527→4533）——4 席 persistent 门拦留冷（C-04429 time-morning 第19轮/C-04534 sky-mismatch 第3轮/C-04536 sky-mismatch 第2轮/C-04539 time-morning 首见·凌晨档 vs 实况=结构性拦·诚实门禁健康态·stays due 下轮自然再试）。核卡 2/2 PASS 零修复（C-04529 口头禅「红灯面前没有老熟人」逐字领句+江边摆摊 face 域内+风况措辞过门·C-04540 口头禅「门禁亮绿灯，心里才亮堂」逐字领句+行话「拆信」域内·[锚] 2/2 齐备·机审门 v0.43 批内全审过门）。账平行：09-30 新写环全域直数 138=R729 面 132+本批 6 零差（python 全 census 域 [锚] 当日行直数·sync ring=4533 实测）",
+   "t": "R731 批4环（C-04539 R730 time-morning 留冷过门归位+C-04544/C-04545/C-04546 三席首环·批 db891e2b+sync 5e8894fe·ring 4533→4537·批题头 join(done)=实落一致持续实证）——6 席 persistent 门拦留冷（C-04429 time-morning 第20轮/C-04534 sky+time 第4轮/C-04536 time-morning 第3轮/C-04547/C-04548/C-04549 time-morning 首见·凌晨档 vs 实况=结构性拦·诚实门禁健康态·零程序动作零卡面改动·stays due 下轮自然再试）。核卡 2/2 PASS 零修复（C-04539 口头禅「街坊一声喊，放下碗就到」逐字领句+「收工后绕江走半里」散步 face 域内/C-04545 口头禅「灶上有汤，自取」逐字领句+「江水清清」散步 face 域内·[锚] 2/2 齐备·机审门批内全审过门）。账平行：09-30 新写环全域直数 142=R730 面 138+本批 4 零差（python 全 census 域 [锚] 当日行直数·sync ring=4537 实测）",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "随年轮批自动同步 recent_ring（R730 批 sync rows_changed=6 ring_synced=6·ring=4533·commit 74f226b7·behavior.py v3.7 --auto 再生节律〔bucket=night wx=cloud snd=fest unchanged skip regen·10-01 国庆前夕声景〕/社交位族 v3.27/休闲环 v3.20/休伫环 v3.18/声景反向 v3.30 在役·anchor slot_null=0）",
+   "t": "随年轮批自动同步 recent_ring（R731 批 sync rows_changed=4 ring_synced=4·ring=4537·commit 5e8894fe·behavior.py v3.7 --auto 再生节律〔bucket=night wx=cloud snd=fest unchanged skip regen·10-01 国庆前夕声景〕/社交位族 v3.27/休闲环 v3.20/休伫环 v3.18/声景反向 v3.30 在役·anchor slot_null=0）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "R730 smoke 第一百三十四证五项全勾（qa/smoke-R730.log：tick 04:06:02 连戳/今日环 138 账平/behavior slot_null=0 抽样+anchors home_null=0/sync rows=6/heartbeat 04:47:48 新鲜）+核卡行（2/2 PASS 零修复）+尾查行（orders 09-29 19:50:39/decisions 09-29 13:17:02 零漂移·ceo-review 09-30 04:37:44 维持 BigDomain 域行零涉司·本仓 orders newest=O-20260927-1648-HQ-C 维持·零新令）+双闸实测过（light=10030·unique=10030·ID 封顶 C-10036·over_cap=0·block_null=0·注册冻结维持）+GPU 探针本轮免跑（Bonsai GPU 收口窗 09-30 13:00 未至·R727 起免探针先例·F-20260929-BL01 已前置·单 open 至窗后收口）",
+   "t": "R731 smoke 第一百三十五证五项全勾（qa/smoke-R731.log：tick 05:06:02 连戳/今日环 142 账平/behavior slot_null=0 抽样+anchors home null 全量直数=3 恰荣誉席 C-00001/2/3 非 reserved=0/sync rows=4/heartbeat 04:57:59 新鲜）+核卡行（2/2 PASS 零修复）+尾查行（orders 09-29 19:50:39/decisions 09-29 13:17:02/ceo-review 09-30 04:37:44 零漂移维持·本仓 orders newest=O-20260927-1648-HQ-C 维持·零新令）+双闸实测过（light=10030·unique=10030·ID 封顶 C-10036·over_cap=0·注册冻结维持）+GPU 探针本轮免跑（Bonsai GPU 收口窗 09-30 13:00 未至·R727 起免探针先例·F-20260929-BL01 已前置·单 open 至窗后收口）",
    "s": 1
   },
   {
@@ -151,16 +151,16 @@
    "户籍卡"
   ],
   [
-   "4533",
-   "年轮环总数（R729 批5环 4522→4527+R730 批6环 4527→4533）"
+   "4537",
+   "年轮环总数（R730 批6环 4527→4533+R731 批4环 4533→4537）"
   ],
   [
-   "138",
-   "09-30 新写环（全域直数 138=R729 面 132+R730 批 6 账平零差·python 全 census 域 [锚] 当日行直数·sync ring=4533）"
+   "142",
+   "09-30 新写环（全域直数 142=R730 面 138+R731 批 4 账平零差·python 全 census 域 [锚] 当日行直数·sync ring=4537）"
   ],
   [
-   "534/325",
-   "基因库（口头禅/钩子物件·tp 191·R719 兑现六轴 89x6·R720 results 行滞 R711 旧值勘正）"
+   "537/328",
+   "基因库（口头禅/钩子物件·tp 194·R727 兑现 9 条后实数·本轮 R731 results 行滞后勘正码证 genes/language.json+lives.json）"
   ],
   [
    "518",

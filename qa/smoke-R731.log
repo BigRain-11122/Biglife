@@ -1,0 +1,11 @@
+BigLife QA smoke 第一百三十五证（R731）2026-09-30 05:1x
+[1] poolgen tick: 05:06:02 连戳 TOTAL=1440 FAIL_BUCKETS=NONE 间隔60min<24h PASS
+[2] census 新条目: 本批4环 C-04539/C-04544/C-04545/C-04546 (批 db891e2b+sync 5e8894fe ring 4533->4537) PASS
+[3] 位置字段非null: behavior slot_null=0/200 抽样+anchors home null 全量直数=3 恰荣誉席 C-00001/C-00002/C-00003(非reserved=0) PASS
+[4] 行为链再生: sync_rings 随批 rows=4 ring=4537 (behavior --auto 随批在役) PASS
+[5] heartbeat 3h内: 04:57:59 round done PASS
+gate: 年轮批 evolve_citizen 机审门批内全审过门4席留冷6席 stays due（C-04429 time-morning/C-04534 sky+time/C-04536 time-morning 持续留冷+C-04547/C-04548/C-04549 time-morning 首见·凌晨档 vs 实况=结构性拦·诚实门禁健康态·零程序动作零卡面改动）
+红线: 停造人令双闸 light=10030 unique=10030 ID封顶C-10036 over_cap=0 注册冻结维持
+核卡: 2/2 PASS 零修复（C-04539 口头禅「街坊一声喊，放下碗就到」逐字领句+「绕江走半里」散步 face 域内/C-04545 口头禅「灶上有汤，自取」逐字领句+「江水清清」散步 face 域内·[锚] 2/2 齐备·卡面直读）
+账平: 09-30 新写环全域直数 142=R730面138+本批4 零差 (python 全 census 域 [锚] 当日行直数·sync ring=4537 实测)
+尾查: 集团 orders 09-29 19:50:39/decisions 09-29 13:17:02/ceo-review 09-30 04:37:44 零漂移维持(BigDomain 域行零涉司)·本仓 orders/ 零新件 newest=O-20260927-1648-HQ-C 维持
