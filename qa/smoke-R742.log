@@ -1,0 +1,11 @@
+=== BigLife smoke R742 五项 === 2026-09-30 07:16
+[PASS] poolgen tick: === 2026-09-30 07:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[PASS] 09-30 rings: 174 (expect 174)
+[PASS] light gate: rows=10030 unique=10030 over_cap=0 ring=4569
+[PASS] freeze guard(3): generate_census:exit4Y resident_intake:exit4Y mirror_intake:exit4Y
+[PASS] zero new cards since freeze: PASS (0 rows)
+[PASS] 核卡 3/3: C-04578 糜予安「街坊一声喊，放下碗就到」逐字领句+今早风挺大晨风域内+收摊 face 域内 / C-04580 韦伯·小「老地方见」逐字领句+「今早的城最真」=起早性格行直引域内 / C-04582 沈南汐「汤要趁烫，话要慢讲」逐字领句+「麻溜」底色+出摊 face 域内·[锚] 3/3 齐备·机审门批内全审过门
+[PASS] P0 判据窗监测（令点 05:38 起 12h→09-30 17:38 到期复核）: 双闸 10030/10030·cap C-10036·over_cap=0·三码闸 exit 4 三脚本实弹在役（REGISTRY-FROZEN 输出零写盘）·A-filter since 强冻点 0 行·账平 174 零差——判据面现行满足态
+[PASS] 尾查: 集团 orders.md 09-30 05:38:08 维持（已承接 P0 零新漂移）·decisions.md 09-29 13:17:02 维持·ceo-review.md 09-30 06:37:45 维持（BigCompute T27 域零涉本司）·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 维持）
+[INFO] behavior slot_null=0（10030 行）·heartbeat 07:09:15（3h 内）·GPU 探针本轮免（Bonsai 收口窗 09-30 13:00 未至·R737 起免探针先例维持）
+=== smoke R742: 5/5 PASS ===
