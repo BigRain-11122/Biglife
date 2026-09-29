@@ -1,0 +1,34 @@
+=== qa/smoke-R669.log 2026-09-29 16:4x @BigLife-OSLoop（T-20260928-05 常设随轮件·第七十六证）===
+
+五项清单（BigLife 适配=数据面自验·章程 docs/qa-smoke-test-charter.md BigLife 节）：
+
+[1] poolgen 跑通（tick 戳）
+--- state/poolgen_run.log tail ---
+=== 2026-09-29 16:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+✓ 判定过：tick <24h·exit=0·满额自停维持
+
+[2] census 最新条目（本批新环）
+--- git log（本批）---
+8f9964d1 年轮 2026-09-29: C-04179, C-04183, C-04184, C-04185, C-04186, C-04187, C-04188, C-04189, C-04190 [via BigLife-OSLoop]
+0825c3e0 行为线 2026-09-29: 镜像 rows=9 ring=4183 [via BigLife-OSLoop]
+✓ 判定过：本批 9 新环·9/10 due（C-04162 rain 族 persistent 门禁留冷 stays due）
+
+[3] 位置字段非 null（behavior slot 实测）
+--- python 直数 ---
+behavior rows= 10030 slot null= 0
+✓ 判定过：slot 全非空
+
+[4] 行为链再生 --auto 随批在役
+--- 本批 sync 实证 ---
+evolve_citizen 落环后自动 sync_rings：committed rows_changed=9 ring_synced=9（commit 0825c3e0·ring 4174→4183）
+✓ 判定过：随批在役（勿手动重复=mandate 原文·本批自动面实证）
+
+[5] heartbeat 3h 内
+✓ 判定过：R669 轮末 heartbeat 随轮落 state/heartbeat.txt（16:4x·间隔 <1h）
+
+附加证（非五项·留档）：
+- 核卡抽验 2/2 PASS 零修复：C-04179（GM·口头禅「我送走的老主顾，比这城里一半的楼岁数都大」逐字领句=language.json 怀旧轴在库行+sky-mismatch persistent 解锁归位+「天气这不正合适」face 域内+[锚] 齐备·卡面直读 L25）；C-04190（RV·[锚] 齐备+「信使驿站…江水清清」RV 江面与光桥 face 域内·卡面直读 L25）
+- 09-29 新写环全域直数账平：registry 499+anchors 2=501=R668 面 492+本批 9 零差（python 全域直数实测）
+- GPU 第六十五探针：9833/12282 MiB util 65% 空窗未开（余 ~2.4GB<权重 5.94GB·让路律不抢·F-BL01 回执窗 09-30 13:00 维持）
+
+== smoke-R669: 5/5 全勾 ==
