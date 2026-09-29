@@ -1,0 +1,11 @@
+# QA Smoke Test — R639 (2026-09-29 ~10:0x)
+# BigLife 数据面自验五项（工程=docs/qa-smoke-test-charter.md 本司面每轮 commit 后自验）
+[1] poolgen 跑步机 tick 2026-09-29 09:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE —— PASS（09:06 距本轮 <24h 连戳判据持续满足）
+[2] census 新条目 本批 10 due 落 7 环（C-03990/03991/03992/03993/03994/03995/03996 七席首环·批 7f70d715）ring 3980→3987 —— PASS
+[3] 位置字段面 null: light block_null=0/10030 · behavior slot_null=0/10030（实测 rows=10030） —— PASS
+[4] 行为链再生 sync_rings 随批自动收口 rows=7 ring_synced=7（commit f8bf96a8） —— PASS
+[5] heartbeat 3h 内 09:48:19 round done exit=0（R638 收尾）·本轮 R639 轮末刷新 —— PASS
+红线行：停造人令轮首双闸实测过 light_rows=10030 unique=10030 ID 封顶 C-10036 越顶 0（注册冻结维持·判据未触发态）
+核卡行：C-03990 OR 口头禅「门禁亮绿灯，心里才亮堂」逐字直引（出生口头禅直引豁免判例族·signal-state 门豁免设计本意）+「今早天气清清爽爽」云天爽形体感直读合法·C-03996 GM 底色「帮帮忙」+口头禅「站直了别趴下」逐字领句+「动工前净手」行为 face 域内·实况 cloud/day/sound=fest 坐实·[锚] 2/2 齐备 —— PASS
+免巡行：QC 免巡窗（R636 problems=0 在案·下到期 ≈R642）·例份面全满跳过（池 R628 已耗·相遇 3/3·反思 3/3·聚光 9 月 2/2·基因 ≈R645）
+GPU 探针行：T-20260928-07 第三十五探针 6661/12282MiB util 3% 空窗未开（余 ~5.62GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置）
