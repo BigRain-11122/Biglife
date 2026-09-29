@@ -1,0 +1,14 @@
+# qa/smoke-R680 —— 五项自验（T-20260928-05 · 2026-09-29 18:5x）
+[1] 红线行：轮首 git status 净（仅 .codely-cli/ 未跟踪不入库·定向 add 本轮产出·禁 add -A 守住·尾标 [via BigLife-OSLoop]）。停造人令轮首双闸实测过（light_rows=10030·unique=10030·ID 封顶 C-10036 越顶 0·注册冻结维持）。——判定过
+[2] 核卡行：本批 7 卡 [锚] 7/7 齐（python 逐卡直数）·C-04272 口头禅「明儿又是新的一天，今天就先码到这儿」逐字领句+「江水清清的」=U229 水色白名单 face 域内·卡面直读。——判定过
+[3] 留冷行：C-04162 rain+moon 十三轮同判 R668~R680+C-04259 rain 三轮+C-04263 rain 三轮 stays due（诚实门禁健康·零程序动作零卡面改动·下轮自然再试）；QC 免巡（R679 problems=0 在案·下到期 ≈R685）。——判定过
+[4] 例份面合规跳过：池 09-29 例份 R668 已耗（满额 1440+518 维持）；相遇 09-29 3/3（R596/R601/R604）；反思 09-29 3/3（R600/R602）；聚光 9 月 2/2 满；基因轮 ≈R685；日清窗未至（晚间 23:00 前轮·lowpoly 批 2 呈报随窗）；OSS 借力新窗 21:40 首片（晚间轮）；T-05 ②文案批产 12+12 留下轮（窗 10-02 12:00 充裕）。——判定过
+[5] GPU 探针+尾查行：GPU 第七十五探针空窗未开让路律维持（F-20260929-BL01 回执已前置·单 open 至 09-30 13:00 窗后收口）；尾查=集团 orders.md 18:2x 双令=R679 已捕获 T-06 承接在案零新漂移·decisions 13:17:02 维持·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 维持）·poolgen tick 18:06:02 连戳链维持（TOTAL=1440 FAIL_BUCKETS=NONE·连续戳 <24h 判据持续满足）。——判定过
+
+附加证（非应项留档）：
+- 分配表行：T-20260929-06 step② census 住宅/工位分配表生成器交付=Tools/citizen_anchors.py v1.0（R3 再生面 census/export/citizen-anchors.jsonl·gitignored）——--qc 实跑输出「QC PASS: rows=10030 light=10030 reserved=3 ok=10027 zones=6 double_run=identical」（一一映射机检=id 序 1:1+district/block 镜像对位+坐标域内+home≠work+同输入双跑逐字节一致）；T2=CODEX §十二 v3.54；消费方通知=T-20260923-01 通知族行；census 冻结面零触碰（light 只读）
+- 账平行：09-29 新写环全 census 域直数 587=R679 面 580+本批 7 零差（python glob+re 全 census 域·含 registry 六城区子目录+anchors+reserved）
+- smoke 五项实测：poolgen tick 18:06:02 连戳 ✓；census 本批 7 环（批+sync 脚本自动 commit·rows=7 ring 4262→4269）✓；light 双闸 rows=unique=10030 ✓；行为链 sync rows=7 随批在役 ✓；heartbeat 轮末刷新 ✓
+红线行：轮首 git status 净即只定向 add 本轮产出（.codely-cli/ 不入库）·禁 git add -A 守住·[via BigLife-OSLoop] 尾标在列 commit·集团域只读未涉写·FluxVerse 事件流只读·禁伪造令·本地算力律 api=0
+
+== smoke-R680: 5/5 全勾 ==
