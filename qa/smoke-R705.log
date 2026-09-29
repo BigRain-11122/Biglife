@@ -1,0 +1,16 @@
+=== BigLife QA Smoke Test R705 轮 2026-09-29 23:17 ===
+判据=T-20260928-05（数据面自验五项·真跑非文案）
+[1] poolgen 跑通? tick 2026-09-29 23:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE ✓（连戳链 22:06→23:06 间隔 60min <24h 判据持续满足·poolgen_loop 自循环在役·09-29 例份 R668 已耗满额合规）
+[2] census 新条目? 本批 4 环 C-04391(OR)/C-04392(GM)/C-04393(NS)/C-04394(GM)·批 commit 8069b7c4·批题头 join(done)=实落一致 ✓
+[3] 位置字段非 null: behavior rows=10030 slot_null=0 实测（python 逐行断言·anchors 10030 同 seed 径在役·荣誉席 null 3 除外）✓
+[4] 行为线收口? sync_rings 随批自动收口 rows_changed=4 ring_synced=4·ring 4378→4382·commit 6b6463e0 ✓
+[5] heartbeat 3h 内? 23:10:11 R704 round done 在案+本轮 R705 刷新 ✓
+红线行: 停造人令双闸实测过（light_rows=10030·unique=10030·ID 封顶 C-10036·over_cap=0·注册冻结维持·python 实测）。
+账平行: 09-29 新写环全域直数 700=R704 面 696+本批 4 零差（python glob+re 全 census 域 [锚] 当日行直数·sync ring=4382 实测）。
+核卡行: 核卡 4/4 零修复（本批 4 卡原文逐卡面验：[锚] 4/4 齐备·口头禅领句=四席均本卡自有出生逐字——C-04391「这城里好玩的东西一天比一天多」+开窗听江声行为节域内/C-04392「弄堂还是那个弄堂」+清爽天气域内〔C-03990 判例族〕/C-04393 同句双卡各自出生自有〔R693 判例族·POOL_CAP 跨卡=0〕+巡线浇花行为节逐字咬合/C-04394「街坊一声喊，放下碗就到」+城门值守职业 face 域内·真实天气/时间接线全过·机审门 v0.43 批内全审过门·rain 族 6 席 persistent 门禁留冷维持 stays due）。
+QC 行: 免巡（R703 到期巡检 problems=0 在案·cards=10030·例行下到期 ≈R709）。
+轮首拉取行: pull --ff-only 常规首试 Already up to date ✓（R704 后 ssh 面维持·显式密钥口径不需要）。
+GPU 探针行: 第九十七探针 6923/12282MiB util 5% 空窗未开（余 ~5.36GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置·单 open 自 09-30 13:00 回执窗后收口）。
+尾查行: 集团 orders.md 19:50:39/decisions.md 13:17:02/ceo-review.md 22:37:51 三 mtime=R704 核值态零漂移维持·本仓 orders newest=O-20260927-1648-HQ-C 00:05:03 维持（零新令）。
+例份行: 09-29 例份全满合规跳过（相遇 3/3·反思 3/3·聚光 2/2·池 tick 23:06 TOTAL=1440 FAIL=NONE·基因轮 R702 已兑现下次 ≈R710·日清窗 F-BL12 已落 R698 今日已办）·合法零产出面豁免。
+verdict: 5/5 PASS
