@@ -1,0 +1,14 @@
+# qa/smoke-R676 —— 五项自验（T-20260928-05·2026-09-29 17:5x）
+
+[1] 红线行：轮首 git status 净（定向 add 本轮产出·.codely-cli/ 不入库·禁 add -A 守住·尾标 [via BigLife-OSLoop]）。——✓ 判定过
+[2] 核卡行：抽验 2/2 PASS 零修复（C-04234 GM 口头禅「谁没个难处呢，来，坐下说」逐字领句+「挺适合喝口热茶」face 冷天暖气域内；C-04247 QT 口头禅「我送走的老主顾，比这城里一半的楼岁数都大」逐字领句+「还挺适合外出走走」机审门 v0.43+ 适配语域过门；[锚] 2/2 齐备·批 diff 卡面直读）。——✓ 判定过
+[3] 留冷行：C-04162 rain-invented 九轮同判+C-04242 sky-mismatch 首见留冷 stays due（诚实门禁健康态·零程序动作零卡面改动·下轮自然再试）；QC 免巡（R673 到期巡检 problems=0 在案·下到期 ≥R679）。——✓ 判定过
+[4] 例份面合规跳过行：池 09-29 例份 R668 已耗（audit PASS 满额 1440+518）；相遇 09-29 3/3（R596/R601/R604）；反思 09-29 3/3（R600/R602）；聚光 9 月 2/2 满；基因轮 ≈R677（下轮到期候选）；日清窗未至（晚间 23:00 前轮落行·lowpoly 批 2 呈报随该窗）。——✓ 判定过
+[5] GPU 探针+尾查行：GPU 第七十二探针 10646/12282MiB util100% 满载空窗未开（余 ~1.6GB<权重 5.94GB·让路律·F-20260929-BL01 已前置·单 open 至 09-30 13:00 窗后收口）；尾查=集团 orders 17:38:26 漂移捕获尾三新行全 Biggame/FluxVerse 域（吸盘怪 U307 双版本定档+U308 动效改造令+学城令收口·城建律 V1.0=FluxVerse 城市域）零本司派工；decisions 13:17:02 维持（C-20260929-03 表决 7/7 已收零 pending·D-20260929-07 产品优先律=本司 prompt 已接线）；本仓 orders 零新件（newest=O-20260927-1648-HQ-C 维持）；poolgen tick 17:06:02 连戳（16:06→17:06 间隔 60min<24h 判据持续满足·TOTAL=1440 FAIL_BUCKETS=NONE）；停造人令轮首双闸实测过（light_rows=10030·unique=10030·ID 封顶 C-10036 越顶 0·注册冻结维持）。——✓ 判定过
+附加证（非五项留档）：
+- 账平行：09-29 新写环全域直数 558=R675 面 550+本批 8 零差（registry 556+anchors 2·sync ring=4240 实测·python glob+re 全 census 域直数）
+- smoke 五项实测：poolgen tick 17:06:02 exit=0 TOTAL=1440 ✓；census 新条目=本批 8 环 commit 4556f16c ✓；slot_null=0 rows=10030 实测 ✓；行为链 sync rows=8 ring=4240 commit a963ffd9 ✓；heartbeat 轮末刷新 ✓
+
+红线行：轮首 git status 非净即只定向 add 本轮产出（.codely-cli/ 不入库）·禁 git add -A 守住·[via BigLife-OSLoop] 尾标在一切 commit·集团域只读未涉写·FluxVerse 事件流只读·禁伪造令·本地算力律 api=0
+
+== smoke-R676: 5/5 全勾 ==
