@@ -1,0 +1,12 @@
+== BigLife smoke 自验 R685（T-20260928-05 五项·QA Smoke Test 自验令）==
+[1] poolgen 跑通: tick 2026-09-29 19:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（18:06→19:06 间隔 60min <24h 连戳判据持续满足）— PASS
+[2] census 新条目: 本批 5 环 C-04303~C-04307 首环（commit 0de3380d·批题头 join(done)=实落一致）— PASS
+[3] 位置字段非 null: behavior slot_null=0 rows=10030（python 实测）+停造人双闸 light=10030 unique=10030 ID 封顶 C-10036 越顶 0 — PASS
+[4] 行为链再生: 本轮批 sync rows_changed=5 ring_synced=5 ring 4291→4296（commit 79a45b90·cursor 口径）— PASS
+[5] heartbeat 3h 内: R684 轮收尾 ~19:2x + 本轮 alive 行随尾落盘 — PASS
+== 附加实测 ==
+QC R685 例行到期巡检: cards=10030 evolved=4296 problems=0（QC-REPORT 随轮入库·下到期 ≈R691）
+09-29 新写环全域直数: 614（=R683 面 604+R684 批 5+本批 5 账平零差·python glob+re 全 census 域 [锚] 当日行直数）
+T-20260929-05 slice-B: B 片 12 款文案卡批产（docs/u307-protagonist-cards.json 24/24·nearcheck 12/12 CLEAN·QC PASS qa/u307-cards-B-R685.log）
+GPU 探针（第七十九）: used=7128/12282MiB util8% — 空窗未开（余 ~5.15GB<权重 5.94GB·让路律·F-BL01 收口窗 09-30 13:00）
+verdict=PASS 5/5
