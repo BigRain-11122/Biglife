@@ -1,0 +1,16 @@
+# QA Smoke Test · R649 (2026-09-29 ~11:5x)
+# BigLife 数据面自检五项（章程 docs/qa-smoke-test-charter.md 本司面每轮 commit 后自检）
+[1] poolgen 跑通：tick 2026-09-29 11:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE → PASS（10:06→11:06 间隔 60min 连跑判据持续满足）
+[2] census 新条目：本批 10 due 落 4 环（C-04002〔rain 族留冷过门归位·无雨断言自洽〕+C-04045/C-04046/C-04047 三席首环·批 f8021b24）ring 4031→4035 → PASS
+[3] 位置字段非 null：light block_null=0/10030 · behavior slot_null=0/10030（本轮实测 rows=10030）→ PASS
+[4] 行为链再生：sync_rings 随批自动收口 rows_changed=4 ring_synced=4（commit 69ad05c0）→ PASS
+[5] heartbeat 3h 内：11:33:54 round done exit=0（R648 零产出裸轮·零 commit 零残留实证）；本轮 R649 轮末刷新 → PASS
+
+红线行：停造人令轮首双闸实测过 light_rows=10030 unique=10030 ID 封顶 C-10036 越顶 0（注册冻结维持·registry 零新增）
+核卡行：4/4 全批全审零修复——C-04002「开嗓了，今天又是个好天气，江水清清的」行话领句+无雨断言自洽（rain-invented 族逢晴窗自然解锁）；C-04045「这版本我等好久了」口头禅逐字；C-04046「好咯」底色领句+清清爽爽 C-03990 判例族；C-04047 晨窗「今早」坐实+行为段直引「抖了抖翅膀上的光尘」+工作日实况——[锚] 4/4 齐备
+留冷行：6 席 persistent 门拦（C-03936/C-03978/C-04043 rain-invented 同族+C-04033 rain+C-04042 session-state+C-04044 sky-mismatch·stays due 下轮自然再试·零程序动作零卡面改动）
+QC 行：R649 到期巡检 problems=0（cards=10030·evolved=4035·QC-REPORT 随轮入库·下到期 ≈R655）
+账差定谳行：**账差 9 观察项闭口（R646/R647 留单 QC 随扫兑现）**——git 逐批 commit 序贯累计码证：根因①R623 轮 status-export 免刷（R622 已刷 <1h·24h 闸内合法跳过）→R624 刷新批增量基数未续入 R623 批 10 环（以 R622 面 158+自批 10=168 起算·批径恒低 10）②R640 刷新增量误记 +7（实落批 6 环·批 7eaf463c 题头码证）·净 −9=R646 切直数口径时显形值——数据面零缺陷（卡面环数=git 批 commit 题头并集 347 逐卡一致·QC problems=0 双证）·**现值全 census 域（registry+anchors）直数 353=批环 347+相遇环 6（R596 anchors 2+R601 2+R604 2）账平零差**·附带定谳①旧「直数」扫描面 registry-only 漏 anchors 域相遇环 2（R620/R646/R647 三轮同型·本轮起全 census 域口径）②R598 export 注记「第二批落籍环 10」系拆分注记误归属（批 2 席 C-10027~36=v1.0 出生档案无年轮环节·出生 09-28·存史不回改）
+例份行：池 audit PASS 满额自停（1440+518·hard_fails=0·确定性 192+25 零漂移·09-29 例份 R628 已耗）·相遇 3/3·反思 3/3·聚光 9 月 2/2·基因 ≈R653
+GPU 探针行：T-20260928-07 第四十四探针 used=9948/12282MiB util 12% 空窗未开（余 ~2.28GB<权重 5.94GB·让路律不抢·回执 F-20260929-BL01 已前置·单 open 至 09-30 13:00 窗后收口）
+尾查行：集团 orders.md 11:40:53 漂移捕获=5 新行全数非新涉司派工（O-20260929-1116 高收益高回撤族=@BigMoney 域·O-2026-0929-003 治理域开源采用直落实批=CPH4 域〔Mesa 接线真户籍库只读〕·C-20260929-02 本地机队算力案=委员会件同窗收口已 executed〔self-drive §7 周报分机行 GPU util 30% 点名阈值与既有 T-20260928-03 ③ 计量行咬合·10-05 周轮对齐面〕·C-20260929-03 审查反思轮=CPH4 工作轮·库内选件令=已知件维持）·decisions.md 11:25:29=R647 已核值（C-20260929-01 接线毕在案·零 pending 涉司件）·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 00:05:03 维持）
