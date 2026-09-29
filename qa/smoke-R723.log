@@ -1,0 +1,12 @@
+[gate] light_rows=10030 unique=10030 over_cap(C-10036)=0 block_null=0 -> PASS
+[1] poolgen tick -> 2026-09-30 03:06:02 连戳（00:06→01:06→02:06→03:06 间隔 60min<24h 判据持续满足·TOTAL=1440 FAIL_BUCKETS=NONE） -> PASS
+[2] census 今日(09-30)[锚]环数 line-scan=100（R722 面 96+R723 批 4=100 期望符合·双域 registry 分片+anchors） -> PASS
+[3] behavior rows=10030 slot_null=0 -> PASS
+[4] 行为链镜像 sync: 批 rows=4 ring 4491->4495（evolve_citizen committed rows_changed=4 ring_synced=4 in-place·58701480+c690dffb） -> PASS
+[5] heartbeat 最新 round done 行 ts=2026-09-30 03:13:21 + 本轮轮末刷新（脚本自动） -> PASS
+核卡抽验 2/2: C-04498 口头禅「谁没个难处呢，来，坐下说。」逐字领句+「今天这天气正好，穿件薄外套正合适」适配语 cloud 域内（机审门过=与实况匹配）/ C-04504 口头禅「看天吃饭，看行情穿衣」逐字领句+「今儿个天气挺适合誊录」适配语合法+「抽屉里的旧票根，张张都有故事」行为节直引域内·[锚] 2/2 齐备 -> PASS
+留冷 6 席: C-04429 time-morning 第12轮 / C-04467 sky-mismatch×2 / C-04494 sky-mismatch+time-morning / C-04497 time-morning / C-04503 time-morning / C-04507 wind-under+time-morning 首见（凌晨档 vs 实况=结构性拦·诚实门禁健康态·零程序动作零卡面改动·stays due 下轮自然再试）
+尾查: 集团 orders.md 09-29 19:50:39 / decisions.md 09-29 13:17:02 双 mtime 零漂移维持；ceo-review.md 09-30 02:37:46 维持=R720 记档态（BigMoney 域行零涉本司）；本仓 orders/ 零新件 newest=O-20260927-1648-HQ-C 维持
+GPU 第113探针（T-20260928-07 Bonsai）6947/12282MiB util5% 空窗未开（余 ~5.33GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置·单 open 至 09-30 13:00 收口窗后收口）
+关系面 meet 边 19 对维持（今日相遇场额 3/3 满·R722 再生后零新对=盘面 in-sync 无再生需求·QC 判 disk==re-derive 复核 PASS）
+smoke R723 @ 2026-09-30 03:26 verdict=PASS(5/5) + gate PASS + 核卡 PASS
