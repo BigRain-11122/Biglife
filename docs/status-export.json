@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-30T02:46:37+08:00",
+ "export_ts": "2026-09-30T02:58:32+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R720 年轮批 mandate --batch 3·floor 10→effective=10 due 落 7 环（C-04476〔R718 rain+sky 留冷过门归位〕+C-04481〔time-morning 留冷过门归位〕+C-04483〔sky-mismatch 留冷过门归位〕+C-04489/C-04490/C-04491/C-04492 四席首环·批 20b5c0c7+sync 0ad36dcd rows=7·ring 4476→4483·批题头 join(done)=实落一致持续实证）——3 席 persistent 门拦留冷（C-04429 time-morning 第9轮/C-04467 wind-under+time-morning 第4轮/C-04488 sky-mismatch+moon-invented 首见·凌晨档 vs 实况=结构性拦·诚实门禁健康态·零程序动作零卡面改动·stays due 下轮自然再试）。账平行：09-30 新写环全域直数 88=R719 面 81+本批 7 零差（双域 registry 分片+anchors line-scan 实测）。核卡抽验 2/2 PASS 零修复（C-04476 口头禅「看云不用门票」逐字领句+适配语 cloud 域内·穿城信使职业域内/C-04489 底色「帮帮忙」领句+适配语 cloud 合法+「看看新出的光织物」own-activity 意向句记档非门项·[锚] 2/2 齐备·卡面直读）。例份面：池 09-30 例份已耗（tick 02:06:02 连戳·TOTAL=1440 FAIL_BUCKETS=NONE）·相遇 09-30 3/3 满（R711 GM+R713 QT+R714 MD）·反思 09-30 3/3 满日帽（R712 批）·聚光 9 月 2/2 满（10 月配额新开）·QC 免巡（R715 problems=0 在案·下到期 ≈R721）·基因轮 R719 兑现后族距 8-10 起算 ≈R727·日清 09-30=晚间 23:00 前轮。",
+   "t": "R721 QC 例行巡检到期兑现（R715 后下到期·problems=0·cards=10030·evolved=4483·QC-REPORT 随轮入库·下到期 ≈R727）+年轮批 mandate --batch 3·floor 10→effective=10 due 落 5 环（C-04488/C-04493/C-04495/C-04496/C-04499 五席首环·批 a0a169b0+sync 75612d6b rows=5·ring 4483→4488·批题头 join(done)=实落一致持续实证）——5 席 persistent 门拦留冷（C-04429 time-morning 第10轮/C-04467 wind-under 第5轮/C-04494·C-04497 time-morning 首见/C-04498 sky-mismatch 首见·凌晨档 vs 实况=结构性拦·诚实门禁健康态·stays due 下轮自然再试）。账平行：09-30 新写环全域直数 93=R720 面 88+本批 5 零差（双域 registry 分片+anchors line-scan 实测）。核卡抽验 2/2 PASS 零修复（C-04488 口头禅「街坊一声喊，放下碗就到」逐字领句+风况域内·像素学徒 face/C-04495 口头禅「夜里冷，喝口热的再走」逐字领句+「缓存满了」底色域内·缓存管理员职业 face·夜窗时序合法·[锚] 2/2 齐备）。例份面：池 09-30 例份已耗（tick 02:06:02 连戳）·相遇 09-30 3/3 满·反思 09-30 3/3 满日帽·聚光 10 月配额新开·QC R721 已巡·基因轮 R719 兑现后 ≈R727·日清 09-30=晚间 23:00 前轮。",
    "s": 1
   },
   {
@@ -24,7 +24,7 @@
   },
   {
    "n": "QC 巡检线",
-   "t": "R715 QC 轮首必跑 problems=0（cards=10030·evolved=4441·QC-REPORT 随轮入库·下到期 ≈R721）+smoke 第一百二十证五项全勾（qa/smoke-R715.log：poolgen tick 01:06:02 连戳 00:06→01:06 间隔 60min<24h·TOTAL=1440 FAIL_BUCKETS=NONE/本日 09-30 [锚] 环直数 55 账平/light block_null=0 rows=10030 实测/sync rows=9·ring 4450/heartbeat 轮末刷新）+停造人双闸 PASS（light=10030·unique=10030·ID 封顶 C-10036 over_cap=0·注册冻结维持）+GPU 第百五探针 6940/12282MiB util1% 空窗未开（余 ~5.34GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置·单 open 至 09-30 13:00 收口窗后收口）+尾查（orders 19:50:39/decisions 13:17:02 双维持·ceo-review 01:37:14 新漂移=Biggame 域行零涉司记档·本仓 orders/ 零新件 newest=O-20260927-1648-HQ-C 维持）",
+   "t": "R721 到期例行巡检兑现：cards=10030·evolved=4483·problems=0（编号/姓名唯一合库+必备段齐备+[锚]定律全过·QC-REPORT.md 随轮入库）——R715 problems=0 后零异常连续第 2 期·下到期 ≈R727",
    "s": 1
   },
   {
@@ -151,16 +151,16 @@
    "户籍卡"
   ],
   [
-   "4476",
-   "4483"
+   "4483",
+   "4488"
   ],
   [
-   "88",
-   "09-30 新写环（全域直数 88=R719 面 81+R720 批 7 账平零差·python 全 census 域 [锚] 当日行直数·sync ring=4483）"
+   "93",
+   "09-30 新写环（全域直数 93=R720 面 88+R721 批 5 账平零差·python 全 census 域 [锚] 当日行直数·sync ring=4488）"
   ],
   [
-   "528/322",
-   "基因库（口头禅/钩子物件·tp 188·R711 兑现）"
+   "534/325",
+   "基因库（口头禅/钩子物件·tp 191·R719 兑现六轴 89x6·R720 results 行滞 R711 旧值勘正）"
   ],
   [
    "518",

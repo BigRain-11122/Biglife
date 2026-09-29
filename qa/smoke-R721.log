@@ -1,0 +1,12 @@
+[gate] light_rows=10030 unique=10030 over_cap(C-10036)=0 block_null=0 -> PASS
+[1] poolgen tick -> 2026-09-30 02:06:02 连戳（00:06→01:06→02:06 间隔 60min<24h 判据持续满足·TOTAL=1440 FAIL_BUCKETS=NONE） -> PASS
+[2] census 今日(09-30)[锚]环数 line-scan=93（R720 面 88+R721 批 5=93 期望符合·双域 registry 分片+anchors） -> PASS
+[3] behavior rows=10030 slot_null=0 -> PASS
+[4] 行为链镜像 sync: 批 rows=5 ring 4483->4488（evolve_citizen committed rows_changed=5 ring_synced=5 in-place·a0a169b0+75612d6b） -> PASS
+[5] heartbeat 最新 round done 行 ts=2026-09-30 02:4x + 本轮轮末刷新（脚本自动） -> PASS
+QC 例行巡检（R721 到期·R720 遗令轮首必跑兑现）：cards=10030 evolved=4483 problems=0·QC-REPORT 随轮入库·下到期 ≈R727 -> PASS
+核卡抽验 2/2: C-04488 口头禅「街坊一声喊，放下碗就到」逐字领句+「今天这风挺大」风况域内（机审门过=与实况匹配）·像素学徒 face 域内 / C-04495 口头禅「夜里冷，喝口热的再走」逐字领句+「缓存满了」本卡底色域内·缓存管理员职业域内·夜窗时序合法·[锚] 2/2 齐备 -> PASS
+留冷 5 席: C-04429 time-morning 第10轮 / C-04467 wind-under 第5轮 / C-04494 time-morning 首见 / C-04497 time-morning 首见 / C-04498 sky-mismatch 首见（凌晨档 vs 实况=结构性拦·诚实门禁健康态·零程序动作零卡面改动·stays due 下轮自然再试）
+尾查: 集团 orders.md 09-29 19:50:39 / decisions.md 09-29 13:17:02 双 mtime 零漂移维持；ceo-review.md 09-30 02:37:46 维持=R720 记档态（BigMoney 域行零涉本司）；本仓 orders/ 零新件 newest=O-20260927-1648-HQ-C 维持
+GPU 第111探针（T-20260928-07 Bonsai）6947/12282MiB util5% 空窗未开（余 ~5.33GB<权重 5.94GB·让路律不抢·F-20260929-BL01 已前置·单 open 至 09-30 13:00 收口窗后收口）
+smoke R721 @ 2026-09-30 02:58:32 verdict=PASS(5/5) + gate PASS + 核卡 PASS + QC PASS
