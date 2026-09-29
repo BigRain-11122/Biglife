@@ -1,0 +1,7 @@
+[gate] light_rows=10030 unique=10030 over_cap(C-10036)=0 block_null=0 -> PASS
+[1] poolgen tick -> === 2026-09-30 00:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE -> PASS
+[2] census 今日(09-30)[锚]环直数 regex=21 line-scan=21 -> PASS (R710批9+R711批10+相遇2=21期望面)
+[3] behavior rows=10030 slot_null=0 -> PASS
+[4] 行为链镜像 sync: 批 rows=10 ring 4417->4420 + 相遇 rows=2 (evolve_citizen 自动收口输出 in-place) -> PASS
+[5] heartbeat 最新行 ts=2026-09-30 00:04:33 round done + 本轮轮末刷新 -> PASS
+smoke R711 @ 2026-09-30 00:52:05 verdict=PASS(5/5) + gate PASS
