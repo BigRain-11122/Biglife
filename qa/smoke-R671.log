@@ -1,0 +1,36 @@
+=== qa/smoke-R671.log 2026-09-29 16:5x @BigLife-OSLoop（T-20260928-05 常设随轮件·第七十八证）===
+
+五项清单（BigLife 适配=数据面自验·章程 docs/qa-smoke-test-charter.md BigLife 节）：
+[1] poolgen 跑通（tick 戳）
+--- state/poolgen_run.log tail ---
+=== 2026-09-29 16:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+✓ 判定过：tick <24h·exit=0·满额自停维持（15:06→16:06 间隔 60min）
+
+[2] census 最新条目（本批新环）
+--- git log（本批）---
+f4e66bf7 年轮 2026-09-29: C-04200, C-04201, C-04202, C-04203, C-04204, C-04205, C-04206, C-04207, C-04208 [via BigLife-OSLoop]
+98af0d5d 行为线 2026-09-29: 镜像 rows=9 ring=4201 [via BigLife-OSLoop]
+✓ 判定过：本批 9 新环·9/10 due（C-04162 rain persistent 门禁留冷 stays due——R668/R669/R670/R671 四轮同判）
+
+[3] 位置字段非 null（behavior slot 实测）
+--- python 直数 ---
+behavior rows= 10030 slot null= 0
+✓ 判定过：slot 全非空
+
+[4] 行为链再生 --auto 随批在役
+--- 本批 sync 实证 ---
+evolve_citizen 落环后自动 sync_rings：committed rows_changed=9 ring_synced=9（commit 98af0d5d·ring 4192→4201）
+✓ 判定过：随批在役（勿手动重复=mandate 原文·本轮自动门实证）
+
+[5] heartbeat 3h 内
+✓ 判定过：R671 轮末 heartbeat 随轮落 state/heartbeat.txt（16:5x·与上轮 round done 16:38:05 间隔 <1h）
+
+附加证（非应项留档）：
+- 核卡抽验 2/2 PASS 零修复：C-04200（GM·口头禅「旧钥匙开新锁，有时候还真开得开」逐字领句+「今天这风挺大」巡线 face 域内+[锚]·批 diff 直读）；C-04204（GM·口头禅「饭点了，天大的事吃完再谈」逐字领句+[锚]·批 diff 直读）——9/9 卡 [锚] 注脚全齐备
+- 09-29 新写环全域直数账平：registry 517+anchors 2=519=R670 面 510+本批 9（python 全域直数实测·账平零差·sync ring=4201 实测）
+- 轮首停造人令双闸实测过：light_rows=10030·unique=10030·ID 封顶 C-10036 越顶 0·注册冻结维持
+- 尾查新令扫描：集团 orders.md mtime 16:32:11 维持（=R670 尾查值·16:32 新令 2 行 City3D 线零涉司已核）·decisions.md 13:17:02 维持·本仓 orders/ 零新件（mtime 最新=O-20260927-1648-HQ-C 00:05:03 维持）
+- GPU 第六十七探针：8271/12282 MiB util 14% 空窗未开（余 ~4.0GB<权重 5.94GB·让路律不抢·F-BL01 回执窗 09-30 13:00 维持）
+- status-export results 区勘正：R670 面刷新漏 results 段（depts 已更而 results 滞 R669 值 4183/501）——本轮一并刷新（4201/519）+基因 depts 标签对调勘正（tp 178/ho 312 python 直数）如实记
+- 例份面：池 audit 实跑 PASS 1440+518 例份满（09-29 例份已耗·自终止律）·QC 免巡≈R673·相遇 3/3·反思 3/3·聚光 2/2（月度满）·基因轮 ≈R677（R669 已兑现）
+== smoke-R671: 5/5 全勾 ==
