@@ -1,0 +1,11 @@
+# qa/smoke-R657.log —— BigLife 数据面自验（T-20260928-05 常设随轮件·2026-09-29 13:2x 轮）
+[1] poolgen 跑通: tick 2026-09-29 13:06:03 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（12:06:02→13:06:03 间隔 60min<24h 连戳判据持续满足·state/poolgen_run.log 尾行实测）→ PASS
+[2] census 新条目: 本批 4 环首环 C-04082/C-04084/C-04085/C-04086（批 64c29a68·[锚] 注脚 4/4·ring 4070→4074）→ PASS
+[3] 位置字段非 null: census/export/citizen-behavior.jsonl rows=10030 slot_null=0（python 全量实测）→ PASS
+[4] 行为链再生: sync_rings rows=4 ring_synced=4 ring=4074（commit c9d3037b·批后自动收口）→ PASS
+[5] heartbeat 3h 内: 轮末刷新（state/heartbeat.txt 追加 R657 alive 行·距上轮 13:08:56 <15min）→ PASS
+[红线行] 停造人令轮首双闸: light_rows=10030+unique=10030+block_null=0+ID 封顶 C-10036 越顶 0（python 实测·注册冻结维持）
+[账平行] 09-29 新写环全域直数 392=R656 面 388+本批 4 账平零差（python glob+re 全 census 域直数）
+[GPU 探针行] T-20260928-07 第五十三探针 used=10138/12282MiB util 99% 空窗未开（余 ~2.1GB<权重 5.94GB·满载让路律不抢·F-20260929-BL01 已前置）
+[尾查行] 集团 orders.md 13:13:06 新行=O-20260929-06 研究室职能升格令（集团研究室横切件·彼司内自扫此集团横切=本司调研部既有面·零新涉司派工·记档零动作）·decisions.md 12:09:18 维持零 pending
+五项全勾。
