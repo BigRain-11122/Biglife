@@ -1685,7 +1685,7 @@ def main():
                        "n": cursor.get(cid, {}).get("n", 0) + 1}
         n += 1
     if paths:
-        commit_files(paths, "年轮 %s: %s%s" % (today(), ", ".join(done), via))
+        commit_files(paths, "年轮环(既有居民迭代·零新注册) %s: %s%s" % (today(), ", ".join(done), via))
         save_cursor(cursor)  # before sync: sync_rings mirrors only cursor-listed citizens
         sync_light(args.via)
     else:

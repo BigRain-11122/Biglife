@@ -1,0 +1,31 @@
+—— BigLife 五项数据面自检（qa-smoke-test-charter BigLife 节·每轮 commit 后自检·真实运行输出）——
+本轮: R688 @ 2026-09-29 20:1x（OSLoop）
+
+[1] poolgen 跑通: PASS
+    state/poolgen_run.log 尾行: === 2026-09-29 20:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+    （19:06→20:06 间隔 60min < 24h 连戳链维持·判据持续满足）
+
+[2] census 新条目（本批新环）: PASS
+    本批 6 环: C-04287（rain 长线归位）+C-04318/C-04319/C-04320/C-04321/C-04322 五席首环
+    批 commit addd91e7（卡面 6 文件 +24/-6）·ring 4306→4312·4 席 rain 族 persistent 留冷（C-04162 十九轮/C-04259/C-04283/C-04315）
+
+[3] 位置字段非 null: PASS
+    light rows=10030 block_null=0（python 实测）
+    behavior rows=10030 slot_null=0（python 实测）
+
+[4] 行为链再生（sync 收口）: PASS
+    批 sync commit c8e76c66「行为线…镜像 rows=6 ring=4312」+修卡镜像 84e02369「rows=1 ring=4312」（rows_changed=1 ring_synced=1）
+
+[5] heartbeat 3h 内: PASS
+    state/heartbeat.txt 尾行 2026-09-29 19:59:28 os-loop: round done exit=0（<3h）
+
+附加行
+- 停造人令轮首双闸: light_rows=10030 unique=10030 ID 封顶 C-10036 over_cap=0（python 实测·注册冻结维持）
+- 账平行: 09-29 新写环全域直数 630（registry 628+anchors 2）·R687 面 624+本批 6 账平零差（python glob+re census 全域 [锚] 当日行直数）·sync ring=4312
+- 核卡抽验 2/2: 1 PASS+1 修卡——C-04318「红灯面前没有老熟人，今天又得晚点出师作品了。」本卡自有出生口头禅逐字领句+「出师作品」face 行为域内+[锚] 齐零天气断言；C-04322（GM）「今天又是一周的开始」=星期断言错位 #36 族变体首犯（今日实为周二·事件流喂入星期二）——修卡改 face 双直引「读书会一周一页」（经历现状域逐字）+「天塌下来先把手里这步做完」（性格域逐字）·原句存史 addd91e7·修卡 commit c3ff79e8·QC 修后复扫 problems=0（cards=10030 evolved=4312）·#36 gate 收口候选=复发再收（#42 首犯仅修判例）
+- ceo-review 18:37 升级件同轮处置: 「13:23 仍注册」git 定谳=13:24:45 提交 19db01f5 系既有卡追加年轮环（--diff-filter=A 全日新增卡文件=0·被点名 10 卡全 09-23 root 批 07f1f1c5 出生）·证据回应 F-20260929-BL11 落 HQ-FEEDBACK·commit 标题自澄清模板修复（evolve_citizen.py L1688「年轮环(既有居民迭代·零新注册)」·py_compile 过）
+- GPU 第八十二探针（T-20260928-07 Bonsai）: 7084/12282MiB util 5%——空窗未开（余 ~5.1GB<权重 5.94GB·让路律·F-20260929-BL01 已前置·单 open 至 09-30 13:00 回执窗后收口）
+- 尾查: 集团 orders.md mtime 19:50:39=R686 已核值维持（O-028~033 零涉司新派工）·decisions.md 13:17:02 维持·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 维持）·poolgen tick 20:06 连戳
+- 时间戳按实测钟写（R687 判例）
+
+verdict: PASS 5/5
