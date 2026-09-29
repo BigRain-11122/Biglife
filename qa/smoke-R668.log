@@ -1,0 +1,12 @@
+# qa/smoke-R668.log — smoke 第七十五证（T-20260928-05 五项自验）
+- [x] 红线行：轮首 pull --ff-only 秒过（Already up to date）·工作区净（仅 .codely-cli/ 不入库）·停造人令双闸过（light=10030·unique=10030·ID 封顶 C-10036 越顶 0·python 实测·注册冻结维持）
+- [x] 判据① poolgen 跑通：tick 15:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（连戳链 14:06→15:06 间隔 60min <24h 判据持续满足）
+- [x] 判据② census 新条目：本批 8 环（C-04168/C-04175~C-04178/C-04180~C-04182·批 cf584001）·ring 4166→4174
+- [x] 判据③ 位置字段非 null：behavior rows=10030 slot_null=0（python 实测）
+- [x] 判据④ 行为链再生：sync_rings 随批自动收口 rows=8 ring_synced=8·commit 4c20169d（行为面镜像 ring=4174）
+- [x] 判据⑤ heartbeat 3h 内：15:54:12（0.2h·轮末脚本自动续戳）
+- [x] 核卡表：抽验 2/2 PASS 零修复（C-04168 留冷归位席口头禅「潮水的事交给潮水」逐字领句+「今天风挺大」风况域内·C-04182 口头禅「饭点了，天大的事吃完再谈」逐字领句〔池基因 R637 登记件·C-00695 R192 判例族合法引用〕+资源事件域内·[锚] 2/2 齐备·分片路径直读）
+- [x] 留冷表：2 席 persistent 门禁留冷 stays due（C-04162 rain-invented 同族延续=实况无雨平面禁·逢雨窗自然解锁；C-04179 sky-mismatch 新增=环行天气断言与实况不符拒·实况变化过门·下轮自然再试·零程序动作零卡面改动）
+- [x] QC 巡检行+例份行：QC 免巡窗（R667 到期巡检 problems=0 在案·下到期 ≈R673）·池 09-29 例份已耗（audit PASS 满额 1440+518 维持）·例份面满合规跳过（相遇 09-29 3/3·反思 3/3·聚光 9 月 2/2·基因轮 ≈R670·OSS 新窗 21:40 起·日清窗晚间 23:00 前轮）
+- [x] GPU 探针行+尾查行：GPU 第六十四探针 10574/12282MiB util7% 空窗未开（余 ~1.7GB<权重 5.94GB·让路律不抢·回执 F-20260929-BL01 已前置·单 open 至 09-30 13:00 回执窗后收口）·尾查：集团 orders.md mtime 15:08:02 维持零新漂移（R667 已核值）·decisions.md 13:17:02 维持·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C）
+- [x] 账平行：09-29 新写环全域直数 492=R667 面 484+本批 8 账平零差（python glob+re 全 census 域「- 2026-09-29 」环行直数实测·registry 490+anchors 2）·ring 口径=sync 4174（R667 面 4166+本批 8 一致·两口径增量 +8/+8）·status-export R668 刷新（export_ts 实测·ring 4166→4174·年轮/镜像 dept 随轮·json 回读校验过）
