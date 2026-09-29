@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-29T08:34:00+08:00",
+ "export_ts": "2026-09-29T09:01:00+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R631 批 10 due 落 7 环（rows_changed=7 ring_synced=7·ring=3923→3930·C-03922〔R630 rain-invented 留冷席晨窗过门归位〕+C-03932/C-03933/C-03935/C-03937/C-03938/C-03939 六席首环·批 bd454c6b+sync 6b499be1·批题头 join(done)=实落一致持续实证·3 席 persistent 门拦留冷 C-03926 sky-mismatch/C-03934 session-state/C-03936 rain-invented=诚实门禁健康态）·09-29 新写环 232（批环口径=R630 面 225+本批 7）·QC 免巡窗（R630 到期巡检 problems=0 在案·下到期≈R636）·池 audit 复核 PASS 全桶达标（1440+518·SELF_TERMINATE）·T-20260929-01 关结面维持（社交边观测面在 results 区·rows=2841090 账平·md5 882f65a5=R618 再生件零漂移）·基因轮 R629 兑现后下次族距 8-10 起算 ≈R637·T-20260928-07 Bonsai GPU 探针随轮=空窗维持（第二十七探针 used=6818/12282MiB 余 ~5.33GB<5.94GB·让路律不抢·回执 F-20260929-BL01 已前置·单 open 至 09-30 13:00 窗后收口）·T-20260928-09 lowpoly 批 2 库内呈报维持（待 CEO 过目后出库·呈报面随日清窗）",
+   "t": "R632 批 10 due 落 7 环（rows_changed=7 ring_synced=7·ring=3930→3937·C-03940/C-03941/C-03942/C-03943/C-03944/C-03945/C-03946 七席首环·批 16dd3871+sync c9afc8d2·批题头 join(done)=实落一致持续实证·3 席 persistent 门拦留冷 C-03926 sky-mismatch/C-03934 session-state/C-03936 rain-invented=诚实门禁健康态）·09-29 新写环 239（批环口径=R631 面 232+本批 7）·QC 免巡窗（R630 到期巡检 problems=0 在案·下到期≈R636）·池 09-29 例份已耗（R628 audit PASS+R631 复核 PASS 全桶达标 1440+518·SELF_TERMINATE）·T-20260929-01 关结面维持（社交边观测面在 results 区·rows=2841090 账平·md5 882f65a5=R618 再生件零漂移）·基因轮 R629 兑现后下次族距 8-10 起算 ≈R637·T-20260928-07 Bonsai GPU 探针随轮=空窗维持（第二十八探针 used=6658/12282MiB 余 ~5.49GB<5.94GB·让路律不抢·回执 F-20260929-BL01 已前置·单 open 至 09-30 13:00 窗后收口）·T-20260928-09 lowpoly 批 2 库内呈报维持（待 CEO 过目后出库·呈报面随日清窗）",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "随进环批自动同步 recent_ring（R631 批 sync rows=7·ring=3930）+behavior.py v3.7 --auto 再生节律/社交位族 v3.27/休闲环 v3.20/休息环 v3.18/声景反向 v3.30 在役（L2 补环三步全毕+T-13 关结）",
+   "t": "随进环批自动同步 recent_ring（R632 批 sync rows=7·ring=3937）+behavior.py v3.7 --auto 再生节律/社交位族 v3.27/休闲环 v3.20/休息环 v3.18/声景反向 v3.30 在役（L2 补环三步全毕+T-13 关结）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "QC 免巡窗（R630 到期巡检 problems=0 在案·下到期 ≈R636）·smoke R631 第三十九证五项全勾+红线行（poolgen tick 08:06:02 连戳维持·R631 本批 7 环·3 席 persistent 留冷·light=10030+ID 封顶 C-10036 双闸实测过·registry A-filter 00:06 后零新增·behavior slot_null=0 rows=10030 实测·sync rows=7 ring=3930·heartbeat 轮末刷新）",
+   "t": "QC 免巡窗（R630 到期巡检 problems=0 在案·下到期 ≈R636）·smoke R632 第四十证五项全勾+红线行（poolgen tick 08:06:02 连戳维持·R632 本批 7 环·3 席 persistent 留冷·light=10030+ID 封顶 C-10036 双闸实测过·registry git A-filter 00:06 基线批〔1b529b71〕后零新增·CreationTime 假阳性 2 件 git 甄别在案·behavior slot_null=0 rows=10030 实测·sync rows=7 ring=3937·heartbeat 轮末刷新）",
    "s": 1
   },
   {
@@ -141,12 +141,12 @@
    "户籍卡"
   ],
   [
-   "3923",
-   "3930"
+    "3930",
+    "3937"
   ],
   [
-   "225",
-   "232"
+    "232",
+    "239"
   ],
   [
    "468/302",
