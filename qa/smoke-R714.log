@@ -1,0 +1,11 @@
+# BigLife QA Smoke Test 第百一十九证（R714 · 2026-09-30 01:4x · 数据面自验五项 · T-20260928-05）
+[1] poolgen 跑通：tick 2026-09-30 01:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（00:06→01:06 间隔 60min <24h 判据持续满足·state/poolgen_run.log 直读） PASS
+[2] census 新条目：09-30 [锚] 环全域直数 46（R713 面 38+本批 6+相遇 2 账平零差·双域 registry+anchors+reserved python glob+re 直数·批 fd6caa28 6 环+相遇 5f69b1ef 双环） PASS
+[3] 位置字段非 null：behavior slot_null=0 rows=10030 实测；light block_null=0（district 空 3=荣誉席正典形态） PASS
+[4] 行为链再生：sync b58eaacd rows=6 ring_synced=6（ring 4435→4441）+相遇 sync 88290c30 rows=2（C-00024×C-00042） PASS
+[5] heartbeat 3h 内：轮末刷新 2026-09-30 01:4x PASS
+红线行：停造人令双闸 light=10030 unique=10030 ID 封顶 C-10036 over_cap=0 注册冻结维持 PASS
+核卡行：本批 6/6 全批抽验 PASS 零修复（[锚] 6/6 齐备·口头禅逐字领句·机审门 v0.43 批内全审）
+GPU 探针行：第百四探针 6909/12282MiB util5% 空窗未开（余 ~5.37GB<权重 5.94GB·让路律·F-20260929-BL01 收口窗 09-30 13:00）
+尾查行：orders 19:50:39/decisions 13:17:02/ceo-review 00:37:14 三 mtime=R711/R713 核值态零漂移维持·本仓 orders/ 零新件
+verdict: 5/5 PASS
