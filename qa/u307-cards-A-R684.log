@@ -1,0 +1,8 @@
+U307 主角图鉴文案卡 A 片 QC — T-20260929-05 step② slice-A @R684 2026-09-29 19:26:34
+cards=12/12 五字段全非空 PASS
+story 长度包络: max=22 全 ≤40 PASS
+id 集=A01~A12 与 U307 名册名逐卡一致 PASS
+记忆点与 U307 视觉记忆句柄一致（desc 关键词全含）PASS
+口癖 nearcheck 12/12 CLEAN（Layer A 4-gram+B 层 cp92）PASS ·证据=本轮命令行输出
+skill_ref 与 U313 技能总览板对位 12/12（批产时人工对位·板在只读源）
+verdict=PASS

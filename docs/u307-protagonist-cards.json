@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "deliverable": "U307 吸嘟嘟主角图鉴文案卡（BigLife 文案供给面·人设域 U172=纯呈现层零管理权）",
+    "task": "T-20260929-05 · 集团令 O-2026-0929-013 派单@BigLife · 回执窗 2026-10-02 12:00",
+    "slices": "A 片 12 款本文件已载；B 片 12 款下轮追加（拆步律）",
+    "sources": [
+      "MiniGame/Design/evidence/characters/U307_主角候选批/U307_生成证据清单.json（24 款名+视觉记忆句柄·只读）",
+      "MiniGame/Art Assets/资产银行/U307_主角母版库/ char_01~12.png + wchar_01~12.png（24/24 实存·CEO 保全令）",
+      "MiniGame/Design/evidence/characters/U307_主角候选批/U313_吸嘟嘟伙伴团技能总览板.html（技能族对位·只读）"
+    ],
+    "fields": ["species 物种", "personality 性格", "memo 记忆点", "story 一句话背景故事(≤40字)", "catchphrase 口癖(nearcheck 零撞句)"],
+    "consumers": ["图鉴收集线", "章节卡绑款", "败局安抚", "分享卡"],
+    "style": "A 片=3D 糖瓷系（Royal Match 家族·暖马卡龙）·B 片=水彩系（2D 手绘·莫兰迪）——风格双版本随 U307 两线"
+  },
+  "cards": [
+    {"id": "A01", "name": "嘟嘟·典藏版", "species": "紫白毛绒小鸡", "personality": "圆满可靠·全队主心骨", "memo": "紫白毛绒+肚皮金漩涡纹（Logo 同构）", "story": "金漩涡纹一转，全城的甜点都听它号令。", "catchphrase": "漩涡一转，好运就来！", "skill_ref": "金漩涡·半径系"},
+    {"id": "A02", "name": "蜜金水手鸭", "species": "水手小鸭", "personality": "稳得住场子的老水手脾气", "memo": "奶油旋呆毛+白水手帽金锚", "story": "跑过最远的浪，如今负责把逃跑的星星定在原地。", "catchphrase": "抛锚咯，谁也别想溜！", "skill_ref": "金锚定泊·迟滞系"},
+    {"id": "A03", "name": "薄荷小恐龙", "species": "薄荷色小恐龙", "personality": "清凉慢性子·眯眯笑", "memo": "三片圆背鳍+螺旋肚纹+眯眯笑", "story": "尾巴一甩刮起薄荷风，夏天的账就算清了。", "catchphrase": "凉凉的，不着急。", "skill_ref": "薄荷旋风·半径系"},
+    {"id": "A04", "name": "珊瑚小狐狸", "species": "珊瑚色小狐狸", "personality": "鬼点子多的机灵鬼", "memo": "蓬大尾奶白尖+狡黠眯眼", "story": "眨眼间糖罐就空了一半，尾巴却还在装无辜。", "catchphrase": "嘘，是我干的，也是风的功劳。", "skill_ref": "蓬尾旋风·半径系"},
+    {"id": "A05", "name": "蓝莓小企鹅", "species": "蓝莓色小企鹅", "personality": "扑腾不止的行动派", "memo": "白肚兜+扑腾短翅+冷色反差", "story": "翅膀太短飞不起来，扑腾着扑腾着就把事办成了。", "catchphrase": "扑腾两下，不就上来了嘛！", "skill_ref": "企鹅扑腾·定吸系"},
+    {"id": "A06", "name": "抹茶小鳄鱼", "species": "抹茶色小鳄鱼", "personality": "见牙不见狠的憨乐派", "memo": "圆钝大嘴咧笑+反差萌", "story": "大嘴一张吞掉整个喷嚏，只留下满地星星沙。", "catchphrase": "张嘴！啊——", "skill_ref": "大嘴吞屏·风暴系"},
+    {"id": "A07", "name": "奶油星星仓鼠", "species": "奶油色小仓鼠", "personality": "财迷小管家·腮帮子存得住话", "memo": "鼓腮+捧金星·直连金库叙事", "story": "腮帮里存的不止星沙，还有全队的小金库。", "catchphrase": "存一点，再存一点！", "skill_ref": "星沙雨·星沙系"},
+    {"id": "A08", "name": "团子猫头鹰", "species": "团子体型小猫头鹰", "personality": "不说话光瞪眼的冷面裁判", "memo": "心形脸盘+团子体型+琥珀大眼", "story": "琥珀大眼一瞪，乱跑的星星自己就站好了队。", "catchphrase": "嗯？站好，别动。", "skill_ref": "鹰眼定身·迟滞系"},
+    {"id": "A09", "name": "草莓折耳兔", "species": "草莓色折耳兔", "personality": "一半机警一半软乎", "memo": "一耳立一耳折+白围嘴（机警预警）", "story": "立着的耳朵听风，折着的耳朵存糖，两不耽误。", "catchphrase": "等等，我再听一耳朵。", "skill_ref": "竖耳预警·时间系"},
+    {"id": "A10", "name": "星尘精灵嘟嘟", "species": "星尘精灵（嘟嘟近亲）", "personality": "自带光环的祝福派", "memo": "紫金渐变绒毛+金环+星瞳", "story": "打了个喷嚏，撒出去的却是三十颗星沙。", "catchphrase": "接好咯，星星的祝福！", "skill_ref": "星尘祝福·星沙系"},
+    {"id": "A11", "name": "糖瓷可可熊", "species": "糖瓷材质小熊", "personality": "釉面温柔·兜底担当", "memo": "糖瓷釉材质对照款+奶白围嘴（治愈）", "story": "输了也不怕，它的熊抱能把你从败局里捞回来。", "catchphrase": "抱抱，还有机会。", "skill_ref": "熊抱护盾·护盾系"},
+    {"id": "A12", "name": "嘟嘟·吸吸嘴版", "species": "吸吸嘴嘟嘟", "personality": "说到做到的直球派", "memo": "嘴=软吸管·玩法直译", "story": "指哪儿吸哪儿，软管一抿星星就归位了。", "catchphrase": "吸气——就是现在！", "skill_ref": "吸管点吸·定吸系"}
+  ]
+}
