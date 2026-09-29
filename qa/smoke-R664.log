@@ -1,0 +1,10 @@
+== smoke R664 (2026-09-29 14:5x @BigLife-OSLoop) 数据面五项自验（T-20260928-05 常设随轮件·章程 BigLife 节=log 面即证据面）==
+[1] poolgen 跑通: PASS — state/poolgen_run.log 尾行 "=== 2026-09-29 14:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE"（13:06→14:06 间隔 60min <24h 连戳链判据持续满足）
+[2] census 新条目（本批年轮环）: PASS — 本批 9 环 C-04137~C-04146（批 commit b6cdcd33「年轮 2026-09-29: C-04137, C-04138, C-04139, C-04140, C-04142, C-04143, C-04144, C-04145, C-04146」·1 席 C-04141 sky-mismatch 机审门禁留冷=诚实门健康态）
+[3] 位置字段非 null（behavior slot）: PASS — python 全量实测 rows=10030 slot_null=0（behavior 面 mtime 14:23 day/cloud 桶再生件；首探针单行 walrus 计数逻辑 bug 读出 0 行如实记·正规 for 循环复跑 10030/0 坐实）
+[4] 行为链再生（sync/镜像）: PASS — sync_rings 随批自动收口 rows_changed=9 ring_synced=9（commit 4022b954「行为线 2026-09-29: 镜像 rows=9 ring=4139」）
+[5] heartbeat 3h 内: PASS — 上戳 14:50:06（R663 轮末）·本戳轮末脚本追加（<1h 域内）
+== 红线行（停造人令轮首双闸）: PASS — light_rows=10030·unique=10030·ID 封顶 C-10036 越顶 0·registry 零新增（批量注册冻结维持）
+== 账平行: PASS — 09-29 新写环全域 md 直数 457 = R663 面 448 + 本批 9（registry 455 + anchors 2·账平零差）
+== GPU 探针（T-20260928-07 第六十探针）: 10594/12282 MiB util 8% — 余 ~1.7GB << 权重 5.94GB·空窗未开（让路律不抢·回执 F-20260929-BL01 已前置·单 open 至 09-30 13:00 回执窗后收口）
+VERDICT: 5/5 PASS
