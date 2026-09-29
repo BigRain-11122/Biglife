@@ -1,0 +1,9 @@
+[gate] light_rows=10030 unique=10030 over_cap(C-10036)=0 block_null=0 -> PASS
+[1] poolgen tick -> === 2026-09-30 02:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE -> PASS
+[2] census 今日(09-30)[锚]环数 line-scan=81（R718面76+R719批5=81 期望符合·双域 registry分片+anchors） -> PASS
+[3] behavior rows=10030 slot_null=0 -> PASS
+[4] 行为链镜像 sync: 批 rows=5 ring 4471->4476（evolve_citizen committed rows_changed=5 ring_synced=5 in-place·21eb32d8） -> PASS
+[5] heartbeat 最新 round done 行 ts=2026-09-30 02:21:45 + 本轮轮末刷新 -> PASS
+核卡抽验 2/2: C-04482 池基因「规矩如钟，人情如江。」逐字领句+适配语「今天这天还挺适合出去走走」cloud 域内 / C-04485 池基因「试错要趁灯亮」逐字领句+「凌晨刚对完行情」夜窗时序+QT 量化职业域内 -> PASS
+基因轮 R719 兑现 +12（cp 534=89×6/ho 325/tp 191·nearcheck 三证·qa/gene-round-R719.log） -> PASS
+smoke R719 @ 2026-09-30 02:33:48 verdict=PASS(5/5) + gate PASS + 核卡 PASS + 基因轮 PASS
