@@ -1,0 +1,13 @@
+== smoke R633 2026-09-29 08:44~09:0x @BigLife-OSLoop ==
+[x] ①poolgen 跑通：tick 2026-09-29 08:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（07:06→08:06 间隔 60min <24h 判据继续满足·连戳维持）
+[x] ②census 新条目：本批 9 环（C-03926/C-03934 两席 persistent 留冷晨窗过门归位+C-03947/C-03948/C-03949/C-03950/C-03951/C-03952/C-03953 七席首环·commit 9e22ddc1·批题头 join(done)=实落一致持续实证）·ring 3937→3946——1 席 persistent 门拦留冷（C-03936 rain-invented 同族延续·诚实门禁健康态·零程序动作零卡面改动·stays due 下轮自然再试）
+[x] ③位置字段非 null：behavior slot_null=0（rows=10030 全量直数）
+[x] ④行为链再生：sync_rings 批内自动收口 rows=9 ring_synced=9（commit 2a9c3988·镜像 rows=9 ring=3946）
+[x] ⑤heartbeat 3h 内：08:44:00 os-loop round done exit=0（Δ~15min）
+[x] 判据红线行：停造人令轮首双闸实测过（light_rows=10030·unique=10030·ID 封顶 C-10036 越顶 0·registry git A-filter 00:07 后零新增=注册冻结维持）
+[x] QC 行：QC 免巡窗（R630 到期巡检 problems=0 在案·下到期≈R636）
+[x] 池 audit 行：09-29 例份已耗（R628 audit PASS+R631 复核 PASS+R633 实跑 PASS 全桶达标 1440+518·hard_fails=0·确定性 192+25 对零漂移·SELF_TERMINATE 例零动作零 commit）
+[x] 例份行：相遇 09-29 额度 3/3 满（R596/R601/R604）·反思 3/3（R600/R602）·聚光 9 月 2/2 满·基因轮 R629 兑现后族距 8-10 起算 ≈R637
+[x] 核卡抽验行：C-03948（NS·首环）+C-03926（NS·留冷归位席）2/2 PASS——[锚] 注脚 2/2 齐备·C-03948「今天上午的光线确实看不清游丝，下午铺子一开，得给钟表们上上弦」晨窗光线域内坐实·C-03926「江水清清的好天气」晴晨坐实=R631/632 sky-mismatch 留冷晨窗过门归位实证——卡直读零修复
+[x] GPU 探针行：used=6504/12282MiB util 3%——空窗未开（第二十九探针·余 ~5.35GB<权重 5.94GB·让路律不抢·回执 F-20260929-BL01 已前置·T-20260928-07 单 open 至 09-30 13:00 窗后收口）
+verdict: PASS 5/5
