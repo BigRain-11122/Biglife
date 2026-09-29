@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-29T15:09:07+08:00",
+ "export_ts": "2026-09-29T15:25:00+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R665 批 10 due 落 10 环全中零留冷（C-04141 R664 sky-mismatch 留冷归位+C-04147~C-04155 九席首环·批 80ad1e9a+sync 724e029b rows=10·ring 4139→4149）·核卡抽验 2/2 PASS 零修复（C-04141 口头禅族叠字变体+行为节双事实引用·C-04150 口头禅「看云不用门票」逐字+cloud 档域内坐实）·池 09-29 例份已耗 audit PASS 满额 1440+518 自停维持·GPU 第六十一探针 11862/12282MiB util100% 满载空窗未开（让路律不抢·回执 F-20260929-BL01 已前置·单 open 至 09-30 13:00 回执窗后收口）",
+   "t": "R666 批 10 due 落 9 环（C-04156~C-04161/C-04163~C-04165 九席首环·批 e6d51cf8+sync c0336d24 rows=9·ring 4149→4158·C-04162 rain 族 persistent 门禁留冷 stays due〔卡面「雨天单子最多」雨特质 vs 实况无雨·根因 R640 已盘·自然解锁面=逢雨天喂入·零程序动作〕）·核卡抽验 2/2 PASS 零修复（C-04156 口头禅「弄堂还是那个弄堂」逐字领句+实况 25°C 天气域内·C-04165 口头禅「夜里冷，喝口热的再走」逐字+「好咯」底色领句+通宵写谱 face 域内·[锚] 2/2 齐备·卡面直读）·池 09-29 例份 R628 已耗 audit PASS 满额 1440+518 自停维持·GPU 第六十二探针 7465/12282MiB util6% 空窗未开（余 ~4.8GB<权重 5.94GB·让路律不抢·回执 F-20260929-BL01 已前置·单 open 至 09-30 13:00 回执窗后收口）",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "随年轮批自动同步 recent_ring（R665 批 sync rows=10·ring=4149·commit 724e029b）+behavior.py v3.7 --auto 再生节律在役（本窗 15:03 day/cloud/alarm 桶再生=v3.30 声景 alarm 窗触发实录·slot_null=0 rows=10030 实测）",
+   "t": "随年轮批自动同步 recent_ring（R666 批 sync rows=9·ring=4158·commit c0336d24）+behavior.py v3.7 --auto 再生节律在役（本窗 15:03 day/cloud/alarm 桶再生=v3.30 声景 alarm 窗触发实录·slot_null=0 rows=10030 实测）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "QC 免巡窗（R661 到期巡检 problems=0 在案·下到期 ≈R667）+smoke 第七十二证五项全勾+红线行（poolgen tick 15:06:02 连戳维持·本批 10 环·light=10030+unique=10030+ID 封顶 C-10036 双闸实测过·behavior slot_null=0 rows=10030 实测·sync rows=10 ring=4149·09-29 新写环全域直数 467=R664 面 457+本批 10 账平零差〔registry 465+anchors 2〕·口径注记=ring 4149 系 cursor 位计数〔sync_rings.py L67 码证定谳〕与 registry 环行直数 4151 差 2=手写/落籍环行历史存量·两口径各自成立非缺陷·GPU 第六十一探针满载空窗未开·heartbeat 轮末刷新）",
+   "t": "QC 免巡窗（R661 到期巡检 problems=0 在案·下到期 ≈R667）+smoke 第七十三证五项全勾+红线行（poolgen tick 15:06:02 连戳维持·本批 9 环·light=10030+unique=10030+ID 封顶 C-10036 双闸实测过·behavior slot_null=0 rows=10030 实测·sync rows=9 ring=4158·09-29 新写环全域直数 476=R665 面 467+本批 9 账平零差〔registry 474+anchors 2〕·口径注记=ring 4158 系 cursor 位计数〔sync_rings.py L67 码证定谳〕与 registry 环行直数 4160 差 2=手写/落籍环行历史存量·两口径各自成立非缺陷·GPU 第六十二探针 7465MiB util6% 空窗未开·heartbeat 轮末刷新）",
    "s": 1
   },
   {
@@ -141,12 +141,12 @@
    "户籍卡"
   ],
   [
-   "4139",
-   "4149"
+   "4149",
+   "4158"
   ],
   [
-   "467",
-   "09-29 新写环（全 census 域直数 467=R664 面 457+本批 10·账平零差·registry 465+anchors 2·python 全域 md 直数实测）"
+   "476",
+   "09-29 新写环（全 census 域直数 476=R665 面 467+本批 9·账平零差·registry 474+anchors 2·python 全域 md 直数实测）"
   ],
   [
    "492/310",
