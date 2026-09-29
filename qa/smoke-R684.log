@@ -1,0 +1,7 @@
+smoke R684 2026-09-29 19:27:18
+1 poolgen tick: === 2026-09-29 19:06:02 poolgen_loop tick src=auto exit=0 == PASS
+2 census 本批新环: ring 4286->4291 (+5·C-04298~302) PASS
+3 slot/位置字段非 null: light rows=10030 block_null=0 PASS
+4 行为链再生: sync rows=5 ring_synced=5 (b596cbd1) PASS
+5 heartbeat 3h 内: 2026-09-29 19:20:48 PASS
+verdict=5/5 PASS
