@@ -1,0 +1,9 @@
+[gate] light_rows=10030 unique=10030 over_cap(C-10036)=0 block_null=0 -> PASS
+[gate] light_rows=10030 unique=10030 over_cap(C-10036)=0 block_null=0 -> PASS
+[1] poolgen tick -> === 2026-09-30 02:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE -> PASS
+[2] census 今日(09-30)[锚]环数 line-scan=70（R716面63+R717批7=70 期望符合·双域 registry+anchors） -> PASS
+[3] behavior rows=10030 slot_null=0 -> PASS
+[4] 行为链镜像 sync: 批 rows=7 ring 4458->4465（evolve_citizen committed rows_changed=7 ring_synced=7 in-place·d735ae70） -> PASS
+[5] heartbeat 最新 round done 行 ts=2026-09-30 01:59:58 + 本轮轮末刷新 -> PASS
+核卡抽验 2/2: C-04468 信条逐字领句+face 光尘直引 / C-04474 行话「试铃」域内+风信使职业域 -> PASS
+smoke R717 @ 2026-09-30 02:10:04 verdict=PASS(5/5) + gate PASS + 核卡 PASS
