@@ -1,0 +1,14 @@
+qa/smoke-R757.log — QA Smoke Test 第159证（2026-09-30 10:0x~10:1x @BigLife-OSLoop·T-20260928-05 数据面自检五项·QC 例行到期轮）
+[1] poolgen tick：=== 2026-09-30 09:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（09:06→本轮维持·间隔 60min<24h 判据满足·池达标自停维护面·零重复扫描）→ PASS
+[2] census 新条目：本轮批 10 环（C-04669/C-04670/C-04671/C-04672/C-04673/C-04674/C-04675/C-04676/C-04677/C-04678 十席首环·批 f2a93b30+sync 376639cb·ring 4662→4672·批头 join(done)=实落一致·既有居民迭代零新注册·gap #65 修复后产出率 10/10 连庄第三批）→ 09-30 全域环总数 277（expect 277=R756 面 267+本轮批 10 账平零差·census 基 [锚] 当日行数：anchors 20+GM 82+MD 53+NS 20+OR 30+QT 59+RV 13）→ PASS
+[3] 位置字段非 null：citizen-behavior.jsonl 10030 行 slot_null=0（非 reserved=0）·citizens-light block_null=0 → light gate rows=10030 unique=10030 over_cap=0 ring 4662→4672（ring-bearing 面·sync commit ring=4672 实测账平·本轮 10 卡 recent_ring_date=today True）→ PASS
+[4] 三码闸：Tools/generate_census:exit4Y Tools/resident_intake:exit4Y Tools/mirror_intake:exit4Y（--force 亦拒·REGISTRY-FROZEN 强冻盘·本轮实弹全测）→ PASS
+【P0 停造人强冻令判据窗监测（令点 09-30 05:38 起 12h→17:38 到期复核·窗内每轮随行）】a. 双闸：light_rows=10030 unique=10030 max_id=C-10036 over_cap=0（python 实测）→ 满足；b. 三码闸：generate_census/resident_intake/mirror_intake --force 实弹 exit=4 零写盘（本轮全测）→ 满足；c. 强冻点（09-29 18:37）后 A-filter census 新增卡文件 0 行（git 实测）→ 满足；d. 判据「12h 新增 0 新 ID」现行满足态。
+[QC] 例行巡检 R757 到期兑现：cards=10030 evolved=4672 problems=0（qc_census.py 全量不变量扫描·QC-REPORT 随轮入库·下到期 ≈R763）→ PASS
+[INFO] 尾查: 集团 orders.md mtime=2026-09-30 05:38:08（本轮已承 P0 维持·漂移以本行实测为准）
+[INFO] 尾查: 集团 decisions.md mtime=2026-09-29 13:17:02（本轮已承 P0 维持·漂移以本行实测为准）
+[INFO] 尾查: 集团 ceo-review.md mtime=2026-09-30 09:41:45（本轮已承 P0 维持·漂移以本行实测为准）
+[INFO] 尾查: 本仓 orders/ newest=O-20260928-1410-HQ-C.md 维持
+[INFO] 例行面: 相遇 09-30 3/3 满日额（R711 GM+R713 QT+R714 MD）·反思 3/3 满日帽（R712 批）·聚光 10 月 2/2 满（R725+R728）·QC 本轮已跑（下到期 ≥R763）·基因轮 R751 已兑现·下次 8-10 起算 ≥R759
+[INFO] 留冷面: 0 席（批 10/10 首过全落=产出率连庄第三批·gap #65 修复疗效维持）
+smoke 五项全勾 → PASS
