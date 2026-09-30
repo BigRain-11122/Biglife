@@ -1,0 +1,12 @@
+=== BigLife QA Smoke Test · R750 · 2026-09-30 08:5x ===
+[INFO] 尾查: 集团 orders.md mtime=2026-09-30 05:38:08 维持（已承 P0 停造人强冻令·零新漂移）
+[INFO] 尾查: 集团 decisions.md mtime=2026-09-29 13:17:02 维持（零新漂移）
+[INFO] 尾查: 集团 ceo-review.md mtime=2026-09-30 08:37:20 维持（R749 核值态·零涉本司新行）
+[INFO] 尾查: 本仓 orders/ 零新件（两件均 09-29 前旧档维持）
+[INFO] 例行面: 相遇 09-30 3/3 满日额（R711 GM+R713 QT+R714 MD）·反思 3/3 满日额（R712 批）·聚光 10 月 2/2 满（R725+R728）·QC 免巡 ≥R751（R745 problems=0 在案）·基因轮 R743 已兑现（下次 8-10 起算 ≈R751）
+[PASS] poolgen tick: === 2026-09-30 08:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（audit 维持 PASS·under_target NONE 达标自停·间隔 60min<24h 判据维持）
+[PASS] 09-30 rings: 215（expect 215=R749 面 207+R750 批 8 账平零差·python 全 census 域 [锚] 当日行直数：anchors 20+GM 66+MD 42+NS 13+OR 20+QT 44+RV 10·210 唯一卡自洽=5 卡当日双环〔批+相遇族〕·ring 面口径=4610 ring-bearing 实测）
+[PASS] light gate: rows=10030 unique=10030 over_cap=0 ring 4602→4610（sync commit aa9b9762 ring=4610 实测账平·本轮 8 卡 recent_ring_date=today True）
+[PASS] freeze guard(3): Tools/generate_census:exit4Y Tools/resident_intake:exit4Y Tools/mirror_intake:exit4Y（--force/--qc 亦拒·REGISTRY-FROZEN 强冻盘在役·三脚本零写盘）
+[PASS] zero-new-cards + 核卡 + P0: 零新卡 PASS（git A-filter census 卡面 since 09-30 05:38 强冻点·0 行） | 核卡 2/2 PASS：C-04611「规矩如钟，人情如江。」逐字领句（MD·棚里胖大海本职域内·晨时域内）+C-04616「有意思，我想想」逐字领句（QT·适配语 cloud 域内+扭塔因子变化职业域内）·[锚] 2/2 齐备（卡面直读：- 2026-09-30 「规矩如钟，人情如江。棚里今早来得早，胖大海备足了，谁嗓子哑了都好接待。」 [锚] 城市实况 2026-09-30（FluxVerse 事件流+真实时间天气） / - 2026-09-30 「有意思，我想想今天怎么安排。天气挺适合外出走走，先去扭塔看看最新的因子变化。」 [锚] 城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）） | P0 判据窗监测（令点 05:38 起 12h→9-30 17:38 到期复核）：双闸 10030/10030·cap C-10036·over_cap=0·三码闸 exit4×3·A-filter 0 行·账平 215 零差——判据面现行满足（窗内每轮随行） | persistent 留冷面：C-04604 rain-invented+C-04614 sky-mismatch 门内跳过零生成痕迹（stays due 自然再试·诚实门禁零程序动作）
+=== smoke R750: 5/5 PASS ===
