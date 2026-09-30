@@ -1,0 +1,12 @@
+—— QA Smoke Test 第162证（2026-09-30 10:4x~10:5x @BigLife-OSLoop·T-20260928-05 数据面自检五项·P0 判据窗随行轮）
+[1] poolgen tick：== 2026-09-30 10:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（10:06 连戳维持·间隔 <24h 判据满足·池达标自停维护面·零重复扫描——本例份 09-30 已耗）→ PASS
+[2] census 新条目：本轮批 9 环（C-04699~C-04708 九席首环·C-04702 rain-invented persistent 门拦留冷 stays due·批 66275704+sync 5687b09b·ring 4692→4701·批头 join(done)=实落一致·零新注册）→ 09-30 全域环总数 306（expect 306=R759 面 297+本轮批 9 账平零偏差·python 关 census 卡 [锚] 当日行变数实测：anchors 20+registry 286）→ PASS
+[3] light gate rows=10030 unique=10030 max_id=C-10036 over_cap=0（ring 4692→4701·sync commit ring=4701 实测账平·本轮 9 卡 recent_ring_date=2026-09-30 九卡全 True·python 实测）→ PASS
+[4] 三码闸：Tools/generate_census:exit4Y Tools/resident_intake:exit4Y Tools/mirror_intake:exit4Y（--force 亦拒·REGISTRY-FROZEN 强冻盘本轮实弹零写盘三连）→ PASS
+【P0 停造人强冻令判据窗监测（令点 09-30 05:38 起 12h→17:38 到期复核·窗内每轮随行）】a. 双阈：light_rows=10030 unique=10030 max_id=C-10036 over_cap=0（python 实测）→ 满足；b. 三码闸：generate_census/resident_intake/mirror_intake --force 实弹 exit=4 零写盘（本轮全测）→ 满足；c. 强冻点（09-29 18:37）后 A-filter census 新增卡文件 0 行（git --diff-filter=A 实测 count=0）→ 满足；d. 判据「12h 新增 0 新 ID」现行满足态（05:38 令点后 max_id 维持 C-10036）。
+[INFO] 尾查: 集团 orders.md mtime=2026-09-30 10:26:11（维持=R759 捕获漂移实锤 集团 commit 9254f11「O-034 注册收口：三方案 v2 迭代重做令」——09-30 ~05:4x 既有令的注册收口行·@CPH4 主承接·BigLife 非主受令司·零涉本司新义务·P0 强冻维持）；集团 decisions.md mtime=2026-09-29 13:17:02（维持）；集团 ceo-review.md mtime=2026-09-30 09:41:45（维持 R757 核价行零涉本司记档）；本仓 orders/ newest（mtime 序既有口径）=O-20260927-1648-HQ-C.md @09-29 00:05:03 维持零新令。
+[INFO] 例行面: 池达标自停维持（tick 10:06 连戳·TOTAL=1440 FAIL=NONE）；相遇 09-30 3/3 满日额（R711 GM+R713 QT+R714 MD）；反思 3/3 满日帽（R712 批）；聚光 10 月 2/2 满（R725+R728）；QC 免巡（R757 problems=0 在案·下到期 ≈R763）；基因轮 R759 已兑现（10/10 入库·证据 qa/gene-round-R759.log·下次 8-10 起算 ≈R767）。
+[INFO] 留冷面: 1 席（C-04702 rain-invented persistent·「淅沥声中，江岸的雨丝轻拂…」雨天实况下创雨景细节=诚实门结构性拦·stays due 下轮自然再试）。
+[INFO] 窗件: Bonsai GPU 收口窗 09-30 13:00 未至（免探针先例维持·F-20260929-BL01 呈单 open 至窗后收口）+融汇回执窗 14:00+P0 判据 12h 到期复核 17:38 呈报+日清窗 23:00 前轮。
+[INFO] T-20260929-07 ruff 静检门: 本轮 .py 均在 state/ 临时件不入库=未触发合规；status-export R760 刷新补账（R759 轮面未及刷新·本件随轮收口）。
+smoke 五项全勾 → PASS
