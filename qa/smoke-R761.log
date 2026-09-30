@@ -1,0 +1,13 @@
+—— QA Smoke Test 第163证（2026-09-30 10:5x @BigLife-OSLoop·T-20260928-05 数据面自检五项·P0 判据窗随行轮）
+[1] poolgen tick：=== 2026-09-30 10:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（10:06 连戳维持·间隔 <24h 判据满足·池达标自停维护面·例份 09-30 已耗零重扫）→ PASS
+[2] census 新条目：本轮批 10 环（C-04702〔R760 rain-invented 留冷过门归位〕+C-04709~C-04717 九席首环·批 e9f76e75+sync d1c75f53·ring 4701→4711·批头 join(done)=实落一致·既有居民迭代零新注册）→ 09-30 全域环总数 316（expect 316=R760 面 306+本轮批 10 账平零偏差·python 关 census 卡 [锚] 当日行变数实测：anchors 20+registry 291）→ PASS
+[3] light gate rows=10030 unique=10030 max_id=C-10036 over_cap=0（ring_bearing=4711=sync commit ring 实测账平·本轮 10 卡 recent_ring_date=2026-09-30 十卡全 True·python 实测）→ PASS
+[4] 三码闸：Tools/generate_census:REGISTRY-FROZEN exit4 Tools/resident_intake:REGISTRY-FROZEN exit4 Tools/mirror_intake:REGISTRY-FROZEN exit4（--force 亦拒·强冻锁 state/registry-freeze.lock 在盘 Test-Path True·实弹三连零写盘·exit=4 无管道复核实测〔管道面 $LASTEXITCODE=-1 系 PowerShell 管道伪码记档非门项〕）→ PASS
+[5] heartbeat 3h 内：state/heartbeat.txt 尾行 2026-09-30 10:47:41 os-loop: round done exit=0（<3h）→ PASS
+【P0 停造人强冻令判据窗监测（令点 09-30 05:38 起 12h→17:38 到期复核·窗内每轮随行）】a. 双阈：light_rows=10030 unique=10030 max_id=C-10036 over_cap=0（python 实测）→ 满足；b. 三码闸：generate_census/resident_intake/mirror_intake --force 实弹 exit=4 零写盘（本轮全测）→ 满足；c. 强冻点（09-29 18:37）后 A-filter census 新增卡文件 0 行（git --diff-filter=A 实测 Lines=0）→ 满足；d. 判据「12h 新增 0 新 ID」现行满足态（05:38 令点后 max_id 维持 C-10036）。
+[INFO] 尾查: 集团 orders.md mtime=2026-09-30 10:26:11（维持=R759 捕获 O-034 注册收口 @CPH4 主承接零涉本司新义务·P0 强冻维持）；集团 decisions.md mtime=2026-09-29 13:17:02（维持·委员会节零新 council-pending=席6 尾查合规）；集团 ceo-review.md mtime=2026-09-30 10:46:37（新漂移=BigMoney 域行 r466收口+W13 落地·零涉本司记档）；本仓 orders/ newest（mtime 序）=O-20260927-1648-HQ-C.md @09-29 00:05:03 维持零新令。
+[INFO] 例行面: 池达标自停维持（tick 10:06 连戳·TOTAL=1440 FAIL=NONE）；相遇 09-30 3/3 满日额（R711 GM+R713 QT+R714 MD）；反思 3/3 满日帽（R712 批）；聚光 10 月 2/2 满（R725+R728）；QC 免巡（R757 problems=0 在案·下到期 ≈R763）；基因轮 R759 已兑现（证据 qa/gene-round-R759.log·下次 ≈R767）。
+[INFO] 留冷面: 0 席（批 10/10 全中零留冷·gap #65 修复后产出率 10/10 连庄第六批）。
+[INFO] 窗件: Bonsai GPU 收口窗 09-30 13:00 未至（免探针先例维持·F-20260929-BL01 已前置·单 open 至窗后收口）+融汇回执窗 14:00+P0 判据 12h 到期复核 17:38 呈报+QC 例巡 ≈R763+日清窗 23:00 前轮+下次基因轮 ≈R767。
+[INFO] T-20260929-07 ruff 静检门: 本轮无入库 .py 交付=未触发合规；T-20260924-08 轮末例行：status-export R761 刷新（export_ts 10:57:40 实测·ring 4701→4711·09-30 环 316·json 回读校验过）。
+smoke 五项全勾 → PASS
