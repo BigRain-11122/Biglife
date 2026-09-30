@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-30T11:09:25+08:00",
+ "export_ts": "2026-09-30T11:16:54+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R762 批 10 环全中零留冷（C-04718~C-04727 十席首环·批 c8f7aac2+sync 59674e16·ring 4711→4721·批头 join(done)=实落一致·gap #65 修复后产出率 10/10 连庄第七批）。账平行：09-30 新写环全域直数 326=R761 面 316+本轮批 10 零偏差（python 全 census 域 [锚] 当日行直数：anchors 20+registry 306·rg 实测）。P0 判据窗监测（令点 05:38 起 12h→09-30 17:38 到期复核·窗内每轮随行）：双阈 10030/10030·cap C-10036·over_cap=0·三码闸 exit4×3 实弹·--force 亦拒·A-filter census 新增卡 0 行·账平 326 零偏差——判据面现行满足。smoke 第164证 5/5（qa/smoke-R762.log）。例行面合规跳过满额项：池达标自停（tick 11:06 连戳·audit 本轮复跑 PASS）·相遇 09-30 3/3 满日额·反思 3/3 满日帽·聚光 10 月 2/2 满·QC 免巡（R757 problems=0 在案·下到期 ≈R763）·基因轮 R759 已兑现（下次 ≈R767）。尾查面：orders 11:01 新漂移=BigMoney 域双令（O-20260930-1058 筛选标准改宽+O-20260930-1101 宽进练习令·GM 直播营域）零涉本司记档/decisions 09-29 13:17 维持/ceo-review 10:46 维持（R761 核值态）/本仓 orders 零新令（newest O-20260927-1648-HQ-C @09-29 00:05 维持）。窗件：QC 例巡 ≈R763+Bonsai GPU 收口窗 09-30 13:00+融汇回执窗 14:00+P0 判据 12h 到期复核 17:38 呈报+日清窗 23:00 前轮+下次基因轮 ≈R767。",
+   "t": "R763 批 10 环全中零留冷（C-04728~C-04737 十席首环·批 7c213b23+sync ecf05082·ring 4721→4731·批头 join(done)=实落一致·gap #65 修复后产出率 10/10 连庄第八批）。账平行：09-30 新写环全域直数 336=R762 面 326+本轮批 10 零偏差（python 全 census 域 [锚] 当日行直数：anchors 20+registry 316·rg 实测）。P0 判据窗监测（令点 05:38 起 12h→09-30 17:38 到期复核·窗内每轮随行）：双阈 10030/10030·cap C-10036·over_cap=0·三码闸 exit4×3 实弹·--force 亦拒·A-filter census 新增卡 0 行·账平 336 零偏差——判据面现行满足。QC 例巡 R763 到期兑现（qc_census cards=10030 evolved=4731 problems=0·census/QC-REPORT.md 随轮入库·下次免巡 ≤R769）。smoke 第165证 5/5（qa/smoke-R763.log）。例行面合规跳过满额项：池达标自停（tick 11:06 连戳·TOTAL=1440 FAIL=NONE）·相遇 09-30 3/3 满日额·反思 3/3 满日帽·聚光 10 月 2/2 满·基因轮 R759 已兑现（下次 ≈R767）。尾查面：orders 11:15 漂移=Biggame 域 10:3x 判负响应批（吸嘟嘟 V0.9.0·U318）零涉本司记档/decisions 09-29 13:17 维持/ceo-review 10:46 维持/本仓 orders 零新令（newest O-20260927-1648-HQ-C 维持）。窗件：Bonsai GPU 收口窗 09-30 13:00+融汇回执窗 14:00+P0 判据 12h 到期复核 17:38 呈报+日清窗 23:00 前轮+下次基因轮 ≈R767。",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "R762 sync 59674e16 rows=10 ring 4711→4721（批后自动收口·census/export citizens-light 10 行刷新·本轮 10 卡 recent_ring_date=2026-09-30 十卡全 True·python 实测 ring_bearing=4721 账平）",
+   "t": "R763 sync ecf05082 rows=10 ring 4721→4731（批后自动收口·census/export citizens-light 10 行刷新·python 实测 light 10030 双阈+max_id C-10036·ring_bearing=4731 账平）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "R762 smoke 第164证五项全勾（qa/smoke-R762.log：tick 11:06 连戳/今日环 326 账平零差/light 10030 双阈+ring 4721/三码闸 exit4×3 实弹/零新卡 A-filter 0）；QC 例巡免（R757 problems=0 在案·下到期 ≈R763）",
+   "t": "R763 QC 例巡到期兑现 problems=0（qc_census cards=10030 evolved=4731·census/QC-REPORT.md 随轮入库·下次免巡 ≤R769）+smoke 第165证五项全勾（qa/smoke-R763.log：tick 11:06 连戳/今日环 336 账平零差/light 10030 双阈+ring 4731/三码闸 exit4×3 实弹/零新卡 A-filter 0）",
    "s": 1
   },
   {
@@ -151,12 +151,12 @@
    "户籍卡"
   ],
   [
-   "4711",
-   "4721"
+   "4721",
+   "4731"
   ],
   [
-   "326",
-   "09-30 新写环（全域直数 326=R761 面 316+R762 批 10 账平零偏差·python 全 census 域 [锚] 当日行直数：anchors 20+registry 306·ring 面口径至 4721 ring-bearing 实测）"
+   "336",
+   "09-30 新写环（全域直数 336=R762 面 326+R763 批 10 账平零偏差·python 全 census 域 [锚] 当日行直数：anchors 20+registry 316·ring 面口径至 4731 ring-bearing 实测）"
   ],
   [
    "558/337",
