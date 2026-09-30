@@ -1,0 +1,20 @@
+﻿== gene-round R767 (2026-09-30) 先验后登正序 T-20260927-01 ==
+候选 10 条 = cp 六轴各1(94x6=564) + ho 2(339) + tp 2(205)
+
+-- 预检收敛史 (nearcheck --file) --
+v1: 3 CLEAN / 7 FLAG (半条街都/脚底板/老式爆米花/旧手电筒/舍不得扔+的搪瓷缸/第一次上/台风夜守+守了一宿+认下这份)
+v2: 7 CLEAN / 3 FLAG (上桌，先/的旧座钟/头一回上)
+v3: 9 CLEAN / 1 FLAG (的老挂钟)
+v4: 10/10 CLEAN exit 0
+
+-- 登记断言 (state/gene-register-R767.py·全锚含闭引号·外科尾追加·既有基因零字节改动) --
+language.json cp: 558 -> 564 | axes: {逍遥:94, 烟火:94, 秩序:94, 求新:94, 怀旧:94, 侠气:94}
+lives.json tp: 203 -> 205 | ho: 337 -> 339
+REGISTER OK · 前缀子集零漂移断言过 · json 双件回读过
+
+-- 终验三重 --
+nearcheck --qc: 15 PASS, 0 FAIL
+nearcheck --baseline: 三池 criterion_ok 全 true (cp92/ho95/tp44 = R417 定谳值零漂移)
+复跑 --file: 10 候选 10 近重候选 (ratio 100 vs 自身) = 入库证
+查二自检: cp 6 条零天气零时段实况词 (「月亮又不催人」=比喻非实况断言·池中「月」先例 3 处 rg 码证) · 机审门扫环输出非基因输入
+查三跨面: 池基因入 language/lives 即为面本体 (T-20260927-01 单源·pools/greetings 面无涉)
