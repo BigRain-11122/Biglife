@@ -1,0 +1,22 @@
+qa/smoke-R752.log — QA Smoke Test 第154证（2026-09-30 09:2x @BigLife-OSLoop·T-20260928-05 数据面自验五项）
+[1] poolgen 跑通：state/poolgen_run.log tick 2026-09-30 09:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（08:06→09:06 连戳·间隔 60min<24h 判据持续满足）→ PASS
+[2] census 新条目：本批 8 环（C-04627/C-04628/C-04629/C-04630/C-04631/C-04632/C-04633/C-04634·批 8a6bad48+sync 81156b9d·ring 4618→4626·既有居民迭代零新注册）→ PASS
+[3] 位置字段非 null：citizen-behavior.jsonl 10030 行 slot_null=0+anchor_null=3（恰荣誉席 reserved·非 reserved=0）+citizens-light block_null=0 → PASS
+[4] 行为链再生：behavior.py --auto 再生节律在役（behavior-last bucket=empk wx=cloud snd=fest·ts 08:43:01 同桶同天气=skip regen 正常态）→ PASS
+[5] heartbeat 新鲜：本轮轮末 alive 行落 state/heartbeat.txt（R751 09:11:43 <3h）→ PASS
+
+【P0 停造人强冻令判据窗监测（令点 09-30 05:38 起 12h→17:38 到期复核·窗内每轮随行）】
+a. 双闸：light_rows=10030 unique=10030 max_id=C-10036 over_cap=0 block_null=0（python 实测）→ 满足
+b. 三码闸：generate_census/resident_intake/mirror_intake --qc 三脚本实弹 exit=4 零写盘（本轮全测）→ 满足
+c. 强冻点（09-29 18:37）后 A-filter census 三域新增卡文件=0 行（git --diff-filter=A 实测）→ 满足
+d. 判据「12h 新增 0 新 ID」= 现行满足态
+【核卡抽验 3/3 PASS 零修复（机审门 v0.43 批内全审过门在案）】
+C-04628（NS·首环）：口头禅「多个人多双筷子」逐字领句+「今早的城最真」晨时实况域内+[锚] 齐备
+C-04631（GM·首环）：口头禅「我送走的老主顾，比这城里一半的楼岁数都大」逐字领句（同池基因多卡共享=C-00695 R192 判例域合法）+底色「侬晓得伐」入语+[锚] 齐备
+C-04633（GM·首环）：口头禅「先复核一遍」逐字领句+「清清爽爽」适配语 cloud 域内+行话「起稿」「描点」本职域内+[锚] 齐备
+【账平行】09-30 新写环全域直数 231=R751 面 223+本批 8 零差（python 全 census 域 [锚] 当日行直数：anchors 20+GM 69+MD 47+NS 16+OR 21+QT 47+RV 11·sync ring=4626 实测）
+【留冷】2 席 rain-invented persistent 门内跳过零生成痕迹（C-04604 第 N 轮+C-04620 首见·stays due 自然再试·诚实门禁健康态）
+【QC 免巡】R751 problems=0 在案·下到期 ≈R757
+【尾查】集团 orders.md 09-30 05:38:08 维持（=已承 P0·零新漂移）·decisions.md 09-29 13:17:02 维持·ceo-review.md 09-30 08:37:20 维持（R750 已核值态零涉本司）·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 维持）
+GPU 探针免跑（Bonsai GPU 收口窗 09-30 13:00 未至·R727 起免探针先例维持·F-20260929-BL01 已前置·单 open 至窗后收口）
+smoke 五项全勾 → PASS
