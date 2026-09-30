@@ -1,0 +1,17 @@
+# smoke-R769 (2026-09-30 12:3x @BigLife-OSLoop)
+# BigLife 数据面五项自验（T-20260928-05 常设）+P0 判据窗随行
+[1] poolgen 跑通: state/poolgen_run.log tick 12:06:02 src=auto exit=0 · TOTAL=1440 FAIL_BUCKETS=NONE · 连戳 11:06→12:06 间隔 60min <24h 判据持续满足 ✓
+[2] census 新条目(本批产出): R769 年轮批 10/10 环全落零留冷 C-04788~C-04797 十席首环 · 批 557813aa + sync 48971c66 rows=10 · ring 4781→4791 ✓
+[3] 位置字段非 null: citizen-behavior.jsonl rows=10030 slot_null=0 (mtime 11:33 本日再生 --auto 随批在役) ✓
+[4] 行为链再生: sync_rings 批后自动收口 48971c66 (镜像 rows=10) · behavior --auto 桶/天气触发链在役 ✓
+[5] heartbeat 3h 内: state/heartbeat.txt 末戳 2026-09-30 12:08:56 (R768) <3h ✓ 本轮收尾再落新戳
+[6] 核卡抽验 2/2 PASS: C-04788 NS 口头禅「灶上有汤，自取」逐字领句+雨实况域内+[锚]齐备 · C-04795 OR 口头禅「老地方见」逐字领句+雨实况域内+[锚]齐备 · 卡面直读 ✓
+[P0 判据窗监测] 令点 05:38 起 12h → 17:38 到期复核（窗内每轮随行）:
+  a. 双闸: light=10030 unique=10030 · ID 封顶 C-10036 · over_cap=0 · block_null=0 ✓
+  b. 三码闸实弹: generate_census/resident_intake/mirror_intake --qc → exit4 ×3 · REGISTRY-FROZEN 零写盘 ✓
+  c. 强冻点 09-29 18:37 后 A-filter census 新增卡 = 0 行（git 实测）✓
+  d. 账平: 09-30 新写环全域直数 396 = R768 面 386 + 本批 10 零差 · sync ring=4791 ✓
+  → 四判据 a/b/c/d 现行满足 · 零新 ID
+[尾查] 集团 orders.md 12:24 漂移=三同步审计止血批（HQ 自域/FluxVerse 域·本司零派工）·decisions.md 12:25 漂移=D-20260930-06 全域改进清单（XL-17 BigLife 消费方接线数判据·回执窗 10-07 → 本轮立单 T-20260930-01 承接+ack F-20260930-BL03）+D-07 回执核销批（FluxVerse 域·C 类含 blocked-on:BigLife anchor-lines 让渡=FluxVerse 侧在途挂账·R0-R6 对账窗维持）·ceo-review 11:39 维持·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C）✓
+[例行面] 池例份已耗（tick 12:06 TOTAL=1440）·相遇 3/3 满·反思 3/3 满日帽·聚光 10月 2/2 满·QC 免巡 ≤R771（R765 problems=0 在案）·基因轮 R767 已兑现下次 ≈R775 ✓
+ALL PASS
