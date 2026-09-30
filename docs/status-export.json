@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-30T12:29:39+08:00",
+ "export_ts": "2026-09-30T12:52:00+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R769 批 10 环全落零留冷（C-04788~C-04797 十席首环·批 557813aa+sync 48971c66·ring 4781→4791·产出率 10/10 首过全落连庄第十四批·雨天实况域内喂料一致）",
+   "t": "R770 批 10 环全中零留冷（C-04798~C-04807 十席首环·批 61a24721+sync a4e59c61·ring 4791→4801·产出率 10/10 连庄第十五批·雨天实况域内喂料一致）+XL-17 分步①②兑现（Tools/consumer_wiring.py 判据扫描器+cognition/CONSUMER-WIRING.md v1.0 判据设计件+results 接线数常设行·D-20260930-06 承令）",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "R769 sync 48971c66 rows=10 ring 4781→4791（批后自动收口·anchors 20 不动·census/export citizens-light 10 行刷新）",
+   "t": "R770 sync a4e59c61 rows=10 ring 4791→4801（批后自动收口·anchors 20 不动·census/export citizens-light 10 行刷新）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "R769 smoke 第171证五项全勾（qa/smoke-R769.log：tick 12:06 连戳/今日环 396 账平零差/light 10030 双闸+ring 4791/三码闸 exit4×3 实弹/零新卡 A-filter 0 行+核卡 2/2 PASS·QC 例巡免 ≤R771〔R765 problems=0 在案〕）",
+   "t": "R770 smoke 第172证五项全勾（qa/smoke-R770.log：tick 12:06 连戳/今日环 406 账平零差/light 10030 双闸+ring 4801/三码闸 exit4 实弹/零新卡 A-filter 0 行+核卡 2/2 PASS+XL-17 接线数=3 首跑盘面直数·QC 例巡免 ≤R771〔R765 problems=0 在案〕）",
    "s": 1
   },
   {
@@ -151,12 +151,12 @@
    "户籍卡"
   ],
   [
-   "4781",
-   "4791"
+   "4791",
+   "4801"
   ],
   [
-   "396",
-   "09-30 新写环（全域直数 396=R768 面 386+R769 批 10 账平零差·python 全 census 域 [锚] 当日行直数·ring 面口径=4791 ring-bearing 实测账平）"
+   "406",
+   "09-30 新写环（全域直数 406=R769 面 396+R770 批 10 账平零差·python 全 census 域 [锚] 当日行直数〔GM126/MD74/NS33/OR42/QT88/RV23+anchors 20〕·ring 面口径=4801 ring-bearing 实测账平）"
   ],
   [
    "564/339",
@@ -185,6 +185,10 @@
   [
    "10030",
    "polygon 装配映射表（citizen-assembly.jsonl R3 新面·确定性形象档案·族源三分 7517/2003/507·儿童件 1410·双跑逐字节一致·T2 v3.56）"
+  ],
+  [
+   "3",
+   "消费方接线数（XL-17 判据·D-20260930-06·T-20260930-01：Tools/consumer_wiring.py 首跑盘面直数=3 仓 wired——FluxVerse 13 证〔city-watch/population-check/perceptor probes/bake 工具/ResidentIdentityProof.cs〕+Biggame-MiniGame 14 证〔tools/PixelTownBoard.ps1 读 citizen-persona.jsonl+硅基生命元宇宙-data.js 窗口镜像〕+BigDomain 8 证〔src/sandbox/lobby/city.py 读 citizens-light.jsonl·docs/_trash auto-save 3 证噪声记档〕·BigStream 0=诚实态·cph4 集团工具面 2 证不计入·文档级引用不计·与集团审计文档级基线差异如实记·判据件=cognition/CONSUMER-WIRING.md·--qc 双跑收口下轮）"
   ]
  ]
 }

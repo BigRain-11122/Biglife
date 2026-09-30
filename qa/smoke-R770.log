@@ -1,0 +1,18 @@
+# smoke-R770 (2026-09-30 12:5x @BigLife-OSLoop)
+# BigLife 数据面五项自验（T-20260928-05 常设）+P0 判据窗随行
+[1] poolgen 跑通: state/poolgen_run.log tick 12:06:02 src=auto exit=0 · TOTAL=1440 FAIL_BUCKETS=NONE · 连戳 11:06→12:06 间隔 60min <24h 判据持续满足 ✓
+[2] census 新条目(本批产出): R770 年轮批 10/10 环全落零留冷 C-04798~C-04807 十席首环 · 批 61a24721 + sync a4e59c61 rows=10 · ring 4791→4801 ✓
+[3] 位置字段非 null: citizen-behavior.jsonl rows=10030 slot_null=0 (本日再生 --auto 随批在役) ✓
+[4] 行为链再生: sync_rings 批后自动收口 a4e59c61 (镜像 rows=10) · behavior --auto 桶/天气触发链在役 ✓
+[5] heartbeat 3h 内: state/heartbeat.txt 末戳 2026-09-30 12:30:40 (R769) <3h ✓ 本轮收尾再落新戳
+[6] 核卡抽验 2/2 PASS: C-04798 QT 徐嘉树 口头禅「又学了一招」逐字领句+雨天撑伞实况域内+[锚]齐备 · C-04799 GM 范德明 底色「好咯」+口头禅「急啥，汤还没开呢」逐字领句+雨实况域内+[锚]齐备 · 卡面直读 ✓
+[P0 判据窗监测] 令点 05:38 起 12h → 17:38 到期复核（窗内每轮随行）:
+  a. 双闸: light=10030 unique=10030 · ID 封顶 C-10036 · over_cap=0 · block_null=0 (python 实测) ✓
+  b. 三码闸实弹: generate_census --qc → exit4 REGISTRY-FROZEN 零写盘 (锁在盘·R737 起在役) ✓
+  c. 强冻点 09-29 18:37 后 A-filter census 新增卡 = 0 行（git 实测）✓
+  d. 账平: 09-30 新写环全域直数 406 = R769 面 396 + 本批 10 零差 (GM126/MD74/NS33/OR42/QT88/RV23+anchors20) · sync ring=4801 ✓
+  → 四判据 a/b/c/d 现行满足 · 零新 ID
+[尾查] 集团 orders.md 12:32:14 漂移=坚决清理令行内审计止血批③呈报补录（FluxVerse 域备份盘·末三行 BigMoney/Biggame 域零 BigLife 提及·零本司派工）·decisions.md 12:31:09 漂移=D-20260930-08 交付物三指标探针+D-09 外审结论写法勘误（HQ 域零涉司）·external-audit.md 12:30:16 新文件=auditor-A 块面台账（诚实律 P2 观察项已由 D-20260930-02 监测口径定谳闭环）·ceo-review 11:39 维持·本仓 orders/ 零新件 ✓
+[例行面] 池例份已耗（tick 12:06 TOTAL=1440）·相遇 3/3 满·反思 3/3 满·聚光 10月 2/2 满·QC 免巡 ≤R771（R765 problems=0 在案）·基因轮 R767 已兑现下次 ≈R775 ✓
+[XL-17] T-20260930-01 分步①②兑现: Tools/consumer_wiring.py v1.0 只读扫描器（12,491 代码文件·四仓+cph4 闭集·文档级不计）+cognition/CONSUMER-WIRING.md v1.0 判据设计件+status-export 接线数常设行=首跑盘面直数 3（FluxVerse/Biggame-MiniGame/BigDomain wired·BigStream 0 诚实态·cph4 集团工具面不计入·与审计文档级基线差异如实记）·--qc 双跑收口留单下轮（预算尽如实记）✓
+ALL PASS
