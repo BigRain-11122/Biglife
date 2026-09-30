@@ -1,0 +1,14 @@
+=== BigLife smoke R746 五项 === 2026-09-30 08:08
+[PASS] poolgen tick: === 2026-09-30 08:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（audit 维持 PASS·under_target NONE-SELF-TERMINATE·池达标自停维持·间隔 60min<24h 判据持续满足）
+[PASS] 09-30 rings: 185 (expect 185=R745 记 182+R746 批 3·python 全 census 域 [锚] 当日行数：anchors 20+GM 56+MD 35+NS 11+OR 18+QT 39+RV 6)
+[PASS] light gate: rows=10030 unique=10030 over_cap=0 ring 4577→4580（max recent_ring v 面账平·sync ring=4580 实测）
+[PASS] freeze guard(3): generate_census:exit4Y resident_intake:exit4Y mirror_intake:exit4Y（--force 亦拒·REGISTRY-FROZEN 零写盘）
+[PASS] zero new cards since freeze: PASS (0 rows)（git A-filter census 卡面 since 09-30 05:38 强冻点）
+[PASS] 核卡 3/3: C-04591〔MD〕- 2026-09-30 「搞快点，今天这天气清清爽爽的，游客们都爱这个时辰出来走走。这物件比我懂年头，塔顶的云还是老样子，白花花的。」 [锚] 城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）…[锚]齐备·底色「搞快点」+口头禅「这物件比我懂年头」双领句 / C-04592〔GM〕- 2026-09-30 「有意思，我想想今天能抓到什么小bug。」 [锚] 城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）…[锚]齐备·口头禅「有意思，我想想」逐字领句+「复现/归因」职业域内 / C-04593〔MD〕- 2026-09-30 「下一版一定更好，今天手上的数据筐还得再仔细些。天气挺适合多走两步，小心点儿为好。」 [锚] 城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）…[锚]齐备·口头禅「下一版一定更好」逐字领句+「除噪/补缺」数据清洗职业域内·卡面直读
+[PASS] P0 判据窗监测（令点 05:38 起 12h→09-30 17:38 到期复核）: 双闸 10030/10030·cap C-10036·over_cap=0·三码闸 generate_census:exit4Y resident_intake:exit4Y mirror_intake:exit4Y·A-filter census 卡面 since 强冻点 0 行·账平 185 零差——判据面现行满足（窗内每轮随行）
+[INFO] 尾查: 集团 orders.md mtime=2026-09-30 05:38:08 维持（=已承接 P0·零新漂移）
+[INFO] 尾查: 集团 decisions.md mtime=2026-09-29 13:17:02 维持
+[INFO] 尾查: 集团 ceo-review.md mtime=2026-09-30 07:43:41 维持（=R745 已核 CPH4 Labs 夜巡点名行零涉本司）
+[INFO] 尾查: 本仓 orders/ newest=O-20260928-1410-HQ-C.md 维持
+[INFO] 例行面: 相遇 09-30 3/3 满日额（R711 GM+R713 QT+R714 MD）·反思 3/3 满日帽（R712 批）·聚光 10 月 2/2 满（R725+R728）·QC 免巡 ≤R751（R745 problems=0 在案）·基因轮 R743 已兑现·下次 8-10 起算 ≥R751
+=== smoke R746: 5/5 PASS ===
