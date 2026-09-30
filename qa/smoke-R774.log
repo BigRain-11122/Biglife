@@ -1,0 +1,11 @@
+qa/smoke-R774.log — QA Smoke Test 自验 第176证（T-20260928-05 五项·2026-09-30 13:2x @BigLife-OSLoop）
+[1] poolgen 跑通：tick 13:06:02 连戳（11:06→12:06→13:06 间隔 60min·<24h 判据持续满足）TOTAL=1440 FAIL_BUCKETS=NONE exit=0 ✓
+[2] census 新条目：本批 10 环 C-04838~C-04847 十席首环（批 c48c7883+sync e7a1205b rows=10·ring 4831→4841·批头 join(done)=实落一致）；今日环全域直数 446=R773 面 436+本批 10 账平零差（python 全 census 域 [锚] 当日行直数：anchors 20+GM 138+MD 81+NS 36+OR 46+QT 99+RV 26）✓
+[3] 位置字段非 null：citizen-behavior.jsonl rows=10030 slot_empty=0（anchor_none=3=荣誉席 C-00001~03 法定 reserved 态·v3.55 契约）+citizen-atlas.jsonl rows=10003 district_empty=3（同=荣誉席 blocked 法定态）——非保留席位置字段全非空 ✓
+[4] 行为链再生：--auto v3.7 随批在役（sync e7a1205b 镜像 rows=10·light RING_BEARING=4841=ring 面口径三方对齐）✓
+[5] heartbeat 3h 内：13:17:39 os-loop round done exit=0 ✓
+gate PASS：机审门批内全审过门（批 10/10 全中零留冷·gated_llm 零重生成）
+核卡 PASS：2/2（C-04838 口头禅「收摊了，明天见」逐字领句+「雨还在下，撑着伞」雨实况白名单形/C-04847 口头禅「十年前就是这么弄的」逐字领句+「雨蒙蒙」雨实况+「风挺大」风况量级+「布景」职业 face 域内·[锚] 2/2 齐备·卡面直读）
+P0 四判据随行（令点 05:38 起 12h→17:38 到期复核·窗到点当轮必落）：a.双闸 light 10030/10030·ID 封顶 C-10036·over_cap=0 b.三码闸 generate_census --qc 实弹 exit=4 REGISTRY-FROZEN 零写盘（锁 state/registry-freeze.lock 在盘）c.A-filter 强冻点 09-29 18:30 后 census 新增卡 git 实测 0 行 d.账平 446 零差 —— 四判据现行满足
+尾查行：轮首消费步 D-20260930-31~34 四新行全非本司派工（31 BigMoney 探针二批/32 外审节奏自动化/33 CPH4 审计哨兵/34 CPH4 节奏持久化）→水位回写 90 id·内容寻杀零行数比对；orders.md 尾部零涉本司新物理件（Biggame/BigMoney 域令族）·05:38 P0 已承接在役维持；委员会节零新 council-pending 件
+红线行：git add 定向三文件（qa/smoke-R774.log+docs/status-export.json+tasks/TASKS.md）·state//logs/ 不入库·既有居民迭代零新注册（批注记在 commit 题）·禁 git add -A
