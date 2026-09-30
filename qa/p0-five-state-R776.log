@@ -1,0 +1,59 @@
+== BigLife P0 五状态令（集团 docs/orders.md 2026-09-30 13:38）承接证据 · R776 @2026-09-30 13:4x~13:5x ==
+
+[令文捕获]（orders.md mtime=2026-09-30 13:42:04 实测·R776 轮首尾查捕获·R775 尾查 13:38:31 未及该行）
+  2026-09-30 13:38 | [CEO决策-P0] BigLife停造人强冻令五状态：05:37升级砍注册路径未生效，13:35仍批量注册C-04855/856/857，6h新增280 ID；升级条款触发Jason物理介入：请暂停BigLife-OSLoop调度48h+census写入目录改只读，注册链路移除；判据=6h新增0新ID，未达成前BigLife不得恢复自主调度 | dispatched
+
+[执行动作（本司可自决域·即时生效）]
+1. 产线全线 stand-down：年轮批/相遇/反思/基因/QC 巡检本轮起停·census 零写入（CEO 令「census写入目录改只读」的行为侧等价先行；物理 ACL 动作=Jason 域·本司不代执行）。
+2. \BigLife-OSLoop 调度任务禁用（CEO 令原文「暂停BigLife-OSLoop调度48h」直接授权·可逆）：
+   > schtasks /Change /TN "\BigLife-OSLoop" /DISABLE
+   SUCCESS: The parameters of scheduled task "\BigLife-OSLoop" have been changed. (exit=0 @2026-09-30 13:51:41)
+   复验：TaskName: \BigLife-OSLoop / Next Run Time: N/A（后续火次已停；Status: Running=本轮当次进程·本轮收尾后不再触发）
+   复启命令（48h 窗 2026-10-02 13:38 到期或 CEO 解冻令时点·由 Jason/HQ 执行）：
+   > schtasks /Change /TN "\BigLife-OSLoop" /ENABLE
+3. 三码闸 live-fire 复证（=「注册链路移除」的码闸等价物在役·零写盘）：
+   > python -X utf8 Tools/generate_census.py --qc
+   REGISTRY-FROZEN: census batch registration call-chain disabled per CEO P0 order 2026-09-30 05:38 (registry-freeze.lock). Unfreeze = CEO order removes the lock. Zero write.  → exit=4
+   > python -X utf8 Tools/resident_intake.py --qc
+   REGISTRY-FROZEN: new-resident intake disabled per CEO P0 order 2026-09-30 05:38 (registry-freeze.lock). Unfreeze = CEO order removes the lock. Zero write.  → exit=4
+   > python -X utf8 Tools/mirror_intake.py --qc
+   REGISTRY-FROZEN: mirror-resident intake disabled per CEO P0 order 2026-09-30 05:38 (registry-freeze.lock). Unfreeze = CEO order removes the lock. Zero write.  → exit=4
+   锁在盘：state/registry-freeze.lock Test-Path=True
+4. PoolGenLoop（每小时自循环·T-20260927-03 CEO 令在役·判据=连续戳 <24h·orders 09-27 ~16:20）维持运行——不写 census（仅 cognition/pools.json+state 日志）·停之将重造「poolgen 停转」旧障；如 CEO 意停一句话即停（已在 F-20260930-BL04 披露）。
+
+[事实核验·证据链（诚实律）]
+A. 强冻点后零新卡（D-20260930-02 定谳口径：新增 ID 唯一判据=census 域新增卡文件数+light 双闸）：
+   > git log --diff-filter=A --oneline --since="2026-09-29 18:30" -- census
+   → 0 行（本轮实测；qa/freeze-guard-R737.log 起每轮 smoke 随行在案）
+B. 「13:35 仍批量注册 C-04855/856/857」实证=既有居民首环年轮（非注册）：
+   > git log -1 --format=... bcda5400
+   → bcda5400 2026-09-30 13:35:24 +0800
+     年轮环(既有居民迭代·零新注册) 2026-09-30: C-04848, C-04849, C-04850, C-04851, C-04852, C-04853, C-04854, C-04855, C-04856, C-04857 [via BigLife-OSLoop]
+   三卡出生入库实测：
+   > git log --diff-filter=A --format="%h %ad %s" --date=short -- <C-04855/56/57 三卡路径>
+   → 07f1f1c5 2026-09-23 BigLife 临时代号 成立批root: ...万人户籍库(census 10000=手写锚20+生成9980+城主保留席9)...
+   = C-04855/56/57 均为 09-23 初始批次既有居民；13:35 批=其首环年轮（卡面迭代·卡文件零新增）。
+C. 「6h 新增 280 ID」来源定谳=年轮线 commit 消息中的既有居民 ID 字样：
+   > git log --since="2026-09-30 07:38" --until="2026-09-30 13:38" --format="%s" --grep="年轮"
+   → 34 个年轮批 commit（每批列 ~10 个既有居民 ID·批产主产线=09-23 CEO 令「形成一个不断迭代的居民库」正产品）——非户籍新增。
+D. light 双闸（本轮回实测）：rows=10030 / unique=10030 / cap=C-10036 / over_cap=0
+   → 户籍总量 10030 自 09-29 18:37 强冻起零增长（F-20260930-BL02 起每轮双闸在案）。
+E. 旧四状态令（05:38·12h 判据窗）提前复核：05:38→13:5x 全程 A-filter=0·双闸稳定——判据「12h 新增 0 新 ID」已满足（原 17:38 到期复核由 F-20260930-BL04 提前出具）。
+F. 新五状态令判据（6h 新增 0 新 ID·令点 13:38→09-30 19:38 复核窗）：调度已停+三码闸在役→按构造满足；核验命令（集团侧可随时复跑）：
+   > git log --diff-filter=A --since="2026-09-30 13:38" -- census   → 预期 0 行
+
+[恢复条件（三条件其一·本司不自行恢复）]
+  a. CEO/集团解冻令一句话（任意时点）
+  b. 48h 窗到期 2026-10-02 13:38 且 F 判据满足
+  c. 集团明示按 D-20260930-02 定谳口径复核放行
+
+[呈报 Jason 物理件清单（CEO 令指定 Jason 域·本司不代执行）]
+  ① \BigLife-OSLoop 复启（10-02 13:38 或解冻令时点）——命令见上
+  ② census 写入目录改只读（文件系统 ACL 动作·解冻时须同步回滚）
+  ③ 注册链路物理移除（现役等价物=三码闸 exit4×3+freeze lock 在盘）
+
+[水位差集（轮首消费步②·D-19 接线例行）]
+  decisions.md mtime=13:20:37 维持·D-id 内容寻杀差集=0（89 id 双侧对齐·D-18 判例合规·禁行数比对）——零新派工。
+  orders.md CEO 待办物理件区：13:38 五状态令=本轮唯一涉司新行（本件承接）。
+
+回执=F-20260930-BL04（HQ-FEEDBACK.md）·轮实录=R776（tasks/TASKS.md）·本件=qa 证据
