@@ -1,0 +1,14 @@
+qa/smoke-R775.log — QA Smoke Test 第177证（2026-09-30 13:4x @BigLife-OSLoop·T-20260928-05 数据面自检五项·P0 判据窗随轮）
+[1] poolgen tick：=== 2026-09-30 13:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（13:06 连续·间隔 60min<24h 判据满足·池达标自停维护面）→ PASS
+[2] census 新条目：本轮批 10 环全中零留冷（C-04848~C-04857 十人首环·批 bcda5400+sync 4167ccc3·ring 4841→4851·批头 join(done)=实落一致·既有居民迭代零新注册）→ 09-30 全域环总数 456（expect 456=R774 阶 446+本轮批 10 账平零差·census 域 [锚] 当日行数：anchors 20+GM 139+MD 81+NS 40+OR 47+QT 102+RV 27）→ PASS
+[3] light gate rows=10030 unique=10030 over_cap=0 ring 4841→4851（ring-bearing 与 sync commit ring=4851 实测账平·本轮 10 卡 recent_ring_date=today True）→ PASS
+[4] 三码闸：Tools/generate_census:exit4Y Tools/resident_intake:exit4Y Tools/mirror_intake:exit4Y（--force 亦拒·REGISTRY-FROZEN 强冻盘本轮实测）→ PASS
+【P0 停造人强冻令判据窗监测（令点 09-30 05:38 起 12h→17:38 到期复核·窗内每轮随行）】a. 双闸：light_rows=10030 unique=10030 max_id=C-10036 over_cap=0（python 实测）→ 满足；b. 三码闸：generate_census/resident_intake/mirror_intake --force 实弹 exit=4 强冻盘（本轮全测）→ 满足；c. 强冻点（09-29 18:37 起）后 A-filter census 新增卡文件 0 行（git 实测）→ 满足；d. 判据「12h 新增 0 新 ID」现行满足态。核卡 2/2：C-04849（NS 檐下避雨街坊·首环·头部缀领句+「弄堂口的路灯最亮」怀旧域内+雨天实况域内）：- 2026-09-30 「今早起来雨还在下，撑着伞去单位，风挺大，檐下避雨的街坊不少。弄堂还是那个弄堂，路走得再远，弄堂口的路灯最亮。」 [锚] 城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）；C-04855（GM NPC 舞美师·首环·头部缀「清单第一」职业域内（布景架收好）+雨还在下实况域内）：- 2026-09-30 「清单第一，雨还在下，布景架底子得收好，免得到时候湿哒哒的。」 [锚] 城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）
+[INFO] 尾查: 集团 orders.md mtime=2026-09-30 13:38:31（orders 12:51:31 后新行=Biggame/BigMoney 域令·零涉本司；decisions 水位差集=0·90 id 全消费·D-18 内容寻杀合规；原则面新行先审核再执行）
+[INFO] 尾查: 集团 decisions.md mtime=2026-09-30 13:20:37（orders 12:51:31 后新行=Biggame/BigMoney 域令·零涉本司；decisions 水位差集=0·90 id 全消费·D-18 内容寻杀合规；原则面新行先审核再执行）
+[INFO] 尾查: 集团 ceo-review.md mtime=2026-09-30 13:38:31（orders 12:51:31 后新行=Biggame/BigMoney 域令·零涉本司；decisions 水位差集=0·90 id 全消费·D-18 内容寻杀合规；原则面新行先审核再执行）
+[INFO] 尾查: 本仓 orders/ newest（mtime 序）=O-20260927-1648-HQ-C.md 维持
+[INFO] 例份面: 池达标自停维护（tick 13:06 TOTAL=1440 FAIL=NONE·间隔 60min<24h）→ 相遇 09-30 3/3 满日额（R711 GM+R713 QT+R714 MD）；聚光 10 月 2/2 满（R725+R728）；QC 免巡（R771 problems=0 在案·下轮起 ≥R777）；基因轮 R775 本轮兑现（+10 条 commit 26dd464f）→ 下次 ≥R783（沿革 8 轮）
+[INFO] 基因轮 R775 判据面: cp 95x6=570/ho 341/tp 207·nearcheck 三轮收敛 10/10 CLEAN·--qc 15/15·--baseline 三池 criterion_ok 零漂移（cp91.667/ho94.118/tp43.902=R417 定谳值）·复跑 10/10 ratio100 自命中=入库证·既有条目零字节改动 diff 13+/3-（尾行隔号结构重排 R719 同型）·证据 qa/gene-round-R775.log
+[INFO] 窗件: 汇总回执窗 09-30 14:00（R592 已提前回执 F-20260928-BL09·窗内零动作）+P0 判据 17:38 到期复核呈报+日清窗 23:00 前轮+T-20260928-09 lowpoly 批 2 出库窗 CEO 过目随日清窗报+T-20260929-03 N2 waiting BigDomain 排期（禁重扫同一等待对象）
+smoke 五项全勾 → PASS
