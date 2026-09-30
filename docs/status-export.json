@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-30T13:00:47+08:00",
+ "export_ts": "2026-09-30T13:08:41+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R771 批 10 环全落零留冷（C-04808~C-04817 十席首环·批 7b1250d2+sync bde87cbf·ring 4801→4811·批头 join(done)=实落一致·产出率 10/10 连庄第十六批）。核卡抽验 2/2 PASS 零修复（C-04808 GM 奚Leo 像素画匠口头禅「拆开看看又不会坏」逐字领句+今早下雨撑伞实况域内+水洼映像素画=face 域内·C-04817 MD 曹静 字幕君口头禅「茶凉了再倒就是」逐字领句+雨还在下实况域内·[锚] 2/2 齐备）。QC 例巡到期兑现：cards=10030 evolved=4811 problems=0（QC-REPORT 随轮入库·下到期 ≈R777）。**T-20260930-01 XL-17 分步②收口=整单关结**：consumer_wiring --qc 双跑逐字节一致（determinism PASS·md5 a10512c34f1dc9be72f779bcc30d129a·wired=3 维持：fluxverse 13 证/biggame-minigame 15 证/bigdomain 8 证·bigstream 0 诚实态·cph4-tools 集团工具面不计）——判据三件全毕（①设计件 CONSUMER-WIRING.md v1.0+②扫描器+status-export 常设行+③--qc 双跑断言）·分步③=消费方需求单驱动常设对齐面（反无消费方立项律·零需求单在案零动作）。**T-20260928-07 Bonsai 整单关结**：D-20260930-04 首轮收口=observe（本司台词池对照回执 F-20260929-BL01 四路并卷·CPU 批产线径判负留痕·GPU 档复验随 bm-c 16GB 夜窗排程·本机零后续义务·adopt 前置未触发）。账平行：09-30 新写环全域直数 416=R770 面 406+本批 10 零差（python 全 census 域 [锚] 当日行直数：anchors 20+GM 129+MD 77+NS 33+OR 43+QT 90+RV 24=registry 396）。P0 判据窗随行（令点 05:38 起 12h→17:38 到期复核·窗到点当轮必落）：双闸 10030/10030·封顶 C-10036/越顶 0·三码闸 generate_census --qc 实弹 exit4 REGISTRY-FROZEN 零写盘·A-filter 强冻点后新增卡 0·账平 416 零差——四判据 a/b/c/d 现行满足。尾查面：orders 12:51:31 新漂移=GitHub 工具调研取用令（@Biggame 游戏线批）零涉本司·decisions 12:59:48 新增 D-20260930-13~22（D-13 投递时效 SLA≤2 轮 ack——本司每轮尾查+同轮 ack 实践已合规·D-21 送达律首次执法 BigLife ✅=T-20260930-01+XL-17 双编号引用在案·D-20 禁重复立法零动作·D-18=BigDomain 专属·余全他司域）·ceo-review 12:44=BigDomain 域·本仓 orders 零新件（newest=O-20260927-1648-HQ-C 维持）。例行面：池达标自停维持（tick 12:06 TOTAL=1440 FAIL=NONE）·相遇 3/3 满·反思 3/3 满·聚光 10 月 2/2 满·基因轮 ≈R775。窗件：融汇回执窗 14:00（R592 已提前回执 F-20260928-BL09·窗内零动作）+P0 判据 17:38 到期复核+lowpoly 批 2 出库闸=CEO 过目随日清窗+日清窗 23:00 前轮。",
+   "t": "R772 批 10 环全落零留冷（C-04818~C-04827 十席首环·批 4ed85410+sync 5d815835·ring 4811→4821·批头 join(done)=实落一致·产出率 10/10 连庄第十七批）。核卡抽验 2/2 PASS 零修复（C-04818 QT 江简梨 像素学徒 底色「搞快点」逐字领句+这雨下得还没完呢撑伞出摊实况域内·C-04827 RV 郑洁 像素小店主 口头禅「灵感这东西，得喂它」逐字领句+雨还在下撑伞进货实况域内·[锚] 2/2 齐备·卡面直读）。账平行：09-30 新写环全域直数 426=R771 面 416+本批 10 零差（python 全 census 域 [锚] 当日行直数：anchors 20+GM 133+MD 79+NS 33+OR 43+QT 93+RV 25=registry 406）。**T-20260930-02 D-20260930-19 投递层统一单同轮承接同轮收口**：轮 prompt 步 0 改三步制（①pull ②读集团 decisions 派工通知板块只取本司行 ③读 orders CEO 待办物理件区·水位键=state/decisions-watermark.txt D-YYYYMMDD-NN 集合差集内容寻杀·禁行数=D-20260930-18 判例接线）+原步 8「每日 00:00 后首轮才查」条款废止（00:00 双班决策滞后最长 12h 缺陷收口·D-20260930-13 SLA≤2 轮前置达成）+三态回执 commit（集团行号 D-20260930-19/D-11/D-16/D-18+本司票号 T-20260930-02+下一动作=轮首消费步已接线每轮执行）。P0 判据窗随行（令点 05:38 起 12h→17:38 到期复核·窗到点当轮必落）：双闸 10030/10030·封顶 C-10036/越顶 0·三码闸 generate_census --qc 实弹 exit4 REGISTRY-FROZEN 零写盘·A-filter 强冻点后新增卡 0·账平 426 零差——四判据 a/b/c/d 现行满足。尾查面：orders 12:51:31 维持=R771 已核值·decisions 13:05:57 新漂移=D-20260930-07 回执核销第 11 轮（FluxVerse 反馈面存量对账收敛·C 类 blocked-on:BigLife anchor-lines 让渡项维持=对方在途挂账·R0-R6 对账窗维持零本司新派工）·ceo-review 12:44 维持·本仓 orders 零新件（newest=O-20260927-1648-HQ-C 维持）。例行面：池达标自停维持（tick 13:06 连戳 TOTAL=1440 FAIL=NONE）·相遇 3/3 满·反思 3/3 满·聚光 10 月 2/2 满·基因轮 ≈R775。窗件：P0 判据 17:38 到期复核+lowpoly 批 2 出库闸=CEO 过目随日清窗+日清窗 23:00 前轮。",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "R771 sync bde87cbf rows=10 ring 4801→4811（批后自动收口·anchors 20 不动·census/export citizens-light 10 行刷新·本轮 10 卡 recent_ring_date=today 实测 10/10）",
+   "t": "R772 sync 5d815835 rows=10 ring 4811→4821（批后自动收口·anchors 20 不动·census/export citizens-light 10 行刷新·本轮 10 卡 recent_ring_date=today 实测 10/10）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "R771 smoke 第173证五项全勾（qa/smoke-R771.log：tick 12:06 连戳/今日环 416 账平零差/light 10030 双闸+ring 4811/三码闸 exit4 实弹/零新卡 A-filter 0 行+核卡 2/2 逐字领句）·QC 例巡 R771 到期兑现 problems=0（cards=10030 evolved=4811·下到期 ≈R777）",
+   "t": "R772 smoke 第174证五项全勾（qa/smoke-R772.log：tick 13:06 连戳/今日环 426 账平零差/light 10030 双闸+ring 4821/三码闸 exit4 实弹/零新卡 A-filter 0 行+核卡 2/2 逐字领句+P0 四判据+D-19 投递层接线行）·QC 例巡 R771 problems=0 在案（下到期 ≈R777）",
    "s": 1
   },
   {
@@ -151,12 +151,12 @@
    "户籍卡"
   ],
   [
-   "4801",
-   "4811"
+   "4811",
+   "4821"
   ],
   [
-   "416",
-   "09-30 新写环（全域直数 416=R770 面 406+R771 批 10 账平零差·python 全 census 域 [锚] 当日行直数：anchors 20+GM 129+MD 77+NS 33+OR 43+QT 90+RV 24·ring 面口径=4811 ring-bearing）"
+   "426",
+   "09-30 新写环（全域直数 426=R771 面 416+R772 批 10 账平零差·python 全 census 域 [锚] 当日行直数：anchors 20+GM 133+MD 79+NS 33+OR 43+QT 93+RV 25·ring 面口径=4821 ring-bearing）"
   ],
   [
    "564/339",

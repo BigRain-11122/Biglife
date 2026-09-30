@@ -1,0 +1,20 @@
+# smoke-R772 (2026-09-30 13:0x @BigLife-OSLoop)
+# BigLife 数据面五项自验（T-20260928-05 常设）+P0 判据窗随行+D-19 投递层接线
+[1] poolgen 跑通: state/poolgen_run.log tick 13:06:02 src=auto exit=0 · TOTAL=1440 FAIL_BUCKETS=NONE · 连戳 12:06→13:06 间隔 60min <24h 判据持续满足 ✓
+[2] census 新条目(本批产出): R772 年轮批 10/10 环全落零留冷 C-04818~C-04827 十席首环 · 批 4ed85410 + sync 5d815835 rows=10 · ring 4811→4821（GM4/MD2/QT3/RV1 分布·commit 文件 10 改 40+/40-） ✓
+[3] 位置字段非 null: citizen-behavior slot_null=0·light block_null=0 rows=10030 (python 实测) ✓
+[4] 行为链再生: sync_rings 批后自动收口 5d815835（镜像 rows=10·ring 面口径 4821 ring-bearing）· behavior --auto 桶/天气触发链在役 ✓
+[5] heartbeat 3h 内: state/heartbeat.txt 末戳 2026-09-30 13:02:17 (R771) <3h ✓ 本轮收尾再落新戳
+[6] 核卡抽验 2/2 PASS: C-04818 QT 江简梨 像素学徒 底色「搞快点」逐字领句+「这雨下得还没完呢，撑着伞出摊」实况域内+[锚]齐备 · C-04827 RV 郑洁 像素小店主 口头禅「灵感这东西，得喂它」逐字领句+雨还在下撑伞进货实况域内+[锚]齐备 · 卡面直读 ✓
+[P0 判据窗监测] 令点 05:38 起 12h → 17:38 到期复核（窗内每轮随行·窗到点当轮必落·15:07 起单一口径）:
+  a. 双闸: light=10030 unique=10030 · ID 封顶 C-10036 · over_cap=0 · block_null=0 (python 实测) ✓
+  b. 三码闸实弹: generate_census --qc → exit4 REGISTRY-FROZEN 零写盘 (锁在盘·R737 起在役) ✓
+  c. 强冻点 09-29 18:37 后 A-filter census 新增卡 = 0 行（git --diff-filter=A 实测）✓
+  d. 账平: 09-30 新写环全域直数 426 = R771 面 416 + 本批 10 零差 (anchors 20+GM 133+MD 79+NS 33+OR 43+QT 93+RV 25) · sync ring=4821 ✓
+  → 四判据 a/b/c/d 现行满足 · 零新 ID
+[D-19 投递层统一单·T-20260930-02 同轮承接同轮收口] 集团行号=D-20260930-19（并 D-11/D-16/D-18 三案）·本司票号=T-20260930-02·本司下一动作=轮首消费步已接线（iteration_prompt.txt 步 0 改三步制：①pull ②读集团 decisions.md 派工通知板块只取本司行 ③读 orders.md CEO 待办物理件区·水位键=state/decisions-watermark.txt D-YYYYMMDD-NN 集合差集内容寻杀=84 id 全量基线落盘·禁行数比对=D-20260930-18 判例接线）+原步 8「每日 00:00 后首轮才查」条款废止（00:00 双班决策滞后最长 12h 缺陷收口·D-13 SLA ≤2 轮 ack 前置达成）——验收窗 10-02 12:00 前置完成·三态回执=本轮轮收尾 commit（集团行号+本司票号+下一动作三要素齐） ✓
+[D-15 外推可核] 本轮 git push 结果随轮实录留行（成功/被拒/错误码）——收尾执行后落 heartbeat+TASKS 实录行 ✓
+[尾查] 集团 orders.md 12:51:31 维持=R771 已核值（GitHub 工具调研取用令 @Biggame 域零涉司）·decisions.md 13:05:57 新漂移=D-20260930-07 回执核销第 11 轮（FluxVerse 反馈面存量对账收敛·C 类 blocked-on:BigLife anchor-lines 让渡项维持=对方在途挂账·R0-R6 对账窗维持·零本司新派工）·ceo-review.md 12:44:59 维持（BigDomain 域）·external-audit.md 12:30:16 维持（R770 已核）·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 维持） ✓
+[例行面] 池例份已耗达标自停（tick 13:06 TOTAL=1440 FAIL=NONE）·相遇 09-30 3/3 满（R711 GM+R713 QT+R714 MD）·反思 3/3 满日帽·聚光 10 月 2/2 满·QC 免巡（R771 problems=0 在案·下到期 ≈R777）·基因轮 ≈R775 ✓
+[窗件] P0 判据 17:38 到期复核（窗到点当轮必落）+lowpoly 批 2 出库闸=CEO 过目随日清窗+日清窗 09-30 23:00 前轮+T-20260929-03 N2 waiting BigDomain 排期（禁重扫） ✓
+ALL PASS
