@@ -1,6 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.33 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.44 - BigLife citizen evolution engine.
+v0.44 gap #65 (2026-09-30 R755, prompt-side recap + gate diagnosability;
+NOT a gate-token close - the gate flagged every line correctly): the
+persistent-skip disease, closed at the GENERATION side. Evidence: R754+R755
+same pair stays-due (C-04638/C-04650 sky-mismatch, 6 wasted regens/round;
+evolve-r691.log 5x rain-invented = same disease); logs/_r755_diag.py
+reproduction = 6/8 samples were GENUINE fair-weather assessments under the
+rain 24.3C feed (天气挺适合/清清爽爽/正好转转) - the ~40-item 硬约束 ban
+list sits ~2k chars upstream of the output slot and a 7B model cannot hold
+it that far. Fix = weather_recap(): regime-classified whitelist recap pinned
+at the prompt TAIL (batch + meet both, #44/#53 mirror law), wind quantity
+rides along (#9 family), stricter-wins clause so the recap can never widen
+what the gate passes. gated_llm: max_regens 2->3 + prints the last violating
+line on persistent skip (R754 smoke complaint 门内跳过零生成痕迹 - a skip
+with no generation trace is undiagnosable). Gate v0.35-v0.43 token faces
+untouched (零漂移); live unblock of the stuck pair rides the next batch.
 v0.33 gap #56 residual gate close (2026-09-27, R479; R478 parked the
 whole-round census item): C-02918 first strike (「今天正好出来走走」
 rain-fed, card fixed R478, original preserved in batch commit bdae850d) is
@@ -1023,15 +1038,19 @@ def ring_violations(line, sig):
             v.append("sky-mismatch")
     return v
 
-def gated_llm(prompt, sig, max_regens=2):
+def gated_llm(prompt, sig, max_regens=3):
     """Generate with the honesty gate: regenerate on violations (<= max_regens),
-    then give up -> None (caller skips; citizen stays due for the next round)."""
+    then give up -> None (caller skips; citizen stays due for the next round).
+    v0.44 gap #65: max_regens 2->3 (persistent-skip disease, see weather_recap)
+    + the last violating line prints on persistent skip - R754 smoke complaint
+    门内跳过零生成痕迹: a skip with no generation trace is undiagnosable."""
     line = ""
     for _ in range(1 + max_regens):
         line = llm(prompt)
         if not ring_violations(line, sig):
             return line
     print("gate: persistent violations", ring_violations(line, sig))
+    print("gate: last violating line:", line[:120])
     return None
 
 def rings_of(text):
@@ -1283,6 +1302,46 @@ def rumor_line_for(cid, sig):
             "不得给传闻添加任何细节，也不得声称传闻之外的任何具体事。"
             % (h1["text"], h1["to"], h1["to"], h2["to"]))
 
+def weather_recap(wx):
+    """v0.44 gap #65 (2026-09-30 R755): regime-classified weather recap pinned
+    at the prompt TAIL - a 7B model cannot hold the ~40-item ban list ~2k chars
+    upstream of the output slot, so fair-weather assessments kept slipping
+    (R754/R755 C-04638/C-04650 sky-mismatch persistent skips; R691 5x
+    rain-invented same disease; logs/_r755_diag.py: 6/8 samples genuine).
+    Whitelist-first + stricter-wins clause => the recap can never widen what
+    the gate passes; gate token faces untouched. Empty wx -> "" (no feed, no
+    recap - byte-shape then matches the pre-wiring prompt)."""
+    if not wx:
+        return ""
+    w = wx.lower()
+    if re.search(r"clear|晴", w):
+        rule = ("天空面只许晴系直读（如「天清气朗」「太阳正好」）或完全不提天气；"
+                "严禁任何阴系措辞（天阴/阴着/阴天/多云）。")
+    elif re.search(r"rain|drizzle|shower|雨", w):
+        rule = ("天空面只许雨的如实直读（如「雨还在下」「撑着伞」「檐下避雨」「地上的水洼」）"
+                "或完全不提天气；严禁一切天气正面评估与外出适配语"
+                "（天气挺好/天气好/天气不错/天气正好/天气挺适合/天气正合适/这天挺好/"
+                "清爽/清清爽爽/清清的/晴/阳光/太阳/晒，"
+                "及「今天+正好/适合+外出/转转/逛逛/散步/走走」）。")
+    elif re.search(r"cloud|overcast|阴|多云", w):
+        rule = ("天空面只许阴云如实直读（如「天阴着」「云厚」「没下雨」）或完全不提天气；"
+                "严禁晴系措辞（晴/阳光/太阳/晒/天气挺好/天气正好/天气挺适合/天气正合适/这天挺好）；"
+                "不带天空字的体感直读（凉爽/凉快）可以。")
+    else:
+        # snow/fog/mist/thunder...: hard-weather regime mirrors the rain rules
+        # (gate #54/#59/#61 trigger on non-clear AND non-cloud alike)
+        rule = ("天空面只许该实况天气的如实直读（含相应防护动作）或完全不提天气；"
+                "严禁一切天气正面评估、晴系措辞与外出适配语。")
+    m = re.search(r"wind\s*([\d.]+)\s*m/s", wx, re.I)
+    if m:
+        wind = ("风只许按实况量级措辞：" +
+                ("「风轻轻的/风不大」。" if float(m.group(1)) <= 3
+                 else "「风不小/风挺大」（严禁任何弱化变体与弱化名词）。"))
+    else:
+        wind = "实况无风速数据：完全不提风。"
+    return ("【本日天气速记·最高优先级·贴近你的输出】此刻实况天气=%s。%s%s"
+            "此速记与前文硬约束同效，冲突时以更严者为准。\n" % (wx, rule, wind))
+
 def build_prompt(cid, text, sig):
     p = persona_digest(text)
     ev = "\n".join("- " + e for e in viewpoint_events(text, sig)) or "- （今日无新城市事件）"
@@ -1327,6 +1386,7 @@ def build_prompt(cid, text, sig):
             f"今天日期是 {sig.get('day')} 号（{sig.get('day_parity')}）：你人设里凡以「单日/双日/逢单/逢双」等日期奇偶为前置条件的习惯，只许写与今天同侧的进行态或完成态；另一侧严禁写成今天已发生或正在发生，只许以规则自述（人设原文规则句可原样引用）、按规则的自然推论或未来打算句式提及，严禁借引用断言今天发生了错侧动作，写错侧视为编造；同样严禁把你卡面没有奇偶前置的习惯硬捆绑到单日/双日名下——卡面没有的规则不得借日期之名新造，日期奇偶只许与你人设原文里真带奇偶字样的规则搭配。\n"
             f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历且天空类型必须与喂入天气串一致（喂入 clear/晴 严禁「天阴着/阴天/多云」等阴系措辞，喂入非晴天气（cloud/阴/雨/雷/雾等一切非 clear/晴 的天气）严禁「天清/天晴/晴天/天气清（含「天气」二字后面隔了几个字才落「清」字的插入变体）/天儿清（含「天儿」二字后隔字才落「清」的插入变体）/以及省略天字、拿「清清的」这类叠字清词直接当天气或天色谓语的写法（描写江水水色除外）/阳光/太阳/晴得好/清气朗/清朗/晒得/天气挺好/天气正好/天气好/天气不错/好天气/天气挺适合/天气正合适/这天挺好/这天正好/这天贼好/这天挺适合/天儿正好（这十二种=不带天空字或省略天气字的好天气正面评估断言·含「还」字插入形（天气/天儿+还+挺好/正好/好/不错/挺适合，如「天气还挺适合外出」）与「还真」双字插入形（如「这天气还真挺适合外出走走」）·同属晴系变体·雨阴天下的「正好/适合/合适+外出/走走/逛/散步/溜达」类适配语同禁·含「天气清清爽/清爽」类爽形体感句（含单爽「清爽得很」形）——雨/雾/雪/雷喂入时无论是否在后引出「正好/适合+外出/看江水」类适配语一律同禁（flat 形与复合形同禁）·云天下单纯爽形体感直读合法）」等晴系措辞，且喂入非晴天气时严禁把任何带「晒」字的动作（不论晒的对象是什么）写成当下的天气适配句或意图句，无论适配语前置还是后置均不许与「正好/适合/该……了」类当下适配语共现——阴天无日可晒，此类句=变相晴断言；你人设原文自带「晒」字字样的只许规则自述式引用，且严禁与任何适配语搭配，喂入 clear/晴 时晒日动作不受此限，但你「语言风格」里自有的口头禅（即使含「清/晴」字样）、含「清」字的时间词（如清早/清晨）与「清爽/清清爽爽/清凉」类体感词、以及描写江水/河水水色的「清」字用法（如「江水清清的」）都不属晴系、可照常引用（但凌晨时辰的时间词仍受下方时段词禁令约束）），天气只许用中文措辞描述（如「天阴着/天清气朗」），严禁把喂入天气串里的英文天气代码原样抄进年轮（如「天气cloud」「天气 clear」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许写「风轻轻的/风不大」，喂入风速>3m/s 只许写「风不小/风挺大」类如实量级措辞（此时严禁写「风不大/风也不大/风轻轻的/风声轻轻的」等任何带插入字的弱化变体，也严禁「微风/和风/清风/风轻」等弱化名词），风速数据缺失则完全不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止出现「天气预报说/预报/听说」等消息源归属字样。实况与事件流从无台风数据，严禁提及任何台风场景（如「台风夜/台风刚过」）——「台风季」季节概念读法除外。喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象。城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」——此类状态恒无锚）。城市事件流也从无行情开盘/收盘等交易场次数据，严禁对开盘/收盘/行情收做当下状态断言（如「开盘这会儿/行情收得清清」——场次状态恒无锚；开盘/收盘等场次词仅当本卡人设本就带行情/盘口/交易/盯盘域词才可提及，人设原文习惯自述如「收盘才想起」也仅限此类卡面——人设与行情盘口无关的严禁出现任何场次词）。事件清单中的开发流水轮次号（如 round 156、R156）属开发循环内部标识而非市民可亲历的具体事，严禁以任何形式写进年轮。人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的，如『广场人流峰值时绕场三圈』），条件未被事件清单或实况坐实时严禁触发该场景，严禁用『还是/照例/依旧』等惯常化措辞把条件行为写成惯常延续，只能写无条件的人设日常；提及时间只许锚定喂入的当前时刻，严禁编造开工/收班/时刻表/『再过几小时』等时间细节，严禁使用与当前时刻不符的时段词（如凌晨时辰写『今早/今晨/早晨/晨光/清晨/清早/晨风』、白天写『今晚/今夜/深夜』）；当前时刻未到放学时点（15 时前）严禁把放学写成已完成的事（如『今早放学绕路看了眼』——放学时刻无数据锚），只能写放学后的打算（如『放学还得绕路去看』）；只许写你卡面人设与你自己的生活，严禁写入不属于你人设的任何行为或场景（如你的人设没有学生身份就严禁提及『放学』类校园生活）；喂入面从无雾况数据，除非你卡面人设本身带「雾」字（如江雾习惯），严禁对雾做任何断言（如「江面上的雾挺大」）。\n"
             f"{diversity}\n"
+            f"{weather_recap(wx)}"
             f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节），只输出这几句话本身。")
 
 def add_ring(path, cid, line, anchor_note):
@@ -1592,6 +1652,7 @@ def main():
                   f"居民「{n1}」人设：{persona_digest(texts[1])['traits']}，职业{persona_digest(texts[1])['prof']}。\n"
                   f"现在真实北京时间 {sig['now']}，上海实况天气：{wx}。\n"
                   f"硬约束（锚定律从严）：台词中提及的具体事必须逐字来自事件清单原文短语，不得添加清单外的具体事实。每行台词直接以台词本身呈现，开头禁止加任何称谓、人名或序号前缀；提及天气只许描述此刻实况亲历且天空类型必须与喂入天气串一致（clear 严禁阴系措辞、非晴天气（cloud/阴/雨/雷/雾等一切非 clear/晴 的天气）严禁晴系措辞，含天气挺好/天气正好/天气好/天气不错/好天气/天气挺适合/天气正合适/这天挺好/这天挺适合（含「还」字插入形，如「天气还挺适合」，及「还真」双字插入形，如「这天气还真挺适合外出」）这类不带天空字或省略天气字的好天气正面评估断言·同属晴系变体，非晴天气下「今天/今儿正好/挺适合/正合适+外出/走走/转转」类把今天当适合外出理由的适配句同禁（雨直读、等雨停、带伞等雨条件句除外·雨/雾/雪/雷下「天气清清爽/清爽」类爽形句（含单爽「清爽得很」形）无论是否引出「正好/适合+外出/看江水」类适配语一律同禁·云天下爽形体感直读合法），也含拿「清清的」当天气或天色谓语的天字省略形（描写江水水色除外）；喂入非晴天气时严禁把任何带「晒」字的动作（不论晒的对象是什么）写成当下的天气适配句或意图句，无论适配语前置还是后置均不许与「正好/适合/该……了」类当下适配语共现（阴天无日可晒=变相晴断言）——人设原文自带「晒」字字样的只许规则自述式引用且严禁配适配语，喂入 clear/晴 时不受此限），天气只许用中文措辞描述，严禁原样抄写英文天气代码（如「天气cloud」「天气 clear」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许「风轻轻的/风不大」，喂入风速>3m/s 只许「风不小/风挺大」类如实量级措辞（此时严禁「风不大/风也不大/风轻轻的/风声轻轻的」等任何带插入字的弱化变体与「微风/和风/清风/风轻」等弱化名词），缺风速则不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止「天气预报说/预报/听说」等消息源归属字样；实况与事件流从无台风数据，严禁提及任何台风场景（如「台风夜/台风刚过」）——「台风季」季节概念读法除外；喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象；城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」）；城市事件流也从无行情交易场次数据，严禁对开盘/收盘/行情收做当下状态断言；场次词仅当双方人设本就带行情/盘口/交易/盯盘域词才可提及，人设与行情盘口无关的严禁出现任何场次词；事件清单中的开发流水轮次号（如 round 156、R156）属开发循环内部标识，严禁引用；人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的），条件未被事件清单或实况坐实时严禁触发该场景，严禁惯常化措辞绕过，只能写无条件的人设日常；禁止编造开工/收班/时刻表/『再过几小时』等时间细节，禁止使用与当前时刻不符的时段词（如凌晨时辰写『今早/今晨/早晨/晨光/清晨/清早/晨风』、白天写『今晚/今夜/深夜』）；当前时刻未到放学时点（15 时前）禁止把放学写成已完成的事（如『今早放学绕路看了眼』），只能写放学后的打算（如『放学还得绕路去看』）；两位居民只许说自己卡面人设内的生活，人设没有学生身份就严禁提及『放学』类校园生活；喂入面从无雾况数据，除非卡面人设本身带「雾」字（如江雾习惯），严禁对雾做任何断言（如「江面上的雾挺大」）。\n"
+                  f"{weather_recap(wx)}"
                   f"围绕其中一件真实事件，写两句话：「{n0}」对「{n1}」说的一句（20-40字），「{n1}」回「{n0}」的一句（20-40字）。输出两行，每行一句，不要序号。")
         try:
             sig["card_text"] = "\n".join(texts)  # gap #18: both cards anchor the meet gate
