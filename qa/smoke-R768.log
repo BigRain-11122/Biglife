@@ -1,0 +1,11 @@
+qa/smoke-R768.log — QA Smoke Test 第170证（2026-09-30 ~12:2x @BigLife-OSLoop·T-20260928-05 数据面自检五项·P0 判据窗随行轮）
+[1] poolgen tick：=== 2026-09-30 12:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（state/poolgen_run.log 尾行一手实读·间隔 <24h 判据持续满足·池达标自停维护面·本轮零重扫）→ PASS
+[2] census 新条目：本轮批 10 环全中零留冷（C-04778~C-04787 十席首环·批 7102c630+sync fd0cf295·ring 4771→4781·产出率 10/10 首过全落连庄第十三批）→ 09-30 全域环总数 386=R767 面 376+本批 10 账平零差（census 域 [锚] 当日行 python 直数 386·381 文件分布）→ PASS
+[3] light gate rows=10030 unique=10030 over_cap=0 ring 4771→4781（ring-bearing 面·sync commit ring=4781 实测账平）→ PASS
+[4] 三码闸：generate_census:REGISTRY-FROZEN resident_intake:REGISTRY-FROZEN mirror_intake:REGISTRY-FROZEN（--force 实弹全测·强冻盘 state/registry-freeze.lock 在盘 Test-Path True·三闸 exit=4×3·零写盘）→ PASS
+[5] QC 例行免巡：R765 全量实跑 problems=0 在案（QC-REPORT 11:35 随轮入库·下到期 ≤R771·本轮按频免）→ PASS
+【P0 停造人强冻令判据窗监测（令点 09-30 05:38 起 12h→17:38 到期复核·窗内每轮随行·D-20260930-02 口径定谳后 15:07 起单一口径 A-filter 实测呈报）】a. 双闸：light_rows=10030 unique=10030 over_cap(>C-10036)=0（python 实测）→ 满足；b. 三码闸 --force 实弹全拒零写盘（本轮全测 exit4×3）→ 满足；c. 强冻点（09-29 18:37）后 A-filter census 新增卡 0 行（git --diff-filter=A 实测 Lines=0）→ 满足；d. 判据「12h 新增 0 新 ID」现行满足态（05:38→12:1x ~6.6h 经·零新 ID·年轮线=既有卡迭代非注册·D-20260930-02 监测面/注册面正式分离定谳）。
+【核卡抽验 2/2 PASS】C-04778 QT「侬晓得伐，今朝雨还在下，收盘才想起泡面坨了，得赶紧去买碗热乎的。数据不会骗人，人会，这风挺大，得小心避避。」/C-04787 NS「这事儿有讲究，今儿这雨还不小，伞借出去怕是收不回来了。」——两席环行均雨天实况域内（与真实天气喂料一致）·[锚] 2/2 齐备（卡面直读·registry/QT/C-04778.md+registry/NS/C-04787.md·[锚] 城市实况 2026-09-30〔FluxVerse 事件流+真实时间天气〕）·口头禅领句合规（「侬晓得伐」/「这事儿有讲究」）·机审门 v0.43 批内全审过门在案。
+【decisions.md 12:05 新漂移四新审核（D-20260930-01/02/03/04·三条涉司）】D-01 回执核销批=本司 F-20260930-BL01（U178 治理日志首跑）收悉知晓自结 closed——无异议；D-02 停造人监测口径定谳=本司 F-20260930-BL02 呈请采纳（「新增 ID」唯一判据=census 域新增卡文件数 git --diff-filter=A+light rows/unique 双闸·年轮环 commit 既有居民 ID 不计入·年轮迭代线照旧）+15:07 起值守轮单一口径 A-filter 实测呈报+17:38 判据窗到点当轮必落复核——完全一致·无异议·接线随行；D-03 法务延窗（@BigDomain/@市 法务）零涉本司；D-04 Bonsai 机器队首轮收口=本司 F-20260929-BL01 台词池对照 observe 维持·GPU 档复验走夜窗既有排程（bm-c 16GB 档）·adopt 前置未触发——与本司留单态一致·无异议·窗后收口走下轮（13:00 窗未至）。
+[INFO] 尾查: 集团 orders.md mtime=2026-09-30 11:59:41（新漂移 ~12:0x=三方案 v3 运动画图集正规化令 @CPH4 实验室主承接·O-034 复议回执+O-033 在途接续·零涉本司）
+[INFO] 尾查: 集团 ceo-review.md mtime=2026-09-30 11:39:54（维持=R761 核验态）·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 维持）
