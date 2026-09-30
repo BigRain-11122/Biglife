@@ -1,0 +1,11 @@
+qa/smoke-R766.log — QA Smoke Test 第168证（2026-09-30 11:4x~11:5x @BigLife-OSLoop·T-20260928-05 数据面自检五项·P0 判据窗随行轮）
+[1] poolgen tick：=== 2026-09-30 11:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（state/poolgen_run.log 尾行一手实读·11:06 维持·间隔 <24h 判据持续满足·池达标自停维护面·本轮零重扫）→ PASS
+[2] census 新条目：本轮批 10 环全中零留冷（C-04758~C-04767 十席首环·批 b70a84f2+sync c2107874·ring 4751→4761·产出率 10/10 首过全落连庄第十一批）→ 09-30 全域环总数 366=R765 面 356+本批 10 账平零差（census 域 [锚] 当日行 python 直数：anchors 20+GM 109+MD 68+NS 28+OR 38+QT 83+RV 20）→ PASS
+[3] light gate rows=10030 unique=10030 over_cap=0 ring 4751→4761（ring-bearing 面·sync commit ring=4761 实测账平）→ PASS
+[4] 三码闸：Tools/generate_census:exit4Y Tools/resident_intake:exit4Y Tools/mirror_intake:exit4Y（--force 亦拒·REGISTRY-FROZEN 强冻盘·本轮实弹全测零写盘）→ PASS
+[5] QC 例行免巡：R765 全量实跑 problems=0 在案（QC-REPORT 11:35 随轮入库·下到期 ≤R771·本轮按频免）→ PASS
+【P0 停造人强冻令判据窗监测（令点 09-30 05:38 起 12h→17:38 到期复核·窗内每轮随行）】a. 双闸：light_rows=10030 unique=10030 max_id=C-10036 over_cap=0（python 实测）→ 满足；b. 三码闸：generate_census/resident_intake/mirror_intake --force 实弹 exit=4 零写盘（本轮全测）→ 满足；c. 强冻点（09-29 18:37）后 A-filter census 新增卡文件 0 行（git 实测）→ 满足；d. 判据「12h 新增 0 新 ID」现行满足态（05:38→11:4x ~6h 经·零新 ID）。
+【核卡抽验 4/4 PASS】C-04758「这事儿有讲究」/C-04762「旧钥匙开新锁，有时候还真开得开」/C-04765「汤要趁烫，话要慢讲」/C-04767「清单第一」——四席环行领句均=卡面**语言**域口头禅领句（卡面直读·regex 实测 True×4）·[锚] 4/4 齐备（城市实况 2026-09-30·FluxVerse 事件流+真实时间天气）·雨天实况域内（雨还在下/撑伞/风挺大——与真实天气喂料一致）。
+[INFO] 尾查: 集团 orders.md mtime=2026-09-30 11:41:41（新漂移 11:41=美术表现专家团介入令 @Biggame 承接·~11:3x 落令·零涉本司；O-20260930-1132 采掘规模化+样本扩容令 @BigMoney=R765 已核维持）
+[INFO] 尾查: 集团 ceo-review.md mtime=2026-09-30 11:39:54（新漂移=BigStream 11:39 行·零涉本司·BigLife 最新行=05:38 P0 停造人强冻令四犯已承接在案=维持）
+[INFO] 尾查: 集团 decisions.md mtime=2026-09-29 13:17:02（维持·零新涉司决策）
