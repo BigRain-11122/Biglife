@@ -1,0 +1,15 @@
+qa/smoke-R756.log — QA Smoke Test 第158证（2026-09-30 09:5x @BigLife-OSLoop·T-20260928-05 数据面自检五项）
+[1] poolgen tick：09:06:02 TOTAL=1440 FAIL_BUCKETS=NONE 连戳（间隔 60min<24h 判据满足·池达标自停维护面·零重复扫描）→ PASS
+[2] census 新条目：本轮批 10 环（C-04659/C-04660/C-04661/C-04662/C-04663/C-04664/C-04665/C-04666/C-04667/C-04668 十席首环·批 dbcfcfd9+sync abc9ef62·ring 4652→4662·批头 join(done)=实落一致·既有居民迭代零新注册·gap #65 修复后产出率 10/10 连庄）→ PASS
+[3] 位置字段非 null：light rows=10030 unique=10030 max_id=C-10036 over_cap=0（python 实测）+ beh rows=10030 slot_null=0 anchor_null_nonreserved=0（behavior mtime 09:33 --auto tick 再生在役）→ PASS
+[4] 三码闸：generate_census:exit4 resident_intake:exit4 mirror_intake:exit4（--qc 亦拒·REGISTRY-FROZEN 零写盘·本轮实弹）→ PASS
+[5] 账平行：09-30 新写环全域 [锚] 直数 267=R755 面 257+本轮批 10 零差（python 全 census 域 registry+anchors 直数实测·sync ring=4662）→ PASS
+【P0 停造人强冻令判据窗监测（令点 09-30 05:38 起 12h→17:38 到期复核·窗内每轮随行）】a. 双闸：light=10030 unique=10030 max_id=C-10036 over_cap=0 → 满足；b. 三码闸 --qc 实弹 exit=4×3 零写盘（本轮全测）→ 满足；c. 强冻点（09-29 18:37）后 A-filter census 新增卡 0 行（git 实测）→ 满足；d. 判据「12h 新增 0 新 ID」现行满足态。
+【核卡抽验 2/2】PASS 零修复（机审门批内全审过门在案）：C-04659（OR 机器站宿舍管理员·首环·口头禅「老地方见」逐字领句+「今早雨还在下，撑着伞」雨天 feed 白名单形+游戏楼亮窗 B1029 加班夜事件域内）：- 2026-09-30 「老地方见，今早雨还在下，撑着伞走过游戏楼，数了数亮着的窗，B1029 挺亮，看来又是个加班夜。」 [锚] 城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）/ C-04664（NS 白玉兰园艺师·首环·「好咯」风格领句+雨伞白名单形+「风挺大」风况量级随行+浇水方案复核本职域内+白玉兰投影 NS 塔区 face 域内）：- 2026-09-30 「好咯，今早撑着伞来园子，地上的水洼映着白玉兰的投影，先复核一遍浇水方案，风挺大，得小心些。」 [锚] 城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）
+[INFO] 尾查: 集团 orders.md mtime=2026-09-30 05:38:08 维持（P0 已承·零新漂移）
+[INFO] 尾查: 集团 decisions.md mtime=2026-09-29 13:17:02 维持（零涉本司新决策）
+[INFO] 尾查: 集团 ceo-review.md mtime=2026-09-30 09:41:45 新漂移=Biggame 域行（X1487 收口）零涉本司记档
+[INFO] 尾查: 本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 维持）
+[INFO] 例行面: 相遇 09-30 3/3 满日额（R711 GM+R713 QT+R714 MD）·反思 3/3 满日帽（R712 批）·聚光 10 月 2/2 满（R725+R728）·QC 免巡 ≥R757（R751 problems=0 在案）·基因轮 R751 已兑现·下次 ≥R759
+[INFO] 留冷面: 0 席（R755 gap #65 修复+解卡清零后·本轮批 10/10 首过全落=产出率恢复连庄）
+smoke 五项全勾 → PASS
