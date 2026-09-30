@@ -1,0 +1,13 @@
+qa/smoke-R754.log — QA Smoke Test 第156证（2026-09-30 09:3x~09:4x @BigLife-OSLoop·T-20260928-05 数据面自检五项）
+[1] poolgen tick：=== 2026-09-30 09:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（09:06→本轮维持·间隔 60min<24h 判据满足·池达标自停维护面）→ PASS
+[2] census 新条目：本轮 8 环（C-04642 归位首环落卡+C-04643/44/45/46/47/48/49 七个首环·批 c3f4e125+sync 5da2edb7·ring 4634→4642·既有居民迭代零新注册）→ 09-30 全域环总数 247（expect 247=R753 面 239+本轮 8 账平零差·census 基 [锚] 当日行数：anchors 20+GM 75+MD 48+NS 16+OR 24+QT 52+RV 12）→ PASS
+[3] 位置字段非 null：citizen-behavior.jsonl 10030 行 slot_null=0（灰名单除外·非 reserved=0）·citizens-light block_null=0 → light gate rows=10030 unique=10030 over_cap=0 ring 4634→4642（ring-bearing 面·sync commit ring=4642 实测账平·本轮 8 卡 recent_ring_date=today True）→ PASS
+[4] 三码闸：Tools/generate_census:exit4Y Tools/resident_intake:exit4Y Tools/mirror_intake:exit4Y（--force 亦拒·REGISTRY-FROZEN 强冻盘·本轮全测）→ PASS
+【P0 停造人强冻令判据窗监测（令点 09-30 05:38 起 12h→17:38 到期复核·窗内每轮随行）】a. 双闸：light_rows=10030 unique=10030 max_id=C-10036 over_cap=0（python 实测）→ 满足；b. 三码闸：generate_census/resident_intake/mirror_intake --force 实弹 exit=4 零写盘（本轮全测）→ 满足；c. 强冻点（09-29 18:37）后 A-filter census 新增卡文件 0 行（git 实测）→ 满足；d. 判据「12h 新增 0 新 ID」现行满足态。【核卡抽验 2/2】PASS 零修复（机审门 v0.43 批内全审过门在案）：C-04642（GM·首环落卡·口头禅逐字领句·老主顾搬家串门事件域内）：- 2026-09-30 「今早上班路遇老主顾，他搬家了，还特意来看看我。我送走的老主顾，比这城里一半的楼岁数都大。希望每一个新市民都能找到属于自己的温暖角落。」 [锚] 城市实况 2026-09-30（FluxVerse 事件流+真实时间天气） / C-04649（口头禅逐字领句+「茶凉些了」出摊节奏行为域内）：- 2026-09-30 「看天吃饭，看行情穿衣，今朝出摊得等到茶凉些了。」 [锚] 城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）
+[INFO] 尾查: 集团 orders.md mtime=2026-09-30 05:38:08 维持（本轮已承 P0·零新漂移）
+[INFO] 尾查: 集团 decisions.md mtime=2026-09-29 13:17:02 维持（本轮已承 P0·零新漂移）
+[INFO] 尾查: 集团 ceo-review.md mtime=2026-09-30 08:37:20 维持（本轮已承 P0·零新漂移）
+[INFO] 尾查: 本仓 orders/ newest=O-20260928-1410-HQ-C.md 维持
+[INFO] 例行面: 相遇 09-30 3/3 满日额（R711 GM+R713 QT+R714 MD）·反思 3/3 满日额·聚光 10 月 2/2 满（R725+R728）·QC 免巡 ≥R757（R751 problems=0 在案）·基因轮 R751 已兑现·下次 8-10 起算 ≥R759
+[INFO] 留冷面: 2 席 sky-mismatch persistent 门内跳过零生成痕迹（C-04638 第N轮/C-04650 首见二连·stays due 自然再试·诚实门禁健康态）
+smoke 五项全勾 → PASS
