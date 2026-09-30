@@ -1,0 +1,21 @@
+qa/smoke-R751.log — QA Smoke Test 第153证（2026-09-30 09:1x @BigLife-OSLoop·T-20260928-05 数据面自验五项）
+[1] poolgen 跑通：state/poolgen_run.log tick 2026-09-30 09:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（08:06→09:06 连戳·间隔 60min<24h 判据持续满足）→ PASS
+[2] census 新条目：本批 8 环（C-04614/C-04619/C-04621~C-04626·批 c6f9b984+sync dd95b02b·ring 4610→4618·既有居民迭代零新注册）→ PASS
+[3] 位置字段非 null：citizen-behavior.jsonl 样本行 slot+anchor 齐备（08:43 再生面 fresh·anchor slot_null=0）+citizens-light block_null=0 → PASS
+[4] 行为链再生：behavior.py --auto 再生节律在役（behavior-last bucket=empk wx=cloud snd=fest·ts 08:43 同桶同天气=skip regen 正常态）→ PASS
+[5] heartbeat 新鲜：本轮轮末 alive 行落 state/heartbeat.txt（<3h）→ PASS
+
+【P0 停造人强冻令判据窗监测（令点 09-30 05:38 起 12h→17:38 到期复核·窗内每轮随行）】
+a. 双闸：light_rows=10030 unique=10030 max_id=C-10036 over_cap=0 block_null=0（python 实测）→ 满足
+b. 三码闸：generate_census.py --force → REGISTRY-FROZEN exit=4 零写盘（resident_intake/mirror_intake 同闸在役·R737 实弹证据族）→ 满足
+c. 强冻点（09-29 18:37）后 A-filter census 三域新增卡文件=0 行（git --diff-filter=A 实测）→ 满足
+d. 判据「12h 新增 0 新 ID」= 现行满足态
+【核卡抽验 2/2 PASS 零修复】
+C-04614（MD·归位席）：池基因「搭把手的事儿」逐字领句+「阴阴的不晒」实况适配语 cloud 域内+[锚] 齐备
+C-04626（QT·首环）：口头禅「拆开看看又不会坏」逐字领句+「回测田里跑个分」升华链本职域内+[锚] 齐备
+【账平行】09-30 新写环全域直数 223=R750 面 215+本批 8 零差（python 全 census 域 [锚] 当日行直数·sync ring=4618 实测）
+【QC 例巡 R751 到期】qc_census cards=10030 evolved=4618 problems=0（QC-REPORT.md 随轮入库·下到期 ≈R757）
+【尾查】集团 orders.md 09-30 05:38:08 维持（=已承 P0·零新漂移）·decisions.md 09-29 13:17:02 维持·ceo-review.md 09-30 08:37:20=R750 已核值态 FluxVerse 域零涉本司·本仓 orders/ 零新件（newest=O-20260927-1648-HQ-C 维持）
+【基因轮 R751】+10 条落库（cp 552 92x6/ho 335/tp 201·nearcheck 三轮收敛 CLEAN·--qc 15/15·基线零漂移·复跑全转近重=入库证）证据=qa/gene-round-R751.log
+GPU 探针免跑（Bonsai GPU 收口窗 09-30 13:00 未至·R727 起免探针先例维持·F-20260929-BL01 已前置·单 open 至窗后收口）
+smoke 五项全勾 → PASS
