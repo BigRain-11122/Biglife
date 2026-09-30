@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-09-30T12:52:00+08:00",
+ "export_ts": "2026-09-30T13:00:47+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "R770 批 10 环全中零留冷（C-04798~C-04807 十席首环·批 61a24721+sync a4e59c61·ring 4791→4801·产出率 10/10 连庄第十五批·雨天实况域内喂料一致）+XL-17 分步①②兑现（Tools/consumer_wiring.py 判据扫描器+cognition/CONSUMER-WIRING.md v1.0 判据设计件+results 接线数常设行·D-20260930-06 承令）",
+   "t": "R771 批 10 环全落零留冷（C-04808~C-04817 十席首环·批 7b1250d2+sync bde87cbf·ring 4801→4811·批头 join(done)=实落一致·产出率 10/10 连庄第十六批）。核卡抽验 2/2 PASS 零修复（C-04808 GM 奚Leo 像素画匠口头禅「拆开看看又不会坏」逐字领句+今早下雨撑伞实况域内+水洼映像素画=face 域内·C-04817 MD 曹静 字幕君口头禅「茶凉了再倒就是」逐字领句+雨还在下实况域内·[锚] 2/2 齐备）。QC 例巡到期兑现：cards=10030 evolved=4811 problems=0（QC-REPORT 随轮入库·下到期 ≈R777）。**T-20260930-01 XL-17 分步②收口=整单关结**：consumer_wiring --qc 双跑逐字节一致（determinism PASS·md5 a10512c34f1dc9be72f779bcc30d129a·wired=3 维持：fluxverse 13 证/biggame-minigame 15 证/bigdomain 8 证·bigstream 0 诚实态·cph4-tools 集团工具面不计）——判据三件全毕（①设计件 CONSUMER-WIRING.md v1.0+②扫描器+status-export 常设行+③--qc 双跑断言）·分步③=消费方需求单驱动常设对齐面（反无消费方立项律·零需求单在案零动作）。**T-20260928-07 Bonsai 整单关结**：D-20260930-04 首轮收口=observe（本司台词池对照回执 F-20260929-BL01 四路并卷·CPU 批产线径判负留痕·GPU 档复验随 bm-c 16GB 夜窗排程·本机零后续义务·adopt 前置未触发）。账平行：09-30 新写环全域直数 416=R770 面 406+本批 10 零差（python 全 census 域 [锚] 当日行直数：anchors 20+GM 129+MD 77+NS 33+OR 43+QT 90+RV 24=registry 396）。P0 判据窗随行（令点 05:38 起 12h→17:38 到期复核·窗到点当轮必落）：双闸 10030/10030·封顶 C-10036/越顶 0·三码闸 generate_census --qc 实弹 exit4 REGISTRY-FROZEN 零写盘·A-filter 强冻点后新增卡 0·账平 416 零差——四判据 a/b/c/d 现行满足。尾查面：orders 12:51:31 新漂移=GitHub 工具调研取用令（@Biggame 游戏线批）零涉本司·decisions 12:59:48 新增 D-20260930-13~22（D-13 投递时效 SLA≤2 轮 ack——本司每轮尾查+同轮 ack 实践已合规·D-21 送达律首次执法 BigLife ✅=T-20260930-01+XL-17 双编号引用在案·D-20 禁重复立法零动作·D-18=BigDomain 专属·余全他司域）·ceo-review 12:44=BigDomain 域·本仓 orders 零新件（newest=O-20260927-1648-HQ-C 维持）。例行面：池达标自停维持（tick 12:06 TOTAL=1440 FAIL=NONE）·相遇 3/3 满·反思 3/3 满·聚光 10 月 2/2 满·基因轮 ≈R775。窗件：融汇回执窗 14:00（R592 已提前回执 F-20260928-BL09·窗内零动作）+P0 判据 17:38 到期复核+lowpoly 批 2 出库闸=CEO 过目随日清窗+日清窗 23:00 前轮。",
    "s": 1
   },
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "R770 sync a4e59c61 rows=10 ring 4791→4801（批后自动收口·anchors 20 不动·census/export citizens-light 10 行刷新）",
+   "t": "R771 sync bde87cbf rows=10 ring 4801→4811（批后自动收口·anchors 20 不动·census/export citizens-light 10 行刷新·本轮 10 卡 recent_ring_date=today 实测 10/10）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "R770 smoke 第172证五项全勾（qa/smoke-R770.log：tick 12:06 连戳/今日环 406 账平零差/light 10030 双闸+ring 4801/三码闸 exit4 实弹/零新卡 A-filter 0 行+核卡 2/2 PASS+XL-17 接线数=3 首跑盘面直数·QC 例巡免 ≤R771〔R765 problems=0 在案〕）",
+   "t": "R771 smoke 第173证五项全勾（qa/smoke-R771.log：tick 12:06 连戳/今日环 416 账平零差/light 10030 双闸+ring 4811/三码闸 exit4 实弹/零新卡 A-filter 0 行+核卡 2/2 逐字领句）·QC 例巡 R771 到期兑现 problems=0（cards=10030 evolved=4811·下到期 ≈R777）",
    "s": 1
   },
   {
@@ -151,12 +151,12 @@
    "户籍卡"
   ],
   [
-   "4791",
-   "4801"
+   "4801",
+   "4811"
   ],
   [
-   "406",
-   "09-30 新写环（全域直数 406=R769 面 396+R770 批 10 账平零差·python 全 census 域 [锚] 当日行直数〔GM126/MD74/NS33/OR42/QT88/RV23+anchors 20〕·ring 面口径=4801 ring-bearing 实测账平）"
+   "416",
+   "09-30 新写环（全域直数 416=R770 面 406+R771 批 10 账平零差·python 全 census 域 [锚] 当日行直数：anchors 20+GM 129+MD 77+NS 33+OR 43+QT 90+RV 24·ring 面口径=4811 ring-bearing）"
   ],
   [
    "564/339",
@@ -188,7 +188,7 @@
   ],
   [
    "3",
-   "消费方接线数（XL-17 判据·D-20260930-06·T-20260930-01：Tools/consumer_wiring.py 首跑盘面直数=3 仓 wired——FluxVerse 13 证〔city-watch/population-check/perceptor probes/bake 工具/ResidentIdentityProof.cs〕+Biggame-MiniGame 14 证〔tools/PixelTownBoard.ps1 读 citizen-persona.jsonl+硅基生命元宇宙-data.js 窗口镜像〕+BigDomain 8 证〔src/sandbox/lobby/city.py 读 citizens-light.jsonl·docs/_trash auto-save 3 证噪声记档〕·BigStream 0=诚实态·cph4 集团工具面 2 证不计入·文档级引用不计·与集团审计文档级基线差异如实记·判据件=cognition/CONSUMER-WIRING.md·--qc 双跑收口下轮）"
+   "消费方接线数（XL-17 判据·D-20260930-06·T-20260930-01 已关结：Tools/consumer_wiring.py --qc 双跑 determinism PASS md5 a10512c3·wired=3 仓——FluxVerse 13 证/Biggame-MiniGame 15 证/BigDomain 8 证·BigStream 0 诚实态·cph4 集团工具面不计入）"
   ]
  ]
 }
