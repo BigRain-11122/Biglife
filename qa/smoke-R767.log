@@ -1,0 +1,11 @@
+qa/smoke-R767.log — QA Smoke Test 第169证（2026-09-30 ~12:1x @BigLife-OSLoop·T-20260928-05 数据面自检五项·P0 判据窗随行轮）
+[1] poolgen tick：=== 2026-09-30 11:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（state/poolgen_run.log 尾行一手实读·间隔 <24h 判据持续满足·池达标自停维护面·本轮零重扫）→ PASS
+[2] census 新条目：本轮批 10 环全中零留冷（C-04768~C-04777 十席首环·批 2f9e5f5f+sync 22a131ba·ring 4761→4771·产出率 10/10 首过全落连庄第十二批）→ 09-30 全域环总数 376=R766 面 366+本批 10 账平零差（census 域 [锚] 当日行 python 直数·双域 registry+anchors+reserved 全扫）→ PASS
+[3] light gate rows=10030 unique=10030 over_cap=0 ring 4761→4771（ring-bearing 面·sync commit ring=4771 实测账平）→ PASS
+[4] 三码闸：generate_census:REGISTRY-FROZEN resident_intake:REGISTRY-FROZEN mirror_intake:REGISTRY-FROZEN（--force 实弹全测·强冻盘 state/registry-freeze.lock 在盘·零写盘）→ PASS
+[5] QC 例行免巡：R765 全量实跑 problems=0 在案（QC-REPORT 11:35 随轮入库·下到期 ≤R771·本轮按频免）→ PASS
+【P0 停造人强冻令判据窗监测（令点 09-30 05:38 起 12h→17:38 到期复核·窗内每轮随行）】a. 双闸：light_rows=10030 unique=10030 over_cap=0（python 实测）→ 满足；b. 三码闸 --force 实弹全拒零写盘（本轮全测）→ 满足；c. 强冻点（09-29 18:37）后 A-filter census 新增卡 0 行（git 实测 Lines=0）→ 满足；d. 判据「12h 新增 0 新 ID」现行满足态（05:38→12:1x ~6.5h 经·零新 ID）。
+【核卡抽验 2/2 PASS】C-04768「雨还在下，撑着伞慢悠悠地走着，江面上的水洼泛着光。今天的日子还是得悠着点过。」/C-04777「收摊了，明天见。雨还在下，今早出门得撑着伞。」——两席环行均雨天实况域内（雨还在下/撑伞=与真实天气喂料一致）·[锚] 2/2 齐备（城市实况 2026-09-30·FluxVerse 事件流+真实时间天气·卡面直读）·机审门 v0.43 批内全审过门在案。
+【基因轮 R767 兑现 +10 条】cp 558→564（六轴 94x6 均衡）/ho 337→339/tp 203→205·nearcheck 先验后登四轮收敛 v1 拦 7→v2 拦 3→v3 拦 1→v4 10/10 CLEAN·--qc 15/15 PASS·--baseline 三池 criterion_ok 全持（R417 定谳值零漂移）·复跑全转近重 10/10=入库证·证据件 qa/gene-round-R767.log。
+[INFO] 尾查: 集团 orders.md mtime=2026-09-30 11:49:07（新漂移 11:49=O-20260930-1147 组合融合线令 @BigMoney 承接+美术表现专家团 @Biggame=11:4x 已核维持·全部零涉本司；P0 强冻维持）
+[INFO] 尾查: 集团 decisions.md mtime=2026-09-29 13:17:02（维持·零新涉司决策）
