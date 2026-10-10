@@ -1,0 +1,7 @@
+qa smoke R789 @2026-10-10 21:1x
+[0] status-export json 回读 PASS export_ts=2026-10-10T21:11:00+08:00
+[1] poolgen tick PASS :: === 2026-10-10 21:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] 今日新写环 65 账平 PASS（本批 10+相遇 2·全域直数=65）
+[3] behavior anchor 非荣誉席 5/5 ok slot=宅户 PASS（mtime=10-10 20:33）
+[4] light 双闸 rows=10030 unique=10030 封顶=C-10036 over_cap=0 PASS（受控复产·注册面零动作）
+[5] heartbeat 最新行 :: 2026-10-10 21:0x R788 @BigLife-OSLoop alive: 当前活=年轮批 10/10 落

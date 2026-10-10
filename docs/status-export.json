@@ -1,10 +1,10 @@
 {
-  "export_ts": "2026-10-10T20:59:48+08:00",
+  "export_ts": "2026-10-10T21:11:00+08:00",
   "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
   "depts": [
     {
       "n": "年轮进化线",
-      "t": "**解冻态（CEO 10-10 17:52「解冻」令·U367 锁删存档）**：10-10 新写环 31（R778 批 10+R780 批 9+相遇 2+R781 批 10）·R782~R785 年轮批 GPU 他窗在产让路 10 due 留冷自然重试（不修不报障律）·QC R785 例巡 problems=0（cards=10030·evolved=4851）·**T-20261010-01 主件交付**：R-L1 消费率闸机器判据 Tools/rl_gate.py v1.0 首跑 pass（13 导出面分类完备——消费面 4：light/behavior/anchors/persona·未消费面 9 已标 unconsumed 入 cognition/consumption-ledger.json·接线仓数 3 与 XL-17 同口径·阈值待校准=前置②行业回执未至·周行 docs/audits/benchmark-gap-biglife.jsonl·ruff 静检全绿）·--qc 双跑留单下轮·T-20261010-02 关结（OH-20261008 E1 切片上链 3f64d81）·造人线受控复产计划 T-20261010-03 立毕（需求触发制）·双过窗排产 T-20260924-10/T-20260925-17 ≥10-12。当前活=R-L 接线收口+年轮批待 GPU 窗；最近实物=rl_gate.py+consumption-ledger+QC-REPORT problems=0 @10-10 20:3x；下里程碑=R-L1 --qc 双跑+阈值回填窗（回执到）+年轮批 GPU 窗恢复。 ·R788 批 10/10 落环（evolved=4861）+Qiqi 首件 T-20260925-16 整单关结（docs/festival-20261031-qiqi-first-delivery.md·问候样 3 条过机器闸+仪式建议稿三段式+C-00002 首件交付环年轮 3 圈）",
+      "t": "**解冻态（CEO 10-10 17:52「解冻」令·U367 锁删存档）**：10-10 新写环 65（复工七轮全产：R778 批 10+R780 批 9+相遇 2+R781 批 10+R787 批 9+相遇 2+R788 批 10+Qiqi 首件环 1+R789 批 10+相遇 2·账平=双域直数 65）·R782~R785 年轮批 GPU 他窗在产让路 10 due 留冷自然重试（不修不报障律）·QC R785 例巡 problems=0（cards=10030·evolved=4851）·**T-20261010-01 主件交付**：R-L1 消费率闸机器判据 Tools/rl_gate.py v1.0 首跑 pass（13 导出面分类完备——消费面 4：light/behavior/anchors/persona·未消费面 9 已标 unconsumed 入 cognition/consumption-ledger.json·接线仓数 3 与 XL-17 同口径·阈值待校准=前置②行业回执未至·周行 docs/audits/benchmark-gap-biglife.jsonl·ruff 静检全绿）·--qc 双跑留单下轮·T-20261010-02 关结（OH-20261008 E1 切片上链 3f64d81）·造人线受控复产计划 T-20261010-03 立毕（需求触发制）·双过窗排产 T-20260924-10/T-20260925-17 ≥10-12。当前活=R-L 接线收口+年轮批待 GPU 窗；最近实物=rl_gate.py+consumption-ledger+QC-REPORT problems=0 @10-10 20:3x；下里程碑=R-L1 --qc 双跑+阈值回填窗（回执到）+年轮批 GPU 窗恢复。 ·R788 批 10/10 落环（C-00048~C-00057）+Qiqi 首件 T-20260925-16 整单关结（docs/festival-20261031-qiqi-first-delivery.md·问候样 3 条过机器闸+仪式建议稿三段式+C-00002 首件交付环年轮 3 圈）·R789 批 10/10（C-00058~C-00067 迭代环·evolved 实测 4851=有环卡直数）+相遇第 3 场 RV 城区首对 C-00025×C-00026 双卡互引（今日 meet 3/3 满·关系面 R3 再生 meet 22 账平 QC PASS·md5 7b40a7f5）",
       "s": 1
     },
     {
@@ -155,8 +155,8 @@
       "4851"
     ],
     [
-      "31",
-      "10-10 新写环（R778 批 10+R780 批 9+相遇双卡互引 2+R781 批 10·R782~R784 GPU 让路三轮零批=如实·R781 smoke 账平 31=registry 9+anchors 22）"
+      "65",
+      "10-10 新写环（复工七轮全产账平：批 58〔R778 10+R780 9+R781 10+R787 9+R788 10+R789 10〕+相遇 6〔三场双卡〕+Qiqi 首件环 1·双域 registry+anchors+reserved python 直数 65 零差）"
     ],
     [
       "576/343",
@@ -167,16 +167,16 @@
       "问候库"
     ],
     [
-      "2841094",
-      "社交边总数（citizen-relations R3·block 2822314+buddy 15131+household 3629+meet 20 账平·md5 c7876218·R784 再生·QC PASS）"
+      "2841096",
+      "社交边总数（citizen-relations R3·block 2822314+buddy 15131+household 3629+meet 22 账平·md5 7b40a7f5·R789 再生·QC PASS）"
     ],
     [
       "15131",
       "buddy 边 10 类分布（茶友1612/忘年交1574/对手1533/牌友1520/邻居1515/常客1490/老搭档1490/老主顾1482/棋友1466/工友1461·提及 15143/对 15131）"
     ],
     [
-      "20",
-      "meet 网络对数（R784 盘面再生 19→20=R780 NS 对 C-00010×C-00012 入面·count/last 强度面·QC PASS）"
+      "22",
+      "meet 网络对数（R789 盘面再生 20→22=R787 GM 对 C-00018×C-00019+R789 RV 对 C-00025×C-00026 入面·count/last 强度面·QC PASS）"
     ],
     [
       "10030",
