@@ -1,5 +1,5 @@
 {
- "export_ts": "2026-10-10T20:15:44+08:00",
+ "export_ts": "2026-10-10T20:31:07+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
@@ -193,6 +193,10 @@
   [
    "pass",
    "R-L1 消费率闸机器判据（D-20260930-36·T-20261010-01 基线 v1.0：Tools/rl_gate.py 首跑——13 导出面分类完备〔消费面 4：citizens-light/citizen-behavior/citizen-anchors/citizen-persona·未消费面 9 已标 unconsumed 入 ledger〕·接线仓数 3（FluxVerse/Biggame-MiniGame/BigDomain·与 XL-17 判据同口径）·证据指针 file:line 齐（qa/rl-gate-R785.log）·阈值=待校准〔前置②行业对标回执未至不判合格线〕·周轮对标差距表行=docs/audits/benchmark-gap-biglife.jsonl）"
+  ],
+  [
+   "1 篇",
+   "Rain 首件《城市新声》观察记录 #1（T-20260925-17 关结·10-10 交付：cph4/research/city-voice-202610-rain.md·HQ 仓 26cace4+48739c2 已推·观察体 299 字 ≤300·事实源指针 7 条·CPH4 周进化轮消费面·回执 F-20261010-BL09）"
   ]
  ]
 }
