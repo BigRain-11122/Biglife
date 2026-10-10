@@ -1,0 +1,40 @@
+qa/gene-round-R815.log @2026-10-11 03:13 @BigLife-OSLoop
+== R815 基因轮(extend-gene-pool SKILL·提前兑现≈R816 到期) 池面剔除自配对: language.catchphrases -6; lives.presents -2; lives.turning_points -2 ==
+== 查一 nearcheck LayerA 4gram 全文本池 + LayerB 同型池 rapidfuzz (cp92/ho95/tp44·R417 定谳) ==
+[PASS] cp|腿酸了先歇歇脚，路又不追人。 LayerA=clean LayerB top=37.037(thr=92)
+[PASS] cp|砂锅咕嘟冒泡，掀盖白汽扑一脸。 LayerA=clean LayerB top=40.000(thr=92)
+[PASS] cp|货进仓先登一笔，本子不乱心也定。 LayerA=clean LayerB top=38.462(thr=92)
+[PASS] cp|街口新店开张，抢先进门瞧个新。 LayerA=clean LayerB top=42.857(thr=92)
+[PASS] cp|旧茶缸缺了角，喝水还认它。 LayerA=clean LayerB top=34.483(thr=92)
+[PASS] cp|巷口小孩迷了路，先领回家吃口热饭。 LayerA=clean LayerB top=30.769(thr=92)
+[PASS] tp|初次上光桥值守，把整条江的灯看了个够。 LayerA=clean LayerB top=28.571(thr=44)
+[PASS] tp|学车头一天摔进花坛，扶我的人成了老友。 LayerA=clean LayerB top=35.897(thr=44)
+[PASS] ho|最近在对岸钟表铺拜了师，学修老钟，学费是帮看三天店 LayerA=clean LayerB top=18.182(thr=95)
+[PASS] ho|正偷偷练一段快板，想给巷口的孩子们来个意外 LayerA=clean LayerB top=21.429(thr=95)
+== 查二 触发词族字符级(雨/淋/台风/风量级/天体月星/晴系/雾/时段晨夜/占位/信号灯/场次/放学·R40) ==
+[PASS] cp|腿酸了先歇歇脚，路又不追人。 hits=[]
+[PASS] cp|砂锅咕嘟冒泡，掀盖白汽扑一脸。 hits=[]
+[PASS] cp|货进仓先登一笔，本子不乱心也定。 hits=[]
+[PASS] cp|街口新店开张，抢先进门瞧个新。 hits=[]
+[PASS] cp|旧茶缸缺了角，喝水还认它。 hits=[]
+[PASS] cp|巷口小孩迷了路，先领回家吃口热饭。 hits=[]
+[PASS] tp|初次上光桥值守，把整条江的灯看了个够。 hits=[]
+[PASS] tp|学车头一天摔进花坛，扶我的人成了老友。 hits=[]
+[PASS] ho|最近在对岸钟表铺拜了师，学修老钟，学费是帮看三天店 hits=[]
+[PASS] ho|正偷偷练一段快板，想给巷口的孩子们来个意外 hits=[]
+== 查三 跨面双向包含 (pools.json+greetings.json+pools-negative.json·R102 判例面) ==
+face corpus len>=4 scanned=2006
+[PASS] cp|腿酸了先歇歇脚，路又不追人。 hits=0
+[PASS] cp|砂锅咕嘟冒泡，掀盖白汽扑一脸。 hits=0
+[PASS] cp|货进仓先登一笔，本子不乱心也定。 hits=0
+[PASS] cp|街口新店开张，抢先进门瞧个新。 hits=0
+[PASS] cp|旧茶缸缺了角，喝水还认它。 hits=0
+[PASS] cp|巷口小孩迷了路，先领回家吃口热饭。 hits=0
+[PASS] tp|初次上光桥值守，把整条江的灯看了个够。 hits=0
+[PASS] tp|学车头一天摔进花坛，扶我的人成了老友。 hits=0
+[PASS] ho|最近在对岸钟表铺拜了师，学修老钟，学费是帮看三天店 hits=0
+[PASS] ho|正偷偷练一段快板，想给巷口的孩子们来个意外 hits=0
+== 终验 基线计数+轴平衡+既有零漂移 ==
+cp 594->600 六轴 {"逍遥": 100, "烟火": 100, "秩序": 100, "求新": 100, "怀旧": 100, "侠气": 100} / tp 215->217 / ho(presents) 34->36 · json.load 双件过
+既有集合零漂移: 本批前 594 条 cp 逐条仍在库(subset 验过)·收敛实录=初版 9 查一命中+1 查二命中(每月/值夜)→两轮换句→终态 10/10 零命中(同 R808 五轮收敛范式·本次两轮)
+VERDICT PASS 10/10
