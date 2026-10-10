@@ -1,0 +1,9 @@
+=== qa/smoke-R808.log 2026-10-11 02:0x @BigLife-OSLoop ===
+[1] poolgen tick：state/poolgen_run.log 末戳 2026-10-11 01:06:02 src=auto TOTAL=1440 FAIL_BUCKETS=NONE → 间隔<24h（池达标自停·tick 为维护面）→ PASS
+[2] census 新环：R808 批 4/10 落环（C-00141/C-00151/C-00158/C-00159·批 9470ed24+镜像 fe84b6d4 rows=4·6 席 time-morning 凌晨档门拦留冷自然重试）→ 2026-10-11 全域环总数 30（expect 30=R807 面 26+本批 4 账平零差·census registry+anchors [锚] 当日行机器直数 30）→ PASS
+[3] 造人双闸：light rows=10030 unique=10030 over_cap=0（封顶 C-10036·受控复产零新注册维持）；ring-bearing 4851→4851（既有居民迭代环非新环民）；本批 4 卡 recent_ring_date=today 4/4 → PASS
+[4] 位置字段：behavior anchor 荣誉席 null=3 契约态维持；relations R3 再生态维持（mtime 早于本轮环批=零 meet 增量免重跑·10-11 场额 3/3 已满）→ PASS
+[5] 基因轮 R808：cp 588→594 六轴 99x6/ho 347→349/tp 213→215（nearcheck 终版 10/10 CLEAN+查二 0 拦+查三 162400 面 0+--qc 15/15+--baseline 三池零漂移+入库证 10/10）→ PASS
+[6] heartbeat：上一轮 2026-10-11 01:41:23 os-loop: round done exit=0 <3h → PASS
+tokens: local=4（年轮批 4 落环各 1=4+6 门禁尝试=门内跳过零完成计数·基因轮纯确定性零 LLM）·api=0
+smoke 六项全勾 → PASS
