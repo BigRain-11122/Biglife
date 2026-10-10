@@ -1,0 +1,7 @@
+﻿=== qa/smoke-R803.log 2026-10-11 00:5x @BigLife-OSLoop ===
+1) poolgen tick: 2026-10-11 00:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE (闂撮殧<24h PASS)
+2) census 鏂扮幆: R803 鎵?3 (C-00135/C-00137/C-00138路commit 3657913e) + 鐩搁亣 3/3 鍦?C-00134脳C-00114 (commit cc8b82ef) = 鏈疆 5 鍗℃洿鏂? light rows=10030 闆舵柊娉ㄥ唽 (鍙楁帶澶嶄骇缁存寔)
+3) 浣嶇疆瀛楁: citizen-behavior.jsonl 鍓?00琛?anchor null=3=鑽ｈ獕甯?C-00001/02/03 濂戠害闈紙v3.55 璁捐鎬侊級路闈炶崳瑾?null=0 (PASS); mtime=2026-10-10 23:53
+4) 琛屼负閾? behavior 瀵煎嚭闈㈡柊椴?(mtime 鍦ㄤ笂); relations R3 鍐嶇敓鏈疆瀹炶窇: rows=2841098 meet=24 md5=4907814b (鍦?鍚庢壒閲忓啀鐢熷厬鐜奥稲802婊炵暀娉ㄨ閿€)
+5) heartbeat: 涓婁竴鎴?2026-10-11 00:33:35 <3h (PASS)
+tokens: local=12（反思 C-00134 三试制 ≥2+C-00114 1·[gates:] 注记=重试残迹非拦截） api=0
