@@ -1,0 +1,16 @@
+== BigLife OSLoop smoke R802 == 2026-10-11 00:32
+[1] poolgen tick 连戳（PoolGenLoop PT1H 在役）:
+=== 2026-10-10 22:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-10-10 23:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-10-11 00:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] census 新条目：10-11 新写环 8（R801 批 2+相遇 2+R802 批 2+相遇 2·迭代环零新卡）·registry 冻结维持（双闸 rows=10030 unique=10030 max=C-10036 over_cap=0）
+[3] 位置字段非 null：citizen-behavior slot_null=0（采样前 201 行·first slot=家户·就寝）
+[4] 行为链再生：R3 再生面随 tick --auto 在役（样本行数校验 202）
+[5] heartbeat 3h 内：本文件同轮写入 ✓
+[g] 停造人双闸：PASS（rows=10030 unique=10030 封顶 C-10036 越顶 0·唯 CEO 解禁维持）
+[g] 池轮 10-11 例份：pool_audit PASS 满额自停（axes 72 桶 at_target=72·TOTAL=1440·under_target NONE·determinism 192+25 零漂移）
+[g] 核卡抽验 4/4 PASS：C-00134（「夜里冷，喝口热的再走」池基因领句+风况域内）/C-00140（「街坊一声喊，放下碗就到」池基因领句+cloud 适配语域内·同池共享=C-00695 R192 判例域）/C-00016×C-00017 相遇双卡互引+风况域内·[锚] 4/4 齐备
+[g] 账平行：10-11 新写环全域直数 8=R801 面 4+本批 2+本相遇 2 零差（[锚] 当日行直数）
+[g] 关系面注记：meet 边盘面 22（R3 面 R789 再生后滞留·本日新对 C-00016×C-00017 待场 3 后批量再生·下轮 QC disk!=re-derive 预期捕获=R713 判例域诚实维护）
+[g] 年轮批留冷 8 席：wind-over/time-morning 凌晨档结构性拦（stays due 自然重试·诚实门禁健康态零程序动作）
+tokens: local=14 api=0 api_reason=-
