@@ -1,0 +1,7 @@
+BigLife OS smoke R812 2026-10-11 02:36:08
+ITEM1 poolgen tick: === 2026-10-11 02:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE age=PASS -> PASS
+ITEM2 census new ring lines today=45 by_dir={"census/GM": 9, "census/MD": 7, "census/NS": 3, "census/OR": 5, "census/QT": 12, "census/RV": 5, "census/census/anchors": 4} -> PASS
+ITEM3 behavior rows=10030 slot_null=0 anchor_null=3 ids=C-00001,C-00002,C-00003 -> PASS
+ITEM4 relations meet rows=24 -> PASS
+ITEM5 heartbeat last: 2026-10-11 02:26:52 os-loop: round done exit=0 -> PASS
+VERDICT 5/5 PASS
