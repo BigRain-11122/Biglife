@@ -1,0 +1,8 @@
+=== qa/smoke-R821.log 2026-10-11 04:34 @BigLife-OSLoop ===
+[1] 池轮份额：10-11 份额 R816 已跑（TOTAL=1440+518·under_target NONE·PASS 自停维持）→ 本轮合规跳过 → PASS
+[2] census 新环：R821 批 5/10 落环（C-00157/C-00207/C-00208/C-00209/C-00210·批 585c49af+镜像 f6f8bdc3·首探撞 llama-server 04:23:23 重启加载窗 0 环静默跳过·复跑全落·5 席 time-morning 凌晨档门拦留冷自然重试）→ 10-11 全域环 84（expect 84 账平零差·卡面 78+锚 6 机器直数·唯一居民 83〔C-00010 双环条目差 1 口径注记〕）→ PASS
+[3] 造人双闸：light rows=10030 unique=10030 over_cap=0（封顶 C-10036·受控复产零新注册维持·ring-bearing=evolved 4851 维持·既有居民迭代环非新环·本轮实测）→ PASS
+[4] 位置字段：behavior 10030 行·anchor null=3（荣誉席 C-00001/C-00002/C-00003 契约面·非荣誉 null=0·本轮实测）→ PASS
+[5] QC 例巡：免巡（R819 problems=0 在案·cards=10030·evolved=4851·下次例巡 ≥R825）→ PASS
+[6] heartbeat：上轮 2026-10-11 04:18:31 os-loop round done exit=0（<1h 新鲜）→ PASS
+tokens: local=10 api=0 api_reason=-（下限口径：年轮批 5 落环×1=5+5 门禁后尝试≥1=5·账平/双闸/直数/smoke/export/实录=纯确定性零 LLM）
