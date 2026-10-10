@@ -1,0 +1,22 @@
+qa/gene-round-R823.log @2026-10-11 05:0x @BigLife-OSLoop
+== R823 基因轮(extend-gene-pool SKILL·≈R823 到期兑现·R815 后族距 8) 池面剔除自配对: language.catchphrases -6; lives.hook_objects -2; lives.turning_points -2 ==
+== 查一 nearcheck LayerA 4gram 全文本池 + LayerB 同型池 rapidfuzz (cp92/ho95/tp44·R417 定谳) ==
+[PASS] cp|板凳往肩上一扛，歇脚从来不发愁。
+[PASS] cp|蒸笼一揭盖，白汽先吃了个饱。
+[PASS] cp|锤归锤，凿归凿，搁错半寸浑身不得劲。
+[PASS] cp|街面上刚出的新货，我屋里已经用上了。
+[PASS] cp|老座钟走时不准了，报点却一回没落下。
+[PASS] cp|谁家搬重物喊一嗓子，撂下筷子我就到。
+[PASS] ho|印花的洋铁点心匣
+[PASS] ho|用了两辈子的牛皮针线包
+[PASS] tp|戏班子在村口搭台那回，我从开场蹲到散场。
+[PASS] tp|接下祖传的老铺，账本头一页就写着我的名字。
+== 查二 触发词族字符级(雨/淋/台风/风量级/天体月星/晴系/雾/时段晨夜/占位/信号灯/场次/放学·R40) ==
+[PASS] 10/10 hits=[] ALL PASS（新候选零天气/时段 token=不造结构性门拦·R640 雨特质判例防线）
+== 查三 跨面双向包含 (pools.json+greetings.json+pools-negative.json·R102 判例面) ==
+face corpus len>=4 scanned=2006
+[PASS] 10/10 hits=0 ALL PASS（初版「各有各的」撞 pools.json「雨中行人，各有各的风度」→当轮拦下换句「锤归锤，凿归凿」=R102 跨面撞句实弹再现）
+== 终验 基线计数+轴平衡+既有零漂移 ==
+cp 600->606 六轴 {"逍遥": 101, "烟火": 101, "秩序": 101, "求新": 101, "怀旧": 101, "侠气": 101} / tp 217->219 / ho 349->351 · json.load 双件过
+既有集合零漂移: 登记脚本断言 catchphrases[:600]/turning_points[:217]/hook_objects[:349] 全等 · diff 纯尾追加（13+/3-·3-=末行加逗号改写）·收敛实录=四轮 6→4→1→0（Layer A 4-gram 命中 6 席初版→3 轮换句→终态 10/10 CLEAN·R815 两轮/R808 五轮收敛范式续证）
+VERDICT PASS 10/10

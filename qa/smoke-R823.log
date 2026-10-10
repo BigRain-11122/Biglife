@@ -1,0 +1,9 @@
+=== qa/smoke-R823.log 2026-10-11 @BigLife-OSLoop ===
+[1] poolgen tick: === 2026-10-11 04:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE => PASS
+[2] census 10-11 新环: 本批 4/10 落环（C-00217/C-00218/C-00219/C-00221·批 c3733df3+镜像 589187be·6 席 time-morning 凌晨档门拦留冷自然重试）=> 全域总数 94（expect 94 账平零差·机器直数 census/**.md 当日 [锚] 行）=> PASS
+[3] 造人双闸: light rows=10030 unique=10030 over_cap=0（封顶 C-10036·受控复产零新注册维持）| recent_ring_date=today 实测 93（94 md 行−1=双环卡条目差·R819 起 75−74 同型口径注记）=> PASS
+[4] 位置字段: behavior 前 100 行 anchor null=3（豁免中 ['C-00001', 'C-00002', 'C-00003'] 荣誉席·非豁免 null=0）=> PASS
+[4b] 行为线: relations rows=2841098 meet=24（R803 再生 24 维持·本轮无 meet 增量免重跳）=> PASS
+[5] heartbeat: 上一次 2026-10-11 04:51:02  0.19h <3h => PASS
+[6] 基因轮: cp 600->606 六轴 {'逍遥': 101, '烟火': 101, '秩序': 101, '求新': 101, '怀旧': 101, '侠气': 101} / tp 217->219 / ho 349->351·json.load 双件过·既有零漂移（登记脚本断言）=> PASS
+smoke 六项全绿（[1]-[6] 全检 PASS）=> PASS
