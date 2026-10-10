@@ -1,0 +1,8 @@
+=== qa/smoke-R820.log 2026-10-11 04:1x @BigLife-OSLoop ===
+[1] 池轮例面：10-11 份额 R816 已跑（03:2x PASS 自停维持·TOTAL=1440+518·under_target NONE）→ 本轮合规跳过 PASS
+[2] census 新环：R820 批 4/10 落环（C-00203/C-00204/C-00205/C-00206·批 651cebdc+镜像 0b9f405b·6 席 time-morning 凌晨档门拦留冷自然重试）→ 10-11 全域环 79（expect 79 账平零差·卡面 73+锚 6 机器直数·唯一居民 recent_ring_date=today=78〔C-00010 双环条目差 1 口径注记〕）→ PASS
+[3] 造人双闸：light rows=10030 unique=10030 over_cap=0（封顶 C-10036·受控复产零新注册维持）·ring-bearing=evolved 4851 维持〔既有居民迭代环非新登·本轮实测〕→ PASS
+[4] 位置字段：behavior 10030 行·anchor null=3（荣誉席 C-00001/00002/00003 契约面）·非荣誉 null=0（本轮实测）→ PASS
+[5] QC 例巡：免巡（R819 problems=0 在案·cards=10030·evolved=4851·下次例巡 ≥R825）→ PASS
+[6] heartbeat：上轮 2026-10-11 04:08:37 os-loop round done exit=0（<3h 新鲜）→ PASS
+tokens: local=10 api=0 api_reason=-（下限口径：年轮批 4 落环×1=4+6 门禁后尝试≥1=6·账平/双闸/直数/export/实录=纯确定性零 LLM）
