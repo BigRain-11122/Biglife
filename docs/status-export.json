@@ -1,5 +1,5 @@
 {
- "export_ts": "2026-10-11 01:17",
+ "export_ts": "2026-10-11 01:40",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
@@ -19,12 +19,12 @@
   },
   {
    "n": "行为面镜像线",
-   "t": "R778 复工首产 sync 633673d6 rows=10（census/export citizens-light 刷新·10 卡 recent_ring_date=2026-10-10 实测 10/10·ring-bearing 4851 维持=既有居民迭代环非新环民）；R801 sync rows=2（批）+rows=2（相遇）·ring-bearing 4851 维持；R802 sync rows=2（批）+rows=2（相遇）·ring-bearing 4851 维持（迭代环）；R804 sync rows=5（批）·ring-bearing 4851 维持（迭代环）；R805 sync rows=4（批）·ring-bearing 4851 维持（迭代环）",
+   "t": "R778 复工首产 sync 633673d6 rows=10（census/export citizens-light 刷新·10 卡 recent_ring_date=2026-10-10 实测 10/10·ring-bearing 4851 维持=既有居民迭代环非新环民）；R801 sync rows=2（批）+rows=2（相遇）·ring-bearing 4851 维持；R802 sync rows=2（批）+rows=2（相遇）·ring-bearing 4851 维持（迭代环）；R804 sync rows=5（批）·ring-bearing 4851 维持（迭代环）；R805 sync rows=4（批）·ring-bearing 4851 维持（迭代环）；R807 sync rows=4（批）·ring-bearing 4851 维持（迭代环）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "R779 复工首巡+R785 例巡+R791 例巡+**R795 例巡 problems=0（cards=10030·evolved=4851·QC-REPORT 随轮入库·GPU 让路轮提前兑现）**·R801 例巡 problems=0（cards=10030·evolved=4851·QC-REPORT 随轮入库）·下次例巡≥R807",
+   "t": "R779 复工首巡+R785 例巡+R791 例巡+**R795 例巡 problems=0（cards=10030·evolved=4851·QC-REPORT 随轮入库·GPU 让路轮提前兑现）**·R801 例巡 problems=0（cards=10030·evolved=4851·QC-REPORT 随轮入库）；R807 例巡 problems=0（cards=10030·evolved=4851·QC-REPORT 随轮入库 cca60382）·下次例巡 ≥R813",
    "s": 1
   },
   {
@@ -199,8 +199,8 @@
    "Rain 首件《城市新声》观察记录 #1（T-20260925-17 关结·10-10 交付：cph4/research/city-voice-202610-rain.md·HQ 仓 26cace4+48739c2 已推·观察体 299 字 ≤300·事实源指针 7 条·CPH4 周进化轮消费面·回执 F-20261010-BL09）"
   ],
   [
-   "22",
-   "10-11 新写环（R801 批 2〔C-00136/C-00139〕+R801 相遇 2〔C-00018×C-00019〕+R802 批 2〔C-00134/C-00140〕+R802 相遇 2〔C-00016×C-00017〕+R803 批 3〔C-00135/C-00137/C-00138〕+R803 相遇 2〔C-00134×C-00114〕+R804 批 5〔C-00122/C-00142/C-00143/C-00145/C-00146〕+R805 批 4〔C-00133/C-00147/C-00148/C-00149〕·全域直数 22 零差〔机器直数 census/**.md ^- 2026-10-11 行=22·含 anchors 4〕）"
+   "26",
+   "10-11 新写环（R801 批 2〔C-00136/C-00139〕+R801 相遇 2〔C-00018×C-00019〕+R802 批 2〔C-00134/C-00140〕+R802 相遇 2〔C-00016×C-00017〕+R803 批 3〔C-00135/C-00137/C-00138〕+R803 相遇 2〔C-00134×C-00114〕+R804 批 5〔C-00122/C-00142/C-00143/C-00145/C-00146〕+R805 批 4〔C-00133/C-00147/C-00148/C-00149〕+R806 让路 0〔Ollama 他窗让路〕+R807 批 4〔C-00144/C-00152/C-00153/C-00154〕·全域直数 26 零差〔机器直数 census/**.md ^- 2026-10-11 行=26·含 anchors 4〕）"
   ]
  ]
 }
