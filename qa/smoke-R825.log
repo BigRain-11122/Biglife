@@ -1,0 +1,9 @@
+=== qa/smoke-R825.log 2026-10-11 @BigLife-OSLoop ===
+[1] poolgen tick: === 2026-10-11 05:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE => PASS
+[2] census 10-11 新环: R825 批 0/10 落环（ollama down·脚本静默跳过不修不报障·留冷自然重试）·全域总数 99（expect 99 账平零差·机器直数 census/**.md 当日 [锚] 行·{'anchors': 6, 'GM': 20, 'MD': 20, 'NS': 7, 'OR': 8, 'QT': 28, 'RV': 10}）=> PASS
+[3] 造人双闸: light rows=10030 unique=10030 over_cap=0（封顶 C-10036·受控复产零新注册维持）| recent_ring_date=today 实测 98（99 md 行−1=双环卡条目差·R819 起 75−74 同型口径注记）=> PASS
+[4] 位置字段: behavior 前 100 行 anchor null=3（豁免中 ['C-00001', 'C-00002', 'C-00003'] 荣誉席·非豁免 null=0）=> PASS
+[4b] 行为线: relations rows=2841098 meet=24（R803 再生 24 维持·03:56 相遇对未入 R3 面待下次再生·免重跳）=> PASS
+[5] heartbeat: 上一次 2026-10-11 05:20:21  0.20h <3h => PASS
+[6] 基因轮: cp 606 六轴 {'逍遥': 101, '烟火': 101, '秩序': 101, '求新': 101, '怀旧': 101, '侠气': 101} / tp 219 / ho 351·R823 兑现值维持·json.load 双件过=> PASS
+RESULT: 7/7 PASS
