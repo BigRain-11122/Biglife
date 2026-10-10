@@ -1,0 +1,16 @@
+[account] today rings total=134 (cards=128 anchors=6) prev=129 delta=5
+[gate] light rows=10030 unique=10030 cap=C-10036 (受控复产: 需求触发前零新注册)
+[anchor] behavior rows=10030 anchor-null=3 (null==3 reserved contract, non-reserved 0)
+[relations] rows=2841098 meet=24 (expect 24, no meet today)
+[poolgen] tick age=0.9h (<24h ok)
+[heartbeat] age=0.2h (<3h ok)
+[genes] cp total=606 (expect 606=101x6)
+
+SMOKE R829 PASS 7/7
+PASS poolgen tick <24h
+PASS ring account 129+5==134
+PASS light gate 10030/10030
+PASS anchor null==3 reserved
+PASS relations meet==24
+PASS heartbeat <3h
+PASS genes cp==606
