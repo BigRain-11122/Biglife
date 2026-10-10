@@ -1,202 +1,202 @@
 {
-  "export_ts": "2026-10-10T22:34:57+08:00",
-  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
-  "depts": [
-    {
-      "n": "年轮进化线",
-      "t": "**解冻态（CEO 10-10 17:52「解冻」令·U367 锁删存档）**：10-10 新写环 97（复工十轮全产：R778 批 10+R780 批 9+相遇 2+R781 批 10+R787 批 9+相遇 2+R788 批 10+Qiqi 首件环 1+R789 批 10+相遇 2+R792 批 12+R793 批 10+R794 批 10·账平=全域直数 97）·R782~R785+R790~R791 年轮批 GPU 他窗在产让路 10 due 留冷自然重试（R791 实测=视频线 ComfyUI 单在飞 GPU 100%·qwen2.5:7b 已载显存但推理饿死·让路律 CEO用机>视频产线>批池·不修不报障律）·QC R785 例巡 problems=0（cards=10030·evolved=4851）·**T-20261010-01 主件交付**：R-L1 消费率闸机器判据 Tools/rl_gate.py v1.0 首跑 pass（13 导出面分类完备——消费面 4：light/behavior/anchors/persona·未消费面 9 已标 unconsumed 入 cognition/consumption-ledger.json·接线仓数 3 与 XL-17 同口径·阈值待校准=前置②行业回执未至·周行 docs/audits/benchmark-gap-biglife.jsonl·ruff 静检全绿）·--qc 双跑留单下轮·T-20261010-02 关结（OH-20261008 E1 切片上链 3f64d81）·造人线受控复产计划 T-20261010-03 立毕（需求触发制）·双过窗排产 T-20260924-10/T-20260925-17 ≥10-12。当前活=QC 例巡提前兑现（R795·problems=0）+年轮批 GPU 让路留冷；最近实物=census/QC-REPORT.md problems=0（cards=10030·evolved=4851）+qa/smoke-R795.log @10-10 22:34；下里程碑=年轮批 GPU 窗恢复（10 due 自然重试）+反思日帽余 1 席+R-L 阈值回填窗（行业回执 ≤10-13）+基因轮 ≈R798。 ·R788 批 10/10 落环（C-00048~C-00057）+Qiqi 首件 T-20260925-16 整单关结（docs/festival-20261031-qiqi-first-delivery.md·问候样 3 条过机器闸+仪式建议稿三段式+C-00002 首件交付环年轮 3 圈）·R789 批 10/10（C-00058~C-00067 迭代环·evolved 实测 4851=有环卡直数）+相遇第 3 场 RV 城区首对 C-00025×C-00026 双卡互引（今日 meet 3/3 满·关系面 R3 再生 meet 22 账平 QC PASS·md5 7b40a7f5）·**R786 起跑的 rl_gate --qc 双跑终态=determinism PASS**（md5 884064644d5133ceab72a3de3b1b6b32·wired 3 仓 consumed=8/unconsumed=5·T-20261010-01 查终验收口·阈值回填=唯一余项 waiting 行业回执 ≤10-13）·**R794 批 10/10（C-00090~C-00099·批 d164c276+镜像 d52ff284·零留冷）+反思轮 10-10 双席（C-00011 朱鸿奎「细节决定成败。」+C-00012 沈佩兰「不论天气如何，队形与人心都不能乱。」·锚民域候选池 96 席在册·日帽 2/3）·**R795 年轮批 GPU 他窗在产两试让路（10 due 留冷自然重试）+QC 例巡提前兑现 problems=0**",
-      "s": 1
-    },
-    {
-      "n": "基因库补给线",
-      "t": "**R790 兑现 +10 条**（cp 576→582 六轴 97x6 均衡/ho 343→345/tp 209→211·nearcheck 两轮收敛 v1拦5→v2拦0+查二 NONE+查三 39826 面文件 NONE〔R784 口径 10081 超集〕·--qc 15/15+R417 基线 91.667/94.118/43.902 逐值零漂移·入库证 10/10 转近重（插入索引 cp576-581/ho343-344/tp209-210）·surgical 尾追加既有条目零字节改动·证据 qa/gene-round-R790.log·下次≈R798）",
-      "s": 1
-    },
-    {
-      "n": "语言线·台词池",
-      "t": "**水位扩容达标：池 1440+问候 518**（T-07 双面 R204 一次全量收口·CEO 定向令 O-20260925-1138 承令·pool_gen 84+28 桶 FAIL=NONE·audit PASS hard 0·under_target NONE-SELF_TERMINATE·确定性 192+25 零漂移）·批策略 10 生效·**09-26 ~16:20 外部审查令回应（orders.md 21:11:27 落册·@BigLife·T-20260926-14 同轮收口）**：排查定谳=非故障——poolgen_run.log 停在 9/24 16:12 系水位达标自停（自终止律=迭代总纲原文「语言线达标自停」·audit 每轮实跑 PASS·under_target NONE·该文件=state/ 一次性运行捕获件非常驻任务日志〔Tools 全仓零引用〕·err 0 字节零报错·零故障零修复）·手动触发承令执行 21:15:22（CEO 令胜自停默认：pool_gen --append --target 18 --sprite-target 12→84 桶全 at target·TOTAL=1440·FAIL=NONE·exit=0·零新条目=水位满额诚实结果·追加式 9/24 史保全）·判据②=census 新条目=年轮线全日在产（今日新写环 781·年轮居民 2110·本批 4 环 acb56d3c）——回执 F-20260926-BL08·**09-27 ~16:20 二次令（做成自循环而非一次性·判据=连续戳 <24h）同轮收口 R492**：根因=poolgen 从未有 cron 注册（拉取式·audit 满额态零调用·R375 已定谳非故障·本次令=自循环面升格）→schtasks BigLife-PoolGenLoop 每小时自循环 tick 注册在役（Tools/poolgen_loop.ps1+register_poolgen_loop.ps1·种子戳 16:49:41+首火 17:06=双戳间隔 ~16min 达成·pool_gen --append 幂等 at-target 零生成字节零漂移·欠深 budget 300 软顶·异常捕获入 poolgen_err.log·T2 v3.47·回执 F-20260927-BL04）",
-      "s": 2
-    },
-    {
-      "n": "行为面镜像线",
-      "t": "R778 复工首产 sync 633673d6 rows=10（census/export citizens-light 刷新·10 卡 recent_ring_date=2026-10-10 实测 10/10·ring-bearing 4851 维持=既有居民迭代环非新环民）",
-      "s": 1
-    },
-    {
-      "n": "QC 巡检线",
-      "t": "R779 复工首巡+R785 例巡+R791 例巡+**R795 例巡 problems=0（cards=10030·evolved=4851·QC-REPORT 随轮入库·GPU 让路轮提前兑现）**·下次例巡≈R801",
-      "s": 1
-    },
-    {
-      "n": "城脑服务面",
-      "t": "聚光灯月度抽验 10 月 2/2 满（R725 首例 C-04507/C-04512+R728 第 2 例 C-04527/C-04530·配额首日收口）·问候库 518 条在库待引擎消费·P-67① 候选任务面已交付（T-12 关结·tasks=20009·回访窗 10-01）·D-20260925-08 再生节律收口（T-11）·P-71 消费件 T-16 整单关结·P-72 形象面/P-75 behavior.py 关单在案·T-09 关系面 manifest 已交付关结（R3 再生面·rows=2819355·T2 v3.14）·D-03 锁标准采纳（BL02）·D-04 乱码复核 PASS（BL01 闭环）·画像 v2+记忆检索+问答 v1 服务面已交付（T-14/15 关单·T2 v3.12/3.13）·**相遇轮扩编 v1.2 在案（T-08 in-progress·互链卡 milestone 9/10）：09-26 场 3/3 广场场 QT 对 C-01360×C-01363 落卡（今日新环双卡故事连续性选人）+家户场 C-00085×C-00193（R267）+街区场 C-01345×C-01350（R266）**——R268 meet 台词核验抓双环缺陷修卡 2 张（C-01363「那天」过去指涉=R267 C-00193 同型二犯+C-01360 甲乙叙事变体+「推文」无锚→修为 feed 事件逐字+face 锚互引·候选 #38 登记）·**T-20260925-20 清理整合：分步④ 索引面已交付（R268·CODEX §十二 T2 正序索引 35 条目+行序注记承收候选 #2·原文零删改）·待办余=分步③全域同义词余扫 09-27~28→09-30 治理日对账 U178**·**T-20260926-01 集团技能动员令整单关结（R270·P-2026-09-26-01·R268 立单→R270 关结 ≤2h）**：建 2 落件 Tools/skills/verify-citizen-ring + extend-gene-pool（SKILL.md frontmatter+命令式·判例族知识固化）+README「## 技能」登记节+HQ 清单式回执 F-20260926-BL02（P-51 送达判据=关结 commit 含令号）·不建 5 定谳在案·禁双建核零重叠·**P-2026-09-25-15 真有生命的硅基城市令捕获（09-25 ~19:55 落册 19:53·R274 轮首全文 @BigLife 扫描恢复后首捕获·ack 超时补报 F-20260926-BL03+T-20260926-02 立单 in-progress：R-20260925-alive-city 五层梯调研件窗→10-02+居民生命循环深化主责·行为面继续供 M2）·分步① 骨架开工 R275（docs/research/R-20260925-alive-city.md：立项三问+L1-L5 五层梯仓内现状初盘 A/B 级+应用表骨架+源分级·待盘细项+竞品锚=逐轮小步）·分步② L2 五环覆盖度实证收口 R277（behavior.py derive() 全路径盘点：起居✓浅粒/工作✓全/社交△单态/休闲△窄门/休息✗零专属态新发现+补环三候选=休闲扩容/休息新建/社交位扩容·全阈值派生零新系统·L1/L3/L4/L5+竞品锚=后续轮续）·分步③ L4 年轮目标语句实证收口 R278（1424 行全库确定性扫描零 LLM·三方对账 ✓：长线目标句 9/1424=真例 6 全「出师」共基因母题+3 FP·中线以后/将来=0·短线日级意图 135——缺口形状三证：声音在/兑现态零/母题单一→目标系统候选精化=个体化派生+跨环进展记账双面）·分步④ L3 三引擎互链断点实证收口 R279（全仓 rg 消费点扫描零 LLM：崩溃态 ✓全链 needs→behavior overlay→draw 负面台词面+情绪导演 ✓三消费点 draw/spotlight/citizen_qa+流言链 ✗零消费点=断点①流言→年轮②流言→互聊+关系面 ✗仓内零消费=断点③关系→行为面社交位④关系→相遇轮选人+断点⑤候选情绪→行为面设计权衡——4 断点全「读面接线」级·候选件待研后立·分步⑤ L1 声轴双轨盘点收口 R280（城市音景=FluxVerse City/Assets/Audio 41 件+音频层第一正典 R-20260923-audio-assets 在案·「未开工」预判证伪+居民声=本司 VOICE-POOL v1.0 产线在产〔citizen-voice 10003 行 R3 再生面+piper 神经声 8 片实证〕+声景→行为反向触发=零系统·读面接线级候补入 L3 断点族）·分步⑥ L5 城市响应面规格候选版 v0 收口 R281（四段链 事件→反应→留痕→衰减：反应通道=既有三面复用·新数据面=城市年谱 city-chronicle.jsonl 数据行制〔源指针律内嵌〕+确定性衰减曲线〔半衰期参数化〕+三消费点〔A 年轮喂入「本周城市大事」=最小闭环/B mood_director 扩展候选/C CityWatch 记忆墙跨司〕+判据预注册六条+单谱行制=体量 M 级正面回应——**五层梯 L1-L5 全梯规格/实证收口**·余=竞品锚拆解〔D 级五件〕+应用表终稿 R282 收口=调研面交付毕：竞品锚五件 web_fetch 直验〔Sims aspiration/RimWorld story generator/动森实时钟仪式/模拟城市反馈环〔zh 3000 代为主〕/SL 偏航改源 ICIS 2009 social presence〕——生命感配方六件·已建 4/6·缺 L4 目标层+L5 城市记忆；优先级序=L2 补环→L3 断点①-④→L5 城市年谱→L4 目标系统〔M 级小步试点〕；应用表终稿 7 行定谳待集团拍板·送达回执 F-20260926-BL04）**·T-20260926-05 拆月归档分步②交付（R306：已结单详情 35 行入月件·板 293,464→260,966B·断言四组全过+幂等 no-op+滚动律零回归·余=当日实录区 198.5KB 明晨滚动律自然移走后 ≈66KB 达标）",
-      "s": 1
-    }
+ "export_ts": "2026-10-10T23:00:30+08:00",
+ "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
+ "depts": [
+  {
+   "n": "年轮进化线",
+   "t": "**解冻态（CEO 10-10 17:52「解冻」令·U367 锁删存档）**：10-10 新写环 97（复工十轮全产：R778 批 10+R780 批 9+相遇 2+R781 批 10+R787 批 9+相遇 2+R788 批 10+Qiqi 首件环 1+R789 批 10+相遇 2+R792 批 12+R793 批 10+R794 批 10·账平=全域直数 97）·R782~R785+R790~R791 年轮批 GPU 他窗在产让路 10 due 留冷自然重试（R791 实测=视频线 ComfyUI 单在飞 GPU 100%·qwen2.5:7b 已载显存但推理饿死·让路律 CEO用机>视频产线>批池·不修不报障律）·QC R785 例巡 problems=0（cards=10030·evolved=4851）·**T-20261010-01 主件交付**：R-L1 消费率闸机器判据 Tools/rl_gate.py v1.0 首跑 pass（13 导出面分类完备——消费面 4：light/behavior/anchors/persona·未消费面 9 已标 unconsumed 入 cognition/consumption-ledger.json·接线仓数 3 与 XL-17 同口径·阈值待校准=前置②行业回执未至·周行 docs/audits/benchmark-gap-biglife.jsonl·ruff 静检全绿）·--qc 双跑留单下轮·T-20261010-02 关结（OH-20261008 E1 切片上链 3f64d81）·造人线受控复产计划 T-20261010-03 立毕（需求触发制）·双过窗排产 T-20260924-10/T-20260925-17 ≥10-12。当前活=QC 例巡提前兑现（R795·problems=0）+年轮批 GPU 让路留冷；最近实物=census/QC-REPORT.md problems=0（cards=10030·evolved=4851）+qa/smoke-R795.log @10-10 22:34；下里程碑=年轮批 GPU 窗恢复（10 due 自然重试）+反思日帽余 1 席+R-L 阈值回填窗（行业回执 ≤10-13）+基因轮 ≈R798。 ·R788 批 10/10 落环（C-00048~C-00057）+Qiqi 首件 T-20260925-16 整单关结（docs/festival-20261031-qiqi-first-delivery.md·问候样 3 条过机器闸+仪式建议稿三段式+C-00002 首件交付环年轮 3 圈）·R789 批 10/10（C-00058~C-00067 迭代环·evolved 实测 4851=有环卡直数）+相遇第 3 场 RV 城区首对 C-00025×C-00026 双卡互引（今日 meet 3/3 满·关系面 R3 再生 meet 22 账平 QC PASS·md5 7b40a7f5）·**R786 起跑的 rl_gate --qc 双跑终态=determinism PASS**（md5 884064644d5133ceab72a3de3b1b6b32·wired 3 仓 consumed=8/unconsumed=5·T-20261010-01 查终验收口·阈值回填=唯一余项 waiting 行业回执 ≤10-13）·**R794 批 10/10（C-00090~C-00099·批 d164c276+镜像 d52ff284·零留冷）+反思轮 10-10 双席（C-00011 朱鸿奎「细节决定成败。」+C-00012 沈佩兰「不论天气如何，队形与人心都不能乱。」·锚民域候选池 96 席在册·日帽 2/3）·**R795 年轮批 GPU 他窗在产两试让路（10 due 留冷自然重试）+QC 例巡提前兑现 problems=0**",
+   "s": 1
+  },
+  {
+   "n": "基因库补给线",
+   "t": "**R790 兑现 +10 条**（cp 576→582 六轴 97x6 均衡/ho 343→345/tp 209→211·nearcheck 两轮收敛 v1拦5→v2拦0+查二 NONE+查三 39826 面文件 NONE〔R784 口径 10081 超集〕·--qc 15/15+R417 基线 91.667/94.118/43.902 逐值零漂移·入库证 10/10 转近重（插入索引 cp576-581/ho343-344/tp209-210）·surgical 尾追加既有条目零字节改动·证据 qa/gene-round-R790.log·下次≈R798）",
+   "s": 1
+  },
+  {
+   "n": "语言线·台词池",
+   "t": "**水位扩容达标：池 1440+问候 518**（T-07 双面 R204 一次全量收口·CEO 定向令 O-20260925-1138 承令·pool_gen 84+28 桶 FAIL=NONE·audit PASS hard 0·under_target NONE-SELF_TERMINATE·确定性 192+25 零漂移）·批策略 10 生效·**09-26 ~16:20 外部审查令回应（orders.md 21:11:27 落册·@BigLife·T-20260926-14 同轮收口）**：排查定谳=非故障——poolgen_run.log 停在 9/24 16:12 系水位达标自停（自终止律=迭代总纲原文「语言线达标自停」·audit 每轮实跑 PASS·under_target NONE·该文件=state/ 一次性运行捕获件非常驻任务日志〔Tools 全仓零引用〕·err 0 字节零报错·零故障零修复）·手动触发承令执行 21:15:22（CEO 令胜自停默认：pool_gen --append --target 18 --sprite-target 12→84 桶全 at target·TOTAL=1440·FAIL=NONE·exit=0·零新条目=水位满额诚实结果·追加式 9/24 史保全）·判据②=census 新条目=年轮线全日在产（今日新写环 781·年轮居民 2110·本批 4 环 acb56d3c）——回执 F-20260926-BL08·**09-27 ~16:20 二次令（做成自循环而非一次性·判据=连续戳 <24h）同轮收口 R492**：根因=poolgen 从未有 cron 注册（拉取式·audit 满额态零调用·R375 已定谳非故障·本次令=自循环面升格）→schtasks BigLife-PoolGenLoop 每小时自循环 tick 注册在役（Tools/poolgen_loop.ps1+register_poolgen_loop.ps1·种子戳 16:49:41+首火 17:06=双戳间隔 ~16min 达成·pool_gen --append 幂等 at-target 零生成字节零漂移·欠深 budget 300 软顶·异常捕获入 poolgen_err.log·T2 v3.47·回执 F-20260927-BL04）",
+   "s": 2
+  },
+  {
+   "n": "行为面镜像线",
+   "t": "R778 复工首产 sync 633673d6 rows=10（census/export citizens-light 刷新·10 卡 recent_ring_date=2026-10-10 实测 10/10·ring-bearing 4851 维持=既有居民迭代环非新环民）",
+   "s": 1
+  },
+  {
+   "n": "QC 巡检线",
+   "t": "R779 复工首巡+R785 例巡+R791 例巡+**R795 例巡 problems=0（cards=10030·evolved=4851·QC-REPORT 随轮入库·GPU 让路轮提前兑现）**·下次例巡≈R801",
+   "s": 1
+  },
+  {
+   "n": "城脑服务面",
+   "t": "聚光灯月度抽验 10 月 2/2 满（R725 首例 C-04507/C-04512+R728 第 2 例 C-04527/C-04530·配额首日收口）·问候库 518 条在库待引擎消费·P-67① 候选任务面已交付（T-12 关结·tasks=20009·回访窗 10-01）·D-20260925-08 再生节律收口（T-11）·P-71 消费件 T-16 整单关结·P-72 形象面/P-75 behavior.py 关单在案·T-09 关系面 manifest 已交付关结（R3 再生面·rows=2819355·T2 v3.14）·D-03 锁标准采纳（BL02）·D-04 乱码复核 PASS（BL01 闭环）·画像 v2+记忆检索+问答 v1 服务面已交付（T-14/15 关单·T2 v3.12/3.13）·**相遇轮扩编 v1.2 在案（T-08 in-progress·互链卡 milestone 9/10）：09-26 场 3/3 广场场 QT 对 C-01360×C-01363 落卡（今日新环双卡故事连续性选人）+家户场 C-00085×C-00193（R267）+街区场 C-01345×C-01350（R266）**——R268 meet 台词核验抓双环缺陷修卡 2 张（C-01363「那天」过去指涉=R267 C-00193 同型二犯+C-01360 甲乙叙事变体+「推文」无锚→修为 feed 事件逐字+face 锚互引·候选 #38 登记）·**T-20260925-20 清理整合：分步④ 索引面已交付（R268·CODEX §十二 T2 正序索引 35 条目+行序注记承收候选 #2·原文零删改）·待办余=分步③全域同义词余扫 09-27~28→09-30 治理日对账 U178**·**T-20260926-01 集团技能动员令整单关结（R270·P-2026-09-26-01·R268 立单→R270 关结 ≤2h）**：建 2 落件 Tools/skills/verify-citizen-ring + extend-gene-pool（SKILL.md frontmatter+命令式·判例族知识固化）+README「## 技能」登记节+HQ 清单式回执 F-20260926-BL02（P-51 送达判据=关结 commit 含令号）·不建 5 定谳在案·禁双建核零重叠·**P-2026-09-25-15 真有生命的硅基城市令捕获（09-25 ~19:55 落册 19:53·R274 轮首全文 @BigLife 扫描恢复后首捕获·ack 超时补报 F-20260926-BL03+T-20260926-02 立单 in-progress：R-20260925-alive-city 五层梯调研件窗→10-02+居民生命循环深化主责·行为面继续供 M2）·分步① 骨架开工 R275（docs/research/R-20260925-alive-city.md：立项三问+L1-L5 五层梯仓内现状初盘 A/B 级+应用表骨架+源分级·待盘细项+竞品锚=逐轮小步）·分步② L2 五环覆盖度实证收口 R277（behavior.py derive() 全路径盘点：起居✓浅粒/工作✓全/社交△单态/休闲△窄门/休息✗零专属态新发现+补环三候选=休闲扩容/休息新建/社交位扩容·全阈值派生零新系统·L1/L3/L4/L5+竞品锚=后续轮续）·分步③ L4 年轮目标语句实证收口 R278（1424 行全库确定性扫描零 LLM·三方对账 ✓：长线目标句 9/1424=真例 6 全「出师」共基因母题+3 FP·中线以后/将来=0·短线日级意图 135——缺口形状三证：声音在/兑现态零/母题单一→目标系统候选精化=个体化派生+跨环进展记账双面）·分步④ L3 三引擎互链断点实证收口 R279（全仓 rg 消费点扫描零 LLM：崩溃态 ✓全链 needs→behavior overlay→draw 负面台词面+情绪导演 ✓三消费点 draw/spotlight/citizen_qa+流言链 ✗零消费点=断点①流言→年轮②流言→互聊+关系面 ✗仓内零消费=断点③关系→行为面社交位④关系→相遇轮选人+断点⑤候选情绪→行为面设计权衡——4 断点全「读面接线」级·候选件待研后立·分步⑤ L1 声轴双轨盘点收口 R280（城市音景=FluxVerse City/Assets/Audio 41 件+音频层第一正典 R-20260923-audio-assets 在案·「未开工」预判证伪+居民声=本司 VOICE-POOL v1.0 产线在产〔citizen-voice 10003 行 R3 再生面+piper 神经声 8 片实证〕+声景→行为反向触发=零系统·读面接线级候补入 L3 断点族）·分步⑥ L5 城市响应面规格候选版 v0 收口 R281（四段链 事件→反应→留痕→衰减：反应通道=既有三面复用·新数据面=城市年谱 city-chronicle.jsonl 数据行制〔源指针律内嵌〕+确定性衰减曲线〔半衰期参数化〕+三消费点〔A 年轮喂入「本周城市大事」=最小闭环/B mood_director 扩展候选/C CityWatch 记忆墙跨司〕+判据预注册六条+单谱行制=体量 M 级正面回应——**五层梯 L1-L5 全梯规格/实证收口**·余=竞品锚拆解〔D 级五件〕+应用表终稿 R282 收口=调研面交付毕：竞品锚五件 web_fetch 直验〔Sims aspiration/RimWorld story generator/动森实时钟仪式/模拟城市反馈环〔zh 3000 代为主〕/SL 偏航改源 ICIS 2009 social presence〕——生命感配方六件·已建 4/6·缺 L4 目标层+L5 城市记忆；优先级序=L2 补环→L3 断点①-④→L5 城市年谱→L4 目标系统〔M 级小步试点〕；应用表终稿 7 行定谳待集团拍板·送达回执 F-20260926-BL04）**·T-20260926-05 拆月归档分步②交付（R306：已结单详情 35 行入月件·板 293,464→260,966B·断言四组全过+幂等 no-op+滚动律零回归·余=当日实录区 198.5KB 明晨滚动律自然移走后 ≈66KB 达标）",
+   "s": 1
+  }
+ ],
+ "outs": [
+  [
+   "万人户籍库 census/",
+   "on",
+   "10030 卡·QC problems=0（生成 9980+锚 20+荣誉席 3+影射册首批 7 R459+新居民团首批 10 R496+第二批 10 R595·T-20260927-04 分步②④）"
   ],
-  "outs": [
-    [
-      "万人户籍库 census/",
-      "on",
-      "10030 卡·QC problems=0（生成 9980+锚 20+荣誉席 3+影射册首批 7 R459+新居民团首批 10 R496+第二批 10 R595·T-20260927-04 分步②④）"
-    ],
-    [
-      "认知城脑 cognition/pools.json",
-      "on",
-      "1440 条·audit PASS·B 片开场分化后六 worst 桶全 ≤3/18（R408 复测 4/4·worst 桶内同开场 6/18→≤3/18 达阵）"
-    ],
-    [
-      "问候库 cognition/greetings.json",
-      "on",
-      "518 条（实测·greet 476+faq 42）"
-    ],
-    [
-      "负面池 cognition/pools-negative.json",
-      "on",
-      "48 条（4 轴负面+像素灵+恢复叙事 6 桶·floor 6/target 8·audit 闸随件）·draw 负面路由已接线（T-16d 分步③ R137·T-16 整单关结）"
-    ],
-    [
-      "池/问候库任务包 cognition/package/",
-      "on",
-      "v1.0 快照 1200+301·空窗 GPU 认领即领即跑"
-    ],
-    [
-      "导出面 census/export/citizens-light.jsonl",
-      "on",
-      "10030 行字段齐备·白名单 v1.0+数据授权行（D-09）·影射册七卡 append-only 入面（R459）+新居民团两批二十卡 append-only 入面（R496/R595·新物种值过 schema 面零结构变更·style_dna/voice_profile 深水位不入 light 面=契约 §二.3）"
-    ],
-    [
-      "动机面 census/export/citizen-needs.jsonl",
-      "on",
-      "R3 再生面·v1.7 注册表接线（T-16a）+v2.8 crash/crash_axis 加法字段（T-16d 分步①·纯阈值）·消费前重生成"
-    ],
-    [
-      "候选任务面 census/export/citizen-tasks.jsonl",
-      "on",
-      "R3 再生面·T-20260925-12（D-20260925-11 解锁）·needs 强度 ≥1→四资产面（ledger/lines/greet/lecturer）·tasks=20009 行 10003 居民全覆盖·双跑逐字节一致·消费前重生成"
-    ],
-    [
-      "行为面 census/export/citizen-behavior.jsonl",
-      "on",
-      "R3 再生面·P-75 behavior.py v1+v2.9 崩溃三态/律八③限幅+**v3.7 再生节律 --auto**（桶/天气/rest_win 窗缘变更触发·QC 门·启动器每 tick 接线）+**v3.18 休息环（03a）**+**v3.30 声景反向触发（T-20260926-13 R362：alarm/fest 30min 窗 slot 值 2 值纯加法「街头·驻足望塔/街角·循声围看」·25% hash 门控·--auto sound 键随 tier 翻转再生·静默窗零漂移）**+**v3.20 休闲环 leisure_play/park/stroll 三态（T-20260926-03b·state 白名单 17→20 纯加法·M2 可见密度有界放量=预注册预期）**·M2 消费前重生成"
-    ],
-    [
-      "形象面 census/export/citizen-atlas.jsonl",
-      "on",
-      "R3 再生面·P-72 atlas_manifest.py v1 落件（T-14·rows=10003 dup=0）·M2/群像墙消费前重生成·形象面默认深水（PUBLIC-WHITELIST §三）"
-    ],
-    [
-      "流言链引擎 Tools/rumor_chain.py",
-      "on-demand",
-      "按需调用面（非 R3）·T-16b 落件 v1.0·--qc 206 断言 PASS·消费方=M2 互聊升级（消费标注 hop 谱系）·T2 v2.6"
-    ],
-    [
-      "情绪导演引擎 Tools/mood_director.py",
-      "on-demand",
-      "按需调用面（非 R3）·T-16c 落件 v1.0·--qc 276 断言 PASS·mood 闭集五态+纪念日表 mood-calendar.json（法源指针律）·draw --auto 桶加权+spotlight 阈值接线·消费方=M2 城市氛围层·T2 v2.7"
-    ],
-    [
-      "负面台词路由 Tools/draw.py",
-      "on",
-      "T-16d 分步③（R137）·crash→负面桶/recovering→恢复桶·非崩溃零变更·律八③槽级冷却+城帽 3%→区帽 5% 截断·合成断言 16/16+活面双跑逐字节一致·T2 v3.2"
-    ],
-    [
-      "关系面 census/export/citizen-relations.jsonl",
-      "on",
-      "R3 再生面·T-20260925-09 R210 交付（Tools/relations_manifest.py 三源→一面·纯解析零 LLM·--qc bad=0·荣誉席 block 源排除·家户独居否定规则·消费前重生成·T2 v3.14）·R616 再生刷新 meet 边 4→16 账平（T-20260929-01 分步①·CEO 方向令关系网主线·md5 d7fd6a92·rows=2825959）·**v1.1 meet 边强度面（分步②·T2 v3.51）：meet 行型 {a,b,rel,src,count,last}——count=相遇次数（年轮互引行按日期去重直数）·last=最近一次·src=首次日期语义零变·block/household 行型零改动·纯追加字段消费方零 breaking·--qc PASS md5 120abce8·rows=2825959（block 2822314+household 3629+meet 16）**·**v1.2 buddy 边族（分步③·T2 v3.52）：卡面「关系」节出生分配社交提及 10 类闭集确定性派生（多类型「、」归并·工友=真同职场边）·R3 再生 rows=2841090（block 2822314+buddy 15131+household 3629+meet 16 账平·md5 882f65a5·--qc PASS）**·**分步④ 观测面（R619）：社交边计数/类型分布/meet 网络对数入 status-export results 区（盘面直数）**"
-    ],
-    [
-      "反思面 census/reflections.jsonl",
-      "on",
-      "committed append-only·20 民实弹零编造（**10-10 R794 批 C-00011 朱鸿奎「细节决定成败。」+C-00012 沈佩兰「不论天气如何，队形与人心都不能乱。」**〔锚民域候选池 96 席·日帽 2/3·G4 闭包门〕·3 试点 v0+T-20260926-08 低频批产线：R323 首批 C-00013 林之恒「细节连成完整记忆，点滴造就历史。」+C-00085 肖阿果「遇到问题及时解决，机会总是留给有准备的人。」·**R324 第 3 席 C-00097 钱元宝「风浪越大，江面越宽广。」**〔双环=09-24 批环+09-25 R213 家户场互引环·--batch 实为逗号 ID 列表非自选数·误用报 SKIP 如实记档→rg 计数扫候选面 --id 定点〕·09-27 批 C-00580/C-01922/C-02271（相遇双环族候选面互喂）+09-28 批 C-00182 熊之南「今日事今日毕，准备充分心自安。」/C-00193 邵蕾「优化代码，才能应对复杂环境。」（相遇互链族双环候选·首试 C-00010 冷却中+C-00017 环数不足双 SKIP=门槛值守如实记）+R536 批 C-03004 龚有根「承诺之事，定要践行。」（相遇#12 对 C-03254 双环族·候选池扫描 rings≥2=20 民·余 12 席候选池在案）·G4 闭包门零编造·日封顶 09-28 3/3 满·09-29 批 C-03254 袁果果「善行不分大小，关键时刻能发光。」+C-02270 汪健「珍惜当下，莫负好时光。」+C-00105 史军「天气好时，不妨出去走走，享受自然。」〔相遇互链双环族候选·日帽 09-29 3/3 满·候选池余 12 席在案〕）·v1.6 入召回池=importance ×1.5 乘子+QA 感悟标签（T-20260926-07 bm-c 交付·T2 v3.24）·消费方=memory_index 召回/档案页/讲师包"
-    ],
-    [
-      "互聊台账 cognition/interchat-ledger.jsonl",
-      "on",
-      "22 行（11 对相遇双卡互引·卡面原文逐字·源指针律 100%·append-only·rumor_hop feed 面在役零行=诚实态·T2 v3.44）"
-    ],
-    [
-      "BigStream 素材接口 docs/bigstream-material-interface.md",
-      "on",
-      "五面供货清单级交付（互聊台账 22/灵族志 7/生灵册 11/影射册 7/职业册 24·指针必带·点单制·只读零写回·R448·T-18 步⑨②）"
-    ],
-    [
-      "升华律⑨③ 审计面 docs/research/R-20260927-prototype-subject-audit.md",
-      "on",
-      "判据预注册+首扫基线（A1/A2=0·A3=1 处合法判读·零违律零改动·复扫窗=下一次池轮随批·R451·T-18 步⑨③ 审计先行件）"
-    ],
-    [
-      "新居民入城契约 cognition/RESIDENT-INTAKE.md",
-      "on",
-      "v1.0（T-20260927-04 分步①·20 席三族制+判据 K1-K12 预注册+八文化街区映射+滚动合流常设·R493）——分步② 首批 10 席落籍 R496（C-10017~C-10026·T2 v3.48）+**分步③ AI 接线收口 R497（认知栈五面再生跑验+K9 QA 轮值+声位引擎分句定谳表 v1+QC 基线随迁+窗面就绪声明·K1-K12 全过·T2 v3.49）**·余=分步④ 第二批 10 席随清单滚动补（R554 零新波维持：gaming 面 09-27 18:00 后无 sp_b6 新证据件·待 MiniGame 生产泵下波）"
-    ],
-    [
-      "化身原创件 批2 docs/research/lowpoly-avatars-batch2-20260929.png",
-      "on",
-      "内部资料·待 CEO 过目后出库（荣誉席三位 lowpoly·C-00001 白袍蓝晕特典位+C-00002/03 真用户点眼白标·QC 四判据全过 md5 d15d2b34·T-20260928-09·R606）"
-    ],
-    [
-      "census/export/citizen-anchors.jsonl",
-      "on",
-      "R3 再生面（gitignored·Tools/citizen_anchors.py 秒级再生）=住宅/工位分配表 10030 行·同居民永远同锚点·待 R0-R6 坐标对账窗校准 v2"
-    ],
-    [
-      "census/export/citizen-assembly.jsonl",
-      "on",
-      "R3 再生面（gitignored·Tools/citizen_assembly.py 秒级再生）=polygon 角色装配映射表 10030 行确定性形象档案（族源三分碳源 7517/硅源 2003/城源 507·年龄→AD-024 儿童件 1410·硅源 AD-018 变体 2003·atlas v2.4 五 hex 单源镜像·荣誉席 reserved 零代创·T2 v3.56·O-020 BigLife 总责·换装=数据驱动投影律）"
-    ]
+  [
+   "认知城脑 cognition/pools.json",
+   "on",
+   "1440 条·audit PASS·B 片开场分化后六 worst 桶全 ≤3/18（R408 复测 4/4·worst 桶内同开场 6/18→≤3/18 达阵）"
   ],
-  "results": [
-    [
-      "10030",
-      "户籍卡"
-    ],
-    [
-      "4851",
-      "4851"
-    ],
-    [
-      "97",
-      "10-10 新写环（复工十轮账平 97：批 90〔R778 10+R780 9+R781 10+R787 9+R788 10+R789 10+R792 12+R793 10+R794 10〕+相遇 6〔三场双卡〕+Qiqi 首件环 1·全域 python 直数 97 零差）"
-    ],
-    [
-      "582/345",
-      "基因库（口头禅 582=97x6 六轴均衡/钩子物件 345/转折点 211·R790 兑现）"
-    ],
-    [
-      "518",
-      "问候库"
-    ],
-    [
-      "2841096",
-      "社交边总数（citizen-relations R3·block 2822314+buddy 15131+household 3629+meet 22 账平·md5 7b40a7f5·R789 再生·QC PASS）"
-    ],
-    [
-      "15131",
-      "buddy 边 10 类分布（茶友1612/忘年交1574/对手1533/牌友1520/邻居1515/常客1490/老搭档1490/老主顾1482/棋友1466/工友1461·提及 15143/对 15131）"
-    ],
-    [
-      "22",
-      "meet 网络对数（R789 盘面再生 20→22=R787 GM 对 C-00018×C-00019+R789 RV 对 C-00025×C-00026 入面·count/last 强度面·QC PASS）"
-    ],
-    [
-      "10030",
-      "空间锚点分配表（citizen-anchors.jsonl R3 新面·住宅/工位 10027 行+荣誉席 reserved 3·md5 确定性 seed 双跑一致·T2 v3.54）"
-    ],
-    [
-      "10030",
-      "polygon 装配映射表（citizen-assembly.jsonl R3 新面·确定性形象档案·族源三分 7517/2003/507·儿童件 1410·双跑逐字节一致·T2 v3.56）"
-    ],
-    [
-      "3",
-      "消费方接线数（XL-17 判据·D-20260930-06·T-20260930-01 已关结：Tools/consumer_wiring.py --qc 双跑 determinism PASS·wired=3 仓维持——FluxVerse 13 证/Biggame-MiniGame 15 证/BigDomain 8 证·BigStream 0 诚实态·cph4 集团工具面不计入）"
-    ],
-    [
-      "pass",
-      "R-L1 消费率闸机器判据（D-20260930-36·T-20261010-01 基线 v1.0：Tools/rl_gate.py 首跑——13 导出面分类完备〔消费面 4：citizens-light/citizen-behavior/citizen-anchors/citizen-persona·未消费面 9 已标 unconsumed 入 ledger〕·接线仓数 3（FluxVerse/Biggame-MiniGame/BigDomain·与 XL-17 判据同口径）·证据指针 file:line 齐（qa/rl-gate-R785.log）·阈值=待校准〔前置②行业对标回执未至不判合格线〕·周轮对标差距表行=docs/audits/benchmark-gap-biglife.jsonl）"
-    ],
-    [
-      "1 篇",
-      "Rain 首件《城市新声》观察记录 #1（T-20260925-17 关结·10-10 交付：cph4/research/city-voice-202610-rain.md·HQ 仓 26cace4+48739c2 已推·观察体 299 字 ≤300·事实源指针 7 条·CPH4 周进化轮消费面·回执 F-20261010-BL09）"
-    ]
+  [
+   "问候库 cognition/greetings.json",
+   "on",
+   "518 条（实测·greet 476+faq 42）"
+  ],
+  [
+   "负面池 cognition/pools-negative.json",
+   "on",
+   "48 条（4 轴负面+像素灵+恢复叙事 6 桶·floor 6/target 8·audit 闸随件）·draw 负面路由已接线（T-16d 分步③ R137·T-16 整单关结）"
+  ],
+  [
+   "池/问候库任务包 cognition/package/",
+   "on",
+   "v1.0 快照 1200+301·空窗 GPU 认领即领即跑"
+  ],
+  [
+   "导出面 census/export/citizens-light.jsonl",
+   "on",
+   "10030 行字段齐备·白名单 v1.0+数据授权行（D-09）·影射册七卡 append-only 入面（R459）+新居民团两批二十卡 append-only 入面（R496/R595·新物种值过 schema 面零结构变更·style_dna/voice_profile 深水位不入 light 面=契约 §二.3）"
+  ],
+  [
+   "动机面 census/export/citizen-needs.jsonl",
+   "on",
+   "R3 再生面·v1.7 注册表接线（T-16a）+v2.8 crash/crash_axis 加法字段（T-16d 分步①·纯阈值）·消费前重生成"
+  ],
+  [
+   "候选任务面 census/export/citizen-tasks.jsonl",
+   "on",
+   "R3 再生面·T-20260925-12（D-20260925-11 解锁）·needs 强度 ≥1→四资产面（ledger/lines/greet/lecturer）·tasks=20009 行 10003 居民全覆盖·双跑逐字节一致·消费前重生成"
+  ],
+  [
+   "行为面 census/export/citizen-behavior.jsonl",
+   "on",
+   "R3 再生面·P-75 behavior.py v1+v2.9 崩溃三态/律八③限幅+**v3.7 再生节律 --auto**（桶/天气/rest_win 窗缘变更触发·QC 门·启动器每 tick 接线）+**v3.18 休息环（03a）**+**v3.30 声景反向触发（T-20260926-13 R362：alarm/fest 30min 窗 slot 值 2 值纯加法「街头·驻足望塔/街角·循声围看」·25% hash 门控·--auto sound 键随 tier 翻转再生·静默窗零漂移）**+**v3.20 休闲环 leisure_play/park/stroll 三态（T-20260926-03b·state 白名单 17→20 纯加法·M2 可见密度有界放量=预注册预期）**·M2 消费前重生成"
+  ],
+  [
+   "形象面 census/export/citizen-atlas.jsonl",
+   "on",
+   "R3 再生面·P-72 atlas_manifest.py v1 落件（T-14·rows=10003 dup=0）·M2/群像墙消费前重生成·形象面默认深水（PUBLIC-WHITELIST §三）"
+  ],
+  [
+   "流言链引擎 Tools/rumor_chain.py",
+   "on-demand",
+   "按需调用面（非 R3）·T-16b 落件 v1.0·--qc 206 断言 PASS·消费方=M2 互聊升级（消费标注 hop 谱系）·T2 v2.6"
+  ],
+  [
+   "情绪导演引擎 Tools/mood_director.py",
+   "on-demand",
+   "按需调用面（非 R3）·T-16c 落件 v1.0·--qc 276 断言 PASS·mood 闭集五态+纪念日表 mood-calendar.json（法源指针律）·draw --auto 桶加权+spotlight 阈值接线·消费方=M2 城市氛围层·T2 v2.7"
+  ],
+  [
+   "负面台词路由 Tools/draw.py",
+   "on",
+   "T-16d 分步③（R137）·crash→负面桶/recovering→恢复桶·非崩溃零变更·律八③槽级冷却+城帽 3%→区帽 5% 截断·合成断言 16/16+活面双跑逐字节一致·T2 v3.2"
+  ],
+  [
+   "关系面 census/export/citizen-relations.jsonl",
+   "on",
+   "R3 再生面·T-20260925-09 R210 交付（Tools/relations_manifest.py 三源→一面·纯解析零 LLM·--qc bad=0·荣誉席 block 源排除·家户独居否定规则·消费前重生成·T2 v3.14）·R616 再生刷新 meet 边 4→16 账平（T-20260929-01 分步①·CEO 方向令关系网主线·md5 d7fd6a92·rows=2825959）·**v1.1 meet 边强度面（分步②·T2 v3.51）：meet 行型 {a,b,rel,src,count,last}——count=相遇次数（年轮互引行按日期去重直数）·last=最近一次·src=首次日期语义零变·block/household 行型零改动·纯追加字段消费方零 breaking·--qc PASS md5 120abce8·rows=2825959（block 2822314+household 3629+meet 16）**·**v1.2 buddy 边族（分步③·T2 v3.52）：卡面「关系」节出生分配社交提及 10 类闭集确定性派生（多类型「、」归并·工友=真同职场边）·R3 再生 rows=2841090（block 2822314+buddy 15131+household 3629+meet 16 账平·md5 882f65a5·--qc PASS）**·**分步④ 观测面（R619）：社交边计数/类型分布/meet 网络对数入 status-export results 区（盘面直数）**"
+  ],
+  [
+   "反思面 census/reflections.jsonl",
+   "on",
+   "committed append-only·20 民实弹零编造（**10-10 R794 批 C-00011 朱鸿奎「细节决定成败。」+C-00012 沈佩兰「不论天气如何，队形与人心都不能乱。」**〔锚民域候选池 96 席·日帽 2/3·G4 闭包门〕·3 试点 v0+T-20260926-08 低频批产线：R323 首批 C-00013 林之恒「细节连成完整记忆，点滴造就历史。」+C-00085 肖阿果「遇到问题及时解决，机会总是留给有准备的人。」·**R324 第 3 席 C-00097 钱元宝「风浪越大，江面越宽广。」**〔双环=09-24 批环+09-25 R213 家户场互引环·--batch 实为逗号 ID 列表非自选数·误用报 SKIP 如实记档→rg 计数扫候选面 --id 定点〕·09-27 批 C-00580/C-01922/C-02271（相遇双环族候选面互喂）+09-28 批 C-00182 熊之南「今日事今日毕，准备充分心自安。」/C-00193 邵蕾「优化代码，才能应对复杂环境。」（相遇互链族双环候选·首试 C-00010 冷却中+C-00017 环数不足双 SKIP=门槛值守如实记）+R536 批 C-03004 龚有根「承诺之事，定要践行。」（相遇#12 对 C-03254 双环族·候选池扫描 rings≥2=20 民·余 12 席候选池在案）·G4 闭包门零编造·日封顶 09-28 3/3 满·09-29 批 C-03254 袁果果「善行不分大小，关键时刻能发光。」+C-02270 汪健「珍惜当下，莫负好时光。」+C-00105 史军「天气好时，不妨出去走走，享受自然。」〔相遇互链双环族候选·日帽 09-29 3/3 满·候选池余 12 席在案〕）·v1.6 入召回池=importance ×1.5 乘子+QA 感悟标签（T-20260926-07 bm-c 交付·T2 v3.24）·消费方=memory_index 召回/档案页/讲师包"
+  ],
+  [
+   "互聊台账 cognition/interchat-ledger.jsonl",
+   "on",
+   "22 行（11 对相遇双卡互引·卡面原文逐字·源指针律 100%·append-only·rumor_hop feed 面在役零行=诚实态·T2 v3.44）"
+  ],
+  [
+   "BigStream 素材接口 docs/bigstream-material-interface.md",
+   "on",
+   "五面供货清单级交付（互聊台账 22/灵族志 7/生灵册 11/影射册 7/职业册 24·指针必带·点单制·只读零写回·R448·T-18 步⑨②）"
+  ],
+  [
+   "升华律⑨③ 审计面 docs/research/R-20260927-prototype-subject-audit.md",
+   "on",
+   "判据预注册+首扫基线（A1/A2=0·A3=1 处合法判读·零违律零改动·复扫窗=下一次池轮随批·R451·T-18 步⑨③ 审计先行件）"
+  ],
+  [
+   "新居民入城契约 cognition/RESIDENT-INTAKE.md",
+   "on",
+   "v1.0（T-20260927-04 分步①·20 席三族制+判据 K1-K12 预注册+八文化街区映射+滚动合流常设·R493）——分步② 首批 10 席落籍 R496（C-10017~C-10026·T2 v3.48）+**分步③ AI 接线收口 R497（认知栈五面再生跑验+K9 QA 轮值+声位引擎分句定谳表 v1+QC 基线随迁+窗面就绪声明·K1-K12 全过·T2 v3.49）**·余=分步④ 第二批 10 席随清单滚动补（R554 零新波维持：gaming 面 09-27 18:00 后无 sp_b6 新证据件·待 MiniGame 生产泵下波）"
+  ],
+  [
+   "化身原创件 批2 docs/research/lowpoly-avatars-batch2-20260929.png",
+   "on",
+   "内部资料·待 CEO 过目后出库（荣誉席三位 lowpoly·C-00001 白袍蓝晕特典位+C-00002/03 真用户点眼白标·QC 四判据全过 md5 d15d2b34·T-20260928-09·R606）"
+  ],
+  [
+   "census/export/citizen-anchors.jsonl",
+   "on",
+   "R3 再生面（gitignored·Tools/citizen_anchors.py 秒级再生）=住宅/工位分配表 10030 行·同居民永远同锚点·待 R0-R6 坐标对账窗校准 v2"
+  ],
+  [
+   "census/export/citizen-assembly.jsonl",
+   "on",
+   "R3 再生面（gitignored·Tools/citizen_assembly.py 秒级再生）=polygon 角色装配映射表 10030 行确定性形象档案（族源三分碳源 7517/硅源 2003/城源 507·年龄→AD-024 儿童件 1410·硅源 AD-018 变体 2003·atlas v2.4 五 hex 单源镜像·荣誉席 reserved 零代创·T2 v3.56·O-020 BigLife 总责·换装=数据驱动投影律）"
   ]
+ ],
+ "results": [
+  [
+   "10030",
+   "户籍卡"
+  ],
+  [
+   "4851",
+   "4851"
+  ],
+  [
+   "107",
+   "10-10 新写环（复工账 107：批 100〔R778 10+R780 9+R781 10+R787 9+R788 10+R789 10+R792 12+R793 10+R794 10+R796 10〕+相遇 6〔三场双卡〕+Qiqi 首件环 1·全域直数 107 零差）"
+  ],
+  [
+   "582/345",
+   "基因库（口头禅 582=97x6 六轴均衡/钩子物件 345/转折点 211·R790 兑现）"
+  ],
+  [
+   "518",
+   "问候库"
+  ],
+  [
+   "2841096",
+   "社交边总数（citizen-relations R3·block 2822314+buddy 15131+household 3629+meet 22 账平·md5 7b40a7f5·R789 再生·QC PASS）"
+  ],
+  [
+   "15131",
+   "buddy 边 10 类分布（茶友1612/忘年交1574/对手1533/牌友1520/邻居1515/常客1490/老搭档1490/老主顾1482/棋友1466/工友1461·提及 15143/对 15131）"
+  ],
+  [
+   "22",
+   "meet 网络对数（R789 盘面再生 20→22=R787 GM 对 C-00018×C-00019+R789 RV 对 C-00025×C-00026 入面·count/last 强度面·QC PASS）"
+  ],
+  [
+   "10030",
+   "空间锚点分配表（citizen-anchors.jsonl R3 新面·住宅/工位 10027 行+荣誉席 reserved 3·md5 确定性 seed 双跑一致·T2 v3.54）"
+  ],
+  [
+   "10030",
+   "polygon 装配映射表（citizen-assembly.jsonl R3 新面·确定性形象档案·族源三分 7517/2003/507·儿童件 1410·双跑逐字节一致·T2 v3.56）"
+  ],
+  [
+   "3",
+   "消费方接线数（XL-17 判据·D-20260930-06·T-20260930-01 已关结：Tools/consumer_wiring.py --qc 双跑 determinism PASS·wired=3 仓维持——FluxVerse 13 证/Biggame-MiniGame 15 证/BigDomain 8 证·BigStream 0 诚实态·cph4 集团工具面不计入）"
+  ],
+  [
+   "pass",
+   "R-L1 消费率闸机器判据（D-20260930-36·T-20261010-01 基线 v1.0：Tools/rl_gate.py 首跑——13 导出面分类完备〔消费面 4：citizens-light/citizen-behavior/citizen-anchors/citizen-persona·未消费面 9 已标 unconsumed 入 ledger〕·接线仓数 3（FluxVerse/Biggame-MiniGame/BigDomain·与 XL-17 判据同口径）·证据指针 file:line 齐（qa/rl-gate-R785.log）·阈值=待校准〔前置②行业对标回执未至不判合格线〕·周轮对标差距表行=docs/audits/benchmark-gap-biglife.jsonl）"
+  ],
+  [
+   "1 篇",
+   "Rain 首件《城市新声》观察记录 #1（T-20260925-17 关结·10-10 交付：cph4/research/city-voice-202610-rain.md·HQ 仓 26cace4+48739c2 已推·观察体 299 字 ≤300·事实源指针 7 条·CPH4 周进化轮消费面·回执 F-20261010-BL09）"
+  ]
+ ]
 }
