@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-10T20:15:00+08:00",
+ "export_ts": "2026-10-10T20:15:44+08:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**解冻态（CEO 10-10 17:52「解冻」令·U367 锁删存档·C-20261010-03⑤ 复工）**：R778/R780/R781 三批 29 环+相遇 2 环=10-10 新写环 31（既有居民迭代零新注册）·R782 冻结锁冲突按解冻令再删收口（F-20261010-BL07）·R782~R784 年轮批 GPU 他窗在产让路 10 due 留冷自然重试（不修不报障律）·QC R779 复工首巡 problems=0（cards=10030·evolved=4851）·**T-20261010-02 关结**：OH-20261008-biglife.md E1 域切片已交付上链（cph4/oss-harvest commit 3f64d81——piper zh 血统定谳采用/faster-whisper advisory/kokoro parked·三腿实证据 R779/R780/R783 探针件）·T-20261010-01 R-L 判据接线在产（窗≤10-13）·**造人线受控复产计划单 T-20261010-03 立毕**（首批 ≤10 席·City3D 行人层等消费需求触发制·防 P0 五犯复发）·双过窗排产 T-20260924-10/T-20260925-17 ≥10-12。当前活=复工排产（年轮批待 GPU 窗+R-L 接线）；最近实物=OH-20261008-biglife.md+基因轮 10 条（R784）@10-10 20:1x；下里程碑=R-L 判据接线 ≤10-13+年轮批 GPU 窗恢复。",
+   "t": "**解冻态（CEO 10-10 17:52「解冻」令·U367 锁删存档）**：10-10 新写环 31（R778 批 10+R780 批 9+相遇 2+R781 批 10）·R782~R785 年轮批 GPU 他窗在产让路 10 due 留冷自然重试（不修不报障律）·QC R785 例巡 problems=0（cards=10030·evolved=4851）·**T-20261010-01 主件交付**：R-L1 消费率闸机器判据 Tools/rl_gate.py v1.0 首跑 pass（13 导出面分类完备——消费面 4：light/behavior/anchors/persona·未消费面 9 已标 unconsumed 入 cognition/consumption-ledger.json·接线仓数 3 与 XL-17 同口径·阈值待校准=前置②行业回执未至·周行 docs/audits/benchmark-gap-biglife.jsonl·ruff 静检全绿）·--qc 双跑留单下轮·T-20261010-02 关结（OH-20261008 E1 切片上链 3f64d81）·造人线受控复产计划 T-20261010-03 立毕（需求触发制）·双过窗排产 T-20260924-10/T-20260925-17 ≥10-12。当前活=R-L 接线收口+年轮批待 GPU 窗；最近实物=rl_gate.py+consumption-ledger+QC-REPORT problems=0 @10-10 20:3x；下里程碑=R-L1 --qc 双跑+阈值回填窗（回执到）+年轮批 GPU 窗恢复。",
    "s": 1
   },
   {
@@ -189,6 +189,10 @@
   [
    "3",
    "消费方接线数（XL-17 判据·D-20260930-06·T-20260930-01 已关结：Tools/consumer_wiring.py --qc 双跑 determinism PASS·wired=3 仓维持——FluxVerse 13 证/Biggame-MiniGame 15 证/BigDomain 8 证·BigStream 0 诚实态·cph4 集团工具面不计入）"
+  ],
+  [
+   "pass",
+   "R-L1 消费率闸机器判据（D-20260930-36·T-20261010-01 基线 v1.0：Tools/rl_gate.py 首跑——13 导出面分类完备〔消费面 4：citizens-light/citizen-behavior/citizen-anchors/citizen-persona·未消费面 9 已标 unconsumed 入 ledger〕·接线仓数 3（FluxVerse/Biggame-MiniGame/BigDomain·与 XL-17 判据同口径）·证据指针 file:line 齐（qa/rl-gate-R785.log）·阈值=待校准〔前置②行业对标回执未至不判合格线〕·周轮对标差距表行=docs/audits/benchmark-gap-biglife.jsonl）"
   ]
  ]
 }

@@ -1,0 +1,38 @@
+# rl_gate R-L1 machine judgment — 2026-10-10 R785 @BigLife-OSLoop
+# rule: R-L1 (docs/audits/global-benchmark-and-check-rules-20260930.md, group repo)
+# task: T-20261010-01 (D-20260930-36 R-L wiring, window <=10-13)
+# basis: baseline-v1.0-ours (industry receipts pending = D-20260930-36 pre-2)
+# ruff: uvx ruff@0.16.9 --select F401,F811,F841,SIM115,RUF059 Tools/rl_gate.py -> All checks passed (SIM115x2 fixed in-round)
+# py_compile: OK
+# cmd: python -X utf8 Tools/rl_gate.py
+[rl-scan] fluxverse         files=548 11.1s
+[rl-scan] biggame-minigame  files=13369 99.9s
+[rl-scan] bigdomain         files=820 8.3s
+[rl-scan] bigstream         files=11240 107.5s
+[rl-scan] cph4-tools        files=21418 207.2s
+RL1 citizens-light.jsonl   consumed    consumers=fluxverse,biggame-minigame,bigdomain
+RL1 citizen-needs.jsonl    unconsumed  consumers=-
+RL1 citizen-behavior.jsonl consumed    consumers=fluxverse
+RL1 citizen-tasks.jsonl    unconsumed  consumers=-
+RL1 citizen-relations.jsonl unconsumed  consumers=-
+RL1 citizen-anchors.jsonl  consumed    consumers=biggame-minigame
+RL1 citizen-assembly.jsonl unconsumed  consumers=-
+RL1 citizen-initiatives.jsonl unconsumed  consumers=-
+RL1 citizen-atlas.jsonl    unconsumed  consumers=-
+RL1 citizen-persona.jsonl  consumed    consumers=biggame-minigame
+RL1 citizen-goals.jsonl    unconsumed  consumers=-
+RL1 citizen-voice.jsonl    unconsumed  consumers=-
+RL1 census/export          unconsumed  consumers=-
+RL1_JUDGMENT=pass problems=none
+RL1 consumed=4/13 unconsumed=9 wired_repos=3
+RL1 threshold=PENDING_CALIBRATION (rate=0.308·行业回执到前不判合格线)
+RL1 gap-row=appended
+RL1 ledger=cognition/consumption-ledger.json
+# notes:
+# - consumed faces (4): citizens-light (3 repos) / citizen-behavior (fluxverse) /
+#   citizen-anchors (biggame-minigame) / citizen-persona (biggame-minigame)
+# - unconsumed faces (9) tagged in ledger per R-L1 "零消费批不入册（或标 unconsumed）"
+# - 口径一致 wired_repos=3 = consumer_wiring.py v1.0 (XL-17) same口径 (cph4 excluded, doc-level refs excluded)
+# - threshold face NOT judged pass/fail (PENDING_CALIBRATION per正典教训: undefined threshold -> DATA_GAP not PASS)
+# - --qc double-run determinism: 留单下轮 (single scan ~7min incl cph4 207s; double run over round budget)
+# - intake face: 新增居民批次消费方标注 = T-20261010-03 需求触发制 (consumer-arrival-before-registration)
