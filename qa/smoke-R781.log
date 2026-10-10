@@ -1,0 +1,8 @@
+﻿BigLife smoke R781 @2026-10-10 19:08:36 (round: year-ring 10/10 C-00026+C-00030~38 committed f59bc26e, sync 0fa4a1a4)
+[1] poolgen_tick PASS last_tick==== 2026-10-10 19:06:02 poolgen_loop tic age_h=0.0
+[2] today_rings ledger=31 (registry=9 anchors=22) expected=31 PASS
+[3] light_gates PASS rows=10030 unique=10030 max=C-10036 over_cap=0 (freeze maintained)
+[4] freeze_gate FAIL exit=1 REGISTRY-FROZEN=False (zero-write enforced)
+[5] heartbeat PASS mtime=18:57 age_min=10.6
+[6] card_spot C-00026 PASS; C-00032 PASS
+[4b] freeze_gate RESTORED PASS - registry-freeze.lock found MISSING at 19:08 live probe (last evidenced on disk R778 18:2x board record; R779/R780 smoke logs absent = evidence gap; deletion window 09-30 19:38~10-10 19:08, no authorized unfreeze order in group docs/orders.md; deletion source unknowable - state/ untracked). Re-armed 19:11 per standing order C-20261010-03⑤ (census freeze maintained, CEO-only release). Live-fire after re-arm: generate_census --qc exit=4 REGISTRY-FROZEN / resident_intake --qc exit=4 REGISTRY-FROZEN. Census data zero-drift throughout (light 10030/10030 cap=C-10036 over_cap=0). Incident carried to 23:00 daily report (HQ-FEEDBACK).
