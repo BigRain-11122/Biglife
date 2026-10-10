@@ -1,0 +1,7 @@
+BigLife OS smoke R809 2026-10-11 02:09:21
+ITEM1 poolgen tick: === 2026-10-11 02:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=14 age=0.06h -> PASS
+ITEM2 census new ring lines today=32 by_dir={"census/anchors": 4, "census/registry/GM": 4, "census/registry/MD": 5, "census/registry/NS": 1, "census/registry/OR": 4, "census/registry/QT": 9, "census/registry/RV": 5} -> PASS
+ITEM3 behavior rows=10030 slot_null=0 anchor_null=3 ids=C-00001,C-00002,C-00003 -> PASS
+ITEM4 relations meet rows=24 (regen-state check, no new meets since R803 regen) -> PASS
+ITEM5 heartbeat last: 2026-10-11 01:58:55 os-loop: round done exit=0 age=0.17h -> PASS
+VERDICT 5/5 PASS
