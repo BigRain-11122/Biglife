@@ -1,0 +1,9 @@
+=== qa/smoke-R813.log 2026-10-11 02:48 @BigLife-OSLoop ===
+[1] poolgen tick：=== 2026-10-11 02:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（间隔 <24h·池达标自停维护面）→ PASS
+[2] census 新环：R813 批 4/10 落环（C-00175/C-00176/C-00177/C-00178·批 942716b7+镜像 f4e4d93a·6 席 time-morning 凌晨档门拦留冷自然重试）→ 10-11 全域环总数 49（expect 49 账平零差·anchors 4+GM 10+MD 9+NS 3+OR 5+QT 12+RV 6）→ PASS
+[3] 造人双闸：light rows=10030 unique=10030 over_cap=0（封顶 C-10036·受控复产零新注册维持）·ring-bearing 4851→4851（既有居民迭代环非新环民）·本轮 4 卡 recent_ring_date=today True → PASS
+[4] 位置字段：behavior 前 100 行 anchor null=3（荣誉席 ['C-00001', 'C-00002', 'C-00003'] 契约面）·非荣誉 null=0 → PASS
+[4b] 行为线：relations meet rows=24（R803 再生 24 维持·本轮零 meet 增量免重跑）+QC 例巡 R813 到期兑现 problems=0（cards=10030·evolved=4851·下次 ≥R819）→ PASS
+[5] heartbeat：上一戳 2026-10-11 02:37:27 os-loop: round done exit=0 <3h → PASS
+tokens: local=10（年轮批 4 落环×1=4+6 门禁后尝试≥1=6·QC 例巡/账平/双闸/直数/smoke/export=纯确定性零 LLM） api=0
+smoke 五项全勾 → PASS
