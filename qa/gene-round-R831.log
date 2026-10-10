@@ -1,0 +1,23 @@
+qa/gene-round-R831.log @2026-10-11 @BigLife-OSLoop
+== R831 基因轮(extend-gene-pool·R831 到期兑现) 池面: language.catchphrases +6; lives.hook_objects +2; lives.turning_points +2 ==
+== 查一 nearcheck LayerA 4gram 全文本池 + LayerB 同型池 rapidfuzz (cp92/ho95/tp44·R417 定谳) ==
+[PASS] cp|躺椅一横就是半天，蒲扇摇到饭点才肯停。
+[PASS] cp|灶膛火气一窜，锅铲比人先醒。
+[PASS] cp|老秤高高的，一钱一厘都有去处。
+[PASS] cp|街上头一天出现的物件，我总想抢先摸一遍。
+[PASS] cp|邮戳磨浅了的老信封，一封压着一封收。
+[PASS] cp|见着以大欺小，嗓门先顶上去。
+[PASS] ho|细脖子的酱油提子
+[PASS] ho|包浆发亮的凿子柄
+[PASS] tp|头回赶集把钱包丢了，捡着的人挨摊问了一路。
+[PASS] tp|厂里散伙那年，我把工牌留在了更衣柜里。
+== 查二 触发词族字符级(R40) ==
+[PASS] 10/10 hits=[] ALL PASS（新候选零天气/时段 token）
+== 查三 跨面 4gram vs face corpus (pools+greetings+pools-negative·R102 判例面) ==
+face corpus scanned=2006
+[PASS] 10/10 hits=[] ALL PASS（零跨面撞句）
+== 终验 基线计数+轴平衡+既有零漂移 ==
+cp 606->612 六轴 {"逍遥": 102, "烟火": 102, "秩序": 102, "求新": 102, "怀旧": 102, "侠气": 102} / tp 219->221 / ho 351->353 · json.load 双件过
+既有集合零漂移: cp[:606]/tp[:219]/ho[:351] 逐条全等断言 PASS · 纯尾追加（末行加逗号改写 3 行）
+VERDICT PASS 10/10
+收敛实录=五轮 7→4→4→1→0（查一 4-gram 初版 7 席命中〔躺椅往树荫/新鲜玩意…〕→3 轮换句→查二字符级抓「柜台」台字+查三 4-gram 抓「新鲜玩意」撞脸面语料 2006 条当轮拦→终态 10/10 CLEAN·R823 四轮/R815 两轮/R808 五轮收敛范式续证）
