@@ -1,0 +1,8 @@
+qa/smoke-R794.log — BigLife 五项自验（T-20260928-05）— 2026-10-10T22:20:28+08:00
+[1] poolgen 跑通 PASS — tick 尾行: === 2026-10-10 22:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] census 新条目 PASS — 10-10 新写环 97（R789 面 65+R792 批 12+R793 批 10+R794 批 10=97 账平）
+[3] light 双闸 PASS — rows=10030 unique=10030 封顶 C-10036 over_cap=0 · anchors home null=3（荣誉席法定 3·arows=10030）
+[4] 行为链再生 PASS — behavior-last bucket=eve weather=rain v=2 ts=2026-10-10T21:43:02+08:00（--auto 在役）
+[5] heartbeat 新鲜 PASS — 轮末 alive 行随本件落（3h 窗内）
+[6] 核卡抽验 PASS — C-00090/C-00095 [锚] 2/2 齐备·雨天实况域内·机审门批内全审过门
+[7] 反思面 PASS — reflections=20 行（10-10 R794 批 C-00011/C-00012·G4 闭包门·append-only）
