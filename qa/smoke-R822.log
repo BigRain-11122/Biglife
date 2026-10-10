@@ -1,0 +1,8 @@
+=== qa/smoke-R822.log 2026-10-11 04:55 @BigLife-OSLoop ===
+[1] 池日额度：10-11 额度 R816 已跑（TOTAL=1440+518·under_target NONE·PASS 自停维持）→ 本轮合规跳过 → PASS
+[2] census 新环：R822 批 6/10 落环（C-00150/C-00166/C-00212/C-00213/C-00214/C-00215·批 badfcc76+镜像 98749495·4 席带 time-morning 凌晨档门拦留冷自然重试〔C-00121/C-00160/C-00161/C-00211〕）→ 10-11 全域环 90（expect 90 账平零差〔84 卡面+6 锚 机器直数 Select-String ^- 2026-10-11 全 census/*.md=90·唯一居民 89〔C-00134 双环条目差 1 口径注记〕〕）→ PASS
+[3] 造人双闸：light rows=10030 unique=10030 over_cap=0（封顶 C-10036·受控复产零新注册维持·ring-bearing=recent_ring_date 非空 4851 维持〔实测〕·既有居民迭代环非新环民）→ PASS
+[4] 位置字段：behavior 10030 行·anchor null=3（荣誉席 C-00001/C-00002/C-00003 契约面非岗位 null=0·本轮实测）→ PASS
+[5] QC 例巡：免巡（R819 problems=0 在案·cards=10030·evolved=4851·下次例巡 ≥R825）→ PASS
+[6] heartbeat：上轮 2026-10-11 04:35:44 os-loop round done exit=0（<1h 新鲜）→ PASS
+tokens: local=10 api=0 api_reason=-（下限口径：年轮批 6 落环×1=6+4 门禁拦留尝试=4·账平/双闸/直数/smoke/export/实录=纯确定性零 LLM）
