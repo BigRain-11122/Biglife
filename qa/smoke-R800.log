@@ -1,0 +1,11 @@
+qa/smoke-R800.log — OSLoop 冒烟五项 @2026-10-11 00:0x（R799 后第 1 轮·跨午夜轮）
+
+[1] poolgen tick: state/poolgen_run.log 尾行 === 2026-10-10 23:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（间隔 60min<24h 判据持续满足）PASS
+    + 10-11 日窗池轮 audit：verdict=PASS·under_target NONE-SELF-TERMINATE·hard_fails=0·negative 6/6 recovering=8·determinism 192+25 对 mismatch=0（达标自停·例份收口）
+[2] 今日环账平: 10-10 全域直数 127 = 107（R796 面）+R798 批 6+R799 批 7+R800 批 7 零差（python 双域 registry+anchors+reserved [锚] 当日行直数）PASS；10-11 窗 00:0x 刚开·当日环 0（如实）
+[3] light 双闸: rows=10030 unique=10030 max=C-10036 over_cap=0（解冻后零新注册=T-20261010-03 需求触发制合规态）PASS
+[4] 闸面: 解冻后三码闸 BASELINE REFUSED 前置守护在役（R782 在案·锁已按 CEO 17:52 解冻令删）+机审门批内全审——3 席 wind-over 生成后拒零编造入库（C-00121/00122/00127 stays due）PASS
+[5] 核卡抽验 2/2: C-00124「街角的云厚着呢，风不大…尾巴天线还是对准了最热闹的方向」+C-00130「退退退，今儿这天云厚风不大，走街串巷倒也自在」——风况「风不大」与低风实况一致（wind-over 拦截面同窗互证）·[锚] 2/2 齐备·卡面直读 PASS
+[6] heartbeat: 本轮尾写（00:0x）新鲜 PASS
+
+基因轮主件: qa/gene-round-R800.log（cp 588=98x6/ho 347/tp 213·qc 15/15·baseline criterion_ok·入库证 10/10 转近重）
