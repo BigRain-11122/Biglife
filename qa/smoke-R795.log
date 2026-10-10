@@ -1,0 +1,8 @@
+qa/smoke-R795.log — BigLife 五项自验（T-20260928-05）— 2026-10-10T22:34:57+08:00
+[1] poolgen 跑通 PASS — tick 尾行: === 2026-10-10 22:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] census 新条目 PASS — 10-10 新写环 97（R794 面 97 维持·R795 GPU 让路零新环账平不变）
+[3] light 双闸 PASS — rows=10030 unique=10030 封顶 C-10036 over_cap=0
+[4] 行为链再生 PASS — behavior-last bucket=eve weather=rain v=2 ts=2026-10-10T21:43:02+08:00（--auto 在役）
+[5] heartbeat 新鲜 PASS — 轮末 alive 行随本件落（3h 窗内）
+[6] QC 例巡 PASS — R795 problems=0 cards=10030 evolved=4851（QC-REPORT 随轮入库·原 ≈R797 让路轮提前兑现）
+[7] 反思面 PASS — reflections=20 行维持（R794 批 20 民·日帽 2/3·余 1 席候选待 GPU 窗）
