@@ -1,0 +1,43 @@
+qa/gene-round-R790.log — R790 基因轮证据链（2026-10-10 21:4x @BigLife-OSLoop·先验后登正序·T-20260927-01·R784 后提前兑现〔GPU 让路面〕·extend-gene-pool SKILL 全步）
+
+== 候选清单 v2 终版（10 条=cp 六轴各1+ho2+tp2）==
+cp|蒸笼一掀满巷白汽，用不着吆喝人就来了。
+cp|家什摆在固定地方，谁用完谁放回去，省得抓瞎。
+cp|收了摊先不急回家，江边石阶坐个够再往回走。
+cp|别处传来的新吃法，回家必要亲手试上一回。
+cp|这把锡壶用惯了，磕瘪个坑也照旧使着。
+cp|街坊有急难处，钱匣子先敞开再说。
+ho|熏得乌黑的老铜壶
+ho|锯齿磨秃了的旧手锯
+tp|跟着驼队走了趟口外，回来皮袄里还缝着一小袋戈壁的石子。
+tp|平生头一次见着火车，撵着车尾跑了半里地才肯回铺子。
+
+== 近重预检收敛实录（Tools/gene_nearcheck.py·纯确定性零 LLM）==
+R1: 10 候选, 5 近重候选（cp 各归各位[各归各位∈cp356]·cp 了再说。[了再说。∈cp3]·cp 老辈传下[是老辈传∈ho_scope5]·ho 舍不得换[舍不得换∈cp256]·tp 头一回进/了半个月[∈tp15/32/93]）
+R2: 10 候选, 0 近重候选 — CLEAN 10/10 exit 0（换句再验收敛·Layer A 全文本池零 4-gram 重叠+Layer B 阈值内）
+
+== 查二 触发词族（R40 纪律·字符级）==
+NONE（族表 雨/淋/台/风/月/星/晴/雾/晨/夜/灯/放学/场次/信号/占位 全零命中·机器扫描）
+
+== 查三 跨面撞句（R102 教训·双向包含扫描）==
+NONE（面文件 39,826 条=pools.json+greetings.json+census/export/citizens-light.jsonl 10030 行全字段·R784 口径 10081 面的超集·双向包含零命中）
+
+== 登记外科追加实录（state/gene-register-R790.py·R775/R784 同型）==
+language.json cp: 576 -> 582 | axes: {'逍遥': 97, '烟火': 97, '秩序': 97, '求新': 97, '怀旧': 97, '侠气': 97}
+lives.json tp: 209 -> 211 | ho: 343 -> 345
+REGISTER OK（既有条目零漂移断言 d2[:nb]==d[:nb] 三池全过·97x6 均衡断言过·git diff 13+/3-=纯尾追加·尾行隔号结构重排 R719 同型）
+
+== 落库终验① --qc 断言电池（活跑）==
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+
+== 落库终验② --baseline 三池自配对基线（活跑）==
+cp n=582 max_ratio=91.667 T=92 criterion_ok=true（top_pair=热汤落肚/热汤下肚·R417 定谳值零漂移）
+ho n=345 max_ratio=94.118 T=95 criterion_ok=true（top_pair=别在门襟上的老怀表/别在襟上的老怀表·零漂移）
+tp n=211 max_ratio=43.902 T=44 criterion_ok=true（top_pair=守摊/守饭摊·零漂移）
+（新 10 条未超越史顶对=三池 max_ratio 逐值不动）
+
+== 入库证：候选全量复跑（活跑·应 10/10 近重候选=ratio100 自命中=全部入库）==
+10/10 全 FLAG（cp 插入索引 576-581·ho 343-344·tp 209-210·Layer A 自撞 4-gram 全列+B ratio100 三池阈值逐条过）
+
+== 计量 ==
+tokens: local=0 api=0 api_reason=-（基因轮纯文本零 LLM·nearcheck/登记/终验/入库证=纯确定性）
