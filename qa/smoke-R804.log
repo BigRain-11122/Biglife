@@ -1,0 +1,9 @@
+=== qa/smoke-R804.log 2026-10-11 01:09 @BigLife-OSLoop ===
+[1] poolgen tick：=== 2026-10-11 01:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（间隔 <24h·池达标自停维护面·本轮 audit 复跑 PASS under_target NONE）→ PASS
+[2] census 新环：R804 批 5/10 落环（C-00122/C-00142/C-00143/C-00145/C-00146·批 9226e5db+镜像 d880f3d0·5 席 time-morning 凌晨档门拦留冷自然重试）→ 10-11 全域环总数 18（expect 18 账平零差·census 域 [锚] 当日行：anchors 4+GM 2+MD 1+NS 1+OR 1+QT 5+RV 4）→ PASS
+[3] 造人双闸：light rows=10030 unique=10030 over_cap=0（封顶 C-10036·受控复产零新注册维持）·ring-bearing 4851→4851（既有居民迭代环非新环民）·本轮 5 卡 recent_ring_date=today True → PASS
+[4] 位置字段：behavior 前 100 行 anchor null=3（荣誉席 ['C-00001', 'C-00002', 'C-00003'] 契约面·v3.55 设计态）·非荣誉 null=0（PASS）；mtime=2026-10-11 01:03:02（sync_rings 本轮新躺）→ PASS
+[4b] 行为线：relations R3 再生态维持（mtime=2026-10-11 00:52 早于本轮环批 01:03=零 meet 增量免重跑·R803 再生 meet 16→24 md5=4907814b 在案）→ PASS
+[5] heartbeat：上一戳 2026-10-11 00:55:04 os-loop: round done exit=0 <3h → PASS
+tokens: local=10（年轮批 5 落环×1=5+5 门禁后尝试≥1=5·零相遇/零反思=日额已满·账平/双闸/直数/smoke/export=纯确定性零 LLM） api=0
+smoke 五项全勾 → PASS
