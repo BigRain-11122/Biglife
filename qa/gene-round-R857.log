@@ -1,0 +1,18 @@
+# 基因轮 R857 预检与追加终验 (2026-10-11 12:06) [via BigLife-OSLoop]
+配方: cp 624->630 (105x6 六轴均衡) / tp 225->227 / ho 357->359 = +10
+check2 TRIGGER: 0 hits PASS
+check1 NEARCHECK: 0 hits PASS (LayerA 4gram all-pool + LayerB rapidfuzz cp92/tp44/ho95)
+check3 CLASH: 0 hits PASS (face corpus bidirectional)
+外科式纯尾追加: 既有条目零字节改动 ([:624]/[:225]/[:357] 逐位相等断言 PASS)
+新条目 10/10:
+  cp|逍遥|抓把瓜子揣兜里，溜达到哪儿吃到哪儿。
+  cp|烟火|砂锅在灶上咕嘟着，掀盖先舀一勺尝咸淡。
+  cp|秩序|簸箕里的豆子颠三遍，瘪的坏的各归各堆。
+  cp|求新|新到的洋戏匣子，抢先一步搬回家摆堂屋。
+  cp|怀旧|祖母顶针箍还收在笸箩底，箍身都压弯了。
+  cp|侠气|街口有人仗势欺生，我搬条凳坐他跟前。
+  tp|堂会头一遭开腔，锣一响忘了词，索性吼了段号子。
+  tp|药铺盘给别人那天，戥子擦得能照见人影才交出去。
+  ho|缺口磨圆了还使着的桃木饭勺
+  ho|腌菜坛口的木压石
+VERDICT: PASS 10/10
