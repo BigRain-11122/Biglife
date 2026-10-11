@@ -1,0 +1,9 @@
+=== qa/smoke-R838.log 2026-10-11 @BigLife-OSLoop ===
+[1] poolgen tick: === 2026-10-11 08:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE => PASS
+[2] census 10-11 新环: R837 199+R838 批 9→全域总数 208（expect 208 账平零差·机器直数 census/**.md 当日 [锚] 行·status-export results[13] 同值）{'anchors': 6, 'GM': 52, 'MD': 42, 'NS': 21, 'OR': 15, 'QT': 57, 'RV': 15} => PASS
+[3] 造人双闸: light rows=10030 unique=10030 over_cap=0（封顶 C-10036·受控复产零新注册维持）· recent_ring_date=today 实测 207 == md 直环居民 207（208 行划 1 = 双环卡面差口径）=> PASS
+[4] 位置字段: behavior 前 100 行 anchor null=3（荣誉席 ['C-00001', 'C-00002', 'C-00003']·非荣誉免 null=0）=> PASS
+[4b] 行为线 relations: rows=2841100 meet=26（R834 再生 26 维持·R838 零新遇）=> PASS
+[5] heartbeat: 上一次 2026-10-11 08:37:47  0.16h <3h => PASS
+[6] 基因轮: cp 612 六轴 {'逍遥': 102, '烟火': 102, '秩序': 102, '求新': 102, '怀旧': 102, '侠气': 102} / tp 221 / ho 353·R831 兑现值维持（json.load 双连读）=> PASS
+RESULT: 7/7 PASS
