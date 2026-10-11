@@ -1,0 +1,35 @@
+== BigLife gene-round R896 @2026-10-11 19:2x ==
+候选：cp6（六轴均沾 逍遥/烟火/秩序/求新/怀旧/侠气）+tp2+ho2=10 条
+
+[查一] gene_nearcheck.py（Layer A 4-gram 全文本池 + Layer B rapidfuzz cp92/ho95/tp44）四轮收敛：
+  v1: 10 候选 8 近重——椅吱呀一声/砂锅咕嘟/工具各归各位/新工具上手/日子照样/吃完再谈/头一回喊他师/化锡小炉 全 4-gram 既有句族拦
+  v2: 5 近重——急事也得/日日清，+抽屉里的+票子按面值/旧收音机/铁皮饼干盒+颗都有来/陪嫁的樟木箱 全拦
+  v3: 2 近重——坐出包浆/擦得锃亮 占位拦
+  v4: 10 候选 0 近重 [CLEAN] 10/10
+终版候选清单=state/gene-cand-R896.txt（四轮换句实录在会话档）
+
+[查二] 触发词族扫描: 零命中 PASS
+  词族=风/雨/雪/雹/晴/阴/雾/霜/晒/台风+今早/早上/早晨/清晨/晨光/今晚/深夜/夜深/凌晨/傍晚/黄昏/正午/午夜/夜里/夜班/夜市/值夜+单字 早/晨/夜/晚/宵+红灯/绿灯/毫秒——零天气/时段 token=不造结构性门拦
+
+[查三] 跨面撞句（cognition/pools.json+greetings.json+pools-negative.json·corpus=2006 串·双向包含）: 零命中 PASS
+
+[入库实录·外科式纯尾追加]
+  splice v1: language.json cp +6 落盘成功；lives.json 断言拦停（闭行检测漏 '], ' 形）=零写盘 fail-safe
+  splice v2: 闭行检测修 standalone '], ' 形——但 tp/ho 实为附着式闭行（尾条目与 '"]' 同行·多数组中间形制）→ v2 仍只认 standalone → 候选错插 habits/sprite_hook_actions 两数组（git diff 实锚）→ git checkout genes/lives.json 回滚自修（本轮自伤自修如实记·教训=拼接件闭行检测必须双形制起步）
+  splice v3: 双形制闭行检测（standalone/attached）+多条目共行兼容（parts 重建）+全键不变断言 → 通过
+  diff 终态=13 insertions / 3 deletions（两文件·末行加逗号改写=外科式追加零漂移）
+
+[终验断言 11/11 PASS]
+PASS tp 233→235
+PASS tp 前缀零漂移（[:233] 对 HEAD 逐条全等）
+PASS tp 尾 2=候选
+PASS ho 369→371
+PASS ho 前缀零漂移
+PASS ho 尾 2=候选
+PASS 全键不变（habits/sprite_hook_actions 等其余键对 HEAD 逐值全等=错插防线）
+PASS cp 654→660
+PASS 六轴 110x6（Counter 逐轴 110）
+PASS cp 前缀零漂移（[:654] 对 HEAD 逐条全等）
+PASS cp 尾 6=候选六轴序
+
+== gene-round R896: 三查全过 + 入库 10 条（cp 660=110x6 均沾 / tp 235 / ho 371）·下次 ≈R904 ·纯文本零 LLM ==
