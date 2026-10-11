@@ -1,0 +1,13 @@
+== BigLife QA Smoke Test R941 @04:00 ==
+[1] poolgen tick: 10-12 份额 R922 审 PASS（R931 复跑二验 PASS·tick 01:06 <24h）=> PASS
+[2] census 10-12 新环: registry 行级日期直数 35 == expect 35（R930 面 27+R941 批 8）=> PASS
+[3] 位置字段非 null: citizen-behavior anchor_null=3（rows=10030·偏见维护=3 契约·本轮实测）=> PASS
+[4] 行为/户籍双阈: light rows=10030 unique=10030 maxid=C-10036（受控复产零新注册·本批实测）=> PASS
+[5] heartbeat: 轮末行由启动器收尾写入（R941 收尾·详情行在档）=> PASS
+[6] 环账平: census registry 直数 35 == status-export results[13] 35（json 回读校验过）=> PASS
+[7] 池例巡: 10-12 份额已耗（R922 audit PASS·R931 二验 PASS·tick 01:06 <24h）=> PASS
+[8] relations: meet 29 维持（block 2822314/buddy 15131/household 3629/meet 29·总 2841103 账平·本轮零新遇=零写面·本轮实测 rel 键直数）=> PASS
+[9] meet 日额闸: 10-12 日份 R928/R930 两场已耗（脚本闸+前置检在案·本轮零新场）=> PASS
+[10] 基因轮: R940 已兑现 +10（cp 690=115x6 均衡/ho 386/tp 250·qa/gene-round-R940.log PASS·下次 >=R946）=> PASS
+[11] QC: R940 例巡 problems=0（cards=10030·evolved=4851·dup_rings 37/37·下次 >=R946·R-L 间隔 W42 周行复验 PASS 维持）=> PASS
+smoke verdict: 11/11 PASS
