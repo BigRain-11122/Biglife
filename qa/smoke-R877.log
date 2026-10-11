@@ -1,0 +1,13 @@
+== BigLife QA Smoke Test R877 @2026-10-11 15:48 ==
+[1] poolgen tick: 最新戳 === === 2026-10-11 15:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE == (<24h 判据·age 0.7h) PASS
+[2] census 本批: 8 环 C-00613/614/616/618/619/620/621/622 落 8 (commit aeea39f6·镜像 94f45cca rows=8·GPU 争用窗七连留冷后收口续产·dedup 闸 v0.45 实弹拦截 C-00615/C-00617 stays due) PASS
+[3] 位置字段非 null: behavior rows=10030 anchor_null=3 (荣誉席契约面·非荣誉 0·零新注册维持) PASS
+[4] 行为链: citizen-behavior.jsonl rows=10030 ring-bearing=4851 (镜像 rows=8 sync 本批) PASS
+[5] heartbeat: 轮末续鲜 (随本脚本写入) PASS
+[6] light 双闸: rows=10030 unique=10030 (maxid=C-10036·受控复产零注册维持) PASS
+[7] 环账平: 10-11 全域直数 505 = R868 面 497 + 本批 8 零差 (行级机器直数 registry 497+anchors 8) PASS
+[8] 池: audit PASS 全桶达标自停维持（本轮实跑 verdict=PASS SELF_TERMINATE·六轴 72/72·sprite 12/12·greet 28/28·faq 7/7·determinism 192 对零漂移） PASS
+[9] relations: meet=27 (相遇日额超帽免写·meet-cap 闸 6/3 在案自证·本轮尝试被 cap 拒零 LLM 零写) PASS
+[10] 基因: cp642=107x6/tp229/ho365 维持（R873 已兑现·下次基因轮 ≈R881） PASS
+[11] QC: problems=0 免巡在案 (R872·≥R878 到期) + dup_rings 观测基线 37/37 + 本批成品逐字重复率 0/8 (T-20261011-01 判据观察窗第 2 批 <2% ✓ 连续 2 批过线·闸拦截面 2/10=生成端收敛被闸兜底·观察数据点如实记) PASS
+smoke verdict: 11/11 PASS
