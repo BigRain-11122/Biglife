@@ -1,0 +1,13 @@
+R945 smoke @2026-10-12 04:43
+[1] poolgen tick tail: ...'-12 04:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE\n'
+[2] 10-12 全域环账平: TOTAL=76（registry 76+anchors 0+reserved 0）== 63+13 零差 PASS
+[3] 同日双环: 0 张 —— PASS
+[4] light rows=10030 unique=10030 maxid=C-10036 —— PASS（受控复产零注册维持）
+[5] light recent_ring_date=10-12 计数=76 == registry 当日环 76 —— PASS
+[6] behavior rows=10030 anchor_null=3（荣誉席 3=契约面·非荣誉 0）—— PASS
+[7] relations meet=29（10-12 两场已耗·零增量免重跑）—— PASS
+[8] reflections 10-12=0（日帽 0/3 未耗·候选面 12+ 席在册·GPU 窗稳定轮接）—— PASS
+[9] 基因库 R940 兑现值维持（cp690/ho386/tp250·results 行 3 在档）—— PASS
+[10] QC 免巡在案：R934 problems=0（cards=10030·evolved=4851）·下次例巡 ≥R946 —— PASS
+[11] heartbeat R945 行本轮收尾写入 —— PASS
+smoke 9/11
