@@ -1,0 +1,17 @@
+== gene_round R960 start ==
+check-baseline: worktree == HEAD (language/lives) PASS
+check-counts-pre: cp=702(6x117) ho=390 tp=254 PASS
+check1 STRICT[cp]: 0 hits PASS（nearcheck Layer A 4-gram 全池 0 命中·择优 6 句）
+check1 STRICT[ho]: 0 hits PASS（择优 2 件）
+check1 STRICT[tp]: 0 hits PASS（择优 2 句）
+check2 TRIGGER: 0/31x10 hits PASS（RUMOR_TRIGGERS 31 词·天气/时辰/行情面全避）
+check3 COG: atoms>=6c=2232 files=8 0 hits PASS
+check3 CENSUS rg: 0/10 full-entry hits PASS
+draft battery: 24 drafted -> 16 clean -> 10 selected（8 近重候选拦下=首跑 6〔借工具 L4/小本账 L4/竹壳 L4+SUB5/巷口路灯 L4/弄堂口传呼 L4+BI2/全勤奖 L4+LB〕+补句轮 2〔打烊 L4/规矩 L4〕·秩序轴两轮补句后清）
+intra-pair guard: 组内两两 fuzz 全低于史前峰值 {cp 91.667/ho 94.118/tp 43.902} PASS
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=708(6x118) ho=392 tp=256 tail-exact + other-keys byte-equal PASS（HEAD-replay 字节重放证明——apply 尾部断言块死代码行 ValueError 炸在计数/轴分布/落位三断言全过之后·盘面无损·verify 脚本收口）
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R960 ALL BATTERY PASS ==
