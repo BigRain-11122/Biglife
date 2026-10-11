@@ -1,0 +1,13 @@
+== BigLife QA Smoke Test R930 @2026-10-12 01:41 ==
+[1] poolgen tick: === 2026-10-12 01:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（tick 距今 0.6h <24h·10-12 份额 R922 已耗 audit PASS 自停） => PASS
+[2] census 10-12 新环: 行级当日日期直数 27 == expect 27（R929 面 17+R930 批 8+相遇 2·registry 27+anchors 0+reserved 0） => PASS
+[3] 位置字段非 null: citizen-behavior rows=10030 anchor_null=3（荣誉席维护面=3 契约·检面正身=behavior） => PASS
+[4] 行为/户籍双阈: light rows=10030 unique=10030 maxid=C-10036（受控复产零新注册维持·实测） => PASS
+[5] heartbeat: R929 round done 01:32:44 新鲜在档+R930 行随轮末写入（state/ 本机面） => PASS
+[6] 环账平: census 10-12 直数 27 == status-export results[13] 27（json 回读校验过） => PASS
+[7] 池例份: 10-12 份额已耗（R922 audit PASS·tick <24h） => PASS
+[8] relations: meet 总数 29（R930 再生 28→29 入面 QC PASS md5 27ec42b4·rows=2841103·block 2822314+buddy 15131+household 3629+meet 29 账平·行级直数实测） => PASS
+[9] meet 日额闸: 当日 2 场（R928 MD C-03766×C-04389+R930 GM C-00473×C-01209 均首遇）帽 3 内·rel 直数 src=10-12 计 2 => PASS
+[10] 基因轮: R926 兑现在档（cp 680/ho 381/tp 245·qa/gene-round-R926.log PASS·下次 ≥R934·本轮未到期零动作） => PASS
+[11] QC: R929 例巡 problems=0 在档（census/QC-REPORT.md·cards=10030 evolved=4851 dup 37/37·下次例巡 ≥R935·本轮未到期） => PASS
+smoke verdict: 11/11 PASS
