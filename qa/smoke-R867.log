@@ -1,0 +1,4 @@
+== BigLife QA Smoke Test R867 @2026-10-11 14:08 ==
+[1] census 本批: 10 环 C-00593~C-00602 落 (commit 3ce8c0d9+镜像 ceda7ec9 rows=10·一次通零门拦) PASS
+[2] 环账平: 10-11 全域直数 487 = R866 面 477 + 本批 10 零差 (行级机器直数 card 479+anchors 8·_count_R853 正法口径) PASS
+[3] heartbeat: 轮末鲜 (v1 已写·R867 行在案) PASS
