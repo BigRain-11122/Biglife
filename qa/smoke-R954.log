@@ -1,0 +1,13 @@
+== R954 smoke @ 2026-10-12 06:34 ==
+[PASS] 环账平 10-12 rings_today=98 (expect 98 maintain·GPU 争用窗零新环·机器直数)
+[PASS] light 双阈 rows=10030 uniq=10030
+[PASS] maxid 零新注册 C-10036（受控复产=需求触发制·本轮零需求零注册）
+[PASS] behavior anchor_null rows=10030 null=3（荣誉席契约面维持）
+[PASS] relations meet=30（日额 3/3 满·R953 面维持）
+[PASS] pool tick 06:06 TOTAL=1440 FAIL_BUCKETS=NONE（全桶达标自停·<24h）
+[PASS] gene cp 702=6x117 axes（R953 基因轮面维持）
+[PASS] gene battery qa/gene-round-R953.log PASS 10/10
+[PASS] status-export export_ts 2026-10-12 06:2x（<24h·实况无变化本轮零刷新=律合规）
+[PASS] nearcheck sentinel（R953 三查电池面维持·本轮零基因动作）
+[PASS] task hygiene T-20261011-02 checkbox 正名（实质 R911 关单·防 open 扫重triage）
+== R954 smoke: 11 PASS, 0 FAIL ==
