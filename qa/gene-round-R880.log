@@ -1,0 +1,24 @@
+== BigLife 基因轮 R880 预检三查+登记 @ 2026-10-11 16:2x ==
+[查一-nearcheck v1] 10 候选 4 近重 FLAG（树荫底下/新到的洋/旧算盘打 3 cp + 戥子擦得 tp LayerB 50.0≥T44 同题材）→ 换句 4 条
+[查一-nearcheck v2] 10 候选 0 近重 CLEAN（LayerA 全文本池 4-gram + LayerB rapidfuzz cp92/ho95/tp44·两轮收敛 4→0）
+[查二-CLEAN] cp|竹躺椅留一把给我，板凳让给着急的人。
+[查二-CLEAN] cp|灶膛里留一把火种，粥不糊，话也熬得稠。
+[查二-CLEAN] cp|账本再薄，一笔归一笔，谁也别想混着记。
+[查二-CLEAN] cp|刚进的洋钉子，先给木箱换副筋骨。
+[查二-CLEAN] cp|老门槛磨出凹口，进出的人它都记得。
+[查二-CLEAN] cp|谁家房顶瓦松了，梯子我先扛过去。
+[查二-CLEAN] ho|锡匠铺的化锡小炉
+[查二-CLEAN] ho|竹编匠的刮青篾刀
+[查二-CLEAN] tp|接手祖传木匠铺那天没动一柄旧凿，只把祖师爷的墨斗缠上新的线。
+[查二-CLEAN] tp|头一趟进城没给自己买鞋，回村却把攒的票子全塞给妹妹交学费。
+== 查二 PASS: 触发族零命中 10/10（wind/rain/sky/time=RUMOR_TRIGGERS 全表 + signal=dev-id + placeholder + garbled 七族扫描）==
+[查三-v1 FLAG] cp|灶膛里留一把火种，粥不糊，日子也不糊。 4gram「，日子也」⊂ pools.json「热茶里加块糖，日子也甜些」→ 换句（R823「各有各的」同型判例）
+[查三扫描面] cognition/*.json 8 件 + census/export/citizen-persona.jsonl 全行 corpus 串 245903 条（双向包含）+ pools.json 4-gram 严格面
+[查三-CLEAN] 10/10（跨面双向包含零命中 + pools.json 4-gram 零命中）
+== 查三 PASS: 双向包含+4gram 零命中 10/10（三轮收敛 4→1→0）==
+== language.json splice: catchphrases 642->648=108x6 均衡·前段零漂移·尾纯断言连 ==
+== lives.json splice: turning_points 229->231 + hook_objects 365->367·既有元素级零漂移·尾纯断言连 ==
+== diff 外科面: 13 insertions(+), 3 deletions(-)（3-=末行加逗号改写·R823 同型）==
+== 先登记后使用事: 本批 10 条已入库（口头禅 6 六轴各 1 / 转折点 2 / 钩子物件 2）==
+== R880 基因轮 PASS 10/10 @ 2026-10-11 16:2x ==
+tokens: local=0 api=0 api_reason=-（基因轮纯文本零 LLM）
