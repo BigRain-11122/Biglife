@@ -1036,6 +1036,13 @@ def ring_violations(line, sig):
             break
         if hit32:
             v.append("sky-mismatch")
+    # v0.35 gap #52 (2026-10-11 R842): garbled-script guard - local 7b
+    # sampling corrupted C-00358's ring (нуж for 需要, Cyrillic). No legit
+    # ring voice uses these script blocks; census scan: 1 violation / 0 face
+    # hits = 零误伤. gated_llm auto-regenerates on hit.
+    if re.search(r"[\u0400-\u04FF\u0370-\u03FF\uAC00-\uD7AF"
+                 r"\u0600-\u06FF\u0590-\u05FF\u0E00-\u0E7F\u0900-\u097F]", line):
+        v.append("garbled-chars")
     return v
 
 def gated_llm(prompt, sig, max_regens=3):

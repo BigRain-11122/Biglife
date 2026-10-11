@@ -1,0 +1,9 @@
+smoke-R842 2026-10-11 09:28:39 (QA charter 5+2 items)
+[PASS] poolgen-tick age=0.38h
+[PASS] census-new-entries today_rings=248
+[PASS] light-gate rows=10030 unique=10030 over_cap=0
+[PASS] behavior-anchor null=3 (honored 3)
+[PASS] relations-meet meet=26 rows=2841100
+[PASS] heartbeat age=0.21h
+[PASS] gene-bank cp=618 tp=223 ho=355
+[PASS] mirror-garble-0 hits=0
