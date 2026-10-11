@@ -1,0 +1,22 @@
+qa/gene-round-R839.log @2026-10-11 @BigLife-OSLoop
+== R839 基因轮(extend-gene-pool·R839 到期兑现·R831 后族距 8) 池面: language.catchphrases +6; lives.hook_objects +2; lives.turning_points +2 ==
+== 查一 nearcheck LayerA 4gram 全文本池 + LayerB 同型池 rapidfuzz (cp92/ho95/tp44·R417 定谳) ==
+[PASS] cp|二两酒配上半碟豆，坐到铺子打烊才走。
+[PASS] cp|咸菜坛子开盖那下，馋虫全被勾出来了。
+[PASS] cp|钉子要一颗颗敲进去，糊弄不得半分。
+[PASS] cp|新到货的洋蜡头一回点，比油灯亮堂多了。
+[PASS] cp|旧木匣里的铜纽扣，颗颗都有来历。
+[PASS] cp|路见挑担的上了坡，伸手就帮他推一把。
+[PASS] ho|烙了印的皮酒囊
+[PASS] ho|绑了麻绳的井辘轳
+[PASS] tp|跟师傅学裁缝，头一件活就把袖子裁坏了半寸。
+[PASS] tp|铺面盘出去那天，我把招牌描了最后一遍金。
+== 查二 触发词族字符级(R40) ==
+[PASS] 10/10 hits=[] ALL PASS（新候选零天气/时段 token）
+== 查三 跨面 4gram vs face corpus (pools+greetings+pools-negative·R102 判例面) ==
+face corpus scanned=2006
+[PASS] 10/10 hits=[] ALL PASS（零跨面撞句）
+== 终验 基线计数+轴平衡+既有零漂移 ==
+cp 612->618 六轴 {"逍遥": 103, "烟火": 103, "秩序": 103, "求新": 103, "怀旧": 103, "侠气": 103} / tp 221->223 / ho 353->355 · json.load 双件过
+既有集合零漂移: cp[:612]/tp[:221]/ho[:353] 逐条全等断言 PASS · 纯尾追加（末行加逗号改写 3 行）
+VERDICT PASS 10/10
