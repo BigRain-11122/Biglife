@@ -1,0 +1,13 @@
+== BigLife QA Smoke Test R905 @2026-10-11 20:57 ==
+[1] poolgen tick: tick 2026-10-11 20:06:01 TOTAL=1440 FAIL_BUCKETS=NONE（<24h 新鲜·10-11 例份已耗） => PASS
+[2] census 10-11 新环: 机器直数 678 == expect 678（R904 面 669+R905 批 9 账平零差·行级 census/**.md 当日 [锚] 行） => PASS
+[3] 位置字段非 null: behavior rows=10030 anchor_null=3（荣誉席契约面维持） => PASS
+[4] 行为对 light 双闸: light rows=10030 unique=10030 maxid=C-10036（受控复产零新注册维持） => PASS
+[5] heartbeat: 轮末行新鲜（本文件随收尾脚本写入·age<=5min） => PASS
+[6] 环账平: census 机器直数 678 == status-export results[13] 678（R905 当轮值域同步） => PASS
+[7] 池例份: 10-11 例份已耗（R848/R877/R882/R893/R896 audit PASS 全桶达标自停·水位 1440 自终止维持） => PASS
+[8] relations: meet 总数 27 维持（本轮零新增·R3 再生态） => PASS
+[9] meet 日额闸 v0.36: 本轮零相遇写入（今日场额已超帽·闸在役） => PASS
+[10] 基因轮: R905 兑现在档（qa/gene-round-R905.log·cp666=111x6/tp237/ho373·commit 956dfd9b·下次 ≈R913） => PASS
+[11] QC: R901 例巡 problems=0 在档（cards=10030·evolved=4851·下次例巡 >=R907·本轮 R905 免巡） => PASS
+smoke verdict: 11/11 PASS
