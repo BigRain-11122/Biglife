@@ -1,0 +1,13 @@
+== BigLife QA Smoke Test R943 @04:19 ==
+[1] poolgen tick: 10-12 tick 04:06 TOTAL=1440 FAIL_BUCKETS=NONE（<24h）=> PASS
+[2] census 10-12 新环: registry 行级日期直数 53 == expect 53（R942 面 42+R943 两批 1+10）=> PASS
+[3] 位置字段非 null: citizen-behavior anchor_null=3（rows=10030·偏见维护=3 契约）=> PASS
+[4] 行为/户籍双阈: light rows=10030 unique=10030 maxid=C-10036（受控复产零新注册）=> PASS
+[5] heartbeat: 轮末行由启动器收尾写入（R943 收尾·详情行在档）=> PASS
+[6] 环账平: census registry 直数 53 == status-export results[13] 53（json 回读校验过）=> PASS
+[7] 池例巡: 10-12 tick 04:06 audit PASS 已耗（水位 1440 全桶达标·FAIL_NONE）=> PASS
+[8] relations: meet 29 维持（block 2822314/buddy 15131/household 3629·总 2841103 账平·本轮零新遇=零写面）=> PASS
+[9] meet 日额闸: 10-12 日份 R928 场已耗（脚本闸在役·本轮零新场）=> PASS
+[10] 基因轮: R940 已兑现 +10（cp 690=115x6/ho 386/tp 250·qa/gene-round-R940.log PASS·下次 >=R946）=> PASS
+[11] QC: R940 例巡 problems=0（cards=10030·evolved=4851·dup_rings 37/37·下次 >=R946）+ R943 time_recap 修法件 py_compile PASS+实弹复跑 10/10 全落（修法判例入档）=> PASS
+smoke verdict: 11/11 PASS
