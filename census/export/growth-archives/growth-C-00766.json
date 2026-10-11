@@ -1,0 +1,112 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 14,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 50.49,
+    "z": -71.23
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.45,
+    "z": -121.53
+   },
+   "work": {
+    "site": "塔区风筝队员·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 141.73,
+    "z": -157.74
+   }
+  },
+  "crash_axis": "shejiao",
+  "ctx": "tw=eve,wx=clear,wd=1",
+  "id": "C-00766",
+  "quirk": "",
+  "slot": "摊位/广场·抱怨",
+  "state": "grumble",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "在旧织机的梭子上刻了一行没人认得的小字——这事只有师父知道",
+ "id": "C-00766",
+ "month_lines": [
+  "老地方见，今儿风挺大，放线收线得小心点。"
+ ],
+ "name": "糜糖糖",
+ "profession": "塔区风筝队员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-25",
+   "quote": "今天的事今天清，风挺大，放线收线得小心点，老地方见，得早一步去。",
+   "text": "「今天的事今天清，风挺大，放线收线得小心点，老地方见，得早一步去。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-11（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-11",
+   "quote": "老地方见，今儿风挺大，放线收线得小心点。",
+   "text": "「老地方见，今儿风挺大，放线收线得小心点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}
