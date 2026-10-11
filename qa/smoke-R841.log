@@ -1,0 +1,18 @@
+[account] today rings total=238 (cards=232 anchors=6) prev=228 delta=10 (批10 全落·C-00348~C-00357)
+[spot] C-00348 ring line: - 2026-10-11 「今儿个天清气朗，风不小，摸了摸窗台的温度计，这阵子多绑了三道绳，谁没个难处呢，来，坐下说。」 [锚] 城市实况 2026-10-11（FluxVerse 事件流+真实时间天气）
+[ring account] prev=228 delta=10 批10 全落·C-00348~C-00357
+[light gate] rows=10030 unique=10030 cap=C-10036 over_cap=0 (需求触发前零新注册维持)
+[anchor null] behavior rows=10030 anchor-null=3 (null==3 reserved contract, non-reserved 0)
+[relations] rows=2841100 meet=26 (expect 26〔R834 再生后〕·日额已超帽维持)
+[poolgen tick] tick age=0.15h (<24h ok)
+[heartbeat] age=0.14h (<3h ok)
+[genes] cp total=618 tp=223 ho=355 (expect 618=103x6/223/355·R839 值维持零追加)
+
+SMOKE R841 PASS 7/7
+PASS ring account prev=228 delta=10 批10 全落·C-00348~C-00357
+PASS light gate rows=10030 unique=10030 cap=C-10036 over_cap=0 (需求触发前零新注册维持)
+PASS anchor null behavior rows=10030 anchor-null=3 (null==3 reserved contract, non-reserved 0)
+PASS relations rows=2841100 meet=26 (expect 26〔R834 再生后〕·日额已超帽维持)
+PASS poolgen tick tick age=0.15h (<24h ok)
+PASS heartbeat age=0.14h (<3h ok)
+PASS genes cp total=618 tp=223 ho=355 (expect 618=103x6/223/355·R839 值维持零追加)
