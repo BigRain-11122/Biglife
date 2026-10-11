@@ -1,0 +1,13 @@
+== BigLife QA Smoke Test R872 @2026-10-11 14:59 ==
+[1] poolgen tick: 最新戳 === === 2026-10-11 14:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE == (<24h 判据·age 0.9h) PASS
+[2] census 本批: 0/10 GPU 争用窗留冷 (单发末探 ollama down 静默跳过·10 due 留冷自然重试·R869/R870 判例同型) PASS
+[3] 位置字段非 null: behavior rows=10030 anchor_null=3 (荣誉席契约面·非荣誉 0·零新注册维持) PASS
+[4] 行为链: citizen-behavior.jsonl rows=10030 ring-bearing=4851 (本轮零变更维持) PASS
+[5] heartbeat: 轮末续鲜 (随本脚本写入) PASS
+[6] light 双闸: rows=10030 unique=10030 (maxid=C-10036·受控复产零注册维持) PASS
+[7] 环账平: 10-11 全域直数 497 维持零漂移 (=R868 面·行级机器直数 registry 489+anchors 8) PASS
+[8] 池: 10-11 例份已耗·audit PASS 自停维持（tick 2026-10-11 14:06 TOTAL=1440·不为长而长） PASS
+[9] relations: meet=27 维持 (相遇日额超帽免写·meet 闸 v0.36 在役) PASS
+[10] 基因: cp636=106x6/tp227/ho363 维持（R865 已兑现·下次基因轮 ≈R873） PASS
+[11] QC: R872 例巡提前一轮兑现 problems=0 (cards=10030·evolved=4851·dup_rings 37/37 观测基线零新增·dedup 闸 v0.45 在役·QC-REPORT 14:56 新鲜) PASS
+smoke verdict: 11/11 PASS
