@@ -1,0 +1,18 @@
+# 基因轮 R905 预检与追加终验 (2026-10-11 20:56) [via BigLife-OSLoop]
+配方: cp 660->666 (111x6 六轴均衡) / tp 235->237 / ho 371->373 = +10
+check2 TRIGGER: 0 hits PASS
+check1 NEARCHECK: 0 hits PASS (LayerA 4gram all-pool + LayerB rapidfuzz cp92/tp44/ho95)
+check3 CLASH: 0 hits PASS (face corpus bidirectional)
+外科式纯尾追加: 既有条目零字节改动 ([:660]/[:235]/[:371] 逐位相等断言 PASS)
+新条目 10/10:
+  cp|逍遥|竹躺椅挪到井台边，一壶凉茶坐到饭点儿。
+  cp|烟火|葱花先下锅炝一下，香味窜得人直咽口水。
+  cp|秩序|账本上差一笔，翻来覆去睡不踏实。
+  cp|求新|城东新开的钟表铺，隔两条街都能听见报时。
+  cp|怀旧|厂里的旧工牌还留着，编号早就不认人了。
+  cp|侠气|见着欺负人的事，我这嗓门比谁都响。
+  tp|头一回挑担进城赶集，压肿了肩也没舍得雇车。
+  tp|祖传的戥子交到徒弟手里，他退到门边看着人擦了三遍。
+  ho|剃头挑子上的黄铜盆
+  ho|货郎鼓柄上的红缨子
+VERDICT: PASS 10/10
