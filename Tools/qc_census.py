@@ -69,6 +69,8 @@ def main():
         files += glob.glob(os.path.join(CENSUS, sub, "**", "*.md"), recursive=True)
     files += glob.glob(os.path.join(CENSUS, "reserved", "C-*.md"))  # honored seat cards
     evolved = 0
+    dup_citizens = 0
+    dup_pairs = 0
     for p in sorted(files):
         fn = os.path.basename(p)[:-3]
         with open(p, encoding="utf-8") as f:
@@ -94,6 +96,18 @@ def main():
             evolved += 1
             if "[锚]" not in text:
                 problems.append(f"{fn}: ring without anchor")
+            # T-20261011-01 「逐字重复环」观测扫描：本人历史环内同句对计数。
+            # 观测面不计 problems：历史环不回溯修复（#41 判例），新面自
+            # evolve_citizen v0.45 dedup 闸封（dup-history）。R826 口头禅整句
+            # 复引观察项自本扫描升格为可观测指标（T-20261011-01 立单收口）。
+            m66 = re.search(r"\*\*年轮\*\*\n((?:- .*\n?)+)", text)
+            if m66:
+                seen66 = {}
+                for _d, rt in re.findall(r"- (\d{4}-\d{2}-\d{2}) 「(.*?)」", m66.group(1)):
+                    seen66[rt.strip()] = seen66.get(rt.strip(), 0) + 1
+                if any(c > 1 for c in seen66.values()):
+                    dup_citizens += 1
+                    dup_pairs += sum(c - 1 for c in seen66.values() if c > 1)
     gate_p = os.path.join(os.path.dirname(CENSUS), "state", "sublimate-gate.jsonl")
     gate_n = 0
     if os.path.isfile(gate_p):  # 升华门违律计数入 QC-REPORT（T-20260926-18 步①②机制面）
@@ -104,7 +118,8 @@ def main():
               f"- 卡片总数：{len(ids)}（在册 {len(names)} 名）",
               f"- 已进化（有年轮）：{evolved}",
               f"- 异常数：{len(problems)}", "",
-              f"- 升华门拒入册计数：{gate_n}（生成门/生灵门/灵族门 fail-fast·T-20260926-18 步①②③）", ""]
+              f"- 升华门拒入册计数：{gate_n}（生成门/生灵门/灵族门 fail-fast·T-20260926-18 步①②③）",
+              f"- 逐字重复环：{dup_pairs} 处 / {dup_citizens} 位居民（本人历史环内同句·观测面·历史环不回溯修复·落环侧 v0.45 dedup 闸封新面·T-20261011-01）", ""]
     schema_rows = schema_bad = 0
     if schema_mode:
         schema_rows, schema_bad, per = schema_scan(problems)
@@ -120,7 +135,7 @@ def main():
     with open(os.path.join(CENSUS, "QC-REPORT.md"), "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(report))
     tail = f" schema_rows={schema_rows} schema_bad={schema_bad}" if schema_mode else ""
-    print(f"QC done cards={len(ids)} evolved={evolved} problems={len(problems)}{tail}")
+    print(f"QC done cards={len(ids)} evolved={evolved} problems={len(problems)} dup_rings={dup_pairs}/{dup_citizens}{tail}")
     if problems:
         print("QC FAILED")
         raise SystemExit(1)

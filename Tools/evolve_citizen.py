@@ -1,6 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.44 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.45 - BigLife citizen evolution engine.
+v0.45 gap #66 (2026-10-11 R868, T-20261011-01): verbatim self-ring dedup gate -
+the 10-11 QC census caught 6/50 rings regurgitating one of the citizen's OWN
+historical rings byte-identical (anchor date refreshed, ring text zero-delta;
+samples C-00556/C-00567/C-00588/C-00593/C-00602 - qwen2.5:7b converging on
+similar contexts, no dedup face in the pipeline). dup-history joins
+ring_violations: a candidate whose normalized write face (whitespace
+collapsed, quote marks stripped, [:90] truncation) equals any of THIS card's
+own ring entries = zero-increment copy -> regen (<=3 via gated_llm),
+persistent -> skip (stays due, counted in the round ledger). Exact match on
+the ring-text face only, so card-face catchphrase repeats stay legal (face
+is not the ring corpus); ct absent -> check off (#18/#24/#25 design). The
+batch-side len<8 fixed fallback line passes the same check. qc_census gains
+the 逐字重复环 observation scan line (historical rings not retro-repaired,
+#41 precedent).
 v0.44 gap #65 (2026-09-30 R755, prompt-side recap + gate diagnosability;
 NOT a gate-token close - the gate flagged every line correctly): the
 persistent-skip disease, closed at the GENERATION side. Evidence: R754+R755
@@ -1043,6 +1057,12 @@ def ring_violations(line, sig):
     if re.search(r"[\u0400-\u04FF\u0370-\u03FF\uAC00-\uD7AF"
                  r"\u0600-\u06FF\u0590-\u05FF\u0E00-\u0E7F\u0900-\u097F]", line):
         v.append("garbled-chars")
+    # v0.45 gap #66 (2026-10-11 R868, T-20261011-01): verbatim self-ring dedup -
+    # a new ring byte-identical to one of THIS card's own historical rings is a
+    # zero-increment copy (复读机面); the card-FACE catchphrase repeat stays legal
+    # (face is not the ring corpus). ct absent -> check off (#18/#24/#25 design).
+    if ct is not None and self_dup_history(line, ct):
+        v.append("dup-history")
     return v
 
 def gated_llm(prompt, sig, max_regens=3):
@@ -1067,6 +1087,21 @@ def rings_of(text):
         return "", []
     ents = re.findall(r"- (\d{4}-\d{2}-\d{2}) 「(.*?)」", m.group(1))
     return m.group(1), ents
+
+def self_dup_history(line, ct):
+    """v0.45 gap #66 (T-20261011-01): True if the candidate ring text equals one
+    of the card's OWN historical ring entries on the normalized write face
+    (whitespace collapsed, quote marks stripped, [:90] truncation).
+    Deterministic exact match; ct absent/unparsable -> False (check off)."""
+    try:
+        _corpus, ents = rings_of(ct)
+    except Exception:
+        return False
+    base = re.sub(r"\s+", " ", line or "").strip().strip('「」"“”')
+    if not base:
+        return False
+    cands = {base, base[:90]}
+    return any((t or "").strip() in cands for _d, t in ents)
 
 def reflect_due(cursor):
     """V2-B due list (T-20260924-04): cursor-only scan so never-evolved cards
@@ -1759,6 +1794,10 @@ def main():
         line = re.sub(r"\s+", " ", line).strip().strip('「」"“”')[:90]
         if len(line) < 8:
             line = "今天照常出摊/上岗，江上的光点还是那么多。"
+        # v0.45 gap #66 fallback face: the fixed default line can repeat too
+        if self_dup_history(line, text):
+            print("gate: dup-history skip", cid, "(stays due)")
+            continue
         note_pool_use(line, face, pool_genes, pool_used)  # T-20260925-01: count cross-card quotes
         add_ring(p, cid, line, anchor_note)
         paths.append(p)
