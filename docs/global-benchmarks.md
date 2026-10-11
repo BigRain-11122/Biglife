@@ -34,15 +34,16 @@
 | arXiv 2304.03442 Generative Agents 官方摘要页 | A | 涌现与认知 | web 官方 | ✓ 本轮直验（三机制/25 agents/消融） |
 | developer.nvidia.com/ace（NVIDIA ACE 官方页） | A | LLM-NPC | web 官方 | ✓ 本轮直验（组件/Nemotron/伙伴案例） |
 | inworld.ai 官方门户 | A | LLM-NPC | web 官方 | ✓ 本轮直验（实时 TTS/STT/LLM 平台面·产品深采待刷新） |
-| nvidia.com/en-us/ai/ace/ | A | LLM-NPC | web 官方 | ✗ 404（失败面在册·下次刷新补扫） |
+| nvidia.com/en-us/ai/ace/ | A | LLM-NPC | web 官方 | ✗ 404（09-24+10-12 两验死链·失败面维持·官方活页=developer.nvidia.com/ace） |
 | 《人工智能生成合成内容标识办法》CAC 官网全文 | A | AIGC 人格合规 | web 官方 | ✓ 复用（sl-honesty §三·09-24 当日验） |
 | arXiv 2308.08708 意识指标报告摘要页 | A | 认知红线 | web 官方 | ✓ 复用（sl-honesty §一·09-24 验） |
 | SOAR 官方 FAQ / CMU ACT-R 官方站 | A/B | 认知架构 | web 官方 | ✓ 复用（sl-cognition §6·09-24 验） |
 | Wikipedia：Replika/Character.ai/GWT/Tierra/Avida/slime mold | C | 行业/理论 | web | ✓ 复用（sl-honesty §二·sl-cognition §1-5·09-24 验） |
 | Nakagaki 2000 *Nature* 407:470 / Friston 2010 *Nat Rev Neurosci* | B | 涌现与认知 | 期刊页 | ✓引证在目/未验混合（详见 sl-cognition 源栏·零断言维持） |
 | 仓内研究件三件+`docs/SILICON-LIFE.md` | 内部复用 | 全域 | 仓内 | ✓（09-24 研究波定稿·四批网络验证） |
-| **M 待证 4 项**（零断言·刷新优先补验）：Maturana&Varela 三要素定义·Langton「混沌边缘」·欧盟电子人格决议·虚拟偶像行业事实 | M | — | — | 未验在册（sl-cognition §1/§3·sl-honesty §四） |
+| **M 待证 4 项（10-12 补验后态）**：Maturana&Varela 自创生定义 ✓C 级已验（10-12 维基 Autopoiesis 直验·两判据定义原句引用在案：「组件生产过程网络递归再生产自身网络+划定自身拓扑边界」·1972 提出/1980《Autopoiesis and Cognition》书目确认）·虚拟偶像行业事实 ✓C 级已验（10-12 维基 Virtual influencer 直验：CGI 虚构角色/动捕制作/VTuber=真人 entertainers 虚拟化身=「人操皮套」定义面成立·「无自主数字生命商用先例」=定义推论·标注非源文直接断言）·Langton 1987 ALife 研讨会 ✓C 级半验（10-12 Internet Archive 会议录书目直验=Interdisciplinary Workshop on the Synthesis and Simulation of Living Systems·Los Alamos 1987.09·「混沌边缘/Physica D 1990 归属」仍 M·附学界对冲入册=Mitchell/Hraber/Crutchfield 1993《Revisiting the Edge of Chaos》复扫负结果 Complex Systems 7:89-130）·欧盟电子人格 **仍 M**（EP 官方页 09-24×2+10-12 三连空抓·wiki 侧路未取得正文·如实维持 M·下轮刷新再补） | C/M | — | web 直验 | 10-12 补验：升 C 级 2+半验 1+维持 M 1 |
 
 ## ④更新记录
 
+- 2026-10-12 周期刷新（逾期归正·@BigLife-OSLoop R957）：M 4 项补验=**2 项升 C 级已验**（自创生定义原句两判据+1972/1980 书目／虚拟偶像「人操皮套」定义面）+**1 项半验**（Langton 1987 Los Alamos 研讨会会议录书目直验·「混沌边缘」归属仍 M·1993 Mitchell 复扫负结果=质疑对冲随入册·呼应 §一「含学界质疑对冲」纪律）+**1 项维持 M**（欧盟电子人格：EP 官方页三连空抓·零断言维持）；失败面 nvidia.com/en-us/ai/ace/ 补扫再 404=死链定谳（官方活页=developer.nvidia.com/ace）；**全量动态面（ACE/Inworld/Character.ai 诉讼态）本轮未复扫**=下次到期补（本刷新=M 项+失败面定向补验轮·非全量轮）。**下次到期=2026-10-19**（司级 7 天律·global-vision §三·超期=stale 周轮点名）；硬约束域（法规/平台规则变更）=事件即时+季度全扫随令。
 - 2026-09-24 首版（T-20260924-07 认领并同轮交付·@BigLife-OSLoop 17:2x）：四节齐备·执行标准 6 条全带落地指针（✓5/⬜1）·源清单 11 行（fetch 直验 3+复用验 5+失败面 1+内部复用 1+M 待证 4 项零断言）——集团判据四条（①四节齐备 ②≥5 条带落地指针 ③更新记录首行在册 ④周期活性接线）全过。**下次到期=2026-10-01**（司级 7 天律·global-vision §三·超期=stale 周轮点名）；硬约束域（法规/平台规则变更）=事件即时+季度全扫随令。
