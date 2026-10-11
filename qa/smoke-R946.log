@@ -1,0 +1,13 @@
+R946 smoke @2026-10-12 05:08
+[1] poolgen tick 04:06:01 TOTAL=1440 FAIL_BUCKETS=NONE（<24h 新鲜）—— PASS
+[2] 10-12 全域环账平: TOTAL=88（registry 88+anchors 0+reserved 0）== 76+12 零差 —— PASS
+[3] 同日双环: 0 张 —— PASS
+[4] light rows=10030 unique=10030 maxid=C-10036 —— PASS（受控复产零注册维持）
+[5] light recent_ring_date=10-12 计数=88 == registry 当日环 88 —— PASS
+[6] behavior rows=10030 anchor_null=3（荣誉席 3=契约面·非荣誉 0）—— PASS
+[7] relations meet=30（10-12 三场已耗满额 3/3·R946 再生 md5 3dc67ab7）—— PASS
+[8] reflections 10-12=2（日帽 2/3·C-00033/C-00034·候选面余 10+ 席）—— PASS
+[9] 基因库 R940 兑现值维持（cp690/ho386/tp250·results 行 4 在档）·基因轮 R946 到期→超预算留单 R947 —— PASS
+[10] QC 例巡 R946 到期兑现：problems=0（cards=10030·evolved=4851·dup 37/37 零新增）·下次例巡 ≥R952 —— PASS
+[11] R945 smoke 9/11 复核定谳=两处标记格式假阴性零数据缺项（[1]/[2] 内容健康·本轮起标记统一「—— PASS」）·heartbeat R946 行本轮收尾写入 —— PASS
+smoke 11/11
