@@ -1642,6 +1642,21 @@ def main():
     anchor_note = "城市实况 " + today() + "（FluxVerse 事件流+真实时间天气）"
 
     if args.meet:
+        # v0.36 meet 日额闸 (2026-10-11 R858): R834 超帽违例曾立「git log --grep 前置检」
+        # (人查), R858 未执行该前置检复发第 6 场=人查闸证伪, 按「闸失效即升格」律改脚本断言:
+        # 当日 meet 场数 (relations 出口 src/last 含今日的 meet 行) ≥3 即拒绝 (R801-R803 3/3
+        # 满口径)。出口为 R3 再生面, 陈旧时计数偏低——跑 meet 前先 relations_manifest 再生即准。
+        # 仓根=CO（ROOT=集团层 FluxVerse 路径, 首版误用 ROOT 致闸静默放行·R858 实弹即自证）。
+        relp = os.path.join(CENSUS, "export", "citizen-relations.jsonl")
+        n_meet_today = 0
+        if os.path.exists(relp):
+            with open(relp, encoding="utf-8") as fh:
+                for _l in fh:
+                    if '"rel":"meet"' in _l and ('"src":"%s"' % today() in _l or '"last":"%s"' % today() in _l):
+                        n_meet_today += 1
+        if n_meet_today >= 3:
+            print("meet-cap: %d meets already logged today (cap 3) - skip" % n_meet_today)
+            return
         ids = args.meet
         texts = []
         for cid in ids:
