@@ -1,0 +1,13 @@
+== BigLife QA Smoke Test R932 @2026-10-12 02:08 ==
+[1] poolgen tick: 10-12 份额 R922 已耗（audit PASS 全桶达标自停·R931 复跑二验 PASS·tick <24h） => PASS
+[2] census 10-12 新环: 行级当日日期直数 27 == expect 27（R929 面 17+R930 面 10·本轮 GPU 争用窗零环=留冷预期） => PASS
+[3] 位置字段非 null: citizen-behavior anchor_null=3（荣誉席维护面=3 契约·检面正身=behavior） => PASS
+[4] 行为/户籍双阈: light rows=10030 unique=10030 maxid=C-10036（受控复产零新注册维持·实测） => PASS
+[5] heartbeat: 轮末行由启动器收尾写入（R932 收尾·详情行在档） => PASS
+[6] 环账平: census 10-12 直数 27 == status-export results[13] 27（json 回读校验过） => PASS
+[7] 池例份: 10-12 份额已耗（R922 audit PASS·R931 二验 PASS·tick <24h） => PASS
+[8] relations: meet 总数 29（R930 再生 28→29 md5 27ec42b4·本轮零新遇免重跑·行级直数实测） => PASS
+[9] meet 日额闸: 10-12 日份 R928/R930 两场已耗·本轮零新场（脚本闸+git-grep 前置检在役） => PASS
+[10] 基因轮: R926 兑现在档（cp 680/ho 381/tp 245·下次 >=R934·本轮未到期零动作） => PASS
+[11] QC: 下次例巡 >=R935（R929 problems=0 在档）·**R-L 闸链 W42 周行复验 PASS（determinism c6641971f78f1f75b849c50b39a0e66f·consumed=8/unconsumed=5 三跑零漂移）·T-20261010-01 整单关结**（qa/rl-gate-qc-R931.log+benchmark-gap 2026-W42 行） => PASS
+smoke verdict: 11/11 PASS

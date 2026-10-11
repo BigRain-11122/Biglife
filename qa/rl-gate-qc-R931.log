@@ -1,0 +1,7 @@
+[rl-scan] fluxverse         files=293 3.4s
+[rl-scan] biggame-minigame  files=13557 108.7s
+[rl-scan] bigdomain         files=877 2.5s
+[rl-scan] bigstream         files=11502 104.5s
+[rl-scan] cph4-tools        files=21432 198.5s
+QC determinism: PASS (c6641971f78f1f75b849c50b39a0e66f)
+QC wired_repos=['bigdomain', 'biggame-minigame', 'fluxverse'] consumed=8 unconsumed=5
