@@ -1,0 +1,19 @@
+# 基因轮 R913 预检与追加终验 (2026-10-11 22:3x) [via BigLife-OSLoop]
+配方: cp 666->672 (112x6 六轴均衡) / tp 237->239 / ho 373->375 = +10
+check1 NEARCHECK: 0 hits PASS (LayerA 4gram all-pool + LayerB rapidfuzz cp92/tp44/ho95·五轮收敛 5->2->1->1->0)
+check2 TRIGGER: 0 hits PASS (RUMOR_TRIGGERS 全表 31 词手核零命中)
+check3 CLASH: 0 hits PASS (face corpus bidirectional·census/**/*.md 全扫)
+外科式纯尾追加: 既有条目零字节改动 ([:666]/[:237]/[:373] 逐位相等断言 PASS + R896 v3 全键不变断言 PASS)
+施工自纠实录: v1 锚点错插 habits 数组尾 (存档必存两份=habits 尾非 tp 尾)——len(tp)==239 断言 fail-safe 拦截零写盘·v2 join 首条目缺开引号同型中招·v3 戥子附着式锚+显式引号全过
+新条目 10/10:
+  cp|逍遥|河湾里摸了半天鱼，桶是空的，心里是满的。
+  cp|烟火|新蒜下来先编成辫，挂满一屋檐。
+  cp|秩序|收摊前点一遍数，少一件都得找回来。
+  cp|求新|集上见着会叫的洋铁壶，蹲着看了半天。
+  cp|怀旧|抽屉里那杆旧毛笔，笔头秃了还插在笔筒里。
+  cp|侠气|桥头有人推不动车，撂下饭碗就去搭把手。
+  tp|跑码头攒下的第一担本钱，让给师弟娶了亲。
+  tp|头回守摊遇上讨价还价的行家，一分没让，回头手心全是汗。
+  ho|酱园门口的粗陶酱缸
+  ho|挑灯笼用的枣木扁担
+VERDICT: PASS 10/10
