@@ -4,7 +4,7 @@
   "title": "citizen-behavior.jsonl row (R3 regen face, Tools/behavior.py V2-A'·state whitelist = STATES∪LEISURE∪REST∪NEG)",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "state", "slot", "visible", "quirk", "v", "ctx"],
+  "required": ["id", "state", "slot", "visible", "quirk", "v", "ctx", "anchor"],
   "properties": {
     "id": {"type": "string", "pattern": "^C-\\d{5}$"},
     "state": {"enum": ["sleep", "home", "work", "commute", "school", "meal",
@@ -20,6 +20,45 @@
     "crash_axis": {"enum": ["anwen", "shengji", "shejiao", "haoqi"],
                     "description": "optional: crash rows carry the crashed axis"},
     "v": {"type": "number", "minimum": 1},
-    "ctx": {"type": "string", "minLength": 1}
+    "ctx": {"type": "string", "minLength": 1},
+    "anchor": {
+      "description": "spatial anchor trio + time windows (v3.55·T-20260929-06 step③·md5 seed single-source with citizen-anchors.jsonl; reserved seats = null)",
+      "oneOf": [
+        {"type": "null"},
+        {"type": "object",
+         "additionalProperties": false,
+         "required": ["home", "work", "social"],
+         "properties": {
+           "home": {"$ref": "#/$defs/anchor_pt"},
+           "work": {"$ref": "#/$defs/anchor_pt_site"},
+           "social": {"$ref": "#/$defs/anchor_pt_site"}
+         }}
+      ]
+    }
+  },
+  "$defs": {
+    "anchor_pt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "z", "win"],
+      "properties": {
+        "x": {"type": "number"},
+        "z": {"type": "number"},
+        "win": {"type": "array", "minItems": 2, "maxItems": 2,
+                "items": {"type": "integer", "minimum": 0, "maximum": 23}}
+      }
+    },
+    "anchor_pt_site": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "z", "win", "site"],
+      "properties": {
+        "x": {"type": "number"},
+        "z": {"type": "number"},
+        "win": {"type": "array", "minItems": 2, "maxItems": 2,
+                "items": {"type": "integer", "minimum": 0, "maximum": 23}},
+        "site": {"type": "string", "minLength": 1}
+      }
+    }
   }
 }
