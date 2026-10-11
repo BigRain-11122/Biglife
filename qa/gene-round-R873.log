@@ -1,0 +1,29 @@
+[查二-CLEAN] cp|竿子一收，鱼账两清。
+[查二-CLEAN] cp|豆浆要滚，油条要脆，日子要热。
+[查二-CLEAN] cp|工具归位，账目归零，才好收工。
+[查二-CLEAN] cp|老图纸翻个面，就是新图纸。
+[查二-CLEAN] cp|旧算盘打新账，珠子认得路。
+[查二-CLEAN] cp|搭不了船，就搭块跳板。
+[查二-CLEAN] tp|头一回掌灯赶上停电，摸黑把整场堂会唱完，赢得个黑嗓的诨号。
+[查二-CLEAN] tp|铺面易主那天没掉一滴泪，转头却给后院那口老井砌了圈石栏。
+[查二-CLEAN] ho|渡口的桐油伞骨
+[查二-CLEAN] ho|补锅匠的锡水长勺
+== 查二 PASS: 触发词族零命中 10/10（wind/rain/sky/time/signal/placeholder/garbled 七族扫描）
+== 查三语料面: cognition/*.json 8 件 + census/export/citizen-persona.jsonl 10020 行（corpus 总串 25773）
+[查三-CLEAN] cp|竿子一收，鱼账两清。
+[查三-CLEAN] cp|豆浆要滚，油条要脆，日子要热。
+[查三-CLEAN] cp|工具归位，账目归零，才好收工。
+[查三-CLEAN] cp|老图纸翻个面，就是新图纸。
+[查三-CLEAN] cp|旧算盘打新账，珠子认得路。
+[查三-CLEAN] cp|搭不了船，就搭块跳板。
+[查三-CLEAN] tp|头一回掌灯赶上停电，摸黑把整场堂会唱完，赢得个黑嗓的诨号。
+[查三-CLEAN] tp|铺面易主那天没掉一滴泪，转头却给后院那口老井砌了圈石栏。
+[查三-CLEAN] ho|渡口的桐油伞骨
+[查三-CLEAN] ho|补锅匠的锡水长勺
+== 查三 PASS: 跨面双向包含零命中 10/10
+== language.json splice: catchphrases 636->642=107x6 均衡·前缀 27773B 零漂移·复载断言过
+== lives.json splice: turning_points 227->229 + hook_objects 363->365·既有两数组元素级零漂移·复载断言过
+== 预检三查全过：查一 nearcheck CLEAN 10/10（三轮收敛 2->0）+ 查二零触发 + 查三零撞句
+== 先登记后使用律：本批 10 条已入库（口头禅 6 六轴各 1 / 转折点 2 / 钩子物件 2）
+== R873 基因轮 PASS 10/10 @ 2026-10-11 15:08
+tokens: local=0 api=0 api_reason=-（基因轮纯文本零 LLM）
