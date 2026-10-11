@@ -1,0 +1,13 @@
+== BigLife QA Smoke Test R861 @2026-10-11 13:06 ==
+[1] poolgen tick: === 2026-10-11 13:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE => PASS
+[2] census 新条目: 本轮批 10 环（C-00533~C-00542·commit 3d5efe2e·镜像 f8f7cacc rows=10） PASS
+[3] 位置字段非 null: behavior rows=10030 anchor_null=3（荣誉席约定面维持） PASS
+[4] 行为闸: light 双闸 rows=10030 unique=10030（maxid=C-10036·受控复产零新注册维持） PASS
+[5] heartbeat: 轮末本行续鲜（<3h·本文件随收尾脚本写入） PASS
+[6] light 双闸: rows=10030 unique=10030 零漂移（count_check 域径一致） PASS
+[7] 环账平: 10-11 全域直数 427 = R860 面 417 + 批 10（零差·机器直数） PASS
+[8] 池: 例份满额已跳（10-11 R816 已耗·tick TOTAL=1440 FAIL=NONE·不为长而长） PASS
+[9] relations: meet 总 27（R858 再生 27 维持·本轮零新遇） PASS
+[10] meet 日额闸 v0.36: 在役拒超（今日场额已超·本轮零相遇零写入） PASS
+[11] QC: R861 例巡到期兑现 problems=0（schema_bad=0·下次例行 ≥R867）；基因轮 ≈R865 到期即兑 PASS
+smoke verdict: 11/11 PASS
