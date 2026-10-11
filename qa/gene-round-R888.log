@@ -1,0 +1,15 @@
+== BigLife 基因轮 R888 预检三查+登记 @ 2026-10-11 17:5x ==
+[候选构成] cp 六轴各 1 + tp 2 + ho 2 = 10 条（承 R880 配方）
+[查一-nearcheck v1] 10 候选 4 近重 FLAG（账本系「差一文/一日一结」撞 cp572/590·「满屋都是」撞 cp589·修表摊「那天，把」撞 tp16/33/74 族·货担「了半辈子」撞 ho152/tp16/111）→ 换句
+[查一-nearcheck v2] 10 候选 2 近重 FLAG（座钟「墙上的印」撞 cp328·扁担「磨出包浆」撞 ho153）→ 再换句
+[查一-nearcheck v3] 10 候选 1 近重 FLAG（「抽屉里的旧」撞 cp442+「都认得出」撞 tp167）→ 三换句
+[查一-nearcheck v4] 10 候选 0 近重 CLEAN（LayerA 全文本池 4-gram + LayerB rapidfuzz cp92/ho95/tp44 双层全过）⇒ PASS
+[查二-CLEAN] 触发词族全表扫描 10/10 零命中（雨/淋/台风/风量级/月星天体/晴/雾/晨夜时段/占位词/信号灯/场次/放学）
+[查三-CLEAN] 跨面双向包含+pools.json 4-gram 严扫 10/10 零命中（corpus=cognition/*.json 8 件+census/export/citizen-persona.jsonl 计 10028 条）
+== language.json splice: catchphrases 648->654=109x6 均匀（六轴各 +1·尾段零漂移·R880 同型外科面）==
+== lives.json splice: turning_points 231->233 + hook_objects 367->369（既有元素级零漂移·纯尾追加）==
+== diff 外科面 13 insertions(+), 3 deletions(-)（3-=两库尾行加逗号改写·R823/R880 同型）==
+== 施工事故自纠实录: 首版追加脚本新元素间缺逗号（两库同型 bug）——lives.json HEAD 还原重跑+language.json 定向补逗修复后 json.load 双过+计数断言全绿（诚实律留痕）==
+== 先登记后使用: 本批 10 条已入库（口头禅六轴各 1 / 转折点 2 / 钩子物件 2）==
+== R888 基因轮 PASS 10/10 @ 2026-10-11 17:5x ==
+tokens: local=0 api=0 api_reason=-（基因轮纯文本零 LLM）
