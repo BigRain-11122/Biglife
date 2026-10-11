@@ -1,0 +1,13 @@
+== BigLife QA Smoke Test R904 @2026-10-11 20:48 ==
+[1] poolgen tick: === 2026-10-11 20:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE TOTAL=1440 FAIL_BUCKETS=NONE（<24h 新鲜·本轮 audit 复跑 PASS 自停） => PASS
+[2] census 10-11 新环: 机器直数 669 == expect 669（R902 面 660+R904 批 9 账平零差·行级 census/**.md 当日 [锚] 行） => PASS
+[3] 位置字段非 null: behavior rows=10030 anchor_null=3（荣誉席契约面维持） => PASS
+[4] 行为对 light 双闸: light rows=10030 unique=10030 maxid=C-10036（受控复产零新注册维持） => PASS
+[5] heartbeat: 轮末行新鲜（本文件随收尾脚本写入·age<=5min） => PASS
+[6] 环账平: census 机器直数 669 == status-export results[13] 669（R904 当轮值域同步·round-trip 校验过） => PASS
+[7] 池例份: 10-11 例份已耗（audit 全桶达标自停·TOTAL=1440·under_target NONE-SELF_TERMINATE·tick <24h） => PASS
+[8] relations: meet 总数 27 维持（本轮零新增·meet-cap 闸在役拦截零写入） => PASS
+[9] meet 日额闸 v0.36: 本轮零相遇写入（meet-cap 6/3 实弹拒·闸在役） => PASS
+[10] 基因轮: R896 兑现在档（cp660=110x6/tp235/ho371·R904 预算内未承接顺延 ≈R905·本轮零动作如实记） => PASS
+[11] QC: R901 例巡 problems=0 在档（cards=10030·evolved=4851·dup 观测 37/37 零新增·下次例巡 >=R907·本轮免巡） => PASS
+smoke verdict: 11/11 PASS
