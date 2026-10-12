@@ -1,0 +1,62 @@
+== gene_round R1067 start ==
+check-baseline: HEAD(cp807/ho426/tp291)==worktree 纯净态 PASS
+check-counts-pre: cp=807 各轴 {'逍遥': 134, '烟火': 135, '秩序': 135, '求新': 135, '怀旧': 134, '侠气': 134} PASS
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 46 候选 clean=30 flag=16 (exit=1)
+  cand[cp/烟火] REJECT:nearcheck-FLAG 火候到了再翻面，锅气才足。
+  cand[cp/烟火] CLEAN 熬糖色得用小火，急了就发苦。
+  cand[cp/烟火] CLEAN 蒸鱼的汽足了再揭盖，一揭就老。
+  cand[cp/烟火] CLEAN 泡香菇的水留着提鲜，倒掉可惜。
+  cand[cp/烟火] CLEAN 剁馅先把刀冻一冻，好剁不粘板。
+  cand[cp/秩序] REJECT:nearcheck-FLAG,STRICT-sub5/contain 抽屉分了格，螺丝钉各有各的家。
+  cand[cp/秩序] CLEAN 出门三摸兜：钥匙、眼镜、零钱。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 账本当日结清，不欠糊涂账。
+  cand[cp/秩序] CLEAN 扳手按大小挂，用哪个摘哪个。
+  cand[cp/秩序] REJECT:nearcheck-FLAG,STRICT-sub5/contain 药盒按顿分好，省得吃错回数。
+  cand[cp/求新] CLEAN 智能音箱使顺了，他让它定点报时。
+  cand[cp/求新] REJECT:trigger:月 电动车骑满仨月，他摸出一套省电法。
+  cand[cp/求新] CLEAN 社区科普课，他回回坐头一排。
+  cand[cp/求新] CLEAN 新字典翻卷了边，他拿夹子夹着用。
+  cand[cp/求新] CLEAN 挂号改在手机上，他教会了整层楼。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 老军挎洗得发白，还照旧背着赶集。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 戏票根夹进字典，一翻就是当年。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG,STRICT-sub5/contain 老座机的号码，他背得比自家的还熟。
+  cand[cp/怀旧] CLEAN 录音机的磁带，他倒着听也津津有味。
+  cand[cp/怀旧] CLEAN 老巷的青石板，他闭着眼也能走。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 钓上来的再放回去，图的就是个手气。
+  cand[cp/逍遥] CLEAN 棋摊上支招不落子，输赢都乐呵。
+  cand[cp/逍遥] CLEAN 遛弯专挑小路，大路留给赶路的。
+  cand[cp/逍遥] CLEAN 评书听完了，他学两句说给猫听。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG,STRICT-sub5/contain 竹躺椅挪到树底下，扇子摇到饭点儿。
+  cand[cp/侠气] REJECT:nearcheck-FLAG,STRICT-sub5/contain 谁家搬重物，他搭把手从不问价。
+  cand[cp/侠气] CLEAN 巷口井盖翘了，他蹲边上提醒路人。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 见人拌嘴，他先给两边各倒碗水。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 帮人修好纱窗，顺手把合页也紧了。
+  cand[cp/侠气] CLEAN 桥坡上见人推车吃力，他上去搭一把。
+  cand[ho] CLEAN 糖画摊的小铜勺
+  cand[ho] CLEAN 裱画师傅的排笔
+  cand[ho] CLEAN 修表匠的寸镜
+  cand[ho] CLEAN 扎灯匠的竹篾刀
+  cand[ho] CLEAN 货栈的公平秤
+  cand[ho] CLEAN 更夫的桃木梆子
+  cand[ho] CLEAN 皮影班的驴皮影人
+  cand[ho] CLEAN 银匠的小砧子
+  cand[tp] REJECT:nearcheck-FLAG 退休证领到手，他端详了半宿才装进抽屉。
+  cand[tp] REJECT:nearcheck-FLAG 老院子拆了，他回去拣了块砖当镇纸。
+  cand[tp] REJECT:nearcheck-FLAG 孙子的录取通知到家，他贴在了正屋墙上。
+  cand[tp] CLEAN 老存折销户，他留了个空折子做纪念。
+  cand[tp] CLEAN 村里的老槐树挂牌保护，他念叨了好些天。
+  cand[tp] REJECT:nearcheck-FLAG 祖宅的门墩运进新楼，他天天擦得发亮。
+  cand[tp] CLEAN 工友退休返聘通知下来，他摆了桌谢师宴。
+  cand[tp] REJECT:STRICT-sub5/contain 旧车间改成展馆，他捐出了那套工装。
+check1 intra-bigram: cp=25.0 ho=28.57142857142857 tp=27.77777777777778 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=40.0 ho=42.85714285714286 tp=31.25 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/35x10 hits PASS
+append: tail-axis rule OK (batch-tail=逍遥 ≠ old-marker=侠气)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=813(各轴+1) ho=428 tp=293 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R1067 ALL BATTERY PASS ==
