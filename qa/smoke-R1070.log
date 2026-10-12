@@ -1,0 +1,11 @@
+[2] census 今日新环 registry=299 anchors=2 reserved=0 total=301
+[2] PASS 账平 291+10=301 零差（[锚] 行级机器直数）
+[2] 锚律抽验 C-01515: - 2026-10-13 「今夜风挺大，巡楼得抓紧些。拿侬呒办法，这天气得留神。」 [锚] 城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）
+[1] poolgen tick age=0.25h last='=== 2026-10-13 05:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE' PASS
+[3] light 双闸 rows=10030 unique=10030 maxid=C-10036 PASS
+[4] behavior rows=10030 anchor_null=3 (荣誉席契约面) 非荣誉null=0 PASS
+[5] relations meet=31 (R3 再生面盘值·gitignored·消费前重生成) PASS
+[6] heartbeat age=0.19h PASS
+[7] genes 回读 cp=813 ho=428 tp=293 (R1067 兑现值维持·下次基因轮 ≈R1073) PASS
+[8] QC-REPORT 异常数=0 在档 age=0.25h (R1069 例巡·下次例巡 >=R1075) PASS
+SMOKE R1070 8/8
