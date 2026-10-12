@@ -1,0 +1,12 @@
+== BigLife smoke R1077 @2026-10-13 06:38 (rev2: reflections check path census/ fixed) ==
+[PASS] poolgen_tick_fresh_0.54h
+[PASS] rings_1013_368
+[PASS] light_rows_10030
+[PASS] light_unique_10030
+[PASS] meet_today_1_cap3
+[PASS] genes_cp819
+[PASS] genes_tp295_ho430
+[PASS] status_export_r13_368
+[PASS] reflections_31_maintain
+[PASS] anchor_sample_C01582_C01591
+smoke verdict: PASS (10/10)
