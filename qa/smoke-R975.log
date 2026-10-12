@@ -1,0 +1,13 @@
+== R975 smoke @ 2026-10-12 10:4x ==
+[PASS] 环账平—— 10-12 rings_today=109 (expect 109=99+10·机器直数)
+[PASS] light 双阈—— rows=10030 uniq=10030
+[PASS] maxid 零新注册—— maxid=C-10036（受控复产=需求触发制·本轮零需求零注册）
+[PASS] behavior anchor_null—— rows=10030 null=3（荣誉席契约面维持）
+[PASS] relations meet—— meet=30（10-12 日额 3/3 满免写·R953 面维持）
+[PASS] pool tick—— 2026-10-12 10:33:29 poolgen_loop tick sr（全桶达标自停·<24h）
+[PASS] gene cp—— cp=720=6x120 axes（R971 基因轮面维持）
+[PASS] gene battery—— qa\gene-round-R971.log PASS（R971 三查电池面维持·本轮零基因动作）
+[PASS] status-export—— export_ts 2026-10-12 10:4x·r13=109（<24h·本轮实况变化已刷新）
+[PASS] nearcheck sentinel—— R971 三查电池面维持（本轮零基因动作·qa/gene-round-R971.log 在档）
+[PASS] task hygiene—— 任务板 open 单全 waiting 维持（T-20260925-10 无消费方/T-20261010-03 造人=需求触发前零注册·T-20261010-01 已关结）
+== R975 smoke: 11 PASS, 0 FAIL ==
