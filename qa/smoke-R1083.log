@@ -1,0 +1,15 @@
+== BigLife smoke R1083 @2026-10-13 07xx ==
+[PASS] poolgen_tick_fresh_0.52h
+[PASS] rings_1013_423
+[PASS] light_rows_10030
+[PASS] light_unique_10030
+[PASS] meet_today_1_cap3
+[PASS] genes_cp825
+[PASS] genes_tp297_ho432
+[PASS] status_export_r13_423
+[PASS] live_3lines_r1083
+[PASS] seg_r1083_in
+[PASS] reflections_31_maintain
+[PASS] anchor_sample_C01618_C01647
+[PASS] qc_report_zero_problems
+smoke verdict: PASS (13/13)
