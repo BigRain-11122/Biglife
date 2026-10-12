@@ -1,0 +1,36 @@
+== gene_round R1002 start ==
+check-baseline: HEAD(cp744/ho404/tp268)==worktree 纯净态 PASS
+check-counts-pre: cp=744(6x124) ho=404 tp=268 PASS
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 20 候选 clean=16 flag=4 (exit=1)
+  cand[cp/侠气] REJECT:nearcheck-FLAG 有人问路他撂下饭碗，把人一直领到巷子口。
+  cand[cp/侠气] CLEAN 隔壁漏水泡了楼道，他扛着自家水泥先补上。
+  cand[cp/烟火] CLEAN 白粥要熬出米油才够火候，锅边一圈焦的最香。
+  cand[cp/烟火] CLEAN 生煎要底脆皮软，出锅前撒的那把葱最要紧。
+  cand[cp/秩序] CLEAN 药箱每周清点一回，缺什么当天就补上。
+  cand[cp/秩序] CLEAN 换季衣裳分箱装，箱面贴条写明是哪一季。
+  cand[cp/求新] CLEAN 小区团购第一单是他组的局，取货点就设在他家楼道口。
+  cand[cp/求新] CLEAN 家里第一个装了指纹锁，来人就演示怎么按。
+  cand[cp/怀旧] CLEAN 老座钟每晚要上弦，这习惯从他爷爷那辈起没断过。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 旧戏票存了满满一铁盒，谁提起来他能讲一下午。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 茶馆里听一下午评弹，散场才想起晚饭还没做。
+  cand[cp/逍遥] CLEAN 鸽子笼里两羽信鸽，喂完食就看它们绕屋飞。
+  cand[ho] CLEAN 修鞋摊的鞋楦头
+  cand[ho] CLEAN 烟纸店的玻璃糖罐
+  cand[ho] CLEAN 生煎铺的芝麻竹匾
+  cand[ho] CLEAN 修棕绷匠的木招子
+  cand[tp] CLEAN 家里第一台电扇到家，他先给老娘屋里装上。
+  cand[tp] CLEAN 厂庆聚餐他坐了主桌，老伙计们轮番来敬酒。
+  cand[tp] REJECT:nearcheck-FLAG 搬进电梯房头一个礼拜，他把老邻居挨家认了门。
+  cand[tp] CLEAN 迁新居请全楼吃了顿饺子，电梯里见了面都热络。
+check1 intra-bigram: cp=21.052631578947366 ho=13.33333333333333 tp=15.000000000000002 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=40.0 ho=44.44444444444444 tp=28.57142857142857 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/31x10 hits PASS
+append: tail-axis rule OK (batch-tail=逍遥 ≠ old-marker=侠气)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=750(6x125) ho=406 tp=270 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R1002 ALL BATTERY PASS ==
