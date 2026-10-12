@@ -1,0 +1,13 @@
+== BigLife QA Smoke Test R1044 @2026-10-13 00:47:36 ==
+[1] poolgen tick: n_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（tick 距今 0.69h <24h·10-13 份额 R1041 audit PASS 自停·TOTAL=1440 全桶达标） => PASS
+[2] census 10-13 新环: [锚] 行级当日直数 42 == expect 42（R1043 面 32+R1044 批 10·registry 42+anchors 0+reserved 0） => PASS
+[3] 位置字段非 null: citizen-behavior rows=10030 anchor_null=3（荣誉席维护面=3 契约） => PASS
+[4] 行为/户籍双阈: light rows=10030 unique=10030 maxid=C-10036（受控复产零新注册维持） => PASS
+[5] heartbeat: 轮末行由收尾脚本写入（R1044 收尾·详情行在档） => PASS
+[6] 环账平: census 10-13 直数 42 == status-export results[13] 42（32+10·json 回读校验过） => PASS
+[7] 池例份: 10-13 份额已耗（R1041 audit PASS 全桶达标自停·tick 0.69h <24h） => PASS
+[8] relations: 再生面 meet 总数 30（rows=2841104·R1041 相遇边在案·R1044 零新遇=日步已耗合规） => PASS
+[9] meet 日额闸 v0.36: 10-13 场额 1/3 维持（R1041 场已耗·相遇步每日至多 1 次·R1044 免写） => PASS
+[10] 基因轮: R1043 兑现在档（cp789/tp285/ho420·qa/gene-round-R1043 在链）·R1044 未到期（下次 >=R1049）·库实读 cp=789 => PASS
+[11] QC: R1042 例巡兑现 problems=0（census/QC-REPORT.md·cards=10030 evolved=4851 dup 37/37·下次例巡 >=R1048） => PASS
+smoke verdict: 11/11 PASS
