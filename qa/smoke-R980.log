@@ -1,0 +1,13 @@
+== R980 smoke @ 2026-10-12 12:2x ==
+[PASS] 账平年轮——10-12 rings_today registry=140 light=140 (expect 140=130+10·机器直数双口径)
+[PASS] light 双阈——rows=10030 uniq=10030
+[PASS] maxid 阶新注册——maxid=C-10036（受保护·需求触发制·本轮零需求零注册·批=既有居民迭代）
+[PASS] behavior anchor_null——rows=10030 null=3（荣誉中保面维持）
+[PASS] relations meet——meet_today=3 (10-12 日额 3/3 满免写·总 meet=30 维持 R953 面)
+[PASS] pool tick——=== 2026-10-12 11:06:03 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（全桶达标自停·<24h）
+[PASS] gene cp——cp=726=6x121 axes/ho=398/tp=262（R979 基因轮面维持·本轮零基因动作）
+[PASS] gene battery——qa/gene-round-R979.log PASS（R979 三查电池面维持）
+[PASS] status-export——export_ts 2026-10-12 12:1x·r13=140（<24h·本轮实况变化已刷新）
+[PASS] nearcheck sentinel——R979 三查电池面维持（qa/gene-round-R979.log 在档·本轮零基因动作）
+[PASS] task hygiene——任务板 open 单全 waiting 维持（T-20260925-10 无消费方/T-20261010-03 造人=需求触发前零注册/T-20261010-01 已关结）
+== R980 smoke: 11 PASS, 0 FAIL ==
