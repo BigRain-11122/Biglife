@@ -1,0 +1,17 @@
+export already refreshed this round (idempotent skip)
+PASS export_r13_readback | r13=414
+PASS export_ts_refreshed | 2026-10-13 07:28
+PASS export_json_valid
+PASS light_rows_10030 | 10030
+PASS light_unique_10030 | 10030
+PASS maxid_C-10036 | C-10036
+PASS registry_rings_412 | 412
+PASS anchors_outside_2 | 2
+PASS total_rings_414 | 414
+PASS genes_cp825_ho432_tp297 | cp=825 ho=432 tp=297
+PASS reflections_31 | 31
+PASS anchor_spot_C-01630 | rings=1
+PASS anchor_spot_C-01638 | rings=1
+PASS heartbeat_fresh_24h | 0.2h
+PASS qc_report_anomaly0_pass | 异常数：0 + 全部不变量 PASS 实锚
+SMOKE-R1082 15/15 PASS ts=2026-10-13 07:28
