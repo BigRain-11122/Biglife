@@ -1,0 +1,36 @@
+== gene_round R1073 start ==
+check-baseline: 还原态 HEAD=ff2db23d (revert 后) 基线 cp=813 ho=428 tp=293
+check-counts-pre: 还原态 cp=813 ho=428 tp=293 (pre 轴分布未打印·以 post 实测与 +6 六轴各一反推 135/136 邻域·诚实律注记)
+nearcheck official 批1: 16 候选 9 FLAG 7 CLEAN (exit=1 预检态)
+  [CLEAN] cp|留三分，日子长。
+  [CLEAN] cp|饭要趁热吃，话要凉了说。
+  [CLEAN] cp|旧照片要常翻才不潮。
+  [CLEAN] ho|修伞铺的竹骨钳
+  [CLEAN] ho|电台夜班的旧耳机
+  [CLEAN] ho|灯塔看守人的旧航标图
+  [CLEAN] tp|领第一份工资，他给母亲买了副新袖套。
+nearcheck official 批2: 6 候选 4 FLAG 2 CLEAN
+  [CLEAN] cp|桌上不留隔夜账。
+  [CLEAN] cp|新规矩先试一个月再骂。
+nearcheck official 批3: 3 候选 1 FLAG 2 CLEAN
+  [CLEAN] cp|这事我兜着。
+  [CLEAN] tp|体检报告出来没事，他把烟盒交给了老伴。
+
+流程事故与自纠（诚实律留痕）:
+  首登记 10 条未过官方预检即入库 (87639323) → nearcheck 回验全 10 条 FLAG=Layer B 100% 自撞
+  （候选已在库·自匹配）暴露顺序倒置 → revert ff2db23d 还原库 → 三批预检重跑（先预检后
+  入库正法恢复）→ 只登记 CLEAN 条。教训: 基因轮一律 nearcheck 预检 CLEAN 才入库（T-20260927-01
+  分步②原法），登记后回验自撞=预期非判据。
+
+final register (10 genes·全部 nearcheck CLEAN·纯增量零破坏既有卡):
+  cp 6 (六轴各一): 留三分，日子长。(逍遥) / 饭要趁热吃，话要凉了说。(烟火) /
+    桌上不留隔夜账。(秩序) / 新规矩先试一个月再骂。(求新) / 旧照片要常翻才不潮。(怀旧) /
+    这事我兜着。(侠气)
+  ho 2: 修伞铺的竹骨钳 / 电台夜班的旧耳机
+  tp 2: 领第一份工资，他给母亲买了副新袖套。 / 体检报告出来没事，他把烟盒交给了老伴。
+  (备用 CLEAN 弃用: ho|灯塔看守人的旧航标图——总数 10 上限取舍)
+
+check-counts-post: cp=819 实测 {'逍遥': 136, '烟火': 137, '秩序': 137, '求新': 137, '怀旧': 136, '侠气': 136} 合计 819 (813+6) 六轴均衡 PASS
+check-verify: nearcheck --qc 15 PASS 0 FAIL; --baseline criterion_ok=true (三池漂移监控 PASS)
+git: 基因批正身 commit 于本 qa log 同批; revert 链 87639323→ff2db23d 留痕不抹除
+== gene_round R1073 done: +10 genes registered (cp 813→819 / ho 428→430 / tp 293→295) ==
