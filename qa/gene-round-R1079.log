@@ -1,0 +1,33 @@
+== gene_round R1079 start ==
+check-baseline: cp=819 ho=430 tp=295（R1073 后库态·轴分布 136/137/137/137/136/136）
+
+[查一 nearcheck 官方预检]（先预检后入库正法·R1073 事故判例执法·候选清单 state/gene-cand-R1079.txt）
+  批1: 10 候选 7 FLAG（遛弯「，走到哪」撞 cp778 遛鸟句/「也想试试」撞 cp231/「磕了口，」撞 cp412 老瓷碗句/
+    「修鞋摊的」撞 ho404 鞋楦头/「爆米花机」4-gram 撞 ho50 老式爆米花机/tp「了半个月」撞 tp15+tp32 双处/
+    「火车去省」撞 tp267 绿皮火车句/「头一件事」撞 habits2+tp221）→换句 7 条
+  批2: 10 候选 4 FLAG（「多聊两句/聊两句。」撞 cp147/「磨剪子的」撞 ho397 戗刀凳/
+    tp「那年，他」撞 tp239+tp250 双处/「，他把工」撞 tp239）→换句 4 条
+  批3: 10 候选 1 FLAG（「就挪不动/挪不动步」撞 tp192 感知风筝句）→换句 1 条
+  批4: 10 候选 0 近重候选 CLEAN 10/10 exit 0（四轮收敛 7→4→1→0）
+
+[查二 触发词族字符扫]（RUMOR_TRIGGERS 31 官方〔evolve_citizen.py 正身〕+淋/占位/信号灯/场次 4 补位+保守单字符 早晨夜晚灯台宵午时今）
+  10/10 零命中 PASS
+
+[查三 跨面撞句]（pools.json=1440+greetings.json=518+pools-negative.json=48·corpus 2006 串·双向包含（len≥6+全等任意长）+4-gram 严扫）
+  10/10 零命中 PASS + census 全树 rg -F -f 纯文本模式文件候选串包含扫 0 撞 PASS
+
+[落盘] 外科尾追加 fail-safe 先验后写（state/gene-splice-R1079.py：锚点唯一断言×3+json/计数/轴分布/尾位断言全过才写盘）
+
+final register (10 genes·三查全 CLEAN·既有条目零字节改动):
+  cp 6 (六轴各一): 遛弯不掐点，见着棋摊就蹲下看一局。(逍遥) / 腌菜坛子封了口，一冬都有底。(烟火) /
+    借还都记账，交情才不掺假。(秩序) / 老法子好使，也想捣鼓点新玩意。(求新) /
+    旧茶缸不换，认它那口老茶味。(怀旧) / 看到老人挑担，顺手接过一段路。(侠气)
+  ho 2: 配钥匙小摊的铜坯匣子 / 戗菜刀的三屉木凳
+  tp 2: 搬进筒子楼，他包下了全楼道的扫地活。 / 头一批进城做工，工钱缝在裤腰里带回了村。
+
+check-counts-post: cp=819→825 实测 {'逍遥': 137, '烟火': 138, '秩序': 138, '求新': 138, '怀旧': 137, '侠气': 137} 六轴均衡 PASS / ho 430→432 / tp 295→297
+check-verify: nearcheck --qc 15 PASS 0 FAIL; --baseline criterion_ok 三池 true + 哨兵三峰值 91.667/94.118/43.902 插入后维持（n=825/432/297）
+diff: language.json +7/-1（尾行加逗号+6 新行）lives.json +2/-2（tp/ho 两尾行内联接续）=纯尾追加·既有条目零字节改动
+坑实录: PS `>` 重定向写 baseline JSON 为 UTF-16（py json.load utf-8-sig 仍炸 0xff）→函数直调正法收口；status-export 基因行/年轮行/export_ts 三处续鲜随批
+
+== gene_round R1079 done: +10 genes registered (cp 819→825 / ho 430→432 / tp 295→297) ==
