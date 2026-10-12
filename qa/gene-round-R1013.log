@@ -1,0 +1,44 @@
+== gene_round R1013 start ==
+check-baseline: HEAD(cp756/ho408/tp272)==worktree 纯净态 PASS
+check-counts-pre: cp=756(6x126) ho=408 tp=272 PASS
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 28 候选 clean=17 flag=11 (exit=1)
+  cand[cp/侠气] CLEAN 独居老太菜场里拎不动米，他接过来背起就送到家门口。
+  cand[cp/侠气] REJECT:STRICT-sub5/contain 弄口有人当街欺负收旧货的老头，他杵在中间让人赔了不是。
+  cand[cp/侠气] CLEAN 楼里停电黑得伸手不见五指，他举着手电把老人一个个扶下楼。
+  cand[cp/烟火] REJECT:nearcheck-FLAG,STRICT-sub5/contain 腌笃鲜要小火慢煨到汤色奶白，急火只会煮出一锅浑汤。
+  cand[cp/烟火] REJECT:nearcheck-FLAG 菜场收摊前半个钟头去，熟客的秤头总归给得足一点。
+  cand[cp/烟火] CLEAN 灶披间里猪油渣一出锅，小囡们围着灶台能等出三碗饭。
+  cand[cp/秩序] CLEAN 账本每晚一结，钢笔字小得像米粒但笔笔对得上。
+  cand[cp/秩序] CLEAN 冰箱剩菜一律贴日期条，过没过期限掀盖就知道。
+  cand[cp/秩序] REJECT:nearcheck-FLAG,STRICT-sub5/contain 工具箱里的扳手按尺寸排开，借出去一件当天就要收回。
+  cand[cp/求新] REJECT:nearcheck-FLAG,STRICT-sub5/contain 全城公交换乘图他背得滚瓜烂熟，问路的人省了导航钱。
+  cand[cp/求新] REJECT:nearcheck-FLAG 新出的扫地机器人他第一个下单，楼里邻居排队来参观。
+  cand[cp/求新] CLEAN 小区里第一个装光伏板的，电表倒转那天他拍了照存档。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 粮票布票攒了一抽屉，搬了三回家一样没舍得扔。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 老式收音机擦得锃亮，评书联播一档不落守着听。
+  cand[cp/怀旧] CLEAN 爷爷传下的白瓷茶缸，磕了口也照样天天用它喝水。
+  cand[cp/逍遥] CLEAN 礼拜天钓竿一扛就是大半天，鱼篓空着人也舒坦。
+  cand[cp/逍遥] CLEAN 阳台上那盆兰花养了整十年，浇花的水都要先晾过。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG,STRICT-sub5/contain 旧藤椅搬到弄堂口，摇着蒲扇能跟人闲话一个黄昏。
+  cand[ho] REJECT:nearcheck-FLAG 裁缝铺的软皮尺
+  cand[ho] CLEAN 钟表行的寸镜
+  cand[ho] CLEAN 酱菜铺的大陶缸
+  cand[ho] REJECT:nearcheck-FLAG 磨刀匠的条凳
+  cand[ho] CLEAN 弹棉花店的弓弦
+  cand[tp] CLEAN 买下缝纫机的票子攥了一路，到家先让老娘摸了摸机头。
+  cand[tp] REJECT:STRICT-sub5/contain 单位组织疗养那趟，他在滩涂上捡的贝壳串成了钥匙链。
+  cand[tp] CLEAN 搬家工人抬走最后一件家具，他站在空屋里四下看了好几遍。
+  cand[tp] REJECT:nearcheck-FLAG,STRICT-sub5/contain 厂里发的奖状他没往墙上挂，叠好塞进牛皮纸袋收进了樟木箱。
+  cand[tp] CLEAN 孙辈出生他包了个厚红包，回头自己下了一碗光面当午饭。
+check1 intra-bigram: cp=20.833333333333336 ho=15.384615384615385 tp=15.384615384615385 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=38.888888888888886 ho=50.0 tp=34.04255319148937 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/35x10 hits PASS
+append: tail-axis rule OK (batch-tail=怀旧 ≠ old-marker=侠气)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=762(6x127) ho=410 tp=274 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R1013 ALL BATTERY PASS ==
