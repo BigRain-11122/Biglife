@@ -1,0 +1,57 @@
+== gene_round R1031 start ==
+check-baseline: HEAD(cp774/ho414/tp278)==worktree 纯净态 PASS
+check-counts-pre: cp=774(6x129) ho=414 tp=278 PASS
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 41 候选 clean=25 flag=16 (exit=1)
+  cand[cp/烟火] REJECT:nearcheck-FLAG 蒸鱼盘底垫两根筷子架空，鱼肉不贴盘，汤水也利落。
+  cand[cp/烟火] CLEAN 炒花生要凉锅凉油下锅，听噼啪声由密转稀就得起锅。
+  cand[cp/烟火] CLEAN 新铁锅先拿肥肉皮擦出油光，养出的锅黑才不生锈。
+  cand[cp/烟火] CLEAN 酱瓜切丁拌毛豆，过粥最相宜。
+  cand[cp/烟火] CLEAN 烤山芋挑细长的受热匀，两头不夹生。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 钥匙配了三把：一把随身，一把压信箱底，一把塞给对门收着。
+  cand[cp/秩序] REJECT:nearcheck-FLAG,STRICT-sub5/contain 挂历翻过的页不撕，折角记事，年底正好对账。
+  cand[cp/秩序] REJECT:nearcheck-FLAG,STRICT-sub5/contain 工具箱隔层贴了字条，锤归锤钳归钳，闭眼也摸得着。
+  cand[cp/秩序] CLEAN 账本一笔一行，红字记欠，蓝字记还。
+  cand[cp/秩序] REJECT:STRICT-sub5/contain 晾衣绳按衣裳长短分三段，被里被面永远晾中段。
+  cand[cp/求新] CLEAN 菜场东头新开了现磨芝麻酱的摊子，他排队尝了一勺就认了准。
+  cand[cp/求新] REJECT:nearcheck-FLAG 社区医院换叫号机，他研究明白后，回头把全流程教给排队的老街坊。
+  cand[cp/求新] REJECT:nearcheck-FLAG,STRICT-sub5/contain 无人售货亭扫码买汽水，他对着出货口来回看了三遍。
+  cand[cp/求新] CLEAN 孙子的遥控赛车他偷偷练熟了手，转弯不撞桌腿才肯还。
+  cand[cp/求新] CLEAN 公交换了电子屏报站，他特意坐过两站把屏上的字看全。
+  cand[cp/怀旧] CLEAN 樟木箱底那匹母亲织的嫁妆布，纹路如今没几个人认得了。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG,STRICT-sub5/contain 老缝纫机踏板松了，他垫块胶皮照用，说这声响比新的踏实。
+  cand[cp/怀旧] CLEAN 旧军挎磨白了边，他把破口锁个圈边，接着背。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 剃头挑子换了一茬又一茬，他就认巷尾那把老推子的手感。
+  cand[cp/怀旧] CLEAN 玻璃罩里那台老座钟不走了，他照样每礼拜上一次弦。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG,STRICT-sub5/contain 下棋输了不恼，把棋子码齐，说残局留着明儿接着琢磨。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 竹躺椅对着一墙爬山虎，他能坐足一个下午。
+  cand[cp/逍遥] CLEAN 遛鸟不赶趟，走到哪儿歇到哪儿，鸟叫得比哪儿都欢。
+  cand[cp/逍遥] CLEAN 钓鱼不带表，收竿全看日头斜到第几个桥洞。
+  cand[cp/逍遥] CLEAN 河沿挑块平石头坐下，看人家撒网也能看个饱。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 邻居家水管冻裂了，他披上衣裳先去关总阀。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 楼上漏水漏到楼下，他爬上爬下帮两家传话，直到修利索。
+  cand[cp/侠气] CLEAN 街坊家孩子没处写作业，他腾出半张桌子，顺手还管削铅笔。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 谁家红白事缺人手，他不用请，卷起袖子头一个到。
+  cand[cp/侠气] CLEAN 卖菜老汉的三轮链子掉了，他蹲在路边帮着接上，手黑了不嫌。
+  cand[ho] CLEAN 修表铺的油泥刀
+  cand[ho] REJECT:nearcheck-FLAG,STRICT-sub5/contain 铜匠摊的小铁砧
+  cand[ho] CLEAN 鞋摊的檀木楦头
+  cand[ho] CLEAN 染坊的刮浆板
+  cand[ho] CLEAN 香烛店的烛剪
+  cand[ho] CLEAN 米行的斗刮板
+  cand[tp] REJECT:nearcheck-FLAG 徒弟满师那礼拜，师傅把使惯的钢锯条悄悄留在他铺位上。
+  cand[tp] CLEAN 分红头一笔到账，他给巷里的孤老各称了包桂花糖。
+  cand[tp] CLEAN 老伙计住院那阵，送饭的差事他一肩挑了四十来天。
+  cand[tp] REJECT:nearcheck-FLAG,STRICT-sub5/contain 厂里最后一次发劳保手套，他领了两双，一双日常使，一双收进铁盒。
+  cand[tp] CLEAN 搬进新房安了家，他把老槐树籽埋进阳台花盆里。
+check1 intra-bigram: cp=18.518518518518523 ho=14.28571428571429 tp=17.391304347826086 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=44.44444444444444 ho=71.42857142857143 tp=32.55813953488372 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/35x10 hits PASS
+append: tail-axis rule OK (batch-tail=侠气 ≠ old-marker=逍遥)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=780(6x130) ho=416 tp=280 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R1031 ALL BATTERY PASS ==
