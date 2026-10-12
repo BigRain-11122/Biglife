@@ -1,0 +1,50 @@
+== gene_round R1019 start ==
+check-baseline: HEAD(cp762/ho410/tp274)==worktree 纯净态 PASS
+check-counts-pre: cp=762(6x127) ho=410 tp=274 PASS
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 34 候选 clean=21 flag=13 (exit=1)
+  cand[cp/侠气] CLEAN 楼上水管半夜爆了，他披件衣裳先去帮邻居关总阀。
+  cand[cp/侠气] REJECT:STRICT-sub5/contain 有人中暑倒在菜场口，他蹲在边上撑伞守到救护车来。
+  cand[cp/侠气] REJECT:nearcheck-FLAG,STRICT-sub5/contain 新搬来的租客不认路，他画了张手绘地图塞给人家。
+  cand[cp/侠气] CLEAN 收废品的爷叔三轮车坏在坡上，他顶着一口气推到平路才撒手。
+  cand[cp/烟火] REJECT:nearcheck-FLAG,STRICT-sub5/contain 煤球炉子封过夜，第二天捅开还能省半块引火柴。
+  cand[cp/烟火] REJECT:nearcheck-FLAG 腌腊肉挂得高高的，猫够不着才算腌到位。
+  cand[cp/烟火] CLEAN 泡饭要拿隔夜剩饭煮，米粒开花才够糯。
+  cand[cp/烟火] CLEAN 生煎要吃锅底的，脆底咬开一包汤汁才叫灵。
+  cand[cp/秩序] CLEAN 遥控器用完插回底座，沙发上永远找得到。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 钥匙进门就挂上门边的挂钩，从来不用翻包。
+  cand[cp/秩序] CLEAN 工具间墙上画了轮廓线，哪件家什归哪格一眼便知。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 碗筷按人头分格摆，一家人的筷子从不混用。
+  cand[cp/求新] CLEAN 街口新开了家自助洗衣店，他揣着硬币去试了三回。
+  cand[cp/求新] CLEAN 小区门禁换了刷脸的，他非要研究明白才肯进门。
+  cand[cp/求新] CLEAN 新出的电子血压计他先给全楼老人各量了一遍。
+  cand[cp/求新] REJECT:nearcheck-FLAG,STRICT-sub5/contain 地铁新线路通到江对岸，他特地去坐了个来回。
+  cand[cp/怀旧] CLEAN 箱底压着娘纳的千层底布鞋，针脚密得数不过来。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 弄堂里磨剪子戗菜刀的吆喝，他到现在还能接上后半句。
+  cand[cp/怀旧] CLEAN 小学用的铁皮铅笔盒还在，打开能闻见铅屑味。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 黑白电视机上盖的那块钩花罩布，他洗得发白也不换。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 竹躺椅拖到树荫底下，闭目养神能养一个时辰。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG,STRICT-sub5/contain 闲来给阳台上的葱蒜换盆，收成够炒一盘子。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG,STRICT-sub5/contain 棋摊上输了不恼，赢一盘就收手回家吃饭。
+  cand[cp/逍遥] CLEAN 拎着鸟笼子遛一圈，鸟没叫他先哼上了。
+  cand[ho] CLEAN 锡匠摊的小铁砧
+  cand[ho] CLEAN 竹器店的刮青刀
+  cand[ho] REJECT:nearcheck-FLAG 剃头挑子的荡刀布
+  cand[ho] CLEAN 铜匠担子的焊锡壶
+  cand[ho] CLEAN 香烛店的签筒
+  cand[ho] REJECT:nearcheck-FLAG 皮匠摊的线拐子
+  cand[tp] CLEAN 楼上小夫妻吵架摔了碗，他敲开人家门递进去一副新买的对碗。
+  cand[tp] CLEAN 他给全楼道修了盏声控灯，夜里回来的人再不用摸黑找开关。
+  cand[tp] REJECT:trigger:月 孙女满月，他打了一对银镯子，小的给娃戴上，大的留着等她出嫁。
+  cand[tp] CLEAN 他把攒了多年的菊花石砚送了徒弟，自己留了块垫桌脚的青砖。
+check1 intra-bigram: cp=21.739130434782606 ho=14.28571428571429 tp=18.181818181818176 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=48.78048780487805 ho=66.66666666666667 tp=24.489795918367353 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/35x10 hits PASS
+append: tail-axis rule OK (batch-tail=侠气 ≠ old-marker=怀旧)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=768(6x128) ho=412 tp=276 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R1019 ALL BATTERY PASS ==
