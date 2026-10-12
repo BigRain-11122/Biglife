@@ -1,0 +1,14 @@
+== R1040 smoke @ 2026-10-12 23:5x（口径修正复跑·首跑账平断言口径误已勘正·数据面无恙）==
+[PASS] 账平年轮双口径——10-12 rings lines=329 unique_citizens=328 light=328（329 行=328 唯一居民+1 同日双环 C-01209〔01:36 相遇环 d469b300+23:15 批环 2284a693·meet/batch 独立配额合法〕·判据修正=首跑断言口径误〔行数当居民数〕·数据面无恙·R1038 309/308 双口径先例）
+[PASS] light 双阈——rows=10030 uniq=10030
+[PASS] maxid 阶新注册——maxid=C-10036（受保护·需求触发制·本轮零需求零注册·批=既有居民迭代）
+[PASS] behavior anchor_null——rows=10030 null=3（荣誉席契约面维持）
+[PASS] relations meet——meet_today=3 (10-12 日额 3/3 满免写·总 meet=30 维持)
+[PASS] pool tick——=== 2026-10-12 23:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（全桶达标自停·tick_age=0.83h <24h）
+[PASS] gene cp——cp=786=131x6 axes/ho=418/tp=282（R1037 基因轮兑现面维持·下次基因轮 ≈R1043）
+[PASS] gene battery——qa/gene-round-R1037.log 全电池 PASS 在档（哨兵三峰值维持）
+[PASS] status-export——export_ts 2026-10-12 23:5x·r13=329·depts 实况三行 R1040 续鲜已落（json 回读校验·本步仅复核零改写）
+[PASS] heartbeat——age=0.25h（3h 新鲜度闸）
+[PASS] QC 例巡窗——免巡维持（R1036 problems=0 在案·下次例巡 >=R1042〔下下轮到期〕）
+[PASS] task hygiene——waiting 单禁重扫维持（T-20260925-10 无消费方/T-20261010-03 造人=需求触发前零注册·T-20261010-01 已关结·阈值回填随单存续）·行业回执 24h 节奏核验本轮已做=仍未到货（cph4/research 无新 benchmark/industry R- 件·窗 ≤10-13）
+== R1040 smoke: 12 PASS, 0 FAIL ==
