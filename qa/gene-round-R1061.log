@@ -1,0 +1,62 @@
+== gene_round R1061 start ==
+check-baseline: HEAD(cp801/ho424/tp289)==worktree 纯净态 PASS
+check-counts-pre: cp=801 各轴 {'逍遥': 133, '烟火': 134, '秩序': 134, '求新': 134, '怀旧': 133, '侠气': 133} PASS
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 46 候选 clean=27 flag=19 (exit=1)
+  cand[cp/烟火] REJECT:nearcheck-FLAG 面要三揉三醒，赶出来的不筋道。
+  cand[cp/烟火] CLEAN 腌菜压上青石，到了时候才开坛。
+  cand[cp/烟火] CLEAN 煮粥得守着锅，糊了底一锅都亏。
+  cand[cp/烟火] REJECT:nearcheck-FLAG 新蒸的馒头留两个，给晚归的人垫肚子。
+  cand[cp/烟火] CLEAN 茶要趁热倒二道，凉了再热就走了味。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 票据夹按颜色码，翻起来不费神。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 工具用过归原位，省得下回抓瞎。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 账目两清才握手，交情归交情。
+  cand[cp/秩序] CLEAN 货架标签朝外摆，顾客自己就能找到。
+  cand[cp/秩序] CLEAN 与人约定提前一刻到，不叫人干等。
+  cand[cp/求新] CLEAN 新买的说明书，他戴着花镜逐页啃。
+  cand[cp/求新] CLEAN 孙子的拼音表，他贴在灶台边上照着念。
+  cand[cp/求新] REJECT:nearcheck-FLAG 电子秤用了半年，老手艺也没丢。
+  cand[cp/求新] CLEAN 新公交线路图，他默画了一遍才记牢。
+  cand[cp/求新] CLEAN 手机上缴电费，他学会了就教老邻居。
+  cand[cp/怀旧] CLEAN 旧挂钟停了摆，他也不舍得送人。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG,STRICT-sub5/contain 粮票攒了一沓，如今成了念想。
+  cand[cp/怀旧] CLEAN 老相册边角卷了，他用米浆一点点补。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 母校的门楼没拆，他绕路也要看一眼。
+  cand[cp/怀旧] CLEAN 老照片发黄了，人名他一个不落全记得。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG,STRICT-sub5/contain 散步不赶终点，走到哪儿算哪儿。
+  cand[cp/逍遥] CLEAN 茶馆一坐半天，壶续三回才尽兴。
+  cand[cp/逍遥] CLEAN 花开了谢了他都不恼，接着养。
+  cand[cp/逍遥] CLEAN 输了棋也不悔，摆开再来一盘。
+  cand[cp/逍遥] CLEAN 午睡醒来不急着起，先听一会儿鸟叫。
+  cand[cp/侠气] REJECT:nearcheck-FLAG,STRICT-sub5/contain 邻居住院那阵，他每天捎一桶热汤。
+  cand[cp/侠气] CLEAN 楼里停电，他挨家挨户送蜡烛。
+  cand[cp/侠气] CLEAN 小孩迷路哭鼻子，他蹲下来哄到不哭。
+  cand[cp/侠气] REJECT:nearcheck-FLAG,STRICT-sub5/contain 街坊办红白事缺人手，他头一个到。
+  cand[cp/侠气] CLEAN 见老人挑重担，他顺手接过来半边。
+  cand[ho] REJECT:nearcheck-FLAG,STRICT-sub5/contain 锔瓷匠的金刚钻头
+  cand[ho] REJECT:nearcheck-FLAG 货郎担上的拨浪鼓
+  cand[ho] CLEAN 铁匠铺的淬火铁钳
+  cand[ho] REJECT:nearcheck-FLAG,STRICT-sub5/contain 药铺柜台的白铜碾
+  cand[ho] CLEAN 船夫的桐油斗笠
+  cand[ho] CLEAN 染坊的靛蓝大缸
+  cand[ho] CLEAN 磨剪匠的四层板凳
+  cand[ho] CLEAN 木匠的牛角墨斗
+  cand[tp] REJECT:nearcheck-FLAG,STRICT-sub5/contain 儿子头一回寄钱回来，他把汇款单压在枕头底下。
+  cand[tp] REJECT:nearcheck-FLAG 老屋拆迁那天，他只带走了一块门牌。
+  cand[tp] CLEAN 摊子第一天开张，他天不亮就起来备货。
+  cand[tp] REJECT:nearcheck-FLAG,STRICT-sub5/contain 拿到新房钥匙，他绕着楼道走了三圈。
+  cand[tp] REJECT:nearcheck-FLAG,STRICT-sub5/contain 徒弟出师摆酒那天，他在主桌敬了一圈。
+  cand[tp] CLEAN 第一次视频见着重孙，他对着屏幕直招手。
+  cand[tp] CLEAN 厂庆五十周年，他作为老代表上台领了章。
+  cand[tp] REJECT:nearcheck-FLAG,STRICT-sub5/contain 搬家那天，老藤椅他非要一起抬上车。
+check1 intra-bigram: cp=34.48275862068966 ho=13.33333333333333 tp=27.027027027027028 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=38.70967741935484 ho=53.333333333333336 tp=34.14634146341463 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/35x10 hits PASS
+append: tail-axis rule OK (batch-tail=侠气 ≠ old-marker=烟火)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=807(各轴+1) ho=426 tp=291 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R1061 ALL BATTERY PASS ==
