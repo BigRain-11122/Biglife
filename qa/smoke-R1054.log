@@ -1,0 +1,10 @@
+== BigLife smoke R1054 @2026-10-13 02:26:51 ==
+[PASS] poolgen_tick_fresh_0.35h (TOTAL=1440 FAIL=NONE 维持·10-13 份额 R1041 audit PASS 自停)
+[PASS] rings_1013_146 (registry 144+anchors 2·136+10 批 0b3b4a49)
+[PASS] light_rows_10030
+[PASS] light_unique_10030 (maxid=C-10036 受控复产维持)
+[PASS] meet_today_1_cap3 (R1041/R1048/R1050 三场在档·日额 3/3 封顶=零新遇合规)
+[PASS] genes_cp795 (R1049 已兑·下次基因轮 >=R1055)
+[PASS] genes_tp287_ho422
+[PASS] status_export_r13_146 (export_ts=2026-10-13 02:26)
+smoke verdict: PASS (8/8)
