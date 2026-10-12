@@ -1,0 +1,17 @@
+== BigLife Gene Round R1043 @2026-10-13 00:3x（终版·首版三查抓 2 条 near-dup 未过闸已改写）==
+batch: +3 catchphrases（axis=秩序/求新/烟火·六轴内）+3 turning_points +2 hook_objects = 8（登记 commit 44b690ea·改写修版 commit 本批·先登记后使用·外科式纯追加）
+rework 实录: cp「新开的铺子总要去尝一口…」worst=5→改「谁家铺子新开张他都要去逛一圈，买不买另说。」0 撞过闸；tp「夜校报名表…」worst=3→改「夜校开课那天，他把搁了多年的旧钢笔找了出来。」1 撞过闸（备选过闸判例）
+check1 nearcheck cp: worst 1 4-gram 撞/条 => PASS（≤1 旧口径）
+    汤要趁热，话要慢说。… -> 1 撞
+check1 nearcheck tp: worst 1 4-gram 撞/条 => PASS（≤1 旧口径）
+    夜校开课那天，他把搁了多年的旧钢笔找了出来。… -> 1 撞
+    搬进新城第一晚，他失眠到天亮，把老街的门牌号… -> 1 撞
+check1 nearcheck ho: worst 1 4-gram 撞/条 => PASS（≤1 旧口径）
+    修表铺的单眼放大镜… -> 1 撞
+check2 触发词/时段 token 实录（tp=过往叙事·ring 断言面不适用）:
+    搬进新城第一晚，他失眠到天亮，把老街的门… -> ['天亮']（叙事性过往·非当日断言）
+    城办第一届马拉松，他在终点线外站了一上午… -> ['上午']（叙事性过往·非当日断言）
+    当日 attach 硬违（那天下/今天/今儿）: 0 => PASS
+check3 跨面 census registry exact 撞:
+    exact 撞计 0 => PASS
+gene-round verdict: PASS（R1037 交接口径·库计数 cp=789/tp=285/ho=420 实读·下次 >=R1049）
