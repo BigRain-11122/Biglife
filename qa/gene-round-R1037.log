@@ -1,0 +1,58 @@
+== gene_round R1037 start ==
+check-baseline: HEAD(cp780/ho416/tp280)==worktree 纯净态 PASS
+check-counts-pre: cp=780(6x130) ho=416 tp=280 PASS
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 42 候选 clean=14 flag=28 (exit=1)
+  cand[cp/烟火] REJECT:nearcheck-FLAG 火候到了，菜自己会香。
+  cand[cp/烟火] CLEAN 油渣要趁热撒盐，凉了就不脆了。
+  cand[cp/烟火] REJECT:nearcheck-FLAG 泡饭就酱瓜，吃的是个热乎气。
+  cand[cp/烟火] REJECT:nearcheck-FLAG,STRICT-sub5/contain 灶膛留个火种，明早生火快。
+  cand[cp/烟火] REJECT:nearcheck-FLAG 泡菜坛沿水要勤换，坛子才不生花。
+  cand[cp/秩序] CLEAN 物归原位，心才安生。
+  cand[cp/秩序] REJECT:nearcheck-FLAG,STRICT-sub5/contain 药盒按早中晚分好，一把抓不出错。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 钥匙串上贴了色条，哪个门一看就明白。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 存折号码他抄在小本上，锁进抽屉最里层。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 工具用完当天归位，坏了当轮就修。
+  cand[cp/求新] CLEAN 试试又不费米。
+  cand[cp/求新] REJECT:nearcheck-FLAG 自助结账机他试了两回，回头教起了排队的街坊。
+  cand[cp/求新] REJECT:nearcheck-FLAG,STRICT-sub5/contain 小区门禁换刷脸，他头一个站过去让机器认。
+  cand[cp/求新] CLEAN 菜场新上的电子秤，他盯着屏核了两遍才掏钱。
+  cand[cp/求新] CLEAN 孙子的点读笔他玩明白了，还找出三处读错的字。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG,STRICT-sub5/contain 旧东西认人。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 老闹钟上了弦还准，他不肯换新的。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 樟木箱一开盖，就是小时候的味道。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG,STRICT-sub5/contain 旧毛衣拆了重织，线还是那点旧线。
+  cand[cp/怀旧] CLEAN 老照片按年头码进相册，翻一遍就是一辈子。
+  cand[cp/逍遥] CLEAN 闲是福，不是懒。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG,STRICT-sub5/contain 午后靠窗打个盹，比啥都养人。
+  cand[cp/逍遥] CLEAN 棋摊上他不争输赢，图的是个热闹。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 茶馆一坐一下午，一壶茶续到没味也乐意。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG,STRICT-sub5/contain 河边遛弯不带目的，走到哪儿算哪儿。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 路见事，搭把手。
+  cand[cp/侠气] REJECT:nearcheck-FLAG,STRICT-sub5/contain 楼道灯泡坏了，他搬梯子先换了再说。
+  cand[cp/侠气] REJECT:nearcheck-FLAG,trigger:月 邻居住院，他帮着接送了半个月的孩子。
+  cand[cp/侠气] CLEAN 公交车上他总把座让给提重物的。
+  cand[cp/侠气] CLEAN 街口井盖松了，他蹲在边上守到来人修。
+  cand[ho] CLEAN 茶馆的长嘴铜壶
+  cand[ho] REJECT:nearcheck-FLAG 裁缝铺的划粉竹尺
+  cand[ho] REJECT:nearcheck-FLAG 磨刀匠的惊闺铁串
+  cand[ho] CLEAN 酱园的豆瓣缸盖
+  cand[ho] REJECT:nearcheck-FLAG,STRICT-sub5/contain 竹器店的刮青刀
+  cand[ho] REJECT:nearcheck-FLAG 馄饨担的竹梆子
+  cand[tp] CLEAN 老屋拆迁前，他把院里的桂花树移进了新小区的花坛。
+  cand[tp] REJECT:nearcheck-FLAG 孩子高考完那年夏天，他头一回休了年假，陪老伴去看了海。
+  cand[tp] REJECT:nearcheck-FLAG 退休那天他把工牌擦了又擦，转身报了社区的义务修车摊。
+  cand[tp] REJECT:nearcheck-FLAG,STRICT-sub5/contain 徒弟出师那天，他把使了十年的刨刃送了过去。
+  cand[tp] REJECT:nearcheck-FLAG 搬家那天他没扔旧门槛，垫在了新家花盆底下。
+  cand[tp] CLEAN 他头一次坐飞机，是为了赶回来见师傅最后一面。
+check1 intra-bigram: cp=26.66666666666667 ho=14.28571428571429 tp=13.043478260869568 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=66.66666666666667 ho=50.0 tp=32.55813953488372 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/35x10 hits PASS
+append: tail-axis rule OK (batch-tail=逍遥 ≠ old-marker=侠气)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=786(6x131) ho=418 tp=282 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R1037 ALL BATTERY PASS ==
