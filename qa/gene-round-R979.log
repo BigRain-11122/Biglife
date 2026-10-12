@@ -1,0 +1,43 @@
+== gene_round R979 start ==
+PASS batch-axes 6 轴各一
+PASS batch-unique 10 条零重复
+PASS rumor-triggers 31 词零命中（实弹 0）
+PASS nearcheck FINAL 10/10 CLEAN
+PASS PAIR-PEAK intra-batch max=29.412 below 43.902
+PASS counts-pre cp=720(6x120)
+PASS counts-pre ho=396
+PASS counts-pre tp=260
+PASS baseline worktree == HEAD (language/lives)
+PASS sentinel(pre)[cp]: 91.667 < T92
+PASS sentinel(pre)[ho]: 94.118 < T95
+PASS sentinel(pre)[tp]: 43.902 < T44
+PASS lang-anchor unique x1
+PASS obj-anchor unique x1
+PASS turn-anchor unique x1
+PASS dup-cp:摇橹船上看野
+PASS dup-cp:生煤炉先劈柴
+PASS dup-cp:螺丝罐头按大
+PASS dup-cp:阳台上搭了塑
+PASS dup-cp:老花镜配了两
+PASS dup-cp:邻摊被掀他第
+PASS dup:皮匠摊的锥子
+PASS dup:磨剪子的戗刀
+PASS dup:拆迁通知贴出
+PASS dup:金婚那年他把
+PASS verify-post(mem) cp=726(6x121)
+PASS verify-post(mem) ho=398 tp=262
+PASS tail-exact cp
+PASS tail-exact ho/tp
+PASS other-keys byte-equal
+append: lang +6 cp / lives +2 ho +2 tp DONE
+PASS verify-post(disk) 726/398/262
+PASS sentinel(post)[cp]: 91.667 < T92
+PASS sentinel(post)[ho]: 94.118 < T95
+PASS sentinel(post)[tp]: 43.902 < T44
+PASS status-export anchor export_ts unique x1
+PASS status-export anchor r3-key unique x1
+PASS status-export anchor r3-text unique x1
+PASS status-export anchor r13-ring unique x1
+PASS status-export anchor depts-yearring unique x1
+PASS status-export anchor depts-gene unique x1
+status-export: export_ts+r13 130+r3 726/398+depts 两段续鲜 DONE
