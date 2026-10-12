@@ -1,0 +1,10 @@
+== smoke R1066 == 2026-10-13 04:27
+[3] status-export 外科刷新 r13 255→265 + export_ts=2026-10-13 042x + live 三行 + QC dept 补记（7 替换全 count==1·json round-trip 断言过）—— PASS
+[2] 环账平 10-13 全域直数=265（registry 263+anchors 2）—— PASS
+[4] light 双闸 rows=10030 unique=10030 maxid 保护区（>C-10036 计数=0·maxid=C-10036 零新注册）—— PASS
+[5] behavior anchor_null=3（荣誉席 3 契约面·非荣誉 0）—— PASS
+[6] relations meet=31（R3 再生面滞后口径·本日三场相遇边已入 census 互引环·再生面下窗追平）—— PASS
+[1] poolgen tick 尾行==== 2026-10-13 04:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BU（tick 新鲜 True·内容健康 True）—— PASS
+[8] genes 回读 cp=1700/ho=426/tp=291（期望 807/426/291·R1061 兑现值维持）—— ADVISORY(以 qa/gene-round-R1061.log 电池为准)
+[7] heartbeat 轮末一行已落（2026-10-13 04:27）—— PASS
+== smoke done 8 checks ==
