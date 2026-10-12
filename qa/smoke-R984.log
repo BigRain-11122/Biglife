@@ -1,0 +1,14 @@
+== R984 smoke @ 2026-10-12 12:37 ==
+[PASS] 环账平 10-12 rings_today=180（expect 180·批 10/10 全落 C-01071~C-01080·机器直数 census [锚] 行级）
+[PASS] light 双阈 rows=10030 uniq=10030
+[PASS] maxid 零新注册 C-10036（受控复工·需求触发制·本轮零需求零注册）
+[PASS] behavior anchor_null rows=10030 null=3（荣誉市民豁免面维持）
+[PASS] relations meet=30（日额 3/3 满·R981 面维持·本轮配额免写·精确口径 '"rel":"meet"' 行计数）
+[PASS] pool tick poolgen_run.log TOTAL=1440 FAIL_BUCKETS=NONE（全桶达标自停·age 0.5h<24h）
+[PASS] gene cp 726=121x6 axes（R979 基因轮维持·下次基因轮 >=R985）
+[PASS] gene battery qa/gene-round-R979.log PASS（电池面维持·本轮零基因动作）
+[PASS] status-export export_ts 2026-10-12 12:36·r13 170→180·depts 年轮线段续鲜·json 回读断言过
+[PASS] QC 例巡 R982 problems=0 在档（QC-REPORT 12:16·UTF-8「异常数：0」直验·异常=0·下次例巡 >=R988）
+[PASS] task hygiene 三单 waiting 维持禁重扫（T-20261010-01 已关结/T-20260925-10 无消费方/T-20261010-03 造人=需求触发前零注册）
+[NOTE] 首跑两断言口径误植复验归正（relations 全行计数 2841104≠meet 对数→rel=meet 精确计数=30；QC 检索词 problems≠报告中文「异常数：0」·UTF-8 直验）——数据面健康零缺项（R945 假阴性判例同型）
+== R984 smoke: 11 PASS, 0 FAIL ==

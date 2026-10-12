@@ -1,0 +1,37 @@
+== gene_round R997 start ==
+check-baseline: HEAD(cp726/ho398/tp262)→worktree(cp738/ho402/tp266) prefix+other-keys PASS（=HEAD+R985+R991 双基因轮纯追加态）
+check-counts-pre: cp=738(6x123) ho=402 tp=266 PASS
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 21 候选 clean=16 flag=5 (exit=1)
+  cand[cp/逍遥] REJECT:nearcheck-FLAG,STRICT-sub5/contain 躺椅挪到井台边，一把蒲扇摇到饭点。
+  cand[cp/逍遥] CLEAN 鱼竿往桥栏上一靠，先眯一觉再说。
+  cand[cp/烟火] CLEAN 灶膛里煨着藕汤，锅盖缝里冒白汽。
+  cand[cp/烟火] REJECT:nearcheck-FLAG,STRICT-sub5/contain 蒸笼一揭满巷白汽，排队的人都踮脚。
+  cand[cp/秩序] CLEAN 账本年年包蓝布皮，页脚折角都对齐。
+  cand[cp/秩序] CLEAN 钥匙只放玄关第二格，乱放的人自己找。
+  cand[cp/求新] CLEAN 头一回用高压锅，揭盖前全家退三步。
+  cand[cp/求新] CLEAN 收音机配了副耳机，走路也能听评弹。
+  cand[cp/怀旧] CLEAN 铝饭盒用了四十年，磕的坑全在盖沿上。
+  cand[cp/怀旧] CLEAN 老挂历拆下来包书皮，年头盖着年头。
+  cand[cp/侠气] CLEAN 邻居住院他垫的钱，出院才轻描淡写提一句。
+  cand[cp/侠气] CLEAN 巷口井盖翘了他守到半夜，等市政的人来换。
+  cand[ho] CLEAN 弹棉花匠的木弓
+  cand[ho] CLEAN 箍桶匠的铁箍钳
+  cand[ho] REJECT:nearcheck-FLAG 修钢笔的笔尖镊子
+  cand[ho] CLEAN 面案边的和面粗陶盆
+  cand[ho] CLEAN 烧饼炉口的贴饼铁铲
+  cand[tp] CLEAN 弄堂通了管道煤气，他把煤球炉擦净收进箱底。
+  cand[tp] CLEAN 头一回坐上绿皮火车去省城，兜里揣着煮鸡蛋。
+  cand[tp] REJECT:nearcheck-FLAG,STRICT-sub5/contain 广播里听到恢复高考，他把课本从阁楼上取了下来。
+  cand[tp] REJECT:nearcheck-FLAG,STRICT-sub5/contain 分到新房钥匙那天，先在空屋里走了一圈才锁门。
+check1 intra-bigram: cp=22.857142857142854 ho=28.57142857142857 tp=9.523809523809524 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=44.44444444444444 ho=42.85714285714286 tp=30.434782608695656 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/31x10 hits PASS
+append: tail-axis rule OK (batch-tail=侠气 ≠ old-marker=烟火)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=744(6x124) ho=404 tp=268 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R997 ALL BATTERY PASS ==

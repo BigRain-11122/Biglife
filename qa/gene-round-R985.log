@@ -1,0 +1,15 @@
+== gene_round R985 start ==
+check-baseline: worktree == HEAD (language/lives) PASS
+check-counts-pre: cp=726(6x121) ho=398 tp=262 PASS
+check1 STRICT[cp]: 0 hits PASS
+check1 STRICT[ho]: 0 hits PASS
+check1 STRICT[tp]: 0 hits PASS
+check2 TRIGGER: 0/31x10 hits PASS
+check3 COG: atoms>=6c=2148 files=8 0 hits PASS
+check3 CENSUS rg: 0/10 full-entry hits PASS
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=732(6x122) ho=400 tp=264 tail-exact + other-keys byte-equal PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R985 ALL BATTERY PASS ==

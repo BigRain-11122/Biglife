@@ -1,0 +1,13 @@
+== R983 smoke @ 2026-10-12 12:26 ==
+[PASS] 环账平 10-12 rings_today=170（expect 170·批 10/10 全落〔C-01061~C-01070〕·机器直数 registry [锚] 170=light 170 双口径零差）
+[PASS] light 双阈 rows=10030 uniq=10030
+[PASS] maxid 零新注册 C-10036（受控复产=需求触发制·本轮零需求零注册）
+[PASS] behavior anchor_null rows=10030 null=3（荣誉席契约面维持）
+[PASS] relations meet=30（日额 3/3 满·R981 面维持·本轮免写）
+[PASS] pool tick 12:06 TOTAL=1440 FAIL_BUCKETS=NONE（全桶达标自停·<24h）
+[PASS] gene cp 726=6x121 axes（R979 基因轮面维持·下次基因轮 ≈R985）
+[PASS] gene battery qa/gene-round-R979.log PASS（电池面维持·本轮零基因动作）
+[PASS] status-export export_ts 2026-10-12 12:26（<24h·r13 160→170·depts 两段续鲜·json 回读断言过）
+[PASS] QC 例巡 R982 problems=0 在档（cards=10030·evolved=4851·QC-REPORT 12:16·下次例巡 ≥R988）
+[PASS] task hygiene 三单 waiting 维持禁重扫（T-20261010-01 已关结/T-20260925-10 无消费方/T-20261010-03 造人=需求触发前零注册）
+== R983 smoke: 11 PASS, 0 FAIL ==
