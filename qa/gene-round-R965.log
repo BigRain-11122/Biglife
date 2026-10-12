@@ -1,0 +1,52 @@
+== gene_round R965 start ==
+PASS  cp|逍遥 茶馆里听评弹打瞌睡，散场才醒也算听全了。 
+PASS  cp|逍遥 钓鱼人半天不提竿，收工却比谁都满足。 
+FAIL  cp|逍遥 睡午觉睡到自然醒，起来先笑一声再问几点了。   << L4:language.catchphrases[514]睡到自然/到自然醒; SUB5:language.catchphrases[514]睡到自然醒; BI2:language.catchphrases[514]
+PASS  cp|烟火 生煎底板焦得正好，咬破一角先嘬汤。 
+PASS  cp|烟火 咸菜炒毛豆，一筷子能送两碗泡饭。 
+PASS  cp|烟火 煤炉上煨的粥，米油厚得能挂住调羹。 
+PASS  cp|秩序 晾衣竹竿高低一律，被单床单各归各档。 
+PASS  cp|秩序 自行车铃催得再急，进弄堂也得推着走。 
+PASS  cp|秩序 药瓶按顿分格摆，谁吃几粒一眼清。 
+PASS  cp|求新 跟着广播学英语，念得满弄堂都听得见。 
+PASS  cp|求新 出国回来带只电饭煲，全楼排队借去试煮。 
+PASS  cp|求新 照相机进了家门，全家轮流对着镜头正一正衣领。 
+PASS  cp|怀旧 修钢笔的摊头，围着看的比修笔的多。 
+FAIL  cp|怀旧 旧挂历翻到年底，十二张画都揭下来包了书皮。   << L4:language.catchphrases[510]旧挂历翻
+FAIL  cp|怀旧 老挂钟慢五分钟，全家按它过日子倒也顺。   << L4:lives.hook_objects[238]慢五分钟
+PASS  cp|侠气 谁家煤饼烧完了，隔壁先匀两只应急。 
+PASS  cp|侠气 小孩闯了祸，老师傅拎着苹果陪上门赔不是。 
+PASS  cp|侠气 半夜有人发高烧，他背起人就往医院跑。 
+PASS  ho|- 老虎灶的铜吊子 
+PASS  ho|- 酱油店的大提子 
+PASS  ho|- 刻章摊的字模小抽屉 
+FAIL  tp|- 居委会添了台公用缝纫机，她包了全弄堂孩子的补丁活。   << L4:lives.turning_points[255]了全弄堂
+PASS  tp|- 他替生病的老伙计顶了十来天的早班，自家厂里一回没迟到。 
+PASS  tp|- 街坊凑钱装的路灯，开关的事他一管就是十年。 
+PASS  tp|- 厂里评先进的红纸花，她转身别给了门房师傅。 
+PASS  tp|- 女儿考去外地念书，他连夜给行李箱钉上了护角。 
+PAIR-PEAK: all intra-round pairs below historic peaks {'cp': 91.667, 'ho': 94.118, 'tp': 43.902}
+atoms>=6c=2232 files=8
+FINAL 10/10 SELECTED -> _gene_r965_final.txt
+SEL cp 逍遥 茶馆里听评弹打瞌睡，散场才醒也算听全了。
+SEL cp 烟火 生煎底板焦得正好，咬破一角先嘬汤。
+SEL cp 秩序 晾衣竹竿高低一律，被单床单各归各档。
+SEL cp 求新 跟着广播学英语，念得满弄堂都听得见。
+SEL cp 怀旧 修钢笔的摊头，围着看的比修笔的多。
+SEL cp 侠气 谁家煤饼烧完了，隔壁先匀两只应急。
+SEL ho - 老虎灶的铜吊子
+SEL ho - 酱油店的大提子
+SEL tp - 他替生病的老伙计顶了十来天的早班，自家厂里一回没迟到。
+SEL tp - 街坊凑钱装的路灯，开关的事他一管就是十年。
+check-counts-pre: cp=708(6x118) ho=392 tp=256 PASS
+check-baseline: worktree == HEAD (language/lives) PASS
+sentinel(pre-write)[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel(pre-write)[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel(pre-write)[tp]: max_ratio=43.902 < T44 maintained PASS
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=714 {'逍遥': 119, '烟火': 119, '秩序': 119, '求新': 119, '怀旧': 119, '侠气': 119} / ho=394 tp=258
+verify-post: cp=714(6x119) ho=394 tp=258 tail-exact + other-keys byte-equal PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R965 ALL BATTERY PASS ==
