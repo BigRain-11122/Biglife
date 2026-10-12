@@ -1,0 +1,48 @@
+== gene_round R971 start ==
+PASS batch-axes 6 轴各一
+PASS batch-unique 10 条零重复
+PASS  cp|藤椅搬到弄堂口，一坐就坐到了吃晚饭。 
+PASS  cp|老虎窗外头晾咸鱼，猫在瓦上蹲成一排。 
+PASS  cp|自行车龙头挂只竹篮，菜分两袋不压豆腐。 
+PASS  cp|空调装进门框那年，蒲扇收进了樟木箱。 
+PASS  cp|药方抄在挂历背面，老中医的字要眯眼看。 
+PASS  cp|楼道灯泡他常年包着换，换了也不声张。 
+PASS  ho|灶披间的竹筷笼 
+PASS  ho|黄鱼车的木踏板 
+PASS  tp|孙子出生后第一个周末，他把摇椅刨得溜光。 
+PASS  tp|小学同学聚会他没去成，托人捎去一包大白兔。 
+PASS nearcheck FINAL 10/10 CLEAN
+PASS PAIR-PEAK intra-batch max=22.222 below historic min-peak 43.902
+PASS check-counts-pre cp=714(6x119)
+PASS check-counts-pre ho=394
+PASS check-counts-pre tp=258
+PASS check-baseline worktree == HEAD (language/lives)
+PASS sentinel(pre-write)[cp]: max_ratio=91.667 < T92 maintained
+PASS sentinel(pre-write)[ho]: max_ratio=94.118 < T95 maintained
+PASS sentinel(pre-write)[tp]: max_ratio=43.902 < T44 maintained
+PASS lang-anchor unique x1
+PASS obj-anchor unique x1
+PASS turn-anchor unique x1
+PASS dup-catch:藤椅搬到弄堂
+PASS dup-catch:老虎窗外头晾
+PASS dup-catch:自行车龙头挂
+PASS dup-catch:空调装进门框
+PASS dup-catch:药方抄在挂历
+PASS dup-catch:楼道灯泡他常
+PASS dup:灶披间的竹筷
+PASS dup:黄鱼车的木踏
+PASS dup:孙子出生后第
+PASS dup:小学同学聚会
+PASS verify-post(mem) cp=720(6x120) ho=396 tp=260
+PASS tail-exact cp
+PASS tail-exact ho/tp
+PASS other-keys byte-equal
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+PASS verify-post(disk) cp=720(6x120) ho=396 tp=260 tail-exact + other-keys byte-equal
+PASS sentinel[cp]: max_ratio=91.667 < T92 maintained
+PASS sentinel[ho]: max_ratio=94.118 < T95 maintained
+PASS sentinel[tp]: max_ratio=43.902 < T44 maintained
+PASS status-export anchor export_ts unique x1
+PASS status-export anchor r3-key unique x1
+PASS status-export anchor r3-text unique x1
+status-export: r3 基因行续鲜 720/396/260 + export_ts 09:4x DONE
