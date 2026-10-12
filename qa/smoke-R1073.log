@@ -1,0 +1,11 @@
+== BigLife smoke R1073 @2026-10-13 05xx ==
+[PASS] poolgen_tick_fresh_0.77h
+[PASS] rings_1013_331  (321+10 batch a32759f9 rows_changed=10 ring_synced=10)
+[PASS] light_rows_10030
+[PASS] light_unique_10030  (维持态·零新注册·双闸 maxid=C-10036)
+[PASS] meet_today_3_cap3  (日额 3/3 满免写·R1072 已核维持)
+[PASS] genes_cp819  (813+6 六轴 136/137 相邻档·实测 axis counts)
+[PASS] genes_tp295_ho430  (293+2 / 428+2·nearcheck CLEAN 10/10)
+[PASS] status_export_r13_331  (json round-trip 断言过·export_ts 05:51/05:5x)
+[PASS] industry_receipt_pending_note  (T-20261010-01 waiting 维持·R1072 到期核验仍未到货·禁重扫)
+smoke verdict: PASS (9/9)
