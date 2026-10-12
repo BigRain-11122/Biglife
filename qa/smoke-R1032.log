@@ -1,0 +1,10 @@
+[1] poolgen tick: === 2026-10-12 21:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] rings_today_1012 = 249 (expect 249)
+[3] light rows=10030 unique=10030 maxid=C-10036
+[4] behavior rows=10030 anchor_null=3
+[5] relations meet=30
+[6] heartbeat age=0.16h
+[7] genes cp file check: exists=False
+[8] mirror garble = 0
+[9] card files = 10034
+SMOKE PASS 9/9 core
