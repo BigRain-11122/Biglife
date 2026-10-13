@@ -1,0 +1,61 @@
+== gene_round R1175 start ==
+check-baseline: HEAD(cp910/ho463/tp328)==worktree 纯净态 PASS
+check-counts-pre: cp=910 各轴 {'逍遥': 151, '烟火': 152, '秩序': 152, '求新': 152, '怀旧': 151, '侠气': 152} PASS（R1169 失衡实锚符合）
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 45 候选 clean=26 flag=19 (exit=1)
+  cand[cp/烟火] CLEAN+SEL 烧饼炉子他半夜就和面，芝麻现磨才香。
+  cand[cp/烟火] CLEAN(满额) 卤味摊的老汤他天天撇沫，配方只传自家人。
+  cand[cp/烟火] CLEAN(满额) 大饼一炉出十八张，他数着张数下剂子。
+  cand[cp/烟火] REJECT:nearcheck-FLAG 爆米花机转够圈数他才开盖，响声就是招牌。
+  cand[cp/秩序] CLEAN+SEL 修好的钟他拨准了才交货，误差不过半分。
+  cand[cp/秩序] CLEAN(满额) 账本他按页码顺序记，找哪笔翻哪页。
+  cand[cp/秩序] CLEAN(满额) 学徒进门先扫三天地，他把这叫规矩。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 工具箱他分层码放，闭着眼也摸得着家什。
+  cand[cp/求新] REJECT:nearcheck-FLAG 街坊装电话他头一个登记，号码挑了个顺口的。
+  cand[cp/求新] CLEAN+SEL 新出的BP机他挂腰上，回话比谁都勤。
+  cand[cp/求新] CLEAN(满额) 玻璃柜台他率先换上灯箱，货色看着精神。
+  cand[cp/求新] REJECT:nearcheck-FLAG 他攒了半年钱换了台电子秤，分毫不差。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 师父留下的围裙他补了又补，油渍当勋章。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 老主顾的口味他都记着，进门不用开口。
+  cand[cp/怀旧] CLEAN+SEL 拆迁前他拍了整卷相片，墙缝都留了影。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 那口老井填了多年，他还记得水的甜味。
+  cand[cp/怀旧] CLEAN+SEL 旧算盘他留着不擦，珠子磨得发乌才顺手。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 老街坊搬走前，他把人家的门牌拓了一张。
+  cand[cp/侠气] CLEAN+SEL 有人多找了钱他追出半条街，硬塞回去。
+  cand[cp/侠气] CLEAN(满额) 流浪猫他管饭三年，摊子底下窝着一窝。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 邻居家孩子没人接，他顺路捎了整段路。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 他替生病的同行看摊，分文不取。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 收了工他泡壶粗茶，守着收音机听评书。
+  cand[cp/逍遥] CLEAN+SEL 他养了一缸金鱼，喂食比自家吃饭还准时。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 竹躺椅他搬到树荫底下，眯一觉比啥都解乏。
+  cand[cp/逍遥] CLEAN+SEL 闲篇他听得进也讲得出，茶馆里坐得住。
+  cand[cp/逍遥] CLEAN(满额) 修完家伙什他就哼小曲，调子跑了也不管。
+  cand[cp/逍遥] CLEAN(满额) 他揣着鸟食逛林子，笼子早空了习惯还在。
+  cand[ho] REJECT:nearcheck-FLAG 剃头挑子的火罐
+  cand[ho] CLEAN+SEL 粮油铺的油提子
+  cand[ho] REJECT:nearcheck-FLAG 修车摊的气门芯
+  cand[ho] CLEAN(满额) 开水房的老虎灶
+  cand[ho] CLEAN(满额) 报刊亭的木转架
+  cand[ho] REJECT:nearcheck-FLAG 五金铺的虎头钳
+  cand[ho] CLEAN(满额) 菜市场的公平秤
+  cand[ho] CLEAN(满额) 照相馆的布景帘
+  cand[tp] REJECT:STRICT-sub5/contain 头回照相他绞着手不肯笑，照片倒成了镇店之宝。
+  cand[tp] REJECT:nearcheck-FLAG 铺面到期那天，他把匾摘下来擦净，扛回了老家。
+  cand[tp] REJECT:peak-high 儿子接棒那天他把钥匙串交了个底朝天，一把没落。
+  cand[tp] REJECT:STRICT-sub5/contain 头一笔大单他押上全部家当，成了才敢跟人说。
+  cand[tp] CLEAN+SEL 搬进新市场他整宿没合眼，天亮又把老招牌挂上了。
+  cand[tp] REJECT:nearcheck-FLAG 她把摊子传给徒弟那天，只提了一个条件：秤要准。
+  cand[tp] REJECT:nearcheck-FLAG 他把爷爷的修表摊接了过来，头一件事是换了张新凳。
+  cand[tp] CLEAN(满额) 头年生意冷清，他把铺面隔出半间租给了书摊。
+  cand[tp] REJECT:nearcheck-FLAG 她头一回掌秤亏了本，打那以后秤杆擦得锃亮。
+check1 intra-bigram: cp=27.027027027027028 ho=0.0 tp=0.0 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=50.0 ho=57.14285714285714 tp=40.74074074074075 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=8/8 ho=1/1 tp=1/1)
+check2 TRIGGER: 0/35x10 hits PASS
+append: tail-axis rule OK (batch-tail=逍遥 ≠ old-marker=侠气)
+append: lang +8 cp / lives +1 ho +1 tp (byte-level single-replace) DONE
+verify-post: cp=918(六轴 153 均衡) ho=464 tp=329 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 maintained PASS
+sentinel[ho]: max_ratio=94.118 maintained PASS
+sentinel[tp]: max_ratio=43.902 maintained PASS
+== gene_round R1175 ALL BATTERY PASS ==
