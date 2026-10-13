@@ -1,0 +1,81 @@
+== gene_round R1147 start ==
+check-baseline: HEAD(cp882/ho452/tp317)==worktree 纯净态 PASS
+check-counts-pre: cp=882 各轴 {'逍遥': 147, '烟火': 147, '秩序': 147, '求新': 147, '怀旧': 147, '侠气': 147} PASS
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 65 候选 clean=44 flag=21 (exit=1)
+  cand[cp/烟火] CLEAN 卤煮的火候他掐得准，捞起来正好弹牙。
+  cand[cp/烟火] CLEAN 他熬粥先撇三道沫，米油才留得住。
+  cand[cp/烟火] CLEAN 煤炉封火他有讲究，留个眼儿不闷不熄。
+  cand[cp/烟火] CLEAN 他炸油条看油纹，起了纹路才下锅。
+  cand[cp/烟火] CLEAN 他烙饼转锅有节奏，起泡那下最要紧。
+  cand[cp/烟火] REJECT:nearcheck-FLAG 蒸笼垫布他洗得发白，说笼气才正。
+  cand[cp/烟火] REJECT:nearcheck-FLAG 收摊前他把案板刮一遍，木纹都养出来了。
+  cand[cp/烟火] REJECT:nearcheck-FLAG 铺子晚市的灯他留到末客走。
+  cand[cp/秩序] CLEAN 修表他先看序号，螺丝按次序摆上绒布。
+  cand[cp/秩序] CLEAN 他记账用两支笔，进出一手一支。
+  cand[cp/秩序] CLEAN 班表他贴在门背后，谁换班谁签一笔。
+  cand[cp/秩序] CLEAN 轮值的名单他排得公平，自己不挑好班。
+  cand[cp/秩序] CLEAN 他收账必留凭条，哪怕街坊熟得不能再熟。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 货位他编了号，补货闭着眼也摸得到。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 他盘库必点两遍，数头对上才锁柜。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 样册他每季清一回，缺页当场补齐。
+  cand[cp/求新] CLEAN 他学着用计算器核账，算盘留着当镇纸。
+  cand[cp/求新] CLEAN 新出的洋布他扯半尺试洗，看缩不缩水。
+  cand[cp/求新] REJECT:nearcheck-FLAG 长途电话进城那阵，他排队喊了三声喂。
+  cand[cp/求新] REJECT:nearcheck-FLAG 新装的路灯他琢磨半天开关时辰。
+  cand[cp/求新] REJECT:nearcheck-FLAG 公园安了健身桩，他跟着旁人比划几下。
+  cand[cp/求新] REJECT:nearcheck-FLAG 缝纫机进巷那天，他抱着布排队试针脚。
+  cand[cp/求新] REJECT:nearcheck-FLAG 他买了张新地图，把没走过的巷子描了红线。
+  cand[cp/怀旧] CLEAN 他留着师父的围裙，浆洗得发硬也不扔。
+  cand[cp/怀旧] CLEAN 祖母的顶针他收在铁盒里，干粗活也不戴别的。
+  cand[cp/怀旧] CLEAN 旧城砖他捡了一块搁窗台，说是念想。
+  cand[cp/怀旧] CLEAN 戏票他夹进旧字典，纸都脆了还留着。
+  cand[cp/怀旧] CLEAN 老井封了以后，他还留着一副杉木桶。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 老茶馆的楹联他还能背全，一字不落。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 那台旧唱机他擦得锃亮，摇把上了油。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 他把父亲的老花镜收进抽屉，自己眼睛倒还亮。
+  cand[cp/侠气] CLEAN 学徒没处过年，他领回自家桌上一双筷。
+  cand[cp/侠气] CLEAN 棚户失了火他先救人，自家担子撂在路边。
+  cand[cp/侠气] CLEAN 街口井绳断了他连夜搓新的。
+  cand[cp/侠气] CLEAN 邻铺出门他照应着看摊，账分文不差。
+  cand[cp/侠气] CLEAN 生客问路他送到岔口，还画了张草图。
+  cand[cp/侠气] CLEAN 他半夜爬起来替街坊关好鸡笼。
+  cand[cp/逍遥] CLEAN 他把收音机音量拧小，就着戏码打盹。
+  cand[cp/逍遥] CLEAN 他听评书爱听下半段，留个悬念才有趣。
+  cand[cp/逍遥] CLEAN 下棋他惯让先手，输了也哼小曲。
+  cand[cp/逍遥] CLEAN 他哼着小调走完一整条街，谁喊也不停步。
+  cand[cp/逍遥] CLEAN 老酒馆的角落他坐惯了，伙计不用问就端来。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 他提笼鸟在城墙根下遛，笼布懒得掀。
+  cand[ho] CLEAN 皮影戏的幕布
+  cand[ho] CLEAN 修车摊的气筒
+  cand[ho] CLEAN 糕饼铺的木模
+  cand[ho] CLEAN 油坊的石碾
+  cand[ho] CLEAN 竹器铺的篾刀
+  cand[ho] CLEAN 纸扎铺的浆糊碗
+  cand[ho] CLEAN 茶炉房的铜壶
+  cand[ho] CLEAN 糖坊的切糖刀
+  cand[ho] REJECT:nearcheck-FLAG 裱画铺的棕刷
+  cand[ho] REJECT:nearcheck-FLAG 豆腐坊的卤水坛
+  cand[ho] REJECT:nearcheck-FLAG 剃头挑子的荡刀布
+  cand[ho] REJECT:nearcheck-FLAG 钟表铺的校表仪
+  cand[tp] CLEAN 她进纱厂剪了辫子，工友笑她假小子她不恼。
+  cand[tp] CLEAN 他领着兄弟俩闯码头，站稳后把弟弟们都叫了来。
+  cand[tp] CLEAN 她背药篓进山采药，一趟迷路走出三十里。
+  cand[tp] CLEAN 他半路改行卖煤，一冬天就摸出了门道。
+  cand[tp] CLEAN 她把摊位支在桥头石阶上，一开张就引来围观。
+  cand[tp] CLEAN 她替姐姐守了三年柜台，回来盘下了隔壁铺。
+  cand[tp] CLEAN 他挑担走乡串巷收山货，收出了自家第一间铺。
+  cand[tp] REJECT:nearcheck-FLAG 他学徒三年没挨一句骂，出师那日师父眼圈红了。
+  cand[tp] REJECT:STRICT-sub5/contain 他把地契换成间铺面，头年就站住了脚。
+  cand[tp] REJECT:nearcheck-FLAG,trigger:月 他把头月工钱给全家扯了花布。
+check1 intra-bigram: cp=22.857142857142854 ho=16.666666666666664 tp=9.523809523809524 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=40.0 ho=46.15384615384615 tp=28.57142857142857 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/35x10 hits PASS
+append: tail-axis rule OK (batch-tail=逍遥 ≠ old-marker=侠气)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=888(各轴+1=148) ho=454 tp=319 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R1147 ALL BATTERY PASS ==
