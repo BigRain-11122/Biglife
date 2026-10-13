@@ -1,0 +1,50 @@
+== gene_round R1117 start ==
+产出 +10：cp|腌笃鲜的砂锅上了桌，最厚那块肉先拨给老人。 / cp|戥子用完挂回门后钉子上，位置错了他自己都不习惯。 / cp|新到的扫码秤他抢着先试，坏了也拆开来琢磨门道。 / cp|绿邮筒一直在老位置，他隔段日子就投一封信给自己。 / cp|楼下两家为晾衣竿吵起来，他拎壶茶下去各斟一杯。 / cp|遛弯专挑河岸那一段，看人家下棋能站半根烟工夫。 / ho|染坊的靛蓝搅拌棍 / ho|皮匠担子的绱鞋锥 / tp|厂里推荐他去读技工学校，他攥着通知在车间门口站了半天，才想起来道谢。 / tp|知青返城后他顶替父亲进了锅炉房，头回领薪水全买了毛线，给母亲织了条围巾。
+探针收敛实录：v1 拦 8→v2 拦 4→v3 拦 1→v4 拦 1（电扇撞池）→v5 拦 1（暖水瓶池内近同概念弃）→v6 终版 10/10 CLEAN（候选档 gene-cand-R1117.txt）
+PASS batch-size 10 条
+PASS batch-axes 6 支六轴各一（143×6 均衡批·批序烟火→秩序→求新→怀旧→侠气→逍遥）
+PASS batch-unique 10 条零重复
+PASS 尾位判例：批末轴（逍遥）≠旧 marker 轴（侠气）
+PASS rumor-triggers 45 词零命中（实弹 0）
+PASS nearcheck FINAL 10/10 CLEAN == gene_nearcheck: 10 候选, 0 近重候选 ==
+PASS corpus-face cognition 2336 串+census light 160442 行载入
+PASS cross-face 特征词 20 项+rev 双向 0 hit（0）
+cross-face 0 hit: 腌笃鲜
+cross-face 0 hit: 最厚那块肉
+cross-face 0 hit: 戥子
+cross-face 0 hit: 门后钉子
+cross-face 0 hit: 扫码秤
+cross-face 0 hit: 拆开来琢磨
+cross-face 0 hit: 绿邮筒
+cross-face 0 hit: 投一封信
+cross-face 0 hit: 晾衣竿
+cross-face 0 hit: 拎壶茶
+cross-face 0 hit: 河岸那一段
+cross-face 0 hit: 半根烟工夫
+cross-face 0 hit: 靛蓝搅拌棍
+cross-face 0 hit: 皮匠担子
+cross-face 0 hit: 绱鞋锥
+cross-face 0 hit: 技工学校
+cross-face 0 hit: 车间门口
+cross-face 0 hit: 知青返城
+cross-face 0 hit: 锅炉房
+cross-face 0 hit: 织了条围巾
+PASS counts-pre cp=852 六轴 142 均衡
+PASS counts-pre ho=442
+PASS counts-pre tp=307
+PASS baseline worktree == HEAD (language/lives)
+PASS sentinel(pre)[cp]: 91.667 < T92
+PASS sentinel(pre)[ho]: 94.118 < T95
+PASS sentinel(pre)[tp]: 43.902 < T44
+sentinel(pre) 三池峰值 cp=91.667 ho=94.118 tp=43.902
+PASS PAIR-PEAK intra-batch max=25.000 below 43.902
+PASS surgical round-trip 纯追加证明
+PASS verify-post cp=858 六轴 143 均衡
+PASS verify-post ho=444 tp=309
+PASS tail-exact cp
+PASS tail-exact ho/tp
+PASS other-keys byte-equal
+PASS sentinel(post)[cp]: 91.667 < T92 零漂移
+PASS sentinel(post)[ho]: 94.118 < T95 零漂移
+PASS sentinel(post)[tp]: 43.902 < T44 零漂移
+PASS --qc 15/15（含 double-run+file-roundtrip） == gene_nearcheck --qc: 15 PASS, 0 FAIL ==
