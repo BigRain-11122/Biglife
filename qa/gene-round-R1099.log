@@ -1,0 +1,53 @@
+== gene_round R1099 start ==
+产出 +7：cp 逍遥|逛庙会只看不买，转一圈算一圈。/ cp 怀旧|收音机只认一个台，说换台就换了味道。/ cp 侠气|夜路送老人回家，回来自己摸黑走。
+ho|刻章摊的印泥盒 / ho|巷尾的压水井把手
+tp|电线牵进村那阵，他跟着电工递了三天工具。/ tp|头趟绿皮车过镇口，他追着跑完整条田埂。
+PASS batch-axes 3 支低轴各一（补齐 140 均衡）
+PASS batch-unique 7 条零重复
+PASS rumor-triggers 31 词零命中（实弹 0）
+PASS nearcheck FINAL 7/7 CLEAN
+PASS PAIR-PEAK intra-batch max=20.513 below 43.902
+PASS counts-pre cp=837 六轴 139/140 相邻档
+PASS counts-pre ho=436
+PASS counts-pre tp=301
+PASS baseline worktree == HEAD (language/lives)
+PASS sentinel(pre)[cp]: 91.667 < T92
+PASS sentinel(pre)[ho]: 94.118 < T95
+PASS sentinel(pre)[tp]: 43.902 < T44
+sentinel(pre) 三池峰值 cp=91.667 ho=94.118 tp=43.902
+PASS lang-anchor unique x1
+PASS obj-anchor unique x1
+PASS turn-anchor unique x1
+PASS dup-cp:逛庙会只看不
+PASS dup-cp:收音机只认一
+PASS dup-cp:夜路送老人回
+PASS dup:刻章摊的印泥
+PASS dup:巷尾的压水井
+PASS dup:电线牵进村那
+PASS dup:头趟绿皮车过
+PASS verify-post(mem) cp=840 六轴 140 均衡
+PASS verify-post(mem) ho=438 tp=303
+PASS tail-exact cp
+PASS tail-exact ho/tp
+PASS other-keys byte-equal
+append: lang +4/-1 行 · lives +2/-2 行（既有条目零字节改动）
+PASS verify-post(disk) 840/438/303
+PASS prefix-unchanged 前缀全等断言
+PASS sentinel(post)[cp]: 91.667 < T92
+sentinel(post)[cp] 零漂移
+PASS sentinel(post)[ho]: 94.118 < T95
+sentinel(post)[ho] 零漂移
+PASS sentinel(post)[tp]: 43.902 < T44
+sentinel(post)[tp] 零漂移
+PASS --qc 15/15（e
+PASS double-run
+PASS file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==）
+PASS cross-face 0 hit: 逛庙会只看不买
+PASS cross-face 0 hit: 只认一个台
+PASS cross-face 0 hit: 摸黑走
+PASS cross-face 0 hit: 印泥盒
+PASS cross-face 0 hit: 压水井把手
+PASS cross-face 0 hit: 牵进村
+PASS cross-face 0 hit: 绿皮车
+== gene_round R1099 ALL BATTERY PASS ==
