@@ -1,0 +1,19 @@
+== gene_round R1087 start ==
+check-baseline: cp=825 ho=432 tp=297（R1079 后库态·轴分布 137/138/138/138/137/137）
+[查一 nearcheck 官方预检]（候选清单 state/gene-cand-R1087.txt·Layer A 全文本池 4-gram+Layer B 同型池 fuzz 阈值 cp92/ho95/tp44）
+  r1: 18 候选 15 FLAG（躺椅一放/灶膛的火/手就先痒/谁家屋顶漏/剃头挑子/针线笸箩/糖画摊小铜勺 4-gram 全等撞/通用 4-gram「的日子，」撞/tp 首批 4 条全撞）→换句
+  r2: 14 候选 8 FLAG（闲下来就/腌菜坛子/挪不动步/撂下饭碗/头一回把/学徒-半辈子族/进城头一/他攒了一 各撞）→换句
+  r3: 5 候选 2 FLAG（没见过的 高频 4-gram 撞）→换句
+  r4: 2 候选 1 FLAG → 终版 10/10 CLEAN exit 0（四轮收敛 15→8→2→1→0）
+[查二 触发词族]（RUMOR_TRIGGERS 31 官方 evolve_citizen.py 正身+补位 占位/信号灯/场次/夜晚/今天/时辰/正午/中午/半夜/黄昏/黎明/凌晨）：10/10 零命中 PASS
+  判例：首版补位含裸「时」误拦「小时候」——官方 31 表无此 token·补位集修正后过闸（错账留痕）
+[查三 跨面撞句]（pools.json 1440+greetings.json 518+pools-negative.json 48·corpus 2006 双向包含+全等扫描）：10/10 零命中 PASS + census 全树 rg -F -f 候选串 0 撞 PASS
+[落盘] 外科尾插 v2（二进制级·先验后写）：language.json 尾条目 }→},+6 新行（+7/-1）·lives.json ho/tp 两尾行内联接续（+2/-2）=纯尾追加·既有条目零字节改动
+  判例：首版 json.dumps indent=1 重排全文件（diff 4300+ 行）违纯尾追加铁律→git checkout 还原→二进制外科改正法收口（R1079 内联接续格式实锚复刻）
+final register (10 genes·三查全 CLEAN):
+  cp 6（六轴各一）: 收了摊就沿河遛弯，走哪算哪。（逍遥）/ 后院的枣树归他管，打下来的枣先分邻居。（烟火）/ 账本每一笔，都得对得上人。（秩序）/ 新玩意只要他瞧上，三天两头往人堆里钻。（求新）/ 老门轴吱呀一响，就回到小时候。（怀旧）/ 街坊搬家他去扛大件，只收两句谢。（侠气）
+  ho 2: 称糖果的木杆秤 / 修伞的竹骨条筐
+  tp 2: 把攒齐的粮票换成一辆旧单车，全家轮流学着骑。/ 包下渡口的头一个汛期，他没让一位客人误了船。
+check-counts-post: cp 825→831 实测 {'逍遥': 138, '烟火': 139, '秩序': 139, '求新': 139, '怀旧': 138, '侠气': 138} 六轴均沾 PASS / ho 432→434 / tp 297→299
+check-verify: nearcheck --qc 15 PASS 0 FAIL；--baseline criterion_ok 三池 true+哨兵三峰值 91.667/94.118/43.902 插入后维持（n=831/434/299）；git diff 实测 language.json 8 行（+7/-1）/lives.json 4 行（+2/-2）既有条目零字节改动实证；status-export r3 825/432→831/434 外科续鲜（json 回读断言过）
+== gene_round R1087 done: +10 genes registered (cp 825→831 / ho 432→434 / tp 297→299) ==
