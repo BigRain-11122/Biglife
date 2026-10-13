@@ -1,0 +1,17 @@
+smoke-R1112 2026-10-13 @12:46:59
+[1] poolgen tick 今日+FAIL=NONE -> PASS
+[2] light/unique 双闸 10030/10030 -> PASS
+[3] 账平 直数=453 与 status r13 一致 -> PASS
+[4] genes cp852/ho442/tp307 -> PASS
+[5] QC 报告今日+PASS 面 -> PASS
+[6] heartbeat <3h -> PASS
+[7] reflections 31 行（日帽 3/3） -> PASS
+7/7 checks PASS
+[账平] 10-13 全域环 直数=453 (registry=451 + anchors=2 + reserved=0)
+[双闸] light rows=10030 unique=10030
+[genes] cp=852 ho=442 tp=307 轴分布={'逍遥': 142, '烟火': 142, '秩序': 142, '求新': 142, '怀旧': 142, '侠气': 142}
+[QC] QC-REPORT mtime 今日=True 内容 PASS 面=True
+[heartbeat] age=0.12h (闸 <3h)
+[反思] reflections rows=31 (10-13 日帽 3/3 满·31 行在册)
+[poolgen] last tick: === 2026-10-13 12:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[status-export] 外科续鲜 OK（export_ts=2026-10-13 12:4x·QC dept 追加·实况三行续鲜·r13=453·round-trip 断言过）
