@@ -1,0 +1,62 @@
+== gene_round R1141 start ==
+check-baseline: HEAD(cp876/ho450/tp315)==worktree 纯净态 PASS
+check-counts-pre: cp=876 各轴 {'逍遥': 146, '烟火': 146, '秩序': 146, '求新': 146, '怀旧': 146, '侠气': 146} PASS
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 46 候选 clean=25 flag=21 (exit=1)
+  cand[cp/烟火] CLEAN 糖人捏到第一百个，手腕才有了准头。
+  cand[cp/烟火] CLEAN 炒栗子要翻得勤，糖色才挂得匀。
+  cand[cp/烟火] CLEAN 馄饨皮擀薄了才透亮，汤清而不浑。
+  cand[cp/烟火] REJECT:nearcheck-FLAG 他熬糖讲究火色，起沫那一下最关键。
+  cand[cp/烟火] REJECT:nearcheck-FLAG,STRICT-sub5/contain 腌菜坛子压上青石，急不得也省不得。
+  cand[cp/秩序] CLEAN 工具按长短排开，用完归原位。
+  cand[cp/秩序] CLEAN 账本页角折三折，按季查起来不乱。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 布匹码得齐整，散一寸他都要重叠。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 铺门下了三道闩，最后一道他亲手拉。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 样品编号入册，借出去也要记归还。
+  cand[cp/求新] REJECT:nearcheck-FLAG 新款算盘他上手拨了半天，嫌它滑。
+  cand[cp/求新] CLEAN 镇上放头一场有声戏，他挤在前排听。
+  cand[cp/求新] CLEAN 新式洋钉比木楔快，他试着换了一板墙。
+  cand[cp/求新] REJECT:nearcheck-FLAG 他头一个订了画报，翻完借给街坊传看。
+  cand[cp/求新] REJECT:STRICT-sub5/contain 新修的马路平整，他推车专拣道中间走。
+  cand[cp/怀旧] CLEAN 老算盘框裂了缝，他拿铜丝缠着继续用。
+  cand[cp/怀旧] CLEAN 褪色的招幌他不肯换，说字是师父写的。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 旧藤箱里存着票根，翻一回能想半宿。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 祖上的戥子盒磨得发亮，他原样摆着。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 那把黄铜锁匙他配了三把，怕丢。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 邻居搬重物，他撂下筷子去搭肩。
+  cand[cp/侠气] CLEAN 街尾老人拎水，他顺手替人提到门口。
+  cand[cp/侠气] CLEAN 伙计病了，他把人那份活计揽下来。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 生客受了骗，他陪着去把理讨回来。
+  cand[cp/侠气] CLEAN 天擦黑他先替人点上门口的灯。
+  cand[cp/逍遥] CLEAN 闲了他侍弄一窗台的葱蒜，掐叶儿配面。
+  cand[cp/逍遥] CLEAN 他爱听码头号子，隔着两条街也去。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 收工先沏一壶粗茶，坐透了才起身。
+  cand[cp/逍遥] REJECT:STRICT-sub5/contain 他把鱼食撒成一道弧，看鱼抢着吃取乐。
+  cand[cp/逍遥] CLEAN 午后他倚着门框打盹，猫偎在脚边。
+  cand[ho] CLEAN 酱园的酱缸
+  cand[ho] REJECT:nearcheck-FLAG 裁缝铺的划粉
+  cand[ho] REJECT:nearcheck-FLAG,STRICT-sub5/contain 货郎的拨浪鼓
+  cand[ho] CLEAN 书场的醒木
+  cand[ho] CLEAN 药铺的捣臼
+  cand[ho] REJECT:nearcheck-FLAG 修鞋摊的锥子
+  cand[ho] REJECT:nearcheck-FLAG 灶台边的火钩
+  cand[ho] CLEAN 染坊的晾杆
+  cand[tp] CLEAN 他掌勺办头一场寿宴，三桌菜没出一道差错。
+  cand[tp] REJECT:nearcheck-FLAG 她替父守摊那年，学会了看人也学会了记账。
+  cand[tp] CLEAN 他攒钱买了头驴，头一趟赶集就赚回了本钱。
+  cand[tp] CLEAN 她把嫁妆当本钱开了间小染坊，越染越有名声。
+  cand[tp] REJECT:nearcheck-FLAG 他替人写信写出了名，半个巷子认他做先生。
+  cand[tp] REJECT:nearcheck-FLAG 她头一回登梯补瓦，从此房顶的活没求过人。
+  cand[tp] REJECT:nearcheck-FLAG,STRICT-sub5/contain 他学木匠出师那天，师父把墨斗传给了他。
+  cand[tp] CLEAN 她接了婆婆的酱方，坛子一守就是十几年。
+check1 intra-bigram: cp=23.529411764705888 ho=19.999999999999996 tp=25.0 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=51.85185185185186 ho=71.42857142857143 tp=41.02564102564102 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/35x10 hits PASS
+append: tail-axis rule OK (batch-tail=侠气 ≠ old-marker=秩序)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=882(各轴+1=147) ho=452 tp=317 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R1141 ALL BATTERY PASS ==
