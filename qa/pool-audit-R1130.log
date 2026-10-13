@@ -1,0 +1,12 @@
+== pool_audit (language line machine gate) ==
+axes buckets 72: lines=1296 at_target=72
+sprite buckets 12: lines=144 at_target=12
+total lines: 1440
+greet buckets 28: lines=476 at_target=28
+faq buckets 7: pairs=21 lines=42 at_target=7
+negative face: lines=40 recovering=8 at_target=6/6
+hard_fails: 0
+under_target (pool 18/12 + greet 17 + faq 3 + neg 8): NONE - SELF_TERMINATE
+determinism: 192 pairs double-drawn, mismatch=0, empty_draw=0 (16 ids x 12 ctx)
+greet determinism: 25 pairs double-drawn, mismatch=0, empty_draw=0 (5 ids x 4 gkey + faq)
+verdict: PASS

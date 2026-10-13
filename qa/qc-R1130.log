@@ -1,0 +1,5 @@
+﻿== BigLife QC 例巡 R1130 @2026-10-13 16:26 ==
+cmd: python -X utf8 Tools/qc_census.py
+QC done cards=10030 evolved=4851 problems=0 dup_rings=37/37
+
+qc verdict: PASS (problems=0·census/QC-REPORT.md 随轮入库·下次例巡 >=R1136)

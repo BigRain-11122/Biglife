@@ -1,0 +1,11 @@
+== BigLife smoke R1130 @2026-10-13 16:30:52 ==
+[PASS] status_export_fresh_2026-10-13_gene_row (R1129 外科续鲜 export_ts=2026-10-13 16:05:27·cp870/ho448 与实数一致)
+[PASS] pool_at_target_1440 (pool_audit R1130 实跑落盘 72 axes + 12 sprite 全达标·10-13 份额已耗自停·hard_fails=0)
+[PASS] rings_1013_453 (registry+anchors+reserved 机器直数复算=R1129 账平面维持·本轮零年轮批=工作日零排单令)
+[PASS] light_rows_10030
+[PASS] light_unique_10030 (maxid=C-10036 受控复产维持)
+[PASS] meet_today_3_cap3 (R1130 零新相遇·日额配额面合规·双卡互引折算)
+[PASS] genes_cp870_tp313_ho448 (R1129 已兑·六轴 145x6 均衡·下次基因轮 ≈R1135)
+[PASS] status_export_r13_453 (全域环面行在位·R1130 复算同数=账平维持)
+[PASS] reflections_31_rows (R1130 零反思席·10-13 配额 3/3 满维持)
+smoke verdict: PASS (9/9)
