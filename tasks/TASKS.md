@@ -579,3 +579,9 @@ tokens: local=11 api=0 api_reason=-（下限口径：年轮批 9 落环×1=9+C-0
   最近实物: 年轮 2 环 C-01718/C-01719（fb1df493+镜像 c615554c）+QC-REPORT problems=0+status-export r14=33 @2026-10-14 02:0x
   下个里程碑: 年轮批 3 环收割（下轮）+QC 例巡 >=R1179+基因轮 ≈R1175 兑现+日清 10-14（23:00 前轮）
   tokens: local=2 api=0 api_reason=-（R1172 批 2 落环×1=2·QC/收核/账平/续鲜=纯确定性零 LLM·R1173 补发批调用由下轮收割时核）
+
+- R1174 2026-10-14 02:2x @BigLife-OSLoop: 轮首三步毕（pull up to date·决策水位差集 NEW=NONE｛155 id 维持｝·物理件区零涉本司新令）+R1173 补发批收核=0/10（「ollama down; batch paused at 0」·02:04-02:06 撞 llama-server 翻覆窗｛后端 02:19:08 重启实证｝·协议静默留冷零报障）+Ollama 直探复活（/api/ps 14b-8k 驻留 vr=10.4G·llama-server 新起）→R1174 批 8 后台补发（runner_r1174.ps1 落盘 env 正法｛R1170 判例｝+BIGLIVE_LLM_TIMEOUT=600·PID 106688·首探 90s 过=批过探针在生成中·下轮收割推送）+配额面维持（池审 10-14 PASS 自停/相遇 10-14 R1171 已兑/QC 例巡 >=R1179｛R1173 problems=0 在档｝/基因轮 ≈R1175 下轮兑现/聚光灯 10 月 2/2 满/日清 F-20261014-BL01 R1172 已落）
+  当前活: 夜窗年轮线批 8 在飞（PID 106688·下轮收核推送）
+  最近实物: R1173 QC-REPORT problems=0+status-export r14=33 已推 @02:0x（本轮批 8 环产物下轮收割）
+  下个里程碑: 批 8 环收割+推送（下轮）+基因轮 R1175 兑现+QC 例巡 >=R1179
+  tokens: local=0 api=0 api_reason=-（本轮零直调——批 8 次在飞由脚本计·下轮收割归账）
