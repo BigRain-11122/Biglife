@@ -1,0 +1,62 @@
+== gene_round R1123 start ==
+check-baseline: HEAD(cp858/ho444/tp309)==worktree 纯净态 PASS
+check-counts-pre: cp=858 各轴 {'逍遥': 143, '烟火': 143, '秩序': 143, '求新': 143, '怀旧': 143, '侠气': 143} PASS
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 46 候选 clean=23 flag=23 (exit=1)
+  cand[cp/烟火] REJECT:nearcheck-FLAG,STRICT-sub5/contain 火候到了自然香，急不来的一律急不来。
+  cand[cp/烟火] REJECT:nearcheck-FLAG 汤要撇三道沫，急火炖不出清味。
+  cand[cp/烟火] REJECT:nearcheck-FLAG,STRICT-sub5/contain 灶膛里留个火种，明早生火省一截柴。
+  cand[cp/烟火] REJECT:nearcheck-FLAG 腌菜坛子压紧石，等它自己入味。
+  cand[cp/烟火] CLEAN 米要淘两遍，头一遍去尘第二遍去沙。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 先看三遍账，再摸钱袋子。
+  cand[cp/秩序] CLEAN 剪刀磨好归回鞘，用时不用翻抽屉。
+  cand[cp/秩序] CLEAN 零件拆一地，装回去一个不多一个不少。
+  cand[cp/秩序] CLEAN 收工先擦机器，机器才不闹脾气。
+  cand[cp/秩序] CLEAN 钥匙串挂门边第三个钩，黑灯也摸得着。
+  cand[cp/求新] REJECT:STRICT-sub5/contain 新家伙什先让我拆一回，拆完就懂了七成。
+  cand[cp/求新] REJECT:nearcheck-FLAG 新到的说明书他先翻三页再上手。
+  cand[cp/求新] REJECT:nearcheck-FLAG 旧收音机换了新喇叭，声音脆了一截。
+  cand[cp/求新] REJECT:nearcheck-FLAG,STRICT-sub5/contain 学用新秤那天，他把老秤也带去对了三回。
+  cand[cp/求新] CLEAN 新鲜事儿他先记本上，回头一样样试。
+  cand[cp/怀旧] CLEAN 老物件退了役，名字还得记着。
+  cand[cp/怀旧] CLEAN 旧椅子的榫卯松了，他垫张纸接着用。
+  cand[cp/怀旧] CLEAN 老歌他只听磁带版，说带点沙才对味。
+  cand[cp/怀旧] CLEAN 相册里那页最厚，压平了他才合上。
+  cand[cp/怀旧] CLEAN 老地名他照旧叫，新门牌他记不住。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 收了摊沿江走一段，看船比看账舒坦。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG,trigger:晌,STRICT-sub5/contain 午觉睡到日头偏西，买卖不差这一晌。
+  cand[cp/逍遥] CLEAN 喂完鸽子他不急着回，看它们扑棱一阵。
+  cand[cp/逍遥] REJECT:trigger:晌 歇晌他把草帽扣脸上，就着树荫眯一觉。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 晚饭后遛弯到桥头，看灯一盏盏亮。
+  cand[cp/侠气] REJECT:nearcheck-FLAG,STRICT-sub5/contain 过路的外乡人，头一碗汤记我账上。
+  cand[cp/侠气] REJECT:nearcheck-FLAG,trigger:放学,STRICT-sub5/contain 谁家孩子放学没人接，他顺路捎到巷口。
+  cand[cp/侠气] CLEAN 邻铺搬新家，他借出三轮车连车锁都给了。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 夜里听见叫门声，他披衣就去开门。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 生面孔问路，他放下手里活带到路口。
+  cand[ho] REJECT:trigger:星 秤店的定盘星砝码
+  cand[ho] CLEAN 刻章铺的黄铜印床
+  cand[ho] REJECT:nearcheck-FLAG 弹棉花的弓弦木槌
+  cand[ho] REJECT:nearcheck-FLAG 修鞋摊的钉拐
+  cand[ho] REJECT:nearcheck-FLAG,STRICT-sub5/contain 酱园的豆瓣木耙
+  cand[ho] CLEAN 灯笼铺的劈篾刀
+  cand[ho] CLEAN 成衣铺的领衬板
+  cand[ho] REJECT:nearcheck-FLAG,STRICT-sub5/contain 钟表铺的油泥刷
+  cand[tp] REJECT:nearcheck-FLAG 纺织厂招挡车工，她十六岁进车间，师傅说手快不如心细，她记了一辈子。
+  cand[tp] REJECT:nearcheck-FLAG,STRICT-sub5/contain 公社广播站选播音员，他普通话带口音落了选，回家路上把整段新闻背熟了才进门。
+  cand[tp] CLEAN 供销社柜台她一站站了十一年，算盘打到闭眼都能响。
+  cand[tp] REJECT:nearcheck-FLAG 村小代课那三年，他把每个娃的生日都记在工作手册上。
+  cand[tp] CLEAN 公社分粮那年他头回管秤，多的少的都记在本子上。
+  cand[tp] CLEAN 厂里头一台缝纫机分给她，她连夜做了条新裤子给妹妹。
+  cand[tp] CLEAN 知青点办夜校，他教识字也学烧饭，两手都没闲着。
+  cand[tp] REJECT:nearcheck-FLAG 她头回领到布票，攥着在柜台前挑了整整一个时辰。
+check1 intra-bigram: cp=23.529411764705888 ho=26.66666666666667 tp=21.276595744680847 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=50.0 ho=53.333333333333336 tp=33.333333333333336 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/35x10 hits PASS
+append: tail-axis rule OK (batch-tail=侠气 ≠ old-marker=逍遥)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=864(各轴+1=144) ho=446 tp=311 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R1123 ALL BATTERY PASS ==
