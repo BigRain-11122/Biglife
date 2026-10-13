@@ -1,0 +1,52 @@
+== gene_round R1129 start ==
+check-baseline: HEAD(cp864/ho446/tp311)==worktree 纯净态 PASS
+check-counts-pre: cp=864 各轴 {'逍遥': 144, '烟火': 144, '秩序': 144, '求新': 144, '怀旧': 144, '侠气': 144} PASS
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 36 候选 clean=17 flag=19 (exit=1)
+  cand[cp/烟火] CLEAN 炖肉先焯一遍水，浮沫撇净了汤才正。
+  cand[cp/烟火] CLEAN 炭要烧透了再下串，生炭有烟呛眼睛。
+  cand[cp/烟火] CLEAN 熬糖看色不看钟，颜色到了锅离火。
+  cand[cp/烟火] CLEAN 大锅熬猪油，油渣铲给灶边的娃。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 账本一年结一本，旧的不扔压箱底。
+  cand[cp/秩序] REJECT:nearcheck-FLAG,STRICT-sub5/contain 工具用完归原格，谁缺了一眼就看出。
+  cand[cp/秩序] CLEAN 门牌号他背得熟，收信从没错过一户。
+  cand[cp/秩序] CLEAN 零件袋分格装，拆几格装回几格。
+  cand[cp/求新] REJECT:nearcheck-FLAG,STRICT-sub5/contain 新机器进店，他头一个报名学操作。
+  cand[cp/求新] CLEAN 新出的节能灯泡，他买了三只挨个试。
+  cand[cp/求新] REJECT:nearcheck-FLAG,STRICT-sub5/contain 街坊新开的铺子，他先进去转一圈。
+  cand[cp/求新] REJECT:nearcheck-FLAG 新玩意儿他先问一句：能拆开看看吗？
+  cand[cp/怀旧] REJECT:nearcheck-FLAG,STRICT-sub5/contain 老照片按年份排，隔些日子翻一回。
+  cand[cp/怀旧] CLEAN 旧藤椅换了新条，他偏说旧的那把顺。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG,STRICT-sub5/contain 收音机的老频道，他记到现在。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG,STRICT-sub5/contain 老街的门牌换了新样，他照旧念旧名。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 泡一壶粗茶坐门槛，看街上来回的人。
+  cand[cp/逍遥] CLEAN 收市了他不急走，沿堤看人钓鱼。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG,STRICT-sub5/contain 躺在竹椅上打个盹，一下午就这么过去。
+  cand[cp/逍遥] CLEAN 闲天不出摊，他就找人下两盘棋。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 邻居家急用钱，他把柜里的活钱先垫上。
+  cand[cp/侠气] REJECT:nearcheck-FLAG,STRICT-sub5/contain 巷口老人提重物，他接过来一路送到家。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 同行有难处，他把渠道分一条过去。
+  cand[cp/侠气] CLEAN 夜里有急事的敲错门，他也起来指路。
+  cand[ho] CLEAN 裱画铺的排笔洗
+  cand[ho] CLEAN 铜匠铺的錾花錾子
+  cand[ho] REJECT:nearcheck-FLAG 豆腐坊的卤水壶
+  cand[ho] REJECT:nearcheck-FLAG 竹器行的刮青刀
+  cand[ho] CLEAN 纸扎铺的糊灯笼竹篾
+  cand[ho] CLEAN 酱菜园的压坛石
+  cand[tp] REJECT:nearcheck-FLAG 县文化馆招美术员，他画了三天黑板报，落选了却从此爱上了画画。
+  cand[tp] REJECT:nearcheck-FLAG 镇上第一台拖拉机进村，他挤进人堆摸了一把方向盘。
+  cand[tp] REJECT:nearcheck-FLAG,STRICT-sub5/contain 她十八岁进城当学徒，头一年光练手上功夫。
+  cand[tp] CLEAN 厂里技术比武他拿了第三名，奖品是条毛巾，用到现在没舍得换。
+  cand[tp] CLEAN 公社放第一场露天电影，她搬着板凳占了前排，看完还不肯走。
+  cand[tp] REJECT:nearcheck-FLAG,STRICT-sub5/contain 粮站招记账先生，他一笔字写得端正被留下，一记就记了半辈子。
+check1 intra-bigram: cp=23.529411764705888 ho=26.66666666666667 tp=14.035087719298245 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=42.10526315789473 ho=71.42857142857143 tp=26.923076923076927 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/35x10 hits PASS
+append: tail-axis rule OK (batch-tail=逍遥 ≠ old-marker=侠气)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=870(各轴+1=145) ho=448 tp=313 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 < T92 maintained PASS
+sentinel[ho]: max_ratio=94.118 < T95 maintained PASS
+sentinel[tp]: max_ratio=43.902 < T44 maintained PASS
+== gene_round R1129 ALL BATTERY PASS ==
