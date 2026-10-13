@@ -1,0 +1,11 @@
+== gene_round R1190 start ==
+check-counts-pre: cp=924 六轴 154 均衡 ho=466 tp=331（R1181 后基线）
+check0 nearcheck official: 35 候选 clean/flag 见 step-A 面（cp 22 ho 8 tp 5·三次 fail-fast 闸实录：月份牌 TRIG:月 拦 1/秩序·怀旧·侠气·tp 撞池词换选 4）
+check2 TRIGGER: 0/40x32 hits PASS（31 官方+9 保守扩展）
+cross-corpus: 13 特征词 census+cognition rg 零撞 PASS
+append: tail-axis rule OK (batch-tail=逍遥 ≠ old-marker=侠气)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level·既有条目零字节改动)
+verify-post: cp=930(六轴 155 均衡) ho=468 tp=333 tail-exact PASS
+sentinel post: {'cp': 91.667, 'ho': 94.118, 'tp': 43.902} criterion_ok=True
+selection: cp=6/6(六轴各一·序=烟火/秩序/求新/侠气/怀旧/逍遥) ho=2/2 tp=2/2 +10 登记
+== gene_round R1190 ALL BATTERY PASS ==
