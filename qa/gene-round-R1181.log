@@ -1,0 +1,13 @@
+== gene_round R1181 start ==
+check-counts-pre: cp=918 六轴 153 均衡 ho=464 tp=329（R1175 后基线）
+check0 nearcheck official: 26 候选 clean=13 flag=13（cp 14 支 9 CLEAN 六轴全有富余·ho 6 支 2 CLEAN·tp 6 支 2 CLEAN·烟火首轮 2 支全 FLAG〔馄饨挑子/酱缸〕+换句煤炉过）
+check2 TRIGGER: 0/38x10 hits PASS（31 官方+9 保守扩展）
+check1 intra-bigram(ratio): cp=24.4 ho=14.3 tp=15.4 (PASS·<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=43.8 ho=46.2 tp=33.3 (PASS·<哨兵峰 91.667/94.118/43.902)
+check3 cross-corpus: 14 特征词 census+cognition rg 零撞 PASS（首跑撞 1=糖炒栗子∈C-00593 卡面→烟火换句煤炉咕嘟声复跑 0-hit）
+append: tail-axis rule OK (batch-tail=侠气 ≠ old-marker=逍遥)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level·既有条目零字节改动)
+verify-post: cp=924(六轴 154 均衡) ho=466 tp=331 tail-exact + other-keys PASS
+sentinel post: {'cp': 91.667, 'ho': 94.118, 'tp': 43.902} criterion_ok=True
+selection: cp=6/6(六轴各一) ho=2/2 tp=2/2 +10 登记
+== gene_round R1181 ALL BATTERY PASS ==
