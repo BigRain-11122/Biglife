@@ -96,7 +96,8 @@ def run_closed_blocks(raw, eol, lines, dry_run):
     block_at = {}
     for (s, e) in blocks:
         head_txt = lines[s].decode('utf-8', 'replace')
-        m = re.search(r'T-(\d{4})-(\d{2})', head_txt)
+        # R1102 修：任务号形=T-YYYYMMDD-NN（无年内连字符），旧式 T-(\d{4})-(\d{2}) 永不匹配→月归属恒落默认今月
+        m = re.search(r'(?:T|PR)-(\d{4})(\d{2})\d{2}-\d', head_txt)
         month = (m.group(1) + '-' + m.group(2)) if m else datetime.date.today().strftime('%Y-%m')
         block_at[s] = (e, month)
         for k in range(s + 1, e):
