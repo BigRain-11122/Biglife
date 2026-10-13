@@ -591,7 +591,10 @@ def llm(prompt):
         data=json.dumps({"model": MODEL, "prompt": prompt, "stream": False,
                          "options": {"temperature": 0.8, "num_predict": 120}}).encode("utf-8"),
         headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=90) as r:
+    # BIGLIVE_LLM_TIMEOUT: CPU-only lane (CEO-CPU-OPEN-LAW O-20261013-2215) needs
+    # 90-150s/request; default 90 keeps the GPU lane unchanged.
+    with urllib.request.urlopen(
+        req, timeout=int(os.environ.get("BIGLIVE_LLM_TIMEOUT", "90"))) as r:
         return json.loads(r.read().decode("utf-8")).get("response", "").strip()
 
 def ring_violations(line, sig):
