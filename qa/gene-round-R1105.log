@@ -1,0 +1,61 @@
+== gene_round R1105 start ==
+产出 +10：cp 侠气|水里救人的事他干过两回，救完拍拍衣裳就走。/ cp 逍遥|泡澡堂子泡到打烊，搓背师傅撵他都不肯起。/ cp 烟火|灶披间炖了肉，他先盛一碗给对门的老人端去。/ cp 秩序|铺盖叠得有棱有角，是厂里宿舍带出来的老规矩。/ cp 求新|听说城里开了自选商店，他专门进城开了一回眼界。/ cp 怀旧|巷口的叫卖声换了几茬，他还会哼头一茬的调。
+ho|染坊的搅布木耙 / ho|修棕绷的绷针木锤
+tp|头一回摇通电话，他扯着嗓子喊，把接线员逗笑了。/ tp|粮站招记账先生，他一笔好字全村头一个被点中。
+探针收敛实录：首版 Layer A 拦 5（钓鱼/工具归位/包浆/弹棉花/滚瓜烂熟饱和带）→ 换句 10/10 CLEAN（候选档 gene-cand-R1105.txt）
+PASS batch-axes 6 支六轴各一（141×6 均衡批）
+PASS batch-unique 10 条零重复
+PASS 尾位判例：批末轴（怀旧）≠旧 marker 轴（侠气）
+PASS rumor-triggers 31 词零命中（实弹 0）
+PASS nearcheck FINAL 10/10 CLEAN
+PASS PAIR-PEAK intra-batch max=28.571 below 43.902
+PASS counts-pre cp=840 六轴 140 均衡
+PASS counts-pre ho=438
+PASS counts-pre tp=303
+PASS baseline worktree == HEAD (language/lives)
+PASS sentinel(pre)[cp]: 91.667 < T92
+PASS sentinel(pre)[ho]: 94.118 < T95
+PASS sentinel(pre)[tp]: 43.902 < T44
+sentinel(pre) 三池峰值 cp=91.667 ho=94.118 tp=43.902
+PASS lang-anchor unique x1
+PASS obj-anchor unique x1
+PASS turn-anchor unique x1
+PASS dup-cp:水里救人的事
+PASS dup-cp:泡澡堂子泡到
+PASS dup-cp:灶披间炖了肉
+PASS dup-cp:铺盖叠得有棱
+PASS dup-cp:听说城里开了
+PASS dup-cp:巷口的叫卖声
+PASS dup:染坊的搅布木
+PASS dup:修棕绷的绷针
+PASS dup:头一回摇通电
+PASS dup:粮站招记账先
+PASS verify-post(mem) cp=846 六轴 141 均衡
+PASS verify-post(mem) ho=440 tp=305
+PASS tail-exact cp
+PASS tail-exact ho/tp
+PASS other-keys byte-equal
+append: lang +7/-1 行 · lives +2/-2 行（既有条目零字节改动）
+PASS verify-post(disk) 846/440/305
+PASS prefix-unchanged 前缀全等断言
+PASS sentinel(post)[cp]: 91.667 < T92
+sentinel(post)[cp] 零漂移
+PASS sentinel(post)[ho]: 94.118 < T95
+sentinel(post)[ho] 零漂移
+PASS sentinel(post)[tp]: 43.902 < T44
+sentinel(post)[tp] 零漂移
+PASS --qc 15/15（e
+PASS double-run
+PASS file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==）
+PASS cross-face 0 hit: 泡澡堂子
+PASS cross-face 0 hit: 搓背师傅
+PASS cross-face 0 hit: 灶披间炖了肉
+PASS cross-face 0 hit: 有棱有角
+PASS cross-face 0 hit: 自选商店
+PASS cross-face 0 hit: 叫卖声换了
+PASS cross-face 0 hit: 搅布木耙
+PASS cross-face 0 hit: 绷针木锤
+PASS cross-face 0 hit: 摇通电话
+PASS cross-face 0 hit: 粮站招记账
+== gene_round R1105 ALL BATTERY PASS ==
