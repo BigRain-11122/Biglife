@@ -1,0 +1,50 @@
+== gene_round R1111 start ==
+产出 +10：cp|他不赶集不凑热闹，就爱守着摊子跟熟人瞎聊。 / cp|谁病了吃不下饭，他就熬一锅烂面，卧个蛋端过去。 / cp|借出去的账一行是一行，谁还了没还写得清清楚楚。 / cp|百货商店进了的确良，他捏着布票排长队，扯布做了一身新的。 / cp|老招牌拆下来，他把字号一笔一画描下来，收进了抽屉。 / cp|有人砸了馄饨摊，他垫上本钱让摊主第二天照常出摊。 / ho|药铺的铜碾槽 / ho|修表匠的单眼寸镜 / tp|队里添了台拖拉机，他自告奋勇去学，熄火八回才开出大队院。 / tp|镇上刚开照相馆，他攒了半年工钱，端端正正拍了张半身照。
+探针收敛实录：v1 拦 7→v2 拦 4→探针 8 稿收 3+ho 探针 6 稿收 2→终版 10/10 CLEAN（候选档 gene-cand-R1111.txt）
+PASS batch-size 10 条
+PASS batch-axes 6 支六轴各一（142×6 均衡批·批序逍遥→烟火→秩序→求新→怀旧→侠气）
+PASS batch-unique 10 条零重复
+PASS 尾位判例：批末轴（侠气）≠旧 marker 轴（怀旧）
+PASS rumor-triggers 45 词零命中（实弹 0）
+PASS nearcheck FINAL 10/10 CLEAN == gene_nearcheck: 10 候选, 0 近重候选 ==
+PASS corpus-face cognition 2336 串+census light 160442 行载入
+PASS cross-face 特征词 20 项+rev 双向 0 hit（0）
+cross-face 0 hit: 赶集
+cross-face 0 hit: 瞎聊
+cross-face 0 hit: 熬一锅烂面
+cross-face 0 hit: 卧个蛋
+cross-face 0 hit: 一行是一行
+cross-face 0 hit: 借出去的账
+cross-face 0 hit: 的确良
+cross-face 0 hit: 布票
+cross-face 0 hit: 老招牌
+cross-face 0 hit: 一笔一画
+cross-face 0 hit: 馄饨摊
+cross-face 0 hit: 垫上本钱
+cross-face 0 hit: 铜碾槽
+cross-face 0 hit: 药铺
+cross-face 0 hit: 寸镜
+cross-face 0 hit: 修表匠
+cross-face 0 hit: 拖拉机
+cross-face 0 hit: 自告奋勇
+cross-face 0 hit: 照相馆
+cross-face 0 hit: 半身照
+PASS counts-pre cp=846 六轴 141 均衡
+PASS counts-pre ho=440
+PASS counts-pre tp=305
+PASS baseline worktree == HEAD (language/lives)
+PASS sentinel(pre)[cp]: 91.667 < T92
+PASS sentinel(pre)[ho]: 94.118 < T95
+PASS sentinel(pre)[tp]: 43.902 < T44
+sentinel(pre) 三池峰值 cp=91.667 ho=94.118 tp=43.902
+PASS PAIR-PEAK intra-batch max=25.000 below 43.902
+PASS surgical round-trip 纯追加证明
+PASS verify-post cp=852 六轴 142 均衡
+PASS verify-post ho=442 tp=307
+PASS tail-exact cp
+PASS tail-exact ho/tp
+PASS other-keys byte-equal
+PASS sentinel(post)[cp]: 91.667 < T92 零漂移
+PASS sentinel(post)[ho]: 94.118 < T95 零漂移
+PASS sentinel(post)[tp]: 43.902 < T44 零漂移
+PASS --qc 15/15（含 double-run+file-roundtrip） == gene_nearcheck --qc: 15 PASS, 0 FAIL ==
