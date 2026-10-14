@@ -1,0 +1,15 @@
+== gene_round R1237 start ==
+check-baseline: HEAD(cp966/ho480/tp343→966/480/345·R1231 后基线·六轴 161x6)==worktree PASS
+check-counts-pre: cp=966 六轴 161 均衡 ho=480 tp=345（R1231 后基线）
+check0 nearcheck official: 两轮 38 候选（首版 20 候 13 FLAG〔剥毛豆/凉席/屋顶漏/剃头挑子/弹棉花/爆米花机=精确重复/评先进/布鞋/技校喜报 4-gram 撞〕→换句 18 候 7 FLAG→终选 10/10 CLEAN；烟火轴三换：蒸鱼撞「不看钟」→烙饼撞「锅边一圈」→烤红薯/青石/粽子/折角/热粥 撞 pools+census→炒花生过闸）
+check1 intra(new x new 4-gram): 0 collisions PASS
+check-peak(new x pool): cp=39.0 ho=62.5 tp=32.7 PASS（哨兵 91.667/94.118/43.902）
+check2 TRIGGER: 0/40x10 hits PASS（首版「月底」月字实拦换句「查账一抽一份准」=R926/R965 同型闸兜底）
+cross-corpus: 10 特征词 census+cognition rg 零撞 PASS（首跑烤红薯/锅边/青石/粽子/折角/热粥 6 词撞 corpus 换句复跑 0-hit·R1111 秤杆换戥子同判例）
+append: tail-axis rule OK (batch-tail=逍遥 != old-marker=侠气)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level 外科尾插·既有条目零字节改动·前缀/后缀逐字节断言过)
+verify-post: cp=972(六轴 162 均衡) ho=482 tp=347 tail-exact PASS
+sentinel post: {'cp': 91.667, 'ho': 94.118, 'tp': 43.902} criterion_ok=True（--baseline 实跑·三池峰值零漂移）
+nearcheck --qc: 15/15 PASS
+selection: cp=6/6(序:烟火=炒花生掺粗盐/秩序=票据码铁盒/求新=挂历圈节气/怀旧=旧课本字帖/侠气=垫车钱/逍遥=鸽子添谷) ho=2/2(麦芽糖铜锣/馄饨木头梆子) tp=2/2(扫盲班报名表/交接本签名) +10 登记
+== gene_round R1237 ALL BATTERY PASS ==
