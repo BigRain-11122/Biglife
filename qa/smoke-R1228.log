@@ -1,0 +1,7 @@
+== QA smoke R1228 (2026-10-14 17:1x) ==
+[1] poolgen tick fresh=True (mtime=10-14 17:06)
+[2] census new entries: rings_today=384 (10 this round) + reflections rows=34 (+2 this round)
+[3] behavior slot non-null=True sample=工位/楼内窗影
+[4] ring mirror sync rows=10 ring_synced=10 (evolve batch auto-run, this round)
+[5] heartbeat fresh(<3h)=True
+VERDICT: PASS
