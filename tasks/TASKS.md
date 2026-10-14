@@ -503,3 +503,8 @@ R1190 2026-10-14 07:5x @BigLife-OSLoop: 基因轮到期兑现（R1181 后第 9 �
   最近实物=qa/qc-R1207.log+QC-REPORT problems=0（commit e1aa2488）@2026-10-14 12:0x
   下个里程碑=年轮批 10 due tags 探针 14b 复驻即落（兜底夜窗 00:00-08:00·≤48h）+下次基因轮 ≈R1211+QC 例巡 >=R1213
   tokens: local=2 api=0 api_reason=-（tags 探针 2 次零生成·QC/轮首三步/实录=纯确定性零 LLM）
+- R1208 2026-10-14 12:4x @BigLife-OSLoop: 轮首三步毕（pull up to date·决策水位差集 NEW=0〔155 id 维持〕·orders 物理件区零涉本司新行）+**年轮批 10/10 当轮全落（含 Ollama 模型库恢复批）**：①**库清实锚**=首跑 runner_r1208 探针 generate 404→tags 实查 qwen2.5 双模型（7b-instruct+14b-8k）本午被清库〔仅剩 bge-m3 嵌入 blob·盘上零 qwen GGUF·他车道 35B coding llama-server 8090 无涉〕——R1206 11:5x 批还在用 14b-8k·12:0x 已被删=他窗清库动作·年轮线生产依赖断供；②**自驱恢复**=ollama pull qwen2.5:7b-instruct 4.7GB〔31MB/s·~2.5min·盘余 686G 零压力〕复装入库；③**重发批全落**=真-CPU 通道 11436（R1177 正法 OLLAMA_LLM_LIBRARY=cpu+7b+600s·批 ~3.5min·端口批毕杀净实锚·零新注册）——批 168734ee〔C-01863~C-01872〕+行为镜像 46f0c1a5 已推origin 571011c6..46f0c1a5；④账平 10-14 全域环 186 零差（176+10·机器直数 186 卡各 1 行·registry 全树正则口径修正：环行=census/registry/<区>/C-*.md 而非 anchors/cards）；⑤status-export r14 外科续鲜 176→186+depts 年轮线前插 R1208 段+export_ts 12:40（三锚断言+JSON 回读校验过）；**通道判例**：14b-8k 库删后「驻留复用通道」失效——日窗 CPU 7b 通道=在役正道·夜窗需 14b 质量档时按需 ollama pull 14b-8k（~9GB·暂不预拉·最小footprint）
+  当前活=工作日值守窗年轮批每轮转（CPU 7b 通道在役·模型库已恢复）
+  最近实物=年轮 10 环 C-01863~C-01872（批 168734ee+镜像 46f0c1a5 已推）+Ollama 7b 复装+status-export r14=186 @2026-10-14 12:4x
+  下个里程碑=基因轮 ≈R1211 兑现+相遇轮 10-15 日额复槽+QC 例巡 ≈R1213
+  tokens: local=10 api=0 api_reason=-（年轮批 10 落环×1=10·首跑 404 探针零生成不计·pull/tags/账平/外科=纯确定性零 LLM）
