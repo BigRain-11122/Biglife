@@ -1,0 +1,14 @@
+== gene_round R1231 start ==
+check-baseline: HEAD(cp960/ho478/tp343)==worktree 纯净态 PASS
+check-counts-pre: cp=960 六轴 160 均衡 ho=478 tp=343（R1225 后基线）
+check0 nearcheck official: 48 候选 clean=29/flag=19（cp/ho/tp 明细见 step-A 面）
+check1 intra(new x new 4-gram): 0 collisions PASS
+check-peak(new x pool): cp=30.8 ho=54.5 tp=33.3 PASS（<哨兵 91.667/94.118/43.902）
+check2 TRIGGER: 0/40x10 hits PASS
+cross-corpus: 9 特征词 census+cognition rg 零撞 PASS
+append: tail-axis rule OK (batch-tail=侠气 != old-marker=逍遥)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level·既有条目零字节改动)
+verify-post: cp=966(六轴 161 均衡) ho=480 tp=345 tail-exact PASS
+sentinel post: {'cp': 91.667, 'ho': 94.118, 'tp': 43.902} criterion_ok=True
+selection: cp=6/6(序=烟火/秩序/求新/怀旧/逍遥/侠气) ho=2/2 tp=2/2 +10 登记
+== gene_round R1231 ALL BATTERY PASS ==
