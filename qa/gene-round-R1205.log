@@ -1,0 +1,52 @@
+== gene_round R1205 start ==
+check-baseline: HEAD(cp936/ho470/tp335)==worktree 纯净态 PASS
+check-counts-pre: cp=936 各轴 {'逍遥': 156, '烟火': 156, '秩序': 156, '求新': 156, '怀旧': 156, '侠气': 156} PASS（R1196 均衡基线符合）
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 36 候选 clean=17 flag=19 (exit=1)
+  cand[cp/逍遥] CLEAN+SEL 下棋他从不悔子，输了就把棋盘一推去沏茶。
+  cand[cp/逍遥] CLEAN(满额) 花椒树底下他支了张竹躺椅，眯着眼听蝉。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 他隔三差五去河边钓鱼，钓不钓得着都坐够一个时辰。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 闲了他把蝈蝈笼擦一遍，喂两朵南瓜花就满足了。
+  cand[cp/烟火] CLEAN+SEL 炖肉他掐好火候就撤柴，锅底余温焖到肉离骨。
+  cand[cp/烟火] CLEAN(满额) 蒸鱼的姜丝他切得比头发丝粗不了多少，说去腥不抢味。
+  cand[cp/烟火] CLEAN(满额) 冬储白菜他码在墙根，横一层竖一层压得结实。
+  cand[cp/烟火] REJECT:nearcheck-FLAG 炒糖色他不看表，糖化到枣红就下肉，多一秒都嫌过。
+  cand[cp/秩序] CLEAN+SEL 找零他零钱整钱分兜装，掏出来不用现数。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 关库房他倒退着出来，最后一把锁要亲眼看着落下。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 收摊他把秤杆挂回钉子上，秤砣归匣不许乱放。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 进货单他按日子钉成册，翻到哪页都不带错的。
+  cand[cp/求新] REJECT:nearcheck-FLAG 县里通了班车，他头一拨去坐，回来说比骡车稳当。
+  cand[cp/求新] REJECT:nearcheck-FLAG 新到的塑料凉鞋他不嫌，说轻便比结实实惠。
+  cand[cp/求新] REJECT:nearcheck-FLAG 收音机换了新电池，他把旧的攒在小铁盒里说还有用。
+  cand[cp/求新] CLEAN+SEL 邻镇办了集，他歇了半天工专程去转一圈。
+  cand[cp/侠气] CLEAN+SEL 路遇翻板的粮车，他撂下自行车帮着扶起来才走。
+  cand[cp/侠气] CLEAN(满额) 讨饭的进门他不给钱，盛一碗热面看着人吃完。
+  cand[cp/侠气] CLEAN(满额) 徒弟家里遭了难，他关了三天铺门带人回去帮忙。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 邻居家吵得凶他站院里守着，火大了才上前拦一把。
+  cand[cp/怀旧] CLEAN+SEL 柜台还是爹在时那副老榆木的，他说换新的硌手。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 旧挂钟他不许人乱上油，走时不准也是老伙计。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 老照片他拿塑料皮夹着，压在玻璃板底下三十年。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 供销社的旧算盘掉了个珠，他磨一颗枣木补上，色差着也认。
+  cand[ho] CLEAN+SEL 照相馆的布景
+  cand[ho] REJECT:nearcheck-FLAG 车马店的铜铃铛
+  cand[ho] CLEAN+SEL 纸扎铺的浆糊盆
+  cand[ho] CLEAN(满额) 磨刀师傅的条凳
+  cand[ho] CLEAN(满额) 锡匠的小烙铁
+  cand[ho] REJECT:nearcheck-FLAG 豆腐坊的纱布包
+  cand[tp] CLEAN+SEL 铺子里添了头一台电唱机，他围着摆弄了一晚上。
+  cand[tp] REJECT:nearcheck-FLAG 拆土灶换煤炉那天，他把旧灶王爷的画像小心揭下来收好。
+  cand[tp] REJECT:nearcheck-FLAG 孙子出生那年，他把柜台底下的木马翻出来重新刷了漆。
+  cand[tp] REJECT:nearcheck-FLAG 头一回进城进货，他背回来一台半导体，半条街的人都来听。
+  cand[tp] REJECT:nearcheck-FLAG 铺子盘给别人那天他没让放炮，只把牌匾摘下来自己抱回家。
+  cand[tp] CLEAN+SEL 公社改乡那阵子，他换了新执照，旧框子没舍得扔。
+check1 intra-bigram: cp=20.512820512820518 ho=15.384615384615385 tp=22.22222222222222 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=37.83783783783784 ho=53.333333333333336 tp=38.095238095238095 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/35x10 hits PASS
+append: tail-axis rule OK (batch-tail=怀旧 ≠ old-marker=侠气)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=942(六轴 157 均衡) ho=472 tp=337 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 maintained PASS
+sentinel[ho]: max_ratio=94.118 maintained PASS
+sentinel[tp]: max_ratio=43.902 maintained PASS
+== gene_round R1205 ALL BATTERY PASS ==
