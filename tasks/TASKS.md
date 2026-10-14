@@ -294,6 +294,7 @@
   - 【详情已归档】3 行单内详情已逐字移至 tasks/archive/TASKS-2026-09.md——T-20260926-05 拆月归档分步②（原文保全·检索走 rg 全文）
 
 - [ ] **T-20261014-01**（开源借力采用落地单·P-2026-09-26-08 常设令·T-20260926-16 第三窗首采兑现·R1192 立单·台账=`cph4/oss-harvest/OH-20261013-biglife.md` 切片 1·五门评估在册）：**年轮线 LLM 调用瞬态自愈重试接线（tenacity）**——evolve_citizen.py LLM 调用面（urlopen L589-597 单次调用实锚）包 tenacity @retry：wait_exponential(multiplier=1, min=4, max=30)+stop_after_attempt(3)+retry 条件=URLError/socket timeout/HTTP 5xx（4xx 不重试=参数面错误）——判据=①下一批年轮落环实弹验收（瞬态失败=轮内自愈实录或三试退避后留冷=判据可回归·实录回写台账切片 2）②假阴性探针舞轮次归零复核（R1184/85/87/91 型「paused-at-0 假阴性」零复发）③--qc 电池回归层不动（静检/重试=新增层非替代）；红线=fail-safe 静默跳过语义不动（Ollama 真挂=跳过不报障）+cursor 批级幂等不动+不引网络外发（重试全本地 http 面）·依赖本地化（pip install tenacity 先探·不可用=如实记档回退手写重试环）；执行=夜窗年轮批前排产前接线（下轮起小步自领·拆步律）。
+  - status: in-progress @BigLife-OSLoop 2026-10-14 08:4x R1193：**接线毕（红线面全保）**——pip tenacity 9.2.1 落地（五门评估版一致·回退手写环未触发）·evolve_citizen v0.46→v0.47：llm() 包 @_llm_retry（tenacity @retry wait_exponential(multiplier=1,min=4,max=30)+stop_after_attempt(3)+**reraise=True**〔探针实锚=tenacity 耗尽默认抛 RetryError 包装非原异常·reraise 修正=调用方收 URLError 原面·silent-skip 契约逐字节不变〕）+谓词 _llm_transient（HTTPError≥500/URLError/socket.timeout/TimeoutError/ConnectionError 重试·4xx 与非瞬态 1 试直冒）+ImportError 守卫（同步机无依赖=单发旧行为）·探针 state/oss-probe-R1193-tenacity.py 全绿（谓词 9/9+自愈 3 试 8.0s+持续挂 3 试抛 URLError 原面+参数面 1 试）·py_compile 过·--qc 层/cursor 幂等/网络面零触碰·**判据①②待夜窗实弹**（10-15 00:00-08:00 批实录回写台账切片 2）
 
 ## 全域外审承令批（2026-09-30 · D-20260930-06 XL-17 派工 · R769 尾查捕获）
 
@@ -661,3 +662,8 @@ R1190 2026-10-14 07:5x @BigLife-OSLoop: 基因轮到期兑现（R1181 后第 9 �
   最近实物=cph4/oss-harvest/OH-20261013-biglife.md+T-20261014-01 立单+cph4/README.md 第八例插行 @2026-10-14 08:2x
   下个里程碑=T-20261014-01 夜窗批前接线+年轮批 10-15 00:00-08:00 恢复落环+QC 例巡 >=R1195
   tokens: local=0 api=2 api_reason=oss-harvest 实搜面 web_fetch×2（P-2026-09-26-08 开源借力令授权·LLM 本地零调用）
+- R1193 2026-10-14 08:4x @BigLife-OSLoop: **T-20261014-01 tenacity @retry 接线收口（接线面·实弹面留夜窗）**——依赖本地化=pip install tenacity 9.2.1（五门评估版一致·纯 Python 零传递依赖）·evolve_citizen.py v0.46→v0.47 三处：import 行补 socket/urllib.error+llm() 面 @_llm_retry（wait_exponential(multiplier=1,min=4,max=30)+stop_after_attempt(3)+**reraise=True**〔探针实锚发现：tenacity 耗尽默认抛 RetryError 包装非原异常·reraise 修正=调用方 except Exception 收 URLError 原面·「Ollama 挂=批自停/相遇跳过」契约逐字节不变〕）+谓词 _llm_transient（HTTPError code≥500/URLError/socket.timeout/TimeoutError/ConnectionError=重试·4xx 参数面与非瞬态=1 试直冒）+ImportError 守卫（同步机无依赖=单发旧行为）·红线三面全保（--qc 电池层零触碰/cursor 批级幂等零触碰/零网络外发）·探针全绿（state/oss-probe-R1193-tenacity.py：谓词 9/9+自愈 3 试 8.0s 实测〔4s+4s 指数退避〕+持续挂 3 试抛 URLError 原面+参数面 1 试直冒）+py_compile 过；轮首三步毕（pull up to date·决策水位差集 NEW=NONE〔155 id 维持〕·物理件区零涉本司新行）·年轮线留冷维持（CEO 用机期·10 due ETA 10-15 夜窗 00:00-08:00·R1189/90/91 定谳禁重扫）·配额面维持（池 10-14 R1191 PASS 自停/相遇 R1171 日额已耗/QC 例巡 >=R1195/基因轮 ≈R1196/聚光灯 10 月 2/2 满/日清 F-20261014-BL01 已落）；waiting 三单禁重扫维持
+  当前活=T-20261014-01 接线毕·候夜窗实弹验收（判据①②=自愈实录/假阴性归零复核）
+  最近实物=Tools/evolve_citizen.py v0.47（tenacity @retry 自愈层）+state/oss-probe-R1193-tenacity.py 全绿 @2026-10-14 08:4x
+  下个里程碑=10-15 00:00-08:00 夜窗年轮批恢复落环（retry 实弹实录回写台账切片 2）+QC 例巡 >=R1195
+  tokens: local=0 api=0 api_reason=-（纯代码接线+进程内探针·零 LLM 零外网）

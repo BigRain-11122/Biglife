@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.46 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.47 - BigLife citizen evolution engine.
+v0.47 (2026-10-14 R1193, T-20261014-01): tenacity @retry on the llm face -
+transient failures (URLError / socket timeout / HTTP 5xx) self-heal in-round
+(wait_exponential min=4 max=30, 3 attempts); a 4xx is a parameter-face error
+and bubbles immediately. After 3 attempts the exception still reaches the
+callers, so the Ollama-down silent-skip contract (batch paused / meet
+skipped) is untouched. Guarded import: a synced machine without the local
+pip falls back to single-shot, as before. OSS adoption OH-20261013-biglife
+slice 2 wiring; live-fire acceptance rides the next night-window batch.
 v0.46 gap #67 (2026-10-11 R911, T-20261011-02): wind-under idiom attractor,
 prompt-side close - C-00798 wind-under gate held 5 straight rounds (R906-R910,
 e.g. 「看云不用门票，今朝天色云淡风轻，正适合巡塔」). Root cause adjudicated
@@ -478,7 +486,7 @@ Usage:
   python -X utf8 evolve_citizen.py --batch 3 --propose # +V3 councilor proposals (<=3/day)
   --via BigLife-OSLoop  # committer-identity tail on every commit (cph4/versioning.md 4.1)
 """
-import argparse, datetime, glob, json, os, re, subprocess, sys, urllib.request
+import argparse, datetime, glob, json, os, re, socket, subprocess, sys, urllib.error, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
@@ -585,6 +593,29 @@ def real_signals():
             pass
     return sig
 
+# T-20261014-01 (tenacity adoption, OH-20261013-biglife slice 2): 6 rounds of
+# transient-dropped batches (R1067 mid-batch cut / R1183 saturation window /
+# R1184-91 probe dance) - transient faces now self-heal in-round instead of
+# leaving rings cold. 4xx must NOT retry: that is a parameter-face error.
+try:
+    from tenacity import (retry, retry_if_exception, stop_after_attempt,
+                          wait_exponential)
+
+    def _llm_transient(exc):
+        if isinstance(exc, urllib.error.HTTPError):
+            return exc.code >= 500
+        return isinstance(exc, (urllib.error.URLError, socket.timeout,
+                               TimeoutError, ConnectionError))
+
+    _llm_retry = retry(retry=retry_if_exception(_llm_transient),
+                       wait=wait_exponential(multiplier=1, min=4, max=30),
+                       stop=stop_after_attempt(3),
+                       reraise=True)  # exhausted -> ORIGINAL face bubbles (callers see URLError as before)
+except ImportError:  # synced machine without the local pip: single-shot, as before
+    def _llm_retry(fn):
+        return fn
+
+@_llm_retry
 def llm(prompt):
     req = urllib.request.Request(
         OLLAMA.rstrip("/") + "/api/generate",
