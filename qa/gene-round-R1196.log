@@ -1,0 +1,52 @@
+== gene_round R1196 start ==
+check-baseline: HEAD(cp930/ho468/tp333)==worktree 纯净态 PASS
+check-counts-pre: cp=930 各轴 {'逍遥': 155, '烟火': 155, '秩序': 155, '求新': 155, '怀旧': 155, '侠气': 155} PASS（R1190 均衡基线符合）
+check3 COG atoms loaded: unique>=6c=2148 files=8
+check0 nearcheck official: 36 候选 clean=21 flag=15 (exit=1)
+  cand[cp/烟火] CLEAN+SEL 包饺子他捏十八个褶，一个不多一个不少。
+  cand[cp/烟火] CLEAN(满额) 卤味摊收锅他把汤面上的浮油撇净，留着转天挂桶。
+  cand[cp/烟火] CLEAN(满额) 煮馄饨他掐三滚点两回水，皮不破馅才匀。
+  cand[cp/烟火] CLEAN(满额) 蒸馒头的笼布他一天一洗，说面味串了不好。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 账本他一天一结，差一分钱也要翻遍抽屉找出来。
+  cand[cp/秩序] REJECT:nearcheck-FLAG 工具箱里的扳手他按个头排，闭眼能摸对号。
+  cand[cp/秩序] CLEAN+SEL 打烊他沿着柜台走一圈，门窗插销挨个用手拽一下。
+  cand[cp/秩序] CLEAN(满额) 谷子他筛三遍再入缸，瘪的挑出去喂鸡。
+  cand[cp/求新] REJECT:nearcheck-FLAG 供销社来了新样式的搪瓷盆，他挑俩花纹最鲜的摆柜台最前头。
+  cand[cp/求新] CLEAN+SEL 电视里讲的新菜谱他琢磨一宿，转天就上灶试了。
+  cand[cp/求新] CLEAN(满额) 新出的二八车他试着骑了一趟，回来说链子响得有节奏。
+  cand[cp/求新] CLEAN(满额) 老手艺他也肯添新家什，竹尺旁边压了把卷尺。
+  cand[cp/怀旧] CLEAN+SEL 师父留下的围裙他补了三层，针脚还是照着原来的走。
+  cand[cp/怀旧] CLEAN(满额) 老算盘他打惯了，计算器搁在抽屉里落灰。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 开张头一天的门牌他擦得锃亮，说这是铺子的脸面。
+  cand[cp/怀旧] REJECT:nearcheck-FLAG 旧茶缸磕掉一块瓷他也用，说豁口正好对嘴。
+  cand[cp/侠气] CLEAN+SEL 邻居孩子急病，他蹬上三轮车一路把人送到镇卫生院。
+  cand[cp/侠气] REJECT:nearcheck-FLAG 巷口谁家搬家，他撂下手里的活先去扛大件。
+  cand[cp/侠气] REJECT:STRICT-sub5/contain 生人问价他先倒杯热水，买卖成不成是另一说。
+  cand[cp/侠气] CLEAN(满额) 徒弟闯了祸他先替人赔不是，回头关起门再讲理。
+  cand[cp/逍遥] CLEAN+SEL 遛完弯他顺手买二两花生，蹲门槛上剥着吃。
+  cand[cp/逍遥] CLEAN(满额) 天热他只摇蒲扇，说那点软和气电扇给不了。
+  cand[cp/逍遥] CLEAN(满额) 养的兰花他不催花，开几朵算几朵，看着就欢喜。
+  cand[cp/逍遥] REJECT:nearcheck-FLAG 提了鸟笼他往老槐树底下一挂，自己靠着树打盹。
+  cand[ho] REJECT:nearcheck-FLAG 剃头挑子上的铜盆
+  cand[ho] REJECT:nearcheck-FLAG 药铺的戥子
+  cand[ho] REJECT:nearcheck-FLAG 弹棉花匠的木磨盘
+  cand[ho] REJECT:nearcheck-FLAG 修鞋摊的锥子
+  cand[ho] CLEAN+SEL 邮递员的绿帆布包
+  cand[ho] CLEAN+SEL 打铁铺的铁砧
+  cand[tp] REJECT:nearcheck-FLAG 置办头一辆三轮车那天，他绕着镇子骑了一整圈才回铺子。
+  cand[tp] CLEAN+SEL 铺子装上电话的当天，红纸抄的号码被他贴进柜台里头。
+  cand[tp] CLEAN+SEL 儿女进城念书以后，他把里屋的旧床腾出来添了货架。
+  cand[tp] REJECT:nearcheck-FLAG 得了县里表彰那阵子，收音机里报出自家名字他听了一整段。
+  cand[tp] REJECT:nearcheck-FLAG 老街翻修完，他把门脸重新油了一遍，旧木头一根没换。
+  cand[tp] REJECT:nearcheck-FLAG 徒弟出师的日子，他把自己那套家伙什送了人，说该置新的了。
+check1 intra-bigram: cp=23.809523809523814 ho=14.28571428571429 tp=16.326530612244895 (PASS·须<哨兵峰且零 4-gram 互撞)
+check-peak(new×pool): cp=40.0 ho=57.14285714285714 tp=34.78260869565217 (PASS·须<哨兵峰 91.667/94.118/43.902)
+selection: complete=True (cp=6/6 ho=2/2 tp=2/2)
+check2 TRIGGER: 0/35x10 hits PASS
+append: tail-axis rule OK (batch-tail=侠气 ≠ old-marker=逍遥)
+append: lang +6 cp / lives +2 ho +2 tp (byte-level single-replace) DONE
+verify-post: cp=936(六轴 156 均衡) ho=470 tp=335 tail-exact + other-keys PASS
+sentinel[cp]: max_ratio=91.667 maintained PASS
+sentinel[ho]: max_ratio=94.118 maintained PASS
+sentinel[tp]: max_ratio=43.902 maintained PASS
+== gene_round R1196 ALL BATTERY PASS ==
