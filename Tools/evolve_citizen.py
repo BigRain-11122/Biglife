@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.47 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.48 - BigLife citizen evolution engine.
+v0.48 (2026-10-15 R1277, gap #68): dup-history regen attractor close - see the
+gated_llm docstring (C-02565 held due since 10-04; tail-pinned anti-copy
+recap on the dup-history face only, non-dup regen faces 零漂移).
 v0.47 (2026-10-14 R1193, T-20261014-01): tenacity @retry on the llm face -
 transient failures (URLError / socket timeout / HTTP 5xx) self-heal in-round
 (wait_exponential min=4 max=30, 3 attempts); a 4xx is a parameter-face error
@@ -1122,13 +1125,30 @@ def gated_llm(prompt, sig, max_regens=3):
     then give up -> None (caller skips; citizen stays due for the next round).
     v0.44 gap #65: max_regens 2->3 (persistent-skip disease, see weather_recap)
     + the last violating line prints on persistent skip - R754 smoke complaint
-    门内跳过零生成痕迹: a skip with no generation trace is undiagnosable."""
+    门内跳过零生成痕迹: a skip with no generation trace is undiagnosable.
+    v0.48 gap #68 (2026-10-15 R1277): dup-history regen attractor - a regen
+    with the SAME prompt re-enters the same attractor (C-02565: 1-ring card,
+    held due since 10-04, the 7B copies the only ring it sees in mem every
+    attempt; the v0.46 (c) mem anti-recopy note sits far upstream = gap #65
+    tail law, a 7B cannot hold it). Fix = tail-pinned anti-copy recap appended
+    ON the dup-history face only, naming the just-rejected line; every other
+    violation family regens on the original prompt (零漂移 for non-dup faces,
+    #44/#53 mirror law: gated_llm serves batch + meet alike). Gate faces
+    untouched (the gate stays the last line of defense)."""
     line = ""
+    v = []
     for _ in range(1 + max_regens):
         line = llm(prompt)
-        if not ring_violations(line, sig):
+        v = ring_violations(line, sig)
+        if not v:
             return line
-    print("gate: persistent violations", ring_violations(line, sig))
+        if "dup-history" in v:
+            prompt = (prompt
+                      + "\n你刚才写的句子与本居民既有年轮逐字重复了（「"
+                      + line.strip()[:60]
+                      + "」）。重写一条全新的：严禁再输出这句或任何与旧年轮相同/高度相似的句子，"
+                        "开头第一句必须换掉，从今日实况里挑一件上次没写过的事。")
+    print("gate: persistent violations", v)
     print("gate: last violating line:", line[:120])
     return None
 
