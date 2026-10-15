@@ -1,0 +1,7 @@
+== BigLife QA Smoke R1308 (2026-10-15 15:5x @BigLife-OSLoop) 五项自验（qa-smoke-test-charter BigLife 节·数据面）==
+① poolgen 跑通（tick 戳）: state/poolgen_run.log 2026-10-15 15:06 — PASS
+② census 新条目（本批环）: 本轮 10 新环=批 6f872aa3 C-02724~C-02733(10)·相遇 0 环（当日 5 场超 cap3 额满·T-20261015-01 在案）；10-15 当日环机器直数 418（registry 414+anchors 4·python os.walk [锚] 直数零差=承 408+10）— PASS
+③ 位置字段非 null: census/export/citizen-behavior.jsonl 抽检 2000 行 slot null=0（sample slot=工位/楼内窗影·state=work·visible=0）— PASS
+④ 行为链再生（--auto）: state/behavior-last.json 2026-10-15T15:13 tick 再生在役·同步面 rows=10 ring_synced=10 随批镜像 572d0a26 在案 — PASS
+⑤ heartbeat 3h 内: state/heartbeat.txt 15:33+本轮末 15:5x 刷新 — PASS
+结论: 5/5 PASS（零 LLM·纯确定性直检）
