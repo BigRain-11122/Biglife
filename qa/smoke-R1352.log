@@ -1,0 +1,6 @@
+qa/smoke-R1352.log - BigLife 数据面自验五项（T-20260928-05 常设随轮件·2026-10-16 01:1x R1352·真实运行输出）
+[1] poolgen 跑通: === 2026-10-16 01:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE -> PASS
+[2] census 新条目: 年轮批 10/10 落环 C-02814~C-02823（0952c291+镜像 1d7bf2d0 rows=10 ring_synced=10）+反思 1 席 C-00022（reflections.jsonl 34 行·10-16 日帽 3/3 满） -> PASS
+[3] 导出面字段非 null: citizens-light recent_ring_date=2026-10-16 命中 40 民（机器直数·双环卡 42 环/40 民口径差合法） -> PASS
+[4] 行为链再生: behavior.py --auto exit=0 -> behavior auto: bucket=night wx=cloud rest=na snd=fest unchanged - skip regen（桶/天气/窗缘零变更 no-op=启动器每 tick 同件在役） -> PASS
+[5] heartbeat 新鲜: 上轮 01:07:09 round done·本轮 01:1x 在写（age<10min）
