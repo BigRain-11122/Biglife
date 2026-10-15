@@ -1790,6 +1790,18 @@ def main():
                 for _l in fh:
                     if '"rel":"meet"' in _l and ('"src":"%s"' % today() in _l or '"last":"%s"' % today() in _l):
                         n_meet_today += 1
+        # v0.49 (T-20261015-01): git 直数主源——当日「相遇」commit 计数（单写者唯一正典·零陈旧面）；
+        # relations R3 出口降为辅源，取 max 双闸。修复 R1304/R1307 出口陈旧两连误放行（R3 再生面
+        # gitignored·陈旧时计数 0）。bytes 计数防 locale 解码坑（只数行数零解码依赖）。
+        n_meet_git = 0
+        try:
+            r = subprocess.run(
+                ["git", "-C", CO, "log", "--oneline", "--since=%s 00:00" % today(),
+                 "--grep=^相遇 "], capture_output=True, timeout=60)
+            n_meet_git = len((r.stdout or b"").splitlines())
+        except Exception:
+            n_meet_git = 0
+        n_meet_today = max(n_meet_today, n_meet_git)
         if n_meet_today >= 3:
             print("meet-cap: %d meets already logged today (cap 3) - skip" % n_meet_today)
             return
