@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""BigLife 基因轮近重预检常设件 v1.0 —— 近重候选清单器（T-20260927-01 分步②·rapidfuzz 开源采用落点件）
+"""BigLife 基因轮近重预检常设件 v1.1 —— 近重候选清单器（T-20260927-01 分步②·rapidfuzz 开源采用落点件）
 
 法源: T-20260927-01（P-2026-09-26-08 开源借力机制令·oss-harvest §五 落点强制·R416 切片 2 采用
 rapidfuzz→本件=工作流变更落点）；分步① 阈值定谳=R417（数据锚定=阈值略高于各池自配对基线峰值）。
 双层判据: Layer A=候选 4-gram 对基因库全文本池重叠扫描（跨池命中合法报——R417「自己退到后」跨池
 判例·Layer A 扫全文本池非仅同型池）；Layer B=同型池 rapidfuzz fuzz.ratio 全串阈值层（高于池内
-任意两条既有条目间最高相似度=统计离群=近重候选·THRESHOLDS cp92/ho95/tp44=R417 基线
-91.667/94.118/43.902 定谳值）。
+任意两条既有条目间最高相似度=统计离群=近重候选·THRESHOLDS cp92/ho95/tp50——cp/ho=R417 基线
+91.667/94.118 定谳值·tp 44→50=CODEX §十二 v3.59 再定谳〔R1319 实锤池内自配对新峰值 48.889
+「工牌」对·照 R417 原式「略高于峰值」重推导〕）。
 红线: 不替换既有禁触发词扫描面（SKILL 查二）与跨面撞句扫描（查三），只加近重候选层；史前近重对
 零触碰只记档（基因库既有条目零字节改动）；预检纯确定性零 LLM。
 用法: --file <候选清单>（每行 `type|text`·type∈cp/ho/tp）或 --candidate "type|text"（可多参）——
@@ -19,11 +20,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
 GENES = os.path.join(CO, "genes")
 
-# 同型池注册表（type -> (池键, Layer B 阈值)·阈值=R417 分步①定谳·再定谳走 CODEX §十二 T2）
+# 同型池注册表（type -> (池键, Layer B 阈值)·cp/ho=R417 定谳·tp50=§十二 v3.59 再定谳·再改走 T2）
 TYPE_POOLS = {
     "cp": ("language.catchphrases", 92.0),
     "ho": ("lives.hook_objects", 95.0),
-    "tp": ("lives.turning_points", 44.0),
+    "tp": ("lives.turning_points", 50.0),
 }
 
 
@@ -163,9 +164,9 @@ def qc():
     # 7) 基线判据成立（阈值仍高于池内自配对峰值=注册判据在效·漂移监控）
     base = baseline(pools)
     check("baseline-criterion", all(v["criterion_ok"] for v in base.values()))
-    # 8) 史前近重对哨兵（cp 91.667/ho 94.118/tp 43.902 三峰值在位=既有条目零触碰在证）
+    # 8) 史前近重对哨兵（cp 91.667/ho 94.118/tp 48.889 三峰值在位=既有条目零触碰在证·tp 峰=v3.59 改判新基线）
     check("baseline-sentinel", base["cp"]["max_ratio"] == 91.667
-          and base["ho"]["max_ratio"] == 94.118 and base["tp"]["max_ratio"] == 43.902)
+          and base["ho"]["max_ratio"] == 94.118 and base["tp"]["max_ratio"] == 48.889)
     # 9) 行解析：type|text 切分+违例行检出
     check("parse-line", parse_candidate_line("cp| 慢慢来 ") == ("cp", "慢慢来")
           and parse_candidate_line("无竖线行")[0] is None)

@@ -17,7 +17,7 @@ description: BigLife 基因轮低频补充作业规程（为 genes/ 语言库与
 
 1. 拟候选：口头禅 +6（六轴各 1 平衡：逍遥/烟火/秩序/求新/怀旧/侠气）+钩子物件 +4（市井旧物·具象可挂场景）；转折点按同法。
 2. 预检三查（禁省）：
-   - 查一 唯一性：python Counter 全库校验+常设件 `python -X utf8 Tools/gene_nearcheck.py --file <候选清单>`（每行 `type|text`·type∈cp/ho/tp——Layer A 全文本池 4-gram 重叠+Layer B 同型池 rapidfuzz 阈值 cp92/ho95/tp44·R417 定谳·exit 1=近重候选清单→换句再验；R149 近重防线常设件化·R418 起手写临时 4-gram 件退役）。
+   - 查一 唯一性：python Counter 全库校验+常设件 `python -X utf8 Tools/gene_nearcheck.py --file <候选清单>`（每行 `type|text`·type∈cp/ho/tp——Layer A 全文本池 4-gram 重叠+Layer B 同型池 rapidfuzz 阈值 cp92/ho95/tp50〔cp/ho=R417 定谳·tp 44→50=§十二 v3.59 再定谳〕·exit 1=近重候选清单→换句再验；R149 近重防线常设件化·R418 起手写临时 4-gram 件退役）。
    - 查二 触发词族零命中：字符级扫描新候选（族表见 §0）。
    - 查三 跨面零撞句：新候选对 cognition/pools.json+greetings.json+负面面双向包含扫描（R102 跨面撞句教训）。
 3. 纯尾追加：编辑 genes/ 对应库文件（尾行加逗号+新行），`json.load` 双件过。
@@ -25,7 +25,7 @@ description: BigLife 基因轮低频补充作业规程（为 genes/ 语言库与
 
 ## 2 判例指针
 
-R40 触发词族纪律立线 / R102 跨面撞句实弹（新句与问候库撞·当轮拦下双修）/ R149 近重候选三换句实录 / R249 预检抓撞实录 / R417 阈值定谳（三池基线 91.667/94.118/43.902→T 92/95/44）/ R418 常设件 gene_nearcheck 交付（灵敏度门 10/10 回收·--qc 15/15）——详 tasks/TASKS.md 对应轮迭代批实录。
+R40 触发词族纪律立线 / R102 跨面撞句实弹（新句与问候库撞·当轮拦下双修）/ R149 近重候选三换句实录 / R249 预检抓撞实录 / R417 阈值定谳（三池基线 91.667/94.118/43.902→T 92/95/44）/ R418 常设件 gene_nearcheck 交付（灵敏度门 10/10 回收·--qc 15/15）/ R1319 tp 池自配对峰值漂移实锤 48.889〔R1312 遗留·T-20261015-02〕→ T2 v3.59 再定谳 tp 44→50+哨兵 43.902→48.889 改判——详 tasks/TASKS.md 对应轮迭代批实录。
 
 ## 3 收尾
 
