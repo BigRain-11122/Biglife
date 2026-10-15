@@ -1,0 +1,7 @@
+qa/smoke-R1378 五项自验（2026-10-16 06:0x · @BigLife-OSLoop · 全部真实运行输出·逐条可复跑）
+①poolgen 跑通（tick 戳）：state/poolgen_run.log 尾行 = "=== 2026-10-16 05:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE"  -> PASS
+②census 新条目（本批 10 环）：evolve_citizen --batch 10 输出 "OK evolved=10 of 10 due / committed rows_changed=10 ring_synced=10"（C-03074~C-03083·批 1d9ea478+镜像 6d006068）  -> PASS
+③位置字段非 null（behavior/atlas slot）：state/_count_r1359.py 输出 "behavior rows=10030 slot_bad=0"  -> PASS
+④行为链再生（--auto v3.7 随批在役）：python -X utf8 Tools/behavior.py --auto 输出 "behavior auto: bucket=night wx=cloud rest=na snd=fest unchanged - skip regen"  -> PASS
+⑤heartbeat 3h 内：state/heartbeat.txt 尾行 = "2026-10-16 05:48:16 os-loop: round done exit=0"（在窗·轮末脚本自动续戳）  -> PASS
+五项全勾。QC 例巡 R1378 同轮兑现：cards=10030 evolved=4851 problems=0 dup_rings=37/37 观测基线零新增（qa/qc-R1378.log）。
