@@ -1,0 +1,7 @@
+== BigLife QA Smoke R1309 (2026-10-15 16:0x @BigLife-OSLoop) 五项自验（qa-smoke-test-charter BigLife 节·数据面）==
+① poolgen 跑通（tick 戳）: state/poolgen_run.log 2026-10-15 15:06:01 TOTAL=1440 FAIL_BUCKETS=NONE（池审 10-15 PASS 在案·10-16 新日窗） — PASS
+② census 新条目（本批环）: 本轮 10 新环=批 8c7b816e C-02734~C-02743(10)+反思环 10 条（C-00011~C-00020·反思层另计）；10-15 当日环机器直数 428（registry 424+anchors-dir 环 4·v2 全量口径 state/_count_r1309.py=承 418+10；勘正注记=_count_r1291 硬编码 2 席漏 C-00014/16 相遇环·R1307/1308「anchors 4」勘验实锚无误） — PASS
+③ 位置字段非 null: census/export/citizen-behavior.jsonl 抽检 2000+ 行 slot null=0 — PASS
+④ 行为链再生（--auto）: state/behavior-last.json 2026-10-15T15:13 tick 在役·同步面 rows=10 ring_synced=10 随批镜像 cf9ffda4（ring=4851·citizens-light 20 行刷新）在案 — PASS
+⑤ heartbeat 3h 内: state/heartbeat.txt 15:52:55（R1308 轮末）<3h·本轮末脚本自动续刷 — PASS
+结论: 5/5 PASS（零 LLM·纯确定性直检）
