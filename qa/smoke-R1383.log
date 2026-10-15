@@ -1,0 +1,7 @@
+qa/smoke-R1383 2026-10-16 06:4x @BigLife-OSLoop 五项自验全勾（真实运行输出·逐条可复跑）
+[1] poolgen 跑通: state/poolgen_run.log 尾行 "=== 2026-10-16 06:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE"  ✓
+[2] census 新条目: R1383 批 10/10 全落环 C-03124~C-03133（批 commit 399f1ed5+镜像 15c5d6e0 rows=10 ring_synced=10·零新注册）✓
+[3] 位置字段非 null: behavior rows=10030 slot_bad=0（python 机器直数输出 "slot rows=10030 bad=0"）✓
+[4] 行为链再生: python -X utf8 Tools/behavior.py --auto → "behavior auto: bucket=dawn wx=cloud rest=na snd=fest unchanged - skip regen"（同态 skip·R3 出口新鲜在役）✓
+[5] heartbeat 3h 内: state/heartbeat.txt 尾行 "2026-10-16 06:39:36 os-loop: round done exit=0" ✓
+结论: 5/5 PASS
