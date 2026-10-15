@@ -28,7 +28,8 @@ PERSONA = os.path.join(CO, "census", "export", "citizen-persona.jsonl")
 ROOT = os.path.abspath(os.path.join(CO, "..", ".."))
 FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
 OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
-MODEL = os.environ.get("BIGLIFE_MODEL", "qwen2.5:7b-instruct")
+MODEL = os.environ.get("BIGLIFE_MODEL", "qwen3.6-35b")
+LLM_URL = os.environ.get("BIGLIFE_LLM_URL", "http://127.0.0.1:8090/v1/chat/completions")
 MAXLEN = 60
 WHITELIST = {"C-%05d" % i for i in range(10, 30)}   # anchor core (v1.2: rotation adds daily 100)
 _ROT_CACHE = {}
@@ -201,12 +202,16 @@ def build_prompt(row, sig, mem, history, question, persona, mood):
 
 def llm(prompt, temp):
     req = urllib.request.Request(
-        OLLAMA.rstrip("/") + "/api/generate",
-        data=json.dumps({"model": MODEL, "prompt": prompt, "stream": False,
-                         "options": {"temperature": temp, "num_predict": 100}}).encode("utf-8"),
+        LLM_URL,
+        data=json.dumps({"model": MODEL,
+                         "messages": [{"role": "user", "content": prompt}],
+                         "max_tokens": 100, "temperature": temp,
+                         "chat_template_kwargs": {"enable_thinking": False}}).encode("utf-8"),
         headers={"Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=120) as resp:
-        return json.loads(resp.read().decode("utf-8")).get("response", "")
+        j = json.loads(resp.read().decode("utf-8"))
+        return ((j.get("choices") or [{}])[0].get("message") or {}
+                ).get("content", "")
 
 def answer(row, sig, history, question, persona, mood):
     rings = load_rings(row["id"], row.get("district"))

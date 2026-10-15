@@ -499,7 +499,8 @@ CURSOR = os.path.join(STATE_DIR, "evolve-cursor.json")
 ROOT = os.path.abspath(os.path.join(CO, "..", ".."))
 FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
 OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
-MODEL = os.environ.get("BIGLIFE_MODEL", "qwen2.5:7b-instruct")
+MODEL = os.environ.get("BIGLIFE_MODEL", "qwen3.6-35b")
+LLM_URL = os.environ.get("BIGLIFE_LLM_URL", "http://127.0.0.1:8090/v1/chat/completions")
 COOLDOWN_DAYS = 7
 REFLECT_MIN_RINGS = 3   # V2-B: a reflection needs a life to look back on
 POOL_CAP = 2            # T-20260925-01: soft per-batch cap for cross-card pool-gene quotes
@@ -621,15 +622,18 @@ except ImportError:  # synced machine without the local pip: single-shot, as bef
 @_llm_retry
 def llm(prompt):
     req = urllib.request.Request(
-        OLLAMA.rstrip("/") + "/api/generate",
-        data=json.dumps({"model": MODEL, "prompt": prompt, "stream": False,
-                         "options": {"temperature": 0.8, "num_predict": 120}}).encode("utf-8"),
+        LLM_URL,
+        data=json.dumps({"model": MODEL,
+                         "messages": [{"role": "user", "content": prompt}],
+                         "max_tokens": 120, "temperature": 0.8,
+                         "chat_template_kwargs": {"enable_thinking": False}}).encode("utf-8"),
         headers={"Content-Type": "application/json"})
-    # BIGLIVE_LLM_TIMEOUT: CPU-only lane (CEO-CPU-OPEN-LAW O-20261013-2215) needs
-    # 90-150s/request; default 90 keeps the GPU lane unchanged.
+    # BIGLIVE_LLM_TIMEOUT: 35B-A3B fleet brain lane (:8090, O-20261015-1335), ~38 chars/s.
     with urllib.request.urlopen(
-        req, timeout=int(os.environ.get("BIGLIVE_LLM_TIMEOUT", "90"))) as r:
-        return json.loads(r.read().decode("utf-8")).get("response", "").strip()
+        req, timeout=int(os.environ.get("BIGLIVE_LLM_TIMEOUT", "120"))) as r:
+        j = json.loads(r.read().decode("utf-8"))
+        return ((j.get("choices") or [{}])[0].get("message") or {}
+                ).get("content", "").strip()
 
 def ring_violations(line, sig):
     """gap #12 honesty gate: machine-check an LLM ring against the fed signals.
