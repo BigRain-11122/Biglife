@@ -1,0 +1,7 @@
+== BigLife QA Smoke R1372 (2026-10-16 04:57) ==
+[1] poolgen tick: === 2026-10-16 04:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] census new rings: 10/10 (C-03014~C-03023) OK
+[3] behavior slot non-null: rows=10030 bad=0 OK
+[4] behavior chain: mirror 9a13735c rows=10 in-batch; behavior mtime=23:03 (bucket=night wx=cloud unchanged-skip)
+[5] heartbeat last line: 2026-10-16 04:49:08 os-loop: round done exit=0
+== five checks all PASS ==
