@@ -1,0 +1,19 @@
+# qa/smoke-R1376.log — BigLife 五项数据面自验（qa-smoke-test-charter BigLife 节）
+# 时间: 2026-10-16 05:35 @BigLife-OSLoop R1376  承 R1375 例（逐条可复跑·真实输出摘录）
+
+[1] poolgen 跑通（tick 戳·state/poolgen_run.log 尾）
+    === 2026-10-16 05:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE   -> PASS
+
+[2] census 新条目（本批 10 环）
+    committed rows_changed=10 ring_synced=10  OK evolved=10 of 10 due  ->  C-03054~C-03063  批 a0caf149 + 镜像 a13fb3f5(rows=10 ring=4851)   -> PASS
+
+[3] 位置字段非 null（behavior slot 机检·state/_count_r1359.py 内联直数）
+    behavior rows=10030 slot_bad=0   -> PASS
+
+[4] 行为链再生（--auto v3.7 随批在役）
+    behavior auto: bucket=night wx=cloud rest=na snd=fest unchanged - skip regen   -> PASS（跨桶/跨天气变更才再生·同态合法 skip）
+
+[5] heartbeat 3h 内
+    state/heartbeat.txt 尾行 2026-10-16 05:32:12 os-loop: round done exit=0 + 轮末脚本再落本轮戳   -> PASS
+
+结论: 5/5 全勾
