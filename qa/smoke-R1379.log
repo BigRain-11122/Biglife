@@ -1,0 +1,7 @@
+qa/smoke-R1379 五项自验（2026-10-16 06:1x · @BigLife-OSLoop · 全部真实运行输出·逐条可复跑）
+①poolgen 跑通（tick 戳）：state/poolgen_run.log 尾行 = "=== 2026-10-16 06:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE"  -> PASS
+②census 新条目（本批 10 环）：evolve_citizen --batch 10 输出 "OK evolved=10 of 10 due / committed rows_changed=10 ring_synced=10"（C-03084~C-03093·批 ee180f0f+镜像 62ef3f01）  -> PASS
+③位置字段非 null（behavior/atlas slot）：state/_count_r1359.py 输出 "behavior rows=10030 slot_bad=0"（registry 10-16 全域环=312 同跑直数零差）  -> PASS
+④行为链再生（--auto v3.7 随批在役）：python -X utf8 Tools/behavior.py --auto 输出 "rows=10030 bad=0 ... tw=night wx=clear wd=4 top3=[('sleep',7117),('charge',2003),('night_light',503)]"——天气变更 cloud→clear 触发再生活动跑（T-20260925-11 ②天气变更加跑判据实锚）  -> PASS
+⑤heartbeat 3h 内：state/heartbeat.txt 尾行 = "2026-10-16 05:59:59 os-loop: round done exit=0"（在窗·轮末脚本自动续戳）  -> PASS
+五项全勾。
