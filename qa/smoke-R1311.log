@@ -1,0 +1,7 @@
+== BigLife QA Smoke R1311 (2026-10-15 16:3x @BigLife-OSLoop) 五项自验（qa-smoke-test-charter BigLife 节·数据面）==
+① poolgen 跑通（tick 戳）: state/poolgen_run.log 2026-10-15 16:06:01 TOTAL=1440 FAIL_BUCKETS=NONE（池审 10-15 PASS 在案·10-16 新日窗） — PASS
+② census 新条目（本批环）: 本轮 R1311 新环 0（Ollama 双通道停摆让路态·fail-safe 静默跳过·due 10 席顺延）；R1310 被杀轮收核=批 39c5e3e8 C-02744~C-02753(10)+反思环 5 条（C-00021~C-00025·反思层另计）+闸修 e288b1a5；10-15 当日环机器直数 438（registry 434+anchors-dir 环 4·state/_count_r1309.py v2 全量口径） — PASS
+③ 位置字段非 null: census/export/citizen-behavior.jsonl 全量 10030 行 slot null=0 — PASS
+④ 行为链再生（--auto）: state/behavior-last.json 2026-10-15T15:13 tick 在役·本轮 sync_rings 补账镜像（被杀轮批 39c5e3e8 镜像未落=补收 rows=10 ring_synced=10）已 commit — PASS
+⑤ heartbeat 3h 内: state/heartbeat.txt 16:23:02（R1310 超时杀行）<3h·本轮末脚本自动续刷 — PASS
+结论: 5/5 PASS（零 LLM·纯确定性直检·生成面让路态不计 fail）
