@@ -1,0 +1,8 @@
+# BigLife QA Smoke Test R1367 @ 2026-10-16 04:08 [via BigLife-OSLoop]
+[1] poolgen 跑通: state/poolgen_run.log 尾行 === 2026-10-16 04:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE -> PASS
+[2] census 新条目: 年轮批 10/10 evolved（C-02964~C-02973·commit 9668913b·rows_changed=10 ring_synced=10·零新注册） -> PASS
+[3] 位置字段非 null: citizen-behavior.jsonl rows=10030 slot_bad=0（全行 slot 非空·机器直数） -> PASS
+[4] 行为链再生: python -X utf8 Tools/behavior.py --auto -> bucket=night wx=cloud rest=na snd=fest unchanged - skip regen（触发检测实跑·R3 出口新鲜） -> PASS
+[5] heartbeat 3h 内: state/heartbeat.txt 尾行 2026-10-16 03:59:51 os-loop: round done exit=0 -> PASS
+附: 10-16 全域环 192 机器直数零差（registry 192·state/_count_r1359.py 复用·light 190 民命中·C-02784/C-02786 双环卡=192 环/190 民口径差合法）
+五项全勾 PASS @2026-10-16 04:08
