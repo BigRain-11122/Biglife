@@ -1,0 +1,7 @@
+qa/smoke-R1369.log — 2026-10-16 04:26 @BigLife-OSLoop（数据面自验五项·章程 BigLife 节）
+[1] poolgen 跑通: === 2026-10-16 04:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE  ✓
+[2] census 新条目: 本批 10 新环 C-02984~C-02993（批 8393fd74+镜像 878a4de5 rows=10 ring_synced=10·零新注册）  ✓
+[3] 位置字段非 null: behavior rows=10030 slot_bad=0（state/_count_r1359.py 实测）  ✓
+[4] 行为链再生: behavior --auto → bucket=night wx=cloud rest=na snd=fest unchanged - skip regen（状态未变零再生=正确跳过）  ✓
+[5] heartbeat 3h 内: 2026-10-16 04:19:52 os-loop: round done exit=0  ✓
+五项全勾。可复跑命令：python -X utf8 state/_count_r1359.py / python -X utf8 Tools/behavior.py --auto
