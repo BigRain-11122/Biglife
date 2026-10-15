@@ -1,0 +1,8 @@
+=== BigLife qa/smoke R1386 · 2026-10-16 07:16 · [via BigLife-OSLoop] ===
+[1] poolgen 跑通（tick 戳）: PASS — state/poolgen_run.log 尾行 2026-10-16 07:06:01 tick src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（06:06:01 前戳同窗在册）
+[2] census 新条目（本批 10 环）: PASS — 年轮批 10/10 全落环 C-03154~C-03163（commit 2aaae3e6+镜像 a64f8976 rows=10 ring_synced=4851·:8090 35B 一次通·零新注册）
+[3] 位置字段非 null: PASS — citizen-behavior.jsonl slot rows=10030 bad=0（python 机器直数）
+[4] 行为链再生: PASS — behavior.py --auto bucket=dawn wx=cloud rest=na snd=fest unchanged - skip regen（同态跳过=链已同步·无变更面合法）
+[5] heartbeat 3h 内: PASS — state/heartbeat.txt 尾行 2026-10-16 07:08:10 os-loop: round done exit=0
+附加: 核卡抽验 2/2（C-03154「风挺大…蹲在塔底钓鱼，单子来了就接」/C-03163「包在我身上…茶馆刚开壶」[锚]注脚+口头禅入语+风况措辞与实况符零违禁）+export 续鲜 382 零差（registry 382/light 380 双机器直数·state/_upd_export_r1386.py 断言全过）
+五项全勾 · 证据=本文件+git log 2aaae3e6/a64f8976
