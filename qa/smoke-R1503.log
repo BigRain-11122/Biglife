@@ -1,0 +1,8 @@
+BigLife QA Smoke R1503 @ 2026-10-17 06:53
+[1] poolgen tick: tail: === 2026-10-17 06:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE -> PASS
+[2] census new rings commit: 7de01da7 年轮环(既有居民迭代·零新注册) 2026-10-17: C-03624..C-03633 -> PASS
+[3] behavior slot/anchor non-null: rows=10030 bad=0 (behavior --qc) -> PASS
+[4] behavior --auto regen: bucket=dawn wx=cloud unchanged - skip regen -> PASS
+[5] heartbeat fresh: last: 2026-10-17 06:53 R1503 alive rings_today=306 -> PASS
+5/5 PASS
+rows=10030 bad=0 tw=dawn wx=cloud wd=5 top3=[('home', 6150), ('work', 2003), ('exercise', 1877)] crash=0 recovering=2850
