@@ -1,0 +1,9 @@
+qa/smoke-R1468 五项自验（R1468 复产常态轮·晚间复产窗第十四班·QC 例巡兑现轮·2026-10-16 21:5x~22:0x）——五项全勾
+①poolgen 跑通: poolgen_run.log 尾行 === 2026-10-16 21:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE 满额自停
+②census 新条目: 年轮批 10/10 落环 C-03384~C-03393（批 5711ccf2+行为镜像 a871b83e rows=10 ring_synced=4851·registry 机器直数 614=604+10 零差·light recent_ring_date=2026-10-16 命中 610 民）
+③位置字段非 null: behavior rows=10030 bad=0（slot 面随 --qc 断言·bad=0 含 slot 非空检查）
+④行为链再生: behavior --auto unchanged-skip（bucket=eve wx=cloud rest=eve snd=fest）+--qc rows=10030 bad=0（top3 social 4742/rest_eve 2782/work 2003·crash=0 recovering=2850）
+⑤heartbeat 3h 内: 2026-10-16 21:44:33 os-loop: round done exit=0
+QC 例巡 R1468 到期兑现全绿（cards=10030 evolved=4851 problems=0 dup_rings=37/37 观测基线零新增·QC-REPORT.md 21:56 续鲜+qa/qc-R1468.log 随轮入库·例巡位重置 ≥R1474）
+核卡抽验 2/2 PASS（C-03384 沈Ruby「船到桥头自然直」口头禅逐字+行话「润译」入语/C-03393 段德明「以前我们那儿……」口头禅逐字+信条「老唱片」自洽呼应——[锚] 注脚齐·风况措辞与实况符〔eve/cloud/wd4〕·零违禁零编造）
+export 续鲜 VERIFY-OK（results 142→143·export_ts 22:00·registry=614 anchors=0 total=614 light=610·段头断言 **R1468（ 全形防 R1463 里程碑行假阳性）
