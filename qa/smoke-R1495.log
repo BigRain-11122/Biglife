@@ -1,0 +1,7 @@
+smoke R1495 @ 2026-10-17 05:2x
+[1] pool audit (语言线门·日额复证): verdict=PASS SELF_TERMINATE — axes 72/72 sprite 12/12 greet 28/28 faq 7/7 neg 6/6 at_target · TOTAL=1440 · under_target NONE · determinism 192+25 mismatch=0
+[2] census new rings commit: 6665c8d7 年轮环(既有居民迭代·零新注册) 2026-10-17: C-03544, C-03545, C-03546, C-03547, C-03548, C-03549, C-03550, C-03551, C-03552, C-03553 [via BigLife-OSLoop] + 行为镜像 eef321a8 rows=10 ring=4851
+[3] behavior regen+qc: --auto + --qc rows=10030 bad=0 tw=night wx=clear wd=5 top3=[('sleep', 7388), ('charge', 2003), ('night_light', 503)] crash=0 recovering=2850
+[4] gene-round gates: nearcheck 11/11 CLEAN exit=0 (三轮换句 9→3→0) · trigger/intra/crossface 3 GATES PASS · prefix-drift assert PASS · post-baseline criterion_ok x3 true · --qc battery 15 PASS 0 FAIL · qa/gene-round-R1495.log
+[5] heartbeat: 2026-10-17 05:16 R1495 alive rings_today=226 export_ts=2026-10-17 05:15 [via BigLife-OSLoop]
+RESULT: 5/5
