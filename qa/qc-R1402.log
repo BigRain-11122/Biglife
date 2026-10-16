@@ -1,0 +1,5 @@
+QC 例巡 R1402（2026-10-16 10:0x·pauseLite 让路墙日窗纯确定性兑现·例巡位 R1396→R1402 六轮周期到期）
+命令: python -X utf8 Tools/qc_census.py
+实跑输出:
+QC done cards=10030 evolved=4851 problems=0 dup_rings=37/37
+判读: problems=0 全绿；dup_rings=37/37=观测基线（R1372 起持平零新增）；census/QC-REPORT.md 随轮续鲜；例巡位重置 ≥R1408
