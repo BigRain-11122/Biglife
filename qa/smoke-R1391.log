@@ -1,0 +1,7 @@
+1.poolgen tick: === 2026-10-16 08:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+2.census 本批新环: 年轮 10 环 C-03204~C-03213 (批 5dde611e+镜像 46224bfe rows=10)
+3/4.behavior --auto: rows=10030 bad=0 ctx_hb=2 weather=cloud events=['COMMIT', 'GAME_STAGE', 'GATE_PASS', 'GITHUB_EVENT', 'OS_TICK_DONE', 'OS_TICK_START'] crash=0 recovering=2850
+rows=10030 bad=0 tw=empk wx=cloud wd=4 top3=[('commute', 7650), ('exercise', 1877), ('home', 503)] crash=0 recovering=2850
+3.slot/--qc: rows=10030 bad=0 tw=empk wx=cloud wd=4 top3=[('commute', 7650), ('exercise', 1877), ('home', 503)] crash=0 recovering=2850
+5.heartbeat 尾行: 2026-10-16 08:04:37 os-loop: round done exit=0
+（注：python 三编码读盘全败=shell Get-Content 兜底直读·时间戳在窗判定不受影响）
