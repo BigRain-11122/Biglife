@@ -1,0 +1,5 @@
+1.poolgen tick: === 2026-10-16 08:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE（水位满额 at-target 零生成自停设计态·09:00 pauseLite 窗内候让路面 tick 顺延合法）
+2.census 本批新环: 0 环（09:00 pauseLite 让路墙·evolve 实报 `ollama down; batch paused at 0`=工作日口令制 O-20261015-1845 设计态·晚间候「开工」口令恢复·代偿证据=QC 全绿 cards=10030 evolved=4851 problems=0）
+3/4.behavior --auto: behavior auto: bucket=empk wx=cloud rest=na snd=fest unchanged - skip regen
+3.slot/--qc: rows=10030 bad=0 tw=empk wx=cloud wd=4 top3=[('commute', 7650), ('exercise', 1877), ('home', 503)] crash=0 recovering=2850
+5.heartbeat 尾行: 2026-10-16 08:58:21 os-loop: round done exit=0（在窗 3h 内·shell 直读过）
