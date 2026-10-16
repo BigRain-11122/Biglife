@@ -1,0 +1,9 @@
+=== qa/smoke-R1473 2026-10-17 00:0x 五项自验（R1473 轮·复产常态轮·晚间复产窗第十九班）===
+[1] poolgen 跑通: poolgen_run.log 尾戳 2026-10-16 23:06:02 tick src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（满额自停） PASS
+[2] census 新条目: 本批 10 环 C-03444~C-03453（批 de98bf4f+行为镜像 451f74bb rows=10 ring_synced=4851）零新注册 PASS
+[3] 位置字段非 null: behavior slot rows=10030 bad=0 PASS
+[4] 行为链再生: behavior --auto bucket=night wx=clear rest=na snd=fest unchanged - skip regen PASS
+[5] heartbeat 3h 内: 2026-10-16 23:43:03 os-loop 行在窗（前班超时痕如实记·R1472 收口 commit 647c9fd1 在库=收口完整） PASS
+verdict: 5/5 PASS
+另: 10-17 新日窗池审首证 pool_audit verdict=PASS under_target NONE-SELF_TERMINATE hard_fails=0 determinism 192 pairs mismatch=0（满额自停零生成零 commit）
+另: export 续鲜 state/_upd_export_r1473.py VERIFY-OK results=148 10-16 全域环 674（registry 674/light 670）
