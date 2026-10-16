@@ -1,0 +1,7 @@
+qa/smoke-R1467 五项自验（R1467 复产常态轮·晚间复产窗第十三班·2026-10-16 21:3x~21:4x）——五项全勾
+①poolgen 跑通: poolgen_run.log 尾行 === 2026-10-16 21:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE 满额自停
+②census 新条目: 年轮批 10/10 落环 C-03374~C-03383（批 507b7a5b+行为镜像 923cf6e3 rows=10 ring_synced=4851·registry 机器直数 604=594+10 零差·light recent_ring_date=2026-10-16 命中 600 民）
+③位置字段非 null: behavior rows=10030 bad=0（slot 面随 --qc 断言·bad=0 含 slot 非空检查）
+④行为链再生: behavior --auto unchanged-skip（bucket=eve wx=cloud rest=eve snd=fest）+--qc rows=10030 bad=0（top3 social 4742/rest_eve 2782/work 2003·crash=0 recovering=2850）
+⑤heartbeat 3h 内: 2026-10-16 21:29:37 os-loop: round done exit=0
+核卡抽验 2/2 PASS（C-03374「多个人多双筷子」口头禅+「得劲」底色入语/C-03383「先试了再说」口头禅逐字入语——[锚] 注脚齐·风况措辞与实况符〔eve/cloud/wd4〕·零违禁零编造）
