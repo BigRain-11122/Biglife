@@ -1,0 +1,7 @@
+smoke R1494 @ 2026-10-17 05:00:53
+[1] poolgen tick: === 2026-10-17 04:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] census new rings commit: c1d6208a 年轮环(既有居民迭代·零新注册) 2026-10-17: C-03534, C-03535, C-03536, C-03537, C-03538, C-03539, C-03540, C-03541, C-03542, C-03543 [via BigLife-OSLoop]
+[3] behavior anchor fields non-null: OK (rows=10030 null-anchor rows=3 all-honored=['C-00001', 'C-00002', 'C-00003'])
+[4] behavior regen: auto unchanged-skip (bucket=night wx=cloud snd=fest) + qc rows=10030 bad=0 tw=night wx=cloud wd=5 top3=[('sleep', 7388), ('charge', 2003), ('night_light', 503)] crash=0 recovering=2850
+[5] heartbeat: 2026-10-17 05:00 R1494 alive rings_today=216 export_ts=2026-10-17 05:00 [via BigLife-OSLoop]
+RESULT: 5/5
