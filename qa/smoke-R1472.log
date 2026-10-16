@@ -1,0 +1,28 @@
+== BigLife QA Smoke 自验 R1472 · 2026-10-16 23:3x · T-20260928-05 五项（数据面自验·真实运行输出·逐条可复跑）==
+
+[1] poolgen 跑通（tick 戳新鲜）:
+  state/poolgen_run.log 尾行: === 2026-10-16 23:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+  -> PASS（满额自停=水位 18/12 达标设计态·语言线 R1460 已兑日额）
+
+[2] census 新条目（本批年轮 10 环）:
+  git log: c9c665eb 年轮环(既有居民迭代·零新注册) 2026-10-16: C-03434..C-03443 [via BigLife-OSLoop]
+  批实跑: OK evolved=10 of 10 due
+  -> PASS（零新注册·停造人令红线维持）
+
+[3] 位置字段非 null（behavior/slot 面）:
+  python -X utf8 Tools/behavior.py --qc -> rows=10030 bad=0 tw=night wx=clear wd=4
+  top3=[('sleep',7388),('charge',2003),('night_light',503)] crash=0 recovering=2850
+  -> PASS（10030 行全量 bad=0）
+
+[4] 行为链再生（--auto 触发面）:
+  python -X utf8 Tools/behavior.py --auto -> bucket=night wx=clear rest=na snd=fest unchanged - skip regen
+  -> PASS（同态 unchanged-skip=链路健康·天气翻转 cloud→clear 已由 23:23:02 再生消费在案〔behavior-last 实锚〕）
+
+[5] heartbeat 3h 内:
+  state/heartbeat.txt 尾行: 2026-10-16 23:18:08 os-loop: round done exit=0
+  -> PASS（本班 23:2x 在窗）
+
+== 附:年轮批 10 环全貌抽验（state/_ring_scan_r1472.txt 落盘证据）==
+  [锚] 注脚 10/10 齐；风词 10/10 与 wd=4 实况符（风不小/风挺大）；晴评估 5 环（C-03435/36/37/38/43「天清气朗/天色还清朗」）与 wx=clear 实况符——cloud→clear 翻面（~23:23）被本批正确消费；夜词合规；零违禁零编造；口头禅/行话入语抽验 2/2 PASS。
+
+VERDICT: 5/5 PASS
