@@ -1,0 +1,7 @@
+qa/smoke-R1432 2026-10-16 15:0x @BigLife-OSLoop（pauseLite 让路窗·纯确定性自验·零 LLM）
+[1] poolgen 跑通: === 2026-10-16 15:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE => PASS
+[2] census 新条目: 10-16 全域环 472 承行（R1348~R1395 晨窗批在案·09:00 让路墙后零新环=工作日口令制 O-20261015-1845 设计态·evolve 实报 ollama down; batch paused at 0）·light recent_ring_date=2026-10-16 命中 470 民（rows=10030·472 环/470 民双环卡口径差合法） => PASS（承）
+[3] 位置字段非 null: citizen-behavior.jsonl rows=10030 slot bad=0 => PASS
+[4] 行为链再生: behavior --auto rc=0 | behavior auto: bucket=day wx=cloud rest=na snd=fest unchanged - skip regen | --qc rows=10030 bad=0（top3 work 6745/home 1455/leisure_park 925·crash=0 recovering=2850·rest=nap→na 时段漂移合法） => PASS
+[5] heartbeat 3h 内: 2026-10-16 14:57:21 os-loop: round done exit=0 => PASS
+五项=5/5——证据=本文件·可复跑（python -X utf8 Tools/behavior.py --auto + state/poolgen_run.log 尾行 + census/export 双面直数）
