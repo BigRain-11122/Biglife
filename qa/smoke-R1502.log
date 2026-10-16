@@ -1,0 +1,7 @@
+BigLife QA Smoke R1502 @ 2026-10-17 06:41
+[1] poolgen tick: tail: === 2026-10-17 06:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=14 -> PASS
+[2] census new rings commit: 7c08e5f0 年轮环(既有居民迭代·零新注册) 2026-10-17: C-03614, C-03615, C-03616, C-036 -> PASS
+[3] behavior slot/anchor non-null: rows=10030 sampled_anchor_bad=0 -> PASS
+[4] behavior --auto regen: behavior mtime 12 min ago -> PASS
+[5] heartbeat fresh: last: 2026-10-17 06:30:51 os-loop: round done exit=0 -> PASS
+5/5 PASS
