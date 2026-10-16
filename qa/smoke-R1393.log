@@ -1,0 +1,7 @@
+1.poolgen tick: === 2026-10-16 08:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+2.census 本批新环: 年轮 10 环 C-03224~C-03233 (批 21771841+镜像 956eb57d rows=10 ring_synced=10)
+3/4.behavior --auto: bucket=empk wx=cloud rest=na snd=fest unchanged - skip regen
+rows=10030 bad=0 tw=empk wx=cloud wd=4 top3=[('commute', 7650), ('exercise', 1877), ('home', 503)] crash=0 recovering=2850
+3.slot/--qc: rows=10030 bad=0 tw=empk wx=cloud wd=4 top3=[('commute', 7650), ('exercise', 1877), ('home', 503)] crash=0 recovering=2850
+5.heartbeat 尾行: 2026-10-16 08:28:50 os-loop: round done exit=0
+（附）核卡抽验 2/2: C-03228「风挺大，吹得云头乱滚。刚听完G08的结算声，这节奏比巡街还紧」[锚] 注脚+风况措辞与实况符+G08=当日事件实锚 PASS；C-03233「风挺大，吹得榜单直晃悠。Bigmedia 那波推送刚落，我端着汤跟对门老李撞见…破防就破防吧」[锚] 注脚+Bigmedia=当日事件流实锚+风况措辞与实况符 PASS——零违禁零编造
