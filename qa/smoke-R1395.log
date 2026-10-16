@@ -1,0 +1,6 @@
+1.poolgen tick: === 2026-10-16 08:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+2.census 本批新环: 年轮 10 环 C-03244~C-03253 (批 428d83cc+镜像 11e4ae4d rows=10)
+3/4.behavior --auto: behavior auto: bucket=empk wx=cloud rest=na snd=fest unchanged - skip regen
+3.slot/--qc: rows=10030 bad=0 tw=empk wx=cloud wd=4 top3=[('commute', 7650), ('exercise', 1877), ('home', 503)] crash=0 recovering=2850
+5.heartbeat 尾行: <unreadable>
+5b.shell兜底直读: 2026-10-16 08:46:42 os-loop: round done exit=0（在窗·python三编码读盘败=R1391同型非缺陷）
