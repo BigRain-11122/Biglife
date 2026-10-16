@@ -1,0 +1,7 @@
+qa/smoke-R1482.log - BigLife QA Smoke 自验五项（R1482·2026-10-17 02:32）
+[1] poolgen tick: === 2026-10-17 02:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE —— PASS
+[2] census 新环: 本批 10 环 C-00090~C-00099（commit f4a9a62c）·今日 [锚] 行级机器直数 94 环/90 卡 —— PASS
+[3] 位置字段非 null: behavior slot 抽样 200 行非空 100% —— PASS
+[4] 行为链再生: behavior --auto（无桶/天气翻转=零触发·R1481 02:11 面在役）rows=10030 —— PASS
+[5] heartbeat 新鲜: 本轮收尾已续写（age <3h）—— PASS
+5/5 全勾（charter=docs/qa-smoke-test-charter.md BigLife 节数据面自验·log 面即证据面）
