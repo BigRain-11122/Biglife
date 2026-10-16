@@ -1,0 +1,7 @@
+BigLife QA Smoke R1501 @ 2026-10-17 06:30
+[1] poolgen tick: tail: === 2026-10-17 06:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=14 -> PASS
+[2] census rings today: 286 rings / 280 cards -> PASS
+[3] behavior slot/anchor non-null: rows=10030 sampled_anchor_bad=0 -> PASS
+[4] behavior --auto regen: behavior mtime 0 min ago -> PASS
+[5] heartbeat fresh: last: 2026-10-17 06:22:06 os-loop: round done exit=0 -> PASS
+5/5 PASS
