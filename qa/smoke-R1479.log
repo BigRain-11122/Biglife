@@ -1,0 +1,6 @@
+qa/smoke-R1479 2026-10-17 01:27
+[1] poolgen tick: PASS | === 2026-10-17 01:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] census rings 10-17: 62 (R1474 12+R1475 10+R1476 10+R1477 10+R1478 10+R1479 10) => PASS
+[3] light rows=10030 (expect 10030) => PASS
+[4] behavior export rows=10030 (expect 10030) => PASS | sync_rings rows=10 this round (599e4010); --auto regen on bucket/weather change
+[5] heartbeat age 10 min (<180) => PASS
