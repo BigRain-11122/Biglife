@@ -1,0 +1,8 @@
+# BigLife QA Smoke 五项自验 R1504 · 2026-10-17 07:1x @BigLife-OSLoop
+# 判据=docs/qa-smoke-test-charter.md（本司适配=数据面自验·log 面即证据面）
+[1] poolgen 跑通: PASS — poolgen_loop tick 2026-10-17 06:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（state/poolgen_run.log 尾行·<1h 新鲜）
+[2] census 新条目: PASS — R1504 批 10/10 新写环 C-03634~C-03643（批 9149ad79+镜像 1a909171 rows=10 ring_synced=4851·[锚] 行级机器直数=316 与批账 306+10 零差）
+[3] 位置字段非 null: PASS — behavior --qc rows=10030 bad=0（dawn/cloud/wd5·top3 home 6150/work 2003/exercise 1877·anchor 面权威判据=behavior --qc rows/bad〔R1503 谓词勘误口径承袭〕）
+[4] 行为链再生: PASS — behavior --auto bucket=dawn wx=cloud rest=na snd=fest unchanged - skip regen（同窗 unchanged-skip=合法态·跨桶/跨天气触发器在役）+ --qc rows=10030 bad=0
+[5] heartbeat 3h 内: PASS — state/heartbeat.txt 尾行 2026-10-17 06:54:19 os-loop: round done exit=0（<3h·轮末由启动器续写）
+5/5 全勾（实跑证据随行可复跑）
