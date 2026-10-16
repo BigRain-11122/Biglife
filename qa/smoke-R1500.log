@@ -1,0 +1,11 @@
+BigLife QA Smoke R1500 @ 2026-10-17 06:20
+[1] poolgen tick: tail: === 2026-10-17 06:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=14 -> PASS
+[2] census rings today: 276 rings / 270 cards -> PASS
+[3] behavior slot/anchor non-null: rows=10030 sampled_anchor_bad=1 -> FAIL (false-negative: C-00001 荣誉席 anchor=null 设计态〔v3.55 明文豁免〕)
+[4] behavior --auto regen: behavior mtime 58 min ago -> PASS
+[5] heartbeat fresh: last: 2026-10-17 06:11:50 os-loop: round done exit=0 -> PASS
+4/5 PASS
+
+[3-fix] recheck with honored-seat exemption: rows=10030 bad=0 -> PASS
+勘误注记: 首跑 4/5 假阴性=R1499 同型（检查谓词漏豁免荣誉席 anchor=null 设计态·T-20260929-06 v3.55 明文「荣誉席 3 席 anchor=null」）·补豁免谓词复检 5/5 收口 @ 2026-10-17 06:21
+5/5 PASS
