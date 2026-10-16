@@ -1,6 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.48 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.50 - BigLife citizen evolution engine.
+v0.50 (2026-10-16 R1469, gap #69): stray-quote gate - a lone U+201D where
+the 「」 style belongs is the same-day 3x hand-fixed defect (C-03153 /
+C-03223 / C-03283), and the R1469 census per-line scan found the family
+much wider: 31 unpaired U+201C/U+201D ring lines (mostly 10-15/16
+batches) - historical, not retro (#41). Gate flags the UNPAIRED shape only
+(count mismatch); PAIRED curly quotes (16 census lines) are a tolerated
+style and stay legal; zero face-section hits = 零误伤. Birth-site close per
+缺陷出生地拦截律; CEO 10-14 search-first law honored (GitHub punctuation
+wheels: none in the half->full direction -> self-write, OH-20261016-biglife
+slice 1). Straight U+0022 stray unobserved, stays out flat (#46/#51).
 v0.48 (2026-10-15 R1277, gap #68): dup-history regen attractor close - see the
 gated_llm docstring (C-02565 held due since 10-04; tail-pinned anti-copy
 recap on the dup-history face only, non-dup regen faces 零漂移).
@@ -1122,6 +1132,19 @@ def ring_violations(line, sig):
     # (face is not the ring corpus). ct absent -> check off (#18/#24/#25 design).
     if ct is not None and self_dup_history(line, ct):
         v.append("dup-history")
+    # v0.50 gap #69 (2026-10-16 R1469): stray English curly quote guard -
+    # three same-day hand-fixed strikes (C-03153 R1385 / C-03223 R1392 /
+    # C-03283 R1457, all a lone U+201D after a catchphrase), and the R1469
+    # census per-line scan found the family much wider: 31 unpaired
+    # U+201C/U+201D ring lines (mostly 10-15/16 batches) - historical, not
+    # retro (#41). Ring style quotes use 「」; PAIRED curly quotes (16
+    # census lines, e.g. meet dialogue) are a tolerated historical style
+    # and stay legal - the gate flags the UNPAIRED shape only (count
+    # mismatch). Zero face-section hits = 零误伤. gated_llm auto-regenerates
+    # on hit (#12 family protocol); straight U+0022 stray unobserved stays
+    # out flat (#46/#51 first-strike protocol).
+    if line.count("\u201c") != line.count("\u201d"):
+        v.append("stray-quote")
     return v
 
 def gated_llm(prompt, sig, max_regens=3):
