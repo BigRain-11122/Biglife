@@ -1,0 +1,8 @@
+BigLife QA Smoke R1499 @ 2026-10-17 06:11
+note: [3] first-run predicate missed honored-seat anchor=null design exemption (T-20260929-06 v3.55); recheck with exemption - recorded honestly.
+[1] poolgen tick: tail: === 2026-10-17 06:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=14 -> PASS
+[2] census rings today: 266 rings / 260 cards (batch 10 C-03584~C-03593) -> PASS
+[3] behavior slot/anchor non-null: rows=10030 sampled_anchor_bad=0 honored_exempt=1 -> PASS
+[4] behavior --auto regen: behavior mtime 48 min ago -> PASS
+[5] heartbeat fresh: last: 2026-10-17 06:10 R1499 alive rings_today=266 export_ts= -> PASS
+5/5 PASS
