@@ -1,0 +1,7 @@
+qa/smoke-R1456 五项自验（2026-10-16 19:40:02·复产常态轮·年轮批 10/10 落环+QC 例巡兑现）
+1 poolgen tick: === 2026-10-16 19:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+2 census 10-16 全域环=492（本批 +10：C-03264~C-03273·批 6fb2f08e）
+3 behavior slot rows=10030 bad=0
+4 behavior --auto: bucket=evpk wx=cloud rest=na snd=fest unchanged - skip regen；行为线镜像=3616d0ed rows=10 ring=4851
+5 heartbeat: 2026-10-16 19:23:22 os-loop: round done exit=0
+RESULT: 5/5 PASS

@@ -1,0 +1,4 @@
+qc_census R1456 例巡（2026-10-16 19:3x·复产窗·QC 例巡到期轮·承 qa-smoke-test-charter 不变量扫描）
+QC done cards=10030 evolved=4851 problems=0 dup_rings=37/37（观测基线零新增）
+census/QC-REPORT.md 同轮续鲜入库
+RESULT: PASS
