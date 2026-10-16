@@ -1,0 +1,6 @@
+QC 例巡 R1498 @2026-10-17 05:5x（@BigLife-OSLoop·R1492 后第 6 轮到期兑现）
+INPUT: python -X utf8 Tools/qc_census.py
+RESULT: QC done cards=10030 evolved=4851 problems=0 dup_rings=37/37
+schema_rows=51964 schema_bad=0（与 R1486/R1492 一致零漂移）
+判定: PASS（编号/姓名唯一/必备段齐备/年轮锚定律全过·dup_rings=观测基线零新增）
+census/QC-REPORT.md 随轮入库·下次例巡 >=R1504
