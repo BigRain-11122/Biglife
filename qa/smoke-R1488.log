@@ -1,0 +1,7 @@
+=== BigLife smoke R1488 2026-10-17 04:01 ===
+[1] poolgen tick: 2026-10-17 03:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE  -> OK
+[2] census 新条目: 年轮批 10/10 落环 C-03474~C-03483 (commit 759d5fbd) + 镜像 0b6fe980 rows=10  -> OK
+[3] 位置字段非 null: behavior --qc rows=10030 bad=0 (slot/anchor 面零 null)  -> OK
+[4] 行为链再生: --auto bucket=night wx=cloud rest=na snd=fest unchanged-skip + --qc rows=10030 bad=0  -> OK
+[5] heartbeat: 2026-10-17 03:50:44 (R1487 round done) < 3h + R1488 alive 行已落 (rings_today=156)  -> OK
+RESULT: 5/5 OK
