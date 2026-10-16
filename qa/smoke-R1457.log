@@ -1,0 +1,7 @@
+qa/smoke-R1457.log — BigLife 五项自验（T-20260928-05 常设单·R1457·2026-10-16 19:4x）
+① poolgen 跑通：state/poolgen_run.log 尾戳 2026-10-16 19:06:01 tick src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（18:06/19:06 双 tick 连续在役·满额自停）
+② census 新条目：本批 10 环 C-03274~C-03283（批 9f9d28f7·镜像 bf84ff8e rows=10）——10-16 全域环 502 registry 机器直数（state/_upd_export_r1457.py COUNT-OK registry=502）
+③ 位置字段非 null：behavior --qc rows=10030 bad=0（slot 字段全数合法·tw=evpk wx=cloud wd=4）
+④ 行为链再生：behavior --auto bucket=evpk wx=cloud rest=na snd=fest unchanged - skip regen（同态免再生=设计态）——QC 佐证 top3=[('commute', 4373), ('home', 2782), ('meal', 2372)] crash=0 recovering=2850
+⑤ heartbeat 3h 内：state/heartbeat.txt 尾行 2026-10-16 19:41:08 os-loop: round done exit=0
+—— 五项全勾。生成方式：本轮实跑输出直录（确定性，可复跑）。
