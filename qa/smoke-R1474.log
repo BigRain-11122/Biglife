@@ -1,0 +1,7 @@
+=== qa/smoke-R1474 2026-10-17 00:3x @BigLife-OSLoop 五项自验（全勾·源=本轮实跑输出·逐条可复跑） ===
+[1] poolgen 跑通: state/poolgen_run.log 尾行 "=== 2026-10-17 00:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE"（满额自停） PASS
+[2] census 新条目: 10-17 新环 12（批 10 环 C-00010~C-00019 commit 8f31f3d7 + 相遇 2 环 C-00018×C-00019 commit 47e2cf2d·双卡互引） PASS
+[3] slot 字段非 null: behavior --qc rows=10030 bad=0（tw=night wx=cloud wd=5·top3 sleep 7388/charge 2003/night_light 503） PASS
+[4] 行为链再生: behavior --auto 再生 rows=10030 bad=0（天气翻面 clear→cloud 触发再生·crash=0 recovering=2850） PASS
+[5] heartbeat 3h 内: state/heartbeat.txt 尾行 "2026-10-17 00:07:34 os-loop: round done exit=0"（在窗·本轮收口后再落一行） PASS
+=== 五项 5/5 全勾 ===
