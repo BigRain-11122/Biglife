@@ -1,0 +1,7 @@
+qa/smoke-R1464 五项自验（2026-10-16 21:1x）：复产常态轮·晚间复产窗第十班（年轮批 10/10 落环）
+1 poolgen tick: === 2026-10-16 21:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+2 census 10-16 全域环=574（年轮批 +10：C-03344~C-03353 批 30860aa4·registry 机器直数零差·含 R1463 批 C-03334~C-03343 的 564 基线）
+3 behavior slot rows=10030 bad=0（tw=eve wx=cloud wd=4 snd=fest·behavior --auto unchanged-skip）
+4 behavior 镜像: 年轮批=4c2a1bf1 rows=10 ring_synced（ring=4851 基线之上·R1463 批镜像 f4ac8f46 同环基线）
+5 heartbeat: 2026-10-16 21:00:30 os-loop: round done exit=0（在窗 <30min）
+RESULT: 5/5 PASS
