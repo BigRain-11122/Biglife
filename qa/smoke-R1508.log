@@ -1,0 +1,8 @@
+=== qa/smoke-R1508.log 2026-10-17 08:0x @BigLife-OSLoop 五项自验（QA Smoke Test 自验令 T-20260928-05 数据面口径）===
+[1] poolgen 跑通（tick 戳）: PASS — state/poolgen_run.log 尾戳 2026-10-17 07:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（08:06 tick 未到窗·本戳 3h 内新鲜）
+[2] census 新条目（本批环）: PASS — R1508 批 10/10 落环 C-03674~C-03683（commit b6368a61）+行为镜像 b6fa4aae rows=10 ring_synced=4851；light=10030 双闸在役零新注册
+[3] 位置字段非 null（behavior 面）: PASS — behavior --qc rows=10030 bad=0（tw=empk wx=cloud wd=5 top3 commute 7650/exercise 1877/home 503·crash=0 recovering=2850）
+[4] 行为链再生: PASS — behavior --auto unchanged-skip（tw=empk wx=cloud snd=fest 未翻面·同态跳过=正确行为）+镜像链 sync_rings rows=10 ring=4851（evolve 批自动收口）
+[5] heartbeat 3h 内: PASS — state/heartbeat.txt 尾行 2026-10-17 08:01 R1508 alive rings_today=356 export_ts=2026-10-17 08:01 [via BigLife-OSLoop]
+=== 5/5 PASS @2026-10-17 08:0x ===
+附注: 本轮续鲜含 R1507 export 断链补账（git 实证 6f02ab0c 收口仅 genes 双件+TASKS.md 零 status-export·其宣称 export_ts 07:40 未落盘→本轮通用工具一跑补齐=update_status_export.py resumable 设计再证）。
