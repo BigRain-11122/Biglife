@@ -1,0 +1,8 @@
+=== smoke 五项自验 R1531（2026-10-17 14:33·数据面自验=T-20260928-05 定谳口径）===
+[1] poolgen 跑通: PASS — state/poolgen_run.log 尾戳 2026-10-17 14:06:02 tick src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（0.5h 新鲜）
+[2] census 新条目: PASS — 本批 10 环 commit bba72443（C-03904~C-03913·既有居民迭代零新注册）+citizens-light.jsonl rows=10030 双闸在役
+[3] 位置字段非 null: PASS — Tools/behavior.py --qc 实跑 rows=10030 bad=0（本轮在案·权威判据=behavior --qc rows/bad 面·荣誉席 3 席 anchor=null 设计态豁免口径承 R1503 勘误）
+[4] 行为链再生: PASS — behavior.py --auto 实跑 unchanged-skip（再生在役·tw=day wx=cloud snd=fest·top3 social 3935/work 2003/explore 1712·crash=0 recovering=2850）
+[5] heartbeat 3h 内: PASS — state/heartbeat.txt 尾行 2026-10-17 14:33 R1531 alive rings_today=593 export_ts=2026-10-17 14:33（0h 新鲜）
+=== RESULT: 5/5 PASS ===
+附注: export 续鲜=通用工具 v1.0 payload 正参实跑（dry-run total=593 预验账平→实跑 dept/qc/results/hb 四段全落·total=593 reg=567+anc=26 与 expect 593 零差）
