@@ -1,0 +1,8 @@
+BigLife smoke R1552 2026-10-17 21:31
+[1] poolgen tick age(h)=0.43 PASS (last=2026-10-17 21:06)
+[2] ring batch commit 7b15abc1 in git case: PASS | head: 8ccd0908 行为线 2026-10-17: 镜像 rows=10 ring=4851 [via BigLife-OSLoop] / 7b15abc1 年轮环(既有居民迭代·零新注册) 2026-10-17: C-04123, C-04124, C-04125, C-04126, C-04127, C-04128, C-04129, C-04130, C-04131, C-04132 [via BigLife-OSLoop] / dfc24f49 轮收尾 R1551: 年轮10环(C-04113~C-04122)+基因轮9条(1148/558/416)+export续鲜811+smoke6/6 [via BigLife-OSLoop]
+[3] behavior --qc: PASS | rows=10030 bad=0 tw=eve wx=clear wd=5 top3=[('social', 4599), ('rest_eve', 2694), ('charge', 1934)] crash=300 recovering=503
+[4] behavior --auto in service: PASS | rows=10030 bad=0 tw=eve wx=clear wd=5 top3=[('social', 4599), ('rest_eve', 2694), ('charge', 1934)] crash=300 recovering=503
+[5] heartbeat R1552 alive line: PASS | 2026-10-17 21:31 R1552 alive rings_today=821 export_ts=2026-10-17 21:31 [via BigLife-OSLoo
+[6] QC 例巡 evidence qa/qc-R1552.log: PASS
+VERDICT=PASS
