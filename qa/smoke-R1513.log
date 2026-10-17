@@ -1,0 +1,7 @@
+# 2026-10-17 09:24
+[1] poolgen tick: mtime=2026-10-17 09:06:02 age=0.3h -> PASS
+[2] census batch this round: commit c02ad770 C-03724~C-03733 10 rings -> PASS
+[3] behavior --qc: rows=10030 bad=0 tw=empk wx=cloud wd=5 top3=[('commute', 7650), ('exercise', 1877), ('home', 503)] -> PASS
+[4] behavior --auto: ran this round (unchanged - skip regen, tw=empk wx=cloud snd=fest) -> PASS
+[5] heartbeat: age=0.0h tail=2026-10-17 09:24 R1513 alive rings_today=406 export_ts=2026-10-17 09:24 [via Big -> PASS
+SMOKE R1513: 5/5
