@@ -1,0 +1,7 @@
+qa/smoke-R1565.log — 2026-10-18 01:2x~01:3x·LLM 让路面第 9 轮延续（等待态声明轮）五项自验
+CHECK1 poolgen tick 新鲜：state/poolgen_run.log 尾行 2026-10-18 01:06:02 tick src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（age ~0.4h·语言线 10-18 已兑 R1561 PASS 满额 1440 SELF_TERMINATE 本日不重扫）→ PASS
+CHECK2 LLM 让路面如实记非 FAIL：evolve 实跑输出「ollama down; batch paused at 0 / OK evolved=0 of 10 due」（:8090/:11434 双 DOWN=他窗腾显存法定形态·看门狗三任务禁用态维持·mandate「Ollama 挂=脚本静默跳过不修不报障」执法·禁复燃禁修）→ PASS（合法豁免）
+CHECK3 行为链健康：behavior --auto unchanged-skip（night/cloud/wd6/fest 夜窗态面新鲜零陈旧）+ --qc rows=10030 bad=0（top3 sleep 7161/charge 1934/night_light 503·crash=300 recovering=503=夜窗正常语义）→ PASS
+CHECK4 export 续鲜幂等账平：dry-run total=0 reg=0 anc=0 → 实跑 OK total=0 dept=True qc=False results=False hb=True（results 尾行 no-op=计数 0==机器直数防重复收）·export_ts=2026-10-18 01:28 刷新·dept0 窗 R1565 条落位 → PASS
+CHECK5 心跳 alive：state/heartbeat.txt 尾行「2026-10-18 01:28 R1565 alive rings_today=0 export_ts=2026-10-18 01:28 [via BigLife-OSLoop]」→ PASS
+VERDICT=PASS（5/5）
