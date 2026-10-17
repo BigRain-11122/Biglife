@@ -1,0 +1,7 @@
+== smoke R1554 2026-10-17 22:05 ==
+PASS poolgen tick 21:06 TOTAL=1440 FAIL_BUCKETS=NONE (fresh ~1h)
+PASS ring batch a2dde918 C-04143~C-04152 in repo
+PASS behavior rows=10030 bad=0 (--auto unchanged-skip in service)
+PASS export total 841 (reg 815 + anc 26 = expect 841)
+PASS heartbeat R1554 alive rings_today=841 export_ts 22:04
+VERDICT=PASS 5/5
