@@ -1,0 +1,23 @@
+# qa/smoke-R1593.log — BigLife 数据面五项自验（LLM 让路面等待态轮·python 直写=R1564 坑律执法）
+# 轮次: R1593 @ 2026-10-18 07:3x  [via BigLife-OSLoop]
+# 判据面: docs/qa-smoke-test-charter.md BigLife 节（数据面自验·非 GUI 司）
+
+CHECK1 poolgen tick 新鲜: PASS
+  state/poolgen_run.log 尾行 = 2026-10-18 07:06:02 poolgen_loop tick src=auto exit=0  TOTAL=1440 FAIL_BUCKETS=NONE（~0.5h 新鲜·满额自停续绿）
+
+CHECK2 本批年轮环 commit 在案: PASS（LLM 让路面合法豁免·如实记非 FAIL）
+  本轮 evolve 实跑 = "ollama down; batch paused at 0 / OK evolved=0 of 10 due"（machine-state flag=paused 2026-10-17 22:51 CEO 让路令合法态·禁复启让路律执法·恢复通道=AutoYield/CEO 口令非本司权限面·R1557~R1592 判例链第 38 轮）
+  今日 10-18 环账 = 0 环（诚实态·LLM 让路面全天零新环）
+
+CHECK3 behavior 导出面: PASS
+  Tools/behavior.py --qc → rows=10030 bad=0（tw=empk wx=cloud wd=6 snd=fest）
+
+CHECK4 行为链 --auto 在役: PASS
+  --auto 实跑 = bucket=empk wx=cloud rest=na snd=fest unchanged - skip regen（unchanged-skip=再生判断在役·通勤窗正常语义）
+  top3 = commute 7650 / exercise 1877 / home 503 · crash=0 recovering=2850
+
+CHECK5 心跳 alive: PASS
+  export 工具 --heartbeat 实跑 OK total=0 reg=0 anc=0 · hb=True · ts=2026-10-18 07:36（state/heartbeat.txt alive 行新鲜 0.0h）
+
+VERDICT: PASS 5/5
+tokens: local=0 api=0 api_reason=-
