@@ -1,0 +1,7 @@
+PASS poolgen tick 今日新鲜 TOTAL=1440 FAIL_BUCKETS=NONE | === 2026-10-18 01:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+PASS LLM 双端点 DOWN 探针复现（让路面合法态·年轮批静默跳过如实记） | :8090=DOWN :11434=DOWN
+PASS behavior --qc rows=10030 bad=0 | rows=10030 bad=0 tw=night wx=cloud wd=6 top3=[('sleep', 7388), ('charge', 2003), ('night_light', 503)] crash=0 recovering=4428
+PASS export dept0 含 R1567 新窗条+results 尾行==0+export_ts 今日 | export_ts=2026-10-18 02:01 last_cnt=0
+PASS 心跳 alive 行 R1567 | 2026-10-18 02:01 R1567 alive rings_today=0 export_ts=2026-10-18 02:01 [via BigLife-OSLoop]
+PASS 基因轮证据：KEEP=12 DROPPED=0+APPEND_OK cp=1154->1160 ho=561->564 tp=417->420+--qc 15 PASS+light 10030 | R1567 gene_nearcheck KEEP=12 DROPPED=0
+VERDICT=PASS (6/6)
