@@ -1,0 +1,18 @@
+BigLife smoke 5-item self-check R1529 @ 2026-10-17 13:52 (charter=docs/qa-smoke-test-charter.md v1.0; all lines below are real outputs)
+[1] poolgen tick OK (state/poolgen_run.log tail):
+=== 2026-10-17 12:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-10-17 13:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] census new entries (git log -5):
+4817a6f1 行为线 2026-10-17: 镜像 rows=10 ring=4851 [via BigLife-OSLoop]
+73b65c17 年轮环(既有居民迭代·零新注册) 2026-10-17: C-03884, C-03885, C-03886, C-03887, C-03888, C-03889, C-03890, C-03891, C-03892, C-03893 [via BigLife-OSLoop]
+e5d82e3c R1528 smoke 件补入(5/5 PASS) [via BigLife-OSLoop]
+12607470 轮收口 R1528: 年轮10环C-03874~C-03883+QC例巡全绿+export续鲜556+smoke5/5 [via BigLife-OSLoop]
+2feb2ecf 行为线 2026-10-17: 镜像 rows=10 ring=4851 [via BigLife-OSLoop]
+[3] behavior --auto (R3 regen / unchanged-skip):
+behavior auto: bucket=day wx=cloud rest=nap snd=fest unchanged - skip regen
+[4] behavior --qc (position fields non-null proxy = rows/bad):
+rows=10030 bad=0 tw=day wx=cloud wd=5 top3=[('social', 3935), ('work', 2003), ('explore', 1712)] crash=0 recovering=2850
+[5] heartbeat tail (<=3h):
+2026-10-17 13:34:39 os-loop: round done exit=0
+2026-10-17 13:52 R1529 alive rings_today=566 export_ts=2026-10-17 13:52 [via BigLife-OSLoop]
+5/5 PASS
