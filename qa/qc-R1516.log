@@ -1,0 +1,6 @@
+QC 例巡 R1516（2026-10-17 10:2x @BigLife-OSLoop·R1510 例巡后第 6 轮到期兑现）
+命令：python -X utf8 Tools/qc_census.py --schema
+结果：QC done cards=10030 evolved=4851 problems=0 dup_rings=37/37 schema_rows=51964 schema_bad=0
+判读：不变量全绿——编号/姓名唯一、必备段齐备、锚定律过、[锚] 日期=今日（年轮批 89f35433 C-03754~C-03763 落环后扫描）；
+dup_rings 37/37=观测基线零新增（T-20261011-01 dedup 闸在役基线值）；schema 四面（citizens-light/behavior/needs/tasks）零漂移。
+census/QC-REPORT.md 同轮再生入库。例巡位重置 ≥R1522。

@@ -1,0 +1,8 @@
+smoke 五项自验 R1516（2026-10-17 10:2x @BigLife-OSLoop）
+1 poolgen tick fresh: === 2026-10-17 10:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BU [PASS]
+2 本批 10 环 commit 在案: 89f35433 年轮 + 9881e87f 镜像 rows=10 ring=4851 [PASS]
+3 behavior --qc: rows=10030 bad=0（tw=day wx=cloud·top3 social 3935/work 2003/explore 1712）[PASS]
+4 behavior --auto 在役: bucket=day wx=cloud rest=na snd=fest unchanged-skip（触发检测实跑·无翻面）[PASS]
+5 heartbeat: 2026-10-17 10:26 R1516 alive rings_today=436 export_ts=2026-10-17 10:26 [via BigLife-OSLoo [PASS]
+
+注记：③谓词口径=R1503 勘正（behavior --qc rows/bad 面=权威判据·light anchor 字段判空=假阴性·荣誉席 anchor=null=v3.55 设计态豁免）
