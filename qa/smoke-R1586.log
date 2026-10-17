@@ -1,0 +1,8 @@
+qa/smoke-R1586.log  (2026-10-18T06:08)
+PASS C1-poolgen-tick: tick 2026-10-18 06:06:02 age 0.1h TOTAL=1440 FAIL_BUCKETS=NONE（满额自停续绿·语言线 10-18 已兑 R1561 首证+R1570 复证）
+PASS C2-LLM-yield-form: 让路面合法豁免如实记非 FAIL（:8090 DOWN·machine-state paused 2026-10-17 22:51 CEO 让路令合法态）evolve 证据链在案（state/evolve-r1586.log「ollama down; batch paused at 0 / OK evolved=0 of 10 due」·R1557~R1585 判例链第 31 轮）
+PASS C3-behavior-qc: rows=10030 bad=0 tw=night wx=clear wd=6 top3=[('sleep', 7388), ('charge', 2003), ('night_light', 503)] crash=0 recovering=2850（夜窗正常语义）
+PASS C4-auto-in-service: behavior --auto unchanged-skip 在役（本轮实跑 rows=10030 bad=0 输出在案·night/clear 维持 R1584 态）
+PASS C5-heartbeat: 2026-10-18 06:08 R1586 alive rings_today=0 export_ts=2026-10-18 06:08 [via BigLife-OSLoop]
+PASS C6-export-idempotent: export 续鲜 OK total=0 reg=0 anc=0 dept=True·results 段幂等 no-op=0==机器直数防重复收（10-18 零环诚实态）·QC 证据双件在案（qa/qc-R1582.log 例巡+R1585 提前复扫 census/QC-REPORT.md）·本轮 smoke 件=write_file 直写（R1564 坑律执法·禁 Tee-Object）
+VERDICT=PASS 6/6
