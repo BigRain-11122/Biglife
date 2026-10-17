@@ -1,0 +1,41 @@
+=== R1588 smoke 自验（2026-10-18 06:46·LLM让路面等待窗·machine-state: paused 2026-10-17T22:51:01+08:00）===
+
+[PASS] 1 poolgen tick 满额续绿
+=== 2026-10-18 06:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+
+[PASS] 2 池审 10-18 gate（pool_audit PASS=自停）
+exit=0
+== pool_audit (language line machine gate) ==
+axes buckets 72: lines=1296 at_target=72
+sprite buckets 12: lines=144 at_target=12
+total lines: 1440
+greet buckets 28: lines=476 at_target=28
+faq buckets 7: pairs=21 lines=42 at_target=7
+negative face: lines=40 recovering=8 at_target=6/6
+hard_fails: 0
+under_target (pool 18/12 + greet 17 + faq 3 + neg 8): NONE - SELF_TERMINATE
+determinism: 192 pairs double-drawn, mismatch=0, empty_draw=0 (16 ids x 12 ctx)
+greet determinism: 25 pairs double-drawn, mismatch=0, empty_draw=0 (5 ids x 4 gkey + faq)
+verdict: PASS
+
+[PASS] 3 census 户籍双闸（零新注册）
+rows=10030 unique=10030 maxid=C-10036 over_cap=0
+
+[PASS] 4 行为链 --auto/--qc
+auto exit=0
+rows=10030 bad=0 tw=dawn wx=cloud wd=6 top3=[('home', 6150), ('work', 2003), ('exercise', 1877)] crash=0 recovering=2850
+qc exit=0
+rows=10030 bad=0 tw=dawn wx=cloud wd=6 top3=[('home', 6150), ('work', 2003), ('exercise', 1877)] crash=0 recovering=2850
+
+[PASS] 5 heartbeat 新鲜（3h 内）+ 续鲜行落位
+pre_age=0.36h fresh=True
+export exit=0
+hb_tail: 2026-10-18 06:46 R1588 alive rings_today=0 export_ts=2026-10-18 06:46 [via BigLife-OSLoop]
+
+[PASS] 6 决策水位差集 NO-NEW（152 ID 超集维持）
+（执行窗实录：Compare-Object 实跑 NEW 集空·watermark 无需回写）
+
+[PASS] 7 基因轮 10 条登记三证
+baseline exit=0 / qc exit=0 / 计数 1178/572/427 / light=10030（详证 qa/gene-round-r1588.log）
+
+VERDICT: PASS (7/7)

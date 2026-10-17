@@ -1,0 +1,113 @@
+=== R1588 基因轮证据件（2026-10-18 06:46·CEO 让路等待窗兑现轮）===
+法源: 迭代总纲步6 + SKILL extend-gene-pool（预检三查/纯尾追加/终验）·近重防线=常设件 gene_nearcheck v1.1
+收敛实录: 五轮 10→9→7→2→1→0；预登记终扫（v5）=「gene_nearcheck: 10 候选, 0 近重候选」exit=0（执行窗实录转录）
+候选清单（type|text）:
+  cp|藤椅一挪进树荫，眼皮就开始打架。
+  cp|灶台边油渍厚，说明这家的锅没凉过。
+  cp|每样家什都有固定窝，摸黑也拿不错。
+  cp|新到的料子，总要先裁一块试试。
+  cp|还是老井水泡的茶对味，别处喝不出这个劲儿。
+  cp|遇事能搭桥，就不叫人绕道。
+  ho|焊锡补过的搪瓷盆
+  ho|盛过刨花的木匣子
+  tp|把铺面盘给徒弟时，师父只收了个零头。
+  tp|熟客搬去了别的区，他多备的那副碗筷一直没撤。
+
+--- 追加后计数（state/_gene_app_r1588.py 断言先于写盘全过） ---
+catchphrases=1178 (1172+6) / hook_objects=572 (570+2) / turning_points=427 (425+2) / light=10030（万卡零触碰恒 10030）
+可逆断言: 三锚点插回=原文件逐字节复得（既有基因零字节改动·锚行加逗号=SKILL 特许面）
+
+--- 登记后复验 nearcheck --file（预期 10 FLAG=登记生效反证·exit 1） ---
+exit=1
+[FLAG] cp|藤椅一挪进树荫，眼皮就开始打架。
+    A: language.catchphrases[1172] ['藤椅一挪', '椅一挪进', '一挪进树', '挪进树荫', '进树荫，', '树荫，眼', '荫，眼皮', '，眼皮就', '眼皮就开', '皮就开始', '就开始打', '开始打架', '始打架。'] ⊂ 藤椅一挪进树荫，眼皮就开始打架。
+    B: ratio 100.0 ≥ T92 vs 藤椅一挪进树荫，眼皮就开始打架。
+[FLAG] cp|灶台边油渍厚，说明这家的锅没凉过。
+    A: language.catchphrases[1173] ['灶台边油', '台边油渍', '边油渍厚', '油渍厚，', '渍厚，说', '厚，说明', '，说明这', '说明这家', '明这家的', '这家的锅', '家的锅没', '的锅没凉', '锅没凉过', '没凉过。'] ⊂ 灶台边油渍厚，说明这家的锅没凉过。
+    B: ratio 100.0 ≥ T92 vs 灶台边油渍厚，说明这家的锅没凉过。
+[FLAG] cp|每样家什都有固定窝，摸黑也拿不错。
+    A: language.catchphrases[1174] ['每样家什', '样家什都', '家什都有', '什都有固', '都有固定', '有固定窝', '固定窝，', '定窝，摸', '窝，摸黑', '，摸黑也', '摸黑也拿', '黑也拿不', '也拿不错', '拿不错。'] ⊂ 每样家什都有固定窝，摸黑也拿不错。
+    B: ratio 100.0 ≥ T92 vs 每样家什都有固定窝，摸黑也拿不错。
+[FLAG] cp|新到的料子，总要先裁一块试试。
+    A: language.catchphrases[1175] ['新到的料', '到的料子', '的料子，', '料子，总', '子，总要', '，总要先', '总要先裁', '要先裁一', '先裁一块', '裁一块试', '一块试试', '块试试。'] ⊂ 新到的料子，总要先裁一块试试。
+    B: ratio 100.0 ≥ T92 vs 新到的料子，总要先裁一块试试。
+[FLAG] cp|还是老井水泡的茶对味，别处喝不出这个劲儿。
+    A: language.catchphrases[1176] ['还是老井', '是老井水', '老井水泡', '井水泡的', '水泡的茶', '泡的茶对', '的茶对味', '茶对味，', '对味，别', '味，别处', '，别处喝', '别处喝不', '处喝不出', '喝不出这', '不出这个', '出这个劲', '这个劲儿', '个劲儿。'] ⊂ 还是老井水泡的茶对味，别处喝不出这个劲儿。
+    B: ratio 100.0 ≥ T92 vs 还是老井水泡的茶对味，别处喝不出这个劲儿。
+[FLAG] cp|遇事能搭桥，就不叫人绕道。
+    A: language.catchphrases[1177] ['遇事能搭', '事能搭桥', '能搭桥，', '搭桥，就', '桥，就不', '，就不叫', '就不叫人', '不叫人绕', '叫人绕道', '人绕道。'] ⊂ 遇事能搭桥，就不叫人绕道。
+    B: ratio 100.0 ≥ T92 vs 遇事能搭桥，就不叫人绕道。
+[FLAG] ho|焊锡补过的搪瓷盆
+    A: lives.hook_objects[570] ['焊锡补过', '锡补过的', '补过的搪', '过的搪瓷', '的搪瓷盆'] ⊂ 焊锡补过的搪瓷盆
+    B: ratio 100.0 ≥ T95 vs 焊锡补过的搪瓷盆
+[FLAG] ho|盛过刨花的木匣子
+    A: lives.hook_objects[571] ['盛过刨花', '过刨花的', '刨花的木', '花的木匣', '的木匣子'] ⊂ 盛过刨花的木匣子
+    B: ratio 100.0 ≥ T95 vs 盛过刨花的木匣子
+[FLAG] tp|把铺面盘给徒弟时，师父只收了个零头。
+    A: lives.turning_points[425] ['把铺面盘', '铺面盘给', '面盘给徒', '盘给徒弟', '给徒弟时', '徒弟时，', '弟时，师', '时，师父', '，师父只', '师父只收', '父只收了', '只收了个', '收了个零', '了个零头', '个零头。'] ⊂ 把铺面盘给徒弟时，师父只收了个零头。
+    B: ratio 100.0 ≥ T50 vs 把铺面盘给徒弟时，师父只收了个零头。
+[FLAG] tp|熟客搬去了别的区，他多备的那副碗筷一直没撤。
+    A: lives.turning_points[426] ['熟客搬去', '客搬去了', '搬去了别', '去了别的', '了别的区', '别的区，', '的区，他', '区，他多', '，他多备', '他多备的', '多备的那', '备的那副', '的那副碗', '那副碗筷', '副碗筷一', '碗筷一直', '筷一直没', '一直没撤', '直没撤。'] ⊂ 熟客搬去了别的区，他多备的那副碗筷一直没撤。
+    B: ratio 100.0 ≥ T50 vs 熟客搬去了别的区，他多备的那副碗筷一直没撤。
+== gene_nearcheck: 10 候选, 10 近重候选 ==
+
+--- baseline 三池自配对（预期 criterion_ok） ---
+exit=0
+{
+ "cp": {
+  "pool": "language.catchphrases",
+  "n": 1178,
+  "max_ratio": 91.667,
+  "top_pair": [
+   "热汤落肚，啥事都好商量。",
+   "热汤下肚，啥事都好商量。"
+  ],
+  "threshold": 92.0,
+  "criterion_ok": true
+ },
+ "ho": {
+  "pool": "lives.hook_objects",
+  "n": 572,
+  "max_ratio": 94.118,
+  "top_pair": [
+   "别在门襟上的老怀表",
+   "别在襟上的老怀表"
+  ],
+  "threshold": 95.0,
+  "criterion_ok": true
+ },
+ "tp": {
+  "pool": "lives.turning_points",
+  "n": 427,
+  "max_ratio": 48.889,
+  "top_pair": [
+   "退休那天把工牌擦亮，挂回车间墙上。",
+   "退休那天把工牌擦了一遍又一遍，最后别在了买菜的帆布包上。"
+  ],
+  "threshold": 50.0,
+  "criterion_ok": true
+ }
+}
+
+--- qc 断言电池（预期 15/15） ---
+exit=0
+PASS gram-extract
+PASS layerA-fixture-hit
+PASS layerA-fixture-miss
+PASS layerA-cross-pool
+PASS layerA-real-R413
+PASS layerA-real-R406
+PASS layerA-real-crosspool
+PASS layerB-historic-boundary
+PASS layerB-exact-dup
+PASS unknown-type-reject
+PASS baseline-criterion
+PASS baseline-sentinel
+PASS parse-line
+PASS double-run
+PASS file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+
+--- git diff --numstat genes/（纯新增面） ---
+24	0	genes/language.json
+6	2	genes/lives.json
