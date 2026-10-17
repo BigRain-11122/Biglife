@@ -1,0 +1,7 @@
+qa/smoke-R1543.log @2026-10-17 19:0x @BigLife-OSLoop R1543 五项自验（本轮实际产物核对·纯确定性零 LLM）：
+[1] poolgen 通道: state/poolgen_run.log 尾行 === 2026-10-17 18:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE → PASS
+[2] census 增量: 本轮年轮批 commit 58135238（C-04033~C-04042·10 环）+行为镜像 45424be9 rows=10 +基因轮 b814399b（cp1145/ho555/tp413） → PASS
+[3] 位姿字段非 null: Tools/behavior.py --qc → rows=10030 bad=0 → PASS
+[4] 行为续算: Tools/behavior.py --auto → rows=10030 bad=0 tw=evpk（傍晚峰窗换窗重算=正常语义·top3 commute 4223/home 2694/meal 2310·crash=300 recovering=503） → PASS
+[5] heartbeat 3h 内: state/heartbeat.txt 尾行 alive（2026-10-17 19:04 R1543 alive rings_today=731 export_ts=2026-10-17 19:04） → PASS
+verdict: 5/5 PASS
