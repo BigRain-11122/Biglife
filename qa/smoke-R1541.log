@@ -1,0 +1,7 @@
+qa/smoke-R1541.log — 2026-10-17 18:2x @BigLife-OSLoop R1541 五项自验（真实运行输出·逐条可复跑）
+[1] poolgen 跑通: state/poolgen_run.log 尾行 === 2026-10-17 18:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE → PASS
+[2] census 新条目: 本批 10 环 commit 10f24645（C-04014~C-04023）+行为镜像 2c8dd8b7 rows=10 → PASS
+[3] 位置字段非 null: Tools/behavior.py --qc → rows=10030 bad=0 → PASS
+[4] 行为链再生: Tools/behavior.py --auto → behavior auto: bucket=meal wx=cloud rest=na snd=fest unchanged - skip regen（--auto 触发器在役·unchanged=同桶健康跳过·跨桶/跨天气翻面时再生） → PASS
+[5] heartbeat 3h 内: state/heartbeat.txt 本轮 alive 行（2026-10-17 18:22 R1541 alive rings_today=712 export_ts=2026-10-17 18:22） → PASS
+verdict: 5/5 PASS
