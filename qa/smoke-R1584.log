@@ -1,0 +1,8 @@
+qa/smoke-R1584.log  (2026-10-18T05:48:02)
+PASS C1-poolgen-tick: tick 2026-10-18 05:06:02 age 0.70h TOTAL=1440
+PASS C2-LLM-yield-form: 让路面合法豁免如实记非 FAIL（:8090 DOWN·machine-state paused 2026-10-17 22:51）evolve 证据链在案
+PASS C3-behavior-qc: rows=10030 bad=0 tw=night wx=clear wd=6 top3=[('sleep', 7388), ('charge', 2003), ('night_light', 503)] crash=0 recovering=2850
+PASS C4-auto-in-service: behavior-last ts=2026-10-18T05:46:39+08:00 age 0.02h tw=night wx=clear
+PASS C5-heartbeat: 2026-10-18 05:47 R1584 alive rings_today=0 export_ts=2026-10-18 05:47 [via BigLife-OSLoop]
+PASS C6-gene-round-evidence: R1581 基因批证据+R1582 QC 例巡证据双件在案（本轮让路面期零新批·承前轮在案）
+VERDICT=PASS 6/6
