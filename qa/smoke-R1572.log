@@ -1,0 +1,8 @@
+BigLife qa/smoke-R1572.log 2026-10-18 03:26:45
+PASS CHECK1 poolgen tick | tick tail: === 2026-10-18 03:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BU | age=0.35h
+PASS CHECK2 year-ring batch | LLM 让路面如实记非 FAIL：evolve detached 点火实跑「ollama down; batch paused at 0 / OK evolved=0 of 10 due」（:8090 DOWN·:11434=MiniGame qwen3:4b 实例非本司面〔qwen2.5:7b 404 实证〕·machine-state 让路面维持·R1557~R1571 判例链第 16 轮）
+PASS CHECK3 behavior qc | rows=10030 bad=0 tw=night wx=cloud wd=6 top3=[('sleep', 7388), ('charge', 2003), ('night_light', 503)] crash=0 recoverin
+PASS CHECK4 behavior auto | --auto 在役·unchanged-skip（夜窗正常语义·top3 sleep 7388/charge 2003/night_light 503·crash=0 recovering=2850）
+PASS CHECK5 heartbeat | 2026-10-18 03:25 R1572 alive rings_today=0 export_ts=2026-10-18 03:25 [via BigLife-OSLoop]
+PASS CHECK6 QC inspect evidence | 承 R1570 例巡证据在案（qa/qc-R1570.log problems=0·QC-REPORT.md mtime=10-18 02:58 本日档=True）·本轮非例巡位（下位 ≥R1576）
+VERDICT=PASS (6/6)
