@@ -1,0 +1,9 @@
+1) poolgen tick: age=0.02h (<24h) -> PASS
+   tail: === 2026-10-17 18:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+2) census: light rows=10030 (双闸 10030) -> PASS
+   今日 [锚] 年轮机器直数 total=702 (承 692+本批 10+账平 702) -> PASS
+3) behavior --qc: rows=10030 bad=0 -> PASS
+4) behavior --auto 在役: last-state age=0.57h (<24h) tw=meal wx=cloud -> PASS
+5) heartbeat: age=0.01h (<3h) -> PASS
+   tail: 2026-10-17 18:06 R1540 alive rings_today=702 export_ts=2026-10-17 18:06 [via BigLife-OSLoop]
+SMOKE-R1540 VERDICT: PASS @2026-10-17 18:07:00
