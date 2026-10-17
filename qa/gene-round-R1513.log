@@ -1,0 +1,76 @@
+# 基因轮 R1513 @BigLife-OSLoop 2026-10-17 09:2x
+# 法源=迭代总纲步 6 基因轮（R1507 已兑后 ≈R1513 到位轮）·SKILL=Tools/skills/extend-gene-pool
+# 候选 11 条：cp+6（六轴各一）/ ho+3 / tp+2
+#
+# 查一 gene_nearcheck --file（Layer A 全文本池 4-gram + Layer B cp92/ho95/tp50）：
+#   四轮换句 6→2→2→0，终 11/11 CLEAN（exit 0）。换句实录：
+#   ·躺着听曲儿/也是正经 → 耳朵先享福(撞「，耳朵先」) → 神仙不换(撞池内「躺椅一支…神仙不换」) → 终版「躺平听曲儿，骨头都松快。」
+#   ·东西归了位(撞池内「东西归了位，心也跟着归位」) → 终版「物件摆整齐，脑子才清爽。」
+#   ·没走过的路(撞池内「没走过的路，才值得拐个弯」) → 终版「从没逛过的街口，最好逛。」
+#   ·搭把手的事(撞池内「搭把手的事儿」/「能搭把手的事，绝不袖手」) → 终版「看不下去就上手，不等人劝。」
+#   ·药铺柜台戥子(撞池内既有戥子件「中药铺柜台底那杆不示人的老戥子」) → 终版「酱园后墙那排倒扣的空坛，敲一敲就能听出成色」
+#   ·慢五分钟挂钟(撞池内「永远慢五分钟的挂钟」同概念件) → 终版「眼镜铺柜台上那副公用老花镜，谁眯眼看价签就递给谁」
+#
+# 查二 触发词族（R40 纪律·雨/淋/台风/灯族/晨夜/月星/晴雾/占位/场次/放学/风量级）：0 命中
+# 查三 跨面双向包含扫描（cognition/ 全 json+md）：26 face 件 0 撞句
+# 批内 4-gram 零互撞：0
+# 纯尾追加：字节回环断言过（new[:i]+new[i+len(ins):] == old）·git diff --numstat = language.json +24/-0 · lives.json +7/-2（尾行逗号对·R1507 同形）
+# 计数：cp 1115→1121（轴 逍遥/烟火/秩序/求新/怀旧/侠气 = 187/187/188/187/187/185）· ho 538→541 · tp 399→401
+# 新增清单：
+#   cp 逍遥「躺平听曲儿，骨头都松快。」/ 烟火「灶上的事，火候最大。」/ 秩序「物件摆整齐，脑子才清爽。」
+#   cp 求新「从没逛过的街口，最好逛。」/ 怀旧「旧账本比新书耐读。」/ 侠气「看不下去就上手，不等人劝。」
+#   ho「酱园后墙那排倒扣的空坛，敲一敲就能听出成色」/「眼镜铺柜台上那副公用老花镜，谁眯眼看价签就递给谁」/「杂货铺门口那排汽水瓶盖，小孩按一个响一个，能换一下午的笑」
+#   tp「收徒弟那天立下规矩：图纸可以借，手劲得自己练」/「头一年没攒下钱，倒攒下了整墙的谢字条」
+#
+# 终验实跑输出（--baseline 三池 criterion_ok + --qc 电池）↓
+{
+ "cp": {
+  "pool": "language.catchphrases",
+  "n": 1121,
+  "max_ratio": 91.667,
+  "top_pair": [
+   "热汤落肚，啥事都好商量。",
+   "热汤下肚，啥事都好商量。"
+  ],
+  "threshold": 92.0,
+  "criterion_ok": true
+ },
+ "ho": {
+  "pool": "lives.hook_objects",
+  "n": 541,
+  "max_ratio": 94.118,
+  "top_pair": [
+   "别在门襟上的老怀表",
+   "别在襟上的老怀表"
+  ],
+  "threshold": 95.0,
+  "criterion_ok": true
+ },
+ "tp": {
+  "pool": "lives.turning_points",
+  "n": 401,
+  "max_ratio": 48.889,
+  "top_pair": [
+   "退休那天把工牌擦亮，挂回车间墙上。",
+   "退休那天把工牌擦了一遍又一遍，最后别在了买菜的帆布包上。"
+  ],
+  "threshold": 50.0,
+  "criterion_ok": true
+ }
+}
+PASS gram-extract
+PASS layerA-fixture-hit
+PASS layerA-fixture-miss
+PASS layerA-cross-pool
+PASS layerA-real-R413
+PASS layerA-real-R406
+PASS layerA-real-crosspool
+PASS layerB-historic-boundary
+PASS layerB-exact-dup
+PASS unknown-type-reject
+PASS baseline-criterion
+PASS baseline-sentinel
+PASS parse-line
+PASS double-run
+PASS file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
