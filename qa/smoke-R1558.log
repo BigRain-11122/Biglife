@@ -1,0 +1,9 @@
+BigLife smoke R1558 2026-10-17 23:17
+[1] poolgen tick age(h)=0.18 PASS (last=2026-10-17 23:06)
+[2] LLM :8090 yield-form: PASS | DOWN(yield-form)
+[3] behavior --qc: PASS | rows=10030 bad=0 tw=night wx=clear wd=5 top3=[('sleep', 7161), ('charge', 1934), ('night_light', 503)] crash=300 recovering=503
+[4] behavior --auto in service: PASS
+[5] heartbeat R1558 alive + rings_today=851: PASS | 2026-10-17 23:16 R1558 alive rings_today=851 export_ts=2026-10-17 23:16 [via BigLife-OSLoop]
+[6] QC 例巡 evidence qa/qc-R1558.log + QC-REPORT fresh: PASS (report_age=0.03h)
+[7] export account balance total=851 (idempotent): PASS | DRYRUN total=851 reg=825 anc=26 dept=False qc=False results=False ts=2026-10-17 23:17
+VERDICT=PASS
