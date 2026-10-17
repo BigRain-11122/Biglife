@@ -1,0 +1,11 @@
+# BigLife QA Smoke Test 自验日志 — R1587（2026-10-18 06:2x · BigLife-OSLoop · 数据面自验=章程 BigLife 节口径）
+
+- [PASS] ①poolgen tick：state/poolgen_run.log 尾行=2026-10-18 06:06:02 TOTAL=1440 FAIL_BUCKETS=NONE（age 0.28h·<3h 新鲜线）
+- [PASS-EXEMPT] ②本批年轮环 commit：LLM 让路面（:8090 DOWN 探针实证·machine-state paused 10-17 22:51 CEO 让路令合法态）——evolve 实跑「ollama down; batch paused at 0 / OK evolved=0 of 10 due」=法定静默跳过第 32 轮·如实记非 FAIL（法定豁免·R1557~R1586 判例链）
+- [PASS] ③行为链：Tools/behavior.py --qc 实跑 rows=10030 bad=0（tw=night wx=clear wd=6·top3 sleep 7388/charge 2003/night_light 503·crash=0 recovering=2850）
+- [PASS] ④--auto 在役：--auto unchanged-skip（bucket=night wx=clear rest=na snd=fest·R3 面新鲜）
+- [PASS] ⑤心跳/export 续鲜：通用工具 v1.0 实跑 OK total=0 reg=0 anc=0 dept=True hb=True ts=2026-10-18 06:23（10-18 零环诚实态·账平断言过·results 段幂等 no-op=0==机器直数）
+- [PASS] ⑥集团欠账双连补件证据：D-20261001-06 需求单（docs/research/R-20261018-bighouse-neighbor-needs.md 在盘）+D-20261005-05① OSS 补件（cph4/oss-harvest/OH-20261005-biglife.md 在盘）+回执双行（HQ-FEEDBACK F-20261018-BL01/BL02）+本批收口 commit message 含 D-20261001-06+D-20261005-05① 双号（P-51 送达判据）+任务板 T-20261018-01 关结行
+
+VERDICT: PASS 6/6
+[write_file 直写=R1564 坑律执法（Windows 证据日志禁 Tee-Object 管道）]
