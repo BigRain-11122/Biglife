@@ -1,0 +1,7 @@
+=== qa/smoke-R1591.log 2026-10-18 07:16 R1591 五项自验（LLM 让路面第 36 轮·等待态） ===
+CHECK1 poolgen 跑通: state/poolgen_run.log 尾戳 2026-10-18 07:06:02 TOTAL=1440 FAIL_BUCKETS=NONE（age 0.17h 新鲜） -> PASS
+CHECK2 census 新条目（本批环）: evolve 实跑「ollama down; batch paused at 0 / OK evolved=0 of 10 due」（state/evolve-r1591.log·:8090 让路面=machine-state paused 10-17 22:51 CEO 让路令合法态·R1557~R1591 判例链）零新环=让路面合法豁免如实记 -> PASS（豁免）
+CHECK3 位置字段非 null: Tools/behavior.py --qc 实跑 rows=10030 bad=0（slot/anchor 非空断言内建） -> PASS
+CHECK4 行为链再生 --auto 在役: bucket=dawn wx=cloud rest=na snd=fest unchanged - skip regen（跨桶/跨天气触发器在役·晨窗正常语义） -> PASS
+CHECK5 heartbeat 3h 内: state/heartbeat.txt 尾行「2026-10-18 07:16 R1591 alive rings_today=0 export_ts=2026-10-18 07:16 [via BigLife-OSLoop]」 -> PASS
+VERDICT: PASS 5/5（write_file 直写=R1564 坑律执法·禁 Tee-Object）
