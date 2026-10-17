@@ -1,0 +1,61 @@
+# 基因轮 R1519 @BigLife-OSLoop 2026-10-17 11:1x~11:2x
+# 法源=迭代总纲步 6 基因轮（R1513 已兑后 ≈R1519 到位轮）·SKILL=Tools/skills/extend-gene-pool
+# 候选 11 条：cp+6（六轴各一）/ ho+3 / tp+2
+#
+# 查一 gene_nearcheck（Layer A 全文本池 4-gram + Layer B cp92/ho95/tp50）：
+#   四轮换句 10→5→1→0，终 11/11 CLEAN（exit 0）。换句实录：
+#   ·泡脚桶（撞「先放一放」） → 终版「热水没过脚背，一天的坎儿就浅了。」
+#   ·饭要趁热吃话要慢慢说（撞池内同概念三条 83% 近似） → 终版「咸淡先搁一边，热乎气儿最要紧。」
+#   ·工具用完归原位（撞「工具用完归位，人心才不乱」等七条） → 「门匙挂固定钩」再撞钥匙族两条 → 终版「票据夹按年份排好，翻起来比谁家的家谱都顺。」
+#   ·没见过的手艺（撞「没见过的，都值得看一眼」族） → 「城东新开的铺子」再撞新开铺子族 → 「没赶过的集，比过年还提神」再撞「比过年还响」 → 终版「没赶过的集，回来路上嘴还咧着。」
+#   ·公道话不挣钱（撞「公道话不嫌得罪人」） → 终版「理字摆中间，谁的账都敢翻。」
+#   ·裁缝铺顶针（撞裁缝铺的/指头上的/舍不得换三面） → 「锔瓷匠金刚钻」撞「锔碗匠的金刚钻弓」 → 终版「锔瓷摊那捆细如发丝的铜锔子，碗上补丁排得比瓷纹还齐」
+#   ·澡堂竹筛子（撞「澡堂门口的竹拖鞋筐」/「门口那排」） → 终版「竹器摊的样品篮，谁蹲下挑货就顺手递个小板凳」
+#   ·搬新居头一顿饭（撞「一辈子」族）+祖屋门牌（撞 tp#270「门牌钉在了新居门框上」） → 终版「第一回给全家掌灶，咸得发苦，长辈们照样扒完两碗」+「头一笔工钱换成两斤桃酥，一路捧回家没敢松手」（原「把第一个月工钱」含月字符同轮查二换「头一笔」）
+#
+# 查二 触发词族（R40 纪律·字符级 雨淋风月星晴晒雾灯晨夜+词级 台风/场次/放学/占位/红绿灯）：
+#   2 处月字符（「按月份排好」/「第一个月工钱」）换句（月份→年份·第一个月→头一笔）后 0 命中
+# 查三 跨面双向包含扫描（cognition/ 全 json+md）：4378 face 件 0 撞句
+# 批内 4-gram 零互撞：0
+# 纯尾追加：字节回环断言过（new[:i]+new[i+len(ins):]==旧态·lives 双插入对照中间态）·git diff --numstat = language.json +24/-0 · lives.json +7/-2（尾行逗号对·R1513 同形）
+# 计数：cp 1121→1127（轴 逍遥/烟火/秩序/求新/怀旧/侠气 = 188/188/189/188/188/186）· ho 541→544 · tp 401→403
+# 新增清单：
+#   cp 逍遥「热水没过脚背，一天的坎儿就浅了。」/ 烟火「咸淡先搁一边，热乎气儿最要紧。」/ 秩序「票据夹按年份排好，翻起来比谁家的家谱都顺。」
+#   cp 求新「没赶过的集，回来路上嘴还咧着。」/ 怀旧「旧鞋合脚，旧街合心。」/ 侠气「理字摆中间，谁的账都敢翻。」
+#   ho「开水房窗台一排铁皮暖瓶，谁家瓶盖磕了豁口，全楼听得出响」/「锔瓷摊那捆细如发丝的铜锔子，碗上补丁排得比瓷纹还齐」/「竹器摊的样品篮，谁蹲下挑货就顺手递个小板凳」
+#   tp「第一回给全家掌灶，咸得发苦，长辈们照样扒完两碗」/「头一笔工钱换成两斤桃酥，一路捧回家没敢松手」
+#
+# 坑律实录（本基因轮四坑·后续基因轮复用）：
+#   ①lives.json=混合行尾文件（ho 尾区 CRLF·tp 尾区 LF·R1513 两区异形遗产）——锚定须 EOL 自适应探测，写死 \n 即假阴性「anchor not found」
+#   ②sprite_hook_actions（{obj} 模板族数组）与 hook_objects 尾形同构——rfind 纯文本锚会误入邻数组；正法=数组区间守卫（锚点位置须落于 <key> 数组开闭字节位之间）+插入后 json.load 尾序断言（hos[-3:]==新条目）双闸，本轮双闸实测拦住误插
+#   ③条目 join 丢逗号（eol.join 须为 (','+eol).join）——丢即 JSON 炸于条目间；脚本原子性（断言先于写盘）保证炸时零盘污
+#   ④双插入场景回环断言基线=中间态非原文件（tp 插入校验须对照 ho 已插的 mid 态）
+#
+# 终验实跑输出（--baseline 三池 criterion_ok + --qc 电池）↓
+{
+ "cp": {"pool": "language.catchphrases", "n": 1127, "max_ratio": 91.667,
+        "top_pair": ["热汤落肚，啥事都好商量。", "热汤下肚，啥事都好商量。"],
+        "threshold": 92.0, "criterion_ok": true},
+ "ho": {"pool": "lives.hook_objects", "n": 544, "max_ratio": 94.118,
+        "top_pair": ["别在门襟上的老怀表", "别在襟上的老怀表"],
+        "threshold": 95.0, "criterion_ok": true},
+ "tp": {"pool": "lives.turning_points", "n": 403, "max_ratio": 48.889,
+        "top_pair": ["退休那天把工牌擦亮，挂回车间墙上。", "退休那天把工牌擦了一遍又一遍，最后别在了买菜的帆布包上。"],
+        "threshold": 50.0, "criterion_ok": true}
+}
+PASS gram-extract
+PASS layerA-fixture-hit
+PASS layerA-fixture-miss
+PASS layerA-cross-pool
+PASS layerA-real-R413
+PASS layerA-real-R406
+PASS layerA-real-crosspool
+PASS layerB-historic-boundary
+PASS layerB-exact-dup
+PASS unknown-type-reject
+PASS baseline-criterion
+PASS baseline-sentinel
+PASS parse-line
+PASS double-run
+PASS file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
