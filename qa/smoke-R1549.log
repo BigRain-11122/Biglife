@@ -1,0 +1,6 @@
+1 PASS poolgen_tick age=0.6h === 2026-10-17 20:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+2 PASS ring_batch_commit eb209216d63dbf441dff37b0766d9f18ba9b8cb1 年轮环(既有居民迭代·零新注册) 2026-10-17: C-04093, C-04094, C-04095, C-04096, C-04
+3 PASS behavior_qc w=eve wx=cloud wd=5 top3=[('social', 4599), ('home', 2694), ('work', 1934)] crash=300 recovering=503
+4 PASS behavior_auto exit=0 behavior auto: bucket=eve wx=cloud rest=na snd=fest unchanged - skip regen
+5 PASS heartbeat age=0.01h 2026-10-17 20:41 R1549 alive rings_today=791 export_ts=2026-10-17 20:41 [via Big
+VERDICT=PASS (R1549 2026-10-17 20:4x)
