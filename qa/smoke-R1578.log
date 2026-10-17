@@ -1,0 +1,8 @@
+smoke-R1578 六项自验 @2026-10-18 04:39:48（R1578·LLM 让路面第 23 轮·等待态声明轮）
+PASS poolgen tick 新鲜 TOTAL=1440 age<2h | last=2026-10-18 04:06:02 TOTAL=1440 FAIL_BUCKETS=NONE age=0.56h
+PASS LLM 让路面合法豁免如实记(evolve paused at 0) | ollama down; batch paused at 0
+PASS behavior rows=10030 | rows=10030
+PASS --auto 在役 behavior-last ts<1.5h | ts=2026-10-18T04:29:24+08:00 bucket=night age=0.17h
+PASS 心跳 alive 行含 R1578 | 2026-10-18 04:39 R1578 alive rings_today=0 export_ts=2026-10-18 04:39 [via BigLife-OSLoop]
+PASS light rows=10030 双闸(零新注册) | rows=10030
+VERDICT=PASS 6/6
