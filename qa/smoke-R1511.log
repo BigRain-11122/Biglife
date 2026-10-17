@@ -1,0 +1,8 @@
+=== qa/smoke-R1511.log 2026-10-17 08:4x @BigLife-OSLoop 五项自验（QA Smoke Test 自验令·T-20260928-05 数据面口径）===
+[1] poolgen 跑通（tick 戳）: PASS — state/poolgen_run.log 尾戳 2026-10-17 08:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE（3h 内新鲜）
+[2] census 新条目（本批环）: PASS — R1511 批 10/10 落环 C-03704~C-03713（commit c53a4427）+行为镜像 d35be4af rows=10 ring_synced=4851；light=10030 双闸在役零新注册
+[3] 位置字段非 null（behavior 面）: PASS — behavior --qc rows=10030 bad=0（tw=empk wx=cloud wd=5 top3 commute 7650/exercise 1877/home 503·crash=0 recovering=2850）
+[4] 行为链再生: PASS — behavior --auto unchanged-skip（tw=empk wx=cloud snd=fest 未翻面·同态跳过=正确行为）+镜像 sync_rings rows=10 ring=4851（evolve 批自动收口）
+[5] heartbeat 3h 内: PASS — state/heartbeat.txt 尾行 2026-10-17 08:47 R1511 alive rings_today=386 export_ts=2026-10-17 08:47 [via BigLife-OSLoop]
+=== 5/5 PASS @2026-10-17 08:4x ===
+附注: 通用工具 v1.0 本轮实弹两坑实录——①CLI 必须 --payload 标志位（位置参数不识别→打印 doc 乱码 exit 1·三轮假失败实为此因）②非例巡轮 qc_text 须 null（格式守卫轮号一致律=设计正确·QC 段保持最近例巡条 R1510 在册）——两坑已随本 log 留档，后续轮 payload 模板沿用 null 语义
