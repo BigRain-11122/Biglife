@@ -1,0 +1,8 @@
+BigLife qa/smoke-R1573.log 2026-10-18 03:44:43
+PASS CHECK1 poolgen tick | tick tail: === 2026-10-18 03:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BU | age=0.64h
+PASS CHECK2 year-ring batch | LLM 让路面如实记非 FAIL：evolve 实跑「ollama down; batch paused at 0 / OK evolved=0 of 10 due」（:8090 DOWN·:11434=MiniGame 实例族无 qwen2.5:7b·machine-state 让路面维持·R1557~R1572 判例链第 17 轮）
+PASS CHECK3 behavior qc | rows=10030 bad=0 tw=night wx=cloud wd=6 top3=[('sleep', 7388), ('charge', 2003), ('night_light', 503)] crash=0 recoverin
+PASS CHECK4 behavior auto | --auto 在役·unchanged-skip（夜窗正常语义·top3 sleep 7388/charge 2003/night_light 503·crash=0 recovering=2850）
+PASS CHECK5 heartbeat | 2026-10-18 03:43 R1573 alive rings_today=0 export_ts=2026-10-18 03:43 [via BigLife-OSLoop]
+PASS CHECK6 gene-round evidence | qa/gene-round-r1573.log KEEP=13/0·--qc 15/15·池计数 cp=1166/ho=568/tp=423·census light 10030 零变化·commit afb2662e
+VERDICT=PASS (6/6)
