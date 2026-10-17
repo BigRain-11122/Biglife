@@ -1,0 +1,8 @@
+BigLife OS smoke R1577 @ 2026-10-18 04:30（LLM 让路面第 22 轮·等待态轻维护轮·六项自验）
+[PASS] CHECK1 poolgen tick 24h 新鲜 === === 2026-10-18 04:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[PASS] CHECK2 LLM 让路面如实记（:8090 DOWN·年轮批 paused at 0 合法豁免非 FAIL） === URLError
+[PASS] CHECK3 behavior rows=10030 bad=0 === rows=10030 bad=0 tw=night wx=cloud wd=6 top3=[('sleep', 7388), ('charge', 2003), ('night_light', 503)] crash=0 recovering=2850
+[PASS] CHECK4 --auto 在役（unchanged-skip 或再生） === behavior auto: bucket=night wx=cloud rest=na snd=fest unchanged - skip regen
+[PASS] CHECK5 心跳 alive R1577 === 2026-10-18 04:30 R1577 alive rings_today=0 export_ts=2026-10-18 04:30 [via BigLife-OSLoop]
+[PASS] CHECK6 export 续鲜账平（dept 窗含 R1577·ts 今日·total=0==expect） === export_ts=2026-10-18 04:30 OK total=0 reg=0 anc=0 dept=True qc=False results=False hb=True ts=2026-10-18 04
+VERDICT: PASS 6/6
