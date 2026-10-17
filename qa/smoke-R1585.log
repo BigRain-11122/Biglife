@@ -1,0 +1,8 @@
+qa/smoke-R1585.log  (2026-10-18T06:01)
+PASS C1-poolgen-tick: tick 2026-10-18 05:06:02 age 0.9h TOTAL=1440
+PASS C2-LLM-yield-form: 让路面合法豁免如实记非 FAIL（:8090 DOWN·machine-state paused 2026-10-17 22:51）evolve 证据链在案（logs/evolve-r1546.log〔轮号首读误判错名件·实锚本轮〕）
+PASS C3-behavior-qc: rows=10030 bad=0 tw=night wx=clear wd=6 top3=[('sleep', 7388), ('charge', 2003), ('night_light', 503)] crash=0 recovering=2850
+PASS C4-auto-in-service: behavior --auto unchanged-skip 在役（本轮实跑 rows=10030 bad=0 输出在案·night/clear 维持 R1584 态）
+PASS C5-heartbeat: 2026-10-18 05:59 R1585 alive rings_today=0 export_ts=2026-10-18 05:59 [via BigLife-OSLoop]
+PASS C6-gene-qc-evidence: R1581 基因批证据+R1582 QC 例巡证据双件在案+本轮 QC 提前复扫全绿（census/QC-REPORT.md 就地上新·不占例巡名额）
+VERDICT=PASS 6/6
