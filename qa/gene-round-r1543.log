@@ -1,0 +1,15 @@
+gene_nearcheck KEEP=9 DROPPED=0（两轮改写：首检 6 近重换句→复检 2 近重换句→三检 9/9 CLEAN exit=0）
+APPEND_OK cp=1142->1145 ho=552->555 tp=410->413 eol_cp='\n' eol_ho='\r\n' eol_tp='\r\n'
+--baseline exit=0
+{
+ "cp": {"pool": "language.catchphrases", "n": 1145, "max_ratio": 91.667, "threshold": 92.0, "criterion_ok": true},
+ "ho": {"pool": "lives.hook_objects", "n": 555, "max_ratio": 94.118, "threshold": 95.0, "criterion_ok": true},
+ "tp": {"pool": "lives.turning_points", "n": 413, "max_ratio": 48.889, "threshold": 50.0, "criterion_ok": true}
+}
+--qc exit=0 (15 checks)
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+census light rows=10030 (0-change assert)
+新基因 9 条（先登记后使用·本批尚未注入居民卡）：
+cp: 新鞋磨脚，旧路踏实。（怀旧）/ 电灯省一半，月色管够。（逍遥）/ 热闹让人家看，粥要守着自家火候。（烟火）
+ho: 会报时的布谷鸟闹钟 / 贴满站台的行李票根 / 琴筒包了铜边的二胡
+tp: 刚进城那阵总坐反公交，绕了半座城反而把城摸了个熟 / 考夜校截止那天，师傅蹬车追出两条街口替他垫上了学费 / 乔迁新居头一晚碰上全楼断电，邻居举着手电在楼道里认了门
