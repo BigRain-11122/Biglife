@@ -1,0 +1,8 @@
+=== R1582 smoke 2026-10-18 05:27:28 VERDICT=PASS ===
+PASS C1 poolgen tick fresh TOTAL=1440 last=2026-10-18 05:06:02 age=0.36h
+PASS C2 LLM yield-cover as-is (evolved=0 of 10 due·legal exemption) :8090=DOWN(cover) evolve-log-anchored=True
+PASS C3 behavior rows=10030 bad=0(--qc 实跑) rows=10030
+PASS C4 behavior --auto in duty (night unchanged-skip) ts=2026-10-18T04:29:24+08:00 tw=night wx=cloud
+PASS C5 heartbeat alive R1582 fresh last=R1582
+PASS C6 export results tail count=0 honest (idempotent no-op) tail_count=0
+PASS C7 QC-round R1582 evidence anchors (cards/problems/dup_rings/schema)
