@@ -1,0 +1,56 @@
+R1573 gene_nearcheck KEEP=13 DROPPED=0
+APPEND_OK cp=1160->1166 ho=564->568 tp=420->423 eol_cp='\n' eol_ho='\r\n' eol_tp='\r\n'
+--baseline exit=0
+{
+ "cp": {
+  "pool": "language.catchphrases",
+  "n": 1166,
+  "max_ratio": 91.667,
+  "top_pair": [
+   "热汤落肚，啥事都好商量。",
+   "热汤下肚，啥事都好商量。"
+  ],
+  "threshold": 92.0,
+  "criterion_ok": true
+ },
+ "ho": {
+  "pool": "lives.hook_objects",
+  "n": 568,
+  "max_ratio": 94.118,
+  "top_pair": [
+   "别在门襟上的老怀表",
+   "别在襟上的老怀表"
+  ],
+  "threshold": 95.0,
+  "criterion_ok": true
+ },
+ "tp": {
+  "pool": "lives.turning_points",
+  "n": 423,
+  "max_ratio": 48.889,
+  "top_pair": [
+   "退休那天把工牌擦亮，挂回车间墙上。",
+   "退休那天把工牌擦了一遍又一遍，最后别在了买菜的帆布包上。"
+  ],
+  "threshold": 50.0,
+  "criterion_ok": true
+ }
+}
+--qc exit=0 (15 checks)
+PASS gram-extract
+PASS layerA-fixture-hit
+PASS layerA-fixture-miss
+PASS layerA-cross-pool
+PASS layerA-real-R413
+PASS layerA-real-R406
+PASS layerA-real-crosspool
+PASS layerB-historic-boundary
+PASS layerB-exact-dup
+PASS unknown-type-reject
+PASS baseline-criterion
+PASS baseline-sentinel
+PASS parse-line
+PASS double-run
+PASS file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+census light rows=10030 (0-change assert)
