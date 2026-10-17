@@ -1,0 +1,7 @@
+R1589 smoke 五项自验 2026-10-18 06:59:53
+VERDICT: PASS (5/5)
+PASS C1 poolgen tick | === 2026-10-18 06:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+PASS C2 LLM yield-skip evidence | 让路面如实记非 FAIL
+PASS C3 behavior rows/bad | rows=10030 bad=0 tw=dawn wx=cloud wd=6 top3=[('home', 6150), ('work', 2003), ('exercise', 1877)] crash=0 recovering=2850
+PASS C4 heartbeat R1589 alive | 2026-10-18 06:59 R1589 alive rings_today=0 export_ts=2026-10-18 06:59 [via BigLife-OSLoop]
+PASS C5 light=10030 零新注册 | rows=10030
