@@ -1,0 +1,7 @@
+R1590 smoke 五项自验 2026-10-18 07:07
+VERDICT: PASS (5/5)
+PASS C1 poolgen tick | === 2026-10-18 07:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+PASS C2 LLM yield-skip evidence | ollama down; batch paused at 0 / OK evolved=0 of 10 due（让路面如实记非 FAIL）
+PASS C3 behavior rows/bad | rows=10030 bad=0 tw=dawn wx=cloud wd=6 top3=[('home', 6150), ('work', 2003), ('exercise', 1877)] crash=0 recovering=2850
+PASS C4 heartbeat R1590 alive | 2026-10-18 07:07 R1590 alive rings_today=0 export_ts=2026-10-18 07:07 [via BigLife-OSLoop]
+PASS C5 light=10030 零新注册 | rows=10030
