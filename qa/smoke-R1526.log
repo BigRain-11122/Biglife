@@ -1,0 +1,19 @@
+BigLife smoke 5-item self-check R1526 @ 2026-10-17 13:07 (charter=docs/qa-smoke-test-charter.md v1.0; all lines below are real outputs)
+[1] poolgen tick OK (state/poolgen_run.log tail):
+=== 2026-10-17 12:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-10-17 13:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] census new entries (git log -5):
+0f438c5d 行为线 2026-10-17: 镜像 rows=10 ring=4851 [via BigLife-OSLoop]
+5e813185 年轮环(既有居民迭代·零新注册) 2026-10-17: C-03854, C-03855, C-03856, C-03857, C-03858, C-03859, C-03860, C-03861, C-03862, C-03863 [via BigLife-OSLoop]
+4c6598c0 行为线 2026-10-17: 镜像 rows=10 ring=4851 [via BigLife-OSLoop]
+fd448ee9 年轮环(既有居民迭代·零新注册) 2026-10-17: C-03844, C-03845, C-03846, C-03847, C-03848, C-03849, C-03850, C-03851, C-03852, C-03853 [via BigLife-OSLoop]
+a0cd54f5 轮收口 R1525: 基因轮10条(1132/547/405)+年轮批在飞留单R1526 [via BigLife-OSLoop]
+[3] behavior --auto (R3 regen / unchanged-skip):
+rows=10030 bad=0 tw=day wx=cloud wd=5 top3=[('social', 3935), ('work', 2003), ('explore', 1712)] crash=0 recovering=2850
+(regen note: bucket flipped meal->day at 13:00 crossing, regen executed — not unchanged-skip)
+[4] behavior --qc (position fields non-null proxy = rows/bad):
+rows=10030 bad=0 tw=day wx=cloud wd=5 top3=[('social', 3935), ('work', 2003), ('explore', 1712)] crash=0 recovering=2850
+[5] heartbeat tail (<=3h):
+2026-10-17 12:52:45 os-loop: round done exit=0
+2026-10-17 13:07 R1526 alive rings_today=536 export_ts=2026-10-17 13:07 [via BigLife-OSLoop]
+5/5 PASS
