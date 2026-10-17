@@ -1,0 +1,7 @@
+# 2026-10-17 10:02
+[1] poolgen tick: BigLife-PoolGenLoop LastRun=2026-10-17 09:06:02 age=0.9h LastResult=0 TOTAL=1440 FAIL_BUCKETS=NONE -> PASS
+[2] census batch this round: commit 30343469 C-03744~C-03753 10 rings (+ mirror de9f479a rows=10 ring_synced=4851) -> PASS
+[3] behavior --qc: rows=10030 bad=0 tw=day wx=cloud wd=5 top3=[('social', 3935), ('work', 2003), ('explore', 1712)] crash=0 recovering=2850 -> PASS
+[4] behavior --auto: ran this round (unchanged - skip regen, bucket=day wx=cloud snd=fest) -> PASS
+[5] heartbeat: age=0.0h tail=2026-10-17 10:02 R1515 alive rings_today=426 export_ts=2026-10-17 10:02 [via Big -> PASS
+SMOKE R1515: 5/5
