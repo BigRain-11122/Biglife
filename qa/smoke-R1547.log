@@ -1,0 +1,7 @@
+qa/smoke-R1547.log — QA Smoke Test 自验（T-20260928-05 本司五项·2026-10-17 20:20 @BigLife-OSLoop）
+① poolgen 跑通：state/poolgen_run.log 尾行 "=== 2026-10-17 20:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE"（tick 新鲜 <1.1h）— PASS
+② census 新条目：本批 10 环全落环 commit d2cc769d（年轮环 C-04073, C-04074, C-04075, C-04076, C-04077, C-04078, C-04079, C-04080, C-04081, C-04082·零新注册 light=10030 双闸）+行为镜像 edf940b5（rows=10 ring_synced=4851）— PASS
+③ 位置/结构字段非空：behavior --qc 实跑 rows=10030 bad=0（tw=eve wx=cloud wd=5·anchor 荣誉席=null=v3.55 设计态豁免在册）— PASS
+④ 行为链再生在役：behavior --auto 实跑 "bucket=eve wx=cloud rest=na snd=fest unchanged - skip regen"（unchanged-skip=闸在役·换窗语义正常）— PASS
+⑤ heartbeat 新鲜：state/heartbeat.txt 尾行 "2026-10-17 20:20 R1547 alive rings_today=771 export_ts=2026-10-17 20:20 [via BigLife-OSLoop]"（<0.3h）— PASS
+VERDICT: PASS 5/5（证据全部真实运行输出·逐条可复跑）
