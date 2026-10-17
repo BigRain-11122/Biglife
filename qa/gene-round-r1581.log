@@ -1,0 +1,65 @@
+R1581 gene-round cands=13
+CHA2 trigger hits dropped=0
+CHA3 cross-face strings=2006 (ge4=2006)
+CHA3 hits dropped=0
+CHA3b census hit_files=0 dropped=0
+INTRA-4GRAM dropped=0
+CHA1 nearcheck KEEP=10 DROPPED=3
+  DROP: ho - [NEARCHECK] 竹壳热水瓶的软木塞
+  DROP: ho - [NEARCHECK] 剃头挑子上那面黄铜盆
+  DROP: tp - [NEARCHECK] 车间首次评上先进，他把奖状糊在了床头。
+APPEND_OK cp=1166->1172 ho=568->570 tp=423->425 eol_cp='\n' eol_ho='\r\n' eol_tp='\r\n'
+--baseline exit=0
+{
+ "cp": {
+  "pool": "language.catchphrases",
+  "n": 1172,
+  "max_ratio": 91.667,
+  "top_pair": [
+   "热汤落肚，啥事都好商量。",
+   "热汤下肚，啥事都好商量。"
+  ],
+  "threshold": 92.0,
+  "criterion_ok": true
+ },
+ "ho": {
+  "pool": "lives.hook_objects",
+  "n": 570,
+  "max_ratio": 94.118,
+  "top_pair": [
+   "别在门襟上的老怀表",
+   "别在襟上的老怀表"
+  ],
+  "threshold": 95.0,
+  "criterion_ok": true
+ },
+ "tp": {
+  "pool": "lives.turning_points",
+  "n": 425,
+  "max_ratio": 48.889,
+  "top_pair": [
+   "退休那天把工牌擦亮，挂回车间墙上。",
+   "退休那天把工牌擦了一遍又一遍，最后别在了买菜的帆布包上。"
+  ],
+  "threshold": 50.0,
+  "criterion_ok": true
+ }
+}
+--qc exit=0 (15 checks)
+PASS gram-extract
+PASS layerA-fixture-hit
+PASS layerA-fixture-miss
+PASS layerA-cross-pool
+PASS layerA-real-R413
+PASS layerA-real-R406
+PASS layerA-real-crosspool
+PASS layerB-historic-boundary
+PASS layerB-exact-dup
+PASS unknown-type-reject
+PASS baseline-criterion
+PASS baseline-sentinel
+PASS parse-line
+PASS double-run
+PASS file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+census light rows=10030 (0-change assert)
