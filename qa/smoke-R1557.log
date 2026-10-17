@@ -1,0 +1,7 @@
+BigLife smoke R1557 @ 2026-10-17 23:07
+CHECK1 poolgen tick age=1.0h (22:06:02 TOTAL=1440 FAIL_BUCKETS=NONE) -> PASS
+CHECK2 年轮批=LLM 让路面静默跳过 0 环（:8090/:11434 双 000+看门狗三任务已禁用=他窗腾显存·GPU 1% 闲·mandate 不修不报障执法）·R1555 阵亡批 10 环 commits 在案（a9c1bea4+44e345d2·收成入账） -> PASS
+CHECK3 behavior --qc rows=10030 bad=0 (tw=night wx=clear wd=5·top3 sleep 7161/charge 1934/night_light 503) -> PASS
+CHECK4 behavior --auto 23:00 夜窗翻面再生在役（eve→night·勘正 R1556 22:53 遗留 eve 态·首轮 --qc bad=2694 错位根因收口） -> PASS
+CHECK5 heartbeat R1557 alive rings_today=851 export_ts=2026-10-17 23:06 -> PASS
+VERDICT: PASS
