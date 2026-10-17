@@ -1,0 +1,4 @@
+﻿QC-R1510 2026-10-17 08:3x
+cards=10030 evolved=4851 problems=0 dup_rings=37/37 (观测基线零新增) schema_rows=51964 schema_bad=0
+例巡位重置 >=R1516
+cmd: python -X utf8 Tools/qc_census.py --schema
