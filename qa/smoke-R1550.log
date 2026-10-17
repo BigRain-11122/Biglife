@@ -1,0 +1,7 @@
+BigLife smoke R1550 2026-10-17 21:0x
+[1] poolgen tick age(h)=0.91 PASS
+[2] ring batch commit 6cf9ec2d in git case: PASS | head: f26d9fbd 行为线 2026-10-17: 镜像 rows=10 ring=4851 [via BigLife-OSLoop] / 6cf9ec2d 年轮环(既有居民迭代·零新注册) 2026-10-17: C-04103, C-04104, C-04105, C-04106, C-04107, C-04108, C-04109, C-04110, C-04111, C-04112 [via BigLife-OSLoop] / 41074123 轮收尾 R1549: 年轮10环(C-04093~C-04102)+export续鲜791+smoke5/5 [via BigLife-OSLoop]
+[3] behavior --qc: PASS | rows=10030 bad=0 tw=eve wx=clear wd=5 top3=[('social', 4599), ('home', 2694), ('work', 1934)] crash=300 recovering=503
+[4] behavior --auto in service: PASS | behavior auto: bucket=eve wx=clear rest=na snd=fest unchanged - skip regen
+[5] heartbeat age(h)=0.0 PASS
+VERDICT=PASS
