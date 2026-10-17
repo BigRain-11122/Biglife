@@ -1,0 +1,87 @@
+== CHA1: gene_nearcheck --file ==
+[FLAG] cp|手上的茧不会骗人。
+    A: language.catchphrases[13] ['不会骗人'] ⊂ 数据不会骗人，人会。
+[CLEAN] cp|针脚密不密，翻个面就知道。
+[FLAG] cp|粥熬得稠，日子才立得住。
+    A: language.catchphrases[108] ['，日子才'] ⊂ 闲着的时候，日子才算自己的。
+    A: language.catchphrases[211] ['，日子才'] ⊂ 东西哪拿的回哪儿去，日子才不打架。
+    A: language.catchphrases[270] ['，日子才'] ⊂ 慢一点，日子才够长。
+    A: language.catchphrases[470] ['粥熬得稠', '熬得稠，', '立得住。'] ⊂ 隔夜粥熬得稠，勺子立得住。
+    A: lives.turning_points[84] ['才立得住'] ⊂ 头一回落选匠人榜，师父反倒请他吃了碗面——说输得起的手艺才立得住
+[CLEAN] cp|宁可少赚一笔，不欠街坊一情。
+[CLEAN] cp|摊子摆得直，秤上不亏心。
+[CLEAN] cp|路走得熟了，鞋就省了。
+[FLAG] ho|掉漆的牡丹饼干铁盒，里头收满纽扣和顶针
+    A: lives.hook_objects[156] ['饼干铁盒'] ⊂ 装着老照片的饼干铁盒
+[FLAG] ho|挂在门后磨得发亮的竹背篓
+    A: lives.hook_objects[121] ['磨得发亮', '得发亮的'] ⊂ 磨得发亮的门槛石
+    A: lives.hook_objects[132] ['磨得发亮', '得发亮的'] ⊂ 磨得发亮的黄铜门把
+    A: lives.hook_objects[153] ['的竹背篓'] ⊂ 磨出包浆的竹背篓
+    A: lives.hook_objects[186] ['磨得发亮', '得发亮的'] ⊂ 磨得发亮的木头围棋罐
+    A: lives.hook_objects[210] ['得发亮的'] ⊂ 拨得发亮的枣木算盘
+    A: lives.hook_objects[242] ['磨得发亮', '得发亮的'] ⊂ 磨得发亮的铜汤勺柄
+[CLEAN] ho|总慢半刻的旧挂钟，开会总有人拿它打趣
+[CLEAN] ho|烟盒拆平的硬纸板，夹着两斤粮票
+[FLAG] ho|漆皮剥落只剩个福字的旧门牌
+    A: lives.hook_objects[188] ['福字的旧'] ⊂ 贴着褪色福字的旧米缸
+    A: lives.hook_objects[228] ['的旧门牌'] ⊂ 字磨没了的旧门牌
+[CLEAN] tp|头一年除夕轮他守锅炉，厂里喇叭点名表扬，他红了脸没敢应。
+[FLAG] tp|教出来的徒弟出息了，逢年过节拎着点心匣子回来看他，他嘴上嫌贵，回回都收到柜顶。
+    A: lives.turning_points[11] ['逢年过节'] ⊂ 被引擎医生从一次大宕机里捞回来，从此逢年过节都往那儿送吃的
+[FLAG] tp|帮邻居搬家闪了腰，躺一个月，跟对面楼学了一手好棋。
+    A: lives.turning_points[382] ['一个月，'] ⊂ 值夜班头一个月，他把全楼电闸编号画进小本，谁问几号他张口就答。
+== gene_nearcheck: 14 候选, 7 近重候选 ==
+cha1 exit=1 (FLAG→换句)
+Counter cp: n=1148 in_pool_dup=0
+Counter ho: n=558 in_pool_dup=0
+Counter tp: n=416 in_pool_dup=0
+Counter cp: new=6 already_in_lib=0 new_self_dup=0
+Counter ho: new=5 already_in_lib=0 new_self_dup=0
+Counter tp: new=3 already_in_lib=0 new_self_dup=0
+== CHA2: 触发词族扫描 ==
+[HIT] tp|帮邻居搬家闪了腰，躺一个月，跟对面楼学了一手好棋。 chars=['月'] words=[]
+cha2 hits=1 (FAIL→换句)
+== CHA3: 跨面扫描 ==
+face strings n=2336 (cognition/*.json)
+== CHA3b: census 全卡整句撞句 ==
+census cards scanned=10034 hits=0 (PASS)
+== R1561 gene-round precheck VERDICT: FAIL ==
+== CHA1: gene_nearcheck --file ==
+[CLEAN] cp|针脚密不密，翻个面就知道。
+[CLEAN] cp|宁可少赚一笔，不欠街坊一情。
+[CLEAN] cp|摊子摆得直，秤上不亏心。
+[CLEAN] cp|路走得熟了，鞋就省了。
+[CLEAN] cp|活儿干得多，话就说得少。
+[CLEAN] cp|汤要人守，火要人看，懒不得。
+[CLEAN] ho|总慢半刻的旧挂钟，开会总有人拿它打趣
+[CLEAN] ho|烟盒拆平的硬纸板，夹着两斤粮票
+[FLAG] ho|断了齿的木梳，最小的姑娘拿它给布娃娃梳头
+    A: lives.hook_objects[167] ['了齿的木', '齿的木梳'] ⊂ 缺了齿的木梳
+    A: lives.hook_objects[293] ['断了齿的'] ⊂ 断了齿的旧木梳
+[CLEAN] ho|被烟火熏黑的窗棂，过年才擦一回
+[FLAG] ho|拴着红布条的渡口老柳树
+    A: lives.hook_objects[276] ['拴着红布', '着红布条', '红布条的'] ⊂ 拴着红布条的桅杆哨
+[CLEAN] tp|头一年除夕轮他守锅炉，厂里喇叭点名表扬，他红了脸没敢应。
+[FLAG] tp|头一回领工钱，一分没花全交给了娘，娘又塞回两毛让他去听戏。
+    A: lives.turning_points[189] ['头一回领', '一回领工', '回领工钱', '领工钱，'] ⊂ 头一回领工钱，全换成了灯油和灯芯，说要让自家铺面亮过对岸
+    A: lives.turning_points[238] ['，一分没'] ⊂ 头回守摊遇上讨价还价的行家，一分没让，回头手心全是汗。
+[FLAG] tp|相亲那天他把新的确良衬衫穿反了，姑娘倒先笑了，后来成了我娘。
+    A: lives.hook_objects[154] ['的确良衬', '确良衬衫'] ⊂ 压在箱底的的确良衬衫
+    A: lives.turning_points[59] ['笑了，后', '了，后来'] ⊂ 被提名街区调解员那天，她说『我就会劝和，不会讲理』，全弄堂都笑了，后来讲理都在行
+    A: lives.turning_points[62] ['后来成了'] ⊂ bug 猎人第一次放走的虫后来成了著名彩蛋，两个名字并排刻进了进度碑
+    A: lives.turning_points[331] ['那天他把'] ⊂ 挂上「先进个体户」奖状那天他把营业执照也换了新框。
+== gene_nearcheck: 14 候选, 4 近重候选 ==
+cha1 exit=1 (FLAG→换句)
+Counter cp: n=1148 in_pool_dup=0
+Counter ho: n=558 in_pool_dup=0
+Counter tp: n=416 in_pool_dup=0
+Counter cp: new=6 already_in_lib=0 new_self_dup=0
+Counter ho: new=5 already_in_lib=0 new_self_dup=0
+Counter tp: new=3 already_in_lib=0 new_self_dup=0
+== CHA2: 触发词族扫描 ==
+cha2 hits=0 (PASS)
+== CHA3: 跨面扫描 ==
+face strings n=2336 (cognition/*.json)
+== CHA3b: census 全卡整句撞句 ==
+census cards scanned=10034 hits=0 (PASS)
+== R1561 gene-round precheck VERDICT: FAIL ==

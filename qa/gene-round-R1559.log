@@ -1,0 +1,50 @@
+== CHA1: gene_nearcheck --file ==
+[FLAG] cp|不赶集的日子，顺着巷子慢慢晃。
+    A: language.catchphrases[96] ['的日子，'] ⊂ 慢火煨出来的日子，最养人。
+[FLAG] cp|灶上的汤咕嘟着，心里就踏实。
+    A: language.catchphrases[127] ['，心里就'] ⊂ 灶上炖着汤，心里就有底。
+    A: language.catchphrases[289] ['灶上的汤'] ⊂ 灶上的汤滚了，心就落地了。
+    A: language.catchphrases[625] ['咕嘟着，'] ⊂ 砂锅在灶上咕嘟着，掀盖先舀一勺尝咸淡。
+[FLAG] cp|工具各归各位，用时手不慌。
+    A: language.catchphrases[356] ['工具各归', '具各归各', '各归各位', '归各位，', '各位，用'] ⊂ 工具各归各位，用的时候才不抓瞎。
+    A: language.catchphrases[795] ['，用时手'] ⊂ 针线分格摆，用时手一伸就到。
+[FLAG] cp|新鲜玩意儿先上手摸一把，再问价钱。
+    A: language.catchphrases[459] ['上手摸一', '手摸一把'] ⊂ 稀罕物上手摸一把才算见过。
+[FLAG] cp|旧藤椅吱呀一声，比新沙发会聊天。
+    A: language.catchphrases[406] ['藤椅吱呀', '椅吱呀一', '吱呀一声', '呀一声，'] ⊂ 老藤椅吱呀一声，像在打招呼。
+    A: language.catchphrases[536] ['一声，比'] ⊂ 新线路试通那一声，比过年还响。
+[FLAG] cp|有人受欺负，脚比脑子先到。
+    A: language.catchphrases[371] ['人受欺负', '受欺负，'] ⊂ 见不得人受欺负，哪怕多管闲事。
+[FLAG] ho|豁了口的粗瓷海碗，倒扣在灶台上当盖儿
+    A: lives.hook_objects[197] ['了口的粗', '口的粗瓷', '的粗瓷海', '粗瓷海碗'] ⊂ 缺了口的粗瓷海碗
+    A: lives.hook_objects[517] ['豁了口的'] ⊂ 灶披间墙上那把豁了口的铜饭勺，谁家办席都来借它掌勺。
+[FLAG] ho|竹壳热水瓶，瓶胆换过三回壳还是原配
+    A: lives.hook_objects[285] ['竹壳热水', '壳热水瓶'] ⊂ 油亮亮的竹壳热水瓶
+    A: lives.turning_points[373] ['换过三回'] ⊂ 灯会散场捡到一盏没人认领的兔子灯，他挂在铺子门口等失主，等到灯芯换过三回。
+[CLEAN] ho|烟盒拆平的硬纸板，夹着两斤粮票
+[FLAG] tp|学徒三年只管磨刀，出师那天师傅把使旧的刨子塞进他怀里。
+    A: lives.turning_points[16] ['出师那天'] ⊂ 带的第一个学徒出师那天，把自己用了半辈子的家伙事儿传了下去
+[FLAG] tp|头一回登台说书忘词，台下老熟客替他续了下半句，收摊后他请全茶馆喝了一壶茶。
+    A: lives.presents[5] ['，收摊后'] ⊂ 每天还是老规矩，收摊后沿江走一圈才回家
+    A: lives.turning_points[95] ['词，台下'] ⊂ 头一回上台讲故事忘了词，台下街坊却拍红了手
+    A: lives.turning_points[102] ['头一回登', '一回登台', '回登台说', '登台说书'] ⊂ 头一回登台说书，忘词反倒逗笑了全场
+== gene_nearcheck: 11 候选, 10 近重候选 ==
+cha1 exit=1 (FLAG→换句)
+Counter cp: n=1148 in_pool_dup=0
+Counter ho: n=558 in_pool_dup=0
+Counter tp: n=416 in_pool_dup=0
+Counter cp: new=6 already_in_lib=0 new_self_dup=0
+Counter ho: new=3 already_in_lib=0 new_self_dup=0
+Counter tp: new=2 already_in_lib=0 new_self_dup=0
+== CHA2: 触发词族扫描 ==
+cha2 hits=0 (PASS)
+== CHA3: 跨面扫描 ==
+face strings n=2336 (cognition/*.json)
+== CHA3b: census 全卡整句撞句 ==
+census cards scanned=10034 hits=0 (PASS)
+== R1559 gene-round precheck VERDICT: FAIL ==
+== PROBE: lives.json 锚段形态 ==
+[hook_objects] key_idx=18943 close_idx=29143 tail_repr='，拿棉线拴了个提手",\r\n    "油印歌本的歌词页卷了边",\r\n    "钉在书桌前的发黄火车时刻表"\r\n  ],\r\n'
+[hook_objects] anchor_count=1
+[turning_points] key_idx=1698 close_idx=16137 tail_repr='端一盆水扑灭，两家人从此合用一个米缸。",\r\n    "全厂区一起学自行车，她学得最慢，后来骑得最远。"\r\n  ],\r\n'
+[turning_points] anchor_count=1
