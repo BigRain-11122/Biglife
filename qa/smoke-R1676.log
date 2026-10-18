@@ -1,0 +1,22 @@
+# R1676 smoke 自验 @2026-10-19 01:4x（T-20260928-05 数据面五项+export 项·真实运行输出全文·逐条可复跑）
+== 1 poolgen 跑通（tick 戳·1h 自循环在役） ==
+=== 2026-10-19 00:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-10-19 01:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+== 2 census 新条目（当日年轮环 git 直数） ==
+7a3f3b88 年轮环(既有居民迭代·零新注册) 2026-10-19: C-00250, C-00251, C-00252, C-00253, C-00254, C-00255, C-00256, C-00257, C-00258, C-00259 [via BigLife-OSLoop]
+40912063 年轮环(既有居民迭代·零新注册) 2026-10-19: C-00240, C-00241, C-00242, C-00243, C-00244, C-00245, C-00246, C-00247, C-00248, C-00249 [via BigLife-OSLoop]
+3043e094 年轮环(既有居民迭代·零新注册) 2026-10-19: C-00230, C-00231, C-00232, C-00233, C-00234, C-00235, C-00236, C-00237, C-00238, C-00239 [via BigLife-OSLoop]
+a5efd971 年轮环(既有居民迭代·零新注册) 2026-10-19: C-00220, C-00221, C-00222, C-00223, C-00224, C-00225, C-00226, C-00227, C-00228, C-00229 [via BigLife-OSLoop]
+== 3 位置/锚位字段非 null（behavior 面行键实测·前 200 行样本） ==
+behavior anchor non-null sample ok: True of 200
+== 4 行为链再生（当日镜像 git 直数） ==
+bb4e5a6f 行为线 2026-10-19: 镜像 rows=10 ring=4851 [via BigLife-OSLoop]
+7f29309b 行为线 2026-10-19: 镜像 rows=10 ring=4851 [via BigLife-OSLoop]
+776d23c3 行为线 2026-10-19: 镜像 rows=10 ring=4851 [via BigLife-OSLoop]
+851d1b85 行为线 2026-10-19: 镜像 rows=2 ring=4851 [via BigLife-OSLoop]
+1be4958d 行为线 2026-10-19: 镜像 rows=10 ring=4851 [via BigLife-OSLoop]
+== 5 heartbeat 3h 内 ==
+2026-10-19 01:43 R1676 alive rings_today=42 export_ts=2026-10-19 01:43 [via BigLife-OSLoop]
+== 6 export_ts 新鲜度 ==
+2026-10-19 01:43
+VERDICT: PASS 6/6
