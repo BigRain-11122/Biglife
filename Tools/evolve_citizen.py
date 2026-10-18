@@ -636,7 +636,15 @@ def llm(prompt):
         data=json.dumps({"model": MODEL,
                          "messages": [{"role": "user", "content": prompt}],
                          "max_tokens": 120, "temperature": 0.8,
-                         "chat_template_kwargs": {"enable_thinking": False}}).encode("utf-8"),
+                         "chat_template_kwargs": {"enable_thinking": False},
+                         # R1661: Ollama /v1 shim ignores chat_template_kwargs
+                         # (qwen3.8 thinking ate all 120 tokens -> empty content);
+                         # reasoning_effort=none is the one switch both Ollama
+                         # 0.11+ (disables thinking) and llama.cpp :8090
+                         # (unknown field, ignored) tolerate. Lets the ring
+                         # lane reroute to Ollama when the 35B brain lane is
+                         # paused by the CEO yield law.
+                         "reasoning_effort": "none"}).encode("utf-8"),
         headers={"Content-Type": "application/json"})
     # BIGLIVE_LLM_TIMEOUT: 35B-A3B fleet brain lane (:8090, O-20261015-1335), ~38 chars/s.
     with urllib.request.urlopen(
