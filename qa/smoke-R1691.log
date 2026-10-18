@@ -1,0 +1,8 @@
+R1691 smoke 六项自验 2026-10-19 06:2x
+1. QC 例巡: qc_census --schema cards=10030 evolved=4851 problems=0 dup_rings=37/37 schema_rows=51964 schema_bad=0 PASS
+2. gene_nearcheck --qc: 15 PASS 0 FAIL PASS
+3. anchor 探针: 10027/10030 非空（荣誉席 3 法定例外） PASS
+4. behavior --qc: rows=10030 bad=0 tw=night wx=cloud crash=0 PASS
+5. poolgen tick: === 2026-10-19 06:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE PASS
+6. export 账平: expect_total=192 machine=192 reg=191 anc=1 + heartbeat R1691 落行 PASS
+== VERDICT: PASS ==
