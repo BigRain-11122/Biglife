@@ -1,0 +1,9 @@
+qa/smoke-R1649.log = BigLife 数据面自验六项（QA Smoke Test charter·BigLife 节+ C6 前轮锚）
+round: R1649  ts: 2026-10-18 18:27  runner: BigLife-OSLoop
+CHECK1 poolgen tick 新鲜度: PASS (state/poolgen_run.log tail = === 2026-10-18 18:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE)
+CHECK2 census 新条目（年轮线）: 让路-如实记非 FAIL (LLM :8090 让路面·evolve 实跑「ollama down; batch paused at 0 / OK evolved=0 of 10 due」法定证据在 state/evolve-R1649.log·machine-state.flag 本机实读=paused 2026-10-17T22:51:01+08:00（CEO 让路令合法态·恢复通道=AutoYield/CEO 口令非本司权限面）)
+CHECK3 位置字段非 null: PASS (citizen_anchors --qc live: QC PASS: rows=10030 light=10030 reserved=3 ok=10027 zones=6 double_run=identical)
+CHECK4 行为链再生: PASS (behavior --auto: behavior auto: bucket=meal wx=rain rest=na snd=fest unchanged - skip regen + --qc live: rows=10030 bad=0 tw=meal wx=rain wd=6 top3=[('indoors', 4735), ('shelter', 2558), ('work', 1934)] crash=300 recovering=503)
+CHECK5 heartbeat 3h 内: PASS (state/heartbeat.txt 尾行 = 2026-10-18 18:27 R1649 alive rings_today=0 export_ts=2026-10-18 18:27 [via BigLife-OSLoop])
+CHECK6 前轮收口件锚 R1648: PASS (tasks/TASKS.md R1648 实录行在板=True + docs/status-export.json dept0 R1648 窗条在板=True + qa/smoke-R1648.log 在板=True·三件全中)
+VERDICT: PASS 6/6
