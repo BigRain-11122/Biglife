@@ -1,0 +1,9 @@
+=== BigLife OS smoke R1626 @2026-10-18 14:06 ===
+[PASS] C1 poolgen tick 新鲜(当日 exit=0) | === 2026-10-18 14:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[PASS] C2 年轮批 LLM 让路面如实记(法定态非FAIL) | paused at 0 / evolved=0 of 10 due
+[PASS] C3 behavior anchor 非空(荣誉席法定例外) | rows=10030 null_non_hon=0
+[PASS] C4 行为链 --auto 在役(本轮跑过) | tw=day wx=clear unchanged-skip
+[PASS] C5 heartbeat 新鲜(本轮) | 2026-10-18 14:06 R1626 alive rings_today=0 export_ts=2026-10-18 14:06 [via BigLi
+[PASS] C6 今日环计 rings_today=0 诚实态 | LLM 让路面零新环
+VERDICT: PASS
+counts: 6/6
