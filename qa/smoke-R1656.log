@@ -1,0 +1,8 @@
+=== BigLife QA Smoke R1656 @ 2026-10-18 19:37 ===
+CHECK1 poolgen tick 当日 exit=0: PASS (=== 2026-10-18 19:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE)
+CHECK2 年轮批 LLM 让路面如实记（非 FAIL）: PASS (state/evolve-r1656.log: ollama down; batch paused at 0 / OK evolved=0 of 10 due——法定让路面（machine-state.flag 本机实读=paused 2026-10-17T22:51:01+08:00）)
+CHECK3 决策水位差集内容寻杀: PASS (state/_wm_r1590.py 实跑 DOC_IDS=153 WM_IDS=153 NEW=0 NEW_LIST=NONE exit=0)
+CHECK4 行为链 --qc: PASS (rows=10030 bad=0 tw=evpk wx=rain wd=6 top3=[('indoors', 4614), ('home', 2694), ('shelter', 2422)] crash=300 recovering=503)
+CHECK5 export 账平+心跳: PASS (dry-run DRYRUN total=0→实跑 OK total=0 reg=0 anc=0 dept=True results=False 幂等 no-op=0==机器直数·state/heartbeat.txt 尾行 ts=2026-10-18 19:36 R1656 alive)
+CHECK6 前轮收口件锚 R1655 三件全中: PASS (HEAD eb1324bb 三件=tasks/TASKS.md R1655 实录行+qa/smoke-R1655.log+docs/status-export.json·Test-Path qa\smoke-R1655.log=True·dept0 滚动窗前插 R1656 后保最新 3 条 R1656/R1655/R1654)
+VERDICT: PASS 6/6
