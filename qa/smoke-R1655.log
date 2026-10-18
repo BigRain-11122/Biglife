@@ -1,0 +1,8 @@
+=== BigLife QA Smoke R1655 @ 2026-10-18 19:29:34 ===
+CHECK1 poolgen tick 当日 exit=0: PASS (=== 2026-10-18 19:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE)
+CHECK2 年轮批 LLM 让路面如实记（非 FAIL）: PASS (state/evolve-r1655.log: ollama down; batch paused at 0 / OK evolved=0 of 10 due——法定让路面（machine-state paused 10-17 22:51）)
+CHECK3 行为面 anchor 非空机器直数: PASS (rows=10030 null_non_hored=0 荣誉席 3 席法定例外)
+CHECK4 行为链 --qc: PASS (rows=10030 bad=0 tw=evpk wx=rain wd=6 top3=[('indoors', 4614), ('home', 2694), ('shelter', 2422)] crash=300 recovering=503)
+CHECK5 heartbeat 3h 内: PASS (state/heartbeat.txt 尾行 ts=2026-10-18 19:28 R1655 alive)
+CHECK6 前轮收口件锚 R1654 三件全中: PASS (['qa\\gene-round-r1654.log']+['qa\\qc-r1654.log']+tasks/TASKS.md R1654 实录行)
+VERDICT: PASS 6/6
