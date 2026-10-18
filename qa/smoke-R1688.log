@@ -1,0 +1,25 @@
+# qa/smoke-R1688.log — QA Smoke 自验（T-20260928-05 五项+周期面第六项）·2026-10-19 05:2x @BigLife-OSLoop
+
+## ① poolgen 跑通（tick 戳新鲜）
+state/poolgen_run.log 尾：=== 2026-10-19 05:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+（24h 窗连戳 30 次·TOTAL=1440 满额续绿）✓
+
+## ② census 新条目（本批环）
+R1688 年轮批 10/10：C-00370~C-00379 十席〔c28cb854〕+行为线镜像 rows=10 ring=4851〔16cffe19〕
+（T-20261019-01 保活修单后第二批前台零击杀·stdout 逐席流式·OK evolved=10 of 10 due 行实跑输出）✓
+
+## ③ 位置字段非 null（behavior anchor）
+ANCHOR_NONNULL 10027 / 10030（荣誉席 3 席法定例外 anchor=null·承载面=citizen-behavior.jsonl v3.55）✓
+
+## ④ 行为链再生（--auto/--qc）
+behavior --qc 实跑：rows=10030 bad=0 tw=night wx=cloud wd=0
+top3=[('sleep', 7388), ('charge', 2003), ('night_light', 503)] crash=0 recovering=2850（夜窗正常语义）✓
+
+## ⑤ heartbeat 新鲜（3h 内）
+export --heartbeat 同窗落 state/heartbeat.txt（工具实跑输出 hb=True·ts 2026-10-19 05:22·R1688 alive）✓
+
+## ⑥ 周期面·核卡抽验 2/2 人眼过（例巡位未到 ≥R1691）
+C-00370 阿稳定「风挺大，吹得窗缝直响。我把老杯子捂热，听着编译流水线的低鸣，心里默谢主顾，稳住，别浪，先把这字写正。」/C-00379 魏果果「急啥，汤还没开呢。天阴着风挺大，我把灯都检查妥了，清单上没的事就让它排队吧。」：
+[锚] 注脚齐·口头禅领句（稳住别浪/急啥汤还没开呢）·「天阴着风挺大」与当夜实况一致〔behavior wx=cloud〕·事件词全卡面人设域（老杯子捂热/默谢主顾/检查灯=行为节·清单排队=信条·编译流水线低鸣=职业域）·新环与本人历史环零逐字重复〔dup-history 闸在役〕·零占位零越权；✓
+
+VERDICT=PASS 6/6 @2026-10-19 05:2x [via BigLife-OSLoop]
