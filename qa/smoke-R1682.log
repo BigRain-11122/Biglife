@@ -1,0 +1,8 @@
+qa/smoke-R1682 六项自验（T-20260928-05·2026-10-19 03:31 @BigLife-OSLoop）
+1. poolgen 跑通: tick 03:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE ✓（连戳 00:06/01:06/02:06/03:06 四戳在册续绿）
+2. census 新条目: 本批 10 环 C-00310~C-00319〔06ad6392〕·10-19 日账 102 环 ✓
+3. 位置字段非 null: anchor 全库探针 10027/10030 非空（荣誉席 3 席 C-00001~03 法定 anchor=null 例外）✓（本轮探针升级=全量直数·非 200 行样本）
+4. 行为链再生: behavior --auto bucket=night wx=rain unchanged-skip + --qc rows=10030 bad=0〔top3 sleep 7388/charge 2003/indoors 335·crash=0 recovering=2850=夜窗正常语义〕✓·R1681 观察项（03:11 首跑 bad=1=天气 cloud→rain 翻转窗瞬态）复扫即销零复发 ✓
+5. heartbeat 新鲜: export 工具 --heartbeat ts 2026-10-19 03:31 ✓
+6. export 账平: OK total=102 reg=101 anc=1 expect_total=102 断言过（年轮十批 100+相遇 2=10-19 当日 [锚] 直数）✓
+VERDICT: PASS 6/6
