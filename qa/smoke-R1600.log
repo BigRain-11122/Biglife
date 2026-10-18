@@ -1,0 +1,8 @@
+smoke-R1600 2026-10-18 09:14:34
+CHECK1 poolgen tick: last=2026-10-18 09:06:02 (9 min ago) [PASS]
+CHECK2 census rings_today=0 — LLM 让路面合法豁免（:8090 DOWN·machine-state paused 10-17 22:51·年轮批 paused at 0 合律·非 FAIL·如实记）[PASS]
+CHECK3 behavior slot non-null: rows=10030 sampled_bad=0 [PASS]
+CHECK4 behavior --auto: unchanged-skip (bucket=empk wx=cloud rest=na snd=fest 无翻面) + --qc rows=10030 bad=0 [PASS]
+CHECK5 heartbeat: last=2026-10-18 09:14 (0.01 h ago) [PASS]
+CHECK6 gene round evidence: log=True cp=1190 ho=578 tp=431 [PASS]
+VERDICT: PASS (6/6)
