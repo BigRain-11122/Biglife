@@ -1,0 +1,13 @@
+R1594 QC 例巡（到期位兑现·LLM 让路面确定性巡检不停摆=承 R1558/R1564/R1570/R1576/R1582/R1588 第 7 轮）
+时间：2026-10-18 07:5x · 执行：python -X utf8 Tools/qc_census.py --schema
+
+QC done cards=10030 evolved=4851 problems=0 dup_rings=37/37 schema_rows=51964 schema_bad=0
+
+判读：
+- cards=10030（万卡全量·双闸口径维持）
+- evolved=4851（有年轮卡数·与 R1588 位持平=LLM 让路面零新环预期一致）
+- problems=0（编号/姓名唯一·必备段齐备·年轮锚定律全过）
+- dup_rings=37/37（观测基线零新增·R1530/R1532 被杀窗双环历史观测面维持）
+- schema_rows=51964 schema_bad=0（R3 四面 JSON Schema 结构层全绿）
+
+例巡位重置 ≥R1600 · 报告正身 census/QC-REPORT.md（随轮入库）
