@@ -1,0 +1,10 @@
+== R1671 smoke 2026-10-18 23:38 ==
+PASS CHECK1 poolgen tick 当日 FAIL_BUCKETS=NONE (23:06:01 TOTAL=1440)
+PASS CHECK2 R1670 批在飞如实记（evolve-r1670.log 无 OK 行·pid 6124 存活·7/10 已落卡 C-00213~C-00219 mtime 23:28:14→23:32:11 序贯单写者实锚·#8 生成中） in-flight -> R1672 收账（子进程自带收口 commit+cursor+sync_rings·轮体死活零影响）
+PASS CHECK3 behavior qc rows=10030 bad=0 tw=night wx=rain wd=6 top3=[('sleep', 7161), ('charge', 1934), ('indoors', 335)] crash=300 recovering=503
+PASS CHECK4 anchors qc rows=10030 light=10030 reserved=3 ok=10027 zones=6 double_run=identical
+PASS CHECK5 heartbeat R1671 alive 行新鲜 2026-10-18 23:38 R1671 alive rings_today=92 export_ts=2026-10-18 23:38 [via BigLife-OSLoop]
+PASS CHECK6 前轮收口件锚 R1670（73ee30da+qa/smoke-R1670.log 双件在盘）
+PASS CHECK7 游标未进禁并发点火（同游标双批=重复环 P0 防制·本轮零点火=R1672 收账后接续）
+PASS CHECK8 水位新行消费 D-20261018-02（委员会/bm-c 域件非涉本司零回执·watermark 153→154 回写）
+VERDICT: PASS (8/8)
