@@ -1,0 +1,10 @@
+== R1672 smoke 2026-10-18 23:52 ==
+PASS CHECK1 poolgen tick 当日 FAIL_BUCKETS=NONE (23:06:01 TOTAL=1440)
+PASS CHECK2 R1672 批点火在飞如实记（evolve-r1672.log route=reroute->qwen3.8:27b·pid=37356·点火前 Win32_Process 占线核查=0） in-flight -> R1673 收账（子进程自带收口 commit+cursor+sync_rings·轮体死活零影响）
+PASS CHECK3 behavior qc rows=10030 bad=0 tw=night wx=rain wd=6 top3=[('sleep', 7161), ('charge', 1934), ('indoors', 335)] crash=300 recovering=503
+PASS CHECK4 anchors qc rows=10030 light=10030 reserved=3 ok=10027 zones=6 double_run=identical
+PASS CHECK5 heartbeat R1672 alive 行落位（export 工具回执 hb=True ts=2026-10-18 23:52·OK total=92）
+PASS CHECK6 前轮收口件锚 R1671（23016a47+qa/smoke-R1671.log 双件在盘）
+PASS CHECK7 点火纪律（占线核查 0 后单批点火·同游标双批 P0 防制·R1673 收账后接续）
+PASS CHECK8 水位差集 NEW=0（python 内容寻杀实跑·154 ID 全在 watermark·D-20261018-02 已消费）
+VERDICT: PASS (8/8)
