@@ -1,0 +1,118 @@
+# R1630 基因轮实录 @2026-10-18 14:4x-15:0x（LLM 让路面第 75 轮·纯确定性零 LLM·R1624+6 轮到期兑现）
+ollama down; batch paused at 0（年轮批让路面证据·与本基因轮同轮并行）
+[查一] exact-dup 全库 2466 串 0 命中
+[查二] 触发词族 char14+word19 0 命中
+[查三] 跨面 cognition 2295 串 ≥4字地板 0 命中
+[CHA3b] census 整句撞 rg --no-ignore 0 命中
+[批内] 4-gram 0
+[CHA1-nearcheck-pre]
+[CLEAN] cp|木匣隔成小格，凿子刨子各睡各窝。
+[CLEAN] cp|面剂子醒到指坑不回弹，才敢下锅。
+[CLEAN] cp|躺椅底下塞本闲书，醒一页翻一页。
+[CLEAN] cp|新到的留声机唱头，他省着钱也要配。
+[CLEAN] cp|顶针磨出俩坑，正是她缝棉被那几年。
+[CLEAN] cp|巷口有人搬不动粮，他搭把手从不问价钱。
+[CLEAN] ho|当铺门厅外那道齐腰高的木栅栏
+[CLEAN] ho|裱画铺墙上那卷压出旧折痕的绫边
+[CLEAN] ho|车马店院里那口饮牲口的石槽
+[CLEAN] ho|香烛铺案上那把剪灯芯的小剪
+[CLEAN] tp|接了邮差的活，头一年就把山里的路认全了。
+[CLEAN] tp|儿子考上省城学堂，他赶做出一双千层底。
+== gene_nearcheck: 12 候选, 0 近重候选 ==
+[追加] language.json 尾锚零字节改动·+24 行纯插入（,{ 块·六轴各一）
+[追加] lives.json 双锚行加逗号（SKILL 特许）+6 新行（ho 尾锚=豆坊石磨盘条 4 新行+tp 尾锚=妹妹红枣条 2 新行）
+[计数实测] before={'language.catchphrases': 1214, 'lives.hook_objects': 595, 'lives.turning_points': 440} after={'language.catchphrases': 1220, 'lives.hook_objects': 599, 'lives.turning_points': 442}
+[计数] cp 1214→1220 / ho 595→599 / tp 440→442 · light=10030 零变化
+[登记后复验]
+[FLAG] cp|木匣隔成小格，凿子刨子各睡各窝。
+    A: language.catchphrases[1214] ['木匣隔成', '匣隔成小', '隔成小格', '成小格，', '小格，凿', '格，凿子', '，凿子刨', '凿子刨子', '子刨子各', '刨子各睡', '子各睡各', '各睡各窝', '睡各窝。'] ⊂ 木匣隔成小格，凿子刨子各睡各窝。
+    B: ratio 100.0 ≥ T92 vs 木匣隔成小格，凿子刨子各睡各窝。
+[FLAG] cp|面剂子醒到指坑不回弹，才敢下锅。
+    A: language.catchphrases[1215] ['面剂子醒', '剂子醒到', '子醒到指', '醒到指坑', '到指坑不', '指坑不回', '坑不回弹', '不回弹，', '回弹，才', '弹，才敢', '，才敢下', '才敢下锅', '敢下锅。'] ⊂ 面剂子醒到指坑不回弹，才敢下锅。
+    B: ratio 100.0 ≥ T92 vs 面剂子醒到指坑不回弹，才敢下锅。
+[FLAG] cp|躺椅底下塞本闲书，醒一页翻一页。
+    A: language.catchphrases[1216] ['躺椅底下', '椅底下塞', '底下塞本', '下塞本闲', '塞本闲书', '本闲书，', '闲书，醒', '书，醒一', '，醒一页', '醒一页翻', '一页翻一', '页翻一页', '翻一页。'] ⊂ 躺椅底下塞本闲书，醒一页翻一页。
+    B: ratio 100.0 ≥ T92 vs 躺椅底下塞本闲书，醒一页翻一页。
+[FLAG] cp|新到的留声机唱头，他省着钱也要配。
+    A: language.catchphrases[1217] ['新到的留', '到的留声', '的留声机', '留声机唱', '声机唱头', '机唱头，', '唱头，他', '头，他省', '，他省着', '他省着钱', '省着钱也', '着钱也要', '钱也要配', '也要配。'] ⊂ 新到的留声机唱头，他省着钱也要配。
+    B: ratio 100.0 ≥ T92 vs 新到的留声机唱头，他省着钱也要配。
+[FLAG] cp|顶针磨出俩坑，正是她缝棉被那几年。
+    A: language.catchphrases[1218] ['顶针磨出', '针磨出俩', '磨出俩坑', '出俩坑，', '俩坑，正', '坑，正是', '，正是她', '正是她缝', '是她缝棉', '她缝棉被', '缝棉被那', '棉被那几', '被那几年', '那几年。'] ⊂ 顶针磨出俩坑，正是她缝棉被那几年。
+    B: ratio 100.0 ≥ T92 vs 顶针磨出俩坑，正是她缝棉被那几年。
+[FLAG] cp|巷口有人搬不动粮，他搭把手从不问价钱。
+    A: language.catchphrases[1219] ['巷口有人', '口有人搬', '有人搬不', '人搬不动', '搬不动粮', '不动粮，', '动粮，他', '粮，他搭', '，他搭把', '他搭把手', '搭把手从', '把手从不', '手从不问', '从不问价', '不问价钱', '问价钱。'] ⊂ 巷口有人搬不动粮，他搭把手从不问价钱。
+    B: ratio 100.0 ≥ T92 vs 巷口有人搬不动粮，他搭把手从不问价钱。
+[FLAG] ho|当铺门厅外那道齐腰高的木栅栏
+    A: lives.hook_objects[595] ['当铺门厅', '铺门厅外', '门厅外那', '厅外那道', '外那道齐', '那道齐腰', '道齐腰高', '齐腰高的', '腰高的木', '高的木栅', '的木栅栏'] ⊂ 当铺门厅外那道齐腰高的木栅栏
+    B: ratio 100.0 ≥ T95 vs 当铺门厅外那道齐腰高的木栅栏
+[FLAG] ho|裱画铺墙上那卷压出旧折痕的绫边
+    A: lives.hook_objects[596] ['裱画铺墙', '画铺墙上', '铺墙上那', '墙上那卷', '上那卷压', '那卷压出', '卷压出旧', '压出旧折', '出旧折痕', '旧折痕的', '折痕的绫', '痕的绫边'] ⊂ 裱画铺墙上那卷压出旧折痕的绫边
+    B: ratio 100.0 ≥ T95 vs 裱画铺墙上那卷压出旧折痕的绫边
+[FLAG] ho|车马店院里那口饮牲口的石槽
+    A: lives.hook_objects[597] ['车马店院', '马店院里', '店院里那', '院里那口', '里那口饮', '那口饮牲', '口饮牲口', '饮牲口的', '牲口的石', '口的石槽'] ⊂ 车马店院里那口饮牲口的石槽
+    B: ratio 100.0 ≥ T95 vs 车马店院里那口饮牲口的石槽
+[FLAG] ho|香烛铺案上那把剪灯芯的小剪
+    A: lives.hook_objects[598] ['香烛铺案', '烛铺案上', '铺案上那', '案上那把', '上那把剪', '那把剪灯', '把剪灯芯', '剪灯芯的', '灯芯的小', '芯的小剪'] ⊂ 香烛铺案上那把剪灯芯的小剪
+    B: ratio 100.0 ≥ T95 vs 香烛铺案上那把剪灯芯的小剪
+[FLAG] tp|接了邮差的活，头一年就把山里的路认全了。
+    A: lives.turning_points[440] ['接了邮差', '了邮差的', '邮差的活', '差的活，', '的活，头', '活，头一', '，头一年', '头一年就', '一年就把', '年就把山', '就把山里', '把山里的', '山里的路', '里的路认', '的路认全', '路认全了', '认全了。'] ⊂ 接了邮差的活，头一年就把山里的路认全了。
+    B: ratio 100.0 ≥ T50 vs 接了邮差的活，头一年就把山里的路认全了。
+[FLAG] tp|儿子考上省城学堂，他赶做出一双千层底。
+    A: lives.turning_points[441] ['儿子考上', '子考上省', '考上省城', '上省城学', '省城学堂', '城学堂，', '学堂，他', '堂，他赶', '，他赶做', '他赶做出', '赶做出一', '做出一双', '出一双千', '一双千层', '双千层底', '千层底。'] ⊂ 儿子考上省城学堂，他赶做出一双千层底。
+    B: ratio 100.0 ≥ T50 vs 儿子考上省城学堂，他赶做出一双千层底。
+== gene_nearcheck: 12 候选, 12 近重候选 ==
+[nearcheck --qc]
+PASS gram-extract
+PASS layerA-fixture-hit
+PASS layerA-fixture-miss
+PASS layerA-cross-pool
+PASS layerA-real-R413
+PASS layerA-real-R406
+PASS layerA-real-crosspool
+PASS layerB-historic-boundary
+PASS layerB-exact-dup
+PASS unknown-type-reject
+PASS baseline-criterion
+PASS baseline-sentinel
+PASS parse-line
+PASS double-run
+PASS file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+[--baseline]
+{
+ "cp": {
+  "pool": "language.catchphrases",
+  "n": 1220,
+  "max_ratio": 91.667,
+  "top_pair": [
+   "热汤落肚，啥事都好商量。",
+   "热汤下肚，啥事都好商量。"
+  ],
+  "threshold": 92.0,
+  "criterion_ok": true
+ },
+ "ho": {
+  "pool": "lives.hook_objects",
+  "n": 599,
+  "max_ratio": 94.118,
+  "top_pair": [
+   "别在门襟上的老怀表",
+   "别在襟上的老怀表"
+  ],
+  "threshold": 95.0,
+  "criterion_ok": true
+ },
+ "tp": {
+  "pool": "lives.turning_points",
+  "n": 442,
+  "max_ratio": 48.889,
+  "top_pair": [
+   "退休那天把工牌擦亮，挂回车间墙上。",
+   "退休那天把工牌擦了一遍又一遍，最后别在了买菜的帆布包上。"
+  ],
+  "threshold": 50.0,
+  "criterion_ok": true
+ }
+}
+
+KEEP=12 DROPPED=0 · 形制 +24/-0 与 +10/-2=R1618/R1624 同形 · 全确定性零 LLM
