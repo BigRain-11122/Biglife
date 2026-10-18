@@ -1,0 +1,7 @@
+smoke-R1616 2026-10-18 12:07:18 VERDICT=PASS 6/6
+PASS C1 poolgen tick 续绿 === 2026-10-18 12:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BU
+PASS C2 今日环账平 rings_today=0 (LLM 让路面合法豁免·evolve 证据 state/evolve-r1616.log)
+PASS C3 行为面位置字段非 null sampled=197 null=0 (荣誉席 anchor=null 法定例外已排除)
+PASS C4 行为链 --qc rows=10030 bad=0 tw=meal wx=cloud wd=6 top3=[('meal', 7524), ('work', 2003), ('home', 503)] crash=0 
+PASS C5 heartbeat 3h 内 2026-10-18 12:06 R1616 alive rings_today=0 export_ts=2026-10-18 12:06 [via BigLi
+PASS C6 收口件锚全中 evolve 证据行+dept R1616 窗条+export_ts 12:06
