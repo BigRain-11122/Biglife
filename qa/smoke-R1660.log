@@ -1,0 +1,9 @@
+=== BigLife QA Smoke R1660 @ 2026-10-18 20:21 ===
+CHECK1 池水线（poolgen tick/池审计）: PASS (state/poolgen_run.log 尾行: === 2026-10-18 20:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE；池审 10-18 已兑十证满额 1440 自停)
+CHECK2 年轮线 LLM 让路面如实记（非 FAIL）: PASS (state/evolve-r1660.log: batch paused at 0 / 10 位到期居民候批〔machine-state.flag=paused 2026-10-17T22:51:01+08:00＝CEO 让路令合法态·恢复通道=AutoYield/CEO 口令非本司权限面〕)
+CHECK3 锚点强校验: PASS (QC PASS: rows=10030 light=10030 reserved=3 ok=10027 zones=6 double_run=identical)
+CHECK4 行为链 --qc: PASS (rows=10030 bad=0 tw=eve wx=rain wd=6 snd=fest top3=[('indoors', 3357), ('home', 2694), ('work', 1934)] crash=300 recovering=503)
+CHECK5 heartbeat 3h 新鲜: PASS (state/heartbeat.txt 尾行: 2026-10-18 20:20 R1660 alive rings_today=0 export_ts=2026-10-18 20:20 [via BigLife-OSLoop])
+CHECK6 前轮收口件锚 R1659 三件全中: PASS (qa/smoke-R1659.log + tasks/TASKS.md R1659 实录行 + git 收口 commit 10af8fdd（type=commit）)
+CHECK7 基因轮证据锚 R1660 四锚全中: PASS (qa/gene-round-R1660.log + 计数实测 cp 1244→1250/ho 613→616/tp 453→456 + nearcheck --qc 电池 15/15 + --baseline 三池 criterion_ok 哨兵原值在位 cp91.667<92/ho94.118<95/tp48.889<50)
+VERDICT: PASS 7/7
