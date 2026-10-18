@@ -1,0 +1,7 @@
+smoke R1639 2026-10-18 16:38:10 PASS
+PASS C1 poolgen tick | last tick 2026-10-18 16:06:02 age 0.54h
+PASS C2 LLM-yield honest record | legal skip evidence recorded (LLM yield surface, honest not FAIL)
+PASS C3 behavior rows/state | rows=10030 bucket=day wx=rain
+PASS C4 behavior qc | bad=0 rc=0
+PASS C5 heartbeat fresh | last line ts 2026-10-18 16:36 age 0.03h
+PASS C6 prev-round anchors R1638 | missing=none
