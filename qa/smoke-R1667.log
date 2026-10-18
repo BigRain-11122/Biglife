@@ -1,0 +1,7 @@
+C1-R1666-batch-commits: PASS 95a9d610 十席 + 7b6be0cc 镜像 在库
+C2-evolve-logs: PASS r1666 批 OK + r1667 批轮内落地 OK（ed2cc317）+ r1667b 续点火在案（驱动 detached 行被子进程覆写=装饰性坑注记）
+C3-export: PASS export_ts=2026-10-18 22:31 尾行=60（R1667 机器直数 60=上链 55+在飞增量·R1667 行在位）
+C4-board: PASS 承令单 T-20261018-03 + R1667 实录行在板
+C5-heartbeat: PASS R1667 alive 心跳行在位
+C6-ack-F-BL03: PASS CEO 三连令承令回执行在册（方案件 §⑦ 建设案承接）
+VERDICT: PASS

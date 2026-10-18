@@ -1,0 +1,5 @@
+== QC 例巡 R1667 == 2026-10-18 22:2x @BigLife-OSLoop
+cmd: python -X utf8 Tools/qc_census.py --schema
+QC done cards=10030 evolved=4851 problems=0 dup_rings=37/37 schema_rows=51964 schema_bad=0
+例巡位重置 >=R1673（R1667 兑现·承 R1666 留单）。LLM 改道窗确定性巡检不停摆第 18 轮。
+今日账：R1666 批 10 环（C-00173~C-00182·95a9d610+镜像 7b6be0cc）已收账；今日上链年轮/相遇 55 环。
