@@ -1,0 +1,11 @@
+# qa/smoke-R1674.log - 2026-10-19 00:4x @BigLife-OSLoop R1674 五项自验（T-20260928-05·数据面自验·log 面即证据面·逐条可复跑）
+[1] poolgen tick 在跑: PASS
+  state/poolgen_run.log tail: === 2026-10-19 00:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] census 新条目（本批 10 环）: PASS
+  git: 3043e094 年轮环(既有居民迭代·零新注册) 2026-10-19: C-00230..C-00239 [via BigLife-OSLoop]
+  git: 776d23c3 行为线 2026-10-19: 镜像 rows=10 ring=4851 [via BigLife-OSLoop]
+[3] 位置字段非 null: PASS（本 tick behavior-auto unchanged-skip=夜窗正常态·同日 R1673 再生面 --qc rows=10030 bad=0 slot 全非 null 维持）
+  logs/os-loop 本轮 run log: 00:23:02 behavior-auto: behavior auto: bucket=night wx=rain rest=na snd=fest unchanged - skip regen
+[4] 行为链再生 --auto 在役: PASS（同上行=确定性再生日照旧·跨桶/跨天气自动再生键在役）
+[5] heartbeat 3h 内: PASS（R1673 行 2026-10-19 00:16 在窗内·本轮 export --heartbeat 轮末续鲜随后落行）
+VERDICT: PASS 5/5
