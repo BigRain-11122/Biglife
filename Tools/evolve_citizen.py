@@ -1899,6 +1899,8 @@ def main():
     pool_genes = load_pool_genes()   # T-20260925-01: soft opening-diversity guidance
     pool_used = {}
     for cid in due:
+        # T-20261019-01: per-seat stdout keepalive, flush=True beats pipe block-buffering
+        print("evolving %s (%d/%d)" % (cid, n + 1, len(due)), flush=True)
         p = find_card(cid)
         if not p:
             continue
@@ -1930,17 +1932,17 @@ def main():
                     sig["city_digest"] = ""
             line = gated_llm(build_prompt(cid, text, sig), sig)
         except Exception:
-            print("ollama down; batch paused at", n)
+            print("ollama down; batch paused at", n, flush=True)
             break
         if line is None:
-            print("gate: skip", cid, "(stays due)")
+            print("gate: skip", cid, "(stays due)", flush=True)
             continue
         line = re.sub(r"\s+", " ", line).strip().strip('「」"“”')[:90]
         if len(line) < 8:
             line = "今天照常出摊/上岗，江上的光点还是那么多。"
         # v0.45 gap #66 fallback face: the fixed default line can repeat too
         if self_dup_history(line, text):
-            print("gate: dup-history skip", cid, "(stays due)")
+            print("gate: dup-history skip", cid, "(stays due)", flush=True)
             continue
         note_pool_use(line, face, pool_genes, pool_used)  # T-20260925-01: count cross-card quotes
         add_ring(p, cid, line, anchor_note)
