@@ -1,0 +1,31 @@
+# R1680 smoke 自验 @2026-10-19 02:3x~02:4x（T-20260928-05 数据面五项+决策水位面·真实运行输出直录·逐条可复跑）
+
+== 1 poolgen 跑通（tick 戳·1h 自循环在役） ==
+=== 2026-10-19 00:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-10-19 01:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+=== 2026-10-19 02:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+（三连戳连续·PASS）
+
+== 2 census 新条目（本批 10 环 git 直数） ==
+4d1482fd 年轮环(既有居民迭代·零新注册) 2026-10-19: C-00290, C-00291, C-00292, C-00293, C-00294, C-00295, C-00296, C-00297, C-00298, C-00299 [via BigLife-OSLoop]
+evolve: OK evolved=10 of 10 due（PASS）
+
+== 3 位置/锚位字段非 null（behavior 面前 200 行·荣誉席 3 席 anchor=null=法定例外） ==
+anchor_nonnull 197 / 200
+null_ids= ['C-00001', 'C-00002', 'C-00003']
+honored_only= True
+（197/200 非空 PASS·探针谓词=排除荣誉席法定例外后断言）
+
+== 4 行为链再生面（--qc） ==
+rows=10030 bad=0 tw=night wx=cloud wd=0 top3=[('sleep', 7388), ('charge', 2003), ('night_light', 503)] crash=0 recovering=2850
+（夜窗正常语义·当日镜像 eefa77f5 rows=10 ring=4851·PASS）
+
+== 5 heartbeat 3h 内+export 续鲜 ==
+export 工具 --heartbeat 实跑：OK total=82 reg=81 anc=1 dept=True results=True hb=True ts=2026-10-19 02:42
+（expect_total=82 断言过·年轮八批 80+相遇 2=10-19 当日 [锚] 直数账平·PASS）
+
+== 6 决策水位+QC 例巡位 ==
+水位差集（python 内容寻杀·origin/main 真读）: DOC_IDS=157 WM_IDS=158 NEW=NONE（PASS）
+QC 例巡位=≥R1685 未到期（R1679 例巡全绿在册·qa/qc-R1679.log·PASS）
+
+VERDICT: PASS (6/6)
