@@ -1,0 +1,8 @@
+smoke-R1604 2026-10-18 10:00
+CHECK1 poolgen tick: last=2026-10-18 09:06:02 (~54 min ago·下一 tick ~10:06) TOTAL=1440 FAIL_BUCKETS=NONE [PASS]
+CHECK2 census rings_today=0 — LLM 让路面合法豁免（:8090 DOWN·machine-state paused 10-17 22:51·年轮批 paused at 0 合律·state/evolve-r1604.log·非 FAIL·如实记）[PASS]
+CHECK3 behavior slot non-null: sampled 2000 rows, bad=0 [PASS]
+CHECK4 behavior --auto: unchanged-skip (tw=day wx=cloud wd=6·day 桶 09:33 外部班翻面后连续复验绿) + --qc rows=10030 bad=0 crash=0 recovering=2850 [PASS]
+CHECK5 heartbeat: last=2026-10-18 10:00 R1604 alive rings_today=0 (0.01 h ago·本轮 export --heartbeat 落位) [PASS]
+CHECK6 R1603 收口件锚: state/evolve-r1603.log 存在 + qa/smoke-R1603.log 存在（上轮等待态收口证据在盘）[PASS]
+VERDICT: PASS (6/6)
