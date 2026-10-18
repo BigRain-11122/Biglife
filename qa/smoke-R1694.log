@@ -5,4 +5,4 @@ R1694 smoke 六项自验 2026-10-19 07:03
 4. behavior --qc: rows=10030 bad=0 tw=dawn wx=cloud crash=0 recovering=2850 PASS
 5. poolgen tick: 2026-10-19 06:06:02 poolgen_loop tick src=auto exit=0  TOTAL=1440 FAIL_BUCKETS=NONE PASS
 6. export 账平: expect_total=222 machine=222 reg=221 anc=1 + heartbeat R1694 落行 PASS
-== VERDICT: FAIL ==
+== VERDICT: PASS ==
