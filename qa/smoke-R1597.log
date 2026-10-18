@@ -1,0 +1,7 @@
+R1597 smoke 五项自验 2026-10-18 08:36:12
+VERDICT: PASS (5/5)
+PASS C1 poolgen tick | === 2026-10-18 08:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+PASS C2 LLM yield-skip evidence | 让路面如实记非 FAIL
+PASS C3 behavior rows/bad | rows=10030 bad=0 tw=empk wx=cloud wd=6 top3=[('commute', 7650), ('exercise', 1877), ('home', 503)] crash=0 recovering=2850
+PASS C4 heartbeat R1597 alive | 2026-10-18 08:35 R1597 alive rings_today=0 export_ts=2026-10-18 08:35 [via BigLife-OSLoop]
+PASS C5 light=10030 零新注册 | rows=10030
