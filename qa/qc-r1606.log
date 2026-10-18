@@ -1,0 +1,7 @@
+R1606 QC 例巡证据（qc_census --schema·2026-10-18 10:17 @BigLife-OSLoop）
+QC done cards=10030 evolved=4851 problems=0 dup_rings=37/37 schema_rows=51964 schema_bad=0
+dup_rings 37/37=观测基线零新增（R1558/R1564/R1570/R1576/R1582/R1588/R1594/R1600 历史链一致）
+schema_bad=0（jsonschema 结构层·T-20260926-17 在役）
+QC-REPORT.md=census/QC-REPORT.md（qc_census 自动落盘·随轮入库）
+例巡位重置 ≥R1612 · 让路面确定性巡检不停摆第 9 轮
+VERDICT: PASS
