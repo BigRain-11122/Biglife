@@ -1,0 +1,8 @@
+smoke R1619 2026-10-18 12:49:19
+C1 poolgen tick today=PASS last=2026-10-18 12:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 F
+C2 census light rows=10030 PASS (LLM 让路面 0 新环=如实记非 FAIL)
+C3 behavior rows=10030 anchor_null=3(荣誉席法定3) PASS
+C4 heartbeat R1619 age=0.01h PASS
+C5 evolve probe 让路面证据 PASS
+C6 前轮收口件锚 R1618 PASS
+VERDICT: PASS
