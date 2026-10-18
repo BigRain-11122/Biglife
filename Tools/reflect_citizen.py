@@ -13,18 +13,21 @@ Output: census/reflections.jsonl (committed, append-only, one line per reflectio
 Usage: python -X utf8 reflect_citizen.py --id C-00010 [--force] [--qc]
        python -X utf8 reflect_citizen.py --batch C-00010,C-00017,C-00028
 """
-import argparse, datetime, glob, json, os, re, sys, urllib.request
+import argparse, datetime, json, os, re, sys, urllib.error, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-from make_digests import find_card, grab
-from memory_index import load_rings, shingles
+from memory_index import load_rings
 
 LIGHT = os.path.join(CO, "census", "export", "citizens-light.jsonl")
 OUT = os.path.join(CO, "census", "reflections.jsonl")
 OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
-MODEL = os.environ.get("BIGLIFE_MODEL", "qwen2.5:7b-instruct")
+# R1675 model-drift fix: qwen2.5:7b-instruct left service during the reroute
+# window (R1674: HTTP 404, reflections starved, reflections.jsonl zero-write).
+# In-service model is now detected per call from /api/tags (largest qwen* =
+# the fleet's current lane, qwen3.8:27b today); explicit BIGLIFE_MODEL wins.
+MODEL = os.environ.get("BIGLIFE_MODEL", "")
 MAXLEN = 40
 COOLDOWN_DAYS = 30
 GATE_CELESTIAL = re.compile(r"\u6708\u4eae|\u6708\u8272|\u6708\u5149|\u6708\u5706|\u661f\u7a7a|\u7e41\u661f|\u661f\u5149")
@@ -74,10 +77,31 @@ def build_prompt(row, rings):
             f"\u4ece\u8fd9\u4e9b\u8bb0\u5fc6\u91cc\u603b\u7ed3\u51fa\u4e00\u53e5\u5c5e\u4e8e\u4f60\u81ea\u5df1\u7684\u3001\u6bd4\u5355\u6761\u8bb0\u5fc6\u66f4\u9ad8\u4e00\u5c42\u7684\u4eba\u751f\u611f\u609f\uff08\u4e0d\u8d85\u8fc7 {MAXLEN} \u5b57\uff0c"
             f"\u53ea\u80fd\u57fa\u4e8e\u4e0a\u9762\u7684\u8bb0\u5fc6\uff0c\u7981\u63d0\u4efb\u4f55\u8bb0\u5fc6\u4e2d\u6ca1\u6709\u7684\u4e8b\u5b9e\uff0c\u53ea\u8f93\u51fa\u611f\u609f\u672c\u8eab\uff09\u3002")
 
+def detect_model():
+    if MODEL:
+        return MODEL
+    try:
+        with urllib.request.urlopen(OLLAMA.rstrip("/") + "/api/tags",
+                                    timeout=15) as r:
+            models = json.loads(r.read().decode("utf-8")).get("models", [])
+        qwens = [m for m in models if (m.get("name") or "").startswith("qwen")]
+        if qwens:
+            return max(qwens, key=lambda m: m.get("size", 0)).get("name")
+        if models:
+            return models[0].get("name")
+    except Exception:
+        pass
+    return "qwen3.8:27b"  # last resort: current in-service lane name
+
 def llm(prompt):
     req = urllib.request.Request(
         OLLAMA.rstrip("/") + "/api/generate",
-        data=json.dumps({"model": MODEL, "prompt": prompt, "stream": False,
+        # R1675: think=false - qwen3.8:27b is a thinking model and its thinking
+        # ate the whole num_predict budget (G1-length x3, zero writes); probe
+        # showed think=false is tolerated by both thinking and instruct models
+        # on this Ollama (qwen3.8:27b + qwen3:4b-instruct, 2026-10-19).
+        data=json.dumps({"model": detect_model(), "prompt": prompt, "stream": False,
+                         "think": False,
                          "options": {"temperature": 0.7, "num_predict": 80}}).encode("utf-8"),
         headers={"Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=120) as resp:
@@ -104,7 +128,12 @@ def reflect(cid, force=False, today=None):
     fed = "\n".join(r["text"] for r in rings[-10:])
     out, hits = "", []
     for attempt in range(3):
-        raw = llm(build_prompt(row, rings[-10:]))
+        try:
+            raw = llm(build_prompt(row, rings[-10:]))
+        except (urllib.error.URLError, OSError) as e:
+            # R1675: Ollama-down silent-skip contract (R319 precedent, evolve
+            # probe contract #4 parity) - no traceback, zero writes.
+            return {"id": cid, "error": "llm down (%s)" % type(e).__name__}, None
         out = re.sub(r"\s+", " ", raw).strip().strip('\u300c\u300d"\u201c\u201d')[:MAXLEN + 8]
         v = gate(out, fed)
         if v is None:
@@ -140,6 +169,8 @@ def qc():
     p2 = build_prompt(row, [{"date": "2026-09-26", "text": "abc"}])
     if p1 != p2:
         fails.append("prompt drift")
+    if not detect_model():
+        fails.append("detect_model empty")  # R1675: must never resolve to empty
     if fails:
         print("QC FAIL: " + "; ".join(fails))
         return 1
