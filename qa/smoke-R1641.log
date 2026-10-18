@@ -1,0 +1,7 @@
+smoke R1641 2026-10-18 16:57:00 PASS
+PASS C1 poolgen tick | last tick 2026-10-18 16:06:02 age 0.85h
+PASS C2 LLM-yield honest record | legal skip evidence recorded (state/evolve-r1641.log, honest not FAIL)
+PASS C3 behavior rows/state | rows=10030 bucket=day wx=rain
+PASS C4 behavior qc | bad=0 rc=0
+PASS C5 heartbeat fresh | last line ts 2026-10-18 16:56 age 0.02h
+PASS C6 prev-round anchors R1640 | missing=none
