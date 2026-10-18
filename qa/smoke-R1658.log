@@ -1,0 +1,8 @@
+=== BigLife QA Smoke R1658 @ 2026-10-18 19:59:05 ===
+CHECK1 池健康（poolgen tick/池审计达标）: PASS (state/poolgen_run.log 尾行含今日 TOTAL=1440 FAIL_BUCKETS=NONE)
+CHECK2 年轮线 LLM 让路面如实记（非 FAIL）: PASS (state/evolve-r1658.log: batch paused at 0 / 10 位到期候批；machine-state.flag=paused 2026-10-17T22:51:01+08:00（CEO 让路令合法态·恢复通道=AutoYield/CEO 口令非本司权限面）)
+CHECK3 锚点面非空确定性: PASS (QC PASS: rows=10030 light=10030 reserved=3 ok=10027 zones=6 double_run=identical)
+CHECK4 行为链 --qc: PASS (rows=10030 bad=0 tw=evpk wx=rain wd=6 top3=[('indoors', 4614), ('home', 2694), ('shelter', 2422)] crash=300 recovering=503)
+CHECK5 heartbeat 3h 新鲜: PASS (state/heartbeat.txt 尾行: 2026-10-18 19:58 R1658 alive rings_today=0 export_ts=2026-10-18 19:58 [via BigLi)
+CHECK6 前轮收口件锚 R1657 三件全中: PASS (qa/smoke-R1657.log + tasks/TASKS.md R1657 实录行 + git 收口 commit 1ee4da38（type=commit）)
+VERDICT: PASS 6/6
