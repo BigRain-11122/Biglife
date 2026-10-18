@@ -1,0 +1,9 @@
+=== R1644 smoke 六项自验 2026-10-18 17:26 [via BigLife-OSLoop] ===
+[C1] poolgen tick 当日判鲜: 2026-10-18 17:06:02 tick src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE (state/poolgen_run.log 尾行) -> PASS
+[C2] LLM 让路面如实记非 FAIL: state/evolve-r1644.log = "ollama down; batch paused at 0 / OK evolved=0 of 10 due" (:8090 探针 DOWN URLError·machine-state paused 10-17 22:51=CEO 让路令合法态〔R1638 本机实读值维持·本轮探针续判〕·:11434=MiniGame 实例族 qwen3:4b-instruct/qwen3.8:27b 无本司产线面) -> PASS
+[C3] 锚点面 --qc: citizen_anchors QC PASS rows=10030 light=10030 reserved=3 ok=10027 zones=6 double_run=identical (null_non_honored=0·荣誉席 3 席法定例外) -> PASS
+[C4] 行为链 --qc: rows=10030 bad=0 tw=day wx=cloud wd=6 top3 social 3935/work 2003/explore 1712 crash=0 recovering=2850 -> PASS
+[C5] 心跳新鲜: state/heartbeat.txt 尾行 "2026-10-18 17:26 R1644 alive rings_today=0 export_ts=2026-10-18 17:26 [via BigLife-OSLoop]" ≤3h -> PASS
+[C6] 前轮收口件锚 R1643 三件全中: tasks/TASKS.md R1643 实录行(1) + docs/status-export.json R1643 dept 条(2·滚动窗 R1644/R1643/R1642 三条在位) + qa/smoke-R1643.log 在盘 -> PASS
+VERDICT: PASS 6/6
+备注: R1644=LLM 让路面第 89 轮等待态轻声明轮·今日收环 0（rings_today=0 诚实态·QC 例巡+基因轮 R1642 已双兑下位 ≥R1648）·write_file 直写=R1564 坑律执法
