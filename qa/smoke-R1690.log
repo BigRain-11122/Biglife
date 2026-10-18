@@ -1,0 +1,25 @@
+# qa/smoke-R1690.log — QA Smoke 自验（T-20260928-05 五项+周期面第六项）·2026-10-19 05:5x @BigLife-OSLoop
+
+## ① poolgen 跑通（tick 戳新鲜）
+state/poolgen_run.log 尾：=== 2026-10-19 05:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+（24h 窗连戳续绿 03:06/04:06/05:06·TOTAL=1440 满额+每小时续戳）✓
+
+## ② census 新条目（本批环）
+R1690 年轮批 10/10：C-00390~C-00399 十席〔93132a4f〕+行为线镜像 rows=10 ring=4851〔656beb10〕
+（T-20261019-01 保活修单后第四批前台零击杀·stdout 逐席流式「evolving C-003xx (n/10)」+OK evolved=10 of 10 due 行实跑输出）✓
+
+## ③ 位置字段非 null（behavior anchor）
+ANCHOR_NONNULL 10027 / 10030（荣誉席 3 席法定例外 anchor=null·承载面=citizen-behavior.jsonl v3.55）✓
+
+## ④ 行为链再生（--auto/--qc）
+behavior --qc 实跑：rows=10030 bad=0 tw=night wx=cloud wd=0
+top3=[('sleep', 7388), ('charge', 2003), ('night_light', 503)] crash=0 recovering=2850（夜窗正常语义）✓
+
+## ⑤ heartbeat 新鲜（3h 内）
+export --heartbeat 同窗落 state/heartbeat.txt（工具实跑输出 hb=True·ts 2026-10-19 05:49·R1690 alive）✓
+
+## ⑥ 周期面·核卡抽验 2/2 人眼过（例巡位未到 ≥R1691）
+C-00390 石团团「风挺大，灶上有汤，自取。天阴着，先把摊子多绑两道绳，待会儿还得去帮师弟收工。」/C-00399 林斌「风不小，巡边得小心。 侬晓得伐，茶凉了再倒就是，这云压得低，正好多走两步验签。」：
+[锚] 注脚齐·口头禅领句（灶上有汤，自取/茶凉了再倒就是+侬晓得伐底色）·天气词与当夜实况一致〔behavior wx=cloud·风挺大/风不小=风>3 强化方向合规非弱化形〕·事件词全卡面人设域〔绑绳守摊+帮师弟收工=行为节·巡边/验签=职业行话域〕·新环与本人历史环零逐字重复〔dup-history 闸在役〕·零占位零越权；✓
+
+VERDICT=PASS 6/6 @2026-10-19 05:5x [via BigLife-OSLoop]
