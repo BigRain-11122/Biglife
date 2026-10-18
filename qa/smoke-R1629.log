@@ -1,0 +1,31 @@
+# smoke-R1629 — BigLife OS 轮自验（T-20260928-05 常设·六项·2026-10-18 14:4x）
+# 轮态：LLM 让路面第 74 轮（machine-state.flag=paused 2026-10-17T22:51:01+08:00 CEO 让路令合法态·禁复启让路律执法）
+
+CHECK1 poolgen tick（state/poolgen_run.log 尾行实读）:
+  2026-10-18 14:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+  → 当日 tick exit=0 判鲜 PASS（R1626 修正版谓词·不锚死小时位）
+
+CHECK2 census 新条目/年轮线（LLM 让路面如实记非 FAIL）:
+  state/evolve-r1629.log 实读:
+  ollama down; batch paused at 0
+  OK evolved=0 of 10 due
+  → 年轮批法定静默跳过（R1557~R1628 判例链第 74 轮·:8090 HTTP 探针 10061 拒连·llama-server PID 7948=让路面残留仅监听 127.0.0.1:60065·:11434=MiniGame 实例族无本司产线 qwen2.5:7b）·10 位到期居民候批·rings_today=0 诚实态 PASS
+
+CHECK3 位置/anchor 字段面（behavior 导出 QC 实跑）:
+  python -X utf8 Tools/behavior.py --qc → rows=10030 bad=0
+  → 全行字段断言 bad=0·荣誉席 id 闭集法定 null 面含于 QC PASS
+
+CHECK4 行为链再生（--auto 实跑）:
+  behavior auto: bucket=day wx=clear rest=nap snd=fest unchanged - skip regen
+  → 跨桶/跨天气零变更=unchanged-skip 正常语义 PASS
+
+CHECK5 heartbeat 3h 内（state/heartbeat.txt 尾行实读）:
+  2026-10-18 14:38 R1629 alive rings_today=0 export_ts=2026-10-18 14:38 [via BigLife-OSLoop]
+  → alive 行新鲜 PASS
+
+CHECK6 前轮收口件锚 R1628（三件在盘核验）:
+  qa/smoke-R1628.log 在盘（14:28:51）·state/export-payload-R1628.json 在盘·docs/status-export.json dept 窗含 R1628 条
+  → 前轮收口零丢失 PASS
+
+VERDICT: PASS 6/6
+证据日志=python/write_file 直写 UTF-8（R1564 坑律执法·禁 Tee-Object 管道）
