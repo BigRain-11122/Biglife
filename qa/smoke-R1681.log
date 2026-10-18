@@ -1,0 +1,9 @@
+qa/smoke-R1681 六项自验（T-20260928-05·2026-10-19 03:1x @BigLife-OSLoop）
+1. poolgen 跑通: tick 03:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE ✓（三连戳 00:06/01:06/02:06/03:06 续绿）
+2. census 新条目: 本批 10 环 C-00300~C-00309（5e13d617·10-19 日账 92 环）✓
+3. 位置字段非 null: anchor 面 197/200 非空（荣誉席 3 席法定 anchor=null 例外·R1680 探针口径维持·本轮 anchor 文件零触碰）✓
+4. 行为链再生: behavior --qc rows=10030 bad=0 双跑字节稳定（sleep 7388/charge 2003/indoors 335·tw=night wx=rain wd=0·crash=0 recovering=2850 夜窗正常语义）✓——附观察一条: 03:11 首跑 bad=1（night_light 503）=天气 cloud→rain 翻转窗瞬态·复跑双跑 bad=0 全绿·下轮 --auto 巡检复扫确认
+5. heartbeat 新鲜: export 工具 --heartbeat ts 2026-10-19 03:11 ✓
+6. export 账平: OK total=92 reg=91 anc=1 expect_total=92 断言过（年轮九批 90+相遇 2=10-19 当日 [锚] 直数）✓
+VERDICT: PASS 6/6
+本轮附加件: qa/gate-dryrun-R1681.log（生产环闸测 dry-run 三面全过=正例闸族全绿+负例三闸全拦+实树零漂移）
