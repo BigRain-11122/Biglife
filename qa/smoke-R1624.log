@@ -1,0 +1,7 @@
+CHECK1 PASS 决策水位差集 NEW=0 | fetch 后 _wm_check.py 实跑 WM_COUNT=153 DEC_IDS=152 NEW=0（组仓本地领先 origin·10-17/10-18 台账批行未推非派工面·水位零缺口〔search 长行>500 字符假阴性勘误·python 直判为准〕）
+CHECK2 PASS evolve 让路面证据 | state/evolve-r1624.log paused at 0 在位（OK evolved=0 of 10 due）
+CHECK3 PASS 行为链 QC rows=10030 bad=0 | rows=10030 bad=0 tw=day wx=clear wd=6 top3=[('social', 3935), ('work', 2003), ('explore', 1712)] crash=0 recovering=2850
+CHECK4 PASS export 账平+R1624 条 | export_ts=2026-10-18 13:45 results no-op=0==机器直数0 dept=True qc=True hb=True
+CHECK5 PASS 心跳 R1624 alive | 2026-10-18 13:45 R1624 alive rings_today=0 export_ts=2026-10-18 13:45 [via BigLife-OSLoop]
+CHECK6 PASS 前轮收口件锚 R1623 三件 | TASKS.md+status-export+qa/smoke-R1623.log
+VERDICT: PASS (6/6)

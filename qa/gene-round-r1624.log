@@ -1,0 +1,25 @@
+# R1624 基因轮实录 @2026-10-18 13:5x-14:0x（LLM 让路面第 69 轮·纯确定性零 LLM·R1623 里程碑行预定到期件·R1618+6 轮到期兑现）
+ollama down; batch paused at 0（年轮批让路面证据·与本基因轮同轮并行）
+[预检-三迭代] 初版 12 候选 9 近重（4-gram 地板：才够味/，越坐越/坐出包浆/，比新的/修鞋摊的/豆腐坊的/养得发亮/那天，他/攒了半年 等全被库面占用）→二版 3 近重（了三回，/皮匠摊的/攒了一冬）→三版 1 近重（修鞋挑子 tp 池占用）→终版换骨 12 候选 0 近重候选（全库 2442 串 4-gram 地板零命中）
+[CLEAN] cp|凉粉摊的糖水，挂了勺才算熬透。
+[CLEAN] cp|补锅担子挑进巷，一头风箱一头炉。
+[CLEAN] cp|竹躺椅泼盆井水，暑气先退三分。
+[CLEAN] cp|新毛笔先开锋，温水泡着等它软。
+[CLEAN] cp|老座钟上弦，十二下半点不差。
+[CLEAN] cp|旧蚊帐缝过三道边，反倒更服帖。
+[CLEAN] ho|酱园里排开的陶缸，缸口蒙着扎紧的纱布
+[CLEAN] ho|巷口皮匠挑子的铁鞋撑，大小码挂满一面木板墙
+[CLEAN] ho|眼镜行试镜架上那排铜框镜片，按度数从深到浅挂开
+[CLEAN] ho|豆坊的石磨盘，磨眼让豆浆浸得油亮
+[CLEAN] tp|头名徒弟敬过茶，他把祖师牌位扶正才肯落座。
+[CLEAN] tp|妹妹远嫁，他连夜称了半筐红枣塞进她陪嫁的藤箱。
+== gene_nearcheck 预检: 12 候选, 0 近重候选 ==
+[追加] language.json 尾锚（巷尾阿婆条）零字节改动·+24 行纯插入（,{ 块·六轴分派 烟火2/逍遥1/求新1/秩序1/怀旧1）
+[追加] lives.json 双锚行加逗号（SKILL 特许·R1618 同形）+10 新行（ho 尾锚=粮站磅秤条 4 新行+tp 尾锚=徒弟招牌条 2 新行）
+[计数实测] before={'language.catchphrases': 1208, 'lives.hook_objects': 591, 'lives.turning_points': 438} after={'language.catchphrases': 1214, 'lives.hook_objects': 595, 'lives.turning_points': 440}
+[计数] cp 1208→1214 / ho 591→595 / tp 438→440 · light=10030 零变化
+[登记后复验] 12/12 自配对 FLAG ratio 100.0 vs 自身=入库后自匹配预期态（预检零近重为入池闸正身·R1618 同形）
+[JSON 合法性] language.json+lives.json json.load 双过
+[nearcheck --qc] 15 PASS, 0 FAIL
+[--baseline] cp n=1214 max_ratio=91.667<92 criterion_ok=true（top_pair 热汤落肚×热汤下肚 既有基线）/ ho n=595 max_ratio=94.118<95 criterion_ok=true（既有基线）/ tp n=440 max_ratio=48.889<50 criterion_ok=true（既有基线）——三池基线零推高
+KEEP=12 DROPPED=0 · 形制 +24/-0 与 +10/-2=R1618/R1612 同形 · 全确定性零 LLM
