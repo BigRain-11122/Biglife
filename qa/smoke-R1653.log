@@ -1,0 +1,8 @@
+qa/smoke-R1653 2026-10-18 19:07:00
+[PASS] C1 poolgen tick of the day | === 2026-10-18 19:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[PASS] C2 LLM yield-surface faithful record (non-FAIL) | state/evolve-r1653.log real-run evidence
+[PASS] C3 behavior full-volume rows=10030 | rows=10030 bad=0 tw=evpk wx=rain
+[PASS] C4 QC-REPORT on record 卡片总数=10030 异常数=0 | census/QC-REPORT.md (r1648 routine patrol)
+[PASS] C5 previous round R1652 closeout evidence | smoke log + ledger line + export entry
+[PASS] C6 heartbeat alive fresh | 2026-10-18 19:05 R1653 alive rings_today=0 export_ts=2026-10-18 19:05 [via BigLife-OSLoop]
+VERDICT: PASS (6/6)
