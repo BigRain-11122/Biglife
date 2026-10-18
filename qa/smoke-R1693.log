@@ -1,0 +1,8 @@
+R1693 smoke 六项自验 2026-10-19 06:45
+1. QC 例巡: 例巡位 ≥R1697（R1691 已兑全绿 problems=0·本轮到期位未至） PASS
+2. gene_nearcheck --qc: 15 PASS 0 FAIL PASS
+3. anchor 探针: 10027/10030 非空（荣誉席 3 法定例外·regen wrote 10030 rows） PASS
+4. behavior --qc: rows=10030 bad=0 tw=dawn wx=cloud crash=0 recovering=2850 PASS
+5. poolgen tick: === 2026-10-19 06:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE PASS
+6. export 账平: expect_total=212 machine=212 reg=211 anc=1 + heartbeat R1693 落行 PASS
+== VERDICT: PASS ==
