@@ -536,7 +536,7 @@ def sig_of(c):
 
 def voice_seat(c, light):
     """VOICE-POOL §一 派生律（单源引用 voice_manifest+kokoro_synth·同 id 双跑一致）。"""
-    sapi, blocked = vm.voice_for(light)          # rate 带（SAPI manifest 同源）
+    sapi, _blocked = vm.voice_for(light)          # rate 带（SAPI manifest 同源）
     voice = ks.voice_for(light["id"], light["gender"])   # 性别→池+md5(id) 池内定选
     speed = ks.speed_for(sapi["rate"])            # speed=100/(100+rate)
     return ks.SID_MAP[voice], voice, speed
@@ -629,6 +629,13 @@ def build_light(c):
 def light_rows():
     with io.open(LIGHT, encoding="utf-8") as f:
         return [json.loads(l) for l in f if l.strip()]
+
+
+def rows_before(max_id):
+    # K10-K12 夹具刷新（R1681 排期·2026-10-19 兑现）：电池断言语义=「批前历史基线」，
+    # 活库已被本工具历批（C-10017 起）推进——电池入参按 id 上界重建批前态再断言；
+    # 活库落库守卫（BASELINE REFUSED）与 freeze lock 原语义零触碰。
+    return [r for r in light_rows() if int(r["id"][2:]) < max_id]
 
 
 # 生计「可见」面（契约 §二.4 三性之一·城内场所/交接面·单列便于判据核验）
@@ -959,7 +966,7 @@ def main():
     if "--batch2" in args:  # 分步④ 滚动合流批二（T-20260927-04·R595）
         rendered = [(c, render_card(c), build_light(c)) for c in CARDS2]
         if "--qc" in args:
-            return qc_battery2(rendered, light_rows())
+            return qc_battery2(rendered, rows_before(10027))
         rows = light_rows()
         if len(rows) != 10020:
             print(f"BASELINE REFUSED: light rows={len(rows)} != 10020（前缀基线漂移·零写入）")
@@ -973,7 +980,7 @@ def main():
         return apply(rendered)
     rendered = [(c, render_card(c), build_light(c)) for c in CARDS]
     if "--qc" in args:
-        return qc_battery(rendered, light_rows())
+        return qc_battery(rendered, rows_before(10017))
     rows = light_rows()
     if len(rows) != 10010:
         print(f"BASELINE REFUSED: light rows={len(rows)} != 10010（前缀基线漂移·零写入）")
