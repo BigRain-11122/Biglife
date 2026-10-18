@@ -1,0 +1,8 @@
+qa/smoke-R1683 六项自验（T-20260928-05·2026-10-19 03:4x @BigLife-OSLoop）
+1. poolgen 跑通: tick 03:06:02 src=auto exit=0 TOTAL=1440 FAIL_BUCKETS=NONE ✓（连戳 00:06/01:06/02:06/03:06 在册续绿）
+2. census 新条目: 本批 10 环 C-00320~C-00329〔efd2a176〕·10-19 日账 112 环（十一批 110+相遇 2）✓·核卡抽验 2/2 过（C-00320 抖动「雨势没停，风也不小，塔顶白光在雨夜里亮得挺稳…」/C-00329 邵果冻「这单我送，别跟我抢。」雨大…屋檐下躲清静…」：[锚] 注脚齐·口头禅领句·雨夜风大与当夜实况一致〔behavior wx=rain〕·事件词全卡面人设域·与本人历史环零逐字重复〔dup-history 闸〕·观察一条=C-00329 环首孤立引号=cosmetic 非门禁项〔R1676 C-00250 同形·原句存史不修卡〕）
+3. 位置字段非 null: anchor 全库探针 10027/10030 非空（荣誉席 3 席 C-00001~03 法定 anchor=null 例外）✓
+4. 行为链再生: 落环自动 sync_rings rows=10 ring=4851〔74af27e6〕+behavior --auto 启动器前置在役 ✓
+5. heartbeat 新鲜: export 工具 --heartbeat ts 2026-10-19 03:48 ✓
+6. export 账平: OK total=112 reg=111 anc=1 expect_total=112 断言过（年轮十一批 110+相遇 2=10-19 当日 [锚] 直数）✓
+VERDICT: PASS 6/6
