@@ -1,0 +1,8 @@
+# smoke R1618 @2026-10-18
+PASS CHECK1 poolgen-tick === 2026-10-18 12:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BU
+PASS CHECK2 evolve-llm-yield 
+PASS CHECK3 behavior-anchor rows=10030 null_all=3 null_non_honored=0
+PASS CHECK4 behavior-qc rows=10030 bad=0 tw=meal wx=cloud wd=6 top3=[('meal', 7524), ('work', 2003), ('h
+PASS CHECK5 heartbeat-R1618 2026-10-18 12:35 R1618 alive rings_today=0 export_ts=2026-10-18 12:35 [via BigLi
+PASS CHECK6 round-evidence 
+VERDICT: PASS 6/6

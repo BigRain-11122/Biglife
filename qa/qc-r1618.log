@@ -1,0 +1,4 @@
+# QC 例巡 R1618 @2026-10-18 12:2x（LLM 让路面确定性巡检不停摆·承 R1558/R1564/R1570/R1576/R1582/R1588/R1594/R1600/R1606/R1612 第 11 轮）
+QC done cards=10030 evolved=4851 problems=0 dup_rings=37/37 schema_rows=51964 schema_bad=0
+例巡位重置 >=R1624
+双落=census/QC-REPORT.md（工具覆写新档）+本件
