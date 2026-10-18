@@ -1,0 +1,9 @@
+=== smoke R1636 2026-10-18 ===
+PASS C1 poolgen tick 当日 exit=0
+PASS C2 LLM 让路面如实记（evolve 证据日志锚定）
+PASS C3 behavior anchor 非空 rows=10030 null_non_hon=0
+PASS C4 behavior --qc rows=10030 bad=0 tw=day wx=cloud wd=6 top3=[('social', 3935), ('work', 2003), ('explore', 1712)] crash=0 recovering=2850
+PASS C5 心跳 alive 行 R1636 在位
+PASS C6 前轮收口件锚 R1635 三件全中
+PASS C7 双兑现证据锚（KEEP=11+qc15/15+problems=0+计数 cp1226/ho602/tp444）
+VERDICT: PASS

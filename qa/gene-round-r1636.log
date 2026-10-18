@@ -1,0 +1,114 @@
+# R1636 基因轮实录 @2026-10-18 15:5x-16:0x（LLM 让路面第 81 轮·纯确定性零 LLM·R1630+6 轮到期兑现）
+ollama down; batch paused at 0（年轮批让路面证据·与本基因轮同轮并行）
+[查一] exact-dup 全库 2478 串命中 0
+[查二] 触发词族 char14+word19 命中 0
+[查三] 跨面 cognition 2295 串 ≥4字地板 命中 0
+[CHA3b] census 整句撞 rg --no-ignore 命中 0
+[批内] 4-gram 命中 0
+[CHA1-nearcheck-pre]
+[CLEAN] cp|螺丝分号入袋，装几号拧几号。
+[CLEAN] cp|鱼要现杀，汤才压得住腥。
+[CLEAN] cp|输了棋他不恼，先给棋友续上茶。
+[CLEAN] cp|新到的花布料，他先摸一把再问价。
+[CLEAN] cp|旧藤箱的铜锁扣，摸上去还有点坠手。
+[CLEAN] cp|邻家房顶漏了他搭梯，自家瓦片排在后头。
+[CLEAN] ho|菜坛口上封着的那圈黄泥
+[CLEAN] ho|纸马铺柜台那管朱砂笔
+[CLEAN] ho|钟表铺案边那块包浆的麂皮擦布
+[CLEAN] tp|盘店时他把戥子包进了红布里。
+[CLEAN] tp|分家时她只挑了那把铜熨斗。
+== gene_nearcheck: 11 候选, 0 近重候选 ==
+[追加] language.json 尾锚零字节改动·+24 行纯插入（,{ 块·六轴各一）
+[追加] lives.json 双锚行加逗号（SKILL 特许）+5 新行（ho 尾锚=香烛铺小剪条 3 新行+tp 尾锚=千层底条 2 新行）
+[计数实测] before={'language.catchphrases': 1220, 'lives.hook_objects': 599, 'lives.turning_points': 442} after={'language.catchphrases': 1226, 'lives.hook_objects': 602, 'lives.turning_points': 444}
+[计数] cp 1220→1226 / ho 599→602 / tp 442→444 · light=10030 零变化
+[登记后复验]
+[FLAG] cp|螺丝分号入袋，装几号拧几号。
+    A: language.catchphrases[1220] ['螺丝分号', '丝分号入', '分号入袋', '号入袋，', '入袋，装', '袋，装几', '，装几号', '装几号拧', '几号拧几', '号拧几号', '拧几号。'] ⊂ 螺丝分号入袋，装几号拧几号。
+    B: ratio 100.0 ≥ T92 vs 螺丝分号入袋，装几号拧几号。
+[FLAG] cp|鱼要现杀，汤才压得住腥。
+    A: language.catchphrases[1221] ['鱼要现杀', '要现杀，', '现杀，汤', '杀，汤才', '，汤才压', '汤才压得', '才压得住', '压得住腥', '得住腥。'] ⊂ 鱼要现杀，汤才压得住腥。
+    B: ratio 100.0 ≥ T92 vs 鱼要现杀，汤才压得住腥。
+[FLAG] cp|输了棋他不恼，先给棋友续上茶。
+    A: language.catchphrases[1222] ['输了棋他', '了棋他不', '棋他不恼', '他不恼，', '不恼，先', '恼，先给', '，先给棋', '先给棋友', '给棋友续', '棋友续上', '友续上茶', '续上茶。'] ⊂ 输了棋他不恼，先给棋友续上茶。
+    B: ratio 100.0 ≥ T92 vs 输了棋他不恼，先给棋友续上茶。
+[FLAG] cp|新到的花布料，他先摸一把再问价。
+    A: language.catchphrases[1223] ['新到的花', '到的花布', '的花布料', '花布料，', '布料，他', '料，他先', '，他先摸', '他先摸一', '先摸一把', '摸一把再', '一把再问', '把再问价', '再问价。'] ⊂ 新到的花布料，他先摸一把再问价。
+    B: ratio 100.0 ≥ T92 vs 新到的花布料，他先摸一把再问价。
+[FLAG] cp|旧藤箱的铜锁扣，摸上去还有点坠手。
+    A: language.catchphrases[1224] ['旧藤箱的', '藤箱的铜', '箱的铜锁', '的铜锁扣', '铜锁扣，', '锁扣，摸', '扣，摸上', '，摸上去', '摸上去还', '上去还有', '去还有点', '还有点坠', '有点坠手', '点坠手。'] ⊂ 旧藤箱的铜锁扣，摸上去还有点坠手。
+    B: ratio 100.0 ≥ T92 vs 旧藤箱的铜锁扣，摸上去还有点坠手。
+[FLAG] cp|邻家房顶漏了他搭梯，自家瓦片排在后头。
+    A: language.catchphrases[1225] ['邻家房顶', '家房顶漏', '房顶漏了', '顶漏了他', '漏了他搭', '了他搭梯', '他搭梯，', '搭梯，自', '梯，自家', '，自家瓦', '自家瓦片', '家瓦片排', '瓦片排在', '片排在后', '排在后头', '在后头。'] ⊂ 邻家房顶漏了他搭梯，自家瓦片排在后头。
+    B: ratio 100.0 ≥ T92 vs 邻家房顶漏了他搭梯，自家瓦片排在后头。
+[FLAG] ho|菜坛口上封着的那圈黄泥
+    A: lives.hook_objects[599] ['菜坛口上', '坛口上封', '口上封着', '上封着的', '封着的那', '着的那圈', '的那圈黄', '那圈黄泥'] ⊂ 菜坛口上封着的那圈黄泥
+    B: ratio 100.0 ≥ T95 vs 菜坛口上封着的那圈黄泥
+[FLAG] ho|纸马铺柜台那管朱砂笔
+    A: lives.hook_objects[600] ['纸马铺柜', '马铺柜台', '铺柜台那', '柜台那管', '台那管朱', '那管朱砂', '管朱砂笔'] ⊂ 纸马铺柜台那管朱砂笔
+    B: ratio 100.0 ≥ T95 vs 纸马铺柜台那管朱砂笔
+[FLAG] ho|钟表铺案边那块包浆的麂皮擦布
+    A: lives.hook_objects[601] ['钟表铺案', '表铺案边', '铺案边那', '案边那块', '边那块包', '那块包浆', '块包浆的', '包浆的麂', '浆的麂皮', '的麂皮擦', '麂皮擦布'] ⊂ 钟表铺案边那块包浆的麂皮擦布
+    B: ratio 100.0 ≥ T95 vs 钟表铺案边那块包浆的麂皮擦布
+[FLAG] tp|盘店时他把戥子包进了红布里。
+    A: lives.turning_points[442] ['盘店时他', '店时他把', '时他把戥', '他把戥子', '把戥子包', '戥子包进', '子包进了', '包进了红', '进了红布', '了红布里', '红布里。'] ⊂ 盘店时他把戥子包进了红布里。
+    B: ratio 100.0 ≥ T50 vs 盘店时他把戥子包进了红布里。
+[FLAG] tp|分家时她只挑了那把铜熨斗。
+    A: lives.turning_points[443] ['分家时她', '家时她只', '时她只挑', '她只挑了', '只挑了那', '挑了那把', '了那把铜', '那把铜熨', '把铜熨斗', '铜熨斗。'] ⊂ 分家时她只挑了那把铜熨斗。
+    B: ratio 100.0 ≥ T50 vs 分家时她只挑了那把铜熨斗。
+== gene_nearcheck: 11 候选, 11 近重候选 ==
+[nearcheck --qc]
+PASS gram-extract
+PASS layerA-fixture-hit
+PASS layerA-fixture-miss
+PASS layerA-cross-pool
+PASS layerA-real-R413
+PASS layerA-real-R406
+PASS layerA-real-crosspool
+PASS layerB-historic-boundary
+PASS layerB-exact-dup
+PASS unknown-type-reject
+PASS baseline-criterion
+PASS baseline-sentinel
+PASS parse-line
+PASS double-run
+PASS file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+[--baseline]
+{
+ "cp": {
+  "pool": "language.catchphrases",
+  "n": 1226,
+  "max_ratio": 91.667,
+  "top_pair": [
+   "热汤落肚，啥事都好商量。",
+   "热汤下肚，啥事都好商量。"
+  ],
+  "threshold": 92.0,
+  "criterion_ok": true
+ },
+ "ho": {
+  "pool": "lives.hook_objects",
+  "n": 602,
+  "max_ratio": 94.118,
+  "top_pair": [
+   "别在门襟上的老怀表",
+   "别在襟上的老怀表"
+  ],
+  "threshold": 95.0,
+  "criterion_ok": true
+ },
+ "tp": {
+  "pool": "lives.turning_points",
+  "n": 444,
+  "max_ratio": 48.889,
+  "top_pair": [
+   "退休那天把工牌擦亮，挂回车间墙上。",
+   "退休那天把工牌擦了一遍又一遍，最后别在了买菜的帆布包上。"
+  ],
+  "threshold": 50.0,
+  "criterion_ok": true
+ }
+}
+
+KEEP=11 DROPPED=0 · 形制 +24/-0 与 +10/-4=R1618/R1624/R1630 同形 · 全确定性零 LLM
