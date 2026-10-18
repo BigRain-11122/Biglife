@@ -1,0 +1,9 @@
+# BigLife OS 循环轮自验 smoke — R1631（2026-10-18 15:2x @BigLife-OSLoop）
+# QA Smoke Test 自验令（T-20260928-05）五项 + 本轮交付件证据锚；证据落盘=write_file UTF-8（R1564 坑律：禁 Tee-Object/PS 重定向）
+CHECK1 poolgen 跑通: PASS — state/poolgen_run.log 尾行 tick 2026-10-18 15:06:02 TOTAL=1440 FAIL_BUCKETS=NONE（当日 exit=0 判鲜·每小时自循环在役）
+CHECK2 census 新条目: PASS（诚实态）— 10-18 累计 0 环（LLM 让路面年轮批 paused at 0·machine-state paused 10-17 22:51 CEO 让路令合法态·非 FAIL·state/evolve-r1631.log「ollama down; batch paused at 0」）
+CHECK3 位置字段非 null: PASS — behavior --qc rows=10030 bad=0（tw=day wx=clear wd=6·top3 social 3935/work 2003/explore 1712·crash=0 recovering=2850·anchor id 闭集 null_non_honored=0 荣誉席法定）
+CHECK4 行为链再生: PASS — behavior --auto unchanged-skip（bucket=day wx=clear snd=fest·跨桶/跨天气无翻面=法定 skip）
+CHECK5 heartbeat 3h 内: PASS — export --heartbeat 续鲜 alive 行 R1631（2026-10-18 15:07 R1631 alive rings_today=0 export_ts=2026-10-18 15:07 [via BigLife-OSLoop]·读回实证）
+CHECK6 前轮收口件锚: PASS — R1630 三件全中（TASKS.md R1630 实录行在库+docs/status-export.json HEAD dept0=R1630 全条〔git show 实读·本轮滚动窗按设计让位 R1631·R1630 条存证=git 史+TASKS 双通道〕+qa/smoke-R1630.log 在盘三件全验）
+VERDICT: PASS 6/6
