@@ -1,0 +1,61 @@
+# T-20261018-02 archive_tasks.py v0.4 根修交付证据 — R1595 @BigLife-OSLoop 2026-10-18 08:2x
+# 判据=单内五项（①判据扩容 ②tokens 语义复验 ③--qc 电池 ④误吞防护 ⑤裸跑复核）·以下全部实跑输出（python -X utf8 直跑·证据落盘=write_file UTF-8·R1564 坑律执法）
+
+[1] py_compile: PASS（python -X utf8 -m py_compile Tools/archive_tasks.py → exit=0）
+
+[2] --qc 断言电池 19/19 PASS（F841 死赋值摘除前后各跑一次同判）:
+PASS  正典形（OPENERS 开头）  got='2026-09-26' want='2026-09-26'
+PASS  裸日期+粗体轮注形  got='2026-09-26' want='2026-09-26'
+PASS  引用前缀形  got='2026-09-26' want='2026-09-26'
+PASS  R#### 全日期轮注形  got='2026-09-26' want='2026-09-26'
+PASS  R#### 全日期无落款·防护  got=None want=None
+PASS  v0.4 bold+缩位形（现行正形）  got='2026-10-18' want='2026-10-18'
+PASS  v0.4 当日实录不移（cutoff 护栏）  got=None want=None
+PASS  v0.4 半角括号形·不识别  got=None want=None
+PASS  误吞防护·任务单头 [ ]（内嵌字面示例）  got=None want=None
+PASS  误吞防护·bold T- 单头  got=None want=None
+PASS  误吞防护·bold PR- 提案头  got=None want=None
+PASS  误吞防护·节标题  got=None want=None
+PASS  误吞防护·归档指针行  got=None want=None
+PASS  误吞防护·缩进状态行  got=None want=None
+PASS  误吞防护·缩进证据行（含 @落款）  got=None want=None
+PASS  误吞防护·缩进 bold 轮形（非列 0）  got=None want=None
+PASS  tokens 正常附属·随父行同月  got='2026-10-18' want='2026-10-18'
+PASS  tokens 列 0 残留形·当前月收口  got='2026-10-01' want='2026-10-01'
+PASS  tokens 无父缩进形·零误吞不附着  got=None want=None
+archive_tasks --qc: 19/19 PASS
+
+[3] 探针交叉核验（state/_probe_r1595.py 实跑）:
+BOLD=34 CONCRETE=34 TOKENS=35 ORPHAN_TOKENS=1
+（板面 34 条现行轮实录全为具体日期 bold 形·tokens 附属 34+列 0 残留 1）
+
+[4] dry-run 现行形零滞板证明（--before 2026-10-19 --dry-run·零写盘）:
+archive_tasks: cutoff=2026-10-19 runs=1 moved_lines=113 board 259940 -> 166647 bytes
+  -> tasks/archive/TASKS-2026-10.md  +113 lines
+  samples verbatim hit: 10/10
+  (dry-run: nothing written)
+
+[5] 正式裸跑（cutoff=今日 2026-10-18·滚动律执法面恢复首跑）:
+archive_tasks: cutoff=2026-10-18 runs=1 moved_lines=1 board 259940 -> 259902 bytes
+  -> tasks/archive/TASKS-2026-10.md  +1 lines
+  samples verbatim hit: 1/1
+  written: board + 1 archive file(s)
+（moved_lines=1=L386 列 0 残留 tokens 行〔10-17 遗留·年轮批 10 调用 :8090 计量行〕逐字归位 2026-10 月件·当日 34 条实录按滚动律不移）
+
+[6] 幂等复跑:
+archive_tasks: no log lines before 2026-10-18 — no-op (idempotent)
+
+[7] ruff advisory 增量静检门（T-20260929-07·修改文件交付前）:
+uvx ruff@0.16.9 check --select F401,F811,F841,SIM115,RUF059 Tools/archive_tasks.py
+首跑=2 errors（F841 ptr_head ×2=存量死赋值〔run_closed_blocks/main〕）→按「修改文件命中即修」律当轮摘除→复跑=All checks passed!（exit=0）
+
+[8] 行为链/池面/export 例行:
+behavior auto: bucket=empk wx=cloud rest=na snd=fest unchanged - skip regen
+behavior --qc: rows=10030 bad=0 tw=empk wx=cloud wd=6 top3=[('commute', 7650), ('exercise', 1877), ('home', 503)] crash=0 recovering=2850
+poolgen tick 2026-10-18 08:06:02 TOTAL=1440 FAIL_BUCKETS=NONE
+export（update_status_export v1.0 --payload state/export-payload-R1595.json --heartbeat）:
+  DRYRUN total=0 reg=0 anc=0 dept=True qc=False results=False ts=2026-10-18 08:14
+  OK total=0 reg=0 anc=0 dept=True qc=False results=False hb=True ts=2026-10-18 08:14
+  （results 段幂等 no-op=0==机器直数防重复收·qc=False=本轮无 census 例巡）
+
+VERDICT: T-20261018-02 五判据全过·整单关结——滚动律⑤执法面自 v0.4 起恢复常设裸跑（R1348 判例第三例根治·R1594 外科脚本使命终结）

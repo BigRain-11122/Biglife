@@ -1,0 +1,9 @@
+# BigLife OS 循环轮自验 smoke — R1595（2026-10-18 08:2x @BigLife-OSLoop）
+# QA Smoke Test 自验令（T-20260928-05）五项 + 本轮交付件证据锚；证据落盘=write_file UTF-8（R1564 坑律：禁 Tee-Object/PS 重定向）
+CHECK1 poolgen 跑通: PASS — state/poolgen_run.log 尾行 tick 2026-10-18 08:06:02 TOTAL=1440 FAIL_BUCKETS=NONE（每小时自循环在役）
+CHECK2 census 新条目: PASS（诚实态）— 10-18 累计 0 环（LLM 让路面年轮批 paused at 0·machine-state paused 10-17 22:51 CEO 让路令合法态·非 FAIL）
+CHECK3 位置字段非 null: PASS — behavior --qc rows=10030 bad=0（tw=empk wx=cloud wd=6·anchor/slot 全量生成面零坏行）
+CHECK4 行为链再生: PASS — behavior --auto unchanged-skip（bucket=empk wx=cloud rest=na snd=fest·跨桶/跨天气无翻面=法定 skip）
+CHECK5 heartbeat 3h 内: PASS — export --heartbeat 续鲜 alive 行 R1595（ts=2026-10-18 08:14）
+CHECK6 本轮交付件证据锚: PASS — T-20261018-02 archive_tasks v0.4 根修（--qc 电池 19/19·dry-run 现行形 113 行零滞板·正式跑 moved_lines=1 残留行归位·复跑 no-op·ruff 门零命中·证据=qa/archive-tasks-v04-R1595.log）
+VERDICT: PASS 6/6

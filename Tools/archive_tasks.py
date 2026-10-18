@@ -7,11 +7,11 @@
 ②open/in-progress 单头/状态/交付行零触碰（只动「批实录」行族：迭代批实录/进化批实录/相遇轮实录/语言线闸实跑/池轮补深收口开头）
 ③滚动律=次日首轮裸跑（默认 cutoff=今日·移今日之前全部实录行·幂等零匹配即零动作）
 ④验收内建断言（任一不过即中止零写盘）：非移动行序逐字节零漂移 + 检查框行计数保全 + 移动行数=月件新增行数 + 抽验 10 行原文逐字命中月件
-⑤实录族全形判据（T-20260928-01 修面 v0.2·R817 补 `> ` 引用前缀形；T-20261016-01 v0.3 补 R#### 轮注形）：正典形=OPENERS 开头（缩进随旧例）；缺标记形/补记形=列 0 `- [日期…]` 且 **R### 粗体轮注或落款 @BigLife-OSLoop；引用前缀形=列 0 `> [日期…]` 同三判据之一；无 - 前缀形=列 0 `[日期…]` 同三判据之一；R#### 轮注形=列 0 `- R#### 日期…`/`R#### 日期…` 且落款 @BigLife-OSLoop（R1256 起轮实录行族）。
-   tokens 计量行（`- tokens: local=…`·无日期）=轮实录附属行，随前一实录行同月归档（中间空行不断）。
+⑤实录族全形判据（T-20260928-01 修面 v0.2·R817 补 `> ` 引用前缀形；T-20261016-01 v0.3 补 R#### 轮注形；T-20261018-02 v0.4 补 bold+缩位形）：正典形=OPENERS 开头（缩进随旧例）；缺标记形/补记形=列 0 `- [日期…]` 且 **R### 粗体轮注或落款 @BigLife-OSLoop；引用前缀形=列 0 `> [日期…]` 同三判据之一；无 - 前缀形=列 0 `[日期…]` 同三判据之一；R#### 轮注形=列 0 `- R#### 日期…`/`R#### 日期…` 且落款 @BigLife-OSLoop（R1256 起轮实录行族）；bold+缩位形=列 0 `- **R####（MM-DD HH:MM…）**：`（R1501 起现行轮实录正形·年份缺位=本纪年 2026·列 0 锚定=任务单头/缩进体行误吞防线）。
+   tokens 计量行（`- tokens: local=…`·无日期）=轮实录附属行，随前一实录行同月归档（中间空行不断）；列 0 残留形（回溯无实录父行=父块已被先前归档收走·手术脚本遗留面）→ 按当前月归档收口（v0.4）。
    缩进任务体行（status/交付/证据行）恒非实录=零误吞（判据②红线：open/in-progress 单头/状态/交付行零触碰）。
 红线：CEO 人设权保留面/荣誉席卡面/QC·sync·census 户籍面零涉（本件只读写 tasks/ 两文件）。
-用法：python -X utf8 Tools/archive_tasks.py [--before 2026-09-26] [--dry-run]
+用法：python -X utf8 Tools/archive_tasks.py [--before 2026-09-26] [--dry-run] [--qc]
 """
 import argparse
 import datetime
@@ -32,6 +32,9 @@ BOUNDARY_RE = re.compile(rb'^(?:- \[|#)')
 # T-20261016-01 v0.3：R#### 轮注形（R1256 起·`- R#### 日期…`/`R#### 日期…`+落款 @BigLife-OSLoop）；tokens 计量行=附属跟行
 ROUND_LOG_RE = re.compile(rb'^[ \t]*(?:- )?R\d{3,5} (\d{4})-(\d{2})-(\d{2})')
 TOKENS_RE = re.compile(rb'^[ \t]*- tokens: local=')
+# T-20261018-02 v0.4：现行轮实录 bold+缩位形（R1501 起板面正形 `- **R####（MM-DD HH:MM…）**：`）。
+# 列 0 锚定=误吞防线（任务单头 `- [ ] **T…`/`- **T…`/`- **PR-…` 与缩进体行均不匹配）；年份缺位=本纪年 2026。
+BOLD_ROUND_RE = re.compile(rb'^- \*\*R\d{3,5}\xef\xbc\x88(\d{2})-(\d{2})')
 
 
 def classify(line, cutoff):
@@ -73,6 +76,13 @@ def classify(line, cutoff):
             return None
         if b'@BigLife-OSLoop' in line:
             return date
+    # T-20261018-02 v0.4：bold+缩位形（列 0 锚定=误吞防线·年份=本纪年 2026）
+    m = BOLD_ROUND_RE.match(line)
+    if m:
+        date = '2026-%s-%s' % (m.group(1).decode('ascii'), m.group(2).decode('ascii'))
+        if date >= cutoff:
+            return None
+        return date
     return None
 
 
@@ -102,7 +112,6 @@ def run_closed_blocks(raw, eol, lines, dry_run):
     """分步②主流程：已结单整块详情逐字移月件，板面留单头行+一行指针。
     断言④同契约：非移动行零漂移 + [ ]/[x] 计数保全 + 移动行数=月件新增行数 + 抽验 10 行逐字命中。"""
     blocks = closed_blocks(lines)
-    ptr_head = '  - 【详情已归档】'.encode('utf-8')
     moved = set()
     month_of = {}
     block_at = {}
@@ -171,12 +180,80 @@ def run_closed_blocks(raw, eol, lines, dry_run):
     return 0
 
 
+def propagate_tokens(lines, flags):
+    """T-20261016-01 v0.3：tokens 计量行=轮实录附属行（无日期·随前一实录行同月·中间空行不断）。
+    T-20261018-02 v0.4：列 0 残留形收口——回溯最近非空行非实录行（父块已被先前归档/手术移动收走）
+    且本行列 0 → 按当前月归档（tokens 行=轮末计量附属·板面无独立合法态·残留恒为近期批遗留）。"""
+    for i in range(len(lines)):
+        if flags[i] is None and TOKENS_RE.match(lines[i]):
+            j = i - 1
+            while j >= 0 and lines[j].strip() == b'':
+                j -= 1
+            if j >= 0 and flags[j]:
+                flags[i] = flags[j]
+            elif lines[i].startswith(b'- tokens: '):
+                flags[i] = datetime.date.today().strftime('%Y-%m') + '-01'
+    return flags
+
+
+def qc_battery():
+    """T-20261018-02 v0.4 断言电池：合成夹具零触碰真件（R99 契约范式）。
+    覆盖=实录族全形六正形 + v0.4 bold+缩位正/护栏/半角防护 + 误吞防护八负例 + tokens 附属三态。"""
+    CUT = '2026-10-19'
+
+    def u(s):
+        return s.encode('utf-8')
+
+    results = []
+
+    def chk(name, got, want):
+        results.append((name, got == want, repr(got), repr(want)))
+
+    chk('正典形（OPENERS 开头）', classify(u('- [2026-09-26 12:00] 迭代批实录：R1 收口'), CUT), '2026-09-26')
+    chk('裸日期+粗体轮注形', classify(u('[2026-09-26 12:30] **R240 收口记录'), CUT), '2026-09-26')
+    chk('引用前缀形', classify(u('> [2026-09-26 22:2x] 进化批实录：x'), CUT), '2026-09-26')
+    chk('R#### 全日期轮注形', classify(u('- R1234 2026-09-26 22:00 收口 @BigLife-OSLoop'), CUT), '2026-09-26')
+    chk('R#### 全日期无落款·防护', classify(u('- R1234 2026-09-26 22:00 收口（无落款）'), CUT), None)
+    chk('v0.4 bold+缩位形（现行正形）', classify(u('- **R1594（10-18 07:4x~08:1x·基因轮兑现轮）**：轮首三步毕…'), CUT), '2026-10-18')
+    chk('v0.4 当日实录不移（cutoff 护栏）', classify(u('- **R1595（10-18 08:2x·测试轮）**：…'), '2026-10-18'), None)
+    chk('v0.4 半角括号形·不识别', classify(u('- **R1594(10-18 07:4x·半角变体）**：…'), CUT), None)
+    chk('误吞防护·任务单头 [ ]（内嵌字面示例）', classify(u('- [ ] **T-20261018-02**（缺陷单·内嵌字面 `- **R####（MM-DD…` 示例）'), CUT), None)
+    chk('误吞防护·bold T- 单头', classify(u('- **T-20260926-18**（集团令·升华律执行件 v1.3）'), CUT), None)
+    chk('误吞防护·bold PR- 提案头', classify(u('- **PR-20260928-BL01**（自驱提案轨首件）'), CUT), None)
+    chk('误吞防护·节标题', classify(u('## 自领池（OS 循环/交互会话按优先级自领）'), CUT), None)
+    chk('误吞防护·归档指针行', classify(u('  - 【实录已归档】12 行批实录（2026-10）已逐字移至 tasks/archive/TASKS-2026-10.md——T-20260926-05 拆月归档（原文保全）'), CUT), None)
+    chk('误吞防护·缩进状态行', classify(u('  - status: open（2026-10-18 08:1x @BigLife-OSLoop R1594 立单）'), CUT), None)
+    chk('误吞防护·缩进证据行（含 @落款）', classify(u('  - [2026-09-25 19:1x @BigLife-OSLoop R240] **U208 清理整合分步③**：①项回落标注'), CUT), None)
+    chk('误吞防护·缩进 bold 轮形（非列 0）', classify(u('  - **R1594（10-18 07:4x·缩进变体）**：…'), CUT), None)
+    # tokens 附属三态
+    lines = [u('- **R1590（10-18 07:0x·附属测试轮）**：…'), b'', u('  - tokens: local=0 api=0 api_reason=-（测试）')]
+    flags = propagate_tokens(lines, [classify(l, CUT) for l in lines])
+    chk('tokens 正常附属·随父行同月', flags[2], '2026-10-18')
+    lines = [u('  - 【实录已归档】12 行批实录（2026-10）已逐字移至 tasks/archive/TASKS-2026-10.md…'), b'', b'',
+             u('- tokens: local=10 api=0 api_reason=-（残留形）')]
+    flags = propagate_tokens(lines, [classify(l, CUT) for l in lines])
+    chk('tokens 列 0 残留形·当前月收口', flags[3], datetime.date.today().strftime('%Y-%m') + '-01')
+    lines = [u('  - status: open（任务体行·2026-10-18 08:1x）'), b'',
+             u('  - tokens: local=0 api=0 api_reason=-（无父行缩进形）')]
+    flags = propagate_tokens(lines, [classify(l, CUT) for l in lines])
+    chk('tokens 无父缩进形·零误吞不附着', flags[2], None)
+
+    bad = [r for r in results if not r[1]]
+    for name, ok, got, want in results:
+        print('%s  %s  got=%s want=%s' % ('PASS' if ok else 'FAIL', name, got, want))
+    print('archive_tasks --qc: %d/%d PASS' % (len(results) - len(bad), len(results)))
+    return 1 if bad else 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--before', default=None, help='YYYY-MM-DD（默认=今日·移该日之前实录行）')
     ap.add_argument('--closed-blocks', action='store_true', help='分步②：已结单整块详情逐字移月件（板面留单头+指针）')
     ap.add_argument('--dry-run', action='store_true')
+    ap.add_argument('--qc', action='store_true', help='断言电池（合成夹具·零触碰真件）')
     args = ap.parse_args()
+    if args.qc:
+        return qc_battery()
     cutoff = args.before or datetime.date.today().isoformat()
 
     with open(BOARD, 'rb') as f:
@@ -187,16 +264,7 @@ def main():
     if args.closed_blocks:
         return run_closed_blocks(raw, eol, lines, args.dry_run)
 
-    flags = [classify(l, cutoff) for l in lines]
-
-    # T-20261016-01 v0.3：tokens 计量行=轮实录附属行（无日期·随前一实录行同月；中间空行不断）
-    for i in range(len(lines)):
-        if flags[i] is None and TOKENS_RE.match(lines[i]):
-            j = i - 1
-            while j >= 0 and lines[j].strip() == b'':
-                j -= 1
-            if j >= 0 and flags[j]:
-                flags[i] = flags[j]
+    flags = propagate_tokens(lines, [classify(l, cutoff) for l in lines])
 
     # 组 run：相邻实录行（允许行间纯空行·版式随行保全）
     runs, cur = [], []
@@ -225,7 +293,6 @@ def main():
     # 板面重建：run 原位留一行指针；实录行按月归集（版式空行随前一实录行月件）
     out = []
     arc = {}
-    ptr_head = '  - 【实录已归档】'.encode('utf-8')
     ptr_idx = set()
     for i, l in enumerate(lines):
         r = run_starts.get(i)
