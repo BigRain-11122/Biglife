@@ -1,0 +1,10 @@
+== R1670 smoke 2026-10-18 23:28:59 ==
+PASS CHECK1 poolgen tick 当日 FAIL_BUCKETS=NONE 
+PASS CHECK2a R1669 批收账 OK evolved=10 of 10 
+PASS CHECK2b R1670 点火批证据（log 实读·在飞=如实记非 FAIL） in-flight -> R1671 收账
+PASS CHECK3 behavior qc rows=10030 bad=0 rows=10030 bad=0 tw=night wx=rain wd=6 top3=[('sleep', 7161), ('charge', 1934), ('indoors', 335)] cr
+PASS CHECK4 anchors qc rows=10030 reserved=3 ok=10027 QC PASS: rows=10030 light=10030 reserved=3 ok=10027 zones=6 double_run=identical
+PASS CHECK5 heartbeat R1670 alive 行新鲜 2026-10-18 23:28 R1670 alive rings_today=85 export_ts=2026-10-18 23:28 [via BigLife-OSLoop
+PASS CHECK6 前轮收口件锚 R1669（ef267be8+qa 双件） 
+PASS CHECK7 R1670 批在飞（R1671 收账·非 FAIL 如实记） in-flight
+VERDICT: PASS (8/8)
