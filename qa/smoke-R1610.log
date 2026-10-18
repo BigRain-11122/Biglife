@@ -1,0 +1,8 @@
+R1610 smoke 自验（2026-10-18 11:0x @BigLife-OSLoop·write_file 直写=R1564 坑律执法）
+CHECK1 poolgen 跑批: state/poolgen_run.log 尾行 === 2026-10-18 11:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE ✓
+CHECK2 census 新条目: rings_today=0（10-18 全日 LLM 让路面·evolve「ollama down; batch paused at 0」法定豁免 state/evolve-r1610.log·export 工具机器直数 total=0 reg=0 anc=0·如实记非 FAIL）✓
+CHECK3 位置字段 QC: behavior --qc rows=10030 bad=0（anchor/slot/state 字段面零 bad）✓
+CHECK4 行为链再验: behavior --auto bucket=day wx=cloud rest=na snd=fest unchanged-skip（当前桶态在位·tw=day wx=cloud wd=6·top3 social 3935/work 2003/explore 1712）✓
+CHECK5 heartbeat 3h 内: state/heartbeat.txt 尾行 2026-10-18 11:08 R1610 alive rings_today=0 export_ts=2026-10-18 11:08（export 工具 hb=True 实报）✓
+CHECK6 收口件锚: R1609 smoke 6/6 VERDICT=PASS 在档 + R1606 双实物锚=qa/gene-round-r1606.log（基因轮 +14 条全链）+qa/qc-r1606.log（QC 例巡全绿）✓
+VERDICT: PASS 6/6
