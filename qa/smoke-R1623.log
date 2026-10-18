@@ -1,0 +1,7 @@
+CHECK1 PASS 决策水位差集 NEW=0 | WM_COUNT=153 DOC_IDS=152 NEW=0
+CHECK2 PASS evolve 让路面证据 | state/evolve-r1623.log paused at 0 在位
+CHECK3 PASS 行为链 QC rows=10030 bad=0 | rows=10030 bad=0 tw=day wx=clear wd=6 top3=[('social', 3935), ('work', 2003), ('explore', 1712)] crash=0 recovering=2850
+CHECK4 PASS export 账平+R1623 条 | export_ts=2026-10-18 13:28 results_tail=0==机器直数0
+CHECK5 PASS 心跳 R1623 alive | 2026-10-18 13:28 R1623 alive rings_today=0 export_ts=2026-10-18 13:28 [via BigLife-OSLoop]
+CHECK6 PASS 前轮收口件锚 R1622 三件 | TASKS.md+status-export+qa/smoke-R1622.log
+VERDICT: PASS (6/6)
