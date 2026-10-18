@@ -1,0 +1,8 @@
+R1627 smoke 六项自验 2026-10-18 14:16:41
+PASS C1 poolgen 当日 tick exit=0 判鲜
+PASS C2 年轮批 LLM 让路面如实记非 FAIL
+PASS C3 行为面 anchor 非空(id 闭集 null_non_hon=0 rows=10030)
+PASS C4 行为链再生 QC rows=10030 bad=0
+PASS C5 heartbeat 本轮 alive 行落位
+PASS C6 前轮收口件锚 R1626 三件全中(台账+export+smoke)
+VERDICT: PASS 6/6
