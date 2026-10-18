@@ -1,0 +1,7 @@
+== qc_census R1673 (2026-10-19 00:1x·10-19 首班·LLM 改道窗确定性巡检不停摆) ==
+run1 (basic): QC done cards=10030 evolved=4851 problems=0 dup_rings=37/37
+run2 (--schema): QC done cards=10030 evolved=4851 problems=0 dup_rings=37/37 schema_rows=51964 schema_bad=0
+verdict: PASS（dup_rings 37/37=观测基线零新增·编号/姓名唯一·必备段齐备·年轮锚定律过·schema 结构层零漂移）
+例巡位重置: >=R1679
+扫描窗注记: 本例巡扫于年轮批 10/10（a5efd971）之后、相遇轮（220c1198）之前——meet 双卡互引环属正写面不涉本轮不变量基线，归 >=R1679 例巡复扫覆盖（诚实记）
+收账关联: R1672 分离批（pid 37356）取证=state/evolve-r1672.log「ollama down; batch paused at 0 / OK evolved=0 of 10 due」:11434 批内断连法定暂停·零 commit 零 cursor 前进·本轮同步批 10/10 取代（C-00220~C-00229 十席含 R1670 遗留 3 席）

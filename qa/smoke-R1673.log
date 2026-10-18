@@ -1,0 +1,8 @@
+== smoke R1673 (2026-10-19 00:14·10-19 首班·T-20260928-05 数据面自验) ==
+CHECK1 poolgen 跑通: PASS — state/poolgen_run.log tick 2026-10-19 00:06:02 TOTAL=1440 FAIL_BUCKETS=NONE
+CHECK2 census 新条目: PASS — 10-19 本批年轮环 C-00220~C-00229 十席〔a5efd971〕+相遇双卡 C-00027×C-01090〔220c1198〕=今日 12 环（export 机器直数 total=12 账平）
+CHECK3 位置字段非 null: PASS — behavior --qc rows=10030 bad=0（top3 sleep 7161/charge 1934/indoors 335）
+CHECK4 行为链再生: PASS — --auto unchanged-skip（tw=night wx=rain 桶维持·unchanged 合法跳过·sync_rings 随批随 meet 双镜像 rows=10+rows=2）
+CHECK5 heartbeat 3h 内: PASS — alive 行 2026-10-19 00:14 随 export --heartbeat 落位
+CHECK6 LLM 面: PASS — evolve 批「OK evolved=10 of 10 due」+meet「OK meet」·qwen3.8:27b@Ollama :11434 改道窗在产（R1672 死批收账定谳=paused at 0 零污染·本轮同步批取代）
+VERDICT: PASS 6/6
