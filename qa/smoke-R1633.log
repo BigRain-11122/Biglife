@@ -1,0 +1,9 @@
+# BigLife OS 循环第 R1633 轮自验 smoke 板（2026-10-18 15:2x @BigLife-OSLoop）
+# QA Smoke 检查组（T-20260928-05 承诺件+字级断言与探针验证锚验证；写法=write_file UTF-8〔R1564 判例〕·Tee-Object/PS 重定向禁用）
+CHECK1 poolgen 通道: PASS（state/poolgen_run.log 尾行 tick 2026-10-18 15:06:02 TOTAL=1440 FAIL_BUCKETS=NONE〔exit=0·省略每小时间隔豁免〕+本轮 pool_audit 直跑第九证 verdict PASS·满额 1440 SELF_TERMINATE·hard_fails=0·determinism 192 对零漂移+greet 25 对零漂移）
+CHECK2 census 年轮批: PASS（等待态维持·10-18 累计 0 新环〔LLM 让路面·machine-state paused at 0 非本司故障〕·state/evolve-r1633.log·ollama down; batch paused at 0 / OK evolved=0 of 10 due·TCP 探针实测 :8090 FAIL/:11434 OPEN=MiniGame 实例池〔无本司 35B 面〕）
+CHECK3 位置字段与 null 探针: PASS（behavior --qc rows=10030 bad=0〔tw=day wx=clear wd=6·top3 social 3935/work 2003/explore 1712·crash=0 recovering=2850〕+anchor id 空占位探针 null_non_honored=0 荣誉席豁免〔citizen_anchors --qc rows=10030 reserved=3 ok=10027 double_run=identical〕）
+CHECK4 行为链再生: PASS（behavior --auto unchanged-skip〔bucket=day wx=clear rest=na snd=fest·与现桶/天气无漂移=正常 skip〕）
+CHECK5 heartbeat 3h 内: PASS（export --heartbeat 实证 alive 行 R1633〔2026-10-18 15:26 R1633 alive rings_today=0 export_ts=2026-10-18 15:26 实测过〕）
+CHECK6 前轮收口件锚: PASS（R1632 收口三件全中〔TASKS.md R1632 实录在板+docs/status-export.json dept 窗 R1632 条在〔R1633 前后窗实测过〕+qa/smoke-R1632.log 证据文件全在〕）
+VERDICT: PASS 6/6
