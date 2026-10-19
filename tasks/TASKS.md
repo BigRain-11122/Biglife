@@ -930,3 +930,7 @@
 - **T-07 十月证据行（2026-10-20 R1774）**：月度聚光灯抽验 ≥2 例已达标——C-00655 侯蕾 / C-00664 石Ruby 双席，逐句核对「只提所喂事实」全过，证据件=qa/spotlight-R1774.log（含工具修复说明：qwen2.5:7b 退役致 404 → 已切 35B 车道）。
 
 - **R1775·2026-10-20 03:16（夜窗轮）年轮 8 卡**：轮首三步毕（pull up to date·决策水位差集 NEW=0·orders 物理件区无涉本司新行）。产品①年轮线 --batch 3 实落 8 卡（C-00665~C-00672·卡片年轮+版本号同步完整·commit 3105a06c）→ 行为线 sync_rings rows=8 ring=4851（be2b3e31）；语言线当日 audit=PASS 按自终止律跳过；QC 当日 02:38 已跑（R1772 窗·dup_rings 37/37 零新增）本轮不重复；相遇轮当日已做（7d0dc461）不重复。过程如实：evolve 进程在 5 分钟无输出被工具侧取消，已落盘 8 卡逐张校验 diff 完整无半截，未产生脏卡。推送 origin/main 完成。\n  - tokens: local=8 api=0 api_reason=-（年轮 8 卡本地 LLM 生成，余为确定性逻辑）
+
+- **R1776·2026-10-20 03:2x（夜窗轮）年轮 2 卡**：轮首三步毕（pull up to date·HEAD=3811f930；决策水位差集 NEW=0〔watermark 已含 D-20261020-01/02/03〕·orders 物理件区无涉本司新行）。产品①年轮线 --batch 3 实落 2 卡（C-00673/C-00674·余 8 位 skip=ring already today）→commit 36b236eb；行为线 sync_rings rows=2 ring=4851（ee8d1966）；语言线 pool_audit=PASS（under_target NONE·determinism mismatch=0）按自终止律跳过 pool_gen；QC 距 R1772 仅 4 轮未满 6 轮阈值不重复；相遇轮当日已做不重复。推送 origin/main 完成。
+  - 三行实况：当前活=年轮线夜窗批（due 池当轮清零即收）；最近实物=census 居民年轮 C-00673/C-00674（2026-10-20 03:19 落环·behavior 镜像同步）；下个里程碑=下一夜窗年轮批 + R1778 前后 QC 巡检（窗 ≤48h）。
+  - tokens: local=2 api=0 api_reason=-（年轮 2 席本地 LLM 生成，余为确定性逻辑）
