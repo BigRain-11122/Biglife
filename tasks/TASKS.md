@@ -994,3 +994,7 @@
 - **R1790（10-20 06:00~06:15）轮实录**: 轮首 git pull=Already up to date；决策水位 166 行零新差集（D-20261020-02 让路窗口径在档，本轮 06:0x 属夜窗合法段·排程闸 yield_window_active 实测生效）。产出：**年轮线 10 条新环**（C-00810 自动批 1 条 + C-00811~C-00819 九条〔前台批被管道缓冲误杀于提交前·9 卡已落盘零弃环·QC 后定向补提交 commit 8619349a〕；全部带 [锚] 城市实况 2026-10-20+真实天气词「天阴着/风不大/风轻轻的」）；行为线 sync_rings rows_changed=9 ring_synced=9 自动 commit（3d64aa8d）；QC 巡检 cards=10072 evolved=4851 problems=0 dup_rings=37/37；相遇轮 meet-cap 3/3 今日已满 skip；语言线 pool_audit 全桶达标自停（本轮未重跑·今日已 PASS）。产品增量=10 条居民年轮（可看 census/registry/*/C-00810~C-00819.md）。
   - status: done（2026-10-20 06:1x @BigLife-OSLoop）
   - tokens: local=10 api=0 api_reason=-
+
+- **R1791（10-20 06:14~06:30）轮实录**: 轮首 git pull=Already up to date；决策水位补录 D-20261020-04/05 两条新行（均派 HQ·05=研究/规则 md 计 0 分、须有产品实物的全司口径，与本司产品优先律同源，零本司待办）。产出：**年轮 11 条**（C-00820 + C-00821~C-00830，环文带 [锚] 城市实况 2026-10-20+真实天气）；行为线 sync_rings 自动收口 rows=10 ring=4851（commit 01309469）；语言线 pool_audit **PASS 全桶达标 SELF_TERMINATE**（axis 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·determinism 192 对 mismatch=0·hard_fails=0）；相遇轮 meet-cap 3/3 今日已满 skip；QC 巡检本轮未到频次（今晨 06:0x 已跑 problems=0）。产品增量=11 条居民年轮，CEO 可见面=census/registry/*/C-00820~C-00830.md
+  - status: done（2026-10-20 06:30 @BigLife-OSLoop）
+  - tokens: local=11 api=0 api_reason=-
