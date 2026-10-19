@@ -1,0 +1,9 @@
+== 复产批八 intake 收口 R1760 @ 2026-10-19 20:5x ==
+resume-intake b8 applied=4 skipped=0 light 10056->10060
+POST-CLOSEOUT: needs rc=1 behavior rc=0 rows=10060 | rows=10060 bad=0 tw=eve wx=cloud wd=0 top3=[('social', 4762), ('home', 2792), ('work', 2003)] crash=0 recovering=2852
+  【发现+修复实录】needs rc=1=退出码硬编码 10003 陈旧基线假阳（再生本体 rows=10060 bad=0 健康·L242 main QC 段 len(rows)!=10003 双钉·agency.py/voice_manifest.py R497 动态派生先例同修族·needs.py 漏网件）→ 当轮修=基线随 light 面动态派生（n_light 行数直数）→ 复验 rows=10060 bad=0 NEEDS_RC=0
+SELF-VERIFY OK: light=10060 cards=4/4 cursor_touched=file-exists(未触碰面)
+== 批后 QC 全量巡（qc_census --schema）==
+QC done cards=10060 evolved=4851 problems=0 dup_rings=37/37 schema_rows=52054 schema_bad=0
+== 幂等复跑核（intake_batch10 K1 前缀基线闸）==
+BASELINE REFUSED: light rows=10060 != 10056（前缀基线漂移·零写入）——防双写闸在环证明（exit 1 零盘污）

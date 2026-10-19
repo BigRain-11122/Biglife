@@ -1,0 +1,10 @@
+smoke R1760（2026-10-19 20:56·T-20260928-05 数据面自验六项）
+1. poolgen 跑通: LATEST_TICK 2026-10-19 20:06:01 TOTAL=1440 FAIL_BUCKETS=NONE（自循环 tick 续绿）
+2. census 新条目: cards=10060（10-19 当日 +30 卡〔复产批一~八 3+3+4+4+4+4+4+4〕·QC problems=0·maxid=C-10066）
+3. 位置字段非 null: behavior rows=10060 anchor_null=3（荣誉席法定例外·10057/10060 非空）——批后收口步再生后复探
+4. 行为链再生: rows=10060 bad=0 tw=eve wx=cloud top3=[social 4762/home 2792/work 2003] crash=0 recovering=2852
+   【批后收口接线实录】intake_batch10 批后收口步（needs face 刷新→behavior 强制再生→rows 对齐断言三步入脚本）首跑=R1759 候选单兑现·behavior 批后滞后缺陷结构性根治；并当轮抓出 needs.py 退出码 10003 硬编码陈旧基线假阳→基线随 light 面动态派生修→复验 rc=0（agency/voice_manifest R497 先例同修族）
+5. heartbeat 3h 内: 2026-10-19 20:56 R1760 alive rings_today=336 export_ts=20:56 ✓
+6. QC_BATTERY 6/6 PASS（update_status_export --qc 合成数据零触碰真件）
+export 续鲜: OK total=336 reg=333 anc=3 dept=True qc=True results=False(幂等) hb=True ts=20:56（expect_total=336 账平断言过）
+VERDICT: PASS（六项全过）

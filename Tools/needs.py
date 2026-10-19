@@ -272,13 +272,17 @@ def main():
     nrec = sum(1 for o in rows if o.get("crash") == "recovering")
     print(f"rows={len(rows)} bad={bad} ctx_hb={hb} weather={sig['weather'] or 'na'} "
           f"events={sorted(sig['events'])[:6]} crash={ncrash} recovering={nrec}")
+    # R1760 基线随迁: rows 基线跟随 light 面动态派生（原 10003 硬编码=20 席团+复产批前
+    # 陈旧基线·agency.py/voice_manifest.py R497 动态派生先例同修·intake 批后收口步首跑
+    # 抓出 rc 语义假阳——再生本体 rows=10060 bad=0 健康·仅退出码错）
+    with open(LIGHT, encoding="utf-8") as f:
+        n_light = sum(1 for l in f if l.strip())
     if tasks_stats is not None:
         n_in, bad_t, n_tasks = tasks_stats
         print(f"tasks face: in={n_in} bad_tasks={bad_t} tasks={n_tasks} "
               f"out={os.path.basename(TASKS_OUT)}")
-        sys.exit(1 if (bad or len(rows) != 10003 or bad_t or n_in != 10003) else 0)
-    # export face is 10003 rows since v1.9 honored seats C-00001~03 joined
-    sys.exit(1 if (bad or len(rows) != 10003) else 0)
+        sys.exit(1 if (bad or len(rows) != n_light or bad_t or n_in != n_light) else 0)
+    sys.exit(1 if (bad or len(rows) != n_light) else 0)
 
 if __name__ == "__main__":
     main()
