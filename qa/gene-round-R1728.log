@@ -1,0 +1,61 @@
+﻿[CLEAN] cp|鍝ㄩ噷鎺ヤ笅鐨勬椿锛屾病涓€浠跺線鍥為€掋€?
+[CLEAN] cp|鏂板崗璁繘鏈烘埧锛屽厛璇疯€佺洏鏌滆繃涓€閬嶅爞銆?
+[CLEAN] ho|绠楀姏濉斿浠舵灦涓婇偅鎶婂埢婊℃満浣嶅彿鐨勬棫铻轰笣鍒€銆?
+[CLEAN] ho|瀵兼挱鍙拌竟璐寸潃鍐欐弧寮€鎾簭鍙风殑鎻愯瘝鍗°€?
+[CLEAN] ho|鐩戝惉鍝ㄥ€肩彮妗屼笂閭ｅ彧纾ㄦ帀婕嗙殑鏃у璁叉満锛岄閬撻挳涓婄紶鐫€绾㈡绾裤€?
+[CLEAN] tp|澶翠竴鍥炰粠鐪熻鎶ラ噷鍗曟嫀鍑鸿鎶ワ紝浠栧湪鍊肩彮绨夸笂鎶婅嚜涓効鍚嶅ご鎻忕矖浜嗕竴绗斻€?
+[CLEAN] tp|鏈変竴鍥炴柇缃戯紝瑙ｈ璇嶅叏闈犱竴鏀矇绗斿啓婊′簡鏁撮潰鐜荤拑澧欍€?
+[CLEAN] tp|澶翠竴鍙颁翰鎵嬭皟骞崇殑鏈哄簥钀芥埛杞﹂棿锛岄偅鎶婇殢韬骞寸殑娓告爣鍗″昂琚笀鐖跺杩涗簡浠栧厹閲屻€?
+== gene_nearcheck: 8 鍊欓€? 0 杩戦噸鍊欓€?==
+APPLY OK cp=1292 ho=647 tp=476 (+2/+3/+3)
+PASS gram-extract
+PASS layerA-fixture-hit
+PASS layerA-fixture-miss
+PASS layerA-cross-pool
+PASS layerA-real-R413
+PASS layerA-real-R406
+PASS layerA-real-crosspool
+PASS layerB-historic-boundary
+PASS layerB-exact-dup
+PASS unknown-type-reject
+PASS baseline-criterion
+PASS baseline-sentinel
+PASS parse-line
+PASS double-run
+PASS file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+{
+ "cp": {
+  "pool": "language.catchphrases",
+  "n": 1292,
+  "max_ratio": 91.667,
+  "top_pair": [
+   "鐑堡钀借倸锛屽暐浜嬮兘濂藉晢閲忋€?,
+   "鐑堡涓嬭倸锛屽暐浜嬮兘濂藉晢閲忋€?
+  ],
+  "threshold": 92.0,
+  "criterion_ok": true
+ },
+ "ho": {
+  "pool": "lives.hook_objects",
+  "n": 647,
+  "max_ratio": 94.118,
+  "top_pair": [
+   "鍒湪闂ㄨ涓婄殑鑰佹€€琛?,
+   "鍒湪瑗熶笂鐨勮€佹€€琛?
+  ],
+  "threshold": 95.0,
+  "criterion_ok": true
+ },
+ "tp": {
+  "pool": "lives.turning_points",
+  "n": 476,
+  "max_ratio": 48.889,
+  "top_pair": [
+   "閫€浼戦偅澶╂妸宸ョ墝鎿︿寒锛屾寕鍥炶溅闂村涓娿€?,
+   "閫€浼戦偅澶╂妸宸ョ墝鎿︿簡涓€閬嶅張涓€閬嶏紝鏈€鍚庡埆鍦ㄤ簡涔拌彍鐨勫竼甯冨寘涓娿€?
+  ],
+  "threshold": 50.0,
+  "criterion_ok": true
+ }
+}
