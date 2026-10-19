@@ -977,3 +977,8 @@
 
 - [ ] **T-20261020-01**（工具缺口单·同病二犯升格·R1786 实弹立单）：**年轮批前台调用静默超时复发（T-20261019-01 修单未覆盖生成前静默段）**——首班批逐席 print+flush 生效（进度可见），第二班却批内零 stdout 达 5 分钟被会话工具静默窗击杀（6 环已生成未收口，当轮救援零弃环）。判据：现有保活只覆盖「每席完成时」，单席 LLM 调用本身挂起（:8090 无响应/首包迟滞）时仍全静默。拟修法：①逐席**调用前**先打印 `start <cid> <ts>` 并 flush（覆盖挂起段）；②单席 HTTP 超时显式化（requests timeout=120s）+超时即打印 skip 理由；③批领导者心跳线程每 30s 打点（`heartbeat <n>/<len> <ts>`）。验收：连续 3 批前台执行全程每 ≤60s 有 stdout 行、击杀面归零或失败可从日志定位到具体席。
   - status: open（2026-10-20 05:2x @BigLife-OSLoop R1786 立单·执行=下轮第一优先小步）
+
+  - status: **closed（2026-10-20 05:36 @BigLife-OSLoop R1787 当轮交付关结）**——修法三件全落 Tools/evolve_citizen.py：①逐席调用前 `evolving <cid> (n/N) start <HH:MM:SS>` + flush（覆盖挂起段）；②单席超时显式化=`llm timeout skip <cid> (stays due)` 逐席跳过继续，连接拒绝仍走 `ollama down; batch paused`（两态分立，不把挂起误判成服务器死）；③`SeatHeartbeat` 心跳线程每 30s 打点 `heartbeat <cid> #n <HH:MM:SS>`。验证=py_compile 过+心跳冒烟（1s 间隔 2 拍实出）+超时异常类型实测（不可达地址 2s → URLError(reason=TimeoutError)，命中跳过分支）+实弹三批 20 席全程 ≤30s 必有 stdout（证据 state/_evolve-R1787.log 心跳实出）。commit 2b466699。
+
+- **R1787（10-20 05:1x~05:3x）实录**: 决策差集 166 件零新增（D-20261020-02 口径/排程闸已由 R1769/R1770 收口·F-20261020-BL01/02 closed）；年轮线当日实产 **20 环**（C-00771~C-00780 首批 10 + C-00781~C-00784 管道截断救援 4 + C-00785~C-00790 完整批 6·逐卡带 [锚] 注脚）；T-20261020-01 静默超时修法三件当轮关结（start 时间戳/单席超时跳过/30s 心跳·工具面超时从此可定位到具体席）；语言线 pool_audit PASS（72/72 桶达标自停·determinism 192 对零 mismatch）；行为线镜像 rows=10 ring=4851 同轮收口；产品增量=20 条居民年轮（可看: census/registry/*/C-00771~C-00790.md）
+- tokens: local=20 api=0 api_reason=-
