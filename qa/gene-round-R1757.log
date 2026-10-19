@@ -1,0 +1,11 @@
+R1757 gene-round (resume batch-7 raw materials): candidates 8, nearcheck first-run 6 FLAG -> second-run 1 FLAG (监听哨值班桌 4-gram 撞既有对讲机条 -> 换「岗亭里那」) -> third-run 8/8 CLEAN + trigger 0 + crossface 0 + batch-dup 0
+GENE-APPEND R1757 OK: ho 668->672 (#669 配电绝缘手套/#670 导播台乌木改锥/#671 监听哨漆包铜线/#672 回测田木卡尺)
+                        tp 495->499 (#496 闸刀听响/#497 老推子留路/#498 动圈耳机验毛边/#499 田埂实情)
+批七 8/8 原料齐: ho#669~672 + tp#496~499 → R1758 批七 4 席手作直产
+换域面四域: QUANT 算力塔配电间 / MEDIA 导播台 / 感知网监听哨 / QUANT 回测田垄头（R1716/R1720 教训法=避开市井旧物饱和域）
+PASS gram-extract / layerA-fixture-hit / layerA-fixture-miss / layerA-cross-pool / layerA-real-R413 / layerA-real-R406 / layerA-real-crosspool / layerB-historic-boundary / layerB-exact-dup / unknown-type-reject / baseline-criterion / baseline-sentinel / parse-line / double-run / file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+baseline: cp n=1298 max=91.667 (<92 OK) / ho n=672 max=94.118 (<95 OK·哨兵原值在位) / tp n=499 max=48.889 (<50 OK·哨兵原值在位)
+席位方案定谳（R1758 第一优先）: C-10059 雷守闸[原生代·QT 算力塔机房·老配电检修工·秩序轴·ho#669+tp#496] / C-10060 岑守频[弄堂派·MD 导播台·老切换师·怀旧轴·ho#670+tp#497] / C-10061 席静波[通勤族·OR 监听哨·老值机员·安稳轴·ho#671+tp#498] / C-10062 黎望畴[新市民派·QT 回测田·老巡田人·烟火轴·ho#672+tp#499]
+真名撞库预检: 4/4 unique (citizens-light 10052 行实扫·DUP_HITS=NONE)
+跨卡关系网: 雷↔韦九章(QT 同城) / 岑↔桑银针(MD 同城) / 席↔骆闻声(OR 同城) / 黎↔侯振声(QT 回测田同田)

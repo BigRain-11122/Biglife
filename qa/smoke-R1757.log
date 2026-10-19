@@ -1,0 +1,3 @@
+OK total=331 reg=305 anc=26 dept=True qc=True results=True hb=False ts=2026-10-19 20:22
+OK total=331 reg=305 anc=26 dept=False qc=False results=False hb=False ts=2026-10-19 20:22
+QC_BATTERY 6/6 PASS
