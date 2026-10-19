@@ -1567,6 +1567,14 @@ def add_ring(path, cid, line, anchor_note):
     with open(path, encoding="utf-8") as f:
         text = f.read()
     date = today()
+    # R1772 同日幂等闸（出生地拦截）：批次被击杀后重跑不得二次落环节。
+    # 同一天最多一条年轮 + 一条相遇行，超出的写入静默拒绝（调用方按已写处理）。
+    todays = re.findall(r"(?:^|\n)- %s ([^\n]*)" % re.escape(date), text)
+    is_meet = line.startswith("与 ")
+    if is_meet and any("相遇：" in t for t in todays):
+        return False
+    if not is_meet and any("相遇：" not in t for t in todays):
+        return False
     ring = f"**年轮**"
     entry = f"- {date} 「{line}」 [锚] {anchor_note}"
     if ring in text:
@@ -1923,6 +1931,15 @@ def main():
             text = f.read()
         if "成长中" in text and not args.force:
             continue
+        # R1772: 同日年轮幂等闸（cursor 在 state/ 不入库，批次被杀即丢水位→重跑重复落环）。
+        # 卡面已有今日年轮 = 视为已进化，补写水位后跳过，省一次 LLM 调用。
+        if not args.force and re.search(r"(?:^|\n)- %s [^\n]*" % re.escape(today()), text):
+            if not any("相遇：" in l for l in re.findall(r"(?:^|\n)- %s ([^\n]*)" % re.escape(today()), text)):
+                cursor[cid] = {"v": 1, "last": today(),
+                               "next": (datetime.date.today() + datetime.timedelta(days=COOLDOWN_DAYS)).isoformat(),
+                               "n": cursor.get(cid, {}).get("n", 0) + 1}
+                print("skip: ring already today", cid, flush=True)
+                continue
         # T-20260925-01: ownership = persona face only (**年轮** history may
         # quote pool genes from past cycles and must not fake ownership)
         face = text.split("**年轮**", 1)[0]

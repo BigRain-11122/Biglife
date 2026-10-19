@@ -96,6 +96,16 @@ def main():
             evolved += 1
             if "[锚]" not in text:
                 problems.append(f"{fn}: ring without anchor")
+            # R1772 同日年轮唯一性闸（缺陷出生地=批次被击杀后重跑二次落环；
+            # 相遇行与年轮同日并存合法，故只数非相遇行）。
+            _bydate = {}
+            for _d, _body in re.findall(r"(?:^|\n)- (\d{4}-\d{2}-\d{2}) ([^\n]*)", text):
+                if "相遇：" in _body:
+                    continue
+                _bydate[_d] = _bydate.get(_d, 0) + 1
+            for _d, _n in _bydate.items():
+                if _n > 1:
+                    problems.append(f"{fn}: duplicate same-day rings {_d} x{_n}")
             # T-20261011-01 「逐字重复环」观测扫描：本人历史环内同句对计数。
             # 观测面不计 problems：历史环不回溯修复（#41 判例），新面自
             # evolve_citizen v0.45 dedup 闸封（dup-history）。R826 口头禅整句
