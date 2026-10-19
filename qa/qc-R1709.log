@@ -1,0 +1,6 @@
+2026-10-19 10:4x [via BigLife-OSLoop] R1709 QC 例巡到期兑现（例巡位 R1703 重置 ≥R1709 首个到期轮·扫描窗=让路窗法定批尝试 paused at 0 之后·零新环日）
+$ python -X utf8 Tools/qc_census.py --schema
+QC done cards=10030 evolved=4851 problems=0 dup_rings=37/37 schema_rows=51964 schema_bad=0
+-- 全绿判读：编号/姓名唯一+必备段齐备+[锚]定律 problems=0；逐字重复环 dup_rings=37/37=观测基线零新增（R1673 起恒 37·R1685/R1691/R1697/R1703 同值）；schema 结构层 51964 行零漂移
+-- census/QC-REPORT.md 随轮入库（QC 工具自写）
+-- 例巡位重置 ≥R1715
