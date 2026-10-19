@@ -1,0 +1,49 @@
+# qa/gene-round-R1751 — 复产批四原料基因轮证据链（R1751·2026-10-17:3x·T-20261010-03 复产线·R1750 供给线接续留单兑现）
+# 候选清单=state/gene-candidates-R1751.txt（ho 4 + tp 4）·检查脚本=state/gene-check-R1751.py·外科=state/_gene_append_R1751.py
+
+## 查一 nearcheck（Tools/gene_nearcheck.py --file）三轮换句收敛实录
+# 首轮 8 候选 4 FLAG（ho 4/4 CLEAN·tp 4/4 撞）：
+#   tp#1「头一年，」⊂ lives.turning_points[0]（进城头一年，一场台风…）
+#   tp#2「的老主顾」⊂ language.catchphrases[57] + lives.turning_points[9]
+#   tp#3「后，他把」⊂ turning_points[334] +「，他把祖」⊂ turning_points[438]
+#   tp#4「了半辈子」「半辈子的」⊂ hook_objects[152] + turning_points[16][111]
+# 二轮 1 FLAG：
+#   tp#1「那天，她」⊂ turning_points[59] +「门那天，」⊂ turning_points[173]
+# 三轮终验（8/8 CLEAN 全文）：
+[CLEAN] ho|显影盘边那把被药水咬得发毛的竹夹子。
+[CLEAN] ho|肩上那把壶嘴磕出缺口的白铜长流壶。
+[CLEAN] ho|工具筐里那把削苇口磨出浅凹的旧竹刀。
+[CLEAN] ho|摊角那杆专称小件旧物的乌木戥秤。
+[CLEAN] tp|最后一间胶卷冲印铺关张，她把手调放大机搬回弄堂暗房，说慢工出的影才耐看。
+[CLEAN] tp|老茶馆改扫码点单那阵，里间那张老八仙桌被他原样留下，专给下不完棋的老茶客续水。
+[CLEAN] tp|自打滩涂划进禁采区，祖上留的苇编花样被他翻成灯罩提篮，赶集的手艺反倒走俏了。
+[CLEAN] tp|城东旧货大集头一回开进广场，她把攒满一抽屉的换物故事写成卡片压在摊角，换走一件送一段。
+== gene_nearcheck: 8 候选, 0 近重候选 ==
+
+## 查二（触发词族字符级·TRIG 25 族）+ 查三（跨面双向包含）state/gene-check-R1751.py
+candidates 8
+corpus_strings 2006
+trigger_hits 0
+crossface_hits 0
+batch_dup 0
+VERDICT PASS
+
+## 查四 外科纯尾追加 state/_gene_append_R1751.py 实跑输出
+GENE-APPEND R1751 OK: ho 656->660 (#657 显影竹夹/#658 白铜长流壶/#659 削苇竹刀/#660 乌木戥秤)
+                        tp 483->487 (#484 冲印铺关张/#485 茶馆八仙桌/#486 滩涂禁采/#487 旧货大集)
+批四 8/8 原料齐: ho#657~660 + tp#484~487 → R1752 批四 4 席手作直产
+# 断言族全过：baseline (656,483) 锚定 + 双锚点原文断言 + 锚点唯一性 count==1 + 前缀保序 + 他键零漂移
+#             + 批内零重复 + 追加后 660/487 + JSON 双读一致（写后重读复核）
+
+## 终验
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+#（含 baseline-criterion 三池 criterion_ok 全真 + baseline-sentinel 哨兵 cp91.667/ho94.118/tp48.889 原值在位）
+# git diff --numstat genes/lives.json = 10 2（纯尾形·既有条目零字节改动·尾行加逗号族）
+
+## 批四席位方案定谳（R1752 第一优先整轮手作·原料指针逐席配齐·先登记后使用律）
+# C-10047 谢韵秋〔弄堂派·NS 历史立面群·老照相馆暗房师傅·怀旧轴·ho#657+tp#484〕
+# C-10048 童守拙〔原生代·QT 弄堂茶馆巷·老茶馆堂倌·侠气轴·ho#658+tp#485〕
+# C-10049 麦冬生〔新市民派·RV 江岸滩涂·苇编匠人·逍遥轴·ho#659+tp#486〕
+# C-10050 祝九如〔通勤族·GM 广场市集·旧物换物摊掌摊人·好奇轴·ho#660+tp#487〕
+# 跨卡关系网接既有民：谢↔聂砚萍（NS 同立面群街坊）/童↔邬秉直（QT 茶馆棋友）
+#                      /麦↔沈长贵·阮阿桂（RV 渡口赶集·苇篮装茶）/祝↔祁广顺（GM 旧物摊替街机铺收老零件）
