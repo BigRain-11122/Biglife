@@ -1,0 +1,55 @@
+R1755 gene-round (resume batch-6 raw materials): candidates 8, nearcheck first-run 5 FLAG -> second-run 1 FLAG -> third-run 8/8 CLEAN + trigger 0 + crossface 0 + batch-dup 0
+GENE-APPEND R1755 OK: ho 664->668 (#665 行情黑板藤壳小筐/#666 胶片胶木匣/#667 巡线脚扣/#668 舵轮棕缆)
+                        tp 491->495 (#492 黑板擦归抽屉念开盘价/#493 老胶片倒放/#494 巡更灯验明线/#495 航道图记号)
+批六 8/8 原料齐: ho#665~668 + tp#492~495 → R1756 批六 4 席手作直产
+PASS gram-extract
+PASS layerA-fixture-hit
+PASS layerA-fixture-miss
+PASS layerA-cross-pool
+PASS layerA-real-R413
+PASS layerA-real-R406
+PASS layerA-real-crosspool
+PASS layerB-historic-boundary
+PASS layerB-exact-dup
+PASS unknown-type-reject
+PASS baseline-criterion
+PASS baseline-sentinel
+PASS parse-line
+PASS double-run
+PASS file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+{
+ "cp": {
+  "pool": "language.catchphrases",
+  "n": 1298,
+  "max_ratio": 91.667,
+  "top_pair": [
+   "热汤落肚，啥事都好商量。",
+   "热汤下肚，啥事都好商量。"
+  ],
+  "threshold": 92.0,
+  "criterion_ok": true
+ },
+ "ho": {
+  "pool": "lives.hook_objects",
+  "n": 668,
+  "max_ratio": 94.118,
+  "top_pair": [
+   "别在门襟上的老怀表",
+   "别在襟上的老怀表"
+  ],
+  "threshold": 95.0,
+  "criterion_ok": true
+ },
+ "tp": {
+  "pool": "lives.turning_points",
+  "n": 495,
+  "max_ratio": 48.889,
+  "top_pair": [
+   "退休那天把工牌擦亮，挂回车间墙上。",
+   "退休那天把工牌擦了一遍又一遍，最后别在了买菜的帆布包上。"
+  ],
+  "threshold": 50.0,
+  "criterion_ok": true
+ }
+}
