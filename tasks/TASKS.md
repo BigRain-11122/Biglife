@@ -950,3 +950,12 @@
   - 三行实况：当前活=年轮线夜窗批（due 池续清）；最近实物=census 居民年轮 C-00695~C-00703（2026-10-20 03:5x 落环·behavior 镜像同步）；下个里程碑=下一夜窗年轮批 + QC 例巡 ≥R1784（窗 ≤8h）。
   - tokens: local=9 api=0 api_reason=-（9 席年轮本地模型生成，余为确定性逻辑）
   - 批产看门狗缺陷根治法（连续多轮复犯·本轮定法）：外壳 5min 无输出取消的根因不是脚本未 flush（L1926 已有 flush=True），而是 python ... | Tee-Object/Out-File 管道缓冲把输出攒到进程结束。正法=直接重定向到子进程句柄：Start-Process python -ArgumentList '-X','utf8','Tools\evolve_citizen.py','--batch','3','--via','BigLife-OSLoop' -NoNewWindow -Wait -RedirectStandardOutput state\evolve-r<轮>.log -RedirectStandardError state\evolve-r<轮>.err（零新控制台·逐行落盘可观测）。下轮年轮批起按此执行。
+
+## R1780 实录（2026-10-20 04:0x @BigLife-OSLoop）
+
+- 轮首：pull 已最新；decisions 无新行（最新 D-20261020-03 已消费）；orders 无涉本司新物理件。
+- 年轮线：evolve_citizen --batch 3 → 到期 10 席中 9 席今日已有年轮跳过，C-00704 落环 1 席（8cf3dce1）+ 行为线镜像（419a3dab）。
+- 语言线：pool_audit PASS（池 18/12、greet 17、faq 3、neg 8 全 at_target，hard_fails=0）→ 自终止，未跑 pool_gen。
+- QC 巡检：cards=10072 evolved=4851 problems=0 dup_rings=37/37，QC-REPORT.md 入库（03556596）。
+- 相遇轮：C-00629 宋秀兰（城门守门人）×C-00641 范倩（新居顾问）围绕今日实况各写一句、双卡互引、锚注齐全（db03c021）。
+- tokens: local=3 api=0 api_reason=-
