@@ -499,7 +499,7 @@ Usage:
   python -X utf8 evolve_citizen.py --batch 3 --propose # +V3 councilor proposals (<=3/day)
   --via BigLife-OSLoop  # committer-identity tail on every commit (cph4/versioning.md 4.1)
 """
-import argparse, datetime, glob, json, os, re, socket, subprocess, sys, urllib.error, urllib.request
+import argparse, datetime, glob, json, os, re, socket, subprocess, sys, threading, urllib.error, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
@@ -652,6 +652,36 @@ def llm(prompt):
         j = json.loads(r.read().decode("utf-8"))
         return ((j.get("choices") or [{}])[0].get("message") or {}
                 ).get("content", "").strip()
+
+class SeatHeartbeat:
+    """T-20261020-01: silent-kill guard. A stalled 35B seat emits nothing for
+    minutes; the calling session kills a silent foreground batch at ~5min.
+    Beat every 30s while the seat waits so the round stays visibly alive."""
+
+    def __init__(self, label, interval=30):
+        self.label = label
+        self.interval = interval
+        self._stop = threading.Event()
+        self._t = None
+
+    def __enter__(self):
+        self._t = threading.Thread(target=self._run, daemon=True)
+        self._t.start()
+        return self
+
+    def _run(self):
+        n = 0
+        while not self._stop.wait(self.interval):
+            n += 1
+            print("heartbeat %s #%d %s" % (
+                self.label, n,
+                datetime.datetime.now().strftime("%H:%M:%S")), flush=True)
+
+    def __exit__(self, *exc):
+        self._stop.set()
+        if self._t:
+            self._t.join(timeout=1)
+        return False
 
 def ring_violations(line, sig):
     """gap #12 honesty gate: machine-check an LLM ring against the fed signals.
@@ -1923,7 +1953,11 @@ def main():
     pool_used = {}
     for cid in due:
         # T-20261019-01: per-seat stdout keepalive, flush=True beats pipe block-buffering
-        print("evolving %s (%d/%d)" % (cid, n + 1, len(due)), flush=True)
+        # T-20261020-01: seat start carries a timestamp so a stalled seat is
+        # attributable instead of looking like a silent dead round.
+        print("evolving %s (%d/%d) start %s" % (
+            cid, n + 1, len(due),
+            datetime.datetime.now().strftime("%H:%M:%S")), flush=True)
         p = find_card(cid)
         if not p:
             continue
@@ -1962,7 +1996,19 @@ def main():
                     sig["city_digest"] = city_chronicle.city_digest(datetime.datetime.now())
                 except Exception:
                     sig["city_digest"] = ""
-            line = gated_llm(build_prompt(cid, text, sig), sig)
+            with SeatHeartbeat(cid):
+                line = gated_llm(build_prompt(cid, text, sig), sig)
+        except (socket.timeout, TimeoutError):
+            # T-20261020-01: a stalled seat must not kill the batch - skip it,
+            # the citizen stays due for the next round.
+            print("llm timeout skip", cid, "(stays due)", flush=True)
+            continue
+        except urllib.error.URLError as exc:
+            if isinstance(getattr(exc, "reason", None), (socket.timeout, TimeoutError)):
+                print("llm timeout skip", cid, "(stays due)", flush=True)
+                continue
+            print("ollama down; batch paused at", n, flush=True)
+            break
         except Exception:
             print("ollama down; batch paused at", n, flush=True)
             break
