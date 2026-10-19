@@ -1,0 +1,10 @@
+smoke R1759（2026-10-19 20:45·T-20260928-05 数据面自验六项）
+1. poolgen 跑通: LATEST_TICK 2026-10-19 20:06:01 TOTAL=1440 FAIL_BUCKETS=NONE（自循环 tick 续绿）
+2. census 新条目: cards=10056（10-19 当日 +26 卡〔复产批一~七 3+3+4+4+4+4+4〕·QC problems=0）
+3. 位置字段非 null: anchor 10053/10056 非空（3 null=荣誉席法定例外）——behavior 再生后复探
+4. 行为链再生: rows=10056 bad=0 tw=eve wx=cloud top3=[social 4760/home 2790/work 2003] crash=0 recovering=2852
+   【发现+修复实录】探测首跑 QC FAIL rows 10052 != light 10056（R1758 批七入册后 behavior 未随批再生·unchanged-skip 判据不含 light 行数变化）→当轮再生 rows 对齐 10056 bad=0 复绿；候选单=批后收口面接行为链再生步（下轮 intake_batch 落）
+5. heartbeat 3h 内: 2026-10-19 20:45 R1759 alive rings_today=336 export_ts=20:45 ✓
+6. QC_BATTERY 6/6 PASS（update_status_export --qc 合成数据零触碰真件）
+export 续鲜: OK total=336 reg=333 anc=3 dept=True results=False(幂等) hb=True ts=20:45（expect_total=336 账平断言过·幂等复跑全 no-op）
+VERDICT: PASS（六项全过）
