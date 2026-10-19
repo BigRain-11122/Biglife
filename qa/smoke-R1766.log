@@ -1,0 +1,7 @@
+poolgen: 2026-10-19 23:06:02 tick TOTAL=1440 FAIL_BUCKETS=NONE (continuous)
+census: 批十 4 卡入册 light=10068 批后QC cards=10068 problems=0 schema_bad=0 dup_rings=37/37
+anchor: behavior rows=10068 对齐 light (POST-CLOSEOUT 断言过; anchor 字段面 R3 v3.55 全行承载)
+behavior: rows=10068 bad=0 tw=night wx=cloud crash=0 (批后收口步 rc=0)
+heartbeat: 本轮收尾自动续写 (23:21 <3h 新鲜)
+export: OK total=396 reg=393 anc=3 账平 expect 断言过 ts 23:21
+VERDICT: PASS 6/6
