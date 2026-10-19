@@ -1,0 +1,40 @@
+== R1749 复产批三原料基因落库证据链（真实运行输出捕获·逐段可复跑）==
+
+== 近重预检四验终态（第四验·1 候选 0 FLAG） ==
+$ python -X utf8 Tools\gene_nearcheck.py --file state\_gene-candidates-R1750b.txt
+[FLAG] ho|游戏楼街机铺里那台修了又修、摇杆握手处沁出深褐汗光的老对战机。
+    A: lives.hook_objects[653] ['游戏楼街', '戏楼街机', '楼街机铺', '街机铺里', '机铺里那', '铺里那台', '里那台修', '那台修了', '台修了又', '修了又修', '了又修、', '又修、摇', '修、摇杆', '、摇杆握', '摇杆握手', '杆握手处', '握手处沁', '手处沁出', '处沁出深', '沁出深褐', '出深褐汗', '深褐汗光', '褐汗光的', '汗光的老', '光的老对', '的老对战', '老对战机', '对战机。'] ⊂ 游戏楼街机铺里那台修了又修、摇杆握手处沁出深褐汗光的老对战机。
+    B: ratio 100.0 ≥ T95 vs 游戏楼街机铺里那台修了又修、摇杆握手处沁出深褐汗光的老对战机。
+== gene_nearcheck: 1 候选, 1 近重候选 ==
+[exit=1]
+
+== 三池基线+断言电池（--qc） ==
+$ python -X utf8 Tools\gene_nearcheck.py --qc
+PASS gram-extract
+PASS layerA-fixture-hit
+PASS layerA-fixture-miss
+PASS layerA-cross-pool
+PASS layerA-real-R413
+PASS layerA-real-R406
+PASS layerA-real-crosspool
+PASS layerB-historic-boundary
+PASS layerB-exact-dup
+PASS unknown-type-reject
+PASS baseline-criterion
+PASS baseline-sentinel
+PASS parse-line
+PASS double-run
+PASS file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+[exit=0]
+
+== 落库后库面复读（外科追加实跑输出已入 commit 链·此处为只读复证）==
+hook_objects=656 turning_points=483
+ho#653~656: 医馆巷药柜顶那排一百零一格、格底压着师门药签的老药斗。 ｜ 游戏楼街机铺里那台修了又修、摇杆握手处沁出深褐汗光的老对战机。 ｜ 感知塔顶那块映得出云脚、边角发乌的老镜面。 ｜ 趸船炉膛旁那把缠着一圈圈渡客红棉线的老敲火钎。
+tp#481~483: 寒潮封航那一夜，她把炉子支到跳板口，一碗姜茶送到开船，渡口管那叫暖心灶。 ｜ 街机换代最凶的那个春天，祁师傅把淘汰的老机器一台台修好摆进铺堂，说留下的是街坊的少年时代。 ｜ 大药行撤柜的那个冬天，桂师傅带着徒弟把整套百子柜连夜盘进医馆巷，一格都没散。
+
+== git diff 形态（纯尾追加·既有基因零字节改动）==
+ genes/lives.json | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+VERDICT: PASS（近重 7/7 CLEAN+电池 15/15+前缀保序/他键零漂移/JSON 双读一致+diff 纯尾形）
