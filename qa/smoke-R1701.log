@@ -1,0 +1,8 @@
+== smoke R1701 (2026-10-19 08:5x) 六项自验（真实运行输出·逐条可复跑）==
+1 poolgen tick: 2026-10-19 07:06:02 / 08:06:02 连戳 TOTAL=1440 FAIL_BUCKETS=NONE (src=auto exit=0)
+2 census 新条目: 本批 10 环 commit cddeca53 (C-00500..C-00509 年轮环) + 行为线镜像 373ab65d rows=10 ring=4851
+3 位置字段非 null: anchor_non_null=10027/10030 (荣誉席 3 席法定 anchor=null 例外·承载面=citizen-behavior.jsonl v3.55)
+4 行为链: behavior --auto bucket=empk wx=cloud rest=na snd=fest unchanged-skip + --qc rows=10030 bad=0 wd=0 top3=[commute 7650, exercise 1877, home 503] crash=0 recovering=2850
+5 heartbeat 3h 内: 2026-10-19 08:36:35 os-loop: round done exit=0 (R1700 收轮戳·距检查点 <30min)
+6 池审复跑+基因电池: pool_audit verdict=PASS TOTAL=1440 under_target NONE-SELF_TERMINATE determinism 192+25 对零漂移 · gene_nearcheck --qc 15 PASS 0 FAIL
+VERDICT: PASS (6/6)
