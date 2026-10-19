@@ -1,0 +1,8 @@
+PASS poolgen | === 2026-10-20 00:06:01 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BU
+PASS light_rows | rows=10072
+PASS batch13_cards | C-10075..10078 present
+PASS behavior_qc | rows=10072 bad=0 tw=night wx=cloud wd=1 top3=[('sleep', 7429), ('charg
+PASS heartbeat | 2026-10-20 00:37:50 os-loop: round done exit=1
+PASS reflect_today | today=2
+PASS qc_report | cards/异常/结构违例 三字段实读
+VERDICT PASS

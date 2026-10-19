@@ -375,6 +375,13 @@ def main():
     # 水位 15/10→18/12：2026-09-25 CEO 定向开工令 O-20260925-1138-bm-c 派工 T-20260925-07（CODEX §十二 v3.6）
     args.target = max(4, min(18, args.target))
     args.sprite_target = max(3, min(12, args.sprite_target))
+    # D-20261020-02 日间让路窗排程闸: 工作日 09:00-19:00 零改道批（27b 不加载）·周末全窗自领
+    import datetime as _dt
+    _n = _dt.datetime.now()
+    if _n.weekday() < 5 and 9 * 60 <= _n.hour * 60 + _n.minute < 19 * 60:
+        print("yield-window: workday 09:00-19:00 CEO lane-priority - pool round deferred "
+              "to 19:00-09:00/weekend (D-20261020-02)")
+        sys.exit(0)
     if args.append and not acquire_lock():
         print("pool round already running (lock held); skip")
         sys.exit(0)

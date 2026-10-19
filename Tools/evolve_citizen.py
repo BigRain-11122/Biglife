@@ -1791,6 +1791,14 @@ def propose_step(cursor, via, done, sig):
         commit_files([PROPOSALS], "提案 %s: %s%s" % (t, " ".join(made), via))
     print("OK proposals=%d" % len(made))
 
+def yield_window_active(now=None):
+    """D-20261020-02 日间让路窗排程闸: 工作日 09:00-19:00 CEO 用机让路窗（周末全窗自领=不闸）."""
+    import datetime
+    dt = now or datetime.datetime.now()
+    mins = dt.hour * 60 + dt.minute
+    return dt.weekday() < 5 and 9 * 60 <= mins < 19 * 60
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--batch", type=int, default=None)
@@ -1807,6 +1815,13 @@ def main():
     cursor = load_cursor()
     sig = real_signals()
     anchor_note = "城市实况 " + today() + "（FluxVerse 事件流+真实时间天气）"
+
+    # D-20261020-02 日间让路窗排程闸: LLM 批面（batch/meet/reflect）工作日 09:00-19:00 零改道，
+    # 周末全窗自领；水线批/池产出排程限非让路窗 19:00-09:00。本地路径（--qc/确定性件）不受影响。
+    if (args.batch or args.meet or args.reflect) and yield_window_active():
+        print("yield-window: workday 09:00-19:00 CEO lane-priority - evolve/meet/reflect "
+              "deferred to 19:00-09:00/weekend (D-20261020-02)")
+        return
 
     if args.meet:
         # v0.36 meet 日额闸 (2026-10-11 R858): R834 超帽违例曾立「git log --grep 前置检」

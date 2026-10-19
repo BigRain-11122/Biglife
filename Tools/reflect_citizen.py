@@ -186,6 +186,13 @@ def main():
     a = ap.parse_args()
     if a.qc:
         sys.exit(qc())
+    # D-20261020-02 日间让路窗排程闸: 工作日 09:00-19:00 零改道批（27b 不加载）·周末全窗自领
+    import datetime as _dt
+    _n = _dt.datetime.now()
+    if _n.weekday() < 5 and 9 * 60 <= _n.hour * 60 + _n.minute < 19 * 60:
+        print("yield-window: workday 09:00-19:00 CEO lane-priority - reflect deferred "
+              "to 19:00-09:00/weekend (D-20261020-02)")
+        sys.exit(0)
     ids = [x.strip() for x in (a.batch.split(",") if a.batch else [a.id]) if x.strip()]
     for cid in ids:
         rec, hits = reflect(cid, force=a.force)
