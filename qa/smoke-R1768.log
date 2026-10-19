@@ -1,0 +1,7 @@
+﻿[1] poolgen tick: === 2026-10-19 23:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] light rows: 10068
+[3] behavior qc: rows=10068 bad=0 tw=night wx=cloud wd=0 top3=[('sleep', 7425), ('charge', 2003), ('night_light', 503)] crash=0 recovering=2852
+[4] heartbeat: 2026-10-19 23:44:51 os-loop: round done exit=0
+[5] qc battery: cards=10068 evolved=4851 problems=0 schema_bad=0 (qc-R1768.log)
+[6] ring batch in flight: PID 72184 log tail:
+evolving C-00615 (1/10)
