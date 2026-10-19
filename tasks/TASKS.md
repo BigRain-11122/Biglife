@@ -990,3 +990,7 @@
 - **R1789（10-20 05:47~06:0x）轮实录**: 轮首 git pull=Already up to date；决策水位 166 行已覆盖 D-20261020-01/02/03 零新差集（D-20261020-02 日间让路窗口径维持：本轮 05:4x 属夜窗合法段）。产出：**年轮线 9 条新环**（C-00801~C-00809·环文带 2026-10-20 [锚] 城市实况+真实天气：「天阴着风不大」类实锚·逐卡年轮计数+1）；行为线 sync_rings rows_changed=9 ring_synced=9 自动 commit；QC 巡检 cards=10072 evolved=4851 problems=0 dup_rings=37/37（census/QC-REPORT.md 刷新）；语言线 pool_audit PASS 全桶达标 SELF_TERMINATE（72/72 轴桶·determinism 192 对 mismatch=0）。实锚两件：①**工具面 5min 静默取消真因=管道缓冲**——`python ... 2>&1 | Select-Object -Last N` 只在进程结束后吐流，心跳行（30s 一拍）被吞→工具按无输出取消；修法 R1787 无问题，下轮起跑一律重定向到 state/_evolve-R<no>.log 再读尾，勿套 Select-Object；②双 LLM 车道 :11434 与 :8090 本轮实测均不可达（Ollama 未起/大脑车道未起）→9 环为取消前已落盘产物，后续批按 ollama-down 契约 paused 不修不报障。
   - status: done（2026-10-20 06:0x @BigLife-OSLoop）
   - tokens: local=9 api=0 api_reason=-
+
+- **R1790（10-20 06:00~06:15）轮实录**: 轮首 git pull=Already up to date；决策水位 166 行零新差集（D-20261020-02 让路窗口径在档，本轮 06:0x 属夜窗合法段·排程闸 yield_window_active 实测生效）。产出：**年轮线 10 条新环**（C-00810 自动批 1 条 + C-00811~C-00819 九条〔前台批被管道缓冲误杀于提交前·9 卡已落盘零弃环·QC 后定向补提交 commit 8619349a〕；全部带 [锚] 城市实况 2026-10-20+真实天气词「天阴着/风不大/风轻轻的」）；行为线 sync_rings rows_changed=9 ring_synced=9 自动 commit（3d64aa8d）；QC 巡检 cards=10072 evolved=4851 problems=0 dup_rings=37/37；相遇轮 meet-cap 3/3 今日已满 skip；语言线 pool_audit 全桶达标自停（本轮未重跑·今日已 PASS）。产品增量=10 条居民年轮（可看 census/registry/*/C-00810~C-00819.md）。
+  - status: done（2026-10-20 06:1x @BigLife-OSLoop）
+  - tokens: local=10 api=0 api_reason=-
