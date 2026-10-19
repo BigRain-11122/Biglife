@@ -16,7 +16,8 @@ LIGHT = os.path.join(CO, "census", "export", "citizens-light.jsonl")
 ROOT = os.path.abspath(os.path.join(CO, "..", ".."))
 FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
 OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
-MODEL = os.environ.get("BIGLIFE_MODEL", "qwen2.5:7b-instruct")
+MODEL = os.environ.get("BIGLIFE_MODEL", "qwen3.6-35b")
+LLM_URL = os.environ.get("BIGLIFE_LLM_URL", "http://127.0.0.1:8090/v1/chat/completions")
 
 sys.path.insert(0, HERE)
 from make_digests import find_card
@@ -56,6 +57,36 @@ def real_signals():
     except Exception:
         pass
     return sig
+
+def llm(prompt, temperature):
+    """35B brain lane (:8090, OpenAI-compatible) first, Ollama /api/generate fallback.
+
+    R1774: this tool still pointed at the retired qwen2.5:7b Ollama model and died
+    with HTTP 404, so the monthly spotlight check could not run at all. Same lane
+    contract as evolve_citizen.llm (reasoning_effort=none keeps thinking off).
+    """
+    try:
+        req = urllib.request.Request(
+            LLM_URL,
+            data=json.dumps({"model": MODEL,
+                             "messages": [{"role": "user", "content": prompt}],
+                             "max_tokens": 90, "temperature": temperature,
+                             "chat_template_kwargs": {"enable_thinking": False},
+                             "reasoning_effort": "none"}).encode("utf-8"),
+            headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(
+                req, timeout=int(os.environ.get("BIGLIVE_LLM_TIMEOUT", "120"))) as resp:
+            j = json.loads(resp.read().decode("utf-8"))
+            return ((j.get("choices") or [{}])[0].get("message") or {}
+                    ).get("content", "").strip()
+    except Exception:
+        req = urllib.request.Request(
+            OLLAMA.rstrip("/") + "/api/generate",
+            data=json.dumps({"model": MODEL, "prompt": prompt, "stream": False,
+                             "options": {"temperature": temperature, "num_predict": 80}}).encode("utf-8"),
+            headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=90) as resp:
+            return json.loads(resp.read().decode("utf-8")).get("response", "")
 
 def main():
     ap = argparse.ArgumentParser()
@@ -98,14 +129,12 @@ def main():
               f"用你的口吻说一句符合你性格的话（不超过 {eff_max} 字），只输出这句话本身。")
     line = ""
     for attempt in range(3):
-        req = urllib.request.Request(
-            OLLAMA.rstrip("/") + "/api/generate",
-            data=json.dumps({"model": MODEL, "prompt": prompt, "stream": False,
-                             "options": {"temperature": 0.8 if attempt == 0 else 0.5, "num_predict": 80}}).encode("utf-8"),
-            headers={"Content-Type": "application/json"})
-        with urllib.request.urlopen(req, timeout=90) as resp:
-            line = json.loads(resp.read().decode("utf-8")).get("response", "")
-        line = re.sub(r"\s+", " ", line).strip().strip('「」"“”')[:eff_max + 10]
+        try:
+            line = llm(prompt, 0.8 if attempt == 0 else 0.5)
+        except Exception as exc:
+            print(f"{r['id']} {r['name']}: （今日不想说话：LLM 不可用 {type(exc).__name__}）")
+            return
+        line = re.sub(r"\s+", " ", line or "").strip().strip('「」"“”')[:eff_max + 10]
         # QC gate: citizens speak Chinese - stray ASCII-letter artifacts (model glitches) are rejected
         if line and not re.search(r"[A-Za-z]", line) and len(line) >= 4:
             break
