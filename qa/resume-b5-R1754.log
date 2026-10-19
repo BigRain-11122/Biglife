@@ -1,0 +1,4 @@
+﻿resume-intake b5 applied=4 skipped=0 light 10044->10048
+SELF-VERIFY OK: light=10048 cards=4/4 cursor_touched=file-exists(鏈Е纰伴潰)
+QC done cards=10048 evolved=4851 problems=0 dup_rings=37/37 schema_rows=52002 schema_bad=0
+
