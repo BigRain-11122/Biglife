@@ -1,0 +1,33 @@
+# gene-round-R1720 · 2026-10-19 12:3x~12:5x · 基因轮 R1720 到期件（R1716 已兑·顺延位兑现·余料复用+换域面优先）
+
+## 批构成（8 条：cp+1 / ho+3 / tp+4）
+- cp（language.json·怀旧轴）：旧门牌描了遍金才上墙，他说新钥匙得先认认老号码。
+- ho（lives.json·hook_objects）：报刊亭窗口边那摞起了卷角的老价目单 / 感知塔宿舍楼道里那排各写各的小茶缸 / 修车摊边缠着旧胶带的老打气筒
+- tp（lives.json·turning_points）：作坊改成直播间后，掌线的师傅头一回对着镜头演示，手上的茧一点没挪窝。/ 选题馆闭馆大扫除，他私藏了一盘没播完的老带子，编号只有自己懂。/ 新天线装上感知塔后，旧的那根被他栽进花盆，楼顶从此多出一棵铁打的草。/ 女儿出嫁后，那把裁了几十年的剪刀被他收进红布，从此只给街坊改裤脚。
+- 源料=state/gene-candidates-R1716{,b,c}.txt 换写余料 10 条（R1716 已入池 7 条对应候选剔除后）+三轮定点换写
+
+## 查一 nearcheck（三层迭代·池饱和判例族同形）
+- 首轮（R1720 原料 8 条）：8/8 FLAG（撞点族=搬家那天/那天他把/把旧门牌/票根的玻/的搪瓷缸/胶布的老/缠满胶布/弄堂口修/口修车摊/在老位置/，老师傅/那日，他/从此多了/那晚，他）
+- 二轮（换写后）：6/8 CLEAN，2 ho 仍撞（出毛边的⊂磨出毛边的蓝布袖套·窗台上那⊂裁缝铺窗台上那把老木尺·的粗瓷碗⊂烙着福字的粗瓷碗）
+- 三轮（定点改写）：2/2 CLEAN → 终态 8/8 CLEAN（Layer A 全文本池 4-gram+Layer B 同型池 rapidfuzz cp92/ho95/tp50 双层全过）
+- 复验命令：python -X utf8 Tools/gene_nearcheck.py --file state/gene-candidates-R1720b.txt / --file state/gene-candidates-R1720c.txt
+
+## 查二 触发词族（字符级）
+state/gene-check-R1720.py 实跑：candidates 8 / trigger_hits 0 → PASS（族表=雨/淋/台风/风量级/晨夜时段词/信号灯/场次/放学/占位词/晴/雾/月/星 全扫）
+
+## 查三 跨面双向包含（pools+greetings+negative）
+corpus_strings 2006（pools 1440+greetings 476+negative 48） / crossface_hits 0 / batch_dup 0 → PASS
+
+## 查四 纯尾追加断言族（state/gene-verify-R1720.py 实跑）
+- json 双件 parse OK
+- 计数：cp 1289→1290 / ho 641→644 / tp 469→473（断言过）
+- 全库零精确重复（cp text / ho / tp 三面 set 断言过）
+- 新条目 8/8 在场断言过（含 axis=怀旧 字段断言）
+- git numstat：language.json +4/-0 纯增形 / lives.json +9/-2（尾行加逗号 ×2·R1716 勘注同形·既有条目纯句零字节变动）
+
+## 终验电池
+- gene_nearcheck --qc：15 PASS, 0 FAIL（double-run PASS + file-roundtrip PASS）
+- gene_nearcheck --baseline：threshold cp92/ho95/tp50 criterion_ok=true（三池哨兵原值在位）
+
+## 纪律行
+先登记后使用律维持（本批纯登记零消费面）；既有基因零字节改动（尾行加逗号 = R1708/R1716 判例族已定谳合法形）；换域面教训执行（MEDIA 感知网域 5 条优先=一次过率高于日常域）；余料剩 2 条（工牌机床/自行车坐垫）留 state/ 下轮复用（工牌=tp 池已知吸引子簇·须深换写）。
