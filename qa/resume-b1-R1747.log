@@ -1,0 +1,22 @@
+BigLife census 受控复产批一（3 席）落库实录 R1747 · 2026-10-19 16:4x @BigLife-OSLoop
+法源: CEO 解禁令 2026-10-19 15:45「BigLife解禁，自己干好自己的业务」（集团 orders 15:45 行·commit 63ccfaba）→ T-20261010-03 受控复产·首批 ≤10 席·碳源居民优先·禁一次性万人灌入
+先例: resident_intake.py（R496/R595 手写卡一次性件）+R1681 沙箱闸测正例全绿（闸族同律）
+本批: 复产批一 3/10 席（质量优先·手作禁赶工·余席滚动续批·每批同律全门走满）
+
+入册（Tools/intake_batch3.py·全门 fail-fast 闸前置于一切写盘）:
+- C-10037 傅连奎（碳基·原生代·男 68·GM 像素匠人巷·老城梆子戏木作坊掌作）——R1746 双净基因全用（#652 旧木梆+#480 改制下岗转折）
+- C-10038 聂砚萍（碳基·弄堂派·女 57·NS 历史立面群·弄堂活字铺修字师）——基因 #650 老宋体活字
+- C-10039 邬秉直（碳基·新市民派·男 54·QT K线广场·城西货栈老账房）——基因 #651 铜钱坠界尺
+- 闸族: 政治红线 0 命中 3/3 · sublimate_gate 双底座链 3/3 · 声位 md5 派生复检 3/3 ·
+  style_dna 五维逐字入卡+批内两两互异 3/3 · 钩子全城唯一（预检 light 零占用）·
+  真名撞库 0（傅连奎/聂砚萍/邬秉直 全 OK）· 生计三性 3/3 · 基因库证据件指针（K12 常规生成管线批面）3/3
+- apply: applied=3 skipped=0 light 10030->10033（append-only 字节尾）·cursor 不插队·存量 10030 卡零触碰
+
+批后 QC 全量巡（T-20261010-03 判据）:
+- qc_census --schema: cards=10033 evolved=4851 problems=0 dup_rings=37/37（观测基线不动）schema_rows=51967 schema_bad=0 -> PASS
+- QC-REPORT.md 随轮入库（census/QC-REPORT.md）
+
+年轮线法定批尝试（日窗）:
+- evolve --batch 3: ollama down; batch paused at 0 · OK evolved=0 of 10 due（AutoYield 让路 09:00-19:00·state/evolve-r1747.log 落档·不修不报障·19:00 resume 自动恢复）
+
+结论: 解禁后首批实产落地=3 席全绿；余席滚动续批（首批窗 ≤10 席内）；无异常。
