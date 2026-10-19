@@ -1,0 +1,93 @@
+=== R1736 基因轮 查一 nearcheck（四轮收敛 13/13 CLEAN·首轮12撞-二轮4-三轮2-四轮0）===
+[CLEAN] cp|闲天他就拎个马扎往渡口一坐，数船帮上的漆号。
+[CLEAN] cp|猪油渣拌饭也要撒把葱花，穷日子不能穷滋味。
+[CLEAN] cp|外借的家伙什必画押，还回来还得当面过目。
+[CLEAN] cp|新机器到家先不插电，围着转三圈再动手。
+[CLEAN] cp|老相册他不锁抽屉，就摊在柜台任人翻。
+[CLEAN] cp|外地口音被讹了价，他非要拉着人找摊主对质。
+[CLEAN] ho|戏班后台钩杆上那顶盘金线的旧盔头。
+[CLEAN] ho|渡口候船棚钉着的那排黄铜船票夹。
+[CLEAN] ho|印刷铺字架顶层那枚磨秃了笔画的老宋体活字。
+[CLEAN] ho|货栈账房门后那杆吊着铜钱坠的旧界尺。
+[CLEAN] tp|迁进新城门区头一日，他照老家的旧例给门框系了根红布条。
+[CLEAN] tp|头一枚厂发的奖章，他别在围裙上就没再摘过。
+[CLEAN] tp|拿到了城里的暂住凭证，他工工整整誊了一份寄回村里。
+== gene_nearcheck: 13 候选, 0 近重候选 ==
+
+=== 查二/查三 TRIG+跨面（R1720 闸族保真）===
+candidates 13
+corpus_strings 2006
+trigger_hits 0
+crossface_hits 0
+batch_dup 0
+VERDICT PASS
+
+=== 外科应用（纯尾追加·断言族全过）===
+APPLY OK cp=1298 ho=651 tp=479 (+6/+4/+3)
+
+=== nearcheck --qc 电池 ===
+PASS gram-extract
+PASS layerA-fixture-hit
+PASS layerA-fixture-miss
+PASS layerA-cross-pool
+PASS layerA-real-R413
+PASS layerA-real-R406
+PASS layerA-real-crosspool
+PASS layerB-historic-boundary
+PASS layerB-exact-dup
+PASS unknown-type-reject
+PASS baseline-criterion
+PASS baseline-sentinel
+PASS parse-line
+PASS double-run
+PASS file-roundtrip
+== gene_nearcheck --qc: 15 PASS, 0 FAIL ==
+
+=== nearcheck --baseline 三池哨兵 ===
+{
+ "cp": {
+  "pool": "language.catchphrases",
+  "n": 1298,
+  "max_ratio": 91.667,
+  "top_pair": [
+   "热汤落肚，啥事都好商量。",
+   "热汤下肚，啥事都好商量。"
+  ],
+  "threshold": 92.0,
+  "criterion_ok": true
+ },
+ "ho": {
+  "pool": "lives.hook_objects",
+  "n": 651,
+  "max_ratio": 94.118,
+  "top_pair": [
+   "别在门襟上的老怀表",
+   "别在襟上的老怀表"
+  ],
+  "threshold": 95.0,
+  "criterion_ok": true
+ },
+ "tp": {
+  "pool": "lives.turning_points",
+  "n": 479,
+  "max_ratio": 48.889,
+  "top_pair": [
+   "退休那天把工牌擦亮，挂回车间墙上。",
+   "退休那天把工牌擦了一遍又一遍，最后别在了买菜的帆布包上。"
+  ],
+  "threshold": 50.0,
+  "criterion_ok": true
+ }
+}
+
+=== git diff numstat（纯尾形）===
+git : warning: in the working copy of 'genes/language.json', LF will be replaced by CRLF the next time Git touches it
+所在位置 行:18 字符: 10
++ $out += (git diff --numstat -- genes/language.json genes/lives.json 2 ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (warning: in the... Git touches it:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+warning: in the working copy of 'genes/lives.json', LF will be replaced by CRLF the next time Git touches it
+24	0	genes/language.json
+9	2	genes/lives.json
