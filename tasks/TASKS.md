@@ -961,3 +961,6 @@
 - tokens: local=3 api=0 api_reason=-
 
 - 2026-10-20 04:20 @BigLife-OSLoop R1781 实录: 年轮批 10 席（C-00705~C-00714·夜窗让路闸放行）+行为线镜像 rows=10 ring=4851 同轮收口；年轮各带[锚]注脚（FluxVerse 事件+真实时间/天气锚）；池/相遇/QC 今日配额已在 R1769/R1780 用尽，本轮不重复；D-20261020-02 执行口径已在 00:5x/02:1x 同轮入册（BL01/BL02 closed）。 tokens: local=10 api=0 api_reason=-
+
+- 2026-10-20 04:32 @BigLife-OSLoop R1782 实录: 年轮线批 10 席（C-00725~C-00734·非让路窗夜轮）+行为线镜像 rows=20 ring=4851·pool_audit PASS 全桶达标自停（池轮跳过）·报告 10 个居民年轮可见于 census/registry/*/C-0072x~C-0073x.md
+- tokens: local=10 api=0 api_reason=-
