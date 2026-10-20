@@ -1,0 +1,17 @@
+intake-b25-R1830  2026-10-20 16:3x  @BigLife-OSLoop（让路窗内·确定性面）
+== 批二十五内容预备（C-10131~C-10135 五席碳基原生代）==
+原料登记：genes ho#741-745 / tp#568-572（gene_nearcheck 10 候选 0 近重·三轮修订后）
+  三轮修订：首轮 5 FLAG（4-gram 命中）→ 二轮 1 FLAG（"了一半的"）→ 三轮 0 FLAG exit=0
+基因库计数：hook_objects=745 turning_points=572（_append_genes_b25.py 实跑认读）
+门闸干跑（不写盘）：b17.run_gates17(rendered, light_rows=10114) → refusals=NONE (PASS)
+  卡片渲染 5 张：C-10131 贾德顺(白铁匠) / C-10132 狄长庚(箍桶匠) / C-10133 茅德生(弹棉花匠)
+                C-10134 汤秀琴(铅字排版工) / C-10135 卫秉公(钉秤匠)
+基线预注册（按批二十三→二十四→二十五顺序入册）：
+  批二十三 PRE=10114/MAX=10120/POST=10119
+  批二十四 PRE=10119/MAX=10125/POST=10124（已备料 R1826）
+  批二十五 PRE=10124/MAX=10130/POST=10129
+排程闸：D-20261020-02 让路窗（工作日 09:00-19:00）→ 本轮只备料不跑入册；夜窗轮次按序入册
+lint：ruff_gate 2 file(s) CLEAN（F401,F811,F841,SIM115,RUF059）
+py_compile：intake_batch25.py / _append_genes_b25.py OK
+语言池：pool_audit PASS（72/72 axes + 72 sprites at target·under_target NONE·自终止）
+社会图谱页：census/city-social-graph.html 重生成（nodes=599 edges=692 social_nodes=9847 total=2841105）
