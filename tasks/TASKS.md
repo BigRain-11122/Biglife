@@ -1262,3 +1262,10 @@
 - tokens: local=0 api=0 api_reason=-（全确定性：git 历史取证/解码/汇编/校验，零 LLM 调用）
 
 - [ ] **T-20261020-04**（数据面缺陷单·R1839 立单）：**TASKS.md 残留 ASCII `?` 顶替段补字**（R1810/R1819/R1824 三节共 16 行，编码修复未覆盖的第三类旧损伤）——本轮取证结论：三节在 git 历史**所有版本**均同样损坏（源头写入即经 ASCII 丢失通道），无法靠历史拼回；正法=以同轮 commit message + qa/orders 旁证重写这三节，带旁证才落笔，禁臆造。低优先随轮处理。
+
+- **R1840**·2026-10-20 17:53~18:0x @BigLife-OSLoop 轮记：轮首 pull=Already up to date；决策水位差集=NEW 0（watermark 已含 D-20261020-07）；orders 物理件区零涉本司新行。09:00-19:00 让路窗（D-20261020-02）内年轮/相遇 LLM 面停（脚本自带 yield-window 判据直接 defer，非故障）。
+  **产品增量=可见面刷新（数据面，零 LLM）**：`census/export/resident-gallery.html` 重建（13:50→本轮，10,114 位居民图鉴 1.81MB）+ `city-dashboard.html` 复算（total=10114 / rings=4851 / cards=160，内容与 13:56 一致故无字节变更）+ `index.html` 索引页刷新（pages=11）。
+  **QC 例巡**（距上次 R1833 满窗）：`Tools/qc_census.py` → cards=10114 evolved=4851 problems=0 dup_rings=37/37 基线，报告落 `census/QC-REPORT.md`（payload 单号唯一/必备段齐备/年轮锚定律零违规）。
+  **语言线**：`pool_audit.py` = PASS + SELF_TERMINATE（72 轴桶 1296 行、灵族 12 桶 144 行、问候 28 桶、FAQ 7 桶、负向面 40 行，硬失败 0；确定性双抽 192 pairs mismatch=0）→ 按自终止律跳过，不补池。
+  未做（如实）：年轮批/相遇轮受让路窗阻断，ETA 19:00 后夜班承接；T-20261020-03 补字低频小步未动。
+  - tokens: local=0 api=0 api_reason=-（全确定性：QC 扫描/页面构建/池审计/差集，零 LLM 调用）
