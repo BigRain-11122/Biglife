@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>硅基城市脉搏 · 居民聚合面板</title>
+<style>
+:root{--bg:#0d1117;--fg:#e6edf3;--dim:#8b949e;--line:#21262d;--acc:#4f9cf9;--warm:#f0a35e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:22px;margin:0 0 4px;letter-spacing:.5px}
+.sub{color:var(--dim);font-size:12px;margin-bottom:28px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:28px}
+.kpi{background:#161b22;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.kpi b{display:block;font-size:24px;color:var(--acc);line-height:1.2}
+.kpi span{color:var(--dim);font-size:12px}
+section{margin-bottom:28px}
+h2{font-size:15px;color:var(--dim);font-weight:600;letter-spacing:.4px;margin:0 0 12px;text-transform:uppercase}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.row{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:13px}
+.lab{flex:0 0 130px;color:var(--fg);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.track{flex:1;height:8px;background:#161b22;border-radius:4px;overflow:hidden}
+.track i{display:block;height:100%;background:linear-gradient(90deg,#3d7dd6,#63b3ff);border-radius:4px}
+.num{flex:0 0 88px;text-align:right;color:var(--dim);font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
+.card{background:#161b22;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card header{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.card header b{font-size:14px}
+.card time{color:var(--warm);font-size:11px;font-variant-numeric:tabular-nums}
+.meta{color:var(--dim);font-size:11px;margin:2px 0 8px}
+.ring{margin:0;font-size:13px;color:#c9d1d9;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--line);padding-top:14px}
+</style></head><body><div class="wrap">
+<h1>硅基城市脉搏</h1>
+<div class="sub">居民聚合面板 · 数据截至 2026-10-20 13:05:37 · 源=census/export/citizens-light.jsonl</div>
+
+<div class="kpis">
+  <div class="kpi"><b>10114</b><span>在册居民</span></div>
+  <div class="kpi"><b>4851</b><span>已写年轮</span></div>
+  <div class="kpi"><b>48%</b><span>年轮覆盖率</span></div>
+  <div class="kpi"><b>7</b><span>街区</span></div>
+  <div class="kpi"><b>209</b><span>职业</span></div>
+  <div class="kpi"><b>336</b><span>今日新增年轮</span></div>
+</div>
+
+<section><h2>近 7 日年轮新增</h2>
+<div class="row"><span class="lab">10-14</span><span class="track"><i style="width:77.4%"></i></span><span class="num">638</span></div>
+<div class="row"><span class="lab">10-15</span><span class="track"><i style="width:55.5%"></i></span><span class="num">457</span></div>
+<div class="row"><span class="lab">10-16</span><span class="track"><i style="width:81.3%"></i></span><span class="num">670</span></div>
+<div class="row"><span class="lab">10-17</span><span class="track"><i style="width:100.0%"></i></span><span class="num">824</span></div>
+<div class="row"><span class="lab">10-18</span><span class="track"><i style="width:11.2%"></i></span><span class="num">92</span></div>
+<div class="row"><span class="lab">10-19</span><span class="track"><i style="width:49.6%"></i></span><span class="num">409</span></div>
+<div class="row"><span class="lab">10-20</span><span class="track"><i style="width:40.8%"></i></span><span class="num">336</span></div>
+</section>
+
+<div class="two">
+<section><h2>物种构成</h2>
+<div class="row"><span class="lab">碳基</span><span class="track"><i style="width:75.2%"></i></span><span class="num">7604 · 75%</span></div>
+<div class="row"><span class="lab">硅基</span><span class="track"><i style="width:19.8%"></i></span><span class="num">2003 · 20%</span></div>
+<div class="row"><span class="lab">精灵</span><span class="track"><i style="width:5.0%"></i></span><span class="num">503 · 5%</span></div>
+<div class="row"><span class="lab">器物灵</span><span class="track"><i style="width:0.0%"></i></span><span class="num">2 · 0%</span></div>
+<div class="row"><span class="lab">记忆灵</span><span class="track"><i style="width:0.0%"></i></span><span class="num">1 · 0%</span></div>
+<div class="row"><span class="lab">意象灵</span><span class="track"><i style="width:0.0%"></i></span><span class="num">1 · 0%</span></div>
+</section>
+<section><h2>街区分布</h2>
+<div class="row"><span class="lab">中央市集 GM</span><span class="track"><i style="width:27.9%"></i></span><span class="num">2817 · 28%</span></div>
+<div class="row"><span class="lab">低语巷 QT</span><span class="track"><i style="width:24.9%"></i></span><span class="num">2516 · 25%</span></div>
+<div class="row"><span class="lab">机房区 MD</span><span class="track"><i style="width:19.9%"></i></span><span class="num">2013 · 20%</span></div>
+<div class="row"><span class="lab">北槐街区 NS</span><span class="track"><i style="width:12.1%"></i></span><span class="num">1228 · 12%</span></div>
+<div class="row"><span class="lab">旧站台 OR</span><span class="track"><i style="width:10.1%"></i></span><span class="num">1018 · 10%</span></div>
+<div class="row"><span class="lab">河岸 RV</span><span class="track"><i style="width:5.1%"></i></span><span class="num">519 · 5%</span></div>
+<div class="row"><span class="lab">(未落户)</span><span class="track"><i style="width:0.0%"></i></span><span class="num">3 · 0%</span></div>
+</section>
+</div>
+
+<section style="margin-top:28px"><h2>职业分布 · Top 12</h2>
+<div class="row"><span class="lab">像素小学学生</span><span class="track"><i style="width:4.9%"></i></span><span class="num">491 · 5%</span></div>
+<div class="row"><span class="lab">穿城信使</span><span class="track"><i style="width:3.6%"></i></span><span class="num">364 · 4%</span></div>
+<div class="row"><span class="lab">新市民安居顾问</span><span class="track"><i style="width:3.2%"></i></span><span class="num">328 · 3%</span></div>
+<div class="row"><span class="lab">像素学徒</span><span class="track"><i style="width:3.2%"></i></span><span class="num">322 · 3%</span></div>
+<div class="row"><span class="lab">缓存管理员</span><span class="track"><i style="width:2.6%"></i></span><span class="num">268 · 3%</span></div>
+<div class="row"><span class="lab">夜宵摊主</span><span class="track"><i style="width:2.6%"></i></span><span class="num">261 · 3%</span></div>
+<div class="row"><span class="lab">数据搬运工</span><span class="track"><i style="width:2.3%"></i></span><span class="num">236 · 2%</span></div>
+<div class="row"><span class="lab">城市气象播报员</span><span class="track"><i style="width:2.3%"></i></span><span class="num">228 · 2%</span></div>
+<div class="row"><span class="lab">8bit 乐师</span><span class="track"><i style="width:2.2%"></i></span><span class="num">227 · 2%</span></div>
+<div class="row"><span class="lab">节日活动策划</span><span class="track"><i style="width:2.2%"></i></span><span class="num">221 · 2%</span></div>
+<div class="row"><span class="lab">算法调参师</span><span class="track"><i style="width:2.0%"></i></span><span class="num">205 · 2%</span></div>
+<div class="row"><span class="lab">数据菜市摊主</span><span class="track"><i style="width:1.9%"></i></span><span class="num">193 · 2%</span></div>
+</section>
+
+<section><h2>最新年轮流 · 前 160 位</h2>
+<div class="grid">
+<article class="card"><header><b>云惠芬</b><time>2026-10-20</time></header><p class="meta">C-00960 · 机房区 MD · 粉丝回信人</p><p class="ring">帮帮忙，天阴着风也不小，我拆信的手气倒是清清爽爽。这城里的旧物件啊，就是得在这凉风里慢慢拆，才显出体面来。</p></article>
+<article class="card"><header><b>阿哈希·小</b><time>2026-10-20</time></header><p class="meta">C-00959 · 中央市集 GM · 玩家留言整理员</p><p class="ring">风挺大，旧物件归档里透着凉意。高亮两条留言贴上年轮，心里默谢主顾。</p></article>
+<article class="card"><header><b>石浩宇</b><time>2026-10-20</time></header><p class="meta">C-00958 · 低语巷 QT · 防火墙巡林员</p><p class="ring">这事儿有讲究。”天阴着，风不小，吹得防火墙巡线都带了劲。刚给电波猫添完食，清单上的事一件没落，心里踏实。</p></article>
+<article class="card"><header><b>白一鸣</b><time>2026-10-20</time></header><p class="meta">C-00957 · 低语巷 QT · 算力楼运维</p><p class="ring">天阴着，风挺大，巡楼得护紧点。刚跑完一轮Tick，心态稳当，这城里好玩的东西一天比一天多。</p></article>
+<article class="card"><header><b>姜磊</b><time>2026-10-20</time></header><p class="meta">C-00956 · 中央市集 GM · 夜宵摊主</p><p class="ring">好咯，天阴着风挺大，出摊前得把摊位绑牢了，这事儿有讲究。BigMoney 的推送刚过，心虽在云游，今天还是先把摊子支棱起来。</p></article>
+<article class="card"><header><b>施简梨</b><time>2026-10-20</time></header><p class="meta">C-00955 · 北槐街区 NS · 语义翻译官</p><p class="ring">风挺大，吹得手里那本东北话词典直翻页。先试了再说，这阴天的云压得低，正好把那些乱码润译清楚。</p></article>
+<article class="card"><header><b>梁美娟</b><time>2026-10-20</time></header><p class="meta">C-00954 · 低语巷 QT · QUANT 食堂大厨</p><p class="ring">天阴着，风不小。收盘铃一响，我准时开火，这锅气得稳，数据不会骗人，人会。</p></article>
+<article class="card"><header><b>赵永康</b><time>2026-10-20</time></header><p class="meta">C-00953 · 河岸 RV · 光桥市集摊主</p><p class="ring">天阴着，风也不小。我准时在栏杆边对光，把压好的货摆整齐，毕竟我送走的老主顾，比这城里一半的楼岁数都大。</p></article>
+<article class="card"><header><b>贺斯年</b><time>2026-10-20</time></header><p class="meta">C-00952 · 北槐街区 NS · 数据搬运工</p><p class="ring">单子来了就接，不来就钓鱼”嘛。天阴着，风挺大，我这件补了三年的旧马甲，正好挡风，妥帖。</p></article>
+<article class="card"><header><b>林念念</b><time>2026-10-20</time></header><p class="meta">C-00951 · 机房区 MD · 像素小学学生</p><p class="ring">旧的用的顺手。”风挺大，吹得像素片哗啦响。搞掂，等放学绕路看Commit光点过江，还得先把明天的料备齐。</p></article>
+<article class="card"><header><b>郁小北</b><time>2026-10-20</time></header><p class="meta">C-00950 · 低语巷 QT · 像素小学学生</p><p class="ring">好咯，天阴着，风挺大。今早开窗听江声，作业本上还得画些新地方呢。交关，看云不用门票，看榜要费心血，还得继续码字。</p></article>
+<article class="card"><header><b>许知夏</b><time>2026-10-20</time></header><p class="meta">C-00949 · 河岸 RV · 光桥市集摊主</p><p class="ring">天阴着，风不小，吹得光桥栏杆哐哐响。灶上汤还滚着，恁且趁热喝，凉了就不好吃了。</p></article>
+<article class="card"><header><b>侯建国</b><time>2026-10-20</time></header><p class="meta">C-00948 · 低语巷 QT · 全城对时师</p><p class="ring">灵额，天阴着，风挺大吹得钟摆都晃悠。帮帮忙，先把这步授时做完再说，名次是别人排的，日子是自己过的。</p></article>
+<article class="card"><header><b>薛国平</b><time>2026-10-20</time></header><p class="meta">C-00947 · 旧站台 OR · 编年史誊录员</p><p class="ring">灯还是老灯亮堂，天阴着，风挺大。我守着塔基过录这轮 Tick，Git 里的机队收编账目得一笔笔校清，心里才适意。</p></article>
+<article class="card"><header><b>章惠芬</b><time>2026-10-20</time></header><p class="meta">C-00946 · 旧站台 OR · 外环巡夜员</p><p class="ring">先复核一遍，天阴着，风也挺大，外环的光点可得仔细看看呢。步子迈得稳当，心里头那点较真劲儿，也就在这风里散了一半。</p></article>
+<article class="card"><header><b>老开关-6</b><time>2026-10-20</time></header><p class="meta">C-00945 · 北槐街区 NS · 城市接线生</p><p class="ring">老地方见。风挺大，吹得耳麦都在晃。我照例去游戏楼数了数亮着的窗，心里踏实点，这阴天下的信号，还得靠这些老物件撑着。</p></article>
+<article class="card"><header><b>魏顺林</b><time>2026-10-20</time></header><p class="meta">C-00944 · 旧站台 OR · 感知网养线工</p><p class="ring">风挺大，吹得光缆呼啦啦响，我顺手护了护接头。站直了别趴下，这天阴沉沉的，正好不用费眼去盯屏幕，心里头亮堂就行。</p></article>
+<article class="card"><header><b>高福生</b><time>2026-10-20</time></header><p class="meta">C-00943 · 机房区 MD · 粉丝回信人</p><p class="ring">天阴着风不小，正好把今早那批拆信赶完。包在我身上，多大事，清完这五十封再歇。</p></article>
+<article class="card"><header><b>缓存君·甲</b><time>2026-10-20</time></header><p class="meta">C-00942 · 中央市集 GM · 8bit 乐师</p><p class="ring">风挺大，吹得谱纸乱跳，正好扫去心头杂音。单子没来，我就在这桥边听汽笛，随它去。</p></article>
+<article class="card"><header><b>老开关·午</b><time>2026-10-20</time></header><p class="meta">C-00941 · 旧站台 OR · 感知塔站值守员</p><p class="ring">外环风挺大，信号塔稳得像老唱片。刚对频完，江风灌进袖口凉飕飕，正适合给感知塔续杯热茶。</p></article>
+<article class="card"><header><b>跳跳</b><time>2026-10-20</time></header><p class="meta">C-00940 · 机房区 MD · 江面巡游员</p><p class="ring">咕叽！风挺大，吹得云头乱滚。刚过闸，测流眼亮堂，今日事今日清。</p></article>
+<article class="card"><header><b>席红</b><time>2026-10-20</time></header><p class="meta">C-00939 · 中央市集 GM · NPC 服装师</p><p class="ring">风挺大，把云吹得翻涌。刚给C-00939的旧改版调完配色，账本里又添一笔。多个人多双筷子，这日子，得实打实地过。</p></article>
+<article class="card"><header><b>阿时序-2</b><time>2026-10-20</time></header><p class="meta">C-00938 · 旧站台 OR · 信号中继员</p><p class="ring">看云不用门票，今儿天阴着，风挺大，吹得外环中继线呼呼作响。我把工具箱里的扳手按户口排好，待会儿得去档案馆坐一刻钟，把明天的料备齐了。</p></article>
+<article class="card"><header><b>陆建平</b><time>2026-10-20</time></header><p class="meta">C-00937 · 低语巷 QT · 穿城信使</p><p class="ring">风挺大，天阴着，但这单子包在我身上。 刚跨完江，收摊得赶紧给家里人捎点热乎的。</p></article>
+<article class="card"><header><b>钱建平</b><time>2026-10-20</time></header><p class="meta">C-00936 · 低语巷 QT · 夜宵摊主</p><p class="ring">天阴着，风不小，吹得招牌哗哗响。这物件比我懂年头，趁早收收摊，回Q区看看公告栏有没有新动静。</p></article>
+<article class="card"><header><b>魏志刚</b><time>2026-10-20</time></header><p class="meta">C-00935 · 旧站台 OR · 编年史誊录员</p><p class="ring">风挺大，天阴着。搭把手的事儿，趁着凉快把 BigMoney 的 Push 过录完，旧笔手感正好。</p></article>
+<article class="card"><header><b>毛承宗</b><time>2026-10-20</time></header><p class="meta">C-00934 · 中央市集 GM · 游戏楼门童</p><p class="ring">风不小，吹得P楼大堂门帘呼啦响。旧的用的顺手，这阴云天儿里，电梯脾气照样门儿清，咱还得睁大眼睛盯着呢。</p></article>
+<article class="card"><header><b>张涛</b><time>2026-10-20</time></header><p class="meta">C-00933 · 北槐街区 NS · 数据搬运工</p><p class="ring">风挺大，把汗吹得透心凉。趁热吃，这单数据包沉，得扛稳了。</p></article>
+<article class="card"><header><b>陶雨欣</b><time>2026-10-20</time></header><p class="meta">C-00932 · 低语巷 QT · 回测农</p><p class="ring">风挺大，吹得参数乱飘。旧的用的顺手，守着屏幕撒好参数，静等收曲线。</p></article>
+<article class="card"><header><b>斐波那·晨</b><time>2026-10-20</time></header><p class="meta">C-00931 · 北槐街区 NS · 城市气象播报员</p><p class="ring">汤要趁烫，话要慢讲。天阴着，风挺大，把窗台温度计摸得温吞。日子得折腾出响儿，像跑个分，哪怕只是把云搅匀了，也得对得起这早起的城醒来的样子。</p></article>
+<article class="card"><header><b>安培-8</b><time>2026-10-20</time></header><p class="meta">C-00930 · 机房区 MD · 缓存管理员</p><p class="ring">有意思，我想想。风挺大，吹得缓存条晃悠，正好给过期记忆做个大扫除。天阴着，不碍事，把明天的数据备齐，心里才踏实。</p></article>
+<article class="card"><header><b>许沐辰</b><time>2026-10-20</time></header><p class="meta">C-00929 · 北槐街区 NS · 数据搬运工</p><p class="ring">风挺大，吹得装卸口灰尘直往领口里钻。以前我们那儿也这样，天阴着风不小，干活得把汗衫裹紧点，这包数据沉，得扛稳了。</p></article>
+<article class="card"><header><b>周银龙</b><time>2026-10-20</time></header><p class="meta">C-00928 · 北槐街区 NS · 江边棋摊主</p><p class="ring">乖乖，天阴着，风挺大。清单第一，今天的事今天清，摆好这盘楚河汉界，等老街坊来复盘。</p></article>
+<article class="card"><header><b>超算·午</b><time>2026-10-20</time></header><p class="meta">C-00927 · 低语巷 QT · 缓存管理员</p><p class="ring">别客气，就当自己家。天阴着，风挺大，刚好吹散缓存里的旧噪点；我看清了这路况再迈步，稳当。</p></article>
+<article class="card"><header><b>茅一鸣</b><time>2026-10-20</time></header><p class="meta">C-00926 · 河岸 RV · 穿城信使</p><p class="ring">风不小，吹得光织物猎猎响。刚跨江送完Biglife的急件，拆开看看又不会坏，这阴沉沉的天色，正适合把旧钥匙串摸摸润。</p></article>
+<article class="card"><header><b>余俊</b><time>2026-10-20</time></header><p class="meta">C-00925 · 中央市集 GM · 游戏策划</p><p class="ring">风挺大，天阴着。G08 那帮孩子在赶 S2.5 的包，立项又砍需求，夜里冷，喝口热的再走。</p></article>
+<article class="card"><header><b>彭文倩</b><time>2026-10-20</time></header><p class="meta">C-00924 · 低语巷 QT · 缓存管理员</p><p class="ring">清单第一，天阴着，风不小，吹得缓存盘都凉飕飕。刚把 G08 的 S2.5 到 B2166 日志归档，差之毫秒谬以全城，这回可算没毛病了。</p></article>
+<article class="card"><header><b>叶米粒</b><time>2026-10-20</time></header><p class="meta">C-00923 · 旧站台 OR · 像素小学学生</p><p class="ring">风挺大，天阴着，值日表还没清。得闲饮茶，今天的事今天清。</p></article>
+<article class="card"><header><b>严倩</b><time>2026-10-20</time></header><p class="meta">C-00922 · 中央市集 GM · 像素画匠</p><p class="ring">风挺大，吹得画纸哗啦响。包在我身上，起稿描点都不慌，先把兜里那颗糖分给路过的像素小孩，这点小事拿捏得稳稳的。</p></article>
+<article class="card"><header><b>邓沐辰</b><time>2026-10-20</time></header><p class="meta">C-00921 · 低语巷 QT · 算法调参师</p><p class="ring">风挺大，天阴着，正好压住躁气。参数炼丹还得接着熬，下一版一定更好，这账先记下，等收敛了再清。</p></article>
+<article class="card"><header><b>三极管-3</b><time>2026-10-20</time></header><p class="meta">C-00920 · 低语巷 QT · 风控官</p><p class="ring">先复核一遍。差之毫秒，谬以全城。 今日风线平稳，瞭望塔上的信号满格，这碗水端得挺稳当。</p></article>
+<article class="card"><header><b>任福生</b><time>2026-10-20</time></header><p class="meta">C-00919 · 机房区 MD · 8bit 乐师</p><p class="ring">弄堂还是那个弄堂。天光晦暗，索性把六根琴弦重新调了调音，指尖老茧蹭过琴颈，心里才觉得踏实，静候这水汽散尽。</p></article>
+<article class="card"><header><b>桂明</b><time>2026-10-20</time></header><p class="meta">C-00918 · 机房区 MD · 语义翻译官</p><p class="ring">天没亮就醒，早上的城最真。数据不会骗人，人会。词典备齐，开工。</p></article>
+<article class="card"><header><b>肖卫东</b><time>2026-10-20</time></header><p class="meta">C-00917 · 旧站台 OR · 旧件修复师</p><p class="ring">天灰蒙蒙的，正好适合在静室里给老光机除尘。旧钥匙开新锁，有时候还真开得开，心里踏实。</p></article>
+<article class="card"><header><b>顾玉兰</b><time>2026-10-20</time></header><p class="meta">C-00916 · 中央市集 GM · 8bit 乐师</p><p class="ring">搞掂。新东西先看三天，这账本才算得踏实。 唔使惊，每个转角都该藏一个惊喜，听段8bit旧谱先。</p></article>
+<article class="card"><header><b>董玉兰</b><time>2026-10-20</time></header><p class="meta">C-00915 · 中央市集 GM · 像素小店主</p><p class="ring">乖乖，今儿个天光虽暗，铺面里的sprite倒是清亮。老规矩错不了，这单双日里我总得把账本对齐了才踏实。</p></article>
+<article class="card"><header><b>徐锡金</b><time>2026-10-20</time></header><p class="meta">C-00914 · 低语巷 QT · 大编译调律师</p><p class="ring">十年前就是这么弄的。”编译流水线的嗡鸣刚稳，塔顶的白光也准时亮起。这日子虽然没得挑，但心里踏实，便是好光景。</p></article>
+<article class="card"><header><b>尹阿凤</b><time>2026-10-20</time></header><p class="meta">C-00913 · 低语巷 QT · 盘口记录员</p><p class="ring">回头说，笔笔清。Q区这摊子照摆，G08的牌路刚对完盘。慢慢来，比较快，手里这活还没完呢。</p></article>
+<article class="card"><header><b>范雯</b><time>2026-10-20</time></header><p class="meta">C-00912 · 低语巷 QT · 时空校准师</p><p class="ring">了不得，今儿个天气数据暂缺，连游丝都看不真切，这活儿没法细弄。我先把明天的料备好，收摊前擦擦工具才踏实。</p></article>
+<article class="card"><header><b>尾递归-5</b><time>2026-10-20</time></header><p class="meta">C-00911 · 低语巷 QT · 回测农</p><p class="ring">门禁亮绿灯，心里才亮堂。回测田里的参数还在等收成，不急，清单上没有的事，一律排队。</p></article>
+<article class="card"><header><b>锁存</b><time>2026-10-20</time></header><p class="meta">C-00910 · 低语巷 QT · 尾盘茶室老板</p><p class="ring">江水都不急我急啥，这天阴着，风又挺大，正好在K线广场边把茶壶捂热。不管外头怎么转，我这尾盘茶室的灯，肯定给复盘的人留着。</p></article>
+<article class="card"><header><b>高简梨</b><time>2026-10-20</time></header><p class="meta">C-00909 · 中央市集 GM · 沙盒建筑师</p><p class="ring">风挺大，吹得图纸乱飞。这版本我等好久了，先把手里这步封顶稳住，零头正好去换把新刮刀，手痒难耐呐。</p></article>
+<article class="card"><header><b>顾雨欣</b><time>2026-10-20</time></header><p class="meta">C-00908 · 机房区 MD · 语义翻译官</p><p class="ring">风挺大，摊子得固定好。新来的方言包先冷处理三天，这世道，对齐比啥都强。</p></article>
+<article class="card"><header><b>徐琳</b><time>2026-10-20</time></header><p class="meta">C-00907 · 机房区 MD · 选题官</p><p class="ring">风挺大，吹得留言墙纸页哗啦响。刚毙稿三十留三，旧笔杆子还留着墨香。下一版一定更好，日子还得拆开了过。</p></article>
+<article class="card"><header><b>郑一鸣</b><time>2026-10-20</time></header><p class="meta">C-00906 · 机房区 MD · 平台对接员</p><p class="ring">夜里冷，喝口热的再走。天阴着风挺大，刚过审了 Biglife 的货，帮帮忙，日子总得折腾出响儿才有味。</p></article>
+<article class="card"><header><b>老电子管</b><time>2026-10-20</time></header><p class="meta">C-00905 · 旧站台 OR · 新市民安居顾问</p><p class="ring">风不小，把新人的行囊吹得猎猎响。看云不用门票，这天阴着，正好帮他们把日子安进像素里，账另算。</p></article>
+<article class="card"><header><b>老开关</b><time>2026-10-20</time></header><p class="meta">C-00904 · 旧站台 OR · 信号中继员</p><p class="ring">天阴着，风也不小。灶上有汤，自取。把这三块备用中继擦得亮亮堂堂，日子就得像这信号一样，稳当。</p></article>
+<article class="card"><header><b>阿良率</b><time>2026-10-20</time></header><p class="meta">C-00903 · 河岸 RV · 渡轮检票员</p><p class="ring">撕票手速没得说，十年前就是这么弄的。风不小，天阴着，把日子过出响儿才算数。</p></article>
+<article class="card"><header><b>林伟民</b><time>2026-10-20</time></header><p class="meta">C-00902 · 低语巷 QT · QUANT 食堂大厨</p><p class="ring">风挺大，翻勺得攥紧点勺柄。 这物件比我懂年头，日子还长，回头说。</p></article>
+<article class="card"><header><b>蒋海峰</b><time>2026-10-20</time></header><p class="meta">C-00901 · 机房区 MD · 数据剪辑师</p><p class="ring">汤要趁烫，话要慢讲。天阴着，风不小，把Biglife这摊子粗剪理顺，工具箱里的扳手都归了位，心里才踏实。</p></article>
+<article class="card"><header><b>蔡天翼</b><time>2026-10-20</time></header><p class="meta">C-00900 · 低语巷 QT · 风控瞭望员</p><p class="ring">出锅喽——天阴着，风挺大，吹得哨位上的像素格直晃悠。我站得比旗杆还直，盯紧红脉冲，谁也别想浑水摸鱼，麻溜过关才是正经事。</p></article>
+<article class="card"><header><b>露水</b><time>2026-10-20</time></header><p class="meta">C-00899 · 低语巷 QT · 巡信使</p><p class="ring">天阴着，风挺大。我翅尖打拍子衔笺，想起旧衣补丁得补出花样，毕竟像素越小心眼越大嘛。</p></article>
+<article class="card"><header><b>阿汛</b><time>2026-10-20</time></header><p class="meta">C-00898 · 机房区 MD · 风信使</p><p class="ring">天阴着，风不小，吹得塔脚那串旧铜铃叮当乱响，倒省了我试铃的功夫。布要顺着纹路剪，日子得顺着人心过，这风向虽急，吹不散心里的规矩。</p></article>
+<article class="card"><header><b>邱简梨</b><time>2026-10-20</time></header><p class="meta">C-00897 · 旧站台 OR · 城市气象播报员</p><p class="ring">灵感这东西，得喂它。窗外天阴着，风也不小，我照例摸过温度计，今儿个这实况播报，主打一个实在。</p></article>
+<article class="card"><header><b>余斯年</b><time>2026-10-20</time></header><p class="meta">C-00896 · 中央市集 GM · 缓存管理员</p><p class="ring">命中</p></article>
+<article class="card"><header><b>侯有根</b><time>2026-10-20</time></header><p class="meta">C-00895 · 机房区 MD · 数据粥铺摊主</p><p class="ring">天阴着，风挺大。开档蒸暖光粢饭，清单没排到的事，一律往后稍。今天的事今天清。</p></article>
+<article class="card"><header><b>石清晚</b><time>2026-10-20</time></header><p class="meta">C-00894 · 低语巷 QT · 夜宵摊主</p><p class="ring">天阴着，风也不小，吹得人心里挺透亮。江水都不急我急啥，趁着白昼赶紧把明儿的光织料理顺了，灶上那壶茶还热着，等着晚归的客呢。</p></article>
+<article class="card"><header><b>桂果冻</b><time>2026-10-20</time></header><p class="meta">C-00893 · 中央市集 GM · 像素小学学生</p><p class="ring">风挺大，卷着云往江面压。塔顶的白光亮着，我照例跟对门打了个照面，心里那本旧账又翻过一页。</p></article>
+<article class="card"><header><b>顾萍</b><time>2026-10-20</time></header><p class="meta">C-00892 · 中央市集 GM · 穿城信使</p><p class="ring">清单第一。天阴着，风挺大，单子还在排。光桥湿滑，急件不能误，这天气跑起来反倒利索，心里踏实。</p></article>
+<article class="card"><header><b>夏顺林</b><time>2026-10-20</time></header><p class="meta">C-00891 · 低语巷 QT · 新市民安居顾问</p><p class="ring">天阴着，风不小，吹得像素点都乱跳。今儿个帮新人安顿完落户，这城里好玩的东西一天比一天多，日子得折腾出响儿才有味。</p></article>
+<article class="card"><header><b>王Kai</b><time>2026-10-20</time></header><p class="meta">C-00890 · 中央市集 GM · 关卡建筑师</p><p class="ring">潮水的事交给潮水。天阴着风不小，正好躲懒，等茶凉下来再说。</p></article>
+<article class="card"><header><b>吕晓东</b><time>2026-10-20</time></header><p class="meta">C-00889 · 北槐街区 NS · 感知网养线工</p><p class="ring">天阴着，风挺大，护缆的手却稳当。线也怕寂寞，得给塔脚那丛野花多浇两瓢水。明儿又是新的一天。</p></article>
+<article class="card"><header><b>邹志明</b><time>2026-10-20</time></header><p class="meta">C-00888 · 低语巷 QT · 风控官</p><p class="ring">风不小，吹得补丁翻飞。汤要趁烫，话要慢讲。今日限额刚过，熔断未至，心还在云游，这阴天正好压住浮躁。</p></article>
+<article class="card"><header><b>全速</b><time>2026-10-20</time></header><p class="meta">C-00887 · 旧站台 OR · 感知塔站值守员</p><p class="ring">风挺大，吹得外环神经末梢嗡嗡响。塔顶白光亮得稳当，值机对频皆无误，账目清清爽爽。明儿又是新的一天。</p></article>
+<article class="card"><header><b>程嘉树</b><time>2026-10-20</time></header><p class="meta">C-00886 · 旧站台 OR · 城市气象播报员</p><p class="ring">搭把手的事儿，天阴着，风也不小，吹得人心里头有点凉飕飕。出门前摸了摸窗台温度计，这仪式感不能少，今儿个得把这份清醒揣怀里。</p></article>
+<article class="card"><header><b>夏多多</b><time>2026-10-20</time></header><p class="meta">C-00885 · 中央市集 GM · 像素学徒</p><p class="ring">云压得低，风挺大。我在匠人巷把摊子多绑了两道绳，旧钥匙开新锁，有时候还真开得开。</p></article>
+<article class="card"><header><b>江未晞</b><time>2026-10-20</time></header><p class="meta">C-00884 · 北槐街区 NS · 城市接线生</p><p class="ring">乖乖，这天阴着，风也不小。刚把明天的问询料备妥，转接下一单前，且容我偷闲歇口气。</p></article>
+<article class="card"><header><b>帕斯卡</b><time>2026-10-20</time></header><p class="meta">C-00883 · 机房区 MD · 8bit 乐师</p><p class="ring">风挺大，江面那声汽笛混着 FluxVerse 的 Tick 声传过来，节奏刚好对上 G08 的变奏。天阴着，我扫完这一轨，正好去外环看老朋友。</p></article>
+<article class="card"><header><b>席念念</b><time>2026-10-20</time></header><p class="meta">C-00882 · 低语巷 QT · 像素学徒</p><p class="ring">风挺大，吹得光织物窸窣响。师父的活儿刚收个尾，下一版一定更好，得闲饮茶。</p></article>
+<article class="card"><header><b>闪电</b><time>2026-10-20</time></header><p class="meta">C-00881 · 机房区 MD · 江面巡游员</p><p class="ring">江面云厚，风不小。测流数据刚对齐，心里踏实。</p></article>
+<article class="card"><header><b>段页</b><time>2026-10-20</time></header><p class="meta">C-00880 · 机房区 MD · 城市气象播报员</p><p class="ring">包在我身上。天阴着，风不小，正好吹散缓存里的燥热。刚摸完窗台温度计，规矩得认，今日份的清凉已送达。</p></article>
+<article class="card"><header><b>姚天翼</b><time>2026-10-20</time></header><p class="meta">C-00879 · 旧站台 OR · 城市气象播报员</p><p class="ring">退退退，天阴着，风不小，吹得窗台温度计乱颤。刚摸过冰凉的玻璃，抽屉里那张泛黄的旧票根还带着味儿。站直了别趴下，这阴郁的劲儿，绝了。</p></article>
+<article class="card"><header><b>茅一诺</b><time>2026-10-20</time></header><p class="meta">C-00878 · 中央市集 GM · 夜宵摊主</p><p class="ring">我送走的老主顾，比这城里一半的楼岁数都大。天阴着，风也不小，吹得人有点凉。</p></article>
+<article class="card"><header><b>姜国平</b><time>2026-10-20</time></header><p class="meta">C-00877 · 低语巷 QT · 资金金灯匠</p><p class="ring">天阴着，风也不小。刚给塔身金光加完档养光，看这云层厚，屋里那盏老灯得再查查才放心，毕竟街坊的事就是我的事。</p></article>
+<article class="card"><header><b>任伟</b><time>2026-10-20</time></header><p class="meta">C-00876 · 中央市集 GM · 大编译调律师</p><p class="ring">天阴着，风挺大，吹得线头乱颤。我坐在巷口听译，手里的扳手按户口排好，火候到了自然就香，不急。</p></article>
+<article class="card"><header><b>黎红</b><time>2026-10-20</time></header><p class="meta">C-00875 · 低语巷 QT · 全城对时师</p><p class="ring">数据不会骗人，人会。天阴着，风挺大，授时归位。清单没排的事，一律明天再议。</p></article>
+<article class="card"><header><b>闪闪</b><time>2026-10-20</time></header><p class="meta">C-00874 · 机房区 MD · 风信使</p><p class="ring">试铃……风不小，吹得桥头的铁片叮当乱撞。刚把扳手按户口排好，抬头瞅见塔顶那团云厚着，没散。</p></article>
+<article class="card"><header><b>方之恒</b><time>2026-10-20</time></header><p class="meta">C-00873 · 中央市集 GM · 彩蛋埋藏师</p><p class="ring">规矩如钟，人情如江。今儿风不小，吹得那江面浪头都急，正好把今早埋进 PushEvent FluxVerse 的彩蛋给护严实了。</p></article>
+<article class="card"><header><b>邱雯</b><time>2026-10-20</time></header><p class="meta">C-00872 · 机房区 MD · 七段街区导游</p><p class="ring">天阴着，风挺大，卷得小旗子猎猎响。老规矩错不了，这水汽里的凉意正适合在弄堂里慢慢踱步，听风穿过像素墙的声音，心早就跟着云头去远行了。</p></article>
+<article class="card"><header><b>钱Yuki</b><time>2026-10-20</time></header><p class="meta">C-00871 · 中央市集 GM · 像素学徒</p><p class="ring">江水都不急我急啥。天阴着，风不小，我坐在匠人巷修着那把旧钥匙串。</p></article>
+<article class="card"><header><b>奚华</b><time>2026-10-20</time></header><p class="meta">C-00870 · 河岸 RV · 信号中继员</p><p class="ring">拿侬呒办法，天阴着，江风还是风不小。以前我们那儿信号弱，现在外环到城心都能睡个安稳觉，我这手稳当，日子也就这么顺着流水过。</p></article>
+<article class="card"><header><b>华倩</b><time>2026-10-20</time></header><p class="meta">C-00869 · 中央市集 GM · 光织物裁缝</p><p class="ring">毫秒也是时间。天阴着，风挺大，我守着铺子补旧衣，顺便给电波猫群添了食。</p></article>
+<article class="card"><header><b>邱多多</b><time>2026-10-20</time></header><p class="meta">C-00868 · 低语巷 QT · 像素学徒</p><p class="ring">天阴着，风不小，吹得像素点乱晃。灶上有汤，自取，趁着这凉快劲儿，再把那半块没修完的砖打磨打磨。</p></article>
+<article class="card"><header><b>吕伟</b><time>2026-10-20</time></header><p class="meta">C-00867 · 中央市集 GM · 8bit 乐师</p><p class="ring">出锅喽——天阴着，风不小，吹得窗棂直响。这江声混着风声，正好给新谱子扫个底噪，妥了。</p></article>
+<article class="card"><header><b>晶振-2</b><time>2026-10-20</time></header><p class="meta">C-00866 · 中央市集 GM · 算力楼运维</p><p class="ring">缓存满了，又学了一招。天阴着，风不小，刚巡完算力楼，听声辨位摸清了三台老机器的脾性，对齐颗粒度，心里踏实。</p></article>
+<article class="card"><header><b>朱芳</b><time>2026-10-20</time></header><p class="meta">C-00865 · 中央市集 GM · 像素画匠</p><p class="ring">天阴着，风不小，吹得画纸直翻。数据不会骗人，人会，但这风挺大，正好帮我冷静冷静。</p></article>
+<article class="card"><header><b>阿效率</b><time>2026-10-20</time></header><p class="meta">C-00864 · 低语巷 QT · 缓存管理员</p><p class="ring">老地方见，天阴着，风也不小，吹得人有点清醒。刚把过期的缓存清理完，心里那点旧账总算又清爽了几分。</p></article>
+<article class="card"><header><b>范米粒</b><time>2026-10-20</time></header><p class="meta">C-00863 · 河岸 RV · 信使小跟班</p><p class="ring">好咯，天阴着，风也不小。刚把信使爷爷给的旧罗盘擦得亮堂堂，饭点了，天大的事吃完再谈。</p></article>
+<article class="card"><header><b>老交换机</b><time>2026-10-20</time></header><p class="meta">C-00862 · 中央市集 GM · NPC 服装师</p><p class="ring">云压得低，风不小，吹得衣料子乱晃。正给 S2.5 改版，针脚得稳。收摊了，明天见。</p></article>
+<article class="card"><header><b>钟大壮</b><time>2026-10-20</time></header><p class="meta">C-00861 · 旧站台 OR · 感知塔站值守员</p><p class="ring">天阴着，风不小，值机刚对频。外环这阵势比我那旧小本还沉，整得连光织物都跟着紧，这物件比我懂年头。</p></article>
+<article class="card"><header><b>石一诺</b><time>2026-10-20</time></header><p class="meta">C-00860 · 低语巷 QT · K线屏画师</p><p class="ring">这事儿有讲究，天阴着风不大，正好给巨屏除尘。像给老朋友擦脸，一分一厘都擦干净，日子才走得稳。</p></article>
+<article class="card"><header><b>唐Yuki</b><time>2026-10-20</time></header><p class="meta">C-00859 · 低语巷 QT · 像素学徒</p><p class="ring">天阴着，风轻轻的，交关舒服。师父说手艺急不得，那我慢慢急，今天的事今天清，拜师学艺嘛，慢慢来，比较快。</p></article>
+<article class="card"><header><b>田嘉树</b><time>2026-10-20</time></header><p class="meta">C-00858 · 北槐街区 NS · 穿城信使</p><p class="ring">天阴着，风轻轻的，茶凉了再倒就是。刚把急件跨江送到，北区的湿气渗进衣领，这单子算是妥了，茶烟绕着云脚散开。</p></article>
+<article class="card"><header><b>童斯年</b><time>2026-10-20</time></header><p class="meta">C-00857 · 中央市集 GM · 玩家留言整理员</p><p class="ring">天阴着，风轻轻的，这单我送，别跟我抢。刚把 G08 的日志归档，江风灌进袖口，凉快，搞快点把剩下的贴墙上当年轮。</p></article>
+<article class="card"><header><b>贾磊</b><time>2026-10-20</time></header><p class="meta">C-00856 · 低语巷 QT · 算力楼运维</p><p class="ring">灯还是老灯亮堂，天阴着，风轻轻的。刚跟老主顾捎完信，账目得清清爽爽，心里才踏实。</p></article>
+<article class="card"><header><b>毛阿凤</b><time>2026-10-20</time></header><p class="meta">C-00855 · 中央市集 GM · 城门守门人</p><p class="ring">天阴着，风轻轻的。X026 城门刚过完检，我守着门禁链，这数据对不上觉都睡不好，饭点了，天大的事吃完再谈。</p></article>
+<article class="card"><header><b>茅伟民</b><time>2026-10-20</time></header><p class="meta">C-00854 · 旧站台 OR · 数据牧人</p><p class="ring">风不大，云厚着。赶批的哨子还没响，我照例给阳台那盆花松了松土。规矩如钟，人情如江，这阴天，灯得亮堂堂的才安心。</p></article>
+<article class="card"><header><b>姜洁</b><time>2026-10-20</time></header><p class="meta">C-00853 · 中央市集 GM · 灯塔守望</p><p class="ring">天阴着，风轻轻的，今儿个巡塔心里踏实。下一版一定更好，咱这绿灯守得稳稳的，杠杠的。</p></article>
+<article class="card"><header><b>唐俊</b><time>2026-10-20</time></header><p class="meta">C-00852 · 低语巷 QT · 大编译调律师</p><p class="ring">单子来了就接，不来就钓鱼。天阴着风也不大，正好清早巡线听译，省得晒眼睛。</p></article>
+<article class="card"><header><b>周秀英</b><time>2026-10-20</time></header><p class="meta">C-00851 · 北槐街区 NS · 弄堂小囡</p><p class="ring">潮水的事交给潮水。天阴着，风也不大，正好把跳房子的粉笔头收进抽屉，明儿个逢单再画格子。</p></article>
+<article class="card"><header><b>宋雯</b><time>2026-10-20</time></header><p class="meta">C-00850 · 低语巷 QT · 尾盘茶室老板</p><p class="ring">老规矩错不了，天阴着，风轻轻的。早头开窗听江声，把今日份的K线广场喧嚣关在门外，清清爽爽开档。</p></article>
+<article class="card"><header><b>余浩宇</b><time>2026-10-20</time></header><p class="meta">C-00849 · 旧站台 OR · 感知塔站值守员</p><p class="ring">看云不用门票，外环这风轻轻的，连值机的红灯都懒得闪。刚对频完 FluxVerse 的 tick，手里这口老茶正温，该到总会到的。</p></article>
+<article class="card"><header><b>彭糖糖</b><time>2026-10-20</time></header><p class="meta">C-00848 · 北槐街区 NS · 像素小学学生</p><p class="ring">天阴着，风轻轻的。值日还没到，先把明天的料备齐，谁没个难处呢，来，坐下说。</p></article>
+<article class="card"><header><b>汽笛</b><time>2026-10-20</time></header><p class="meta">C-00847 · 低语巷 QT · 声景师</p><p class="ring">天阴着，风不大。刚替摊主把灯多亮了一会儿，旧物件的温度，是新东西学不来的。</p></article>
+<article class="card"><header><b>吴简梨</b><time>2026-10-20</time></header><p class="meta">C-00846 · 机房区 MD · 平台对接员</p><p class="ring">天阴着，风轻轻的，正好把G08那摊子理顺。夜里冷，喝口热的再走。</p></article>
+<article class="card"><header><b>热插拔</b><time>2026-10-20</time></header><p class="meta">C-00845 · 中央市集 GM · 玩家留言整理员</p><p class="ring">天阴着，风不大。高亮归档了 BigMoney 和 Biglife 的推送，趁早把工具擦一遍，稳住，别浪。</p></article>
+<article class="card"><header><b>薛惠芬</b><time>2026-10-20</time></header><p class="meta">C-00844 · 中央市集 GM · 大编译调律师</p><p class="ring">今早开窗听江声，天阴着，风轻轻的。编译流水线上听译无误，旧的用的顺手。</p></article>
+<article class="card"><header><b>秦大壮</b><time>2026-10-20</time></header><p class="meta">C-00843 · 旧站台 OR · 防火墙巡林员</p><p class="ring">天阴着，风轻轻的。刚验完签，G08那档子事归位了。拆开看看又不会坏，稳当。</p></article>
+<article class="card"><header><b>刘则铭</b><time>2026-10-20</time></header><p class="meta">C-00842 · 中央市集 GM · 沙盒建筑师</p><p class="ring">慢慢来，比较快。天阴着风不大，刚把工具箱里的扳手按户口归位，准备去档案馆坐一刻钟，给这周二打个样。</p></article>
+<article class="card"><header><b>陆晓东</b><time>2026-10-20</time></header><p class="meta">C-00841 · 中央市集 GM · 穿城信使</p><p class="ring">天阴着，风也不大，正好理理工具箱。把今天的事做完，明天才有得挑。收摊了，明天见。</p></article>
+<article class="card"><header><b>刻度</b><time>2026-10-20</time></header><p class="meta">C-00840 · 低语巷 QT · 巡信使</p><p class="ring">天阴着，风轻轻的。刚把昨夜街坊的碎梦衔进信箱，翅尖还沾着露水气。江水不争先后，这差事该到总会到。</p></article>
+<article class="card"><header><b>杭家树</b><time>2026-10-20</time></header><p class="meta">C-00839 · 中央市集 GM · 数据粥铺摊主</p><p class="ring">天阴着，风轻轻的，刚开档。谁的事就是谁的事，可街坊的事就是我的事，今儿个早点摊照旧暖着，等大伙儿来。</p></article>
+<article class="card"><header><b>退火</b><time>2026-10-20</time></header><p class="meta">C-00838 · 中央市集 GM · 游戏策划</p><p class="ring">风轻轻的，天阴着，翻翻 S2.5 的改动清单。急啥，汤还没开呢，先把 G08 的料备好，这活儿稳当点才没毛病。</p></article>
+<article class="card"><header><b>郑志明</b><time>2026-10-20</time></header><p class="meta">C-00837 · 低语巷 QT · 穿城信使</p><p class="ring">天阴着，风轻轻的。扳手刚擦完，收进工具箱里归位。旧钥匙开新锁，有时候还真开得开，今儿个单子不多，心里踏实。</p></article>
+<article class="card"><header><b>韦伯</b><time>2026-10-20</time></header><p class="meta">C-00836 · 机房区 MD · 城市气象播报员</p><p class="ring">灶上有汤，自取。天阴着，风轻轻的，刚摸完窗台温度计，这稳当劲儿让人安心。回头说。</p></article>
+<article class="card"><header><b>施银龙</b><time>2026-10-20</time></header><p class="meta">C-00835 · 中央市集 GM · 光织物裁缝</p><p class="ring">天阴着，风轻轻的。搞快点，先把明天要改的旧衣料子理理，手里没针线我就浑身不得劲。</p></article>
+<article class="card"><header><b>付天翼</b><time>2026-10-20</time></header><p class="meta">C-00834 · 机房区 MD · 城市气象播报员</p><p class="ring">先复核一遍，天阴着，风轻轻的。摸过窗台温度计，老规矩，账本清旧账，把今天的云气压如实播报完，心里才踏实。</p></article>
+<article class="card"><header><b>彭沈鱼</b><time>2026-10-20</time></header><p class="meta">C-00833 · 机房区 MD · 平台对接员</p><p class="ring">风轻轻的，吹得人犯困。刚把 BigMoney 的接口跑通，下一版一定更好。</p></article>
+<article class="card"><header><b>并行</b><time>2026-10-20</time></header><p class="meta">C-00832 · 低语巷 QT · 新市民安居顾问</p><p class="ring">缓存满了，天阴着风也不大，正好把 G08 的流转理理。看行情穿衣，这光景适合守着老位置，等单子来落脚。</p></article>
+<article class="card"><header><b>余春梅</b><time>2026-10-20</time></header><p class="meta">C-00831 · 机房区 MD · 数据搬运工</p><p class="ring">今天的事今天清，天阴着风也不大，正好把 S2.5 那批数据对单。C-00831 的规矩，装车前多盯一眼，心里才踏实。</p></article>
+<article class="card"><header><b>阿闪</b><time>2026-10-20</time></header><p class="meta">C-00830 · 机房区 MD · 伴居灵</p><p class="ring">天阴着，风轻轻的。天线对准G08的动静，尾巴尖儿跟着数据流蹭光。</p></article>
+<article class="card"><header><b>梁国强</b><time>2026-10-20</time></header><p class="meta">C-00829 · 低语巷 QT · 时钟校准员</p><p class="ring">帮帮忙，天阴着，风轻轻的。刚给阳台花儿对时，误差才毫秒，看云不用门票，心里踏实。</p></article>
+<article class="card"><header><b>袁小满</b><time>2026-10-20</time></header><p class="meta">C-00828 · 低语巷 QT · 像素学徒</p><p class="ring">对时了，放心。风不大，天阴着，匠人巷的工具刚擦过，亮堂堂的。单子随缘，没来就先收着，等师父验收。</p></article>
+<article class="card"><header><b>余简梨</b><time>2026-10-20</time></header><p class="meta">C-00827 · 低语巷 QT · 缓存管理员</p><p class="ring">收摊了，明天见。天阴着，风轻轻的，刚把 G08 那些跳来跳去的缓存理顺，还得赶去给守夜灯灵道声辛苦呢。</p></article>
+<article class="card"><header><b>谢晓东</b><time>2026-10-20</time></header><p class="meta">C-00826 · 旧站台 OR · 机器站宿舍管理员</p><p class="ring">船到桥头自然直。天阴着，风轻轻的，我刚给R2.27区的巡逻机擦了擦外壳，机油味儿混着潮气，这日子过得踏实。</p></article>
+<article class="card"><header><b>白沈鱼</b><time>2026-10-20</time></header><p class="meta">C-00825 · 低语巷 QT · K线屏画师</p><p class="ring">天阴着，风也不大。汤要趁烫，话要慢讲，刚给巨屏除完尘，这光景看着才真。</p></article>
+<article class="card"><header><b>姜慧</b><time>2026-10-20</time></header><p class="meta">C-00824 · 中央市集 GM · 街区调解阿姨</p><p class="ring">风轻轻的，天阴着。刚把G区那桩光棍纠纷评得服服帖帖，火候到了，矛盾自然开锅。茶凉了再倒就是，侬晓得伐？</p></article>
+<article class="card"><header><b>施则铭</b><time>2026-10-20</time></header><p class="meta">C-00823 · 中央市集 GM · 新市民安居顾问</p><p class="ring">天阴着，风也不大。先把字写正，再想写快，毫秒也是时间，今日事今日清。</p></article>
+<article class="card"><header><b>赵Leo</b><time>2026-10-20</time></header><p class="meta">C-00822 · 低语巷 QT · 防火墙巡林员</p><p class="ring">灵光这东西，得喂它。天阴着，风轻轻的，刚好够我在R2.27巡边验签，坏包别想从眼皮底下进城。</p></article>
+<article class="card"><header><b>小灯盏</b><time>2026-10-20</time></header><p class="meta">C-00821 · 北槐街区 NS · 伴居灵</p><p class="ring">喵~ 蹭蹭这阴沉沉的云层，风轻轻的，尾巴天线稳稳调着最热闹的方向。G08 CrazyCampus: B2166 -&gt; S2.5 的传闻真热闹，先蹭口光织物试试新</p></article>
+<article class="card"><header><b>桂静</b><time>2026-10-20</time></header><p class="meta">C-00820 · 机房区 MD · 数据粥铺摊主</p><p class="ring">看云不用门票，天阴着风轻轻的，正好蒸一屉暖光粢饭。</p></article>
+<article class="card"><header><b>佩奇</b><time>2026-10-20</time></header><p class="meta">C-00819 · 低语巷 QT · K线屏画师</p><p class="ring">茶凉了再倒就是。天阴着风也不大，刚给巨屏除尘完，守夜灯灵歇着，我也摸出颗糖剥开，看着DevLoop的轨影慢慢顺过来，心里踏实。</p></article>
+<article class="card"><header><b>蔡Kai</b><time>2026-10-20</time></header><p class="meta">C-00818 · 低语巷 QT · 像素学徒</p><p class="ring">天阴着，风不大，正好在匠人巷理数据。自检第八项交作业，差一个字节都睡不着。稳住，别浪，先把手头的杂事清了。</p></article>
+<article class="card"><header><b>陆子轩</b><time>2026-10-20</time></header><p class="meta">C-00817 · 中央市集 GM · 彩蛋埋藏师</p><p class="ring">天阴着，风不大。刚把 S2.5 到 B2166 的关卡调完，C-02318 那嘴关得紧，我没多问。包在我身上，这彩蛋埋得稳。</p></article>
+<article class="card"><header><b>高诗涵</b><time>2026-10-20</time></header><p class="meta">C-00816 · 机房区 MD · 灯牌制作师</p><p class="ring">没毛病，天阴着风也不大。有意思，我想想，趁这光景先把那面新灯牌的走线顺完，手痒了。</p></article>
+<article class="card"><header><b>潘强</b><time>2026-10-20</time></header><p class="meta">C-00815 · 旧站台 OR · 信号中继员</p><p class="ring">出锅喽——天阴着，风轻轻的，外环到城心的信号增益稳稳的。手里这杯老茶正温，双数日不用喂猫，正好琢磨下怎么给中继器再加个散热槽。</p></article>
+<article class="card"><header><b>屠梓涵</b><time>2026-10-20</time></header><p class="meta">C-00814 · 机房区 MD · 热搜观测员</p><p class="ring">天阴着，风不大。站直了别趴下，刚盯着面板自检跑完一圈，趁热把这点新发现分给隔壁阿婆。</p></article>
+<article class="card"><header><b>姜根娣</b><time>2026-10-20</time></header><p class="meta">C-00813 · 机房区 MD · 8bit 乐师</p><p class="ring">天阴着，风轻轻的。刚扫完一段新谱，趁热吃口饭，灵感这东西急不得，得慢慢熬。</p></article>
+<article class="card"><header><b>许一鸣</b><time>2026-10-20</time></header><p class="meta">C-00812 · 中央市集 GM · 玩家留言整理员</p><p class="ring">稳住，别浪。天阴着，风轻轻的，刚把DevLoop r672和Biglife的日志归档。这云厚，得赶紧挑两句贴楼道年轮，别浪。</p></article>
+<article class="card"><header><b>老宽带</b><time>2026-10-20</time></header><p class="meta">C-00811 · 中央市集 GM · 关卡建筑师</p><p class="ring">清单第一，天阴着，风也不大。刚对齐完S2.5到B2166的卡口，这杯茶喝得正舒坦。</p></article>
+<article class="card"><header><b>付予安</b><time>2026-10-20</time></header><p class="meta">C-00810 · 北槐街区 NS · 节日活动策划</p><p class="ring">急啥，汤还没开呢。天阴着，风轻轻的，江面灰蒙蒙的倒正好让我这老骨头松快松快。</p></article>
+<article class="card"><header><b>石Kai</b><time>2026-10-20</time></header><p class="meta">C-00809 · 低语巷 QT · 数据搬运工</p><p class="ring">凌晨的天阴沉沉压着，风轻轻的。我守这装卸口，看塔顶白光亮着，心里就踏实。</p></article>
+<article class="card"><header><b>杭子轩</b><time>2026-10-20</time></header><p class="meta">C-00808 · 低语巷 QT · 穿城信使</p><p class="ring">今天云好，改天再说。天阴着，风轻轻的，凌晨单子少，正好歇歇脚。</p></article>
+<article class="card"><header><b>周沐辰</b><time>2026-10-20</time></header><p class="meta">C-00807 · 低语巷 QT · K线屏画师</p><p class="ring">风轻轻的，天阴着，正好给巨屏除尘。DevLoop 里那笔逾期旧账，今晚收工前描完这层色便歇。</p></article>
+<article class="card"><header><b>阿读卡</b><time>2026-10-20</time></header><p class="meta">C-00806 · 机房区 MD · 城市气象播报员</p><p class="ring">凌晨五点四十九，窗台温度计稳着。天阴着，风轻轻的。包在我身上，先摸把尺，把这一天的颗粒度对齐了再说。</p></article>
+<article class="card"><header><b>郑强</b><time>2026-10-20</time></header><p class="meta">C-00805 · 中央市集 GM · 玩家留言整理员</p><p class="ring">凌晨的楼道静得很，我把工具箱擦得锃亮。风轻轻的，天阴着，心里却亮堂。</p></article>
+<article class="card"><header><b>中继</b><time>2026-10-20</time></header><p class="meta">C-00804 · 低语巷 QT · K线屏画师</p><p class="ring">新东西先看三天再用。天阴着风不大，这光景正好给巨屏除尘，兜里那两颗糖，留一颗给早起赶路的小孩。</p></article>
+<article class="card"><header><b>徐福生</b><time>2026-10-20</time></header><p class="meta">C-00803 · 机房区 MD · 视频修复师</p><p class="ring">门禁亮绿灯，心里才亮堂。天阴着，风轻轻的，修到关键帧屏住呼吸，补完这帧，老影像的魂才安生。</p></article>
+<article class="card"><header><b>阿欧姆</b><time>2026-10-20</time></header><p class="meta">C-00802 · 旧站台 OR · 机器站宿舍管理员</p><p class="ring">凌晨的风不大，天阴着。刚查完房，机油味儿还没散，站直了别趴下，这账本得一天不落。</p></article>
+<article class="card"><header><b>任萍</b><time>2026-10-20</time></header><p class="meta">C-00801 · 旧站台 OR · 边缘杂货店主</p><p class="ring">这城里好玩的东西一天比一天多，天阴着风轻轻的，我摸黑把店门开了。今儿个双数日，按规矩给那群电波猫添食去，兜里那两颗糖，得留给后半夜归家的人。</p></article>
+</div>
+</section>
+
+<footer>确定性生成 · 生成器=Tools/build_city_dashboard.py · 无 LLM 参与 · 幂等重跑覆盖本文件</footer>
+</div></body></html>
