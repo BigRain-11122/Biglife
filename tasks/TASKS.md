@@ -1048,3 +1048,9 @@
   - 三行实况：当前活=年轮线晨窗批收尾（09:00 起进让路窗停重批）；最近实物=census/registry/*/C-00941~C-00950.md（10 张年轮卡·2026-10-20 08:44 前后落环+行为线镜像）；下个里程碑=19:00 让路窗解后夜窗年轮续批 + intake_batch14 造人批（4 席·原料已备）。
   - 未做（留单·如实）：①造人批仍未做（R1797 起连续留单·原料已备·待夜窗）；②T-20261020-01 静默超时缺陷本轮三度实证（5min 无 stdout 被前端取消，落 10 卡后中断）——start/skip/heartbeat 三处 flush 改造仍待办，建议夜窗前优先修。
   - tokens: local=10 api=0 api_reason=-（10 席年轮本地模型生成；池审/行为线收口=确定性零 LLM；全轮零云端）
+
+- **R1805**·2026-10-20 08:48~09:05 @BigLife-OSLoop 轮实录：轮首 git pull=Already up to date；决策水位差集 NEW=0（已覆盖至 D-20261020-07）；orders 物理件区无涉本司新行；08:4x 开跑仍属非让路窗合法窗尾。**产品增量=年轮 9 卡**：evolve_citizen --batch 3 实跑（后台任务 exit=0），落 C-00951~C-00959 逐卡 [锚] 注脚+当日 FluxVerse 实况；8 卡定向提交 49450db6，第 9 卡随行为线 sync_rings 自提交 a6d9511f（rows=10 ring=4851）；**QC 例巡**带 --schema：cards=10072 evolved=4851 problems=0 dup_rings=37/37 schema_rows=52090 schema_bad=0 → c20608af；两笔已 push（49450db6..c20608af）。census/export/citizens-light.jsonl 随批刷新（08:45:50）。语言线 today pool_audit=SELF_TERMINATE(DONE) 跳过；相遇轮今日 meet-cap 已满 SKIP；docs/status-export.json 04:31 已鲜（<24h）。
+  - 三行实况：当前活=年轮线晨窗批收尾，09:00 起进 LLM 让路窗停重批；最近实物=census/registry/*/C-00951~C-00959.md（9 张年轮卡·2026-10-20 09:0x 落环）+ census/QC-REPORT.md（08:59 例巡）；下个里程碑=19:00 让路窗解后夜窗年轮续批 + intake_batch14 造人批（4 席·原料已备）。
+  - 判例（落 tasks T-20261020-01 旁）：qc_census.py **不带 --schema 会整段删掉 QC-REPORT 的 Schema 结构层（T-20260926-17）**——正法=例行巡检一律 --schema，缺参数=报告退化（本轮先裸跑发现，已带参重跑复原）。
+  - 未做（留单·如实）：①造人批 intake_batch14 仍未做（R1797 起连续留单·09:00-19:00 让路窗内不做 LLM 批·待夜窗）；②T-20261020-01 静默超时缺陷（evolve 无 stdout 逐席 flush）未修。
+  - tokens: local=10 api=0 api_reason=-（9 席年轮本地模型生成；QC/水位/导出=确定性零 LLM；全轮零云端）
