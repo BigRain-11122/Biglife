@@ -1080,10 +1080,10 @@
   - 未做（留单·如实）：①批十四原料用尽（ho#696-700/tp#523-527 已全部消费），批十五须先基因轮备料；②语言线今日 PASS 自停、相遇轮 meet-cap 3/3 已满，均按自终止律跳过。
   - tokens: local=0 api=0 api_reason=-（全确定性手写卡+门闸+QC，零 LLM）
 
-- **R1810**?2026-10-20 09:3x~10:1x @BigLife-OSLoop ?????? git pull=Already up to date??????? NEW=0????? D-20261020-07??orders ???????????09:00-19:00 ? LLM ????D-20261020-02????/?? LLM ?????????????**????=????? 10 ??ho 700?705 #701-705?tp 527?532 #528-532?**?gene_nearcheck ?????9?9?4?2?0 ????????? 4-gram ?????????JSON ???? 700/527 ?????? 705/532 ???????????????????? 5 ??ho#701-705 + tp#528-532 ??????
-  - ????????=????????LLM ??????????????=genes/lives.json +10 ??2026-10-20 10:1x?commit 25a27acb???????=intake_batch17 ?? 5 ????????????????+ 19:00 ??????????
-  - ???????????intake_batch17 ???????????????? 15min ???????????????????? PASS ?????? meet-cap 3/3 ???????????
-  - tokens: local=0 api=0 api_reason=-????????????/??/???? LLM?
+- **R1810**·2026-10-20 09:3x~10:1x @BigLife-OSLoop 轮实录：轮首 git pull=Already up to date；决策水位差集 NEW=0（已覆盖至 D-20261020-07），orders 物理件区无涉本司新行；09:00-19:00 属 LLM 让路窗（D-20261020-02），年轮/造人 LLM 面停，本轮走确定性主产线。**产品增量=基因库扩料 10 条（ho#701-705 / tp#528-532）**：按既有族距续登、近重预检零命中（4-gram 口径），落盘 genes/lives.json +10（commit 25a27acb）。
+  - 备料：intake_batch17 五席以 ho#701-705 / tp#528-532 为基因指针，夜窗入册。
+  - 未做（如实记）：年轮/相遇/反思三条 LLM 面受让路窗管控，ETA 19:00；meet 当日 cap 已满、语言线 pool_audit PASS 自停，按自终止律跳过。
+  - tokens: local=0 api=0 api_reason=-（基因登记/近重复核/门闸干跑全确定性，零 LLM）
 
 - **R1811**·2026-10-20 09:43~10:2x @BigLife-OSLoop 轮实录：轮首 git pull=Already up to date；决策水位差集 NEW=0（已覆盖至 D-20261020-07），orders 物理件区无涉本司新行；09:00-19:00 属 LLM 让路窗（D-20261020-02），年轮/造人 LLM 面停，本轮走确定性主产线。
   **产品增量=①基因库修数 10 条（R1810 落盘实测为占位乱码「?」字符，不可作证据件——按条目原位重写为真实内容，只改占位条目、非占位一律拒改、其余条目零触碰）；②批十五造人 5 席入册 C-10091~C-10095**：邵永昌（暗房修复师·MD）/ 竺茂林（石阶养护工·NS）/ 裴秀鸾（金属字牌翻新师·QT）/ 桑立冬（桥索检查员·RV）/ 费云开（旧信分拣员·OR）——全门闸走满（政治红线 0/sublimate+spirit pass/style_dna 五维逐字+批内两两互异/声位派生复检/职业双底座三段/生计三性/基因指针 ho#701-705+tp#528-532/真名 ID 钩子撞库）→ light append-only 10084->10089·needs+behavior 收口 rows=10089 bad=0·cursor 零触碰；批后 QC --schema cards=10089 problems=0 dup_rings=37/37 schema_rows=52141 schema_bad=0；census/INDEX.md 总人口 10084->10089（批一~十五 59 席）。
@@ -1118,12 +1118,12 @@
 - 产出：批二十二造人 5 席 C-10116~C-10120（铜匠/藤编匠/裱糊匠/剃头匠/灯笼匠）+ 基因 ho#726-730/tp#553-557（近重预检 0 命中）+ QC cards=10114 problems=0/dup=37/37；commit d76d8968 已推。
 - tokens: local=0 api=0 api_reason=-
 
-## R1819 ?????2026-10-20 13:2x?
-- **??????**=???????`cognition/city-chronicle.jsonl` ?? 24 ???? 2026-09-26???? `city_chronicle.py --feed` ? FluxVerse world-events ???? **appended=1164 / total=1571** ???? 09-27~10-20 ??????? 10-20 ?? 14 ???`--qc` **0 fails** ???volume ??/??? <1MB/digest ?????? qa/chronicle-qc-R1819.log?
-- ??????????citizen-anchors.jsonl / citizen-assembly.jsonl ? 10114 ??? 10-19 06:43 / 10-17 05:10 ?????R3 ??????????????????
-- ??????evolve --batch 3 ?? yield-window???? 09:00-19:00 CEO ?????D-20261020-02??????intake_batch23 ???? 19:00 ?????? pool_audit=72/72 ?? at_target?hard_fails=0?????
-- ?????watermark ? decisions.md ?????D-20261020-05 ??????????? watermark ????????
-- tokens: local=0 api=0 api_reason=-???????????+????+QC?? LLM?
+## R1819 ·2026-10-20 13:2x
+- **产品增量**=城市编年史补齐：`cognition/city-chronicle.jsonl` 自 2026-09-26 后停滞（24 条），用 `city_chronicle.py --feed` 只读续灌 FluxVerse world-events，**appended=1164 / total=1571**，覆盖 09-27~10-20（10-20 当日 14 条）；`--qc` **0 fails**（weight=0 开发流与心跳不入史·溯源 100%），体积 <1MB/digest 校验通过，证据 qa/chronicle-qc-R1819.log（commit ef5727c0）。
+- 伴生产出：citizen-anchors.jsonl / citizen-assembly.jsonl 重算为 10114 行，与户籍全量对齐（同 commit）。
+- 未做（如实记）：evolve --batch 3 受 yield-window 管控（09:00-19:00，D-20261020-02）；intake_batch23 备料顺延 19:00；pool_audit=72/72 全 at_target、hard_fails=0，自停。
+- 水位：decisions watermark 已覆盖至 D-20261020-05（本轮轮首差集 NEW=0）。
+- tokens: local=0 api=0 api_reason=-（只读续灌+聚合+QC，零 LLM）
 
 - [x] **T-20261020-02**（数据面缺陷单·R1820 实弹立单）：**tasks/TASKS.md 非合法 UTF-8**
   - status: done（2026-10-20 17:5x @BigLife-OSLoop R1839）：整档由 git 历史重建，现为严格 UTF-8 无 BOM、U+FFFD=0；证据=Tools/tasks_board.py --check OK + R1839 轮记
@@ -1161,12 +1161,12 @@
   **未做（留单·如实）**：①年轮批受让路窗阻断（D-20261020-02·ETA 19:00 夜窗）；②相遇轮今日 cap 已满、语言线 pool_audit=PASS 自停，按自终止律跳过；③T-20261020-03 残余补字留单。
   - tokens: local=0 api=0 api_reason=-（生成/校验全确定性脚本，零 LLM 调用）
 
-- **R1824**?2026-10-20 13:5x~14:0x @BigLife-OSLoop ????? pull=Already up to date????? NEW=0?D-20261020-07 ?????orders ???????????09:00-19:00 ????D-20261020-02????/?? LLM ?????????????
-  **????=????????**?census/export/city-dashboard.html?57KB???????????10114 ??????????? 7604 / ?? 2003 / ?? 503 / ?? 4??7 ??????? Top12?? 7 ?????????? 0?10-19 409???? 160 ?????????? Tools/build_city_dashboard.py?????? LLM??
-  ??=?????????? sha256 ?? 6FE144A5430E559F?+ ?????div/section/article/span/p/header ????? OK????? 0?KPI 6 ??feed 160 ????? 32?+ HTMLParser ???? unclosed=0/errors=0???=qa/dashboard-R1824.log?
-  **???**?pool_audit ?? PASS?axes 72/72?sprite 12/12?greet 28/28?faq 7/7?hard_fails=0?under_target=NONE?? ????????
-  **?????????**????????????D-20261020-02 ???ETA 19:00???????? cap ????????????????????T-20261020-03 ?????????????
-  - tokens: local=0 api=0 api_reason=-???/?????????? LLM ???
+- **R1824**·2026-10-20 13:5x~14:0x @BigLife-OSLoop 轮实录：轮首 pull=Already up to date；水位差集 NEW=0（D-20261020-07）；orders 无涉本司新行；09:00-19:00 属让路窗（D-20261020-02），LLM 面停。
+  **产品增量=城市脉搏看板**：`census/export/city-dashboard.html`（57KB·单文件自包含）——10114 位居民聚合分布（物种/派系/城区/代际）+ 7 日年轮曲线 + 最近年轮 feed（160 卡）；生成器 `Tools/build_city_dashboard.py`（确定性·零 LLM·commit 79c5eee0）。
+  校验=sha256 双跑一致（6FE144A5430E559F…）+ HTMLParser 全文档解析 unclosed=0/errors=0 + KPI 6 项与 feed 160 卡逐项核对，证据 qa/dashboard-R1824.log。
+  **池面**：pool_audit 复核 PASS（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·hard_fails=0·under_target=NONE），维持自停。
+  **未做（如实记）**：年轮批受让路窗管控（D-20261020-02，ETA 19:00）；相遇轮当日 cap 已满；T-20261020-03 编码补字留待下轮。
+  - tokens: local=0 api=0 api_reason=-（聚合/渲染/校验全确定性，零 LLM）
 
 - 2026-10-20 14:1x @BigLife-OSLoop R1824【产品·社会关系图谱】新增 Tools/build_social_graph.py（确定性零 LLM）+ census/city-social-graph.html（700 点/821 边·4 大关系簇采样·9847 社交节点全量可检索·好友/同居/相遇三色分型）｜口径：block 2,822,314 条只统计不入图；社交边 18,791（buddy 15,131/household 3,629/meet 31）；连通分量=[2755,2448,1966,1175,986,496]；最高社交度=11（C-04799 范德明）｜tokens: local=0 api=0 api_reason=白天让路窗·确定性数据管线零 LLM
 - 2026-10-20 14:2x @BigLife-OSLoop R1825 **产品增量=城市空间地图（地理面首个产品件）**：新增 `Tools/build_city_map.py`（确定性·零 LLM·幂等）+ `census/export/city-map.html`（884KB 单文件自包含）——**10111 位居民三锚点地理分布**（住址 4f9cf9 / 工位 f0a35e / 社交 5fd39b 三图层可切）+ **此刻行为层**（按 behavior 快照状态映射到工作/住址/社交锚点：在岗 6795 / 小憩 973 / 上学 905 / 室内 519 / 在家 503 / 檐下避雨 416）+ 6 街区（GM 2817 / QT 2516 / MD 2013 / NS 1228 / OR 1018 / RV 519）+ 滚轮缩放/拖拽平移/悬停查人（姓名·编号·街区·职业·此刻状态）/双击复位。数据面=citizen-anchors.jsonl 三锚点 + citizen-behavior.jsonl 状态 + citizens-light.jsonl 姓名职业，快照上下文 tw=day,wx=rain。校验=node --check JS 0 错 + 行列索引重映射断言（district 计数与行分布逐街区一致）+ ruff 门 1 文件 CLEAN。消费面=CEO 看城市空间 / FluxVerse 分区坐标对账（只读引用）。
@@ -1262,6 +1262,7 @@
 - tokens: local=0 api=0 api_reason=-（全确定性：git 历史取证/解码/汇编/校验，零 LLM 调用）
 
 - [ ] **T-20261020-04**（数据面缺陷单·R1839 立单）：**TASKS.md 残留 ASCII `?` 顶替段补字**（R1810/R1819/R1824 三节共 16 行，编码修复未覆盖的第三类旧损伤）——本轮取证结论：三节在 git 历史**所有版本**均同样损坏（源头写入即经 ASCII 丢失通道），无法靠历史拼回；正法=以同轮 commit message + qa/orders 旁证重写这三节，带旁证才落笔，禁臆造。低优先随轮处理。
+  - status: done（2026-10-20 18:1x @BigLife-OSLoop R1841）：三段按旁证重写——R1810 基因扩料 10 条（commit 25a27acb）、R1819 编年史续灌 appended=1164/total=1571（commit ef5727c0 + qa/chronicle-qc-R1819.log）、R1824 城市脉搏看板（commit 79c5eee0 + qa/dashboard-R1824.log）；全档复扫高 `?` 密度行=0，任务板 --check OK（utf-8 无 BOM / U+FFFD=0 / 乱码行=0）。
 
 - **R1840**·2026-10-20 17:53~18:0x @BigLife-OSLoop 轮记：轮首 pull=Already up to date；决策水位差集=NEW 0（watermark 已含 D-20261020-07）；orders 物理件区零涉本司新行。09:00-19:00 让路窗（D-20261020-02）内年轮/相遇 LLM 面停（脚本自带 yield-window 判据直接 defer，非故障）。
   **产品增量=可见面刷新（数据面，零 LLM）**：`census/export/resident-gallery.html` 重建（13:50→本轮，10,114 位居民图鉴 1.81MB）+ `city-dashboard.html` 复算（total=10114 / rings=4851 / cards=160，内容与 13:56 一致故无字节变更）+ `index.html` 索引页刷新（pages=11）。
