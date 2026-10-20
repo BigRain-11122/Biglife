@@ -207,8 +207,9 @@ def main():
     with io.open(os.path.join(CO, "genes", "lives.json"), encoding="utf-8") as f:
         genes = json.load(f)
     ho_n, tp_n = len(genes["hook_objects"]), len(genes["turning_points"])
-    if not (ho_n == 735 and tp_n == 562):
-        print(f"GENE-BASELINE REFUSED: ho={ho_n} tp={tp_n} != 735/562（批二十三原料基线漂移·零写入）")
+    # R1826: 批二十四登记 ho#736-740/tp#563-567 后总数上移；本批指针仍锁定 731-735/558-562。
+    if not (ho_n == 740 and tp_n == 567):
+        print(f"GENE-BASELINE REFUSED: ho={ho_n} tp={tp_n} != 740/567（批二十三原料基线漂移·零写入）")
         return 4
     for idx in range(730, 735):
         if genes["hook_objects"][idx].strip("? ") == "":
