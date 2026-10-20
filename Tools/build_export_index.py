@@ -24,6 +24,7 @@ TITLE = {
     "city-objects.html": ("城市风物志", "以钩子物件为主角：承载人数 / 主聚城区 / 登记未落册缺口"),
     "city-districts.html": ("城区志", "六城区逐区人口 / 物种 / 派系 / 职业 / 街区 / 六轴聚合与代表居民"),
     "city-life.html": ("城市日常面", "此刻全城在做什么 / 四轴需求 / 好奇缺口名单 / 怪癖与可见面"),
+    "city-voices.html": ("城市声音馆", "八席试点三档试听对照：参数档 / Kokoro fp32 / int8 体积与时长"),
     "gene-ledger.html": ("基因总账", "全类别登记 vs 在册承载 / 覆盖率 / 未落册选题池"),
 }
 ORDER = list(TITLE)

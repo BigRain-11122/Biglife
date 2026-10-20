@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>城市声音馆 · 硅基城市</title>
+<style>
+:root{--bg:#0f1216;--fg:#e8ecf1;--dim:#8b97a6;--line:#232a33;--acc:#6fb3ff;--warn:#e0a45e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.65 "Microsoft YaHei",system-ui,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:26px;margin:0 0 6px}
+.sub{color:var(--dim);font-size:13px;margin-bottom:22px}
+h2{font-size:17px;margin:34px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.card{background:#151a21;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card .k{color:var(--dim);font-size:12px}
+.card .v{font-size:24px;font-weight:600;margin:4px 0 2px}
+.card .n{color:var(--dim);font-size:12px}
+.vcard{background:#151a21;border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+.vcard h3{margin:0 0 4px;font-size:15px}
+.vcard .sub{margin:0 0 10px}
+.say{color:#cfd9e4;font-size:14px;margin:0 0 12px;padding-left:10px;border-left:2px solid var(--acc)}
+.trk{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:7px 0;border-top:1px solid #1b222b}
+.trk:first-of-type{border-top:0}
+.tag{width:104px;flex:none;font-size:12px;color:#9fb0c2;font-variant-numeric:tabular-nums}
+audio{height:34px;flex:1;min-width:220px;filter:invert(.9) hue-rotate(180deg)}
+.meta,.miss{color:var(--dim);font-size:12px;flex:none}
+.det{flex-basis:100%;color:#7d8a99;font-size:12px;padding-left:114px}
+.row{display:flex;align-items:center;gap:10px;margin:6px 0}
+.lab{width:150px;flex:none;color:#c9d4e0;font-size:13px}
+.track{flex:1;height:8px;background:#1c232c;border-radius:5px;overflow:hidden}
+.track i{display:block;height:100%;background:linear-gradient(90deg,#4a86c8,#6fb3ff)}
+.num{width:120px;flex:none;text-align:right;color:var(--dim);font-size:12px;font-variant-numeric:tabular-nums}
+ul{margin:0;padding-left:0;list-style:none}
+li{display:flex;gap:12px;padding:6px 0;border-top:1px solid #1b222b;font-size:13px;flex-wrap:wrap}
+li:first-child{border-top:0}
+li b{width:230px;flex:none;font-weight:500}
+li .d{width:150px;flex:none;color:var(--dim);font-variant-numeric:tabular-nums}
+li .x{color:#a9b6c4}
+.note{background:#1a1712;border:1px solid #3a3020;border-radius:10px;padding:14px 16px;color:#c9bb9f;font-size:13px}
+.note b{color:var(--warn)}
+.foot{margin-top:40px;color:#5f6b7a;font-size:12px;text-align:center}
+</style></head><body><div class="wrap">
+<h1>城市声音馆</h1>
+<div class="sub">八位试点居民 · 三档合成对照（可试听） · 生成 2026-10-20 17:25 · 数据源 census/export/voice-* manifest.json</div>
+
+<div class="cards">
+<div class="card"><div class="k">试点席位</div><div class="v">8</div><div class="n">全城 10114 人中的选样</div></div>
+<div class="card"><div class="k">合成档</div><div class="v">3</div><div class="n">参数档 / Kokoro fp32 / Kokoro int8</div></div>
+<div class="card"><div class="k">样本总量</div><div class="v">5226 KB</div><div class="n">三档合计 24 条</div></div>
+<div class="card"><div class="k">可听总时长</div><div class="v">69.3s</div><div class="n">含量化档重复计时</div></div>
+</div>
+
+<h2>一 · 试听</h2>
+<div class="vcard"><h3>C-00010 · 顾阿凤 · 碳基 · 数据粥铺摊主</h3><div class="sub">NS / 脑环广场街区　·　信条：灶上留一壶，路过的都是客。</div><div class="say">“灶上留一壶，路过的都是客。我是顾阿凤。”</div><div class="trk"><span class="tag">参数档</span><audio controls preload="none" src="voice-samples/C-00010.wav"></audio><span class="meta">478 KB · pitch / rate / vol 参数微调</span><div class="det">pitch -2 / rate -14 / vol 93</div></div><div class="trk"><span class="tag">Kokoro fp32</span><audio controls preload="none" src="voice-pilot-kokoro/C-00010.wav"></audio><span class="meta">161 KB · kokoro-fp32-zf_xiaoxiao</span><div class="det">音色 zf_xiaoxiao · 语速 1.16 · 时长 3.43s · 生成 1.53s</div></div><div class="trk"><span class="tag">Kokoro int8</span><audio controls preload="none" src="voice-pilot-kokoro-int8/C-00010.wav"></audio><span class="meta">161 KB · kokoro-int8-zf_xiaoxiao</span><div class="det">音色 zf_xiaoxiao · 语速 1.16 · 时长 3.43s · 生成 6.65s</div></div></div><div class="vcard"><h3>C-00011 · 朱鸿奎 · 碳基 · 时空校准师</h3><div class="sub">NS / 档案馆区　·　信条：差之毫秒，谬以全城。</div><div class="say">“差之毫秒，谬以全城。我是朱鸿奎。”</div><div class="trk"><span class="tag">参数档</span><audio controls preload="none" src="voice-samples/C-00011.wav"></audio><span class="meta">281 KB · pitch / rate / vol 参数微调</span><div class="det">pitch -8 / rate -5 / vol 80</div></div><div class="trk"><span class="tag">Kokoro fp32</span><audio controls preload="none" src="voice-pilot-kokoro/C-00011.wav"></audio><span class="meta">168 KB · kokoro-fp32-zm_yunjian</span><div class="det">音色 zm_yunjian · 语速 1.05 · 时长 3.59s · 生成 2.50s</div></div><div class="trk"><span class="tag">Kokoro int8</span><audio controls preload="none" src="voice-pilot-kokoro-int8/C-00011.wav"></audio><span class="meta">169 KB · kokoro-int8-zm_yunjian</span><div class="det">音色 zm_yunjian · 语速 1.05 · 时长 3.61s · 生成 7.89s</div></div></div><div class="vcard"><h3>C-00013 · 林之恒 · 碳基 · 编年史馆员</h3><div class="sub">NS / 档案馆区　·　信条：城市不会忘记，除非我们偷懒。</div><div class="say">“城市不会忘记，除非我们偷懒。我是林之恒。”</div><div class="trk"><span class="tag">参数档</span><audio controls preload="none" src="voice-samples/C-00013.wav"></audio><span class="meta">233 KB · pitch / rate / vol 参数微调</span><div class="det">pitch +2 / rate +2 / vol 86</div></div><div class="trk"><span class="tag">Kokoro fp32</span><audio controls preload="none" src="voice-pilot-kokoro/C-00013.wav"></audio><span class="meta">206 KB · kokoro-fp32-zm_yunxia</span><div class="det">音色 zm_yunxia · 语速 0.98 · 时长 4.40s · 生成 3.00s</div></div><div class="trk"><span class="tag">Kokoro int8</span><audio controls preload="none" src="voice-pilot-kokoro-int8/C-00013.wav"></audio><span class="meta">206 KB · kokoro-int8-zm_yunxia</span><div class="det">音色 zm_yunxia · 语速 0.98 · 时长 4.38s · 生成 9.29s</div></div></div><div class="vcard"><h3>C-00015 · 陈雅雯 · 碳基 · 风控官</h3><div class="sub">QT / 风控高地　·　信条：红灯是为所有人亮的，包括我。</div><div class="say">“红灯是为所有人亮的，包括我。我是陈雅雯。”</div><div class="trk"><span class="tag">参数档</span><audio controls preload="none" src="voice-samples/C-00015.wav"></audio><span class="meta">235 KB · pitch / rate / vol 参数微调</span><div class="det">pitch +3 / rate +2 / vol 84</div></div><div class="trk"><span class="tag">Kokoro fp32</span><audio controls preload="none" src="voice-pilot-kokoro/C-00015.wav"></audio><span class="meta">209 KB · kokoro-fp32-zf_xiaoni</span><div class="det">音色 zf_xiaoni · 语速 0.98 · 时长 4.45s · 生成 3.19s</div></div><div class="trk"><span class="tag">Kokoro int8</span><audio controls preload="none" src="voice-pilot-kokoro-int8/C-00015.wav"></audio><span class="meta">204 KB · kokoro-int8-zf_xiaoni</span><div class="det">音色 zf_xiaoni · 语速 0.98 · 时长 4.35s · 生成 9.02s</div></div></div><div class="vcard"><h3>C-00017 · 归档者-07 · 硅基 · 回测农（算法调参师）</h3><div class="sub">QT / 回测田　·　信条：参数不收敛，天理难容。</div><div class="say">“参数不收敛，天理难容。我是归档者-07。”</div><div class="trk"><span class="tag">参数档</span><audio controls preload="none" src="voice-samples/C-00017.wav"></audio><span class="meta">260 KB · pitch / rate / vol 参数微调</span><div class="det">pitch +0 / rate -1 / vol 85</div></div><div class="trk"><span class="tag">Kokoro fp32</span><audio controls preload="none" src="voice-pilot-kokoro/C-00017.wav"></audio><span class="meta">201 KB · kokoro-fp32-zf_xiaoni</span><div class="det">音色 zf_xiaoni · 语速 1.01 · 时长 4.29s · 生成 3.07s</div></div><div class="trk"><span class="tag">Kokoro int8</span><audio controls preload="none" src="voice-pilot-kokoro-int8/C-00017.wav"></audio><span class="meta">200 KB · kokoro-int8-zf_xiaoni</span><div class="det">音色 zf_xiaoni · 语速 1.01 · 时长 4.27s · 生成 9.02s</div></div></div><div class="vcard"><h3>C-00019 · 老晶振 · 硅基 · 引擎医生</h3><div class="sub">GM / 八号楼街区　·　信条：机器不坏是本事，坏了能修是人品。</div><div class="say">“机器不坏是本事，坏了能修是人品。我是老晶振。”</div><div class="trk"><span class="tag">参数档</span><audio controls preload="none" src="voice-samples/C-00019.wav"></audio><span class="meta">280 KB · pitch / rate / vol 参数微调</span><div class="det">pitch -7 / rate +1 / vol 83</div></div><div class="trk"><span class="tag">Kokoro fp32</span><audio controls preload="none" src="voice-pilot-kokoro/C-00019.wav"></audio><span class="meta">198 KB · kokoro-fp32-zm_yunxi</span><div class="det">音色 zm_yunxi · 语速 0.99 · 时长 4.23s · 生成 3.17s</div></div><div class="trk"><span class="tag">Kokoro int8</span><audio controls preload="none" src="voice-pilot-kokoro-int8/C-00019.wav"></audio><span class="meta">195 KB · kokoro-int8-zm_yunxi</span><div class="det">音色 zm_yunxi · 语速 0.99 · 时长 4.16s · 生成 9.17s</div></div></div><div class="vcard"><h3>C-00028 · 十四号路灯 · 灵体 · 夜灯员</h3><div class="sub">OR / 边缘街区　·　信条：灯不问来路，只管照路。</div><div class="say">“灯不问来路，只管照路。我是十四号路灯。”</div><div class="trk"><span class="tag">参数档</span><audio controls preload="none" src="voice-samples/C-00028.wav"></audio><span class="meta">89 KB · pitch / rate / vol 参数微调</span><div class="det">pitch +9 / rate +22 / vol 93</div></div><div class="trk"><span class="tag">Kokoro fp32</span><audio controls preload="none" src="voice-pilot-kokoro/C-00028.wav"></audio><span class="meta">231 KB · kokoro-fp32-zf_xiaoxiao</span><div class="det">音色 zf_xiaoxiao · 语速 0.82 · 时长 4.94s · 生成 3.20s</div></div><div class="trk"><span class="tag">Kokoro int8</span><audio controls preload="none" src="voice-pilot-kokoro-int8/C-00028.wav"></audio><span class="meta">234 KB · kokoro-int8-zf_xiaoxiao</span><div class="det">音色 zf_xiaoxiao · 语速 0.82 · 时长 4.99s · 生成 9.49s</div></div></div><div class="vcard"><h3>C-00029 · 咪喱 · 灵体 · 伴居灵</h3><div class="sub">GM / 像素匠人巷　·　信条：蹭饭是门艺术，报恩是门手艺。</div><div class="say">“蹭饭是门艺术，报恩是门手艺。我是咪喱。”</div><div class="trk"><span class="tag">参数档</span><audio controls preload="none" src="voice-samples/C-00029.wav"></audio><span class="meta">116 KB · pitch / rate / vol 参数微调</span><div class="det">pitch +10 / rate +17 / vol 90</div></div><div class="trk"><span class="tag">Kokoro fp32</span><audio controls preload="none" src="voice-pilot-kokoro/C-00029.wav"></audio><span class="meta">252 KB · kokoro-fp32-zf_xiaobei</span><div class="det">音色 zf_xiaobei · 语速 0.85 · 时长 5.37s · 生成 3.64s</div></div><div class="trk"><span class="tag">Kokoro int8</span><audio controls preload="none" src="voice-pilot-kokoro-int8/C-00029.wav"></audio><span class="meta">256 KB · kokoro-int8-zf_xiaobei</span><div class="det">音色 zf_xiaobei · 语速 0.85 · 时长 5.46s · 生成 10.91s</div></div></div>
+
+<h2>二 · 档位体积对照</h2>
+<div class="row"><span class="lab">参数档</span><span class="track"><i style="width:37.8%"></i></span><span class="num">2020906B · 38%</span></div>
+<div class="row"><span class="lab">Kokoro fp32</span><span class="track"><i style="width:31.1%"></i></span><span class="num">1666334B · 31%</span></div>
+<div class="row"><span class="lab">Kokoro int8</span><span class="track"><i style="width:31.1%"></i></span><span class="num">1663992B · 31%</span></div>
+<div class="sub" style="margin-top:10px">int8 / fp32 平均体积比 100%（同文本同音色）· 音色清单：zf_xiaoxiao / zm_yunjian / zm_yunxia / zf_xiaoni / zm_yunxi / zf_xiaobei</div>
+
+<h2>三 · 逐条量化对照</h2>
+<ul>
+<li><b>C-00010 · 顾阿凤</b><span class="d">161 KB / 161 KB</span><span class="x">100% 体积 · 时长差 0.00s · 实时倍率 0.45x / 1.94x</span></li><li><b>C-00011 · 朱鸿奎</b><span class="d">168 KB / 169 KB</span><span class="x">101% 体积 · 时长差 0.02s · 实时倍率 0.70x / 2.19x</span></li><li><b>C-00013 · 林之恒</b><span class="d">206 KB / 206 KB</span><span class="x">100% 体积 · 时长差 0.02s · 实时倍率 0.68x / 2.12x</span></li><li><b>C-00015 · 陈雅雯</b><span class="d">209 KB / 204 KB</span><span class="x">98% 体积 · 时长差 0.10s · 实时倍率 0.72x / 2.07x</span></li><li><b>C-00017 · 归档者-07</b><span class="d">201 KB / 200 KB</span><span class="x">99% 体积 · 时长差 0.02s · 实时倍率 0.72x / 2.11x</span></li><li><b>C-00019 · 老晶振</b><span class="d">198 KB / 195 KB</span><span class="x">98% 体积 · 时长差 0.07s · 实时倍率 0.75x / 2.20x</span></li><li><b>C-00028 · 十四号路灯</b><span class="d">231 KB / 234 KB</span><span class="x">101% 体积 · 时长差 0.05s · 实时倍率 0.65x / 1.90x</span></li><li><b>C-00029 · 咪喱</b><span class="d">252 KB / 256 KB</span><span class="x">102% 体积 · 时长差 0.09s · 实时倍率 0.68x / 2.00x</span></li>
+</ul>
+
+<h2>四 · 读法说明</h2>
+<div class="note">
+<p><b>这不是声纹克隆。</b>音色全部取自引擎内置说话人（zf_xiaoxiao / zm_yunjian 等），
+文本=居民自己的信条句 + 自称句，不含一个人的真实录音，也不含年轮/钩子等深水面内容。</p>
+<p><b>样本是选样试点，不是全量。</b>全城 10114 位居民中仅 8 位有试音，
+按物种覆盖 3 / 3 类；其余居民的声音面尚未开工。</p>
+<p><b>听感判断留给人耳。</b>本页只做档位与体积对照，不做「像不像这个人」的自动评分；
+参数档与 Kokoro 档的优劣由听者自己定。</p>
+</div>
+
+<div class="foot">本页由 Tools/build_city_voices.py 扫描三份 manifest.json 生成（确定性·零 LLM·幂等）· 音频文件位于 census/export/voice-*/</div>
+</div></body></html>

@@ -1237,3 +1237,11 @@
 - 校验：div 54/54 平衡 · 六节标题齐 · 无未渲染占位 · 页面 12.4KB < 300KB 上限 · 索引 10 页 7/7 链接目标存在
 - 未做（诚实）：**视觉验收未做**——浏览器工具禁 file:// 协议（报 Access blocked），本轮只做结构与占位校验，未人眼过图；年轮/相遇/基因轮=白天让路窗（D-20261020-02），ETA 19:00 夜窗自领；语言线 pool_audit 实测 PASS 全桶达标自停（SELF_TERMINATE）；QC 未巡（上轮 R1831 problems=0，每 6 轮节奏下轮到 R1839）
 - tokens: local=0 api=0 api_reason=-（全确定性脚本·零 LLM）
+
+
+## R1837 · 2026-10-20 17:3x @BigLife-OSLoop（让路窗内·确定性面）
+- 产出件：**城市声音馆** Tools/build_city_voices.py + census/export/city-voices.html（14.2KB 单文件·零 LLM）——吃 census/export 下三份 voice manifest（voice-samples 参数档 8 条 / voice-pilot-kokoro fp32 8 条 / voice-pilot-kokoro-int8 8 条），首次把**声音面**接上可见面。四节：试听（8 席 × 3 档 = 24 个 audio 播放器，附音色/语速/时长/生成耗时）· 档位体积对照（参数档 vs fp32 vs int8）· 逐条量化对照（int8/fp32 体积比 + 时长差 + 实时倍率）· 读法说明（明确非声纹克隆、引擎内置音色、8 席为选样非全量）
+- 公开面口径：只取 name / species / profession / district / creed 公面字段，试音文本=creed + 自称句（逐条比对 citizens-light.creed 一致），不含 recent_ring / hook 深水面
+- 校验：audio 标签 24 / wav 引用 24 / 磁盘实存 24（三档各 8 全绿）· 无「无样本」缺口行 · 四节标题齐 · 索引页升 11 页 11/11 链接目标存在
+- 未做（诚实）：未做视觉/听觉验收——浏览器工具对 file:// 被拦（承 R1836 同判），本轮只做结构与文件存在性校验；年轮/相遇/基因轮=白天让路窗（D-20261020-02），ETA 19:00 夜窗自领；语言线 pool_audit 上轮 PASS 自停维持；QC 未巡（上轮 problems=0，每 6 轮节奏下轮到 R1839）
+- tokens: local=0 api=0 api_reason=-（全确定性脚本·零 LLM）
