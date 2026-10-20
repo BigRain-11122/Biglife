@@ -1088,3 +1088,8 @@
   - 三行实况：当前活=批十五落库收口（LLM 让路窗内确定性面）；最近实物=census/registry/{MD,NS,QT,RV,OR}/C-10091~C-10095.md 5 张出生卡 + genes/lives.json 10 条修数 + census/QC-REPORT.md 全绿（2026-10-20 10:1x）；下个里程碑=19:00 让路窗解后年轮续批 + intake_batch18（原料 ho#706+/tp#533+ 需先基因轮备料）。
   - 未做（留单·如实）：①批十五原料用尽（ho#701-705/tp#528-532 已全部消费），下批须先基因轮备料；②语言线今日 PASS 自停、相遇轮 meet-cap 3/3 已满，均按自终止律跳过。
   - tokens: local=0 api=0 api_reason=-（全确定性手写卡+门禁+QC，零 LLM）
+- **R1812**·2026-10-20 11:0x~11:2x @BigLife-OSLoop 轮实录：轮首 git pull=Already up to date；决策水位差集 NEW=0（D-20261020-05 产品面硬下限=对本司「零新动作」·已覆盖）；orders 物理件区无涉本司新行；09:00-19:00 属 LLM 让路窗（D-20261020-02）→ 年轮批被脚本闸拦（yield-window 提示），本轮走确定性主产线。
+  **产品增量=①基因库 10 条收口入库**（R1811 重写的 tp#528-532 / ho#701-705 终版落盘·本轮复核：JSON 合法、数组内零重复、以 HEAD 旧库为池的近重预检最高 0.40 < 0.75 门全部 ok）→ commit c5943bbe；**②census QC 巡检**：cards=10089 evolved=4851 problems=0 dup_rings=37/37（census/QC-REPORT.md 随轮入库）；**③语言线池审计 PASS**：72 轴桶 + 12 像素桶 + 28 问候桶全达标，verdict=PASS → 按自终止律本轮跳过生产。
+  - 三行实况：当前活=确定性主产线（基因库收口 + QC 巡检）·LLM 面候 19:00 让路窗解；最近实物=genes/lives.json 10 条终版 + census/QC-REPORT.md（2026-10-20 11:2x·commit c5943bbe）；下个里程碑=19:00 后年轮批续转（evolve_citizen --batch 3，日账目标 ≥300 环/日）+ intake_batch18 造人 5 席（原料 ho#706+/tp#533+ 需先备料）。
+  - 未做（留单·如实）：①年轮批受让路窗阻断（受 D-20261020-02 管控·非故障）；②相遇轮 meet-cap 3/3 已满、语言线 PASS 自停，均按自终止律跳过；③批十六造人需新基因原料（本轮只收口旧料，未新增）。
+  - tokens: local=0 api=0 api_reason=-（全确定性：基因复核 + QC + 池审计脚本，零 LLM 调用）
