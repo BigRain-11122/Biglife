@@ -1,0 +1,9 @@
+# TASKS.md 编码修复取证（R1821 / T-20261020-02）
+time: 2026-10-20 13:4x
+before: bytes=693382  utf8_strict=FAIL(pos=72)  标记1\xa47=15395
+after : bytes=705517  utf8_strict=OK           U+FFFD=23817
+lines : 1135  行分类={'utf8': 451, 'utf8-replace': 672, 'gbk': 12}
+backup: state/TASKS.bak-20261020-134018.md
+tool  : Tools/repair_tasks_utf8.py (--check / --apply, 幂等: 二次运行 marks=0)
+机理  : 损坏点=每处丢失 1 个 UTF-8 尾字节(压成 0x84)+插入 1\xa47 标记; 原字需上下文推断, 本轮不臆造
+残留  : E2 84 xx 族中位被 U+FFFD(EF BF BD) 顶替约 8400 处 -> T-20261020-03
