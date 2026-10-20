@@ -1275,3 +1275,5 @@
   - 取证：`python -X utf8 Tools/build_city_relations.py` 输出如上；相逢录段落抽读零乱码（宋秀兰/范倩/主频等 6 位实居民）。
   - 顺带修正数据面口径：rel 三值真名为 block/buddy/household（原映射缺后两类，已补「伙伴/同户」）；城区代号 GM/QT/MD/NS/OR/RV 已按正典映射中文名（此前页面只显示代号时会误读为空城区）。
   - tokens: local=0 api=0 api_reason=本行为纯确定性 Python 聚合（零 LLM 调用；年轮线因让路窗未触发）
+
+- **R1841 补记（18:1x）**：同轮收口 T-20261020-04——把 R1810/R1819/R1824 三段被 ASCII `?` 顶替的旧正文，按同轮 commit（25a27acb/ef5727c0/79c5eee0）与 qa 日志（chronicle-qc-R1819.log / dashboard-R1824.log）旁证重写；全档高 `?` 密度行复扫=0，任务板 --check 三项全绿。commit bfb69c6c。
