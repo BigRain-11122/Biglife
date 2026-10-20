@@ -1182,3 +1182,9 @@
 
 - 2026-10-20 15:4x @BigLife-OSLoop R1828 **产品增量=城市语言志（语言面首个产品件）**：新增 Tools/city_lexicon.py（确定性·零 LLM·幂等·只读汇总不改正本）→ census/export/city-lexicon.html（101.8KB 单文件自包含）——把语言线三份正本汇成一张可检索单页：六轴句 1296（6 轴 × 12 情境）+ 像素灵 144（12 情境）+ 问候 476（6 轴 × 4 场合 + 像素灵 4 场合）+ 问答 21 对 + 负面脸 40 句 + 回转 8 句 = **2006 条语料**，左栏分区跳转 + 全页按词实时过滤（豆浆/台风/重逢/收摊类检索）。校验：5 sections / 117 卡 / 1956 引文节点 / 五项锚点齐 / 模板占位零残留；同时把页头门闸徽标从写死 PASS 改为**实跑 Tools/pool_audit.py 取 verdict**（本轮实测 PASS：axes 72/72·sprite 12/12·greet 28/28·faq 7/7·hard_fails=0·under_target=NONE），门闸退化时页面不再冒充通过。commit 26d77cc2 已推。  **未做（如实记）**：年轮批/相遇轮（09:00-19:00 让路窗·D-20261020-02 管控·ETA 19:00 夜窗自领）；pool_audit 实测全桶达标=语言线自停（determinism 192 对 mismatch=0）；QC 巡检验（未到 6 轮节律窗）；T-20261020-03 U+FFFD 补字留低优先（历史不可逆残留）。
   - tokens: local=0 api=0 api_reason=-（本轮全确定性脚本：生成+门闸复跑，零 LLM 调用）
+
+
+- 2026-10-20 16:1x @BigLife-OSLoop R1829 **产品产出=城市整图刷新 + 户籍 QC 巡检**（确定性零 LLM·白天让路窗内轻线）：重建 census/export/city-map.html（Tools/build_city_map.py·883KB）——吞入 15:03 刷新的 citizen-behavior.jsonl 实时行为态，读者面地图「此刻城市分布」追平最新户籍；户籍 QC 实跑 Tools/qc_census.py verdict problems=0（cards=10114/evolved=4851/dup_rings 37/37），census/QC-REPORT.md 随轮更新。
+  **实况补充**：地图 rows=10111 vs 户籍 10114 差 3 = 荣誉席 C-00001~03 无 home/work 锚（脚本站内 if not h or not w: continue 设计内跳过，非缺陷）。language 线 pool_audit 实跑全桶达标=SELF_TERMINATE 跳过（72/72·12/12·greet 28/28·faq 7/7·hard_fails=0）。
+  **未做（诚实）**：年轮/相遇/基因批=白天 09:00-19:00 LLM 让路（D-20261020-02），ETA 19:00 夜窗。
+  - tokens: local=0 api=0 api_reason=-（本轮全确定性脚本，零 LLM 调用）
