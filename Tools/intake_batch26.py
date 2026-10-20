@@ -26,8 +26,8 @@ LIGHT = ri.LIGHT
 BIRTH = "2026-10-20"
 BATCH = "批二十六"
 MAX_ID = 10135
-PRE_LIGHT = 10139
-POST_LIGHT = 10144
+PRE_LIGHT = 10129
+POST_LIGHT = 10134
 
 with io.open(os.path.join(CO, "genes", "lives.json"), encoding="utf-8") as _f:
     _G = json.load(_f)
@@ -216,8 +216,9 @@ def main():
     with io.open(os.path.join(CO, "genes", "lives.json"), encoding="utf-8") as f:
         genes = json.load(f)
     ho_n, tp_n = len(genes["hook_objects"]), len(genes["turning_points"])
-    if not (ho_n == 750 and tp_n == 577):
-        print(f"GENE-BASELINE REFUSED: ho={ho_n} tp={tp_n} != 750/577（批二十六原料基线漂移·零写入）")
+    # 基因库只增不删（先登记后使用）→ 判下限而非等值，避免后续批登记后本批锁死
+    if not (ho_n >= 750 and tp_n >= 577):
+        print(f"GENE-BASELINE REFUSED: ho={ho_n} tp={tp_n} < 750/577（批二十六原料基线不足·零写入）")
         return 4
     for idx in range(745, 750):
         if genes["hook_objects"][idx].strip("? ") == "":

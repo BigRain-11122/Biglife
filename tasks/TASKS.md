@@ -1245,3 +1245,12 @@
 - 校验：audio 标签 24 / wav 引用 24 / 磁盘实存 24（三档各 8 全绿）· 无「无样本」缺口行 · 四节标题齐 · 索引页升 11 页 11/11 链接目标存在
 - 未做（诚实）：未做视觉/听觉验收——浏览器工具对 file:// 被拦（承 R1836 同判），本轮只做结构与文件存在性校验；年轮/相遇/基因轮=白天让路窗（D-20261020-02），ETA 19:00 夜窗自领；语言线 pool_audit 上轮 PASS 自停维持；QC 未巡（上轮 problems=0，每 6 轮节奏下轮到 R1839）
 - tokens: local=0 api=0 api_reason=-（全确定性脚本·零 LLM）
+
+## R1838 · 2026-10-20 17:4x @BigLife-OSLoop（让路窗内·确定性面）
+- 产物件（可跑）：**人口工厂夜窗就绪链修复**——Tools/intake_batch23/24/25 基因基线由「等值」改「下限」（`ho_n >= N and tp_n >= N`），批二十六行基线 10139/10144 勘正为 10129/10134。根因：基因库按「先登记后使用」提前扩到 ho=750/tp=577，而 23/24/25 三批仍用 ==740/==745 等值校验 → 夜窗会连续 `GENE-BASELINE REFUSED` 零写入；批二十六 PRE_LIGHT 与前三批 POST_LIGHT 链（10129）不符 → 法门 `BASELINE REFUSED`。
+- 验证（证据=.codely-cli/_dry_chain_intake.py 只读链式演练）：base rows=10114 → 批二十三 C-10121~25 / 二十四 C-10126~30 / 二十五 C-10131~35 / 二十六 C-10136~40 逐批九门 run_gates17 refusals=0，final_rows=10134，CHAIN-OK。py_compile 四文件全过。
+- 就绪判据：19:00 夜窗按 23→24→25→26 顺序自领即可一次排空 20 席（禁并发/禁跳序，PRE_LIGHT 为前缀硬基线）。
+- QC 巡检（本轮第 3 步）：cards=10114 evolved=4851 problems=0 dup_rings=37/37（无异常，零修复）。
+- 未做（诚实）：年轮/相遇轮=白天让路窗（D-20261020-02），ETA 19:00 夜窗自领；语言线 pool_audit 上轮 PASS 自停维持；基因轮让位给本修复。
+- tokens: local=0 api=0 api_reason=-（全确定性脚本·零 LLM）
+

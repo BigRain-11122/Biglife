@@ -207,8 +207,9 @@ def main():
     with io.open(os.path.join(CO, "genes", "lives.json"), encoding="utf-8") as f:
         genes = json.load(f)
     ho_n, tp_n = len(genes["hook_objects"]), len(genes["turning_points"])
-    if not (ho_n == 740 and tp_n == 567):
-        print(f"GENE-BASELINE REFUSED: ho={ho_n} tp={tp_n} != 740/567（批二十四原料基线漂移·零写入）")
+    # 基因库只增不删（先登记后使用）→ 判下限而非等值，避免后续批登记后本批锁死
+    if not (ho_n >= 740 and tp_n >= 567):
+        print(f"GENE-BASELINE REFUSED: ho={ho_n} tp={tp_n} < 740/567（批二十四原料基线不足·零写入）")
         return 4
     for idx in range(735, 740):
         if genes["hook_objects"][idx].strip("? ") == "":
