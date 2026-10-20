@@ -1,0 +1,31 @@
+R1833 QA log · 2026-10-20 17:0x · [via BigLife-OSLoop]
+=====================================================================
+[1] 轮首三步
+    - git pull --ff-only origin main: Already up to date
+    - 决策水位差集（内容寻杀 python 实读 origins/decisions.md）: NEW=0（D-20261020-01~07 全已消费）
+    - orders CEO 物理件区: 无涉本司新物理件
+
+[2] 主产出① 批二十六 intake 编码（确定性·零 LLM）
+    file: Tools/intake_batch26.py
+    cards: C-10136~C-10140 5 席（篾匠韦竹生 / 补锅匠翁德昌 / 剃头匠祁顺发 / 修伞匠孟广和 / 糖画匠苗巧云）
+    gene: ho#746-750 / tp#573-577（R1832 登记 · nearcheck CLEAN）
+    baseline asserts: MAX_ID=10135 PRE_LIGHT=10139 POST_LIGHT=10144 gene 750/577
+    dry-run gates (no write): GATES PASS
+      - political_redline: 0 hit
+      - sublimate 双底座链 / spirit 碳基零涉 / style_dna 五维逐字入卡
+      - 声位派生 / 真名·ID·钩子 撞库 0 / K12 基因指针复读
+    schedule gate 实跑: YIELD-WINDOW rc=5（工作日 09:00-19:00 让路窗 · 零写入）
+    zero-write 断言: light rows 10114 未变 · census/registry/MD/C-10136.md 不存在
+    commit: a24a9592 (pushed 4c21763f..a24a9592)
+
+[3] 主产出② QC 例行巡检（确定性）
+    cmd: python -X utf8 Tools/qc_census.py --schema
+    result: QC done cards=10114 evolved=4851 problems=0 dup_rings=37/37 schema_rows=52216 schema_bad=0
+    verdict: PASS（不变量零异常 · dup_rings 37/37 为在案基线未新增）
+
+[4] 排程状态
+    D-20261020-02 日间让路窗在役（09:00-19:00 LLM 批零跑）
+    年轮批 due C-00635+ → 19:00 夜窗续批
+    入册队列：批二十三/二十四/二十五/二十六 共 20 席 → 19:00 夜窗按序入册
+
+tokens: local=0 api=0 api_reason=-（本轮全确定性本地件 · 零 LLM 调用）
