@@ -1054,3 +1054,9 @@
   - 判例（落 tasks T-20261020-01 旁）：qc_census.py **不带 --schema 会整段删掉 QC-REPORT 的 Schema 结构层（T-20260926-17）**——正法=例行巡检一律 --schema，缺参数=报告退化（本轮先裸跑发现，已带参重跑复原）。
   - 未做（留单·如实）：①造人批 intake_batch14 仍未做（R1797 起连续留单·09:00-19:00 让路窗内不做 LLM 批·待夜窗）；②T-20261020-01 静默超时缺陷（evolve 无 stdout 逐席 flush）未修。
   - tokens: local=10 api=0 api_reason=-（9 席年轮本地模型生成；QC/水位/导出=确定性零 LLM；全轮零云端）
+
+
+- **R1806**·2026-10-20 09:05~09:32 @BigLife-OSLoop 轮实录：轮首 git pull=Already up to date；水位差集 NEW=0（已覆盖 D-20261020-07），orders 物理件区无涉本司新行；09:0x 起进 LLM 让路窗（<09:00 才可年轮批），evolve_citizen --batch 3 实测返回 yield-window 拒绝（D-20261020-02 闸生效·零写入），故本轮改走确定性面。**产品增量=census 复产批十二 2 席入册 C-10079 罗守灯（外环感知区·夜市修灯摊主）/ C-10080 岑记春（北外滩治理岸·编年史馆户籍誊抄员）**：intake_batch14 全门闸走满（政治红线 0/subimate+spirit pass/style_dna 五维逐字/声位派生复检/职业双底座三段/生计三性/基因指针/真名 ID 钩子撞库/批内两两互异）→ light append-only 10072->10074·两卡落盘·needs+behavior 收口 rows=10074 bad=0·cursor 零触碰；批后 QC --schema cards=10074 problems=0 dup_rings=37/37 schema_rows=52096 schema_bad=0；census/INDEX.md 总人口 10072->10074（批一~十二 44 席）。
+  - 三行实况：当前活=年轮线让路窗内停批（19:00 后解）；最近实物=census/registry/{OR,NS}/C-10079~C-10080.md 2 张出生卡·2026-10-20 09:2x + census/QC-REPORT.md 复检全绿；下个里程碑=19:00 夜窗年轮续批 + 批十三造人（需先补基因原料 ho#691+/tp#518+）。
+  - 未做（留单·如实）：①批十二按现库原料只做 2 席（ho689/690+tp516/517 恰 4 条指针，不足 4 席原料，未凑数——下批须先基因轮备料）；②T-20261020-01 静默超时缺陷（evolve stdout flush）仍未修。
+  - tokens: local=0 api=0 api_reason=-（让路窗内零 LLM：本批为手写卡+确定性管线绿）
