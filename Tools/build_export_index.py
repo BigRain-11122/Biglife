@@ -26,6 +26,8 @@ TITLE = {
     "city-life.html": ("城市日常面", "此刻全城在做什么 / 四轴需求 / 好奇缺口名单 / 怪癖与可见面"),
     "city-voices.html": ("城市声音馆", "八席试点三档试听对照：参数档 / Kokoro fp32 / int8 体积与时长"),
     "gene-ledger.html": ("基因总账", "全类别登记 vs 在册承载 / 覆盖率 / 未落册选题池"),
+    "city-relations.html": ("城市人情志", "关系边总数 / 类型与来源 / 枢纽人物 / 城区互往 / 相逢录"),
+    "city-today.html": ("今日日报", "当天全量年轮（不抽样）+ 城区分布 + 与昨日对比"),
 }
 ORDER = list(TITLE)
 

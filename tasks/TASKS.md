@@ -1283,3 +1283,10 @@
   **可见面同步**=census/export/gene-ledger.html 重建（114.3KB）：registered=1427（+10）/used=402/unused=1025，hook_objects 覆盖 188/754、turning_points 134/580、habits 28/39，未落卡清单可直接作下一批 intake 选题。
   未做（留单·如实）：年轮批受让路窗阻断（ETA 19:00 夜窗首轮）；相遇轮 meet-cap 3/3 今日已满；语言池全桶达标自停。
   - tokens: local=0 api=0 api_reason=-（全确定性:候选查重/文本插入/台账重算，零 LLM 调用）
+
+- **R1843**·2026-10-20 18:2x~18:5x @BigLife-OSLoop 轮记：轮首 pull=Already up to date；决策水位差集 NEW=0（D-20261020-12 已在上轮回写）；orders 物理件区零涉本司新行；09:00-19:00 让路窗（D-20261020-02）内 LLM 面照旧停（ETA 19:00）。
+  **产品增量=城市今日日报上线（第 13 张页）**：`Tools/build_daily_issue.py`（确定性零 LLM·幂等）读 census/registry 全卡「当天」年轮→`census/export/city-today.html`。与编年史（全日期·每日抽 12 条）互补：本页只做当天且**不抽样**，每天随夜窗长出新内容。今日实锚=342 条年轮 / 336 位开口居民 / 6 城区（GAME城 95·QUANT城 94·MEDIA城 66·北外滩 37·外环感知网 35·江面与光桥 15）/ 昨日 406 条（今日未收日，夜窗续长）。
+  **两处口径修正（同轮自检抓出）**：①城区字段存在两代写法（新「GAME 城 · X026 城门区」/老「北外滩·治理岸 · 档案馆区」），首版正则只认英文代号→2757 张老卡落到「UNK」；改为按首个「·」前统称分组，UNK 归零。②KPI 较昨日原输出「多 -64 条」读不通→分正负改写「少 64 条」。
+  **可见面同步**=产物目录 index.html 重建 13 页（新建 city-today 卡片；顺带补上 city-relations 一直缺的标题与描述——此前卡片显示裸文件名+「单页产物」）。
+  未做（留单）：年轮/相遇/造人 LLM 面受让路窗阻断（ETA 19:00）；语言池全桶达标自停。iteration_loop.ps1 的 modified 面非本轮产物（他窗/前轮改动），按定向 add 律未纳入本次提交。
+  - tokens: local=0 api=0 api_reason=-（全确定性：卡面正则解析/HTML 拼装/目录重建，零 LLM 调用）
