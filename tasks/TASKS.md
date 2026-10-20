@@ -1200,3 +1200,10 @@
 - 队列：夜窗入册队列=批二十三/二十四/二十五共 15 席（每批 5 席+10 基因·门闸干跑全 PASS）
 - 未做（诚实）：年轮/相遇/基因批=白天让路窗（D-20261020-02），ETA 19:00 夜窗
 - tokens: local=0 api=0 api_reason=-
+
+## R1832 · 2026-10-20 16:5x @BigLife-OSLoop（让路窗内·确定性面）
+- 产出：**基因批二十六** ho#746-750 + tp#573-577 全 10 条登记入 genes/lives.json（篾匠·竹器行/补锅匠·小推车/老剃头匠·鐾刀布/修伞匠·伞骨/糖画匠·铜勺铁板），gene_nearcheck 三轮改写收敛至 10/10 CLEAN（exit 0·证据 qa/gene-b26-nearcheck.log）；库现 ho=750 / tp=577
+- 门闸：rl_gate.py 干跑 PASS（RL1_JUDGMENT=pass problems=none·consumed=8/13）
+- 队列：夜窗入册队列=批二十三/二十四/二十五共 15 席；批二十六 = 本批基因原料待编 intake（下轮备料）
+- 未做（诚实）：年轮/相遇轮=白天让路窗（D-20261020-02），ETA 19:00 夜窗自领；语言池 pool_audit 实测 PASS 全桶达标自停；QC 上轮 R1831 已巡（problems=0）
+- tokens: local=0 api=0 api_reason=-（全确定性脚本·零 LLM）

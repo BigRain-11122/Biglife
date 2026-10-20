@@ -5,12 +5,22 @@
  "rule": "R-L1",
  "surfaces": {
   "census/export": {
-   "consumers": [],
-   "evidence": [],
+   "consumers": [
+    "biggame-minigame"
+   ],
+   "evidence": [
+    {
+     "consumer": "biggame-minigame",
+     "counts_in_wired": true,
+     "excerpt": "\"t\":  \"R778 复工首产 sync 633673d6 rows=10（census/export citizens-light 刷新·…\",",
+     "hits": 1,
+     "ptr": "gaming/MiniGame/硅基生命元宇宙-data.js:1099"
+    }
+   ],
    "form": "code-reference",
-   "prev_status": "",
-   "status": "unconsumed",
-   "tagged_ts": "2026-10-10T20:14:57+08:00"
+   "prev_status": "unconsumed",
+   "status": "consumed",
+   "tagged_ts": "2026-10-20T16:41:54+08:00"
   },
   "citizen-anchors.jsonl": {
    "consumers": [
@@ -26,29 +36,40 @@
     }
    ],
    "form": "code-reference",
-   "prev_status": "",
+   "prev_status": "consumed",
    "status": "consumed",
-   "tagged_ts": "2026-10-10T20:14:57+08:00"
+   "tagged_ts": "2026-10-20T16:41:54+08:00"
   },
   "citizen-assembly.jsonl": {
    "consumers": [],
    "evidence": [],
    "form": "code-reference",
-   "prev_status": "",
+   "prev_status": "unconsumed",
    "status": "unconsumed",
-   "tagged_ts": "2026-10-10T20:14:57+08:00"
+   "tagged_ts": "2026-10-20T16:41:54+08:00"
   },
   "citizen-atlas.jsonl": {
-   "consumers": [],
-   "evidence": [],
+   "consumers": [
+    "biggame-minigame"
+   ],
+   "evidence": [
+    {
+     "consumer": "biggame-minigame",
+     "counts_in_wired": true,
+     "excerpt": "\"形象面 census/export/citizen-atlas.jsonl\",",
+     "hits": 1,
+     "ptr": "gaming/MiniGame/硅基生命元宇宙-data.js:1163"
+    }
+   ],
    "form": "code-reference",
-   "prev_status": "",
-   "status": "unconsumed",
-   "tagged_ts": "2026-10-10T20:14:57+08:00"
+   "prev_status": "unconsumed",
+   "status": "consumed",
+   "tagged_ts": "2026-10-20T16:41:54+08:00"
   },
   "citizen-behavior.jsonl": {
    "consumers": [
-    "fluxverse"
+    "fluxverse",
+    "biggame-minigame"
    ],
    "evidence": [
     {
@@ -57,36 +78,53 @@
      "excerpt": "# READ-ONLY consumes BigLife census/export/citizen-behavior.jsonl (deterministic",
      "hits": 2,
      "ptr": "gaming/FluxVerse/Tools/perceptor/probes/street_behavior.ps1:3"
+    },
+    {
+     "consumer": "biggame-minigame",
+     "counts_in_wired": true,
+     "excerpt": "\"行为面 census/export/citizen-behavior.jsonl\",",
+     "hits": 1,
+     "ptr": "gaming/MiniGame/硅基生命元宇宙-data.js:1158"
     }
    ],
    "form": "code-reference",
-   "prev_status": "",
+   "prev_status": "consumed",
    "status": "consumed",
-   "tagged_ts": "2026-10-10T20:14:57+08:00"
+   "tagged_ts": "2026-10-20T16:41:54+08:00"
   },
   "citizen-goals.jsonl": {
    "consumers": [],
    "evidence": [],
    "form": "code-reference",
-   "prev_status": "",
+   "prev_status": "unconsumed",
    "status": "unconsumed",
-   "tagged_ts": "2026-10-10T20:14:57+08:00"
+   "tagged_ts": "2026-10-20T16:41:54+08:00"
   },
   "citizen-initiatives.jsonl": {
    "consumers": [],
    "evidence": [],
    "form": "code-reference",
-   "prev_status": "",
+   "prev_status": "unconsumed",
    "status": "unconsumed",
-   "tagged_ts": "2026-10-10T20:14:57+08:00"
+   "tagged_ts": "2026-10-20T16:41:54+08:00"
   },
   "citizen-needs.jsonl": {
-   "consumers": [],
-   "evidence": [],
+   "consumers": [
+    "biggame-minigame"
+   ],
+   "evidence": [
+    {
+     "consumer": "biggame-minigame",
+     "counts_in_wired": true,
+     "excerpt": "\"动机面 census/export/citizen-needs.jsonl\",",
+     "hits": 1,
+     "ptr": "gaming/MiniGame/硅基生命元宇宙-data.js:1148"
+    }
+   ],
    "form": "code-reference",
-   "prev_status": "",
-   "status": "unconsumed",
-   "tagged_ts": "2026-10-10T20:14:57+08:00"
+   "prev_status": "unconsumed",
+   "status": "consumed",
+   "tagged_ts": "2026-10-20T16:41:54+08:00"
   },
   "citizen-persona.jsonl": {
    "consumers": [
@@ -102,33 +140,43 @@
     }
    ],
    "form": "code-reference",
-   "prev_status": "",
+   "prev_status": "consumed",
    "status": "consumed",
-   "tagged_ts": "2026-10-10T20:14:57+08:00"
+   "tagged_ts": "2026-10-20T16:41:54+08:00"
   },
   "citizen-relations.jsonl": {
    "consumers": [],
    "evidence": [],
    "form": "code-reference",
-   "prev_status": "",
+   "prev_status": "unconsumed",
    "status": "unconsumed",
-   "tagged_ts": "2026-10-10T20:14:57+08:00"
+   "tagged_ts": "2026-10-20T16:41:54+08:00"
   },
   "citizen-tasks.jsonl": {
-   "consumers": [],
-   "evidence": [],
+   "consumers": [
+    "biggame-minigame"
+   ],
+   "evidence": [
+    {
+     "consumer": "biggame-minigame",
+     "counts_in_wired": true,
+     "excerpt": "\"候选任务面 census/export/citizen-tasks.jsonl\",",
+     "hits": 1,
+     "ptr": "gaming/MiniGame/硅基生命元宇宙-data.js:1153"
+    }
+   ],
    "form": "code-reference",
-   "prev_status": "",
-   "status": "unconsumed",
-   "tagged_ts": "2026-10-10T20:14:57+08:00"
+   "prev_status": "unconsumed",
+   "status": "consumed",
+   "tagged_ts": "2026-10-20T16:41:54+08:00"
   },
   "citizen-voice.jsonl": {
    "consumers": [],
    "evidence": [],
    "form": "code-reference",
-   "prev_status": "",
+   "prev_status": "unconsumed",
    "status": "unconsumed",
-   "tagged_ts": "2026-10-10T20:14:57+08:00"
+   "tagged_ts": "2026-10-20T16:41:54+08:00"
   },
   "citizens-light.jsonl": {
    "consumers": [
@@ -147,9 +195,9 @@
     {
      "consumer": "biggame-minigame",
      "counts_in_wired": true,
-     "excerpt": "\"file\": \"life/BigLife/census/export/citizens-light.jsonl\",",
-     "hits": 5,
-     "ptr": "gaming/MiniGame/Design/evidence/siliconview-20261007-x2184_maxage_sourcetrace.json:18"
+     "excerpt": "\"导出面 census/export/citizens-light.jsonl\",",
+     "hits": 6,
+     "ptr": "gaming/MiniGame/硅基生命元宇宙-data.js:1143"
     },
     {
      "consumer": "bigdomain",
@@ -160,10 +208,10 @@
     }
    ],
    "form": "code-reference",
-   "prev_status": "",
+   "prev_status": "consumed",
    "status": "consumed",
-   "tagged_ts": "2026-10-10T20:14:57+08:00"
+   "tagged_ts": "2026-10-20T16:41:54+08:00"
   }
  },
- "ts": "2026-10-10T20:14:57+08:00"
+ "ts": "2026-10-20T16:41:54+08:00"
 }
