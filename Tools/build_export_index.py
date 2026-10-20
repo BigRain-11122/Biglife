@@ -22,6 +22,7 @@ TITLE = {
     "city-chronicle.html": ("城市编年史", "全部年轮按日编排的分章长卷"),
     "city-lexicon.html": ("城市语言志", "六轴句 / 像素灵 / 问候 / 问答 / 负面脸语料正本"),
     "city-objects.html": ("城市风物志", "以钩子物件为主角：承载人数 / 主聚城区 / 登记未落册缺口"),
+    "city-districts.html": ("城区志", "六城区逐区人口 / 物种 / 派系 / 职业 / 街区 / 六轴聚合与代表居民"),
 }
 ORDER = list(TITLE)
 
