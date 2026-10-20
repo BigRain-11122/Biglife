@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>城市人情志 · 硅基城市</title>
+<style>
+:root{--bg:#0f1216;--fg:#e8ecf1;--dim:#8b97a6;--line:#232a33;--acc:#c9a06a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.65 "Microsoft YaHei",system-ui,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:26px;margin:0 0 6px}
+.sub{color:var(--dim);font-size:13px;margin-bottom:24px}
+h2{font-size:17px;margin:34px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.card{background:#151a21;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card .k{color:var(--dim);font-size:12px}
+.card .v{font-size:24px;font-weight:600;margin:4px 0 2px}
+.card .n{color:var(--dim);font-size:12px}
+.row{display:flex;align-items:center;gap:10px;margin:6px 0}
+.lab{width:190px;flex:none;color:#c9d4e0;font-size:13px}
+.track{flex:1;height:8px;background:#1c232c;border-radius:5px;overflow:hidden}
+.track i{display:block;height:100%;background:linear-gradient(90deg,#8d7248,#c9a06a)}
+.num{width:104px;flex:none;text-align:right;color:var(--dim);font-size:12px;font-variant-numeric:tabular-nums}
+ul{margin:0;padding-left:0;list-style:none}
+li{display:flex;gap:12px;padding:6px 0;border-top:1px solid #1b222b;font-size:13px}
+li:first-child{border-top:0}
+li b{width:150px;flex:none;font-weight:500}
+li .d{width:110px;flex:none;color:var(--dim)}
+li .x{color:#a9b6c4}
+li .t{color:#5f6b7a;font:11px/1 ui-monospace,monospace;margin-left:6px}
+.note{background:#1a1712;border:1px solid #3a3020;border-radius:10px;padding:14px 16px;color:#c9bb9f;font-size:13px}
+.note b{color:var(--acc)}
+.foot{margin-top:40px;color:#5f6b7a;font-size:12px;text-align:center}
+</style></head><body><div class="wrap">
+<h1>城市人情志</h1>
+<div class="sub">人怎么彼此连着 · 生成 2026-10-20 18:07 · 数据源 census/export/citizen-relations.jsonl + citizens-light.jsonl</div>
+
+<div class="cards">
+<div class="card"><div class="k">关系边</div><div class="v">2841105</div><div class="n">每条边=一次明确的两人关系</div></div>
+<div class="card"><div class="k">涉及居民</div><div class="v">10017</div><div class="n">关系网覆盖人数</div></div>
+<div class="card"><div class="k">人均度</div><div class="v">567.3</div><div class="n">一人平均连着几条边</div></div>
+<div class="card"><div class="k">相逢记录</div><div class="v">29</div><div class="n">cap 内最近 30 条取自年轮</div></div>
+</div>
+
+<h2>一 · 关系类型</h2>
+<div class="row"><span class="lab">同业</span><span class="track"><i style="width:49.7%"></i></span><span class="num">2822314 · 50%</span></div>
+<div class="row"><span class="lab">伙伴</span><span class="track"><i style="width:0.3%"></i></span><span class="num">15131 · 0%</span></div>
+<div class="row"><span class="lab">同户</span><span class="track"><i style="width:0.1%"></i></span><span class="num">3629 · 0%</span></div>
+<div class="row"><span class="lab">meet</span><span class="track"><i style="width:0.0%"></i></span><span class="num">31 · 0%</span></div>
+<div class="sub" style="margin-top:10px">未标注类型 0 条，按原值保留在数据面，不在此页归并。</div>
+
+<h2>二 · 关系从哪里来</h2>
+<div class="row"><span class="lab">X026 城门区</span><span class="track"><i style="width:9.6%"></i></span><span class="num">272691 · 10%</span></div>
+<div class="row"><span class="lab">八号楼街区</span><span class="track"><i style="width:9.2%"></i></span><span class="num">261726 · 9%</span></div>
+<div class="row"><span class="lab">选题馆街区</span><span class="track"><i style="width:8.2%"></i></span><span class="num">232903 · 8%</span></div>
+<div class="row"><span class="lab">游戏楼街区</span><span class="track"><i style="width:8.1%"></i></span><span class="num">229503 · 8%</span></div>
+<div class="row"><span class="lab">信号塔街区</span><span class="track"><i style="width:8.0%"></i></span><span class="num">226801 · 8%</span></div>
+<div class="row"><span class="lab">像素匠人巷</span><span class="track"><i style="width:7.7%"></i></span><span class="num">219453 · 8%</span></div>
+<div class="row"><span class="lab">回测田</span><span class="track"><i style="width:7.4%"></i></span><span class="num">210276 · 7%</span></div>
+<div class="row"><span class="lab">七段街区</span><span class="track"><i style="width:7.3%"></i></span><span class="num">206403 · 7%</span></div>
+<div class="row"><span class="lab">K线广场</span><span class="track"><i style="width:7.2%"></i></span><span class="num">205761 · 7%</span></div>
+<div class="row"><span class="lab">风控高地</span><span class="track"><i style="width:6.5%"></i></span><span class="num">184528 · 6%</span></div>
+
+<h2>三 · 十二位枢纽居民</h2>
+<div class="sub">按边数排序的社交重心；被引用最多的人不是最有名的人，只是被最多关系穿过的人。</div>
+<ul>
+<li><b>邓银娣</b><span class="d">中央市集 GM</span><span class="x">晨操领队 · 包在我身上，这会儿天阴着，风也不小，吹得窗缝直响。我守着这口老茶缸，听江声混着风声，心里头踏实得很。 · 度 747</span></li><li><b>薛糖糖</b><span class="d">中央市集 GM</span><span class="x">像素小学学生 · 搞七捻三，侬晓得伐？今天天阴着，风挺大，正好适合出去走走。收工后还是要绕江走半里，看看那光点如何过江。 · 度 747</span></li><li><b>邹阿Pi</b><span class="d">中央市集 GM</span><span class="x">游戏策划 · 度 747</span></li><li><b>冯之南</b><span class="d">中央市集 GM</span><span class="x">像素画匠 · 度 747</span></li><li><b>叶天天</b><span class="d">中央市集 GM</span><span class="x">沙盒建筑师 · 饭点了，天大的事吃完再谈。这天阴着，风挺大，搞七捻三真不太习惯。 · 度 746</span></li><li><b>曾桂芳</b><span class="d">中央市集 GM</span><span class="x">灯塔守望 · 今早开窗听江声，风挺大，江面上的浪花打得挺欢。老规矩错不了，今天还得巡塔三遍。 · 度 746</span></li><li><b>同步锁·拾</b><span class="d">中央市集 GM</span><span class="x">穿城信使 · 江水都不急我急啥，今天这风挺大，路上得小心些。 · 度 746</span></li><li><b>史小杏</b><span class="d">中央市集 GM</span><span class="x">信使小跟班 · 毫秒也是时间 · 度 746</span></li><li><b>谢沐晴</b><span class="d">中央市集 GM</span><span class="x">8bit 乐师 · 天阴着，风挺大，吹得窗棂哐当响。正好趁这劲头把新谱里的低频扫弦定死，规矩如钟，这乱劲儿得压住。 · 度 746</span></li><li><b>董之恒</b><span class="d">中央市集 GM</span><span class="x">算力楼运维 · 这城里好玩的东西一天比一天多，今天又学了个新招，巡楼时试试用机器的温度预报天气，感觉挺有意思的。 · 度 746</span></li><li><b>吕清晚</b><span class="d">中央市集 GM</span><span class="x">夜宵摊主 · 看天吃饭，看行情穿衣，今朝出摊得等到茶凉些了。 · 度 746</span></li><li><b>蔡磊</b><span class="d">中央市集 GM</span><span class="x">缓存管理员 · 度 746</span></li>
+</ul>
+
+<h2>四 · 城区互往</h2>
+<div class="sub">两端都登记了城区的边，按城区对聚合（含同区内部边）；空城区已排除。</div>
+<div class="row"><span class="lab">中央市集 GM ↔ 中央市集 GM</span><span class="track"><i style="width:34.8%"></i></span><span class="num">988630 · 35%</span></div>
+<div class="row"><span class="lab">低语巷 QT ↔ 低语巷 QT</span><span class="track"><i style="width:27.7%"></i></span><span class="num">786213 · 28%</span></div>
+<div class="row"><span class="lab">机房区 MD ↔ 机房区 MD</span><span class="track"><i style="width:23.6%"></i></span><span class="num">669954 · 24%</span></div>
+<div class="row"><span class="lab">北槐街区 NS ↔ 北槐街区 NS</span><span class="track"><i style="width:6.5%"></i></span><span class="num">183941 · 6%</span></div>
+<div class="row"><span class="lab">旧站台 OR ↔ 旧站台 OR</span><span class="track"><i style="width:6.0%"></i></span><span class="num">169228 · 6%</span></div>
+<div class="row"><span class="lab">河岸 RV ↔ 河岸 RV</span><span class="track"><i style="width:1.5%"></i></span><span class="num">43139 · 2%</span></div>
+
+<h2>五 · 相逢录</h2>
+<div class="sub">年轮里留下「相遇」事件记录的最近 29 位（共 29 位），是双卡互引那一类事件的可见面。</div>
+<ul>
+<li><b>宋秀兰</b><span class="d">中央市集 GM</span><span class="x">与 C-00641 相遇：宋秀兰：城门门禁链刚放行，我守着X026城门看着呢。　<span class="t">2026-10-20</span></span></li><li><b>范倩</b><span class="d">中央市集 GM</span><span class="x">与 C-00629 相遇：范倩：好嘞，你先把这单扛住，新人安进像素里我接着忙。　<span class="t">2026-10-20</span></span></li><li><b>主频</b><span class="d">中央市集 GM</span><span class="x">与 C-00649 相遇：主频：感知链断供九十五轮了，我刚翻完更新日志，这存档点回得真硬。　<span class="t">2026-10-20</span></span></li><li><b>陈伟民</b><span class="d">中央市集 GM</span><span class="x">与 C-00645 相遇：陈伟民：别急，我先把那些冗余数据清一清，反正这云底下风也不大，慢慢来。　<span class="t">2026-10-20</span></span></li><li><b>布尔</b><span class="d">机房区 MD</span><span class="x">与 C-00751 相遇：布尔：G08的S2.5和B2166来回折腾，像老电影跳帧，我修着片子觉得挺带劲。　<span class="t">2026-10-20</span></span></li><li><b>小锚</b><span class="d">机房区 MD</span><span class="x">与 C-00747 相遇：小锚：我尾巴天线正对这股热闹，刚收摊顺手带了宵夜，咱们边吃边聊这出戏。　<span class="t">2026-10-20</span></span></li><li><b>顾阿凤</b><span class="d">北槐街区 NS</span><span class="x">与 C-00011 相遇：顾阿凤：天阴风挺大，刚听那数据粥铺的流水声，说是Biglife又推了新版本。　<span class="t">2026-10-19</span></span></li><li><b>朱鸿奎</b><span class="d">北槐街区 NS</span><span class="x">与 C-00010 相遇：朱鸿奎：风是不小，得把手里的钟摆校准了。BigDomain这数据要是错了，我心里那根弦可紧。　<span class="t">2026-10-19</span></span></li><li><b>邓建国</b><span class="d">旧站台 OR</span><span class="x">与 C-01090 相遇：雨下得正紧，风也挺大，G08 这局从 S2.5 变成 B2166，你那边光缆没积水吧？　<span class="t">2026-10-19</span></span></li><li><b>带宽·叁</b><span class="d">旧站台 OR</span><span class="x">与 C-00027 相遇：没事，我顺着藤蔓查过，Bigmedia 那几根线都干爽，只要 GPU 不 Draft，咱就安心守着。　<span class="t">2026-10-19</span></span></li><li><b>周浩宇</b><span class="d">低语巷 QT</span><span class="x">与 C-00015 相遇：量化推了BigMoney的新代码，我盯着那行阈值半天没动。　<span class="t">2026-10-18</span></span></li><li><b>陈雅雯</b><span class="d">低语巷 QT</span><span class="x">与 C-00014 相遇：这数没过我的眼，Biglife那边也得卡住，先把手头这步做完。　<span class="t">2026-10-18</span></span></li><li><b>罗大壮</b><span class="d">中央市集 GM</span><span class="x">与 C-00020 相遇：风挺大，天阴着，G08这关改得真急。　<span class="t">2026-10-17</span></span></li><li><b>老晶振</b><span class="d">中央市集 GM</span><span class="x">与 C-00018 相遇：老晶振：引擎刚过FluxVerseTick，听那报错声，像根管线在咳血，得修。　<span class="t">2026-10-17</span></span></li><li><b>苏梓涵</b><span class="d">中央市集 GM</span><span class="x">与 C-00018 相遇：CrazyCampus都倒戈了，正好折腾新方案。　<span class="t">2026-10-17</span></span></li><li><b>王多多</b><span class="d">中央市集 GM</span><span class="x">与 C-00029 相遇：王多多：这风挺大，吹得驿站口哨响。我刚弄懂 FluxGroup 推送咋回事，你尾巴天线咋对准这儿？　<span class="t">2026-10-17</span></span></li><li><b>咪喱</b><span class="d">中央市集 GM</span><span class="x">与 C-00021 相遇：咪喱：喵，亮处最热闹呀。王多多嘴真甜，连 Tick 2026-10-17 02:36:02 的 PASS 都懂。　<span class="t">2026-10-17</span></span></li><li><b>糜倩</b><span class="d">中央市集 GM</span><span class="x">与 C-02786 相遇：这版PushEvent刻进碑里，说过的话比章还硬。　<span class="t">2026-10-16</span></span></li><li><b>叶建平</b><span class="d">中央市集 GM</span><span class="x">与 C-02784 相遇：风挺大，城门守着，朋友的事不过夜，安心睡。　<span class="t">2026-10-16</span></span></li><li><b>门格·晨</b><span class="d">北槐街区 NS</span><span class="x">与 C-02799 相遇：天阴着风也不小，刚推了BigMedia的推送，账我先挂你那儿。　<span class="t">2026-10-16</span></span></li><li><b>梁芳</b><span class="d">北槐街区 NS</span><span class="x">与 C-02797 相遇：够用了就行，你送出的光织物我收了，今晚账算清，我去买菜。　<span class="t">2026-10-16</span></span></li><li><b>校验-3</b><span class="d">中央市集 GM</span><span class="x">与 C-03525 相遇：校验-3：天气挺适合，机房里可暖和了。　<span class="t">2026-10-15</span></span></li><li><b>邓予安</b><span class="d">低语巷 QT</span><span class="x">与 C-02341 相遇：邓予安：昨晚代码推了半夜，今夜天气挺适合户外写生。　<span class="t">2026-10-15</span></span></li><li><b>郁建平</b><span class="d">低语巷 QT</span><span class="x">与 C-02340 相遇：郁建平：别傻了，现在哪有好天气，咱们还得盯着时间。　<span class="t">2026-10-15</span></span></li><li><b>魏秀兰</b><span class="d">中央市集 GM</span><span class="x">与 C-02688 相遇：魏秀兰：今天风挺大，吹得灯塔那盏绿灯晃得厉害，像是要把老物件里的旧账都翻出来。　<span class="t">2026-10-15</span></span></li><li><b>黄军</b><span class="d">低语巷 QT</span><span class="x">与 C-02679 相遇：黄军：风大正好清缓存，把那些没用的记忆删了，心里清净了，日子才能像这天气一样实在。　<span class="t">2026-10-15</span></span></li><li><b>郁元宝</b><span class="d">机房区 MD</span><span class="x">与 C-03766 相遇：郁元宝：好主意，走吧，一起散散步。　<span class="t">2026-10-12</span></span></li><li><b>老交换机·甲</b><span class="d">北槐街区 NS</span><span class="x">与 C-03263 相遇：天清气朗风不小，今天正好放风筝。　<span class="t">2026-10-12</span></span></li><li><b>薛琳</b><span class="d">中央市集 GM</span><span class="x">与 C-00020 相遇：（那天的桥上风大，谁也没多说什么。）　<span class="t">2026-09-30</span></span></li>
+</ul>
+
+<h2>六 · 读法说明</h2>
+<div class="note">
+<p><b>边数是结构，不是感情。</b>关系边来自对话广场等生成来源，一个度数高的居民首先意味着「被写进了更多关系记录」。</p>
+<p>关系类型与来源均按数据面原值归类，未做近义合并；未标注类型如实计数。</p>
+<p>相逢录只取 census 导出档的最近一条年轮（recent_ring），不是全部历史。</p>
+</div>
+
+<div class="foot">BigLife · 城市人情志 · 确定性生成（零 LLM） · 全部数据 offline 内嵌</div>
+</div></body></html>

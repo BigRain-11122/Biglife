@@ -1269,3 +1269,8 @@
   **语言线**：`pool_audit.py` = PASS + SELF_TERMINATE（72 轴桶 1296 行、灵族 12 桶 144 行、问候 28 桶、FAQ 7 桶、负向面 40 行，硬失败 0；确定性双抽 192 pairs mismatch=0）→ 按自终止律跳过，不补池。
   未做（如实）：年轮批/相遇轮受让路窗阻断，ETA 19:00 后夜班承接；T-20261020-03 补字低频小步未动。
   - tokens: local=0 api=0 api_reason=-（全确定性：QC 扫描/页面构建/池审计/差集，零 LLM 调用）
+
+- **R1841（10-20 18:04~18:2x）本轮产出：城市人情志上线（第 12 张页）+ 全链实测**：白天让路窗（D-20261020-02）下年轮/相遇/反思三线延后，本轮取确定性只读面——新建 `Tools/build_city_relations.py` 消费此前无页面承载的 1.89 亿字节关系网（284 万边/10017 位居民），产出 `census/export/city-relations.html`。六节=关系类型（同业 298k/伙伴/同户）/关系来源 1720 类/十二位枢纽居民/城区互往/相逢录（29 条「相遇」年轮）/读法说明。实测：edges=2841105、unparsed=0、页面 15.6 KB、耗时 10s、零 LLM；`build_export_index.py` 重建目录 pages=12。
+  - 取证：`python -X utf8 Tools/build_city_relations.py` 输出如上；相逢录段落抽读零乱码（宋秀兰/范倩/主频等 6 位实居民）。
+  - 顺带修正数据面口径：rel 三值真名为 block/buddy/household（原映射缺后两类，已补「伙伴/同户」）；城区代号 GM/QT/MD/NS/OR/RV 已按正典映射中文名（此前页面只显示代号时会误读为空城区）。
+  - tokens: local=0 api=0 api_reason=本行为纯确定性 Python 聚合（零 LLM 调用；年轮线因让路窗未触发）
