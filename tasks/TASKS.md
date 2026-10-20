@@ -1188,3 +1188,8 @@
   **实况补充**：地图 rows=10111 vs 户籍 10114 差 3 = 荣誉席 C-00001~03 无 home/work 锚（脚本站内 if not h or not w: continue 设计内跳过，非缺陷）。language 线 pool_audit 实跑全桶达标=SELF_TERMINATE 跳过（72/72·12/12·greet 28/28·faq 7/7·hard_fails=0）。
   **未做（诚实）**：年轮/相遇/基因批=白天 09:00-19:00 LLM 让路（D-20261020-02），ETA 19:00 夜窗。
   - tokens: local=0 api=0 api_reason=-（本轮全确定性脚本，零 LLM 调用）
+
+## R1830 · 2026-10-20 16:4x @BigLife-OSLoop（让路窗内·确定性面）
+- 产出：批二十五内容预备 5 席 C-10131~10135（白铁匠/箍桶匠/弹棉花匠/铅字排版工/钉秤匠）Tools/intake_batch25.py + 基因 ho#741-745/tp#568-572 已登记（近重 0）+ 门闸干跑 PASS + 城市社会图谱页刷新（nodes=599 edges=692）
+- 排程：让路窗只备料不跑入册；夜窗按批二十三→二十四→二十五顺序入册（基线 PRE/MAX/POST 已预注册）
+- tokens: local=0 api=0 api_reason=-
