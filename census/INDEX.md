@@ -90,3 +90,5 @@
 ## 产品面（可打开实物）
 
 - export/resident-gallery.html —— 居民图谱单页（10114 位·搜索/物种筛选/最新年轮）·生成器 Tools/build_resident_gallery.py（确定性零 LLM·可重跑覆盖）
+- export/city-objects.html —— 城市风物志（750 件物件基因 / 188 件在册承载 / 12542 次卡片提及 / 562 件登记未落册缺口）·生成器 Tools/build_object_atlas.py（只读 genes/lives.json + registry 户卡）
+- export/index.html —— 产物总目录（7 张单页索引）·生成器 Tools/build_export_index.py（只读目录，新增产物页重跑即入册）

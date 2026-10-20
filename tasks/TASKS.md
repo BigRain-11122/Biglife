@@ -1207,3 +1207,10 @@
 - 队列：夜窗入册队列=批二十三/二十四/二十五共 15 席；批二十六 = 本批基因原料待编 intake（下轮备料）
 - 未做（诚实）：年轮/相遇轮=白天让路窗（D-20261020-02），ETA 19:00 夜窗自领；语言池 pool_audit 实测 PASS 全桶达标自停；QC 上轮 R1831 已巡（problems=0）
 - tokens: local=0 api=0 api_reason=-（全确定性脚本·零 LLM）
+
+## R1833 · 2026-10-20 16:53 @BigLife-OSLoop（让路窗内·确定性面）
+- 产出：**城市风物志** Tools/build_object_atlas.py + census/export/city-objects.html（80.8KB 单文件）——以钩子物件为主角：物件基因 750 件 / 在册承载 188 件 / 卡片提及 12,542 次 / 户卡扫描 10,091 张；十二主物（电波猫 1597 人·弄堂门牌号 751·会发光的纽扣 303…）+ 全册分档表（承载人数/主聚城区）+ 30 条钩子动作模板 + 6 条徽记语境 + **562 件登记未落册缺口**（下批内容选题清单）+ 转折点/心愿/习惯叙事土壤；页面全页按物件名检索
+- 产出：**产物总目录** Tools/build_export_index.py + census/export/index.html（7 张单页索引，含 census 根下的社交图谱相对路径）
+- 校验：rows=188 / cards=12 / chips=562 / 未渲染模板占位 0 处；链接目标 7/7 存在；零 LLM 全确定性
+- 未做（诚实）：年轮/相遇轮=白天让路窗（D-20261020-02），ETA 19:00 夜窗自领；语言池 pool_audit 上轮实测 PASS 自停；QC 上轮 R1831 已巡 problems=0
+- tokens: local=0 api=0 api_reason=-（全确定性脚本·零 LLM）
