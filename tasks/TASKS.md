@@ -1678,3 +1678,5 @@
   - 实物：10 张居民卡新增带锚年轮 + 全城事件流 36,013 条回放一致（可 `census/export/city-dashboard.html` 查）
   - 下个里程碑：ring 5,101 → 5,500（399 环；周末全窗 + 夜窗排产，窗 ≤48h）
   - tokens: local=10 api=0 api_reason=-
+
+- [2026-10-24 06:1x] R1894 小结: 年轮 10 席(C-05108~C-05117·qwen3:4b-instruct)+行为线镜像 ring=5111(rows=10)+事件闸 PASS(events=36023 mismatch=0 schema=0)+看板刷新 rings=5111/10114+census 导出索引 13 页; 水位差集 NEW=0(watermark 至 D-20261024-07); pool=SELF_TERMINATE 跳过; QC 上次 05:55 未到周期; meet=CAP; tokens: local=10 api=0 api_reason=-
