@@ -1411,3 +1411,5 @@
   **池审** pool_audit=PASS 全桶达标 SELF_TERMINATE（72/72 六轴桶·12/12 像素灵桶·hard_fails=0·determinism 192 对 mismatch=0）→ 按自终止律不跑 pool_gen。
   **QC 巡** 未跑：census/QC-REPORT.md 上跑 01:39（<24h 合规窗）；相遇轮今日 cap 已用（R1856 3/3）。缺陷面 0。
   tokens: local=2 api=0 api_reason=-
+
+- [x] **T-20261024-01**（R? @BigLife-OSLoop 2026-10-24 02:1x 认领·同轮交付关单）集团 10-23 五司调研件本司动作「事件流改造」（法源=cph4/research/R-20261023-scan-silicon-city.md §四.1）：**events/ 事件面 + 双工具落地**——Tools/events_derive.py（10,091 卡解析→birth/ring/relation 三类事件，分月分片 events/YYYY-MM.jsonl）+ Tools/events_replay.py（回放→逐居民 vitals 与卡面比对）。实弹判据：事件 35,373 条（2026-09=30,140 / 2026-10=5,233）｜schema 错误 0｜回放-卡片不一致 0（年轮条数/末次日期/关系集合/家户号四项全等）→ **PASS**。证据=qa/EVENTS-REPLAY-REPORT.md + state/events-replay.json。events/ 为可重建数据面（入 .gitignore，同 census/export R3 律）；工具体与报告入库。
