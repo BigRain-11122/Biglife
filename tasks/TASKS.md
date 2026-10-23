@@ -1413,3 +1413,5 @@
   tokens: local=2 api=0 api_reason=-
 
 - [x] **T-20261024-01**（R? @BigLife-OSLoop 2026-10-24 02:1x 认领·同轮交付关单）集团 10-23 五司调研件本司动作「事件流改造」（法源=cph4/research/R-20261023-scan-silicon-city.md §四.1）：**events/ 事件面 + 双工具落地**——Tools/events_derive.py（10,091 卡解析→birth/ring/relation 三类事件，分月分片 events/YYYY-MM.jsonl）+ Tools/events_replay.py（回放→逐居民 vitals 与卡面比对）。实弹判据：事件 35,373 条（2026-09=30,140 / 2026-10=5,233）｜schema 错误 0｜回放-卡片不一致 0（年轮条数/末次日期/关系集合/家户号四项全等）→ **PASS**。证据=qa/EVENTS-REPLAY-REPORT.md + state/events-replay.json。events/ 为可重建数据面（入 .gitignore，同 census/export R3 律）；工具体与报告入库。
+
+- R-20261024-0210 @BigLife-OSLoop：年轮线 batch 3 实跑（due 10 席全成，C-00981~C-00990 各 +1 圈，census/registry 落盘·export 重建）｜池审计 PASS（六轴 18/12·greet 28/17·faq 7/3·neg 6/6·determinism 0 mismatch→SELF_TERMINATE 跳过 pool_gen）｜事件流改造交付关单 T-20261024-01。tokens: local=10 api=0 api_reason=-
