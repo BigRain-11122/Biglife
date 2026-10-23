@@ -1,0 +1,29 @@
+T-20261024-03 池生成双缺陷修复 · 证据 2026-10-24
+=================================================
+环境: BigLife 仓 Tools/pool_gen.py（语言线·第 2 步）
+
+缺陷 A（致命·数据丢失）: --target 兼作上限，低目标截断既有深度
+  复现: python -X utf8 Tools/pool_gen.py --append --target 8 --sprite-target 6
+  现象: cognition/pools.json 总量 1440 -> 648（84 insertions / 876 deletions）
+        每桶 18 -> 8 行（例: axes/烟火/morning 18 -> 8）
+  溯源: 431 行轴桶与 sprite 桶均写 pools[...] = got[:target]，目标即上限
+  语境: 轮值指令固定传 --target 8 --sprite-target 6，而实际水位是 18/12
+        => 每跑一次语言线就削掉 55% 池深度（且 pool_audit 下一次才报警）
+  修法: 目标改为增长下限——keep=本次读取的有效行数，切片用 max(target, keep)，
+        读取路径不再回写截断版
+  验证: 同命令复跑后 TOTAL=1440，cognition/pools.json 与 HEAD 语义相等
+        (json 对比 old==new True)，pool_audit verdict=PASS
+
+缺陷 B（断线·等到才炸）: 模型硬编码 qwen2.5:7b-instruct
+  背景: 集团探针 model-whitelist-probe.py 每小时 /api/delete qwen2.5 族
+        （HQ-FEEDBACK F-20261024-BL01），本机在役席位=qwen3:4b-instruct
+  现象: 桶一旦欠深，pool_gen 全部请求 404，语言线整条断
+  修法: MODEL 默认空 = 运行时向 /api/tags 解析（qwen3:4b-instruct 优先，
+        qwen2.5:7b 次选，再退任意 qwen*），BIGLIFE_MODEL 仍可强制钉住
+  验证: resolve_model() -> qwen3:4b-instruct
+        llm('用五个字说一句早安') -> '早安万物醒'（本地零 token）
+
+回归面: python -X utf8 Tools/pool_audit.py
+  axes buckets 72: lines=1296 at_target=72
+  sprite buckets 12: lines=144 at_target=12
+  hard_fails: 0 / verdict: PASS / SELF_TERMINATE

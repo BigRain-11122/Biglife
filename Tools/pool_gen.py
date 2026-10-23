@@ -7,7 +7,7 @@ contexts (+ sprite pool). Paid once, consumed forever at zero cost.
 Honesty law (cognition/README): pool = context-flavored tone, zero concrete
 facts - no digits, no names, no dates; facts enter only via spotlight/ring,
 and pool contexts are only ACTIVATED by real data (the fact gate).
-Local Ollama only (qwen2.5:7b-instruct, zero token).
+Local Ollama only (seat model resolved at run time, zero token).
 Iteration (CODEX §14 language line): --target/--sprite-target set bucket depth;
 buckets already at target are SKIPPED (self-terminating growth; floor/cap
 enforced). Growth reopens only on new contexts / festivals / CEO order.
@@ -21,7 +21,30 @@ CO = os.path.dirname(HERE)
 POOL = os.path.join(CO, "cognition", "pools.json")
 LOCK = os.path.join(CO, "state", "pool.lock")
 OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
-MODEL = os.environ.get("BIGLIFE_MODEL", "qwen2.5:7b-instruct")
+MODEL = os.environ.get("BIGLIFE_MODEL", "")  # empty = resolve from the live seat
+
+
+def resolve_model():
+    """T-20261024-03: never pin a model this box does not have.
+
+    The fleet probe model-whitelist-probe.py auto-rm's the qwen2.5 family
+    hourly, so a hard-coded qwen2.5:7b-instruct made this whole line die with
+    a 404 the moment the language line reopened. Prefer a whitelisted seat,
+    then whatever qwen* the seat actually serves (same policy as
+    evolve_citizen._ollama_model).
+    """
+    if MODEL:
+        return MODEL
+    try:
+        with urllib.request.urlopen(OLLAMA.rstrip("/") + "/api/tags", timeout=3) as r:
+            names = [m.get("name", "") for m in (json.loads(r.read().decode("utf-8")).get("models") or [])]
+    except Exception:
+        return "qwen3:4b-instruct"
+    for want in ("qwen3:4b-instruct", "qwen2.5:7b"):
+        if want in names:
+            return want
+    qwens = sorted(n for n in names if n.startswith("qwen"))
+    return (qwens or names or ["qwen3:4b-instruct"])[0]
 
 AXES = {
     "烟火": "柴米油盐的踏实劲儿，像早点摊主、食堂师傅、菜场阿姨",
@@ -50,7 +73,7 @@ SPRITE_CONTEXTS = CONTEXTS
 def llm(prompt, timeout=120):
     req = urllib.request.Request(
         OLLAMA.rstrip("/") + "/api/generate",
-        data=json.dumps({"model": MODEL, "prompt": prompt, "stream": False,
+        data=json.dumps({"model": resolve_model(), "prompt": prompt, "stream": False,
                          "options": {"temperature": 0.9, "num_predict": 220}}).encode("utf-8"),
         headers={"Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -465,8 +488,9 @@ def main():
         for ctx, cdesc in CONTEXTS.items():
             pools["axes"][axis].setdefault(ctx, [])
             got = [l for l in pools["axes"][axis][ctx] if valid(l)]
+            keep = len(got)  # --target is a growth floor, never a cap (T-20261024-03)
             if len(got) >= args.target:
-                pools["axes"][axis][ctx] = got[:args.target]
+                pools["axes"][axis][ctx] = got
                 print(f"bucket {axis}/{ctx}: {len(got)} (at target)")
                 continue
             for attempt in range(3):
@@ -474,7 +498,7 @@ def main():
                 got = got + fresh
                 all_lines.update(fresh)
                 if len(got) >= args.target: break
-            got = got[:args.target]
+            got = got[:max(args.target, keep)]
             pools["axes"][axis][ctx] = got
             save_pools(pools)
             if len(got) < 4:
@@ -483,8 +507,9 @@ def main():
     for ctx, cdesc in SPRITE_CONTEXTS.items():
         pools["sprite"].setdefault(ctx, [])
         got = [l for l in pools["sprite"].get(ctx, []) if 4 <= len(l) <= 24]
+        keep = len(got)  # growth floor, not a cap (T-20261024-03)
         if len(got) >= args.sprite_target:
-            pools["sprite"][ctx] = got[:args.sprite_target]
+            pools["sprite"][ctx] = got
             print(f"bucket sprite/{ctx}: {len(got)} (at target)")
             continue
         for attempt in range(2):
@@ -492,7 +517,7 @@ def main():
             got = got + fresh
             all_lines.update(fresh)
             if len(got) >= args.sprite_target: break
-        got = got[:args.sprite_target]
+        got = got[:max(args.sprite_target, keep)]
         pools["sprite"][ctx] = got
         save_pools(pools)
         if len(got) < 3:
