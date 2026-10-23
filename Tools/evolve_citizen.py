@@ -534,7 +534,9 @@ def _ollama_model():
             names = [m.get("name", "") for m in (json.loads(r.read().decode("utf-8")).get("models") or [])]
     except Exception:
         return None
-    for want in ("qwen2.5:7b",):
+    # T-20261024-02: fleet probe model-whitelist-probe.py auto-rm's the qwen2.5
+    # family hourly, so prefer a whitelisted seat and keep 2.5:7b as fallback.
+    for want in ("qwen3:4b-instruct", "qwen2.5:7b"):
         if want in names:
             return want
     return names[0] if names else None
