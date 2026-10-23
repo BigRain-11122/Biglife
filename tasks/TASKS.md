@@ -975,7 +975,7 @@
 
 
 - [ ] **T-20261020-01**（工具缺口单·同病二犯升格·R1786 实弹立单）：**年轮批前台调用静默超时复发（T-20261019-01 修单未覆盖生成前静默段）**——首班批逐席 print+flush 生效（进度可见），第二班却批内零 stdout 达 5 分钟被会话工具静默窗击杀（6 环已生成未收口，当轮救援零弃环）。判据：现有保活只覆盖「每席完成时」，单席 LLM 调用本身挂起（:8090 无响应/首包迟滞）时仍全静默。拟修法：①逐席**调用前**先打印 `start <cid> <ts>` 并 flush（覆盖挂起段）；②单席 HTTP 超时显式化（requests timeout=120s）+超时即打印 skip 理由；③批领导者心跳线程每 30s 打点（`heartbeat <n>/<len> <ts>`）。验收：连续 3 批前台执行全程每 ≤60s 有 stdout 行、击杀面归零或失败可从日志定位到具体席。
-  - status: open（2026-10-20 05:2x @BigLife-OSLoop R1786 立单·执行=下轮第一优先小步）
+  - status: closed 2026-10-24 05:5x @BigLife-OSLoop R1888 复验关单——三件均已落地实证：①逐席调用前起点打印（本轮实跑输出 evolving C-05048 (1/10) start 05:38:43 … 逐席可见）②单趟 HTTP 超时显式化（Tools/evolve_citizen.py L692-693 BIGLIVE_LLM_TIMEOUT 默认 120s）③批内心跳线程 SeatHeartbeat（L698-726 每 30s 打点·L2064 每席 with 包裹）。本轮 10 席批全程无静默击杀，判据达成。
 
   - status: **closed（2026-10-20 05:36 @BigLife-OSLoop R1787 当轮交付关结）**——修法三件全落 Tools/evolve_citizen.py：①逐席调用前 `evolving <cid> (n/N) start <HH:MM:SS>` + flush（覆盖挂起段）；②单席超时显式化=`llm timeout skip <cid> (stays due)` 逐席跳过继续，连接拒绝仍走 `ollama down; batch paused`（两态分立，不把挂起误判成服务器死）；③`SeatHeartbeat` 心跳线程每 30s 打点 `heartbeat <cid> #n <HH:MM:SS>`。验证=py_compile 过+心跳冒烟（1s 间隔 2 拍实出）+超时异常类型实测（不可达地址 2s → URLError(reason=TimeoutError)，命中跳过分支）+实弹三批 20 席全程 ≤30s 必有 stdout（证据 state/_evolve-R1787.log 心跳实出）。commit 2b466699。
 
@@ -1633,5 +1633,14 @@
   - 下个里程碑：ring 5,041→5,500（约 460 席）；T-20261024-02 图像级 aCCS<0.833 候 GPU 窗
   - 闸门：events_refresh --gate PASS（cards=10091 / events=35953 / schema=0 / mismatch=0）；pool_audit verdict=PASS under_target=NONE → 语言线自停；相遇轮今日 cap=3 已满自停
   - QC 巡检（R1833 后首次）：初始 problems=1 = census/anchors/4v/README.md 被误判 bad id（扫描器未排除说明文件）→ Tools/qc_census.py 加 README 豁免；复跑 problems=0 PASS（dup_rings=37/37 属观测面·历史环不回溯）
+  - 未入库（如实）：Tools/iteration_loop.ps1、cognition/pools.json 为轮前既有改动（他窗在途·非本轮产出·不 add）；.codely-cli/ 运行时目录不入库
+  - tokens: local=10 api=0 api_reason=-
+
+- **R1888**（2026-10-24 05:38~05:5x @BigLife-OSLoop 轮记）：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 至 D-20261020-12）；orders 尾无涉本司新令。
+  - 当前活：年轮线续推 cursor 至 C-05057（10 席落环·脚本自提交 c173c949 + 行为线镜像 e02dbcce）
+  - 最近实物：census/export/city-dashboard.html（rings=5051 / 10114 居民 / 05:5x）+ city-life.html + index.html 三面同步（commit cbccea23 已推）
+  - 下个里程碑：ring 5,051→5,500（约 450 席）；T-20261024-02 图像级 aCCS<0.833 候 GPU 窗
+  - 闸门：events_refresh --gate PASS（cards=10091 / events=35963 / schema=0 / mismatch=0）；pool_audit verdict=PASS under_target=NONE → 语言线自停；相遇轮今日已跑（496db86f C-00065/C-00066）跳过；QC 未到期
+  - 工具单关单：T-20261020-01（年轮批静默击杀）三件修法实证落地 → closed
   - 未入库（如实）：Tools/iteration_loop.ps1、cognition/pools.json 为轮前既有改动（他窗在途·非本轮产出·不 add）；.codely-cli/ 运行时目录不入库
   - tokens: local=10 api=0 api_reason=-
