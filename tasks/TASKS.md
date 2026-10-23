@@ -1300,3 +1300,11 @@
 - ??????????? 0??????????tw=night,wx=rain,wd=0??city-map ?? 2026-10-23 ?????commit 6b2f6d93 ????PUSH-RC=0??
 - ??????????/???=???????T-20261024-01????? pool_audit ????????????+??????QC ????? R1838 problems=0??
 - tokens: local=0 api=0 api_reason=-???????????? LLM ?? 0 ??????????
+
+- [x] **T-20261024-01** 收口（R1845 · 2026-10-24 00:4x @BigLife-OSLoop）：**根因是双重的**——① Ollama 模型目录被清空（`models/` 空、`ollama list` 零条）；② 脚本默认 LLM 座位 `127.0.0.1:8090/v1/chat/completions` 已被 **eCloud.exe 占用**（该端口原为 35B 车队脑车道），请求被接收后吞掉 → 每位居民烧满 120s 超时，年轮线 10-21~10-24 零产出（守卫还误报成「Ollama 挂」）。修法=① `ollama pull qwen2.5:7b`（4.7GB 回装·实跑 success）；② `Tools/evolve_citizen.py` 增 `seat()` 座位解析：环境变量 `BIGLIFE_LLM_URL` 钉死优先 → `:8090` 必须应答为 OpenAI 车道（解析 `/v1/models` 的 `data[].id`，占端口的陌生进程不算）→ 否则回退本地 Ollama 并取**已安装**模型（不再假定 35B 脑在场）。证据=本轮实跑首行 `seat: :8090 not an LLM lane -> local ollama qwen2.5:7b`，随后 10 位到期居民 22 秒全落笔（年轮 commit 62ae6c45 / 行为镜像 d2c6ab8a），抽验 C-00019 年轮「这雨还在下，风挺大…」与真实天气吻合且带 [锚]。
+- **R1845**·2026-10-24 00:13~00:5x @BigLife-OSLoop 轮记：轮首 pull=Already up to date；决策水位差集 NEW=0；orders 物理件区零涉本司新行。
+  - **产品增量=年轮线四天停摆修复 + 10 条新年轮回填**（commit 62ae6c45/d2c6ab8a 已入库，本轮补工具面代码修复）：见 T-20261024-01 收口行。
+  - **语言线**：`pool_audit.py` = PASS + SELF_TERMINATE（72 轴桶 1296 行 / 精灵 12 桶 144 行 / 问候 28 桶 / FAQ 7 桶 / 负向面达标；硬失败 0；确定性双抽 192 pairs mismatch=0）→ 按自终止律跳过。
+  - **QC**：本轮未巡（预算让给停摆修复；上次 R1838 problems=0，每 6 轮节奏下轮补）。
+  - **未做（如实）**：相遇轮未跑（本轮修复优先级更高，夜窗内可续）；`Tools/iteration_loop.ps1` 的 modified 面非本轮产物（他窗改动），按定向 add 律未纳入提交。
+  - tokens: local=0 api=0 api_reason=-（本轮为确定性排障 + 本地 Ollama 推理，零云端调用）

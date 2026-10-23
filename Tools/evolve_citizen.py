@@ -511,6 +511,45 @@ FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", 
 OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
 MODEL = os.environ.get("BIGLIFE_MODEL", "qwen3.6-35b")
 LLM_URL = os.environ.get("BIGLIFE_LLM_URL", "http://127.0.0.1:8090/v1/chat/completions")
+
+# T-20261024-01 (2026-10-24): the 35B fleet seat on :8090 is not ours to assume.
+# eCloud.exe took the port; our POST was accepted and then swallowed, so every
+# citizen burned the 120s timeout and rings stopped for four days (10-21~10-24).
+# Resolve the seat once per run: an explicit env pin wins, else :8090 only counts
+# when it answers as an OpenAI lane, else fall back to the local Ollama seat with
+# a model that is actually installed (never assume the 35B brain is present).
+_SEAT = None
+
+def _openai_seat_ok(url):
+    try:
+        with urllib.request.urlopen(url + "/models", timeout=3) as r:
+            j = json.loads(r.read().decode("utf-8"))
+        return any(m.get("id") for m in (j.get("data") or []))
+    except Exception:
+        return False
+
+def _ollama_model():
+    try:
+        with urllib.request.urlopen(OLLAMA + "/api/tags", timeout=3) as r:
+            names = [m.get("name", "") for m in (json.loads(r.read().decode("utf-8")).get("models") or [])]
+    except Exception:
+        return None
+    for want in ("qwen2.5:7b",):
+        if want in names:
+            return want
+    return names[0] if names else None
+
+def seat():
+    global _SEAT
+    if _SEAT is None:
+        url, model = LLM_URL, MODEL
+        if not os.environ.get("BIGLIFE_LLM_URL") and not _openai_seat_ok("http://127.0.0.1:8090/v1"):
+            m = _ollama_model()
+            if m:
+                print("seat: :8090 not an LLM lane -> local ollama %s" % m, flush=True)
+                url, model = OLLAMA + "/v1/chat/completions", m
+        _SEAT = (url, model)
+    return _SEAT
 COOLDOWN_DAYS = 7
 REFLECT_MIN_RINGS = 3   # V2-B: a reflection needs a life to look back on
 POOL_CAP = 2            # T-20260925-01: soft per-batch cap for cross-card pool-gene quotes
@@ -631,9 +670,10 @@ except ImportError:  # synced machine without the local pip: single-shot, as bef
 
 @_llm_retry
 def llm(prompt):
+    url, model = seat()
     req = urllib.request.Request(
-        LLM_URL,
-        data=json.dumps({"model": MODEL,
+        url,
+        data=json.dumps({"model": model,
                          "messages": [{"role": "user", "content": prompt}],
                          "max_tokens": 120, "temperature": 0.8,
                          "chat_template_kwargs": {"enable_thinking": False},
