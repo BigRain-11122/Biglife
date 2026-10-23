@@ -1653,3 +1653,11 @@
   - 下个里程碑：ring 5,071→5,500（约 430 席 / 每轮 10 席，窗 ≤48h）；T-20261024-02 图像级 aCCS<0.833 判据待 GPU 窗。
   - 闸门：events_refresh --gate PASS（cards=10091 / events=35983 / schema=0 / mismatch=0）；pool_audit 全桶达标=SELF_TERMINATE 跳过；QC 上轮 05:44 problems=0 未到复检轮。
   - tokens: local=10 api=0 api_reason=-
+
+- R1891 2026-10-24 05:5x @BigLife-OSLoop 轮记：轮首 pull=Already up to date，决策水位差集 NEW=0（watermark 至 D-20261020-12，10-21~10-24 无本司新决策行），orders 尾无本司新令
+  - 当前活：年轮线续转（cursor 至 C-05087）；10 席落环·脚本自提交 220ee51b + 行为线镜像 b5a35ee2 ring=5081
+  - 最近实物：census/export/city-dashboard.html（rings=5081 / 10114 居民 / 2026-10-24 06:0x 刷新）+ index.html 导出索引同步（commit 本轮）
+  - 下个里程碑：ring 5,081 → 8,500（约 420 席 / 每轮 10 席 ≈ 42h）；T-20261024-02 图像面 aCCS<0.833 判据候 GPU 窗
+  - 闸门：events_refresh --gate PASS（cards=10091 / events=35993 / schema=0 / mismatch=0，qa/EVENTS-REPLAY-REPORT.md 入库）；QC 巡检 cards=10114 rings=5081 problems=0（census/QC-REPORT.md 入库）；相遇轮今日 cap=3 已满自停；语言线池全桶达标自停
+  - 未入库（如实）：Tools/iteration_loop.ps1（他窗 CLOUD-OFF 守卫在途）、cognition/pools.json（行尾差异）为轮前既有改动，非本轮产出未 add；.codely-cli/ 运行时目录不入库
+  - tokens: local=10 api=0 api_reason=-
