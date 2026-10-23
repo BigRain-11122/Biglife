@@ -1397,3 +1397,11 @@
   - tokens: local=10 api=0 api_reason=-（本地 Ollama qwen3:4b-instruct 年轮 10；页面重建为确定性零 LLM；零云端调用）
 
 - **R1856**（2026-10-24 01:5x @BigLife-OSLoop 轮记）：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 已含 D-20261020-12，10-21~10-24 无新 D 行）；任务板无 open 单。**产品增量**=年轮环 10 条（C-00120/123/124/125/126/128/129/130/131/132，全部带 [锚] 真实事件脚注）→ commit 6a9af8c6 + 行为线自动收口 12e06277（rows=10 ring=4851）；**城市今日日报重建** city-today.html rings=104 people=100 cards=10091（较上轮 94 条 +10）；**城市总看板重建** city-dashboard.html total=10114 卡 160；导出索引 index.html pages=13。语言线 pool_audit=PASS 全桶达标 SELF_TERMINATE（72/72 轴桶、12/12 灵桶、hard_fails=0、determinism 192 对 mismatch=0）→ 按自终止律跳过。相遇轮 meet-cap 3/3 已满 → 跳过。QC 巡检今日已跑（da1b921f，不变量 0）→ 周期内跳过。tokens: local=2 api=0 api_reason=-
+
+- **R1857**（2026-10-24 02:0x 交互班 @BigLife-OSLoop 轮记）：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 含至 D-20261020-12，10-21~10-24 无新 D 行）→ 仅执行 orders 10-23 23:3x「全集团调研自己最新业务技能」之知悉面（硅基城市群线交付件 `cph4/research/R-20261023-scan-silicon-city.md` 已在盘 7.1KB·33 次检索 14 成源·含 3 条与现行冲突，本司不重复造件）。任务板无 open 单。
+  **产品增量（CEO 能看）**=对外看板 **7 面全量刷新**（10-20 后积压的 4,851 圈年轮入屏）：city-chronicle.html（1,594 日行·10,068 圈·19 天·卡片 10,091）+ city-lexicon.html 101.8KB（语料 2,006 行 gate=PASS）+ city-objects.html 81.3KB（物件 754·提及 12,542·卡片 10,091）+ city-relations.html 14.5KB（边 2,841,105·节点 10,017·meets=25）+ city-districts.html 50.1KB（6 城区·10,114 席）+ city-voices.html 14KB（8 席 3 轨）+ gene-ledger.html（基因面）；commit 88e32ad5 已推 origin。
+  **年轮线**=evolve_citizen --batch 3 实跑 due 10/10 全成（C-00961~C-00970·均带 [锚]）→ 脚本自提交 402ad897 + 行为线收口 2090e420（rows=10 ring=4,851）；合计本地 LLM 调用 10 次（qwen3:4b-instruct）。
+  **闸门**=pool_audit=PASS 全桶达标（72/72 轴·12/12 灵·greet28·faq7·neg 6/6·hard_fails=0·determinism 192 对 mismatch=0）→ SELF_TERMINATE 跳过；QC 今日 01:40 已跑（problems=0）周期内不重跑；相遇轮当日 cap 已满（C-00065/66、C-00044/47、C-00012/16 三对在案）→ skip；月度聚光灯 10-20 已 2/2 达标。
+  **实况三行**=当前活：年轮线（due 批次 10 席/轮·已进化 4,851/10,114）｜最近实物：`census/export/city-chronicle.html`（2026-10-24 02:0x·7 面刷新）+ `census/registry/*/C-00961~C-00970.md`｜下个里程碑：年轮覆盖过半（约 5,057 席·按现速 ≈1.5 天）。
+  **未动面（如实）**=`Tools/iteration_loop.ps1` 为轮前既有 modified（非本轮产出，未 add）；`.codely-cli/` 运行时目录不入库。
+  - tokens: local=10 api=0 api_reason=-
