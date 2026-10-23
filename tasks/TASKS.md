@@ -1545,3 +1545,10 @@
 - **R1875**?2026-10-24 04:0x ?? @BigLife-OSLoop ???pull=Already up to date????? NEW=0?watermark ??? D-20261020-12?10-21~10-24 ????? D ???orders ????????TASKS open ?=0???? PASS ???? SELF_TERMINATE?72/72 ??+12/12 ??+?? 6/6?determinism mismatch=0?? ??????**????**=?? 10 ??C-01271~C-01280???? [?] ?????commit 7e17b253?+ ??????????rows=10 ring=4851?commit 9417c869??**?????**=city-dashboard.html total=10114 rings=4851 cards=160 / city-life.html rows=10114 / city-today.html rings=424 people=420 districts=6?commit a1723468 ?? origin??????? 3/3 ???R1856 ???? ???QC ?? 02:0x ? PASS ????tokens: local=10 api=0 api_reason=-
 
 - [2026-10-24 04:1x] R1876 轮记: 年轮 10 席(C-01281~C-01290·qwen3:4b-instruct 本地)+可见面三页刷新上屏(city-dashboard/life/today)；语言池 audit PASS 自停；QC/相遇日配额本日已达标跳过。tokens: local=10 api=0 api_reason=-
+
+- [2026-10-24 04:2x] R1877 轮记: 年轮 10 席(C-01291~C-01300·本地 qwen3:4b-instruct)+新闸上线 gap #70 批内开头去重(ring_violations 新增 batch-dup-opening 面·gated_llm 尾钉重生提示·批级 accepted-opening 集合)；池 audit PASS 自停；QC problems=0；相遇日配额 3/3 已满跳过。
+  - 当前活：年轮线每轮 10 席（cooldown 到期推送）+ 语言线自停（72/72 桶全达标）
+  - 最近实物：census 年轮卡 10 张已落库（commit dddca2d6，行如 C-01291「雨还在下…」带[锚]城市实况 2026-10-24）/ 行为线镜像 census/export/citizens-light.jsonl ring=4851（commit 0a506e31，已推 origin）
+  - 下个里程碑：年轮覆盖 4,851 → 5,000 环（约 15 轮 ×10 席·48h 窗内）；gap #70 抑制同批同开头（本批 7/10 同开头为改前存量，下批起生效）
+  - 未入库（如实）：Tools/iteration_loop.ps1 为轮前既有 modified（非本轮产出·未 add）；cognition/pools.json 仅换行面差异；.codely-cli/ 运行时目录不入库
+  - tokens: local=10 api=0 api_reason=-

@@ -1225,6 +1225,16 @@ def ring_violations(line, sig):
     # out flat (#46/#51 first-strike protocol).
     if line.count("\u201c") != line.count("\u201d"):
         v.append("stray-quote")
+    # v0.51 gap #70 (2026-10-24 R1877): batch-level opening dedup - one batch
+    # wrote 7/10 rings sharing the same 12-char opening (「这会儿天还黑着，雨
+    # 还在下，风挺大」), a template collapse the per-card suites cannot see.
+    # sig["batch_openings"] is the batch-scoped set of accepted openings the
+    # batch caller populates; absent (meet/reflect faces) -> check off.
+    bo = sig.get("batch_openings")
+    if isinstance(bo, set):
+        op = re.sub(r"\s+", "", line or "").strip("「」\"“”")[:12]
+        if len(op) >= 8 and op in bo:
+            v.append("batch-dup-opening")
     return v
 
 def gated_llm(prompt, sig, max_regens=3):
@@ -1255,6 +1265,14 @@ def gated_llm(prompt, sig, max_regens=3):
                       + line.strip()[:60]
                       + "」）。重写一条全新的：严禁再输出这句或任何与旧年轮相同/高度相似的句子，"
                         "开头第一句必须换掉，从今日实况里挑一件上次没写过的事。")
+        if "batch-dup-opening" in v:
+            # gap #70: tail-pinned like dup-history - the 4B copies whatever it
+            # last saw, so the rejected opening is named right at the tail.
+            prompt = (prompt
+                      + "\n你刚才那句的开头（「"
+                      + line.strip()[:20]
+                      + "」）与本轮另一位居民雷同。重写：第一个短句必须完全换一种写法，"
+                        "先写本居民此刻手上正在做的一件小事，再带今日实况。")
     print("gate: persistent violations", v)
     print("gate: last violating line:", line[:120])
     return None
@@ -1993,6 +2011,7 @@ def main():
     paths = []
     pool_genes = load_pool_genes()   # T-20260925-01: soft opening-diversity guidance
     pool_used = {}
+    sig["batch_openings"] = set()    # gap #70: batch-scoped opening dedup face
     for cid in due:
         # T-20261019-01: per-seat stdout keepalive, flush=True beats pipe block-buffering
         # T-20261020-01: seat start carries a timestamp so a stalled seat is
@@ -2064,6 +2083,9 @@ def main():
         if self_dup_history(line, text):
             print("gate: dup-history skip", cid, "(stays due)", flush=True)
             continue
+        # gap #70: record the accepted opening so later seats in this batch must
+        # vary theirs (same-round cross-card repetition is not a per-card defect).
+        sig["batch_openings"].add(re.sub(r"\s+", "", line)[:12])
         note_pool_use(line, face, pool_genes, pool_used)  # T-20260925-01: count cross-card quotes
         add_ring(p, cid, line, anchor_note)
         paths.append(p)
