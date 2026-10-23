@@ -1,0 +1,7 @@
+[1] poolgen tick: === 2026-10-24 06:06:02 poolgen_loop tick src=auto exit=0 === TOTAL=1440 FAIL_BUCKETS=NONE
+[2] cards with 2026-10-24 ring: 900
+[3] behavior rows=10114 anchor_nonnull=10111
+[4] behavior --qc: rows=10114 bad=0 tw=dawn wx=rain wd=5 top3=[('home', 6203), ('charge', 2003), ('indoors', 1225)] crash=0 recovering=4461
+[5] heartbeat tail: 2026-10-24 07:05 R1904 alive rings_today=906 export_ts=2026-10-24 07:05 [via BigLife-OSLoop]
+[6] events report: # 事件流回放验收报告（events → vitals）
+VERDICT=PASS
