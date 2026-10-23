@@ -1693,18 +1693,22 @@ def due_citizens(cursor, batch, force=None):
     if force:
         return [c for c in all_ids if c in force]
     t = datetime.date.today()
-    due = []
+    # R1883: never-evolved first. A single ascending list let cooldown-expired
+    # low IDs starve the 5k+ never-ringed cards (coverage froze at 4,851 while
+    # re-evolving the same cohort). Fresh faces grow the city; repeats only
+    # fill the batch once no first-ring work is left.
+    fresh, again = [], []
     for cid in all_ids:
         c = cursor.get(cid)
         if not c or not c.get("next"):
-            due.append(cid)  # never evolved yet: anchors first (born earliest)
+            fresh.append(cid)  # never evolved yet: anchors first (born earliest)
         else:
             try:
                 if datetime.date.fromisoformat(c["next"]) <= t:
-                    due.append(cid)
+                    again.append(cid)
             except Exception:
-                due.append(cid)
-    return due[:batch]
+                again.append(cid)
+    return (fresh + again)[:batch]
 
 def commit_files(paths, msg):
     try:

@@ -1588,3 +1588,11 @@
   - 跳过面：池线 pool_audit=PASS 全桶达标自终止；相遇轮今日已 cap（01:20）；聚光灯本月 2/2 已达标
   - 未触碰：Tools/iteration_loop.ps1、cognition/pools.json（他窗在途改动，未 add）；.codely-cli/ 会话临时目录
   - tokens: local=10 api=0 api_reason=-
+
+- [2026-10-24 05:0x] R1883 轮记 @BigLife-OSLoop：轮首 pull=Already up to date；决策水位差集 NEW=0；orders 无涉本司新令。**主产出=年轮选人饥饿缺陷修复**：原 due_citizens 按 ID 升序取到期者→3,477 位冷却到期老居民永久压住 5,263 位从未进化居民（C-04858 起），年轮覆盖率 4 天卡死 4,851；改为「未进化者优先」两级队列后首批发 C-04858~C-04867，覆盖率 **4,851 → 4,861**（实证）。附带：年轮 10 席（先 C-01371~C-01380 老队列 + 新队列 10 席，均本地 qwen3:4b-instruct）；行为线镜像自动收口；events_refresh --gate PASS（cards=10091/events=35773/schema=0/mismatch=0）；可见面三页刷新（dashboard rings=4861 / city-today rings=534 people=530）。闸门：pool_audit 当日已 PASS 自停；QC 上轮 R1882 problems=0 未到期；相遇轮今日 cap 已满。
+  - 当前活：年轮线每轮 10 席·新队列起点 C-04868（预计 14 轮补满 5,263 未进化居民）
+  - 最近实物：census/registry/*/C-04858~C-04867 首环卡（2026-10-24 05:06）+ census/export/city-dashboard.html（rings=4861·05:07）
+  - 下个里程碑：年轮覆盖 4,861 → 5,000（约 14 轮 × 10 席 / ≤8h）
+  - 未入库（如实）：Tools/iteration_loop.ps1、cognition/pools.json 为轮前既有改动（他窗在途，非本轮产出·不 add）；.codely-cli/ 运行时目录不入库
+  - tokens: local=20 api=0 api_reason=-
+
