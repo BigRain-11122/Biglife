@@ -1510,15 +1510,15 @@
   - 未做（如实）：造人批（批二十七）未开工——本批无夜窗剩余预算；`sync_rings.py` 在并发窗口下曾现 PermissionError（本轮未复现），留观察。
   - tokens: local=10 api=0 api_reason=-
 
-- **R1872**（2026-10-24 03:38-03:44 夜班 @BigLife-OSLoop 轮记）：轮首 pull=Already up to date；水位差集 NEW=0（watermark 已含 D-20261020-12，10-21~10-24 decisions 无新行，mtime 10-20 18:04）；orders 尾部 10-23 23:3x 全司调研令的硅基城市线件 `cph4/research/R-20261023-scan-silicon-city.md` 已于 10-23 23:35 落地，本轮不重复。
-  **产品增量**=40 席年轮（4 批 × 10 席，due 全满 40/40）：C-01181~C-01220，全部带 `[锚] 数据事实 2026-10-24` 注脚（FluxVerse 事件流 + 真实北京时间/天气），行为线镜像自动收口（rows=10 / ring=4851），commits 82228a69+f9804e4e、411a556c+8728858、0a8efffc+584e0605，已推 origin/main（f9804e4e、584e0605 实锚）。
+- **R1872**（2026-10-24 03:38-03:46 夜班 @BigLife-OSLoop 轮记）：轮首 pull=Already up to date；水位差集 NEW=0（watermark 已含 D-20261020-12，10-21~10-24 decisions 无新行，mtime 10-20 18:04）；orders 尾部 10-23 23:3x 全司调研令的硅基城市线件 `cph4/research/R-20261023-scan-silicon-city.md` 已于 10-23 23:35 落地，本轮不重复。
+  **产品增量**=60 席年轮（6 批 × 10 席，due 全满 60/60）：C-01181~C-01240，全部带 `[锚] 数据事实 2026-10-24` 注脚（FluxVerse 事件流 + 真实北京时间/天气），行为线镜像自动收口（rows=10 / ring=4851），commits 82228a69+f9804e4e、411a556c+8728858、0a8efffc+584e0605、90ddfa85+6cb858a9，已推 origin/main（末尾 6cb858a9 实锚）。
   **累积验证**=C-01181 卡内年轮累加至第 3 圈（前有 2026-10-12 一条），纵向生长而非覆盖，符合年轮定律。
   **QC 巡检**=problems=0 / cards=10114 / evolved=4851 / dup_rings 37-37，census/QC-REPORT.md 刷新（03:41）。
   **语言线**=pool_audit 本日已 PASS（R1868/R1871 实锚），SELF_TERMINATE 维持，未跑 pool_gen。
   **相遇轮**=本日 cap 3 已满（R1868/R1869），跳过。
   **等待态**=F-20261024-BL01（model-whitelist-probe 删模型）仍候集团侧裁定，无重复上报。
-  - 当前活：年轮线续批（夜班 10 席/批，本轮连跑 4 批）
-  - 最近实物：census/registry/*/C-01181~C-01220.md 年轮（2026-10-24 03:40）
+  - 当前活：年轮线续批（夜班 10 席/批，本轮连跑 6 批）
+  - 最近实物：census/registry/*/C-01181~C-01240.md 年轮（2026-10-24 03:43）
   - 下个里程碑：年轮量 4,851 → 5,000（约 12 轮 / 48h 窗内）
   - 未入库实物：`Tools/iteration_loop.ps1` 为既有 modified 面（未 add）；`.codely-cli/` 为临时目录已忽略。
-  - tokens: local=40 api=0 api_reason=-
+  - tokens: local=60 api=0 api_reason=-
