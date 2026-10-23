@@ -1670,3 +1670,11 @@
   - ???events_refresh --gate PASS?cards=10091 / events=36003 / schema=0 / mismatch=0?qa/EVENTS-REPLAY-REPORT.md ????pool_audit ????=SELF_TERMINATE?axes 72/72?sprite 12/12?hard_fails=0??QC ?? 05:55 problems=0 ?????
   - ????????Tools/iteration_loop.ps1?CLOUD-OFF ?????????cognition/pools.json??????? add?.codely-cli/ ?????
   - tokens: local=10 api=0 api_reason=-
+
+- R1893 2026-10-24 06:0x @BigLife-OSLoop 轮首：pull=Already up to date；决策差集 NEW=7（D-20261024-01~07），涉本司 1 行已消费——D-20261024-02 白名单探针裁定（qwen2.5:7b 降为 NEED-JUDGMENT 只记不删·机队单一口径 qwen3:4b-instruct）=本司零动作，4b 现行照跑；watermark 已回写
+  - 年轮线：10 席 C-05098~C-05107 年轮落库，ring 5,091 → 5,101（commit a6b8d6d8）+ 行为线同步 rows=10（commit 35b41511）
+  - 事件闸：cards=10091 / events=36013 / schema_errors=0 / mismatch=0 = PASS（qa/EVENTS-REPLAY-REPORT.md 入库）
+  - 池审计：verdict=PASS·SELF_TERMINATE（pool 18/12·greet 17·faq 3·neg 8 全达标，hard_fails=0，determinism 192 pairs mismatch=0）
+  - 实物：10 张居民卡新增带锚年轮 + 全城事件流 36,013 条回放一致（可 `census/export/city-dashboard.html` 查）
+  - 下个里程碑：ring 5,101 → 5,500（399 环；周末全窗 + 夜窗排产，窗 ≤48h）
+  - tokens: local=10 api=0 api_reason=-
