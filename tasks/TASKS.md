@@ -1405,3 +1405,9 @@
   **实况三行**=当前活：年轮线（due 批次 10 席/轮·已进化 4,851/10,114）｜最近实物：`census/export/city-chronicle.html`（2026-10-24 02:0x·7 面刷新）+ `census/registry/*/C-00961~C-00970.md`｜下个里程碑：年轮覆盖过半（约 5,057 席·按现速 ≈1.5 天）。
   **未动面（如实）**=`Tools/iteration_loop.ps1` 为轮前既有 modified（非本轮产出，未 add）；`.codely-cli/` 运行时目录不入库。
   - tokens: local=10 api=0 api_reason=-
+
+- **R1858**（2026-10-24 02:0x 夜窗 @BigLife-OSLoop 轮记）：轮首 pull=Already up to date（HEAD 5b58671b 起）；决策水位差集 NEW=0（watermark 已含 D-20261020-12；10-21~10-24 无涉本司新 D 行）；orders 尾读无涉本司新令；TASKS open 单=0（T-20261024-01/-02 已收口）。
+  **产品增量**：①年轮批 10 位（C-00971~C-00980，全带 [锚]，真实 2026-10-24 事件注入）→ commit 6c4dc0b7 + 行为线镜像 67bc4ab9（rows=10 ring=4851）；②可见面重建「三件」：city-today.html rings=124 people=120 cards=10091 / city-life.html rows=10114 visible=306 / city-dashboard.html total=10114 rings=4851 cards=160（CEO 可直接开页看当日新环）。
+  **池审** pool_audit=PASS 全桶达标 SELF_TERMINATE（72/72 六轴桶·12/12 像素灵桶·hard_fails=0·determinism 192 对 mismatch=0）→ 按自终止律不跑 pool_gen。
+  **QC 巡** 未跑：census/QC-REPORT.md 上跑 01:39（<24h 合规窗）；相遇轮今日 cap 已用（R1856 3/3）。缺陷面 0。
+  tokens: local=2 api=0 api_reason=-
