@@ -1312,3 +1312,10 @@
 - **R1845 补记**（00:5x）：相遇轮在同轮补跑成功——C-00012 与 C-00016 围绕今日真实雨风各写一句互引年轮（「雨还在下，舞步怎么跳？」/「外面风挺大，还是等会儿做饭吧。」·均带 [锚]），commit cf5c94b6 + 行为镜像 2c451ec2 已推 origin。故本轮「未做」中的相遇轮一节作废，实际当日相遇 1/3。
 
 - **R1845 计量更正**：上条 `tokens: local=0` 记错——本轮实际本地推理 12 次（年轮批 10 + 相遇对 2，全走 Ollama qwen2.5:7b），api=0（零云端）。以本行为准。
+
+- **R1846**·2026-10-24 00:39~01:0x @BigLife-OSLoop 轮记：轮首 pull=Already up to date；决策水位差 NEW=0（watermark 已含 D-20261020-12，10-21~10-24 无新 D 行）；orders 物理件区零涉本司新行；集团 10-23 23:3x「各子公司调研最新业务技术」令的硅基城市线已由 `cph4/research/R-20261023-scan-silicon-city.md` 承接（查重律：不重派）。
+- **产品增量=年轮 10 条落地**（commit 0b45061a 年轮 + 454d4551 行为镜像）：C-00020~C-00029 各写一条带 [锚] 的年轮，环绕真实北京时间/天气（tw=night, wx=rain）；`qc_census.py` 复扫 cards=10114 / ring=4851 / problems=0 / dup_rings 37-37。
+- **本轮主事故=Ollama 模型目录 40 分钟内第二次被清空**（取证：`%USERPROFILE%\.ollama\models\{blobs,manifests,manifests-v2}` 目录 mtime 全部 = 2026-10-24 00:37:01、`ollama list` 零条、`/api/tags` 返回空 models 而服务在线；上轮回装 qwen2.5:7b 仅 ~20 分钟后即空）。后果=轮首 `evolve_citizen --batch 3` 无输出挂满 5 分钟被工具取消（不是脚本 bug，是无可用模型时座位重试）。处置=重拉 `ollama pull qwen2.5:7b`（success）后同一脚本 16 秒完成 10 位（首行 `seat: :8090 not an LLM lane -> local ollama qwen2.5:7b`），证明链路本身健康。
+- 未定源（如实）：已排除的候选=`BigCompute/Tools/model_blob_manifest.py`（只读清单，无删除路径）；尚未定位的真正清除者——时间点 00:37:01 落在 BigLife-OSLoop 上一轮收尾（00:36:25 round done）之后、`BigCompute-CleanWindowProbe`（00:39:58, RC=3）之前。下一轮取证方向：`FluxGroup-DiskSentinel`（00:43:03）与 CleanWindowProbe 的实际清扫清单、以及是否有任务以 `OLLAMA_MODELS` 指向临时目录后删除。已立单 T-20261024-02。
+- tokens: local=11 api=0 api_reason=-（本地 Ollama qwen2.5:7b：年轮 10 + 座位探测 1；零云端调用）
+- [ ] **T-20261024-02**（资源面缺陷单·R1846 立）：**Ollama 模型目录反复被清空（40 分钟内两度）**——证据=`models/*` 目录 mtime 2026-10-24 00:37:01 全空、`ollama list` 零条、服务 `/api/tags` 在线但 models 为空；上轮 00:1x 刚装回 4.7GB。影响=年轮线每轮回落到「重拉 4.7GB」或挂 5 分钟被取消。正法=下一轮先抓清除者（DiskSentinel / CleanWindowProbe / 任何 `Remove-Item *\.ollama` 或 OLLAMA_MODELS 重定向），拿到命令行为证据后再改；未定位前不重复重装（改由轮首一条 `ollama list` 探测决定是否拉取）。
