@@ -1497,3 +1497,15 @@
   - 下个里程碑：年轮覆盖 4,851 → 5,000 环（约 13 个 10 席批，48h 窗内）
   - 未做（如实）：`Tools/iteration_loop.ps1` 为他窗 modified 面，按定向 add 律不入提交；`.codely-cli/` 为本地运行目录不入库。
   - tokens: local=30 api=0 api_reason=-
+
+- **R1871**·2026-10-24 03:31-03:40 夜窗 @BigLife-OSLoop 轮实录：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 已含 D-20261020-12，decisions.md mtime 10-20 18:04 无新行）；orders 物理件区无涉本司新行；`Tools/iteration_loop.ps1` 为他窗 modified 面未 add，`.codely-cli/` 为工具临时目录不入库。
+  **产品增量=10 席年轮落环**：evolve_citizen --batch 3 实跑，due 10 席全成（C-01171~C-01180），逐卡 [锚] 注脚+真实北京时间/天气；脚本自提交 b6fcec31，行为线 sync_rings 自动收口 21b5cb7c（rows=10 ring=4851）。
+  **QC 例巡**：qc_census.py 实跑 problems=0（cards=10114 / evolved=4851 / dup_rings 37/37 基线·编号姓名唯一/必备段齐备/年轮锚定律三不变全过），census/QC-REPORT.md 随轮刷新（03:34）。
+  **语言线**：pool_audit 实测 PASS 全桶达标（72 轴桶 12/行·问候 28 桶·FAQ 7 桶·负向 6/6·hard_fails=0·确定性双抽 mismatch=0）→ SELF_TERMINATE 自停，未跑 pool_gen。
+  **相遇轮**：当日 cap 3 已满，自停（候选 NS 区 C-00010 顾阿凤×C-00011 朱鸿奎 留待明日额度）。
+  **实况面**：docs/status-export.json 三行刷新（export_ts 03:36）。
+  - 当前活：夜窗年轮批滚动（下批 due C-01181+）
+  - 最近实物：census/QC-REPORT.md（2026-10-24 03:34·0 异常）+ 年轮 10 席 C-01171~C-01180（03:33）
+  - 下个里程碑：年轮环 4,851→5,000（约 15 批 ×10 席·≤48h）
+  - 未做（如实）：造人批（批二十七）未开工——本批无夜窗剩余预算；`sync_rings.py` 在并发窗口下曾现 PermissionError（本轮未复现），留观察。
+  - tokens: local=10 api=0 api_reason=-
