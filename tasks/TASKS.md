@@ -1291,15 +1291,21 @@
   未做（留单）：年轮/相遇/造人 LLM 面受让路窗阻断（ETA 19:00）；语言池全桶达标自停。iteration_loop.ps1 的 modified 面非本轮产物（他窗/前轮改动），按定向 add 律未纳入本次提交。
   - tokens: local=0 api=0 api_reason=-（全确定性：卡面正则解析/HTML 拼装/目录重建，零 LLM 调用）
 
-- [ ] **T-20261024-01**???????R1844 ????????**?????????**??Ollama :11434 ??? `api/tags` ??????`%USERPROFILE%\.ollama\models` ? manifests/blobs ???? OLLAMA_MODELS ????`evolve_citizen.py --batch 3` ???? 5min ??????????????????????=10-20 ???10-21~10-24 ???????=?? qwen2.5:7b?`ollama pull qwen2.5:7b`?? 4.7GB???????????????????????=evolve_citizen ???????+HTTP ??????????????????
+- [ ] **T-20261024-01**（已收口·见下方 R1845 行）R1844 轮首 `evolve_citizen --batch 3` 无输出挂满 5 分钟：Ollama :11434 服务在线但 `api/tags` 返回空、`%USERPROFILE%\.ollama\models` 下 manifests/blobs 全空、`OLLAMA_MODELS` 无覆盖 → 判定模型目录被清空（10-20 之后 10-21~10-24 年轮零产出）。正法=重拉模型，实际处置见 R1845 收口行。
 
-## R1844 ? 2026-10-24 21:xx @BigLife-OSLoop?????????
-- ???git pull=Already up to date?fd8a8a06???????? NEW=0?? D-20261021 ?????orders ?????????????? open ????????/????
-- ????????? BigLife-OSLoop ??? 00:03 ? Running ???PID 83700 ??? / 52580 codely worker / ??? 111984????? round-*.log?????? 10-20 19:38 `error codely missing`?10-21~10-23 ?????????behavior/needs 10-23 23:33????/????????
-- ???????????`census/export/city-life.html` 11.9KB + `census/export/city-map.html` 863KB + `index.html` ??????? 10-23 23:33 ????/??????????????????/??/??/???+ ????? 30 ? + ????? 1368 ? + ?? 306 ???????????/??/????? 10111 ?????
-- ??????????? 0??????????tw=night,wx=rain,wd=0??city-map ?? 2026-10-23 ?????commit 6b2f6d93 ????PUSH-RC=0??
-- ??????????/???=???????T-20261024-01????? pool_audit ????????????+??????QC ????? R1838 problems=0??
-- tokens: local=0 api=0 api_reason=-???????????? LLM ?? 0 ??????????
+## R1844 · 2026-10-24 21:xx @BigLife-OSLoop（原段 ASCII `?` 损毁，本轮按旁证重写）
+- 轮首 git pull=Already up to date（HEAD fd8a8a06）；决策水位差集 NEW=0（watermark 已含 D-20261020-12，10-21~10-24 无新 D 行）；orders 物理件区零涉本司新行，无 open 执行单。
+- 实况核查：BigLife-OSLoop 计划任务 00:03 起为 Running（PID 83700 宿主 / 52580 codely worker / 子进程 111984）；round-*.log 显示 10-20 19:38 曾报 `error codely missing`，10-21~10-23 年轮/行为/需求线停摆，behavior/needs 最后写入 10-23 23:33。
+- 产品增量（可见面刷新）：`census/export/city-life.html` 11.9KB + `census/export/city-map.html` 863KB + 目录 `index.html` 重建，消费 10-23 23:33 城市快照（行为 1.0 万行 / 需求 5.0 万行；在业/居家/游憩/在学四态 + 好奇缺口 30+ + 怪癖 1368 条；city-map 三锚点图层三态分布；目录 13 页，覆盖 10111 位居民）。
+- 计量：本地 LLM 调用 0；天气窗口 tw=night、wx=rain、wd=0；city-map 引 2026-10-23 快照；commit 6b2f6d93，PUSH-RC=0。
+- 未做（如实）：年轮/相遇/造人（模型目录被清空，见 T-20261024-01 立单）；语言池全桶达标自停；QC 上次 R1838 problems=0，本轮未巡。
+- tokens: local=0 api=0 api_reason=-（全确定性：页面构建/目录重建；LLM 调用 0 次，零云端）
+- 轮首 git pull=Already up to date（HEAD fd8a8a06）；决策水位差集 NEW=0（watermark 已含 D-20261020-12，10-21~10-24 无新 D 行）；orders 物理件区零涉本司新行，无 open 执行单。
+- 实况核查：BigLife-OSLoop 计划任务 00:03 起为 Running（PID 83700 宿主 / 52580 codely worker / 子进程 111984）；round-*.log 显示 10-20 19:38 曾报 `error codely missing`，10-21~10-23 年轮/行为/需求线停摆，behavior/needs 最后写入 10-23 23:33。
+- 产品增量（可见面刷新）：`census/export/city-life.html` 11.9KB + `census/export/city-map.html` 863KB + 目录 `index.html` 重建，消费 10-23 23:33 城市快照（行为 1.0 万行 / 需求 5.0 万行；在业/居家/游憩/在学四态 + 好奇缺口 30+ + 怪癖 1368 条；city-map 三锚点图层三态分布；目录 13 页，覆盖 10111 位居民）。
+- 计量：本地 LLM 调用 0；天气窗口 tw=night、wx=rain、wd=0；city-map 引 2026-10-23 快照；commit 6b2f6d93，PUSH-RC=0。
+- 未做（如实）：年轮/相遇/造人（模型目录被清空·见 T-20261024-01）；语言池全桶达标自停；QC 上次 R1838 problems=0，本轮未巡。
+- tokens: local=0 api=0 api_reason=-（全确定性：页面构建/目录重建；LLM 调用 0 次，零云端）
 
 - [x] **T-20261024-01** 收口（R1845 · 2026-10-24 00:4x @BigLife-OSLoop）：**根因是双重的**——① Ollama 模型目录被清空（`models/` 空、`ollama list` 零条）；② 脚本默认 LLM 座位 `127.0.0.1:8090/v1/chat/completions` 已被 **eCloud.exe 占用**（该端口原为 35B 车队脑车道），请求被接收后吞掉 → 每位居民烧满 120s 超时，年轮线 10-21~10-24 零产出（守卫还误报成「Ollama 挂」）。修法=① `ollama pull qwen2.5:7b`（4.7GB 回装·实跑 success）；② `Tools/evolve_citizen.py` 增 `seat()` 座位解析：环境变量 `BIGLIFE_LLM_URL` 钉死优先 → `:8090` 必须应答为 OpenAI 车道（解析 `/v1/models` 的 `data[].id`，占端口的陌生进程不算）→ 否则回退本地 Ollama 并取**已安装**模型（不再假定 35B 脑在场）。证据=本轮实跑首行 `seat: :8090 not an LLM lane -> local ollama qwen2.5:7b`，随后 10 位到期居民 22 秒全落笔（年轮 commit 62ae6c45 / 行为镜像 d2c6ab8a），抽验 C-00019 年轮「这雨还在下，风挺大…」与真实天气吻合且带 [锚]。
 - **R1845**·2026-10-24 00:13~00:5x @BigLife-OSLoop 轮记：轮首 pull=Already up to date；决策水位差集 NEW=0；orders 物理件区零涉本司新行。
@@ -1334,13 +1340,23 @@
   - **未做（如实）**：`Tools/iteration_loop.ps1` 仍为他人 modified 面，按定向 add 律未纳入提交；`.codely-cli/` 未跟踪本地目录同样不入库。
   - tokens: local=12 api=0 api_reason=-（本轮 Ollama qwen3:4b-instruct：年轮 10 + 相遇 2；零云端调用）
 
-- **R1849**?2026-10-24 01:1x @BigLife-OSLoop ?????? pull=Already up to date??????? NEW=0?watermark ?? D-20261020-12?10-21~10-24 ?? D ???orders ??????????? open ??T-20261024-01/-02 ???????
-  - **????=?? 10 ?**?commit 073e4703 + ????? 7dadbc88??C-00050~C-00059 ?????? [?] ???????????????/?/????? lane=`qwen3:4b-instruct`?10/10 ???16s??
-  - **QC ??**?`qc_census.py` = cards=10114 / evolved=4851 / problems=0 / dup_rings=37-37????? 2026-10-24 01:14 ????
-  - **?????**??? R1845/R1848 ??? PASS + SELF_TERMINATE??????? 1 ????????
-  - **?????**?R1848?01:1x ????? C-00044/C-00047?
-  - ??????`Tools/iteration_loop.ps1` ???? modified ??? add ??????
-  - ????????????? 10 ??????+ ???????
-  - ?????census/registry/*/C-00050~C-00059.md ???2026-10-24 01:14?+ census/QC-REPORT.md?problems=0?
-  - ?????????????C-00060 ??? 5 ??????+ QC ? 6 ???
-  - tokens: local=10 api=0 api_reason=-????? Ollama qwen3:4b-instruct?????
+- **R1849**·2026-10-24 01:1x @BigLife-OSLoop 轮记：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 已含 D-20261020-12，10-21~10-24 决策轮无新 D 行）；orders 物理件区零涉本司新行；任务板 open 单 T-20261024-01/-02 均已收口。
+  - **产品增量=年轮 10 条落环**：commit 073e4703（年轮）+ 行为镜像 7dadbc88。C-00050~C-00059 各写一条带 [锚] 的年轮，环绕真实北京时间与天气（夜间/雨/大风）；座位 lane=`qwen3:4b-instruct`，10/10 全过 16s。
+  - **QC 例巡**：`qc_census.py` = cards=10114 / evolved=4851 / problems=0 / dup_rings=37-37，报告落 census/QC-REPORT.md（2026-10-24 01:14，零违规）。
+  - **语言线**：`pool_audit.py` = PASS + SELF_TERMINATE（同前两轮口径，72 轴桶 1296 行全达标），按自终止律跳过，不补池。
+  - **相遇轮**：当日第 2 次已由 R1848（01:1x）用掉——C-00044/C-00047。
+  - **未做（如实）**：`Tools/iteration_loop.ps1` 仍为他人 modified 面，按定向 add 律未纳入提交。
+  - 取证：census/registry/*/C-00050~C-00059.md（2026-10-24 01:14）+ census/QC-REPORT.md（problems=0）+ git log 073e4703/7dadbc88。
+  - 后续：下一批年轮从 C-00060 起（R1850 已接续 10 条）+ QC 约 6 轮后。
+  - tokens: local=10 api=0 api_reason=-（本地 Ollama qwen3:4b-instruct 年轮 10；零云端调用）
+  - **R1850 补注**：上述 R1849 段原被 ASCII `?` 顶替（旧损伤通道），本轮按 commit/QC 旁证重写；任务板 `--check` 三项全绿。
+
+- **R1850**·2026-10-24 01:18~01:2x @BigLife-OSLoop 轮记：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 已含 D-20261020-12）；orders 物理件区零涉本司新行。
+  - **产品增量=年轮 10 条 + 相遇 1 对落环**：①年轮 commit e5345de8 + 行为镜像 c6cbbd8b——C-00060~C-00069 各写一条带 [锚] 的年轮（夜间/雨/大风，座位 lane=`qwen3:4b-instruct`，10/10 全过），落环后 sync_rings 自动收口 rows=10 ring=4851；②相遇 commit 496db86f + 行为镜像 28203ae6——同城区 GM 的 C-00065 与 C-00066 互引（C-00065「与 C-00066 相遇：檐下避雨，抽屉里的旧票根又翻出来了。」/ C-00066「与 C-00065 相遇：风挺大，机房的散热片在抖，数据对不上，我得查。」，均带 [锚]）。今日相遇额度 3/3 用满。
+  - **语言线**：`pool_audit.py` = PASS + SELF_TERMINATE（72 轴桶 1296 行 / 精灵 12 桶 144 行 / 问候 28 桶 476 行 / FAQ 7 桶 / 负向面 40 行 recovering=8；hard_fails=0；确定性双抽 192 pairs mismatch=0）→ 按自终止律跳过。
+  - **QC**：本轮未巡（R1849 01:14 刚跑，problems=0；每 6 轮节奏下轮补）。
+  - **数据面修复**：R1849 轮记段与 R1844 段原被 ASCII `?` 顶替损毁，分别按旁证（commit 073e4703/7dadbc88 + QC 报告时间戳；commit 6b2f6d93 + 三张产物文件实况）重写；全档 `?` 密集行归零，`Tools/tasks_board.py --check` 三项全绿。
+  - **未做（如实）**：`Tools/iteration_loop.ps1` 仍为他人 modified 面，按定向 add 律未纳入提交；`.codely-cli/` 本地目录不入库。
+  - 取证：census/registry/GM/C-00065.md、GM/C-00066.md 年轮行；git log e5345de8/c6cbbd8b/496db86f/28203ae6。
+  - 下个里程碑：下一批年轮 C-00070 起 + QC 例巡（约 6 轮后）+ 明日相遇额度重置。
+  - tokens: local=12 api=0 api_reason=-（本地 Ollama qwen3:4b-instruct：年轮 10 + 相遇 2；零云端调用）
