@@ -1559,3 +1559,15 @@
   - 下个里程碑：年轮覆盖 4,851 → 5,000 环（约 15 批 ×10 席·48h 窗内）
   - 未入库（如实）：Tools/iteration_loop.ps1 为轮前既有 modified（非本轮产出·未 add）；cognition/pools.json 仅换行面差异；.codely-cli/ 运行时目录不入库
   - tokens: local=10 api=0 api_reason=-
+
+- **交互窗轮记（2026-10-24 04:3x~04:5x·事件流回放闸接线）**
+  - 当前活：事件流闸从「陈旧即 FAIL」变成「重生+比对」一键闸（R-20261023-scan-silicon-city 动作 1 落地）
+  - 最近实物：`Tools/events_refresh.py` + `qa/EVENTS-REPLAY-REPORT.md`（cards=10091/events=35723/schema=0/mismatch 700→0 PASS·04:4x）+ 轮 prompt 步 1 必跑接线（commit 5272030d）
+  - 下个里程碑：连续 3 轮 events_refresh 均 PASS（证明闸随轮不收假绿）·窗 48h
+  - tokens: local=4 api=0 api_reason=-
+
+## 待办（新立·2026-10-24）
+
+- [ ] **T-20261024-02 居民头像身份锚包（ELECT 路线）**：为居民建 4 视角 anchor 包（正/侧/背/半侧），图-字分离登记后接入立绘链；判据=同一居民两视角 anchor 生成同框比对无身份漂移（人工 10/10）+ 包体 <20GB 留本地。
+  - 来源：cph4/research/R-20261023-scan-silicon-city 条目 4（ELECT arXiv 2610.15555）
+  - status: open（2026-10-24 立·待认领）
