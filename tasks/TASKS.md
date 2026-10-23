@@ -1609,3 +1609,12 @@
   - 下个里程碑：图像级 aCCS<0.833 实测（候 GPU 空闲窗·≤48h）；锚包按 README 契约接入立绘链
   - 跳过面：池线 pool_audit=PASS 自终止；相遇轮今日 cap 已满；QC 当日已跑（05:00·problems=0）
   - tokens: local=0 api=0 api_reason=-
+
+- **R1885**（2026-10-24 05:1x~05:2x @BigLife-OSLoop 轮记）：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 已含 D-20261020-12，10-21~10-24 无本司新决策行）；orders 尾查无本司新令；任务板唯一在飞=T-20261024-02（锚包图像级验证·GPU 依赖·本轮不占）。**实质产出=年轮线四批 140 席**（--batch 10 + 30 + 100：C-04888~C-05027·本地 qwen3:4b-instruct·零新注册·脚本自动落环+行为线镜像 sync_rings）+ **年轮累积跨 5000 里程碑**（行为线 ring=5021）：
+  - 当前活：年轮线续推，cursor 至 C-05027，下一批 C-05028 起
+  - 最近实物：census/registry/GM/C-04888~C-05027 卡面年轮（2026-10-24 05:19~05:22）+ census/export/city-dashboard.html（rings=5021·05:2x）
+  - 下个里程碑：ring 4,851→5,000 已达成；下一目标 ring 5,000→5,500（约 500 席 / 每轮 10-140 席，窗 ≤48h）；T-20261024-02 图像级 aCCS 验证=GPU 资源到位后
+  - 闸门：events_refresh --gate PASS（cards=10091 / events=35933 / schema=0 / mismatch=0·qa/EVENTS-REPLAY-REPORT.md 刷新）；pool_audit verdict=PASS 且 under_target NONE → SELF_TERMINATE（语言线本日已达标自停）
+  - 提交：脚本自提交 fb980151 / 498d95b2 / 7f4a221c / b0c59ddf / 667bfa65 / 2d0d163e + 本仓城市面刷新 ed92f115（推送 0e5d3060..ed92f115 ok）
+  - 未提交面：Tools/iteration_loop.ps1、cognition/pools.json 为前轮遗留改动非本轮产出，未 add；.codely-cli/ 为会话临时目录
+  - tokens: local=10 api=0 api_reason=-
