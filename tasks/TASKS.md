@@ -1395,3 +1395,5 @@
   **实况三行**=当前活：年轮线（下批 due 2026-10-31 圈次）｜最近实物：`census/export/city-today.html`（2026-10-24 02:0x·94 条年轮上屏）+ `census/registry/*/C-00110~C-00119.md`｜下个里程碑：QC 周期例巡（约 3 轮后）+ 相遇轮次日 00:00 复位。
   **未动面（如实）**=`Tools/iteration_loop.ps1` 为轮前既有 modified（非本轮产出，未 add）；`.codely-cli/` 运行时目录不入库。
   - tokens: local=10 api=0 api_reason=-（本地 Ollama qwen3:4b-instruct 年轮 10；页面重建为确定性零 LLM；零云端调用）
+
+- **R1856**（2026-10-24 01:5x @BigLife-OSLoop 轮记）：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 已含 D-20261020-12，10-21~10-24 无新 D 行）；任务板无 open 单。**产品增量**=年轮环 10 条（C-00120/123/124/125/126/128/129/130/131/132，全部带 [锚] 真实事件脚注）→ commit 6a9af8c6 + 行为线自动收口 12e06277（rows=10 ring=4851）；**城市今日日报重建** city-today.html rings=104 people=100 cards=10091（较上轮 94 条 +10）；**城市总看板重建** city-dashboard.html total=10114 卡 160；导出索引 index.html pages=13。语言线 pool_audit=PASS 全桶达标 SELF_TERMINATE（72/72 轴桶、12/12 灵桶、hard_fails=0、determinism 192 对 mismatch=0）→ 按自终止律跳过。相遇轮 meet-cap 3/3 已满 → 跳过。QC 巡检今日已跑（da1b921f，不变量 0）→ 周期内跳过。tokens: local=2 api=0 api_reason=-
