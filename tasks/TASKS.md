@@ -1380,3 +1380,10 @@
   **当前活**=年轮线（下批 due 2026-10-31 圈次）｜**最近实物**=census/registry/GM/C-00090~C-00099.md + census/QC-REPORT.md（2026-10-24 01:4x）｜**下个里程碑**=QC 周期巡检 + 相遇轮（次日 00:00 后复位）。
   **未推送/未动面**=Tools/iteration_loop.ps1 为轮前既有 modified（非本轮产出，未 add）；.codely-cli/ 运行时目录。
   - tokens: local=10 api=0 api_reason=-
+- **R1854**（2026-10-24 01:43~02:0x @BigLife-OSLoop 轮记）：轮首 pull=Already up to date；决策水位差集 NEW=0（122 条已消费，watermark 未动）；orders 物理件区零涉本司新行。
+  **产品面（本轮实物）**=①年轮 10 席 C-00100~C-00109 全部带 [锚]（读真实城市事件+实时天气，座位 lane=`qwen3:4b-instruct`，10/10 16s 落环；commit d78f56b5 年轮 + 02ac23ab 行为镜像）；②**城市今日日报重建**——`census/export/city-today.html` 由 10-20 旧快照（342 条年轮）刷为当日实况：**84 条年轮 / 80 位开口居民 / 6 城区 / 卡片 10091**（`Tools/build_daily_issue.py` 确定性零 LLM，幂等，跑一次即定稿）。
+  **当日口径实况（可见面真相）**：昨日（10-23）年轮=0、前日 342 → 页面 KPI 直接显示「昨日 0 条」，此即 10-21~10-23 模型目录被清空三天停摆的痕迹（T-20261024-01/-02 已收口），本页未做任何遮掩或补造。
+  **闸门**=pool_audit PASS+SELF_TERMINATE（72 轴桶 1296 行/精灵 12 桶 144 行/greet 28 桶 476 行/faq 7 桶/负向面 40 行 recovering=8；hard_fails=0，双抽 192 pairs mismatch=0）；QC 巡检卡 10114/已进化 4851/problems=0（01:40 刚跑，周期内不重跑）；相遇轮当日 cap 3/3 已满（C-00065/66 等），skip。
+  **当前活**=年轮线（下批 due 2026-10-31 圈次）｜**最近实物**=`census/export/city-today.html`（2026-10-24 02:0x·84 条年轮上屏）+ `census/registry/*/C-00100~C-00109.md`｜**下个里程碑**=QC 周期例巡（约 3 轮后）+ 相遇轮次日 00:00 复位。
+  **未动面（如实）**=Tools/iteration_loop.ps1 为轮前既有 modified（非本轮产出，未 add）；.codely-cli/ 运行时目录不入库。
+  - tokens: local=10 api=0 api_reason=-（本地 Ollama qwen3:4b-instruct 年轮 10；页面重建为确定性零 LLM；零云端调用）
