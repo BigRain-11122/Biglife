@@ -76,7 +76,8 @@ def main():
         with open(p, encoding="utf-8") as f:
             text = f.read()
         if not fn.startswith("C-"):
-            problems.append(f"{p}: bad id")
+            if fn.upper() != "README":  # 目录说明文件不是居民卡
+                problems.append(f"{p}: bad id")
             continue
         if fn in ids:
             problems.append(f"{fn}: duplicate id")

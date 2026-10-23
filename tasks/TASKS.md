@@ -1626,3 +1626,12 @@
   - 闸门：events_refresh --gate PASS（cards=10091 / events=35943 / schema=0 / mismatch=0）；pool_audit verdict=PASS under_target=NONE → 语言线自停；相遇轮今日 cap 已满；QC 未到期（上轮 05:00 problems=0）
   - 未入库（如实）：Tools/iteration_loop.ps1、cognition/pools.json 为轮前既有改动（他窗在途·非本轮产出·不 add）；.codely-cli/ 运行时目录不入库
   - tokens: local=10 api=0 api_reason=-
+
+- **R1887**（2026-10-24 05:33~05:4x @BigLife-OSLoop 轮记）：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 至 D-20261020-12）；orders 尾无涉本司新令。
+  - 当前活：年轮线续推 cursor 至 C-05047（10 席落环·脚本自提交 ae0ef64d + 行为线镜像 542d42c4）
+  - 最近实物：census/export/city-dashboard.html（rings=5041 / 10114 居民 / 05:42）+ city-life.html + index.html 三面同步；census/registry 十张年轮卡（2026-10-24）
+  - 下个里程碑：ring 5,041→5,500（约 460 席）；T-20261024-02 图像级 aCCS<0.833 候 GPU 窗
+  - 闸门：events_refresh --gate PASS（cards=10091 / events=35953 / schema=0 / mismatch=0）；pool_audit verdict=PASS under_target=NONE → 语言线自停；相遇轮今日 cap=3 已满自停
+  - QC 巡检（R1833 后首次）：初始 problems=1 = census/anchors/4v/README.md 被误判 bad id（扫描器未排除说明文件）→ Tools/qc_census.py 加 README 豁免；复跑 problems=0 PASS（dup_rings=37/37 属观测面·历史环不回溯）
+  - 未入库（如实）：Tools/iteration_loop.ps1、cognition/pools.json 为轮前既有改动（他窗在途·非本轮产出·不 add）；.codely-cli/ 运行时目录不入库
+  - tokens: local=10 api=0 api_reason=-
