@@ -1473,3 +1473,11 @@
   - 下个里程碑：年轮覆盖 4,851 → 5,000 环（约 15 个 10 席批，48h 窗内）
   - 未做（如实）：`Tools/iteration_loop.ps1` 为他窗 modified 面，按定向 add 律不入提交；`.codely-cli/` 为本地运行目录不入库。
   - tokens: local=10 api=0 api_reason=-
+
+- **R1867**（2026-10-24 03:09-03:15 夜班 @BigLife-OSLoop 轮记）：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 含至 D-20261020-12；10-21~10-24 无涉本司新 D 行）；orders 尾读 10-23 23:3x 五司调研令=全司线交付件 `cph4/research/R-20261023-scan-silicon-city.md` 已于 10-23 23:35 落盘，本司动作面（事件流改造 T-20261024-01）已于 02:1x 关单，无新增可执行面。
+  **产品增量**=年轮环 10 条落环（C-01101~C-01110，全部带 [锚] 城市实况 2026-10-24 注脚）+ 行为线镜像自动同步（rows=10 / ring=4851）。commit e083bada + 2cf1318c，已推 origin/main。
+  **语言线**=pool_audit 实跑 verdict PASS（72 桶全达标 / hard_fails=0 / 确定性 192 对 mismatch=0）→ 按自终止律本轮跳过 pool_gen。
+  **未做（如实）**：相遇轮今日 C-00065/66（496db86f）与 QC 巡检（cfa2bd93 cards=10114 problems=0）均已完成，日配额已用，不重复。
+  **等待态**：F-20261024-BL01（model-whitelist-probe 删模型）候集团裁定，本司已自解耦（改走 qwen3:4b-instruct）。
+  - 未做（如实）：`Tools/iteration_loop.ps1` 为他窗 modified 面，按定向 add 律不入提交；`.codely-cli/` 为本地运行目录不入库。
+  - tokens: local=10 api=0 api_reason=-
