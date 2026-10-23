@@ -1450,3 +1450,15 @@
   **实况面**=当前活：年轮线；最近实物：`census/export/city-today.html`（2026-10-24 02:51，224 位居民当日页）+ `census/registry/*/C-01071~C-01080.md`；下个里程碑：C-01081 起下一批 10 席年轮（本轮链末自动接力，≤10 分钟）。
   **未入库（纪实）**=Tools/iteration_loop.ps1 为他窗未提交改动，本轮未 add；.codely-cli/ 为运行时目录。
   - tokens: local=10 api=0 api_reason=-
+
+- **R1865**·2026-10-24 02:5x 夜窗 @BigLife-OSLoop 轮记：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 已含 D-20261020-12，10-21~10-24 无新 D 行）；orders 尾部新令=10-23 23:3x「各子公司调研最新业务技术」——硅基城市线已由 `cph4/research/R-20261023-scan-silicon-city.md`（10-23 23:35）承接，查重律不重派。
+  - **产品增量=年轮 10 条落环**（commit 4905165e 年轮 + 8fbdd23b 行为镜像，均已推 origin）：C-01081~C-01090 各写一条带 [锚] 的年轮，环绕真实北京时间与雨天大风；座位实况 `seat: :8090 not an LLM lane -> local ollama qwen3:4b-instruct`。
+  - **语言线**：`pool_audit.py` PASS + SELF_TERMINATE（72 轴桶 12/桶·问候 28 桶·FAQ 7 桶·负向面 6/6·determinism mismatch=0）→ 按自终止律不动 pool_gen。
+  - **相遇轮**：当日已 3 对（cap 3）→ 自停跳过（同城 MD 候选 C-01086/C-01088 留待明日）。
+  - **QC 巡检**：cards=10114 / evolved=4851 / problems=0 / dup_rings 37-37，`census/QC-REPORT.md` 随轮入库。
+  - **可见面刷新**：`docs/status-export.json` export_ts 2026-10-20 17:06 → 2026-10-24 02:56（T-20260924-08 的 48h 新鲜度闸复位）；`census/export/city-today.html` 重建 rings=234 people=230 cards=10091。
+  - 当前活：年轮进化线（夜窗批，10 席/轮）
+  - 最近实物：`census/export/city-today.html`（2026-10-24 02:56）+ `census/registry/*/C-01081~C-01090.md`
+  - 下个里程碑：年轮覆盖 4,851 → 5,000 环（按 10 席/轮约 15 轮，48h 窗内）
+  - 未做（如实）：`Tools/iteration_loop.ps1` 为他人 modified 面，按定向 add 律不入提交；`.codely-cli/` 为本地运行目录不入库。
+  - tokens: local=10 api=0 api_reason=-
