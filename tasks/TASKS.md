@@ -1522,3 +1522,14 @@
   - 下个里程碑：年轮量 4,851 → 5,000（约 12 轮 / 48h 窗内）
   - 未入库实物：`Tools/iteration_loop.ps1` 为既有 modified 面（未 add）；`.codely-cli/` 为临时目录已忽略。
   - tokens: local=60 api=0 api_reason=-
+
+- **R1873**·2026-10-24 03:5x 夜班 @BigLife-OSLoop 轮记）：轮首 pull=Already up to date；决策水位差 NEW=0（watermark 含至 D-20261020-12·decisions 10-21 后无涉本司新行）；orders 尾读无涉本司新物理件（10-23 23:3x 全司调研令的硅基城市线件已于 10-23 23:35 交付，查重律不重派）。
+  - **产品增量=10 席年轮落环**：evolve_citizen --batch 3 实跑 due 10/10 全成（C-01251~C-01260），脚本自提交 21cad3da + 行为线镜像收口 c37441bb（rows=10 ring=4851）；10/10 卡内 [锚]+2026-10-24 校验通过、缺失 0。
+  - **可见面重建**：city-today.html rings=404 people=400 districts=6（实测命中 C-01251/C-01260 原文·110.5KB）/ city-dashboard.html total=10114 rings=4851 / city-life.html rows=10114 visible=306；commit 24e6678f 已推 origin（c46055eb..24e6678f）。
+  - **语言线**：今日已 1 次（R1868 pool_audit PASS·SELF_TERMINATE），按每日至多 1 次不重复跑。
+  - **QC/相遇/聚光**：QC 今日 03:41 PASS（<24h 未到巡检点）；相遇今日 cap 3 已满；十月聚光灯 2/2 已达标 → 均如实跳过。
+  - 当前活：年轮进化线（夜窗 10 席/批，cursor 已至 C-01260）
+  - 最近实物：`census/export/city-today.html`（2026-10-24 03:5x·404 条当日年轮上屏）+ `census/registry/*/C-01251~C-01260.md`
+  - 下个里程碑：年轮覆盖 4,851 → 5,000 环（约 15 批 ×10 席·48h 窗内）
+  - 未入库（如实）：`Tools/iteration_loop.ps1` 为轮前既存 modified（非本轮产出，未 add）；`.codely-cli/` 为运行时目录不入库。
+  - tokens: local=10 api=0 api_reason=-
