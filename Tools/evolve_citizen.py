@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.54 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.55 - BigLife citizen evolution engine.
+v0.55 (2026-10-25 R2039, gap #74): regen tail notes accumulated inside
+gated_llm, so a late attempt carried every previous rejection at once and the
+4B still shipped the banned 7-gram (C-06556 skipped on batch-dup-phrase this
+round). Fix = prompt is rebuilt from the base each attempt, one note per
+current violation only.
 v0.54 (2026-10-24 R1958, gap #73, T-20261024-09 收口): the batch phrase gate
 starved seats instead of fixing them - C-05895 was skipped today on
 batch-dup-phrase after 3 regens, and R1929/R1930 lost C-05458/C-05459 and
@@ -1295,7 +1300,14 @@ def gated_llm(prompt, sig, max_regens=3):
     untouched (the gate stays the last line of defense)."""
     line = ""
     v = []
+    # v0.55 gap #74 (2026-10-25 R2039): tail notes stacked up across regens, so a
+    # 4B reached attempt 4 holding three separate instructions naming three
+    # different rejected lines - and the seat still died on batch-dup-phrase
+    # (C-06556 skipped this round). Rebuild from the base prompt every attempt
+    # and pin exactly ONE note for the CURRENT violation.
+    base_prompt = prompt
     for _ in range(1 + max_regens):
+        prompt = base_prompt
         line = llm(prompt)
         v = ring_violations(line, sig)
         if not v:
@@ -1686,7 +1698,8 @@ def time_recap(sig):
         return ("【当前时段速记·最高优先级·贴近你的输出】现在是凌晨夜时段（0-5 点），天还没亮。"
                 "你的输出里严禁出现任何晨间字样：今早/今晨/早上/早晨/清晨/清早/晨光/晨风"
                 "（含「今天清早」类插入形），也不得描写还没发生的晨景；"
-                "此刻只许夜语（如凌晨/夜深/深夜/今夜/这会儿天还黑着）。"
+                "此刻只许夜语（时间词仅限「凌晨/夜深/深夜/今夜」，"
+                "不得照抄本速记里的任何整句写法，须用居民自己的话）。"
                 "此速记与前文硬约束同效，冲突时以更严者为准。\n")
     if h <= 17:
         return ("【当前时段速记·最高优先级·贴近你的输出】现在是白天时段（6-17 点）。"

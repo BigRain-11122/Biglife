@@ -2163,3 +2163,8 @@ tokens: local=10 api=0 api_reason=-
 - 本轮跳过项（自终止律）：语言池 pool_audit=PASS 全桶达标 72/72（不再加长）；相遇轮 meet=CAP（今日已 3 次上限）；日报已于 02:47 轮写过（无待报）。
 - 实况三行：当前活=年轮线按轮转（到期居民迭代，本地 qwen3:4b-instruct）。最近实物=census/registry/GM/C-06546.md（02:57）+ census/QC-REPORT.md（02:58）。下个里程碑=rings 6580（约 40 席 · ETA 10-25 白天窗口）。
 - tokens: local=10 api=0 api_reason=-
+
+- **[R2039]** 2026-10-25 03:0x~03:2x @BigLife-OSLoop 小结：pull=Already up to date；水位集 NEW=0（D-20261025-01~04 已全在册）；orders 无本司令；任务板 open=0。**产品增量=年轮 9 席 C-06547~C-06555**（commit 46cd26759）→ 行为线镜像 ring=6555，第二轮批 9 席 C-06556~C-06570 落环（e076eb48f/bb1e583fe + 行为线 b307d71f0/0ed961ea6），累计 ring=6564；事件回放闸 PASS（cards=10091/events=37467/replayed=10091/mismatch=0/schema=0，qa/EVENTS-REPLAY-REPORT.md 入库 14192eb4e）；池审计 PASS 72/72 SELF_TERMINATE；看板刷新 rings=6564 bytes=61696。**品质修复（v0.55 gap #74·evolve_citizen.py）**：批内撞句子串致席位饿死（首轮 skip 1 席·复跑 skip 2 席）根因=①gated_llm 的纠错尾注跨次累积，第 4 次尝试同时背三条互相打架的指令；②时段速记（0-5 点窗）把「这会儿天还黑着」当示例句喂给 4B，模型整句照抄→同批 7 字串撞车。修法=每次从 base prompt 重建+只挂当前违规一条注；夜语只给时间词清单（凌晨/夜深/深夜/今夜）不给整句。实测 10 席批：6/10 → 9/10 落环（skip 1 席）。
+- 留观（下一轮 gap #75）：残余 1 席仍死于 batch-dup-phrase，撞车串实测为「风好大，我正把」「，城心灯还亮着」——模型把风量级提示自行改写成「风好大」并跨卡复用的高频搭配；候选修法=风量级 hint 池扩写/把「风好大」系并入批级黑名单源。
+- 实况三行：当前活=年轮线按轮转（本地 qwen3:4b-instruct；cursor C-06570）。最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-dashboard.html（03:1x，rings=6564）+ Tools/evolve_citizen.py v0.55（03:1x）。下个里程碑=rings 6600（约 36 席 · ETA 10-25 白天窗）+ gap #75 撞车串收口。
+- tokens: local=30 api=0 api_reason=-（年轮 19 席生成 + 2 次冒烟批的重试轮，全本地 Ollama；闸/审计/看板为确定性本地件）
