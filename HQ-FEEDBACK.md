@@ -129,3 +129,4 @@
 - [2026-10-24 10:4x R1946] 日清：无待报 CEO 事项。年轮 10 席（C-05606~C-05615）·rings=5609·事件闸 PASS events=36521/mismatch=0/schema=0·QC PASS cards=10114/evolved=5609/problems=0·池全桶达标自停。
 
 - [2026-10-24 11:3x R1950] 本司有 1 项跨线资源冲突待集团知悉（非拍板项）：年轮线依赖本地 Ollama，但本机 GPU 长期被兄弟线 ComfyUI（D:\AI\comfyui-krea）占满（10-24 11:2x 实测 显存 11089/12282 MiB、util 99%），`evolve_citizen --batch 3` 5 分钟零输出被中止，年轮批已连续受阻。本司做法=GPU 让路不抢占、转产确定性城市视图（10 页刷新，rings=1302/cards=10091）+ QC problems=0 + 事件回放闸 PASS（events=36541）。请集团在派工层明确「本地 LLM 线（BigLife/BigCompute）与 ComfyUI 渲染批」的 GPU 时段或分卡策略；本司同时排改造项=调用端点透传 num_gpu=0 走 CPU 兜底（CPU 探针实测 37 tokens/2.0s 可用）。
+- [2026-10-24 12:0x R1954] 日清：无待报（无待 CEO 决策项）。本轮实物：10 席新年轮（C-05666~C-05675，ring=5669）+ 事件回放闸 PASS events=36581/mismatch=0/schema=0 + QC PASS cards=10114/problems=0。附：D-20261024-02 模型口径已生效——本机仅存 qwen3:4b-instruct，evolve_citizen.py 兜底改走 4b，语言线未断供（实测 10/10 成功）。
