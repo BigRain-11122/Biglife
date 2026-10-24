@@ -1930,3 +1930,7 @@
 - QC 巡检：13:00 R1959 已巡检 problems=0，本轮轮次未到，跳过。
 - 状态导出：docs/status-export.json export_ts=12:05，4h 新鲜度闸内，无需刷新。
 - 计量：tokens: local=12 api=0 api_reason=-
+
+- [2026-10-24 13:2x R1964] 轮职（OS 静默轮）：产品增量=10 席年轮落环 C-05746~C-05755（qwen3:4b-instruct·脚本自动 commit 3d16d6dee+行为线镜像 431bcb13d）→ ring 累计 5749；事件回放闸 PASS（cards=10091 events=36661 replayed=10091 mismatch=0 schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 同轮刷新）；QC 巡检 cards=10114 problems=0 dup_rings=37/37；池审计 PASS 自终止（六轴/问候/FAQ/负样本 全桶达标，determinism 192 对 mismatch=0）跳过；可见面三页刷新（dashboard rings=5749 total=10114 / 今日刊 rings=1422 people=1418 / index pages=13）；决策水位差集 NEW=0。
+- R1964 过程可见：当前活=年轮环续转 + 三页可见面；最近实物=census/export/city-dashboard.html（13:2x）、census/registry/** 十张 2026-10-24 年轮卡（C-05746~C-05755）；下个里程碑=ring 累计 6000（ETA 2026-10-25）。
+- R1964 计量：tokens: local=10 api=0 api_reason=-
