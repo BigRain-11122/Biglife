@@ -1944,3 +1944,6 @@
 - R1966 发现（效率）：同一时刻存在并发轮执行同一年轮环，本轮三个批次的 20 席重复算力（约 20 次本地 LLM 调用）被浪费；`logs/round.lock` 在轮间不留存（每轮退出即释放），启动器并发拉取时无法互斥。建议：evolve_citizen.py 在写入前按卡内「- <今日> 」存在性做内容级幂等跳过（先查卡再调 LLM），并给启动器加一次性互斥（计划任务与手拉双通道时择一）。
 - R1966 过程可见：当前活=年轮环推进（由并发轮承载）；最近实物=qa/EVENTS-REPLAY-REPORT.md（2026-10-24 13:48，PASS/36681/0/0）；下个里程碑=ring 累计 6000 席（ETA 2026-10-25）。
 - R1966 计量：tokens: local=30 api=0 api_reason=-
+- [2026-10-24 14:0x R1967] 值守席·OS 静默轮。产品增量=10 席年轮 C-05796~C-05805（qwen3:4b-instruct·脚本自动 commit 075552fb6 + 行为线镜像 27797a14d·ring 累计 5799）；事件回放闸 PASS：cards=10091 events=36711 replayed=10091 schema_errors=0 mismatch=0（qa/EVENTS-REPLAY-REPORT.md 14:06 刷新）；QC 巡检 PASS：异常 0、编号/姓名唯一、必备段齐备、年轮锚定律无违例（dup_rings=37/37 为历史同文记录口径）；语言线池 SELF_TERMINATE 全桶达标；相遇线日 cap 已满本轮停；决策水位差集 NEW=0（D-20261024-12 已消费）。
+- R1967 过程可见面：当前活=年轮线轮转（10 席/轮）；最近实物=census/registry/** 十席 2026-10-24 14:06 + census/QC-REPORT.md 14:08；下个里程碑=ring 累计 6000 席，ETA 2026-10-25。
+- R1967 计量：tokens: local=10 api=0 api_reason=-
