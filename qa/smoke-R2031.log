@@ -1,0 +1,28 @@
+=== BigLife smoke 自验 R2031 · 2026-10-25 02:0x @BigLife-OSLoop ===
+[1] poolgen 跑通（tick 戳）
+    2026-10-25 01:06:02 poolgen_loop tick src=auto exit=0  TOTAL=1440 FAIL_BUCKETS=NONE
+[2] census 新条目（本批年轮环 10 席）
+    388d94db2 年轮批 2026-10-25: C-06477..C-06486（10 files changed, 40 insertions, 10 deletions）
+    8ed8fb924 行为线镜像 rows=10 ring=6480
+[3] 位置字段非 null（行为面锚位）
+    python -X utf8 Tools/behavior.py --qc
+    rows=10114 bad=0 tw=night wx=rain wd=6 top3=[('sleep',7470),('charge',2003),('indoors',335)] crash=0 recovering=4461
+[4] 行为链再生
+    sync_rings 随年轮批自动收口（镜像 rows=10 ring=6480·commit 8ed8fb924）
+[5] heartbeat 3h 内
+    state/heartbeat.txt 尾行 R2030 2026-10-25 01:53（本轮轮末再写 R2031 行）
+[6] 事件流回放闸
+    python -X utf8 Tools/events_refresh.py --gate
+    derive: OK cards=10091 events=37398 shards=2
+    replay: events=37398 cards=10091 replayed=10091 schema_errors=0 mismatch=0 -> PASS
+[7] 台词池审计（语言线日额）
+    python -X utf8 Tools/pool_audit.py
+    under_target (pool 18/12 + greet 17 + faq 3 + neg 8): NONE - SELF_TERMINATE
+    determinism: 192 pairs mismatch=0 / greet 25 pairs mismatch=0
+    verdict: PASS
+[8] 核卡抽验 2/2（人眼六面）
+    C-06477 熊阿宁（GM 像素画匠）「雨脚细细密密，风一阵紧一阵，画桌上的灯还亮着。老地方见，我这儿的笔尖没动，可心早顺着纹路剪开了。」
+      —— [锚] 注脚齐 / 天气词与 wx=rain 一致 / 口头禅「老地方见」入语 / 职业行话「起稿·描点」域内 / 零占位零越权
+    C-06486 陆美娟（QT 风控官）「雨敲在窗棂上，风不小，我手心还攥着那块褪色的旧布包，边角裂了口，像昨夜没收的账——又学了一招，把这日子，缝进袖口里。」
+      —— [锚] 注脚齐 / 天气词一致 / 口头禅「又学了一招」入语 / 性格「细算」+钩子「旧药柜抽屉→旧布包」域内 / 零占位零越权
+VERDICT = PASS（8/8 面全过）
