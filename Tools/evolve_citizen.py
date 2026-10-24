@@ -1297,6 +1297,25 @@ def gated_llm(prompt, sig, max_regens=3):
                       + line.strip()[:20]
                       + "」）与本轮另一位居民雷同。重写：第一个短句必须完全换一种写法，"
                         "先写本居民此刻手上正在做的一件小事，再带今日实况。")
+        if "batch-dup-phrase" in v:
+            # v0.53 gap #72 (2026-10-24 R1930, T-20261024-09): the phrase gate
+            # had no tail note, so the same citizens regenerated into the same
+            # shared phrase every round and stayed due forever (R1929/R1930
+            # skipped C-05458/C-05459 and C-05466/C-05467 on one 7-gram).
+            # Name the offending grams at the tail, like #68/#70.
+            _norm = re.sub(r"\s+", "", line or "")
+            _bad = []
+            for _i in range(len(_norm) - 6):
+                _g = _norm[_i:_i + 7]
+                if sig.get("batch_phrases", {}).get(_g, 0) >= 2 and _g not in _bad:
+                    _bad.append(_g)
+            if _bad:
+                prompt = (prompt
+                          + "\n你刚才的句子里有一段措辞（「"
+                          + "」「".join(_bad[:3])
+                          + "」）与本轮别的居民撞了。重写：这段措辞本轮禁用，"
+                            "换一个本居民自己的具体细节（身上带着的旧物、此刻手上的动作），"
+                            "不要用公共的模板句。")
     print("gate: persistent violations", v)
     print("gate: last violating line:", line[:120])
     return None
