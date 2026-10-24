@@ -1,6 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.50 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.52 - BigLife citizen evolution engine.
+v0.52 (2026-10-24 R1919, gap #71): batch-level PHRASE dedup - gap #70 only
+guards the opening 12 chars, so a batch can still collapse mid-sentence:
+the R1917 batch wrote 9/10 rings carrying 「雨还在下，风挺大」 verbatim (the
+weather recap's own example phrases pasted back). Fix = (a) the recap's rain
+and wind branches now mark their examples 严禁照抄 and name variant phrasings,
+(b) build_prompt carries this batch's already-accepted rings as an avoid
+list, (c) ring_violations gains the batch-dup-phrase check (7-char normalized
+n-gram seen in >=2 accepted rings this batch -> regenerate).
+v0.51 (2026-10-24 R1877, gap #70): batch opening dedup - one batch wrote 7/10
+rings sharing the same 12-char opening; per-card suites cannot see it.
 v0.50 (2026-10-16 R1469, gap #69): stray-quote gate - a lone U+201D where
 the 「」 style belongs is the same-day 3x hand-fixed defect (C-03153 /
 C-03223 / C-03283), and the R1469 census per-line scan found the family
@@ -1235,6 +1245,20 @@ def ring_violations(line, sig):
         op = re.sub(r"\s+", "", line or "").strip("「」\"“”")[:12]
         if len(op) >= 8 and op in bo:
             v.append("batch-dup-opening")
+    # v0.52 gap #71 (2026-10-24 R1919): batch-level PHRASE dedup - gap #70 sees
+    # only the opening 12 chars, so a batch still collapses mid-sentence (the
+    # R1917 batch: 9/10 rings carried 「雨还在下，风挺大」, i.e. the weather
+    # recap's own examples pasted back). sig["batch_phrases"] counts 7-char
+    # normalized n-grams over rings ALREADY ACCEPTED this batch; a gram seen in
+    # >=2 accepted rings is a template copy -> regenerate. Absent (meet /
+    # reflect / single-shot faces) -> check off, zero drift there.
+    bph = sig.get("batch_phrases")
+    if isinstance(bph, dict) and bph:
+        norm_ln = re.sub(r"\s+", "", line or "")
+        for i in range(len(norm_ln) - 6):
+            if bph.get(norm_ln[i:i + 7], 0) >= 2:
+                v.append("batch-dup-phrase")
+                break
     return v
 
 def gated_llm(prompt, sig, max_regens=3):
@@ -1557,7 +1581,8 @@ def weather_recap(wx):
         rule = ("天空面只许晴系直读（如「天清气朗」「太阳正好」）或完全不提天气；"
                 "严禁任何阴系措辞（天阴/阴着/阴天/多云）。")
     elif re.search(r"rain|drizzle|shower|雨", w):
-        rule = ("天空面只许雨的如实直读（如「雨还在下」「撑着伞」「檐下避雨」「地上的水洼」）"
+        rule = ("天空面只许雨的如实直读（下列示例仅供理解，严禁整句照抄——请换你自己的说法，"
+                "如「雨点没停」「雨丝还挂着」「撑着伞走」「檐下躲着」「地上的水洼积着水」）"
                 "或完全不提天气；严禁一切天气正面评估与外出适配语"
                 "（天气挺好/天气好/天气不错/天气正好/天气挺适合/天气正合适/这天挺好/"
                 "清爽/清清爽爽/清清的/晴/阳光/太阳/晒，"
@@ -1573,14 +1598,16 @@ def weather_recap(wx):
                 "严禁一切天气正面评估、晴系措辞与外出适配语。")
     m = re.search(r"wind\s*([\d.]+)\s*m/s", wx, re.I)
     if m:
-        wind = ("风只许按实况量级措辞：" +
+        wind = ("风只许按实况量级措辞（示例仅供理解，严禁整句照抄——风大时换用「风不小」「风好大」"
+                "「风刮得紧」这类同量级说法，不要每次都写同一句）：" +
                 ("「风轻轻的/风不大」。" if float(m.group(1)) <= 3
                  else "「风不小/风挺大」（严禁任何弱化变体与弱化名词，含成语「云淡风轻」——"
-                      "风大时该成语=「风轻」弱化断言，即使你历史年轮原句里有也严禁照搬）。"))
+                       "风大时该成语=「风轻」弱化断言，即使你历史年轮原句里有也严禁照搬）。"))
     else:
         wind = "实况无风速数据：完全不提风。"
     return ("【本日天气速记·最高优先级·贴近你的输出】此刻实况天气=%s。%s%s"
-            "此速记与前文硬约束同效，冲突时以更严者为准。\n" % (wx, rule, wind))
+            "此速记与前文硬约束同效，冲突时以更严者为准；同批其他居民已写过的措辞不得照抄。\n"
+            % (wx, rule, wind))
 
 def time_recap(sig):
     # 2026-10-12 night-pile fix (R941/R943 batches: 9/10 due stuck on
@@ -1621,6 +1648,13 @@ def build_prompt(cid, text, sig):
     # byte-identical to the pre-wiring build (zero-drift law, same as rumor/city).
     gl = (sig.get("goal") or "").strip()
     goal_blk = (gl + "\n") if gl else ""
+    # v0.52 gap #71: this batch's already-accepted rings as a tail-side avoid
+    # list. Empty (meet/reflect/single-shot) -> "" -> prompt byte-identical to
+    # the pre-wiring build (zero-drift law, same as rumor/city/goal).
+    bu = sig.get("batch_used") or []
+    batch_blk = ("本批同城其他居民今天已经写下的句子（严禁照抄其中任何连续 6 字以上的措辞，"
+                 "同一天同一种天气也要各说各的）：\n"
+                 + "\n".join("- " + x for x in bu[-8:]) + "\n") if bu else ""
     # T-20260925-01/T-20260925-18 soft guidance (NOT a gate): open with your OWN
     # catchphrase; standing per-prompt constraint caps generic pool-gene quotes at
     # 1 per ring (cross-card quotes stay LEGAL per C-00695 R192 - diversity nudge
@@ -1644,7 +1678,7 @@ def build_prompt(cid, text, sig):
     return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
             f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
-            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}{city_blk}{goal_blk}"
+            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}{city_blk}{goal_blk}{batch_blk}"
             f"现在真实北京时间 {sig['now']}，今天{sig.get('weekday','')}（{'周末' if sig.get('weekend') else '工作日'}），上海实况天气：{wx}。\n"
             f"今天属于上面标明的工作日/周末：你人设里凡以「周末」或「工作日」为前置条件的习惯，只许写与今天同侧的进行态或完成态，另一侧只许作为未来打算句提及，写错侧视为编造。\n"
             f"今天日期是 {sig.get('day')} 号（{sig.get('day_parity')}）：你人设里凡以「单日/双日/逢单/逢双」等日期奇偶为前置条件的习惯，只许写与今天同侧的进行态或完成态；另一侧严禁写成今天已发生或正在发生，只许以规则自述（人设原文规则句可原样引用）、按规则的自然推论或未来打算句式提及，严禁借引用断言今天发生了错侧动作，写错侧视为编造；同样严禁把你卡面没有奇偶前置的习惯硬捆绑到单日/双日名下——卡面没有的规则不得借日期之名新造，日期奇偶只许与你人设原文里真带奇偶字样的规则搭配。\n"
@@ -2016,6 +2050,8 @@ def main():
     pool_genes = load_pool_genes()   # T-20260925-01: soft opening-diversity guidance
     pool_used = {}
     sig["batch_openings"] = set()    # gap #70: batch-scoped opening dedup face
+    sig["batch_phrases"] = {}        # gap #71: 7-char n-gram counts, accepted rings
+    sig["batch_used"] = []           # gap #71: accepted lines -> prompt avoid list
     for cid in due:
         # T-20261019-01: per-seat stdout keepalive, flush=True beats pipe block-buffering
         # T-20261020-01: seat start carries a timestamp so a stalled seat is
@@ -2090,6 +2126,13 @@ def main():
         # gap #70: record the accepted opening so later seats in this batch must
         # vary theirs (same-round cross-card repetition is not a per-card defect).
         sig["batch_openings"].add(re.sub(r"\s+", "", line)[:12])
+        # gap #71: feed the accepted line into the batch phrase counter + the
+        # prompt avoid list (both consumed by the NEXT seat in this batch).
+        _norm_ln = re.sub(r"\s+", "", line)
+        for _i in range(len(_norm_ln) - 6):
+            _g = _norm_ln[_i:_i + 7]
+            sig["batch_phrases"][_g] = sig["batch_phrases"].get(_g, 0) + 1
+        sig["batch_used"].append(line)
         note_pool_use(line, face, pool_genes, pool_used)  # T-20260925-01: count cross-card quotes
         add_ring(p, cid, line, anchor_note)
         paths.append(p)
