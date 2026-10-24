@@ -1992,3 +1992,6 @@
 - R1958 计量：tokens: local=10 api=0 api_reason=-
 
 - [2026-10-24 15:48 R1959] 小结: 年轮线 evolved=10(C-05905~C-05914, qwen3:4b-instruct)+行为线 ring=5908+事件回放闸 PASS(events=36820 cards=10091 replay=10091 schema=0 mismatch=0)+pool_audit PASS 全桶达标 SELF_TERMINATE(72/72 axes·sprite 12/12·hard_fails=0·determinism 192 pairs mismatch=0)+QC problems=0(cards=10114 evolved=5908 dup_rings=37/37)+meet=CAP(每日 3/3 已足)+任务板 open 仅 T-20260923-01(属 FluxVerse 侧非本司单)+水位差集 NEW=0(watermark 已含 D-20261024-12)+产品增量刷新 city-dashboard.html(rings=5908 total=10114)/city-life.html(rows=10114); commit ec08f0b91 已 push origin/main; tokens: local=10 api=0 api_reason=-
+
+- [2026-10-24 15:58 R1967] 小结: 年轮线 evolved=10/10(C-05915~C-05924, qwen3:4b-instruct)+行为线 ring=5918(脚本自commit fdb2eca32/dfb1df4ef)+事件回放闸 PASS(cards=10091 events=36830 replay=10091 schema=0 mismatch=0)+QC problems=0(cards=10114 evolved=5918 dup_rings=37/37)+看板刷新(city-dashboard rings=5918/people=10114·city-life rows=10114)+pool_audit PASS 全桶达标 SELF_TERMINATE(under_target NONE·hard_fails=0)+相遇轮今日 cap 已满跳过+决策水位差集 NEW=0(watermark 已含 D-20261024-12); commit 见下; tokens: local=10 api=0 api_reason=-
+- R1967 过程可见：当前活=年轮环滚动进化（cursor 至 C-05924）；最近实物=census/registry/*/C-05915~C-05924 十张年轮卡（16:0x）·census/export/city-dashboard.html（16:0x rings=5918）；下个里程碑=年轮累计 6,000（环 5918，差 82 席，ETA 2026-10-25 内）
