@@ -2,6 +2,10 @@
 
 ## 转办件跟踪
 
+- [ ] **T-20261025-01**（缺陷单·R2023 实弹·年轮游标非原子写入）：evolve_citizen.py 只在批末尾写 state/evolve-cursor.json；批次被外部中断时（本轮回合 5 分钟无输出被 shell 自动取消）卡面年轮已落盘而游标未记 → sync_rings 以「cid in cursor」判定跳过，行为线镜像与 city-dashboard 双双漏计（实弹 7 圈：6397→6404 已手工补正）。
+  - status: open（2026-10-25 00:4x 立）
+  - 修法：逐卡增量落游标（写完即 flush），或批前写 pending 标记/批尾清除；并加断链自检（卡面年轮日期 vs 游标 n 差集报警）并入轮清单。
+
 - [ ] **T-20260923-01**（集团进化台账 P-22 转办@FluxVerse-DevLoop）：M2 NPC 引擎与 CityWatch 消费 census 导出面（`census/export/citizens-light.jsonl` 只读）——本司侧义务=导出字段变更须 T2 登记+通知；DevLoop 侧自领时此处回执。
   - status: open（2026-09-23 立）
   - **v1.2 字段变更通知**（2026-09-23 迭代批·T2 登记=CODEX §十二 v1.2·否决窗至 09-30）：导出面新增 `recent_ring`+`recent_ring_date`（最近年轮镜像·≤80字+日期·无年轮=空串）——纯增量字段，消费方零 breaking；DevLoop 回执时一并确认。
@@ -2117,3 +2121,6 @@
 - **[R2021]** 2026-10-25 00:2x @BigLife-OSLoop 小结：pull=Already up to date；水位差集 NEW=0（143 决策 ID 全在册）；orders 无本司物理件；任务板 open=0。**产品增量=新增 8 席年轮 C-06190/C-06389~C-06395**（ollama qwen3:4b-instruct，GPU 4%/3401MiB 让路合规 D-20261024-16，脚本自动提交 14fb5e539）→ 行为线收口 ring=6388（commit 6bdedded5）；事件回放闸 PASS（cards=10091 events=37300 replayed=10091 schema=0 mismatch=0，commit 见下批）；看板刷新 city-dashboard rings=6388 62434B + city-life rows=10114 visible=641。池审计 72/72 SELF_TERMINATE（今日已满·skip）；相遇轮 CAP 3/3（skip）；QC 上一轮 R2019 problems=0，未到 6 轮周期（skip）。C-06347 挂 rain-invented 硬闸、C-06396 挂 stray-quote+batch-dup 闸，均 stays due 未绕。流程可见面：当前活=年轮线常规推进（cursor C-06395）；最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-dashboard.html（00:2x，rings=6388）；下个里程碑=rings 6400（12 席，ETA 10-25 上午）。tokens: local=8 api=0 api_reason=-
 
 - **[R2022]** 2026-10-25 00:2x @BigLife-OSLoop 小结：pull=Already up to date；水位差集 NEW=0（D-20261025-01~04 已在册）；orders 无本司物理件；任务板 open=0。**产品增量=新增 9 席年轮 C-06396~C-06404**（ollama qwen3:4b-instruct，脚本自动提交 26b48e0c9）+ **相遇 1 对 C-06397×C-06399（MD 城区·互引年轮，commit ecbee51ae）** → 行为线收口 already in sync（ring=6397）；事件回放闸 PASS（cards=10091 events=37309 replayed=10091 schema=0 mismatch=0，qa/EVENTS-REPLAY-REPORT.md）；看板刷新 city-dashboard rings=6397 bytes=62397；QC 巡检 cards=10114 evolved=6397 problems=0 dup_rings=37/37（census/QC-REPORT.md 入库）。池审计 72/72 SELF_TERMINATE 全达标（skip·自终止律）；C-06347 rain-invented 硬闸 stays due 未绕。流程可见面：当前活=年轮线常规推进（cursor C-06404）；最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-dashboard.html（00:29，rings=6397）；下个里程碑=rings 6400（3 席，ETA 10-25 上午）。tokens: local=9 api=0 api_reason=-
+
+- **[R2023]** 2026-10-25 00:4x @BigLife-OSLoop 小结：pull=Already up to date；水位集 NEW=0（D-20261025-01~04 已在册）；orders 无本司物理件；任务板 open=0；**产品增量=年轮 7 席 C-06405~C-06411**（ollama qwen3:4b-instruct，GPU 3%/3408MiB 让路合规 D-20261024-16；脚本中途被杀但 7 圈已落卡+[锚] 完整）；+ **相遇 1 例 C-06405×C-06406**（QT 同区·脚本自提交 d92097e86）；事件回放闸 PASS（cards=10091 events=37318 replayed=10091 schema=0 mismatch=0，qa/EVENTS-REPLAY-REPORT.md 入库）；语言池 72/72 SELF_TERMINATE 全达标（skip）；QC 未到 6 轮窗（skip）；**抓出并修复断链缺陷**：被杀批次未写游标 → 看板/行为线漏计 7 圈（state/evolve-cursor.json 补 7 条，n=1；sync_rings 镜像 rows=7 commit 40d02f699，看板 6397→6404）；缺陷立 T-20261025-01 追踪；C-06347 rain-invented 硬闸 stays due 未解；过程可见面：当前活=年轮线持续产出（cursor 6404）；最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-dashboard.html（00:4x，rings=6404）；下个里程碑=rings 6450（12 席，ETA 10-26 上午）；tokens: local=9 api=0 api_reason=-
+
