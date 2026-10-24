@@ -1939,3 +1939,8 @@
 
 - R1965 过程可见面：当前活=年轮环推进 + 可见面刷新；最近实物=census/export/city-today.html（13:4x，rings=1432）与 census/registry/** 十席 2026-10-24 年轮卡（C-05756~C-05765）；下个里程碑=ring 累计 6000 席，ETA 2026-10-25。
 - R1965 计量：tokens: local=10 api=0 api_reason=-
+
+- [2026-10-24 13:44~14:05 R1966] 值守席（OS 静默轮·并发让路）：产品增量=0 新卡（本轮三次 evolve 批次所命中的范围 C-05766~C-05775 / C-05776~C-05785 / C-05786~C-05795 均已被并发轮先行落卡并入库：commit 5f9ba6402 / 69028ded8 / e6c4f7ae5，三次撰写内容与 HEAD 逐字节一致 → 零 diff，未产生重复卡）；真实产出=事件回放闸复核 PASS（cards=10091 events=36681 replayed=10091 schema_errors=0 mismatch=0，qa/EVENTS-REPLAY-REPORT.md 13:48 入库）；语言线池审计 PASS 全桶达标（axes 72/72、sprite 12/12、greet 28/28、faq 7/7、neg 6/6、hard_fails 0、determinism mismatch 0/empty_draw 0）→ SELF_TERMINATE；相遇轮今日 cap 3 已满→跳过；决策水位差集 NEW=0（D-20261024-12 已消费）。
+- R1966 发现（效率）：同一时刻存在并发轮执行同一年轮环，本轮三个批次的 20 席重复算力（约 20 次本地 LLM 调用）被浪费；`logs/round.lock` 在轮间不留存（每轮退出即释放），启动器并发拉取时无法互斥。建议：evolve_citizen.py 在写入前按卡内「- <今日> 」存在性做内容级幂等跳过（先查卡再调 LLM），并给启动器加一次性互斥（计划任务与手拉双通道时择一）。
+- R1966 过程可见：当前活=年轮环推进（由并发轮承载）；最近实物=qa/EVENTS-REPLAY-REPORT.md（2026-10-24 13:48，PASS/36681/0/0）；下个里程碑=ring 累计 6000 席（ETA 2026-10-25）。
+- R1966 计量：tokens: local=30 api=0 api_reason=-
