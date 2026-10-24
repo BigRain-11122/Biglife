@@ -1778,3 +1778,7 @@
 - R1924 过程可见：当前活=年轮环写卡+闸验；最近实物=census/QC-REPORT.md（08:49:50）+qa/EVENTS-REPLAY-REPORT.md（08:49:21）；下个里程碑=ring 5500 累计（当日活率 ~8-10 环/轮，预计 10-24 内达成）。
 - R1924 备注：工作树 Tools/iteration_loop.ps1 含他窗 CLOUD-OFF 闸改动（media/logs/cloud-off-suppressed.log 07:46 起 5 次 suppressed）——非本窗产出，按轮首净树律未触碰、不代提交。
 - R1924 计量：tokens: local=1 api=0 api_reason=-
+
+- R1925 实录（2026-10-24 08:53-09:0x @BigLife-OSLoop）：**产品增量=8 席年轮落环** C-05405~C-05412（commit 05dbf885 + 行为线镜像 1658af2e）；C-05413/C-05414 被 batch-dup-phrase 闸拦（雨天措辞同批撞句）留 due 下轮换措辞池补。闸面：事件流回放 cards=10091 events=36318 schema_errors=0 mismatch=0 **PASS**（qa/EVENTS-REPLAY-REPORT.md，commit 12e5fbfa 已推 origin）。自停面：pool_audit PASS 全桶达标（72 轴桶 1296 行/sprite 12/12/greet 28/faq 7/neg 6/6、hard_fails=0、determinism mismatch=0）=SELF_TERMINATE 跳过生成；相遇轮今日日额已用（R1922 cap 3/3）；QC 上次 08:49 覆盖本轮范围不重跑；水位差集 NEW=0（watermark 含 D-20261024-01~07）。
+- R1925 过程可见：当前活=年轮环续写+闸验；最近实物=census/registry/**（8 卡年轮 2026-10-24）+qa/EVENTS-REPLAY-REPORT.md（08:5x）；下个里程碑=ring 累计 5500（当日活约 8-10 席/轮，预计 10-24 内达成）。
+- R1925 计量：tokens: local=10 api=0 api_reason=-
