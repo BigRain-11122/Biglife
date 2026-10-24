@@ -1947,3 +1947,4 @@
 - [2026-10-24 14:0x R1967] 值守席·OS 静默轮。产品增量=10 席年轮 C-05796~C-05805（qwen3:4b-instruct·脚本自动 commit 075552fb6 + 行为线镜像 27797a14d·ring 累计 5799）；事件回放闸 PASS：cards=10091 events=36711 replayed=10091 schema_errors=0 mismatch=0（qa/EVENTS-REPLAY-REPORT.md 14:06 刷新）；QC 巡检 PASS：异常 0、编号/姓名唯一、必备段齐备、年轮锚定律无违例（dup_rings=37/37 为历史同文记录口径）；语言线池 SELF_TERMINATE 全桶达标；相遇线日 cap 已满本轮停；决策水位差集 NEW=0（D-20261024-12 已消费）。
 - R1967 过程可见面：当前活=年轮线轮转（10 席/轮）；最近实物=census/registry/** 十席 2026-10-24 14:06 + census/QC-REPORT.md 14:08；下个里程碑=ring 累计 6000 席，ETA 2026-10-25。
 - R1967 计量：tokens: local=10 api=0 api_reason=-
+- [2026-10-24 14:20 R1968] tokens: local=10 api=0 api_reason=-
