@@ -2283,3 +2283,13 @@ tokens: local=10 api=0 api_reason=-
 - build_city_dashboard: rings=6836 people=10114 bytes=63414 重建
 - commit 438ae39ea 已推送 origin/main
 - tokens: local=10 api=0 api_reason=-
+
+## R2071 轮实录 2026-10-25 07:4x~07:5x
+- 轮首：pull=Already up to date；决策水位 NEW=0；orders 物理件区无本司新项；任务板 open=0
+- 年轮批 evolve_citizen --batch 3 -> due 10/10 落笔(C-06843..C-06852) commit 02b0b90be（行为线收口 d2bf85a13·镜像 rows=10）
+- events_refresh --gate: events=37764 replayed=10091 mismatch=0 schema_errors=0 -> PASS
+- pool_audit: 全桶达标 SELF_TERMINATE（本轮跳过池轮）
+- 相遇轮: 今日已记 3/3 达上限（cap 3）→ 跳过
+- qc_census: cards=10114 evolved=6846 problems=0 dup_rings=37/37
+- build_city_dashboard: rings=6846 people=10114 bytes=63682 重建
+- tokens: local=10 api=0 api_reason=-
