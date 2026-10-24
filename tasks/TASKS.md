@@ -1793,3 +1793,10 @@
 - R1927 计量：tokens: local=10 api=0 api_reason=-
 
 - [2026-10-24 09:2x R1928] 年轮 9 席（C-05441/C-05442/C-05443~C-05447/C-05449/C-05450）+ 行为线镜像 rows=9 + 事件回放闸 PASS（cards=10091 events=36355 replay=10091 mismatch=0 schema=0）+ 语言池 SELF_TERMINATE（72/72 达标，本轮不生成）+ QC 例巡免（上轮 09:14 problems=0）+ 相遇轮 cap 已满 + 决策差集为空。C-05448 因 batch-dup-phrase 闸留待下轮重试。 tokens: local=10 api=0 api_reason=-
+
+
+- [ ] **T-20261024-09**（年轮闸与口头禅基因重复度冲突·R1929 实锚）census 卡片「口头禅」去重仅 140 种 / 9561 卡（「汤要趁炫，话要慢讲」180 卡、「老规矩错不了」183 卡等），而 build_prompt 软引导「开场句优先取你自己的口头禅」+ v0.52 batch-dup-phrase 闸（同批 7 字 n-gram ≥2 次判负）二者互相打架 → 同批两位共享口头禅的居民必触发闸、重生成 3 次后 skip（R1929 实测 C-05458/C-05459 双双 skip，stays due）。正解二选一：(a) 批内已用过的口头禅转述化（build_prompt 检测本批 accepted catchphrase 后改喂「今天改说行话/底色词」）(b) ring_violations 对「本卡语言风格自有口头禅」7-gram 免检（保留真声音）。须补单测/闸回归，禁放闸门。
+  - status: open 2026-10-24 09:2x @BigLife-OSLoop R1929
+
+- R1929 过程可见：当前活=年轮环续转+闸验；最近实物=census/registry/** 八张卡片新增年轮（[锚]=2026-10-24）·qa/EVENTS-REPLAY-REPORT.md（09:24 刷新）；下个里程碑=ring 累计 5500（当日活跃 8-10 席/轮，预计 10-24 内达成）。
+- R1929 计量：tokens: local=10 api=0 api_reason=-
