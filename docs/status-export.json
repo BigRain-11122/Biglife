@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-24 19:53",
+ "export_ts": "2026-10-25 01:29",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R1996（10-24 19:5x·年轮线常态轮）**：轮首三步毕（pull up to date·决策水位差集 NEW=0〔至 D-20261024-17 全消费，含 D-16 GPU 仲裁序：开跑前实测 GPU util=2% <30% 门槛、周六非让路窗〕·orders 尾部零涉本司件）+年轮线 10/10 全落环（C-06153~C-06162·commit 941cc68cf+行为线镜像 2f1ffdd79 rows=10 ring=6156）+事件流回放闸 PASS（cards=10091 events=37068 replayed=10091 mismatch=0 schema=0）+池审 SELF_TERMINATE（六轴 72/72·sprite 12/12·greet 28/28·faq 7/7·negative 6/6·hard_fails=0）+city-dashboard 重建（rings=6156 cards=160 页·63,277B）。 **R1954（10-24 12:0x·年轮线常态轮）**：轮首三步毕（pull up to date·决策水位差集 NEW=0〔D-20261024-01~07 已消费·D-20261024-02 模型口径已实测生效=本机仅存 qwen3:4b-instruct、evolve_citizen.py 兜底改走 4b 且 10/10 成功〕·orders 尾部零涉本司件）+年轮线 10/10 全落环（C-05666~C-05675·commit f9db5768b+行为线镜像 5067c1d81 rows=10 ring=5669）+事件流回放闸 PASS（events=36581 cards=10091 replayed=10091 mismatch=0 schema_errors=0）+QC 巡检 PASS（cards=10114 evolved=5669 problems=0 dup_rings=37/37）+池审 SELF_TERMINATE（六轴 72/72·sprite 12/12·greet 28/28·faq 7/7·negative 6/6·hard_fails=0·determinism mismatch=0）+相遇轮今日已满额（cap 拦截跳过）。 **R1948（10-24 10:4x~10:5x·年轮线常态轮）**：轮首三步毕（pull up to date·决策水位差集 NEW=0〔D-20261024-01~07 已由晨轮消费·其中 D-20261024-02 明示 BigLife 侧零动作=qwen3:4b-instruct 照跑〕·orders 尾部零涉本司件）+年轮线 10/10 全落环（C-05626~C-05635·commit 27ad63c9d+行为线镜像 c704ab9b3 rows=10 ring=5629）+事件流回放闸 PASS（events=36541 cards=10091 replayed=10091 mismatch=0 schema_errors=0·qa/EVENTS-REPLAY-REPORT.md 入库 0239b764b）+池审 SELF_TERMINATE（六轴 72/72·sprite 12/12·greet 28/28·faq 7/7·negative 6/6·hard_fails=0·determinism mismatch=0）+相遇轮今日已满额 3/3（cap 拦截跳过）。周期面：QC 巡检上轮已兑（cards=10114 problems=0），本轮未到期。",
+   "t": "**R2028（** 2026-10-25 01:2x @BigLife-OSLoop 年轮线 10 席（C-06447~C-06456·零新注册）+ 行为线收口（ring=6450）+ 事件回放闸 PASS（cards=10091 / events=37366 / mismatch 0 / schema 0）+ 看板刷新（city-dashboard rings=6450 / people=10114）；语言池 72/72 SELF_TERMINATE（skip）；相遇轮今日已于 R2023 消费（skip）；QC 巡检 R2027 刚跑（problems=0·skip）。 **R1996（10-24 19:5x·年轮线常态轮）**：轮首三步毕（pull up to date·决策水位差集 NEW=0〔至 D-20261024-17 全消费，含 D-16 GPU 仲裁序：开跑前实测 GPU util=2% <30% 门槛、周六非让路窗〕·orders 尾部零涉本司件）+年轮线 10/10 全落环（C-06153~C-06162·commit 941cc68cf+行为线镜像 2f1ffdd79 rows=10 ring=6156）+事件流回放闸 PASS（cards=10091 events=37068 replayed=10091 mismatch=0 schema=0）+池审 SELF_TERMINATE（六轴 72/72·sprite 12/12·greet 28/28·faq 7/7·negative 6/6·hard_fails=0）+city-dashboard 重建（rings=6156 cards=160 页·63,277B）。 **R1954（10-24 12:0x·年轮线常态轮）**：轮首三步毕（pull up to date·决策水位差集 NEW=0〔D-20261024-01~07 已消费·D-20261024-02 模型口径已实测生效=本机仅存 qwen3:4b-instruct、evolve_citizen.py 兜底改走 4b 且 10/10 成功〕·orders 尾部零涉本司件）+年轮线 10/10 全落环（C-05666~C-05675·commit f9db5768b+行为线镜像 5067c1d81 rows=10 ring=5669）+事件流回放闸 PASS（events=36581 cards=10091 replayed=10091 mismatch=0 schema_errors=0）+QC 巡检 PASS（cards=10114 evolved=5669 problems=0 dup_rings=37/37）+池审 SELF_TERMINATE（六轴 72/72·sprite 12/12·greet 28/28·faq 7/7·negative 6/6·hard_fails=0·determinism mismatch=0）+相遇轮今日已满额（cap 拦截跳过）。",
    "s": 1
   },
   {
@@ -1301,6 +1301,10 @@
   [
    "1851",
    "10-24 今日 [锚] 年轮累计 1851 环（行级机器直数·registry/anchors 递归·本轮批 10 席 C-06153~C-06162 已计入）"
+  ],
+  [
+   "81",
+   "本轮结果：年轮 10 席落盘（81 环·今日累计），事件流回放闸全绿，看板与对外状态面续鲜。"
   ]
  ],
  "t": "当前活：年轮线常态批滚动（每轮 10 席·qwen3:4b-instruct 本地席）+ 事件流/池审双闸随轮跑\n最近实物：census/registry 年轮 10 席 C-05636~C-05645（commit 644e71ac2·行为线镜像 00eab55e8 ring=5639）+ qa/EVENTS-REPLAY-REPORT.md（events=36551 cards=10091 mismatch=0 PASS·84deb3353）\n下个里程碑：今日 [锚] 年轮累计 1400 环（现 1334·每轮 +10 席·ETA 约 3h）"
