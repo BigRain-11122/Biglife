@@ -1864,3 +1864,10 @@
 - [2026-10-24 10:5x] R1948 小结（@BigLife-OSLoop 本轮产品增量）：①年轮线本批 10 席 C-05626~C-05635 全部落环（evolve_citizen --batch 3·座位 :8090 非 LLM 道→本地 ollama qwen3:4b-instruct·脚本自提交 27ad63c9d+行为线镜像 c704ab9b3 rows=10 ring=5629）；②事件流回放闸 PASS（cards=10091 events=36541 replayed=10091 mismatch=0 schema_errors=0·qa/EVENTS-REPLAY-REPORT.md 入库 0239b764b）；③池审 SELF_TERMINATE（六轴 72/72·sprite 12/12·hard_fails=0·determinism mismatch=0）；④相遇轮今日满额 3/3 跳过；⑤对外状态面续鲜（docs/status-export.json export_ts 10:52·今日 [锚] 年轮 1324 环·三行实况面刷新）。决策消费：D-20261024-01~07 已由晨轮消费、新差集=0（D-20261024-02 明示 BigLife 侧零动作）。tokens: local=1 api=0 api_reason=-
 
 - [R1949] 2026-10-24 11:1x 产品轮：今日城市日报 `census/export/city-today.html`（rings=1302 / 1298 人 / 6 城区 / cards=10091）+ 居民画廊 `census/export/resident-gallery.html`（10114 席）+ QC 不变量巡检 problems=0（cards=10114 evolved=5629 dup_rings=37/37）；年轮批与相遇轮因本机白天让路窗本地推理（qwen3:4b-instruct 已驻留 VRAM 但 60s 无响应）按契约静默跳过。tokens: local=3 api=0 api_reason=-（探测 2 + 脚本 1，均无产出）
+
+- **R1950**，2026-10-24 11:2x @BigLife-OSLoop 小轮：轮首 pull=Already up to date；水位集合 NEW=0（watermark 已含 D-20261024-01~07；D-20261024-02 模型冲突已核验落地=qwen2.5 已下线、脚本首选 qwen3:4b-instruct）。
+  - **年轮批受阻（如实记未完成）**：`evolve_citizen.py --batch 3` 5 分钟零输出被中止；取证=`nvidia-smi` 显存 11089/12282 MiB、GPU util 99%，占用者=ComfyUI（D:\AI\comfyui-krea，兄弟线产线）且 CEO 正在用机（Photoshop/千问/Tuanjie 在跑）；CPU 直跑探针（num_gpu=0）实测 37 tokens/2.0s 可用，但现役调用走 OpenAI 兼容端点无法透传 num_gpu，改造节点留单下轮（避免逐轮撞同一墙）。
+  - **产品增量（确定性、零 LLM、不抢 GPU）**：城市视图全套刷新至今日数据——city-today（rings=1302/people=1298/cards=10091）、city-dashboard（total=10114 rings=5629）、city-map（rows=10111/districts=7）、city-districts（10114 人/6 区）、city-chronicle（10091 cards/11256 条年轮/19 天）、city-objects、city-relations、city-voices（8 声线 3 轨）、gene-ledger（sprite_habits 12/12）、index（13 页）。
+  - **闸门**：QC `qc_census.py` = cards=10114/evolved=5629/problems=0/dup_rings=37-37；pool_audit = PASS + SELF_TERMINATE（axes 72/72、sprite 12/12、hard_fails=0、确定性 192 pairs mismatch=0）；events_refresh `--gate` = PASS（events=36541 cards=10091 schema=0 mismatch=0）。
+  - **下个里程碑**：GPU 让路窗结束（ComfyUI 批完结）后补年轮 10 席 + 相遇轮 1 对，目标 10-24 当天内。
+  - tokens: local=2 api=0 api_reason=-
