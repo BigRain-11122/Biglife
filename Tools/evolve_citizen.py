@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.55 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.56 - BigLife citizen evolution engine.
+v0.56 (2026-10-25 R2045, gap #77): the weather phrasing pools were smaller than
+a batch (rain 8 / wind-big 6 / wind-small 4 vs 10 seats), so two seats in every
+batch drew the same wind clause by pigeonhole and the later seat was skipped on
+batch-dup-phrase (C-06639 on 「风一阵紧一阵」 this round); pools widened to 12
+each so a consecutive-id batch never repeats a clause.
 v0.55 (2026-10-25 R2039, gap #74): regen tail notes accumulated inside
 gated_llm, so a late attempt carried every previous rejection at once and the
 4B still shipped the banned 7-gram (C-06556 skipped on batch-dup-phrase this
@@ -1622,13 +1627,23 @@ def rumor_line_for(cid, sig):
 # rain/wind branches listed a shared set of examples; the 4B pasted them back
 # and 5/10 due citizens died on batch-dup-phrase (「雨点砸得板墙响，风挺大」).
 # A fixed list is a template attractor by construction - assign each citizen a
-# DIFFERENT clause pair instead. Cycle length of the (rain, wind) index pair is
-# lcm(8,6)=24 > batch size 10, so one batch never repeats a pair.
+# DIFFERENT clause pair instead.
+# v0.56 gap #77 (2026-10-25 R2045): the pools were smaller than the batch
+# (rain 8 / wind-big 6 / wind-small 4 vs 10 seats), so by pigeonhole two seats
+# always drew the same wind clause and every later seat sharing that 7-gram was
+# skipped (this round: C-06639 on 「风一阵紧一阵」). Now every pool is 12 >=
+# batch size, so a consecutive-id batch never repeats a clause.
 RAIN_HINTS = ["雨点没停", "雨丝还挂着", "雨还在落", "檐口的水线不断",
-              "地上的水洼积着水", "雨脚细细密密", "雨敲在窗棂上", "伞面一直响"]
+              "地上的水洼积着水", "雨脚细细密密", "雨敲在窗棂上", "伞面一直响",
+              "雨没歇过", "雨落在瓦上发闷", "雨水顺着瓦沟流", "肩头湿了一片"]
 WIND_BIG_HINTS = ["风不小", "风好大", "风刮得紧", "风一阵紧一阵",
-                  "风把人往前推", "风掀得衣角乱摆"]
-WIND_SMALL_HINTS = ["风轻轻的", "风不大", "风软软的", "窗外几乎没风"]
+                  "风把人往前推", "风掀得衣角乱摆",
+                  "风从巷口直灌进来", "风顶得人站不稳", "风把树梢压弯了",
+                  "风刮得招牌直晃", "风灌进领口发凉", "风大得说话要抬声"]
+WIND_SMALL_HINTS = ["风轻轻的", "风不大", "风软软的", "窗外几乎没风",
+                    "风只在檐下打转", "风贴着地面走", "风小得纸片不动",
+                    "风偶尔拂一下", "风没起来", "风停在树影里",
+                    "风细得听不见", "风只够吹动窗帘"]
 
 
 def weather_recap(wx, seed=None):
@@ -1670,7 +1685,9 @@ def weather_recap(wx, seed=None):
                        "风大时该成语=「风轻」弱化断言，即使你历史年轮原句里有也严禁照搬）。"))
     else:
         wind = "实况无风速数据：完全不提风。"
-    # per-citizen assigned wording (gap #72): cycle lcm(8,6)=24 > batch 10
+    # per-citizen assigned wording (gap #72 / #77): each pool must be >= batch
+    # size (10) or pigeonhole guarantees two seats in one batch draw the same
+    # clause and die on batch-dup-phrase (v0.56: pools widened 8/6/4 -> 12/12/12)
     variant = ""
     if seed:
         d = re.search(r"(\d+)\s*$", str(seed))
