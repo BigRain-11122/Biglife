@@ -1792,3 +1792,4 @@
 - R1927 过程可见：当前活=年轮环续转+闸验；最近实物=census/registry/** 九卡年轮（[锚]=2026-10-24）·qa/EVENTS-REPLAY-REPORT.md·docs/status-export.json（09:13 刷新·今日 [锚] 累计 1129）；下个里程碑=ring 累计 5500（当日活跃 8-10 席/轮，预计 10-24 内达成）。
 - R1927 计量：tokens: local=10 api=0 api_reason=-
 
+- [2026-10-24 09:2x R1928] 年轮 9 席（C-05441/C-05442/C-05443~C-05447/C-05449/C-05450）+ 行为线镜像 rows=9 + 事件回放闸 PASS（cards=10091 events=36355 replay=10091 mismatch=0 schema=0）+ 语言池 SELF_TERMINATE（72/72 达标，本轮不生成）+ QC 例巡免（上轮 09:14 problems=0）+ 相遇轮 cap 已满 + 决策差集为空。C-05448 因 batch-dup-phrase 闸留待下轮重试。 tokens: local=10 api=0 api_reason=-
