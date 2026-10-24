@@ -2148,3 +2148,11 @@
 **[R2033]** 2026-10-25 02:1x~02:3x @BigLife-OSLoop 小结：轮首 pull=Already up to date、工作树净、决策水位差集 NEW=0（D-20261025-01~04 全在册）、orders 无本司新令、任务板 open=0。**产品增量=年轮 10 席 C-06497~C-06506**（rings 6373→6500·commit e96fd35e5）+ 行为线镜像 rows=10（commit 848646ba3）+ 事件回放闸 PASS（events 37418 / replayed 10091 / mismatch 0 / schema 0）。GPU 争用面 3% util（<30% 门槛·D-20261024-16 序）合规开跑；语言线池审计全桶达标→SELF_TERMINATE 跳过；相遇轮与 QC 轮今日已执行（00:44 / 01:41）按每日上限跳过。
 tokens: local=10 api=0 api_reason=-
 - **[R2035]** 2026-10-25 02:3x @BigLife-OSLoop 小结：轮首 pull=Already up to date；水位差集 NEW=0（D-20261025-01~04 全在册）；orders 无涉本司令；任务板 open=0。**产品增量=年轮 10 席 C-06507~C-06516**（ollama qwen3:4b-instruct，GPU 3% 让路合规 D-20261024-16，脚本自动 commit 28d0e8769）+ 行为线镜像 rows=10 ring=6510（commit 3eb889842）+ **事件流回放闸 PASS**（cards=10091 events=37428 replayed=10091 mismatch=0 schema=0）+ 视图刷新（city-dashboard rings=6510 bytes=61361 / city-life rows=10114 visible=306 / index pages=13）+ 语言线池审计 PASS 全桶达标 SELF_TERMINATE（skip·自终止律）。QC 巡检未到窗口（上次 01:53 R2030）。相遇线上限已满（skip）。过程可见面：当前活=年轮线持续推进 cursor C-06516；最近实物=census/export/city-dashboard.html（02:3x）rings=6510；下个里程碑=rings 6600（约 90 席·ETA 10-25 午后）+ QC 巡检 约 R2036。tokens: local=10 api=0 api_reason=-
+
+﻿## R2036 · 2026-10-25 02:3x @BigLife-OSLoop
+
+- 轮首三步：git pull=Already up to date；决策水位差集 NEW=0（watermark 已含 D-20261025-04）；orders 物理件区零涉本司新行。
+- 产品增量=年轮 10 圈 C-06517~C-06526（commit 49abf1419）+ 行为线镜像 rows=10 ring=6520（dc7834fb6）+ 事件回放闸 PASS（cards=10091/events=37438/mismatch 0/schema 0）+ QC 巡检 problems=0（cards=10114/evolved=6520/dup_rings=37/37）+ 池审计 PASS 72/72 SELF_TERMINATE（跳过量产）。
+- 当前活：年轮线按轮转（到期居民迭代，qwen3:4b-instruct 本地）。最近实物：census/registry/GM/C-06526.md（02:37）+ census/QC-REPORT.md（02:38）。下个里程碑：rings 6550（约 30 席 · ETA 10-25 上午）。
+- 观测（不修）：PowerShell Invoke-WebRequest 打 http://127.0.0.1:11434/api/tags 连接被关闭，而 Python urllib 直连同一端口 200 正常——本机 Ollama 健康探针若用 PS 会假报"挂"；后续探针脚本一律走 Python 直连（T-20261024-01 同症状的可疑成因候选，留观察不动轮）。
+- tokens: local=10 api=0 api_reason=-
