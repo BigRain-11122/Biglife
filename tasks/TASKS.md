@@ -1902,3 +1902,17 @@
 - 相遇轮：今日已达日上限自停，本轮跳过。
 - 产品面：city-life.html（rows=10114 rings=5719）、city-dashboard.html、export index（13 页）按新年轮重建。
 - 计量：tokens: local=10 api=0 api_reason=-
+
+---
+
+## R1959 轮值实录（2026-10-24 13:0x）
+
+- 轮首 git pull=Already up to date；决策水位差集 NEW=0（最新已消费 D-20261024-12）；orders 物理件区无涉本司行。
+- 模型口径复核：D-20261024-02 已在 evolve_citizen.py/pool_gen.py 生效（seat 实测选 qwen3:4b-instruct，qwen2.5 不作推理默认）。
+- 年轮线：evolve_citizen --batch 3 实跑 due=10 全成，C-05726~C-05735 各写年轮（含[锚]注脚）；行为线 sync_rings 已自动同步（rows=10 ring=5729）。
+- 事件闸：events_refresh --gate cards=10091 events=36641 shards=2 replay=10091 schema_errors=0 mismatch=0 -> PASS（qa/EVENTS-REPLAY-REPORT.md 入库）。
+- 语言线：pool_audit PASS 全桶达标（axes 72/72、sprite 12/12、greet 28/28、faq 7/7、negative 6/6、hard_fails 0、determinism mismatch 0）→ 自终止，不生成。
+- QC 巡检：本轮轮次未到（13:01 R1958 已巡检 problems=0），跳过。
+- 相遇轮：今日已达日上限自停，本轮跳过。
+- 产品面：city-dashboard.html（rings=5729 / people=10114）与 city-today.html（rings=1402）按新年轮重建。
+- 计量：tokens: local=10 api=0 api_reason=-
