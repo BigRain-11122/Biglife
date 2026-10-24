@@ -602,9 +602,15 @@ def load_cursor():
     return {}
 
 def save_cursor(c):
+    # T-20261025-01: 原子写（tmp + os.replace）。批次被外部击杀时，
+    # 半截 JSON 会让下一轮 load_cursor 直接抛错、整条年轮线卡死。
     os.makedirs(STATE_DIR, exist_ok=True)
-    with open(CURSOR, "w", encoding="utf-8", newline="\n") as f:
+    tmp = CURSOR + ".tmp"
+    with open(tmp, "w", encoding="utf-8", newline="\n") as f:
         json.dump(c, f, ensure_ascii=False, indent=1)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, CURSOR)
 
 def real_signals():
     """Collect REAL city signals: FluxVerse world events tail + world state (read-only)."""
@@ -2165,6 +2171,7 @@ def main():
                 cursor[cid] = {"v": 1, "last": today(),
                                "next": (datetime.date.today() + datetime.timedelta(days=COOLDOWN_DAYS)).isoformat(),
                                "n": cursor.get(cid, {}).get("n", 0) + 1}
+                save_cursor(cursor)  # T-20261025-01: 水位即时落盘
                 print("skip: ring already today", cid, flush=True)
                 continue
         # T-20260925-01: ownership = persona face only (**年轮** history may
@@ -2235,6 +2242,9 @@ def main():
         cursor[cid] = {"v": 1, "last": today(),
                        "next": (datetime.date.today() + datetime.timedelta(days=COOLDOWN_DAYS)).isoformat(),
                        "n": cursor.get(cid, {}).get("n", 0) + 1}
+        # T-20261025-01: 环落盘即存水位（原先整批末才存 → 批次被杀时
+        # 卡面年轮已在、游标未在，sync_rings 按 cursor 判定跳过致漏计）。
+        save_cursor(cursor)
         n += 1
     if paths:
         commit_files(paths, "年轮环(既有居民迭代·零新注册) %s: %s%s" % (today(), ", ".join(done), via))

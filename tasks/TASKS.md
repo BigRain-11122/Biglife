@@ -2,9 +2,11 @@
 
 ## 转办件跟踪
 
-- [ ] **T-20261025-01**（缺陷单·R2023 实弹·年轮游标非原子写入）：evolve_citizen.py 只在批末尾写 state/evolve-cursor.json；批次被外部中断时（本轮回合 5 分钟无输出被 shell 自动取消）卡面年轮已落盘而游标未记 → sync_rings 以「cid in cursor」判定跳过，行为线镜像与 city-dashboard 双双漏计（实弹 7 圈：6397→6404 已手工补正）。
-  - status: open（2026-10-25 00:4x 立）
-  - 修法：逐卡增量落游标（写完即 flush），或批前写 pending 标记/批尾清除；并加断链自检（卡面年轮日期 vs 游标 n 差集报警）并入轮清单。
+- [x] **T-20261025-01**（缺陷单·R2023 实弹·年轮游标非原子写入）：evolve_citizen.py 只在批末尾写 state/evolve-cursor.json；批次被外部中断时（本轮回合 5 分钟无输出被 shell 自动取消）卡面年轮已落盘而游标未记 → sync_rings 以「cid in cursor」判定跳过，行为线镜像与 city-dashboard 双双漏计（实弹 7 圈：6397→6404 已手工补正）。
+  - status: closed（2026-10-25 01:5x @BigLife-OSLoop R2030 修复关单）
+  - 修法落地：①`save_cursor` 改 tmp+`os.replace` 原子写（半截 JSON 会让下一轮 load_cursor 抛错卡死全线）；②落环即存水位——`add_ring` 成功后立即 `save_cursor`（原整批末只存一次，窗口=整批时长）；③同日幂等闸补写水位分支同样即时落盘。批末既有 `save_cursor` 保留幂等无害。
+  - 证据：py_compile OK；实弹批 10/10 席 C-06467~C-06476 全落环（commit 445d12c32）+ 行为线镜像 rows=10 ring=6470（274407c48）+ 事件闸 PASS（cards=10091/events=37388/mismatch 0/schema 0）+ QC problems=0 dup_rings=37/37。
+  - 遗留（下轮可选）：断链自检（卡面年轮日期 vs 游标 n 差集报警）尚未落环清单，机理已被即时落盘根治，自检降为观察项。
 
 - [ ] **T-20260923-01**（集团进化台账 P-22 转办@FluxVerse-DevLoop）：M2 NPC 引擎与 CityWatch 消费 census 导出面（`census/export/citizens-light.jsonl` 只读）——本司侧义务=导出字段变更须 T2 登记+通知；DevLoop 侧自领时此处回执。
   - status: open（2026-09-23 立）
