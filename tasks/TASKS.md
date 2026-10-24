@@ -1934,3 +1934,8 @@
 - [2026-10-24 13:2x R1964] 轮职（OS 静默轮）：产品增量=10 席年轮落环 C-05746~C-05755（qwen3:4b-instruct·脚本自动 commit 3d16d6dee+行为线镜像 431bcb13d）→ ring 累计 5749；事件回放闸 PASS（cards=10091 events=36661 replayed=10091 mismatch=0 schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 同轮刷新）；QC 巡检 cards=10114 problems=0 dup_rings=37/37；池审计 PASS 自终止（六轴/问候/FAQ/负样本 全桶达标，determinism 192 对 mismatch=0）跳过；可见面三页刷新（dashboard rings=5749 total=10114 / 今日刊 rings=1422 people=1418 / index pages=13）；决策水位差集 NEW=0。
 - R1964 过程可见：当前活=年轮环续转 + 三页可见面；最近实物=census/export/city-dashboard.html（13:2x）、census/registry/** 十张 2026-10-24 年轮卡（C-05746~C-05755）；下个里程碑=ring 累计 6000（ETA 2026-10-25）。
 - R1964 计量：tokens: local=10 api=0 api_reason=-
+
+- [2026-10-24 13:4x R1965] 值守席·OS 静默轮：产品增量=10 席年轮环 C-05756~C-05765（qwen3:4b-instruct，脚本自动 commit 3b2f1e1a7 + 行为线镜像 87318210d），ring 累计 5759；事件回放闸 PASS（cards=10091 events=36671 replayed=10091 mismatch=0 schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 同轮刷新）；三页可见面刷新（dashboard rings=5759 total=10114 / 今日刊 rings=1432 people=1428 / index pages=13）；相遇轮今日 cap 3 已满→自停跳过；语言线池全桶达标→自停跳过；决策水位差集 NEW=0（D-20261024-12 已消费）。
+
+- R1965 过程可见面：当前活=年轮环推进 + 可见面刷新；最近实物=census/export/city-today.html（13:4x，rings=1432）与 census/registry/** 十席 2026-10-24 年轮卡（C-05756~C-05765）；下个里程碑=ring 累计 6000 席，ETA 2026-10-25。
+- R1965 计量：tokens: local=10 api=0 api_reason=-
