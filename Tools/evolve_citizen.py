@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.52 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.54 - BigLife citizen evolution engine.
+v0.54 (2026-10-24 R1958, gap #73, T-20261024-09 收口): the batch phrase gate
+starved seats instead of fixing them - C-05895 was skipped today on
+batch-dup-phrase after 3 regens, and R1929/R1930 lost C-05458/C-05459 and
+C-05466/C-05467 the same way. Two defects: (a) sig["batch_phrases"] counted
+GRAM OCCURRENCES, so a single accepted ring that repeats a 7-gram internally
+pushed the count to 2 and blocked every later seat on a phrase only one
+citizen ever wrote - now counted per-ring (deduped grams within a line);
+(b) the avoid face fed only the raw accepted lines, and a 4B cannot compute
+7-grams - build_prompt now carries the already-condemned phrases as an
+explicit collapsed blacklist (batch_banned_phrases), so the model gets an
+actionable "do not write these words" instead of a corpus to analyze.
 v0.52 (2026-10-24 R1919, gap #71): batch-level PHRASE dedup - gap #70 only
 guards the opening 12 chars, so a batch can still collapse mid-sentence:
 the R1917 batch wrote 9/10 rings carrying 「雨还在下，风挺大」 verbatim (the
@@ -1677,6 +1688,34 @@ def time_recap(sig):
                 "此速记与前文硬约束同效，冲突时以更严者为准。\n")
     return ""
 
+def batch_banned_phrases(bph, limit=6):
+    """v0.54 gap #73 (T-20261024-09): collapse this batch's >=2-hit 7-grams
+    into maximal banned phrases the prompt can state outright. Overlapping
+    grams (one-char shifts of the same sentence fragment) chain-merge; a gram
+    contained in an already-merged string is dropped. Advisory input only -
+    ring_violations stays the judge, so a bad merge can never let a real
+    duplicate through."""
+    if not isinstance(bph, dict) or not bph:
+        return []
+    out = []
+    for g in sorted((g for g, c in bph.items() if c >= 2), key=len, reverse=True):
+        hit = False
+        for i, m in enumerate(out):
+            if g in m:
+                hit = True
+                break
+            if m[-6:] == g[:6]:
+                out[i] = m + g[-1]
+                hit = True
+                break
+            if g[-6:] == m[:6]:
+                out[i] = g + m[-1]
+                hit = True
+                break
+        if not hit:
+            out.append(g)
+    return sorted(set(out), key=len, reverse=True)[:limit]
+
 def build_prompt(cid, text, sig):
     p = persona_digest(text)
     ev = "\n".join("- " + e for e in viewpoint_events(text, sig)) or "- （今日无新城市事件）"
@@ -1701,6 +1740,13 @@ def build_prompt(cid, text, sig):
     batch_blk = ("本批同城其他居民今天已经写下的句子（严禁照抄其中任何连续 6 字以上的措辞，"
                  "同一天同一种天气也要各说各的）：\n"
                  + "\n".join("- " + x for x in bu[-8:]) + "\n") if bu else ""
+    # v0.54 gap #73: the condemned phrases themselves, collapsed to maximal
+    # strings. A 4B cannot derive 7-grams from the raw lines above, so name
+    # what is already banned outright. Empty before 2 rings land -> "" and
+    # the prompt stays byte-identical to the v0.52 build (zero-drift law).
+    _bad = batch_banned_phrases(sig.get("batch_phrases"))
+    bad_blk = ("本批已判负的措辞（谁再写出其中任何一段，整句退回重写；必须换成完全不同的说法）："
+               + "、".join("「" + b + "」" for b in _bad) + "\n") if _bad else ""
     # T-20260925-01/T-20260925-18 soft guidance (NOT a gate): open with your OWN
     # catchphrase; standing per-prompt constraint caps generic pool-gene quotes at
     # 1 per ring (cross-card quotes stay LEGAL per C-00695 R192 - diversity nudge
@@ -1724,7 +1770,7 @@ def build_prompt(cid, text, sig):
     return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
             f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
-            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}{city_blk}{goal_blk}{batch_blk}"
+            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}{city_blk}{goal_blk}{batch_blk}{bad_blk}"
             f"现在真实北京时间 {sig['now']}，今天{sig.get('weekday','')}（{'周末' if sig.get('weekend') else '工作日'}），上海实况天气：{wx}。\n"
             f"今天属于上面标明的工作日/周末：你人设里凡以「周末」或「工作日」为前置条件的习惯，只许写与今天同侧的进行态或完成态，另一侧只许作为未来打算句提及，写错侧视为编造。\n"
             f"今天日期是 {sig.get('day')} 号（{sig.get('day_parity')}）：你人设里凡以「单日/双日/逢单/逢双」等日期奇偶为前置条件的习惯，只许写与今天同侧的进行态或完成态；另一侧严禁写成今天已发生或正在发生，只许以规则自述（人设原文规则句可原样引用）、按规则的自然推论或未来打算句式提及，严禁借引用断言今天发生了错侧动作，写错侧视为编造；同样严禁把你卡面没有奇偶前置的习惯硬捆绑到单日/双日名下——卡面没有的规则不得借日期之名新造，日期奇偶只许与你人设原文里真带奇偶字样的规则搭配。\n"
@@ -2175,8 +2221,11 @@ def main():
         # gap #71: feed the accepted line into the batch phrase counter + the
         # prompt avoid list (both consumed by the NEXT seat in this batch).
         _norm_ln = re.sub(r"\s+", "", line)
-        for _i in range(len(_norm_ln) - 6):
-            _g = _norm_ln[_i:_i + 7]
+        # v0.54 gap #73: count each gram ONCE per ring (the ring is the unit
+        # the gate means by "seen in >=2 accepted rings"). Counting raw
+        # occurrences let one ring with an internal repeat self-increment to 2
+        # and starve every later seat of that batch.
+        for _g in {_norm_ln[_i:_i + 7] for _i in range(len(_norm_ln) - 6)}:
             sig["batch_phrases"][_g] = sig["batch_phrases"].get(_g, 0) + 1
         sig["batch_used"].append(line)
         note_pool_use(line, face, pool_genes, pool_used)  # T-20260925-01: count cross-card quotes

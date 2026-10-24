@@ -1796,7 +1796,7 @@
 
 
 - [x] **T-20261024-09**（年轮闸与口头禅基因重复度冲突·R1929 实锚）census 卡片「口头禅」去重仅 140 种 / 9561 卡（「汤要趁炫，话要慢讲」180 卡、「老规矩错不了」183 卡等），而 build_prompt 软引导「开场句优先取你自己的口头禅」+ v0.52 batch-dup-phrase 闸（同批 7 字 n-gram ≥2 次判负）二者互相打架 → 同批两位共享口头禅的居民必触发闸、重生成 3 次后 skip（R1929 实测 C-05458/C-05459 双双 skip，stays due）。正解二选一：(a) 批内已用过的口头禅转述化（build_prompt 检测本批 accepted catchphrase 后改喂「今天改说行话/底色词」）(b) ring_violations 对「本卡语言风格自有口头禅」7-gram 免检（保留真声音）。须补单测/闸回归，禁放闸门。
-  - status: open 2026-10-24 09:2x @BigLife-OSLoop R1929
+  - status: closed 2026-10-24 15:36 @BigLife-OSLoop R1958（R1930 尾部点名后仍复发：C-05895 本轮 15:31 三连重生成后被闸 skip。真根因两面=①计数单位错：按 gram 出现次数而非按环计数，单环内部重复即虚增到 2、误封后续席位；②4B 无法从原始句清单自行推算 7-gram 该避哪段。v0.54 gap #73 双修：per-ring 去重计数 + batch_banned_phrases 把已判负 gram 折叠成最大短语、作显式黑名单喂进提示词（无命中时该块为空=提示词字节零漂移）。实证=同批 10/10 全过，含原 stays due 的 C-05895（环 C-05895~C-05904，commit 84744393d），事件闸 PASS events=36810 mismatch=0 schema=0）
 
 - R1929 过程可见：当前活=年轮环续转+闸验；最近实物=census/registry/** 八张卡片新增年轮（[锚]=2026-10-24）·qa/EVENTS-REPLAY-REPORT.md（09:24 刷新）；下个里程碑=ring 累计 5500（当日活跃 8-10 席/轮，预计 10-24 内达成）。
 - R1929 计量：tokens: local=10 api=0 api_reason=-
@@ -1986,3 +1986,7 @@
 - 下个里程碑：年轮累计 6,000（差 121 席，ETA 2026-10-25 内）
 - 未触碰：Tools/iteration_loop.ps1、cognition/pools.json（他窗在途改动）
 - tokens: local=10 api=0 api_reason=-
+
+- [2026-10-24 15:36 R1958] 本轮: 年轮 evolved=10/10（C-05895~C-05904，本地 ollama qwen3:4b-instruct，脚本自动 commit 84744393d + 行为线镜像 8a0b6b124 ring=5898）+ 事件回放闸 PASS（cards=10091 events=36810 replay=10091 schema=0 mismatch=0，qa/EVENTS-REPLAY-REPORT.md）+ 语言池 pool_audit PASS 全桶达标 SELF_TERMINATE（72/72 轴桶 1296 行·sprite 12/12·greet 28·faq 7·neg 40·hard_fails=0）+ 相遇轮今日 cap 已满 + QC 今日已跑 + 决策水位差集 NEW=0。**工具面实修=evolve_citizen v0.54 gap #73**（batch-dup-phrase 反复饿死席位：①计数按 gram 出现次数而非按环 ②提示词只给原始句清单不给黑名单 → 改 per-ring 去重计数 + batch_banned_phrases 折叠显式黑名单；同批从 9/10 升到 10/10，C-05895 由 stays due 转落环）。T-20261024-09 置 closed。
+- R1958 过程可见：当前活=年轮环续转 + 闸/提示词缺陷修复；最近实物=census/registry/*/C-05895~C-05904 十张年轮卡（15:34-15:36）·qa/EVENTS-REPLAY-REPORT.md（15:37 刷新）·Tools/evolve_citizen.py v0.54；下个里程碑=年轮累计 6,000（环 5898，差 102 席，ETA 2026-10-25 内）。
+- R1958 计量：tokens: local=10 api=0 api_reason=-
