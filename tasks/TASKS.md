@@ -1916,3 +1916,17 @@
 - 相遇轮：今日已达日上限自停，本轮跳过。
 - 产品面：city-dashboard.html（rings=5729 / people=10114）与 city-today.html（rings=1402）按新年轮重建。
 - 计量：tokens: local=10 api=0 api_reason=-
+
+---
+
+## R1963 轮值实录（2026-10-24 13:2x）
+
+- 轮首 git pull=Already up to date；决策水位差集 NEW=0（最新已消费 D-20261024-12，含 D-02 对 BL01 的承接）。
+- 年轮线：evolve_citizen --batch 3 实跑 due=10 全成（C-05736~C-05745，跨 GM/MD/NS/OR/QT/RV 六城区），行为线 sync_rings 自动收口（rows=10 ring=5739）并已自动 commit a514b1a6f/e04fe0982。
+- 事件闸：events_refresh --gate cards=10091 events=36651 shards=2 replay=10091 schema_errors=0 mismatch=0 -> PASS（qa/EVENTS-REPLAY-REPORT.md 入库）。
+- 反思层（T-20260926-08 自领）：C-00063 金伟民「风再大，茶不改，心灯常明。」+ C-00069 邹子轩「稳住，别浪，是与风雨共处时对自我的温柔坚持。」——reflections.jsonl 53→55 行，日封顶 2/3，G4 闭包门与 ≤40 字门通过。
+- 语言线：pool_audit PASS 全桶达标（axes 72/72、sprite 12/12、greet 28/28、faq 7/7、neg 6/6、hard_fails 0、determinism mismatch 0）→ SELF_TERMINATE，不生成。
+- 相遇轮：今日 3 次上限已满（meet-cap 3），跳过。
+- QC 巡检：13:00 R1959 已巡检 problems=0，本轮轮次未到，跳过。
+- 状态导出：docs/status-export.json export_ts=12:05，4h 新鲜度闸内，无需刷新。
+- 计量：tokens: local=12 api=0 api_reason=-
