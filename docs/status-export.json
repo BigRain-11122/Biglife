@@ -1,5 +1,5 @@
 {
- "export_ts": "2026-10-24 08:37",
+ "export_ts": "2026-10-24 08:45",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
@@ -1273,7 +1273,11 @@
   [
    "1068",
    "R1921 机械直数：resident cards=1068"
+  ],
+  [
+   "5383",
+   "R1922 常态轮：年轮 10 席（C-05378/381~389，qwen3:4b-instruct，commit 2dfca0af）+行为线镜像 ring=5383（dfc1761e）；事件流回放闸 PASS（details events=36295 cards=10091 mismatch=0 schema=0）；QC 不变量扫描 cards=10114 evolved=5383 problems=0 dup_rings=37/37；pool_audit 全桶达标 SELF_TERMINATE（hard_fails=0）；相遇轮今日 3/3 已满、反思日封顶 3/3 已满，均跳过"
   ]
  ],
- "t": "当前活：夜窗年轮批滚动（下批 due C-01181+）与户籍入册队列\n最近实物：census/QC-REPORT.md（2026-10-24 03:34 全库巡检 0 异常）+ 年轮 10 席 C-01171~C-01180（commit b6fcec31）\n下个里程碑：夜窗年轮续批落环 + 造人批续件（ETA ≤48h）"
+ "t": "当前活：年轮线常态批滚动（每批 10 席·qwen3:4b-instruct 本地席）与户籍入册队列\n最近实物：census/QC-REPORT.md（2026-10-24 08:39 全库巡检 cards=10114 problems=0）+ 年轮 10 席 C-05378~C-05389（commit 2dfca0af）+ 今日日报 census/export/city-today.html\n下个里程碑：年轮 [锚] 累计 5383 → 5500（ETA ≤24h·每轮 +10 席），事件闸与 QC 双闸随轮跑"
 }
