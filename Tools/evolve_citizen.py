@@ -785,7 +785,12 @@ def ring_violations(line, sig):
             v.append("wind-over")
     elif re.search(r"风[^大]?不大|风[^大]?轻轻的|风[^小]?不小|风挺大|风好大|微风|和风|(?<![天今])清风|风轻", line):
         v.append("wind-nodata")
-    if not re.search(r"rain|drizzle|shower|雨", wx, re.I) and "雨" in line:
+    # gap #76 (2026-10-25 R2044): species/trade proper nouns carry 雨 - 像素灵
+    # 雨声蛙 (198 census hits) and 雨天合唱团 (67) name a creature and a choir, not
+    # rain. C-06611 stayed due two rounds writing its own name under a dry feed.
+    # Mask those compounds only; genuine rain words still match unmodified.
+    _rain_face = re.sub(r"雨声蛙|雨天合唱团", "", line)
+    if not re.search(r"rain|drizzle|shower|雨", wx, re.I) and "雨" in _rain_face:
         v.append("rain-invented")
     # gap #19 (2026-09-24): sky-type pairing - a ring must not recast the fed
     # sky state (R123 C-00389 first strike, R125 C-00409 recurrence both wrote
