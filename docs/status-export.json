@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-24 07:24",
+ "export_ts": "2026-10-24 08:01",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R1907（2026-10-24 07:1x 年轮线满转）**：当前活=年轮批 10 席落笔（C-05238~C-05247，本地 qwen3:4b-instruct，往返 12 秒）+ 事件流回放闸复跑 PASS。最近实物=census/registry/ 十张卡面新年轮（[锚] 城市实况 2026-10-24）+ qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=36153 mismatch=0 schema=0）。下个里程碑=下一个 5 分钟轮次续推年轮批（每轮 10 席），夜窗内视配额补造人线/相遇轮；桶深全线达标自停不改。 **R1904（10-24 07:0x）年轮线 10 席落环 C-05208~C-05217（commit 4a1fea7a）+行为线镜像 rows=10 ring=5211（commit 82c78125）+事件回放闸 PASS（cards=10091 / events=36123 / mismatch=0 / schema=0）** **R1902（2026-10-24 06:5x·晨窗）**：年轮批 10 席真实新增（C-05188~C-05197 各写一条带 [锚] 的年轮，环绕真实北京时间/雨天大风·commit 54b0fd5d 盘面有 diff）→ 行为线镜像 rows=10 ring=5191（0b4c7668）→ 看板/索引刷新 rings=5191/10114；事件回放闸 PASS（cards=10091 / events=36103 / schema=0 / mismatch=0）；QC 全库巡检 problems=0（dup_rings 37/37 基线）；语言池 PASS 全桶达标自停（72 轴桶+28 问候桶+7 FAQ+负向 6/6·hard_fails=0）；相遇轮当日 cap 3 已满自停。",
+   "t": "**R1914（2026-10-24 08:0x 年轮线满转）**：当前活=年轮批 10 席落笔（C-05308~C-05317，本地 qwen3:4b-instruct）+ 事件流回放闸复跑 PASS。最近实物=census/registry/ 十张卡面新年轮（[锚] 城市实况 2026-10-24）+ qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=36223 mismatch=0 schema=0）。下个里程碑=下一 5 分钟轮次续推年轮批（每轮 10 席·窗 ≤48h）；语言线 72 桶全线达标=SELF_TERMINATE 维持不扩。 **R1907（2026-10-24 07:1x 年轮线满转）**：当前活=年轮批 10 席落笔（C-05238~C-05247，本地 qwen3:4b-instruct，往返 12 秒）+ 事件流回放闸复跑 PASS。最近实物=census/registry/ 十张卡面新年轮（[锚] 城市实况 2026-10-24）+ qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=36153 mismatch=0 schema=0）。下个里程碑=下一个 5 分钟轮次续推年轮批（每轮 10 席），夜窗内视配额补造人线/相遇轮；桶深全线达标自停不改。 **R1904（10-24 07:0x）年轮线 10 席落环 C-05208~C-05217（commit 4a1fea7a）+行为线镜像 rows=10 ring=5211（commit 82c78125）+事件回放闸 PASS（cards=10091 / events=36123 / mismatch=0 / schema=0）**",
    "s": 1
   },
   {
@@ -1257,6 +1257,10 @@
   [
    "936",
    "R1907 年轮 10 席（C-05238~C-05247）· 事件闸 PASS（events=36153 mismatch=0 schema=0）· QC 不变量扫描 cards=10114 evolved=5241 problems=0 · 池审计 PASS 自停 · 相遇轮今日已达上限 3/3 跳过 · 总卡数 936"
+  ],
+  [
+   "1006",
+   "R1914 年轮 10 席（C-05308~C-05317）+事件闸 PASS(events=36223/mismatch=0/schema=0)+池审计 SELF_TERMINATE(hard_fails=0)。累计环数 1006。"
   ]
  ],
  "t": "当前活：夜窗年轮批滚动（下批 due C-01181+）与户籍入册队列\n最近实物：census/QC-REPORT.md（2026-10-24 03:34 全库巡检 0 异常）+ 年轮 10 席 C-01171~C-01180（commit b6fcec31）\n下个里程碑：夜窗年轮续批落环 + 造人批续件（ETA ≤48h）"
