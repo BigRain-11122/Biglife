@@ -99,8 +99,11 @@ def main():
                 problems.append(f"{fn}: ring without anchor")
             # R1772 同日年轮唯一性闸（缺陷出生地=批次被击杀后重跑二次落环；
             # 相遇行与年轮同日并存合法，故只数非相遇行）。
+            # R1997 判据收窄：只扫 **年轮** 段。V2-B 反思层同日条目（提炼自
+            # 当日年轮·天生同日）与相遇行均不属「同日年轮」，不参与本闸。
+            _byc = re.search(r"\*\*年轮\*\*\n((?:- .*\n?)+)", text)
             _bydate = {}
-            for _d, _body in re.findall(r"(?:^|\n)- (\d{4}-\d{2}-\d{2}) ([^\n]*)", text):
+            for _d, _body in re.findall(r"(?:^|\n)- (\d{4}-\d{2}-\d{2}) ([^\n]*)", _byc.group(1) if _byc else ""):
                 if "相遇：" in _body:
                     continue
                 _bydate[_d] = _bydate.get(_d, 0) + 1
