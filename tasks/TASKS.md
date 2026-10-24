@@ -1804,3 +1804,8 @@
 - [2026-10-24 09:3x R1930] T-20261024-09 收口（选 b 强化）：gated_llm 对 batch-dup-phrase 撞句在提示词尾部点名撞用 7-gram 并禁本批再用（对齐 gap #68/#70 尾部点名律）——此前该面无尾部点名，同两位居民每轮重生成同一句、永久 stays due。实锚：C-05466/C-05467 两轮 skip 后本轮 10/10 全过（环 C-05466~C-05475，commit f8d4e34a），事件闸 PASS events=36381 mismatch=0 schema=0，QC cards=10114 problems=0。
 - R1930 过程可见：当前活=年轮批+闸修；最近实物=census/registry/** 十席年轮卡（C-05466~C-05475·09:30）；下个里程碑=10-24 相遇轮/池轮日配额（当日）。
 - R1930 tokens: local=10 api=0 api_reason=-
+
+
+- [2026-10-24 09:3x R1931] 轮职交替（交互会话轮）：年轮批 10 席（C-05476~C-05485，已由并发 OS 轮 commit 431c5979/6735a260 上链）+ 事件闸 PASS（cards=10091 events=36391 replay=10091 mismatch=0 schema=0）+ 池审计全桶达标 SELF_TERMINATE（1440 行/72+12+28+7 桶）+ QC 巡检 problems=0（cards=10114 evolved=5479）+ 相遇轮今日 cap 3 已满自停 + 决策水位 10-24 七行已在册（D-02 判 BigLife 零动作）。
+- R1931 过程可见：当前活=年轮/事件闸/QC 全绿；最近实物=census/QC-REPORT.md（09:35）+qa/EVENTS-REPLAY-REPORT.md（09:34）；下个里程碑=ring 累计 5500（今日内）。
+- R1931 tokens: local=10 api=0 api_reason=-
