@@ -29,3 +29,4 @@ __pycache__/
 
 # Event shards derived from census cards (regenerable: Tools/events_derive.py)
 events/
+.codely-cli/
