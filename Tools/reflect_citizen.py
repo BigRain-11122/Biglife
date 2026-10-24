@@ -54,6 +54,31 @@ def existing():
                 out.setdefault(r["id"], []).append(r)
     return out
 
+def pick_ids(n):
+    """First n citizens with >=2 rings, outside 30d cooldown, honored seats excluded."""
+    today = datetime.date.today().isoformat()
+    hist = existing()
+    picked = []
+    with open(LIGHT, encoding="utf-8") as f:
+        for ln in f:
+            ln = ln.strip()
+            if not ln:
+                continue
+            r = json.loads(ln)
+            cid = r.get("id", "")
+            if not cid or cid in ("C-00001", "C-00002", "C-00003"):
+                continue
+            if not r.get("recent_ring"):
+                continue
+            if any((datetime.date.fromisoformat(today) - datetime.date.fromisoformat(h["date"])).days < COOLDOWN_DAYS
+                   for h in hist.get(cid, []) if h.get("date")):
+                continue
+            picked.append(cid)
+            if len(picked) >= n:
+                break
+    return picked
+
+
 def gate(text, fed_text):
     if not text or len(text) < 6 or len(text) > MAXLEN:
         return "G1-length"
@@ -193,7 +218,17 @@ def main():
         print("yield-window: workday 09:00-19:00 CEO lane-priority - reflect deferred "
               "to 19:00-09:00/weekend (D-20261020-02)")
         sys.exit(0)
-    ids = [x.strip() for x in (a.batch.split(",") if a.batch else [a.id]) if x.strip()]
+    raw = a.batch.strip() if a.batch else a.id
+    if raw.isdigit():
+        # R1934: numeric --batch means "auto-pick N eligible citizens" (parity
+        # with evolve_citizen --batch). Before this, "2" was parsed as citizen
+        # id C-...2, so every call reported "no citizen" and reflections starved.
+        ids = pick_ids(int(raw))
+        if not ids:
+            print("0 SKIP: no eligible citizen (need >=2 rings + 30d cooldown clear)")
+            return
+    else:
+        ids = [x.strip() for x in raw.split(",") if x.strip()]
     for cid in ids:
         rec, hits = reflect(cid, force=a.force)
         if rec.get("error"):
