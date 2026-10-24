@@ -1871,3 +1871,5 @@
   - **闸门**：QC `qc_census.py` = cards=10114/evolved=5629/problems=0/dup_rings=37-37；pool_audit = PASS + SELF_TERMINATE（axes 72/72、sprite 12/12、hard_fails=0、确定性 192 pairs mismatch=0）；events_refresh `--gate` = PASS（events=36541 cards=10091 schema=0 mismatch=0）。
   - **下个里程碑**：GPU 让路窗结束（ComfyUI 批完结）后补年轮 10 席 + 相遇轮 1 对，目标 10-24 当天内。
   - tokens: local=2 api=0 api_reason=-
+
+- **R1951**（2026-10-24 11:34 @BigLife-OSLoop 交互轮）：R1950 留单已闭环——**年轮批 10 位落环**（C-05636~C-05645，本地 ollama qwen3:4b-instruct，脚本自提交 644e71ac2）；行为线镜像自动收口 rows=10 ring=5639（00eab55e8）；事件回放闸复验 PASS（events=36551 cards=10091 replayed=10091 mismatch=0 schema_errors=0，报告 84deb3353）；池轮 SELF_TERMINATE（全桶达标）跳过；今日相遇轮 3/3 满额跳过（cap 3）。决策消费：watermark 已含 D-20261024-01~07，新差集 0。tokens: local=10 api=0 api_reason=-

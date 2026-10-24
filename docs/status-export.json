@@ -1290,6 +1290,11 @@
       "1324",
       "10-24 今日 [锚] 年轮累计 1324 环（行级机器直数·registry/anchors 递归·本轮批 10 席 C-05626~C-05635 已计入）"
     ]
+    ,
+    [
+      "1334",
+      "10-24 今日 [锚] 年轮累计 1334 环（行级机器直数·本轮 +10 席 C-05636~C-05645·commit 644e71ac2）"
+    ]
   ],
-  "t": "当前活：年轮线常态批滚动（每批 10 席·qwen3:4b-instruct 本地席）+ 事件闸/池审双闸随轮跑\n最近实物：census/registry 年轮 10 席 C-05626~C-05635（commit 27ad63c9d·行为线镜像 c704ab9b3 ring=5629）+ qa/EVENTS-REPLAY-REPORT.md（events=36541 mismatch=0 PASS·0239b764b）\n下个里程碑：今日 [锚] 年轮累计 1400 环（现 1324·每轮 +10 席·ETA ≤8h）"
+  "t": "当前活：年轮线常态批滚动（每轮 10 席·qwen3:4b-instruct 本地席）+ 事件流/池审双闸随轮跑\n最近实物：census/registry 年轮 10 席 C-05636~C-05645（commit 644e71ac2·行为线镜像 00eab55e8 ring=5639）+ qa/EVENTS-REPLAY-REPORT.md（events=36551 cards=10091 mismatch=0 PASS·84deb3353）\n下个里程碑：今日 [锚] 年轮累计 1400 环（现 1334·每轮 +10 席·ETA 约 3h）"
 }
