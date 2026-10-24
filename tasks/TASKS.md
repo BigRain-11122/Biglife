@@ -3,6 +3,7 @@
 ## 转办件跟踪
 
 - [x] **T-20261025-01**（缺陷单·R2023 实弹·年轮游标非原子写入）：evolve_citizen.py 只在批末尾写 state/evolve-cursor.json；批次被外部中断时（本轮回合 5 分钟无输出被 shell 自动取消）卡面年轮已落盘而游标未记 → sync_rings 以「cid in cursor」判定跳过，行为线镜像与 city-dashboard 双双漏计（实弹 7 圈：6397→6404 已手工补正）。
+- [x] **T-20261025-02**（缺陷单·R2053 实弹·文档面编码损失）：tasks/TASKS.md 与 HQ-FEEDBACK.md 共 17 行含连续 '?' 串（ASCII 0x3F 落盘，非 Unicode 替换符；文件本身是合法 UTF-8），成因=历轮用 PowerShell 非 UTF-8 管道直写 md，中文字符被有损转换成 '?'。原文不可从 git 回溯（引入该 commit 已是损坏态）。处置=本轮只结单唯一 open 的受损行（R1879，按存留 ASCII 事实重建）；其余 16 行为历史实录，标注为不可恢复，禁再重扫。防复发=md 写入一律走 python UTF-8（禁 Set-Content 无 -Encoding）。
   - status: closed（2026-10-25 01:5x @BigLife-OSLoop R2030 修复关单）
   - 修法落地：①`save_cursor` 改 tmp+`os.replace` 原子写（半截 JSON 会让下一轮 load_cursor 抛错卡死全线）；②落环即存水位——`add_ring` 成功后立即 `save_cursor`（原整批末只存一次，窗口=整批时长）；③同日幂等闸补写水位分支同样即时落盘。批末既有 `save_cursor` 保留幂等无害。
   - 证据：py_compile OK；实弹批 10/10 席 C-06467~C-06476 全落环（commit 445d12c32）+ 行为线镜像 rows=10 ring=6470（274407c48）+ 事件闸 PASS（cards=10091/events=37388/mismatch 0/schema 0）+ QC problems=0 dup_rings=37/37。
@@ -1847,7 +1848,7 @@
 
 - R1938 ?? 2026-10-24 10:1x??? 10 ??C-05546~C-05555?qwen3:4b-instruct?rings=5549???? PASS?cards=10091/events=36461/mismatch=0/schema=0??QC PASS?cards=10114/problems=0????? SELF_TERMINATE?72 ?????????????????tokens: local=10 api=0 api_reason=- [via BigLife-OSLoop]
 
-| 2026-10-24 10:1x | in-progress | R1879 ????? 10 ??C-05556~C-05565??? qwen3:4b-instruct ????? + ??????? + ??? PASS?cards=10091 events=36471 replay mismatch=0 schema_err=0?+ ?? PASS ?????? 72/72?sprite 12/12?hard_fails=0?+ ????????dashboard rings=5559 total=10114 / ?? rings=1232 people=1228?? commit 995bc40df/1e505bd9b/8f0deede7 ??? | ???Tools/iteration_loop.ps1 ????? T0 CLOUD-OFF spawn ???10 ?????? marker cph4\fleet\CLOUD-OFF-LOCAL-ONLY-v1.md ?????=??????????? marker ???? loop ?? exit 0 ?????????????????????????????tokens: local=10 api=0 api_reason=- |
+| 2026-10-24 10:1x | done（2026-10-25 R2053 结单·原文遭遇编码损失已按存留 ASCII 事实重建） | R1879 完成：年轮 10 席 C-05556~C-05565（qwen3:4b-instruct）+ 事件回放闸 PASS（cards=10091 events=36471 mismatch=0 schema_err=0）+ 池审计 PASS 自终止（72/72·sprite 12/12·hard_fails=0） + 可见面刷新（dashboard rings=5559 total=10114 / 今日刊 rings=1232 people=1228）；commit 995bc40df/1e505bd9b/8f0deede7；遗留疑点=Tools/iteration_loop.ps1 对 CLOUD-OFF marker 的 spawn 拦截（后续轮次 marker 常态存在未复发） | tokens: local=10 api=0 api_reason=- |
 - [2026-10-24 10:2x R1939] OSLoop 轮：年轮 10 圈 C-05566~C-05575（qwen3:4b-instruct）+ 事件流回放闸 PASS（cards=10091 events=36481 replayed=10091 mismatch=0 schema_errors=0）+ 可见面三页刷新（dashboard rings=5569 total=10114 / 今日刊 rings=1242 people=1238 / index pages=13）；池审计 PASS 自终止跳过；commit 3c18ac68e/1df1d29d0/f4232d1ed，push 9821743cf..f4232d1ed
   - tokens: local=10 api=0 api_reason=-
 - 2026-10-24 10:3x @BigLife-OSLoop R194x 轮记：年轮环 10/10 幂等（C-05576~C-05585 前轮已入，本轮零新增）；相遇轮今日已由前轮用满（GM C-00065/66、OR C-00044/47）跳过；池轮 pool_audit=SELF_TERMINATE 跳过；QC 重跑 cards=10114 problems=0 dup_rings=37/37；事件回放闸 replay 36491/10091 mismatch=0 schema=0 PASS。commit 2a46992ed 已推 origin/main。
@@ -2216,3 +2217,11 @@ tokens: local=10 api=0 api_reason=-
 
 
 **[R2052]** 2026-10-25 05:1x~05:2x @BigLife-OSLoop 小结：轮首 pull=Already up to date、工作树净、决策水位差集 NEW=0（D-20261025-01~04 全在册）、orders 无涉本司令、任务板 open=0。**产品增量=年轮 9 席 C-06677~C-06683/C-06685/C-06686**（ollama qwen3:4b-instruct，脚本自动 commit e1d7592ba，行为线镜像 61bb55606 ring=6679）；C-06684 撞批内重复短语被产物闸拦下（batch-dup-phrase，gap #78 本轮回潮 1 例，闸生效未入库），留待下轮重试。事件流回放闸 PASS（cards=10091/events=37597/replayed=10091/mismatch=0/schema=0，commit e1fcdad4a）。语言线池审计 72/72+12/12 全桶达标 SELF_TERMINATE（skip·自终止律）。QC 例巡 problems=0 dup_rings=37/37（census/QC-REPORT.md）。看板重建 city-dashboard.html rings=6679/total=10114 bytes=61662（05:19）。相遇轮本轮未跑：今日 00:44 已用 C-06405×C-06406，按日额闸让位。过程可见面：当前活=年轮线推进 cursor C-06686；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（05:19）rings=6679；下个里程碑=rings 6700（约 21 席·ETA 10-25 上午）。tokens: local=9 api=0 api_reason=-
+
+**[R2053]** 2026-10-25 05:2x~05:4x @BigLife-OSLoop 小结：轮首 pull=Already up to date、工作树净、决策水位差集 NEW=0（D-20261025-01~04 全在册）、orders 无涉本司物理件、任务板 open=1（陈旧 in-progress）。**产品增量=年轮 10 席 C-06684/C-06687~C-06695**（ollama qwen3:4b-instruct，GPU 4%/3403MiB 让路合规 D-20261024-16）→ ring=6689（commit 0ac06c691 年轮环 + b4dc3e05d 行为线镜像 rows=10）。
+  - 事件流回放闸：derive OK cards=10091 events=37607 shards=2；replay replayed=10091 mismatch=0 schema_errors=0 → PASS（qa/EVENTS-REPLAY-REPORT.md 刷新入库）。
+  - 池审计：72/72 桶达标 + sprite 12/12 + greet 28 + faq 7 + neg 6/6、hard_fails=0、determinism mismatch=0 → SELF_TERMINATE（语言线本轮跳过）。
+  - 相遇轮：今日已由 R2023 消耗（1/日额度），本轮跳过。
+  - 任务板：结单 R1879 陈旧 in-progress 行（原文编码损失·按 ASCII 事实重建）→ open 1→0；新立 T-20261025-02 缺陷单（文档面 17 行编码损失·已界定处置）。
+  - 实况：当前活=确定性面收口完成，年轮线续跑由 OS 循环自领；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（本轮随环刷新）；下个里程碑=rings 6700（约 11 席，ETA 10-25 夜窗）。
+  - tokens: local=10 api=0 api_reason=-（年轮 10 席=Ollama 本地推理；其余=确定性脚本/闸/导出，零云端调用）
