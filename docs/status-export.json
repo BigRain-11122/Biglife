@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-24 08:52",
+ "export_ts": "2026-10-24 09:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R1924（2026-10-24 08:4x~08:5x·年轮线）**：当前活=年轮环写卡+闸验。本轮 8 席新年轮落环（C-05397~C-05404，本地 qwen3:4b-instruct；C-05405/C-05406 被 batch-dup-phrase 闸拦住转下轮换措辞）。事件回放闸 cards=10091 events=36310 mismatch=0 schema=0 PASS；QC 不变量 problems=0（dup_rings 37/37）；语言池 72 桶全达标自停；相遇轮今日日额已用。最近实物=census/registry/ 八张居民卡年轮追加（[锚]=2026-10-24 真实北京时间+城市事件流·commit 440ad634）+ census/QC-REPORT.md（08:49:50）+ qa/EVENTS-REPLAY-REPORT.md（08:49:21）。下个里程碑=ring 5,398→5,500 累计（窗 ≤48h）+ 被拦两席换天气措辞回炉。 **R1921（08:3x~08:4x·年轮线缺口根治轮）**：天气速记原先给全批同一组例句，4B 模型照抄→batch-dup-phrase 闸当天拦掉 5/10 席位（被拦居民的年轮停在旧日、天天重试天天被拦）。改为按居民编号分配互不相同的说法（雨 8×风 6=周期 24>批量 10），同批验证 5/10 → 9/10 通过。本轮 9 席写新年轮（C-05368~C-05380 区间），事件回放闸 mismatch=0，QC problems=0。 **R1920（2026-10-24 08:3x 年轮线）**：当前活=年轮环（已进化 5,359 / 10,091 有环居民·今日 8 席真写）。最近实物=census/registry/{OR,GM,MD,QT}/C-05358~C-05367 八张居民卡年轮追加（[锚]=2026-10-24 真实北京时间+城市事件流·commit 67fd0bab）+ qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=36271 mismatch=0 schema=0 PASS）。下个里程碑=下一批 due 年轮 10 席（含本轮被闸拦下的 C-05363/C-05365 回炉）+ ring 5,359→5,500（窗 ≤48h）。",
+   "t": "**R1926（2026-10-24 08:5x~09:00·年轮线）**：当前活=年轮环续写+今日日报重建。本轮 10 席新年轮落环（C-05413~C-05422，本地 qwen3:4b-instruct，脚本自动 commit 6fa7a368 + 行为线镜像 bfd096b3）。闸面：事件流回放 cards=10091 events=36328 schema=0 mismatch=0 **PASS**；语言池 72 轴桶+12 精灵桶+greet/faq/neg 全达标 **SELF_TERMINATE**（hard_fails=0·determinism 192 对零漂）。最近实物=**census/export/city-today.html 今日全员年轮长卷重建（09:00·rings=1089 people=1085 六城区 cards=10091）**+十张居民卡年轮追加（[锚]=2026-10-24 真实北京时间+城市事件流）+ qa/EVENTS-REPLAY-REPORT.md。下个里程碑=ring 累计 5500（当日活 8-10 席/轮·ETA ≤24h）+ 相遇轮次日额重置。 **R1924（2026-10-24 08:4x~08:5x·年轮线）**：当前活=年轮环写卡+闸验。本轮 8 席新年轮落环（C-05397~C-05404，本地 qwen3:4b-instruct；C-05405/C-05406 被 batch-dup-phrase 闸拦住转下轮换措辞）。事件回放闸 cards=10091 events=36310 mismatch=0 schema=0 PASS；QC 不变量 problems=0（dup_rings 37/37）；语言池 72 桶全达标自停；相遇轮今日日额已用。最近实物=census/registry/ 八张居民卡年轮追加（[锚]=2026-10-24 真实北京时间+城市事件流·commit 440ad634）+ census/QC-REPORT.md（08:49:50）+ qa/EVENTS-REPLAY-REPORT.md（08:49:21）。下个里程碑=ring 5,398→5,500 累计（窗 ≤48h）+ 被拦两席换天气措辞回炉。 **R1921（08:3x~08:4x·年轮线缺口根治轮）**：天气速记原先给全批同一组例句，4B 模型照抄→batch-dup-phrase 闸当天拦掉 5/10 席位（被拦居民的年轮停在旧日、天天重试天天被拦）。改为按居民编号分配互不相同的说法（雨 8×风 6=周期 24>批量 10），同批验证 5/10 → 9/10 通过。本轮 9 席写新年轮（C-05368~C-05380 区间），事件回放闸 mismatch=0，QC problems=0。 **R1920（2026-10-24 08:3x 年轮线）**：当前活=年轮环（已进化 5,359 / 10,091 有环居民·今日 8 席真写）。最近实物=census/registry/{OR,GM,MD,QT}/C-05358~C-05367 八张居民卡年轮追加（[锚]=2026-10-24 真实北京时间+城市事件流·commit 67fd0bab）+ qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=36271 mismatch=0 schema=0 PASS）。下个里程碑=下一批 due 年轮 10 席（含本轮被闸拦下的 C-05363/C-05365 回炉）+ ring 5,359→5,500（窗 ≤48h）。",
    "s": 1
   },
   {
@@ -1283,5 +1283,5 @@
    "R1924：今日居民年轮累计 1093 席新年轮落环（[锚] 行级机器直数·registry/anchors 递归）"
   ]
  ],
- "t": "当前活：年轮线常态批滚动（每批 10 席·qwen3:4b-instruct 本地席）与户籍入册队列\n最近实物：census/QC-REPORT.md（2026-10-24 08:39 全库巡检 cards=10114 problems=0）+ 年轮 10 席 C-05378~C-05389（commit 2dfca0af）+ 今日日报 census/export/city-today.html\n下个里程碑：年轮 [锚] 累计 5383 → 5500（ETA ≤24h·每轮 +10 席），事件闸与 QC 双闸随轮跑"
+ "t": "当前活：年轮线常态批滚动（每批 10 席·qwen3:4b-instruct 本地席）+ 今日城市日报重建\n最近实物：census/export/city-today.html（2026-10-24 09:00 重建·rings=1089/people=1085/6 城区/cards=10091）+ 年轮 10 席 C-05413~C-05422（commit 6fa7a368·行为线镜像 bfd096b3）+ qa/EVENTS-REPLAY-REPORT.md（events=36328 mismatch=0 schema=0 PASS）\n下个里程碑：年轮 [锚] 累计 ring 5500（ETA ≤24h·每轮 +10 席），事件闸与 QC 双闸随轮跑"
 }
