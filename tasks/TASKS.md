@@ -2106,3 +2106,5 @@
 | 2026-10-24 23:1x R2015 | done | ??8? C-06341~C-06346/C-06348/C-06349?C-06190/C-06347 ?????due?rings=6341/people=10114 + ????? PASS(37253/0/0) + ??/????/?????? + pool SELF_TERMINATE + GPU 5% ??MV + commit/push ??? | ??=census cards+export ?????=qa/EVENTS-REPLAY-REPORT.md?tokens: local=10 api=0 api_reason=- |
 
 - [R2016 2026-10-24 23:3x @BigLife-OSLoop] 年轮 8 席 C-06350~C-06357（rings 6349/people 10114）+ 行为线收口 + 事件闸 PASS 37261/0/0 + QC problems=0 dup_rings=37/37 + 池 72/72 SELF_TERMINATE（skip）+ 相遇 CAP 3/3（skip）+ 水位 NEW=0；C-06190/C-06347 rain-invented 硬闸 due 未绕。tokens: local=12 api=0 api_reason=-
+
+- [R2017 2026-10-24 23:3x @BigLife-OSLoop] 年轮 8 席 C-06358~C-06365（rings=6357/people=10114 + 行为线镜像 rows=8·commit 04f1907ca）+ 事件回放闸 PASS（37269 events/0 mismatch/0 schema）+ 池审计 PASS 全桶达标 SELF_TERMINATE + 水位差集 NEW=0（含 D-20261024-17）+ 任务板 open=0；C-06190/C-06347 仍挂 rain-invented 闸留队。tokens: local=8 api=0 api_reason=-
