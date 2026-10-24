@@ -2234,3 +2234,8 @@ tokens: local=10 api=0 api_reason=-
   - tokens: local=10 api=0 api_reason=-（年轮 10 席=本地 Ollama；余为确定性脚本/闸，零云端）
 
 - **[R2060]** 2026-10-25 05:5x~06:1x @BigLife-OSLoop 小结：轮首 pull=up to date、水位差集 NEW=0（D-20261025-01~04 已在册）、orders 无本司令、任务板无新增可领单。**产品增量=年轮 18 席**（第一批 8/10：C-06716~C-06722/C-06724；第二批 10/10：C-06723/C-06725~C-06733；qwen3:4b-instruct，GPU 3%/3393MiB 合规 D-20261024-16），ring 6709→6727。**gap #78 收口（出生地拦截）**：batch-dup-phrase 反复跳席的根因不在闸，而在 v0.52 的批内上下文把「本批已接受年轮原文最多 8 行」整段喂给 4B——4B 会照抄任何可读的 7 字串（今日实测把自造的「G08滑回S2.5」抄进 C-06722 之后的席位，导致 C-06723/C-06725 被闸跳过）。修法 v0.57=该块改为只报句数（「本批同城已有 N 位居民写下今日年轮——措辞必须完全不同」），原始行不再入 prompt；机械闸照旧兜底。验证：同一批立即重跑 10/10 全落卡，此前被拦的 C-06723/C-06725 均通过，py_compile OK。事件闸 PASS（cards=10091/events=37645/replayed=10091/mismatch=0/schema=0）。看板刷新 rings=6727 bytes=60875。池 72/72 SELF_TERMINATE skip；相遇轮今日 00:44 已执行；QC 上次 05:19 未到巡检轮。commit 6152471cf（含年轮自动提交 214767189/3e06b5c44）已推送 origin。tokens: local=18 api=0 api_reason=-
+
+- **[R2061]** 2026-10-25 06:0x~06:2x @BigLife-OSLoop ????? pull=up to date????? NEW=4?????D-20261025-05~08 ??????orders ??/27 ??????/MV V5 ??/bigmoney ????????????orders ?????????????????
+  - **????=?? 10 ?**?C-06734~C-06743?qwen3:4b-instruct?GPU 5%/3397MiB ???? D-20261024-16?? ring 6727?6737?????? rows=10???? PASS?events=37655/cards=10091/replay 10091/mismatch=0/schema=0????????? SELF_TERMINATE?axes 72/72?sprite 12/12?greet 28/28?faq 7/7?neg 8/8?hard_fails=0???????? rings=6737 ??=160???????????R2023????
+  - ??????=???????? 6737 ??/10114 ????????=census/export/city-dashboard.html 2026-10-25 06:16 + census/registry 10 ???? 06:09~06:12??????=ring 6800?ETA 10-25 12:00 ??? 6 ???
+  - tokens: local=10 api=0 api_reason=-
