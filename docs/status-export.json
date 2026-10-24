@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-24 08:06",
+ "export_ts": "2026-10-24 08:32",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R1915（2026-10-24 08:0x 年轮线）**：本轮活=年轮 10 席（C-05318~C-05327，本地 qwen3:4b-instruct 四b档）。最近实物=census/registry/ 十张居民卡年轮追加〔[锚]=2026-10-24 真实北京时/城市事件〕+ qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=36233 mismatch=0 schema=0 PASS）。下个里程碑=下一轮 10 席年轮续跑 + 相遇轮（CAP 未到点）。 **R1914（2026-10-24 08:0x 年轮线满转）**：当前活=年轮批 10 席落笔（C-05308~C-05317，本地 qwen3:4b-instruct）+ 事件流回放闸复跑 PASS。最近实物=census/registry/ 十张卡面新年轮（[锚] 城市实况 2026-10-24）+ qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=36223 mismatch=0 schema=0）。下个里程碑=下一 5 分钟轮次续推年轮批（每轮 10 席·窗 ≤48h）；语言线 72 桶全线达标=SELF_TERMINATE 维持不扩。 **R1907（2026-10-24 07:1x 年轮线满转）**：当前活=年轮批 10 席落笔（C-05238~C-05247，本地 qwen3:4b-instruct，往返 12 秒）+ 事件流回放闸复跑 PASS。最近实物=census/registry/ 十张卡面新年轮（[锚] 城市实况 2026-10-24）+ qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=36153 mismatch=0 schema=0）。下个里程碑=下一个 5 分钟轮次续推年轮批（每轮 10 席），夜窗内视配额补造人线/相遇轮；桶深全线达标自停不改。",
+   "t": "**R1920（2026-10-24 08:3x 年轮线）**：当前活=年轮环（已进化 5,359 / 10,091 有环居民·今日 8 席真写）。最近实物=census/registry/{OR,GM,MD,QT}/C-05358~C-05367 八张居民卡年轮追加（[锚]=2026-10-24 真实北京时间+城市事件流·commit 67fd0bab）+ qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=36271 mismatch=0 schema=0 PASS）。下个里程碑=下一批 due 年轮 10 席（含本轮被闸拦下的 C-05363/C-05365 回炉）+ ring 5,359→5,500（窗 ≤48h）。 **R1915（2026-10-24 08:0x 年轮线）**：本轮活=年轮 10 席（C-05318~C-05327，本地 qwen3:4b-instruct 四b档）。最近实物=census/registry/ 十张居民卡年轮追加〔[锚]=2026-10-24 真实北京时/城市事件〕+ qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=36233 mismatch=0 schema=0 PASS）。下个里程碑=下一轮 10 席年轮续跑 + 相遇轮（CAP 未到点）。 **R1914（2026-10-24 08:0x 年轮线满转）**：当前活=年轮批 10 席落笔（C-05308~C-05317，本地 qwen3:4b-instruct）+ 事件流回放闸复跑 PASS。最近实物=census/registry/ 十张卡面新年轮（[锚] 城市实况 2026-10-24）+ qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=36223 mismatch=0 schema=0）。下个里程碑=下一 5 分钟轮次续推年轮批（每轮 10 席·窗 ≤48h）；语言线 72 桶全线达标=SELF_TERMINATE 维持不扩。",
    "s": 1
   },
   {
@@ -1265,6 +1265,10 @@
   [
    "1016",
    "R1915 年轮 10 席（C-05318~C-05327，qwen3:4b-instruct）· 事件流回放闸 PASS（cards=10091 events=36233 mismatch=0 schema=0）· pool_audit 全桶达标 SELF_TERMINATE（axes 72/72、sprite 12/12、hard_fails=0、determinism mismatch=0）· QC cards=10114 evolved=5321 problems=0 dup_rings=37/37"
+  ],
+  [
+   "1054",
+   "R1920 年轮 8 席真写（C-05358/359/360/361/362/364/366/367，本地 qwen3:4b-instruct，commit 67fd0bab）· 2 席被 batch-dup-phrase 闸拦下留 due；行为线镜像 ring=5359（commit dea30b6f）；事件流回放闸 PASS（cards=10091 events=36271 mismatch=0 schema=0）；pool_audit 全桶达标 SELF_TERMINATE（axes 72/72、sprite 12/12、hard_fails=0、determinism mismatch=0）；meet=CAP（今日 3 场已满）；任务板 open 仅 T-20260923-01"
   ]
  ],
  "t": "当前活：夜窗年轮批滚动（下批 due C-01181+）与户籍入册队列\n最近实物：census/QC-REPORT.md（2026-10-24 03:34 全库巡检 0 异常）+ 年轮 10 席 C-01171~C-01180（commit b6fcec31）\n下个里程碑：夜窗年轮续批落环 + 造人批续件（ETA ≤48h）"
