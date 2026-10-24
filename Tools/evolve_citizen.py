@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.56 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.57 - BigLife citizen evolution engine.
+v0.57 (2026-10-25 R2060, gap #78): the neighbour block pasted up to 8 verbatim
+lines from rings already accepted this batch; qwen3:4b copies any 7-gram it can
+read (today it echoed an invented 「G08滑回S2.5」 into two later seats), so the
+gate then skipped those seats (C-06723/C-06725). Fix = the block keeps the
+diversity instruction and the banned-phrase list, but no longer exposes the raw
+lines; the mechanical gate alone enforces distinctness.
 v0.56 (2026-10-25 R2045, gap #77): the weather phrasing pools were smaller than
 a batch (rain 8 / wind-big 6 / wind-small 4 vs 10 seats), so two seats in every
 batch drew the same wind clause by pigeonhole and the later seat was skipped on
@@ -1777,10 +1783,12 @@ def build_prompt(cid, text, sig):
     # v0.52 gap #71: this batch's already-accepted rings as a tail-side avoid
     # list. Empty (meet/reflect/single-shot) -> "" -> prompt byte-identical to
     # the pre-wiring build (zero-drift law, same as rumor/city/goal).
+    # v0.57 gap #78: count only, never the raw lines - a 4B reuses whatever text
+    # it can read, and the gate then skipped the seat instead of the copy.
     bu = sig.get("batch_used") or []
-    batch_blk = ("本批同城其他居民今天已经写下的句子（严禁照抄其中任何连续 6 字以上的措辞，"
-                 "同一天同一种天气也要各说各的）：\n"
-                 + "\n".join("- " + x for x in bu[-8:]) + "\n") if bu else ""
+    batch_blk = ("本批同城已有 %d 位居民写下今日年轮——你的措辞必须与他们完全不同，"
+                 "同一个意思也换一种说法，同一天同一种天气也要各说各的。\n"
+                 % len(bu)) if bu else ""
     # v0.54 gap #73: the condemned phrases themselves, collapsed to maximal
     # strings. A 4B cannot derive 7-grams from the raw lines above, so name
     # what is already banned outright. Empty before 2 rings land -> "" and
