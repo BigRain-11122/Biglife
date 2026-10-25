@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-25 11:01",
+ "export_ts": "2026-10-25 11:19",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2092（年轮批 10/10 落环 C-07015~C-07024｜行为线镜像 ring=7018｜事件回放闸 PASS cards=10091/events=37936/mismatch=0/schema=0｜城市看板 rings=7018/total=10114 已刷新｜语言池 72/72+12/12+greet28+faq7+neg6 全桶达标 SELF_TERMINATE｜相遇轮当日 cap 3 已满自停）** **R2088（年轮批 10/10 落环 C-06977/C-06979~C-06987（零新注册）｜行为线镜像 rows=10 ring=6981｜事件回放闸 PASS cards=10091/events=37899/mismatch=0/schema=0｜QC 例巡 cards=10114 evolved=6981 problems=0 dup_rings=37/37｜批进度保活实弹：逐席 start 打印全程可见零击杀，T-20261019-01/T-20261020-01 两修单实战验证收口）** **R2052（年轮批 9/10 落环 C-06677~C-06686，C-06684 撞批内重复短语被闸拦下留待下轮｜事件回放闸 PASS cards=10091/events=37597/mismatch=0/schema=0｜QC 例巡 problems=0 dup_rings=37/37｜池审计 72/72+12/12 全桶达标 SELF_TERMINATE｜看板 rings=6679/total=10114）**",
+   "t": "**R2094（年轮批 10/10 落环 C-07035~C-07044｜行为线镜像 ring=7038｜事件回放闸 PASS cards=10091/events=37956/mismatch=0/schema=0｜城市看板 rings=7038/total=10114 已刷新｜今日刊 rings_today=671｜语言线 72/72+12/12+greet28+faq7+neg6 全桶达标 SELF_TERMINATE｜相遇轮当日 cap 3 已满自停）** **R2092（年轮批 10/10 落环 C-07015~C-07024｜行为线镜像 ring=7018｜事件回放闸 PASS cards=10091/events=37936/mismatch=0/schema=0｜城市看板 rings=7018/total=10114 已刷新｜语言池 72/72+12/12+greet28+faq7+neg6 全桶达标 SELF_TERMINATE｜相遇轮当日 cap 3 已满自停）** **R2088（年轮批 10/10 落环 C-06977/C-06979~C-06987（零新注册）｜行为线镜像 rows=10 ring=6981｜事件回放闸 PASS cards=10091/events=37899/mismatch=0/schema=0｜QC 例巡 cards=10114 evolved=6981 problems=0 dup_rings=37/37｜批进度保活实弹：逐席 start 打印全程可见零击杀，T-20261019-01/T-20261020-01 两修单实战验证收口）**",
    "s": 1
   },
   {
@@ -1321,6 +1321,10 @@
   [
    "651",
    "R2092 收口：年轮 10/10 + 行为线 ring=7018 + 回放闸 PASS + 城市看板刷新（机器直数 651）"
+  ],
+  [
+   "671",
+   "R2094 收口：年轮 10/10 + 行为线 ring=7038 + 回放闸 PASS + 看板/生活页/今日刊刷新（机器直数 671）"
   ]
  ],
  "t": "当前活：年轮线常态批滚动（每轮 10 席·qwen3:4b-instruct 本地席）+ 事件/池审双闸随轮跑\n最近实物：census 年轮 10 环 C-06977/C-06979~C-06987（commit 934239e30·行为线镜像 8519ebab6 ring=6981）+ qa/EVENTS-REPLAY-REPORT.md（events=37899 mismatch=0 PASS）\n下个里程碑：今日 [锚] 年轮累计 7000 环（现 6981·每轮 +10 席·ETA 约 2 轮内）"
