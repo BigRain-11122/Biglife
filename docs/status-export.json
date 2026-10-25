@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-25 17:05",
+ "export_ts": "2026-10-25 17:44",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2126（2026-10-25 17:0x~17:1x·年轮环+回放闸）**: 本轮 10 席年轮落环（C-07334~C-07343），ring 7327→7337，[锚] 实锚 2026-10-25 齐备（5 席过 soft-concession recent-dup-phrase 门后落环，不硬闯）；行为线 sync_rings 自动收口（rows=10 ring=7337，commit eed14dde5，年轮环 commit 2c92ddfc3）；事件流回放闸 PASS（derive cards=10091 / events=38255 / replay 10091 / mismatch=0 / schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 盖章）；语言池 pool_audit=hards 0 / under_target NONE（SELF_TERMINATE 不重跑）；相遇轮今日 cap 已满、QC 未到 6 轮窗，均不重跑。 **R2125（2026-10-25 16:49~17:0x·年轮环+回放闸）**: 本轮 10 席年轮落环（C-07317/C-07325/C-07326/C-07327/C-07328/C-07329/C-07330/C-07331/C-07332/C-07333），ring 7317→7327，[锚] 实锚 2026-10-25 齐备，部分席过 soft-concession（recent-dup-phrase）门后落环不硬闯；行为线 sync_rings 自动收口（rows=10 ring=7327，commit 23b082b72）；事件流回放闸 PASS（derive cards=10091 / events=38245 / replay 10091 / mismatch=0 / schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 盖章）；GPU util 6%（3782/12282MiB）→ D-20261024-16 让路律不触发；语言池今日已 SELF_TERMINATE、QC 例巡未到 6 轮窗，均不重跑。 **R2124（2026-10-25 16:3x~16:5x·年轮环+回放闸）**: 本轮累计 17 席年轮落环（前段 8 席 C-07307~C-07314 收口 + 本段 9 席 C-07315/C-07316/C-07318/C-07319/C-07320/C-07321/C-07322/C-07323/C-07324），ring 7300→7317，[锚] 实锚 2026-10-25 齐备（C-07317 被诚实门拦 mist-import+recent-dup-phrase 留 due，不硬闯），行为线 sync_rings 自动收口（rows=17 ring=7317，commit 8baf8c84f）；事件流回放闸 PASS（derive cards=10091 / events=38235 / replay 10091 / mismatch=0 / schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 盖章）；GPU util 4%（3789/12282MiB）→ D-20261024-16 让路律不触发；语言池今日已 SELF_TERMINATE、相遇轮今日 cap 满、QC 例巡未到 6 轮窗，均不重跑。",
+   "t": "**R2128（17:33~17:47 年轮环）**：C-07374~C-07383 共 10 席落环（ring 7337→7357），[锚] 实锚 2026-10-25 齐备，4 席过 soft-concession recent-dup-phrase 门；行为线 sync_rings rows=20 ring=7377 已收口；回放闸 PASS（cards=10091 events=38295 mismatch=0 schema=0）。GPU util 4% 合 D-20261024-16 让路律。 **R2126（2026-10-25 17:0x~17:1x·年轮环+回放闸）**: 本轮 10 席年轮落环（C-07334~C-07343），ring 7327→7337，[锚] 实锚 2026-10-25 齐备（5 席过 soft-concession recent-dup-phrase 门后落环，不硬闯）；行为线 sync_rings 自动收口（rows=10 ring=7337，commit eed14dde5，年轮环 commit 2c92ddfc3）；事件流回放闸 PASS（derive cards=10091 / events=38255 / replay 10091 / mismatch=0 / schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 盖章）；语言池 pool_audit=hards 0 / under_target NONE（SELF_TERMINATE 不重跑）；相遇轮今日 cap 已满、QC 未到 6 轮窗，均不重跑。 **R2125（2026-10-25 16:49~17:0x·年轮环+回放闸）**: 本轮 10 席年轮落环（C-07317/C-07325/C-07326/C-07327/C-07328/C-07329/C-07330/C-07331/C-07332/C-07333），ring 7317→7327，[锚] 实锚 2026-10-25 齐备，部分席过 soft-concession（recent-dup-phrase）门后落环不硬闯；行为线 sync_rings 自动收口（rows=10 ring=7327，commit 23b082b72）；事件流回放闸 PASS（derive cards=10091 / events=38245 / replay 10091 / mismatch=0 / schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 盖章）；GPU util 6%（3782/12282MiB）→ D-20261024-16 让路律不触发；语言池今日已 SELF_TERMINATE、QC 例巡未到 6 轮窗，均不重跑。",
    "s": 1
   },
   {
@@ -1373,7 +1373,11 @@
   [
    "970",
    "R2126 年轮 10 席（ring 7337）+ 回放闸 PASS（38255/10091/0/0）+ 状态面三行续鲜；tokens: local=10 api=0 api_reason=-"
+  ],
+  [
+   "1010",
+   "机器直数 people=1010｜rings=7357｜rings_today=1090｜gate PASS｜qc problems=0"
   ]
  ],
- "t": "当前活：年轮环 10 席落盘 + 事件流全量回放闸 PASS（38255 events / 10091 cards / mismatch 0）\n最近实物：census/registry 10 张居民卡年轮（C-07334~C-07343，2026-10-25 17:03）+ qa/EVENTS-REPLAY-REPORT.md 盖章\n下个里程碑：ring 7350 达成（预计 2026-10-26，按每轮 10 席节奏）"
+ "t": "当前活：年轮线 R2128 批 10 席落环 + 事件回放闸 PASS\n最近实物：qa/EVENTS-REPLAY-REPORT.md（2026-10-25 17:44 送批次，cards 10091/events 38295/mismatch 0）\n下个里程碑：R2131 前后年轮批累计破 7400（ETA 2026-10-25 晚间，窗 ≤48h）"
 }
