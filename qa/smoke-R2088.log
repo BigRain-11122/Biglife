@@ -1,0 +1,40 @@
+QA Smoke Test — R2088 (2026-10-25 10:03~10:14, @BigLife-OSLoop)
+Charter = docs/qa-smoke-test-charter.md v1.0 · BigLife 五项（数据面自验）
+
+[1] 池/语言线跑通
+    $ python -X utf8 Tools/pool_audit.py
+    negative face: lines=40 recovering=8 at_target=6/6
+    hard_fails: 0
+    under_target (pool 18/12 + greet 17 + faq 3 + neg 8): NONE - SELF_TERMINATE
+    determinism: 192 pairs double-drawn, mismatch=0, empty_draw=0
+    verdict: PASS
+    -> PASS（自终止律：不为长而长，本轮不追加）
+
+[2] census 新条目（本批年轮）
+    $ python -X utf8 Tools/evolve_citizen.py --batch 3 --via BigLife-OSLoop
+    evolving C-06977 (1/10) start 10:04:04 ... evolving C-06987 (10/10) start 10:06:13
+    OK evolved=10 of 10 due
+    -> PASS（10 席真写，逐席 stdout 保活全程可见，零击杀）
+
+[3] 位置/环字段非空
+    census/export/citizens-light.jsonl rows=10114, recent_ring 非空=6981（本轮 6971→6981）
+    -> PASS
+
+[4] 行为链再生
+    行为线 2026-10-25: 镜像 rows=10 ring=6981  [via BigLife-OSLoop]  commit 8519ebab6
+    -> PASS
+
+[5] heartbeat 3h 内
+    state/heartbeat.txt 尾行 2026-10-25 09:59:22 os-loop: round done exit=0
+    -> PASS
+
+[附] 事件流回放闸（mandate 步1 收口）
+    $ python -X utf8 Tools/events_refresh.py --gate
+    derive: OK cards=10091 events=37899 shards=2
+    replay: events=37899 cards=10091 replayed=10091 schema_errors=0 mismatch=0 -> PASS
+
+[附] QC 不变量扫描
+    $ python -X utf8 Tools/qc_census.py
+    QC done cards=10114 evolved=6981 problems=0 dup_rings=37/37
+
+结论：五项全 PASS（1-5）。证据=以上实跑输出原文。
