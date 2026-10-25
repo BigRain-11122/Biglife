@@ -2621,3 +2621,4 @@ R2172 2026-10-26 00:00~00:06 压实录：pull=Already up to date；决策水位�
 - 下个里程碑：年轮线下一批到期居民（窗 ≤48h，2026-10-27 前）
 - 发现：state/evolve-cursor.json 到期判定与实际卡内容不同步 → 已进化居民被重复选中，白烧 GPU（8 位×1 次）。立单待修：到期判定应叠加「卡内是否已有当日年轮」硬闸。
 - tokens: local=10 api=0 api_reason=-
+- [2026-10-26 07:4x @BigLife-OSLoop] R实录：年轮批落环 7/10（到期 10、重复开场闸挡 3）·事件闸 PASS cards=10091/events=39013/mismatch=0/schema=0·语言线 pool_audit 全桶达标=SELF_TERMINATE·相遇轮今日 cap 3 已满跳过·QC 06:01 已跑不重复；产出=**开场骨架池 12→24**（evolve_citizen.py v0.62·治 dup-opening 批量撞句）tokens: local=10 api=0 api_reason=-

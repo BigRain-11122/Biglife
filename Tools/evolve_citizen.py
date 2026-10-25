@@ -1965,6 +1965,22 @@ OPENING_SKELETONS = (
     "这会儿手边最碍事的就是这些，",
     "又到了要看一眼的时候：",
     "这半页还差几行才算齐，",
+    # v0.62 (2026-10-26): 12 -> 24. With only 12 skeletons, ~7400 citizens hashed
+    # onto the same one often enough that today's gate rejected 3/10 due seats on
+    # recent-dup-opening. Same style law: work/action only, no weather, no street
+    # scene, no persona-specific nouns.
+    "活计一件件压过来，我照老规矩先拣紧要的——",
+    "手边这几样我都过了一遍，心里有了数：",
+    "这桩事搁了两天，今儿总算轮到我动手，",
+    "我把袖口往上挽了挽，先从最难的那件下手，",
+    "手上的活儿排到第三件，我停下来核了核，",
+    "有些东西得对着光才看得清，我把它举起来，",
+    "数目对到一半我又回头看了一眼，",
+    "工具摆开，我照自己那套老顺序来，",
+    "这一摊子事我自己有数，慢慢捋就是了，",
+    "东西归位之前，我先把它们挨个认了一遍，",
+    "今天这活不赶，我就按自己的性子来，",
+    "我数着日子过，手上这点营生也一样，",
 )
 
 
