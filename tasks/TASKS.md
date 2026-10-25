@@ -2293,3 +2293,11 @@ tokens: local=10 api=0 api_reason=-
 - qc_census: cards=10114 evolved=6846 problems=0 dup_rings=37/37
 - build_city_dashboard: rings=6846 people=10114 bytes=63682 重建
 - tokens: local=10 api=0 api_reason=-
+
+- R2072 ???pull=Already up to date????? NEW=0?tasks open=0
+- ??? evolve_citizen --batch 3 -> due 10/10 ??(C-06853..C-06862) commit 014eb9a12???? sync rows=10 ring=6846
+- events_refresh --gate: events=37774 replayed=10091 mismatch=0 schema_errors=0 -> PASS
+- pool_audit: ???? SELF_TERMINATE???????
+- ???: ????(commit 82cde500a) ??
+- qc_census: ?? R2071 ??(problems=0) ???? ??
+- tokens: local=10 api=0 api_reason=-
