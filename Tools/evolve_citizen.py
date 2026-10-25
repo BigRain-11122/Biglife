@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.59 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.60 - BigLife citizen evolution engine.
+v0.60 (2026-10-26 R2199, gap #80 开场吸引子正面供给): v0.59 only named the
+condemned openings, so a 4B had prohibitions but no starting point and kept
+re-emerging the same single attractor ("风从巷口直灌进来，我正把…" blocked 5
+seats in one R2198 batch). Fix = opening_seed_block(cid) hands every citizen a
+DIFFERENT content-free opening skeleton chosen by a stable hash of its own id,
+placed before the ban list. Skeletons carry no weather/event/street content, so
+the anchor law is unchanged - the model still fills them only with its own
+persona-daily actions. Different seats get different skeletons = spread instead
+of one city-wide template. Verify = a 3-seat batch's skip-rate vs R2198's 5/9.
 v0.59 (2026-10-25 R2109, T-20261025-03 开场句聚簇收敛): gap #79 measured the
 city corpus one ring per citizen, so it missed same-day bursts - R2102 实测
 今日 153 条年轮开场 top-8 覆盖 19%（「雨敲在窗棂上」×5/「风掀得衣角乱」×4）。
@@ -1935,6 +1944,40 @@ def save_today_openings(counts, day=None):
         pass
 
 
+# v0.60 gap #80 (R2199, 2026-10-26): v0.59's ban list is correct but one-sided -
+# naming the condemned opening only tells a 4B what NOT to write, and it keeps
+# falling back to the same single attractor ("风从巷口直灌进来，我正把…" cost 5
+# seats in R2198 alone). Fix = hand each citizen a DIFFERENT opening skeleton
+# BEFORE the ban list, picked by a stable hash of its own id. Skeletons are
+# content-free (no weather / no event / no street scene), so the anchor law is
+# untouched: the model still fills them only with its own persona-daily actions.
+# Different skeletons per seat = natural spread instead of one global template.
+OPENING_SKELETONS = (
+    "手上这件还没收尾——",
+    "我把手边的东西往边上挪了挪，",
+    "方才还在忙，这会儿先停了下：",
+    "做到一半，我先直了直腰：",
+    "桌角那点零碎又该理一理了，",
+    "今天先记一句：",
+    "轮到我把手上的活计清一遍了，",
+    "东西刚拿到手，还带着点余温，",
+    "我把手头的活从头数了一遍：",
+    "这会儿手边最碍事的就是这些，",
+    "又到了要看一眼的时候：",
+    "这半页还差几行才算齐，",
+)
+
+
+def opening_seed_block(cid):
+    """Per-citizen opening skeleton (deterministic, stable per id)."""
+    cid = cid or ""
+    n = sum((i + 1) * ord(ch) for i, ch in enumerate(cid))
+    sk = OPENING_SKELETONS[n % len(OPENING_SKELETONS)]
+    return ("本轮你的开场句式骨架（只借用这个起句的骨架，词必须自己换；"
+            "骨架里不写天气、不写街景套话，填进去的动作只能是你人设里本来就有的日常）："
+            "「" + sk + "」——严禁原样照抄这句，换掉其中每一个词。\n")
+
+
 def build_prompt(cid, text, sig):
     p = persona_digest(text)
     ev = "\n".join("- " + e for e in viewpoint_events(text, sig)) or "- （今日无新城市事件）"
@@ -1982,6 +2025,9 @@ def build_prompt(cid, text, sig):
     today_blk = ("今天全城已经用滥的开场（今日已出现 ≥%d 次，开场句严禁与其中任何一句相同；"
                  "请从你自己此刻手上正在做的具体小动作写起）：" % TODAY_OPEN_HARD
                  + "、".join("「" + b + "」" for b in _tbl) + "\n") if _tbl else ""
+    # v0.60 gap #80: per-citizen opening skeleton, placed BEFORE the ban list so
+    # the model has something concrete to start from instead of only prohibitions.
+    opening_blk = opening_seed_block(cid)
     # T-20260925-01/T-20260925-18 soft guidance (NOT a gate): open with your OWN
     # catchphrase; standing per-prompt constraint caps generic pool-gene quotes at
     # 1 per ring (cross-card quotes stay LEGAL per C-00695 R192 - diversity nudge
@@ -2005,7 +2051,7 @@ def build_prompt(cid, text, sig):
     return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
             f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
-            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}{city_blk}{goal_blk}{batch_blk}{bad_blk}{recent_blk}{today_blk}"
+            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}{city_blk}{goal_blk}{batch_blk}{bad_blk}{recent_blk}{today_blk}{opening_blk}"
             f"现在真实北京时间 {sig['now']}，今天{sig.get('weekday','')}（{'周末' if sig.get('weekend') else '工作日'}），上海实况天气：{wx}。\n"
             f"今天属于上面标明的工作日/周末：你人设里凡以「周末」或「工作日」为前置条件的习惯，只许写与今天同侧的进行态或完成态，另一侧只许作为未来打算句提及，写错侧视为编造。\n"
             f"今天日期是 {sig.get('day')} 号（{sig.get('day_parity')}）：你人设里凡以「单日/双日/逢单/逢双」等日期奇偶为前置条件的习惯，只许写与今天同侧的进行态或完成态；另一侧严禁写成今天已发生或正在发生，只许以规则自述（人设原文规则句可原样引用）、按规则的自然推论或未来打算句式提及，严禁借引用断言今天发生了错侧动作，写错侧视为编造；同样严禁把你卡面没有奇偶前置的习惯硬捆绑到单日/双日名下——卡面没有的规则不得借日期之名新造，日期奇偶只许与你人设原文里真带奇偶字样的规则搭配。\n"

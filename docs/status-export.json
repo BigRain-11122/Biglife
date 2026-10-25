@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-26 04:38",
+ "export_ts": "2026-10-26 05:46",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2194（2026-10-26 04:5x）**：年轮补落 2 席（C-07960/C-07963，承接上轮被截断批的落盘件）→ 今日年轮机器直数 rings=7959；行为线收口 rows=13（脚本自提交 8b6133b5f）；事件回放闸 PASS（cards=10091/events=38882/replayed=10091/mismatch 0/schema 0）；城市看板重建 61.3KB（rings=7959/people=10114/cards=160）；开场去重闸本轮拦下 4 席（「风从巷口直灌进来」吸引子·闸按律生效，stays due 待重写） **R2193（2026-10-26 04:2x）**：年轮批 6 席落环（C-07947/C-07951/C-07952/C-07953/C-07954/C-07956），ring 7940→7946；行为线收口 rows=6；事件回放闸 PASS（cards=10091/events=38869/replayed=10091/mismatch 0/schema 0）；语言线 pool_audit PASS 全桶达标 SELF_TERMINATE；城市看板重建 61.4KB（rings=7946/people=10114/cards=160） **R2192（2026-10-26 04:0x 夜轮）**：年轮 8 枚（C-07934/C-07935/C-07936/C-07937/C-07939/C-07940/C-07941/C-07942，[锚] 实锚 2026-10-26 真实城市事件+北京时间）；2 席（C-07926/C-07938）过闸失败 stays due（recent-dup-opening/today-dup-opening 复用「风从巷口直灌进来」开场，闸门如实拦截不落环）；行为线 sync_rings 收口 rows=8 ring=7934；事件回放闸 PASS（cards=10091/events=38857/replayed=10091/mismatch 0/schema 0）；城市看板重建 rings=7934/people=10114/cards=160（61.4KB）；决策水位 NEW=0（尾 D-20261026-03）；GPU 让路自检 util 4%、显存 3715/12282 MiB，LLM 车道可用。",
+   "t": "**R2199（2026-10-26 05:4x）**：年轮批两轮共落 11 席（第一轮 C-07990~C-07993·4 席；验证轮 C-07926/C-07938/C-07974/C-07995/C-07996/C-07997 等 7 席），rings=7988；行为线 sync_rings 随环自动收口；事件回放闸 PASS（cards=10091/events=38911/replayed=10091/mismatch 0/schema 0）；城市看板重建 61.5KB（rings=7988/people=10114/cards=160）；**工具改进 v0.60**：新增 per-citizen 开场骨架注入（opening_seed_block），验证轮 10 席落 7 席、0 席因 today-dup-opening 硬拦，此前卡住的三席成功落环 **R2194（2026-10-26 04:5x）**：年轮补落 2 席（C-07960/C-07963，承接上轮被截断批的落盘件）→ 今日年轮机器直数 rings=7959；行为线收口 rows=13（脚本自提交 8b6133b5f）；事件回放闸 PASS（cards=10091/events=38882/replayed=10091/mismatch 0/schema 0）；城市看板重建 61.3KB（rings=7959/people=10114/cards=160）；开场去重闸本轮拦下 4 席（「风从巷口直灌进来」吸引子·闸按律生效，stays due 待重写） **R2193（2026-10-26 04:2x）**：年轮批 6 席落环（C-07947/C-07951/C-07952/C-07953/C-07954/C-07956），ring 7940→7946；行为线收口 rows=6；事件回放闸 PASS（cards=10091/events=38869/replayed=10091/mismatch 0/schema 0）；语言线 pool_audit PASS 全桶达标 SELF_TERMINATE；城市看板重建 61.4KB（rings=7946/people=10114/cards=160）",
    "s": 1
   },
   {
@@ -1457,7 +1457,11 @@
   [
    "236",
    "年轮补落 2 席 + 事件闸 PASS + 城市看板重建。今日 [锚] 年轮机器直数 236 圈 · tokens: local=13 api=0 api_reason=-"
+  ],
+  [
+   "265",
+   "年轮落 11 席 + 事件闸 PASS + 看板重建 + evolve_citizen v0.60 开场种子修法落地并验证。rings=265 · tokens: local=13 api=0 api_reason=-"
   ]
  ],
- "t": "当前活：年轮线 R2194 补落 2 席（rings 7959）+ 事件回放闸 PASS\n最近实物：census/export/city-dashboard.html 61.3KB（2026-10-26 04:5x）含 6 位居民新[锚]年轮\n下个里程碑：ring 8000 里程碑（差 41 圈）· ETA 2026-10-26 12:00 前"
+ "t": "当前活：年轮线 R2199 收轮（rings=7988）+ v0.60 开场骨架修法验证通过\n最近实物：census/export/city-dashboard.html 61.5KB（2026-10-26 05:4x）rings=7988 · Tools/evolve_citizen.py v0.60\n下个里程碑：ring 8000 里程碑（差 12 圈）· ETA 2026-10-26 08:00 前"
 }
