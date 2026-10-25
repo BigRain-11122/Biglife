@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-26 03:43",
+ "export_ts": "2026-10-26 03:56",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2191（2026-10-26 04:0x 夜轮）**：年轮 9 枚（C-07915~C-07923，[锚] 实锚 2026-10-26 真实城市事件+北京时间）；两次跑批均被外层 5 分钟无输出超时截断（本轮第 3 次复发同坑），落盘环完整，定向补提交 23311f691；行为线 sync_rings rows_changed=18 ring=7926；事件回放闸 PASS（cards=10091/events=38849/mismatch 0/schema 0）；池线 SELF_TERMINATE 全桶达标（hard_fails=0，determinism mismatch=0）；决策水位 NEW=0（尾 D-20261026-03）。 **R2189（2026-10-26 03:0x 夜轮）**：年轮 7 枚（C-07900~C-07904/C-07906/C-07907，[锚] 实锚 2026-10-26 真实城市事件+北京时间；零 FFFD 损坏）；批处理调用因管道缓冲 5 分钟无输出被外层超时中断，落盘件已逐卡校验完整（锚在/年轮在），行为线 sync_rings 收口 rows_changed=7；事件回放闸 PASS（cards=10091/events=38823/mismatch 0/schema 0）；城市看板重建 rings=7900（61.1KB），里程碑 7900 达成；GPU 空载窗（util 5%）已用足。 **R2188（2026-10-26 03:0x 夜轮）**：年轮 10 枚 C-07890~C-07899（[锚] 实锚 2026-10-26 真实城市事件+北京时间；门禁 5 席软判定落环，政策内计入）；行为线镜像自动提交 rows=10；事件回放闸 PASS（cards=10091/events=38816/mismatch 0/schema 0）；语言线 pool_audit SELF_TERMINATE（hard_fails=0，determinism mismatch=0）；水位键 v2 已对齐 D-20261025-08（源提交 ff22fb0c/blob 222683B/sha256 f94a284c，--check OK、--verify 取件复现一致，consumed=214）；tasks open=1（T-20261024-02 in-progress：规格级已交付，图像级待 GPU 空闲窗）。",
+   "t": "**R2192（2026-10-26 04:0x 夜轮）**：年轮 8 枚（C-07934/C-07935/C-07936/C-07937/C-07939/C-07940/C-07941/C-07942，[锚] 实锚 2026-10-26 真实城市事件+北京时间）；2 席（C-07926/C-07938）过闸失败 stays due（recent-dup-opening/today-dup-opening 复用「风从巷口直灌进来」开场，闸门如实拦截不落环）；行为线 sync_rings 收口 rows=8 ring=7934；事件回放闸 PASS（cards=10091/events=38857/replayed=10091/mismatch 0/schema 0）；城市看板重建 rings=7934/people=10114/cards=160（61.4KB）；决策水位 NEW=0（尾 D-20261026-03）；GPU 让路自检 util 4%、显存 3715/12282 MiB，LLM 车道可用。 **R2191（2026-10-26 04:0x 夜轮）**：年轮 9 枚（C-07915~C-07923，[锚] 实锚 2026-10-26 真实城市事件+北京时间）；两次跑批均被外层 5 分钟无输出超时截断（本轮第 3 次复发同坑），落盘环完整，定向补提交 23311f691；行为线 sync_rings rows_changed=18 ring=7926；事件回放闸 PASS（cards=10091/events=38849/mismatch 0/schema 0）；池线 SELF_TERMINATE 全桶达标（hard_fails=0，determinism mismatch=0）；决策水位 NEW=0（尾 D-20261026-03）。 **R2189（2026-10-26 03:0x 夜轮）**：年轮 7 枚（C-07900~C-07904/C-07906/C-07907，[锚] 实锚 2026-10-26 真实城市事件+北京时间；零 FFFD 损坏）；批处理调用因管道缓冲 5 分钟无输出被外层超时中断，落盘件已逐卡校验完整（锚在/年轮在），行为线 sync_rings 收口 rows_changed=7；事件回放闸 PASS（cards=10091/events=38823/mismatch 0/schema 0）；城市看板重建 rings=7900（61.1KB），里程碑 7900 达成；GPU 空载窗（util 5%）已用足。",
    "s": 1
   },
   {
@@ -1445,7 +1445,11 @@
   [
    "203",
    "R2191：年轮 9 枚（C-07915~C-07923），今日累计 203 枚；事件闸 PASS（events=38849，mismatch 0/schema 0）；行为线 ring=7926。"
+  ],
+  [
+   "211",
+   "R2192：年轮 8 枚（C-07934~C-07942 区段），今日累计 211 枚；事件闸 PASS（events=38857，mismatch 0/schema 0）；行为线 ring=7934；看板重建 rings=7934。"
   ]
  ],
- "t": "当前活：年轮进化线（ring 7908→7926，今日 9 席新环落库）\n最近实物：census/registry/GM|QT|NS|RV 等 9 张新环卡（2026-10-26 04:0x 提交 23311f691）+ qa/EVENTS-REPLAY-REPORT.md（mismatch 0）\n下个里程碑：rings 7950（差 24 席）ETA 2026-10-26 07:0x 前"
+ "t": "当前活：年轮进化线（ring 7926→7934，本轮 8 席新环落库）\n最近实物：census/registry/ 8 张新环卡（2026-10-26 04:0x 提交 6b8935b2d）+ census/export/city-dashboard.html（ring 7934/people 10114，04:0x 重建）\n下个里程碑：rings 7950（差 16 席）ETA 2026-10-26 06:0x"
 }
