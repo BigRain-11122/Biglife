@@ -2363,3 +2363,11 @@ tokens: local=10 api=0 api_reason=-
 - tokens: local=10 api=0 api_reason=-
 
 - **R2101** 2026-10-25 12:5x~13:0x @BigLife-OSLoop ???pull=Already up to date??????? NEW=0??? D-20261025-13 ?????orders ???????? open=0?**????**=?? 9 ????C-07120/07122~07129?ring=7122?+????? PASS?cards=10091/events=38040/mismatch=0/schema=0?+QC ?? problems=0?10114 ?/dup_rings 37-37?+??? PASS ???hard_fails=0?+?? cap 3 ???????=qwen3:4b-instruct?D-20261024-02 ????GPU util 3% ?????????????=?? 6400 ?????? ring?7200 ? 10-26 ??tokens: local=11 api=0 api_reason=-
+
+- **R2102** 2026-10-25 13:03~13:1x @BigLife-OSLoop 小结：pull=Already up to date；决策水位差集 NEW=0（末位 D-20261025-13 已消费）；orders 无涉本司新令（10-23 五司调研令硅基城市线已由 cph4/research/R-20261023-scan-silicon-city.md 交付，查重不重派）；任务板 open=0。**产品实体**=年轮 10 席 C-07121/C-07130~C-07138（锚定律 10/10 复验过：每条 [锚] 注脚在、均长 61.4 字、commit 5a55436f5）；行为线镜像 rows=10 ring=7132（commit cb205172e，脚本自动收口）；事件流回放闸 PASS（cards=10091 / events=38050 / replayed=10091 / mismatch=0 / schema_errors=0）。**品质观测（供下轮修）**=今日 153 条年轮开场句聚簇：雨敲在窗棂上×5、风掀得衣角乱×4、单子来了就接×4、这单我送×4（top-8 开场覆盖 29/153≈19%），本轮 4/10 席被 recent-dup-phrase 软闸放行——天气→开场句映射过窄，建议下轮给 evolve 的 prompt 加开场多样性约束（同批禁复用前 5 条开场）。池审 PASS 全桶 SELF_TERMINATE（72/72+12/12+greet 28/28+faq 7/7+neg 6/6, hard_fails=0）；QC 上轮 12:5x problems=0（本轮未到 6 轮窗口）；相遇轮今日 cap 已满（R2023）自停；日清已于 12:46 R2100 上报不重写。tokens: local=10 api=0 api_reason=-
+
+- [ ] **T-20261025-03 年轮开场句聚簇收敛**（R2102 立·2026-10-25 13:1x @BigLife-OSLoop 实测）
+  - 现象：今日 153 条年轮开场句 top-8 覆盖 29/153≈19%（雨敲在窗棂上×5/风掀得衣角乱×4/单子来了就接×4/这单我送×4）；本轮 4/10 席 recent-dup-phrase 软闸放行。
+  - 根因假设：天气→开场句式映射过窄（evolve_citizen.py 已把 top-8 开场写进 prompt 且判 recent-dup-opening/phrase，但两者均在 SOFT_ONLY_VIOLATIONS=只记录不拦）。
+  - 建议做法（下轮起，择一）：①开场多样性硬约束只作用于「今日同开场 ≥3 次」的句式，低于阈值仍软放行（拦窄不拦宽，避免断供）；②prompt 侧改为「先写动作再写天气」的句式模板轮转（A/B 双模板隔批切换）；③新增 state/ring-openings-today.json 记当日开场频次，供 prompt 动态注入禁用清单。
+  - 验收：次日同窗口开场 top-8 覆盖率 <10%，且 evolve 成功率 ≥8/10。
