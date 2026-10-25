@@ -2317,3 +2317,4 @@ tokens: local=10 api=0 api_reason=-
 - 相遇轮: 今日 cap 3 已满，跳过
 - 收尾: 回放闸报告入库 commit（本轮）; push 见尾行
 - tokens: local=10 api=0 api_reason=-
+- **R2075** 2026-10-25 08:2x~08:3x @BigLife-OSLoop 小结：pull=Already up to date；决策水位 NEW=0（D-20261025-01..08 全在册）；orders 无本司新令；任务板 open=0。**产品实锚**：年轮 10 席 C-06881~C-06890（evolve 10/10·batch-dup 0）commit 269a3dfbb + 行为线镜像 rows=10 ring=6884 commit 28b6fddbc；QC 巡检 problems=0（cards=10114/evolved=6884）→ census/QC-REPORT.md；事件回放闸 PASS（cards=10091/events=37802/mismatch 0/schema 0）→ qa/EVENTS-REPLAY-REPORT.md；城市看板重生成 rings=6884/people=10114 → census/export/city-dashboard.html（commit ad566331c）。池审计 72/72+12/12 at_target → SELF_TERMINATE 跳过；相遇轮今日已达 cap 3 自停；GPU 让路合规（util 3%，D-20261024-16 窗口内取用）。tokens: local=10 api=0 api_reason=-
