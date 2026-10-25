@@ -1,13 +1,13 @@
 {
   "repo": "git@github.com:BigRain-11122/FluxGroup.git",
   "path": "docs/decisions.md",
-  "commit_sha": "60ae16cbbaf9e795e51bebf86ef41e47f5bd9f14",
+  "commit_sha": "e9532a967254b0d748422a75e18973d248f8a7eb",
   "blob_bytes": 222683,
   "sha256": "f94a284c1b5531baa6b0b95e9f9625df3e5a74a44514ea5816f6507a89ee8b29",
   "fetch_commands": {
-    "fetch": "git -C \"C:\\Users\\sjs20\\Desktop\\FluxGroup\" show 60ae16cbbaf9e795e51bebf86ef41e47f5bd9f14:docs/decisions.md",
+    "fetch": "git -C \"C:\\Users\\sjs20\\Desktop\\FluxGroup\" show e9532a967254b0d748422a75e18973d248f8a7eb:docs/decisions.md",
     "fetch_origin_main": "git -C \"C:\\Users\\sjs20\\Desktop\\FluxGroup\" show origin/main:docs/decisions.md",
-    "verify_sha256": "python -X utf8 -c \"import hashlib,subprocess,sys;b=subprocess.run(['git','-C',r'C:\\Users\\sjs20\\Desktop\\FluxGroup','show','60ae16cbbaf9e795e51bebf86ef41e47f5bd9f14:docs/decisions.md'],capture_output=True).stdout;print(len(b), hashlib.sha256(b).hexdigest())\"",
+    "verify_sha256": "python -X utf8 -c \"import hashlib,subprocess,sys;b=subprocess.run(['git','-C',r'C:\\Users\\sjs20\\Desktop\\FluxGroup','show','e9532a967254b0d748422a75e18973d248f8a7eb:docs/decisions.md'],capture_output=True).stdout;print(len(b), hashlib.sha256(b).hexdigest())\"",
     "note": "verify_sha256 必须整条跑（禁经 PowerShell 文本管道，字节会被转码）"
   },
   "consumed": [
@@ -223,6 +223,6 @@
     "D-20261025-17",
     "D-20261025-18"
   ],
-  "updated_at": "2026-10-25T20:13:36+08:00",
+  "updated_at": "2026-10-25T22:43:54+08:00",
   "last_stale_reason": "source-mismatch:commit_sha"
 }
