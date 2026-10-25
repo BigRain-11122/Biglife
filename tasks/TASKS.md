@@ -2475,3 +2475,15 @@ tokens: local=10 api=0 api_reason=-
 - 决策消费：水位至 D-20261025-18 差集 NEW=0；orders 物理件区无本司件
 - 轮首核验：pull=Already up to date；邻近轮 R2133 产物（C-07432~41/rings 7435）已独立提交，本轮为其后顺序轮零重叠
 - tokens: local=10 api=0 api_reason=-
+
+## R2137 轮实录 2026-10-25 18:54~19:1x
+
+- 年轮线：`--batch 3` 实落 10 席 C-07452~C-07461（脚本自提交 296834fa2 + 行为线镜像 a2f706905 ring=7455），全批带 [锚]（soft-concession recent-dup-phrase 6 席）
+- 开场多样性闸：批前禁今日滥场 9 句（top=「单子来了就接，不来就钓鱼」），本批零席触发 today-dup-opening、evolution 10/10 无饿死（v0.59 硬闸保持有效）
+- 事件回放闸：cards=10091 events=38373 replayed=10091 schema_errors=0 mismatch=0 → PASS（qa/EVENTS-REPLAY-REPORT.md）
+- 实物面：census/export/city-dashboard.html 重建 rings=7455 / people=10114 / cards=160（64365 bytes）；docs/status-export.json 三行续鲜 total=1088（payload R2137）
+- 语言线池轮：全桶 at_target SELF_TERMINATE（72/72+12/12+greet 28/28+faq 7/7+neg 6/6），本轮跳过（自终止律）
+- 相遇轮：今日 cap 已满，跳过；聚光灯本月 2/2 已达标，跳过；QC 未到 6 轮窗（上巡 R2131 problems=0）
+- 决策消费：水位至 D-20261025-18 差集 NEW=0（v2 水位件已对齐）；orders 物理件区无本司件
+- 实况三行——当前活：年轮线续跑（每轮 8-10 席·本地推理）+ 开场多样性硬闸在役；最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（19:0x·rings=7455/people=10114）与 C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/EVENTS-REPLAY-REPORT.md（19:0x·38373/10091/0/0）；下个里程碑：年轮累计破 7500（约 45 席·ETA 2026-10-26 上午，窗 ≤48h）
+- tokens: local=10 api=0 api_reason=-
