@@ -2309,3 +2309,11 @@ tokens: local=10 api=0 api_reason=-
 - 相遇轮: 今日 cap 3 已满，跳过
 - 收尾: 回放闸报告定向 commit 29798e704 已 push（41ee969e9..29798e704）
 - tokens: local=10 api=0 api_reason=-
+
+- R2074 实录 pull=Already up to date NEW=0（D-20261025-01..08 已在水位；D-20261024-16 GPU 让路标注在守）tasks open=0
+- 年轮: evolve_citizen --batch 3 -> evolved=9/10 (C-06871..C-06881 系列, C-06881 闸拦 batch-dup-opening 留待) commit f3fd325c8；sync rows=9 ring=6874 commit e6f82e982
+- events_refresh --gate: events=37792 cards=10091 replayed=10091 mismatch=0 schema_errors=0 -> PASS
+- pool_audit: 全桶达标 SELF_TERMINATE（pool 18/12+greet17+faq3+neg8 无欠桶·determinism 0 失配）
+- 相遇轮: 今日 cap 3 已满，跳过
+- 收尾: 回放闸报告入库 commit（本轮）; push 见尾行
+- tokens: local=10 api=0 api_reason=-
