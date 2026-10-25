@@ -15,6 +15,7 @@ payload JSON（声明式，由轮次 write_file 落盘，规避 CLI CJK 引号�
     "dept_text": "**R1506（...）**：...",     # 必填，dept0 新窗条（滚动窗保最新 3 条）
     "results_note": "... {N} ...",           # 必填，results 尾行文本，{N} 自动替换为机器直数
     "qc_text": null | "**R1506 例巡条...**", # 可选，QC 巡检线前插条
+    "top_text": "当前活：...\\n最近实物：...\\n下个里程碑：...",  # 可选，对外实况三行（产品优先律 5）
     "expect_total": 326                      # 可选，账平断言；缺省=信任机器直数
   }
 
@@ -94,6 +95,13 @@ def load_payload(path):
             raise SystemExit("payload missing key: %s" % k)
     if not re.fullmatch(r"R\d{3,5}", p["round"]):
         raise SystemExit("bad round id: %r" % p["round"])
+    top = p.get("top_text")
+    if top:
+        lines = [ln.strip() for ln in top.strip().splitlines() if ln.strip()]
+        want = ("当前活：", "最近实物：", "下个里程碑：")
+        if len(lines) != 3 or not all(lines[i].startswith(want[i]) for i in range(3)):
+            raise SystemExit("TOP_TEXT_FORMAT_GUARD expect 3 lines 当前活/最近实物/下个里程碑 (got %d)" % len(lines))
+        p["top_text"] = "\n".join(lines)
     return p
 
 
@@ -119,7 +127,7 @@ def apply_refresh(payload, dry_run=False, heartbeat=False):
     d = json.loads(raw)
     ts = datetime.now().strftime("%Y-%m-%d %H:%M")
 
-    changed = {"dept": False, "qc": False, "results": False, "hb": False}
+    changed = {"dept": False, "qc": False, "results": False, "top": False, "hb": False}
 
     # --- dept0: 年轮进化线 滚动窗（幂等：标记已在不重写） ---
     dep0 = d["depts"][0]
@@ -143,6 +151,12 @@ def apply_refresh(payload, dry_run=False, heartbeat=False):
         else:
             raise SystemExit("QC_DEPT_NOT_FOUND")
 
+    # --- 对外实况三行（产品优先律 5：幂等=文本已同不重写） ---
+    top_text = payload.get("top_text")
+    if top_text and d.get("t") != top_text:
+        d["t"] = top_text
+        changed["top"] = True
+
     # --- results: 尾行追加（幂等：尾行计数==机器直数不重append） ---
     last_cnt = str(d["results"][-1][0]) if d["results"] else None
     if last_cnt != str(total):
@@ -153,8 +167,8 @@ def apply_refresh(payload, dry_run=False, heartbeat=False):
     d["export_ts"] = ts
 
     if dry_run:
-        print("DRYRUN total=%d reg=%d anc=%d dept=%s qc=%s results=%s ts=%s" % (
-            total, reg, anc, changed["dept"], changed["qc"], changed["results"], ts))
+        print("DRYRUN total=%d reg=%d anc=%d dept=%s qc=%s results=%s top=%s ts=%s" % (
+            total, reg, anc, changed["dept"], changed["qc"], changed["results"], changed["top"], ts))
         return total, changed, ts
 
     out = json.dumps(d, ensure_ascii=False, indent=1)
@@ -168,6 +182,8 @@ def apply_refresh(payload, dry_run=False, heartbeat=False):
     assert d2["export_ts"] == ts, "roundtrip export_ts"
     assert len(d2["results"]) == len(d["results"]), "roundtrip results len"
     assert d2["depts"][0]["t"].startswith("**R"), "roundtrip dept0"
+    if top_text:
+        assert d2.get("t") == top_text, "roundtrip top_text"
 
     # --- heartbeat（可选·幂等：尾行含本轮标记不重写） ---
     if heartbeat:
@@ -182,8 +198,8 @@ def apply_refresh(payload, dry_run=False, heartbeat=False):
                 f.write(line + "\n")
             changed["hb"] = True
 
-    print("OK total=%d reg=%d anc=%d dept=%s qc=%s results=%s hb=%s ts=%s" % (
-        total, reg, anc, changed["dept"], changed["qc"], changed["results"], changed["hb"], ts))
+    print("OK total=%d reg=%d anc=%d dept=%s qc=%s results=%s top=%s hb=%s ts=%s" % (
+        total, reg, anc, changed["dept"], changed["qc"], changed["results"], changed["top"], changed["hb"], ts))
     return total, changed, ts
 
 
