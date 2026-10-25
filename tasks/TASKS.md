@@ -2463,3 +2463,15 @@ tokens: local=10 api=0 api_reason=-
 - 决策消费：水位至 D-20261025-18 无新差集；订单物理件区无本司件
 - GPU 让路律：util 7% 放行；LLM=qwen3:4b-instruct（D-20261024-02 口径）
 - tokens: local=10 api=0 api_reason=-
+
+
+## R2134 轮实录 2026-10-25 18:4x~18:5x
+
+- 年轮线：\--batch 3\ 实落 10 席 C-07442~C-07451（脚本自提交 551b84c46 + 行为线镜像 c35e28853 ring=7445），全批带 [锚]（软让步 recent-dup-phrase 5 席）
+- 事件回放闸：cards=10091 events=38363 replay=10091 schema_errors=0 mismatch=0 → PASS（qa/EVENTS-REPLAY-REPORT.md）
+- 实物面：census/export/city-dashboard.html 重建 rings=7445 / people=10114 / cards=160（64293 bytes）
+- 语言线池轮：全桶 at_target SELF_TERMINATE（72/72+12/12+greet 28/28+faq 7/7+neg 6/6），本轮跳过（自终止律）
+- 相遇轮：今日 cap 已满，跳过；聚光灯本月 2/2 已达标，跳过
+- 决策消费：水位至 D-20261025-18 差集 NEW=0；orders 物理件区无本司件
+- 轮首核验：pull=Already up to date；邻近轮 R2133 产物（C-07432~41/rings 7435）已独立提交，本轮为其后顺序轮零重叠
+- tokens: local=10 api=0 api_reason=-
