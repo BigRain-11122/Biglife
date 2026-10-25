@@ -1,6 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.58 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.59 - BigLife citizen evolution engine.
+v0.59 (2026-10-25 R2109, T-20261025-03 开场句聚簇收敛): gap #79 measured the
+city corpus one ring per citizen, so it missed same-day bursts - R2102 实测
+今日 153 条年轮开场 top-8 覆盖 19%（「雨敲在窗棂上」×5/「风掀得衣角乱」×4）。
+Fix = today_ring_openings() scans census/registry for TODAY's dated ring lines
+and counts normalized 12-char openings; the batch caller pins
+sig["today_open_ids"] (counter) and sig["today_ban_openings"] (openings seen
+>= TODAY_OPEN_HARD=6 times today, len>=8). ring_violations gains
+today-dup-opening (hard, own-catchphrase exempt: an opening that literally sits
+in this card's own text is persona voice, not a template) and the prompt names
+the banned openings outright; state/ring-openings-today.json keeps the ledger
+observable. Threshold 6 not 3 = 拦窄不拦宽 - a two/three-hit opening still lands
+so the ring line never starves.
 v0.58 (2026-10-25 R2099, gap #79): gaps #70/#71 dedup only inside ONE batch, so
 the city-wide corpus still collapsed into templates: of 7,085 rings, 122 open
 with the same 「这会儿天还黑着，雨还在下」, 67 with 「这城里好玩的东西一天比一」,
@@ -614,6 +626,7 @@ SUGGEST_MARKERS = ("建议", "提议", "不妨", "希望", "应该", "可以", "
 # families sit at 100-800 (「雨还在下，风挺大，檐下」512). Skip-starvation costs
 # a whole cooldown round, so the band is set where the visible 复读机 lives.
 RECENT_GRAM_MIN = 25
+TODAY_OPEN_HARD = 6   # T-20261025-03: same opening >=6x today = template collapse
 SOFT_ONLY_VIOLATIONS = {"recent-dup-opening", "recent-dup-phrase"}
 
 def today():
@@ -1343,6 +1356,16 @@ def ring_violations(line, sig):
                 continue
             v.append("recent-dup-phrase")
             break
+    # T-20261025-03 (R2109): same-day burst - gap #79's corpus is one ring per
+    # citizen, so an opening used 6+ times TODAY still read as fresh. Hard check;
+    # own-catchphrase exempt (opening literally in this card's text = persona
+    # voice, per T-20260925-01). Absent on meet/reflect -> off, zero drift.
+    tob = sig.get("today_ban_openings")
+    if isinstance(tob, set) and tob:
+        op = re.sub(r"\s+", "", line or "").strip("「」\"“”")[:12]
+        if len(op) >= 8 and op in tob:
+            if op not in re.sub(r"\s+", "", sig.get("card_text") or ""):
+                v.append("today-dup-opening")
     return v
 
 def gated_llm(prompt, sig, max_regens=3):
@@ -1869,6 +1892,49 @@ def recent_ring_corpus(export_path=None, gram_n=9, gram_min=RECENT_GRAM_MIN):
     grams = {g: c for g, c in counts.items() if c >= gram_min}
     return openings, grams
 
+def today_ring_openings(day=None):
+    """T-20261025-03 (R2109): same-day opening frequency from the cards themselves.
+
+    recent_ring_corpus() keeps only ONE ring per citizen (the export's latest), so
+    a same-day burst - many citizens opening with the same sentence today - stays
+    invisible to gap #79. This scans census/registry for the dated ring lines of
+    TODAY only and counts normalized 12-char openings (~1.9s per 10k cards).
+    Returns {opening12: count}; missing registry -> {} (check off, zero drift)."""
+    day = day or today()
+    pat = re.compile(r"- " + re.escape(day) + r" 「([^」]{8,})」")
+    counts = {}
+    root = os.path.join(CENSUS, "registry")
+    for dirpath, _, files in os.walk(root):
+        for fn in files:
+            if not fn.endswith(".md"):
+                continue
+            try:
+                with open(os.path.join(dirpath, fn), encoding="utf-8") as f:
+                    s = f.read()
+            except (IOError, OSError):
+                continue
+            for m in pat.finditer(s):
+                k = re.sub(r"\s+", "", m.group(1))[:12]
+                if len(k) >= 8:
+                    counts[k] = counts.get(k, 0) + 1
+    return counts
+
+
+def save_today_openings(counts, day=None):
+    """Ledger face for the today-opening frequency (state/, gitignored)."""
+    p = os.path.join(STATE_DIR, "ring-openings-today.json")
+    try:
+        os.makedirs(STATE_DIR, exist_ok=True)
+        tmp = p + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump({"date": day or today(), "openings": counts,
+                       "updated": datetime.datetime.now().isoformat(timespec="seconds")},
+                      f, ensure_ascii=False, indent=1, sort_keys=True)
+        os.replace(tmp, p)
+    except (IOError, OSError, ValueError):
+        pass
+
+
 def build_prompt(cid, text, sig):
     p = persona_digest(text)
     ev = "\n".join("- " + e for e in viewpoint_events(text, sig)) or "- （今日无新城市事件）"
@@ -1911,6 +1977,11 @@ def build_prompt(cid, text, sig):
     recent_blk = ("全城近期的模板开场（已被众多居民用滥，你的开场严禁与它们相同）："
                   + "、".join("「" + b + "」" for b in _rbl)
                   + "；开场请写你自己此刻手上的具体小动作。\n") if _rbl else ""
+    # T-20261025-03 (R2109): openings already used >=6x TODAY, named outright.
+    _tbl = sig.get("today_ban_openings") or []
+    today_blk = ("今天全城已经用滥的开场（今日已出现 ≥%d 次，开场句严禁与其中任何一句相同；"
+                 "请从你自己此刻手上正在做的具体小动作写起）：" % TODAY_OPEN_HARD
+                 + "、".join("「" + b + "」" for b in _tbl) + "\n") if _tbl else ""
     # T-20260925-01/T-20260925-18 soft guidance (NOT a gate): open with your OWN
     # catchphrase; standing per-prompt constraint caps generic pool-gene quotes at
     # 1 per ring (cross-card quotes stay LEGAL per C-00695 R192 - diversity nudge
@@ -1934,7 +2005,7 @@ def build_prompt(cid, text, sig):
     return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
             f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
-            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}{city_blk}{goal_blk}{batch_blk}{bad_blk}{recent_blk}"
+            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}{city_blk}{goal_blk}{batch_blk}{bad_blk}{recent_blk}{today_blk}"
             f"现在真实北京时间 {sig['now']}，今天{sig.get('weekday','')}（{'周末' if sig.get('weekend') else '工作日'}），上海实况天气：{wx}。\n"
             f"今天属于上面标明的工作日/周末：你人设里凡以「周末」或「工作日」为前置条件的习惯，只许写与今天同侧的进行态或完成态，另一侧只许作为未来打算句提及，写错侧视为编造。\n"
             f"今天日期是 {sig.get('day')} 号（{sig.get('day_parity')}）：你人设里凡以「单日/双日/逢单/逢双」等日期奇偶为前置条件的习惯，只许写与今天同侧的进行态或完成态；另一侧严禁写成今天已发生或正在发生，只许以规则自述（人设原文规则句可原样引用）、按规则的自然推论或未来打算句式提及，严禁借引用断言今天发生了错侧动作，写错侧视为编造；同样严禁把你卡面没有奇偶前置的习惯硬捆绑到单日/双日名下——卡面没有的规则不得借日期之名新造，日期奇偶只许与你人设原文里真带奇偶字样的规则搭配。\n"
@@ -2316,6 +2387,17 @@ def main():
         k for k, ids in sorted(sig["recent_open_ids"].items(),
                                key=lambda kv: -len(kv[1]))[:8]
         if len(k) >= 8 and len(ids) >= 3]
+    # T-20261025-03: same-day burst face (one ring per citizen in the corpus above
+    # cannot see today's repeats). Ledger lands in state/ for observability.
+    _tcount = today_ring_openings()
+    sig["today_open_ids"] = _tcount
+    sig["today_ban_openings"] = {k for k, c in _tcount.items()
+                                 if c >= TODAY_OPEN_HARD and len(k) >= 8}
+    save_today_openings(_tcount)
+    if sig["today_ban_openings"]:
+        print("today-dup openings banned: %d (top=%s)" % (
+            len(sig["today_ban_openings"]),
+            max(_tcount.items(), key=lambda kv: kv[1])[0]), flush=True)
     for cid in due:
         # T-20261019-01: per-seat stdout keepalive, flush=True beats pipe block-buffering
         # T-20261020-01: seat start carries a timestamp so a stalled seat is
@@ -2402,6 +2484,15 @@ def main():
         for _g in {_norm_ln[_i:_i + 7] for _i in range(len(_norm_ln) - 6)}:
             sig["batch_phrases"][_g] = sig["batch_phrases"].get(_g, 0) + 1
         sig["batch_used"].append(line)
+        # T-20261025-03: keep the same-day opening counter live inside the batch,
+        # so a sentence that reaches TODAY_OPEN_HARD mid-batch blocks later seats.
+        _ti = sig.get("today_open_ids")
+        if isinstance(_ti, dict):
+            _op = re.sub(r"\s+", "", line)[:12]
+            if len(_op) >= 8:
+                _ti[_op] = _ti.get(_op, 0) + 1
+                if _ti[_op] >= TODAY_OPEN_HARD:
+                    sig["today_ban_openings"].add(_op)
         note_pool_use(line, face, pool_genes, pool_used)  # T-20260925-01: count cross-card quotes
         add_ring(p, cid, line, anchor_note)
         paths.append(p)
