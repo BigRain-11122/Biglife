@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-26 00:16",
+ "export_ts": "2026-10-26 00:33",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2173（年轮6席）** C-07744/C-07745/C-07746/C-07747/C-07748/C-07750 ring=7737→7743·回放闸 PASS(events=38663/mismatch 0/schema 0)·语言池全桶达标自终止·QC 未到期 **R2172（年轮 10 席 + 相遇 1 对 · ring 7737）**：evolve_citizen --batch 3 实跑 10 席（C-07727、C-07735~C-07743），软让步闸 recent-dup-phrase 拦下重复开头 9 条；行为线镜像 rows=10 自动同步；相遇轮围绕 2026-10-26 真实城市事件各写一句年轮式互动，双卡互引。回放闸 PASS（events=38655/cards=10091/replayed=10091/mismatch 0/schema 0）；QC problems=0（dup_rings=37/37）；语言池全桶达标 SELF_TERMINATE；决策水位 NEW=0（尾 D-20261025-18）。 **R2168（2026-10-25 23:2x）：年轮线 8 席落环（C-07707~C-07714）·ring 7700→7708·批次进程 5min 无输出被中断后收口补提交（sync_rings committed rows=8）·事件闸 PASS（events=38626/cards=10091/mismatch=0/schema=0）·语言池 SELF_TERMINATE 维持（axes 72/72+sprite 12/12+greet 28/28+faq 7/7+neg 6/6）·决策水位 NEW=0（尾 D-20261025-18）·附修 HQ-FEEDBACK/TASKS 两处 GBK 混入段**",
+   "t": "**R2175（年轮席·夜窗）** C-07760~C-07769 十席落环 ring=7753→7763·回放闸 PASS(events=38683/mismatch 0/schema 0)·语言池全桶达标自终止·看板/生活页重建 **R2173（年轮6席）** C-07744/C-07745/C-07746/C-07747/C-07748/C-07750 ring=7737→7743·回放闸 PASS(events=38663/mismatch 0/schema 0)·语言池全桶达标自终止·QC 未到期 **R2172（年轮 10 席 + 相遇 1 对 · ring 7737）**：evolve_citizen --batch 3 实跑 10 席（C-07727、C-07735~C-07743），软让步闸 recent-dup-phrase 拦下重复开头 9 条；行为线镜像 rows=10 自动同步；相遇轮围绕 2026-10-26 真实城市事件各写一句年轮式互动，双卡互引。回放闸 PASS（events=38655/cards=10091/replayed=10091/mismatch 0/schema 0）；QC problems=0（dup_rings=37/37）；语言池全桶达标 SELF_TERMINATE；决策水位 NEW=0（尾 D-20261025-18）。",
    "s": 1
   },
   {
@@ -1417,7 +1417,11 @@
   [
    "16",
    "2026-10-26 R2173: 年轮 6 席入册(ring=7743)+回放闸 PASS，累计产物 16 件。"
+  ],
+  [
+   "36",
+   "2026-10-26 R2175: 年轮 10 席入册(ring=7763)+回放闸 PASS，累计产出 36 件。"
   ]
  ],
- "t": "当前活：年轮线居民进化（本地模型生成·FluxVerse 事件+真实时空锚）\n最近实物：census/registry 六张居民年轮卡 + census/export/city-dashboard.html（2026-10-26 00:18）\n下个里程碑：QC 巡检（约 R2178，≤48h）与每日相遇轮"
+ "t": "当前活：年轮线居民进化（本地 qwen3:4b 生成·FluxVerse 事件+真实时空锚·夜间 GPU 4% 非争用窗）\n最近实物：census/export/city-dashboard.html 与 census/export/city-life.html（2026-10-26 00:34·rings=7763/cards=160）\n下个里程碑：QC 不变量巡检（约 R2178，≤48h）+ 次日相遇轮"
 }
