@@ -2544,3 +2544,4 @@ tokens: local=10 api=0 api_reason=-
 
 - R2155 (2026-10-25 21:1x @BigLife-OSLoop) 年轮10席(C-07584~C-07593·ring 7587)+sync零写+事件闸PASS(38505/0/0)+池自终止全达标+QC problems=0。tokens: local=10 api=0 api_reason=-
 - R2156 2026-10-25 21:24 轮实录：年轮10席(C-07594~C-07603·ring 7597)+事件回放闸 PASS(38515/10091/0/0)+池全桶达标 SELF_TERMINATE+相遇 cap3 已满+今日刊/看板重建(city-today rings=1230·dashboard rings=7597)。tokens: local=10 api=0 api_reason=-
+- R2157 2026-10-25 21:3x 轮实录：年轮10席（C-07604~C-07613·ring 7607）+行为线镜像 rows=10[via 脚本自动提交 c7fdcdc1a]+事件回放闸 PASS（38525 events/10091 cards/mismatch=0/schema=0·qa/EVENTS-REPLAY-REPORT.md 入库 9b0cddd96）+池六轴72/72·像素灵12/12·问候28/28 全达标 SELF_TERMINATE+相遇 cap3 已满 skip+决策水位 NEW=0（末位 D-20261025-18）。三行面：当前活=年轮线批轮转（本地 qwen3:4b-instruct）｜最近实物=census/export/city-dashboard.html（2026-10-25 21:3x·rings=7607）｜下个里程碑=rings 7650（约 43 席·ETA 10-26 上午）。tokens: local=10 api=0 api_reason=-
