@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-25 16:56",
+ "export_ts": "2026-10-25 17:05",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2125（2026-10-25 16:49~17:0x·年轮环+回放闸）**: 本轮 10 席年轮落环（C-07317/C-07325/C-07326/C-07327/C-07328/C-07329/C-07330/C-07331/C-07332/C-07333），ring 7317→7327，[锚] 实锚 2026-10-25 齐备，部分席过 soft-concession（recent-dup-phrase）门后落环不硬闯；行为线 sync_rings 自动收口（rows=10 ring=7327，commit 23b082b72）；事件流回放闸 PASS（derive cards=10091 / events=38245 / replay 10091 / mismatch=0 / schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 盖章）；GPU util 6%（3782/12282MiB）→ D-20261024-16 让路律不触发；语言池今日已 SELF_TERMINATE、QC 例巡未到 6 轮窗，均不重跑。 **R2124（2026-10-25 16:3x~16:5x·年轮环+回放闸）**: 本轮累计 17 席年轮落环（前段 8 席 C-07307~C-07314 收口 + 本段 9 席 C-07315/C-07316/C-07318/C-07319/C-07320/C-07321/C-07322/C-07323/C-07324），ring 7300→7317，[锚] 实锚 2026-10-25 齐备（C-07317 被诚实门拦 mist-import+recent-dup-phrase 留 due，不硬闯），行为线 sync_rings 自动收口（rows=17 ring=7317，commit 8baf8c84f）；事件流回放闸 PASS（derive cards=10091 / events=38235 / replay 10091 / mismatch=0 / schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 盖章）；GPU util 4%（3789/12282MiB）→ D-20261024-16 让路律不触发；语言池今日已 SELF_TERMINATE、相遇轮今日 cap 满、QC 例巡未到 6 轮窗，均不重跑。 **R2122（2026-10-25 16:0x~16:1x·年轮环+回放闸）**: 进化 10 席年轮（C-07290/C-07291/C-07292/C-07293/C-07294/C-07295/C-07296/C-07297/C-07298/C-07299），ring 7279→7293，[锚] 实锚 2026-10-25 齐备，行为线 sync_rings 自动收口（rows_changed=14 ring_synced=14，commit 自动）；事件流回放闸 PASS（derive cards=10091 / events=38211 / replay 10091 / mismatch=0 / schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 盖章）；语言池 pool_audit PASS 全桶 SELF_TERMINATE（72/72 + 12/12 + greet 28/28 + faq 7/7 + neg 6/6，hard_fails=0）→ 语言线本轮自停不产；QC/相遇轮未到期。",
+   "t": "**R2126（2026-10-25 17:0x~17:1x·年轮环+回放闸）**: 本轮 10 席年轮落环（C-07334~C-07343），ring 7327→7337，[锚] 实锚 2026-10-25 齐备（5 席过 soft-concession recent-dup-phrase 门后落环，不硬闯）；行为线 sync_rings 自动收口（rows=10 ring=7337，commit eed14dde5，年轮环 commit 2c92ddfc3）；事件流回放闸 PASS（derive cards=10091 / events=38255 / replay 10091 / mismatch=0 / schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 盖章）；语言池 pool_audit=hards 0 / under_target NONE（SELF_TERMINATE 不重跑）；相遇轮今日 cap 已满、QC 未到 6 轮窗，均不重跑。 **R2125（2026-10-25 16:49~17:0x·年轮环+回放闸）**: 本轮 10 席年轮落环（C-07317/C-07325/C-07326/C-07327/C-07328/C-07329/C-07330/C-07331/C-07332/C-07333），ring 7317→7327，[锚] 实锚 2026-10-25 齐备，部分席过 soft-concession（recent-dup-phrase）门后落环不硬闯；行为线 sync_rings 自动收口（rows=10 ring=7327，commit 23b082b72）；事件流回放闸 PASS（derive cards=10091 / events=38245 / replay 10091 / mismatch=0 / schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 盖章）；GPU util 6%（3782/12282MiB）→ D-20261024-16 让路律不触发；语言池今日已 SELF_TERMINATE、QC 例巡未到 6 轮窗，均不重跑。 **R2124（2026-10-25 16:3x~16:5x·年轮环+回放闸）**: 本轮累计 17 席年轮落环（前段 8 席 C-07307~C-07314 收口 + 本段 9 席 C-07315/C-07316/C-07318/C-07319/C-07320/C-07321/C-07322/C-07323/C-07324），ring 7300→7317，[锚] 实锚 2026-10-25 齐备（C-07317 被诚实门拦 mist-import+recent-dup-phrase 留 due，不硬闯），行为线 sync_rings 自动收口（rows=17 ring=7317，commit 8baf8c84f）；事件流回放闸 PASS（derive cards=10091 / events=38235 / replay 10091 / mismatch=0 / schema_errors=0，qa/EVENTS-REPLAY-REPORT.md 盖章）；GPU util 4%（3789/12282MiB）→ D-20261024-16 让路律不触发；语言池今日已 SELF_TERMINATE、相遇轮今日 cap 满、QC 例巡未到 6 轮窗，均不重跑。",
    "s": 1
   },
   {
@@ -1369,7 +1369,11 @@
   [
    "960",
    "R2125 年轮 10 席（ring 7327）+ 回放闸 PASS（38245/10091/0/0）+ 导出索引 13 页刷新；tokens: local=10 api=0 api_reason=-"
+  ],
+  [
+   "970",
+   "R2126 年轮 10 席（ring 7337）+ 回放闸 PASS（38255/10091/0/0）+ 状态面三行续鲜；tokens: local=10 api=0 api_reason=-"
   ]
  ],
- "t": "当前活：年轮环续跑（既有居民迭代·本轮 10 席·lane=qwen3:4b-instruct），事件流回放闸全绿，GPU util 6% 无让路冲突\n最近实物：census/registry/ 十份年轮卡（[锚] 实锚 2026-10-25·16:5x·ring 7327）；qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=38245 mismatch=0 schema=0）；census/export/index.html（13 页）\n下个里程碑：ring 7350（约 23 席·ETA 2026-10-26 上午）；语言池全桶达标 SELF_TERMINATE 维持不动"
+ "t": "当前活：年轮环 10 席落盘 + 事件流全量回放闸 PASS（38255 events / 10091 cards / mismatch 0）\n最近实物：census/registry 10 张居民卡年轮（C-07334~C-07343，2026-10-25 17:03）+ qa/EVENTS-REPLAY-REPORT.md 盖章\n下个里程碑：ring 7350 达成（预计 2026-10-26，按每轮 10 席节奏）"
 }
