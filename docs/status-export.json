@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-25 15:17",
+ "export_ts": "2026-10-25 15:40",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2118（2026-10-25 15:0x·年轮环·既有居民迭代·零新注册）**: 两批共 17 席落环 C-07245/C-07246/C-07248~C-07258/C-07260~C-07263（环 7238→7255），行为线镜像 rows=8 自动收口（commit 9314fe86f），年轮件 commit 97af3a910；事件流回放闸 PASS（derive cards=10091 / events=38173 / replay 10091 / mismatch=0 / schema_errors=0）；语言池 pool_audit 全桶达标 SELF_TERMINATE（72+12 桶 at_target·hard_fails=0·determinism 192+25 双抽 mismatch=0）；相遇轮/QC 今日已由 R2115/R2117 完成，本轮不重复；看板/生活页/导出索引按新环重建（rings=7255 people=10114 pages=13）。\n**R2117（2026-10-25 14:5x）**: 年轮 10 席 C-07230/C-07236~C-07244（ring=7238）+ 回放闸 PASS（38156/0/0）+ QC 例巡 problems=0。\n**R2116（2026-10-25 14:5x）**: 年轮 7 席 C-07228~C-07235 扣窗（C-07230 缺因批中补）+ 回放闸 PASS（38146/10091/0/0）。 **R2115（2026-10-25 14:3x·年轮环·既有居民迭代·零新注册）**: C-07218~C-07227 十席落环 ring=7211→7221，行为线镜像 rows=10 同环自动收口（commit 9ff58439f）；事件流回放闸 PASS（derive cards=10091 / events=38139 / replay 10091 / mismatch=0 / schema_errors=0）；语言池 pool_audit 全桶达标 SELF_TERMINATE（72+12 桶 at_target·hard_fails=0·determinism 双抽 mismatch=0·1296+144 行不动）；相遇线今日 cap 3/3 已满跳过；QC 未到 6 轮窗口（上巡 12:5x problems=0）；看板/生活页/今日刊/索引四件按新环重建（rings=7221 people=10114 pages=13）。 **R2113（2026-10-25 14:2x·年轮环·既有居民迭代·零新注册）**: C-07198~C-07207 十席落环 ring=7191→7201，行为线镜像 rows=10 同环自动收口（commit 45c260a40）；事件流回放闸 PASS（derive cards=10091 / events=38119 / replay 10091 / mismatch=0 / schema_errors=0）；语言池 pool_audit 全桶达标 SELF_TERMINATE（72+12 桶 at_target·hard_fails=0·determinism 双抽 mismatch=0）；相遇线今日 cap 3/3 已满跳过；QC 未到 6 轮窗口（上巡 12:5x problems=0）；开场聚簇验收复核=今日 834 条年轮开场 top-8 覆盖 74/834=8.9%（<10% 验收线，高频句计数批前后零增）。",
+   "t": "**R2120（2026-10-25 15:3x·年轮环·既有居民迭代·零新注册）**: 年轮 7 席落卡 C-07269/C-07272/C-07273/C-07274/C-07275/C-07271/C-07276（环 7263→7270·[锚] 城市实况 2026-10-25 齐备），行为线镜像 rows=7 自动收口（commit 1c957943a），年轮 commit 594ceb8d1；事件流回放闸 PASS（derive cards=10091 / events=38188 / replay 10091 / mismatch=0 / schema_errors=0）；语言线今日已 SELF_TERMINATE 全桶达标不重跑；相遇线今日 cap 3/3 已满；QC 今日例巡 problems=0 未到 6 轮窗；GPU util 3%（3661/12282MiB）→ D-20261024-16 让路律不触发（lane=qwen3:4b-instruct·合规 D-20261024-02）。\n**R2119（2026-10-25 15:2x）**: 年轮 8 席（环 7255→7263）+ 回放闸 PASS（38181/10091/0/0）+ 日清上报。\n**R2118（2026-10-25 15:0x）**: 年轮 17 席（C-07245~C-07263·环 7255）+ 行为线镜像 rows=8 + 池自终止 + 看板四件重建。 **R2118（2026-10-25 15:0x·年轮环·既有居民迭代·零新注册）**: 两批共 17 席落环 C-07245/C-07246/C-07248~C-07258/C-07260~C-07263（环 7238→7255），行为线镜像 rows=8 自动收口（commit 9314fe86f），年轮件 commit 97af3a910；事件流回放闸 PASS（derive cards=10091 / events=38173 / replay 10091 / mismatch=0 / schema_errors=0）；语言池 pool_audit 全桶达标 SELF_TERMINATE（72+12 桶 at_target·hard_fails=0·determinism 192+25 双抽 mismatch=0）；相遇轮/QC 今日已由 R2115/R2117 完成，本轮不重复；看板/生活页/导出索引按新环重建（rings=7255 people=10114 pages=13）。 **R2117（2026-10-25 14:5x）**: 年轮 10 席 C-07230/C-07236~C-07244（ring=7238）+ 回放闸 PASS（38156/0/0）+ QC 例巡 problems=0。",
    "s": 1
   },
   {
@@ -1353,7 +1353,11 @@
   [
    "888",
    "R2118 年轮 17 席 + 行为线镜像 rows=8 + 回放闸 PASS + 池自终止 + 看板四件重建；tokens: local=2 api=0 api_reason=-"
+  ],
+  [
+   "903",
+   "R2120 年轮 7 席 + 行为线镜像 rows=7 + 回放闸 PASS（38188/10091/0/0）；tokens: local=7 api=0 api_reason=-"
   ]
  ],
- "t": "当前活：年轮环十七席落环（C-07245~C-07263·lane=qwen3:4b-instruct）+ 事件流回放闸全 PASS\n最近实物：census/registry/ 十七份年轮卡（[锚] 实锚 2026-10-25 15:1x）+ qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=38173 mismatch=0 schema=0）+ census/export/city-dashboard.html（rings=7255）\n下个里程碑：下一轮年轮继续每轮 ~10 席，ring 7300 ETA 10-26；语言池全桶达标=SELF_TERMINATE 维持不动"
+ "t": "当前活：年轮环续跑（既有居民迭代·每轮 7~10 席·lane=qwen3:4b-instruct），事件流回放闸全绿\n最近实物：census/registry/ 七份年轮卡（[锚] 实锚 2026-10-25·15:3x·环 7270）；qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=38188 mismatch=0 schema=0）；census/export/city-dashboard.html（rings=7270）\n下个里程碑：ring 7300（约 30 席·ETA 2026-10-26 上午）；语言池全桶达标 SELF_TERMINATE 维持不动"
 }
