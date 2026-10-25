@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-26 00:33",
+ "export_ts": "2026-10-26 00:44",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2175（年轮席·夜窗）** C-07760~C-07769 十席落环 ring=7753→7763·回放闸 PASS(events=38683/mismatch 0/schema 0)·语言池全桶达标自终止·看板/生活页重建 **R2173（年轮6席）** C-07744/C-07745/C-07746/C-07747/C-07748/C-07750 ring=7737→7743·回放闸 PASS(events=38663/mismatch 0/schema 0)·语言池全桶达标自终止·QC 未到期 **R2172（年轮 10 席 + 相遇 1 对 · ring 7737）**：evolve_citizen --batch 3 实跑 10 席（C-07727、C-07735~C-07743），软让步闸 recent-dup-phrase 拦下重复开头 9 条；行为线镜像 rows=10 自动同步；相遇轮围绕 2026-10-26 真实城市事件各写一句年轮式互动，双卡互引。回放闸 PASS（events=38655/cards=10091/replayed=10091/mismatch 0/schema 0）；QC problems=0（dup_rings=37/37）；语言池全桶达标 SELF_TERMINATE；决策水位 NEW=0（尾 D-20261025-18）。",
+   "t": "**R2176（年轮席·夜窗）** C-07770/C-07771/C-07772/C-07775/C-07776/C-07777/C-07778/C-07779 八席落环 ring=7763→7771·回放闸 PASS(events=38691/mismatch 0/schema 0)·语言池全桶达标自终止·看板/生活页重建(rings=7771/cards=160/life rows=10114) **R2175（年轮席·夜窗）** C-07760~C-07769 十席落环 ring=7753→7763·回放闸 PASS(events=38683/mismatch 0/schema 0)·语言池全桶达标自终止·看板/生活页重建 **R2173（年轮6席）** C-07744/C-07745/C-07746/C-07747/C-07748/C-07750 ring=7737→7743·回放闸 PASS(events=38663/mismatch 0/schema 0)·语言池全桶达标自终止·QC 未到期",
    "s": 1
   },
   {
@@ -1421,7 +1421,11 @@
   [
    "36",
    "2026-10-26 R2175: 年轮 10 席入册(ring=7763)+回放闸 PASS，累计产出 36 件。"
+  ],
+  [
+   "44",
+   "2026-10-26 R2176: 年轮 8 席入册(ring=7771)+回放闸 PASS，累计产出 44 件。"
   ]
  ],
- "t": "当前活：年轮线居民进化（本地 qwen3:4b 生成·FluxVerse 事件+真实时空锚·夜间 GPU 4% 非争用窗）\n最近实物：census/export/city-dashboard.html 与 census/export/city-life.html（2026-10-26 00:34·rings=7763/cards=160）\n下个里程碑：QC 不变量巡检（约 R2178，≤48h）+ 次日相遇轮"
+ "t": "当前活：年轮线居民进化（本地 qwen3:4b-instruct 生成·FluxVerse 事件+真实时空锚·GPU 4% 非争用窗）\n最近实物：census/export/city-dashboard.html 与 census/export/city-life.html（2026-10-26 00:45·rings=7771/cards=160/rows=10114）\n下个里程碑：QC 不变量巡检（约 R2177~R2178，≤48h）+ 次日相遇轮"
 }
