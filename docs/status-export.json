@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-25 23:09",
+ "export_ts": "2026-10-25 23:33",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2166（2026-10-25 23:0x）：年轮线迭代 10 席（C-07687~C-07696）·ring 7680→7690·事件闸 PASS（events=38608/cards=10091/mismatch=0/schema=0）·城市看板重建（rings=7690/people=10114）·语言池 SELF_TERMINATE 维持（72/72+12/12+greet 28/28+faq 7/7+neg 6/6）·决策水位 NEW=0（156 条全消费·尾 D-20261025-18）·tasks open=0** **R2165（10-25 22:5x~23:0x 年轮环）**：C-07677~C-07686 共 10 席落环（[锚] 注脚齐备，FluxVerse 事件+真实北京时间喂养），行为线镜像 rows=10 ring=7680；事件流回放闸 PASS（cards=10091/events=38598/replayed=10091/mismatch 0/schema 0）；城市看板重建 rings=7680/people=10114/cards=160；语言池全桶达标自终止（池 18/12+greet 28+faq 7+neg 6，determinism 0 mismatch）。 **R2154（20:58~21:0x 年轮环）**：C-07569/C-07575~C-07583 共 10 席落环（[锚] 注脚齐备，FluxVerse 事件+真实北京时间喂养），行为线镜像 rows=10 ring=7577；事件流回放闸 PASS（cards=10091/events=38495/replayed=10091/mismatch 0/schema 0）；语言池六轴 72/72+像素灵 12/12+问候 28/28+FAQ 7/7+负向 6/6 全达标自终止；QC 巡检 problems=0 dup_rings=37/37；决策水位 NEW=0（D-20261025-18 尾）；城市看板重建 rings=7577/people=10114/cards=160。",
+   "t": "**R2168（2026-10-25 23:2x）：年轮线 8 席落环（C-07707~C-07714）·ring 7700→7708·批次进程 5min 无输出被中断后收口补提交（sync_rings committed rows=8）·事件闸 PASS（events=38626/cards=10091/mismatch=0/schema=0）·语言池 SELF_TERMINATE 维持（axes 72/72+sprite 12/12+greet 28/28+faq 7/7+neg 6/6）·决策水位 NEW=0（尾 D-20261025-18）·附修 HQ-FEEDBACK/TASKS 两处 GBK 混入段** **R2166（2026-10-25 23:0x）：年轮线迭代 10 席（C-07687~C-07696）·ring 7680→7690·事件闸 PASS（events=38608/cards=10091/mismatch=0/schema=0）·城市看板重建（rings=7690/people=10114）·语言池 SELF_TERMINATE 维持（72/72+12/12+greet 28/28+faq 7/7+neg 6/6）·决策水位 NEW=0（156 条全消费·尾 D-20261025-18）·tasks open=0** **R2165（10-25 22:5x~23:0x 年轮环）**：C-07677~C-07686 共 10 席落环（[锚] 注脚齐备，FluxVerse 事件+真实北京时间喂养），行为线镜像 rows=10 ring=7680；事件流回放闸 PASS（cards=10091/events=38598/replayed=10091/mismatch 0/schema 0）；城市看板重建 rings=7680/people=10114/cards=160；语言池全桶达标自终止（池 18/12+greet 28+faq 7+neg 6，determinism 0 mismatch）。",
    "s": 1
   },
   {
@@ -1405,7 +1405,11 @@
   [
    "1323",
    "本轮实物：10 张居民年轮卡入库（census/registry 各区）+ 看板重建 + 事件回放闸报告；今日累计 ring 1323 条。"
+  ],
+  [
+   "1341",
+   "本轮实物：8 张居民年轮卡入库（census/registry 各区）+ 事件回放闸报告更新；今日累计 ring 1341 条。"
   ]
  ],
- "t": "当前活：年轮线 R2166 迭代 10 席（C-07687~C-07696）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-10-25 23:1x 重建·rings=7690/people=10114）+ qa\\EVENTS-REPLAY-REPORT.md（events=38608·mismatch 0·schema 0 PASS）\n下个里程碑：ring 7700（约 10 席·ETA 2026-10-25 23:40 前）"
+ "t": "当前活：年轮线 R2168 落环 8 席（C-07707~C-07714·ring 7708）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\registry（8 张新年轮卡·2026-10-25 23:2x）+ C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\EVENTS-REPLAY-REPORT.md（events=38626·cards=10091·mismatch 0·schema 0 PASS）\n下个里程碑：ring 7750（约 42 席·ETA 2026-10-26 上午）"
 }
