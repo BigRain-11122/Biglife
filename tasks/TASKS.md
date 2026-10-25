@@ -2452,3 +2452,14 @@ tokens: local=10 api=0 api_reason=-
 - **[R2131]** 2026-10-25 18:0x~18:2x @BigLife-OSLoop 小结：轮首 pull=Already up to date；水位差集 NEW=0（v2 水位件 sha=f94a284c1b55 已对齐 origin）；orders 无涉本司新令。**产品增量=年轮 10 席 C-07404~C-07413**（ollama qwen3:4b-instruct，GPU util 5% 合规 D-20261024-16，脚本自动提交 73f437402）+ 行为线镜像 ring=7407（2758b4b58）+ 事件流回放闸 PASS（cards=10091 / events=38325 / replayed=10091 / mismatch=0 / schema_errors=0，25a18673c）+ QC 例巡 problems=0 dup_rings=37/37（cards=10114 evolved=7407）+ 语言池 audit 全桶 at_target SELF_TERMINATE（skip）+ 相遇轮今日 1 场已用（skip）+ 聚光灯本月 2/2 已达标（skip）。**集团转办单 T-20261025-02 收口**：水位键 v2 四元组 + 可复现取件命令落件（docs/watermark-v2.json 可抽验镜像 + state 主件），--update/--check/--verify 三态实跑全绿，取件命令独立复现 sha=f94a284c1b55 bytes=222683；坑录=PowerShell 文本管道转码字节（222683→144258 假 sha），校验一律 python subprocess 直取。push=6530e3a51。tokens: local=10 api=0 api_reason=-
 
 - **[R2132]** 2026-10-25 18:19~18:35 @BigLife-OSLoop 小结：轮首 pull=Already up to date、工作树净；决策水位差集 NEW=5（D-20261025-14~18：核销批/燃烧率归因/地板验收/OSS 收线/白名单 proposal，本司零派工，已回写 txt+v2 侧车 consumed=211 sha=f94a284c1b55）；orders 无涉本司新令；任务板 open=0。**产品实物**=年轮 18 席（C-07414~C-07421 八席首跑落环后脚本被 5 分钟无输出取消，改 `python -u` 重跑补齐 C-07422~C-07431；commit 07936944a + 补录 39d32d815·行为线镜像 rows=18 ring=7425）；事件回放闸 PASS（events=38343/cards=10091/mismatch 0/schema 0）；QC 全量 problems=0（cards=10114/evolved=7425）；池审计 PASS 全桶达标 SELF_TERMINATE。坑录：evolve 长跑必须 `python -u`，块缓冲会被工具 5 分钟静默判死（本次 8 席落盘未提交=可恢复，无盘污）。计量：tokens: local=18 api=0 api_reason=-
+
+## R2133 轮实录 2026-10-25 18:3x~18:5x
+
+- 年轮线：`--batch 3` 实落 10 席 C-07432~C-07441（脚本自提交 788f71ed + 行为线 244658994 ring=7435），全批带 [锚]（软让步 recent-dup-phrase 4 席）
+- 事件回放闸：cards=10091 events=38353 replay=10091 schema_errors=0 mismatch=0 → PASS（cd485cd8b，qa/EVENTS-REPLAY-REPORT.md）
+- 实物面：census/export/city-dashboard.html 重建 rings=7435 / people=10114 / cards=160（64019 bytes）
+- 语言线池轮：今日已 SELF_TERMINATE（72/72+12/12+greet 28/28+faq 7/7+neg 6/6），本轮跳过（自终止律）
+- 相遇轮：今日已 cap 3/3，跳过
+- 决策消费：水位至 D-20261025-18 无新差集；订单物理件区无本司件
+- GPU 让路律：util 7% 放行；LLM=qwen3:4b-instruct（D-20261024-02 口径）
+- tokens: local=10 api=0 api_reason=-
