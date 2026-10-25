@@ -1,5 +1,5 @@
 {
- "export_ts": "2026-10-25 16:12",
+ "export_ts": "2026-10-25 16:30",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
@@ -1363,5 +1363,5 @@
    "R2122 进化 10 席（ring 7293）+ 回放闸 PASS（38211/10091/0/0）+ 状态面/看板刷新；tokens: local=10 api=0 api_reason=-"
   ]
  ],
- "t": "当前活：年轮环续跑（既有居民迭代·每轮 7~10 席·lane=qwen3:4b-instruct），事件流回放闸全绿\n最近实物：census/registry/ 十份年轮卡（[锚] 实锚 2026-10-25·16:0x·ring 7293）；qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=38211 mismatch=0 schema=0）；census/export/city-dashboard.html（rings=7293）\n下个里程碑：ring 7320（约 30 席·ETA 2026-10-26 上午）；语言池全桶达标 SELF_TERMINATE 维持不动"
+ "t": "当前活：年轮环续跑（既有居民迭代·至今 ring 7300·本轮 7 席 C-07300~C-07306）；事件流回放闸全绿；QC 不变量 problems=0\n最近实物：census/registry/ 七份年轮卡（[锚] 实锚 2026-10-25·16:2x·ring 7300）；qa/EVENTS-REPLAY-REPORT.md（cards=10091 events=38218 mismatch=0 schema=0）；census/export/city-dashboard.html（rings=7300 cards=160）\n下个里程碑：ring 7350（约 50 席·ETA 2026-10-26 晚间）；语言池全桶达标 SELF_TERMINATE 维持不动"
 }
