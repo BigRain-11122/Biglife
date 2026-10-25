@@ -1,6 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.57 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.58 - BigLife citizen evolution engine.
+v0.58 (2026-10-25 R2099, gap #79): gaps #70/#71 dedup only inside ONE batch, so
+the city-wide corpus still collapsed into templates: of 7,085 rings, 122 open
+with the same 「这会儿天还黑着，雨还在下」, 67 with 「这城里好玩的东西一天比一」,
+and 512 carry 「雨还在下，风挺大，檐下」 (measured on census/export/
+citizens-light.jsonl this round). Cross-day template collapse is the 复读机 face
+a reader sees even when every batch passed. Fix = the batch caller loads the
+city corpus once (recent_ring bodies, anchor note stripped) and sig carries
+recent_open_ids (opening12 -> citizen ids), recent_grams (9-grams seen in >=3
+rings) and recent_banned_openings (top-8 named in the prompt); ring_violations
+gains recent-dup-opening (any OTHER citizen already uses this opening) and
+recent-dup-phrase (9-gram with >=RECENT_GRAM_MIN=25 city hits, both with
+tail-pinned regen notes). Meet/reflect faces carry none of the keys -> zero
+drift there.
 v0.57 (2026-10-25 R2060, gap #78): the neighbour block pasted up to 8 verbatim
 lines from rings already accepted this batch; qwen3:4b copies any 7-gram it can
 read (today it echoed an invented 「G08滑回S2.5」 into two later seats), so the
@@ -595,6 +608,13 @@ POOL_CAP = 2            # T-20260925-01: soft per-batch cap for cross-card pool-
 PROPOSALS = os.path.join(CO, "cognition", "proposals.jsonl")
 PROPOSE_CAP = 3        # T-20260926-19: 议员采样 <=3/日 (珍稀律·防提案通胀·PROPOSALS.md §一)
 SUGGEST_MARKERS = ("建议", "提议", "不妨", "希望", "应该", "可以", "想要", "打算", "申请", "不如", "盼")
+# v0.58 gap #79: a 9-gram needs this many city rings before it counts as the
+# template band. First live batch used 3 and starved seats on phrases with only
+# 17-24 hits (「，风把树梢压弯了，」17 / 「，风顶得人站不稳，」24) - the epidemic
+# families sit at 100-800 (「雨还在下，风挺大，檐下」512). Skip-starvation costs
+# a whole cooldown round, so the band is set where the visible 复读机 lives.
+RECENT_GRAM_MIN = 25
+SOFT_ONLY_VIOLATIONS = {"recent-dup-opening", "recent-dup-phrase"}
 
 def today():
     return datetime.date.today().isoformat()
@@ -1297,6 +1317,32 @@ def ring_violations(line, sig):
             if bph.get(norm_ln[i:i + 7], 0) >= 2:
                 v.append("batch-dup-phrase")
                 break
+    # v0.58 gap #79 (2026-10-25 R2099): cross-day template collapse - #70/#71
+    # only see the current batch, so the city corpus still carries 122 rings
+    # opening 「这会儿天还黑着，雨还在下」 and 512 carrying 「雨还在下，风挺大，檐下」.
+    # sig["recent_open_ids"]/["recent_grams"] come from recent_ring_corpus();
+    # absent (meet/reflect/single-shot) -> both checks off, zero drift.
+    roi = sig.get("recent_open_ids")
+    if isinstance(roi, dict) and roi:
+        op = re.sub(r"\s+", "", line or "").strip("「」\"“”")[:12]
+        if len(op) >= 8 and (roi.get(op, set()) - {sig.get("cid") or ""}):
+            v.append("recent-dup-opening")
+    rgr = sig.get("recent_grams")
+    if isinstance(rgr, dict) and rgr:
+        nl = re.sub(r"\s+", "", line or "")
+        _min = sig.get("recent_gram_min", RECENT_GRAM_MIN)
+        # v0.58 gap #79b: the anchor law ORDERS verbatim event quoting, so an
+        # event phrase shared by hundreds of rings (「CrazyCampus」83 hits) is
+        # not a template - exclude grams that live inside the fed event text.
+        _ev = sig.get("event_norm") or ""
+        for i in range(len(nl) - 8):
+            _g = nl[i:i + 9]
+            if rgr.get(_g, 0) < _min:
+                continue
+            if _ev and re.sub(r"[^\w\u4e00-\u9fff]", "", _g) in _ev:
+                continue
+            v.append("recent-dup-phrase")
+            break
     return v
 
 def gated_llm(prompt, sig, max_regens=3):
@@ -1361,6 +1407,36 @@ def gated_llm(prompt, sig, max_regens=3):
                           + "」）与本轮别的居民撞了。重写：这段措辞本轮禁用，"
                             "换一个本居民自己的具体细节（身上带着的旧物、此刻手上的动作），"
                             "不要用公共的模板句。")
+        # v0.58 gap #79: cross-day template faces carry the same tail-pinned
+        # treatment - name the rejected opening / the city-wide gram outright.
+        if "recent-dup-opening" in v:
+            prompt = (prompt
+                      + "\n你刚才那句的开头（「"
+                      + line.strip()[:20]
+                      + "」）是全城近期用滥的模板开场。重写：开头第一句换成你此刻手上的"
+                        "一个具体小动作（带旧物、工具、身体细节），严禁再用"
+                        "「雨还在下」「这会儿天还黑着」「风挺大」这类公共开场。")
+        if "recent-dup-phrase" in v:
+            _n2 = re.sub(r"\s+", "", line or "")
+            _b2 = []
+            for _i in range(len(_n2) - 8):
+                _g = _n2[_i:_i + 9]
+                if sig.get("recent_grams", {}).get(_g, 0) >= sig.get("recent_gram_min", RECENT_GRAM_MIN) and _g not in _b2:
+                    _b2.append(_g)
+            if _b2:
+                prompt = (prompt
+                          + "\n你刚才的句子里有一段措辞（「"
+                          + "」「".join(_b2[:3])
+                          + "」）已在全城许多居民的年轮里反复出现。重写：这段措辞禁用，"
+                            "换成只有本居民才会说的具体细节。")
+    # v0.58 gap #79c: template dedup is BEST-EFFORT, honesty is not. A seat
+    # that only keeps tripping recent-dup-* must land anyway - the first live
+    # batch lost 5/10 seats that way (4B cannot stop writing 「夜里冷，喝口热的
+    # 再走」), and a skip costs a whole 7-day cooldown round, a far bigger
+    # product loss than one shared connective clause.
+    if v and set(v) <= SOFT_ONLY_VIOLATIONS and line:
+        print("gate: soft-concession", v, "(ring lands)", flush=True)
+        return line
     print("gate: persistent violations", v)
     print("gate: last violating line:", line[:120])
     return None
@@ -1763,9 +1839,42 @@ def batch_banned_phrases(bph, limit=6):
             out.append(g)
     return sorted(set(out), key=len, reverse=True)[:limit]
 
+def recent_ring_corpus(export_path=None, gram_n=9, gram_min=RECENT_GRAM_MIN):
+    """v0.58 gap #79: city-wide recent-ring corpus for CROSS-DAY template dedup.
+
+    Reads the census export face (census/export/citizens-light.jsonl) once per
+    batch: recent_ring bodies with the [锚] note stripped. Returns
+    (openings, grams) where openings maps the normalized 12-char opening to the
+    set of citizen ids using it, and grams keeps only gram_n-grams seen in
+    >= gram_min rings (the template band). Missing/corrupt export -> ({}, {}),
+    which switches both new checks off (zero drift, same law as #70/#71)."""
+    path = export_path or os.path.join(CENSUS, "export", "citizens-light.jsonl")
+    openings, counts = {}, {}
+    try:
+        with open(path, encoding="utf-8") as f:
+            rows = [json.loads(l) for l in f if l.strip()]
+    except (IOError, OSError, ValueError):
+        return {}, {}
+    for r in rows:
+        raw = (r.get("recent_ring") or "").strip()
+        if not raw:
+            continue
+        body = re.sub(r"\s+", "", re.split(r"\[锚\]|［锚］|\[锚|【锚", raw)[0])
+        if len(body) < 8:
+            continue
+        openings.setdefault(body[:12], set()).add(r.get("id") or "")
+        if len(body) >= 20:
+            for g in {body[i:i + gram_n] for i in range(len(body) - gram_n + 1)}:
+                counts[g] = counts.get(g, 0) + 1
+    grams = {g: c for g, c in counts.items() if c >= gram_min}
+    return openings, grams
+
 def build_prompt(cid, text, sig):
     p = persona_digest(text)
     ev = "\n".join("- " + e for e in viewpoint_events(text, sig)) or "- （今日无新城市事件）"
+    # v0.58 gap #79b: punctuation-free event text, so the cross-day template
+    # gate never condemns a phrase the anchor law REQUIRES quoting verbatim.
+    sig["event_norm"] = re.sub(r"[^\w\u4e00-\u9fff]", "", ev)
     wx = sig["weather"] or "（天气数据暂缺）"
     # T-20260926-10 分步① (L3 断点①): optional rumor candidate block. Empty
     # string -> the prompt is byte-identical to the pre-wiring build.
@@ -1796,6 +1905,12 @@ def build_prompt(cid, text, sig):
     _bad = batch_banned_phrases(sig.get("batch_phrases"))
     bad_blk = ("本批已判负的措辞（谁再写出其中任何一段，整句退回重写；必须换成完全不同的说法）："
                + "、".join("「" + b + "」" for b in _bad) + "\n") if _bad else ""
+    # v0.58 gap #79: the city-wide over-used openings, named outright (a 4B
+    # cannot infer them). Empty on meet/reflect/single-shot -> "" (zero drift).
+    _rbl = sig.get("recent_banned_openings") or []
+    recent_blk = ("全城近期的模板开场（已被众多居民用滥，你的开场严禁与它们相同）："
+                  + "、".join("「" + b + "」" for b in _rbl)
+                  + "；开场请写你自己此刻手上的具体小动作。\n") if _rbl else ""
     # T-20260925-01/T-20260925-18 soft guidance (NOT a gate): open with your OWN
     # catchphrase; standing per-prompt constraint caps generic pool-gene quotes at
     # 1 per ring (cross-card quotes stay LEGAL per C-00695 R192 - diversity nudge
@@ -1819,7 +1934,7 @@ def build_prompt(cid, text, sig):
     return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
             f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
-            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}{city_blk}{goal_blk}{batch_blk}{bad_blk}"
+            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}{city_blk}{goal_blk}{batch_blk}{bad_blk}{recent_blk}"
             f"现在真实北京时间 {sig['now']}，今天{sig.get('weekday','')}（{'周末' if sig.get('weekend') else '工作日'}），上海实况天气：{wx}。\n"
             f"今天属于上面标明的工作日/周末：你人设里凡以「周末」或「工作日」为前置条件的习惯，只许写与今天同侧的进行态或完成态，另一侧只许作为未来打算句提及，写错侧视为编造。\n"
             f"今天日期是 {sig.get('day')} 号（{sig.get('day_parity')}）：你人设里凡以「单日/双日/逢单/逢双」等日期奇偶为前置条件的习惯，只许写与今天同侧的进行态或完成态；另一侧严禁写成今天已发生或正在发生，只许以规则自述（人设原文规则句可原样引用）、按规则的自然推论或未来打算句式提及，严禁借引用断言今天发生了错侧动作，写错侧视为编造；同样严禁把你卡面没有奇偶前置的习惯硬捆绑到单日/双日名下——卡面没有的规则不得借日期之名新造，日期奇偶只许与你人设原文里真带奇偶字样的规则搭配。\n"
@@ -2193,6 +2308,14 @@ def main():
     sig["batch_openings"] = set()    # gap #70: batch-scoped opening dedup face
     sig["batch_phrases"] = {}        # gap #71: 7-char n-gram counts, accepted rings
     sig["batch_used"] = []           # gap #71: accepted lines -> prompt avoid list
+    # v0.58 gap #79: load the city-wide ring corpus once (cheap, ~1s) and keep
+    # the top over-used openings named in the prompt.
+    sig["recent_open_ids"], sig["recent_grams"] = recent_ring_corpus()
+    sig["recent_gram_min"] = RECENT_GRAM_MIN
+    sig["recent_banned_openings"] = [
+        k for k, ids in sorted(sig["recent_open_ids"].items(),
+                               key=lambda kv: -len(kv[1]))[:8]
+        if len(k) >= 8 and len(ids) >= 3]
     for cid in due:
         # T-20261019-01: per-seat stdout keepalive, flush=True beats pipe block-buffering
         # T-20261020-01: seat start carries a timestamp so a stalled seat is
@@ -2222,6 +2345,7 @@ def main():
         face = text.split("**年轮**", 1)[0]
         try:
             sig["card_text"] = text  # gap #18: persona-import gate anchor
+            sig["cid"] = cid        # gap #79: own-opening exclusion face
             sig["pool_advice"] = pool_advice_for(face, pool_used)  # T-20260925-01 advisory
             sig["rumor"] = rumor_line_for(cid, sig)  # T-20260926-10 分步①: L3 断点① 流言->年轮候选面
             # T-20260926-12 (L4 目标系统·D-07 优先级序4): done 态达成候选块.
