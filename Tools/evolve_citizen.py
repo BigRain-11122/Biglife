@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.62 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.63 - BigLife citizen evolution engine.
+v0.63 (2026-10-27 R2298, gap #83 雨字物件误伤收口): the rain-invented gate counted
+every 雨 character as a rain claim, so object nouns (雨棚/雨篷/雨搭/雨刷/雨刮) failed
+honest lines on a dry feed - today clear 16.3C wind 6.4m/s and C-08518/C-08539
+stayed due writing 「风把雨棚掀得直响」, one skip = one 7-day cooldown round burned
+per citizen per round. gap #76 had already built the mask face for species nouns
+(雨声蛙/雨天合唱团); the fixture/part family joins it. Registry scan before the fix:
+5 object hits (2 屋棚 + 3 雨刷子似的 similes), 0 genuine rain claims, so the mask is
+narrowing a false positive, not widening honesty. Rain gear (雨衣/雨伞/雨靴/雨披)
+stays unmasked by design: owning it is fine, wearing/carrying it asserts weather.
 v0.62 (2026-10-27 R2291, gap #81+#82 天气模板族根治): after gap #79/#80 the gate
 still soft-conceded on recent-dup-phrase for 4-5 of every 10 seats. Diagnosis on
 today's 129 rings: the offenders were not prose the model invented but the
@@ -903,7 +912,15 @@ def ring_violations(line, sig):
     # 雨声蛙 (198 census hits) and 雨天合唱团 (67) name a creature and a choir, not
     # rain. C-06611 stayed due two rounds writing its own name under a dry feed.
     # Mask those compounds only; genuine rain words still match unmodified.
-    _rain_face = re.sub(r"雨声蛙|雨天合唱团", "", line)
+    # gap #83 (2026-10-27 R2298): same disease, object class - 雨棚/雨篷/雨搭/雨刷/
+    # 雨刮 are fixtures and parts, not precipitation. Today's feed was clear 16.3C
+    # wind 6.4m/s and C-08518/C-08539 both stayed due on rain-invented purely
+    # because the WIND_BIG_HINTS entry 「风把雨棚掀得直响」 carries 雨; census scan
+    # of the whole registry found 雨棚/雨篷 x2 (「调校雨棚角度」/「老张家的雨棚塌了」)
+    # and 雨刷/雨刮 x3 (all similes 「雨刷子似的」) - every hit an object, zero
+    # genuine rain claims behind the mask. 雨衣/雨伞/雨靴 stay UNMASKED on purpose:
+    # wearing/holding them is itself a rain claim under a dry feed (stricter wins).
+    _rain_face = re.sub(r"雨声蛙|雨天合唱团|雨棚|雨篷|雨搭|雨刷子|雨刷|雨刮器|雨刮", "", line)
     if not re.search(r"rain|drizzle|shower|雨", wx, re.I) and "雨" in _rain_face:
         v.append("rain-invented")
     # gap #19 (2026-09-24): sky-type pairing - a ring must not recast the fed

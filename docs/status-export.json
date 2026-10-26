@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-27 02:01",
+ "export_ts": "2026-10-27 02:09",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2297（年轮环·既有居民迭代·零新注册）**：C-08529~C-08537 共 9 席落环（batch 3 供给面实跑；C-08518 因 persistent violations [rain-invented, recent-dup-phrase] 过门失败留待下轮），环数 8521→8530，户籍 10114 不变。 **R2296（年轮环·既有居民迭代·零新注册）**：C-08520~C-08528 共 9 席落环（batch 3 供给面实跑；C-08518 因 persistent violations [rain-invented, recent-dup-phrase] 过门失败留待下轮），环数 8512→8521，户籍 10114 不变。 **R2284（年轮批 10 席）**：C-08348~C-08357 落环（soft-concession 4 席，commit 47bf9c16e），行为线镜像 rows=10 ring=8351（3c4b62c37）；事件流回放闸 PASS（events=39442 cards=10111 replayed=10111 schema=0 mismatch=0）；城市看板重建 rings=8351 / 10114 居民。",
+   "t": "**R2298（本轮）**：年轮线两批共 18 席落环（前批 8 + 后批 10，含长期阻卡双席 C-08518/C-08539 解锁）；缺陷出生地修法 gap #83——雨字物件（雨棚/雨篷/雨搭/雨刷/雨刮）被 rain-invented 硬门误判为编造天气，实测 dry feed 下连卡 3 轮，修后同批 10/10 满席落地。 **R2297（年轮环·既有居民迭代·零新注册）**：C-08529~C-08537 共 9 席落环（batch 3 供给面实跑；C-08518 因 persistent violations [rain-invented, recent-dup-phrase] 过门失败留待下轮），环数 8521→8530，户籍 10114 不变。 **R2296（年轮环·既有居民迭代·零新注册）**：C-08520~C-08528 共 9 席落环（batch 3 供给面实跑；C-08518 因 persistent violations [rain-invented, recent-dup-phrase] 过门失败留待下轮），环数 8512→8521，户籍 10114 不变。",
    "s": 1
   },
   {
@@ -1497,7 +1497,11 @@
   [
    "224",
    "年轮 9 席落环 + 事件流回放闸 PASS（events=39622 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0）；行为线镜像 rows=9 ring=8530；看板重建 rings=8530 / total=224 / cards=160；今日日报 rings=224 people=219 districts=6。"
+  ],
+  [
+   "242",
+   "年轮 18 席落环（含阻卡双席解锁）+ 事件流回放闸 PASS（events=39640 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0）；行为线镜像 rows=10 ring=8548；看板重建 rings=8548 / 户籍 10114 / cards=160；今日日报 rings=242 people=237 districts=6。"
   ]
  ],
- "t": "当前活：年轮线每轮转（本地 Ollama qwen3:4b-instruct 批量供给）+ 事件流回放闸守卫\n最近实物：census/export/city-dashboard.html（2026-10-27 02:0x 重建 rings=8530 / 户籍 10114）+ census/export/city-today.html（今日 224 环 / 219 位居民 / 6 城区）\n下个里程碑：下一轮年轮 10 席续产（ETA ≤40min）+ QC 不变量巡检（约 R2300 到点）"
+ "t": "当前活：年轮线每轮转（本地 Ollama qwen3:4b-instruct 批量供给）+ 门禁误伤修法 gap #83（雨字物件不再判编造）\n最近实物：census/export/city-dashboard.html（2026-10-27 02:08 重建 rings=8548 / 户籍 10114）+ census/export/city-today.html（今日 242 环 / 237 位居民 / 6 城区）\n下个里程碑：下一轮年轮 10 席续产（ETA ≤40min）+ QC 不变量巡检（约 R2300 到点）"
 }
