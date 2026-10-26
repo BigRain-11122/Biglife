@@ -738,3 +738,6 @@
 - 一线面：语言池自终止 pool_audit=PASS 全桶达标 SELF_TERMINATE（axes 72/72、sprite 12/12、greet 28/28、faq 7/7、neg 6/6、hard_fails=0、determinism mismatch=0）；QC 巡检 problems=0 dup_rings=37/37；相遇轮 meet-cap 当日 3/3 已满 → 停（自终止律）。
 - 实况三行：当前活=年轮线+回放闸复核+看板重建；最近实物=census/export/city-dashboard.html（2026-10-27 05:0x 重建，rings=8836，人口 10114）；下个里程碑=下一轮年轮 10 席+闸复核，ETA 2026-10-27 05:20。
 - tokens: local=10 api=0 api_reason=-
+- [2026-10-27 05:1x R2305] 小账：轮首 pull=Already up to date；水位差集 NEW=0（191 在档全消费）；orders 尾无本司新单；D-20261026-13（HQ-FEEDBACK GBK→UTF-8）与 D-20261026-25（S4U 记 closed）**均已闭合**（全文 decode 零异常/300 行）。年轮线 --batch 3 实跑 evolved=10 of 10 due（C-08843~C-08852·1 席 soft-concession 落环）——本班复跑产出与 HEAD 逐字节相同（确定性去重），故今日年轮增量归前轮。语言线 pool_audit=PASS 全桶达标（72/72、sprite 12/12、greet 28、faq 7、neg 6/6）→ SELF_TERMINATE 跳过。相遇轮 meet-cap 当日 3/3 已满 → 停。**本月 spotlight 缺件补做**（10 月此前 0 例·月度闸 ≥2）：3 例全 PASS——C-08852「趁热吃，这晨光还没凉透，得赶紧去巷口看看灯语更新了没？」（卡片钩子=灯语对照表·晨时自洽）、C-08850「锅要热，心要稳…等汤花冒了才收火」（行为段翻勺/油花自洽）、C-08848 问「今天城里有什么新鲜事」答「风把雨棚掀了，桥名毛衣还挂在柜子上」（今日大风真实信号+无编造事件）→ 只提所喂事实=6/6 达标。回放闸 events=39938 cards=10111 replayed=10111 mismatch=0 schema=0 PASS。
+- 实况三行：当前活=年轮线收口+月度 spotlight 补件；最近实物=qa/EVENTS-REPLAY-REPORT.md（2026-10-27 05:0x 重放 39938 事件 PASS）+ tasks/TASKS.md T-07 十月证据 3 例；下个里程碑=下一轮年轮 10 席+QC 巡检，ETA 2026-10-27 05:30。
+- tokens: local=7 api=0 api_reason=-
