@@ -1,0 +1,106 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 2,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.77,
+    "z": 72.62
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.04,
+    "z": 73.62
+   },
+   "work": {
+    "site": "大编译调律师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -70.19,
+    "z": 145.02
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06371",
+  "quirk": "night_run",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "口袋里总揣着爷爷的工作证——没人知道为什么",
+ "id": "C-06371",
+ "month_lines": [
+  "老地方见，风掀得衣角乱摆，编译器那头又在哼着告警音，我刚调了下零响阈值，听译到脉搏偏移了，得明天再补上G08那批料。"
+ ],
+ "name": "姚芳",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "老地方见，风掀得衣角乱摆，编译器那头又在哼着告警音，我刚调了下零响阈值，听译到脉搏偏移了，得明天再补上G08那批料。",
+   "text": "「老地方见，风掀得衣角乱摆，编译器那头又在哼着告警音，我刚调了下零响阈值，听译到脉搏偏移了，得明天再补上G08那批料。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

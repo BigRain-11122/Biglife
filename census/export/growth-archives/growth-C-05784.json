@@ -1,0 +1,106 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 11,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -106.83,
+    "z": 216.0
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 0.87,
+    "z": 240.67
+   },
+   "work": {
+    "site": "像素小学学生·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 63.33,
+    "z": 229.27
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05784",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "旧物件的温度，是新东西学不来的。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "把巷口的第一盏灯的位置背得比自家门牌还熟——据说是老辈传下的规矩",
+ "id": "C-05784",
+ "month_lines": [
+  "雨点没停，风不小，我正把最后一颗糖递进街角小娃手里，那盏守夜灯灵又道了一声辛苦——十年前就是这么弄的。"
+ ],
+ "name": "吴多多",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨点没停，风不小，我正把最后一颗糖递进街角小娃手里，那盏守夜灯灵又道了一声辛苦——十年前就是这么弄的。",
+   "text": "「雨点没停，风不小，我正把最后一颗糖递进街角小娃手里，那盏守夜灯灵又道了一声辛苦——十年前就是这么弄的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -1,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.72,
+    "z": 59.87
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.36,
+    "z": 121.55
+   },
+   "work": {
+    "site": "风控瞭望员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -67.56,
+    "z": 67.52
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06548",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "守时是最便宜的本事，也是最难改的毛病。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "坚持手写老码头缆桩——这事只有档案馆知道",
+ "id": "C-06548",
+ "month_lines": [
+  "门禁亮绿灯，心里才亮堂。这会儿天阴着，风刮得紧，我站岗的光门还晃着红脉冲，墙上的留言立着，一个没少。"
+ ],
+ "name": "超算-5",
+ "profession": "风控瞭望员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "门禁亮绿灯，心里才亮堂。这会儿天阴着，风刮得紧，我站岗的光门还晃着红脉冲，墙上的留言立着，一个没少。",
+   "text": "「门禁亮绿灯，心里才亮堂。这会儿天阴着，风刮得紧，我站岗的光门还晃着红脉冲，墙上的留言立着，一个没少。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

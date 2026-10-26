@@ -1,0 +1,105 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 8,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.87,
+    "z": -62.71
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.54,
+    "z": -55.73
+   },
+   "work": {
+    "site": "字幕君·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -47.99,
+    "z": -86.89
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05544",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "日子是过出来的，不是算出来的。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "偷偷给旧货郎的拨浪鼓上油保养——这事全巷都知道",
+ "id": "C-05544",
+ "month_lines": [
+  "雨点没停，风不小，我对着阳台的花说：“双日撑住，你得把根扎进这雨里。"
+ ],
+ "name": "毛文倩",
+ "profession": "字幕君",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨点没停，风不小，我对着阳台的花说：“双日撑住，你得把根扎进这雨里。",
+   "text": "「雨点没停，风不小，我对着阳台的花说：“双日撑住，你得把根扎进这雨里。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

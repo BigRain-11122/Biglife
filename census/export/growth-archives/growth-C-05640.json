@@ -1,0 +1,105 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 10,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.63,
+    "z": -73.55
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.81,
+    "z": -101.02
+   },
+   "work": {
+    "site": "语义翻译官·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -32.31,
+    "z": -100.56
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05640",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "流量像潮水，我是灯塔不是渔船。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "梦话都在念叨一台修了八次的老收音机——据说是老辈传下的规矩",
+ "id": "C-05640",
+ "month_lines": [
+  "雨点没停，风不小，我刚把门禁公告读了三遍，对齐了昨夜的错误码。明儿又是新的一天。"
+ ],
+ "name": "金知夏",
+ "profession": "语义翻译官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨点没停，风不小，我刚把门禁公告读了三遍，对齐了昨夜的错误码。明儿又是新的一天。",
+   "text": "「雨点没停，风不小，我刚把门禁公告读了三遍，对齐了昨夜的错误码。明儿又是新的一天。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

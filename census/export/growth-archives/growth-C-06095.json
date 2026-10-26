@@ -1,0 +1,106 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 19,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -123.38,
+    "z": 117.6
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.23,
+    "z": 95.14
+   },
+   "work": {
+    "site": "像素小学学生·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -33.09,
+    "z": 61.78
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06095",
+  "quirk": "umbrella",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "得之我幸，失之我睡。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把手绘的城图的位置背得比自家门牌还熟——他自己也说不清为什么",
+ "id": "C-06095",
+ "month_lines": [
+  "船到桥头自然直，风掀得衣角乱摆，我坐在旧课桌边，盯着留言墙——今天双日，值日还没轮到，但作业本上的光点，又过江了。"
+ ],
+ "name": "严天天",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "船到桥头自然直，风掀得衣角乱摆，我坐在旧课桌边，盯着留言墙——今天双日，值日还没轮到，但作业本上的光点，又过江了。",
+   "text": "「船到桥头自然直，风掀得衣角乱摆，我坐在旧课桌边，盯着留言墙——今天双日，值日还没轮到，但作业本上的光点，又过江了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

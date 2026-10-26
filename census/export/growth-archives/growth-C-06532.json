@@ -1,0 +1,106 @@
+{
+ "age": 84,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -14,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.84,
+    "z": 18.88
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.39,
+    "z": 28.64
+   },
+   "work": {
+    "site": "时钟校准员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.14,
+    "z": 125.21
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06532",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着老钟楼的齿轮——没人知道为什么",
+ "id": "C-06532",
+ "month_lines": [
+  "站直了别趴下，风把人往前推，我正对着那块老钟盘校对——零点零秒，误差毫秒都没过。阳台的花说：「今天你守得真稳。"
+ ],
+ "name": "盛家树",
+ "profession": "时钟校准员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "站直了别趴下，风把人往前推，我正对着那块老钟盘校对——零点零秒，误差毫秒都没过。阳台的花说：「今天你守得真稳。",
+   "text": "「站直了别趴下，风把人往前推，我正对着那块老钟盘校对——零点零秒，误差毫秒都没过。阳台的花说：「今天你守得真稳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

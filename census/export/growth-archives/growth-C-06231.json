@@ -1,0 +1,106 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 1,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.18,
+    "z": 33.2
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.51,
+    "z": 70.98
+   },
+   "work": {
+    "site": "防火墙巡林员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -25.5,
+    "z": 123.21
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06231",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "给停摆的老挂钟都起了名字——这事只有师父知道",
+ "id": "C-06231",
+ "month_lines": [
+  "这事儿有讲究。风一阵紧一阵，我刚把灯串绕了三圈，螺丝松了两处，补得跟老树皮一样，得在下个节点前稳住。"
+ ],
+ "name": "曼彻-4",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这事儿有讲究。风一阵紧一阵，我刚把灯串绕了三圈，螺丝松了两处，补得跟老树皮一样，得在下个节点前稳住。",
+   "text": "「这事儿有讲究。风一阵紧一阵，我刚把灯串绕了三圈，螺丝松了两处，补得跟老树皮一样，得在下个节点前稳住。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

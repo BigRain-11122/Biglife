@@ -1,0 +1,106 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": -5,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 67.02,
+    "z": 84.23
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.63,
+    "z": 47.43
+   },
+   "work": {
+    "site": "像素小店主·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.24,
+    "z": 23.58
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05860",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把老药房的药柜抽屉修好再免费送人——没人知道为什么",
+ "id": "C-05860",
+ "month_lines": [
+  "地上的水洼积着水，风把人往前推，我站在铺面门口，对着对门喊：“老李，你先起，我等你。”下一版一定更好。"
+ ],
+ "name": "邱静",
+ "profession": "像素小店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风把人往前推，我站在铺面门口，对着对门喊：“老李，你先起，我等你。”下一版一定更好。",
+   "text": "「地上的水洼积着水，风把人往前推，我站在铺面门口，对着对门喊：“老李，你先起，我等你。”下一版一定更好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

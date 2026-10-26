@@ -1,0 +1,106 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 7,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -101.88,
+    "z": 29.49
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.48,
+    "z": 159.97
+   },
+   "work": {
+    "site": "数据搬运工·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -25.83,
+    "z": 139.91
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05767",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "守时是最便宜的本事，也是最难改的毛病。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把心事只说给雨声录音听——没人知道为什么",
+ "id": "C-05767",
+ "month_lines": [
+  "伞面一直响，风好大，江边的灯在雨里晃，像谁在打转。收了最后一单，规矩如钟，人情如江，今儿这雨，撑得我心也沉了。"
+ ],
+ "name": "郁乐遥",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风好大，江边的灯在雨里晃，像谁在打转。收了最后一单，规矩如钟，人情如江，今儿这雨，撑得我心也沉了。",
+   "text": "「伞面一直响，风好大，江边的灯在雨里晃，像谁在打转。收了最后一单，规矩如钟，人情如江，今儿这雨，撑得我心也沉了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

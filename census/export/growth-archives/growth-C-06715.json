@@ -1,0 +1,105 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": 1,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 69.87,
+    "z": 10.93
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.41,
+    "z": 121.04
+   },
+   "work": {
+    "site": "沙盒建筑师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 112.28,
+    "z": 112.97
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06715",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "给旧日历都起了名字",
+ "id": "C-06715",
+ "month_lines": [
+  "风顶得人站不稳，塔顶白光还亮着，老规矩错不了。盖楼的图纸又翻了一遍，G08那层刚挪回S2.5，脉搏清，人也稳。"
+ ],
+ "name": "灯芯·新",
+ "profession": "沙盒建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风顶得人站不稳，塔顶白光还亮着，老规矩错不了。盖楼的图纸又翻了一遍，G08那层刚挪回S2.5，脉搏清，人也稳。",
+   "text": "「风顶得人站不稳，塔顶白光还亮着，老规矩错不了。盖楼的图纸又翻了一遍，G08那层刚挪回S2.5，脉搏清，人也稳。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 8,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -123.9,
+    "z": 149.55
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.4,
+    "z": 121.96
+   },
+   "work": {
+    "site": "回测农·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -70.89,
+    "z": 11.48
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05482",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "在旧船木做的镇纸上刻了一行没人认得的小字",
+ "id": "C-05482",
+ "month_lines": [
+  "雨还在落，风把人往前推，我蹲在摊边调参数，K线屏闪了又闪，像极了去年那场没说出口的雨，潮水的事交给潮水，我收曲线，只等塔顶白光亮了再睡。"
+ ],
+ "name": "廖卡佳",
+ "profession": "回测农",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨还在落，风把人往前推，我蹲在摊边调参数，K线屏闪了又闪，像极了去年那场没说出口的雨，潮水的事交给潮水，我收曲线，只等塔顶白光亮了再睡。",
+   "text": "「雨还在落，风把人往前推，我蹲在摊边调参数，K线屏闪了又闪，像极了去年那场没说出口的雨，潮水的事交给潮水，我收曲线，只等塔顶白光亮了再睡。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

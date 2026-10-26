@@ -1,0 +1,106 @@
+{
+ "age": 6,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 20,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -128.6,
+    "z": 41.27
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.12,
+    "z": 139.34
+   },
+   "work": {
+    "site": "像素小学学生·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.91,
+    "z": 85.01
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06734",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "从不让褪色的红领巾离开自己三步远——没人知道为什么",
+ "id": "C-06734",
+ "month_lines": [
+  "红灯面前没有老熟人，天阴着风刮得紧，我看了眼塔顶白光还亮着，作业本上的commit光点又过江了，值日同桌说今天该晒书，我偏说晒不到，风太大。"
+ ],
+ "name": "范小满",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "buddy",
+   "src": "工友",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "红灯面前没有老熟人，天阴着风刮得紧，我看了眼塔顶白光还亮着，作业本上的commit光点又过江了，值日同桌说今天该晒书，我偏说晒不到，风太大。",
+   "text": "「红灯面前没有老熟人，天阴着风刮得紧，我看了眼塔顶白光还亮着，作业本上的commit光点又过江了，值日同桌说今天该晒书，我偏说晒不到，风太大。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

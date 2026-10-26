@@ -1,0 +1,106 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 10,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.68,
+    "z": -20.99
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.94,
+    "z": -97.02
+   },
+   "work": {
+    "site": "像素小学学生·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.3,
+    "z": -148.89
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05691",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "能背出老裁缝铺的样衣的全部班次——他自己也说不清为什么",
+ "id": "C-05691",
+ "month_lines": [
+  "檐口的水线不断，风一阵紧一阵。 刚把阳台花说“今天双数日，趁热吃”，又听见G08 CrazyCampus的光点在江上跳，趁热看了眼，没等它变冷。"
+ ],
+ "name": "韩果果",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "buddy",
+   "src": "茶友",
+   "with": "C-00051"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线不断，风一阵紧一阵。 刚把阳台花说“今天双数日，趁热吃”，又听见G08 CrazyCampus的光点在江上跳，趁热看了眼，没等它变冷。",
+   "text": "「檐口的水线不断，风一阵紧一阵。 刚把阳台花说“今天双数日，趁热吃”，又听见G08 CrazyCampus的光点在江上跳，趁热看了眼，没等它变冷。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

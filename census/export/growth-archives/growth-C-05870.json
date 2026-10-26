@@ -1,0 +1,106 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 15,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -129.18,
+    "z": 254.39
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -15.59,
+    "z": 201.87
+   },
+   "work": {
+    "site": "像素小学学生·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 70.15,
+    "z": 241.31
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05870",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "攒了满抽屉老式邮戳从不给看——没人知道为什么",
+ "id": "C-05870",
+ "month_lines": [
+  "雨敲在窗棂上，风刮得紧，我捏着那张泛黄的票根，边角卷了边，是去年冬天去光织物展那天的——这物件比我懂年头。"
+ ],
+ "name": "朱果冻",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨敲在窗棂上，风刮得紧，我捏着那张泛黄的票根，边角卷了边，是去年冬天去光织物展那天的——这物件比我懂年头。",
+   "text": "「雨敲在窗棂上，风刮得紧，我捏着那张泛黄的票根，边角卷了边，是去年冬天去光织物展那天的——这物件比我懂年头。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

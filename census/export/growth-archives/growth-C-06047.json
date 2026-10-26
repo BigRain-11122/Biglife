@@ -1,0 +1,106 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 5,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.03,
+    "z": 108.49
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.4,
+    "z": 26.1
+   },
+   "work": {
+    "site": "K线屏画师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -70.37,
+    "z": 54.81
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06047",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "旧物件的温度，是新东西学不来的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能背出退役的探针铭牌的全部班次——这事全巷都知道",
+ "id": "C-06047",
+ "month_lines": [
+  "以前我们那儿……风掀得衣角乱摆，老屏上那条K线像被扯着，我一边擦尘一边念着明天的料，小本子翻到第37页，生日记得清，钥匙串还挂在我裤兜里，旧得发亮。"
+ ],
+ "name": "曾晓东",
+ "profession": "K线屏画师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "以前我们那儿……风掀得衣角乱摆，老屏上那条K线像被扯着，我一边擦尘一边念着明天的料，小本子翻到第37页，生日记得清，钥匙串还挂在我裤兜里，旧得发亮。",
+   "text": "「以前我们那儿……风掀得衣角乱摆，老屏上那条K线像被扯着，我一边擦尘一边念着明天的料，小本子翻到第37页，生日记得清，钥匙串还挂在我裤兜里，旧得发亮。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

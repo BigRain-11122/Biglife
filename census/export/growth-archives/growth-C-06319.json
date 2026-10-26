@@ -1,0 +1,106 @@
+{
+ "age": 66,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -11,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -141.27,
+    "z": -76.16
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.84,
+    "z": -43.33
+   },
+   "work": {
+    "site": "粉丝回信人·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -47.08,
+    "z": -157.27
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06319",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "坚持给全城灯语的对照表记日记",
+ "id": "C-06319",
+ "month_lines": [
+  "风好大，阳台上那盆老花又歪了，我把它扶正，像扶回去年搬来时那样子。下一版一定更好。"
+ ],
+ "name": "田国强",
+ "profession": "粉丝回信人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风好大，阳台上那盆老花又歪了，我把它扶正，像扶回去年搬来时那样子。下一版一定更好。",
+   "text": "「风好大，阳台上那盆老花又歪了，我把它扶正，像扶回去年搬来时那样子。下一版一定更好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

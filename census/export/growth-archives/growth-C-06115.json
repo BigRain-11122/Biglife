@@ -1,0 +1,105 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 3,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 25.16,
+    "z": 135.16
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.12,
+    "z": 108.68
+   },
+   "work": {
+    "site": "8bit 乐师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.97,
+    "z": 67.5
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06115",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件褪色的游戏卡带",
+ "id": "C-06115",
+ "month_lines": [
+  "旧的用的顺手，风好大，桥上那汽笛又响了，我扫弦的手掌都跟着抖，像没写完的谱子，正等着天阴着时再补。"
+ ],
+ "name": "薛慧",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "buddy",
+   "src": "老主顾",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "旧的用的顺手，风好大，桥上那汽笛又响了，我扫弦的手掌都跟着抖，像没写完的谱子，正等着天阴着时再补。",
+   "text": "「旧的用的顺手，风好大，桥上那汽笛又响了，我扫弦的手掌都跟着抖，像没写完的谱子，正等着天阴着时再补。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

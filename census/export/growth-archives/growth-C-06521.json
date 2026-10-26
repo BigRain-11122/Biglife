@@ -1,0 +1,105 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -1,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -31.88,
+    "z": -210.01
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 5.78,
+    "z": -239.34
+   },
+   "work": {
+    "site": "夜宵摊主·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 60.09,
+    "z": -240.9
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06521",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "能一眼认出第一封妥投的加急件的真伪——他自己也说不清为什么",
+ "id": "C-06521",
+ "month_lines": [
+  "雨丝还挂着，风掀得衣角乱摆。收摊灯还亮着，最后一位客人走后，我给阳台的花说：“明儿又是新的一天。"
+ ],
+ "name": "段炯",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "雨丝还挂着，风掀得衣角乱摆。收摊灯还亮着，最后一位客人走后，我给阳台的花说：“明儿又是新的一天。",
+   "text": "「雨丝还挂着，风掀得衣角乱摆。收摊灯还亮着，最后一位客人走后，我给阳台的花说：“明儿又是新的一天。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

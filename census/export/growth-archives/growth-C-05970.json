@@ -1,0 +1,105 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 7,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -58.3,
+    "z": 226.32
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 12.4,
+    "z": 227.32
+   },
+   "work": {
+    "site": "外环巡夜员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 79.23,
+    "z": 174.02
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05970",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "口袋里总揣着编年史馆的门票——这事只有师父知道",
+ "id": "C-05970",
+ "month_lines": [
+  "对时了，放心。风不小，手里的铜扳手又硌了两下，昨夜补的那截灯管，今天在风里晃得准，像老伙计点头了。"
+ ],
+ "name": "付沐辰",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "对时了，放心。风不小，手里的铜扳手又硌了两下，昨夜补的那截灯管，今天在风里晃得准，像老伙计点头了。",
+   "text": "「对时了，放心。风不小，手里的铜扳手又硌了两下，昨夜补的那截灯管，今天在风里晃得准，像老伙计点头了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

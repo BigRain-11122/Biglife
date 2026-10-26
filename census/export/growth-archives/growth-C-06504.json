@@ -1,0 +1,106 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#B388FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 17,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 40.95,
+    "z": -117.86
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.95,
+    "z": -58.16
+   },
+   "work": {
+    "site": "夜灯员·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 103.86,
+    "z": -102.05
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06504",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "高兴时会把光借给旧饭盒里的字条——据说是老辈传下的规矩",
+ "id": "C-06504",
+ "month_lines": [
+  "雨点没停，风不小。刚查了G08的脉动，从B2396转到S2.5了，灯芯还在抖，像在说——这路我照过，稳。"
+ ],
+ "name": "阿小台风",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "雨点没停，风不小。刚查了G08的脉动，从B2396转到S2.5了，灯芯还在抖，像在说——这路我照过，稳。",
+   "text": "「雨点没停，风不小。刚查了G08的脉动，从B2396转到S2.5了，灯芯还在抖，像在说——这路我照过，稳。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

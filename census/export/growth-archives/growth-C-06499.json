@@ -1,0 +1,106 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 7,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -143.43,
+    "z": 72.16
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.57,
+    "z": 62.1
+   },
+   "work": {
+    "site": "算力楼运维·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -59.55,
+    "z": 64.7
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06499",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "记得淘汰的电话卡的每一个来历——这事全巷都知道",
+ "id": "C-06499",
+ "month_lines": [
+  "檐口的水线不断，风好大，机房的散热口像喘着气。这会儿天还黑着，可弄堂里的机器都醒了，一声声脉动，像在说——我在这儿，稳着呢。"
+ ],
+ "name": "唐沐辰",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "檐口的水线不断，风好大，机房的散热口像喘着气。这会儿天还黑着，可弄堂里的机器都醒了，一声声脉动，像在说——我在这儿，稳着呢。",
+   "text": "「檐口的水线不断，风好大，机房的散热口像喘着气。这会儿天还黑着，可弄堂里的机器都醒了，一声声脉动，像在说——我在这儿，稳着呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

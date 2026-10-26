@@ -1,0 +1,106 @@
+{
+ "age": 70,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -15,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.08,
+    "z": 129.33
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.99,
+    "z": 75.76
+   },
+   "work": {
+    "site": "数据粥铺摊主·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.79,
+    "z": 47.08
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06040",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "坚持给老式冰箱贴记日记",
+ "id": "C-06040",
+ "month_lines": [
+  "汤要趁烫，话要慢讲。风把人往前推，我正把最后一屉暖光粢饭推到摊前，蒸汽升腾，像老邻居在说话，一句没说全，就散了。"
+ ],
+ "name": "范玉兰",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "汤要趁烫，话要慢讲。风把人往前推，我正把最后一屉暖光粢饭推到摊前，蒸汽升腾，像老邻居在说话，一句没说全，就散了。",
+   "text": "「汤要趁烫，话要慢讲。风把人往前推，我正把最后一屉暖光粢饭推到摊前，蒸汽升腾，像老邻居在说话，一句没说全，就散了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

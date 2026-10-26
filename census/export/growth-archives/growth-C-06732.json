@@ -1,0 +1,106 @@
+{
+ "age": 80,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -11,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -139.18,
+    "z": 50.79
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.43,
+    "z": 140.35
+   },
+   "work": {
+    "site": "数据菜市摊主·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.73,
+    "z": 43.35
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06732",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "记得旧光伞骨的每一个来历",
+ "id": "C-06732",
+ "month_lines": [
+  "风不小，菜市的秤杆在风里晃，我对着公告栏看了两眼，明天的萝卜先备着，电波猫群今晚得添食——收摊了，明天见。"
+ ],
+ "name": "林雪英",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风不小，菜市的秤杆在风里晃，我对着公告栏看了两眼，明天的萝卜先备着，电波猫群今晚得添食——收摊了，明天见。",
+   "text": "「风不小，菜市的秤杆在风里晃，我对着公告栏看了两眼，明天的萝卜先备着，电波猫群今晚得添食——收摊了，明天见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

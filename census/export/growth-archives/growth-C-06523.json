@@ -1,0 +1,106 @@
+{
+ "age": 64,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -9,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -101.0,
+    "z": 97.6
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.89,
+    "z": 79.12
+   },
+   "work": {
+    "site": "算力楼运维·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.39,
+    "z": 23.4
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06523",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "攒了满抽屉旧日历从不给看——这事全巷都知道",
+ "id": "C-06523",
+ "month_lines": [
+  "檐口的水线不断，风好大。 机房那台老服务器的喘息声又回来了，我顺手摸了摸散热片，还是老样子——热得像块铁，可得撑着，别松口。"
+ ],
+ "name": "任健",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "檐口的水线不断，风好大。 机房那台老服务器的喘息声又回来了，我顺手摸了摸散热片，还是老样子——热得像块铁，可得撑着，别松口。",
+   "text": "「檐口的水线不断，风好大。 机房那台老服务器的喘息声又回来了，我顺手摸了摸散热片，还是老样子——热得像块铁，可得撑着，别松口。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

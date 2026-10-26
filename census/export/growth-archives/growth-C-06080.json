@@ -1,0 +1,106 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 2,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.43,
+    "z": 113.34
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.26,
+    "z": 66.37
+   },
+   "work": {
+    "site": "夜宵摊主·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -31.51,
+    "z": 53.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06080",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "还在用巷口的第一盏灯——这事全巷都知道",
+ "id": "C-06080",
+ "month_lines": [
+  "数据不会骗人，人会。风刮得紧，收摊灯还亮着，G08的窗灯在抖，我晓得，这城的脉搏，是有人在夜里，一盏一盏，数着的。"
+ ],
+ "name": "白阿宁",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "数据不会骗人，人会。风刮得紧，收摊灯还亮着，G08的窗灯在抖，我晓得，这城的脉搏，是有人在夜里，一盏一盏，数着的。",
+   "text": "「数据不会骗人，人会。风刮得紧，收摊灯还亮着，G08的窗灯在抖，我晓得，这城的脉搏，是有人在夜里，一盏一盏，数着的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

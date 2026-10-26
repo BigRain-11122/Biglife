@@ -1,0 +1,105 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 9,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -122.75,
+    "z": -96.79
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.84,
+    "z": -37.4
+   },
+   "work": {
+    "site": "城市接线生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.62,
+    "z": -63.71
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06598",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "梦话都在念叨停用的老式磅秤——这事只有档案馆知道",
+ "id": "C-06598",
+ "month_lines": [
+  "风把人往前推，窗台的旧钥匙还在抖，我听见接线台那边“占线”，老规矩是旧钥匙开新锁，有时候还真开得开。"
+ ],
+ "name": "薛子轩",
+ "profession": "城市接线生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风把人往前推，窗台的旧钥匙还在抖，我听见接线台那边“占线”，老规矩是旧钥匙开新锁，有时候还真开得开。",
+   "text": "「风把人往前推，窗台的旧钥匙还在抖，我听见接线台那边“占线”，老规矩是旧钥匙开新锁，有时候还真开得开。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 10,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 67.86,
+    "z": 118.19
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.01,
+    "z": 135.55
+   },
+   "work": {
+    "site": "玩家留言整理员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 136.75,
+    "z": 133.26
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05522",
+  "quirk": "umbrella",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件退役探空气球的碎片——这事全巷都知道",
+ "id": "C-05522",
+ "month_lines": [
+  "雨还在落，风刮得紧，我蹲在楼道口，把昨夜收的玩家留言贴上墙——门禁亮绿灯，心里才亮堂。"
+ ],
+ "name": "程雨欣",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨还在落，风刮得紧，我蹲在楼道口，把昨夜收的玩家留言贴上墙——门禁亮绿灯，心里才亮堂。",
+   "text": "「雨还在落，风刮得紧，我蹲在楼道口，把昨夜收的玩家留言贴上墙——门禁亮绿灯，心里才亮堂。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

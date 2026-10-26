@@ -1,0 +1,106 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 2,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.51,
+    "z": 84.47
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.22,
+    "z": 36.97
+   },
+   "work": {
+    "site": "算法调参师·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.82,
+    "z": 15.86
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06802",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "灶上留一壶，路过的都是客。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "能一眼认出全城公交的老路线图的真伪——这事全巷都知道",
+ "id": "C-06802",
+ "month_lines": [
+  "饭点了，天大的事吃完再谈。风灌进领口发凉，我正对着屏里那串GPU_VRAM_LOW的告警调参，手边那杯温水泡了三泡才喝一口，补丁补到第三遍，像在炼一剂老汤底。"
+ ],
+ "name": "江Yuki",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "饭点了，天大的事吃完再谈。风灌进领口发凉，我正对着屏里那串GPU_VRAM_LOW的告警调参，手边那杯温水泡了三泡才喝一口，补丁补到第三遍，像在炼一剂老汤底。",
+   "text": "「饭点了，天大的事吃完再谈。风灌进领口发凉，我正对着屏里那串GPU_VRAM_LOW的告警调参，手边那杯温水泡了三泡才喝一口，补丁补到第三遍，像在炼一剂老汤底。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

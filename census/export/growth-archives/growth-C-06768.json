@@ -1,0 +1,106 @@
+{
+ "age": 68,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -12,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -120.56,
+    "z": 188.04
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -4.33,
+    "z": 218.01
+   },
+   "work": {
+    "site": "外环巡夜员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 106.31,
+    "z": 237.86
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06768",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "每年挑一天只为全城桥的名字大扫除——这事全巷都知道",
+ "id": "C-06768",
+ "month_lines": [
+  "这城里好玩的东西一天比一天多。巡夜步频照旧，风不小，灯一盏灭了，我晓得三秒内总有谁在补光。"
+ ],
+ "name": "廖招娣",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "这城里好玩的东西一天比一天多。巡夜步频照旧，风不小，灯一盏灭了，我晓得三秒内总有谁在补光。",
+   "text": "「这城里好玩的东西一天比一天多。巡夜步频照旧，风不小，灯一盏灭了，我晓得三秒内总有谁在补光。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

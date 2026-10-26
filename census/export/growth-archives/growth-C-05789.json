@@ -1,0 +1,106 @@
+{
+ "age": 79,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -8,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -141.46,
+    "z": 116.8
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.56,
+    "z": 52.44
+   },
+   "work": {
+    "site": "时空校准师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.65,
+    "z": 64.3
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05789",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "留着老式邮差的背包却从来不用——她自己也说不清为什么",
+ "id": "C-05789",
+ "month_lines": [
+  "雨脚细细密密，风掀得衣角乱摆，我铺子的钟摆还在走，手边那块老怀表，走时稳，上弦也准——包在我身上。"
+ ],
+ "name": "苏桂芳",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨脚细细密密，风掀得衣角乱摆，我铺子的钟摆还在走，手边那块老怀表，走时稳，上弦也准——包在我身上。",
+   "text": "「雨脚细细密密，风掀得衣角乱摆，我铺子的钟摆还在走，手边那块老怀表，走时稳，上弦也准——包在我身上。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 17,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -43.63,
+    "z": -218.61
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 7.02,
+    "z": -196.45
+   },
+   "work": {
+    "site": "信使小跟班·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 102.6,
+    "z": -243.55
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05736",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "给旧工牌写了一整本观察笔记——这事只有档案馆知道",
+ "id": "C-05736",
+ "month_lines": [
+  "雨点没停，风不小，灯下写完作业，信使小本子翻了一页。潮水的事交给潮水，这单子我带得稳。"
+ ],
+ "name": "管天天",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨点没停，风不小，灯下写完作业，信使小本子翻了一页。潮水的事交给潮水，这单子我带得稳。",
+   "text": "「雨点没停，风不小，灯下写完作业，信使小本子翻了一页。潮水的事交给潮水，这单子我带得稳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

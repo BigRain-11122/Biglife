@@ -1,0 +1,106 @@
+{
+ "age": 40,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#FFA726",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#82B1FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 13,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 36.13,
+    "z": 131.05
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.51,
+    "z": 148.43
+   },
+   "work": {
+    "site": "江面巡游员·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 125.53,
+    "z": 132.13
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06538",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "替老药房的药柜抽屉守过一整夜的灯——没人知道为什么",
+ "id": "C-06538",
+ "month_lines": [
+  "风把人往前推，灯杆晃得我翅尖打拍子。测流刚过，G08那条路又跳了B2396——跃水时总撞见旧票根，像在跟自己说话。"
+ ],
+ "name": "白阿渡",
+ "profession": "江面巡游员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风把人往前推，灯杆晃得我翅尖打拍子。测流刚过，G08那条路又跳了B2396——跃水时总撞见旧票根，像在跟自己说话。",
+   "text": "「风把人往前推，灯杆晃得我翅尖打拍子。测流刚过，G08那条路又跳了B2396——跃水时总撞见旧票根，像在跟自己说话。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

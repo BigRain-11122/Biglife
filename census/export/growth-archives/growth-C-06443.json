@@ -1,0 +1,105 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -1,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 44.88,
+    "z": -63.19
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.15,
+    "z": -56.79
+   },
+   "work": {
+    "site": "城市文书誊写员·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 122.76,
+    "z": -14.09
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06443",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "给奖状都编了号还建了册——这事全巷都知道",
+ "id": "C-06443",
+ "month_lines": [
+  "一句话的事。檐口的水线不断，风掀得衣角乱摆，我正把新单子誊清——今夜的灯灵，该道声辛苦了。"
+ ],
+ "name": "施俊",
+ "profession": "城市文书誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "一句话的事。檐口的水线不断，风掀得衣角乱摆，我正把新单子誊清——今夜的灯灵，该道声辛苦了。",
+   "text": "「一句话的事。檐口的水线不断，风掀得衣角乱摆，我正把新单子誊清——今夜的灯灵，该道声辛苦了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

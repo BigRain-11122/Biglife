@@ -1,0 +1,106 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -3,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -52.05,
+    "z": -249.18
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -3.29,
+    "z": -198.5
+   },
+   "work": {
+    "site": "江面清波工·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 83.32,
+    "z": -248.69
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06255",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "RV",
+ "gender": "无定",
+ "hook": "攒钱就为了赎回一件旧城庆纪念章——这事只有师父知道",
+ "id": "C-06255",
+ "month_lines": [
+  "慢慢来，比较快。 风一阵紧一阵，江面倒影晃得厉害，我正捞漂那枚去年落下的小银扣，镜面里浮着S2.5的光点，像在等谁。"
+ ],
+ "name": "阿时序·老",
+ "profession": "江面清波工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "慢慢来，比较快。 风一阵紧一阵，江面倒影晃得厉害，我正捞漂那枚去年落下的小银扣，镜面里浮着S2.5的光点，像在等谁。",
+   "text": "「慢慢来，比较快。 风一阵紧一阵，江面倒影晃得厉害，我正捞漂那枚去年落下的小银扣，镜面里浮着S2.5的光点，像在等谁。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

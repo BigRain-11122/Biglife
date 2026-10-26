@@ -1,0 +1,105 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 2,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -104.97,
+    "z": -31.42
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.88,
+    "z": -113.36
+   },
+   "work": {
+    "site": "数据剪辑师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -43.86,
+    "z": -99.86
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06331",
+  "quirk": "umbrella",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "记得老茶壶的每一个来历——这事只有师父知道",
+ "id": "C-06331",
+ "month_lines": [
+  "风好大，我正把旧怀表往数据包里塞，表盖边沿磨出毛边，是十年前我哥留的。"
+ ],
+ "name": "魏磊",
+ "profession": "数据剪辑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风好大，我正把旧怀表往数据包里塞，表盖边沿磨出毛边，是十年前我哥留的。",
+   "text": "「风好大，我正把旧怀表往数据包里塞，表盖边沿磨出毛边，是十年前我哥留的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

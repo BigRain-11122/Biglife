@@ -1,0 +1,105 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -9,
+   "rate": -3,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 50.11,
+    "z": -139.82
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.86,
+    "z": -23.03
+   },
+   "work": {
+    "site": "数据搬运工·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 146.52,
+    "z": -14.73
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05835",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "搬家三次，钥匙一把不扔。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "会给奖状织毛衣——这事只有档案馆知道",
+ "id": "C-05835",
+ "month_lines": [
+  "檐口的水线一阵紧一阵，风也一阵紧一阵，数据包沉在掌心，像老伙计认得我似的。这物件比我懂年头。"
+ ],
+ "name": "阿海明-9",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线一阵紧一阵，风也一阵紧一阵，数据包沉在掌心，像老伙计认得我似的。这物件比我懂年头。",
+   "text": "「檐口的水线一阵紧一阵，风也一阵紧一阵，数据包沉在掌心，像老伙计认得我似的。这物件比我懂年头。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

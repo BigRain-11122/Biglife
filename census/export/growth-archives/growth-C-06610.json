@@ -1,0 +1,105 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -3,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 29.05,
+    "z": 26.14
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.04,
+    "z": 117.96
+   },
+   "work": {
+    "site": "算法调参师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 114.59,
+    "z": 127.89
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06610",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "口袋里总揣着断了的帆船模型——这事只有师父知道",
+ "id": "C-06610",
+ "month_lines": [
+  "风把人往前推，我正盯着G08那灯链的走向——数据没说错，B2396到S2.5，搭把手的事儿，今夜得调参到亮。"
+ ],
+ "name": "陈海峰",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风把人往前推，我正盯着G08那灯链的走向——数据没说错，B2396到S2.5，搭把手的事儿，今夜得调参到亮。",
+   "text": "「风把人往前推，我正盯着G08那灯链的走向——数据没说错，B2396到S2.5，搭把手的事儿，今夜得调参到亮。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

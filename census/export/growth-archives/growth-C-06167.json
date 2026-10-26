@@ -1,0 +1,106 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 17,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.99,
+    "z": -157.6
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.91,
+    "z": -20.61
+   },
+   "work": {
+    "site": "像素小学学生·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -71.71,
+    "z": -73.37
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06167",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "留着全城第一块砖的拓片却从来不用——他自己也说不清为什么",
+ "id": "C-06167",
+ "month_lines": [
+  "对时了，放心。风掀得衣角乱摆，光桥那边的点还在晃，我晓得——今儿双日，得把老主顾的讯儿捎完，再绕路看看commit光点，稳着呢。"
+ ],
+ "name": "尹小满",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "对时了，放心。风掀得衣角乱摆，光桥那边的点还在晃，我晓得——今儿双日，得把老主顾的讯儿捎完，再绕路看看commit光点，稳着呢。",
+   "text": "「对时了，放心。风掀得衣角乱摆，光桥那边的点还在晃，我晓得——今儿双日，得把老主顾的讯儿捎完，再绕路看看commit光点，稳着呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

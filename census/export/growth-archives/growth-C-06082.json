@@ -1,0 +1,106 @@
+{
+ "age": 89,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -13,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -102.72,
+    "z": 47.27
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.15,
+    "z": 124.67
+   },
+   "work": {
+    "site": "尾盘茶室老板·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.66,
+    "z": 111.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06082",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件巷口的第一盏灯——没人知道为什么",
+ "id": "C-06082",
+ "month_lines": [
+  "又学了一招，今天风把人往前推，我手里的搪瓷杯底磕出个凹坑，茶汤还烫着，是老李昨夜塞给我的，说“这杯，能装下整条街的暖”。"
+ ],
+ "name": "邓美娟",
+ "profession": "尾盘茶室老板",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "又学了一招，今天风把人往前推，我手里的搪瓷杯底磕出个凹坑，茶汤还烫着，是老李昨夜塞给我的，说“这杯，能装下整条街的暖”。",
+   "text": "「又学了一招，今天风把人往前推，我手里的搪瓷杯底磕出个凹坑，茶汤还烫着，是老李昨夜塞给我的，说“这杯，能装下整条街的暖”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

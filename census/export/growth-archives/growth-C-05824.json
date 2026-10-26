@@ -1,0 +1,105 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 2,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 61.19,
+    "z": 126.01
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.8,
+    "z": 152.53
+   },
+   "work": {
+    "site": "8bit 乐师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 118.06,
+    "z": 159.78
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05824",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "把老式门铃的铜壳画进了自己的作品里——据说是老辈传下的规矩",
+ "id": "C-05824",
+ "month_lines": [
+  "雨点没停，风把人往前推，我正把旧铁皮锅盖上的焊口擦了又擦，底下那道暗纹，是去年桥上听汽笛时，我摔了的那枚音符。"
+ ],
+ "name": "晶圆·乙",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨点没停，风把人往前推，我正把旧铁皮锅盖上的焊口擦了又擦，底下那道暗纹，是去年桥上听汽笛时，我摔了的那枚音符。",
+   "text": "「雨点没停，风把人往前推，我正把旧铁皮锅盖上的焊口擦了又擦，底下那道暗纹，是去年桥上听汽笛时，我摔了的那枚音符。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

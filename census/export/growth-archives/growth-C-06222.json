@@ -1,0 +1,106 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 4,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 29.06,
+    "z": 137.56
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.44,
+    "z": 107.53
+   },
+   "work": {
+    "site": "关卡建筑师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 99.64,
+    "z": 132.44
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06222",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "偷偷给旧月台的站牌上油保养——这事只有师父知道",
+ "id": "C-06222",
+ "month_lines": [
+  "这版本我等好久了，风不小，阳台那盆绿萝晃得厉害，我给它说了句“稳住，今天多想一步”。"
+ ],
+ "name": "高梓涵",
+ "profession": "关卡建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这版本我等好久了，风不小，阳台那盆绿萝晃得厉害，我给它说了句“稳住，今天多想一步”。",
+   "text": "「这版本我等好久了，风不小，阳台那盆绿萝晃得厉害，我给它说了句“稳住，今天多想一步”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 0,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -128.86,
+    "z": 42.48
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.87,
+    "z": 93.15
+   },
+   "work": {
+    "site": "盘口记录员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -32.19,
+    "z": 118.68
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06290",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "扛得住事，才配得上街坊喊一声师傅。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "偷偷给雨声录音上油保养——这事只有档案馆知道",
+ "id": "C-06290",
+ "month_lines": [
+  "风刮得紧，笔尖在盘口上划得慢，两支笔头都快磨秃了。门禁公告又翻了一遍，规矩得天天认——旧钥匙开新锁，有时候还真开得开。"
+ ],
+ "name": "阿力-4",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风刮得紧，笔尖在盘口上划得慢，两支笔头都快磨秃了。门禁公告又翻了一遍，规矩得天天认——旧钥匙开新锁，有时候还真开得开。",
+   "text": "「风刮得紧，笔尖在盘口上划得慢，两支笔头都快磨秃了。门禁公告又翻了一遍，规矩得天天认——旧钥匙开新锁，有时候还真开得开。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

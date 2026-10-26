@@ -1,0 +1,105 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 9,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 57.89,
+    "z": 11.83
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.78,
+    "z": 57.31
+   },
+   "work": {
+    "site": "算法调参师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 102.8,
+    "z": 142.23
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05838",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "会为第一炉出炉的像素瓷推掉一整晚的生意——这事只有师父知道",
+ "id": "C-05838",
+ "month_lines": [
+  "雨敲在窗棂上，风不小，我正调参到一半，G08的那条路又翻了回来，明儿又是新的一天。"
+ ],
+ "name": "江南汐",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨敲在窗棂上，风不小，我正调参到一半，G08的那条路又翻了回来，明儿又是新的一天。",
+   "text": "「雨敲在窗棂上，风不小，我正调参到一半，G08的那条路又翻了回来，明儿又是新的一天。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

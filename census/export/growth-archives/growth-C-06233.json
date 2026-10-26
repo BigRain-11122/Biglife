@@ -1,0 +1,106 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -11,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.01,
+    "z": 79.78
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.41,
+    "z": 56.68
+   },
+   "work": {
+    "site": "数据清洗工·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -71.4,
+    "z": 118.76
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06233",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每天跟旧梯田式看台的一块座板打招呼",
+ "id": "C-06233",
+ "month_lines": [
+  "我送走的老主顾，比这城里一半的楼岁数都大。风掀得衣角乱摆，我正把最后一筐数据补进流水线，阳台的花听见了，歪了歪头，像在说：别急，灯还亮着。"
+ ],
+ "name": "阮秀兰",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "我送走的老主顾，比这城里一半的楼岁数都大。风掀得衣角乱摆，我正把最后一筐数据补进流水线，阳台的花听见了，歪了歪头，像在说：别急，灯还亮着。",
+   "text": "「我送走的老主顾，比这城里一半的楼岁数都大。风掀得衣角乱摆，我正把最后一筐数据补进流水线，阳台的花听见了，歪了歪头，像在说：别急，灯还亮着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

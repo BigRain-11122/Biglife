@@ -1,0 +1,105 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 3,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.62,
+    "z": -151.88
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.32,
+    "z": -63.57
+   },
+   "work": {
+    "site": "8bit 乐师·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.85,
+    "z": -107.66
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05521",
+  "quirk": "slow",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "日子是过出来的，不是算出来的。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "口袋里总揣着旧城庆纪念章",
+ "id": "C-05521",
+ "month_lines": [
+  "雨丝还挂着，风好大，我坐在阳台边，手里的谱子被吹得哗啦响，就着这节奏扫了两下弦——火候到了，自然就香。"
+ ],
+ "name": "阿硅·小",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨丝还挂着，风好大，我坐在阳台边，手里的谱子被吹得哗啦响，就着这节奏扫了两下弦——火候到了，自然就香。",
+   "text": "「雨丝还挂着，风好大，我坐在阳台边，手里的谱子被吹得哗啦响，就着这节奏扫了两下弦——火候到了，自然就香。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

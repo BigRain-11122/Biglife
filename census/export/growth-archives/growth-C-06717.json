@@ -1,0 +1,105 @@
+{
+ "age": 38,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 7,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.93,
+    "z": 31.74
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.48,
+    "z": 53.34
+   },
+   "work": {
+    "site": "8bit 乐师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 143.12,
+    "z": 124.07
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06717",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "每天跟手绘的城图打招呼——这事全巷都知道",
+ "id": "C-06717",
+ "month_lines": [
+  "清单第一，风刮得招牌直晃，桥上汽笛声还响着，我刚扫完一段新谱子，G08的阶段又滑回S2.5了，这摊子照摆，不走也不收。"
+ ],
+ "name": "陆阿宁",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "清单第一，风刮得招牌直晃，桥上汽笛声还响着，我刚扫完一段新谱子，G08的阶段又滑回S2.5了，这摊子照摆，不走也不收。",
+   "text": "「清单第一，风刮得招牌直晃，桥上汽笛声还响着，我刚扫完一段新谱子，G08的阶段又滑回S2.5了，这摊子照摆，不走也不收。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

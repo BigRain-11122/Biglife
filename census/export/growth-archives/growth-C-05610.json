@@ -1,0 +1,105 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 9,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 45.68,
+    "z": 38.25
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.69,
+    "z": 87.16
+   },
+   "work": {
+    "site": "bug 猎人·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.02,
+    "z": 144.47
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05610",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "逢人就讲旧船票的故事",
+ "id": "C-05610",
+ "month_lines": [
+  "雨还在落，风不小。茶摊前的留声机又卡了，我顺手调了调音量——X2730的滑块，一碰就冒泡，就像老汤底，谁碰谁就烫。"
+ ],
+ "name": "周梓涵",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨还在落，风不小。茶摊前的留声机又卡了，我顺手调了调音量——X2730的滑块，一碰就冒泡，就像老汤底，谁碰谁就烫。",
+   "text": "「雨还在落，风不小。茶摊前的留声机又卡了，我顺手调了调音量——X2730的滑块，一碰就冒泡，就像老汤底，谁碰谁就烫。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

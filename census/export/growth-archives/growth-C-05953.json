@@ -1,0 +1,106 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 5,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 51.58,
+    "z": -104.79
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.88,
+    "z": -85.08
+   },
+   "work": {
+    "site": "数据粥铺摊主·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 102.08,
+    "z": -124.67
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05953",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "每逢下雨就去修弄堂钥匙串——据说是老辈传下的规矩",
+ "id": "C-05953",
+ "month_lines": [
+  "风好大，我正把第三把铜钥匙从旧布袋里掏出来，锈了，掌心还是能摸到那年冬天它第一次沉进去的温热。"
+ ],
+ "name": "阿频·午",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风好大，我正把第三把铜钥匙从旧布袋里掏出来，锈了，掌心还是能摸到那年冬天它第一次沉进去的温热。",
+   "text": "「风好大，我正把第三把铜钥匙从旧布袋里掏出来，锈了，掌心还是能摸到那年冬天它第一次沉进去的温热。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

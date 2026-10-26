@@ -1,0 +1,106 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 0,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.64,
+    "z": 83.01
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.66,
+    "z": 116.62
+   },
+   "work": {
+    "site": "K线屏画师·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.78,
+    "z": 23.18
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06092",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "记得全城灯火的第一张照片的每一个来历——这事只有档案馆知道",
+ "id": "C-06092",
+ "month_lines": [
+  "风刮得紧，G08路口那条线刚描完，C-03155喊的“B2396 -> S2.5”跟账本里三十七行对上了，旧的用得顺手，换色也得跟着风走。"
+ ],
+ "name": "郁浩宇",
+ "profession": "K线屏画师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风刮得紧，G08路口那条线刚描完，C-03155喊的“B2396 -> S2.5”跟账本里三十七行对上了，旧的用得顺手，换色也得跟着风走。",
+   "text": "「风刮得紧，G08路口那条线刚描完，C-03155喊的“B2396 -> S2.5”跟账本里三十七行对上了，旧的用得顺手，换色也得跟着风走。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

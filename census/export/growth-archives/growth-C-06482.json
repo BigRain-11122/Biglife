@@ -1,0 +1,105 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 4,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -79.88,
+    "z": 258.37
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -7.66,
+    "z": 185.15
+   },
+   "work": {
+    "site": "外环巡夜员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 118.17,
+    "z": 186.75
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06482",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "坚持给退役的路灯灯丝记日记",
+ "id": "C-06482",
+ "month_lines": [
+  "雨还在落，风刮得紧。灯一盏一盏查下去，补光不落空，潮水的事交给潮水。"
+ ],
+ "name": "侯莉",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "雨还在落，风刮得紧。灯一盏一盏查下去，补光不落空，潮水的事交给潮水。",
+   "text": "「雨还在落，风刮得紧。灯一盏一盏查下去，补光不落空，潮水的事交给潮水。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

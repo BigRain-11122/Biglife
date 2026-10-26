@@ -1,0 +1,105 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -3,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 45.01,
+    "z": 76.2
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.01,
+    "z": 142.48
+   },
+   "work": {
+    "site": "算力楼运维·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 120.53,
+    "z": 63.53
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06726",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "搬家三次，钥匙一把不扔。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "用编年史馆的门票教会了半条街的孩子",
+ "id": "C-06726",
+ "month_lines": [
+  "老规矩错不了，夜深了风从巷口直灌进来，机房的喘息声和数据菜市的收摊声叠在一起，GPU_VRAM_LOW在脉冲里晃了下，我正想着把新来的光织物上身试——这风，够劲。"
+ ],
+ "name": "触发器·新",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "老规矩错不了，夜深了风从巷口直灌进来，机房的喘息声和数据菜市的收摊声叠在一起，GPU_VRAM_LOW在脉冲里晃了下，我正想着把新来的光织物上身试——这风，够劲。",
+   "text": "「老规矩错不了，夜深了风从巷口直灌进来，机房的喘息声和数据菜市的收摊声叠在一起，GPU_VRAM_LOW在脉冲里晃了下，我正想着把新来的光织物上身试——这风，够劲。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

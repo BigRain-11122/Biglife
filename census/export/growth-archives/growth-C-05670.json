@@ -1,0 +1,106 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -9,
+   "rate": -3,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -129.37,
+    "z": 82.21
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.45,
+    "z": 52.84
+   },
+   "work": {
+    "site": "数据搬运工·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.95,
+    "z": 43.42
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05670",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着第一天的营业账本——据说是老辈传下的规矩",
+ "id": "C-05670",
+ "month_lines": [
+  "雨敲在窗棂上，风不小，我正扛着数据包往装卸口走，这单我送，别跟我抢。"
+ ],
+ "name": "电位-4",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨敲在窗棂上，风不小，我正扛着数据包往装卸口走，这单我送，别跟我抢。",
+   "text": "「雨敲在窗棂上，风不小，我正扛着数据包往装卸口走，这单我送，别跟我抢。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

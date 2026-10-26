@@ -1,0 +1,106 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 16,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 36.48,
+    "z": -71.31
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.73,
+    "z": -106.05
+   },
+   "work": {
+    "site": "像素小学学生·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 137.81,
+    "z": -68.47
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06790",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把全城雪夜的第一次合影画进了自己的作品里",
+ "id": "C-06790",
+ "month_lines": [
+  "单子来了就接，不来就钓鱼。风灌进领口发凉，我站在江边，看commit光点漂过水面，像谁在写信，没寄出。"
+ ],
+ "name": "云小满",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "单子来了就接，不来就钓鱼。风灌进领口发凉，我站在江边，看commit光点漂过水面，像谁在写信，没寄出。",
+   "text": "「单子来了就接，不来就钓鱼。风灌进领口发凉，我站在江边，看commit光点漂过水面，像谁在写信，没寄出。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

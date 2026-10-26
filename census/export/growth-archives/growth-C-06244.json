@@ -1,0 +1,106 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -4,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.45,
+    "z": 12.77
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.92,
+    "z": 36.29
+   },
+   "work": {
+    "site": "回测农·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -39.27,
+    "z": 33.51
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06244",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每年挑一天只为老式邮差的背包大扫除——据说是老辈传下的规矩",
+ "id": "C-06244",
+ "month_lines": [
+  "站直了别趴下，风把人往前推，我站在留言墙前，看新上来的光织物试了试，还是凉得发颤。"
+ ],
+ "name": "杜莉",
+ "profession": "回测农",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "站直了别趴下，风把人往前推，我站在留言墙前，看新上来的光织物试了试，还是凉得发颤。",
+   "text": "「站直了别趴下，风把人往前推，我站在留言墙前，看新上来的光织物试了试，还是凉得发颤。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

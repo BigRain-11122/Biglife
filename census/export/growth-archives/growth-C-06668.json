@@ -1,0 +1,106 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 11,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 41.47,
+    "z": 86.46
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.36,
+    "z": 96.79
+   },
+   "work": {
+    "site": "像素小学学生·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 129.07,
+    "z": 134.31
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06668",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每天跟旧工牌打招呼——据说是老辈传下的规矩",
+ "id": "C-06668",
+ "month_lines": [
+  "风把树梢压弯了，我坐在窗边看年轮又多了一行——“pulse=2026-10-25T04:56:16 verdict=GPU_VRAM_LOW”。谁没个难处呢，来，坐下说。"
+ ],
+ "name": "云多多",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风把树梢压弯了，我坐在窗边看年轮又多了一行——“pulse=2026-10-25T04:56:16 verdict=GPU_VRAM_LOW”。谁没个难处呢，来，坐下说。",
+   "text": "「风把树梢压弯了，我坐在窗边看年轮又多了一行——“pulse=2026-10-25T04:56:16 verdict=GPU_VRAM_LOW”。谁没个难处呢，来，坐下说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

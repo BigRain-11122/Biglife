@@ -1,0 +1,105 @@
+{
+ "age": 80,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -5,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -45.12,
+    "z": 210.32
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 7.53,
+    "z": 244.09
+   },
+   "work": {
+    "site": "外环巡夜员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 65.42,
+    "z": 181.9
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05790",
+  "quirk": "umbrella",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "偷偷给旧挂历上油保养——这事只有档案馆知道",
+ "id": "C-05790",
+ "month_lines": [
+  "雨敲在窗棂上，风不小，灯一盏一盏查，补光不落空。红灯面前没有老熟人，照旧走着，步频不改。"
+ ],
+ "name": "朱银娣",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨敲在窗棂上，风不小，灯一盏一盏查，补光不落空。红灯面前没有老熟人，照旧走着，步频不改。",
+   "text": "「雨敲在窗棂上，风不小，灯一盏一盏查，补光不落空。红灯面前没有老熟人，照旧走着，步频不改。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

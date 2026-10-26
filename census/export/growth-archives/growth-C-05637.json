@@ -1,0 +1,106 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 2,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -119.5,
+    "z": 126.76
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.63,
+    "z": 147.59
+   },
+   "work": {
+    "site": "数据搬运工·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.29,
+    "z": 99.39
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05637",
+  "quirk": "umbrella",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "收藏旧饭盒里的字条且每件都记得来历——据说是老辈传下的规矩",
+ "id": "C-05637",
+ "month_lines": [
+  "对时了，放心。雨脚细细密密，风一阵紧一阵，装卸口的灯还亮着，我刚把今天最后一车数据包扛到Q区南线，收摊前给家里人捎了罐酸梅汤。"
+ ],
+ "name": "姜Kai",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "对时了，放心。雨脚细细密密，风一阵紧一阵，装卸口的灯还亮着，我刚把今天最后一车数据包扛到Q区南线，收摊前给家里人捎了罐酸梅汤。",
+   "text": "「对时了，放心。雨脚细细密密，风一阵紧一阵，装卸口的灯还亮着，我刚把今天最后一车数据包扛到Q区南线，收摊前给家里人捎了罐酸梅汤。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

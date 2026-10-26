@@ -1,0 +1,105 @@
+{
+ "age": 95,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -5,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 34.63,
+    "z": -18.59
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.19,
+    "z": -69.26
+   },
+   "work": {
+    "site": "数据粥铺摊主·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.01,
+    "z": -16.82
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05526",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "口袋里总揣着老式冰箱贴——据说是老辈传下的规矩",
+ "id": "C-05526",
+ "month_lines": [
+  "雨敲在窗棂上，风不小，暖光粢饭的蒸笼还在冒热气，明儿又是新的一天。"
+ ],
+ "name": "奚永康",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨敲在窗棂上，风不小，暖光粢饭的蒸笼还在冒热气，明儿又是新的一天。",
+   "text": "「雨敲在窗棂上，风不小，暖光粢饭的蒸笼还在冒热气，明儿又是新的一天。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

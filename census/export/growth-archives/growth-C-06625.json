@@ -1,0 +1,105 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 8,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -111.53,
+    "z": -172.64
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 17.76,
+    "z": -167.18
+   },
+   "work": {
+    "site": "信号中继员·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 63.18,
+    "z": -246.63
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06625",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "收藏巷口的第一盏灯且每件都记得来历——这事只有师父知道",
+ "id": "C-06625",
+ "month_lines": [
+  "看天吃饭，看行情穿衣。风好大，江水在暗处晃，三块中继我揣得紧，信号弱了就补，像补心跳。"
+ ],
+ "name": "沈天翼",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "看天吃饭，看行情穿衣。风好大，江水在暗处晃，三块中继我揣得紧，信号弱了就补，像补心跳。",
+   "text": "「看天吃饭，看行情穿衣。风好大，江水在暗处晃，三块中继我揣得紧，信号弱了就补，像补心跳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

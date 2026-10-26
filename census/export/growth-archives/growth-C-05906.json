@@ -1,0 +1,105 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 2,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -52.78,
+    "z": 217.57
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -0.99,
+    "z": 202.25
+   },
+   "work": {
+    "site": "防火墙巡林员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 41.29,
+    "z": 187.09
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05906",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "能背出全城雪夜的第一次合影的全部班次——据说是老辈传下的规矩",
+ "id": "C-05906",
+ "month_lines": [
+  "雨还在落，风刮得紧，我巡到G08边沿，眼见B2396转S2.5了，验签条都对得上，潮水的事交给潮水。"
+ ],
+ "name": "邱洁",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨还在落，风刮得紧，我巡到G08边沿，眼见B2396转S2.5了，验签条都对得上，潮水的事交给潮水。",
+   "text": "「雨还在落，风刮得紧，我巡到G08边沿，眼见B2396转S2.5了，验签条都对得上，潮水的事交给潮水。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

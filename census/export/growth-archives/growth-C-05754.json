@@ -1,0 +1,105 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": -4,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 72.98,
+    "z": 66.78
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.76,
+    "z": 12.54
+   },
+   "work": {
+    "site": "彩蛋埋藏师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 118.57,
+    "z": 156.18
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05754",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "自己淋过雨，就想给别人撑伞。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "收藏半张老电影票且每件都记得来历——没人知道为什么",
+ "id": "C-05754",
+ "month_lines": [
+  "雨还在落，风不小，我正用旧钥匙在摊角的铁皮盒上刮着字——锈了的边角，刮出的字，比新楼图纸还准。"
+ ],
+ "name": "管敏",
+ "profession": "彩蛋埋藏师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨还在落，风不小，我正用旧钥匙在摊角的铁皮盒上刮着字——锈了的边角，刮出的字，比新楼图纸还准。",
+   "text": "「雨还在落，风不小，我正用旧钥匙在摊角的铁皮盒上刮着字——锈了的边角，刮出的字，比新楼图纸还准。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

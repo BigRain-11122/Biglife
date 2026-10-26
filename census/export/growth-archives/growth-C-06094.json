@@ -1,0 +1,106 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 5,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -141.6,
+    "z": 67.13
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.57,
+    "z": 27.76
+   },
+   "work": {
+    "site": "穿城信使·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -33.72,
+    "z": 10.73
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06094",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "会给旧船票织毛衣",
+ "id": "C-06094",
+ "month_lines": [
+  "一句话的事。风把人往前推，我顺手把阳台花的纸条翻了翻，说“今天天阴着，你别想开”。"
+ ],
+ "name": "冯斯年",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "一句话的事。风把人往前推，我顺手把阳台花的纸条翻了翻，说“今天天阴着，你别想开”。",
+   "text": "「一句话的事。风把人往前推，我顺手把阳台花的纸条翻了翻，说“今天天阴着，你别想开”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

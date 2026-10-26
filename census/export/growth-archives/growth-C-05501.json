@@ -1,0 +1,106 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -5,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.17,
+    "z": 132.03
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.88,
+    "z": 80.18
+   },
+   "work": {
+    "site": "量化策略研究员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.13,
+    "z": 134.47
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05501",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "每天跟老式算盘珠打招呼——没人知道为什么",
+ "id": "C-05501",
+ "month_lines": [
+  "又学了一招：雨脚细细密密，风掀得衣角乱摆，扭塔里的行情屏还亮着，我盯着那根绿线，像在等一个没说出口的回撤。"
+ ],
+ "name": "阿缓存·乙",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "又学了一招：雨脚细细密密，风掀得衣角乱摆，扭塔里的行情屏还亮着，我盯着那根绿线，像在等一个没说出口的回撤。",
+   "text": "「又学了一招：雨脚细细密密，风掀得衣角乱摆，扭塔里的行情屏还亮着，我盯着那根绿线，像在等一个没说出口的回撤。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

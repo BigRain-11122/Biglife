@@ -1,0 +1,106 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 0,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.71,
+    "z": 134.39
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.14,
+    "z": 49.92
+   },
+   "work": {
+    "site": "回测农·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -25.6,
+    "z": 36.18
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06401",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "逢人就讲第一封妥投的加急件的故事——没人知道为什么",
+ "id": "C-06401",
+ "month_lines": [
+  "风掀得衣角乱摆，我正低头看手里那把生了锈的扳手，是去年修老楼顶时留的，焊口还发黑，像条没封口的旧疤。"
+ ],
+ "name": "童桃桃",
+ "profession": "回测农",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风掀得衣角乱摆，我正低头看手里那把生了锈的扳手，是去年修老楼顶时留的，焊口还发黑，像条没封口的旧疤。",
+   "text": "「风掀得衣角乱摆，我正低头看手里那把生了锈的扳手，是去年修老楼顶时留的，焊口还发黑，像条没封口的旧疤。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

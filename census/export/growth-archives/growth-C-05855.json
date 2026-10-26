@@ -1,0 +1,105 @@
+{
+ "age": 91,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -8,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.79,
+    "z": -103.7
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.49,
+    "z": -69.08
+   },
+   "work": {
+    "site": "编年史誊录员·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 136.12,
+    "z": -42.19
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05855",
+  "quirk": "slow",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "守时是最便宜的本事，也是最难改的毛病。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "每年挑一天只为全城桥的名字大扫除——据说是老辈传下的规矩",
+ "id": "C-05855",
+ "month_lines": [
+  "伞面一直响，风掀得衣角乱摆。 刚把G08 CrazyCampus: B2396 -> S2.5那茬过录完，对门C-05526说了一半，又怕漏了，得再校字——这雨天，守时最是实打实。"
+ ],
+ "name": "邱国强",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风掀得衣角乱摆。 刚把G08 CrazyCampus: B2396 -> S2.5那茬过录完，对门C-05526说了一半，又怕漏了，得再校字——这雨天，守时最是实打实。",
+   "text": "「伞面一直响，风掀得衣角乱摆。 刚把G08 CrazyCampus: B2396 -> S2.5那茬过录完，对门C-05526说了一半，又怕漏了，得再校字——这雨天，守时最是实打实。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

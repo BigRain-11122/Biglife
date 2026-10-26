@@ -1,0 +1,106 @@
+{
+ "age": 15,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 11,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.42,
+    "z": -41.54
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.7,
+    "z": -101.63
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -28.74,
+    "z": -105.03
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06002",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "把旧饭票修好再免费送人",
+ "id": "C-06002",
+ "month_lines": [
+  "试错要趁灯亮，风刮得紧，我刚把作业本翻到G08那页，手一抖，像素地图的边角蹭破了——得拆开看看，是最大的敬意。"
+ ],
+ "name": "余小满",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "试错要趁灯亮，风刮得紧，我刚把作业本翻到G08那页，手一抖，像素地图的边角蹭破了——得拆开看看，是最大的敬意。",
+   "text": "「试错要趁灯亮，风刮得紧，我刚把作业本翻到G08那页，手一抖，像素地图的边角蹭破了——得拆开看看，是最大的敬意。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

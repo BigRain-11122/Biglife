@@ -1,0 +1,106 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 0,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -122.19,
+    "z": 39.78
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.87,
+    "z": 23.11
+   },
+   "work": {
+    "site": "数据清洗工·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -23.36,
+    "z": 148.07
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06616",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "灶上留一壶，路过的都是客。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "梦话都在念叨旧信使地图的边角料",
+ "id": "C-06616",
+ "month_lines": [
+  "风把人往前推，灶上那壶水还温着，收摊了，明天见。"
+ ],
+ "name": "邹CJ",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风把人往前推，灶上那壶水还温着，收摊了，明天见。",
+   "text": "「风把人往前推，灶上那壶水还温着，收摊了，明天见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

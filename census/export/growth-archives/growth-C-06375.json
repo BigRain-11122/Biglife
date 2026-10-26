@@ -1,0 +1,105 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 1,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 40.08,
+    "z": 92.46
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.05,
+    "z": 66.81
+   },
+   "work": {
+    "site": "玩家留言整理员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 129.71,
+    "z": 152.7
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06375",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把全城灯语的对照表修好再免费送人",
+ "id": "C-06375",
+ "month_lines": [
+  "船到桥头自然直，风一阵紧一阵，楼道墙的年轮又添了半句——“该到的，总会到”。"
+ ],
+ "name": "秦浩宇",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "船到桥头自然直，风一阵紧一阵，楼道墙的年轮又添了半句——“该到的，总会到”。",
+   "text": "「船到桥头自然直，风一阵紧一阵，楼道墙的年轮又添了半句——“该到的，总会到”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

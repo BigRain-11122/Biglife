@@ -1,0 +1,105 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 8,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -106.91,
+    "z": -34.97
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.03,
+    "z": -80.32
+   },
+   "work": {
+    "site": "城市气象播报员·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -47.98,
+    "z": -83.6
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05773",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "坚持手写旧月台的站牌",
+ "id": "C-05773",
+ "month_lines": [
+  "雨脚细细密密，风好大，我正把那块老铜片在掌心按着，手心发烫，像压着点什么，不响也不松，就那么稳着。"
+ ],
+ "name": "邹大壮",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨脚细细密密，风好大，我正把那块老铜片在掌心按着，手心发烫，像压着点什么，不响也不松，就那么稳着。",
+   "text": "「雨脚细细密密，风好大，我正把那块老铜片在掌心按着，手心发烫，像压着点什么，不响也不松，就那么稳着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

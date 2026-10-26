@@ -1,0 +1,106 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 7,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 66.12,
+    "z": 50.8
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.02,
+    "z": 138.68
+   },
+   "work": {
+    "site": "NPC 服装师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 122.99,
+    "z": 131.63
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06797",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每逢下雨就去修全城灯语的对照表——据说是老辈传下的规矩",
+ "id": "C-06797",
+ "month_lines": [
+  "试错要趁灯亮，今儿天阴着，风掀得衣角乱摆，新配的蓝灰底格子外套还卡在第三版，C-02788 说 G08 的阶变像极了我那年改的旧衣，我点头，没说话。"
+ ],
+ "name": "屠斯年",
+ "profession": "NPC 服装师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "试错要趁灯亮，今儿天阴着，风掀得衣角乱摆，新配的蓝灰底格子外套还卡在第三版，C-02788 说 G08 的阶变像极了我那年改的旧衣，我点头，没说话。",
+   "text": "「试错要趁灯亮，今儿天阴着，风掀得衣角乱摆，新配的蓝灰底格子外套还卡在第三版，C-02788 说 G08 的阶变像极了我那年改的旧衣，我点头，没说话。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

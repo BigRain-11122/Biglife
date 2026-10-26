@@ -1,0 +1,106 @@
+{
+ "age": 66,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -7,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.97,
+    "z": 30.9
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.53,
+    "z": 99.47
+   },
+   "work": {
+    "site": "时钟校准员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.01,
+    "z": 116.95
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05585",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "江水不争先后，该到总会到。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每逢下雨就去修掉漆的糖果罐——这事全巷都知道",
+ "id": "C-05585",
+ "month_lines": [
+  "雨丝还挂着，风掀得衣角乱摆。刚对了时，钟摆抖了两下，误差在毫秒里，我脸红了，又笑了笑——明儿又是新的一天。"
+ ],
+ "name": "糜永康",
+ "profession": "时钟校准员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨丝还挂着，风掀得衣角乱摆。刚对了时，钟摆抖了两下，误差在毫秒里，我脸红了，又笑了笑——明儿又是新的一天。",
+   "text": "「雨丝还挂着，风掀得衣角乱摆。刚对了时，钟摆抖了两下，误差在毫秒里，我脸红了，又笑了笑——明儿又是新的一天。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 1,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -144.82,
+    "z": 52.19
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.77,
+    "z": 29.96
+   },
+   "work": {
+    "site": "夜宵摊主·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -34.81,
+    "z": 38.14
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05863",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给老式算命的签筒写了一整本观察笔记——她自己也说不清为什么",
+ "id": "C-05863",
+ "month_lines": [
+  "伞面一直响，风好大。收摊灯还亮着，守夜灯灵又喊了声“辛苦”，我咧嘴一笑——旧的用得顺手，心就稳。"
+ ],
+ "name": "王敏",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风好大。收摊灯还亮着，守夜灯灵又喊了声“辛苦”，我咧嘴一笑——旧的用得顺手，心就稳。",
+   "text": "「伞面一直响，风好大。收摊灯还亮着，守夜灯灵又喊了声“辛苦”，我咧嘴一笑——旧的用得顺手，心就稳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

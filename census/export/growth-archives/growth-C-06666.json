@@ -1,0 +1,106 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 4,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -137.77,
+    "z": 146.18
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.73,
+    "z": 102.65
+   },
+   "work": {
+    "site": "风控官·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.6,
+    "z": 71.34
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06666",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每年挑一天只为旧船票大扫除——没人知道为什么",
+ "id": "C-06666",
+ "month_lines": [
+  "规矩如钟，人情如江。风从巷口直灌进来，我刚把老屋灯线捋了捋，回头说——这夜，得亮着。"
+ ],
+ "name": "阿睿频·老",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "规矩如钟，人情如江。风从巷口直灌进来，我刚把老屋灯线捋了捋，回头说——这夜，得亮着。",
+   "text": "「规矩如钟，人情如江。风从巷口直灌进来，我刚把老屋灯线捋了捋，回头说——这夜，得亮着。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

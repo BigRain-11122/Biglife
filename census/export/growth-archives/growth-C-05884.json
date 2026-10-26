@@ -1,0 +1,106 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 5,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.99,
+    "z": 117.18
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.65,
+    "z": 39.68
+   },
+   "work": {
+    "site": "时空校准师·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -28.02,
+    "z": 104.13
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05884",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把老照片底片排成一排挨个擦——没人知道为什么",
+ "id": "C-05884",
+ "month_lines": [
+  "地上的水洼积着水，风把人往前推，我刚把老怀表从衣袋里掏出来，铜壳磨毛了，指针停在三点十七，像在等灯，又像在等谁回来。"
+ ],
+ "name": "肖洁",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风把人往前推，我刚把老怀表从衣袋里掏出来，铜壳磨毛了，指针停在三点十七，像在等灯，又像在等谁回来。",
+   "text": "「地上的水洼积着水，风把人往前推，我刚把老怀表从衣袋里掏出来，铜壳磨毛了，指针停在三点十七，像在等灯，又像在等谁回来。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

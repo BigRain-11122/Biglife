@@ -1,0 +1,106 @@
+{
+ "age": 89,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -6,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.2,
+    "z": 51.16
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.93,
+    "z": 91.45
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.93,
+    "z": 116.67
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06101",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "桥上不问来路，落水都得拉一把。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "能一眼认出初代像素调色板的真伪——据说是老辈传下的规矩",
+ "id": "C-06101",
+ "month_lines": [
+  "风掀得衣角乱摆，我顺手把阳台花的纸条翻了翻，说“今天天阴着，你别想开”。"
+ ],
+ "name": "高招娣",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风掀得衣角乱摆，我顺手把阳台花的纸条翻了翻，说“今天天阴着，你别想开”。",
+   "text": "「风掀得衣角乱摆，我顺手把阳台花的纸条翻了翻，说“今天天阴着，你别想开”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

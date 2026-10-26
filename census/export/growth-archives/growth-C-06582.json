@@ -1,0 +1,106 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -4,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 27.46,
+    "z": 79.69
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.73,
+    "z": 19.02
+   },
+   "work": {
+    "site": "算法调参师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 130.99,
+    "z": 121.68
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06582",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "偷偷给停产的暖光灯泡上油保养",
+ "id": "C-06582",
+ "month_lines": [
+  "这版本我等好久了。风不小，夜深了，参数还在收尾，老灯灵的回响还没断，我盯着屏幕，一帧一帧，像在等一场没说出口的开机。"
+ ],
+ "name": "阿良率-7",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "这版本我等好久了。风不小，夜深了，参数还在收尾，老灯灵的回响还没断，我盯着屏幕，一帧一帧，像在等一场没说出口的开机。",
+   "text": "「这版本我等好久了。风不小，夜深了，参数还在收尾，老灯灵的回响还没断，我盯着屏幕，一帧一帧，像在等一场没说出口的开机。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

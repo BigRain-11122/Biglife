@@ -1,0 +1,106 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 8,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -134.48,
+    "z": 72.25
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.69,
+    "z": 113.57
+   },
+   "work": {
+    "site": "新市民安居顾问·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.74,
+    "z": 131.88
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06771",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "逢人就讲老照片底片的故事——没人知道为什么",
+ "id": "C-06771",
+ "month_lines": [
+  "弄堂还是那个弄堂，风一阵紧一阵，我刚带看房回来，那对新人说，像素里住得下心，日子才不会飘着走。"
+ ],
+ "name": "张南汐",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "弄堂还是那个弄堂，风一阵紧一阵，我刚带看房回来，那对新人说，像素里住得下心，日子才不会飘着走。",
+   "text": "「弄堂还是那个弄堂，风一阵紧一阵，我刚带看房回来，那对新人说，像素里住得下心，日子才不会飘着走。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 8,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 12,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -26.18,
+    "z": -245.75
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -18.82,
+    "z": -209.75
+   },
+   "work": {
+    "site": "信使小跟班·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 64.95,
+    "z": -197.5
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06644",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "能一眼认出写满字的光带的真伪——这事只有档案馆知道",
+ "id": "C-06644",
+ "month_lines": [
+  "单子来了就接，不来就钓鱼。风把树梢压弯了，我蹲在驿站门口，灯还亮着，旧笔在手，写着写着，就笑了。"
+ ],
+ "name": "姜团团",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "单子来了就接，不来就钓鱼。风把树梢压弯了，我蹲在驿站门口，灯还亮着，旧笔在手，写着写着，就笑了。",
+   "text": "「单子来了就接，不来就钓鱼。风把树梢压弯了，我蹲在驿站门口，灯还亮着，旧笔在手，写着写着，就笑了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

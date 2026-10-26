@@ -1,0 +1,106 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 9,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.21,
+    "z": 37.11
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.76,
+    "z": 141.97
+   },
+   "work": {
+    "site": "夜宵摊主·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -33.45,
+    "z": 78.27
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06812",
+  "quirk": "umbrella",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "江水不争先后，该到总会到。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每天跟初版街景照片打招呼",
+ "id": "C-06812",
+ "month_lines": [
+  "船到桥头自然直，天阴着风把树梢压弯了，我这摊子灯还亮着，最后一个客人刚走，收摊的铃铛响了两声，锅底的油星子还冒着热气。"
+ ],
+ "name": "崔之恒",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "船到桥头自然直，天阴着风把树梢压弯了，我这摊子灯还亮着，最后一个客人刚走，收摊的铃铛响了两声，锅底的油星子还冒着热气。",
+   "text": "「船到桥头自然直，天阴着风把树梢压弯了，我这摊子灯还亮着，最后一个客人刚走，收摊的铃铛响了两声，锅底的油星子还冒着热气。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

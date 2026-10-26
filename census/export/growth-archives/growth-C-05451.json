@@ -1,0 +1,106 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -2,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.76,
+    "z": 25.69
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.52,
+    "z": 157.18
+   },
+   "work": {
+    "site": "盘口记录员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -35.62,
+    "z": 111.53
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05451",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "把旧书店的竹梯画进了自己的作品里——没人知道为什么",
+ "id": "C-05451",
+ "month_lines": [
+  "檐口的水线不断，风一阵紧一阵，笔尖在盘口记录上抖了两下，还是把B2396的对盘写清楚了——慢慢来，比较快。"
+ ],
+ "name": "阿稳定-4",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线不断，风一阵紧一阵，笔尖在盘口记录上抖了两下，还是把B2396的对盘写清楚了——慢慢来，比较快。",
+   "text": "「檐口的水线不断，风一阵紧一阵，笔尖在盘口记录上抖了两下，还是把B2396的对盘写清楚了——慢慢来，比较快。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

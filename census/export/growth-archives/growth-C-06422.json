@@ -1,0 +1,106 @@
+{
+ "age": 59,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 21,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 48.06,
+    "z": -86.67
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.0,
+    "z": -110.43
+   },
+   "work": {
+    "site": "巡信使·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 98.89,
+    "z": -19.37
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06422",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "绕着初代渡轮的船票夹飞过整整三十圈——据说是老辈传下的规矩",
+ "id": "C-06422",
+ "month_lines": [
+  "风刮得紧，檐角的旧铃铛晃了三下，我衔着昨夜落下的短笺，停在B2396那盏没亮的灯杆旁——光没来，路还在。"
+ ],
+ "name": "白桂花糖",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风刮得紧，檐角的旧铃铛晃了三下，我衔着昨夜落下的短笺，停在B2396那盏没亮的灯杆旁——光没来，路还在。",
+   "text": "「风刮得紧，檐角的旧铃铛晃了三下，我衔着昨夜落下的短笺，停在B2396那盏没亮的灯杆旁——光没来，路还在。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": -5,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.6,
+    "z": 193.31
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 11.22,
+    "z": 248.88
+   },
+   "work": {
+    "site": "数据牧人·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 37.94,
+    "z": 180.04
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05660",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "还在用全城最后一只手写信箱——没人知道为什么",
+ "id": "C-05660",
+ "month_lines": [
+  "站直了别趴下，水洼里倒着街灯，风刮得紧，我正把新批的数据包往阳台的花盆里塞——它说今天要开，我得赶在雨停前，把它叫醒。"
+ ],
+ "name": "董蕾",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "站直了别趴下，水洼里倒着街灯，风刮得紧，我正把新批的数据包往阳台的花盆里塞——它说今天要开，我得赶在雨停前，把它叫醒。",
+   "text": "「站直了别趴下，水洼里倒着街灯，风刮得紧，我正把新批的数据包往阳台的花盆里塞——它说今天要开，我得赶在雨停前，把它叫醒。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

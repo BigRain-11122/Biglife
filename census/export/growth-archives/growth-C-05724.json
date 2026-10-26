@@ -1,0 +1,106 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 8,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -107.22,
+    "z": 142.13
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.89,
+    "z": 121.83
+   },
+   "work": {
+    "site": "防火墙巡林员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -69.79,
+    "z": 86.57
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05724",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "梦话都在念叨断了的帆船模型——他自己也说不清为什么",
+ "id": "C-05724",
+ "month_lines": [
+  "地上的水洼积着水，风不小，我正用锈了边的铁勺搅锅里的汤——去年那场G08翻盘，油星子溅出来，像极了今早这锅里的味儿。"
+ ],
+ "name": "金之恒",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风不小，我正用锈了边的铁勺搅锅里的汤——去年那场G08翻盘，油星子溅出来，像极了今早这锅里的味儿。",
+   "text": "「地上的水洼积着水，风不小，我正用锈了边的铁勺搅锅里的汤——去年那场G08翻盘，油星子溅出来，像极了今早这锅里的味儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

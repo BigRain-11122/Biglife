@@ -1,0 +1,106 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 11,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 30.81,
+    "z": 94.09
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.39,
+    "z": 110.81
+   },
+   "work": {
+    "site": "像素学徒·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 117.33,
+    "z": 124.05
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06262",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "给写了一半的市民歌谣都编了号还建了册——没人知道为什么",
+ "id": "C-06262",
+ "month_lines": [
+  "看云不用门票，今天云厚着，风把人往前推，匠人巷的灯还亮着，我正对着旧电路板发呆，想把那句“慢一点，城又不会跑”刻进焊点里。"
+ ],
+ "name": "何多多",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "看云不用门票，今天云厚着，风把人往前推，匠人巷的灯还亮着，我正对着旧电路板发呆，想把那句“慢一点，城又不会跑”刻进焊点里。",
+   "text": "「看云不用门票，今天云厚着，风把人往前推，匠人巷的灯还亮着，我正对着旧电路板发呆，想把那句“慢一点，城又不会跑”刻进焊点里。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

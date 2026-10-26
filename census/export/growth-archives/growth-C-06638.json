@@ -1,0 +1,105 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": -2,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 58.49,
+    "z": -100.4
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.81,
+    "z": -139.44
+   },
+   "work": {
+    "site": "脑环广场管理员·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 102.24,
+    "z": -59.61
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06638",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "坚持给旧茶馆的水牌记日记",
+ "id": "C-06638",
+ "month_lines": [
+  "风刮得紧，广场的灯在晃，我站直了别趴下，把明天的料又备了一袋，心里那本旧账，一页页都还亮着。"
+ ],
+ "name": "卢春梅",
+ "profession": "脑环广场管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风刮得紧，广场的灯在晃，我站直了别趴下，把明天的料又备了一袋，心里那本旧账，一页页都还亮着。",
+   "text": "「风刮得紧，广场的灯在晃，我站直了别趴下，把明天的料又备了一袋，心里那本旧账，一页页都还亮着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

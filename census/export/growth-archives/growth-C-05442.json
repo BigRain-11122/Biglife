@@ -1,0 +1,106 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 18,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 72.83,
+    "z": -69.78
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.0,
+    "z": -152.86
+   },
+   "work": {
+    "site": "弄堂小囡·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.44,
+    "z": -105.11
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05442",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "在老钢琴的琴键上刻了一行没人认得的小字",
+ "id": "C-05442",
+ "month_lines": [
+  "雨还在落，风不小，光格子房子的第三代跳法我刚试了，脚底踩得稳，像三十年前奶奶教我的那下。"
+ ],
+ "name": "侯天天",
+ "profession": "弄堂小囡",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨还在落，风不小，光格子房子的第三代跳法我刚试了，脚底踩得稳，像三十年前奶奶教我的那下。",
+   "text": "「雨还在落，风不小，光格子房子的第三代跳法我刚试了，脚底踩得稳，像三十年前奶奶教我的那下。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

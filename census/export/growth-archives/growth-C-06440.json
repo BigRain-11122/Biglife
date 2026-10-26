@@ -1,0 +1,106 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -2,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -118.07,
+    "z": 43.49
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.11,
+    "z": 65.71
+   },
+   "work": {
+    "site": "算法调参师·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -22.45,
+    "z": 89.47
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06440",
+  "quirk": "night_run",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "坚持给退役的路灯灯丝记日记——这事只有师父知道",
+ "id": "C-06440",
+ "month_lines": [
+  "雨点没停，风刮得紧，参数表在怀里晃着，像极了那年调不出的旧配方。今夜云好，改天再说。"
+ ],
+ "name": "解调-5",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "雨点没停，风刮得紧，参数表在怀里晃着，像极了那年调不出的旧配方。今夜云好，改天再说。",
+   "text": "「雨点没停，风刮得紧，参数表在怀里晃着，像极了那年调不出的旧配方。今夜云好，改天再说。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

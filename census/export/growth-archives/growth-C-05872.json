@@ -1,0 +1,106 @@
+{
+ "age": 80,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -10,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.14,
+    "z": 136.97
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.07,
+    "z": 63.29
+   },
+   "work": {
+    "site": "盘口记录员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -31.18,
+    "z": 14.47
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05872",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每逢下雨就去修爷爷的工作证——据说是老辈传下的规矩",
+ "id": "C-05872",
+ "month_lines": [
+  "雨点没停，风把人往前推，我手里的那枚铜钥匙还闪着光——是去年修灯时老电工给的，旧钥匙开新锁，有时候还真开得开。"
+ ],
+ "name": "阮雪英",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨点没停，风把人往前推，我手里的那枚铜钥匙还闪着光——是去年修灯时老电工给的，旧钥匙开新锁，有时候还真开得开。",
+   "text": "「雨点没停，风把人往前推，我手里的那枚铜钥匙还闪着光——是去年修灯时老电工给的，旧钥匙开新锁，有时候还真开得开。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

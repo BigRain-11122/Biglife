@@ -1,0 +1,106 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 7,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.16,
+    "z": 136.13
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.39,
+    "z": 101.43
+   },
+   "work": {
+    "site": "算力楼运维·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.74,
+    "z": 129.13
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06583",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "收藏旧光伞骨且每件都记得来历——这事全巷都知道",
+ "id": "C-06583",
+ "month_lines": [
+  "风好大，天阴着，我刚把最后一台机柜的温感探头调好，心跳声和机器的脉搏几乎要重叠了——茶凉了再倒就是，这城的夜，得靠体温说话。"
+ ],
+ "name": "管南汐",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风好大，天阴着，我刚把最后一台机柜的温感探头调好，心跳声和机器的脉搏几乎要重叠了——茶凉了再倒就是，这城的夜，得靠体温说话。",
+   "text": "「风好大，天阴着，我刚把最后一台机柜的温感探头调好，心跳声和机器的脉搏几乎要重叠了——茶凉了再倒就是，这城的夜，得靠体温说话。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 64,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -14,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 52.13,
+    "z": -66.71
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.43,
+    "z": -96.4
+   },
+   "work": {
+    "site": "城市接线生·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 126.26,
+    "z": -107.93
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06520",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把退役的探针铭牌画进了自己的作品里",
+ "id": "C-06520",
+ "month_lines": [
+  "雨点没停，风把人往前推，我正对着接线台那块老屏数窗——G08的窗在闪，从B2396到S2.5，整活了，拆开看看又不会坏。"
+ ],
+ "name": "方涛",
+ "profession": "城市接线生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "雨点没停，风把人往前推，我正对着接线台那块老屏数窗——G08的窗在闪，从B2396到S2.5，整活了，拆开看看又不会坏。",
+   "text": "「雨点没停，风把人往前推，我正对着接线台那块老屏数窗——G08的窗在闪，从B2396到S2.5，整活了，拆开看看又不会坏。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

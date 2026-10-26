@@ -1,0 +1,106 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -1,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -113.6,
+    "z": 112.52
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.89,
+    "z": 51.39
+   },
+   "work": {
+    "site": "K线屏画师·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -72.88,
+    "z": 90.64
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06288",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "扛得住事，才配得上街坊喊一声师傅。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "梦话都在念叨第一天的营业账本——这事全巷都知道",
+ "id": "C-06288",
+ "month_lines": [
+  "谁没个难处呢，来，坐下说。风不小，我正把G08楼那块显卡的散热绳多绑一道，脉搏在后台跳得急，得扛得住，才配得上街坊喊一声师傅。"
+ ],
+ "name": "杭晓东",
+ "profession": "K线屏画师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "谁没个难处呢，来，坐下说。风不小，我正把G08楼那块显卡的散热绳多绑一道，脉搏在后台跳得急，得扛得住，才配得上街坊喊一声师傅。",
+   "text": "「谁没个难处呢，来，坐下说。风不小，我正把G08楼那块显卡的散热绳多绑一道，脉搏在后台跳得急，得扛得住，才配得上街坊喊一声师傅。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

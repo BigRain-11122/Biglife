@@ -1,0 +1,105 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": 3,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 30.59,
+    "z": 56.6
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.01,
+    "z": 107.77
+   },
+   "work": {
+    "site": "光织物裁缝·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 116.49,
+    "z": 38.9
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06032",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "在第一炉出炉的像素瓷上刻了一行没人认得的小字——据说是老辈传下的规矩",
+ "id": "C-06032",
+ "month_lines": [
+  "饭点了，天大的事吃完再谈。风刮得紧，我正给电波猫群添食，线头晃了晃，像谁在轻轻拨动藤蔓。"
+ ],
+ "name": "影子盘-5",
+ "profession": "光织物裁缝",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "饭点了，天大的事吃完再谈。风刮得紧，我正给电波猫群添食，线头晃了晃，像谁在轻轻拨动藤蔓。",
+   "text": "「饭点了，天大的事吃完再谈。风刮得紧，我正给电波猫群添食，线头晃了晃，像谁在轻轻拨动藤蔓。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

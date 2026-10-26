@@ -1,0 +1,106 @@
+{
+ "age": 82,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -8,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -113.23,
+    "z": 39.58
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.42,
+    "z": 77.9
+   },
+   "work": {
+    "site": "时钟校准员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.53,
+    "z": 147.27
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06314",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每逢下雨就去修初代探针的日志纸带——据说是老辈传下的规矩",
+ "id": "C-06314",
+ "month_lines": [
+  "风刮得紧，我把G08切回S2.5的谱子塞进抽屉，说“有意思，我想想”——今夜的账，得对上毫秒。"
+ ],
+ "name": "张建国",
+ "profession": "时钟校准员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风刮得紧，我把G08切回S2.5的谱子塞进抽屉，说“有意思，我想想”——今夜的账，得对上毫秒。",
+   "text": "「风刮得紧，我把G08切回S2.5的谱子塞进抽屉，说“有意思，我想想”——今夜的账，得对上毫秒。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

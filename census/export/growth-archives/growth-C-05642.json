@@ -1,0 +1,106 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 17,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 45.95,
+    "z": 69.84
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.85,
+    "z": 139.19
+   },
+   "work": {
+    "site": "信使小跟班·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 147.35,
+    "z": 76.84
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05642",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "在旧缝纫机踏板上刻了一行没人认得的小字",
+ "id": "C-05642",
+ "month_lines": [
+  "雨还在落，风刮得紧，我正把那块旧铁片贴在信筒上——是妈妈当年给我缝的，边角都磨薄了，现在还亮着，像我们家灯下的影。"
+ ],
+ "name": "高天天",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨还在落，风刮得紧，我正把那块旧铁片贴在信筒上——是妈妈当年给我缝的，边角都磨薄了，现在还亮着，像我们家灯下的影。",
+   "text": "「雨还在落，风刮得紧，我正把那块旧铁片贴在信筒上——是妈妈当年给我缝的，边角都磨薄了，现在还亮着，像我们家灯下的影。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

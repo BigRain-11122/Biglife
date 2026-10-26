@@ -1,0 +1,106 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -9,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.66,
+    "z": 11.69
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.47,
+    "z": 143.06
+   },
+   "work": {
+    "site": "量化策略研究员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -42.37,
+    "z": 134.28
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05710",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "坚持给手抄的菜谱记日记",
+ "id": "C-05710",
+ "month_lines": [
+  "雨敲在窗棂上，风把人往前推，我正盯着数据墙，S2.5又抖了一下——夜里冷，喝口热的再走，今天这回，汤桶还热着。"
+ ],
+ "name": "陶慧",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨敲在窗棂上，风把人往前推，我正盯着数据墙，S2.5又抖了一下——夜里冷，喝口热的再走，今天这回，汤桶还热着。",
+   "text": "「雨敲在窗棂上，风把人往前推，我正盯着数据墙，S2.5又抖了一下——夜里冷，喝口热的再走，今天这回，汤桶还热着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 6,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -115.53,
+    "z": -146.88
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.89,
+    "z": -135.45
+   },
+   "work": {
+    "site": "缓存管理员·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.39,
+    "z": -21.28
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06456",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "攒了满抽屉老式怀表链从不给看——这事只有档案馆知道",
+ "id": "C-06456",
+ "month_lines": [
+  "雨点没停，风不小，我正把那块老怀表从怀里掏出来，表盖边磕出的锈迹映着灯，像谁在暗处轻轻叩门。"
+ ],
+ "name": "严子轩",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "雨点没停，风不小，我正把那块老怀表从怀里掏出来，表盖边磕出的锈迹映着灯，像谁在暗处轻轻叩门。",
+   "text": "「雨点没停，风不小，我正把那块老怀表从怀里掏出来，表盖边磕出的锈迹映着灯，像谁在暗处轻轻叩门。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

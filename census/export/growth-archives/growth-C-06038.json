@@ -1,0 +1,106 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 8,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.12,
+    "z": 152.74
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.2,
+    "z": 34.56
+   },
+   "work": {
+    "site": "回测农·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -50.43,
+    "z": 19.88
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06038",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "江水不争先后，该到总会到。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "在弄堂口的邮筒上刻了一行没人认得的小字——没人知道为什么",
+ "id": "C-06038",
+ "month_lines": [
+  "风刮得紧，工具箱擦得亮亮的，收摊前又捎了块酱香饼给媳妇。慢慢来，比较快。"
+ ],
+ "name": "钟Momo",
+ "profession": "回测农",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风刮得紧，工具箱擦得亮亮的，收摊前又捎了块酱香饼给媳妇。慢慢来，比较快。",
+   "text": "「风刮得紧，工具箱擦得亮亮的，收摊前又捎了块酱香饼给媳妇。慢慢来，比较快。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

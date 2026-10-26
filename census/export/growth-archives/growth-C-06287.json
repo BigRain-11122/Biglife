@@ -1,0 +1,106 @@
+{
+ "age": 14,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 16,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.9,
+    "z": 116.64
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.32,
+    "z": 17.56
+   },
+   "work": {
+    "site": "像素小学学生·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -25.86,
+    "z": 151.23
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06287",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "风吹哪页读哪页。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "偷偷给褪色的灯笼骨架上油保养——没人知道为什么",
+ "id": "C-06287",
+ "month_lines": [
+  "风掀得衣角乱摆，我正捏着那枚旧磁卡，卡面磨得发亮，背面歪歪扭扭写着“C-06287 值日不迟到”，手一抖，字迹晃了晃，像在应着城心跳。"
+ ],
+ "name": "杨阿果",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风掀得衣角乱摆，我正捏着那枚旧磁卡，卡面磨得发亮，背面歪歪扭扭写着“C-06287 值日不迟到”，手一抖，字迹晃了晃，像在应着城心跳。",
+   "text": "「风掀得衣角乱摆，我正捏着那枚旧磁卡，卡面磨得发亮，背面歪歪扭扭写着“C-06287 值日不迟到”，手一抖，字迹晃了晃，像在应着城心跳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

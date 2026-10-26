@@ -1,0 +1,106 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#69F0AE"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 17,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 44.56,
+    "z": 32.86
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.49,
+    "z": 45.28
+   },
+   "work": {
+    "site": "风信使·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 126.15,
+    "z": 70.54
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05559",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "记得爷爷的工作证出现过的每一个雨夜——这事只有师父知道",
+ "id": "C-05559",
+ "month_lines": [
+  "伞面一直响，风一阵紧一阵，我把试铃调到最低，风铃在檐角抖了三下，报风说：B2396到S2.5了，水到了警戒线就得说，说得早就是功劳。"
+ ],
+ "name": "黑春汛",
+ "profession": "风信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风一阵紧一阵，我把试铃调到最低，风铃在檐角抖了三下，报风说：B2396到S2.5了，水到了警戒线就得说，说得早就是功劳。",
+   "text": "「伞面一直响，风一阵紧一阵，我把试铃调到最低，风铃在檐角抖了三下，报风说：B2396到S2.5了，水到了警戒线就得说，说得早就是功劳。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

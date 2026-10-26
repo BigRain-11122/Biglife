@@ -1,0 +1,105 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -5,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.07,
+    "z": -61.04
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.49,
+    "z": -48.94
+   },
+   "work": {
+    "site": "声优棚掌柜·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -31.87,
+    "z": -68.72
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06671",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "灶上留一壶，路过的都是客。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "用褪色的戏票根教会了半条街的孩子——没人知道为什么",
+ "id": "C-06671",
+ "month_lines": [
+  "风大得说话要抬声，棚里胖大海还搁着，谁哑嗓就来，我这老掌柜的，今夜就守着这口锅，不放人走。"
+ ],
+ "name": "曾雯",
+ "profession": "声优棚掌柜",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风大得说话要抬声，棚里胖大海还搁着，谁哑嗓就来，我这老掌柜的，今夜就守着这口锅，不放人走。",
+   "text": "「风大得说话要抬声，棚里胖大海还搁着，谁哑嗓就来，我这老掌柜的，今夜就守着这口锅，不放人走。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

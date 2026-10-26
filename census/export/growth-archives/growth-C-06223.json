@@ -1,0 +1,106 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 15,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.42,
+    "z": -51.24
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.49,
+    "z": -110.46
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.48,
+    "z": -46.8
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06223",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "从不让手抄的菜谱离开自己三步远——她自己也说不清为什么",
+ "id": "C-06223",
+ "month_lines": [
+  "灯还是老灯亮堂，风好大，我那旧工具箱在墙角晃了晃，钥匙还在，作业本上画的城，今天又添了一盏新光。"
+ ],
+ "name": "管念念",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "灯还是老灯亮堂，风好大，我那旧工具箱在墙角晃了晃，钥匙还在，作业本上画的城，今天又添了一盏新光。",
+   "text": "「灯还是老灯亮堂，风好大，我那旧工具箱在墙角晃了晃，钥匙还在，作业本上画的城，今天又添了一盏新光。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

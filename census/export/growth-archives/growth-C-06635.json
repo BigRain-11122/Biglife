@@ -1,0 +1,105 @@
+{
+ "age": 59,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 4,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -113.34,
+    "z": -96.45
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.89,
+    "z": -97.6
+   },
+   "work": {
+    "site": "新市民安居顾问·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -63.64,
+    "z": -66.21
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06635",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "梦话都在念叨初版街景照片——这事全巷都知道",
+ "id": "C-06635",
+ "month_lines": [
+  "风掀得衣角乱摆，塔顶白光还亮着，今夜的G08路脉又滑回S2.5了——老地方见，得等风停了再动。"
+ ],
+ "name": "吴晓东",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风掀得衣角乱摆，塔顶白光还亮着，今夜的G08路脉又滑回S2.5了——老地方见，得等风停了再动。",
+   "text": "「风掀得衣角乱摆，塔顶白光还亮着，今夜的G08路脉又滑回S2.5了——老地方见，得等风停了再动。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

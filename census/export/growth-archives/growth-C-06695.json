@@ -1,0 +1,105 @@
+{
+ "age": 40,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": -1,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -121.7,
+    "z": -87.45
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.94,
+    "z": -88.9
+   },
+   "work": {
+    "site": "声优棚掌柜·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.4,
+    "z": -122.85
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06695",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把褪色的灯笼骨架修好再免费送人",
+ "id": "C-06695",
+ "month_lines": [
+  "火候到了自然就香。风大得说话要抬声，我搁在棚里把胖大海泡开，听收声的卡带轻响，像老朋友在翻页。"
+ ],
+ "name": "付丽",
+ "profession": "声优棚掌柜",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "火候到了自然就香。风大得说话要抬声，我搁在棚里把胖大海泡开，听收声的卡带轻响，像老朋友在翻页。",
+   "text": "「火候到了自然就香。风大得说话要抬声，我搁在棚里把胖大海泡开，听收声的卡带轻响，像老朋友在翻页。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

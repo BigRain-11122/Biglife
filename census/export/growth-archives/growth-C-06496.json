@@ -1,0 +1,106 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 12,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 59.57,
+    "z": -60.36
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.11,
+    "z": -62.73
+   },
+   "work": {
+    "site": "信使小跟班·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 130.57,
+    "z": -80.28
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06496",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "搬家三次，钥匙一把不扔。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把初代广场舞光带画进了自己的作品里——他自己也说不清为什么",
+ "id": "C-06496",
+ "month_lines": [
+  "雨点没停，风把人往前推，我站在M5街口，手里攥着那包旧数据，灯一亮，整条路都颤了——门禁亮绿灯，心里才亮堂。"
+ ],
+ "name": "石果果",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "雨点没停，风把人往前推，我站在M5街口，手里攥着那包旧数据，灯一亮，整条路都颤了——门禁亮绿灯，心里才亮堂。",
+   "text": "「雨点没停，风把人往前推，我站在M5街口，手里攥着那包旧数据，灯一亮，整条路都颤了——门禁亮绿灯，心里才亮堂。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

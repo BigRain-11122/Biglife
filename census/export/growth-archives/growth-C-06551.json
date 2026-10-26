@@ -1,0 +1,106 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 3,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -101.47,
+    "z": 27.47
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.08,
+    "z": 44.85
+   },
+   "work": {
+    "site": "算力楼运维·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.79,
+    "z": 70.86
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06551",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持手写老式爆米花的粮票——这事只有师父知道",
+ "id": "C-06551",
+ "month_lines": [
+  "明儿又是新的一天。风掀得衣角乱摆，机房里那台老服务器还在哼着旧歌，我听见它喘气，像在说——日子，得自己过。"
+ ],
+ "name": "许予安",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "明儿又是新的一天。风掀得衣角乱摆，机房里那台老服务器还在哼着旧歌，我听见它喘气，像在说——日子，得自己过。",
+   "text": "「明儿又是新的一天。风掀得衣角乱摆，机房里那台老服务器还在哼着旧歌，我听见它喘气，像在说——日子，得自己过。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

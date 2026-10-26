@@ -1,0 +1,106 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 10,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -98.53,
+    "z": -82.0
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.58,
+    "z": -76.49
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -32.5,
+    "z": -42.35
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06172",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "会为初版街景照片推掉一整晚的生意——这事只有档案馆知道",
+ "id": "C-06172",
+ "month_lines": [
+  "风把人往前推，我正把旧收音机的旋钮拧紧——边角刮得发烫，像谁在耳边说“再听一次”。"
+ ],
+ "name": "毛念念",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风把人往前推，我正把旧收音机的旋钮拧紧——边角刮得发烫，像谁在耳边说“再听一次”。",
+   "text": "「风把人往前推，我正把旧收音机的旋钮拧紧——边角刮得发烫，像谁在耳边说“再听一次”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

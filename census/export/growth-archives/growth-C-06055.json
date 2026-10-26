@@ -1,0 +1,105 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 3,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -32.17,
+    "z": 247.02
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 13.14,
+    "z": 222.24
+   },
+   "work": {
+    "site": "城市气象播报员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 75.3,
+    "z": 183.97
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06055",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "偷偷给老式公交站牌上油保养——她自己也说不清为什么",
+ "id": "C-06055",
+ "month_lines": [
+  "风好大，窗台温度计被吹得摇晃，我伸手摸了下，20.7°C，阴着呢。对门C-05070刚喊我，说G08 CrazyCampus那波转阶段她听懂了，我只回了个“今天的事今天清”。"
+ ],
+ "name": "宋沈鱼",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风好大，窗台温度计被吹得摇晃，我伸手摸了下，20.7°C，阴着呢。对门C-05070刚喊我，说G08 CrazyCampus那波转阶段她听懂了，我只回了个“今天的事今天清”。",
+   "text": "「风好大，窗台温度计被吹得摇晃，我伸手摸了下，20.7°C，阴着呢。对门C-05070刚喊我，说G08 CrazyCampus那波转阶段她听懂了，我只回了个“今天的事今天清”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

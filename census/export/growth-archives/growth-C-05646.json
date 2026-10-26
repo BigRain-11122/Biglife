@@ -1,0 +1,105 @@
+{
+ "age": 4,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -3,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 59.71,
+    "z": 102.0
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.73,
+    "z": 54.42
+   },
+   "work": {
+    "site": "缓存管理员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 126.79,
+    "z": 156.38
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05646",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "得之我幸，失之我睡。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "逢人就讲老钟楼的齿轮的故事",
+ "id": "C-05646",
+ "month_lines": [
+  "船到桥头自然直。 雨敲在窗棂上，风不小，我正把G08 CrazyCampus：B2396 -> S2.5那条路，从缓存里调出来，对齐颗粒度。"
+ ],
+ "name": "老电子管·快",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "船到桥头自然直。 雨敲在窗棂上，风不小，我正把G08 CrazyCampus：B2396 -> S2.5那条路，从缓存里调出来，对齐颗粒度。",
+   "text": "「船到桥头自然直。 雨敲在窗棂上，风不小，我正把G08 CrazyCampus：B2396 -> S2.5那条路，从缓存里调出来，对齐颗粒度。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

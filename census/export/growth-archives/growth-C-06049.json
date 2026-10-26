@@ -1,0 +1,106 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 6,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -121.45,
+    "z": 118.05
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.33,
+    "z": 24.41
+   },
+   "work": {
+    "site": "K线屏画师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -53.79,
+    "z": 94.84
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06049",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "给弄堂钥匙串写了一整本观察笔记——他自己也说不清为什么",
+ "id": "C-06049",
+ "month_lines": [
+  "风好大，桥上K线屏的描线被吹得歪了，我赶紧换色补上，十年前就是这么弄的。"
+ ],
+ "name": "郁亦风",
+ "profession": "K线屏画师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风好大，桥上K线屏的描线被吹得歪了，我赶紧换色补上，十年前就是这么弄的。",
+   "text": "「风好大，桥上K线屏的描线被吹得歪了，我赶紧换色补上，十年前就是这么弄的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 9,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.79,
+    "z": -115.55
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.75,
+    "z": -32.41
+   },
+   "work": {
+    "site": "穿城信使·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.68,
+    "z": -17.77
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05887",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "从不让1990 年的真硬币离开自己三步远——据说是老辈传下的规矩",
+ "id": "C-05887",
+ "month_lines": [
+  "伞面一直响，风好大。接单呢，雨天单子多，急啥，汤还没开呢。"
+ ],
+ "name": "盛之南",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风好大。接单呢，雨天单子多，急啥，汤还没开呢。",
+   "text": "「伞面一直响，风好大。接单呢，雨天单子多，急啥，汤还没开呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

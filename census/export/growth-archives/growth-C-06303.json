@@ -1,0 +1,106 @@
+{
+ "age": 69,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -8,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.96,
+    "z": 79.4
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.19,
+    "z": 73.37
+   },
+   "work": {
+    "site": "数据粥铺摊主·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.45,
+    "z": 150.56
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06303",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "用老式的士票教会了半条街的孩子——据说是老辈传下的规矩",
+ "id": "C-06303",
+ "month_lines": [
+  "看云不用门票，风一阵紧一阵，蒸笼里的暖光晃着，我正把今天的commit光点过江看了——还在跳，趁热吃。"
+ ],
+ "name": "冯银龙",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "看云不用门票，风一阵紧一阵，蒸笼里的暖光晃着，我正把今天的commit光点过江看了——还在跳，趁热吃。",
+   "text": "「看云不用门票，风一阵紧一阵，蒸笼里的暖光晃着，我正把今天的commit光点过江看了——还在跳，趁热吃。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

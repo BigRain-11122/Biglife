@@ -1,0 +1,105 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 4,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.82,
+    "z": -50.45
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.16,
+    "z": -35.09
+   },
+   "work": {
+    "site": "编年史誊录员·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 110.09,
+    "z": -15.74
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06786",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "收藏旧光伞骨且每件都记得来历",
+ "id": "C-06786",
+ "month_lines": [
+  "灯还是老灯亮堂，风从巷口直灌进来，我正对着塔基档案那页“G08 S2.5→B2396”的校字，指尖一抖，差点把“CrazyCampus”那行给抹了——这年头，连名字都得过录三遍才敢"
+ ],
+ "name": "刘俊",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "灯还是老灯亮堂，风从巷口直灌进来，我正对着塔基档案那页“G08 S2.5→B2396”的校字，指尖一抖，差点把“CrazyCampus”那行给抹了——这年头，连名字都得过录三遍才敢",
+   "text": "「灯还是老灯亮堂，风从巷口直灌进来，我正对着塔基档案那页“G08 S2.5→B2396”的校字，指尖一抖，差点把“CrazyCampus”那行给抹了——这年头，连名字都得过录三遍才敢」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

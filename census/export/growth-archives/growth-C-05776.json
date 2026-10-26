@@ -1,0 +1,106 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 0,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -145.46,
+    "z": 67.58
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.08,
+    "z": 149.41
+   },
+   "work": {
+    "site": "盘口记录员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.07,
+    "z": 72.47
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05776",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "会给写了一半的市民歌谣织毛衣",
+ "id": "C-05776",
+ "month_lines": [
+  "又学了一招，今天雨点没停，风把人往前推，我手里的两支笔都快抖了，盘口对得急，笔笔清，心可稳。"
+ ],
+ "name": "屠雨欣",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "又学了一招，今天雨点没停，风把人往前推，我手里的两支笔都快抖了，盘口对得急，笔笔清，心可稳。",
+   "text": "「又学了一招，今天雨点没停，风把人往前推，我手里的两支笔都快抖了，盘口对得急，笔笔清，心可稳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

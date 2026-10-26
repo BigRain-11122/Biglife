@@ -1,0 +1,105 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -4,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 62.87,
+    "z": 61.38
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.76,
+    "z": 73.51
+   },
+   "work": {
+    "site": "关卡建筑师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 101.28,
+    "z": 128.98
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05958",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "会为第一天的营业账本推掉一整晚的生意",
+ "id": "C-05958",
+ "month_lines": [
+  "对时了，放心。风不小，楼顶的风标晃得厉害，我刚把G08 CrazyCampus的卡口重新跑了一遍，B2396到S2.5的转角，还是得补个防滑坡的编译协议。"
+ ],
+ "name": "叁仟·慢",
+ "profession": "关卡建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "对时了，放心。风不小，楼顶的风标晃得厉害，我刚把G08 CrazyCampus的卡口重新跑了一遍，B2396到S2.5的转角，还是得补个防滑坡的编译协议。",
+   "text": "「对时了，放心。风不小，楼顶的风标晃得厉害，我刚把G08 CrazyCampus的卡口重新跑了一遍，B2396到S2.5的转角，还是得补个防滑坡的编译协议。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

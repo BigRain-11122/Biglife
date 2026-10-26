@@ -1,0 +1,106 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 16,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -60.71,
+    "z": -237.06
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 3.48,
+    "z": -195.97
+   },
+   "work": {
+    "site": "声景师·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 61.88,
+    "z": -258.16
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06606",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "RV",
+ "gender": "无定",
+ "hook": "把退役巡夜灯灵的灯罩当成了自己的老朋友——这事只有师父知道",
+ "id": "C-06606",
+ "month_lines": [
+  "风不小，灯链摇得急，我正绕着杆子打拍子——G08那头又短了，可我听见了，是合唱团开嗓了。"
+ ],
+ "name": "白灯芯草",
+ "profession": "声景师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风不小，灯链摇得急，我正绕着杆子打拍子——G08那头又短了，可我听见了，是合唱团开嗓了。",
+   "text": "「风不小，灯链摇得急，我正绕着杆子打拍子——G08那头又短了，可我听见了，是合唱团开嗓了。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -4,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 67.97,
+    "z": 33.8
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.42,
+    "z": 40.75
+   },
+   "work": {
+    "site": "bug 猎人·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 133.48,
+    "z": 146.98
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05702",
+  "quirk": "umbrella",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能背出停产的暖光灯泡的全部班次——这事只有档案馆知道",
+ "id": "C-05702",
+ "month_lines": [
+  "雨敲在窗棂上，风刮得紧。灯还亮着，我正翻旧账本——G08又从B2396滑回S2.5了，这事儿有讲究。"
+ ],
+ "name": "汪倩",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨敲在窗棂上，风刮得紧。灯还亮着，我正翻旧账本——G08又从B2396滑回S2.5了，这事儿有讲究。",
+   "text": "「雨敲在窗棂上，风刮得紧。灯还亮着，我正翻旧账本——G08又从B2396滑回S2.5了，这事儿有讲究。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

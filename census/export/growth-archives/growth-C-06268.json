@@ -1,0 +1,106 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#FFA726",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 22,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.11,
+    "z": -78.31
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.41,
+    "z": -54.1
+   },
+   "work": {
+    "site": "夜灯员·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -72.8,
+    "z": -121.38
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06268",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "绕着三代人传下的顶针飞过整整三十圈——这事只有师父知道",
+ "id": "C-06268",
+ "month_lines": [
+  "风把人往前推，灯尖打了两下，照径的光晃着，见老摊主还守着，就多亮了半秒——这城转得快，可夜灯员的执灯，从不赶。"
+ ],
+ "name": "白霜降",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风把人往前推，灯尖打了两下，照径的光晃着，见老摊主还守着，就多亮了半秒——这城转得快，可夜灯员的执灯，从不赶。",
+   "text": "「风把人往前推，灯尖打了两下，照径的光晃着，见老摊主还守着，就多亮了半秒——这城转得快，可夜灯员的执灯，从不赶。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

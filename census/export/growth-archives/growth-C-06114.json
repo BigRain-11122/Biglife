@@ -1,0 +1,105 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 9,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 55.03,
+    "z": -144.59
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.53,
+    "z": -18.44
+   },
+   "work": {
+    "site": "数据搬运工·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 133.68,
+    "z": -40.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06114",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "还在用写满字的光带——这事只有档案馆知道",
+ "id": "C-06114",
+ "month_lines": [
+  "老地方见，今天天阴着，风不小，装卸口那块风一吹，数据包都抖得像要飞起来，收工前又绕了江，水面上浮着点光，像旧灯不灭。"
+ ],
+ "name": "程向洋",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "老地方见，今天天阴着，风不小，装卸口那块风一吹，数据包都抖得像要飞起来，收工前又绕了江，水面上浮着点光，像旧灯不灭。",
+   "text": "「老地方见，今天天阴着，风不小，装卸口那块风一吹，数据包都抖得像要飞起来，收工前又绕了江，水面上浮着点光，像旧灯不灭。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

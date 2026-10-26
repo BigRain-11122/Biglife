@@ -1,0 +1,105 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 5,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 53.8,
+    "z": 14.73
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.57,
+    "z": 133.94
+   },
+   "work": {
+    "site": "算法调参师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 147.86,
+    "z": 117.38
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05627",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "留着老式饭盒却从来不用——这事全巷都知道",
+ "id": "C-05627",
+ "month_lines": [
+  "檐口的水线不断，风掀得衣角乱摆。参数调到凌晨三点，今天的事今天清，明天的料我提前备好了。"
+ ],
+ "name": "邵梓涵",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线不断，风掀得衣角乱摆。参数调到凌晨三点，今天的事今天清，明天的料我提前备好了。",
+   "text": "「檐口的水线不断，风掀得衣角乱摆。参数调到凌晨三点，今天的事今天清，明天的料我提前备好了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

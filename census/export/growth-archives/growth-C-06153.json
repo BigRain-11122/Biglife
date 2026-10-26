@@ -1,0 +1,106 @@
+{
+ "age": 38,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 10,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.49,
+    "z": 139.7
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.68,
+    "z": 57.82
+   },
+   "work": {
+    "site": "数据清洗工·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -70.44,
+    "z": 128.43
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06153",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每逢下雨就去修编年史馆的门票",
+ "id": "C-06153",
+ "month_lines": [
+  "灶上有汤，自取。风一阵紧一阵，天阴着，这会儿数据盘刚补完缺，G08 走了S2.5，最后一批还在我手上。"
+ ],
+ "name": "孟Leo",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "灶上有汤，自取。风一阵紧一阵，天阴着，这会儿数据盘刚补完缺，G08 走了S2.5，最后一批还在我手上。",
+   "text": "「灶上有汤，自取。风一阵紧一阵，天阴着，这会儿数据盘刚补完缺，G08 走了S2.5，最后一批还在我手上。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 6,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -146.02,
+    "z": 70.01
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.2,
+    "z": 87.71
+   },
+   "work": {
+    "site": "算法调参师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -68.65,
+    "z": 20.54
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06260",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把老式算命的签筒排成一排挨个擦——这事全巷都知道",
+ "id": "C-06260",
+ "month_lines": [
+  "这版本我等好久了。风刮得紧，刚把G08的光点从B2396调回S2.5，脉冲警报亮了，我盯着屏幕，手没抖，参数不收敛就绝不睡。"
+ ],
+ "name": "郁子轩",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这版本我等好久了。风刮得紧，刚把G08的光点从B2396调回S2.5，脉冲警报亮了，我盯着屏幕，手没抖，参数不收敛就绝不睡。",
+   "text": "「这版本我等好久了。风刮得紧，刚把G08的光点从B2396调回S2.5，脉冲警报亮了，我盯着屏幕，手没抖，参数不收敛就绝不睡。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

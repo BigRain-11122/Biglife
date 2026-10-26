@@ -1,0 +1,106 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -1,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -97.62,
+    "z": 222.92
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 13.67,
+    "z": 233.51
+   },
+   "work": {
+    "site": "边缘杂货店主·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 59.7,
+    "z": 214.98
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06508",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "能背出三代人传下的顶针的全部班次——据说是老辈传下的规矩",
+ "id": "C-06508",
+ "month_lines": [
+  "地上的水洼积着水，风把人往前推，我推着小推车往里走，门铃响了，是隔壁老张，赊账又多了三块，下一版一定更好。"
+ ],
+ "name": "崔国平",
+ "profession": "边缘杂货店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "地上的水洼积着水，风把人往前推，我推着小推车往里走，门铃响了，是隔壁老张，赊账又多了三块，下一版一定更好。",
+   "text": "「地上的水洼积着水，风把人往前推，我推着小推车往里走，门铃响了，是隔壁老张，赊账又多了三块，下一版一定更好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

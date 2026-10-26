@@ -1,0 +1,106 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 3,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.5,
+    "z": 80.38
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.15,
+    "z": 60.26
+   },
+   "work": {
+    "site": "穿城信使·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -38.96,
+    "z": 64.97
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06727",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "把巷口的第一盏灯的位置背得比自家门牌还熟——这事只有档案馆知道",
+ "id": "C-06727",
+ "month_lines": [
+  "出锅喽——夜深了，天阴着，风顶得人站不稳，留言墙前站了十分钟，没看见谁写我。"
+ ],
+ "name": "信号枪·丁",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "出锅喽——夜深了，天阴着，风顶得人站不稳，留言墙前站了十分钟，没看见谁写我。",
+   "text": "「出锅喽——夜深了，天阴着，风顶得人站不稳，留言墙前站了十分钟，没看见谁写我。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

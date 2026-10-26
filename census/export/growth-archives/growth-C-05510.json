@@ -1,0 +1,105 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 5,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -27.83,
+    "z": 236.65
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 16.38,
+    "z": 218.15
+   },
+   "work": {
+    "site": "防火墙巡林员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 76.72,
+    "z": 238.25
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05510",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "能背出旧邮局的分信格的全部班次",
+ "id": "C-05510",
+ "month_lines": [
+  "雨敲在窗棂上，风刮得紧。巡边到江边，绕了半里，验签的牌子还在，一句话的事，就这。"
+ ],
+ "name": "方沐辰",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨敲在窗棂上，风刮得紧。巡边到江边，绕了半里，验签的牌子还在，一句话的事，就这。",
+   "text": "「雨敲在窗棂上，风刮得紧。巡边到江边，绕了半里，验签的牌子还在，一句话的事，就这。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -1,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -121.99,
+    "z": 117.7
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.46,
+    "z": 135.03
+   },
+   "work": {
+    "site": "尾盘茶室老板·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -61.85,
+    "z": 63.2
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06311",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "给旧月台的站牌都编了号还建了册——这事只有师父知道",
+ "id": "C-06311",
+ "month_lines": [
+  "风掀得衣角乱摆，收摊前把明天的茶叶分了三份，一盒留灶上，一盒塞抽屉，一盒——趁热吃，给街口那对老夫妻。"
+ ],
+ "name": "秦伟民",
+ "profession": "尾盘茶室老板",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风掀得衣角乱摆，收摊前把明天的茶叶分了三份，一盒留灶上，一盒塞抽屉，一盒——趁热吃，给街口那对老夫妻。",
+   "text": "「风掀得衣角乱摆，收摊前把明天的茶叶分了三份，一盒留灶上，一盒塞抽屉，一盒——趁热吃，给街口那对老夫妻。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

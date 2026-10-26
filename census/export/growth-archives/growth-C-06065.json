@@ -1,0 +1,106 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 18,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -119.24,
+    "z": 219.96
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 4.81,
+    "z": 215.81
+   },
+   "work": {
+    "site": "像素小学学生·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 93.43,
+    "z": 234.56
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06065",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "从不让雨声录音离开自己三步远——据说是老辈传下的规矩",
+ "id": "C-06065",
+ "month_lines": [
+  "这单我送，别跟我抢。放学还得绕路去看一眼今日 commit 光点过江，风掀得衣角乱摆，云厚得好像把整座城都裹进去了。"
+ ],
+ "name": "任朵朵",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这单我送，别跟我抢。放学还得绕路去看一眼今日 commit 光点过江，风掀得衣角乱摆，云厚得好像把整座城都裹进去了。",
+   "text": "「这单我送，别跟我抢。放学还得绕路去看一眼今日 commit 光点过江，风掀得衣角乱摆，云厚得好像把整座城都裹进去了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 5,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.86,
+    "z": 185.11
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 0.42,
+    "z": 205.01
+   },
+   "work": {
+    "site": "编年史誊录员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 122.15,
+    "z": 243.91
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05948",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "口袋里总揣着第一炉出炉的像素瓷——没人知道为什么",
+ "id": "C-05948",
+ "month_lines": [
+  "明儿又是新的一天，风刮得紧，江边那摊子又多绑了三道绳，我晓得伐——这风，是真不给城里人喘气的。"
+ ],
+ "name": "童志刚",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "明儿又是新的一天，风刮得紧，江边那摊子又多绑了三道绳，我晓得伐——这风，是真不给城里人喘气的。",
+   "text": "「明儿又是新的一天，风刮得紧，江边那摊子又多绑了三道绳，我晓得伐——这风，是真不给城里人喘气的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

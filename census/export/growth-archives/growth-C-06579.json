@@ -1,0 +1,106 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 4,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -112.23,
+    "z": 43.35
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.95,
+    "z": 118.43
+   },
+   "work": {
+    "site": "夜宵摊主·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -23.51,
+    "z": 147.52
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06579",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "留着初版街景照片却从来不用——这事只有师父知道",
+ "id": "C-06579",
+ "month_lines": [
+  "锅要热，心要稳，油要慢慢淋。今夜风一阵紧一阵，灯还亮着，我数了第三遍——多个人多双筷子，这城的夜，总有人在等一口暖。"
+ ],
+ "name": "侯清晚",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "锅要热，心要稳，油要慢慢淋。今夜风一阵紧一阵，灯还亮着，我数了第三遍——多个人多双筷子，这城的夜，总有人在等一口暖。",
+   "text": "「锅要热，心要稳，油要慢慢淋。今夜风一阵紧一阵，灯还亮着，我数了第三遍——多个人多双筷子，这城的夜，总有人在等一口暖。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

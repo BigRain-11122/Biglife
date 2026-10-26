@@ -1,0 +1,105 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 1,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -83.7,
+    "z": -244.69
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -17.1,
+    "z": -187.76
+   },
+   "work": {
+    "site": "数据牧人·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 60.62,
+    "z": -167.56
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05587",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "记得拆迁前夜的门牌合影的每一个来历",
+ "id": "C-05587",
+ "month_lines": [
+  "檐口的水线断断续续，风好大，把江面吹得直晃。数据包在批流里赶得急，心里头却还惦着电波猫群，得去补一顿食。"
+ ],
+ "name": "谢斯年",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线断断续续，风好大，把江面吹得直晃。数据包在批流里赶得急，心里头却还惦着电波猫群，得去补一顿食。",
+   "text": "「檐口的水线断断续续，风好大，把江面吹得直晃。数据包在批流里赶得急，心里头却还惦着电波猫群，得去补一顿食。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

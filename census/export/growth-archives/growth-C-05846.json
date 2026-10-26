@@ -1,0 +1,106 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 9,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 46.32,
+    "z": 138.56
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.68,
+    "z": 44.1
+   },
+   "work": {
+    "site": "bug 猎人·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 139.52,
+    "z": 74.0
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05846",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "从不让一台修了八次的老收音机离开自己三步远——没人知道为什么",
+ "id": "C-05846",
+ "month_lines": [
+  "以前我们那儿……雨敲在窗棂上，风刮得紧，阳台那盆绿萝歪了，我给它说：“今天你别晃，我等明天的bug过门禁线再给你补土。"
+ ],
+ "name": "廖行舟",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "以前我们那儿……雨敲在窗棂上，风刮得紧，阳台那盆绿萝歪了，我给它说：“今天你别晃，我等明天的bug过门禁线再给你补土。",
+   "text": "「以前我们那儿……雨敲在窗棂上，风刮得紧，阳台那盆绿萝歪了，我给它说：“今天你别晃，我等明天的bug过门禁线再给你补土。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 85,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -5,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -53.81,
+    "z": 176.29
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 9.57,
+    "z": 220.39
+   },
+   "work": {
+    "site": "编年史誊录员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 73.21,
+    "z": 236.24
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06621",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "偷偷给旧像素图钉上油保养",
+ "id": "C-06621",
+ "month_lines": [
+  "慢慢来，比较快。 风一阵紧一阵，江面的批流晃着，我刚把G08的过录校对完，又添了一次食，电波猫群在暗处窸窣，这城脉，得靠人声养着。"
+ ],
+ "name": "范阿凤",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "慢慢来，比较快。 风一阵紧一阵，江面的批流晃着，我刚把G08的过录校对完，又添了一次食，电波猫群在暗处窸窣，这城脉，得靠人声养着。",
+   "text": "「慢慢来，比较快。 风一阵紧一阵，江面的批流晃着，我刚把G08的过录校对完，又添了一次食，电波猫群在暗处窸窣，这城脉，得靠人声养着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

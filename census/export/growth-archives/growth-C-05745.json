@@ -1,0 +1,106 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 1,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 59.55,
+    "z": 102.39
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.81,
+    "z": 64.63
+   },
+   "work": {
+    "site": "彩蛋埋藏师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.86,
+    "z": 40.11
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05745",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "在老式算命的签筒上刻了一行没人认得的小字——这事只有师父知道",
+ "id": "C-05745",
+ "month_lines": [
+  "雨丝还挂着，风一阵紧一阵，我正低头看那把锈了边的钥匙——第三把锁孔磨平了，还插在衣兜里，像条没断的线。"
+ ],
+ "name": "彭梓涵",
+ "profession": "彩蛋埋藏师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨丝还挂着，风一阵紧一阵，我正低头看那把锈了边的钥匙——第三把锁孔磨平了，还插在衣兜里，像条没断的线。",
+   "text": "「雨丝还挂着，风一阵紧一阵，我正低头看那把锈了边的钥匙——第三把锁孔磨平了，还插在衣兜里，像条没断的线。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

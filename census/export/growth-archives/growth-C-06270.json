@@ -1,0 +1,105 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 0,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 49.98,
+    "z": 63.55
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.15,
+    "z": 40.09
+   },
+   "work": {
+    "site": "算力楼运维·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 147.65,
+    "z": 38.71
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06270",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "每年挑一天只为旧货郎的拨浪鼓大扫除——据说是老辈传下的规矩",
+ "id": "C-06270",
+ "month_lines": [
+  "趁热吃，楼里那台老GPU又跑分低了，我正往机房走，风不小，把散热片吹得哗哗响，像在替我说话。"
+ ],
+ "name": "付秀兰",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "趁热吃，楼里那台老GPU又跑分低了，我正往机房走，风不小，把散热片吹得哗哗响，像在替我说话。",
+   "text": "「趁热吃，楼里那台老GPU又跑分低了，我正往机房走，风不小，把散热片吹得哗哗响，像在替我说话。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

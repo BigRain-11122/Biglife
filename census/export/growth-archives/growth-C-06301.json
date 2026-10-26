@@ -1,0 +1,106 @@
+{
+ "age": 15,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 13,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -111.87,
+    "z": -122.65
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.83,
+    "z": -23.28
+   },
+   "work": {
+    "site": "像素小学学生·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.06,
+    "z": -125.07
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06301",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "还在用老码头缆桩——这事只有师父知道",
+ "id": "C-06301",
+ "month_lines": [
+  "风好大，收摊前我先把明天的料备了，顺便把今天的commit光点过江看了——还在跳，趁热吃。"
+ ],
+ "name": "阮豆豆",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风好大，收摊前我先把明天的料备了，顺便把今天的commit光点过江看了——还在跳，趁热吃。",
+   "text": "「风好大，收摊前我先把明天的料备了，顺便把今天的commit光点过江看了——还在跳，趁热吃。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

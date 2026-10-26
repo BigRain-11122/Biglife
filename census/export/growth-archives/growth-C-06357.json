@@ -1,0 +1,106 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 0,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -106.21,
+    "z": 77.02
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.58,
+    "z": 10.28
+   },
+   "work": {
+    "site": "防火墙巡林员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -28.11,
+    "z": 92.09
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06357",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每天跟退役探空气球的碎片打招呼",
+ "id": "C-06357",
+ "month_lines": [
+  "风一阵紧一阵，江边那盏老灯还亮着，我刚把G08的脉冲数据驱逐了一遍，心跳在23:20撞上低频，门还没关，人得迈着。"
+ ],
+ "name": "林阿宁",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风一阵紧一阵，江边那盏老灯还亮着，我刚把G08的脉冲数据驱逐了一遍，心跳在23:20撞上低频，门还没关，人得迈着。",
+   "text": "「风一阵紧一阵，江边那盏老灯还亮着，我刚把G08的脉冲数据驱逐了一遍，心跳在23:20撞上低频，门还没关，人得迈着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

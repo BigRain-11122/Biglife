@@ -1,0 +1,105 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -5,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 53.75,
+    "z": -104.11
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.56,
+    "z": -52.32
+   },
+   "work": {
+    "site": "全城对时师·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 114.83,
+    "z": -44.86
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05639",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "会给全城最后一只手写信箱织毛衣——这事全巷都知道",
+ "id": "C-05639",
+ "month_lines": [
+  "伞面一直响，风掀得衣角乱摆，我正数着G08的窗——亮着的那几扇，还像去年一样，一排排，不偏不倚。"
+ ],
+ "name": "任建平",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风掀得衣角乱摆，我正数着G08的窗——亮着的那几扇，还像去年一样，一排排，不偏不倚。",
+   "text": "「伞面一直响，风掀得衣角乱摆，我正数着G08的窗——亮着的那几扇，还像去年一样，一排排，不偏不倚。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

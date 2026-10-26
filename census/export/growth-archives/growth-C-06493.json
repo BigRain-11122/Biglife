@@ -1,0 +1,105 @@
+{
+ "age": 64,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -10,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -36.0,
+    "z": -185.66
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -10.27,
+    "z": -228.27
+   },
+   "work": {
+    "site": "数据牧人·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 117.54,
+    "z": -194.27
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06493",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "自己淋过雨，就想给别人撑伞。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "给旧船锚残件都起了名字",
+ "id": "C-06493",
+ "month_lines": [
+  "雨脚细细密密，风好大，我正把老数据包往M5街口扛——G08那条路的脉搏，我得把脉。"
+ ],
+ "name": "童强",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "雨脚细细密密，风好大，我正把老数据包往M5街口扛——G08那条路的脉搏，我得把脉。",
+   "text": "「雨脚细细密密，风好大，我正把老数据包往M5街口扛——G08那条路的脉搏，我得把脉。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

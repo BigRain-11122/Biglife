@@ -1,0 +1,105 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 5,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 48.22,
+    "z": 80.86
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.09,
+    "z": 91.0
+   },
+   "work": {
+    "site": "算法调参师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 102.63,
+    "z": 105.69
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05648",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "守时是最便宜的本事，也是最难改的毛病。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "还在用初代广场舞光带——这事只有师父知道",
+ "id": "C-05648",
+ "month_lines": [
+  "雨点没停，风刮得紧，我正把那串旧怀表从抽屉里掏出来，表盖上还留着G08初版的划痕——调参三十年，参数不收敛，手就稳。"
+ ],
+ "name": "侯未晞",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨点没停，风刮得紧，我正把那串旧怀表从抽屉里掏出来，表盖上还留着G08初版的划痕——调参三十年，参数不收敛，手就稳。",
+   "text": "「雨点没停，风刮得紧，我正把那串旧怀表从抽屉里掏出来，表盖上还留着G08初版的划痕——调参三十年，参数不收敛，手就稳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

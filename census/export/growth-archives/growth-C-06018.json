@@ -1,0 +1,106 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": 0,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.81,
+    "z": 140.25
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.65,
+    "z": 62.72
+   },
+   "work": {
+    "site": "时空校准师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -58.04,
+    "z": 82.34
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06018",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持手写断了的帆船模型",
+ "id": "C-06018",
+ "month_lines": [
+  "街坊一声喊，放下碗就到——风不小，灯还亮，我刚把明天的料备好，G08对单翻了又翻，B2396又往回走，可我这人，答应过的事，还接着办。"
+ ],
+ "name": "迭代·丁",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "街坊一声喊，放下碗就到——风不小，灯还亮，我刚把明天的料备好，G08对单翻了又翻，B2396又往回走，可我这人，答应过的事，还接着办。",
+   "text": "「街坊一声喊，放下碗就到——风不小，灯还亮，我刚把明天的料备好，G08对单翻了又翻，B2396又往回走，可我这人，答应过的事，还接着办。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

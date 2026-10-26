@@ -1,0 +1,105 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 9,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -59.79,
+    "z": 185.57
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -16.21,
+    "z": 171.7
+   },
+   "work": {
+    "site": "感知网养线工·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.43,
+    "z": 173.72
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06059",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "自己淋过雨，就想给别人撑伞。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "坚持给第一版户口簿的封面纸记日记——据说是老辈传下的规矩",
+ "id": "C-06059",
+ "month_lines": [
+  "这单我送，别跟我抢。风掀得衣角乱摆，塔脚那串野花我刚浇了，白光还在顶上亮着，像谁没闭眼。"
+ ],
+ "name": "周大壮",
+ "profession": "感知网养线工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "buddy",
+   "src": "常客",
+   "with": "C-00060"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这单我送，别跟我抢。风掀得衣角乱摆，塔脚那串野花我刚浇了，白光还在顶上亮着，像谁没闭眼。",
+   "text": "「这单我送，别跟我抢。风掀得衣角乱摆，塔脚那串野花我刚浇了，白光还在顶上亮着，像谁没闭眼。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

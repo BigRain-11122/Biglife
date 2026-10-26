@@ -1,0 +1,106 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -4,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.07,
+    "z": 44.36
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.14,
+    "z": 143.45
+   },
+   "work": {
+    "site": "数据菜市摊主·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -43.64,
+    "z": 35.26
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05545",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把消失的船班时刻表排成一排挨个擦——他自己也说不清为什么",
+ "id": "C-05545",
+ "month_lines": [
+  "雨丝还挂着，风好大，我正对着摊子前那块老秤说：“先试了再说”，秤杆不动，菜价也稳，不出错的日子，就是最风光的日子。"
+ ],
+ "name": "孟国平",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨丝还挂着，风好大，我正对着摊子前那块老秤说：“先试了再说”，秤杆不动，菜价也稳，不出错的日子，就是最风光的日子。",
+   "text": "「雨丝还挂着，风好大，我正对着摊子前那块老秤说：“先试了再说”，秤杆不动，菜价也稳，不出错的日子，就是最风光的日子。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

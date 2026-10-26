@@ -1,0 +1,105 @@
+{
+ "age": 82,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -5,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 33.94,
+    "z": 124.44
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.8,
+    "z": 154.72
+   },
+   "work": {
+    "site": "引擎医生·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 114.29,
+    "z": 82.28
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06637",
+  "quirk": "night_run",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "得之我幸，失之我睡。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "能一眼认出旧饭票的真伪——这事全巷都知道",
+ "id": "C-06637",
+ "month_lines": [
+  "风好大，塔顶白光还亮着，我刚把出诊箱收好，街角灯灵应声轻颤，像听见我一句“看天吃饭，看行情穿衣”。"
+ ],
+ "name": "童阿炳",
+ "profession": "引擎医生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风好大，塔顶白光还亮着，我刚把出诊箱收好，街角灯灵应声轻颤，像听见我一句“看天吃饭，看行情穿衣”。",
+   "text": "「风好大，塔顶白光还亮着，我刚把出诊箱收好，街角灯灵应声轻颤，像听见我一句“看天吃饭，看行情穿衣”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

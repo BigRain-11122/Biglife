@@ -1,0 +1,106 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 8,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -122.01,
+    "z": 121.05
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.68,
+    "z": 146.5
+   },
+   "work": {
+    "site": "算力楼运维·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -24.89,
+    "z": 128.2
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05708",
+  "quirk": "night_run",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持给拆迁前夜的门牌合影记日记——没人知道为什么",
+ "id": "C-05708",
+ "month_lines": [
+  "地上的水洼积着水，风刮得紧，我刚巡完三楼，机房那头的散热器又嘀咕了一声——拆开看看又不会坏，数据墙的抖动，还是得盯紧。"
+ ],
+ "name": "沈嘉树",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风刮得紧，我刚巡完三楼，机房那头的散热器又嘀咕了一声——拆开看看又不会坏，数据墙的抖动，还是得盯紧。",
+   "text": "「地上的水洼积着水，风刮得紧，我刚巡完三楼，机房那头的散热器又嘀咕了一声——拆开看看又不会坏，数据墙的抖动，还是得盯紧。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#26A69A",
+   "eye": "#FFD27A",
+   "hair": "#C5E1FF",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 16,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.27,
+    "z": 47.84
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.21,
+    "z": 56.81
+   },
+   "work": {
+    "site": "风信使·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.83,
+    "z": 75.55
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06106",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "看得见老式怀表链里住着的光——他自己也说不清为什么",
+ "id": "C-06106",
+ "month_lines": [
+  "风把人往前推，塔脚花园的风铃晃得急，我试了下铃，一声短，一声长——红灯是为所有人亮的，包括我。"
+ ],
+ "name": "阿雷公",
+ "profession": "风信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风把人往前推，塔脚花园的风铃晃得急，我试了下铃，一声短，一声长——红灯是为所有人亮的，包括我。",
+   "text": "「风把人往前推，塔脚花园的风铃晃得急，我试了下铃，一声短，一声长——红灯是为所有人亮的，包括我。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

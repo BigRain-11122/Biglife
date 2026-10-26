@@ -1,0 +1,105 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 1,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 23.01,
+    "z": -19.0
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.89,
+    "z": -79.04
+   },
+   "work": {
+    "site": "感知网养线工·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.11,
+    "z": -88.64
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06424",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件初版城市地图——他自己也说不清为什么",
+ "id": "C-06424",
+ "month_lines": [
+  "风把人往前推，我正巡到B2396那根老光杆，脉冲告警闪了下，先试了再说——线怕寂寞，我得给它浇口水。"
+ ],
+ "name": "邱志明",
+ "profession": "感知网养线工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风把人往前推，我正巡到B2396那根老光杆，脉冲告警闪了下，先试了再说——线怕寂寞，我得给它浇口水。",
+   "text": "「风把人往前推，我正巡到B2396那根老光杆，脉冲告警闪了下，先试了再说——线怕寂寞，我得给它浇口水。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

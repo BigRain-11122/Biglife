@@ -1,0 +1,106 @@
+{
+ "age": 95,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -11,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -146.96,
+    "z": 138.28
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.84,
+    "z": 96.3
+   },
+   "work": {
+    "site": "数据菜市摊主·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -46.2,
+    "z": 59.13
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06339",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "旧物件的温度，是新东西学不来的。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每逢下雨就去修写了一半的市民歌谣——她自己也说不清为什么",
+ "id": "C-06339",
+ "month_lines": [
+  "这物件比我懂年头，手里这把老秤杆还烫着，风一阵紧一阵，秤星歪了三格，我偏要它停一停——老东西不松，人就稳。"
+ ],
+ "name": "钱佩兰",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这物件比我懂年头，手里这把老秤杆还烫着，风一阵紧一阵，秤星歪了三格，我偏要它停一停——老东西不松，人就稳。",
+   "text": "「这物件比我懂年头，手里这把老秤杆还烫着，风一阵紧一阵，秤星歪了三格，我偏要它停一停——老东西不松，人就稳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

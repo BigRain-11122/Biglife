@@ -1,0 +1,105 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 0,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 49.91,
+    "z": 154.57
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.6,
+    "z": 27.35
+   },
+   "work": {
+    "site": "缓存管理员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.49,
+    "z": 140.43
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05638",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "给旧梯田式看台的一块座板都起了名字——他自己也说不清为什么",
+ "id": "C-05638",
+ "month_lines": [
+  "雨敲在窗棂上，风把人往前推，我正数着G08的窗——亮着的那几扇，还像去年一样，一排排，不偏不倚。"
+ ],
+ "name": "石海峰",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨敲在窗棂上，风把人往前推，我正数着G08的窗——亮着的那几扇，还像去年一样，一排排，不偏不倚。",
+   "text": "「雨敲在窗棂上，风把人往前推，我正数着G08的窗——亮着的那几扇，还像去年一样，一排排，不偏不倚。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

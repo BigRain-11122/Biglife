@@ -1,0 +1,106 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 2,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.61,
+    "z": 149.27
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.21,
+    "z": 34.3
+   },
+   "work": {
+    "site": "K线屏画师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.85,
+    "z": 28.11
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05477",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着旧饭票——这事只有档案馆知道",
+ "id": "C-05477",
+ "month_lines": [
+  "雨脚细细密密，风掀得衣角乱摆，我正给K线屏描线，旧笔在手，数据不会骗人，人会——今天这行情，像极了江水，涨了又落，可我笔下的线，总得稳稳地走。"
+ ],
+ "name": "华顺林",
+ "profession": "K线屏画师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨脚细细密密，风掀得衣角乱摆，我正给K线屏描线，旧笔在手，数据不会骗人，人会——今天这行情，像极了江水，涨了又落，可我笔下的线，总得稳稳地走。",
+   "text": "「雨脚细细密密，风掀得衣角乱摆，我正给K线屏描线，旧笔在手，数据不会骗人，人会——今天这行情，像极了江水，涨了又落，可我笔下的线，总得稳稳地走。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

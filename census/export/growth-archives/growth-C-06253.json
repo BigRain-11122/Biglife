@@ -1,0 +1,106 @@
+{
+ "age": 14,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 15,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -115.44,
+    "z": -94.76
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.17,
+    "z": -98.68
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -25.71,
+    "z": -157.42
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06253",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "每年挑一天只为旧当铺的票据夹大扫除——没人知道为什么",
+ "id": "C-06253",
+ "month_lines": [
+  "饭点了，天阴着风好大，我蹲在档案馆门口等同桌来，她总说G08的光点过江那会儿，像在讲故事。"
+ ],
+ "name": "刘阿果",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "饭点了，天阴着风好大，我蹲在档案馆门口等同桌来，她总说G08的光点过江那会儿，像在讲故事。",
+   "text": "「饭点了，天阴着风好大，我蹲在档案馆门口等同桌来，她总说G08的光点过江那会儿，像在讲故事。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

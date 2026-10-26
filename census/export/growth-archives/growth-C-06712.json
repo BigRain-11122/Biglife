@@ -1,0 +1,106 @@
+{
+ "age": 8,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 16,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -136.29,
+    "z": 111.57
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.37,
+    "z": 87.86
+   },
+   "work": {
+    "site": "像素学徒·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -63.0,
+    "z": 147.65
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06712",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每逢下雨就去修旧货郎的拨浪鼓——这事只有师父知道",
+ "id": "C-06712",
+ "month_lines": [
+  "这单我送，别跟我抢。风把人往前推，G08那层脉搏跳得清，我手心还留着旧扳手的烫。"
+ ],
+ "name": "付小北",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "这单我送，别跟我抢。风把人往前推，G08那层脉搏跳得清，我手心还留着旧扳手的烫。",
+   "text": "「这单我送，别跟我抢。风把人往前推，G08那层脉搏跳得清，我手心还留着旧扳手的烫。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

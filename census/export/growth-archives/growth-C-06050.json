@@ -1,0 +1,105 @@
+{
+ "age": 72,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -7,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -72.53,
+    "z": -208.95
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -10.45,
+    "z": -256.25
+   },
+   "work": {
+    "site": "光桥市集摊主·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 47.53,
+    "z": -231.55
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06050",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件拆迁前夜的门牌合影——她自己也说不清为什么",
+ "id": "C-06050",
+ "month_lines": [
+  "清单第一，风刮得紧，桥上扫弦声都歪了，我赶紧把摊子前的K线补上，十年前就这么干，今天也得撑住。"
+ ],
+ "name": "朱雪英",
+ "profession": "光桥市集摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "清单第一，风刮得紧，桥上扫弦声都歪了，我赶紧把摊子前的K线补上，十年前就这么干，今天也得撑住。",
+   "text": "「清单第一，风刮得紧，桥上扫弦声都歪了，我赶紧把摊子前的K线补上，十年前就这么干，今天也得撑住。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

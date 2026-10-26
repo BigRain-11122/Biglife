@@ -1,0 +1,106 @@
+{
+ "age": 94,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -11,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 30.26,
+    "z": 156.46
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.13,
+    "z": 51.99
+   },
+   "work": {
+    "site": "8bit 乐师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.46,
+    "z": 27.81
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06341",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "坚持手写手写信——她自己也说不清为什么",
+ "id": "C-06341",
+ "month_lines": [
+  "先试了再说。天阴着，风掀得衣角乱摆，灯都照得亮，工具擦得干干净净，今儿个双日，得劲。"
+ ],
+ "name": "童玉兰",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "先试了再说。天阴着，风掀得衣角乱摆，灯都照得亮，工具擦得干干净净，今儿个双日，得劲。",
+   "text": "「先试了再说。天阴着，风掀得衣角乱摆，灯都照得亮，工具擦得干干净净，今儿个双日，得劲。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

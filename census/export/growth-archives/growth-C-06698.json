@@ -1,0 +1,105 @@
+{
+ "age": 38,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 5,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 39.31,
+    "z": -13.47
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.93,
+    "z": -73.47
+   },
+   "work": {
+    "site": "城市接线生·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.66,
+    "z": -47.28
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06698",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把旧茶馆的水牌画进了自己的作品里——他自己也说不清为什么",
+ "id": "C-06698",
+ "month_lines": [
+  "风刮得紧，留言墙前的灯串还晃着，我正把昨夜没拆的那根接上接线柱——急啥，汤还没开呢。"
+ ],
+ "name": "陶予安",
+ "profession": "城市接线生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风刮得紧，留言墙前的灯串还晃着，我正把昨夜没拆的那根接上接线柱——急啥，汤还没开呢。",
+   "text": "「风刮得紧，留言墙前的灯串还晃着，我正把昨夜没拆的那根接上接线柱——急啥，汤还没开呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

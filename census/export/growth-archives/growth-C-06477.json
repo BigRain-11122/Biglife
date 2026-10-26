@@ -1,0 +1,105 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 4,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 38.35,
+    "z": 108.1
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.06,
+    "z": 148.72
+   },
+   "work": {
+    "site": "像素画匠·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.87,
+    "z": 36.89
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06477",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "给断了的帆船模型写了一整本观察笔记——这事全巷都知道",
+ "id": "C-06477",
+ "month_lines": [
+  "雨脚细细密密，风一阵紧一阵，画桌上的灯还亮着。老地方见，我这儿的笔尖没动，可心早顺着纹路剪开了。"
+ ],
+ "name": "熊阿宁",
+ "profession": "像素画匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "雨脚细细密密，风一阵紧一阵，画桌上的灯还亮着。老地方见，我这儿的笔尖没动，可心早顺着纹路剪开了。",
+   "text": "「雨脚细细密密，风一阵紧一阵，画桌上的灯还亮着。老地方见，我这儿的笔尖没动，可心早顺着纹路剪开了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

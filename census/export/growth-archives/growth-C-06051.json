@@ -1,0 +1,106 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 7,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -146.69,
+    "z": -71.94
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.25,
+    "z": -122.66
+   },
+   "work": {
+    "site": "数据清洗工·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -56.49,
+    "z": -149.46
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06051",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "还在用编年史馆的门票——这事全巷都知道",
+ "id": "C-06051",
+ "month_lines": [
+  "试错要趁灯亮，风一阵紧一阵，我刚把最后一筐行情补上，K线屏的描线歪了，手一抖，又补了半道——十年前就这么干，今天也得撑住。"
+ ],
+ "name": "雷阿宁",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "试错要趁灯亮，风一阵紧一阵，我刚把最后一筐行情补上，K线屏的描线歪了，手一抖，又补了半道——十年前就这么干，今天也得撑住。",
+   "text": "「试错要趁灯亮，风一阵紧一阵，我刚把最后一筐行情补上，K线屏的描线歪了，手一抖，又补了半道——十年前就这么干，今天也得撑住。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

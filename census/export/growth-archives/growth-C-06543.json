@@ -1,0 +1,106 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": 4,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.86,
+    "z": 12.89
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.87,
+    "z": 65.76
+   },
+   "work": {
+    "site": "夜宵摊主·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -39.8,
+    "z": 135.32
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06543",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把旧日历修好再免费送人——据说是老辈传下的规矩",
+ "id": "C-06543",
+ "month_lines": [
+  "夜里冷，喝口热的再走。风一阵紧一阵，灯还亮着，我正把阳台的花说：“今天云厚着，你得撑住。"
+ ],
+ "name": "老宽带·甲",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "夜里冷，喝口热的再走。风一阵紧一阵，灯还亮着，我正把阳台的花说：“今天云厚着，你得撑住。",
+   "text": "「夜里冷，喝口热的再走。风一阵紧一阵，灯还亮着，我正把阳台的花说：“今天云厚着，你得撑住。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

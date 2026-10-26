@@ -1,0 +1,105 @@
+{
+ "age": 38,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 4,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -104.28,
+    "z": -13.07
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.77,
+    "z": -94.95
+   },
+   "work": {
+    "site": "玩家留言整理员·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -69.51,
+    "z": -28.64
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05461",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "会给老茶壶织毛衣——他自己也说不清为什么",
+ "id": "C-05461",
+ "month_lines": [
+  "雨脚细细密密，风好大，我正低头翻着门禁公告，第十七条又改了——说是要把「PushEvent BigMoney"
+ ],
+ "name": "杭行舟",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨脚细细密密，风好大，我正低头翻着门禁公告，第十七条又改了——说是要把「PushEvent BigMoney",
+   "text": "「雨脚细细密密，风好大，我正低头翻着门禁公告，第十七条又改了——说是要把「PushEvent BigMoney」再传一遍，我捏了捏旧皮夹，像当年端汤那年，手稳，心不跳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

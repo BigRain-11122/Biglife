@@ -1,0 +1,106 @@
+{
+ "age": 40,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 1,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -104.79,
+    "z": 103.38
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.99,
+    "z": 61.58
+   },
+   "work": {
+    "site": "算力楼运维·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.27,
+    "z": 154.17
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05987",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "逢人就讲三十年前的车铃的故事——这事只有师父知道",
+ "id": "C-05987",
+ "month_lines": [
+  "看天吃饭，看行情穿衣。风掀得衣角乱摆，机房的机器们脉搏都慢了半拍，BG-A那边跑分喘气，像在等一场没说出口的汛期。"
+ ],
+ "name": "蔡莉",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "看天吃饭，看行情穿衣。风掀得衣角乱摆，机房的机器们脉搏都慢了半拍，BG-A那边跑分喘气，像在等一场没说出口的汛期。",
+   "text": "「看天吃饭，看行情穿衣。风掀得衣角乱摆，机房的机器们脉搏都慢了半拍，BG-A那边跑分喘气，像在等一场没说出口的汛期。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

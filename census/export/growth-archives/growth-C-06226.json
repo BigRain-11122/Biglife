@@ -1,0 +1,105 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 7,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.44,
+    "z": -207.02
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -2.93,
+    "z": -207.3
+   },
+   "work": {
+    "site": "信号中继员·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 58.52,
+    "z": -214.96
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06226",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "把第一炉出炉的像素瓷排成一排挨个擦——没人知道为什么",
+ "id": "C-06226",
+ "month_lines": [
+  "饭点了，天大的事吃完再谈。风把人往前推，我收了最后一台中继，把两颗糖塞进摊角，等下一个路过的小孩。"
+ ],
+ "name": "许像素仔",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "饭点了，天大的事吃完再谈。风把人往前推，我收了最后一台中继，把两颗糖塞进摊角，等下一个路过的小孩。",
+   "text": "「饭点了，天大的事吃完再谈。风把人往前推，我收了最后一台中继，把两颗糖塞进摊角，等下一个路过的小孩。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 17,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.28,
+    "z": 66.32
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.38,
+    "z": 110.18
+   },
+   "work": {
+    "site": "像素学徒·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -65.68,
+    "z": 100.99
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06299",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "江水不争先后，该到总会到。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件褪色的红领巾——没人知道为什么",
+ "id": "C-06299",
+ "month_lines": [
+  "茶凉了再倒就是，风掀得衣角乱摆，G08那关又滑回B2396了，师父说急不得，我手痒着呢，就等它旧了再用。"
+ ],
+ "name": "谢果果",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "茶凉了再倒就是，风掀得衣角乱摆，G08那关又滑回B2396了，师父说急不得，我手痒着呢，就等它旧了再用。",
+   "text": "「茶凉了再倒就是，风掀得衣角乱摆，G08那关又滑回B2396了，师父说急不得，我手痒着呢，就等它旧了再用。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

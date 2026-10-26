@@ -1,0 +1,105 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 0,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.93,
+    "z": -37.97
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.99,
+    "z": -79.25
+   },
+   "work": {
+    "site": "平台对接员·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -58.67,
+    "z": -113.95
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06811",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "从不让老皮匠的锥子离开自己三步远——据说是老辈传下的规矩",
+ "id": "C-06811",
+ "month_lines": [
+  "今天的事今天清，风顶得人站不稳，平台那边刚push了Biglife，我立马把O-20261023-2317-bm-a的流程对了，账本上一行字都没少，外环老朋友还在等我。"
+ ],
+ "name": "曾沈鱼",
+ "profession": "平台对接员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "今天的事今天清，风顶得人站不稳，平台那边刚push了Biglife，我立马把O-20261023-2317-bm-a的流程对了，账本上一行字都没少，外环老朋友还在等我。",
+   "text": "「今天的事今天清，风顶得人站不稳，平台那边刚push了Biglife，我立马把O-20261023-2317-bm-a的流程对了，账本上一行字都没少，外环老朋友还在等我。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

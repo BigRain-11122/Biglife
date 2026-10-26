@@ -1,0 +1,105 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -4,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -106.5,
+    "z": 205.0
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -3.18,
+    "z": 185.48
+   },
+   "work": {
+    "site": "感知塔站值守员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 62.13,
+    "z": 202.47
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05453",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "梦话都在念叨老裁缝的画粉——据说是老辈传下的规矩",
+ "id": "C-05453",
+ "month_lines": [
+  "雨脚细细密密，风掀得衣角乱摆。感知塔的对频灯闪了三下，B2396的盘口又在翻，数据不会骗人，人会。"
+ ],
+ "name": "侯敏",
+ "profession": "感知塔站值守员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "buddy",
+   "src": "忘年交",
+   "with": "C-00147"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨脚细细密密，风掀得衣角乱摆。感知塔的对频灯闪了三下，B2396的盘口又在翻，数据不会骗人，人会。",
+   "text": "「雨脚细细密密，风掀得衣角乱摆。感知塔的对频灯闪了三下，B2396的盘口又在翻，数据不会骗人，人会。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

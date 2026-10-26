@@ -1,0 +1,105 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 3,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 28.28,
+    "z": -38.11
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.22,
+    "z": -72.32
+   },
+   "work": {
+    "site": "编年史馆员·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 133.46,
+    "z": -58.51
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05831",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "从不让全城公交的老路线图离开自己三步远——她自己也说不清为什么",
+ "id": "C-05831",
+ "month_lines": [
+  "伞面一直响，风掀得衣角乱摆，茶杯还搁在台角，老地方见。"
+ ],
+ "name": "应清晚",
+ "profession": "编年史馆员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "buddy",
+   "src": "老主顾",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风掀得衣角乱摆，茶杯还搁在台角，老地方见。",
+   "text": "「伞面一直响，风掀得衣角乱摆，茶杯还搁在台角，老地方见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

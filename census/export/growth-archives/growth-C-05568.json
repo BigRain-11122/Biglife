@@ -1,0 +1,106 @@
+{
+ "age": 11,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 25,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 69.16,
+    "z": -29.31
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 76.49,
+    "z": -12.87
+   },
+   "work": {
+    "site": "像素小学学生·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 123.35,
+    "z": -61.44
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05568",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "搬家三次，钥匙一把不扔。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "会给全城桥的名字织毛衣",
+ "id": "C-05568",
+ "month_lines": [
+  "雨点没停，风不小，我站在街口瞅着commit光点过江——老样子，一小时一跳，值日没少，同桌小蓝又在画我昨天写的作业本。"
+ ],
+ "name": "史果冻",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨点没停，风不小，我站在街口瞅着commit光点过江——老样子，一小时一跳，值日没少，同桌小蓝又在画我昨天写的作业本。",
+   "text": "「雨点没停，风不小，我站在街口瞅着commit光点过江——老样子，一小时一跳，值日没少，同桌小蓝又在画我昨天写的作业本。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

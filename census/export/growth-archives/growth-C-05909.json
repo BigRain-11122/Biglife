@@ -1,0 +1,106 @@
+{
+ "age": 77,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -13,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.02,
+    "z": 88.76
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.37,
+    "z": 17.25
+   },
+   "work": {
+    "site": "风控官·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -68.79,
+    "z": 119.43
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05909",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "用手工风筝的竹篾教会了半条街的孩子——据说是老辈传下的规矩",
+ "id": "C-05909",
+ "month_lines": [
+  "雨脚细细密密，风掀得衣角乱摆，我站在风控高地，看G08的脉冲稳稳亮着——这版本我等好久了。"
+ ],
+ "name": "糜承宗",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨脚细细密密，风掀得衣角乱摆，我站在风控高地，看G08的脉冲稳稳亮着——这版本我等好久了。",
+   "text": "「雨脚细细密密，风掀得衣角乱摆，我站在风控高地，看G08的脉冲稳稳亮着——这版本我等好久了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

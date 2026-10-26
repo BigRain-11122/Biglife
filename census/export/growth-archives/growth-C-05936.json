@@ -1,0 +1,106 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 15,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.86,
+    "z": -118.45
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.98,
+    "z": -58.55
+   },
+   "work": {
+    "site": "夜灯员·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -30.38,
+    "z": -127.83
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05936",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "绕着会发光的纽扣飞过整整三十圈",
+ "id": "C-05936",
+ "month_lines": [
+  "雨点没停，风刮得紧，我巡到老街口，见那盏打盹的摊灯还亮着，我就多照了半寸——灯不灭，人就还在。"
+ ],
+ "name": "阿阿泡",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨点没停，风刮得紧，我巡到老街口，见那盏打盹的摊灯还亮着，我就多照了半寸——灯不灭，人就还在。",
+   "text": "「雨点没停，风刮得紧，我巡到老街口，见那盏打盹的摊灯还亮着，我就多照了半寸——灯不灭，人就还在。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

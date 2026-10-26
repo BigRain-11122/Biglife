@@ -1,0 +1,106 @@
+{
+ "age": 15,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 16,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.97,
+    "z": 135.3
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.1,
+    "z": 29.98
+   },
+   "work": {
+    "site": "像素学徒·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -58.17,
+    "z": 113.58
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06777",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把编年史馆的门票排成一排挨个擦——没人知道为什么",
+ "id": "C-06777",
+ "month_lines": [
+  "拆开看看又不会坏，我刚路过游戏楼，数了数亮着的窗，又多了一扇——G08 CrazyCampus: B2396 -> S2.5，我跟C-02785说了，他转头就给C-01246听了，"
+ ],
+ "name": "潘团团",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "拆开看看又不会坏，我刚路过游戏楼，数了数亮着的窗，又多了一扇——G08 CrazyCampus: B2396 -> S2.5，我跟C-02785说了，他转头就给C-01246听了，",
+   "text": "「拆开看看又不会坏，我刚路过游戏楼，数了数亮着的窗，又多了一扇——G08 CrazyCampus: B2396 -> S2.5，我跟C-02785说了，他转头就给C-01246听了，」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

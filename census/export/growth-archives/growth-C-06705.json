@@ -1,0 +1,105 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": -2,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 51.8,
+    "z": 56.22
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.47,
+    "z": 22.62
+   },
+   "work": {
+    "site": "城门守门人·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 130.56,
+    "z": 26.95
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06705",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "每逢下雨就去修老式算盘珠——这事只有档案馆知道",
+ "id": "C-06705",
+ "month_lines": [
+  "风刮得招牌直晃，门灯还亮着，我正对着那根没拆的灯串看——老规矩错不了，今夜的线，得等它自己醒过来。"
+ ],
+ "name": "童倩",
+ "profession": "城门守门人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风刮得招牌直晃，门灯还亮着，我正对着那根没拆的灯串看——老规矩错不了，今夜的线，得等它自己醒过来。",
+   "text": "「风刮得招牌直晃，门灯还亮着，我正对着那根没拆的灯串看——老规矩错不了，今夜的线，得等它自己醒过来。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

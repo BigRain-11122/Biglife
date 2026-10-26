@@ -1,0 +1,105 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 10,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -141.58,
+    "z": -71.69
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.91,
+    "z": -78.4
+   },
+   "work": {
+    "site": "选题官·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -60.4,
+    "z": -144.08
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06189",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "搬家三次，钥匙一把不扔。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件编年史馆的门票——这事只有档案馆知道",
+ "id": "C-06189",
+ "month_lines": [
+  "这物件比我懂年头，风一阵紧一阵，我把电波猫群的食盒又添了一次，G08 CrazyCampus从B2396翻到S2.5了，同桌说她也看见了，还问我要不要一起看。"
+ ],
+ "name": "卢一鸣",
+ "profession": "选题官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这物件比我懂年头，风一阵紧一阵，我把电波猫群的食盒又添了一次，G08 CrazyCampus从B2396翻到S2.5了，同桌说她也看见了，还问我要不要一起看。",
+   "text": "「这物件比我懂年头，风一阵紧一阵，我把电波猫群的食盒又添了一次，G08 CrazyCampus从B2396翻到S2.5了，同桌说她也看见了，还问我要不要一起看。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

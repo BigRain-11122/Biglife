@@ -1,0 +1,106 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 15,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -118.93,
+    "z": -135.64
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.34,
+    "z": -115.06
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -70.49,
+    "z": -125.38
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05583",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "给旧城庆纪念章都编了号还建了册——据说是老辈传下的规矩",
+ "id": "C-05583",
+ "month_lines": [
+  "伞面一直响，风一阵紧一阵，我站在老巷口等commit光点过江，第十七个窗亮了，像谁在数我，又像我数着谁。"
+ ],
+ "name": "濮圆圆",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风一阵紧一阵，我站在老巷口等commit光点过江，第十七个窗亮了，像谁在数我，又像我数着谁。",
+   "text": "「伞面一直响，风一阵紧一阵，我站在老巷口等commit光点过江，第十七个窗亮了，像谁在数我，又像我数着谁。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

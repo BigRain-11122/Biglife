@@ -1,0 +1,105 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -2,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 66.11,
+    "z": -88.96
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.87,
+    "z": -64.99
+   },
+   "work": {
+    "site": "城市气象播报员·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 125.47,
+    "z": -153.62
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06285",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "留着旧邮局的分信格却从来不用——没人知道为什么",
+ "id": "C-06285",
+ "month_lines": [
+  "又学了一招，风一阵紧一阵，窗台温度计上的数字总在晃，我伸手摸了摸，像在摸城市的心跳。"
+ ],
+ "name": "田卫东",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "又学了一招，风一阵紧一阵，窗台温度计上的数字总在晃，我伸手摸了摸，像在摸城市的心跳。",
+   "text": "「又学了一招，风一阵紧一阵，窗台温度计上的数字总在晃，我伸手摸了摸，像在摸城市的心跳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

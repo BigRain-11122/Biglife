@@ -1,0 +1,105 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 2,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 55.26,
+    "z": 130.26
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.61,
+    "z": 123.84
+   },
+   "work": {
+    "site": "新市民安居顾问·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 146.81,
+    "z": 10.39
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05862",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "给褪色的戏票根都起了名字",
+ "id": "C-05862",
+ "month_lines": [
+  "雨敲在窗棂上，风不小，我站在对门铺面门口，对着老李喊：“你先起，我等你。”灯一亮，门禁绿了，心里才亮堂。"
+ ],
+ "name": "阿缓存-2-5",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨敲在窗棂上，风不小，我站在对门铺面门口，对着老李喊：“你先起，我等你。”灯一亮，门禁绿了，心里才亮堂。",
+   "text": "「雨敲在窗棂上，风不小，我站在对门铺面门口，对着老李喊：“你先起，我等你。”灯一亮，门禁绿了，心里才亮堂。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 4,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 67.29,
+    "z": 68.02
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.38,
+    "z": 131.25
+   },
+   "work": {
+    "site": "穿城信使·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 98.21,
+    "z": 152.82
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05489",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每年挑一天只为旧船锚残件大扫除",
+ "id": "C-05489",
+ "month_lines": [
+  "雨丝还挂着，风掀得衣角乱摆，单子刚验完，又接了个跨江的——谁没个难处呢，来，坐下说。"
+ ],
+ "name": "吴嘉树",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨丝还挂着，风掀得衣角乱摆，单子刚验完，又接了个跨江的——谁没个难处呢，来，坐下说。",
+   "text": "「雨丝还挂着，风掀得衣角乱摆，单子刚验完，又接了个跨江的——谁没个难处呢，来，坐下说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

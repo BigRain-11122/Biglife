@@ -1,0 +1,106 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -10,
+   "rate": -1,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.56,
+    "z": 46.44
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.16,
+    "z": 139.09
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -72.95,
+    "z": 75.42
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06149",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把巷口的第一盏灯排成一排挨个擦——这事只有师父知道",
+ "id": "C-06149",
+ "month_lines": [
+  "风掀得衣角乱摆，锅盖被掀得老高，汤开了，我哼着老调翻勺——今天这云层厚得像没对齐，可汤味儿，照旧是热的。"
+ ],
+ "name": "奥斯特·老",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风掀得衣角乱摆，锅盖被掀得老高，汤开了，我哼着老调翻勺——今天这云层厚得像没对齐，可汤味儿，照旧是热的。",
+   "text": "「风掀得衣角乱摆，锅盖被掀得老高，汤开了，我哼着老调翻勺——今天这云层厚得像没对齐，可汤味儿，照旧是热的。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

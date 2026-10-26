@@ -1,0 +1,105 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 3,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 30.29,
+    "z": 111.36
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.78,
+    "z": 55.56
+   },
+   "work": {
+    "site": "节日活动策划·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 112.36,
+    "z": 11.24
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06266",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "给老式爆米花的粮票写了一整本观察笔记——这事只有档案馆知道",
+ "id": "C-06266",
+ "month_lines": [
+  "谁没个难处呢，来，坐下说。风刮得紧，节前最后一批彩排布景都堆在巷口，我盯了眼塔顶白光，还没亮，得再等等。"
+ ],
+ "name": "陆莉",
+ "profession": "节日活动策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "谁没个难处呢，来，坐下说。风刮得紧，节前最后一批彩排布景都堆在巷口，我盯了眼塔顶白光，还没亮，得再等等。",
+   "text": "「谁没个难处呢，来，坐下说。风刮得紧，节前最后一批彩排布景都堆在巷口，我盯了眼塔顶白光，还没亮，得再等等。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

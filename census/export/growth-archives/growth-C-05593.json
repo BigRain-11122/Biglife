@@ -1,0 +1,106 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 12,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 46.46,
+    "z": -107.6
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.74,
+    "z": -25.09
+   },
+   "work": {
+    "site": "像素小学学生·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 136.57,
+    "z": -66.86
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05593",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "灶上留一壶，路过的都是客。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "给祖传的修表镊子写了一整本观察笔记——这事只有档案馆知道",
+ "id": "C-05593",
+ "month_lines": [
+  "雨丝还挂着，风好大。 作业本上画的commit光点又过江了，我盯着那根线，像看小时候灶上留的那壶水——值日没完，客总在。"
+ ],
+ "name": "汪米粒",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨丝还挂着，风好大。 作业本上画的commit光点又过江了，我盯着那根线，像看小时候灶上留的那壶水——值日没完，客总在。",
+   "text": "「雨丝还挂着，风好大。 作业本上画的commit光点又过江了，我盯着那根线，像看小时候灶上留的那壶水——值日没完，客总在。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

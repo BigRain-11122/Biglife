@@ -1,0 +1,106 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 19,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -109.21,
+    "z": -150.39
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.66,
+    "z": -118.74
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -63.74,
+    "z": -97.16
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06659",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "能背出老式算命的签筒的全部班次——这事全巷都知道",
+ "id": "C-06659",
+ "month_lines": [
+  "风大得说话要抬声，守夜灯灵又在街角亮了，我给它道了声辛苦——谁没个难处呢，来，坐下说。"
+ ],
+ "name": "石糖糖",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风大得说话要抬声，守夜灯灵又在街角亮了，我给它道了声辛苦——谁没个难处呢，来，坐下说。",
+   "text": "「风大得说话要抬声，守夜灯灵又在街角亮了，我给它道了声辛苦——谁没个难处呢，来，坐下说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

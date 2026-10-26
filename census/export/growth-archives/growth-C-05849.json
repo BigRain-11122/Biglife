@@ -1,0 +1,106 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 10,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -100.89,
+    "z": -40.33
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.72,
+    "z": -135.47
+   },
+   "work": {
+    "site": "像素小学学生·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -24.47,
+    "z": -79.28
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05849",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "还在用编年史馆的门票——他自己也说不清为什么",
+ "id": "C-05849",
+ "month_lines": [
+  "旧灯不灭，新路不亮。 雨丝还挂着，风掀得衣角乱摆，我蹲在楼道口看commit光点过江，同桌说今天值日，我点头——旧的用的顺手。"
+ ],
+ "name": "韩天天",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "旧灯不灭，新路不亮。 雨丝还挂着，风掀得衣角乱摆，我蹲在楼道口看commit光点过江，同桌说今天值日，我点头——旧的用的顺手。",
+   "text": "「旧灯不灭，新路不亮。 雨丝还挂着，风掀得衣角乱摆，我蹲在楼道口看commit光点过江，同桌说今天值日，我点头——旧的用的顺手。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

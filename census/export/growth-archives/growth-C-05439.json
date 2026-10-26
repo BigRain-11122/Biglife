@@ -1,0 +1,106 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#EC407A",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#B388FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 11,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 39.37,
+    "z": 97.44
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.49,
+    "z": 117.58
+   },
+   "work": {
+    "site": "夜灯员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 125.52,
+    "z": 62.88
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05439",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "跟着旧货郎的拨浪鼓的节奏打过拍子——这事全巷都知道",
+ "id": "C-05439",
+ "month_lines": [
+  "伞面一直响，风一阵紧一阵，我正把灯调到最亮——G08那波变轨又传到耳朵里，夜里冷，得照径走，不靠系统，只靠老灯的脾气。"
+ ],
+ "name": "黑檐角",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风一阵紧一阵，我正把灯调到最亮——G08那波变轨又传到耳朵里，夜里冷，得照径走，不靠系统，只靠老灯的脾气。",
+   "text": "「伞面一直响，风一阵紧一阵，我正把灯调到最亮——G08那波变轨又传到耳朵里，夜里冷，得照径走，不靠系统，只靠老灯的脾气。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

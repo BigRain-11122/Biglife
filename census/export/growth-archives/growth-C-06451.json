@@ -1,0 +1,106 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 20,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.04,
+    "z": -39.58
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.22,
+    "z": -55.06
+   },
+   "work": {
+    "site": "像素小学学生·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.39,
+    "z": -128.68
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06451",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "每天跟第一版户口簿的封面纸打招呼——她自己也说不清为什么",
+ "id": "C-06451",
+ "month_lines": [
+  "檐口的水线不断，风好大，我口袋里的糖捏得扁了，一颗还在我手，一颗刚塞给路边小娃，他抬头看我，眼睛亮得像刚亮的光点。"
+ ],
+ "name": "施米粒",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "檐口的水线不断，风好大，我口袋里的糖捏得扁了，一颗还在我手，一颗刚塞给路边小娃，他抬头看我，眼睛亮得像刚亮的光点。",
+   "text": "「檐口的水线不断，风好大，我口袋里的糖捏得扁了，一颗还在我手，一颗刚塞给路边小娃，他抬头看我，眼睛亮得像刚亮的光点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 91,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -11,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -39.22,
+    "z": -182.46
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -2.68,
+    "z": -168.58
+   },
+   "work": {
+    "site": "江边棋摊主·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 37.75,
+    "z": -245.37
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06016",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "把初代像素调色板修好再免费送人",
+ "id": "C-06016",
+ "month_lines": [
+  "灯还是老灯亮堂，风把人往前推，棋子在手里转了三圈，又落了下一子——那盘老棋，输的人明天一定回来。"
+ ],
+ "name": "金阿炳",
+ "profession": "江边棋摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "灯还是老灯亮堂，风把人往前推，棋子在手里转了三圈，又落了下一子——那盘老棋，输的人明天一定回来。",
+   "text": "「灯还是老灯亮堂，风把人往前推，棋子在手里转了三圈，又落了下一子——那盘老棋，输的人明天一定回来。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

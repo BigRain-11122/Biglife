@@ -1,0 +1,105 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -5,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -139.73,
+    "z": -10.7
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.39,
+    "z": -20.57
+   },
+   "work": {
+    "site": "新市民安居顾问·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -61.85,
+    "z": -106.09
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06417",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "攒了满抽屉断了线的风筝从不给看",
+ "id": "C-06417",
+ "month_lines": [
+  "手心里那块老怀表，玻璃裂了边，指针停在三点十七——我盯着它，风一阵紧一阵，像谁在屋里轻轻敲门。"
+ ],
+ "name": "曹燕",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手心里那块老怀表，玻璃裂了边，指针停在三点十七——我盯着它，风一阵紧一阵，像谁在屋里轻轻敲门。",
+   "text": "「手心里那块老怀表，玻璃裂了边，指针停在三点十七——我盯着它，风一阵紧一阵，像谁在屋里轻轻敲门。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 44,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": -4,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.06,
+    "z": 38.2
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.27,
+    "z": 43.9
+   },
+   "work": {
+    "site": "时空校准师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.28,
+    "z": 46.94
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06724",
+  "quirk": "umbrella",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "风吹哪页读哪页。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每逢下雨就去修第一版户口簿的封面纸——没人知道为什么",
+ "id": "C-06724",
+ "month_lines": [
+  "风把人往前推，铺子还关着，我坐在老位置上，看时钟的游丝在抖，明儿又是新的一天。"
+ ],
+ "name": "廖慧",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风把人往前推，铺子还关着，我坐在老位置上，看时钟的游丝在抖，明儿又是新的一天。",
+   "text": "「风把人往前推，铺子还关着，我坐在老位置上，看时钟的游丝在抖，明儿又是新的一天。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -4,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 68.63,
+    "z": 77.77
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.72,
+    "z": 149.17
+   },
+   "work": {
+    "site": "玩家留言整理员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 125.51,
+    "z": 28.0
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06667",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "江水不争先后，该到总会到。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把手抄的菜谱排成一排挨个擦——没人知道为什么",
+ "id": "C-06667",
+ "month_lines": [
+  "风顶得人站不稳，楼道墙的年轮又多了一行——“pulse=2026-10-25T04:56:16 verdict=GPU_VRAM_LOW”。明儿又是新的一天。"
+ ],
+ "name": "分页-2",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风顶得人站不稳，楼道墙的年轮又多了一行——“pulse=2026-10-25T04:56:16 verdict=GPU_VRAM_LOW”。明儿又是新的一天。",
+   "text": "「风顶得人站不稳，楼道墙的年轮又多了一行——“pulse=2026-10-25T04:56:16 verdict=GPU_VRAM_LOW”。明儿又是新的一天。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

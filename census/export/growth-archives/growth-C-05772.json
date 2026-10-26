@@ -1,0 +1,106 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": 5,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -49.5,
+    "z": 244.3
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -15.06,
+    "z": 175.05
+   },
+   "work": {
+    "site": "感知塔站值守员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 28.4,
+    "z": 181.08
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05772",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "逢人就讲弄堂口的邮筒的故事——没人知道为什么",
+ "id": "C-05772",
+ "month_lines": [
+  "地上的水洼积着水，风不小，手里的旧铜片在掌心发烫——前年老邻居说能压住心慌，今儿这风，倒是压得我肋骨都松了。"
+ ],
+ "name": "阿桥接-5",
+ "profession": "感知塔站值守员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风不小，手里的旧铜片在掌心发烫——前年老邻居说能压住心慌，今儿这风，倒是压得我肋骨都松了。",
+   "text": "「地上的水洼积着水，风不小，手里的旧铜片在掌心发烫——前年老邻居说能压住心慌，今儿这风，倒是压得我肋骨都松了。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

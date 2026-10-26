@@ -1,0 +1,106 @@
+{
+ "age": 87,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -7,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -122.84,
+    "z": 98.17
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.87,
+    "z": 153.82
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -68.7,
+    "z": 64.94
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06313",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每年挑一天只为退役探空气球的碎片大扫除",
+ "id": "C-06313",
+ "month_lines": [
+  "风好大，江边的灯灵抖了抖，我捏着锅铲，把今晚的红汤翻了勺——双日，灯得亮一倍，水到了警戒线就得说，说得早就是功劳。"
+ ],
+ "name": "吴惠芬",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风好大，江边的灯灵抖了抖，我捏着锅铲，把今晚的红汤翻了勺——双日，灯得亮一倍，水到了警戒线就得说，说得早就是功劳。",
+   "text": "「风好大，江边的灯灵抖了抖，我捏着锅铲，把今晚的红汤翻了勺——双日，灯得亮一倍，水到了警戒线就得说，说得早就是功劳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

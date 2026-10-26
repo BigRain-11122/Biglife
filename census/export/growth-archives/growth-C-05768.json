@@ -1,0 +1,106 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 7,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 67.87,
+    "z": -131.23
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.1,
+    "z": -158.36
+   },
+   "work": {
+    "site": "数据搬运工·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 97.43,
+    "z": -115.49
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05768",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "给旧织机的梭子都编了号还建了册——这事全巷都知道",
+ "id": "C-05768",
+ "month_lines": [
+  "雨点没停，风刮得紧，装卸口的灯在雨里晃，手里的数据包湿透了还扛着。站直了别趴下，这单还没对单完，得把C2181那边的rough-cut扛进光桥去。"
+ ],
+ "name": "陶斯年",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨点没停，风刮得紧，装卸口的灯在雨里晃，手里的数据包湿透了还扛着。站直了别趴下，这单还没对单完，得把C2181那边的rough-cut扛进光桥去。",
+   "text": "「雨点没停，风刮得紧，装卸口的灯在雨里晃，手里的数据包湿透了还扛着。站直了别趴下，这单还没对单完，得把C2181那边的rough-cut扛进光桥去。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

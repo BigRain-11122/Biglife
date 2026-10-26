@@ -1,0 +1,106 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 22,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 42.89,
+    "z": -79.44
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.62,
+    "z": -32.21
+   },
+   "work": {
+    "site": "巡信使·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.35,
+    "z": -91.87
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05471",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "跟着一台修了八次的老收音机的节奏打过拍子",
+ "id": "C-05471",
+ "month_lines": [
+  "伞面一直响，风掀得衣角乱摆。 衔了张短笺落檐，屋檐下那盏灯晃得慢，像老伙计在应声。"
+ ],
+ "name": "阿窗花",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风掀得衣角乱摆。 衔了张短笺落檐，屋檐下那盏灯晃得慢，像老伙计在应声。",
+   "text": "「伞面一直响，风掀得衣角乱摆。 衔了张短笺落檐，屋檐下那盏灯晃得慢，像老伙计在应声。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

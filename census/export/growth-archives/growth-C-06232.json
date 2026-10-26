@@ -1,0 +1,106 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 5,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -101.6,
+    "z": 32.41
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.66,
+    "z": 130.83
+   },
+   "work": {
+    "site": "数据清洗工·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -40.44,
+    "z": 64.29
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06232",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "记得旧城庆纪念章的每一个来历——这事只有档案馆知道",
+ "id": "C-06232",
+ "month_lines": [
+  "风把人往前推，我刚把最后一筐数据补进流水线，灯串又晃了下——收摊了，明天见。"
+ ],
+ "name": "陶桃桃",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风把人往前推，我刚把最后一筐数据补进流水线，灯串又晃了下——收摊了，明天见。",
+   "text": "「风把人往前推，我刚把最后一筐数据补进流水线，灯串又晃了下——收摊了，明天见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

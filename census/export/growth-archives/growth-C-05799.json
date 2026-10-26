@@ -1,0 +1,105 @@
+{
+ "age": 23,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 3,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -32.95,
+    "z": 225.15
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 16.32,
+    "z": 217.0
+   },
+   "work": {
+    "site": "信号中继员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 101.27,
+    "z": 236.27
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05799",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "会给祖传的修表镊子织毛衣——据说是老辈传下的规矩",
+ "id": "C-05799",
+ "month_lines": [
+  "伞面一直响，风一阵紧一阵，信号中继三块都亮着，老规矩，急啥，汤还没开呢。"
+ ],
+ "name": "汪清晚",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风一阵紧一阵，信号中继三块都亮着，老规矩，急啥，汤还没开呢。",
+   "text": "「伞面一直响，风一阵紧一阵，信号中继三块都亮着，老规矩，急啥，汤还没开呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

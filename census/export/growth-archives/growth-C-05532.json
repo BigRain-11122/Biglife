@@ -1,0 +1,106 @@
+{
+ "age": 76,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -15,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -141.57,
+    "z": 130.9
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.29,
+    "z": 27.01
+   },
+   "work": {
+    "site": "风控官·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -43.21,
+    "z": 137.46
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05532",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "记得老式邮差的背包的每一个来历——没人知道为什么",
+ "id": "C-05532",
+ "month_lines": [
+  "先复核一遍，地上的水洼积着水，风不小，我正把旧怀表从夹层里取出，表盖上还留着去年城庆那晚的划痕。"
+ ],
+ "name": "朱淑珍",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "先复核一遍，地上的水洼积着水，风不小，我正把旧怀表从夹层里取出，表盖上还留着去年城庆那晚的划痕。",
+   "text": "「先复核一遍，地上的水洼积着水，风不小，我正把旧怀表从夹层里取出，表盖上还留着去年城庆那晚的划痕。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

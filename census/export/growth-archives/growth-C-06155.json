@@ -1,0 +1,106 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#FFA726",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 19,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.55,
+    "z": 53.97
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.69,
+    "z": 81.74
+   },
+   "work": {
+    "site": "夜灯员·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 145.38,
+    "z": 156.97
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06155",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "记得第一天的营业账本出现过的每一个雨夜——他自己也说不清为什么",
+ "id": "C-06155",
+ "month_lines": [
+  "风掀得衣角乱摆，灯芯在风里晃了晃，照见塔脚花园那盏旧灯还亮着。今夜的路，我照得更远些——守灯的活，就在这风里，不歇。"
+ ],
+ "name": "小薄荷",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风掀得衣角乱摆，灯芯在风里晃了晃，照见塔脚花园那盏旧灯还亮着。今夜的路，我照得更远些——守灯的活，就在这风里，不歇。",
+   "text": "「风掀得衣角乱摆，灯芯在风里晃了晃，照见塔脚花园那盏旧灯还亮着。今夜的路，我照得更远些——守灯的活，就在这风里，不歇。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

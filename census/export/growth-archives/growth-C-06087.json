@@ -1,0 +1,106 @@
+{
+ "age": 80,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -6,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -137.71,
+    "z": -75.36
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.68,
+    "z": -156.38
+   },
+   "work": {
+    "site": "七段街区导游·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -67.5,
+    "z": -17.61
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06087",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "口袋里总揣着老式的士票——这事只有档案馆知道",
+ "id": "C-06087",
+ "month_lines": [
+  "下一版一定更好。风一阵紧一阵，我刚在M3街口把小旗子插上，游客说看得见，我心就踏实了。"
+ ],
+ "name": "叶银龙",
+ "profession": "七段街区导游",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "下一版一定更好。风一阵紧一阵，我刚在M3街口把小旗子插上，游客说看得见，我心就踏实了。",
+   "text": "「下一版一定更好。风一阵紧一阵，我刚在M3街口把小旗子插上，游客说看得见，我心就踏实了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

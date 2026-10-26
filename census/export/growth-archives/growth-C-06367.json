@@ -1,0 +1,105 @@
+{
+ "age": 95,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -6,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -98.3,
+    "z": -146.17
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.38,
+    "z": -151.31
+   },
+   "work": {
+    "site": "粉丝回信人·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.86,
+    "z": -151.05
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06367",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "偷偷给初代渡轮的船票夹上油保养——这事只有师父知道",
+ "id": "C-06367",
+ "month_lines": [
+  "风好大，我把数据筐往怀里搂了搂，G08 CrazyCampus那窗子又亮了，最后一批料得补上，明天收摊前先备着。"
+ ],
+ "name": "席珍珠",
+ "profession": "粉丝回信人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风好大，我把数据筐往怀里搂了搂，G08 CrazyCampus那窗子又亮了，最后一批料得补上，明天收摊前先备着。",
+   "text": "「风好大，我把数据筐往怀里搂了搂，G08 CrazyCampus那窗子又亮了，最后一批料得补上，明天收摊前先备着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

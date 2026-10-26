@@ -1,0 +1,105 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -3,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 66.83,
+    "z": 108.18
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.94,
+    "z": 54.27
+   },
+   "work": {
+    "site": "像素小店主·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 145.49,
+    "z": 85.8
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06426",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "给褪色的红领巾写了一整本观察笔记——她自己也说不清为什么",
+ "id": "C-06426",
+ "month_lines": [
+  "数据不会骗人，人会。 脉冲告警闪了下，我正瞅着B2396那根老光杆，风不小，线怕寂寞，我得给它浇口水。"
+ ],
+ "name": "谭萍",
+ "profession": "像素小店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "数据不会骗人，人会。 脉冲告警闪了下，我正瞅着B2396那根老光杆，风不小，线怕寂寞，我得给它浇口水。",
+   "text": "「数据不会骗人，人会。 脉冲告警闪了下，我正瞅着B2396那根老光杆，风不小，线怕寂寞，我得给它浇口水。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

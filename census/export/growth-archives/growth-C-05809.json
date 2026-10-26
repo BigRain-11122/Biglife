@@ -1,0 +1,106 @@
+{
+ "age": 59,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -1,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -109.94,
+    "z": 41.59
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.47,
+    "z": 148.85
+   },
+   "work": {
+    "site": "缓存管理员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.58,
+    "z": 36.22
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05809",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "坚持手写旧饭票——据说是老辈传下的规矩",
+ "id": "C-05809",
+ "month_lines": [
+  "雨丝还挂着，风好大，我正把老工具擦得发亮，那台1998年的缝纫机又在抖——它记性比我强，说啥都不忘。又学了一招。"
+ ],
+ "name": "夏莉",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨丝还挂着，风好大，我正把老工具擦得发亮，那台1998年的缝纫机又在抖——它记性比我强，说啥都不忘。又学了一招。",
+   "text": "「雨丝还挂着，风好大，我正把老工具擦得发亮，那台1998年的缝纫机又在抖——它记性比我强，说啥都不忘。又学了一招。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

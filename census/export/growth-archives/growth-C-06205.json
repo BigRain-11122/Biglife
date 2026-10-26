@@ -1,0 +1,106 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 4,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.33,
+    "z": 89.18
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.01,
+    "z": 25.85
+   },
+   "work": {
+    "site": "时空校准师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.05,
+    "z": 74.11
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06205",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能一眼认出三十年前的车铃的真伪——据说是老辈传下的规矩",
+ "id": "C-06205",
+ "month_lines": [
+  "茶凉了再倒就是，风好大，塔顶的云被扯得歪了，我刚验了G08的路径——B2396转到S2.5了，这波真像被风掀了帘，只差一缕光，就该照亮整条街了。"
+ ],
+ "name": "任志明",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "茶凉了再倒就是，风好大，塔顶的云被扯得歪了，我刚验了G08的路径——B2396转到S2.5了，这波真像被风掀了帘，只差一缕光，就该照亮整条街了。",
+   "text": "「茶凉了再倒就是，风好大，塔顶的云被扯得歪了，我刚验了G08的路径——B2396转到S2.5了，这波真像被风掀了帘，只差一缕光，就该照亮整条街了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

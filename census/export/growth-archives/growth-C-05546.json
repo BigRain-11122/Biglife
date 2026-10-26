@@ -1,0 +1,105 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -6,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.57,
+    "z": -104.25
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.68,
+    "z": -114.14
+   },
+   "work": {
+    "site": "声优棚掌柜·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -57.92,
+    "z": -153.26
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05546",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "攒了满抽屉写满字的光带从不给看——没人知道为什么",
+ "id": "C-05546",
+ "month_lines": [
+  "雨还在落，风刮得紧，棚里胖大海泡着，谁来了嗓哑就给调一调。一句话的事，谁帮过我，灯就亮一倍。"
+ ],
+ "name": "陆强",
+ "profession": "声优棚掌柜",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨还在落，风刮得紧，棚里胖大海泡着，谁来了嗓哑就给调一调。一句话的事，谁帮过我，灯就亮一倍。",
+   "text": "「雨还在落，风刮得紧，棚里胖大海泡着，谁来了嗓哑就给调一调。一句话的事，谁帮过我，灯就亮一倍。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

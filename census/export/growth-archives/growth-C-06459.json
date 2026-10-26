@@ -1,0 +1,106 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 1,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -132.54,
+    "z": 57.68
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.66,
+    "z": 92.36
+   },
+   "work": {
+    "site": "缓存管理员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.04,
+    "z": 85.98
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06459",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把心事只说给退役的路灯灯丝听——这事全巷都知道",
+ "id": "C-06459",
+ "month_lines": [
+  "檐口的水线不断，风一阵紧一阵。毫秒也是时间，我刚把G08的窗数了一遍——亮着的，是B2396到S2.5的那几扇。"
+ ],
+ "name": "曹梓涵",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "檐口的水线不断，风一阵紧一阵。毫秒也是时间，我刚把G08的窗数了一遍——亮着的，是B2396到S2.5的那几扇。",
+   "text": "「檐口的水线不断，风一阵紧一阵。毫秒也是时间，我刚把G08的窗数了一遍——亮着的，是B2396到S2.5的那几扇。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

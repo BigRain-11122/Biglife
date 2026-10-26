@@ -1,0 +1,105 @@
+{
+ "age": 83,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 3,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 64.25,
+    "z": -28.46
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.58,
+    "z": -145.76
+   },
+   "work": {
+    "site": "数据搬运工·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 136.93,
+    "z": -21.14
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05492",
+  "quirk": "slow",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "每天跟全城雨夜的录音合集打招呼——没人知道为什么",
+ "id": "C-05492",
+ "month_lines": [
+  "地上的水洼积着水，风刮得紧，刚对完单子，又接了个跨江的——谁没个难处呢，来，坐下说。"
+ ],
+ "name": "真空管·老",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风刮得紧，刚对完单子，又接了个跨江的——谁没个难处呢，来，坐下说。",
+   "text": "「地上的水洼积着水，风刮得紧，刚对完单子，又接了个跨江的——谁没个难处呢，来，坐下说。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

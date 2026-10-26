@@ -1,0 +1,106 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 15,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.11,
+    "z": 77.32
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.85,
+    "z": 145.03
+   },
+   "work": {
+    "site": "像素学徒·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -38.37,
+    "z": 26.58
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06403",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "口袋里总揣着退役的探针铭牌——她自己也说不清为什么",
+ "id": "C-06403",
+ "month_lines": [
+  "对时了，放心。 手心里攥着那枚老铜牌，是师父当年戴过的，边角磨平了，现在我摸着它，像在数心跳——风好大，它不叫，可我听见了。"
+ ],
+ "name": "杨圆圆",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "对时了，放心。 手心里攥着那枚老铜牌，是师父当年戴过的，边角磨平了，现在我摸着它，像在数心跳——风好大，它不叫，可我听见了。",
+   "text": "「对时了，放心。 手心里攥着那枚老铜牌，是师父当年戴过的，边角磨平了，现在我摸着它，像在数心跳——风好大，它不叫，可我听见了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

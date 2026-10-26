@@ -1,0 +1,106 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -14,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -98.24,
+    "z": 191.82
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 17.03,
+    "z": 202.53
+   },
+   "work": {
+    "site": "防火墙巡林员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 31.41,
+    "z": 227.61
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06608",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "把初代像素调色板画进了自己的作品里——这事全巷都知道",
+ "id": "C-06608",
+ "month_lines": [
+  "风刮得紧，G08那灯链又短了半截，我正要补，却看见C-03300转述了“G08 CrazyCampus: B2396 -> S2.5”——哪灯亮，哪路，下一版一定更好。"
+ ],
+ "name": "席萍",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风刮得紧，G08那灯链又短了半截，我正要补，却看见C-03300转述了“G08 CrazyCampus: B2396 -> S2.5”——哪灯亮，哪路，下一版一定更好。",
+   "text": "「风刮得紧，G08那灯链又短了半截，我正要补，却看见C-03300转述了“G08 CrazyCampus: B2396 -> S2.5”——哪灯亮，哪路，下一版一定更好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

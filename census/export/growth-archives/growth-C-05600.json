@@ -1,0 +1,106 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 3,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -112.6,
+    "z": 159.23
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.96,
+    "z": 114.79
+   },
+   "work": {
+    "site": "缓存管理员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.83,
+    "z": 16.52
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05600",
+  "quirk": "umbrella",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "坚持手写手工风筝的竹篾——没人知道为什么",
+ "id": "C-05600",
+ "month_lines": [
+  "单子来了就接，不来就钓鱼。雨点没停，风刮得紧，我刚把G08的阶段脉动核对完，手心都湿了，守夜灯灵还在我耳畔哼着老调，像在说——慢一点，城又不会跑。"
+ ],
+ "name": "谢沈鱼",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "单子来了就接，不来就钓鱼。雨点没停，风刮得紧，我刚把G08的阶段脉动核对完，手心都湿了，守夜灯灵还在我耳畔哼着老调，像在说——慢一点，城又不会跑。",
+   "text": "「单子来了就接，不来就钓鱼。雨点没停，风刮得紧，我刚把G08的阶段脉动核对完，手心都湿了，守夜灯灵还在我耳畔哼着老调，像在说——慢一点，城又不会跑。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

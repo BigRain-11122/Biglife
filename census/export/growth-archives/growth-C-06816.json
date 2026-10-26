@@ -1,0 +1,106 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 5,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -143.87,
+    "z": 50.23
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.88,
+    "z": 42.93
+   },
+   "work": {
+    "site": "量化策略研究员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -68.63,
+    "z": 102.09
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06816",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "给老码头缆桩都编了号还建了册——这事只有档案馆知道",
+ "id": "C-06816",
+ "month_lines": [
+  "火候到了自然就香。 刚盯完G08的回撤，江风不小，我却还坐在扭塔窗边，看那片云厚得像没洗干净的旧布，心里头只记得谁帮过我，谁没说破的话，都还留着味。"
+ ],
+ "name": "田Yuki",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "火候到了自然就香。 刚盯完G08的回撤，江风不小，我却还坐在扭塔窗边，看那片云厚得像没洗干净的旧布，心里头只记得谁帮过我，谁没说破的话，都还留着味。",
+   "text": "「火候到了自然就香。 刚盯完G08的回撤，江风不小，我却还坐在扭塔窗边，看那片云厚得像没洗干净的旧布，心里头只记得谁帮过我，谁没说破的话，都还留着味。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

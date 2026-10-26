@@ -1,0 +1,106 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": -5,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.14,
+    "z": 108.84
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.2,
+    "z": 70.02
+   },
+   "work": {
+    "site": "数据搬运工·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -39.87,
+    "z": 31.89
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06577",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "日子是过出来的，不是算出来的。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "用初代渡轮的船票夹教会了半条街的孩子",
+ "id": "C-06577",
+ "month_lines": [
+  "风好大，天阴着，装卸口的灯还亮着，我踩着碎步把最后一车数据对单了——火候到了，自然就香。"
+ ],
+ "name": "冯洁",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风好大，天阴着，装卸口的灯还亮着，我踩着碎步把最后一车数据对单了——火候到了，自然就香。",
+   "text": "「风好大，天阴着，装卸口的灯还亮着，我踩着碎步把最后一车数据对单了——火候到了，自然就香。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

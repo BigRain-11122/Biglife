@@ -1,0 +1,105 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 4,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 43.85,
+    "z": 11.46
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.34,
+    "z": 90.75
+   },
+   "work": {
+    "site": "算法调参师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 137.86,
+    "z": 136.42
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06309",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把弄堂的门牌号的位置背得比自家门牌还熟——据说是老辈传下的规矩",
+ "id": "C-06309",
+ "month_lines": [
+  "风一阵紧一阵，抽屉里那张19年秋的公交票还在发烫，我正用指尖摩挲着票角，像在等谁来接一句老话。"
+ ],
+ "name": "郁一诺",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风一阵紧一阵，抽屉里那张19年秋的公交票还在发烫，我正用指尖摩挲着票角，像在等谁来接一句老话。",
+   "text": "「风一阵紧一阵，抽屉里那张19年秋的公交票还在发烫，我正用指尖摩挲着票角，像在等谁来接一句老话。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

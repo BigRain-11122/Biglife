@@ -1,0 +1,106 @@
+{
+ "age": 51,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 4,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.92,
+    "z": 75.34
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.46,
+    "z": 19.93
+   },
+   "work": {
+    "site": "新市民安居顾问·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.55,
+    "z": 110.85
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05668",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把旧缝纫机踏板修好再免费送人——这事全巷都知道",
+ "id": "C-05668",
+ "month_lines": [
+  "地上的水洼积着水，风把人往前推，我站在楼下扫把口前，看新来的年轻面孔往屋里走，一个字没说，只把钥匙递过去——今天的事今天清。"
+ ],
+ "name": "朱海峰",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风把人往前推，我站在楼下扫把口前，看新来的年轻面孔往屋里走，一个字没说，只把钥匙递过去——今天的事今天清。",
+   "text": "「地上的水洼积着水，风把人往前推，我站在楼下扫把口前，看新来的年轻面孔往屋里走，一个字没说，只把钥匙递过去——今天的事今天清。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

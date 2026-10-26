@@ -1,0 +1,106 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 17,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 33.64,
+    "z": -148.63
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.0,
+    "z": -13.2
+   },
+   "work": {
+    "site": "像素小学学生·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.83,
+    "z": -11.78
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05857",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把心事只说给停用的老式磅秤听——这事只有档案馆知道",
+ "id": "C-05857",
+ "month_lines": [
+  "雨丝还挂着，风好大，我站在弄堂口拆开作业本又翻了一页，画的还是那条过江的commit光点，同桌小北说像真城，我咧嘴笑，别客气，就当自己家。"
+ ],
+ "name": "曹多多",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨丝还挂着，风好大，我站在弄堂口拆开作业本又翻了一页，画的还是那条过江的commit光点，同桌小北说像真城，我咧嘴笑，别客气，就当自己家。",
+   "text": "「雨丝还挂着，风好大，我站在弄堂口拆开作业本又翻了一页，画的还是那条过江的commit光点，同桌小北说像真城，我咧嘴笑，别客气，就当自己家。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

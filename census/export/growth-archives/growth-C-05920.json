@@ -1,0 +1,106 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 16,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.6,
+    "z": 251.89
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 18.68,
+    "z": 194.9
+   },
+   "work": {
+    "site": "像素小学学生·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 40.15,
+    "z": 200.9
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05920",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "给旧钟表铺的价目牌都编了号还建了册",
+ "id": "C-05920",
+ "month_lines": [
+  "潮水的事交给潮水，雨点没停，风把人往前推，我站在巷口看那光点一晃一晃地过江，像小时候妈妈牵我手的样子。"
+ ],
+ "name": "梁多多",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "潮水的事交给潮水，雨点没停，风把人往前推，我站在巷口看那光点一晃一晃地过江，像小时候妈妈牵我手的样子。",
+   "text": "「潮水的事交给潮水，雨点没停，风把人往前推，我站在巷口看那光点一晃一晃地过江，像小时候妈妈牵我手的样子。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

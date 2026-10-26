@@ -1,0 +1,106 @@
+{
+ "age": 38,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 9,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -100.77,
+    "z": 125.44
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.43,
+    "z": 36.43
+   },
+   "work": {
+    "site": "量化策略研究员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -63.42,
+    "z": 30.37
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06784",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件老照片底片——她自己也说不清为什么",
+ "id": "C-06784",
+ "month_lines": [
+  "夜里冷，喝口热的再走。 今天天阴着，风把人往前推，扭塔里盯着的因子又回撤了，回头看看留言墙，C-07152写的那句“PushEvent Biglife”还立着呢。"
+ ],
+ "name": "郁Yuki",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "夜里冷，喝口热的再走。 今天天阴着，风把人往前推，扭塔里盯着的因子又回撤了，回头看看留言墙，C-07152写的那句“PushEvent Biglife”还立着呢。",
+   "text": "「夜里冷，喝口热的再走。 今天天阴着，风把人往前推，扭塔里盯着的因子又回撤了，回头看看留言墙，C-07152写的那句“PushEvent Biglife”还立着呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

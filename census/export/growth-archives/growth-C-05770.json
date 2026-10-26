@@ -1,0 +1,105 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 9,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -51.86,
+    "z": -177.33
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -6.09,
+    "z": -244.65
+   },
+   "work": {
+    "site": "穿城信使·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 103.48,
+    "z": -190.79
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05770",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "守时是最便宜的本事，也是最难改的毛病。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "还在用手抄的菜谱——这事只有档案馆知道",
+ "id": "C-05770",
+ "month_lines": [
+  "先复核一遍，雨还在落，风把人往前推，我手里攥着那块旧铜片——是老邻居给的，说能压住心慌。"
+ ],
+ "name": "肖南汐",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "先复核一遍，雨还在落，风把人往前推，我手里攥着那块旧铜片——是老邻居给的，说能压住心慌。",
+   "text": "「先复核一遍，雨还在落，风把人往前推，我手里攥着那块旧铜片——是老邻居给的，说能压住心慌。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

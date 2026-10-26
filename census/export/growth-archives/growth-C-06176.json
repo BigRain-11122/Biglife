@@ -1,0 +1,106 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 19,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -128.08,
+    "z": -18.83
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.0,
+    "z": -93.96
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.34,
+    "z": -138.11
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06176",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件三十年前的车铃——没人知道为什么",
+ "id": "C-06176",
+ "month_lines": [
+  "老地方见，风刮得紧，补丁灯还亮着，像三年前我第一次守着它时那样，作业本上画的城，今天又多了一条光痕。"
+ ],
+ "name": "糜元宝",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "老地方见，风刮得紧，补丁灯还亮着，像三年前我第一次守着它时那样，作业本上画的城，今天又多了一条光痕。",
+   "text": "「老地方见，风刮得紧，补丁灯还亮着，像三年前我第一次守着它时那样，作业本上画的城，今天又多了一条光痕。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

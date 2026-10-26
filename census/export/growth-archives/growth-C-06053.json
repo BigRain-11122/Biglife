@@ -1,0 +1,105 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": 2,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.04,
+    "z": 28.65
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.3,
+    "z": 11.8
+   },
+   "work": {
+    "site": "穿城信使·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.42,
+    "z": 79.73
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06053",
+  "quirk": "umbrella",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "口袋里总揣着老裁缝铺的样衣",
+ "id": "C-06053",
+ "month_lines": [
+  "看天吃饭，看行情穿衣。风掀得衣角乱摆，桥上K线屏的描线歪了，我刚把色卡翻到第七排，手一抖，调色盘滑了半寸，还好，滤镜还能补回来。"
+ ],
+ "name": "老花线·丙",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "看天吃饭，看行情穿衣。风掀得衣角乱摆，桥上K线屏的描线歪了，我刚把色卡翻到第七排，手一抖，调色盘滑了半寸，还好，滤镜还能补回来。",
+   "text": "「看天吃饭，看行情穿衣。风掀得衣角乱摆，桥上K线屏的描线歪了，我刚把色卡翻到第七排，手一抖，调色盘滑了半寸，还好，滤镜还能补回来。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

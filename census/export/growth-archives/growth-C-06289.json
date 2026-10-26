@@ -1,0 +1,106 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 1,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -136.19,
+    "z": 19.97
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.4,
+    "z": 109.86
+   },
+   "work": {
+    "site": "大编译调律师·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -47.06,
+    "z": 83.14
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06289",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每天跟一台修了八次的老收音机打招呼——他自己也说不清为什么",
+ "id": "C-06289",
+ "month_lines": [
+  "这单我送，别跟我抢。风好大，云厚着，江边的灯都晃得歪了，我刚巡完线，门禁公告又翻了一遍，规矩得天天认。"
+ ],
+ "name": "方明",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这单我送，别跟我抢。风好大，云厚着，江边的灯都晃得歪了，我刚巡完线，门禁公告又翻了一遍，规矩得天天认。",
+   "text": "「这单我送，别跟我抢。风好大，云厚着，江边的灯都晃得歪了，我刚巡完线，门禁公告又翻了一遍，规矩得天天认。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

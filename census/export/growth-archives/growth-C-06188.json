@@ -1,0 +1,106 @@
+{
+ "age": 6,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 20,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -122.64,
+    "z": -41.68
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.7,
+    "z": -82.7
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -36.77,
+    "z": -77.73
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06188",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "能背出断了线的风筝的全部班次——他自己也说不清为什么",
+ "id": "C-06188",
+ "month_lines": [
+  "急啥，汤还没开呢。风刮得紧，我正把新到的像素拼图卡贴在作业本上，G08 CrazyCampus从B2396翻到S2.5了，同桌说她也看见了，还问我要不一起看——这活儿，街坊的事，就"
+ ],
+ "name": "朱小满",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "急啥，汤还没开呢。风刮得紧，我正把新到的像素拼图卡贴在作业本上，G08 CrazyCampus从B2396翻到S2.5了，同桌说她也看见了，还问我要不一起看——这活儿，街坊的事，就",
+   "text": "「急啥，汤还没开呢。风刮得紧，我正把新到的像素拼图卡贴在作业本上，G08 CrazyCampus从B2396翻到S2.5了，同桌说她也看见了，还问我要不一起看——这活儿，街坊的事，就」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

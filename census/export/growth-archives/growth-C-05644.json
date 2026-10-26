@@ -1,0 +1,106 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 0,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.25,
+    "z": 119.42
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.09,
+    "z": 32.22
+   },
+   "work": {
+    "site": "量化策略研究员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -42.75,
+    "z": 151.78
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05644",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "旧物件的温度，是新东西学不来的。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "记得旧钟表铺的价目牌的每一个来历——这事只有档案馆知道",
+ "id": "C-05644",
+ "month_lines": [
+  "地上的水洼积着水，风把人往前推，我刚把门禁公告读了两遍，对齐了昨夜的错误码，阳台的花说：“撑住，潮水要涨了。"
+ ],
+ "name": "卢雨欣",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风把人往前推，我刚把门禁公告读了两遍，对齐了昨夜的错误码，阳台的花说：“撑住，潮水要涨了。",
+   "text": "「地上的水洼积着水，风把人往前推，我刚把门禁公告读了两遍，对齐了昨夜的错误码，阳台的花说：“撑住，潮水要涨了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

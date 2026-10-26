@@ -1,0 +1,105 @@
+{
+ "age": 6,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#2E5E4E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 5,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -27.58,
+    "z": -253.3
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -1.37,
+    "z": -256.23
+   },
+   "work": {
+    "site": "穿城信使·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 54.55,
+    "z": -166.37
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05435",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "旧物件的温度，是新东西学不来的。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "给退役的路灯灯丝都编了号还建了册",
+ "id": "C-05435",
+ "month_lines": [
+  "檐口的水线不断，风掀得衣角乱摆，灯还是老灯亮堂。接单了，老信使的活儿，不靠新系统，只靠旧物件的记忆。"
+ ],
+ "name": "寄存·老",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线不断，风掀得衣角乱摆，灯还是老灯亮堂。接单了，老信使的活儿，不靠新系统，只靠旧物件的记忆。",
+   "text": "「檐口的水线不断，风掀得衣角乱摆，灯还是老灯亮堂。接单了，老信使的活儿，不靠新系统，只靠旧物件的记忆。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

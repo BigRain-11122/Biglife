@@ -1,0 +1,106 @@
+{
+ "age": 4,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#EC407A",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 25,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.62,
+    "z": 21.48
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.19,
+    "z": 52.87
+   },
+   "work": {
+    "site": "风信使·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -33.06,
+    "z": 28.29
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06005",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "把老式算盘珠当成了自己的老朋友",
+ "id": "C-06005",
+ "month_lines": [
+  "风掀得衣角乱摆，塔脚花园的风铃又“叮——”地试了下铃。今儿双日，桥头那串旧铃铛归我照看，风大，得把规矩都踩实了。"
+ ],
+ "name": "白春汛",
+ "profession": "风信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风掀得衣角乱摆，塔脚花园的风铃又“叮——”地试了下铃。今儿双日，桥头那串旧铃铛归我照看，风大，得把规矩都踩实了。",
+   "text": "「风掀得衣角乱摆，塔脚花园的风铃又“叮——”地试了下铃。今儿双日，桥头那串旧铃铛归我照看，风大，得把规矩都踩实了。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

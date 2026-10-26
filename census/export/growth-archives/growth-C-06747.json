@@ -1,0 +1,105 @@
+{
+ "age": 23,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 1,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 58.24,
+    "z": 116.69
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.3,
+    "z": 18.8
+   },
+   "work": {
+    "site": "节日活动策划·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 114.38,
+    "z": 85.29
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06747",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "给断了线的风筝都起了名字——据说是老辈传下的规矩",
+ "id": "C-06747",
+ "month_lines": [
+  "规矩如钟，人情如江。今早收摊前在数据菜市挑了两筐时令青椒，风一阵紧一阵，江边走着，心也跟着沉了沉。"
+ ],
+ "name": "卢清晚",
+ "profession": "节日活动策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "规矩如钟，人情如江。今早收摊前在数据菜市挑了两筐时令青椒，风一阵紧一阵，江边走着，心也跟着沉了沉。",
+   "text": "「规矩如钟，人情如江。今早收摊前在数据菜市挑了两筐时令青椒，风一阵紧一阵，江边走着，心也跟着沉了沉。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

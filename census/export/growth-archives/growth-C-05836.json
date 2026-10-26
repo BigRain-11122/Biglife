@@ -1,0 +1,106 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": -3,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.39,
+    "z": 141.24
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.71,
+    "z": 95.3
+   },
+   "work": {
+    "site": "时空校准师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -67.85,
+    "z": 117.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05836",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "收藏全城第一块砖的拓片且每件都记得来历——没人知道为什么",
+ "id": "C-05836",
+ "month_lines": [
+  "地上的水洼积着水，我踩着走，风把人往前推，脚底打滑，幸好铺子下午才开，我这把老骨头，十年前就是这么弄的。"
+ ],
+ "name": "赵燕",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，我踩着走，风把人往前推，脚底打滑，幸好铺子下午才开，我这把老骨头，十年前就是这么弄的。",
+   "text": "「地上的水洼积着水，我踩着走，风把人往前推，脚底打滑，幸好铺子下午才开，我这把老骨头，十年前就是这么弄的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

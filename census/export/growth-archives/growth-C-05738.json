@@ -1,0 +1,105 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 5,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 67.23,
+    "z": -124.61
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.42,
+    "z": -61.05
+   },
+   "work": {
+    "site": "城市气象播报员·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 122.25,
+    "z": -133.23
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05738",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "把旧书店的竹梯修好再免费送人——这事只有师父知道",
+ "id": "C-05738",
+ "month_lines": [
+  "雨还在落，风刮得紧，窗台温度计摸着冰凉——这日子，得把火候等到锅里水开，才香。"
+ ],
+ "name": "张清晚",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨还在落，风刮得紧，窗台温度计摸着冰凉——这日子，得把火候等到锅里水开，才香。",
+   "text": "「雨还在落，风刮得紧，窗台温度计摸着冰凉——这日子，得把火候等到锅里水开，才香。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

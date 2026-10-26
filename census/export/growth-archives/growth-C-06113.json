@@ -1,0 +1,106 @@
+{
+ "age": 1,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#26A69A",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 12,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 54.61,
+    "z": 102.76
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.95,
+    "z": 143.65
+   },
+   "work": {
+    "site": "夜灯员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.02,
+    "z": 73.35
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06113",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "看得见退役巡夜灯灵的灯罩里住着的光——据说是老辈传下的规矩",
+ "id": "C-06113",
+ "month_lines": [
+  "风掀得衣角乱摆，手里的旧电路板边角磨得发亮，是师父留的，我正轻轻一按，纹路里浮出半句没说完的话——急不得，但得动手。"
+ ],
+ "name": "小铃兰",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风掀得衣角乱摆，手里的旧电路板边角磨得发亮，是师父留的，我正轻轻一按，纹路里浮出半句没说完的话——急不得，但得动手。",
+   "text": "「风掀得衣角乱摆，手里的旧电路板边角磨得发亮，是师父留的，我正轻轻一按，纹路里浮出半句没说完的话——急不得，但得动手。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

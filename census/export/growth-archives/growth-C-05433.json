@@ -1,0 +1,105 @@
+{
+ "age": 23,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 5,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -106.19,
+    "z": -18.0
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.53,
+    "z": -85.88
+   },
+   "work": {
+    "site": "七段街区导游·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -42.34,
+    "z": -142.99
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05433",
+  "quirk": "umbrella",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "把退租铺面的旧招牌排成一排挨个擦——这事只有师父知道",
+ "id": "C-05433",
+ "month_lines": [
+  "雨丝还挂着，风一阵紧一阵，我正对着M3街口那盏老路灯念着今天的行程——包在我身上，带团不打烊。"
+ ],
+ "name": "阿稳定·夜",
+ "profession": "七段街区导游",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨丝还挂着，风一阵紧一阵，我正对着M3街口那盏老路灯念着今天的行程——包在我身上，带团不打烊。",
+   "text": "「雨丝还挂着，风一阵紧一阵，我正对着M3街口那盏老路灯念着今天的行程——包在我身上，带团不打烊。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

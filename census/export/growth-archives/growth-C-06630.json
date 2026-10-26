@@ -1,0 +1,105 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 0,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -119.09,
+    "z": -24.03
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.76,
+    "z": -17.94
+   },
+   "work": {
+    "site": "七段街区导游·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.22,
+    "z": -72.93
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06630",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "每年挑一天只为旧当铺的票据夹大扫除——她自己也说不清为什么",
+ "id": "C-06630",
+ "month_lines": [
+  "慢慢来，比较快。 今夜风不小，塔顶云压得低，我刚把留言墙前那条“G08 CrazyCampus: B2396 -> S2.5”扫了一遍，又补了盏灯，黄光摇着，像谁在等回音。"
+ ],
+ "name": "梁知夏",
+ "profession": "七段街区导游",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "慢慢来，比较快。 今夜风不小，塔顶云压得低，我刚把留言墙前那条“G08 CrazyCampus: B2396 -> S2.5”扫了一遍，又补了盏灯，黄光摇着，像谁在等回音。",
+   "text": "「慢慢来，比较快。 今夜风不小，塔顶云压得低，我刚把留言墙前那条“G08 CrazyCampus: B2396 -> S2.5”扫了一遍，又补了盏灯，黄光摇着，像谁在等回音。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

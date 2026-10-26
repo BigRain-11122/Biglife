@@ -1,0 +1,106 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 6,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.53,
+    "z": 120.27
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.07,
+    "z": 20.57
+   },
+   "work": {
+    "site": "夜宵摊主·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.6,
+    "z": 152.18
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06752",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把电波猫修好再免费送人——她自己也说不清为什么",
+ "id": "C-06752",
+ "month_lines": [
+  "稳住，别浪。风把树梢压弯了，收摊的灯还亮着，最后一个客人走后，我听见江水哗啦啦，像在数着谁没说出口的话。"
+ ],
+ "name": "任南汐",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "稳住，别浪。风把树梢压弯了，收摊的灯还亮着，最后一个客人走后，我听见江水哗啦啦，像在数着谁没说出口的话。",
+   "text": "「稳住，别浪。风把树梢压弯了，收摊的灯还亮着，最后一个客人走后，我听见江水哗啦啦，像在数着谁没说出口的话。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

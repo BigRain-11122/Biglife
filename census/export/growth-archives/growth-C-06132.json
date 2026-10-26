@@ -1,0 +1,106 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 12,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.66,
+    "z": 70.48
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.85,
+    "z": 11.64
+   },
+   "work": {
+    "site": "像素学徒·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.47,
+    "z": 63.62
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06132",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "风吹哪页读哪页。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把全城雨夜的录音合集排成一排挨个擦——据说是老辈传下的规矩",
+ "id": "C-06132",
+ "month_lines": [
+  "风不小，我给阳台的花说：“别怕，我守着呢。”手里的钢笔尖儿在抖，第三遍校对时，墨迹还湿，我轻轻一捻，像捻着昨夜没说完的话——火候到了，自然就香。"
+ ],
+ "name": "程圆圆",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风不小，我给阳台的花说：“别怕，我守着呢。”手里的钢笔尖儿在抖，第三遍校对时，墨迹还湿，我轻轻一捻，像捻着昨夜没说完的话——火候到了，自然就香。",
+   "text": "「风不小，我给阳台的花说：“别怕，我守着呢。”手里的钢笔尖儿在抖，第三遍校对时，墨迹还湿，我轻轻一捻，像捻着昨夜没说完的话——火候到了，自然就香。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

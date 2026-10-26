@@ -1,0 +1,106 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 6,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -137.87,
+    "z": 153.07
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.25,
+    "z": 26.48
+   },
+   "work": {
+    "site": "数据清洗工·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -25.0,
+    "z": 38.02
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06703",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着老式邮戳——这事全巷都知道",
+ "id": "C-06703",
+ "month_lines": [
+  "灶上有汤，自取。风顶得人站不稳，我正把B2396的记录蹭进袖口，等天亮前再看一眼那条没拆的线。"
+ ],
+ "name": "唐阿Jay",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "灶上有汤，自取。风顶得人站不稳，我正把B2396的记录蹭进袖口，等天亮前再看一眼那条没拆的线。",
+   "text": "「灶上有汤，自取。风顶得人站不稳，我正把B2396的记录蹭进袖口，等天亮前再看一眼那条没拆的线。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

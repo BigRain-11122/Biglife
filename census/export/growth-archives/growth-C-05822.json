@@ -1,0 +1,106 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 19,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.15,
+    "z": -64.96
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.47,
+    "z": -90.36
+   },
+   "work": {
+    "site": "像素小学学生·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -67.48,
+    "z": -30.74
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05822",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "坚持手写旧梯田式看台的一块座板——据说是老辈传下的规矩",
+ "id": "C-05822",
+ "month_lines": [
+  "雨敲在窗棂上，风刮得紧。我刚把今日 commit 光点过江，塔顶白光亮着，规矩如钟，人情如江，今天值日的账，得一条条对清。"
+ ],
+ "name": "雷米粒",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨敲在窗棂上，风刮得紧。我刚把今日 commit 光点过江，塔顶白光亮着，规矩如钟，人情如江，今天值日的账，得一条条对清。",
+   "text": "「雨敲在窗棂上，风刮得紧。我刚把今日 commit 光点过江，塔顶白光亮着，规矩如钟，人情如江，今天值日的账，得一条条对清。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

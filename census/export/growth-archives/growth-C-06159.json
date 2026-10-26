@@ -1,0 +1,106 @@
+{
+ "age": 68,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -13,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 61.57,
+    "z": 66.85
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.95,
+    "z": 43.71
+   },
+   "work": {
+    "site": "攻略誊写员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 120.57,
+    "z": 149.6
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06159",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把心事只说给旧像素图钉听——据说是老辈传下的规矩",
+ "id": "C-06159",
+ "month_lines": [
+  "新东西先看三天再用，风一阵紧一阵，我蹲在塔脚花园，看那盏旧灯在风里晃，光点浮着，像G08最后那批commit，从江心浮上来一样。"
+ ],
+ "name": "王鸿奎",
+ "profession": "攻略誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "新东西先看三天再用，风一阵紧一阵，我蹲在塔脚花园，看那盏旧灯在风里晃，光点浮着，像G08最后那批commit，从江心浮上来一样。",
+   "text": "「新东西先看三天再用，风一阵紧一阵，我蹲在塔脚花园，看那盏旧灯在风里晃，光点浮着，像G08最后那批commit，从江心浮上来一样。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

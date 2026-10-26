@@ -1,0 +1,105 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 4,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 23.76,
+    "z": 86.83
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.32,
+    "z": 100.29
+   },
+   "work": {
+    "site": "灯塔守望·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 117.4,
+    "z": 34.64
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06766",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把旧热水瓶排成一排挨个擦——没人知道为什么",
+ "id": "C-06766",
+ "month_lines": [
+  "出锅喽——G08的CrazyCampus关了，绿灯还亮着呢，风灌进领口发凉，塔下那群小崽子又在查塔，说要等新阶段值灯。"
+ ],
+ "name": "廖斌",
+ "profession": "灯塔守望",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "出锅喽——G08的CrazyCampus关了，绿灯还亮着呢，风灌进领口发凉，塔下那群小崽子又在查塔，说要等新阶段值灯。",
+   "text": "「出锅喽——G08的CrazyCampus关了，绿灯还亮着呢，风灌进领口发凉，塔下那群小崽子又在查塔，说要等新阶段值灯。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

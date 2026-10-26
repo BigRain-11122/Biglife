@@ -1,0 +1,106 @@
+{
+ "age": 95,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -13,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -144.75,
+    "z": 131.65
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.93,
+    "z": 149.57
+   },
+   "work": {
+    "site": "时钟校准员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -56.62,
+    "z": 141.2
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06528",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给旧钟表铺的价目牌写了一整本观察笔记——据说是老辈传下的规矩",
+ "id": "C-06528",
+ "month_lines": [
+  "这版本我等好久了。风不小，窗外的江声被吹得乱了，我踮脚数了数游戏楼亮着的窗——B2396那扇，还开着呢。"
+ ],
+ "name": "吕秀英",
+ "profession": "时钟校准员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "这版本我等好久了。风不小，窗外的江声被吹得乱了，我踮脚数了数游戏楼亮着的窗——B2396那扇，还开着呢。",
+   "text": "「这版本我等好久了。风不小，窗外的江声被吹得乱了，我踮脚数了数游戏楼亮着的窗——B2396那扇，还开着呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

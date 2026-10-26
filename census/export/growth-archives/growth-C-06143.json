@@ -1,0 +1,106 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 3,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -122.14,
+    "z": 57.93
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.67,
+    "z": 130.88
+   },
+   "work": {
+    "site": "盘口记录员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.4,
+    "z": 13.97
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06143",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "给旧棋谱都编了号还建了册——他自己也说不清为什么",
+ "id": "C-06143",
+ "month_lines": [
+  "新东西先看三天再用，今儿这风掀得衣角乱摆，笔尖都抖了——两支笔对盘，字迹工整，心里头却比像素还清。"
+ ],
+ "name": "应天翼",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "buddy",
+   "src": "邻居",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "新东西先看三天再用，今儿这风掀得衣角乱摆，笔尖都抖了——两支笔对盘，字迹工整，心里头却比像素还清。",
+   "text": "「新东西先看三天再用，今儿这风掀得衣角乱摆，笔尖都抖了——两支笔对盘，字迹工整，心里头却比像素还清。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

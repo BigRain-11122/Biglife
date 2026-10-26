@@ -1,0 +1,106 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 8,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -46.0,
+    "z": -172.19
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -6.97,
+    "z": -244.99
+   },
+   "work": {
+    "site": "数据牧人·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 90.03,
+    "z": -210.95
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06428",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "在老电报局的键上刻了一行没人认得的小字——这事只有档案馆知道",
+ "id": "C-06428",
+ "month_lines": [
+  "风刮得紧，我正把旧皮夹翻过来，那页泛黄的批流记录还贴着边角，像谁留下的暗语——先试了再说，拆开看看，是最大的敬意。"
+ ],
+ "name": "尹清晚",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风刮得紧，我正把旧皮夹翻过来，那页泛黄的批流记录还贴着边角，像谁留下的暗语——先试了再说，拆开看看，是最大的敬意。",
+   "text": "「风刮得紧，我正把旧皮夹翻过来，那页泛黄的批流记录还贴着边角，像谁留下的暗语——先试了再说，拆开看看，是最大的敬意。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

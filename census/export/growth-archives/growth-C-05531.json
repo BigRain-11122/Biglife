@@ -1,0 +1,105 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 0,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -134.39,
+    "z": -22.86
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.17,
+    "z": -123.57
+   },
+   "work": {
+    "site": "8bit 乐师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -53.86,
+    "z": -33.33
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05531",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "逢人就讲退役的路灯灯丝的故事——这事只有档案馆知道",
+ "id": "C-05531",
+ "month_lines": [
+  "檐口的水线不断，风掀得衣角乱摆，我正扫着最后一段弦，老电波猫的食盆添了，明天的谱子得写得更狠些。"
+ ],
+ "name": "杨亦风",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线不断，风掀得衣角乱摆，我正扫着最后一段弦，老电波猫的食盆添了，明天的谱子得写得更狠些。",
+   "text": "「檐口的水线不断，风掀得衣角乱摆，我正扫着最后一段弦，老电波猫的食盆添了，明天的谱子得写得更狠些。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

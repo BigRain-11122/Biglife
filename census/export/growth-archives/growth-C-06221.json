@@ -1,0 +1,106 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -7,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -135.39,
+    "z": 128.15
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.17,
+    "z": 84.78
+   },
+   "work": {
+    "site": "盘口记录员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -38.46,
+    "z": 60.72
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06221",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "收藏弄堂钥匙串且每件都记得来历——没人知道为什么",
+ "id": "C-06221",
+ "month_lines": [
+  "这事儿有讲究，风掀得衣角乱摆，我那本账本页角卷了边，手一抖，字迹倒比平日清——双日嘛，补丁花样得对盘，笔笔清，不差一毫。"
+ ],
+ "name": "彭萍",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这事儿有讲究，风掀得衣角乱摆，我那本账本页角卷了边，手一抖，字迹倒比平日清——双日嘛，补丁花样得对盘，笔笔清，不差一毫。",
+   "text": "「这事儿有讲究，风掀得衣角乱摆，我那本账本页角卷了边，手一抖，字迹倒比平日清——双日嘛，补丁花样得对盘，笔笔清，不差一毫。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

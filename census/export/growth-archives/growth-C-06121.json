@@ -1,0 +1,106 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -5,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -112.76,
+    "z": 60.03
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.56,
+    "z": 24.69
+   },
+   "work": {
+    "site": "风控官·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -28.79,
+    "z": 140.25
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06121",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每逢下雨就去修全城雪夜的第一次合影——这事只有档案馆知道",
+ "id": "C-06121",
+ "month_lines": [
+  "以前我们那儿……风好大，数据包在装卸口都快掀了，我站在岗上，老唱片一转，弄堂就回来了，心里头踏实着，像门轴在响。"
+ ],
+ "name": "丁海峰",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "以前我们那儿……风好大，数据包在装卸口都快掀了，我站在岗上，老唱片一转，弄堂就回来了，心里头踏实着，像门轴在响。",
+   "text": "「以前我们那儿……风好大，数据包在装卸口都快掀了，我站在岗上，老唱片一转，弄堂就回来了，心里头踏实着，像门轴在响。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

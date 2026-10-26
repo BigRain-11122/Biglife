@@ -1,0 +1,105 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 3,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.31,
+    "z": -148.39
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.46,
+    "z": -44.86
+   },
+   "work": {
+    "site": "时空校准师·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 130.24,
+    "z": -136.45
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06474",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "从不让老皮匠的锥子离开自己三步远——没人知道为什么",
+ "id": "C-06474",
+ "month_lines": [
+  "风不小，雨还在落。老钟摆刚校准完，游丝上沾了水，我把它擦了擦——收摊了，明天见。"
+ ],
+ "name": "阿偏压-4",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风不小，雨还在落。老钟摆刚校准完，游丝上沾了水，我把它擦了擦——收摊了，明天见。",
+   "text": "「风不小，雨还在落。老钟摆刚校准完，游丝上沾了水，我把它擦了擦——收摊了，明天见。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

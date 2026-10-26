@@ -1,0 +1,106 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 25,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -107.77,
+    "z": 123.17
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.01,
+    "z": 81.61
+   },
+   "work": {
+    "site": "像素学徒·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -50.24,
+    "z": 101.19
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05563",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "风吹哪页读哪页。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "记得第一天的营业账本的每一个来历——这事只有师父知道",
+ "id": "C-05563",
+ "month_lines": [
+  "檐口的水线不断，风好大，我正对着B2396屏上跳着的S2.5发呆，这路走得再远，弄堂口的路灯最亮。"
+ ],
+ "name": "方糖糖",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线不断，风好大，我正对着B2396屏上跳着的S2.5发呆，这路走得再远，弄堂口的路灯最亮。",
+   "text": "「檐口的水线不断，风好大，我正对着B2396屏上跳着的S2.5发呆，这路走得再远，弄堂口的路灯最亮。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

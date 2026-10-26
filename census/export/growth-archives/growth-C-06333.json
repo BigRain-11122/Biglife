@@ -1,0 +1,105 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 2,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.82,
+    "z": -15.15
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.4,
+    "z": -14.51
+   },
+   "work": {
+    "site": "节日活动策划·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -50.59,
+    "z": -143.13
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06333",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "偷偷给全城公交的老路线图上油保养——她自己也说不清为什么",
+ "id": "C-06333",
+ "month_lines": [
+  "灯还是老灯亮堂，风一阵紧一阵，我正把布景架上的灯泡一个个拧紧——这城老灯不晃，人就踏实。"
+ ],
+ "name": "濮倩",
+ "profession": "节日活动策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "灯还是老灯亮堂，风一阵紧一阵，我正把布景架上的灯泡一个个拧紧——这城老灯不晃，人就踏实。",
+   "text": "「灯还是老灯亮堂，风一阵紧一阵，我正把布景架上的灯泡一个个拧紧——这城老灯不晃，人就踏实。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

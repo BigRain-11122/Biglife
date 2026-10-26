@@ -1,0 +1,105 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 3,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -81.77,
+    "z": -215.2
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 18.04,
+    "z": -175.71
+   },
+   "work": {
+    "site": "穿城信使·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 50.03,
+    "z": -231.39
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06549",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "把老式怀表链排成一排挨个擦——这事只有师父知道",
+ "id": "C-06549",
+ "month_lines": [
+  "一句话的事。 手心还攥着那块旧磁卡，边角磨得发白，是去年收工时从桥头捡的，风一阵紧一阵，像在喊我别松手。"
+ ],
+ "name": "罗一鸣",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "一句话的事。 手心还攥着那块旧磁卡，边角磨得发白，是去年收工时从桥头捡的，风一阵紧一阵，像在喊我别松手。",
+   "text": "「一句话的事。 手心还攥着那块旧磁卡，边角磨得发白，是去年收工时从桥头捡的，风一阵紧一阵，像在喊我别松手。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

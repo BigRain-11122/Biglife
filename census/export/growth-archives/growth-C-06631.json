@@ -1,0 +1,105 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 9,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.47,
+    "z": -71.12
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.5,
+    "z": -75.35
+   },
+   "work": {
+    "site": "新市民安居顾问·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.47,
+    "z": -31.74
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06631",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "收藏第一炉出炉的像素瓷且每件都记得来历",
+ "id": "C-06631",
+ "month_lines": [
+  "风好大，今夜的灯都晃得不稳。刚把G08 CrazyCampus那条路讲给C-07101听，他转头又说给了C-04515——一句话的事，可街角的灯却亮得慢。"
+ ],
+ "name": "杨予安",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风好大，今夜的灯都晃得不稳。刚把G08 CrazyCampus那条路讲给C-07101听，他转头又说给了C-04515——一句话的事，可街角的灯却亮得慢。",
+   "text": "「风好大，今夜的灯都晃得不稳。刚把G08 CrazyCampus那条路讲给C-07101听，他转头又说给了C-04515——一句话的事，可街角的灯却亮得慢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

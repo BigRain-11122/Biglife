@@ -1,0 +1,106 @@
+{
+ "age": 56,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 3,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -98.07,
+    "z": 52.12
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.98,
+    "z": 89.59
+   },
+   "work": {
+    "site": "算力楼运维·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.44,
+    "z": 156.2
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05743",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "还在用旧邮局的分信格——她自己也说不清为什么",
+ "id": "C-05743",
+ "month_lines": [
+  "伞面一直响，风好大，我正把新来的邻居门禁码编进系统，雨点砸在算力楼的铁皮上，像旧票根翻页——谁的事就是谁的事，可街坊的事就是我的事。"
+ ],
+ "name": "黄燕",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风好大，我正把新来的邻居门禁码编进系统，雨点砸在算力楼的铁皮上，像旧票根翻页——谁的事就是谁的事，可街坊的事就是我的事。",
+   "text": "「伞面一直响，风好大，我正把新来的邻居门禁码编进系统，雨点砸在算力楼的铁皮上，像旧票根翻页——谁的事就是谁的事，可街坊的事就是我的事。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

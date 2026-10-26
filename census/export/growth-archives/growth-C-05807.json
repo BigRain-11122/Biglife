@@ -1,0 +1,105 @@
+{
+ "age": 72,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -6,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 57.36,
+    "z": 76.47
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.57,
+    "z": 116.68
+   },
+   "work": {
+    "site": "光织物裁缝·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 110.72,
+    "z": 76.38
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05807",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "在旧邮局的分信格上刻了一行没人认得的小字——这事全巷都知道",
+ "id": "C-05807",
+ "month_lines": [
+  "伞面一直响，风掀得衣角乱摆，我正把老花镜架在缝纫机上，手边那件蓝布衣，十年前就是这么弄的。"
+ ],
+ "name": "梁玉兰",
+ "profession": "光织物裁缝",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风掀得衣角乱摆，我正把老花镜架在缝纫机上，手边那件蓝布衣，十年前就是这么弄的。",
+   "text": "「伞面一直响，风掀得衣角乱摆，我正把老花镜架在缝纫机上，手边那件蓝布衣，十年前就是这么弄的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

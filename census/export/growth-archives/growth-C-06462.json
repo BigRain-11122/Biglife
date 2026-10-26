@@ -1,0 +1,105 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 5,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.49,
+    "z": -14.04
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.93,
+    "z": -79.94
+   },
+   "work": {
+    "site": "穿城信使·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -34.32,
+    "z": -14.71
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06462",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "从不让三十年前的车铃离开自己三步远——没人知道为什么",
+ "id": "C-06462",
+ "month_lines": [
+  "雨敲在窗棂上，风不小，我手上那把铜钥匙还在发烫——是上个月老住户留下的，说能开哪扇门，能通哪条巷。"
+ ],
+ "name": "尹沐辰",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "雨敲在窗棂上，风不小，我手上那把铜钥匙还在发烫——是上个月老住户留下的，说能开哪扇门，能通哪条巷。",
+   "text": "「雨敲在窗棂上，风不小，我手上那把铜钥匙还在发烫——是上个月老住户留下的，说能开哪扇门，能通哪条巷。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

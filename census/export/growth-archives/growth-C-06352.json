@@ -1,0 +1,105 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 10,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 39.17,
+    "z": 14.71
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.54,
+    "z": 44.93
+   },
+   "work": {
+    "site": "缓存管理员·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 123.09,
+    "z": 42.88
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06352",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "用旧月台的站牌教会了半条街的孩子——这事只有师父知道",
+ "id": "C-06352",
+ "month_lines": [
+  "红灯面前没有老熟人，风把人往前推，摊子还歪在江边，我盯着那盏老灯，心里头的账，又算到分上去了。"
+ ],
+ "name": "袁大壮",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "红灯面前没有老熟人，风把人往前推，摊子还歪在江边，我盯着那盏老灯，心里头的账，又算到分上去了。",
+   "text": "「红灯面前没有老熟人，风把人往前推，摊子还歪在江边，我盯着那盏老灯，心里头的账，又算到分上去了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

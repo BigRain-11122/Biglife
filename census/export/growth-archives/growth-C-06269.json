@@ -1,0 +1,106 @@
+{
+ "age": 56,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -1,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.42,
+    "z": 71.72
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.19,
+    "z": 127.55
+   },
+   "work": {
+    "site": "缓存管理员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -42.42,
+    "z": 131.9
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06269",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把老皮匠的锥子的位置背得比自家门牌还熟——据说是老辈传下的规矩",
+ "id": "C-06269",
+ "month_lines": [
+  "风掀得衣角乱摆，阳台那盆老吊兰又晃了晃，我说它不说话，它就轻轻抖叶子——旧钥匙开新锁，有时候还真开得开。"
+ ],
+ "name": "杭健",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风掀得衣角乱摆，阳台那盆老吊兰又晃了晃，我说它不说话，它就轻轻抖叶子——旧钥匙开新锁，有时候还真开得开。",
+   "text": "「风掀得衣角乱摆，阳台那盆老吊兰又晃了晃，我说它不说话，它就轻轻抖叶子——旧钥匙开新锁，有时候还真开得开。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

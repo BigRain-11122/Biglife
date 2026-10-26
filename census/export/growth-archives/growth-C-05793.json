@@ -1,0 +1,105 @@
+{
+ "age": 23,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 9,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.87,
+    "z": 256.88
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 0.26,
+    "z": 183.95
+   },
+   "work": {
+    "site": "数据牧人·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 80.29,
+    "z": 198.48
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05793",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "还在用电波猫——据说是老辈传下的规矩",
+ "id": "C-05793",
+ "month_lines": [
+  "雨丝还挂着，风一阵紧一阵，我摊子前那盏老灯晃得稳，手边的旧票根翻着，一张张都是赶批时的路。有意思，我想想。"
+ ],
+ "name": "汪沈鱼",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨丝还挂着，风一阵紧一阵，我摊子前那盏老灯晃得稳，手边的旧票根翻着，一张张都是赶批时的路。有意思，我想想。",
+   "text": "「雨丝还挂着，风一阵紧一阵，我摊子前那盏老灯晃得稳，手边的旧票根翻着，一张张都是赶批时的路。有意思，我想想。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 78,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -9,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 37.52,
+    "z": 105.06
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.37,
+    "z": 70.6
+   },
+   "work": {
+    "site": "攻略誊写员·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 140.59,
+    "z": 14.74
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06754",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把旧当铺的票据夹画进了自己的作品里——她自己也说不清为什么",
+ "id": "C-06754",
+ "month_lines": [
+  "先复核一遍。天阴着，风灌进领口发凉，江边那盏灯还亮着，老规矩，收工前得绕半里。"
+ ],
+ "name": "云阿凤",
+ "profession": "攻略誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "先复核一遍。天阴着，风灌进领口发凉，江边那盏灯还亮着，老规矩，收工前得绕半里。",
+   "text": "「先复核一遍。天阴着，风灌进领口发凉，江边那盏灯还亮着，老规矩，收工前得绕半里。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

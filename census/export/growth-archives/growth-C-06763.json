@@ -1,0 +1,105 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -5,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 52.4,
+    "z": -28.94
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.04,
+    "z": -86.33
+   },
+   "work": {
+    "site": "城市接线生·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 99.43,
+    "z": -90.16
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06763",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "从不让老码头缆桩离开自己三步远——这事全巷都知道",
+ "id": "C-06763",
+ "month_lines": [
+  "急啥，汤还没开呢——天阴着，风顶得人站不稳，我正把接线板往问询处一塞，听筒里正转接一通“为什么”。"
+ ],
+ "name": "贺萍",
+ "profession": "城市接线生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "急啥，汤还没开呢——天阴着，风顶得人站不稳，我正把接线板往问询处一塞，听筒里正转接一通“为什么”。",
+   "text": "「急啥，汤还没开呢——天阴着，风顶得人站不稳，我正把接线板往问询处一塞，听筒里正转接一通“为什么”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

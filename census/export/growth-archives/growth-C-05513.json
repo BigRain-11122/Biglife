@@ -1,0 +1,105 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -1,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 67.35,
+    "z": 96.56
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.52,
+    "z": 147.14
+   },
+   "work": {
+    "site": "攻略誊写员·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.71,
+    "z": 25.84
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05513",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "留着老钟楼的齿轮却从来不用——据说是老辈传下的规矩",
+ "id": "C-05513",
+ "month_lines": [
+  "雨丝还挂着，风掀得衣角乱摆。对图了，G08 CrazyCampus那条线，B2396到S2.5，得把坐标誊得整，多个人多双筷子，谁也别落下。"
+ ],
+ "name": "盛涛",
+ "profession": "攻略誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨丝还挂着，风掀得衣角乱摆。对图了，G08 CrazyCampus那条线，B2396到S2.5，得把坐标誊得整，多个人多双筷子，谁也别落下。",
+   "text": "「雨丝还挂着，风掀得衣角乱摆。对图了，G08 CrazyCampus那条线，B2396到S2.5，得把坐标誊得整，多个人多双筷子，谁也别落下。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

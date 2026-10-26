@@ -1,0 +1,105 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -5,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.55,
+    "z": -133.25
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.03,
+    "z": -117.87
+   },
+   "work": {
+    "site": "8bit 乐师·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.41,
+    "z": -141.89
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06359",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "坚持手写初版街景照片",
+ "id": "C-06359",
+ "month_lines": [
+  "谁的事就是谁的事，可街坊的事就是我的事。风掀得衣角乱摆，留言墙前又站了会儿，G08关卡跳了，火候到了自然就香。"
+ ],
+ "name": "廖卫东",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "谁的事就是谁的事，可街坊的事就是我的事。风掀得衣角乱摆，留言墙前又站了会儿，G08关卡跳了，火候到了自然就香。",
+   "text": "「谁的事就是谁的事，可街坊的事就是我的事。风掀得衣角乱摆，留言墙前又站了会儿，G08关卡跳了，火候到了自然就香。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

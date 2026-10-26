@@ -1,0 +1,106 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 9,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -121.17,
+    "z": 158.42
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.5,
+    "z": 106.97
+   },
+   "work": {
+    "site": "量化策略研究员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.39,
+    "z": 50.33
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06716",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "守时是最便宜的本事，也是最难改的毛病。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持手写褪色的游戏卡带——这事全巷都知道",
+ "id": "C-06716",
+ "month_lines": [
+  "稳住，别浪。夜深了，风把树梢压弯了，天阴着，江水倒是清清的，收摊前又想起给家里人捎个泡面，这回坨了，下次得早点泡。"
+ ],
+ "name": "邹星野",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "稳住，别浪。夜深了，风把树梢压弯了，天阴着，江水倒是清清的，收摊前又想起给家里人捎个泡面，这回坨了，下次得早点泡。",
+   "text": "「稳住，别浪。夜深了，风把树梢压弯了，天阴着，江水倒是清清的，收摊前又想起给家里人捎个泡面，这回坨了，下次得早点泡。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

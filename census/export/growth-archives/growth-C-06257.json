@@ -1,0 +1,105 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 3,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 41.22,
+    "z": 29.13
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.67,
+    "z": 117.32
+   },
+   "work": {
+    "site": "像素画匠·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 119.94,
+    "z": 137.58
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06257",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "把停用的老式磅秤画进了自己的作品里",
+ "id": "C-06257",
+ "month_lines": [
+  "灶上有汤，自取。风掀得衣角乱摆，我正把S2.5的光点描进走线里，等潮水退了再补一盏。"
+ ],
+ "name": "老电子管·丁",
+ "profession": "像素画匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "灶上有汤，自取。风掀得衣角乱摆，我正把S2.5的光点描进走线里，等潮水退了再补一盏。",
+   "text": "「灶上有汤，自取。风掀得衣角乱摆，我正把S2.5的光点描进走线里，等潮水退了再补一盏。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

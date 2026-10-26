@@ -1,0 +1,106 @@
+{
+ "age": 2,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#C5E1FF",
+   "skin": "#B388FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 23,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -111.61,
+    "z": 94.35
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.05,
+    "z": 65.35
+   },
+   "work": {
+    "site": "伴居灵·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -23.53,
+    "z": 159.57
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06702",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "跟着初版街景照片的节奏打过拍子——这事只有档案馆知道",
+ "id": "C-06702",
+ "month_lines": [
+  "风从巷口直灌进来，尾巴天线抖了抖，正对那根还亮着的旧灯串——数据刚推完，我顺手把B2396的记录蹭进袖口，等天亮前，再看一眼那条没拆的线。"
+ ],
+ "name": "小时针",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风从巷口直灌进来，尾巴天线抖了抖，正对那根还亮着的旧灯串——数据刚推完，我顺手把B2396的记录蹭进袖口，等天亮前，再看一眼那条没拆的线。",
+   "text": "「风从巷口直灌进来，尾巴天线抖了抖，正对那根还亮着的旧灯串——数据刚推完，我顺手把B2396的记录蹭进袖口，等天亮前，再看一眼那条没拆的线。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

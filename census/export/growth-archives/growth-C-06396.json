@@ -1,0 +1,106 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 2,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -134.47,
+    "z": 99.54
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.16,
+    "z": 133.32
+   },
+   "work": {
+    "site": "算力楼运维·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -32.37,
+    "z": 30.02
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06396",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "扛得住事，才配得上街坊喊一声师傅。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把一台修了八次的老收音机的位置背得比自家门牌还熟",
+ "id": "C-06396",
+ "month_lines": [
+  "这会儿天还黑着，风不小，江边上机器的喘气声都跟着晃。G08跑分卡着B2396，我这巡楼三圈，心口就稳着——这单我送，别跟我抢。"
+ ],
+ "name": "管文倩",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "这会儿天还黑着，风不小，江边上机器的喘气声都跟着晃。G08跑分卡着B2396，我这巡楼三圈，心口就稳着——这单我送，别跟我抢。",
+   "text": "「这会儿天还黑着，风不小，江边上机器的喘气声都跟着晃。G08跑分卡着B2396，我这巡楼三圈，心口就稳着——这单我送，别跟我抢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

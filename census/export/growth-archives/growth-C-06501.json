@@ -1,0 +1,106 @@
+{
+ "age": 38,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 8,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -134.91,
+    "z": 129.87
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.82,
+    "z": 105.11
+   },
+   "work": {
+    "site": "量化策略研究员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.11,
+    "z": 108.51
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06501",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把三十年前的车铃修好再免费送人",
+ "id": "C-06501",
+ "month_lines": [
+  "雨脚细细密密，风一阵紧一阵，灯还是老灯亮堂。今夜我照例给守夜灯灵道了辛苦，屋里的脉动稳着，像那年老巷口的水缸，没断过气。"
+ ],
+ "name": "叶之南",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "雨脚细细密密，风一阵紧一阵，灯还是老灯亮堂。今夜我照例给守夜灯灵道了辛苦，屋里的脉动稳着，像那年老巷口的水缸，没断过气。",
+   "text": "「雨脚细细密密，风一阵紧一阵，灯还是老灯亮堂。今夜我照例给守夜灯灵道了辛苦，屋里的脉动稳着，像那年老巷口的水缸，没断过气。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 67,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -5,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.57,
+    "z": 84.9
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.61,
+    "z": 49.6
+   },
+   "work": {
+    "site": "尾盘茶室老板·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -46.67,
+    "z": 105.45
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05449",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "偷偷给退租铺面的旧招牌上油保养——没人知道为什么",
+ "id": "C-05449",
+ "month_lines": [
+  "雨丝还挂着，风好大，我刚把茶室最后一盏灯点了，K线收得平，这单我送，别跟我抢。"
+ ],
+ "name": "钱惠芬",
+ "profession": "尾盘茶室老板",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨丝还挂着，风好大，我刚把茶室最后一盏灯点了，K线收得平，这单我送，别跟我抢。",
+   "text": "「雨丝还挂着，风好大，我刚把茶室最后一盏灯点了，K线收得平，这单我送，别跟我抢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

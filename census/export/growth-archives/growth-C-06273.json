@@ -1,0 +1,105 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 5,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.4,
+    "z": 257.34
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 8.9,
+    "z": 188.57
+   },
+   "work": {
+    "site": "编年史誊录员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 51.02,
+    "z": 229.68
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06273",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "把全城雨夜的录音合集修好再免费送人——这事只有档案馆知道",
+ "id": "C-06273",
+ "month_lines": [
+  "茶凉了再倒就是，风一阵紧一阵，我刚把G08的转场校字完，拿侬呒办法，摊子照摆。"
+ ],
+ "name": "郁燕",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "household",
+   "src": "H-OR0051",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "茶凉了再倒就是，风一阵紧一阵，我刚把G08的转场校字完，拿侬呒办法，摊子照摆。",
+   "text": "「茶凉了再倒就是，风一阵紧一阵，我刚把G08的转场校字完，拿侬呒办法，摊子照摆。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

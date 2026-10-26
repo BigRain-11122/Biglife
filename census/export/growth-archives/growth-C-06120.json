@@ -1,0 +1,106 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -8,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.72,
+    "z": 27.87
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.74,
+    "z": 30.07
+   },
+   "work": {
+    "site": "缓存管理员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -33.44,
+    "z": 109.16
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06120",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "口袋里总揣着断了线的风筝——据说是老辈传下的规矩",
+ "id": "C-06120",
+ "month_lines": [
+  "旧钥匙开新锁，有时候还真开得开——我今儿攥着那把生锈的铜钥匙，指尖发烫，它早就忘了锁哪扇门，可我一拧，门轴就咯吱响了，像老朋友在喘气。"
+ ],
+ "name": "任蕾",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "旧钥匙开新锁，有时候还真开得开——我今儿攥着那把生锈的铜钥匙，指尖发烫，它早就忘了锁哪扇门，可我一拧，门轴就咯吱响了，像老朋友在喘气。",
+   "text": "「旧钥匙开新锁，有时候还真开得开——我今儿攥着那把生锈的铜钥匙，指尖发烫，它早就忘了锁哪扇门，可我一拧，门轴就咯吱响了，像老朋友在喘气。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

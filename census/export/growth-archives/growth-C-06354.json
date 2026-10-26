@@ -1,0 +1,106 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 1,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -100.86,
+    "z": 158.05
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.78,
+    "z": 116.58
+   },
+   "work": {
+    "site": "防火墙巡林员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.34,
+    "z": 131.13
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06354",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "攒了满抽屉半张老电影票从不给看——这事只有师父知道",
+ "id": "C-06354",
+ "month_lines": [
+  "搭把手的事儿，今天风不小，巡边路上老树晃得厉害，留言墙前又多了一行新字，没签名字，但我晓得，谁在等我回头。"
+ ],
+ "name": "侯天翼",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "搭把手的事儿，今天风不小，巡边路上老树晃得厉害，留言墙前又多了一行新字，没签名字，但我晓得，谁在等我回头。",
+   "text": "「搭把手的事儿，今天风不小，巡边路上老树晃得厉害，留言墙前又多了一行新字，没签名字，但我晓得，谁在等我回头。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

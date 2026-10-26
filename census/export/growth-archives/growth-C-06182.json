@@ -1,0 +1,105 @@
+{
+ "age": 85,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -5,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 55.69,
+    "z": 152.82
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.66,
+    "z": 134.25
+   },
+   "work": {
+    "site": "攻略誊写员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 139.42,
+    "z": 60.17
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06182",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每天跟全城最后一只手写信箱打招呼——没人知道为什么",
+ "id": "C-06182",
+ "month_lines": [
+  "风刮得紧，灯还亮着，作业本上那条新画的光痕，正好对上了今天的 commit 光点。这物件比我懂年头。"
+ ],
+ "name": "魏阿炳",
+ "profession": "攻略誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风刮得紧，灯还亮着，作业本上那条新画的光痕，正好对上了今天的 commit 光点。这物件比我懂年头。",
+   "text": "「风刮得紧，灯还亮着，作业本上那条新画的光痕，正好对上了今天的 commit 光点。这物件比我懂年头。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

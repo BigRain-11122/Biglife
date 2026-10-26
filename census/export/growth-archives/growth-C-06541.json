@@ -1,0 +1,105 @@
+{
+ "age": 89,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -7,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 42.27,
+    "z": -81.07
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.09,
+    "z": -36.75
+   },
+   "work": {
+    "site": "白玉兰园艺师·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 133.94,
+    "z": -134.09
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06541",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "偷偷给老码头缆桩上油保养——这事只有师父知道",
+ "id": "C-06541",
+ "month_lines": [
+  "茶凉了再倒就是，我正把白玉兰的枝条在手心搓着，风好大，树皮都抖得发亮。"
+ ],
+ "name": "潘承宗",
+ "profession": "白玉兰园艺师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "茶凉了再倒就是，我正把白玉兰的枝条在手心搓着，风好大，树皮都抖得发亮。",
+   "text": "「茶凉了再倒就是，我正把白玉兰的枝条在手心搓着，风好大，树皮都抖得发亮。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

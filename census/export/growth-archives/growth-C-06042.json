@@ -1,0 +1,106 @@
+{
+ "age": 51,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 1,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -115.77,
+    "z": 85.87
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.52,
+    "z": 24.54
+   },
+   "work": {
+    "site": "夜宵摊主·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.33,
+    "z": 119.38
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06042",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能一眼认出会发光的纽扣的真伪——没人知道为什么",
+ "id": "C-06042",
+ "month_lines": [
+  "这物件比我懂年头，风不小，收摊前又补了块酱香饼给媳妇。天阴着，我正把阳台的花说：“今天你别怕，风大也照常开”。"
+ ],
+ "name": "阮伟",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这物件比我懂年头，风不小，收摊前又补了块酱香饼给媳妇。天阴着，我正把阳台的花说：“今天你别怕，风大也照常开”。",
+   "text": "「这物件比我懂年头，风不小，收摊前又补了块酱香饼给媳妇。天阴着，我正把阳台的花说：“今天你别怕，风大也照常开”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 79,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#2E5E4E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -5,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 71.53,
+    "z": 86.48
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.47,
+    "z": 13.61
+   },
+   "work": {
+    "site": "穿城信使·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 120.5,
+    "z": 103.46
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06461",
+  "quirk": "night_run",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "得之我幸，失之我睡。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "逢人就讲旧船票的故事——据说是老辈传下的规矩",
+ "id": "C-06461",
+ "month_lines": [
+  "雨脚细细密密，风掀得衣角乱摆。单子还在堆着，门禁公告翻了三遍，明天的料我早备好——慢慢来，比较快。"
+ ],
+ "name": "老码·小",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "雨脚细细密密，风掀得衣角乱摆。单子还在堆着，门禁公告翻了三遍，明天的料我早备好——慢慢来，比较快。",
+   "text": "「雨脚细细密密，风掀得衣角乱摆。单子还在堆着，门禁公告翻了三遍，明天的料我早备好——慢慢来，比较快。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

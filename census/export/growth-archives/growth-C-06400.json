@@ -1,0 +1,106 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 11,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -52.07,
+    "z": -205.66
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 9.69,
+    "z": -208.86
+   },
+   "work": {
+    "site": "信使小跟班·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 84.13,
+    "z": -258.46
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06400",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件雨声录音——这事只有师父知道",
+ "id": "C-06400",
+ "month_lines": [
+  "单子来了就接，不来就钓鱼。风把人往前推，口袋里那两颗糖还暖着，守夜灯灵说“钥匙还在发烫”，我听见了，就点头。"
+ ],
+ "name": "钱小杏",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "单子来了就接，不来就钓鱼。风把人往前推，口袋里那两颗糖还暖着，守夜灯灵说“钥匙还在发烫”，我听见了，就点头。",
+   "text": "「单子来了就接，不来就钓鱼。风把人往前推，口袋里那两颗糖还暖着，守夜灯灵说“钥匙还在发烫”，我听见了，就点头。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

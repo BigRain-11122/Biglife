@@ -1,0 +1,105 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 7,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -143.13,
+    "z": -123.52
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.07,
+    "z": -56.11
+   },
+   "work": {
+    "site": "城市接线生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -28.16,
+    "z": -56.27
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06350",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "口袋里总揣着修桥人的旧安全帽——据说是老辈传下的规矩",
+ "id": "C-06350",
+ "month_lines": [
+  "收摊了，明天见。天阴着，风刮得紧，江边那盏老路灯还亮着，像谁没关掉的旧话筒。"
+ ],
+ "name": "姜之恒",
+ "profession": "城市接线生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "收摊了，明天见。天阴着，风刮得紧，江边那盏老路灯还亮着，像谁没关掉的旧话筒。",
+   "text": "「收摊了，明天见。天阴着，风刮得紧，江边那盏老路灯还亮着，像谁没关掉的旧话筒。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

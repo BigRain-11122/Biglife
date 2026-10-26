@@ -1,0 +1,106 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 0,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -27.18,
+    "z": 209.91
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 14.63,
+    "z": 239.57
+   },
+   "work": {
+    "site": "数据牧人·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 128.92,
+    "z": 167.96
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05684",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件老式的士票",
+ "id": "C-05684",
+ "month_lines": [
+  "新东西先看三天再用，这雨下得，地上的水洼都映着天光，风刮得紧，我蹲着把旧年轮的灰刮了，喂进锅里，十年了，还是这么炖。"
+ ],
+ "name": "严蕾",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "新东西先看三天再用，这雨下得，地上的水洼都映着天光，风刮得紧，我蹲着把旧年轮的灰刮了，喂进锅里，十年了，还是这么炖。",
+   "text": "「新东西先看三天再用，这雨下得，地上的水洼都映着天光，风刮得紧，我蹲着把旧年轮的灰刮了，喂进锅里，十年了，还是这么炖。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

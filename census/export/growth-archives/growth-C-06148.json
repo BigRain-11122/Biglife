@@ -1,0 +1,106 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 7,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.64,
+    "z": 101.37
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.41,
+    "z": 81.28
+   },
+   "work": {
+    "site": "新市民安居顾问·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.35,
+    "z": 12.14
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06148",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "流量像潮水，我是灯塔不是渔船。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把老式算盘珠的位置背得比自家门牌还熟——没人知道为什么",
+ "id": "C-06148",
+ "month_lines": [
+  "看天吃饭，看行情穿衣。风把人往前推，阳台的花说：“别怕，今天云层厚，我根扎得稳。"
+ ],
+ "name": "糜简梨",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "看天吃饭，看行情穿衣。风把人往前推，阳台的花说：“别怕，今天云层厚，我根扎得稳。",
+   "text": "「看天吃饭，看行情穿衣。风把人往前推，阳台的花说：“别怕，今天云层厚，我根扎得稳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

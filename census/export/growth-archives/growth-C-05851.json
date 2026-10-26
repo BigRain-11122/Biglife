@@ -1,0 +1,106 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 5,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.37,
+    "z": 84.45
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.59,
+    "z": 104.62
+   },
+   "work": {
+    "site": "回测农·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -72.52,
+    "z": 65.8
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05851",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每天跟旧货郎的拨浪鼓打招呼——据说是老辈传下的规矩",
+ "id": "C-05851",
+ "month_lines": [
+  "檐口的水线不断，风好大，我把茶杯端得稳稳的，看那条绿萝在墙角晃，心里头一紧——门禁亮绿灯，心里才亮堂，这雨，是给老田浇的，也是给心收的。"
+ ],
+ "name": "董燕",
+ "profession": "回测农",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线不断，风好大，我把茶杯端得稳稳的，看那条绿萝在墙角晃，心里头一紧——门禁亮绿灯，心里才亮堂，这雨，是给老田浇的，也是给心收的。",
+   "text": "「檐口的水线不断，风好大，我把茶杯端得稳稳的，看那条绿萝在墙角晃，心里头一紧——门禁亮绿灯，心里才亮堂，这雨，是给老田浇的，也是给心收的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

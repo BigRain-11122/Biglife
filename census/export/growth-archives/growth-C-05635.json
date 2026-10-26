@@ -1,0 +1,106 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 6,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.19,
+    "z": 147.28
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.7,
+    "z": 32.77
+   },
+   "work": {
+    "site": "数据搬运工·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -63.51,
+    "z": 25.02
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05635",
+  "quirk": "night_run",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持给手绘的星空图记日记",
+ "id": "C-05635",
+ "month_lines": [
+  "檐口的水线不断，风好大，我正扛着一包新到的基建数据往装卸口走，先复核一遍——今天这单，得扛稳了。"
+ ],
+ "name": "苏浩宇",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线不断，风好大，我正扛着一包新到的基建数据往装卸口走，先复核一遍——今天这单，得扛稳了。",
+   "text": "「檐口的水线不断，风好大，我正扛着一包新到的基建数据往装卸口走，先复核一遍——今天这单，得扛稳了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

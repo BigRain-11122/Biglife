@@ -1,0 +1,106 @@
+{
+ "age": 6,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 10,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -92.52,
+    "z": 256.9
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -2.14,
+    "z": 188.31
+   },
+   "work": {
+    "site": "像素小学学生·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 32.53,
+    "z": 259.75
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05440",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "把心事只说给老式算命的签筒听——他自己也说不清为什么",
+ "id": "C-05440",
+ "month_lines": [
+  "雨点没停，风把人往前推，我正对着阳台的花说：“老朋友，灯还是老灯亮堂，今天G08变轨了，咱不靠系统，只靠老灯的脾气。"
+ ],
+ "name": "廖果果",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨点没停，风把人往前推，我正对着阳台的花说：“老朋友，灯还是老灯亮堂，今天G08变轨了，咱不靠系统，只靠老灯的脾气。",
+   "text": "「雨点没停，风把人往前推，我正对着阳台的花说：“老朋友，灯还是老灯亮堂，今天G08变轨了，咱不靠系统，只靠老灯的脾气。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

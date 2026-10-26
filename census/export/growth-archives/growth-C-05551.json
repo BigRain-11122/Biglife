@@ -1,0 +1,106 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -2,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.41,
+    "z": 71.31
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.27,
+    "z": 86.16
+   },
+   "work": {
+    "site": "数据清洗工·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.75,
+    "z": 13.47
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05551",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "记得停产的暖光灯泡的每一个来历——这事全巷都知道",
+ "id": "C-05551",
+ "month_lines": [
+  "伞面一直响，风好大，手里的旧票根在抖——刚从抽屉里翻出那张1998年的地铁票，字迹磨得发白，像是江水冲刷过，还是那个弄堂。"
+ ],
+ "name": "总线-2·乙",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "伞面一直响，风好大，手里的旧票根在抖——刚从抽屉里翻出那张1998年的地铁票，字迹磨得发白，像是江水冲刷过，还是那个弄堂。",
+   "text": "「伞面一直响，风好大，手里的旧票根在抖——刚从抽屉里翻出那张1998年的地铁票，字迹磨得发白，像是江水冲刷过，还是那个弄堂。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

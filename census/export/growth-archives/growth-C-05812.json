@@ -1,0 +1,106 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#B388FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 24,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 53.31,
+    "z": 121.68
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.34,
+    "z": 31.8
+   },
+   "work": {
+    "site": "声景师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 131.28,
+    "z": 52.37
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05812",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "高兴时会把光借给初代广场舞光带——这事只有档案馆知道",
+ "id": "C-05812",
+ "month_lines": [
+  "地上的水洼积着水，风把人往前推，我正把旧雨衣的袖口一圈圈翻过来——补丁是去年雨季缝的，针脚歪着，可还顶得住。"
+ ],
+ "name": "白指南",
+ "profession": "声景师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风把人往前推，我正把旧雨衣的袖口一圈圈翻过来——补丁是去年雨季缝的，针脚歪着，可还顶得住。",
+   "text": "「地上的水洼积着水，风把人往前推，我正把旧雨衣的袖口一圈圈翻过来——补丁是去年雨季缝的，针脚歪着，可还顶得住。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

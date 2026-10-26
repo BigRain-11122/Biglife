@@ -1,0 +1,106 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 8,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 46.33,
+    "z": -136.46
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.52,
+    "z": -100.0
+   },
+   "work": {
+    "site": "编年史馆员·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 136.56,
+    "z": -55.75
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06491",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "给全城灯语的对照表都编了号还建了册——这事只有档案馆知道",
+ "id": "C-06491",
+ "month_lines": [
+  "檐口的水线不断，风掀得衣角乱摆。先试了再说，塔基档案库的commit又在昨夜补上了——G08 CrazyCampus的那条路，我得把脉。"
+ ],
+ "name": "吕之恒",
+ "profession": "编年史馆员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "檐口的水线不断，风掀得衣角乱摆。先试了再说，塔基档案库的commit又在昨夜补上了——G08 CrazyCampus的那条路，我得把脉。",
+   "text": "「檐口的水线不断，风掀得衣角乱摆。先试了再说，塔基档案库的commit又在昨夜补上了——G08 CrazyCampus的那条路，我得把脉。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

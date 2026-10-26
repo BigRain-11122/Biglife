@@ -1,0 +1,105 @@
+{
+ "age": 23,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 10,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -115.37,
+    "z": 185.58
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 9.78,
+    "z": 244.28
+   },
+   "work": {
+    "site": "外环巡夜员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 26.03,
+    "z": 231.73
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06104",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "梦话都在念叨老皮匠的锥子",
+ "id": "C-06104",
+ "month_lines": [
+  "风刮得紧，灯盏在风里晃，补光的活儿照旧是三步一查，查到老巷口，江声还像从前。"
+ ],
+ "name": "何小鹿",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风刮得紧，灯盏在风里晃，补光的活儿照旧是三步一查，查到老巷口，江声还像从前。",
+   "text": "「风刮得紧，灯盏在风里晃，补光的活儿照旧是三步一查，查到老巷口，江声还像从前。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

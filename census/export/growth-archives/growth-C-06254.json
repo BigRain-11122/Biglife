@@ -1,0 +1,106 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 3,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.44,
+    "z": 99.18
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.22,
+    "z": 88.51
+   },
+   "work": {
+    "site": "新市民安居顾问·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 145.66,
+    "z": 20.95
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06254",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每年挑一天只为全城雪夜的第一次合影大扫除——这事只有档案馆知道",
+ "id": "C-06254",
+ "month_lines": [
+  "风刮得紧，我刚从光桥边回来，G08的光点又跳回S2.5了，谁的事就是谁的事，可街坊的事就是我的事。"
+ ],
+ "name": "唐之恒",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风刮得紧，我刚从光桥边回来，G08的光点又跳回S2.5了，谁的事就是谁的事，可街坊的事就是我的事。",
+   "text": "「风刮得紧，我刚从光桥边回来，G08的光点又跳回S2.5了，谁的事就是谁的事，可街坊的事就是我的事。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

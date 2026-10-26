@@ -1,0 +1,106 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -8,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.66,
+    "z": 146.22
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.33,
+    "z": 27.48
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -71.7,
+    "z": 111.84
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05524",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "偷偷给老钢琴的琴键上油保养——这事只有档案馆知道",
+ "id": "C-05524",
+ "month_lines": [
+  "地上的水洼积着水，风把人往前推，我蹲在数据菜市门口，把昨天偷练的像素拼图贴在湿漉漉的墙面上，补丁缝得像朵小花，就差个观众说句“好看”。"
+ ],
+ "name": "龚健",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风把人往前推，我蹲在数据菜市门口，把昨天偷练的像素拼图贴在湿漉漉的墙面上，补丁缝得像朵小花，就差个观众说句“好看”。",
+   "text": "「地上的水洼积着水，风把人往前推，我蹲在数据菜市门口，把昨天偷练的像素拼图贴在湿漉漉的墙面上，补丁缝得像朵小花，就差个观众说句“好看”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

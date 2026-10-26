@@ -1,0 +1,106 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 2,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -139.33,
+    "z": 73.04
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.45,
+    "z": 11.63
+   },
+   "work": {
+    "site": "K线屏画师·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -30.41,
+    "z": 56.17
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06166",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "风吹哪页读哪页。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每逢下雨就去修第一炉出炉的像素瓷",
+ "id": "C-06166",
+ "month_lines": [
+  "风把人往前推，我正把老屏的边角描线，光丝蹭了手，像老友在笑。潮水的事交给潮水，明天再换色。"
+ ],
+ "name": "糜一鸣",
+ "profession": "K线屏画师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风把人往前推，我正把老屏的边角描线，光丝蹭了手，像老友在笑。潮水的事交给潮水，明天再换色。",
+   "text": "「风把人往前推，我正把老屏的边角描线，光丝蹭了手，像老友在笑。潮水的事交给潮水，明天再换色。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

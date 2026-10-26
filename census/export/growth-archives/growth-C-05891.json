@@ -1,0 +1,105 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -1,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -120.2,
+    "z": 165.85
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 6.69,
+    "z": 209.42
+   },
+   "work": {
+    "site": "旧件修复师·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 90.54,
+    "z": 186.46
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05891",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "灶上留一壶，路过的都是客。",
+ "district": "OR",
+ "gender": "无定",
+ "hook": "每年挑一天只为旧光伞骨大扫除——这事全巷都知道",
+ "id": "C-05891",
+ "month_lines": [
+  "檐口的水线不断，风掀得衣角乱摆。刚把明天的料备好，又想起那张旧卡——G08 CrazyCampus: B2396 -> S2.5，前天跟C-04612说的，现在茶还温着，火候到了自"
+ ],
+ "name": "超频·乙",
+ "profession": "旧件修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线不断，风掀得衣角乱摆。刚把明天的料备好，又想起那张旧卡——G08 CrazyCampus: B2396 -> S2.5，前天跟C-04612说的，现在茶还温着，火候到了自",
+   "text": "「檐口的水线不断，风掀得衣角乱摆。刚把明天的料备好，又想起那张旧卡——G08 CrazyCampus: B2396 -> S2.5，前天跟C-04612说的，现在茶还温着，火候到了自」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

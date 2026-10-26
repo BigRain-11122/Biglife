@@ -1,0 +1,106 @@
+{
+ "age": 90,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -7,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 42.49,
+    "z": 127.3
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.45,
+    "z": 118.0
+   },
+   "work": {
+    "site": "像素小店主·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 139.99,
+    "z": 110.6
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06117",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "攒了满抽屉老式饭盒从不给看——这事只有档案馆知道",
+ "id": "C-06117",
+ "month_lines": [
+  "灵感这东西，得喂它——今天风一阵紧一阵，我坐在匠人巷门口，把新做的sprite擦了又擦，老主顾说要来，我就知，拆开看看，是最大的敬意。"
+ ],
+ "name": "濮美娟",
+ "profession": "像素小店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "灵感这东西，得喂它——今天风一阵紧一阵，我坐在匠人巷门口，把新做的sprite擦了又擦，老主顾说要来，我就知，拆开看看，是最大的敬意。",
+   "text": "「灵感这东西，得喂它——今天风一阵紧一阵，我坐在匠人巷门口，把新做的sprite擦了又擦，老主顾说要来，我就知，拆开看看，是最大的敬意。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

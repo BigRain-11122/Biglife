@@ -1,0 +1,106 @@
+{
+ "age": 72,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -5,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 63.83,
+    "z": -91.23
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.46,
+    "z": -63.81
+   },
+   "work": {
+    "site": "白玉兰园艺师·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.07,
+    "z": -22.76
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05908",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "每逢下雨就去修初版城市地图——这事只有档案馆知道",
+ "id": "C-05908",
+ "month_lines": [
+  "地上的水洼积着水，风把人往前推，我提着壶走到塔脚花园，白玉兰的枝条还晃着，修枝得趁早，潮水的事交给潮水。"
+ ],
+ "name": "金珍珠",
+ "profession": "白玉兰园艺师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风把人往前推，我提着壶走到塔脚花园，白玉兰的枝条还晃着，修枝得趁早，潮水的事交给潮水。",
+   "text": "「地上的水洼积着水，风把人往前推，我提着壶走到塔脚花园，白玉兰的枝条还晃着，修枝得趁早，潮水的事交给潮水。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

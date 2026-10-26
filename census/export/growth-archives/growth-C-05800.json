@@ -1,0 +1,106 @@
+{
+ "age": 64,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -14,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -132.49,
+    "z": 153.82
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.1,
+    "z": 29.71
+   },
+   "work": {
+    "site": "大编译调律师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -63.78,
+    "z": 35.47
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05800",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每年挑一天只为老照片底片大扫除——没人知道为什么",
+ "id": "C-05800",
+ "month_lines": [
+  "雨点没停，风把人往前推，我手里那台编译器还在哼，调音的活儿没停，汤还没开呢，就着这雨，听它把线程都拉直了。"
+ ],
+ "name": "廖敏",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨点没停，风把人往前推，我手里那台编译器还在哼，调音的活儿没停，汤还没开呢，就着这雨，听它把线程都拉直了。",
+   "text": "「雨点没停，风把人往前推，我手里那台编译器还在哼，调音的活儿没停，汤还没开呢，就着这雨，听它把线程都拉直了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

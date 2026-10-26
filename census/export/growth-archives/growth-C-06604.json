@@ -1,0 +1,106 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 18,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 72.32,
+    "z": 136.12
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.41,
+    "z": 43.18
+   },
+   "work": {
+    "site": "伴居灵·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.42,
+    "z": 103.32
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06604",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "把老式怀表链当成了自己的老朋友——这事只有师父知道",
+ "id": "C-06604",
+ "month_lines": [
+  "风把人往前推，尾巴天线扫过三城屋顶那片乱糟糟的信号带，蹭了下数据——灯灵们还在巡，旧灯没换，旧得体面。"
+ ],
+ "name": "白晚潮",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风把人往前推，尾巴天线扫过三城屋顶那片乱糟糟的信号带，蹭了下数据——灯灵们还在巡，旧灯没换，旧得体面。",
+   "text": "「风把人往前推，尾巴天线扫过三城屋顶那片乱糟糟的信号带，蹭了下数据——灯灵们还在巡，旧灯没换，旧得体面。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

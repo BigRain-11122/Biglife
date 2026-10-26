@@ -1,0 +1,106 @@
+{
+ "age": 38,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 8,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -123.91,
+    "z": 127.16
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.96,
+    "z": 134.69
+   },
+   "work": {
+    "site": "风控瞭望员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.66,
+    "z": 127.95
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05469",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件老电报局的键——他自己也说不清为什么",
+ "id": "C-05469",
+ "month_lines": [
+  "饭点了，天大的事吃完再谈。雨脚细细密密，风一阵紧一阵，我站在岗台前瞅了眼云，像老朋友一样，不说话也明白。"
+ ],
+ "name": "童一鸣",
+ "profession": "风控瞭望员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "饭点了，天大的事吃完再谈。雨脚细细密密，风一阵紧一阵，我站在岗台前瞅了眼云，像老朋友一样，不说话也明白。",
+   "text": "「饭点了，天大的事吃完再谈。雨脚细细密密，风一阵紧一阵，我站在岗台前瞅了眼云，像老朋友一样，不说话也明白。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

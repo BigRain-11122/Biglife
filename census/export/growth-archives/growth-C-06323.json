@@ -1,0 +1,106 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 25,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -97.01,
+    "z": -37.66
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.71,
+    "z": -96.75
+   },
+   "work": {
+    "site": "巡信使·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.15,
+    "z": -83.74
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06323",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "绕着奖状飞过整整三十圈——这事只有师父知道",
+ "id": "C-06323",
+ "month_lines": [
+  "落檐时风掀得衣角乱摆，衔笺飞过街角，灯灵们正慢悠悠调光——今天双日，巡信使的翅膀得更稳些，好东西遇着了，分一半是本分。"
+ ],
+ "name": "小阿汛",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "落檐时风掀得衣角乱摆，衔笺飞过街角，灯灵们正慢悠悠调光——今天双日，巡信使的翅膀得更稳些，好东西遇着了，分一半是本分。",
+   "text": "「落檐时风掀得衣角乱摆，衔笺飞过街角，灯灵们正慢悠悠调光——今天双日，巡信使的翅膀得更稳些，好东西遇着了，分一半是本分。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

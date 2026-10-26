@@ -1,0 +1,106 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 22,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.08,
+    "z": -38.14
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.48,
+    "z": -122.24
+   },
+   "work": {
+    "site": "像素小学学生·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -46.55,
+    "z": -126.29
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05570",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把旧饭票修好再免费送人——这事全巷都知道",
+ "id": "C-05570",
+ "month_lines": [
+  "雨还在落，风刮得紧。我手里那枚锈了边的铁皮钥匙，是去年老街翻修时捡的，今天贴在课桌角，像在等什么人来开。"
+ ],
+ "name": "肖糖糖",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨还在落，风刮得紧。我手里那枚锈了边的铁皮钥匙，是去年老街翻修时捡的，今天贴在课桌角，像在等什么人来开。",
+   "text": "「雨还在落，风刮得紧。我手里那枚锈了边的铁皮钥匙，是去年老街翻修时捡的，今天贴在课桌角，像在等什么人来开。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

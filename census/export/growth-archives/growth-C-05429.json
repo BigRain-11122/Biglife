@@ -1,0 +1,106 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 7,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.16,
+    "z": 67.3
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.24,
+    "z": 63.47
+   },
+   "work": {
+    "site": "量化策略研究员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -46.83,
+    "z": 78.62
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05429",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "流量像潮水，我是灯塔不是渔船。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件会发光的纽扣——她自己也说不清为什么",
+ "id": "C-05429",
+ "month_lines": [
+  "雨脚细细密密，风掀得衣角乱摆。盯了眼G08的灯，从B2396又滑到S2.5，数据回撤得刚好，多个人多双筷子，今天这盘我稳着。"
+ ],
+ "name": "席一诺",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨脚细细密密，风掀得衣角乱摆。盯了眼G08的灯，从B2396又滑到S2.5，数据回撤得刚好，多个人多双筷子，今天这盘我稳着。",
+   "text": "「雨脚细细密密，风掀得衣角乱摆。盯了眼G08的灯，从B2396又滑到S2.5，数据回撤得刚好，多个人多双筷子，今天这盘我稳着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

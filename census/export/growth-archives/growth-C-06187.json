@@ -1,0 +1,106 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 2,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.33,
+    "z": 73.5
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.78,
+    "z": 81.87
+   },
+   "work": {
+    "site": "缓存管理员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.01,
+    "z": 59.3
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06187",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "攒了满抽屉旧月台的站牌从不给看——据说是老辈传下的规矩",
+ "id": "C-06187",
+ "month_lines": [
+  "风好大，巷口的铁皮柜被吹得晃，我扶了扶镜框，手心还留着上周缓存的那条老规矩——水到了警戒线就得说，说得早就是功劳。"
+ ],
+ "name": "郁洁",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风好大，巷口的铁皮柜被吹得晃，我扶了扶镜框，手心还留着上周缓存的那条老规矩——水到了警戒线就得说，说得早就是功劳。",
+   "text": "「风好大，巷口的铁皮柜被吹得晃，我扶了扶镜框，手心还留着上周缓存的那条老规矩——水到了警戒线就得说，说得早就是功劳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

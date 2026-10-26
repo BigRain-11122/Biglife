@@ -1,0 +1,106 @@
+{
+ "age": 90,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -12,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.13,
+    "z": 101.96
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.24,
+    "z": 92.34
+   },
+   "work": {
+    "site": "时空校准师·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.26,
+    "z": 18.27
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06798",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能一眼认出消失街区的路牌的真伪——这事只有师父知道",
+ "id": "C-06798",
+ "month_lines": [
+  "搭把手的事儿，巷口那块老钟盘子裂了道缝，我正想伸手修，风从巷口直灌进来，把游丝吹得晃，手心都发凉。"
+ ],
+ "name": "沈有根",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "buddy",
+   "src": "工友",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "搭把手的事儿，巷口那块老钟盘子裂了道缝，我正想伸手修，风从巷口直灌进来，把游丝吹得晃，手心都发凉。",
+   "text": "「搭把手的事儿，巷口那块老钟盘子裂了道缝，我正想伸手修，风从巷口直灌进来，把游丝吹得晃，手心都发凉。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

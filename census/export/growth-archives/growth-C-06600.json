@@ -1,0 +1,106 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 7,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.48,
+    "z": 75.09
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.36,
+    "z": 90.89
+   },
+   "work": {
+    "site": "数据搬运工·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.87,
+    "z": 112.1
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06600",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "桥上不问来路，落水都得拉一把。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "在掉漆的糖果罐上刻了一行没人认得的小字——没人知道为什么",
+ "id": "C-06600",
+ "month_lines": [
+  "风不小，阳台的花说它快冻了，我摸了摸盆土，还温着，老地方见。"
+ ],
+ "name": "谢大壮",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风不小，阳台的花说它快冻了，我摸了摸盆土，还温着，老地方见。",
+   "text": "「风不小，阳台的花说它快冻了，我摸了摸盆土，还温着，老地方见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

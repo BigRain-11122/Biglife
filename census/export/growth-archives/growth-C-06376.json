@@ -1,0 +1,106 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 15,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -135.55,
+    "z": 77.9
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.82,
+    "z": 107.35
+   },
+   "work": {
+    "site": "像素学徒·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.12,
+    "z": 103.99
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06376",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "逢人就讲全城最后一只手写信箱的故事——据说是老辈传下的规矩",
+ "id": "C-06376",
+ "month_lines": [
+  "看天吃饭，看行情穿衣——风把人往前推，我正把最后一块像素板焊进匠人巷的旧柜里，没说出口的稿子，藏得比塔顶白光还深。"
+ ],
+ "name": "贺果果",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "看天吃饭，看行情穿衣——风把人往前推，我正把最后一块像素板焊进匠人巷的旧柜里，没说出口的稿子，藏得比塔顶白光还深。",
+   "text": "「看天吃饭，看行情穿衣——风把人往前推，我正把最后一块像素板焊进匠人巷的旧柜里，没说出口的稿子，藏得比塔顶白光还深。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

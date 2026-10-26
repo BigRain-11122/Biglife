@@ -1,0 +1,106 @@
+{
+ "age": 6,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#EC407A",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#82B1FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 13,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 33.5,
+    "z": 143.06
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.6,
+    "z": 23.86
+   },
+   "work": {
+    "site": "巡信使·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 122.27,
+    "z": 157.7
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05932",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "看得见第一版户口簿的封面纸里住着的光——没人知道为什么",
+ "id": "C-05932",
+ "month_lines": [
+  "地上的水洼积着水，风把人往前推，我攥着那截旧铁丝，是去年修檐角时留下的——锈了，可还扎在掌心，像信没寄出的那封短笺。"
+ ],
+ "name": "黑云隙",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风把人往前推，我攥着那截旧铁丝，是去年修檐角时留下的——锈了，可还扎在掌心，像信没寄出的那封短笺。",
+   "text": "「地上的水洼积着水，风把人往前推，我攥着那截旧铁丝，是去年修檐角时留下的——锈了，可还扎在掌心，像信没寄出的那封短笺。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

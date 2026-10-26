@@ -1,0 +1,106 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 7,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 41.48,
+    "z": 86.76
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.52,
+    "z": 82.58
+   },
+   "work": {
+    "site": "8bit 乐师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 115.69,
+    "z": 20.13
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06733",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能背出巷口的第一盏灯的全部班次——这事只有师父知道",
+ "id": "C-06733",
+ "month_lines": [
+  "又学了一招，扫弦加了点颤音，今晚的桥上汽笛声，风好大，天阴着，能听出节奏在抖。"
+ ],
+ "name": "刘沐晴",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "又学了一招，扫弦加了点颤音，今晚的桥上汽笛声，风好大，天阴着，能听出节奏在抖。",
+   "text": "「又学了一招，扫弦加了点颤音，今晚的桥上汽笛声，风好大，天阴着，能听出节奏在抖。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

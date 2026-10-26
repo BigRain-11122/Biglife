@@ -1,0 +1,105 @@
+{
+ "age": 11,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 4,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 41.65,
+    "z": 53.37
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.17,
+    "z": 139.55
+   },
+   "work": {
+    "site": "NPC 服装师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 146.71,
+    "z": 64.47
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05483",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "口袋里总揣着旧货郎的拨浪鼓——他自己也说不清为什么",
+ "id": "C-05483",
+ "month_lines": [
+  "檐口的水线不断，风掀得衣角乱摆。改版三套方案还搁在桌角，收摊前再看一眼缓存柜，锁着，老地方见。"
+ ],
+ "name": "奥斯特-5",
+ "profession": "NPC 服装师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线不断，风掀得衣角乱摆。改版三套方案还搁在桌角，收摊前再看一眼缓存柜，锁着，老地方见。",
+   "text": "「檐口的水线不断，风掀得衣角乱摆。改版三套方案还搁在桌角，收摊前再看一眼缓存柜，锁着，老地方见。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

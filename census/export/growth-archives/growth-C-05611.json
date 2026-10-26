@@ -1,0 +1,105 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 7,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -39.6,
+    "z": -189.19
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 4.24,
+    "z": -231.3
+   },
+   "work": {
+    "site": "江面清波工·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 71.98,
+    "z": -227.79
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05611",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "每年挑一天只为老照片底片大扫除——这事只有师父知道",
+ "id": "C-05611",
+ "month_lines": [
+  "檐口的水线不断，风好大，我正把X2730的音量滑块收了，一碰就冒泡，像老汤底，谁碰谁就烫。收摊了，明天见。"
+ ],
+ "name": "付清晚",
+ "profession": "江面清波工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线不断，风好大，我正把X2730的音量滑块收了，一碰就冒泡，像老汤底，谁碰谁就烫。收摊了，明天见。",
+   "text": "「檐口的水线不断，风好大，我正把X2730的音量滑块收了，一碰就冒泡，像老汤底，谁碰谁就烫。收摊了，明天见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

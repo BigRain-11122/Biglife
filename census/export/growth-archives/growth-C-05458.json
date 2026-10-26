@@ -1,0 +1,105 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 9,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 28.64,
+    "z": 88.5
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.34,
+    "z": 112.04
+   },
+   "work": {
+    "site": "像素画匠·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 106.91,
+    "z": 142.78
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05458",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "守时是最便宜的本事，也是最难改的毛病。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "每年挑一天只为半张老电影票大扫除——这事只有师父知道",
+ "id": "C-05458",
+ "month_lines": [
+  "雨还在落，风把人往前推，画桌上的旧调色盘歪了，我扶了扶，一点一点描点，像在等下一个守时的来客。"
+ ],
+ "name": "刘南汐",
+ "profession": "像素画匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨还在落，风把人往前推，画桌上的旧调色盘歪了，我扶了扶，一点一点描点，像在等下一个守时的来客。",
+   "text": "「雨还在落，风把人往前推，画桌上的旧调色盘歪了，我扶了扶，一点一点描点，像在等下一个守时的来客。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

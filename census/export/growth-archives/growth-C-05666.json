@@ -1,0 +1,106 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4DD0E1",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 23,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.35,
+    "z": -118.22
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.03,
+    "z": -119.41
+   },
+   "work": {
+    "site": "巡信使·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.59,
+    "z": -95.02
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05666",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "把雨声录音当成了自己的老朋友——他自己也说不清为什么",
+ "id": "C-05666",
+ "month_lines": [
+  "雨还在落，风刮得紧，巷口的旧唱片机嗡嗡响，我衔了张短笺绕着弄堂走——老街角的信纸被风吹得歪，像极了当年我落檐时写的那行字。"
+ ],
+ "name": "黑阿雾",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨还在落，风刮得紧，巷口的旧唱片机嗡嗡响，我衔了张短笺绕着弄堂走——老街角的信纸被风吹得歪，像极了当年我落檐时写的那行字。",
+   "text": "「雨还在落，风刮得紧，巷口的旧唱片机嗡嗡响，我衔了张短笺绕着弄堂走——老街角的信纸被风吹得歪，像极了当年我落檐时写的那行字。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

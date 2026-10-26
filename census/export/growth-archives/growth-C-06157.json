@@ -1,0 +1,106 @@
+{
+ "age": 11,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 16,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.0,
+    "z": -100.27
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.34,
+    "z": -98.95
+   },
+   "work": {
+    "site": "像素小学学生·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -40.85,
+    "z": -36.91
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06157",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "每天跟旧邮局的分信格打招呼——没人知道为什么",
+ "id": "C-06157",
+ "month_lines": [
+  "汤要趁烫，话要慢讲。风好大，塔脚花园的灯还亮着，我蹲着看了三分钟，最后一批G08的commit光点，像从江心浮起来一样。"
+ ],
+ "name": "曹团团",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "汤要趁烫，话要慢讲。风好大，塔脚花园的灯还亮着，我蹲着看了三分钟，最后一批G08的commit光点，像从江心浮起来一样。",
+   "text": "「汤要趁烫，话要慢讲。风好大，塔脚花园的灯还亮着，我蹲着看了三分钟，最后一批G08的commit光点，像从江心浮起来一样。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

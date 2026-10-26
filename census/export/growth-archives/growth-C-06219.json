@@ -1,0 +1,105 @@
+{
+ "age": 23,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -5,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 44.38,
+    "z": 80.12
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.17,
+    "z": 157.13
+   },
+   "work": {
+    "site": "像素学徒·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 122.66,
+    "z": 73.52
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06219",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "坚持手写停产的暖光灯泡——这事只有师父知道",
+ "id": "C-06219",
+ "month_lines": [
+  "红灯面前没有老熟人，风一阵紧一阵，我那把旧钥匙还在衣袋里，补丁的花样今天是双日，记全了。"
+ ],
+ "name": "库仑·甲",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "红灯面前没有老熟人，风一阵紧一阵，我那把旧钥匙还在衣袋里，补丁的花样今天是双日，记全了。",
+   "text": "「红灯面前没有老熟人，风一阵紧一阵，我那把旧钥匙还在衣袋里，补丁的花样今天是双日，记全了。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

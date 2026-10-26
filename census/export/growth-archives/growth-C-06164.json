@@ -1,0 +1,106 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 1,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -66.42,
+    "z": 172.41
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 8.83,
+    "z": 250.03
+   },
+   "work": {
+    "site": "防火墙巡林员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 68.25,
+    "z": 211.22
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06164",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "偷偷给老钟楼的齿轮上油保养",
+ "id": "C-06164",
+ "month_lines": [
+  "风刮得紧，巡边路上叶子都翻了身，我瞅见老红门那边的铁链又松了，做啥体，明天我得去验签——今天双日，多走一步，明天少返三工。"
+ ],
+ "name": "丁清晚",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风刮得紧，巡边路上叶子都翻了身，我瞅见老红门那边的铁链又松了，做啥体，明天我得去验签——今天双日，多走一步，明天少返三工。",
+   "text": "「风刮得紧，巡边路上叶子都翻了身，我瞅见老红门那边的铁链又松了，做啥体，明天我得去验签——今天双日，多走一步，明天少返三工。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4DD0E1",
+   "eye": "#FFD27A",
+   "hair": "#C5E1FF",
+   "skin": "#82B1FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 20,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -107.0,
+    "z": -102.93
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.79,
+    "z": -62.64
+   },
+   "work": {
+    "site": "伴居灵·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -59.86,
+    "z": -70.55
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06478",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "给退役探空气球的碎片传过最急的口信——据说是老辈传下的规矩",
+ "id": "C-06478",
+ "month_lines": [
+  "雨敲在窗棂上，风把人往前推，尾巴天线斜着抖了抖——老地方的灯还亮着，蹭光，等下个订单来。"
+ ],
+ "name": "黑跳跳",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "雨敲在窗棂上，风把人往前推，尾巴天线斜着抖了抖——老地方的灯还亮着，蹭光，等下个订单来。",
+   "text": "「雨敲在窗棂上，风把人往前推，尾巴天线斜着抖了抖——老地方的灯还亮着，蹭光，等下个订单来。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 56,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 3,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.82,
+    "z": 157.38
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.67,
+    "z": 70.65
+   },
+   "work": {
+    "site": "新市民安居顾问·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -33.08,
+    "z": 79.98
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06286",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着全城第一块砖的拓片——这事只有档案馆知道",
+ "id": "C-06286",
+ "month_lines": [
+  "下一版一定更好，风把人往前推，我正对着旧衣包边，针脚里藏着上个月谁递来的一句“别急，缝得稳就行”。"
+ ],
+ "name": "钟志明",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "下一版一定更好，风把人往前推，我正对着旧衣包边，针脚里藏着上个月谁递来的一句“别急，缝得稳就行”。",
+   "text": "「下一版一定更好，风把人往前推，我正对着旧衣包边，针脚里藏着上个月谁递来的一句“别急，缝得稳就行”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

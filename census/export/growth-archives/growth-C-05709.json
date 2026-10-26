@@ -1,0 +1,106 @@
+{
+ "age": 14,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 20,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -31.49,
+    "z": 189.16
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -8.55,
+    "z": 242.58
+   },
+   "work": {
+    "site": "像素小学学生·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 125.98,
+    "z": 259.08
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-05709",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "会为旧棋谱推掉一整晚的生意",
+ "id": "C-05709",
+ "month_lines": [
+  "雨脚细细密密，风一阵紧一阵，我刚从机房回来，数据墙抖了下，同桌的作业本又画了条新光路——灵感这东西，得喂它。"
+ ],
+ "name": "黎糖糖",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "buddy",
+   "src": "对手",
+   "with": "C-00096"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨脚细细密密，风一阵紧一阵，我刚从机房回来，数据墙抖了下，同桌的作业本又画了条新光路——灵感这东西，得喂它。",
+   "text": "「雨脚细细密密，风一阵紧一阵，我刚从机房回来，数据墙抖了下，同桌的作业本又画了条新光路——灵感这东西，得喂它。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 1,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -31.37,
+    "z": 254.05
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 1.74,
+    "z": 200.4
+   },
+   "work": {
+    "site": "信号中继员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.79,
+    "z": 228.52
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06414",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "还在用全城雨夜的录音合集——据说是老辈传下的规矩",
+ "id": "C-06414",
+ "month_lines": [
+  "风不小，灯还亮着，三块中继里头那块旧的又在嗡嗡响——多个人多双筷子，今晚的信号得靠它稳住。"
+ ],
+ "name": "席斯年",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风不小，灯还亮着，三块中继里头那块旧的又在嗡嗡响——多个人多双筷子，今晚的信号得靠它稳住。",
+   "text": "「风不小，灯还亮着，三块中继里头那块旧的又在嗡嗡响——多个人多双筷子，今晚的信号得靠它稳住。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}
