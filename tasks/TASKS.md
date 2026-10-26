@@ -619,3 +619,17 @@
 - 实况三行：当前活=年轮环批 + 回放闸；最近实物=census/export/city-dashboard.html（2026-10-27 03:2x 重建）；下个里程碑=下一轮年轮 10 席 + 闸复验，ETA 2026-10-27 05:4x。
 - tokens: local=10 api=0 api_reason=-
 - [2026-10-27 03:2x R2309] 收口：轮首 pull=Already up to date；水位差集 NEW=0（已含 D-20261027-05）；orders 尾=本司无新令；HQ 上报闸 ALREADY_REPORTED（今日 15 行·零写入）。**产品增量**=年轮 --batch 3 实跑 10/10 席落价（C-08653、C-08655~C-08663，4 席 soft-concession 门内落环），脚本自提交 6d63fa25d + 行为线镜像 c27e86ce6，rows=10 ring=8657；**回放闸 PASS** cards=10111 events=39749 replayed=10111 schema_errors=0 mismatch=0（qa/EVENTS-REPLAY-REPORT.md）；**CEO 可见重建** census/export/city-dashboard.html（rings=8657 / 人口 10114 / 卡片 160）+ docs/status-export.json 三行实况刷新（ts=2026-10-27 03:22）；相遇轮 meet-cap 3/3 已满（今日已 3 遇）跳过；pool_audit 今日已 SELF_TERMINATE 全桶达标、QC 03:2x 刚过（问题 0）均未重复烧。tokens: local=10 api=0 api_reason=-
+
+
+### R2310 轮记（2026-10-27 03:28-03:40 · 本年轮环 15min 预算）
+
+- 轮首：git status 净；pull --ff-only=Already up to date；decisions 水位差集 NEW=2（D-20261027-06 分卷令=集团常务轮具名执行体·非本司、D-20261027-07 外审班收线提案=ceo-pending）→ 均无本司动作，水位回写至 D-20261027-07。
+- 年轮线：evolve --batch 3 实走 10 席（C-08664~C-08673·qwen3:4b-instruct）→ evolved=10/10，3 席 soft-concession 门内落环（commit 11c579cd1）；行为线 sync_rings 自动收口 rows=10 ring=8667（commit bb6e7511e）。
+- 事件回放闸：cards=10111 events=39759 shards=2 replay 10111 schema_errors=0 mismatch=0 PASS（qa/EVENTS-REPLAY-REPORT.md）。
+- 语言池：pool_audit verdict=PASS（axes 72/72 + sprite 12/12 + greet 28 + faq 7 + neg 6/6，determinism 192/25 双抽零失配）→ SELF_TERMINATE 跳过。
+- 相遇轮：meet-cap 今日已满（R2309 记 3/3）→ 跳过。
+- QC 巡检：本日 03:2x 已跑 problems=0（未到 6 轮窗口）→ 不重复。
+- 看板：city-dashboard.html 重建 total=10114 rings=8667 cards=160（64975B）。
+- 决策轮上报：hq_feedback_daily --check=ALREADY_REPORTED(15) → 零写入。
+- 实况三行：当前活=年轮环批 + 回放闸复验 + 看板重建；最近实物=census/export/city-dashboard.html（2026-10-27 03:39 重建·rings 8667）；下个里程碑=下一轮年轮 10 席 + 闸复验，ETA 2026-10-27 05:4x。
+- tokens: local=10 api=0 api_reason=-
