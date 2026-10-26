@@ -693,3 +693,5 @@
 - 看板重建：city-dashboard.html rings=8747 / 人口 10114 / 席位 160 + status-export 三行刷新
 - 集团日报闸：ALREADY_REPORTED（15 行）零写入
 - tokens: local=10 api=0 api_reason=-
+
+- [2026-10-27 04:1x R2319] 轮记：start 04:13:40；git pull=Already up to date；水位差集 NEW=0（已核至 D-20261027-07）；orders 尾无本司新令；TASKS 无 open 单。**主产出**=年轮 --batch 3 实证 evolved=9/10 席位（C-08754~C-08763，C-08758 触 persistent violations[rain-invented] 闸跳过留到期；1 席 soft-concession recent-dup-phrase 落地），脚本自动提交 3137d8f22 + 行为线 047ad638e（rows=9 ring=8756）。**回放闸 PASS**：cards=10111 events=39848 replayed=10111 schema_errors=0 mismatch=0，qa/EVENTS-REPLAY-REPORT.md 入库。**对外实物重建** census/export/city-dashboard.html（rings=8756 / 人口 10114 / 席位 160）+ city-life.html（10114 行 states=4 quirk=1368 crash=2852 visible=641，page 20.3KB <300KB），提交 846b49a87 已推送。**语言线** pool_audit 全桶达标 SELF_TERMINATE（pool 18/12 + greet 17 + faq 3 + neg 8，hard_fails=0，determinism mismatch=0）零动。**相遇轮** 当日 cap 已满零动。**QC** 距上轮 03:5x 巡检 5 轮，下轮候选。**HQ 闸** ALREADY_REPORTED 零写入。tokens: local=10 api=0 api_reason=-
