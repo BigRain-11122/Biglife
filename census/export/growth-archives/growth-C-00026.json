@@ -1,0 +1,101 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 6,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -106.19,
+    "z": -247.15
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 6.28,
+    "z": -205.4
+   },
+   "work": {
+    "site": "穿城信使·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 29.04,
+    "z": -171.63
+   }
+  },
+  "ctx": "tw=empk,wx=clear,wd=0",
+  "id": "C-00026",
+  "quirk": "",
+  "slot": "通勤街面",
+  "state": "commute",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": null,
+ "creed": "急件不急，稳到才算到。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "全城唯一给每单写「一句话交货注脚」的信使——「今夜风大，交到本人手里」这样的字条，档案馆的年轻人专门收藏了一沓。",
+ "id": "C-00026",
+ "month_lines": [],
+ "name": "高小满",
+ "profession": "穿城信使",
+ "reflections": [
+  {
+   "date": "2026-10-15",
+   "insight": "赶路时，风景是水洼里的光，不是终点。"
+  }
+ ],
+ "relations_top": [
+  {
+   "rel": "meet",
+   "src": "2026-10-10",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

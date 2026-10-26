@@ -1,0 +1,101 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": -1,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 68.39,
+    "z": -117.24
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.67,
+    "z": -128.96
+   },
+   "work": {
+    "site": "晨操领队·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 123.37,
+    "z": -55.78
+   }
+  },
+  "ctx": "tw=empk,wx=clear,wd=0",
+  "id": "C-00012",
+  "quirk": "",
+  "slot": "通勤街面",
+  "state": "commute",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": null,
+ "creed": "队形不能乱，人心更不能散。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "全城唯一能靠光带节奏认出每个队员心气的人——谁今天状态不对，她放的音乐都会慢半拍。",
+ "id": "C-00012",
+ "month_lines": [],
+ "name": "沈佩兰",
+ "profession": "晨操领队",
+ "reflections": [
+  {
+   "date": "2026-10-10",
+   "insight": "不论天气如何，队形与人心都不能乱。"
+  }
+ ],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "meet",
+   "src": "2026-10-10",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

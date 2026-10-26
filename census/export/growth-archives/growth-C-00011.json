@@ -1,0 +1,101 @@
+{
+ "age": 74,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -5,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 67.65,
+    "z": -152.16
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.33,
+    "z": -43.23
+   },
+   "work": {
+    "site": "时空校准师·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 125.31,
+    "z": -14.78
+   }
+  },
+  "ctx": "tw=empk,wx=clear,wd=0",
+  "id": "C-00011",
+  "quirk": "",
+  "slot": "广场·晨练",
+  "state": "exercise",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": null,
+ "creed": "差之毫秒，谬以全城。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "全城唯一坚持用机械钟声对时的人——每次全城齐秒，他的老座钟都跟着响一声，档案馆的人说那是城的「心跳备份」。",
+ "id": "C-00011",
+ "month_lines": [],
+ "name": "朱鸿奎",
+ "profession": "时空校准师",
+ "reflections": [
+  {
+   "date": "2026-10-10",
+   "insight": "细节决定成败。"
+  }
+ ],
+ "relations_top": [
+  {
+   "rel": "meet",
+   "src": "2026-10-11",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,101 @@
+{
+ "age": null,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": 1,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 25.52,
+    "z": 13.48
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.52,
+    "z": 121.92
+   },
+   "work": {
+    "site": "引擎医生·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 101.09,
+    "z": 107.98
+   }
+  },
+  "ctx": "tw=empk,wx=clear,wd=0",
+  "id": "C-00019",
+  "quirk": "",
+  "slot": "通勤街面",
+  "state": "commute",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "机器不坏是本事，坏了能修是人品。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "全城唯一保留「报错率」手写台账的引擎医生——三十年零十一个月没漏诊过一台机器，台账原件已进档案馆。",
+ "id": "C-00019",
+ "month_lines": [],
+ "name": "老晶振",
+ "profession": "引擎医生",
+ "reflections": [
+  {
+   "date": "2026-10-14",
+   "insight": "关心他人，也要注意自身。"
+  }
+ ],
+ "relations_top": [
+  {
+   "rel": "meet",
+   "src": "2026-10-10",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

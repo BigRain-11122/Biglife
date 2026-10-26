@@ -1,0 +1,101 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -3,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -70.21,
+    "z": -235.3
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -4.25,
+    "z": -192.28
+   },
+   "work": {
+    "site": "渡轮船长·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 57.03,
+    "z": -222.98
+   }
+  },
+  "ctx": "tw=empk,wx=clear,wd=0",
+  "id": "C-00025",
+  "quirk": "",
+  "slot": "通勤街面",
+  "state": "commute",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": null,
+ "creed": "船稳，人心才稳。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "全城唯一保留「慢班渡轮」的船长——不为生意，只为给想慢慢看江的人留一趟船，船票恒价：一句「多谢」。",
+ "id": "C-00025",
+ "month_lines": [],
+ "name": "陆海峰",
+ "profession": "渡轮船长",
+ "reflections": [
+  {
+   "date": "2026-10-17",
+   "insight": "船稳，人心才稳；风大，行则不惧。"
+  }
+ ],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00198"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

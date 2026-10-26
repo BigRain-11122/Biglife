@@ -1,0 +1,101 @@
+{
+ "age": null,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 0,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.21,
+    "z": -60.62
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.04,
+    "z": -76.72
+   },
+   "work": {
+    "site": "字幕君·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -69.95,
+    "z": -125.46
+   }
+  },
+  "ctx": "tw=empk,wx=clear,wd=0",
+  "id": "C-00024",
+  "quirk": "",
+  "slot": "通勤街面",
+  "state": "commute",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "字幕慢半帧，都是对说话人的辜负。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "全城唯一给方言字幕手工标注「语气」的字幕君——观众说它做的字幕「有人味」，它把这句话裱在了工位上。",
+ "id": "C-00024",
+ "month_lines": [],
+ "name": "缪一",
+ "profession": "字幕君",
+ "reflections": [
+  {
+   "date": "2026-10-17",
+   "insight": "对轴到呼吸，才知真实在直播里活着。"
+  }
+ ],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00077"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

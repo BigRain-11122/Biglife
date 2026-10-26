@@ -1,0 +1,101 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 4,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -121.87,
+    "z": -118.78
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.97,
+    "z": -148.43
+   },
+   "work": {
+    "site": "主播·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -38.85,
+    "z": -69.55
+   }
+  },
+  "ctx": "tw=empk,wx=clear,wd=0",
+  "id": "C-00022",
+  "quirk": "",
+  "slot": "通勤街面",
+  "state": "commute",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "流量像潮水，我是灯塔不是渔船。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "全城唯一把「真实时间」打进直播标题的主播——她的开播时间表跟交易所钟声对齐，粉丝说等她开播像等开盘。",
+ "id": "C-00022",
+ "month_lines": [],
+ "name": "何雨欣",
+ "profession": "主播",
+ "reflections": [
+  {
+   "date": "2026-10-16",
+   "insight": "风再大，灯塔不灭，心火常明，人就永远在场。"
+  }
+ ],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00129"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,101 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 3,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -122.1,
+    "z": -97.59
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.26,
+    "z": -80.2
+   },
+   "work": {
+    "site": "选题官·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.66,
+    "z": -130.25
+   }
+  },
+  "ctx": "tw=empk,wx=clear,wd=0",
+  "id": "C-00023",
+  "quirk": "",
+  "slot": "通勤街面",
+  "state": "commute",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "毙稿不毙人，选题选良心。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "全城唯一保留「毙稿理由档案」的选题官——二十年每条毙稿一行理由，年轻人都说那是选题馆的「镇馆之宝」。",
+ "id": "C-00023",
+ "month_lines": [],
+ "name": "潘志明",
+ "profession": "选题官",
+ "reflections": [
+  {
+   "date": "2026-10-17",
+   "insight": "照亮的路，总在剔除之后才显清晰。"
+  }
+ ],
+ "relations_top": [
+  {
+   "rel": "meet",
+   "src": "2026-09-29",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,102 @@
+{
+ "age": null,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#EC407A",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 17,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 31.09,
+    "z": 19.59
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.95,
+    "z": 146.72
+   },
+   "work": {
+    "site": "伴居灵·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 105.63,
+    "z": 54.57
+   }
+  },
+  "ctx": "tw=empk,wx=clear,wd=0",
+  "id": "C-00029",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "蹭饭是门艺术，报恩是门手艺。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "全城唯一拥有「巷志」的猫——罗大壮按月给它画像记录体形与光纹变化，档案馆破例收了副本，题名《咪喱巷志》。",
+ "id": "C-00029",
+ "month_lines": [],
+ "name": "咪喱",
+ "profession": "伴居灵",
+ "reflections": [
+  {
+   "date": "2026-10-16",
+   "insight": "稳住当下，温柔以待，便能自然收获温暖。"
+  }
+ ],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00070"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,101 @@
+{
+ "age": 66,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -11,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.26,
+    "z": 78.11
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.5,
+    "z": 80.51
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.92,
+    "z": 135.26
+   }
+  },
+  "ctx": "tw=empk,wx=clear,wd=0",
+  "id": "C-00016",
+  "quirk": "",
+  "slot": "广场·晨练",
+  "state": "exercise",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "行情再绿，汤是热的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "全城唯一按涨跌调整菜谱的人——绿盘日免费例汤，红盘日加一道「冷静甜汤」，食堂日志跟行情日志一起进了档案馆。",
+ "id": "C-00016",
+ "month_lines": [],
+ "name": "徐根福",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [
+  {
+   "date": "2026-10-14",
+   "insight": "天气阴晴不论，生活依旧要美好。"
+  }
+ ],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00090"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

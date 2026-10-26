@@ -1,0 +1,101 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 4,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -113.81,
+    "z": 131.78
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.7,
+    "z": 56.13
+   },
+   "work": {
+    "site": "量化策略研究员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -36.11,
+    "z": 148.66
+   }
+  },
+  "ctx": "tw=empk,wx=clear,wd=0",
+  "id": "C-00014",
+  "quirk": "",
+  "slot": "通勤街面",
+  "state": "commute",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": null,
+ "creed": "回撤教人做人，行情教人谦虚。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "全城唯一给每个被毙策略写「讣告」的研究员——一行死因一行教训，攒了满满一本，同事借阅要排队。",
+ "id": "C-00014",
+ "month_lines": [],
+ "name": "周浩宇",
+ "profession": "量化策略研究员",
+ "reflections": [
+  {
+   "date": "2026-10-11",
+   "insight": "盯盘虽辛苦，但能教会我们如何更好地应对生活中的变数。"
+  }
+ ],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00098"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

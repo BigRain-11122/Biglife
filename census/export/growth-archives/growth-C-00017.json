@@ -1,0 +1,101 @@
+{
+ "age": null,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E5E4E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -1,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -145.21,
+    "z": 98.01
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.68,
+    "z": 60.37
+   },
+   "work": {
+    "site": "回测农（算法调参师）·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -46.44,
+    "z": 112.59
+   }
+  },
+  "ctx": "tw=empk,wx=clear,wd=0",
+  "id": "C-00017",
+  "quirk": "",
+  "slot": "通勤街面",
+  "state": "commute",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": null,
+ "creed": "参数不收敛，天理难容。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "全城唯一坚持给失败参数建「纪念碑田」的回测农——每块碑上刻一行死因，新研究员入职都去先看碑再下田。",
+ "id": "C-00017",
+ "month_lines": [],
+ "name": "归档者-07",
+ "profession": "回测农（算法调参师）",
+ "reflections": [
+  {
+   "date": "2026-10-14",
+   "insight": "付出努力，参数终会收敛。"
+  }
+ ],
+ "relations_top": [
+  {
+   "rel": "meet",
+   "src": "2026-10-11",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

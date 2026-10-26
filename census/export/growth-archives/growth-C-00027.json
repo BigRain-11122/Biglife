@@ -1,0 +1,101 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 1,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -98.4,
+    "z": 219.38
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -4.85,
+    "z": 253.83
+   },
+   "work": {
+    "site": "感知塔站值守员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 108.84,
+    "z": 224.26
+   }
+  },
+  "ctx": "tw=empk,wx=clear,wd=0",
+  "id": "C-00027",
+  "quirk": "",
+  "slot": "通勤街面",
+  "state": "commute",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": null,
+ "creed": "台风天的日志最见人品。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "全城唯一给每场大风起名字的值守员——「梅花」「烟嗓」「过云雨一号」……名字进了气象播报员的口，播报员说比台风编号好记。",
+ "id": "C-00027",
+ "month_lines": [],
+ "name": "邓建国",
+ "profession": "感知塔站值守员",
+ "reflections": [
+  {
+   "date": "2026-10-15",
+   "insight": "风平浪静时，更要守好边角的灯火。"
+  }
+ ],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00206"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}
