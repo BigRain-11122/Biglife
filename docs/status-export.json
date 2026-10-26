@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-26 18:32",
+ "export_ts": "2026-10-26 23:31",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2249（10-26 18:2x 让路窗·编码闸硬化）**：D-20261026-13 复核（HQ-FEEDBACK 严格 UTF-8/无 BOM/U+FFFD=0·258 行），唯一告警=台账引用「五乱码族」原文的历史证据行属误报 → Tools/encoding_guard.py 增证据行豁免（EVIDENCE_MARKERS），硬判定不变；自测=真损坏仍报非 UTF-8 字节 / 证据行 0 告警 / 非证据行含 閿鎶 仍告警 / 全库 21000 文本 PASS。 **R2246（让路窗确定性面**：年轮/相遇 LLM 面按 D-20261020-02 让路（bm-a AutoYield WorkEnd 实测 NextRunTime=2026-10-26 19:00·LastTaskResult=0 健康）；语言池全桶达标自终止（axes 72/sprite 12/greet 28/faq 7/hard_fails 0）；城市看板重建 + 状态续鲜，rings=8157/people=10114。 **R2239（2026-10-26 16:2x·让路窗·确定性线）**：本轮三件——①户籍不变量 QC 全量巡（10,114 片/8,157 已进化/异常 0/年轮重复组 37-37 benign）；②城市看板 `census/export/city-dashboard.html` 重建（16:2x，rings=8157/people=10114/cards=160，64,824B），CEO 可直接打开看全城现状；③上轮遗留疑似隐患结案——`city-today.html` 的 `rings=433` 经核为「今日新增年轮数」的正常语义（`Tools/build_daily_issue.py` 按 `by_day[today]` 取当日行，非全库总数），非缺陷、非串号，上轮标记撤销。语言线池 `pool_audit` 报 72/72+12/12+greet 28/28+faq 7/7+neg 6/6 全达标=SELF_TERMINATE，按自终止律不重复造池。",
+   "t": "**R2271（10-26 23:2x 夜值）**：年轮批 9 席落环（C-08266~C-08274；C-08226 persistent 三闸复发 stay due），行为线镜像 rows=9 ring=8267；事件回放闸 PASS（cards=10111 events=39351 replayed=10111 mismatch=0 schema=0）；ring_lint 今日窗 PASS（rings=543 coded=91 pre=91 post=0，95 席修复后零新增违规）；语言池全桶达标自终止、相遇 cap 3/3 已满、QC 23:0x 刚巡（problems=0），本轮零重复开销。 **R2249（10-26 18:2x 让路窗·编码闸硬化）**：D-20261026-13 复核（HQ-FEEDBACK 严格 UTF-8/无 BOM/U+FFFD=0·258 行），唯一告警=台账引用「五乱码族」原文的历史证据行属误报 → Tools/encoding_guard.py 增证据行豁免（EVIDENCE_MARKERS），硬判定不变；自测=真损坏仍报非 UTF-8 字节 / 证据行 0 告警 / 非证据行含 閿鎶 仍告警 / 全库 21000 文本 PASS。 **R2246（让路窗确定性面**：年轮/相遇 LLM 面按 D-20261020-02 让路（bm-a AutoYield WorkEnd 实测 NextRunTime=2026-10-26 19:00·LastTaskResult=0 健康）；语言池全桶达标自终止（axes 72/sprite 12/greet 28/faq 7/hard_fails 0）；城市看板重建 + 状态续鲜，rings=8157/people=10114。",
    "s": 1
   },
   {
@@ -1477,7 +1477,11 @@
   [
    "434",
    "关单/产出：对外页面可用性修复 1 件（成长档案册分页化）· 年轮/相遇=让路窗静默 · 池自停 · QC 未到周期 · 盘点 434"
+  ],
+  [
+   "544",
+   "R2271 夜值轮：9 席真人真事年轮落环（ring 8267）+ 事件流 39351 条全量可回放 + 日报/看板/导出索引三件刷新，544 文本编码面沿用今晚 R2249 硬化闸读数。"
   ]
  ],
- "t": "当前活：让路窗（工作日 09:00-19:00 LLM 面停·D-20261020-02）确定性维护；本轮 D-20261026-13 编码闸硬化落地（Tools/encoding_guard.py 证据行豁免），语言池全桶达标自终止，QC/事件闸沿用 17:59 R2247 全绿读数（cards=10114/evolved=8157/problems=0/dup 37-37，events=39241 mismatch=0 schema=0）。\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\Tools\\encoding_guard.py（10-26 18:2x 硬化·自测 4 项过·全库 21000 文本 PASS）、C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\QC-REPORT.md（10-26 17:59 全绿）、C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\EVENTS-REPLAY-REPORT.md（10-26 17:59 回放 PASS）\n下个里程碑：19:00 夜窗恢复 → 年轮 3 席（rings 8157→8160+）+ 相遇 1 对（候选 126 对直取）ETA 2026-10-26 19:30"
+ "t": "当前活：夜窗年轮线（qwen3:4b-instruct 本地档）连续产片，事件闸与 ring_lint 双闸当轮过（post-cut 违规=0）。\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-today.html（10-26 23:29 刷新·今日环 543/居民 539/城区 6）、C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（23:29·rings=8267·cards=160）、C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\EVENTS-REPLAY-REPORT.md（23:30 回放 PASS）\n下个里程碑：环数 8267→8300，ETA 2026-10-27 01:30（夜窗每小时 3 席节奏）"
 }
