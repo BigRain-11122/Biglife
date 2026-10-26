@@ -138,6 +138,9 @@ def main():
     ap.add_argument("--cid")
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--next", type=int, default=0,
+                    help="export the next N citizens having no archive file yet "
+                         "(self-advancing batch; --limit always re-takes the head)")
     ap.add_argument("--out", default=OUT_DIR)
     ap.add_argument("--qc", action="store_true")
     args = ap.parse_args()
@@ -167,6 +170,20 @@ def main():
         print("OK %s rings=%d declared=%s month_lines=%d -> %s"
               % (args.cid, len(archive["rings"]), declared,
                  len(archive["month_lines"]), path))
+        return
+
+    if args.next:
+        os.makedirs(args.out, exist_ok=True)
+        pending = [c for c in sorted(light) if c not in reserved
+                   and not os.path.exists(os.path.join(args.out, "growth-%s.json" % c))]
+        cids = pending[:args.next]
+        n = 0
+        for cid in cids:
+            export_one(cid, light, rel_rows, refl_rows, beh_by_id, voice_by_id,
+                       atlas_by_id, month, args.out)
+            n += 1
+        print("OK --next exported=%d pending_before=%d remaining=%d (reserved skipped=%d)"
+              % (n, len(pending), len(pending) - n, len(reserved)))
         return
 
     if args.all:
