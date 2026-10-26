@@ -378,4 +378,15 @@
 - 实物：C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-relations.html · C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\city-social-graph.html
 - 下个里程碑：19:00 产量窗开，年轮线批 3 席（rings 8,157→8,160+·ETA 19:30）按 coverage-backlog 头部 ring 队列取人；相遇轮优先 recent_ring 非空者，新增相遇续落后台关系面
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
-- [ ] **T-20261026-03 相遇候选单（确定性选人·零 LLM）**：Tools/meet_candidates.py 读 census/registry/*/*.md + citizens-light.jsonl，按「同城区 + 双方 recent_ring 非空 + 尚未相遇」确定性排序输出 census/export/meet-candidates.jsonl（top N 对，含选人理由一行），供 19:00 相遇轮直接 evolve_citizen.py --meet 消费——治相遇维度 78/10111（0.8%）最薄面。判据：脚本幂等、双跑同输出（determinism mismatch=0）、候选对不与 city-meets.html 已有对重复、页面/JSON 双落盘。status: open（R2241 立）
+- [x] **T-20261026-03 相遇候选单（确定性选人·零 LLM）**：Tools/meet_candidates.py 读 census/registry/*/*.md + citizens-light.jsonl，按「同城区 + 双方 recent_ring 非空 + 尚未相遇」确定性排序输出 census/export/meet-candidates.jsonl（top N 对，含选人理由一行），供 19:00 相遇轮直接 evolve_citizen.py --meet 消费——治相遇维度 78/10111（0.8%）最薄面。判据：脚本幂等、双跑同输出（determinism mismatch=0）、候选对不与 city-meets.html 已有对重复、页面/JSON 双落盘。status: open（R2241 立）
+
+## R2242 · 2026-10-26 17:1x @BigLife-OSLoop（T-20261026-03 相遇候选单交付·确定性）
+- 轮首：pull=Already up to date；水位差集 NEW=0（尾 D-20261026-15）；D-20261026-13（HQ-FEEDBACK GBK 行）复验=255 行全 UTF-8 解码异常 0、R2220 行 616 字完整 → 前轮 R2236 已闭环，本轮只记复验不改写（查重律）
+- 让路窗（D-20261020-02·09:00-19:00）→ 年轮线/相遇轮/池轮 LLM 面按律跳过（池轮今日 08:06 已达标自停），走确定性面
+- 交付：新建 Tools/meet_candidates.py（确定性·零 LLM·幂等·ruff CLEAN）——同城区 + 双方 recent_ring 非空 + 从未相遇；同街区 +40 / 年轮新鲜度 / 六轴互补 +12 / 物种互补 +6 / 双方钩子物 +4；每街区取最近活跃 12 人枚举，每人最多进一对，按分排序取 top 60
+- 实测：pairs=60 / 可配对池 8,134 / 全库已有相遇对 40 / 分城区 GM11·MD11·NS12·OR7·QT14·RV5；top1=C-00042 阿硅 + C-07762 唐沐晴（同街区·六轴 侠气×怀旧·物种 silicon×carbon）
+- 判据逐条：幂等=双跑 md5 一致（jsonl 848223ab… / html 4e23df6e…）PASS；与既有 city-meets 对交集=0；页面/JSON 双落盘；120 席无重复入选
+- 闸门：ruff_gate 2 文件 CLEAN（F401/F811/F841/SIM115/RUF059）；encoding_guard PASS（3 文件·无 BOM·U+FFFD=0）；export-index pages 17→18（新页按 TITLE 非 fallback 注册）
+- 实物：C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\meet-candidates.html · census\export\meet-candidates.jsonl
+- 下个里程碑：19:00 产量窗开——年轮线批 3 席（rings 8,157→8,160+）＋相遇轮按本单 rank 1 直取（evolve_citizen.py --meet C-00042 C-07762），相遇维度 78→80，ETA 19:40
+- tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
