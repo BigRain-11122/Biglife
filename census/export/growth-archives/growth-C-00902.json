@@ -1,0 +1,119 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -8,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.45,
+    "z": 111.72
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.0,
+    "z": 82.62
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -32.97,
+    "z": 139.42
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-00902",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "留着旧船锚残件却从来不用——没人知道为什么",
+ "id": "C-00902",
+ "month_lines": [
+  "这物件比我懂年头，今儿这风挺大，吃饭得小心点儿。",
+  "风挺大，翻勺得攥紧点勺柄。 这物件比我懂年头，日子还长，回头说。"
+ ],
+ "name": "林伟民",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-25",
+   "quote": "这物件比我懂年头，今天的事今天清。",
+   "text": "「这物件比我懂年头，今天的事今天清。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-11（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-11",
+   "quote": "这物件比我懂年头，今儿这风挺大，吃饭得小心点儿。",
+   "text": "「这物件比我懂年头，今儿这风挺大，吃饭得小心点儿。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-20（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-20",
+   "quote": "风挺大，翻勺得攥紧点勺柄。 这物件比我懂年头，日子还长，回头说。",
+   "text": "「风挺大，翻勺得攥紧点勺柄。 这物件比我懂年头，日子还长，回头说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}
