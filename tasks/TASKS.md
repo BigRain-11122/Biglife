@@ -618,3 +618,4 @@
 - 决策轮上报：hq_feedback_daily --check=ALREADY_REPORTED(15) → 零写入。
 - 实况三行：当前活=年轮环批 + 回放闸；最近实物=census/export/city-dashboard.html（2026-10-27 03:2x 重建）；下个里程碑=下一轮年轮 10 席 + 闸复验，ETA 2026-10-27 05:4x。
 - tokens: local=10 api=0 api_reason=-
+- [2026-10-27 03:2x R2309] 收口：轮首 pull=Already up to date；水位差集 NEW=0（已含 D-20261027-05）；orders 尾=本司无新令；HQ 上报闸 ALREADY_REPORTED（今日 15 行·零写入）。**产品增量**=年轮 --batch 3 实跑 10/10 席落价（C-08653、C-08655~C-08663，4 席 soft-concession 门内落环），脚本自提交 6d63fa25d + 行为线镜像 c27e86ce6，rows=10 ring=8657；**回放闸 PASS** cards=10111 events=39749 replayed=10111 schema_errors=0 mismatch=0（qa/EVENTS-REPLAY-REPORT.md）；**CEO 可见重建** census/export/city-dashboard.html（rings=8657 / 人口 10114 / 卡片 160）+ docs/status-export.json 三行实况刷新（ts=2026-10-27 03:22）；相遇轮 meet-cap 3/3 已满（今日已 3 遇）跳过；pool_audit 今日已 SELF_TERMINATE 全桶达标、QC 03:2x 刚过（问题 0）均未重复烧。tokens: local=10 api=0 api_reason=-

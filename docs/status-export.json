@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-27 02:17",
+ "export_ts": "2026-10-27 03:22",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2299（年轮线）**：10 席落环（C-08555~C-08564·rings=8558），事件回放闸 PASS（cards 10111/events 39650/mismatch 0/schema 0），QC 例巡 problems=0；看板与今日日报同日重建 **R2298（本轮）**：年轮线两批共 18 席落环（前批 8 + 后批 10，含长期阻卡双席 C-08518/C-08539 解锁）；缺陷出生地修法 gap #83——雨字物件（雨棚/雨篷/雨搭/雨刷/雨刮）被 rain-invented 硬门误判为编造天气，实测 dry feed 下连卡 3 轮，修后同批 10/10 满席落地。 **R2297（年轮环·既有居民迭代·零新注册）**：C-08529~C-08537 共 9 席落环（batch 3 供给面实跑；C-08518 因 persistent violations [rain-invented, recent-dup-phrase] 过门失败留待下轮），环数 8521→8530，户籍 10114 不变。",
+   "t": "**R2309（03:2x 本司实况）**年轮批 10/10 席价落（C-08653/C-08655~C-08663）+ 事件流回放闸 PASS（cards=10111 / events=39749 / replayed=10111 / schema_errors=0 / mismatch=0）+ 城市看板重建 rings=8657 / 人口 10114 / 卡片 160。 **R2299（年轮线）**：10 席落环（C-08555~C-08564·rings=8558），事件回放闸 PASS（cards 10111/events 39650/mismatch 0/schema 0），QC 例巡 problems=0；看板与今日日报同日重建 **R2298（本轮）**：年轮线两批共 18 席落环（前批 8 + 后批 10，含长期阻卡双席 C-08518/C-08539 解锁）；缺陷出生地修法 gap #83——雨字物件（雨棚/雨篷/雨搭/雨刷/雨刮）被 rain-invented 硬门误判为编造天气，实测 dry feed 下连卡 3 轮，修后同批 10/10 满席落地。",
    "s": 1
   },
   {
@@ -1505,7 +1505,11 @@
   [
    "252",
    "R2299 年轮 10 席落环 · rings=8558 · 户籍 10114 · QC problems=0 · cards 252"
+  ],
+  [
+   "351",
+   "R2309 收口：年轮 10 席价 + 回放闸 PASS + 看板重建（rings=8657 / 人口 10114 / cards=160）；registry+anchors 实物文件直数 351。"
   ]
  ],
- "t": "当前活：年轮线批产（本地 Ollama qwen3:4b-instruct 在役）+ 事件流回放闸 + QC 例巡 + 对外看板重建\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/registry/ 10 张新年轮卡（C-08555~C-08564·2026-10-27 02:14 落环）· C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（rings=8558 / 居民 10114）\n下个里程碑：下一批年轮（ETA 2026-10-27 05:00 前）+ 相遇轮（今日 cap 3/3 已满·明日重置）"
+ "t": "当前活：居民年轮批（本地 Ollama qwen3:4b-instruct 定价）+ 事件流回放闸 + 城市看板重建\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（rings=8657 / 人口 10114 / 160 席位，2026-10-27 03:2x 重建）+ census/registry/ 10 张年轮卡 C-08653/C-08655~C-08663\n下个里程碑：下一轮年轮批 + QC 巡检复检（ETA 2026-10-27 05:40 前）"
 }
