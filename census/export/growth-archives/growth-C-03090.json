@@ -1,0 +1,112 @@
+{
+ "age": 92,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -11,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.05,
+    "z": 67.0
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.19,
+    "z": 80.17
+   },
+   "work": {
+    "site": "时钟校准员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -28.0,
+    "z": 18.1
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03090",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着旧当铺的票据夹",
+ "id": "C-03090",
+ "month_lines": [
+  "天阴着，风不小。急啥，汤还没开呢，老铁，先把这几笔对时干完再说。"
+ ],
+ "name": "徐鸿奎",
+ "profession": "时钟校准员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "急啥，汤还没开呢，今天开盘早着呢。老铁们都说早上的城最真，得趁早把今天的事做完。",
+   "text": "「急啥，汤还没开呢，今天开盘早着呢。老铁们都说早上的城最真，得趁早把今天的事做完。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "天阴着，风不小。急啥，汤还没开呢，老铁，先把这几笔对时干完再说。",
+   "text": "「天阴着，风不小。急啥，汤还没开呢，老铁，先把这几笔对时干完再说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

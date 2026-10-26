@@ -1,0 +1,112 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 17,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -146.04,
+    "z": 146.22
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.04,
+    "z": 52.62
+   },
+   "work": {
+    "site": "像素学徒·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -60.47,
+    "z": 18.3
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01628",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把心事只说给老电报局的键听——她自己也说不清为什么",
+ "id": "C-01628",
+ "month_lines": [
+  "今早天阴着，正好把屋里的灯挨个检查一遍，风挺大，得小心别吹灭了。"
+ ],
+ "name": "杨糖糖",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "急啥，汤还没开呢。今儿天阴着，正好把屋里的灯挨个检查一遍。",
+   "text": "「急啥，汤还没开呢。今儿天阴着，正好把屋里的灯挨个检查一遍。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今早天阴着，正好把屋里的灯挨个检查一遍，风挺大，得小心别吹灭了。",
+   "text": "「今早天阴着，正好把屋里的灯挨个检查一遍，风挺大，得小心别吹灭了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

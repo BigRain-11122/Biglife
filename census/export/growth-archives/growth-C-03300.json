@@ -1,0 +1,111 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 3,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 66.2,
+    "z": 93.13
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.43,
+    "z": 15.06
+   },
+   "work": {
+    "site": "bug 猎人·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 97.24,
+    "z": 132.18
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03300",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "攒了满抽屉退役巡夜灯灵的灯罩从不给看——据说是老辈传下的规矩",
+ "id": "C-03300",
+ "month_lines": [
+  "风挺大，吹得旧笔尖发颤。这物件比我懂年头，夜里复现归因，稳当。"
+ ],
+ "name": "毛Momo",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "这物件比我懂年头。",
+   "text": "「这物件比我懂年头。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风挺大，吹得旧笔尖发颤。这物件比我懂年头，夜里复现归因，稳当。",
+   "text": "「风挺大，吹得旧笔尖发颤。这物件比我懂年头，夜里复现归因，稳当。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

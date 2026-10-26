@@ -1,0 +1,112 @@
+{
+ "age": 15,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 11,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -119.51,
+    "z": 188.43
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -15.12,
+    "z": 184.63
+   },
+   "work": {
+    "site": "像素小学学生·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 68.1,
+    "z": 176.22
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02254",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "还在用一台修了八次的老收音机",
+ "id": "C-02254",
+ "month_lines": [
+  "这事儿有讲究，今天风挺大，出门得小心点儿。"
+ ],
+ "name": "熊阿果",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "这事儿有讲究，今天天气清清爽爽的，正好适合出去转转。",
+   "text": "「这事儿有讲究，今天天气清清爽爽的，正好适合出去转转。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "这事儿有讲究，今天风挺大，出门得小心点儿。",
+   "text": "「这事儿有讲究，今天风挺大，出门得小心点儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,111 @@
+{
+ "age": 65,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -10,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.2,
+    "z": 95.29
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.93,
+    "z": 16.29
+   },
+   "work": {
+    "site": "晨操领队·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 146.2,
+    "z": 126.39
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02326",
+  "quirk": "night_run",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "用老药房的药柜抽屉教会了半条街的孩子——这事只有档案馆知道",
+ "id": "C-02326",
+ "month_lines": [
+  "今早风挺大，先复核一遍，这天还得比太阳起得早。"
+ ],
+ "name": "阮承宗",
+ "profession": "晨操领队",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "先复核一遍，今天可得好好忙活忙活。天气清清爽爽的，做操的时候得让光带多舞动几下。",
+   "text": "「先复核一遍，今天可得好好忙活忙活。天气清清爽爽的，做操的时候得让光带多舞动几下。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今早风挺大，先复核一遍，这天还得比太阳起得早。",
+   "text": "「今早风挺大，先复核一遍，这天还得比太阳起得早。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

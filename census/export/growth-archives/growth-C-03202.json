@@ -1,0 +1,112 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 5,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.4,
+    "z": 131.59
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.96,
+    "z": 76.61
+   },
+   "work": {
+    "site": "风控官·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -35.75,
+    "z": 137.67
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03202",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "还在用退役的信使哨子——他自己也说不清为什么",
+ "id": "C-03202",
+ "month_lines": [
+  "风挺大，天阴着，正好压压躁动。限额盯紧，不出错就是风光。灶上有汤，自取，回头说。"
+ ],
+ "name": "吕志刚",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "灶上有汤，自取。回头说，今儿个天气清清爽爽的，正好适合出去转转。",
+   "text": "「灶上有汤，自取。回头说，今儿个天气清清爽爽的，正好适合出去转转。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风挺大，天阴着，正好压压躁动。限额盯紧，不出错就是风光。灶上有汤，自取，回头说。",
+   "text": "「风挺大，天阴着，正好压压躁动。限额盯紧，不出错就是风光。灶上有汤，自取，回头说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

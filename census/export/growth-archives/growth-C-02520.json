@@ -1,0 +1,111 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 2,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 50.3,
+    "z": 85.59
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.36,
+    "z": 88.2
+   },
+   "work": {
+    "site": "缓存管理员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 103.61,
+    "z": 55.54
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02520",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把心事只说给老钢琴的琴键听——他自己也说不清为什么",
+ "id": "C-02520",
+ "month_lines": [
+  "老地方见，今夜风挺大，路灯下有点冷。"
+ ],
+ "name": "蔡嘉树",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "老地方见，今早出门多亏了那盏路灯，真是咱碳基人的守护星。",
+   "text": "「老地方见，今早出门多亏了那盏路灯，真是咱碳基人的守护星。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "老地方见，今夜风挺大，路灯下有点冷。",
+   "text": "「老地方见，今夜风挺大，路灯下有点冷。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

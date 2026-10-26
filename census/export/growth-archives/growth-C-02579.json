@@ -1,0 +1,111 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": -2,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.35,
+    "z": -158.23
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.71,
+    "z": -127.2
+   },
+   "work": {
+    "site": "数据搬运工·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -72.54,
+    "z": -116.93
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02579",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "梦话都在念叨老电报局的键——这事只有档案馆知道",
+ "id": "C-02579",
+ "month_lines": [
+  "老规矩错不了，今早装卸口的数据包可真不少，风挺大，得抓紧搬。"
+ ],
+ "name": "钟敏",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "老规矩错不了，今早装卸口的活儿可不少。",
+   "text": "「老规矩错不了，今早装卸口的活儿可不少。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "老规矩错不了，今早装卸口的数据包可真不少，风挺大，得抓紧搬。",
+   "text": "「老规矩错不了，今早装卸口的数据包可真不少，风挺大，得抓紧搬。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

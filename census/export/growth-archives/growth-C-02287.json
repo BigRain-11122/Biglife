@@ -1,0 +1,112 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 3,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -102.21,
+    "z": -49.79
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.05,
+    "z": -73.38
+   },
+   "work": {
+    "site": "玩家留言整理员·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.43,
+    "z": -55.67
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02287",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "留着写了一半的市民歌谣却从来不用",
+ "id": "C-02287",
+ "month_lines": [
+  "灶上有汤，自取。这风挺大，得赶紧收收摊。"
+ ],
+ "name": "郑沐辰",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "灶上有汤，自取。今天单日，年轮不转，就让这句自言自语当个小小的仪式吧。",
+   "text": "「灶上有汤，自取。今天单日，年轮不转，就让这句自言自语当个小小的仪式吧。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "灶上有汤，自取。这风挺大，得赶紧收收摊。",
+   "text": "「灶上有汤，自取。这风挺大，得赶紧收收摊。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

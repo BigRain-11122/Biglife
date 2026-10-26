@@ -1,0 +1,111 @@
+{
+ "age": 77,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -9,
+   "rate": -3,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.5,
+    "z": -150.46
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.53,
+    "z": -150.32
+   },
+   "work": {
+    "site": "平台对接员·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.23,
+    "z": -148.35
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02899",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "留着老裁缝铺的样衣却从来不用——这事只有师父知道",
+ "id": "C-02899",
+ "month_lines": [
+  "包在我身上。风不小，天阴着，刚过完两轮 FluxVerseTick 的闸，G08 的 Stage 来回切得眼晕。"
+ ],
+ "name": "半加器·快",
+ "profession": "平台对接员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "包在我身上，今早江水就干净的蓝白，早起的鸟儿有虫吃，今天又该忙活了。",
+   "text": "「包在我身上，今早江水就干净的蓝白，早起的鸟儿有虫吃，今天又该忙活了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "包在我身上。风不小，天阴着，刚过完两轮 FluxVerseTick 的闸，G08 的 Stage 来回切得眼晕。",
+   "text": "「包在我身上。风不小，天阴着，刚过完两轮 FluxVerseTick 的闸，G08 的 Stage 来回切得眼晕。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

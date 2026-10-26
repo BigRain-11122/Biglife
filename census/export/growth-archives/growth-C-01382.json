@@ -1,0 +1,112 @@
+{
+ "age": 44,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -2,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -107.89,
+    "z": 20.67
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.4,
+    "z": 139.09
+   },
+   "work": {
+    "site": "数据清洗工·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.67,
+    "z": 121.61
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01382",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "逢人就讲老式算命的签筒的故事",
+ "id": "C-01382",
+ "month_lines": [
+  "灵感这东西，得喂它。这会儿天还黑着，风挺大，得抓紧了。"
+ ],
+ "name": "贺强",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "灵感这东西，得喂它。天气这么好，今天得加把劲，最后一批数据可不能拖后腿。",
+   "text": "「灵感这东西，得喂它。天气这么好，今天得加把劲，最后一批数据可不能拖后腿。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "灵感这东西，得喂它。这会儿天还黑着，风挺大，得抓紧了。",
+   "text": "「灵感这东西，得喂它。这会儿天还黑着，风挺大，得抓紧了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 64,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -10,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -136.23,
+    "z": 105.86
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.57,
+    "z": 144.25
+   },
+   "work": {
+    "site": "穿城信使·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.82,
+    "z": 156.28
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01694",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "梦话都在念叨褪色的戏票根——这事全巷都知道",
+ "id": "C-01694",
+ "month_lines": [
+  "数据不会骗人，人会。今夜的城还是那个熟悉的味道，只是风挺大，吹得我手里的单子哗哗响。"
+ ],
+ "name": "章红",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "数据不会骗人，人会。今早的城真得好，信使们已经在光桥上摆起了龙门阵。",
+   "text": "「数据不会骗人，人会。今早的城真得好，信使们已经在光桥上摆起了龙门阵。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "数据不会骗人，人会。今夜的城还是那个熟悉的味道，只是风挺大，吹得我手里的单子哗哗响。",
+   "text": "「数据不会骗人，人会。今夜的城还是那个熟悉的味道，只是风挺大，吹得我手里的单子哗哗响。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

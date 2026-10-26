@@ -1,0 +1,112 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 13,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.02,
+    "z": 98.71
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.14,
+    "z": 148.38
+   },
+   "work": {
+    "site": "像素学徒·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -34.65,
+    "z": 143.4
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01859",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "还在用老电报局的键——这事全巷都知道",
+ "id": "C-01859",
+ "month_lines": [
+  "做啥体，今早太阳正好，正好给守夜灯灵多烧点纸钱。"
+ ],
+ "name": "韩阿果",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "有意思，我想想，今天天阴着，正好给守夜灯灵多烧点纸钱。",
+   "text": "「有意思，我想想，今天天阴着，正好给守夜灯灵多烧点纸钱。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "做啥体，今早太阳正好，正好给守夜灯灵多烧点纸钱。",
+   "text": "「做啥体，今早太阳正好，正好给守夜灯灵多烧点纸钱。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

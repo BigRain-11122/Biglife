@@ -1,0 +1,112 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 0,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.39,
+    "z": 145.47
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.23,
+    "z": 82.2
+   },
+   "work": {
+    "site": "风控官·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.38,
+    "z": 38.22
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01591",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "梦话都在念叨旧茶馆的水牌——据说是老辈传下的规矩",
+ "id": "C-01591",
+ "month_lines": [
+  "今天这天气云厚风挺大，又学了一招，这风控高地的瞭望员还得时时警惕呢。"
+ ],
+ "name": "顾雯",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "又学了一招，这天气阴着，正好去外环看看老朋友。",
+   "text": "「又学了一招，这天气阴着，正好去外环看看老朋友。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今天这天气云厚风挺大，又学了一招，这风控高地的瞭望员还得时时警惕呢。",
+   "text": "「今天这天气云厚风挺大，又学了一招，这风控高地的瞭望员还得时时警惕呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

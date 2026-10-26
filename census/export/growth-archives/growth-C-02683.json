@@ -1,0 +1,111 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 9,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -71.15,
+    "z": -206.66
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -5.88,
+    "z": -196.44
+   },
+   "work": {
+    "site": "江面清波工·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 70.03,
+    "z": -239.94
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02683",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "得之我幸，失之我睡。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "记得老式算盘珠的每一个来历——没人知道为什么",
+ "id": "C-02683",
+ "month_lines": [
+  "今朝风挺大，收工早些，给守夜灯灵多道声辛苦。"
+ ],
+ "name": "高斯年",
+ "profession": "江面清波工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "单子来了就接，不来就钓鱼，今朝风挺大，收工早些，给守夜灯灵多道声辛苦。",
+   "text": "「单子来了就接，不来就钓鱼，今朝风挺大，收工早些，给守夜灯灵多道声辛苦。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今朝风挺大，收工早些，给守夜灯灵多道声辛苦。",
+   "text": "「今朝风挺大，收工早些，给守夜灯灵多道声辛苦。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

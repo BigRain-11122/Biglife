@@ -1,0 +1,111 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 3,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 64.69,
+    "z": 141.97
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.62,
+    "z": 36.44
+   },
+   "work": {
+    "site": "bug 猎人·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 98.77,
+    "z": 17.77
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02374",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "从不让弄堂的门牌号离开自己三步远——她自己也说不清为什么",
+ "id": "C-02374",
+ "month_lines": [
+  "今夜风不小，还得给家里人带点好吃的。站直了别趴下。"
+ ],
+ "name": "许清晚",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "站直了别趴下，今儿这风不大，收摊第一件事就是给家人带点好吃的。",
+   "text": "「站直了别趴下，今儿这风不大，收摊第一件事就是给家人带点好吃的。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今夜风不小，还得给家里人带点好吃的。站直了别趴下。",
+   "text": "「今夜风不小，还得给家里人带点好吃的。站直了别趴下。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

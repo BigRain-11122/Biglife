@@ -1,0 +1,112 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 3,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -106.74,
+    "z": 83.4
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.85,
+    "z": 63.24
+   },
+   "work": {
+    "site": "数据搬运工·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -35.03,
+    "z": 158.92
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02615",
+  "quirk": "umbrella",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每逢下雨就去修弄堂口的邮筒——这事只有档案馆知道",
+ "id": "C-02615",
+ "month_lines": [
+  "这单我送，别跟我抢。今早江水清清的，风挺大，还得加件衣裳。"
+ ],
+ "name": "付萍",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "这单我送，别跟我抢。今早江水不要2个色，就干净的蓝白色就好了！",
+   "text": "「这单我送，别跟我抢。今早江水不要2个色，就干净的蓝白色就好了！」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "这单我送，别跟我抢。今早江水清清的，风挺大，还得加件衣裳。",
+   "text": "「这单我送，别跟我抢。今早江水清清的，风挺大，还得加件衣裳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

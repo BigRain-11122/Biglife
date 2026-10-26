@@ -1,0 +1,112 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -9,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.52,
+    "z": 75.14
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.91,
+    "z": 30.74
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.96,
+    "z": 47.31
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02414",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每年挑一天只为巷口的第一盏灯大扫除——没人知道为什么",
+ "id": "C-02414",
+ "month_lines": [
+  "今夜风挺大，得小心别把菜吹跑了。慢慢来，比较快，早起的鸟儿有虫吃。"
+ ],
+ "name": "施燕",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "慢慢来，比较快，今天星期日，收盘铃还没响，先去江边走走，呼吸下清爽的空气。",
+   "text": "「慢慢来，比较快，今天星期日，收盘铃还没响，先去江边走走，呼吸下清爽的空气。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今夜风挺大，得小心别把菜吹跑了。慢慢来，比较快，早起的鸟儿有虫吃。",
+   "text": "「今夜风挺大，得小心别把菜吹跑了。慢慢来，比较快，早起的鸟儿有虫吃。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

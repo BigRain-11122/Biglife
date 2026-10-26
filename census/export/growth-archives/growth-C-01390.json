@@ -1,0 +1,111 @@
+{
+ "age": 38,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 1,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 24.4,
+    "z": 71.3
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.73,
+    "z": 78.82
+   },
+   "work": {
+    "site": "沙盒建筑师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 125.57,
+    "z": 118.61
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01390",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把心事只说给旧码头的汽笛阀听——没人知道为什么",
+ "id": "C-01390",
+ "month_lines": [
+  "今夜天阴着，风挺大，拆了盖盖了拆，乐呵得很。老地方见。"
+ ],
+ "name": "薛大壮",
+ "profession": "沙盒建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "老地方见，今儿天阴着，拆了盖盖了拆，乐呵得很。",
+   "text": "「老地方见，今儿天阴着，拆了盖盖了拆，乐呵得很。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今夜天阴着，风挺大，拆了盖盖了拆，乐呵得很。老地方见。",
+   "text": "「今夜天阴着，风挺大，拆了盖盖了拆，乐呵得很。老地方见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

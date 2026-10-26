@@ -1,0 +1,112 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 2,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.87,
+    "z": 208.73
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -13.63,
+    "z": 232.87
+   },
+   "work": {
+    "site": "数据牧人·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 89.79,
+    "z": 191.26
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01745",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "把手绘的城图画进了自己的作品里",
+ "id": "C-01745",
+ "month_lines": [
+  "下一版一定更好，今夜风挺大，批流快得紧。"
+ ],
+ "name": "糜雨欣",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "下一版一定更好，今天天气云蒙蒙的，正好给加班加点的赶批来了点灵感。",
+   "text": "「下一版一定更好，今天天气云蒙蒙的，正好给加班加点的赶批来了点灵感。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "下一版一定更好，今夜风挺大，批流快得紧。",
+   "text": "「下一版一定更好，今夜风挺大，批流快得紧。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,111 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 2,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 59.35,
+    "z": 48.7
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.35,
+    "z": 87.08
+   },
+   "work": {
+    "site": "bug 猎人·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 143.53,
+    "z": 116.49
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02030",
+  "quirk": "slow",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "偷偷给手工风筝的竹篾上油保养——这事全巷都知道",
+ "id": "C-02030",
+ "month_lines": [
+  "急啥，汤还没开呢。天清气朗的，风挺大，得注意别被风吹着凉了。"
+ ],
+ "name": "里德所罗门·晨",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "急啥，汤还没开呢。天气阴着，正好检查屋里的灯，免得到时候暗下来手忙脚乱。",
+   "text": "「急啥，汤还没开呢。天气阴着，正好检查屋里的灯，免得到时候暗下来手忙脚乱。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "急啥，汤还没开呢。天清气朗的，风挺大，得注意别被风吹着凉了。",
+   "text": "「急啥，汤还没开呢。天清气朗的，风挺大，得注意别被风吹着凉了。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

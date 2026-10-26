@@ -1,0 +1,111 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 9,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -39.94,
+    "z": 233.24
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -17.6,
+    "z": 190.78
+   },
+   "work": {
+    "site": "信号中继员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 87.3,
+    "z": 171.74
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03395",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "每天跟老式怀表链打招呼——这事全巷都知道",
+ "id": "C-03395",
+ "month_lines": [
+  "天阴着，风也不小。今天云好，改天再说，先把这三颗心脏揣稳了。"
+ ],
+ "name": "姚沐辰",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "今天云好，改天再说，中继手还得揣着三颗心脏。",
+   "text": "「今天云好，改天再说，中继手还得揣着三颗心脏。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "天阴着，风也不小。今天云好，改天再说，先把这三颗心脏揣稳了。",
+   "text": "「天阴着，风也不小。今天云好，改天再说，先把这三颗心脏揣稳了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

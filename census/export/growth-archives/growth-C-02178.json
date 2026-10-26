@@ -1,0 +1,112 @@
+{
+ "age": 94,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -7,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.22,
+    "z": 107.98
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.99,
+    "z": 151.92
+   },
+   "work": {
+    "site": "风控官·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -47.37,
+    "z": 97.96
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02178",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "留着旧船票却从来不用——这事只有师父知道",
+ "id": "C-02178",
+ "month_lines": [
+  "今早出门得多穿点，风挺大。街坊一声喊，放下碗就到。"
+ ],
+ "name": "施珍珠",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "街坊一声喊，放下碗就到。今夜风挺大，出门得多穿点。",
+   "text": "「街坊一声喊，放下碗就到。今夜风挺大，出门得多穿点。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今早出门得多穿点，风挺大。街坊一声喊，放下碗就到。",
+   "text": "「今早出门得多穿点，风挺大。街坊一声喊，放下碗就到。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 40,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#EC407A",
+   "eye": "#FFD27A",
+   "hair": "#C5E1FF",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 10,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 62.12,
+    "z": 71.11
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.15,
+    "z": 62.1
+   },
+   "work": {
+    "site": "伴居灵·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 119.98,
+    "z": 56.42
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01796",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "记得雨声录音出现过的每一个雨夜——这事只有档案馆知道",
+ "id": "C-01796",
+ "month_lines": [
+  "今天风挺大，尾巴天线正对热闹的方向，哼着小调绕灯杆飞了三圈，一天就这样开始了。"
+ ],
+ "name": "梅雨",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "今天天云悠悠的，正好，正适合看看塔顶的云。",
+   "text": "「今天天云悠悠的，正好，正适合看看塔顶的云。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今天风挺大，尾巴天线正对热闹的方向，哼着小调绕灯杆飞了三圈，一天就这样开始了。",
+   "text": "「今天风挺大，尾巴天线正对热闹的方向，哼着小调绕灯杆飞了三圈，一天就这样开始了。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 0,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 51.18,
+    "z": 95.06
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.97,
+    "z": 15.19
+   },
+   "work": {
+    "site": "8bit 乐师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 110.83,
+    "z": 145.12
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01727",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "攒了满抽屉旧像素图钉从不给看——据说是老辈传下的规矩",
+ "id": "C-01727",
+ "month_lines": [
+  "回滚代码新东西先看三天再用，这天气正好适合写谱，灵感来得快。"
+ ],
+ "name": "总线叔-8",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "新东西先看三天再用，今早这天气正好适合写谱，灵感来的快。",
+   "text": "「新东西先看三天再用，今早这天气正好适合写谱，灵感来的快。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "回滚代码新东西先看三天再用，这天气正好适合写谱，灵感来得快。",
+   "text": "「回滚代码新东西先看三天再用，这天气正好适合写谱，灵感来得快。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

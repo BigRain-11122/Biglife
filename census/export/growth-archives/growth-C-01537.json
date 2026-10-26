@@ -1,0 +1,111 @@
+{
+ "age": 80,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -7,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.38,
+    "z": -22.51
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.28,
+    "z": -124.16
+   },
+   "work": {
+    "site": "七段街区导游·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -39.25,
+    "z": -56.19
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01537",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "自己淋过雨，就想给别人撑伞。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "用旧棋谱教会了半条街的孩子——她自己也说不清为什么",
+ "id": "C-01537",
+ "month_lines": [
+  "今夜天有些阴，得把摊子绑牢实些。包在我身上，别担心。"
+ ],
+ "name": "潘淑珍",
+ "profession": "七段街区导游",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "包在我身上，今早天阴着，得把摊子多绑三道绳。",
+   "text": "「包在我身上，今早天阴着，得把摊子多绑三道绳。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今夜天有些阴，得把摊子绑牢实些。包在我身上，别担心。",
+   "text": "「今夜天有些阴，得把摊子绑牢实些。包在我身上，别担心。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

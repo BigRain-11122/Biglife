@@ -1,0 +1,112 @@
+{
+ "age": 56,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": -2,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.07,
+    "z": -20.99
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.89,
+    "z": -54.14
+   },
+   "work": {
+    "site": "语义翻译官·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -42.58,
+    "z": -60.94
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01626",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "会给老照片底片织毛衣——她自己也说不清为什么",
+ "id": "C-01626",
+ "month_lines": [
+  "这版本我等好久了，终于更新了。风挺大，说话得大声点儿。"
+ ],
+ "name": "叶燕",
+ "profession": "语义翻译官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "这版本我等好久了，终于更新了。天气云蒙蒙的，正好适合给阳台的花说悄悄话。",
+   "text": "「这版本我等好久了，终于更新了。天气云蒙蒙的，正好适合给阳台的花说悄悄话。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "这版本我等好久了，终于更新了。风挺大，说话得大声点儿。",
+   "text": "「这版本我等好久了，终于更新了。风挺大，说话得大声点儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

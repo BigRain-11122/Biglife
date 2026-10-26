@@ -1,0 +1,112 @@
+{
+ "age": 86,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -12,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.92,
+    "z": 90.52
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.94,
+    "z": 95.31
+   },
+   "work": {
+    "site": "时空校准师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.82,
+    "z": 23.96
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01871",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "逢人就讲老式公交站牌的故事——这事全巷都知道",
+ "id": "C-01871",
+ "month_lines": [
+  "急啥，汤还没开呢。今天风挺大，正好把阳台的花都说了一遍话。"
+ ],
+ "name": "石根娣",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "急啥，汤还没开呢。今天天气挺热，正好可以多给阳台的花说会儿话。",
+   "text": "「急啥，汤还没开呢。今天天气挺热，正好可以多给阳台的花说会儿话。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "急啥，汤还没开呢。今天风挺大，正好把阳台的花都说了一遍话。",
+   "text": "「急啥，汤还没开呢。今天风挺大，正好把阳台的花都说了一遍话。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

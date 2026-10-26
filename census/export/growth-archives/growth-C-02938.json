@@ -1,0 +1,112 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -4,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 55.17,
+    "z": 111.5
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.27,
+    "z": 65.66
+   },
+   "work": {
+    "site": "引擎医生·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 125.91,
+    "z": 73.57
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02938",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "记得弄堂口的邮筒的每一个来历——没人知道为什么",
+ "id": "C-02938",
+ "month_lines": [
+  "退退退"
+ ],
+ "name": "杜蕾",
+ "profession": "引擎医生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "这版本我等好久了，终于上线了！天气有点阴，出门带把伞，小心点儿。",
+   "text": "「这版本我等好久了，终于上线了！天气有点阴，出门带把伞，小心点儿。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "退退退",
+   "text": "「退退退」，凌晨的风不小，吹得引擎都哆嗦。G区这版本我等好久了，摸出颗糖剥开，听诊器贴上管线，心跳稳得没毛病。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

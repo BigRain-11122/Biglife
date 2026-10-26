@@ -1,0 +1,111 @@
+{
+ "age": 90,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -9,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 28.17,
+    "z": 126.26
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.88,
+    "z": 40.9
+   },
+   "work": {
+    "site": "攻略誊写员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 98.1,
+    "z": 98.25
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01446",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "偷偷给旧工牌上油保养——这事只有师父知道",
+ "id": "C-01446",
+ "month_lines": [
+  "门禁亮绿灯，心里才亮堂。今夜天阴着，风挺大，出门办事正好。"
+ ],
+ "name": "冯佩兰",
+ "profession": "攻略誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "门禁亮绿灯，心里才亮堂。今天这天阴着，出门办点事正好。",
+   "text": "「门禁亮绿灯，心里才亮堂。今天这天阴着，出门办点事正好。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "门禁亮绿灯，心里才亮堂。今夜天阴着，风挺大，出门办事正好。",
+   "text": "「门禁亮绿灯，心里才亮堂。今夜天阴着，风挺大，出门办事正好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -2,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.46,
+    "z": 57.01
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.9,
+    "z": 37.86
+   },
+   "work": {
+    "site": "穿城信使·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.39,
+    "z": 73.85
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02706",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "梦话都在念叨电波猫——这事全巷都知道",
+ "id": "C-02706",
+ "month_lines": [
+  "天阴着，风挺大，把这几单急件护好了。规矩要天天认，灯还是老灯亮堂，心里踏实。"
+ ],
+ "name": "冯红",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "灯还是老灯亮堂，今早收摊后多绑了三道绳，台风季得防微杜渐。",
+   "text": "「灯还是老灯亮堂，今早收摊后多绑了三道绳，台风季得防微杜渐。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "天阴着，风挺大，把这几单急件护好了。规矩要天天认，灯还是老灯亮堂，心里踏实。",
+   "text": "「天阴着，风挺大，把这几单急件护好了。规矩要天天认，灯还是老灯亮堂，心里踏实。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

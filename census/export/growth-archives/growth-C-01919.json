@@ -1,0 +1,111 @@
+{
+ "age": 80,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -5,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -91.69,
+    "z": 254.39
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -16.23,
+    "z": 186.61
+   },
+   "work": {
+    "site": "编年史誊录员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 36.0,
+    "z": 243.21
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01919",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "用全城第一块砖的拓片教会了半条街的孩子——据说是老辈传下的规矩",
+ "id": "C-01919",
+ "month_lines": [
+  "急啥，汤还没开呢，今天阳光正好，风挺大，正好去补补丁。"
+ ],
+ "name": "黄鸿奎",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "急啥，汤还没开呢，阴天正好补补丁。",
+   "text": "「急啥，汤还没开呢，阴天正好补补丁。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "急啥，汤还没开呢，今天阳光正好，风挺大，正好去补补丁。",
+   "text": "「急啥，汤还没开呢，今天阳光正好，风挺大，正好去补补丁。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

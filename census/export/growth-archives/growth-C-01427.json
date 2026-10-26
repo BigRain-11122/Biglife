@@ -1,0 +1,111 @@
+{
+ "age": 73,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -8,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.54,
+    "z": -22.76
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.47,
+    "z": -113.33
+   },
+   "work": {
+    "site": "数据粥铺摊主·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -35.66,
+    "z": -12.77
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01427",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "每天跟第一封妥投的加急件打招呼——这事只有师父知道",
+ "id": "C-01427",
+ "month_lines": [
+  "今夜风挺大，收摊得快点，搭把手的事儿。"
+ ],
+ "name": "阮学勤",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "搭把手的事儿，今儿个风挺大，收摊得快点。",
+   "text": "「搭把手的事儿，今儿个风挺大，收摊得快点。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今夜风挺大，收摊得快点，搭把手的事儿。",
+   "text": "「今夜风挺大，收摊得快点，搭把手的事儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

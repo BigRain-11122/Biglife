@@ -1,0 +1,111 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 2,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.67,
+    "z": 120.74
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 76.89,
+    "z": 72.86
+   },
+   "work": {
+    "site": "缓存管理员·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 118.44,
+    "z": 67.61
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01634",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把退役巡夜灯灵的灯罩修好再免费送人——她自己也说不清为什么",
+ "id": "C-01634",
+ "month_lines": [
+  "这物件比我懂年头，今儿天阴着，风挺大，恰饭得早些打算。"
+ ],
+ "name": "高阿Jay",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "这物件比我懂年头，今儿天阴着，恰饭得早些打算。",
+   "text": "「这物件比我懂年头，今儿天阴着，恰饭得早些打算。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "这物件比我懂年头，今儿天阴着，风挺大，恰饭得早些打算。",
+   "text": "「这物件比我懂年头，今儿天阴着，风挺大，恰饭得早些打算。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

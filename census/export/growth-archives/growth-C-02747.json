@@ -1,0 +1,112 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 0,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -135.54,
+    "z": 67.23
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.57,
+    "z": 49.33
+   },
+   "work": {
+    "site": "量化策略研究员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -56.46,
+    "z": 130.95
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02747",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "能一眼认出手写信的真伪——这事只有档案馆知道",
+ "id": "C-02747",
+ "month_lines": [
+  "风挺大，吹得屏幕上的因子直晃。因子回撤还在跑，收摊前把这版代码过一遍，稳当点好。收摊了，明天见。"
+ ],
+ "name": "超算·乙",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "收摊了，明天见。天气清清爽爽的，正好适合多盯会盘。",
+   "text": "「收摊了，明天见。天气清清爽爽的，正好适合多盯会盘。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "风挺大，吹得屏幕上的因子直晃。因子回撤还在跑，收摊前把这版代码过一遍，稳当点好。收摊了，明天见。",
+   "text": "「风挺大，吹得屏幕上的因子直晃。因子回撤还在跑，收摊前把这版代码过一遍，稳当点好。收摊了，明天见。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

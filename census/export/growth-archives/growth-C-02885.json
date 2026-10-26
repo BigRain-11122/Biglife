@@ -1,0 +1,112 @@
+{
+ "age": 51,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 5,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 39.06,
+    "z": 46.68
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.96,
+    "z": 107.92
+   },
+   "work": {
+    "site": "大编译调律师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 119.45,
+    "z": 51.77
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02885",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "给旧当铺的票据夹写了一整本观察笔记——这事只有档案馆知道",
+ "id": "C-02885",
+ "month_lines": [
+  "灵感这东西，得喂它。风挺大，天阴着，正好听译 FluxVerse 的 Tick 声，没杂音，够我调优。"
+ ],
+ "name": "杜伟",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "灵感这东西，得喂它。今天落着雨，正好用耳朵巡线，编译器的哀嚎骗不了耳朵。",
+   "text": "「灵感这东西，得喂它。今天落着雨，正好用耳朵巡线，编译器的哀嚎骗不了耳朵。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "灵感这东西，得喂它。风挺大，天阴着，正好听译 FluxVerse 的 Tick 声，没杂音，够我调优。",
+   "text": "「灵感这东西，得喂它。风挺大，天阴着，正好听译 FluxVerse 的 Tick 声，没杂音，够我调优。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

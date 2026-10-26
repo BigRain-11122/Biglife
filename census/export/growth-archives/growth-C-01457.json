@@ -1,0 +1,111 @@
+{
+ "age": 59,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 3,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 34.9,
+    "z": 14.26
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.3,
+    "z": 30.14
+   },
+   "work": {
+    "site": "攻略誊写员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.1,
+    "z": 154.8
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01457",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "攒了满抽屉一台修了八次的老收音机从不给看——没人知道为什么",
+ "id": "C-01457",
+ "month_lines": [
+  "今夜风挺大，写字得稳住些，毫秒也是时间。"
+ ],
+ "name": "郁志刚",
+ "profession": "攻略誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "毫秒也是时间，今天这天气正好，晒晒太阳，写篇攻略更带劲。",
+   "text": "「毫秒也是时间，今天这天气正好，晒晒太阳，写篇攻略更带劲。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今夜风挺大，写字得稳住些，毫秒也是时间。",
+   "text": "「今夜风挺大，写字得稳住些，毫秒也是时间。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

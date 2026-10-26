@@ -1,0 +1,111 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 10,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.51,
+    "z": 26.25
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.03,
+    "z": 17.54
+   },
+   "work": {
+    "site": "缓存管理员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 111.39,
+    "z": 148.9
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01400",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "逢人就讲祖传的修表镊子的故事——这事全巷都知道",
+ "id": "C-01400",
+ "month_lines": [
+  "这事儿有讲究，今夜云厚，喝茶还是得用那个杯子。"
+ ],
+ "name": "白雨欣",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "这事儿有讲究，今个天云层有点重，喝茶还是得用那个杯子。",
+   "text": "「这事儿有讲究，今个天云层有点重，喝茶还是得用那个杯子。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "这事儿有讲究，今夜云厚，喝茶还是得用那个杯子。",
+   "text": "「这事儿有讲究，今夜云厚，喝茶还是得用那个杯子。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

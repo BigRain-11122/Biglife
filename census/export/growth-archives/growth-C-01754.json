@@ -1,0 +1,112 @@
+{
+ "age": 6,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 10,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.26,
+    "z": 114.78
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.83,
+    "z": 80.35
+   },
+   "work": {
+    "site": "像素小学学生·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 126.86,
+    "z": 140.09
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01754",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "坚持给旧船锚残件记日记——没人知道为什么",
+ "id": "C-01754",
+ "month_lines": [
+  "江水都不急我急啥，今夜风挺大，窗边江声比往常更响，听着听着就安心了。"
+ ],
+ "name": "许念念",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "江水都不急我急啥，今早开窗江声正响，听得出城外还是云蒙蒙的。",
+   "text": "「江水都不急我急啥，今早开窗江声正响，听得出城外还是云蒙蒙的。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "江水都不急我急啥，今夜风挺大，窗边江声比往常更响，听着听着就安心了。",
+   "text": "「江水都不急我急啥，今夜风挺大，窗边江声比往常更响，听着听着就安心了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

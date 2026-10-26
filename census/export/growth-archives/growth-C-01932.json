@@ -1,0 +1,112 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 20,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.41,
+    "z": 71.89
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.62,
+    "z": 26.33
+   },
+   "work": {
+    "site": "像素小学学生·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 106.61,
+    "z": 84.58
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01932",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "还在用初代渡轮的船票夹——这事只有档案馆知道",
+ "id": "C-01932",
+ "month_lines": [
+  "帮帮忙，今儿天清气朗的，风也不小，正适合绕路去看那光点。"
+ ],
+ "name": "孟豆豆",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "江水都不急我急啥，今天天气正好适合绕路去看那光点。",
+   "text": "「江水都不急我急啥，今天天气正好适合绕路去看那光点。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "帮帮忙，今儿天清气朗的，风也不小，正适合绕路去看那光点。",
+   "text": "「帮帮忙，今儿天清气朗的，风也不小，正适合绕路去看那光点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

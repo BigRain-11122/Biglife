@@ -1,0 +1,111 @@
+{
+ "age": 75,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -5,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 23.91,
+    "z": 11.44
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.07,
+    "z": 150.79
+   },
+   "work": {
+    "site": "数据菜市摊主·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.93,
+    "z": 99.04
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02236",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "风吹哪页读哪页。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "收藏旧像素图钉且每件都记得来历——他自己也说不清为什么",
+ "id": "C-02236",
+ "month_lines": [
+  "看云不用门票，今夜风挺大，秤杆还是稳稳的。"
+ ],
+ "name": "魏德明",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "看云不用门票，今夜的风挺大，秤杆还是稳稳的。",
+   "text": "「看云不用门票，今夜的风挺大，秤杆还是稳稳的。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "看云不用门票，今夜风挺大，秤杆还是稳稳的。",
+   "text": "「看云不用门票，今夜风挺大，秤杆还是稳稳的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 13,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 49.26,
+    "z": -25.14
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.26,
+    "z": -74.19
+   },
+   "work": {
+    "site": "像素小学学生·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.28,
+    "z": -135.12
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01433",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "能一眼认出全城公交的老路线图的真伪——没人知道为什么",
+ "id": "C-01433",
+ "month_lines": [
+  "这单我送，别跟我抢。今夜风挺大，出门还得穿厚点儿。"
+ ],
+ "name": "管阿果",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "这单我送，别跟我抢。回头说今天 commit 的光点过江真漂亮，下次还得再看会儿。",
+   "text": "「这单我送，别跟我抢。回头说今天 commit 的光点过江真漂亮，下次还得再看会儿。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "这单我送，别跟我抢。今夜风挺大，出门还得穿厚点儿。",
+   "text": "「这单我送，别跟我抢。今夜风挺大，出门还得穿厚点儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

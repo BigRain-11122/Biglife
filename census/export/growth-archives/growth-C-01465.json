@@ -1,0 +1,112 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 10,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 51.07,
+    "z": 119.31
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.51,
+    "z": 31.16
+   },
+   "work": {
+    "site": "伴居灵·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 103.25,
+    "z": 29.18
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01465",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "每次路过断了的帆船模型都要亮两下——这事全巷都知道",
+ "id": "C-01465",
+ "month_lines": [
+  "今夜风挺大，尾巴天线牢牢对准热闹处。"
+ ],
+ "name": "晚霞",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "蹭光真好，尾巴天线又转到最热闹的地方了。今天周末，多睡会儿。",
+   "text": "「蹭光真好，尾巴天线又转到最热闹的地方了。今天周末，多睡会儿。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今夜风挺大，尾巴天线牢牢对准热闹处。",
+   "text": "「今夜风挺大，尾巴天线牢牢对准热闹处。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

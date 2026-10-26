@@ -1,0 +1,112 @@
+{
+ "age": 5,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#42A5F5",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 16,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -141.88,
+    "z": 45.1
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.71,
+    "z": 26.49
+   },
+   "work": {
+    "site": "伴居灵·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -65.67,
+    "z": 135.69
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02515",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "看得见初代渡轮的船票夹里住着的光——这事只有师父知道",
+ "id": "C-02515",
+ "month_lines": [
+  "今夜风挺大，尾巴上的天线抓得更紧了。"
+ ],
+ "name": "黑哑铃",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "蹭光了新推的界面优化，简洁清爽，就是尾巴上的天线还是想抓抓最热闹的数据流。",
+   "text": "「蹭光了新推的界面优化，简洁清爽，就是尾巴上的天线还是想抓抓最热闹的数据流。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今夜风挺大，尾巴上的天线抓得更紧了。",
+   "text": "「今夜风挺大，尾巴上的天线抓得更紧了。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,111 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 8,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -40.01,
+    "z": -183.21
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -13.09,
+    "z": -191.83
+   },
+   "work": {
+    "site": "江面清波工·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 58.74,
+    "z": -188.76
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01439",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "能一眼认出初版街景照片的真伪——她自己也说不清为什么",
+ "id": "C-01439",
+ "month_lines": [
+  "急啥，汤还没开呢，今夜风挺大，作业得抓紧了。"
+ ],
+ "name": "谢未晞",
+ "profession": "江面清波工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "急啥，汤还没开呢，今天这天气正好适合江面上做事。",
+   "text": "「急啥，汤还没开呢，今天这天气正好适合江面上做事。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "急啥，汤还没开呢，今夜风挺大，作业得抓紧了。",
+   "text": "「急啥，汤还没开呢，今夜风挺大，作业得抓紧了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

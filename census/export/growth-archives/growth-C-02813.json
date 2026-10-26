@@ -1,0 +1,111 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 5,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.84,
+    "z": -109.74
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.14,
+    "z": -147.66
+   },
+   "work": {
+    "site": "信号塔工·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.2,
+    "z": -12.78
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02813",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把初代像素调色板画进了自己的作品里——她自己也说不清为什么",
+ "id": "C-02813",
+ "month_lines": [
+  "红灯面前没有老熟人。"
+ ],
+ "name": "江雯",
+ "profession": "信号塔工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "红灯面前没有老熟人，今天天气适意，正好适合多走两步确认路。",
+   "text": "「红灯面前没有老熟人，今天天气适意，正好适合多走两步确认路。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "红灯面前没有老熟人。",
+   "text": "「红灯面前没有老熟人。」风挺大，刮得塔顶云脚乱翻。刚在档案馆坐完一刻钟，手里这杯茶还温着，心里便觉着几分踏实。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

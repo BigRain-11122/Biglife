@@ -1,0 +1,112 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 15,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.85,
+    "z": 96.79
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.93,
+    "z": 52.58
+   },
+   "work": {
+    "site": "像素小学学生·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -46.65,
+    "z": 54.54
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03518",
+  "quirk": "night_run",
+  "recovering": "shengji",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把奖状排成一排挨个擦——据说是老辈传下的规矩",
+ "id": "C-03518",
+ "month_lines": [
+  "风挺大，吹得云层翻涌。凌晨的Q区还没醒，我屋里灯都亮着，心里踏实，老规矩错不了。"
+ ],
+ "name": "丁糖糖",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "老规矩错不了，今天天气云淡淡的，江边的光点过江了，得绕路去看一眼。",
+   "text": "「老规矩错不了，今天天气云淡淡的，江边的光点过江了，得绕路去看一眼。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，吹得云层翻涌。凌晨的Q区还没醒，我屋里灯都亮着，心里踏实，老规矩错不了。",
+   "text": "「风挺大，吹得云层翻涌。凌晨的Q区还没醒，我屋里灯都亮着，心里踏实，老规矩错不了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

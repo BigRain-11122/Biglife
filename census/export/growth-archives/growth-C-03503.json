@@ -1,0 +1,111 @@
+{
+ "age": 3,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -10,
+   "rate": -3,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.85,
+    "z": -142.09
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.84,
+    "z": -67.99
+   },
+   "work": {
+    "site": "数据搬运工·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -58.6,
+    "z": -149.94
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03503",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "梦话都在念叨停产的暖光灯泡——这事只有档案馆知道",
+ "id": "C-03503",
+ "month_lines": [
+  "风挺大，吹得塔顶白光直晃眼。CrazyCampus 还在 S2.5 里兜圈子，这破单对得我有点破防。收摊了，明天见。"
+ ],
+ "name": "奥斯特·午",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "收摊了，明天见。今天天气挺好的，扛完数据包心情都明亮了不少。",
+   "text": "「收摊了，明天见。今天天气挺好的，扛完数据包心情都明亮了不少。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，吹得塔顶白光直晃眼。CrazyCampus 还在 S2.5 里兜圈子，这破单对得我有点破防。收摊了，明天见。",
+   "text": "「风挺大，吹得塔顶白光直晃眼。CrazyCampus 还在 S2.5 里兜圈子，这破单对得我有点破防。收摊了，明天见。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#42A5F5",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 25,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.16,
+    "z": 147.07
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.36,
+    "z": 27.06
+   },
+   "work": {
+    "site": "夜灯员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.14,
+    "z": 75.52
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01636",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "替拆迁前夜的门牌合影守过一整夜的灯——这事只有档案馆知道",
+ "id": "C-01636",
+ "month_lines": [
+  "风挺大，走夜路更要紧些。今朝风不小，走夜路更要紧些。"
+ ],
+ "name": "阿塔影",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "拆开看看，是最大的敬意。今朝风不小，走夜路更要紧些。",
+   "text": "「拆开看看，是最大的敬意。今朝风不小，走夜路更要紧些。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "风挺大，走夜路更要紧些。今朝风不小，走夜路更要紧些。",
+   "text": "「风挺大，走夜路更要紧些。今朝风不小，走夜路更要紧些。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

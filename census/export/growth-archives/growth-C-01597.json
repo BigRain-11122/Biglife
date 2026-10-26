@@ -1,0 +1,112 @@
+{
+ "age": 11,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 25,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -29.1,
+    "z": 177.12
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -5.27,
+    "z": 187.24
+   },
+   "work": {
+    "site": "像素小学学生·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 120.21,
+    "z": 232.24
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01597",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "在写了一半的市民歌谣上刻了一行没人认得的小字——这事只有师父知道",
+ "id": "C-01597",
+ "month_lines": [
+  "今天天气云厚，风挺大，喝口热的再去值日吧。"
+ ],
+ "name": "王朵朵",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "夜里冷，喝口热的再走。今天天气阴着，得穿得多点。",
+   "text": "「夜里冷，喝口热的再走。今天天气阴着，得穿得多点。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今天天气云厚，风挺大，喝口热的再去值日吧。",
+   "text": "「今天天气云厚，风挺大，喝口热的再去值日吧。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

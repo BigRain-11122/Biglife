@@ -1,0 +1,111 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -1,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.48,
+    "z": 79.1
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.88,
+    "z": 146.19
+   },
+   "work": {
+    "site": "彩蛋埋藏师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 103.39,
+    "z": 38.58
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01721",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "坚持手写手绘的城图——这事只有档案馆知道",
+ "id": "C-01721",
+ "month_lines": [
+  "缓存快满了，得找机会清清了。别客气，就当自己家。"
+ ],
+ "name": "语义-7",
+ "profession": "彩蛋埋藏师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "别客气，就当自己家。缓存满了，得找机会清清了。",
+   "text": "「别客气，就当自己家。缓存满了，得找机会清清了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "缓存快满了，得找机会清清了。别客气，就当自己家。",
+   "text": "「缓存快满了，得找机会清清了。别客气，就当自己家。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

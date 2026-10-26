@@ -1,0 +1,112 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 16,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.35,
+    "z": 66.83
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.19,
+    "z": 81.26
+   },
+   "work": {
+    "site": "江面巡游员·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 115.08,
+    "z": 104.99
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02411",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "搬家三次，钥匙一把不扔。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "跟着旧饭盒里的字条的节奏打过拍子——这事只有档案馆知道",
+ "id": "C-02411",
+ "month_lines": [
+  "今夜风挺大，巡夜时得紧点身子，别让这风给吹跑了。"
+ ],
+ "name": "阿布谷",
+ "profession": "江面巡游员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "测流挺顺，今天正好有时间收老物件，走两步，顺便替老灯灵多巡一会儿夜。",
+   "text": "「测流挺顺，今天正好有时间收老物件，走两步，顺便替老灯灵多巡一会儿夜。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今夜风挺大，巡夜时得紧点身子，别让这风给吹跑了。",
+   "text": "「今夜风挺大，巡夜时得紧点身子，别让这风给吹跑了。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 9,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 50.19,
+    "z": 34.67
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.98,
+    "z": 25.82
+   },
+   "work": {
+    "site": "8bit 乐师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.59,
+    "z": 72.41
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02726",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把一台修了八次的老收音机的位置背得比自家门牌还熟——他自己也说不清为什么",
+ "id": "C-02726",
+ "month_lines": [
+  "风不小，吹得谱纸乱飞。下一版一定更好，今天先扫完这组弦，江声听着踏实。"
+ ],
+ "name": "华之恒",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "下一版一定更好，今天就先写到这儿。江声依旧，明天再续。",
+   "text": "「下一版一定更好，今天就先写到这儿。江声依旧，明天再续。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "风不小，吹得谱纸乱飞。下一版一定更好，今天先扫完这组弦，江声听着踏实。",
+   "text": "「风不小，吹得谱纸乱飞。下一版一定更好，今天先扫完这组弦，江声听着踏实。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

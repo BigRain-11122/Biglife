@@ -1,0 +1,112 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 5,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -113.13,
+    "z": 60.91
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.4,
+    "z": 40.65
+   },
+   "work": {
+    "site": "回测农·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -35.59,
+    "z": 159.07
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02252",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "梦话都在念叨老式邮差的背包——这事全巷都知道",
+ "id": "C-02252",
+ "month_lines": [
+  "风挺大，今天走路得抓紧帽子，一句話的事，市场行情还在等。"
+ ],
+ "name": "邵红",
+ "profession": "回测农",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "一句话的事，今天天气正好，适合多走走，想想明天的回测策略。",
+   "text": "「一句话的事，今天天气正好，适合多走走，想想明天的回测策略。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "风挺大，今天走路得抓紧帽子，一句話的事，市场行情还在等。",
+   "text": "「风挺大，今天走路得抓紧帽子，一句話的事，市场行情还在等。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

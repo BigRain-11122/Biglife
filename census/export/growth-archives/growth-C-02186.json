@@ -1,0 +1,112 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -2,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -112.87,
+    "z": 113.13
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.83,
+    "z": 50.42
+   },
+   "work": {
+    "site": "新市民安居顾问·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -70.12,
+    "z": 102.56
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02186",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "留着巷口的第一盏灯却从来不用——这事只有师父知道",
+ "id": "C-02186",
+ "month_lines": [
+  "老地方见，今天这风挺大，走路得捂紧了点儿。"
+ ],
+ "name": "金建平",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "老地方见，今天这雨下得正合意。",
+   "text": "「老地方见，今天这雨下得正合意。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "老地方见，今天这风挺大，走路得捂紧了点儿。",
+   "text": "「老地方见，今天这风挺大，走路得捂紧了点儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 24,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -109.28,
+    "z": -51.61
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.35,
+    "z": -120.3
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -63.6,
+    "z": -117.43
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01852",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件旧信使地图的边角料——据说是老辈传下的规矩",
+ "id": "C-01852",
+ "month_lines": [
+  "侬晓得伐，今个天清气朗，风挺大，放学还得绕路去看那光点过江。"
+ ],
+ "name": "谢圆圆",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "搭把手的事儿，今个天阴着，放学还得绕路去看那光点过江。",
+   "text": "「搭把手的事儿，今个天阴着，放学还得绕路去看那光点过江。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "侬晓得伐，今个天清气朗，风挺大，放学还得绕路去看那光点过江。",
+   "text": "「侬晓得伐，今个天清气朗，风挺大，放学还得绕路去看那光点过江。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

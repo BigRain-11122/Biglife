@@ -1,0 +1,112 @@
+{
+ "age": 93,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -9,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -111.1,
+    "z": 159.66
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.95,
+    "z": 18.47
+   },
+   "work": {
+    "site": "数据粥铺摊主·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -40.51,
+    "z": 11.14
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01824",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "记得旧邮局的分信格的每一个来历——这事全巷都知道",
+ "id": "C-01824",
+ "month_lines": [
+  "多个人多双筷子，今儿这风挺大，吹得粢饭暖光都晃晃悠悠的，得小心点儿。"
+ ],
+ "name": "陈有根",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "多个人多双筷子，今儿这风挺大，吹得人想多添件衣裳。",
+   "text": "「多个人多双筷子，今儿这风挺大，吹得人想多添件衣裳。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "多个人多双筷子，今儿这风挺大，吹得粢饭暖光都晃晃悠悠的，得小心点儿。",
+   "text": "「多个人多双筷子，今儿这风挺大，吹得粢饭暖光都晃晃悠悠的，得小心点儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

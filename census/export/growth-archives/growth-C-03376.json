@@ -1,0 +1,111 @@
+{
+ "age": 83,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -5,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 59.81,
+    "z": 145.63
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.57,
+    "z": 45.82
+   },
+   "work": {
+    "site": "夜宵摊主·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 116.74,
+    "z": 120.16
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03376",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "坚持手写旧码头的汽笛阀——这事全巷都知道",
+ "id": "C-03376",
+ "month_lines": [
+  "风挺大，吹得摊子直晃，稳着点手把账记完。毫秒也是时间，加辣，趁热吃。"
+ ],
+ "name": "抖动·拾",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "毫秒也是时间，今晚又该加辣了。",
+   "text": "「毫秒也是时间，今晚又该加辣了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风挺大，吹得摊子直晃，稳着点手把账记完。毫秒也是时间，加辣，趁热吃。",
+   "text": "「风挺大，吹得摊子直晃，稳着点手把账记完。毫秒也是时间，加辣，趁热吃。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,111 @@
+{
+ "age": 84,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -13,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.47,
+    "z": 216.31
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 3.92,
+    "z": 202.31
+   },
+   "work": {
+    "site": "旧件修复师·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 88.75,
+    "z": 208.44
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01998",
+  "quirk": "umbrella",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "把老式算盘珠画进了自己的作品里——这事只有师父知道",
+ "id": "C-01998",
+ "month_lines": [
+  "对时了，放心。今天风挺大，正好不出摊，去外环看看老朋友吧。"
+ ],
+ "name": "云福生",
+ "profession": "旧件修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "对时了，放心。今天天阴着，正好不出摊，去外环看看老朋友吧。",
+   "text": "「对时了，放心。今天天阴着，正好不出摊，去外环看看老朋友吧。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "对时了，放心。今天风挺大，正好不出摊，去外环看看老朋友吧。",
+   "text": "「对时了，放心。今天风挺大，正好不出摊，去外环看看老朋友吧。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

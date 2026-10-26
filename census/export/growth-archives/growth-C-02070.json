@@ -1,0 +1,112 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 1,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 72.34,
+    "z": 95.06
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.73,
+    "z": 73.76
+   },
+   "work": {
+    "site": "NPC 服装师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 102.9,
+    "z": 86.12
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02070",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "给手绘的城图都编了号还建了册——这事只有档案馆知道",
+ "id": "C-02070",
+ "month_lines": [
+  "灵感这东西，得喂它。今天这天清气朗的，正适合去数据菜市转转。"
+ ],
+ "name": "潘清晚",
+ "profession": "NPC 服装师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "灵感这东西，得喂它。今天天气正好，适合逛数据菜市。",
+   "text": "「灵感这东西，得喂它。今天天气正好，适合逛数据菜市。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "灵感这东西，得喂它。今天这天清气朗的，正适合去数据菜市转转。",
+   "text": "「灵感这东西，得喂它。今天这天清气朗的，正适合去数据菜市转转。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

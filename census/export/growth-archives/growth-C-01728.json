@@ -1,0 +1,112 @@
+{
+ "age": 56,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": 0,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -112.14,
+    "z": -23.6
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.74,
+    "z": -24.1
+   },
+   "work": {
+    "site": "数据搬运工·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.42,
+    "z": -142.65
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01728",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "给老式爆米花的粮票都起了名字——这事只有档案馆知道",
+ "id": "C-01728",
+ "month_lines": [
+  "拆开看看又不会坏，今夜风挺大，装卸口得小心些。"
+ ],
+ "name": "阿后台-6",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "拆开看看又不会坏，今儿个天阴着，正好躲开晒，午饭就在装卸口随便啃两口吧。",
+   "text": "「拆开看看又不会坏，今儿个天阴着，正好躲开晒，午饭就在装卸口随便啃两口吧。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "拆开看看又不会坏，今夜风挺大，装卸口得小心些。",
+   "text": "「拆开看看又不会坏，今夜风挺大，装卸口得小心些。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

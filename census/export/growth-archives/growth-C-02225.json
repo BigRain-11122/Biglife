@@ -1,0 +1,111 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -10,
+   "rate": 0,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 51.39,
+    "z": 101.83
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 76.72,
+    "z": 132.22
+   },
+   "work": {
+    "site": "bug 猎人·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 128.81,
+    "z": 92.38
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02225",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "攒了满抽屉第一天的营业账本从不给看——这事只有师父知道",
+ "id": "C-02225",
+ "month_lines": [
+  "搞七捻三，这天云厚风挺大，夜路还是咱俩一起走。老地方见。"
+ ],
+ "name": "库仑·丙",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "搞七捻三，今天这夜路还得一起走。老地方见。",
+   "text": "「搞七捻三，今天这夜路还得一起走。老地方见。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "搞七捻三，这天云厚风挺大，夜路还是咱俩一起走。老地方见。",
+   "text": "「搞七捻三，这天云厚风挺大，夜路还是咱俩一起走。老地方见。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

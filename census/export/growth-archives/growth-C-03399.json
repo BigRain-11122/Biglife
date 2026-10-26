@@ -1,0 +1,112 @@
+{
+ "age": 82,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -12,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -143.43,
+    "z": -45.15
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.67,
+    "z": -145.87
+   },
+   "work": {
+    "site": "粉丝回信人·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.55,
+    "z": -74.21
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03399",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "把旧缝纫机踏板修好再免费送人——没人知道为什么",
+ "id": "C-03399",
+ "month_lines": [
+  "风不小，吹得窗纸哗啦响。刚给C-02760寄出G08 CrazyCampus: B2166 -> S2.5的回信，拆开看看又不会坏，趁手劲还在，再摸两颗糖压压惊。"
+ ],
+ "name": "华锡金",
+ "profession": "粉丝回信人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "拆开看看又不会坏，今天阴天正好给屋里的小玩意儿们多转转光，阴着，风不小。",
+   "text": "「拆开看看又不会坏，今天阴天正好给屋里的小玩意儿们多转转光，阴着，风不小。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风不小，吹得窗纸哗啦响。刚给C-02760寄出G08 CrazyCampus: B2166 -> S2.5的回信，拆开看看又不会坏，趁手劲还在，再摸两颗糖压压惊。",
+   "text": "「风不小，吹得窗纸哗啦响。刚给C-02760寄出G08 CrazyCampus: B2166 -> S2.5的回信，拆开看看又不会坏，趁手劲还在，再摸两颗糖压压惊。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

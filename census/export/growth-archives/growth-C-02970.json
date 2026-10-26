@@ -1,0 +1,112 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 13,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -123.86,
+    "z": 56.79
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.97,
+    "z": 76.3
+   },
+   "work": {
+    "site": "像素小学学生·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -57.59,
+    "z": 106.61
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02970",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能一眼认出老皮匠的锥子的真伪",
+ "id": "C-02970",
+ "month_lines": [
+  "凌晨的风不小，吹得光桥上的灯影乱晃。我守着这还没亮透的夜，等明日早课前的那一帧 commit 落定，事体总得一步步来。"
+ ],
+ "name": "韩元宝",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "我送走的老主顾，比这城里一半的楼岁数都大，今天天气正好，江水清清的，放学还得绕路去看。",
+   "text": "「我送走的老主顾，比这城里一半的楼岁数都大，今天天气正好，江水清清的，放学还得绕路去看。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "凌晨的风不小，吹得光桥上的灯影乱晃。我守着这还没亮透的夜，等明日早课前的那一帧 commit 落定，事体总得一步步来。",
+   "text": "「凌晨的风不小，吹得光桥上的灯影乱晃。我守着这还没亮透的夜，等明日早课前的那一帧 commit 落定，事体总得一步步来。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

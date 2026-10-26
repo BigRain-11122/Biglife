@@ -1,0 +1,111 @@
+{
+ "age": 75,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -5,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 24.36,
+    "z": 158.23
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.75,
+    "z": 153.93
+   },
+   "work": {
+    "site": "攻略誊写员·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 110.9,
+    "z": 139.93
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01498",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每逢下雨就去修雨声录音——他自己也说不清为什么",
+ "id": "C-01498",
+ "month_lines": [
+  "今夜风挺大，弄堂还是那个弄堂，规矩不能忘。"
+ ],
+ "name": "贾学勤",
+ "profession": "攻略誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "弄堂还是那个弄堂，今天这天云云的，风挺大。",
+   "text": "「弄堂还是那个弄堂，今天这天云云的，风挺大。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今夜风挺大，弄堂还是那个弄堂，规矩不能忘。",
+   "text": "「今夜风挺大，弄堂还是那个弄堂，规矩不能忘。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

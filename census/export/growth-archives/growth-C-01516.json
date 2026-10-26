@@ -1,0 +1,111 @@
+{
+ "age": 66,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -7,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -100.89,
+    "z": 235.23
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 15.12,
+    "z": 180.68
+   },
+   "work": {
+    "site": "编年史誊录员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 32.12,
+    "z": 193.57
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01516",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "每年挑一天只为写了一半的市民歌谣大扫除——这事全巷都知道",
+ "id": "C-01516",
+ "month_lines": [
+  "看云不用门票，今夜的风挺大。"
+ ],
+ "name": "桂鸿奎",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "看云不用门票，今早的云真白。",
+   "text": "「看云不用门票，今早的云真白。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "看云不用门票，今夜的风挺大。",
+   "text": "「看云不用门票，今夜的风挺大。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

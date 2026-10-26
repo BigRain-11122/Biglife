@@ -1,0 +1,112 @@
+{
+ "age": 93,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -11,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.96,
+    "z": 65.05
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.8,
+    "z": 90.18
+   },
+   "work": {
+    "site": "全城对时师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -58.19,
+    "z": 96.19
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01477",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "留着手摇的旧胶片机却从来不用",
+ "id": "C-01477",
+ "month_lines": [
+  "站直了别趴下，今夜天阴着，走走散散更自在些。"
+ ],
+ "name": "盛金花",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "站直了别趴下，今儿个天阴着，走走散散更自在些。",
+   "text": "「站直了别趴下，今儿个天阴着，走走散散更自在些。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "站直了别趴下，今夜天阴着，走走散散更自在些。",
+   "text": "「站直了别趴下，今夜天阴着，走走散散更自在些。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#26A69A",
+   "eye": "#FFD27A",
+   "hair": "#C5E1FF",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 25,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -128.88,
+    "z": -33.58
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.55,
+    "z": -102.46
+   },
+   "work": {
+    "site": "夜灯员·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.42,
+    "z": -31.64
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02901",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "每次路过退役巡夜灯灵的灯罩都要亮两下——他自己也说不清为什么",
+ "id": "C-02901",
+ "month_lines": [
+  "灯芯挑亮，照这风挺大的夜径。G08 的轮次刚歇，我把那串 GPU_DRAFT_OK 的动静揣进兜里，给 C-05928 递了个眼色。"
+ ],
+ "name": "白罗盘",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "执灯，今天这风挺大，江边的小家伙们得注意别走丢了。",
+   "text": "「执灯，今天这风挺大，江边的小家伙们得注意别走丢了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "灯芯挑亮，照这风挺大的夜径。G08 的轮次刚歇，我把那串 GPU_DRAFT_OK 的动静揣进兜里，给 C-05928 递了个眼色。",
+   "text": "「灯芯挑亮，照这风挺大的夜径。G08 的轮次刚歇，我把那串 GPU_DRAFT_OK 的动静揣进兜里，给 C-05928 递了个眼色。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

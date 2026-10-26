@@ -1,0 +1,112 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 7,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.69,
+    "z": 120.1
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.9,
+    "z": 103.68
+   },
+   "work": {
+    "site": "算力楼运维·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 112.27,
+    "z": 22.78
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01911",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "记得老裁缝铺的样衣的每一个来历——这事只有师父知道",
+ "id": "C-01911",
+ "month_lines": [
+  "又学了一招，今天风挺大，巡楼得小心些。"
+ ],
+ "name": "赵沐晴",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "又学了一招，今天天阴着，风挺大，巡楼得更仔细些。",
+   "text": "「又学了一招，今天天阴着，风挺大，巡楼得更仔细些。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "又学了一招，今天风挺大，巡楼得小心些。",
+   "text": "「又学了一招，今天风挺大，巡楼得小心些。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

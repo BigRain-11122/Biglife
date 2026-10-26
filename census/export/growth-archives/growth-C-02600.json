@@ -1,0 +1,111 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 1,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 72.18,
+    "z": -36.91
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.59,
+    "z": -112.94
+   },
+   "work": {
+    "site": "城市气象播报员·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 132.45,
+    "z": -51.36
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02600",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把第一天的营业账本排成一排挨个擦",
+ "id": "C-02600",
+ "month_lines": [
+  "今早摊位上的梨膏糖味道真香，风挺大，得小心点吆喝。"
+ ],
+ "name": "段则铭",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "收摊了，明天见。天气这么清爽，讲评书都带劲。",
+   "text": "「收摊了，明天见。天气这么清爽，讲评书都带劲。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今早摊位上的梨膏糖味道真香，风挺大，得小心点吆喝。",
+   "text": "「今早摊位上的梨膏糖味道真香，风挺大，得小心点吆喝。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

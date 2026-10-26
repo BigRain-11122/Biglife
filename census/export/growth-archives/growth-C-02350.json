@@ -1,0 +1,112 @@
+{
+ "age": 8,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 22,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.51,
+    "z": 67.45
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.17,
+    "z": 144.31
+   },
+   "work": {
+    "site": "像素小学学生·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -63.41,
+    "z": 71.24
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02350",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给旧货郎的拨浪鼓都编了号还建了册",
+ "id": "C-02350",
+ "month_lines": [
+  "今夜还没睡呢，等会儿还得绕路去看那光点。没毛病。"
+ ],
+ "name": "谭朵朵",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "buddy",
+   "src": "老搭档",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "没毛病，今天天气正好清清爽爽，正好适合出去转转。弄堂还是那个弄堂。",
+   "text": "「没毛病，今天天气正好清清爽爽，正好适合出去转转。弄堂还是那个弄堂。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今夜还没睡呢，等会儿还得绕路去看那光点。没毛病。",
+   "text": "「今夜还没睡呢，等会儿还得绕路去看那光点。没毛病。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

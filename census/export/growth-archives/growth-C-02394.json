@@ -1,0 +1,111 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 5,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.23,
+    "z": -143.0
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.14,
+    "z": -142.71
+   },
+   "work": {
+    "site": "穿城信使·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -25.76,
+    "z": -92.01
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02394",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "给初版城市地图都起了名字——她自己也说不清为什么",
+ "id": "C-02394",
+ "month_lines": [
+  "弄堂还是那个弄堂，今夜加班单多得像云层厚。"
+ ],
+ "name": "韩南汐",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "弄堂还是那个弄堂，雨声正好当加班费。",
+   "text": "「弄堂还是那个弄堂，雨声正好当加班费。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "弄堂还是那个弄堂，今夜加班单多得像云层厚。",
+   "text": "「弄堂还是那个弄堂，今夜加班单多得像云层厚。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

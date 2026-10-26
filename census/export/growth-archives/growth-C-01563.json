@@ -1,0 +1,111 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 4,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 27.6,
+    "z": 95.73
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.74,
+    "z": 79.07
+   },
+   "work": {
+    "site": "节日活动策划·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 141.69,
+    "z": 92.58
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01563",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "从不让初代探针的日志纸带离开自己三步远——这事只有档案馆知道",
+ "id": "C-01563",
+ "month_lines": [
+  "今早起风挺大，看云不用门票，今天心情挺好的。"
+ ],
+ "name": "奚之南",
+ "profession": "节日活动策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "看云不用门票，今天天阴着，心情挺好的。",
+   "text": "「看云不用门票，今天天阴着，心情挺好的。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今早起风挺大，看云不用门票，今天心情挺好的。",
+   "text": "「今早起风挺大，看云不用门票，今天心情挺好的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

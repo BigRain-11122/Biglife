@@ -1,0 +1,112 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#EC407A",
+   "eye": "#FFD27A",
+   "hair": "#C5E1FF",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 11,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 59.27,
+    "z": -43.11
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.53,
+    "z": -125.83
+   },
+   "work": {
+    "site": "夜灯员·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.56,
+    "z": -79.66
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02413",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "替旧船锚残件守过一整夜的灯",
+ "id": "C-02413",
+ "month_lines": [
+  "今夜风挺大，巡逻得紧些。"
+ ],
+ "name": "阿阿渡",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "执灯，今天的光纹亮得挺清。",
+   "text": "「执灯，今天的光纹亮得挺清。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今夜风挺大，巡逻得紧些。",
+   "text": "「今夜风挺大，巡逻得紧些。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

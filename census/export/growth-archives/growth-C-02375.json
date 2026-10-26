@@ -1,0 +1,111 @@
+{
+ "age": 56,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 0,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 27.19,
+    "z": 32.01
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.88,
+    "z": 133.21
+   },
+   "work": {
+    "site": "像素画匠·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.59,
+    "z": 73.47
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02375",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "用掉漆的糖果罐教会了半条街的孩子",
+ "id": "C-02375",
+ "month_lines": [
+  "今夜天阴着，云厚得看不清路，风挺大，吹得我忙给忘了慢一点，城又不会跑。"
+ ],
+ "name": "薛志刚",
+ "profession": "像素画匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "看云不用门票，今天这毛毛雨倒是清爽。",
+   "text": "「看云不用门票，今天这毛毛雨倒是清爽。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今夜天阴着，云厚得看不清路，风挺大，吹得我忙给忘了慢一点，城又不会跑。",
+   "text": "「今夜天阴着，云厚得看不清路，风挺大，吹得我忙给忘了慢一点，城又不会跑。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

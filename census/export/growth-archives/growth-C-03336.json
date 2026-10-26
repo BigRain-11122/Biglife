@@ -1,0 +1,112 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#69F0AE"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 11,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 30.95,
+    "z": 137.48
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.2,
+    "z": 65.64
+   },
+   "work": {
+    "site": "伴居灵·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.37,
+    "z": 33.36
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03336",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "跟着消失的船班时刻表的节奏打过拍子",
+ "id": "C-03336",
+ "month_lines": [
+  "天阴着，风挺大，吹得尾巴天线直打颤。刚蹭完两脚数据，抖落一翅膀光尘，这凉快劲儿正适合陪人发呆。"
+ ],
+ "name": "阿信风",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "蹭光大半天了，城里的热闹还没看够呢。",
+   "text": "「蹭光大半天了，城里的热闹还没看够呢。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "天阴着，风挺大，吹得尾巴天线直打颤。刚蹭完两脚数据，抖落一翅膀光尘，这凉快劲儿正适合陪人发呆。",
+   "text": "「天阴着，风挺大，吹得尾巴天线直打颤。刚蹭完两脚数据，抖落一翅膀光尘，这凉快劲儿正适合陪人发呆。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

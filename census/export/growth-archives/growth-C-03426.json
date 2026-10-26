@@ -1,0 +1,112 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#42A5F5",
+   "eye": "#FFD27A",
+   "hair": "#E1BEE7",
+   "skin": "#F48FB1"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 13,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -102.34,
+    "z": 83.15
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.21,
+    "z": 84.28
+   },
+   "work": {
+    "site": "巡信使·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -23.24,
+    "z": 14.82
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03426",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "给手抄的菜谱传过最急的口信",
+ "id": "C-03426",
+ "month_lines": [
+  "天阴着，风不小。先把字写正，再想写快。"
+ ],
+ "name": "黑微光",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "落檐了，衔笺忙。今天风不小，写信快点。",
+   "text": "「落檐了，衔笺忙。今天风不小，写信快点。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "天阴着，风不小。先把字写正，再想写快。",
+   "text": "「天阴着，风不小。先把字写正，再想写快。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

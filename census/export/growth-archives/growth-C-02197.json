@@ -1,0 +1,112 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 7,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.98,
+    "z": -244.15
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -16.27,
+    "z": -178.11
+   },
+   "work": {
+    "site": "数据牧人·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 33.62,
+    "z": -193.01
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02197",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "收藏写了一半的市民歌谣且每件都记得来历——没人知道为什么",
+ "id": "C-02197",
+ "month_lines": [
+  "这城里好玩的东西一天比一天多，今个风挺大，赶批也得小心点。"
+ ],
+ "name": "丁未晞",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "这城里好玩的东西一天比一天多，今个天气清清爽爽的，赶批也格外顺手。",
+   "text": "「这城里好玩的东西一天比一天多，今个天气清清爽爽的，赶批也格外顺手。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "这城里好玩的东西一天比一天多，今个风挺大，赶批也得小心点。",
+   "text": "「这城里好玩的东西一天比一天多，今个风挺大，赶批也得小心点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

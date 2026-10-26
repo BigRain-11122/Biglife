@@ -1,0 +1,112 @@
+{
+ "age": 91,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -11,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.39,
+    "z": 152.02
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.57,
+    "z": 104.16
+   },
+   "work": {
+    "site": "盘口记录员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.84,
+    "z": 102.68
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01496",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持手写初版城市地图——没人知道为什么",
+ "id": "C-01496",
+ "month_lines": [
+  "今夜加班到这会儿，天还黑着，风挺大，得搭把手把门窗都关紧。"
+ ],
+ "name": "史有根",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "搭把手的事儿，今天这天头开得顺溜。",
+   "text": "「搭把手的事儿，今天这天头开得顺溜。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今夜加班到这会儿，天还黑着，风挺大，得搭把手把门窗都关紧。",
+   "text": "「今夜加班到这会儿，天还黑着，风挺大，得搭把手把门窗都关紧。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 83,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -9,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.11,
+    "z": 20.05
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.38,
+    "z": 106.89
+   },
+   "work": {
+    "site": "资金金灯匠·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.6,
+    "z": 136.91
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02704",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "江水不争先后，该到总会到。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给老码头缆桩写了一整本观察笔记——没人知道为什么",
+ "id": "C-02704",
+ "month_lines": [
+  "茶凉了再倒就是。天阴着，风挺大，正好给塔身鎏金控控光，这光晕才稳当。"
+ ],
+ "name": "刘雪英",
+ "profession": "资金金灯匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "茶凉了再倒就是，今早的养光活刚做完，塔身的金光又亮堂了一分。",
+   "text": "「茶凉了再倒就是，今早的养光活刚做完，塔身的金光又亮堂了一分。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "茶凉了再倒就是。天阴着，风挺大，正好给塔身鎏金控控光，这光晕才稳当。",
+   "text": "「茶凉了再倒就是。天阴着，风挺大，正好给塔身鎏金控控光，这光晕才稳当。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 1,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.96,
+    "z": 98.33
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.52,
+    "z": 157.88
+   },
+   "work": {
+    "site": "夜宵摊主·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -23.78,
+    "z": 53.27
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02152",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "灶上留一壶，路过的都是客。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把旧当铺的票据夹修好再免费送人——这事全巷都知道",
+ "id": "C-02152",
+ "month_lines": [
+  "收摊了，明天见。这天挺凉快，加点蒜泥正好。"
+ ],
+ "name": "罗向洋",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "收摊了，明天见。这天气挺凉爽，正好加点蒜泥。",
+   "text": "「收摊了，明天见。这天气挺凉爽，正好加点蒜泥。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "收摊了，明天见。这天挺凉快，加点蒜泥正好。",
+   "text": "「收摊了，明天见。这天挺凉快，加点蒜泥正好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

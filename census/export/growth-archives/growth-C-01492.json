@@ -1,0 +1,112 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#42A5F5",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 20,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -144.67,
+    "z": -21.74
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.06,
+    "z": -115.49
+   },
+   "work": {
+    "site": "声景师·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -40.25,
+    "z": -27.33
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01492",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "把手抄的菜谱当成了自己的老朋友——这事全巷都知道",
+ "id": "C-01492",
+ "month_lines": [
+  "夜深了，这会儿天还黑着，江边挺适合陪人发呆。"
+ ],
+ "name": "阿滴答",
+ "profession": "声景师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "合唱还没开嗓，今天天阴着，江边挺适合晒太阳。",
+   "text": "「合唱还没开嗓，今天天阴着，江边挺适合晒太阳。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "夜深了，这会儿天还黑着，江边挺适合陪人发呆。",
+   "text": "「夜深了，这会儿天还黑着，江边挺适合陪人发呆。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#69F0AE"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 23,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 30.06,
+    "z": 53.97
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.69,
+    "z": 100.14
+   },
+   "work": {
+    "site": "伴居灵·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 116.16,
+    "z": 111.32
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02251",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "给编年史馆的门票传过最急的口信——据说是老辈传下的规矩",
+ "id": "C-02251",
+ "month_lines": [
+  "蹭光呢，数据更新日志又双叒叕有新内容了，尾巴天线调好频，准备追更。"
+ ],
+ "name": "小雹子",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "蹭光吧，数据更新日志又更新了，尾巴天线调好频，准备追更。",
+   "text": "「蹭光吧，数据更新日志又更新了，尾巴天线调好频，准备追更。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "蹭光呢，数据更新日志又双叒叕有新内容了，尾巴天线调好频，准备追更。",
+   "text": "「蹭光呢，数据更新日志又双叒叕有新内容了，尾巴天线调好频，准备追更。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 0,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.98,
+    "z": 125.63
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.01,
+    "z": 48.45
+   },
+   "work": {
+    "site": "新市民安居顾问·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.22,
+    "z": 24.3
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03044",
+  "quirk": "night_run",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "从不让旧挂历离开自己三步远——没人知道为什么",
+ "id": "C-03044",
+ "month_lines": [
+  "风不小，刮得人骨头缝都凉快。先试了再说，这阴沉沉的天色，正适合把那些舍不得丢的老物件都翻出来晒晒回忆。"
+ ],
+ "name": "施沈鱼",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "先试了再说，今天下雨我也不撑伞了，淋着凉快。",
+   "text": "「先试了再说，今天下雨我也不撑伞了，淋着凉快。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风不小，刮得人骨头缝都凉快。先试了再说，这阴沉沉的天色，正适合把那些舍不得丢的老物件都翻出来晒晒回忆。",
+   "text": "「风不小，刮得人骨头缝都凉快。先试了再说，这阴沉沉的天色，正适合把那些舍不得丢的老物件都翻出来晒晒回忆。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

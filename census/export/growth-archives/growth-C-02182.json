@@ -1,0 +1,111 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 0,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -43.37,
+    "z": -173.44
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 1.04,
+    "z": -233.29
+   },
+   "work": {
+    "site": "夜宵摊主·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 119.74,
+    "z": -236.17
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02182",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "逢人就讲初版城市地图的故事——这事全巷都知道",
+ "id": "C-02182",
+ "month_lines": [
+  "老规矩错不了，今夜的摊位还得加辣点，风挺大，得小心点。"
+ ],
+ "name": "史诗涵",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "老规矩错不了，今夜的摊位还得加辣点。",
+   "text": "「老规矩错不了，今夜的摊位还得加辣点。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "老规矩错不了，今夜的摊位还得加辣点，风挺大，得小心点。",
+   "text": "「老规矩错不了，今夜的摊位还得加辣点，风挺大，得小心点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

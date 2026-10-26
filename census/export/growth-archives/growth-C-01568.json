@@ -1,0 +1,112 @@
+{
+ "age": 72,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#2E5E4E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -5,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -101.97,
+    "z": 138.82
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.96,
+    "z": 32.19
+   },
+   "work": {
+    "site": "回测农·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -61.93,
+    "z": 56.86
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01568",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "能一眼认出旧钟表铺的价目牌的真伪",
+ "id": "C-01568",
+ "month_lines": [
+  "今天这天色挺合适，正好给收曲线做做准备。回滚参数，还得细细撒。"
+ ],
+ "name": "伯努利-3",
+ "profession": "回测农",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "十年前就是这么弄的，参数还是得细细撒。今天这天色阴得挺合适，正好给收曲线做做准备。",
+   "text": "「十年前就是这么弄的，参数还是得细细撒。今天这天色阴得挺合适，正好给收曲线做做准备。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今天这天色挺合适，正好给收曲线做做准备。回滚参数，还得细细撒。",
+   "text": "「今天这天色挺合适，正好给收曲线做做准备。回滚参数，还得细细撒。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

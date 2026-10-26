@@ -1,0 +1,112 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 5,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.61,
+    "z": -64.13
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.12,
+    "z": -43.14
+   },
+   "work": {
+    "site": "语义翻译官·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.23,
+    "z": -94.27
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02378",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "给老式饭盒写了一整本观察笔记",
+ "id": "C-02378",
+ "month_lines": [
+  "今夜风挺大，先试了再说，这天气还真挺适合不出摊。"
+ ],
+ "name": "邱乐遥",
+ "profession": "语义翻译官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "先试了再说，这天气清清爽爽的，正好约了个单子，得赶紧处理。",
+   "text": "「先试了再说，这天气清清爽爽的，正好约了个单子，得赶紧处理。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今夜风挺大，先试了再说，这天气还真挺适合不出摊。",
+   "text": "「今夜风挺大，先试了再说，这天气还真挺适合不出摊。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

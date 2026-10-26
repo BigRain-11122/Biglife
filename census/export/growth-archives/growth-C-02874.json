@@ -1,0 +1,112 @@
+{
+ "age": 81,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -6,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -62.01,
+    "z": 256.93
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -3.67,
+    "z": 213.99
+   },
+   "work": {
+    "site": "编年史誊录员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 86.11,
+    "z": 190.74
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02874",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "会为停摆的老挂钟推掉一整晚的生意",
+ "id": "C-02874",
+ "month_lines": [
+  "夜深了，风不小。Git 日志里 PushEvent 还在跑，我且把这一行过录妥当。又学了一招，这夜色虽沉，心却是定的。"
+ ],
+ "name": "吴美娟",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "又学了一招，今早下雨，得闲饮茶，倒杯凉白开正合适。",
+   "text": "「又学了一招，今早下雨，得闲饮茶，倒杯凉白开正合适。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "夜深了，风不小。Git 日志里 PushEvent 还在跑，我且把这一行过录妥当。又学了一招，这夜色虽沉，心却是定的。",
+   "text": "「夜深了，风不小。Git 日志里 PushEvent 还在跑，我且把这一行过录妥当。又学了一招，这夜色虽沉，心却是定的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

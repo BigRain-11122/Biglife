@@ -1,0 +1,111 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 10,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -66.44,
+    "z": -187.58
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 18.45,
+    "z": -182.23
+   },
+   "work": {
+    "site": "夜宵摊主·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 54.83,
+    "z": -190.3
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03350",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "坚持给断了线的风筝记日记",
+ "id": "C-03350",
+ "month_lines": [
+  "天阴着，风挺大，吹得摊位帘子直响。刚收摊，工具擦得锃亮，没毛病。"
+ ],
+ "name": "雷Vivi",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "以前我们那儿，江水清清的，现在看看这夜里的摊位，也挺好的。没毛病。",
+   "text": "「以前我们那儿，江水清清的，现在看看这夜里的摊位，也挺好的。没毛病。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "天阴着，风挺大，吹得摊位帘子直响。刚收摊，工具擦得锃亮，没毛病。",
+   "text": "「天阴着，风挺大，吹得摊位帘子直响。刚收摊，工具擦得锃亮，没毛病。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

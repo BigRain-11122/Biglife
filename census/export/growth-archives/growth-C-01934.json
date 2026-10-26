@@ -1,0 +1,112 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -14,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -119.24,
+    "z": 132.91
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.53,
+    "z": 25.1
+   },
+   "work": {
+    "site": "数据粥铺摊主·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -40.26,
+    "z": 25.47
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01934",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "还在用老裁缝铺的样衣",
+ "id": "C-01934",
+ "month_lines": [
+  "这物件比我懂年头，今儿天清气朗，蒸笼里的暖光格外温馨。"
+ ],
+ "name": "崔顺林",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "这物件比我懂年头，今儿个天色云云的，正好蒸笼里升腾的暖光更显温暖。",
+   "text": "「这物件比我懂年头，今儿个天色云云的，正好蒸笼里升腾的暖光更显温暖。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "这物件比我懂年头，今儿天清气朗，蒸笼里的暖光格外温馨。",
+   "text": "「这物件比我懂年头，今儿天清气朗，蒸笼里的暖光格外温馨。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

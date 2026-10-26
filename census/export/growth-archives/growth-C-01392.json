@@ -1,0 +1,111 @@
+{
+ "age": 68,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -9,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -120.34,
+    "z": -75.21
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.73,
+    "z": -32.23
+   },
+   "work": {
+    "site": "声优棚掌柜·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -30.36,
+    "z": -16.62
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01392",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "给手写信都起了名字——这事全巷都知道",
+ "id": "C-01392",
+ "month_lines": [
+  "凌晨这会儿天还黑着，棚里得备着胖大海，谁今夜加班声线也得护好。搞掂。"
+ ],
+ "name": "刘承宗",
+ "profession": "声优棚掌柜",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "搞掂，今天这天气云云的，录音棚里的声线可得注意保护。",
+   "text": "「搞掂，今天这天气云云的，录音棚里的声线可得注意保护。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "凌晨这会儿天还黑着，棚里得备着胖大海，谁今夜加班声线也得护好。搞掂。",
+   "text": "「凌晨这会儿天还黑着，棚里得备着胖大海，谁今夜加班声线也得护好。搞掂。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

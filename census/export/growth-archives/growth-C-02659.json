@@ -1,0 +1,112 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -9,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -137.12,
+    "z": 145.17
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.46,
+    "z": 93.39
+   },
+   "work": {
+    "site": "量化策略研究员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.45,
+    "z": 63.78
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02659",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每天跟旧钟表铺的价目牌打招呼——她自己也说不清为什么",
+ "id": "C-02659",
+ "month_lines": [
+  "数据不会骗人，人会。今早风挺大，出门还得穿厚点儿。"
+ ],
+ "name": "席敏",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "数据不会骗人，人会。今天的泡面坨了，还得再煮一碗。",
+   "text": "「数据不会骗人，人会。今天的泡面坨了，还得再煮一碗。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "数据不会骗人，人会。今早风挺大，出门还得穿厚点儿。",
+   "text": "「数据不会骗人，人会。今早风挺大，出门还得穿厚点儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

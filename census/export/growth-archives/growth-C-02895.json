@@ -1,0 +1,111 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 8,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.93,
+    "z": 102.14
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.82,
+    "z": 73.93
+   },
+   "work": {
+    "site": "8bit 乐师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 118.04,
+    "z": 16.95
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02895",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把心事只说给旧日历听——据说是老辈传下的规矩",
+ "id": "C-02895",
+ "month_lines": [
+  "风挺大，把谱架绑紧点才企理。凌晨写不出调子，不如等茶凉透了再扫弦。"
+ ],
+ "name": "雷沈鱼",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "搞掂，又学了一招，今天天气挺适合写谱，江边的汽笛声正好给我灵感。",
+   "text": "「搞掂，又学了一招，今天天气挺适合写谱，江边的汽笛声正好给我灵感。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风挺大，把谱架绑紧点才企理。凌晨写不出调子，不如等茶凉透了再扫弦。",
+   "text": "「风挺大，把谱架绑紧点才企理。凌晨写不出调子，不如等茶凉透了再扫弦。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

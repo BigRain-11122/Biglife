@@ -1,0 +1,112 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 23,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -121.58,
+    "z": -73.01
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.8,
+    "z": -12.57
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.86,
+    "z": -23.12
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03123",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "攒了满抽屉旧邮局的分信格从不给看——她自己也说不清为什么",
+ "id": "C-03123",
+ "month_lines": [
+  "风挺大，吹得旧杯子盖咔哒响。又学了一招，值日表对上了。同桌，放学还得绕路看 commit 过江呢。"
+ ],
+ "name": "朱念念",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "又学了一招，这天气真凉爽，喝茶还得用那个旧杯子，不换。",
+   "text": "「又学了一招，这天气真凉爽，喝茶还得用那个旧杯子，不换。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风挺大，吹得旧杯子盖咔哒响。又学了一招，值日表对上了。同桌，放学还得绕路看 commit 过江呢。",
+   "text": "「风挺大，吹得旧杯子盖咔哒响。又学了一招，值日表对上了。同桌，放学还得绕路看 commit 过江呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,111 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": -4,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 43.66,
+    "z": 109.6
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.41,
+    "z": 98.36
+   },
+   "work": {
+    "site": "灯塔守望·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 133.64,
+    "z": 101.47
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02418",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "每年挑一天只为旧像素图钉大扫除——这事只有档案馆知道",
+ "id": "C-02418",
+ "month_lines": [
+  "数据不会骗人，人会。今夜风挺大，巡塔还得小心些。"
+ ],
+ "name": "曹秀兰",
+ "profession": "灯塔守望",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "数据不会骗人，人会。今天正好是个单日，巡塔照旧。",
+   "text": "「数据不会骗人，人会。今天正好是个单日，巡塔照旧。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "数据不会骗人，人会。今夜风挺大，巡塔还得小心些。",
+   "text": "「数据不会骗人，人会。今夜风挺大，巡塔还得小心些。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,111 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 4,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -107.99,
+    "z": -88.08
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.7,
+    "z": -128.95
+   },
+   "work": {
+    "site": "语义翻译官·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -53.45,
+    "z": -49.67
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01901",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "还在用全城桥的名字——这事全巷都知道",
+ "id": "C-01901",
+ "month_lines": [
+  "风挺大的，今儿这单子还没来，先去档口看看。"
+ ],
+ "name": "付Kai",
+ "profession": "语义翻译官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "单子来了就接，不来就钓鱼，今儿这风挺大，得找个避风的地方吃午饭。",
+   "text": "「单子来了就接，不来就钓鱼，今儿这风挺大，得找个避风的地方吃午饭。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "风挺大的，今儿这单子还没来，先去档口看看。",
+   "text": "「风挺大的，今儿这单子还没来，先去档口看看。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

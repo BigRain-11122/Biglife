@@ -1,0 +1,112 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 2,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.3,
+    "z": 127.31
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.82,
+    "z": 66.01
+   },
+   "work": {
+    "site": "夜宵摊主·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -33.03,
+    "z": 128.43
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02571",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每年挑一天只为老药房的药柜抽屉大扫除——他自己也说不清为什么",
+ "id": "C-02571",
+ "month_lines": [
+  "今儿这风挺大，出摊得早点儿准备，红灯面前没有老熟人。"
+ ],
+ "name": "谭亦风",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "红灯面前没有老熟人，今儿这风挺大，出摊得早点儿准备。",
+   "text": "「红灯面前没有老熟人，今儿这风挺大，出摊得早点儿准备。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今儿这风挺大，出摊得早点儿准备，红灯面前没有老熟人。",
+   "text": "「今儿这风挺大，出摊得早点儿准备，红灯面前没有老熟人。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

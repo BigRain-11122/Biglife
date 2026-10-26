@@ -1,0 +1,112 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 7,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -97.29,
+    "z": 133.27
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.36,
+    "z": 52.03
+   },
+   "work": {
+    "site": "算力楼运维·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -62.65,
+    "z": 157.21
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02860",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "用退役的信使哨子教会了半条街的孩子——没人知道为什么",
+ "id": "C-02860",
+ "month_lines": [
+  "天阴着，风不小。街坊一声喊，放下碗就到，对的事，一个人也要站直了做。"
+ ],
+ "name": "李斯年",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "街坊一声喊，放下碗就到。今早DeleteEvent BigMoney的事，得让大家都知道，不能让坏规矩占了上风。",
+   "text": "「街坊一声喊，放下碗就到。今早DeleteEvent BigMoney的事，得让大家都知道，不能让坏规矩占了上风。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "天阴着，风不小。街坊一声喊，放下碗就到，对的事，一个人也要站直了做。",
+   "text": "「天阴着，风不小。街坊一声喊，放下碗就到，对的事，一个人也要站直了做。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 11,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 12,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -97.82,
+    "z": 159.54
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.58,
+    "z": 108.05
+   },
+   "work": {
+    "site": "像素学徒·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -42.63,
+    "z": 150.17
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03196",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把第一炉出炉的像素瓷画进了自己的作品里——据说是老辈传下的规矩",
+ "id": "C-03196",
+ "month_lines": [
+  "江水都不急我急啥。天阴着，风也不小，正好把那些没出透的像素边角再细细打磨一遍，不急。"
+ ],
+ "name": "何米粒",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "江水都不急我急啥，今儿个天气清清爽，正好出来溜达溜达。",
+   "text": "「江水都不急我急啥，今儿个天气清清爽，正好出来溜达溜达。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "江水都不急我急啥。天阴着，风也不小，正好把那些没出透的像素边角再细细打磨一遍，不急。",
+   "text": "「江水都不急我急啥。天阴着，风也不小，正好把那些没出透的像素边角再细细打磨一遍，不急。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

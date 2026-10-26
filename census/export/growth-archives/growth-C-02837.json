@@ -1,0 +1,111 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 8,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.02,
+    "z": -35.57
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.72,
+    "z": -23.97
+   },
+   "work": {
+    "site": "8bit 乐师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -71.36,
+    "z": -53.11
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02837",
+  "quirk": "umbrella",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "把心事只说给全城最后一只手写信箱听",
+ "id": "C-02837",
+ "month_lines": [
+  "风挺大，吹得琴弦都紧了。刚把 BigMoney 的谱子扫完，夜里冷，喝口热的再走。"
+ ],
+ "name": "罗则铭",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "夜里冷，喝口热的再走。整活呢，灵感来了就赶紧写谱，这不，刚搞定一波，正打算去桥上吹吹风，听听汽笛声。",
+   "text": "「夜里冷，喝口热的再走。整活呢，灵感来了就赶紧写谱，这不，刚搞定一波，正打算去桥上吹吹风，听听汽笛声。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风挺大，吹得琴弦都紧了。刚把 BigMoney 的谱子扫完，夜里冷，喝口热的再走。",
+   "text": "「风挺大，吹得琴弦都紧了。刚把 BigMoney 的谱子扫完，夜里冷，喝口热的再走。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

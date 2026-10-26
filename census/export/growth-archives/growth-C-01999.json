@@ -1,0 +1,112 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -3,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 60.84,
+    "z": -100.32
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.33,
+    "z": -139.35
+   },
+   "work": {
+    "site": "感知网养线工·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 115.12,
+    "z": -89.5
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01999",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "口袋里总揣着褪色的红领巾——这事全巷都知道",
+ "id": "C-01999",
+ "month_lines": [
+  "搞掂，今天这天正好，巡线之余给塔脚的野花也浇了浇水，这事儿有讲究。"
+ ],
+ "name": "阮国平",
+ "profession": "感知网养线工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "这事儿有讲究，今天天气正好凉快，巡线时顺便给塔脚的野花浇了点水。",
+   "text": "「这事儿有讲究，今天天气正好凉快，巡线时顺便给塔脚的野花浇了点水。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "搞掂，今天这天正好，巡线之余给塔脚的野花也浇了浇水，这事儿有讲究。",
+   "text": "「搞掂，今天这天正好，巡线之余给塔脚的野花也浇了浇水，这事儿有讲究。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

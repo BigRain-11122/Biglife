@@ -1,0 +1,112 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 24,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -106.09,
+    "z": -151.31
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.77,
+    "z": -126.01
+   },
+   "work": {
+    "site": "像素小学学生·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -32.84,
+    "z": -132.1
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02562",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把旧牛奶箱的钥匙的位置背得比自家门牌还熟——这事只有师父知道",
+ "id": "C-02562",
+ "month_lines": [
+  "这城里好玩的东西一天比一天多，今早放学还得绕路去看那光点过江的瞬间。"
+ ],
+ "name": "陈朵朵",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "这城里好玩的东西一天比一天多，今早放学还得绕路去看。",
+   "text": "「这城里好玩的东西一天比一天多，今早放学还得绕路去看。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "这城里好玩的东西一天比一天多，今早放学还得绕路去看那光点过江的瞬间。",
+   "text": "「这城里好玩的东西一天比一天多，今早放学还得绕路去看那光点过江的瞬间。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

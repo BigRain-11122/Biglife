@@ -1,0 +1,111 @@
+{
+ "age": 67,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -7,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 44.56,
+    "z": 80.0
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.25,
+    "z": 113.56
+   },
+   "work": {
+    "site": "数据菜市摊主·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 105.9,
+    "z": 16.7
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03396",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "在初代城门钥匙上刻了一行没人认得的小字",
+ "id": "C-03396",
+ "month_lines": [
+  "旧的用的顺手"
+ ],
+ "name": "邓雪英",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "旧的用的顺手，今天这秤杆稳得很，江水清清的，正好散步去。",
+   "text": "「旧的用的顺手，今天这秤杆稳得很，江水清清的，正好散步去。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "旧的用的顺手",
+   "text": "「旧的用的顺手」。天阴着，风挺大，吹得人骨头缝里都透着凉意。刚把秤杆校准，这落令的行情还得再盯两眼才敢挂出去。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 7,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.9,
+    "z": 105.32
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.81,
+    "z": 100.56
+   },
+   "work": {
+    "site": "数据清洗工·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.36,
+    "z": 33.49
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01974",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持给全城雪夜的第一次合影记日记——没人知道为什么",
+ "id": "C-01974",
+ "month_lines": [
+  "多个人多双筷子，今天手上的这筐数据清洗起来挺顺手的，风挺大，得绑紧摊子。"
+ ],
+ "name": "程则铭",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "多个人多双筷子，今天手上又多了一筐数据等着清洗。",
+   "text": "「多个人多双筷子，今天手上又多了一筐数据等着清洗。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "多个人多双筷子，今天手上的这筐数据清洗起来挺顺手的，风挺大，得绑紧摊子。",
+   "text": "「多个人多双筷子，今天手上的这筐数据清洗起来挺顺手的，风挺大，得绑紧摊子。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

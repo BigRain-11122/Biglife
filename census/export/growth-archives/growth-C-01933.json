@@ -1,0 +1,112 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -11,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -102.42,
+    "z": 25.28
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.88,
+    "z": 151.78
+   },
+   "work": {
+    "site": "夜宵摊主·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.88,
+    "z": 94.71
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01933",
+  "quirk": "night_run",
+  "recovering": "shengji",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "记得全城灯火的第一张照片的每一个来历——这事只有师父知道",
+ "id": "C-01933",
+ "month_lines": [
+  "灯还是老灯亮堂，今儿这风挺大，得注意客人别被吹走了。"
+ ],
+ "name": "华磊",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "灯还是老灯亮堂，今儿这风挺大。",
+   "text": "「灯还是老灯亮堂，今儿这风挺大。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "灯还是老灯亮堂，今儿这风挺大，得注意客人别被吹走了。",
+   "text": "「灯还是老灯亮堂，今儿这风挺大，得注意客人别被吹走了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

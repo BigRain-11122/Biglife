@@ -1,0 +1,111 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -4,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 43.87,
+    "z": 41.14
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.51,
+    "z": 90.81
+   },
+   "work": {
+    "site": "像素小店主·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 118.72,
+    "z": 113.86
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02303",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "流量像潮水，我是灯塔不是渔船。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "给手绘的星空图都起了名字——这事全巷都知道",
+ "id": "C-02303",
+ "month_lines": [
+  "茶凉了再倒就是，这风挺大，开档前得多套几层。"
+ ],
+ "name": "钱涛",
+ "profession": "像素小店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "茶凉了再倒就是，这天气刚好适合喝杯热茶，收工后还得绕江走半里呢。",
+   "text": "「茶凉了再倒就是，这天气刚好适合喝杯热茶，收工后还得绕江走半里呢。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "茶凉了再倒就是，这风挺大，开档前得多套几层。",
+   "text": "「茶凉了再倒就是，这风挺大，开档前得多套几层。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

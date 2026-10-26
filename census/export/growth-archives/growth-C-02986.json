@@ -1,0 +1,112 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#42A5F5",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 16,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -104.85,
+    "z": 101.77
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.4,
+    "z": 36.09
+   },
+   "work": {
+    "site": "伴居灵·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -28.84,
+    "z": 93.71
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02986",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "记得退役的探针铭牌出现过的每一个雨夜",
+ "id": "C-02986",
+ "month_lines": [
+  "喵呜～尾巴天线还竖着，蹭点 FluxGroup 的数据流暖身子。天阴着风挺大，把屋顶那盏旧灯多亮一会儿，老手艺换了壳，心里才踏实。"
+ ],
+ "name": "白秒针",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "蹭数据蹭得正欢，尾巴天线对准热闹的广场，今儿的江水清清的，凉丝丝的。",
+   "text": "「蹭数据蹭得正欢，尾巴天线对准热闹的广场，今儿的江水清清的，凉丝丝的。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "喵呜～尾巴天线还竖着，蹭点 FluxGroup 的数据流暖身子。天阴着风挺大，把屋顶那盏旧灯多亮一会儿，老手艺换了壳，心里才踏实。",
+   "text": "「喵呜～尾巴天线还竖着，蹭点 FluxGroup 的数据流暖身子。天阴着风挺大，把屋顶那盏旧灯多亮一会儿，老手艺换了壳，心里才踏实。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,111 @@
+{
+ "age": 83,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -12,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 33.27,
+    "z": 92.65
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.14,
+    "z": 46.23
+   },
+   "work": {
+    "site": "晨操领队·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 101.08,
+    "z": 144.11
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02900",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把旧船木做的镇纸画进了自己的作品里——没人知道为什么",
+ "id": "C-02900",
+ "month_lines": [
+  "茶凉了再倒就是。"
+ ],
+ "name": "孟阿凤",
+ "profession": "晨操领队",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "茶凉了再倒就是，今早广场上的光带音响开了三分贝，比太阳还早。",
+   "text": "「茶凉了再倒就是，今早广场上的光带音响开了三分贝，比太阳还早。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "茶凉了再倒就是。",
+   "text": "「茶凉了再倒就是。」风挺大，把云都吹得乱撞。C-02900 还在 G 区角落守着那台三分贝音响，毕竟队形还没排利索，心里总不踏实。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

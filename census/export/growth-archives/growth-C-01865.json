@@ -1,0 +1,112 @@
+{
+ "age": 59,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#82B1FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 10,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 23.05,
+    "z": 125.86
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.86,
+    "z": 94.05
+   },
+   "work": {
+    "site": "夜灯员·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 103.98,
+    "z": 37.74
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01865",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "高兴时会把光借给停摆的老挂钟——没人知道为什么",
+ "id": "C-01865",
+ "month_lines": [
+  "今天风挺大，正好替年长的灯灵分担一段路，心情挺好的，翅尖都打起了拍子。"
+ ],
+ "name": "阿浮标",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "执灯行，今日天阴着，风挺大，正好替年长的灯灵分担一段路。",
+   "text": "「执灯行，今日天阴着，风挺大，正好替年长的灯灵分担一段路。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今天风挺大，正好替年长的灯灵分担一段路，心情挺好的，翅尖都打起了拍子。",
+   "text": "「今天风挺大，正好替年长的灯灵分担一段路，心情挺好的，翅尖都打起了拍子。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

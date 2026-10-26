@@ -1,0 +1,112 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 3,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.17,
+    "z": 100.0
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.07,
+    "z": 62.0
+   },
+   "work": {
+    "site": "夜宵摊主·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -33.42,
+    "z": 23.41
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02301",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "攒了满抽屉淘汰的电话卡从不给看——据说是老辈传下的规矩",
+ "id": "C-02301",
+ "month_lines": [
+  "江水都不急我急啥，今天风挺大，收摊多等了会儿，常客又来了，多唠了两句。"
+ ],
+ "name": "史星野",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "江水都不急我急啥，今天收摊晚了点，正好有位常客多聊了会儿。",
+   "text": "「江水都不急我急啥，今天收摊晚了点，正好有位常客多聊了会儿。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "江水都不急我急啥，今天风挺大，收摊多等了会儿，常客又来了，多唠了两句。",
+   "text": "「江水都不急我急啥，今天风挺大，收摊多等了会儿，常客又来了，多唠了两句。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

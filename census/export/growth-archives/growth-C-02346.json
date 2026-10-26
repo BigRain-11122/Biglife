@@ -1,0 +1,112 @@
+{
+ "age": 23,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -2,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 57.63,
+    "z": 37.8
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.39,
+    "z": 32.38
+   },
+   "work": {
+    "site": "关卡建筑师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 147.06,
+    "z": 47.65
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02346",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "会为会发光的纽扣推掉一整晚的生意——这事只有师父知道",
+ "id": "C-02346",
+ "month_lines": [
+  "这城里好玩的东西一天比一天多，今夜茶还是用那个杯子最成。"
+ ],
+ "name": "阿睿频-8",
+ "profession": "关卡建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "这城里好玩的东西一天比一天多，今儿正好是单日，喝茶还是用那个杯子最成。",
+   "text": "「这城里好玩的东西一天比一天多，今儿正好是单日，喝茶还是用那个杯子最成。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "这城里好玩的东西一天比一天多，今夜茶还是用那个杯子最成。",
+   "text": "「这城里好玩的东西一天比一天多，今夜茶还是用那个杯子最成。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

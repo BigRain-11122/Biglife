@@ -1,0 +1,112 @@
+{
+ "age": 11,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 21,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -112.72,
+    "z": 145.32
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.68,
+    "z": 119.11
+   },
+   "work": {
+    "site": "像素小学学生·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.07,
+    "z": 151.07
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03278",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "偷偷给初代像素调色板上油保养——这事只有档案馆知道",
+ "id": "C-03278",
+ "month_lines": [
+  "天阴着，风挺大，吹得作业本哗啦响。这事儿有讲究，凉快劲儿正合适，先把零头花掉，攒整的存着。"
+ ],
+ "name": "黎米粒",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "这事儿有讲究，今天天气清清爽，放学还得绕路去看。",
+   "text": "「这事儿有讲究，今天天气清清爽，放学还得绕路去看。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "天阴着，风挺大，吹得作业本哗啦响。这事儿有讲究，凉快劲儿正合适，先把零头花掉，攒整的存着。",
+   "text": "「天阴着，风挺大，吹得作业本哗啦响。这事儿有讲究，凉快劲儿正合适，先把零头花掉，攒整的存着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 24,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -83.2,
+    "z": 193.49
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 3.69,
+    "z": 240.72
+   },
+   "work": {
+    "site": "像素小学学生·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 33.11,
+    "z": 196.13
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03113",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "给全城灯语的对照表都编了号还建了册——这事全巷都知道",
+ "id": "C-03113",
+ "month_lines": [
+  "交关，风不小，卷得作业本哗啦响。好咯，先把明天的料备好，放学还得绕路看 commit 光点过江，一句话的事。"
+ ],
+ "name": "叶小杏",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "今早绕路看了眼，今天 commit 的光点过江了，好咯，新的一天值日开始了！",
+   "text": "「今早绕路看了眼，今天 commit 的光点过江了，好咯，新的一天值日开始了！」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "交关，风不小，卷得作业本哗啦响。好咯，先把明天的料备好，放学还得绕路看 commit 光点过江，一句话的事。",
+   "text": "「交关，风不小，卷得作业本哗啦响。好咯，先把明天的料备好，放学还得绕路看 commit 光点过江，一句话的事。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

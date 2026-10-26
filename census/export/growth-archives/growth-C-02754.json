@@ -1,0 +1,112 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 1,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -129.04,
+    "z": 73.39
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.43,
+    "z": 131.79
+   },
+   "work": {
+    "site": "算力楼运维·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.63,
+    "z": 59.37
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02754",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每年挑一天只为爷爷的工作证大扫除——没人知道为什么",
+ "id": "C-02754",
+ "month_lines": [
+  "风挺大，天阴着，机房里那台老服务器又「上头"
+ ],
+ "name": "梁一诺",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "拆开看看又不会坏，今早巡楼三圈，花儿都精神着呢。",
+   "text": "「拆开看看又不会坏，今早巡楼三圈，花儿都精神着呢。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "风挺大，天阴着，机房里那台老服务器又「上头",
+   "text": "「风挺大，天阴着，机房里那台老服务器又「上头」报警了。拆开看看又不会坏，顺手给它顺顺气，咱做运维的就得稳得住这赛博后身的「体温」。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

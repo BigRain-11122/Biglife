@@ -1,0 +1,112 @@
+{
+ "age": 11,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4DD0E1",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 11,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -119.68,
+    "z": -80.85
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.14,
+    "z": -111.68
+   },
+   "work": {
+    "site": "伴居灵·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -70.12,
+    "z": -75.39
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02049",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "绕着三代人传下的顶针飞过整整三十圈——这事全巷都知道",
+ "id": "C-02049",
+ "month_lines": [
+  "蹭光，今天风挺大，但街角的摊位还是热闹了不少。"
+ ],
+ "name": "黑灯芯儿",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "蹭光，今天天气正好，街角的摊位又多了些热闹。",
+   "text": "「蹭光，今天天气正好，街角的摊位又多了些热闹。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "蹭光，今天风挺大，但街角的摊位还是热闹了不少。",
+   "text": "「蹭光，今天风挺大，但街角的摊位还是热闹了不少。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

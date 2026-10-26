@@ -1,0 +1,112 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 2,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 28.45,
+    "z": 29.02
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.3,
+    "z": 136.24
+   },
+   "work": {
+    "site": "彩蛋埋藏师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 128.73,
+    "z": 13.44
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02382",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "在老式爆米花的粮票上刻了一行没人认得的小字——她自己也说不清为什么",
+ "id": "C-02382",
+ "month_lines": [
+  "试错要趁灯亮，今夜风挺大，得小心彩蛋别被吹走。"
+ ],
+ "name": "潘之南",
+ "profession": "彩蛋埋藏师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "试错要趁灯亮，今天天气雨不大，屋里的灯正好不用开。",
+   "text": "「试错要趁灯亮，今天天气雨不大，屋里的灯正好不用开。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "试错要趁灯亮，今夜风挺大，得小心彩蛋别被吹走。",
+   "text": "「试错要趁灯亮，今夜风挺大，得小心彩蛋别被吹走。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

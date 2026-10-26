@@ -1,0 +1,112 @@
+{
+ "age": 80,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -8,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -100.45,
+    "z": 157.81
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.25,
+    "z": 57.31
+   },
+   "work": {
+    "site": "全城对时师·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -50.19,
+    "z": 37.85
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02741",
+  "quirk": "night_run",
+  "recovering": "shengji",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "留着旧货郎的拨浪鼓却从来不用",
+ "id": "C-02741",
+ "month_lines": [
+  "收摊了，明天见。今儿天阴着，风也不小，正好压住心里那点钟差。"
+ ],
+ "name": "廖金花",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "收摊了，明天见。今早的江声真清爽。",
+   "text": "「收摊了，明天见。今早的江声真清爽。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "收摊了，明天见。今儿天阴着，风也不小，正好压住心里那点钟差。",
+   "text": "「收摊了，明天见。今儿天阴着，风也不小，正好压住心里那点钟差。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

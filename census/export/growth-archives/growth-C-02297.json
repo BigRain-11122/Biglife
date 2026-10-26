@@ -1,0 +1,112 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 13,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 63.2,
+    "z": 91.81
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.4,
+    "z": 43.9
+   },
+   "work": {
+    "site": "信使小跟班·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 135.41,
+    "z": 105.31
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02297",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "风吹哪页读哪页。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每年挑一天只为初版城市地图大扫除——这事只有师父知道",
+ "id": "C-02297",
+ "month_lines": [
+  "搞快点，清单第一！今天风挺大，出门得裹紧点。"
+ ],
+ "name": "汪果果",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "搞快点，清单第一！今天天气正好清清爽爽的，心情也跟着好起来。",
+   "text": "「搞快点，清单第一！今天天气正好清清爽爽的，心情也跟着好起来。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "搞快点，清单第一！今天风挺大，出门得裹紧点。",
+   "text": "「搞快点，清单第一！今天风挺大，出门得裹紧点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

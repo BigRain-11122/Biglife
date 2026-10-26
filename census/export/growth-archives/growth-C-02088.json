@@ -1,0 +1,112 @@
+{
+ "age": 64,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -7,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.85,
+    "z": 125.59
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.85,
+    "z": 155.05
+   },
+   "work": {
+    "site": "穿城信使·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -57.17,
+    "z": 16.8
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02088",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件写了一半的市民歌谣——这事只有档案馆知道",
+ "id": "C-02088",
+ "month_lines": [
+  "今早起得早，天清气朗，风挺大，收摊了，明天见。"
+ ],
+ "name": "沈俊",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "buddy",
+   "src": "常客",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "收摊了，明天见。今夜风挺大，记得关好窗户。",
+   "text": "「收摊了，明天见。今夜风挺大，记得关好窗户。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今早起得早，天清气朗，风挺大，收摊了，明天见。",
+   "text": "「今早起得早，天清气朗，风挺大，收摊了，明天见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

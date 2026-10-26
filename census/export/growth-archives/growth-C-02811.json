@@ -1,0 +1,112 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 5,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -139.83,
+    "z": 53.97
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.49,
+    "z": 129.32
+   },
+   "work": {
+    "site": "像素学徒·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -43.55,
+    "z": 20.46
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02811",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "梦话都在念叨掉漆的糖果罐",
+ "id": "C-02811",
+ "month_lines": [
+  "风挺大，摊子得再绑两道。清单上没写的活儿先压着，等这阵子把 FluxVerse 的像素补完再说。"
+ ],
+ "name": "奚知夏",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "红灯面前没有老熟人，今天这风不大，打杂时得多穿点。",
+   "text": "「红灯面前没有老熟人，今天这风不大，打杂时得多穿点。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风挺大，摊子得再绑两道。清单上没写的活儿先压着，等这阵子把 FluxVerse 的像素补完再说。",
+   "text": "「风挺大，摊子得再绑两道。清单上没写的活儿先压着，等这阵子把 FluxVerse 的像素补完再说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

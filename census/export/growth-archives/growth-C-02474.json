@@ -1,0 +1,112 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#E1BEE7",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 25,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 36.98,
+    "z": -38.08
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.47,
+    "z": -157.48
+   },
+   "work": {
+    "site": "江面巡游员·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 97.14,
+    "z": -157.46
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02474",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "绕着旧钟表铺的价目牌飞过整整三十圈——据说是老辈传下的规矩",
+ "id": "C-02474",
+ "month_lines": [
+  "今夜江面风挺大，巡夜的路多了几分凉快。"
+ ],
+ "name": "小指南",
+ "profession": "江面巡游员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "测流顺利，今夜江面格外平静，看来蓝白双色的江水真是清爽了。",
+   "text": "「测流顺利，今夜江面格外平静，看来蓝白双色的江水真是清爽了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今夜江面风挺大，巡夜的路多了几分凉快。",
+   "text": "「今夜江面风挺大，巡夜的路多了几分凉快。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

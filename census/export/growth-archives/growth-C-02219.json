@@ -1,0 +1,112 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 4,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -104.31,
+    "z": 93.74
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.49,
+    "z": 81.1
+   },
+   "work": {
+    "site": "像素学徒·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -43.1,
+    "z": 113.28
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02219",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "自己淋过雨，就想给别人撑伞。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "逢人就讲初代渡轮的船票夹的故事——没人知道为什么",
+ "id": "C-02219",
+ "month_lines": [
+  "夜里冷，喝口热的再走。今天风挺大，出门得裹紧点。"
+ ],
+ "name": "盛沐晴",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "夜里冷，喝口热的再走。今天白天打杂晚上偷练，出师作品还藏着掖着呢。",
+   "text": "「夜里冷，喝口热的再走。今天白天打杂晚上偷练，出师作品还藏着掖着呢。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "夜里冷，喝口热的再走。今天风挺大，出门得裹紧点。",
+   "text": "「夜里冷，喝口热的再走。今天风挺大，出门得裹紧点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 8,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.95,
+    "z": -89.78
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.98,
+    "z": -94.63
+   },
+   "work": {
+    "site": "城市接线生·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.92,
+    "z": -40.06
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02568",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "把心事只说给初代渡轮的船票夹听——没人知道为什么",
+ "id": "C-02568",
+ "month_lines": [
+  "这城里好玩的东西一天比一天多，今早风挺大，得小心点。"
+ ],
+ "name": "石桃桃",
+ "profession": "城市接线生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "这城里好玩的东西一天比一天多，今天天气挺好的，正好可以多转转，占线了。",
+   "text": "「这城里好玩的东西一天比一天多，今天天气挺好的，正好可以多转转，占线了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "这城里好玩的东西一天比一天多，今早风挺大，得小心点。",
+   "text": "「这城里好玩的东西一天比一天多，今早风挺大，得小心点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

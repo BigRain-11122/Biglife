@@ -1,0 +1,112 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 13,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -113.54,
+    "z": 143.18
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.23,
+    "z": 133.01
+   },
+   "work": {
+    "site": "像素小学学生·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -31.22,
+    "z": 99.41
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03093",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把雨声录音排成一排挨个擦——这事只有档案馆知道",
+ "id": "C-03093",
+ "month_lines": [
+  "值日刚完，风挺大，吹得门禁公告哗哗响。G08 那版 CrazyCampus 刷得真霸得蛮，收摊了，明天见。"
+ ],
+ "name": "陈小北",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "收摊了，明天见。今早看代码commit过江，真了不得！",
+   "text": "「收摊了，明天见。今早看代码commit过江，真了不得！」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "值日刚完，风挺大，吹得门禁公告哗哗响。G08 那版 CrazyCampus 刷得真霸得蛮，收摊了，明天见。",
+   "text": "「值日刚完，风挺大，吹得门禁公告哗哗响。G08 那版 CrazyCampus 刷得真霸得蛮，收摊了，明天见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

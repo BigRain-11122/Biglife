@@ -1,0 +1,111 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 3,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 47.85,
+    "z": -127.19
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.57,
+    "z": -118.67
+   },
+   "work": {
+    "site": "时空校准师·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 138.08,
+    "z": -101.73
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01450",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "给老式爆米花机的摇柄都编了号还建了册",
+ "id": "C-01450",
+ "month_lines": [
+  "这事儿有讲究，今夜天阴着，修钟正合适。"
+ ],
+ "name": "许伟民",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "household",
+   "src": "H-NS0341",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "这事儿有讲究，天阴着，正好修些旧钟，走时走得出奇。",
+   "text": "「这事儿有讲究，天阴着，正好修些旧钟，走时走得出奇。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "这事儿有讲究，今夜天阴着，修钟正合适。",
+   "text": "「这事儿有讲究，今夜天阴着，修钟正合适。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

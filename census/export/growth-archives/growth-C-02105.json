@@ -1,0 +1,112 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#E1BEE7",
+   "skin": "#69F0AE"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 24,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 67.56,
+    "z": 102.88
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.08,
+    "z": 136.88
+   },
+   "work": {
+    "site": "伴居灵·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 108.17,
+    "z": 48.04
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02105",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "记得老式爆米花机的摇柄出现过的每一个雨夜——没人知道为什么",
+ "id": "C-02105",
+ "month_lines": [
+  "天清气朗，风挺大，尾巴天线都快被风吹歪了。"
+ ],
+ "name": "小雪绒",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "蹭光呀蹭光，今天风挺大，尾巴天线都快被风吹歪了。",
+   "text": "「蹭光呀蹭光，今天风挺大，尾巴天线都快被风吹歪了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "天清气朗，风挺大，尾巴天线都快被风吹歪了。",
+   "text": "「天清气朗，风挺大，尾巴天线都快被风吹歪了。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

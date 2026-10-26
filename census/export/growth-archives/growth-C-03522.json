@@ -1,0 +1,112 @@
+{
+ "age": 94,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -5,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.91,
+    "z": 133.57
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.67,
+    "z": 33.5
+   },
+   "work": {
+    "site": "尾盘茶室老板·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -30.5,
+    "z": 13.24
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03522",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "梦话都在念叨全城最后一只手写信箱——据说是老辈传下的规矩",
+ "id": "C-03522",
+ "month_lines": [
+  "弄堂还是那个弄堂，凌晨的风不小，吹得K线广场的招牌哗啦啦响。我这儿灯还亮着，给复盘的人留着呢，天阴着，正好喝口热茶。"
+ ],
+ "name": "金永康",
+ "profession": "尾盘茶室老板",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "收盘茶，弄堂还是那个弄堂。",
+   "text": "「收盘茶，弄堂还是那个弄堂。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "弄堂还是那个弄堂，凌晨的风不小，吹得K线广场的招牌哗啦啦响。我这儿灯还亮着，给复盘的人留着呢，天阴着，正好喝口热茶。",
+   "text": "「弄堂还是那个弄堂，凌晨的风不小，吹得K线广场的招牌哗啦啦响。我这儿灯还亮着，给复盘的人留着呢，天阴着，正好喝口热茶。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

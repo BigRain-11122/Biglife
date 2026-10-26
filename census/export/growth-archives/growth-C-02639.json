@@ -1,0 +1,111 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 7,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.84,
+    "z": -28.4
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.48,
+    "z": -32.99
+   },
+   "work": {
+    "site": "数据化妆师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -23.95,
+    "z": -100.55
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02639",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "梦话都在念叨全城雪夜的第一次合影——这事只有师父知道",
+ "id": "C-02639",
+ "month_lines": [
+  "急啥，汤还没开呢。风挺大，走路得抓紧。"
+ ],
+ "name": "梁未晞",
+ "profession": "数据化妆师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "急啥，汤还没开呢。天气清清爽爽的，正好散步去。",
+   "text": "「急啥，汤还没开呢。天气清清爽爽的，正好散步去。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "急啥，汤还没开呢。风挺大，走路得抓紧。",
+   "text": "「急啥，汤还没开呢。风挺大，走路得抓紧。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

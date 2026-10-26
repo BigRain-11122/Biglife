@@ -1,0 +1,111 @@
+{
+ "age": 87,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -14,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -51.07,
+    "z": 228.01
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -3.08,
+    "z": 206.78
+   },
+   "work": {
+    "site": "编年史誊录员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 32.51,
+    "z": 207.72
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02099",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "逢人就讲老式邮差的背包的故事——这事全巷都知道",
+ "id": "C-02099",
+ "month_lines": [
+  "弄堂还是那个弄堂，今儿风挺大，得小心些。"
+ ],
+ "name": "潘锡金",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "弄堂还是那个弄堂，今儿风挺大，抓紧茶壶，茶水别洒了。",
+   "text": "「弄堂还是那个弄堂，今儿风挺大，抓紧茶壶，茶水别洒了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "弄堂还是那个弄堂，今儿风挺大，得小心些。",
+   "text": "「弄堂还是那个弄堂，今儿风挺大，得小心些。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

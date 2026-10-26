@@ -1,0 +1,112 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 13,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -69.37,
+    "z": 186.18
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -5.75,
+    "z": 213.96
+   },
+   "work": {
+    "site": "像素小学学生·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 50.54,
+    "z": 219.46
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03349",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "把心事只说给电波猫听——这事只有档案馆知道",
+ "id": "C-03349",
+ "month_lines": [
+  "风挺大，天阴着，多大事，搞快点。今日 Tick 轮次稳稳过，作业本上这像素画也算值日完毕，谁没个难处呢，来，坐下说。"
+ ],
+ "name": "奚小杏",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "多大事，搞快点。谁没个难处呢，来，坐下说。",
+   "text": "「多大事，搞快点。谁没个难处呢，来，坐下说。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风挺大，天阴着，多大事，搞快点。今日 Tick 轮次稳稳过，作业本上这像素画也算值日完毕，谁没个难处呢，来，坐下说。",
+   "text": "「风挺大，天阴着，多大事，搞快点。今日 Tick 轮次稳稳过，作业本上这像素画也算值日完毕，谁没个难处呢，来，坐下说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

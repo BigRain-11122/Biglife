@@ -1,0 +1,111 @@
+{
+ "age": 40,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -4,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.87,
+    "z": 154.67
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.04,
+    "z": 31.54
+   },
+   "work": {
+    "site": "算力楼运维·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 145.8,
+    "z": 69.86
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01639",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把一台修了八次的老收音机排成一排挨个擦——这事只有档案馆知道",
+ "id": "C-01639",
+ "month_lines": [
+  "今朝天阴着，巡楼时多留意机房温度，搭把手的事儿。"
+ ],
+ "name": "周斌",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "搭把手的事儿，今朝天阴着，巡楼时多留意机房温度。",
+   "text": "「搭把手的事儿，今朝天阴着，巡楼时多留意机房温度。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今朝天阴着，巡楼时多留意机房温度，搭把手的事儿。",
+   "text": "「今朝天阴着，巡楼时多留意机房温度，搭把手的事儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

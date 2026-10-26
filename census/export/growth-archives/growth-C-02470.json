@@ -1,0 +1,112 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 13,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 31.57,
+    "z": 19.43
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.64,
+    "z": 51.16
+   },
+   "work": {
+    "site": "夜灯员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.04,
+    "z": 35.43
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02470",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "高兴时会把光借给初代渡轮的船票夹——这事只有师父知道",
+ "id": "C-02470",
+ "month_lines": [
+  "今夜天阴着，风不小，翅膀上的光尘得抖抖才好。"
+ ],
+ "name": "白季风",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "执灯，还是得抖抖翅膀上的光尘，今天天气正好，清清爽爽的。",
+   "text": "「执灯，还是得抖抖翅膀上的光尘，今天天气正好，清清爽爽的。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今夜天阴着，风不小，翅膀上的光尘得抖抖才好。",
+   "text": "「今夜天阴着，风不小，翅膀上的光尘得抖抖才好。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

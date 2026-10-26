@@ -1,0 +1,112 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4DD0E1",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#82B1FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 24,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.52,
+    "z": -32.98
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.58,
+    "z": -98.38
+   },
+   "work": {
+    "site": "伴居灵·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 136.74,
+    "z": -17.65
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01475",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "每次路过老式爆米花机的摇柄都要亮两下——这事只有师父知道",
+ "id": "C-01475",
+ "month_lines": [
+  "尾巴天线已经对准热闹方向，灵感还没来，先给屋顶上的邻居们哼首歌吧。"
+ ],
+ "name": "阿渡",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "天阴着，灵感找上门了，尾巴天线已经调好，准备接收最新数据。",
+   "text": "「天阴着，灵感找上门了，尾巴天线已经调好，准备接收最新数据。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "尾巴天线已经对准热闹方向，灵感还没来，先给屋顶上的邻居们哼首歌吧。",
+   "text": "「尾巴天线已经对准热闹方向，灵感还没来，先给屋顶上的邻居们哼首歌吧。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

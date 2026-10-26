@@ -1,0 +1,112 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 6,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -109.13,
+    "z": 40.37
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.09,
+    "z": 36.51
+   },
+   "work": {
+    "site": "夜宵摊主·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -31.65,
+    "z": 68.89
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03521",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "留着手绘的星空图却从来不用——据说是老辈传下的规矩",
+ "id": "C-03521",
+ "month_lines": [
+  "茶凉了再倒就是。天阴着，风不小，吹得摊子呼啦啦响，正好省得我再费神去盖那层防灰布。"
+ ],
+ "name": "秦卡佳",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "茶凉了再倒就是，今儿个江水还清清的，加点辣不？",
+   "text": "「茶凉了再倒就是，今儿个江水还清清的，加点辣不？」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "茶凉了再倒就是。天阴着，风不小，吹得摊子呼啦啦响，正好省得我再费神去盖那层防灰布。",
+   "text": "「茶凉了再倒就是。天阴着，风不小，吹得摊子呼啦啦响，正好省得我再费神去盖那层防灰布。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

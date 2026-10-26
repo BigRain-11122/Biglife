@@ -1,0 +1,112 @@
+{
+ "age": 6,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 15,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.65,
+    "z": 21.36
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.42,
+    "z": 97.71
+   },
+   "work": {
+    "site": "像素小学学生·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -25.15,
+    "z": 56.83
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03357",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持给褪色的灯笼骨架记日记",
+ "id": "C-03357",
+ "month_lines": [
+  "风挺大，吹得老票根哗啦响。放学还得绕路瞅瞅今日 commit 光点，这阴天色看着也值日。"
+ ],
+ "name": "唐多多",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "我送走的老主顾，比这城里一半的楼岁数都大，今儿天气还挺适合出门转转。",
+   "text": "「我送走的老主顾，比这城里一半的楼岁数都大，今儿天气还挺适合出门转转。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风挺大，吹得老票根哗啦响。放学还得绕路瞅瞅今日 commit 光点，这阴天色看着也值日。",
+   "text": "「风挺大，吹得老票根哗啦响。放学还得绕路瞅瞅今日 commit 光点，这阴天色看着也值日。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

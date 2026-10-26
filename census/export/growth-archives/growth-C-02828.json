@@ -1,0 +1,111 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -2,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 62.13,
+    "z": 139.81
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.79,
+    "z": 47.29
+   },
+   "work": {
+    "site": "节日活动策划·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 106.4,
+    "z": 100.51
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02828",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "风吹哪页读哪页。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "记得手绘的城图的每一个来历——这事只有档案馆知道",
+ "id": "C-02828",
+ "month_lines": [
+  "慢慢来，比较快。"
+ ],
+ "name": "叶卫东",
+ "profession": "节日活动策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "慢慢来，比较快。今天天气正好，适合出去转转，看看新上线的光影效果。",
+   "text": "「慢慢来，比较快。今天天气正好，适合出去转转，看看新上线的光影效果。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "慢慢来，比较快。",
+   "text": "「慢慢来，比较快。」天阴着，风不小，正好把擦过的工具收进箱。今夜布景还在睡，我在留言墙前站一站，看有没有写给自己的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

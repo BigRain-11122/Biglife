@@ -1,0 +1,111 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 1,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 62.17,
+    "z": -45.22
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.05,
+    "z": -86.35
+   },
+   "work": {
+    "site": "编年史馆员·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.43,
+    "z": -126.86
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03413",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "会给爷爷的工作证织毛衣——这事全巷都知道",
+ "id": "C-03413",
+ "month_lines": [
+  "风挺大，吹得档案袋哗哗响，正好醒脑。稳住，别浪，把今儿个的 git commit 收进全史，这一单，稳稳当当。"
+ ],
+ "name": "熊嘉树",
+ "profession": "编年史馆员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "稳住，别浪。今天天气清清爽爽的，正好适合出去走走。",
+   "text": "「稳住，别浪。今天天气清清爽爽的，正好适合出去走走。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风挺大，吹得档案袋哗哗响，正好醒脑。稳住，别浪，把今儿个的 git commit 收进全史，这一单，稳稳当当。",
+   "text": "「风挺大，吹得档案袋哗哗响，正好醒脑。稳住，别浪，把今儿个的 git commit 收进全史，这一单，稳稳当当。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

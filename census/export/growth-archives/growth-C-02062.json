@@ -1,0 +1,111 @@
+{
+ "age": 51,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 1,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 47.14,
+    "z": 48.26
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.73,
+    "z": 88.17
+   },
+   "work": {
+    "site": "灯塔守望·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 115.95,
+    "z": 43.78
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02062",
+  "quirk": "night_run",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "给老式爆米花机的摇柄写了一整本观察笔记——这事只有师父知道",
+ "id": "C-02062",
+ "month_lines": [
+  "稳住，别浪。今天天清气朗，风挺大，巡塔时得多穿件厚外套。"
+ ],
+ "name": "谢春梅",
+ "profession": "灯塔守望",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "稳住，别浪。今天天云着，风挺大，巡塔时得多穿件厚外套。",
+   "text": "「稳住，别浪。今天天云着，风挺大，巡塔时得多穿件厚外套。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "稳住，别浪。今天天清气朗，风挺大，巡塔时得多穿件厚外套。",
+   "text": "「稳住，别浪。今天天清气朗，风挺大，巡塔时得多穿件厚外套。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

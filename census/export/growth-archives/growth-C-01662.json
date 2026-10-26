@@ -1,0 +1,112 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": 1,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 52.4,
+    "z": -51.82
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.51,
+    "z": -26.67
+   },
+   "work": {
+    "site": "穿城信使·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 136.44,
+    "z": -95.19
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01662",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把心事只说给老钟楼的齿轮听——没人知道为什么",
+ "id": "C-01662",
+ "month_lines": [
+  "多个人多双筷子，这天风挺大，抓紧整理码农们的代码吧。"
+ ],
+ "name": "慢速-8",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "多个人多双筷子，今早加班到天阴着，抓紧优化代码，显存紧张！",
+   "text": "「多个人多双筷子，今早加班到天阴着，抓紧优化代码，显存紧张！」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "多个人多双筷子，这天风挺大，抓紧整理码农们的代码吧。",
+   "text": "「多个人多双筷子，这天风挺大，抓紧整理码农们的代码吧。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

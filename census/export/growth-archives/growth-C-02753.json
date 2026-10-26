@@ -1,0 +1,112 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 4,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.88,
+    "z": -79.61
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.35,
+    "z": -95.12
+   },
+   "work": {
+    "site": "数据剪辑师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -68.61,
+    "z": -109.43
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02753",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "每天跟旧码头的汽笛阀打招呼",
+ "id": "C-02753",
+ "month_lines": [
+  "试错要趁灯亮，这天阴着风也挺大，正好把 BigMoney 的粗剪跑完。刚收摊，塔顶白光亮着呢，回家捎口吃的去。"
+ ],
+ "name": "段Nova",
+ "profession": "数据剪辑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "试错要趁灯亮，交片前夜必得悠着点，别太拼了。",
+   "text": "「试错要趁灯亮，交片前夜必得悠着点，别太拼了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "试错要趁灯亮，这天阴着风也挺大，正好把 BigMoney 的粗剪跑完。刚收摊，塔顶白光亮着呢，回家捎口吃的去。",
+   "text": "「试错要趁灯亮，这天阴着风也挺大，正好把 BigMoney 的粗剪跑完。刚收摊，塔顶白光亮着呢，回家捎口吃的去。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

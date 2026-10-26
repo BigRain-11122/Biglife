@@ -1,0 +1,111 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 8,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -65.55,
+    "z": -202.26
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -13.27,
+    "z": -253.94
+   },
+   "work": {
+    "site": "夜宵摊主·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 72.65,
+    "z": -187.38
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02322",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "每天跟老式的士票打招呼——这事全巷都知道",
+ "id": "C-02322",
+ "month_lines": [
+  "今天云好，改天再说，这风挺大，摊前得把炉子绑牢。"
+ ],
+ "name": "廖诗涵",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "今天云好，改天再说，摊上还剩最后一位客人。",
+   "text": "「今天云好，改天再说，摊上还剩最后一位客人。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今天云好，改天再说，这风挺大，摊前得把炉子绑牢。",
+   "text": "「今天云好，改天再说，这风挺大，摊前得把炉子绑牢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

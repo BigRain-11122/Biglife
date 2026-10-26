@@ -1,0 +1,112 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 5,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 22.94,
+    "z": -32.25
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.36,
+    "z": -56.42
+   },
+   "work": {
+    "site": "编年史誊录员·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 138.66,
+    "z": -48.77
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03461",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "梦话都在念叨老裁缝铺的样衣",
+ "id": "C-03461",
+ "month_lines": [
+  "凌晨的夜风挺大，吹得窗缝直响。刚把抄录用的硅基软布擦干净，新来的 Git 推送还得按规矩先晾三天再碰，急不得。"
+ ],
+ "name": "陆斌",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "新东西先看三天再用，今早这会儿正好是誊录的好时辰。",
+   "text": "「新东西先看三天再用，今早这会儿正好是誊录的好时辰。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "凌晨的夜风挺大，吹得窗缝直响。刚把抄录用的硅基软布擦干净，新来的 Git 推送还得按规矩先晾三天再碰，急不得。",
+   "text": "「凌晨的夜风挺大，吹得窗缝直响。刚把抄录用的硅基软布擦干净，新来的 Git 推送还得按规矩先晾三天再碰，急不得。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

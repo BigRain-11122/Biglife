@@ -1,0 +1,112 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -2,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 51.88,
+    "z": 24.54
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.72,
+    "z": 138.83
+   },
+   "work": {
+    "site": "灯塔守望·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 111.63,
+    "z": 52.86
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02397",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "会为1990 年的真硬币推掉一整晚的生意——这事只有档案馆知道",
+ "id": "C-02397",
+ "month_lines": [
+  "先试了再说，巡塔再绕江。这会儿天还黑着，风挺大，得小心些。"
+ ],
+ "name": "史斌",
+ "profession": "灯塔守望",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "今天多想一步，明天少返三工。先试了再说，巡塔再绕江。",
+   "text": "「今天多想一步，明天少返三工。先试了再说，巡塔再绕江。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "先试了再说，巡塔再绕江。这会儿天还黑着，风挺大，得小心些。",
+   "text": "「先试了再说，巡塔再绕江。这会儿天还黑着，风挺大，得小心些。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 3,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -74.07,
+    "z": -195.25
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -7.97,
+    "z": -254.08
+   },
+   "work": {
+    "site": "信号中继员·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 69.7,
+    "z": -214.65
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02228",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "每天跟手绘的星空图打招呼——这事只有师父知道",
+ "id": "C-02228",
+ "month_lines": [
+  "风挺大，手里揣着三颗心脏，今天得更专心才行。"
+ ],
+ "name": "陈天翼",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "下一版一定更好，今天天气正好凉爽，手里还揣着三颗心脏，准备迎接新的挑战。",
+   "text": "「下一版一定更好，今天天气正好凉爽，手里还揣着三颗心脏，准备迎接新的挑战。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "风挺大，手里揣着三颗心脏，今天得更专心才行。",
+   "text": "「风挺大，手里揣着三颗心脏，今天得更专心才行。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

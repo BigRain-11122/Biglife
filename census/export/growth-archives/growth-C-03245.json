@@ -1,0 +1,111 @@
+{
+ "age": 75,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -5,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -67.25,
+    "z": 256.69
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 1.35,
+    "z": 173.35
+   },
+   "work": {
+    "site": "编年史誊录员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 26.37,
+    "z": 202.57
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03245",
+  "quirk": "night_run",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "用停用的老式磅秤教会了半条街的孩子——没人知道为什么",
+ "id": "C-03245",
+ "month_lines": [
+  "得闲饮茶。风挺大，卷着云往塔基档案那边赶，我这儿正校着 FluxGroup 的新过录，数据不会骗人，人会。"
+ ],
+ "name": "凌承宗",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "数据不会骗人，人会。今夜还得加班誊录，外面雨声正好助眠。",
+   "text": "「数据不会骗人，人会。今夜还得加班誊录，外面雨声正好助眠。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "得闲饮茶。风挺大，卷着云往塔基档案那边赶，我这儿正校着 FluxGroup 的新过录，数据不会骗人，人会。",
+   "text": "「得闲饮茶。风挺大，卷着云往塔基档案那边赶，我这儿正校着 FluxGroup 的新过录，数据不会骗人，人会。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

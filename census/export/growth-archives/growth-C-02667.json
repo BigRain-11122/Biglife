@@ -1,0 +1,112 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#C5E1FF",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 10,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 46.81,
+    "z": 57.85
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.48,
+    "z": 126.49
+   },
+   "work": {
+    "site": "声景师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.89,
+    "z": 142.09
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02667",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "绕着编年史馆的门票飞过整整三十圈——没人知道为什么",
+ "id": "C-02667",
+ "month_lines": [
+  "今天风挺大，江边的树叶都摇得欢，开嗓时得多留意些。"
+ ],
+ "name": "白檐角",
+ "profession": "声景师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "开嗓了，今天正好有单子，江岸的雨天合唱又唱起来了。",
+   "text": "「开嗓了，今天正好有单子，江岸的雨天合唱又唱起来了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今天风挺大，江边的树叶都摇得欢，开嗓时得多留意些。",
+   "text": "「今天风挺大，江边的树叶都摇得欢，开嗓时得多留意些。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

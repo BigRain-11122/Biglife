@@ -1,0 +1,112 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 2,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.63,
+    "z": 84.8
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.17,
+    "z": 14.76
+   },
+   "work": {
+    "site": "量化策略研究员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.35,
+    "z": 121.39
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02527",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "攒钱就为了赎回一件老茶壶",
+ "id": "C-02527",
+ "month_lines": [
+  "这版本我等好久了，终于更新了，赶紧盯盘去。今夜风挺大，得小心点。"
+ ],
+ "name": "热插拔·叁",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "这版本我等好久了，终于更新了，赶紧盯盘去。",
+   "text": "「这版本我等好久了，终于更新了，赶紧盯盘去。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "这版本我等好久了，终于更新了，赶紧盯盘去。今夜风挺大，得小心点。",
+   "text": "「这版本我等好久了，终于更新了，赶紧盯盘去。今夜风挺大，得小心点。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

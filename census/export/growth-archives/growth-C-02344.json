@@ -1,0 +1,111 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 6,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 41.22,
+    "z": 155.67
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.84,
+    "z": 126.68
+   },
+   "work": {
+    "site": "夜宵摊主·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 143.73,
+    "z": 64.5
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02344",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把半张老电影票修好再免费送人——这事只有档案馆知道",
+ "id": "C-02344",
+ "month_lines": [
+  "清单第一，今夜天气正好凉快，出摊前得把清单再过一遍。"
+ ],
+ "name": "凌Alex",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "清单第一，今儿个天气正好凉快，出摊前得把清单再过一遍。",
+   "text": "「清单第一，今儿个天气正好凉快，出摊前得把清单再过一遍。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "清单第一，今夜天气正好凉快，出摊前得把清单再过一遍。",
+   "text": "「清单第一，今夜天气正好凉快，出摊前得把清单再过一遍。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

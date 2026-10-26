@@ -1,0 +1,111 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -13,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 60.86,
+    "z": 139.96
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.71,
+    "z": 64.01
+   },
+   "work": {
+    "site": "玩家留言整理员·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 136.28,
+    "z": 151.45
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03137",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "收藏消失的船班时刻表且每件都记得来历——这事全巷都知道",
+ "id": "C-03137",
+ "month_lines": [
+  "天阴着，风不小，吹得阳台那盆花晃悠。我刚把G08的CrazyCampus数据归档，顺手给楼里金句墙贴了新条子。这单我送，别跟我抢。"
+ ],
+ "name": "郑莉",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "这单我送，别跟我抢。今儿天气正好，蓝白的江水真养眼。",
+   "text": "「这单我送，别跟我抢。今儿天气正好，蓝白的江水真养眼。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "天阴着，风不小，吹得阳台那盆花晃悠。我刚把G08的CrazyCampus数据归档，顺手给楼里金句墙贴了新条子。这单我送，别跟我抢。",
+   "text": "「天阴着，风不小，吹得阳台那盆花晃悠。我刚把G08的CrazyCampus数据归档，顺手给楼里金句墙贴了新条子。这单我送，别跟我抢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

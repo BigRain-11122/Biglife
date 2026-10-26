@@ -1,0 +1,111 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -5,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.57,
+    "z": -82.15
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.88,
+    "z": -76.7
+   },
+   "work": {
+    "site": "缓存管理员·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -36.77,
+    "z": -144.02
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02423",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "日子是过出来的，不是算出来的。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "还在用旧像素图钉——据说是老辈传下的规矩",
+ "id": "C-02423",
+ "month_lines": [
+  "灶上有汤，自取。今夜风挺大，得多添件衣裳。"
+ ],
+ "name": "余倩",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "灶上有汤，自取。今天天气正好，不晒不阴，得劲。",
+   "text": "「灶上有汤，自取。今天天气正好，不晒不阴，得劲。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "灶上有汤，自取。今夜风挺大，得多添件衣裳。",
+   "text": "「灶上有汤，自取。今夜风挺大，得多添件衣裳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

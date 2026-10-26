@@ -1,0 +1,112 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 19,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.18,
+    "z": -159.85
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.07,
+    "z": -71.34
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -37.84,
+    "z": -87.5
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01453",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "自己淋过雨，就想给别人撑伞。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把旧书店的竹梯排成一排挨个擦——据说是老辈传下的规矩",
+ "id": "C-01453",
+ "month_lines": [
+  "别客气，就当自己家。今夜天阴着，风挺大，图书馆的灯光真得亮。"
+ ],
+ "name": "云团团",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "别客气，就当自己家。今天天气云云的，正适合去图书馆借本新书。",
+   "text": "「别客气，就当自己家。今天天气云云的，正适合去图书馆借本新书。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "别客气，就当自己家。今夜天阴着，风挺大，图书馆的灯光真得亮。",
+   "text": "「别客气，就当自己家。今夜天阴着，风挺大，图书馆的灯光真得亮。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

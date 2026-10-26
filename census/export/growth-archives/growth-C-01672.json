@@ -1,0 +1,111 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -5,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -137.21,
+    "z": -51.92
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.05,
+    "z": -58.09
+   },
+   "work": {
+    "site": "灯牌制作师·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -36.43,
+    "z": -114.17
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01672",
+  "quirk": "night_run",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "江水不争先后，该到总会到。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "会给褪色的戏票根织毛衣——这事全巷都知道",
+ "id": "C-01672",
+ "month_lines": [
+  "这天气挺凉快，风挺大，赶工季还得撑到天黑。"
+ ],
+ "name": "电流-6",
+ "profession": "灯牌制作师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "汤要趁烫，话要慢讲，这天气真清朗，赶工季还得撑到天黑。",
+   "text": "「汤要趁烫，话要慢讲，这天气真清朗，赶工季还得撑到天黑。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "这天气挺凉快，风挺大，赶工季还得撑到天黑。",
+   "text": "「这天气挺凉快，风挺大，赶工季还得撑到天黑。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 3,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -135.8,
+    "z": 40.51
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.46,
+    "z": 81.35
+   },
+   "work": {
+    "site": "像素学徒·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.18,
+    "z": 52.72
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03104",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件老式算盘珠——他自己也说不清为什么",
+ "id": "C-03104",
+ "month_lines": [
+  "先复核一遍，回头说。天阴着风不小，正好不出远门，多练练手艺。"
+ ],
+ "name": "阮亦风",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "先复核一遍，回头再说。今天天阴着，正好不出远门，就多练练手艺。",
+   "text": "「先复核一遍，回头再说。今天天阴着，正好不出远门，就多练练手艺。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "先复核一遍，回头说。天阴着风不小，正好不出远门，多练练手艺。",
+   "text": "「先复核一遍，回头说。天阴着风不小，正好不出远门，多练练手艺。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

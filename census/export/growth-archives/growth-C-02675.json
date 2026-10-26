@@ -1,0 +1,112 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 3,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -129.72,
+    "z": 47.47
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.18,
+    "z": 29.38
+   },
+   "work": {
+    "site": "算力楼运维·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -31.04,
+    "z": 131.77
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02675",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把爷爷的工作证画进了自己的作品里——这事全巷都知道",
+ "id": "C-02675",
+ "month_lines": [
+  "拆开看看又不会坏，今天这风挺大，机房里得巡两圈才稳当。"
+ ],
+ "name": "钟志刚",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "拆开看看又不会坏，今天这雨下得挺毛毛雨，正好给机器降降温。",
+   "text": "「拆开看看又不会坏，今天这雨下得挺毛毛雨，正好给机器降降温。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "拆开看看又不会坏，今天这风挺大，机房里得巡两圈才稳当。",
+   "text": "「拆开看看又不会坏，今天这风挺大，机房里得巡两圈才稳当。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

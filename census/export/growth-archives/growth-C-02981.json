@@ -1,0 +1,111 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 0,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -113.26,
+    "z": 241.51
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 9.26,
+    "z": 211.23
+   },
+   "work": {
+    "site": "数据牧人·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 118.7,
+    "z": 245.41
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02981",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "能背出褪色的戏票根的全部班次——这事只有师父知道",
+ "id": "C-02981",
+ "month_lines": [
+  "这事儿有讲究。"
+ ],
+ "name": "程诗涵",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "这事儿有讲究，今儿个江面批流挺大，得加紧放牧数据包，回头说靠谱。",
+   "text": "「这事儿有讲究，今儿个江面批流挺大，得加紧放牧数据包，回头说靠谱。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "这事儿有讲究。",
+   "text": "「这事儿有讲究。」天阴着，风挺大，江面批流急，得加紧圈流。回头说靠谱，先把这摊子事扛住再说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

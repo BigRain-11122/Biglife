@@ -1,0 +1,112 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -2,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.73,
+    "z": 28.08
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.08,
+    "z": 86.88
+   },
+   "work": {
+    "site": "风控官·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -61.15,
+    "z": 114.96
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01929",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "把旧热水瓶排成一排挨个擦",
+ "id": "C-01929",
+ "month_lines": [
+  "收摊了，明天见。今儿这风挺大，喝茶还得小心别被吹了。"
+ ],
+ "name": "三极管·快",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "收摊了，明天见。天气这么好，茶馆里的古董茶杯可得再泡会儿。",
+   "text": "「收摊了，明天见。天气这么好，茶馆里的古董茶杯可得再泡会儿。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "收摊了，明天见。今儿这风挺大，喝茶还得小心别被吹了。",
+   "text": "「收摊了，明天见。今儿这风挺大，喝茶还得小心别被吹了。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

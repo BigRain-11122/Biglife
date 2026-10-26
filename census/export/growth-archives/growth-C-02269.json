@@ -1,0 +1,112 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 1,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -135.49,
+    "z": -105.95
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.42,
+    "z": -36.94
+   },
+   "work": {
+    "site": "语义翻译官·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -59.31,
+    "z": -55.54
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02269",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "把心事只说给老式爆米花的粮票听",
+ "id": "C-02269",
+ "month_lines": [
+  "今天这天阴着，风挺大，溜达起来得穿厚点儿。下一版一定更好！"
+ ],
+ "name": "范沐辰",
+ "profession": "语义翻译官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "下一版一定更好，今天这天气正好适合溜达，去档案馆多待一刻钟。",
+   "text": "「下一版一定更好，今天这天气正好适合溜达，去档案馆多待一刻钟。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今天这天阴着，风挺大，溜达起来得穿厚点儿。下一版一定更好！",
+   "text": "「今天这天阴着，风挺大，溜达起来得穿厚点儿。下一版一定更好！」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

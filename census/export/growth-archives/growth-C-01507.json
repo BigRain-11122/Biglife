@@ -1,0 +1,111 @@
+{
+ "age": 56,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 5,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 64.19,
+    "z": 86.95
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.47,
+    "z": 31.91
+   },
+   "work": {
+    "site": "晨操领队·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 130.15,
+    "z": 87.18
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01507",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "江水不争先后，该到总会到。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "给褪色的灯笼骨架都起了名字——他自己也说不清为什么",
+ "id": "C-01507",
+ "month_lines": [
+  "今夜风挺大，看云不用门票，正好合练队形。"
+ ],
+ "name": "黎健",
+ "profession": "晨操领队",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "看云不用门票，今早天阴着，正好合练队形。",
+   "text": "「看云不用门票，今早天阴着，正好合练队形。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今夜风挺大，看云不用门票，正好合练队形。",
+   "text": "「今夜风挺大，看云不用门票，正好合练队形。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

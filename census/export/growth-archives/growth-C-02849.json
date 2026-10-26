@@ -1,0 +1,111 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 5,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.54,
+    "z": -86.57
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.79,
+    "z": -22.61
+   },
+   "work": {
+    "site": "粉丝回信人·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.32,
+    "z": -87.68
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02849",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把褪色的戏票根画进了自己的作品里——这事只有师父知道",
+ "id": "C-02849",
+ "month_lines": [
+  "天阴着，风也不小。江水都不急我急啥，正好趁这夜色把 BigMoney 的信拆完，心里踏实。"
+ ],
+ "name": "尹莉",
+ "profession": "粉丝回信人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "江水都不急我急啥，今天正好没啥直播，回信多得紧，江水都不急我急啥。",
+   "text": "「江水都不急我急啥，今天正好没啥直播，回信多得紧，江水都不急我急啥。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "天阴着，风也不小。江水都不急我急啥，正好趁这夜色把 BigMoney 的信拆完，心里踏实。",
+   "text": "「天阴着，风也不小。江水都不急我急啥，正好趁这夜色把 BigMoney 的信拆完，心里踏实。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

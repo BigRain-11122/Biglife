@@ -1,0 +1,112 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 20,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 69.08,
+    "z": 62.15
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.77,
+    "z": 36.19
+   },
+   "work": {
+    "site": "像素学徒·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.25,
+    "z": 96.43
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01554",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "梦话都在念叨旧信使地图的边角料——据说是老辈传下的规矩",
+ "id": "C-01554",
+ "month_lines": [
+  "好咯，今夜风挺大，出门得小心。师父说了，手艺得慢慢磨，今天的事今天清。"
+ ],
+ "name": "徐天天",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "今天的事今天清，这风挺大，出门得小心。",
+   "text": "「今天的事今天清，这风挺大，出门得小心。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "好咯，今夜风挺大，出门得小心。师父说了，手艺得慢慢磨，今天的事今天清。",
+   "text": "「好咯，今夜风挺大，出门得小心。师父说了，手艺得慢慢磨，今天的事今天清。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

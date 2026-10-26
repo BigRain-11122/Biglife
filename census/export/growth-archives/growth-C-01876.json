@@ -1,0 +1,112 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": -1,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 61.89,
+    "z": 10.97
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 76.1,
+    "z": 25.57
+   },
+   "work": {
+    "site": "8bit 乐师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 143.48,
+    "z": 157.54
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01876",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把一台修了八次的老收音机画进了自己的作品里",
+ "id": "C-01876",
+ "month_lines": [
+  "今早的城最真，汽笛声里灵感正好来敲门，得赶紧写谱去。老铁，这天挺适合多琢磨琢磨新曲子。"
+ ],
+ "name": "谢琳",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "整挺好，老铁。今早的城最真，汽笛声里灵感正好来敲门。",
+   "text": "「整挺好，老铁。今早的城最真，汽笛声里灵感正好来敲门。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今早的城最真，汽笛声里灵感正好来敲门，得赶紧写谱去。老铁，这天挺适合多琢磨琢磨新曲子。",
+   "text": "「今早的城最真，汽笛声里灵感正好来敲门，得赶紧写谱去。老铁，这天挺适合多琢磨琢磨新曲子。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

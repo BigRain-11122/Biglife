@@ -1,0 +1,111 @@
+{
+ "age": 76,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -11,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -44.04,
+    "z": 254.75
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 0.04,
+    "z": 209.76
+   },
+   "work": {
+    "site": "旧件修复师·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.65,
+    "z": 246.78
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01959",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "还在用老皮匠的锥子——这事只有师父知道",
+ "id": "C-01959",
+ "month_lines": [
+  "今天的事今天清，除尘归零又是一个双数日，得赶紧把旧硬件唤醒，今天的事今天清。"
+ ],
+ "name": "孟国强",
+ "profession": "旧件修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "今天的事今天清，除尘归零又是一个双数日。",
+   "text": "「今天的事今天清，除尘归零又是一个双数日。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今天的事今天清，除尘归零又是一个双数日，得赶紧把旧硬件唤醒，今天的事今天清。",
+   "text": "「今天的事今天清，除尘归零又是一个双数日，得赶紧把旧硬件唤醒，今天的事今天清。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

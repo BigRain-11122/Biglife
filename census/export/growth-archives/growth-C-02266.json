@@ -1,0 +1,111 @@
+{
+ "age": 44,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 3,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 25.73,
+    "z": 68.49
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.86,
+    "z": 132.47
+   },
+   "work": {
+    "site": "街区调解阿姨·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 97.64,
+    "z": 13.03
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02266",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "灶上留一壶，路过的都是客。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能背出祖传的修表镊子的全部班次——这事全巷都知道",
+ "id": "C-02266",
+ "month_lines": [
+  "汤要趁烫，话要慢讲，今儿风挺大，出门得穿暖和点儿。"
+ ],
+ "name": "范莉",
+ "profession": "街区调解阿姨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "汤要趁烫，话要慢讲，今儿个天气正好，<data missing>.",
+   "text": "「汤要趁烫，话要慢讲，今儿个天气正好，<data missing>.」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "汤要趁烫，话要慢讲，今儿风挺大，出门得穿暖和点儿。",
+   "text": "「汤要趁烫，话要慢讲，今儿风挺大，出门得穿暖和点儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

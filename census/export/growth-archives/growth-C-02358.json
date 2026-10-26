@@ -1,0 +1,111 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 0,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 66.61,
+    "z": 149.59
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.23,
+    "z": 55.36
+   },
+   "work": {
+    "site": "夜宵摊主·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 135.09,
+    "z": 158.95
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02358",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "梦话都在念叨旧工牌——这事只有师父知道",
+ "id": "C-02358",
+ "month_lines": [
+  "今夜风挺大，收摊晚点再走。站直了别趴下。"
+ ],
+ "name": "顾乐遥",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "站直了别趴下，今儿个天气挺好的，收摊晚点再走。",
+   "text": "「站直了别趴下，今儿个天气挺好的，收摊晚点再走。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今夜风挺大，收摊晚点再走。站直了别趴下。",
+   "text": "「今夜风挺大，收摊晚点再走。站直了别趴下。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

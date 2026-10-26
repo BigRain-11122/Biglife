@@ -1,0 +1,111 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -5,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -119.18,
+    "z": 204.3
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 2.68,
+    "z": 197.57
+   },
+   "work": {
+    "site": "外环巡夜员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 32.78,
+    "z": 206.82
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02117",
+  "quirk": "slow",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "旧物件的温度，是新东西学不来的。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "给初代城门钥匙都起了名字——这事只有师父知道",
+ "id": "C-02117",
+ "month_lines": [
+  "风挺大，今儿这巡夜得多走走，查灯可不能含糊。"
+ ],
+ "name": "罗红",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "household",
+   "src": "H-OR0208",
+   "with": "C-00108"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "试错要趁灯亮，今儿这风挺大，巡夜可得多走走。",
+   "text": "「试错要趁灯亮，今儿这风挺大，巡夜可得多走走。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "风挺大，今儿这巡夜得多走走，查灯可不能含糊。",
+   "text": "「风挺大，今儿这巡夜得多走走，查灯可不能含糊。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

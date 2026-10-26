@@ -1,0 +1,112 @@
+{
+ "age": 67,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -11,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 60.77,
+    "z": -78.45
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.52,
+    "z": -111.53
+   },
+   "work": {
+    "site": "晨操领队·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 105.63,
+    "z": -24.23
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02146",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "把旧光伞骨画进了自己的作品里——这事只有师父知道",
+ "id": "C-02146",
+ "month_lines": [
+  "搞快点，这风挺大，跳会儿舞再回家做饭。"
+ ],
+ "name": "吴珍珠",
+ "profession": "晨操领队",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "搞快点，这天气正好凉爽，跳会儿舞再回家做饭。",
+   "text": "「搞快点，这天气正好凉爽，跳会儿舞再回家做饭。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "搞快点，这风挺大，跳会儿舞再回家做饭。",
+   "text": "「搞快点，这风挺大，跳会儿舞再回家做饭。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

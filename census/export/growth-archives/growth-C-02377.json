@@ -1,0 +1,112 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 8,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 53.08,
+    "z": -32.42
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.56,
+    "z": -153.27
+   },
+   "work": {
+    "site": "城市接线生·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 118.67,
+    "z": -151.68
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02377",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "还在用修桥人的旧安全帽",
+ "id": "C-02377",
+ "month_lines": [
+  "今夜天阴着，风挺大，耳朵里全是电话声。"
+ ],
+ "name": "赵子轩",
+ "profession": "城市接线生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "我送走的老主顾，比这城里一半的楼岁数都大。今天多想一步，明天少返三工。",
+   "text": "「我送走的老主顾，比这城里一半的楼岁数都大。今天多想一步，明天少返三工。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今夜天阴着，风挺大，耳朵里全是电话声。",
+   "text": "「今夜天阴着，风挺大，耳朵里全是电话声。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

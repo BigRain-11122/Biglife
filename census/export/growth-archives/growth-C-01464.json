@@ -1,0 +1,111 @@
+{
+ "age": 84,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -11,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.74,
+    "z": -127.53
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.03,
+    "z": -79.53
+   },
+   "work": {
+    "site": "8bit 乐师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -56.0,
+    "z": -157.41
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01464",
+  "quirk": "umbrella",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "攒了满抽屉旧梯田式看台的一块座板从不给看——这事全巷都知道",
+ "id": "C-01464",
+ "month_lines": [
+  "旧钥匙开新锁，有时候还真开得开。今夜风挺大，桥上的汽笛声格外响。"
+ ],
+ "name": "潘顺发",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "旧钥匙开新锁，有时候还真开得开。天气云阴阴的，桥上的汽笛声格外清。",
+   "text": "「旧钥匙开新锁，有时候还真开得开。天气云阴阴的，桥上的汽笛声格外清。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "旧钥匙开新锁，有时候还真开得开。今夜风挺大，桥上的汽笛声格外响。",
+   "text": "「旧钥匙开新锁，有时候还真开得开。今夜风挺大，桥上的汽笛声格外响。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

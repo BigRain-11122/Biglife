@@ -1,0 +1,112 @@
+{
+ "age": 5,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 11,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.14,
+    "z": -54.31
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.81,
+    "z": -23.86
+   },
+   "work": {
+    "site": "夜灯员·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.68,
+    "z": -142.52
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02162",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "跟着掉漆的糖果罐的节奏打过拍子——没人知道为什么",
+ "id": "C-02162",
+ "month_lines": [
+  "风挺大，今晚还得把自己挂在那个路口，照径要紧。"
+ ],
+ "name": "白三点半",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "执灯已久，今夜风不小，路过的独行客多加小心。",
+   "text": "「执灯已久，今夜风不小，路过的独行客多加小心。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "风挺大，今晚还得把自己挂在那个路口，照径要紧。",
+   "text": "「风挺大，今晚还得把自己挂在那个路口，照径要紧。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,111 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -13,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -75.68,
+    "z": 254.83
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -12.61,
+    "z": 187.56
+   },
+   "work": {
+    "site": "边缘杂货店主·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 26.12,
+    "z": 171.79
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02104",
+  "quirk": "slow",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "口袋里总揣着手抄的菜谱——这事全巷都知道",
+ "id": "C-02104",
+ "month_lines": [
+  "今儿这风挺大，站直了别趴下，关紧门，别让风吹进来。"
+ ],
+ "name": "施卫东",
+ "profession": "边缘杂货店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "站直了别趴下，今儿这风挺大，外环的小卖部得关紧门，别让风吹进来。",
+   "text": "「站直了别趴下，今儿这风挺大，外环的小卖部得关紧门，别让风吹进来。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今儿这风挺大，站直了别趴下，关紧门，别让风吹进来。",
+   "text": "「今儿这风挺大，站直了别趴下，关紧门，别让风吹进来。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,111 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 10,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 69.0,
+    "z": 53.11
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.18,
+    "z": 79.99
+   },
+   "work": {
+    "site": "游戏策划·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 119.99,
+    "z": 131.26
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01415",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "每逢下雨就去修拆迁前夜的门牌合影",
+ "id": "C-01415",
+ "month_lines": [
+  "急啥，汤还没开呢。今夜云厚，风挺大，加班的小伙伴记得多穿点。"
+ ],
+ "name": "阮桃桃",
+ "profession": "游戏策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "急啥，汤还没开呢。今天天气云阴，正好给加班的小伙伴送伞。",
+   "text": "「急啥，汤还没开呢。今天天气云阴，正好给加班的小伙伴送伞。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "急啥，汤还没开呢。今夜云厚，风挺大，加班的小伙伴记得多穿点。",
+   "text": "「急啥，汤还没开呢。今夜云厚，风挺大，加班的小伙伴记得多穿点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,111 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 1,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 58.78,
+    "z": 142.52
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.54,
+    "z": 26.05
+   },
+   "work": {
+    "site": "穿城信使·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 143.82,
+    "z": 133.01
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01414",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "偷偷给老式爆米花的粮票上油保养——这事只有师父知道",
+ "id": "C-01414",
+ "month_lines": [
+  "灶上有汤，自取。今夜收工后还得绕江走半里。"
+ ],
+ "name": "糜亦风",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "灶上有汤，自取。今早跟对门打了声照面，收工后还得绕江走半里。",
+   "text": "「灶上有汤，自取。今早跟对门打了声照面，收工后还得绕江走半里。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "灶上有汤，自取。今夜收工后还得绕江走半里。",
+   "text": "「灶上有汤，自取。今夜收工后还得绕江走半里。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

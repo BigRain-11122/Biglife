@@ -1,0 +1,112 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -11,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -132.88,
+    "z": 65.91
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.55,
+    "z": 147.58
+   },
+   "work": {
+    "site": "风控官·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.41,
+    "z": 43.86
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03455",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "用修桥人的旧安全帽教会了半条街的孩子——这事只有档案馆知道",
+ "id": "C-03455",
+ "month_lines": [
+  "风挺大，吹得塔顶那层云直打旋。老规矩，先眯会儿，等天亮了好去数据菜市挑把新鲜的白菜。"
+ ],
+ "name": "黄海峰",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "老规矩错不了，今早先笑眯眯再上岗，数据菜市的白菜价行情真合适。",
+   "text": "「老规矩错不了，今早先笑眯眯再上岗，数据菜市的白菜价行情真合适。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，吹得塔顶那层云直打旋。老规矩，先眯会儿，等天亮了好去数据菜市挑把新鲜的白菜。",
+   "text": "「风挺大，吹得塔顶那层云直打旋。老规矩，先眯会儿，等天亮了好去数据菜市挑把新鲜的白菜。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

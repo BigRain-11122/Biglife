@@ -1,0 +1,112 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 11,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -121.12,
+    "z": 253.41
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 6.0,
+    "z": 208.48
+   },
+   "work": {
+    "site": "像素小学学生·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 76.19,
+    "z": 221.38
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02040",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "梦话都在念叨退役的路灯灯丝",
+ "id": "C-02040",
+ "month_lines": [
+  "站直了别趴下，今天阳光正好，风挺大，正好适合下棋。"
+ ],
+ "name": "童小杏",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "站直了别趴下，今天天气挺适合下棋，回头说我想让对手先走三步。",
+   "text": "「站直了别趴下，今天天气挺适合下棋，回头说我想让对手先走三步。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "站直了别趴下，今天阳光正好，风挺大，正好适合下棋。",
+   "text": "「站直了别趴下，今天阳光正好，风挺大，正好适合下棋。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

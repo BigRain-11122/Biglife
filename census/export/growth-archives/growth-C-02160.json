@@ -1,0 +1,112 @@
+{
+ "age": 83,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -5,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.06,
+    "z": 145.2
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.3,
+    "z": 135.55
+   },
+   "work": {
+    "site": "盘口记录员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -56.27,
+    "z": 17.87
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02160",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把初代城门钥匙排成一排挨个擦——这事全巷都知道",
+ "id": "C-02160",
+ "month_lines": [
+  "慢慢来，比较快。今天这天阴着，风挺大，走走江边正好。"
+ ],
+ "name": "秦惠芬",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "慢慢来，比较快。今天这天气正好凉爽，走走江边正好。",
+   "text": "「慢慢来，比较快。今天这天气正好凉爽，走走江边正好。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "慢慢来，比较快。今天这天阴着，风挺大，走走江边正好。",
+   "text": "「慢慢来，比较快。今天这天阴着，风挺大，走走江边正好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

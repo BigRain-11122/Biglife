@@ -1,0 +1,112 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 4,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -113.32,
+    "z": 84.98
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.14,
+    "z": 11.47
+   },
+   "work": {
+    "site": "像素学徒·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -31.92,
+    "z": 52.32
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01510",
+  "quirk": "night_run",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "桥上不问来路，落水都得拉一把。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着初代探针的日志纸带——这事全巷都知道",
+ "id": "C-01510",
+ "month_lines": [
+  "昨晚又追了个通宵的版本更新日志，今夜风挺大，出门得小心点。"
+ ],
+ "name": "吕予安",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "搭把手的事儿，这天气云云的，出门得小心点。版本更新日志真绝了，昨晚又熬夜追更了。",
+   "text": "「搭把手的事儿，这天气云云的，出门得小心点。版本更新日志真绝了，昨晚又熬夜追更了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "昨晚又追了个通宵的版本更新日志，今夜风挺大，出门得小心点。",
+   "text": "「昨晚又追了个通宵的版本更新日志，今夜风挺大，出门得小心点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

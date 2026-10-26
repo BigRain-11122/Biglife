@@ -1,0 +1,111 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -5,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 50.0,
+    "z": 127.68
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.1,
+    "z": 16.66
+   },
+   "work": {
+    "site": "光织物裁缝·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 131.49,
+    "z": 87.67
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02351",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "口袋里总揣着旧梯田式看台的一块座板——这事只有档案馆知道",
+ "id": "C-02351",
+ "month_lines": [
+  "搭把手的事儿，今夜风挺大，收摊得牢实些。"
+ ],
+ "name": "谭俊",
+ "profession": "光织物裁缝",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "搭把手的事儿，今天这天色正好，做活计心情都跟清爽了。",
+   "text": "「搭把手的事儿，今天这天色正好，做活计心情都跟清爽了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "搭把手的事儿，今夜风挺大，收摊得牢实些。",
+   "text": "「搭把手的事儿，今夜风挺大，收摊得牢实些。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

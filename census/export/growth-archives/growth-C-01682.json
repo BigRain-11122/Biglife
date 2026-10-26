@@ -1,0 +1,112 @@
+{
+ "age": 67,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -10,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.31,
+    "z": -117.5
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.54,
+    "z": -103.92
+   },
+   "work": {
+    "site": "视频修复师·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.18,
+    "z": -41.62
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01682",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "给旧织机的梭子写了一整本观察笔记",
+ "id": "C-01682",
+ "month_lines": [
+  "拆开看看又不会坏，今天风挺大，太阳正好。"
+ ],
+ "name": "陈鸿奎",
+ "profession": "视频修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "拆开看看又不会坏，今天天气真好，阳光正好。按规矩逢单日才给电波猫群添食，今儿双日，它们少吃一顿倒也精神。",
+   "text": "「拆开看看又不会坏，今天天气真好，阳光正好。按规矩逢单日才给电波猫群添食，今儿双日，它们少吃一顿倒也精神。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "拆开看看又不会坏，今天风挺大，太阳正好。",
+   "text": "「拆开看看又不会坏，今天风挺大，太阳正好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

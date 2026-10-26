@@ -1,0 +1,111 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -13,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 49.0,
+    "z": 146.36
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.13,
+    "z": 98.73
+   },
+   "work": {
+    "site": "像素小店主·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 145.74,
+    "z": 49.36
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03153",
+  "quirk": "umbrella",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每逢下雨就去修老式公交站牌——据说是老辈传下的规矩",
+ "id": "C-03153",
+ "month_lines": [
+  "得闲饮茶。天阴着，风不小，吹得铺面招牌直晃。账本翻得细，这凉意倒让人清醒，来，坐下说。"
+ ],
+ "name": "林强",
+ "profession": "像素小店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "谁没个难处呢，来，坐下说。今早进货，小店的sprite又多了几分颜色。",
+   "text": "「谁没个难处呢，来，坐下说。今早进货，小店的sprite又多了几分颜色。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "得闲饮茶。天阴着，风不小，吹得铺面招牌直晃。账本翻得细，这凉意倒让人清醒，来，坐下说。",
+   "text": "「得闲饮茶。天阴着，风不小，吹得铺面招牌直晃。账本翻得细，这凉意倒让人清醒，来，坐下说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

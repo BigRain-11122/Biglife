@@ -1,0 +1,111 @@
+{
+ "age": 90,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -12,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -55.67,
+    "z": -170.56
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -3.39,
+    "z": -185.69
+   },
+   "work": {
+    "site": "光桥市集摊主·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 94.67,
+    "z": -230.81
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01511",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "得之我幸，失之我睡。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "把三代人传下的顶针画进了自己的作品里——这事全巷都知道",
+ "id": "C-01511",
+ "month_lines": [
+  "今夜风挺大，单子还没来，钓鱼吧。"
+ ],
+ "name": "钟德明",
+ "profession": "光桥市集摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "单子来了就接，不来就钓鱼，今天这天气挺眼的，适合摆个摊看看热闹。",
+   "text": "「单子来了就接，不来就钓鱼，今天这天气挺眼的，适合摆个摊看看热闹。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今夜风挺大，单子还没来，钓鱼吧。",
+   "text": "「今夜风挺大，单子还没来，钓鱼吧。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

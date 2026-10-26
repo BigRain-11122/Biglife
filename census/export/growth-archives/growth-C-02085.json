@@ -1,0 +1,112 @@
+{
+ "age": 15,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 17,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 48.76,
+    "z": 13.99
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.64,
+    "z": 50.98
+   },
+   "work": {
+    "site": "像素小学学生·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 138.41,
+    "z": 66.58
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02085",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "口袋里总揣着旧梯田式看台的一块座板——他自己也说不清为什么",
+ "id": "C-02085",
+ "month_lines": [
+  "好咯，今天风挺大，江水清清的，放学还得绕路去看那光点。"
+ ],
+ "name": "罗小北",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "好咯，今天天气挺好的，江水清清的，放学还得绕路去看那光点。",
+   "text": "「好咯，今天天气挺好的，江水清清的，放学还得绕路去看那光点。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "好咯，今天风挺大，江水清清的，放学还得绕路去看那光点。",
+   "text": "「好咯，今天风挺大，江水清清的，放学还得绕路去看那光点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

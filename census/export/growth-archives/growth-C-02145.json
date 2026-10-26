@@ -1,0 +1,112 @@
+{
+ "age": 3,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -3,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 44.04,
+    "z": -106.54
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.34,
+    "z": -137.27
+   },
+   "work": {
+    "site": "数据搬运工·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.08,
+    "z": -96.29
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02145",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "攒钱就为了赎回一件老式公交站牌——据说是老辈传下的规矩",
+ "id": "C-02145",
+ "month_lines": [
+  "缓存满了，得整理整理了，风挺大，今天还得早起。"
+ ],
+ "name": "与非门·甲",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "缓存满了，又该整理整理了。下一版一定更好。",
+   "text": "「缓存满了，又该整理整理了。下一版一定更好。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "缓存满了，得整理整理了，风挺大，今天还得早起。",
+   "text": "「缓存满了，得整理整理了，风挺大，今天还得早起。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

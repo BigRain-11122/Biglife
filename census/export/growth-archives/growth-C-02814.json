@@ -1,0 +1,112 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 8,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 49.33,
+    "z": 91.48
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.18,
+    "z": 14.83
+   },
+   "work": {
+    "site": "玩家留言整理员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 135.09,
+    "z": 47.65
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02814",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "从不让弄堂钥匙串离开自己三步远——没人知道为什么",
+ "id": "C-02814",
+ "month_lines": [
+  "有意思，我想想。天阴着，风挺大，刚把 FluxVerse 的日志归档。凌晨的江风灌满袖口，这味儿才真。"
+ ],
+ "name": "郑则铭",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "有意思，我想想。天气这么清爽，收工后还是绕江走走吧。",
+   "text": "「有意思，我想想。天气这么清爽，收工后还是绕江走走吧。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "有意思，我想想。天阴着，风挺大，刚把 FluxVerse 的日志归档。凌晨的江风灌满袖口，这味儿才真。",
+   "text": "「有意思，我想想。天阴着，风挺大，刚把 FluxVerse 的日志归档。凌晨的江风灌满袖口，这味儿才真。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

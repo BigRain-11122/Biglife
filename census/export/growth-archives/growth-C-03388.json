@@ -1,0 +1,112 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 14,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.09,
+    "z": -129.09
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.4,
+    "z": -134.28
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -56.42,
+    "z": -30.25
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03388",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件拆迁前夜的门牌合影——这事全巷都知道",
+ "id": "C-03388",
+ "month_lines": [
+  "天阴着，风不小。谁的事就是谁的事，可街坊的事就是我的事，今日 commit 光点过江，中。"
+ ],
+ "name": "韩多多",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "谁的事就是谁的事，可街坊的事就是我的事。今天天气正好，江水清清的，放学还得绕路去看。",
+   "text": "「谁的事就是谁的事，可街坊的事就是我的事。今天天气正好，江水清清的，放学还得绕路去看。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "天阴着，风不小。谁的事就是谁的事，可街坊的事就是我的事，今日 commit 光点过江，中。",
+   "text": "「天阴着，风不小。谁的事就是谁的事，可街坊的事就是我的事，今日 commit 光点过江，中。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

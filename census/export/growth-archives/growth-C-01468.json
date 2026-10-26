@@ -1,0 +1,112 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -3,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -143.75,
+    "z": 68.57
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.17,
+    "z": 86.64
+   },
+   "work": {
+    "site": "全城对时师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.93,
+    "z": 124.03
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01468",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "留着停用的老式磅秤却从来不用——这事只有档案馆知道",
+ "id": "C-01468",
+ "month_lines": [
+  "稳住，别浪。今夜风挺大，电波猫们可得多吃点。"
+ ],
+ "name": "拓扑·晨",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "稳住，别浪。今天天阴着，电波猫们又要少吃一顿了。",
+   "text": "「稳住，别浪。今天天阴着，电波猫们又要少吃一顿了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "稳住，别浪。今夜风挺大，电波猫们可得多吃点。",
+   "text": "「稳住，别浪。今夜风挺大，电波猫们可得多吃点。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

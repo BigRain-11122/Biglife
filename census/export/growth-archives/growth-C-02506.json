@@ -1,0 +1,111 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 1,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 33.13,
+    "z": -123.31
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.37,
+    "z": -82.08
+   },
+   "work": {
+    "site": "语义翻译官·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 101.25,
+    "z": -145.57
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02506",
+  "quirk": "umbrella",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "把老茶壶的位置背得比自家门牌还熟——这事全巷都知道",
+ "id": "C-02506",
+ "month_lines": [
+  "好咯，今夜风挺大，又学了一招。"
+ ],
+ "name": "范洁",
+ "profession": "语义翻译官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "好咯，今早的雨正好洗了个凉爽的清晨，又学了一招。",
+   "text": "「好咯，今早的雨正好洗了个凉爽的清晨，又学了一招。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "好咯，今夜风挺大，又学了一招。",
+   "text": "「好咯，今夜风挺大，又学了一招。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

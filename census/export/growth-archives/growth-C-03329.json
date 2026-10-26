@@ -1,0 +1,111 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 2,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 38.96,
+    "z": 138.21
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.84,
+    "z": 46.74
+   },
+   "work": {
+    "site": "玩家留言整理员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 101.03,
+    "z": 133.78
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03329",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "偷偷给全城桥的名字上油保养——她自己也说不清为什么",
+ "id": "C-03329",
+ "month_lines": [
+  "天阴着，风挺大，吹得楼道墙上的留言纸哗哗响。刚把「PushEvent Biglife"
+ ],
+ "name": "卢敏",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "下一版一定更好，外头雷声隐隐的，心情格外好。",
+   "text": "「下一版一定更好，外头雷声隐隐的，心情格外好。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "天阴着，风挺大，吹得楼道墙上的留言纸哗哗响。刚把「PushEvent Biglife",
+   "text": "「天阴着，风挺大，吹得楼道墙上的留言纸哗哗响。刚把「PushEvent Biglife」的归档高亮完，这阵子活儿不少，下一版一定更好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

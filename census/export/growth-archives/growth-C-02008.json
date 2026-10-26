@@ -1,0 +1,111 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 4,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -83.83,
+    "z": -180.64
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -5.09,
+    "z": -228.87
+   },
+   "work": {
+    "site": "渡轮船长·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 38.97,
+    "z": -243.63
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02008",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "每逢下雨就去修弄堂钥匙串——没人知道为什么",
+ "id": "C-02008",
+ "month_lines": [
+  "弄堂还是那个弄堂，风不小，正好适合出摊。"
+ ],
+ "name": "席春梅",
+ "profession": "渡轮船长",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "弄堂还是那个弄堂，潮汐表背得比菜谱熟，今天又是个双数日，风不小，正好适合出摊。",
+   "text": "「弄堂还是那个弄堂，潮汐表背得比菜谱熟，今天又是个双数日，风不小，正好适合出摊。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "弄堂还是那个弄堂，风不小，正好适合出摊。",
+   "text": "「弄堂还是那个弄堂，风不小，正好适合出摊。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

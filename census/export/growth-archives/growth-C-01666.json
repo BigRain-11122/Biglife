@@ -1,0 +1,111 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 0,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 72.59,
+    "z": 40.45
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.87,
+    "z": 130.21
+   },
+   "work": {
+    "site": "NPC 服装师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 116.79,
+    "z": 159.79
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01666",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "会为消失街区的路牌推掉一整晚的生意——这事全巷都知道",
+ "id": "C-01666",
+ "month_lines": [
+  "今早的风不小，看来今天得慢点走，潮水的事交给潮水。"
+ ],
+ "name": "范志明",
+ "profession": "NPC 服装师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "潮水的事交给潮水，今早的风不小，看来今天得慢点走。",
+   "text": "「潮水的事交给潮水，今早的风不小，看来今天得慢点走。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今早的风不小，看来今天得慢点走，潮水的事交给潮水。",
+   "text": "「今早的风不小，看来今天得慢点走，潮水的事交给潮水。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

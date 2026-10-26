@@ -1,0 +1,112 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 3,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -141.14,
+    "z": 29.39
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.57,
+    "z": 86.54
+   },
+   "work": {
+    "site": "量化策略研究员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -57.18,
+    "z": 83.76
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03380",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把老式爆米花机的摇柄画进了自己的作品里",
+ "id": "C-03380",
+ "month_lines": [
+  "风挺大，我把摊子又绑了两道绳。刚才G08那波折叠收口利落，这逻辑因子对齐了，心里踏实。"
+ ],
+ "name": "缓存君·快",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "这事儿有讲究，今天的行情真是让人琢磨不透。",
+   "text": "「这事儿有讲究，今天的行情真是让人琢磨不透。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风挺大，我把摊子又绑了两道绳。刚才G08那波折叠收口利落，这逻辑因子对齐了，心里踏实。",
+   "text": "「风挺大，我把摊子又绑了两道绳。刚才G08那波折叠收口利落，这逻辑因子对齐了，心里踏实。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

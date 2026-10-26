@@ -1,0 +1,112 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#42A5F5",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 23,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 57.2,
+    "z": 89.77
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.62,
+    "z": 121.75
+   },
+   "work": {
+    "site": "伴居灵·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 102.2,
+    "z": 55.82
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01912",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "替初代城门钥匙守过一整夜的灯——他自己也说不清为什么",
+ "id": "C-01912",
+ "month_lines": [
+  "蹭光的日子总是过得飞快，今个双数日天清气朗，正好不出错，就是最风光。"
+ ],
+ "name": "阿初雪",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "蹭光的日子总是过得飞快，今个双数日天阴着，正好不出错，就是最风光。",
+   "text": "「蹭光的日子总是过得飞快，今个双数日天阴着，正好不出错，就是最风光。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "蹭光的日子总是过得飞快，今个双数日天清气朗，正好不出错，就是最风光。",
+   "text": "「蹭光的日子总是过得飞快，今个双数日天清气朗，正好不出错，就是最风光。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

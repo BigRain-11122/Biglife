@@ -1,0 +1,112 @@
+{
+ "age": 78,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -9,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.37,
+    "z": -88.37
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.52,
+    "z": -61.7
+   },
+   "work": {
+    "site": "数据菜市摊主·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.72,
+    "z": -107.37
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03400",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "会为电波猫推掉一整晚的生意",
+ "id": "C-03400",
+ "month_lines": [
+  "天阴着，风不小。行情落令了，新东西先看三天再用，零头花完，今晚光桥见。"
+ ],
+ "name": "龚阿凤",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "新东西先看三天再用，今天凌晨的行情我估摸着下午就能定价了。",
+   "text": "「新东西先看三天再用，今天凌晨的行情我估摸着下午就能定价了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "天阴着，风不小。行情落令了，新东西先看三天再用，零头花完，今晚光桥见。",
+   "text": "「天阴着，风不小。行情落令了，新东西先看三天再用，零头花完，今晚光桥见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

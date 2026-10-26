@@ -1,0 +1,112 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 15,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -123.98,
+    "z": -84.26
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.72,
+    "z": -26.26
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -35.11,
+    "z": -46.0
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01720",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "会给半张老电影票织毛衣——这事只有档案馆知道",
+ "id": "C-01720",
+ "month_lines": [
+  "今夜天清气朗，风挺大，好想看那江上的光点。"
+ ],
+ "name": "金小北",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "十年前就是这么弄的，今个周末天阴沉着，放学还得绕路去看光点过江。",
+   "text": "「十年前就是这么弄的，今个周末天阴沉着，放学还得绕路去看光点过江。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今夜天清气朗，风挺大，好想看那江上的光点。",
+   "text": "「今夜天清气朗，风挺大，好想看那江上的光点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

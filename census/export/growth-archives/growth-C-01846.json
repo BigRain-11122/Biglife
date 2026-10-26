@@ -1,0 +1,112 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 4,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.36,
+    "z": 60.94
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.38,
+    "z": 135.06
+   },
+   "work": {
+    "site": "缓存管理员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.45,
+    "z": 50.13
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01846",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给全城最后一只手写信箱都起了名字——据说是老辈传下的规矩",
+ "id": "C-01846",
+ "month_lines": [
+  "试错要趁灯亮，今天风挺大，喝茶还是用那个杯子稳妥。"
+ ],
+ "name": "叁仟·快",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "试错要趁灯亮。今天天气正好，喝茶也得用同一个杯子，回头说。",
+   "text": "「试错要趁灯亮。今天天气正好，喝茶也得用同一个杯子，回头说。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "试错要趁灯亮，今天风挺大，喝茶还是用那个杯子稳妥。",
+   "text": "「试错要趁灯亮，今天风挺大，喝茶还是用那个杯子稳妥。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

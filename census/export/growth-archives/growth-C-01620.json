@@ -1,0 +1,111 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -5,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 67.37,
+    "z": 105.61
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.52,
+    "z": 86.36
+   },
+   "work": {
+    "site": "像素学徒·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 103.36,
+    "z": 84.52
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01620",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "把旧信使地图的边角料修好再免费送人——这事全巷都知道",
+ "id": "C-01620",
+ "month_lines": [
+  "先复核一遍，这天云厚风挺大，挺适合出个新版本。"
+ ],
+ "name": "编译婆婆·乙",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "先复核一遍，这天气云蒙蒙的，挺适合出个新版本。",
+   "text": "「先复核一遍，这天气云蒙蒙的，挺适合出个新版本。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "先复核一遍，这天云厚风挺大，挺适合出个新版本。",
+   "text": "「先复核一遍，这天云厚风挺大，挺适合出个新版本。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

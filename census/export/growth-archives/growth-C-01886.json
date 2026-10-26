@@ -1,0 +1,111 @@
+{
+ "age": 89,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -5,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 70.56,
+    "z": 90.38
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.66,
+    "z": 140.4
+   },
+   "work": {
+    "site": "8bit 乐师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 99.56,
+    "z": 83.61
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01886",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "还在用旧当铺的票据夹——这事只有档案馆知道",
+ "id": "C-01886",
+ "month_lines": [
+  "今天的事今天清，天气这么好，风也不小，扫弦正当时。"
+ ],
+ "name": "梁学勤",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "今天的事今天清，茶摊上的人还是那个不争名次的清旧账。天阴着，风挺大，灵感还没来，就去桥上听汽笛吧。",
+   "text": "「今天的事今天清，茶摊上的人还是那个不争名次的清旧账。天阴着，风挺大，灵感还没来，就去桥上听汽笛吧。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今天的事今天清，天气这么好，风也不小，扫弦正当时。",
+   "text": "「今天的事今天清，天气这么好，风也不小，扫弦正当时。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

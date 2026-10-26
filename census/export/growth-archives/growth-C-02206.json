@@ -1,0 +1,112 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 4,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -43.03,
+    "z": 201.73
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -17.5,
+    "z": 180.46
+   },
+   "work": {
+    "site": "编年史誊录员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 50.93,
+    "z": 250.7
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02206",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "留着三代人传下的顶针却从来不用——没人知道为什么",
+ "id": "C-02206",
+ "month_lines": [
+  "天气挺适合外出走走，今天复探双负，誊录工作挺顺利。下一版一定更好。"
+ ],
+ "name": "顾慧",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "下一版一定更好，今天天气正好凉爽，誊录工作挺顺利。",
+   "text": "「下一版一定更好，今天天气正好凉爽，誊录工作挺顺利。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "天气挺适合外出走走，今天复探双负，誊录工作挺顺利。下一版一定更好。",
+   "text": "「天气挺适合外出走走，今天复探双负，誊录工作挺顺利。下一版一定更好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

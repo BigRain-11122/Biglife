@@ -1,0 +1,111 @@
+{
+ "age": 83,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -4,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -35.38,
+    "z": 242.14
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -7.25,
+    "z": 257.39
+   },
+   "work": {
+    "site": "新市民安居顾问·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.51,
+    "z": 238.58
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01718",
+  "quirk": "umbrella",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "每天跟老式门铃的铜壳打招呼——没人知道为什么",
+ "id": "C-01718",
+ "month_lines": [
+  "夜深了，风挺大，得注意给电波猫群添食，别让它们饿着。"
+ ],
+ "name": "镜像-5",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "一句话的事，周末了得好好带看房，灯就亮一倍嘛。",
+   "text": "「一句话的事，周末了得好好带看房，灯就亮一倍嘛。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "夜深了，风挺大，得注意给电波猫群添食，别让它们饿着。",
+   "text": "「夜深了，风挺大，得注意给电波猫群添食，别让它们饿着。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

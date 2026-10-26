@@ -1,0 +1,111 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 1,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 59.98,
+    "z": 69.96
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.4,
+    "z": 153.76
+   },
+   "work": {
+    "site": "8bit 乐师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 128.11,
+    "z": 109.85
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01927",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "逢人就讲手绘的城图的故事——这事全巷都知道",
+ "id": "C-01927",
+ "month_lines": [
+  "今儿个天清气朗，正好写谱呢。别客气，就当自己家。"
+ ],
+ "name": "汪Vivi",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "别客气，就当自己家。今儿个天气正好凉快，正好写谱呢。",
+   "text": "「别客气，就当自己家。今儿个天气正好凉快，正好写谱呢。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今儿个天清气朗，正好写谱呢。别客气，就当自己家。",
+   "text": "「今儿个天清气朗，正好写谱呢。别客气，就当自己家。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

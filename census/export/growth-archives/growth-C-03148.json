@@ -1,0 +1,112 @@
+{
+ "age": 93,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -5,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -104.85,
+    "z": 80.0
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.45,
+    "z": 22.99
+   },
+   "work": {
+    "site": "盘口记录员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -34.37,
+    "z": 108.01
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03148",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "记得退租铺面的旧招牌的每一个来历",
+ "id": "C-03148",
+ "month_lines": [
+  "稳住，别浪。天阴着，风不小，吹得纸页直响。G08 的盘口变来变去，笔笔得清，先把字写正，再想写快。"
+ ],
+ "name": "吴顺发",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "稳住，别浪。今天这天气正好，清清爽爽的，适合在碑前多站会儿。",
+   "text": "「稳住，别浪。今天这天气正好，清清爽爽的，适合在碑前多站会儿。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "稳住，别浪。天阴着，风不小，吹得纸页直响。G08 的盘口变来变去，笔笔得清，先把字写正，再想写快。",
+   "text": "「稳住，别浪。天阴着，风不小，吹得纸页直响。G08 的盘口变来变去，笔笔得清，先把字写正，再想写快。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

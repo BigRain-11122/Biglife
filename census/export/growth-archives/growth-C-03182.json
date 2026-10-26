@@ -1,0 +1,111 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -6,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 71.94,
+    "z": 139.7
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.0,
+    "z": 157.49
+   },
+   "work": {
+    "site": "玩家留言整理员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 99.19,
+    "z": 87.56
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03182",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "扛得住事，才配得上街坊喊一声师傅。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把心事只说给旧工牌听——据说是老辈传下的规矩",
+ "id": "C-03182",
+ "month_lines": [
+  "风不小，吹得楼角告示牌哗哗响。刚把 G08 CrazyCampus 的变动归档，一句话的事，街坊们心里有数就行。"
+ ],
+ "name": "宋蕾",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "一句话的事，今天这天正好出去转转。江水清清的，走走心情就不错。",
+   "text": "「一句话的事，今天这天正好出去转转。江水清清的，走走心情就不错。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风不小，吹得楼角告示牌哗哗响。刚把 G08 CrazyCampus 的变动归档，一句话的事，街坊们心里有数就行。",
+   "text": "「风不小，吹得楼角告示牌哗哗响。刚把 G08 CrazyCampus 的变动归档，一句话的事，街坊们心里有数就行。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

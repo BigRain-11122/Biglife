@@ -1,0 +1,112 @@
+{
+ "age": 93,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -13,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -137.5,
+    "z": 61.73
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.08,
+    "z": 80.61
+   },
+   "work": {
+    "site": "风控官·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.22,
+    "z": 41.65
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01587",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "坚持给初版城市地图记日记——她自己也说不清为什么",
+ "id": "C-01587",
+ "month_lines": [
+  "红灯还没亮，这心就不踏实。风挺大，得稳稳当当，先把手里的事做完。"
+ ],
+ "name": "何梅芳",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "试错要趁灯亮，今天天阴着，红灯还没亮，我这心就不踏实。",
+   "text": "「试错要趁灯亮，今天天阴着，红灯还没亮，我这心就不踏实。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "红灯还没亮，这心就不踏实。风挺大，得稳稳当当，先把手里的事做完。",
+   "text": "「红灯还没亮，这心就不踏实。风挺大，得稳稳当当，先把手里的事做完。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

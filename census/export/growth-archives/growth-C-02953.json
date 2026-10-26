@@ -1,0 +1,112 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 0,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -107.87,
+    "z": 51.48
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.71,
+    "z": 156.11
+   },
+   "work": {
+    "site": "缓存管理员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -37.53,
+    "z": 87.77
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02953",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "还在用初版街景照片——这事只有档案馆知道",
+ "id": "C-02953",
+ "month_lines": [
+  "风挺大，把天吹得阴沉沉的。站直了别趴下，刚顺手把 BigDomain 和 FluxGroup 的缓存归了位，心里踏实。"
+ ],
+ "name": "李沈鱼",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "站直了别趴下，今天天气真好，江水清清的，心情特别爽。",
+   "text": "「站直了别趴下，今天天气真好，江水清清的，心情特别爽。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "风挺大，把天吹得阴沉沉的。站直了别趴下，刚顺手把 BigDomain 和 FluxGroup 的缓存归了位，心里踏实。",
+   "text": "「风挺大，把天吹得阴沉沉的。站直了别趴下，刚顺手把 BigDomain 和 FluxGroup 的缓存归了位，心里踏实。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

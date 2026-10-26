@@ -1,0 +1,112 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 19,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 50.86,
+    "z": 21.33
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.54,
+    "z": 77.11
+   },
+   "work": {
+    "site": "像素小学学生·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 145.58,
+    "z": 103.1
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03494",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "每逢下雨就去修全城最后一只手写信箱——这事全巷都知道",
+ "id": "C-03494",
+ "month_lines": [
+  "风挺大，吹得窗框哐哐响。天阴沉着，没亮堂。老铁，这会儿还得等会儿天黑透，才能安心去瞅一眼江面上的 commit 光点呢。"
+ ],
+ "name": "彭果冻",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "以前我们那儿的孩子放学还得绕路去看今天的commit光点，真怀念那会儿。风挺大的，得抓紧衣服。",
+   "text": "「以前我们那儿的孩子放学还得绕路去看今天的commit光点，真怀念那会儿。风挺大的，得抓紧衣服。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，吹得窗框哐哐响。天阴沉着，没亮堂。老铁，这会儿还得等会儿天黑透，才能安心去瞅一眼江面上的 commit 光点呢。",
+   "text": "「风挺大，吹得窗框哐哐响。天阴沉着，没亮堂。老铁，这会儿还得等会儿天黑透，才能安心去瞅一眼江面上的 commit 光点呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

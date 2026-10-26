@@ -1,0 +1,112 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 2,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -101.36,
+    "z": 123.57
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.82,
+    "z": 95.26
+   },
+   "work": {
+    "site": "回测农·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -59.99,
+    "z": 81.44
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03529",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "攒了满抽屉老码头缆桩从不给看——这事全巷都知道",
+ "id": "C-03529",
+ "month_lines": [
+  "站直了别趴下。天阴着，风挺大，正好趁黑把 B 双分支的 hand-fold 批完，省得明天被市场指着鼻子笑。"
+ ],
+ "name": "陈静",
+ "profession": "回测农",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "站直了别趴下，今儿个天气清清爽，正好出去转转。",
+   "text": "「站直了别趴下，今儿个天气清清爽，正好出去转转。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "站直了别趴下。天阴着，风挺大，正好趁黑把 B 双分支的 hand-fold 批完，省得明天被市场指着鼻子笑。",
+   "text": "「站直了别趴下。天阴着，风挺大，正好趁黑把 B 双分支的 hand-fold 批完，省得明天被市场指着鼻子笑。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

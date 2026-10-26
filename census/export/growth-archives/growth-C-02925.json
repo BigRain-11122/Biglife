@@ -1,0 +1,111 @@
+{
+ "age": 91,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -13,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 29.6,
+    "z": 90.96
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.35,
+    "z": 140.83
+   },
+   "work": {
+    "site": "大编译调律师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.85,
+    "z": 94.3
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02925",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "自己淋过雨，就想给别人撑伞。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "留着老式算命的签筒却从来不用——这事全巷都知道",
+ "id": "C-02925",
+ "month_lines": [
+  "天阴着，风刮得呼呼响，得劲。 巡线零告警，一句话的事。"
+ ],
+ "name": "吴秀英",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "弄啥嘞，巡线用听的不用看的，今儿告警音零响，得劲！",
+   "text": "「弄啥嘞，巡线用听的不用看的，今儿告警音零响，得劲！」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-16（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-16",
+   "quote": "天阴着，风刮得呼呼响，得劲。 巡线零告警，一句话的事。",
+   "text": "「天阴着，风刮得呼呼响，得劲。 巡线零告警，一句话的事。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

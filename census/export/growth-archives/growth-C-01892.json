@@ -1,0 +1,111 @@
+{
+ "age": 74,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -9,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 34.14,
+    "z": 157.8
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.24,
+    "z": 147.69
+   },
+   "work": {
+    "site": "数据菜市摊主·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 98.03,
+    "z": 148.17
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01892",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "搬家三次，钥匙一把不扔。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "收藏旧货郎的拨浪鼓且每件都记得来历——这事全巷都知道",
+ "id": "C-01892",
+ "month_lines": [
+  "今儿这天风挺大，老规矩错不了，菜价还得等等行情。"
+ ],
+ "name": "秦顺发",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "老规矩错不了，今儿这菜价得再等等，看看天亮前行情咋样。",
+   "text": "「老规矩错不了，今儿这菜价得再等等，看看天亮前行情咋样。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今儿这天风挺大，老规矩错不了，菜价还得等等行情。",
+   "text": "「今儿这天风挺大，老规矩错不了，菜价还得等等行情。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

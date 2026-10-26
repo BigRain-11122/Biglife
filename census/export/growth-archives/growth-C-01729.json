@@ -1,0 +1,111 @@
+{
+ "age": 8,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 1,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -32.43,
+    "z": -245.48
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -9.74,
+    "z": -248.45
+   },
+   "work": {
+    "site": "穿城信使·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 70.53,
+    "z": -214.33
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01729",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "RV",
+ "gender": "无定",
+ "hook": "坚持手写旧茶馆的水牌",
+ "id": "C-01729",
+ "month_lines": [
+  "今夜加班费又多了一份，试错要趁灯亮。这风挺大，得小心些。"
+ ],
+ "name": "缓存婆婆·慢",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "试错要趁灯亮，今早加班费就多了一份。",
+   "text": "「试错要趁灯亮，今早加班费就多了一份。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "今夜加班费又多了一份，试错要趁灯亮。这风挺大，得小心些。",
+   "text": "「今夜加班费又多了一份，试错要趁灯亮。这风挺大，得小心些。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

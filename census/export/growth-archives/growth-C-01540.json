@@ -1,0 +1,112 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 4,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.33,
+    "z": 73.03
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.04,
+    "z": 137.5
+   },
+   "work": {
+    "site": "穿城信使·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -24.76,
+    "z": 49.92
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01540",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "旧物件的温度，是新东西学不来的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持手写拆迁前夜的门牌合影——没人知道为什么",
+ "id": "C-01540",
+ "month_lines": [
+  "内存4GB空着，加班不慌。谁没个难处呢，来，坐下说。"
+ ],
+ "name": "朱一鸣",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "谁没个难处呢，来，坐下说。今早的城，天阴着，单子不少。",
+   "text": "「谁没个难处呢，来，坐下说。今早的城，天阴着，单子不少。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "内存4GB空着，加班不慌。谁没个难处呢，来，坐下说。",
+   "text": "「内存4GB空着，加班不慌。谁没个难处呢，来，坐下说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

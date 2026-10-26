@@ -1,0 +1,112 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -5,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -118.95,
+    "z": 37.14
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.32,
+    "z": 50.08
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.59,
+    "z": 99.11
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02161",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "在拆迁前夜的门牌合影上刻了一行没人认得的小字——他自己也说不清为什么",
+ "id": "C-02161",
+ "month_lines": [
+  "出锅喽——今天这风挺大，得注意别让汤面上了霜。"
+ ],
+ "name": "引脚-9",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "出锅喽——今天这锅汤得特别清清爽爽，城里雨水有点儿多，得让来吃饭的伙计们都喝上口清爽。",
+   "text": "「出锅喽——今天这锅汤得特别清清爽爽，城里雨水有点儿多，得让来吃饭的伙计们都喝上口清爽。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "出锅喽——今天这风挺大，得注意别让汤面上了霜。",
+   "text": "「出锅喽——今天这风挺大，得注意别让汤面上了霜。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

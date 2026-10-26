@@ -1,0 +1,112 @@
+{
+ "age": 76,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -10,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 59.62,
+    "z": -97.69
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.94,
+    "z": -140.97
+   },
+   "work": {
+    "site": "全城对时师·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 97.42,
+    "z": -154.93
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01915",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "用一台修了八次的老收音机教会了半条街的孩子——这事只有师父知道",
+ "id": "C-01915",
+ "month_lines": [
+  "这版本我等好久了，好咯。今早风挺大，晒得正好。"
+ ],
+ "name": "云锡金",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "这版本我等好久了，好咯。外头雨下得正欢，正好在屋里校钟差，全城齐秒的活儿，下雨天也误不得。",
+   "text": "「这版本我等好久了，好咯。外头雨下得正欢，正好在屋里校钟差，全城齐秒的活儿，下雨天也误不得。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-14（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-14",
+   "quote": "这版本我等好久了，好咯。今早风挺大，晒得正好。",
+   "text": "「这版本我等好久了，好咯。今早风挺大，晒得正好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

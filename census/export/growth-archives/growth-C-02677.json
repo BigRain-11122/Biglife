@@ -1,0 +1,112 @@
+{
+ "age": 96,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -6,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -97.88,
+    "z": 25.8
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.11,
+    "z": 106.33
+   },
+   "work": {
+    "site": "全城对时师·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.98,
+    "z": 109.12
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02677",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "记得全城桥的名字的每一个来历",
+ "id": "C-02677",
+ "month_lines": [
+  "今天这风挺大，出门得穿暖和点儿。城里的钟摆稳当得很，心里也跟着踏实。"
+ ],
+ "name": "杜淑珍",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "饭点了，天大的事吃完再谈。今天的事做完，明天才有得挑。",
+   "text": "「饭点了，天大的事吃完再谈。今天的事做完，明天才有得挑。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "今天这风挺大，出门得穿暖和点儿。城里的钟摆稳当得很，心里也跟着踏实。",
+   "text": "「今天这风挺大，出门得穿暖和点儿。城里的钟摆稳当得很，心里也跟着踏实。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

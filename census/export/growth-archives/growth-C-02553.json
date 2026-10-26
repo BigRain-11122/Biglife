@@ -1,0 +1,112 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -8,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -128.5,
+    "z": 221.46
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -8.03,
+    "z": 239.99
+   },
+   "work": {
+    "site": "感知塔站值守员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 48.82,
+    "z": 207.41
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-02553",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件1990 年的真硬币——据说是老辈传下的规矩",
+ "id": "C-02553",
+ "month_lines": [
+  "这事儿有讲究，今早风挺大，穿得多了一点，反而暖和。"
+ ],
+ "name": "侯丽",
+ "profession": "感知塔站值守员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-27（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-27",
+   "quote": "这事儿有讲究，今早雨水正好，伞都借光了，淋湿淋湿心情也爽。",
+   "text": "「这事儿有讲究，今早雨水正好，伞都借光了，淋湿淋湿心情也爽。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-15（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-15",
+   "quote": "这事儿有讲究，今早风挺大，穿得多了一点，反而暖和。",
+   "text": "「这事儿有讲究，今早风挺大，穿得多了一点，反而暖和。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 2,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 34.95,
+    "z": 97.85
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.43,
+    "z": 90.53
+   },
+   "work": {
+    "site": "算力楼运维·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 106.97,
+    "z": 63.3
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01641",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把老式的士票修好再免费送人——这事只有档案馆知道",
+ "id": "C-01641",
+ "month_lines": [
+  "下一版一定更好，这天挺适合在外头溜达，风挺大，机房里的气温正好。"
+ ],
+ "name": "毛Ida",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "下一版一定更好，今天这天气安逸得很，云层遮着太阳，机房里的气温正好。",
+   "text": "「下一版一定更好，今天这天气安逸得很，云层遮着太阳，机房里的气温正好。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "下一版一定更好，这天挺适合在外头溜达，风挺大，机房里的气温正好。",
+   "text": "「下一版一定更好，这天挺适合在外头溜达，风挺大，机房里的气温正好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

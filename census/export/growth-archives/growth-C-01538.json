@@ -1,0 +1,112 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 13,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.11,
+    "z": -52.89
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.98,
+    "z": -61.91
+   },
+   "work": {
+    "site": "像素小学学生·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 111.63,
+    "z": -44.12
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-01538",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "用老码头缆桩教会了半条街的孩子",
+ "id": "C-01538",
+ "month_lines": [
+  "今夜放学还得绕路去看那光点过江，包在我身上！"
+ ],
+ "name": "邹豆豆",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-26",
+   "quote": "搞快点，今天天气云蒙蒙的，正好适合放学后看那光点过江。包在我身上！",
+   "text": "「搞快点，今天天气云蒙蒙的，正好适合放学后看那光点过江。包在我身上！」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-13（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-13",
+   "quote": "今夜放学还得绕路去看那光点过江，包在我身上！",
+   "text": "「今夜放学还得绕路去看那光点过江，包在我身上！」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}
