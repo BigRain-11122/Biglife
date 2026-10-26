@@ -330,3 +330,15 @@
 - 闸门：年轮/相遇=让路窗顺延 19:00；pool_audit 当日 PASS 自停；QC 上次 14:59 在 6 轮周期内；ruff_gate ADVISORY 1（F841 need_by 为改动前既有，非本轮回退）。
 - 三行实况：当前活=意向/目标面解冻（确定性数据面补齐）；最近实物=city-life.html 第六节（2026-10-26 15:21）；下个里程碑=19:00 年轮批 3 席（rings 8157→8160+·ETA 19:30）。
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
+
+## R2235 · 2026-10-26 15:3x @BigLife-OSLoop（让路窗·成长边缘深度补齐 + 抽样冻结缺陷根治）
+- 轮首三步：pull=Already up to date；决策水位差集 NEW=0（水位已含 D-20261026-15；D-20261026-13 由 R2222 闭环，本轮复核 HQ-FEEDBACK 全文 UTF-8 无异常、无 BOM）；orders 本司行=PT-20261026-01（P0 推送停摆）→本司 R2234 15:22 已推送，本轮再自证。
+- 真实缺口①（成长边缘最浅）：persona/voice 覆盖面 10,020/10,114，缺的 94 个号码恰是最新席 C-10027..C-10120——正是 CEO 在画廊先看的一批；而 agency.py 与 citizen_qa.py 都消费 persona，故最新居民反而最浅。
+- 实际操作：persona_enrich.py --qc → 10,114 行 bad=0 blocked=3（荣誉三席照旧封禁）；voice_manifest.py → 10,114 行。
+- 缺陷②（QC 硬编码人口常量）：persona_enrich.py QC 断言 len(rows) != 10003——人口一长即假 FAIL（R3 面 10,114 行时复现）。改为对活体 census 行数断言（新增 census_rows()），QC PASS：active=10,111、字段非空、双跑逐字节一致。
+- 实际产物：agency.py 重生当日意向——旧 10,020 席 0 变化（确定性守恒实证）、94 新席中 42 席文本被 persona likes/tic 着色（例 C-10028「在外头跑了这些年，把热乎的吃食翻出来理一理」）。QC PASS（rows/blocked/1-2-inits/len/gate-tokens/double-run）。
+- 缺陷③（抽样冻结·CEO 可见面失真）：城市日常面「今日居民意向 / 遗憾缺口 / 小癖好」三处抽样均为 sorted()[:N]，永远取最早编号的 30 席——城市从 3 千长到 10,114，CEO 看到的始终是同一批老面孔，最新席结构上永不可见。新增 spread_sample()（确定性跨步全域抽样 + 末尾并入最新 6 席），三处统一改用；重建后页内最新席 C-10027+ 命中 17 人、最早席 5 人，双跑 MD5 一致。
+- 实物：C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-life.html（17.0KB·U+FFFD=0）
+- 闸门：qc_census problems=0（cards=10114 evolved=8157 dup_rings=37/37）；ruff_gate 2 文件 CLEAN（顺手清掉改动前既有的 F841 need_by 死赋值）；encoding_guard --check 20992 文件 PASS。
+- 下个里程碑：19:00 年轮线解禁批 3 席（rings 8157→8160+·ETA 19:30）。
+- tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline

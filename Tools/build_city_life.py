@@ -32,6 +32,23 @@ STATE_CN = {
 NEED_CN = {"anwen": "安稳", "shengji": "生计", "shejiao": "社交", "haoqi": "好奇"}
 QUIRK_CN = {"slow": "慢性子", "umbrella": "随身带伞", "night_run": "夜跑习惯"}
 SAMPLE_N = 30
+NEWEST_N = 6
+
+
+def spread_sample(rows, n=SAMPLE_N, newest=NEWEST_N):
+    """Deterministic population-wide sample: stride over the id-sorted list plus
+    the newest ids. Plain [:n] froze the sample on the oldest residents, so the
+    growth edge never appeared as the city grew."""
+    rows = sorted(rows, key=lambda r: r["id"])
+    if len(rows) <= n:
+        return rows
+    tail = rows[-newest:] if newest else []
+    room = n - len(tail)
+    step = len(rows) / float(room)
+    picked = {r["id"]: r for r in (rows[int(i * step)] for i in range(room))}
+    for r in tail:
+        picked[r["id"]] = r
+    return [picked[k] for k in sorted(picked)][:n]
 
 
 def load_jsonl(path):
@@ -81,7 +98,6 @@ def main():
 
     total = len(beh)
     who = {r["id"]: r for r in light}
-    need_by = {r["id"]: r for r in need}
 
     state_cnt = collections.Counter(r["state"] for r in beh)
     state_slots = collections.defaultdict(collections.Counter)
@@ -106,8 +122,8 @@ def main():
     crash_by_district = collections.Counter(district_of(r["id"]) for r in crash_rows)
     visible_by_district = collections.Counter(district_of(r["id"]) for r in visible_rows)
 
-    # 抽样：稳定排序（按编号），避免每轮变动
-    crash_sample = sorted(crash_rows, key=lambda r: r["id"])[:SAMPLE_N]
+    # 抽样：确定性全域跨步（含最新席），避免样本冻结在最早编号
+    crash_sample = spread_sample(crash_rows)
     crash_sample_html = "\n".join(
         person_line(
             (who.get(r["id"]) or {}).get("name", r["id"]),
@@ -122,7 +138,7 @@ def main():
 
     quirk_blocks = []
     for q in ("slow", "umbrella", "night_run"):
-        rows = sorted((r for r in beh if r.get("quirk") == q), key=lambda r: r["id"])[:5]
+        rows = spread_sample((r for r in beh if r.get("quirk") == q), n=5, newest=2)
         items = "\n".join(
             person_line(
                 (who.get(r["id"]) or {}).get("name", r["id"]),
@@ -158,7 +174,7 @@ def main():
     # 今日意向（agency v0·确定性派生）：top 轴分布 + 稳定抽样
     init_active = [r for r in init if (r.get("initiatives") or []) and not r.get("blocked")]
     init_top = collections.Counter(r.get("top") or "—" for r in init_active)
-    init_sample = sorted(init_active, key=lambda r: r["id"])[:SAMPLE_N]
+    init_sample = spread_sample(init_active)
     init_sample_html = "\n".join(
         person_line(
             (who.get(r["id"]) or {}).get("name", r["id"]),

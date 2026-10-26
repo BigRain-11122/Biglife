@@ -153,12 +153,18 @@ def dump(rows):
         for r in rows:
             f.write(json.dumps(r, ensure_ascii=False, separators=(",", ":")) + "\n")
 
+def census_rows():
+    """Expected persona rows = live census lines (population grows; never frozen)."""
+    with open(LIGHT, encoding="utf-8") as f:
+        return sum(1 for ln in f if ln.strip())
+
 def qc(rows, bad, blocked):
     fails = []
     if bad:
         fails.append("bad=%d" % bad)
-    if len(rows) != 10003:
-        fails.append("rows=%d" % len(rows))
+    expected = census_rows()
+    if len(rows) != expected:
+        fails.append("rows=%d expected=%d" % (len(rows), expected))
     if blocked != 3:
         fails.append("blocked=%d" % blocked)
     n_active = 0
