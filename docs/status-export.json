@@ -1,5 +1,5 @@
 {
- "export_ts": "2026-10-26 17:53",
+ "export_ts": "2026-10-26 18:07",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
@@ -1479,5 +1479,5 @@
    "关单/产出：对外页面可用性修复 1 件（成长档案册分页化）· 年轮/相遇=让路窗静默 · 池自停 · QC 未到周期 · 盘点 434"
   ]
  ],
- "t": "当前活：让路窗确定性维护（工作日 09:00-19:00 LLM 让路·D-20261020-02），19:00 后年轮/相遇批接续\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\meet-candidates.html（10-26 17:46·126 对同城区候选队列，双跑 SHA256 一致）+ C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（10-26 17:5x 重建·rings=8157/people=10114）\n下个里程碑：19:00 年轮批 3 席（rings 8157→8160+）+ 相遇轮 1 对（候选队列直取）ETA 2026-10-26 19:30"
+ "t": "当前活：让路窗确定性维护（工作日 09:00-19:00 LLM 让路·D-20261020-02）；本轮轮首决策水位并入 D-20261026-16~19（均非本司派工），语言池全桶达标自终止（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·hard_fails=0·determinism 192+25 pairs mismatch=0），QC 与事件回放闸沿用 17:59 R2247 全绿读数（cards=10114/evolved=8157/problems=0/dup 37-37；events=39241 mismatch=0 schema=0）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\QC-REPORT.md（10-26 17:59·全库不变量全绿）+ C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\EVENTS-REPLAY-REPORT.md（10-26 17:59·回放 PASS）\n下个里程碑：19:00 让路窗解除后年轮批 3 席（rings 8157→8160+）+ 相遇轮 1 对（候选队列 126 对直取）ETA 2026-10-26 19:30"
 }
