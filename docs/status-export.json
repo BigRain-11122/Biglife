@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-27 07:06",
+ "export_ts": "2026-10-27 07:11",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2346（2026-10-27 07:0x）**：年轮线连续批 evolved=10/10（C-09060~C-09069 落环，含 2 席 soft-concession 提示语去重通过）；事件流回放闸 PASS（cards=10111 / events=40155 / replayed=10111 / schema_errors=0 / mismatch=0）；语言池 72/72 全桶达标=SELF_TERMINATE；QC 巡检晨 06:30 已跑 problems=0（10114 卡）；相遇轮当日 cap 已满、基因批 b34 06:42 刚落（本轮不叠批）。 **R2339（年轮环 10 席 C-08992~C-09001）** +回放闸 PASS（events=40087/mismatch=0/schema=0）+语言线自终止（72 桶全达 target）+可见面重建 **R2338（年轮环 10 席 C-08982~C-08991）** +回放闸 PASS（events=40077/mismatch=0）+语言线自终止（池全达 target）",
+   "t": "**R2347（2026-10-27 07:1x）**：年轮线居民进化批 evolved=9/10（C-09070/C-09071/C-09072/C-09073/C-09074/C-09076/C-09077/C-09078/C-09079·GM/MD/NS/QT 四城区；C-09075 触发 persistent violations 门禁留存待下轮 due）；事件流回放闸 PASS（cards=10111 / events=40164 / replayed=10111 / schema_errors=0 / mismatch=0）；可见面重建 city-today rings=766 people=761 districts=6、city-dashboard rings=9072；语言池审计 PASS 全桶达标 SELF_TERMINATE（axes 72/sprite 12/greet 28/faq 7/neg 6·hard_fails=0）。 **R2346（2026-10-27 07:0x）**：年轮线连续批 evolved=10/10（C-09060~C-09069 落环，含 2 席 soft-concession 提示语去重通过）；事件流回放闸 PASS（cards=10111 / events=40155 / replayed=10111 / schema_errors=0 / mismatch=0）；语言池 72/72 全桶达标=SELF_TERMINATE；QC 巡检晨 06:30 已跑 problems=0（10114 卡）；相遇轮当日 cap 已满、基因批 b34 06:42 刚落（本轮不叠批）。 **R2339（年轮环 10 席 C-08992~C-09001）** +回放闸 PASS（events=40087/mismatch=0/schema=0）+语言线自终止（72 桶全达 target）+可见面重建",
    "s": 1
   },
   {
@@ -1549,7 +1549,11 @@
   [
    "757",
    "R2346 年轮批 10 席落环（C-09060~C-09069）· 回放闸 40155 事件 / mismatch 0 / schema 0 · 户籍卡 757"
+  ],
+  [
+   "766",
+   "R2347 尾行计数：今日累计 [锚] 年轮 766 条（机器直数）。"
   ]
  ],
- "t": "当前活：年轮线连续批（每轮 10 席）+ 事件流回放闸守护\n最近实物：census/registry/GM/C-09060.md~C-09069.md（2026-10-27 07:04）+ qa/EVENTS-REPLAY-REPORT.md（40155 事件 PASS）\n下个里程碑：下轮年轮批（10 席）+ QC 巡检（≥6 轮间隔）+ 相遇轮（次日 cap 重置）· 48h 内"
+ "t": "当前活：年轮进化线（居民年轮批 + 行为线收口 + 事件回放闸）\n最近实物：census/registry/GM/C-09071.md 等 9 席年轮 + qa/EVENTS-REPLAY-REPORT.md（40164 事件 PASS·2026-10-27 07:09）\n下个里程碑：下一批 10 席年轮 + 相遇轮（今日 cap 3/3 已满，次日恢复）ETA 2026-10-27 07:30"
 }
