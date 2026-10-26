@@ -2689,3 +2689,8 @@ R2172 2026-10-26 00:00~00:06 压实录：pull=Already up to date；决策水位�
   - 可见实物地址：C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\growth-archives\growth-C-00249.json（2026-10-26 09:40）
   - 里程碑：19:00 让路窗毕后 resume 年轮批 10 席（ring 8157→8167+，ETA 2026-10-26 19:30）；成长档案每轮续推 120 席（余 9869）
   - tokens: local=0 api=0 api_reason=-（本轮零 LLM 调用·全为确定性脚本+缺陷修复）
+
+- R2215 实录 2026-10-26 09:3x~09:4x @BigLife-OSLoop：轮首 pull=Already up to date；决策水位寻杀 NEW=0（尾 D-20261026-09）；orders 无涉本司物理件；日间让路窗（09:00-19:00 让步律 D-20261020-02）→ 年轮/相遇/reflect 全 DEFERRED 至 19:00。本窗与 R2214 重叠（R2214 09:29~09:4x 已交付成长档案 120 席+ --next 根修·commit 711419472/0a95672e1）→ 按重复窗处置律只做独立复核不重复派单：pool_audit PASS 全桶达标 SELF_TERMINATE、events 回放闸 PASS（cards=10091 / events=39080 / mismatch=0 / schema=0）、QC 巡检 problems=0（cards=10114 / evolved=8157 / dup_rings 37-37 已知留档·与 R2214 09:09 同值，QC-REPORT.md 时间戳冗余变动已回滚不入库）、export rows=10114 recent_ring=8157、heartbeat 09:33 新鲜。
+  - 产品实物=qa/smoke-R2215.log（本轮五项自验证据原文入库·[2] 年轮批按让步律标 DEFERRED）
+  - 可见面三行：当前活=让步窗内零 LLM 数据面自验；最近实物=C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\smoke-R2215.log（2026-10-26 09:4x）；下个里程碑=19:00 让步窗解除后年轮批 resume 首转 10 席（rings 8157→8167+，ETA 2026-10-26 19:30）
+  - tokens: local=0 api=0 api_reason=-（本轮零 LLM 调用·全为确定性脚本复核）
