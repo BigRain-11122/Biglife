@@ -28,6 +28,7 @@ TITLE = {
     "gene-ledger.html": ("基因总账", "全类别登记 vs 在册承载 / 覆盖率 / 未落册选题池"),
     "city-relations.html": ("城市人情志", "关系边总数 / 类型与来源 / 枢纽人物 / 城区互往 / 相逢录"),
     "city-today.html": ("今日日报", "当天全量年轮（不抽样）+ 城区分布 + 与昨日对比"),
+    "city-dossiers.html": ("深层档案册", "深年轮居民逐人档案：全部年轮原文 / 信条 / 钩子 / 进化史"),
 }
 ORDER = list(TITLE)
 
