@@ -2745,3 +2745,9 @@ R2172 2026-10-26 00:00~00:06 å‹å®å½•ï¼špull=Already up to dateï¼›å†³ç­–æ°´ä½é
 - commitsï¼š926ad0b05ï¼ˆå·¥å…·+QC æŠ¥å‘Šï¼‰ã€8492a07c9ï¼ˆæ¡£æ¡ˆ 4719ï¼‰ã€fecce756fï¼ˆæ¡£æ¡ˆ 5419ï¼‰å‡å·²æ¨é€ origin/mainï¼›ä½™é¢ pending=4692 ä»½ç»­å¯¼ä¸‹è½®ï¼ˆ--next å¹‚ç­‰è‡ªæ¨è¿›ï¼‰ã€‚
 - å¡ç‚¹ï¼ˆå¦‚å®ï¼‰ï¼šgrowth_archive --all æ—  offset ä¼šæ¯æ¬¡ä»å¤´é‡å†™ã€5 åˆ†é’Ÿçª—å£æ¨è¿›ä¸äº†ï¼›æ­£è§£=--next N è‡ªæ¨è¿›åˆ†æ‰¹ï¼ˆæ¯æ‰¹çº¦ 700 ä»½/2-3 åˆ†é’Ÿï¼‰ã€‚
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
+
+- R2220 ÊµÂ¼ 2026-10-26 11:4x~11:5x @BigLife-OSLoop£ºÂÖÊ× pull=Already up to date£»Ë®Î»Ñ°É± NEW=0£¨watermark=220 / doc_ids=165£©£»orders ÎŞ±¾Ë¾ĞÂÁî£¨PT-20261026-01 P0 ÒÑÓÉ R2217 »ØÖ´¡¢origin...HEAD=0/0£©£»tasks open=2£¨T-20261024-02 aCCS GPU ÑéÖ¤Î´±Õ»· / T-20260924-08 ³£Ì¬£©£»ÓïÑÔÏß pool_audit verdict=PASS È«Í°´ï±ê SELF_TERMINATE£¨Ìø¹ı£©£»ÄêÂÖÏß yield-window£¨09:00-19:00¡¤D-20261020-02£©deferred¡£
+- **²úÆ·ÊµÎï£¨±¾ÂÖ¿É¼ûÔöÁ¿£©**=³É³¤µµ°¸Ğøµ¼ 1400 ·İ£¨5419¡ú6819¡¤¸²¸Ç 10114 ÈË¿Ú 67.4%£©¡ú census/export/growth-archives/£»³É³¤µµ°¸Ò³ÖØ½¨ census/export/city-growth.html£¨cards=6819 / archives=6819 / coverage=67.4%£©£»µµ°¸ QC verdict=PASS£¨reserved refusal 3/3¡¢determinism Ë«ÅÜÒ»ÖÂ¡¢invariants rings=3 anchors=3/3£©£»ÊÂ¼şÁ÷»Ø·ÅÕ¢ PASS£¨cards=10111 / events=39241 / replayed=10111 / schema=0 / mismatch=0£©¡£
+- ¿É¿´ÊµÎïµØÖ·£ºC:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-growth.html£¨2026-10-26 11:4x ÖØ½¨£©
+- commits£º07656b705£¨+1400 µµ°¸ + Ò³ÃæÖØ½¨£©£»Ê£Óà pending=3292 ·İ£¬--next ÃİµÈÍÆ½ø¡£
+- tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
