@@ -464,3 +464,12 @@
 - 对外状态面：docs/status-export.json 三行续鲜（当前活=编码闸硬化 / 最近实物=encoding_guard.py+17:59 双件 / 下个里程碑=19:00 夜窗年轮 3 席+相遇 1 对 ETA 19:30）
 - 本轮计分：实物 1 分（可复用编码闸硬化件，硬拦截能力实测未降）；文件改动 3 处（工具/状态面/任务板，记账 ≤5 处限额内）
 - tokens: local=0 api=0 api_reason=workday-yield-window（LLM 面全让路，仅确定性工具硬化）
+## R2250 · 2026-10-26 18:5x @BigLife-OSLoop（流言录首次投产·确定性）
+- 轮首三步：pull=Already up to date（工作树净，0/0）；决策水位差集 NEW=0（watermark 含至 D-20261026-19）；orders 尾部无涉本司新令（PT-20261026-01 推送停摆已于 R2234/R2247 自证，查重律不重立）
+- 让路窗（D-20261020-02·09:00-19:00）：evolve_citizen 年轮/相遇 line 仍然 defer，LLM 面零调用；本轮走确定性内容面
+- 口径核实：cognition/RUMOR-CHAIN.md（流言链契约 v1.0，2026-09-26 立）与 Tools/rumor_chain.py 引擎在册 60 天，但盘上 cognition/rumors/ 从不存在的产物面=休眠能力
+- 实质产出（2 分·能看实物）：新增 Tools/build_rumors.py 聚合驱动 —— 取当日 events/ 年轮（剥 [锚] 尾注）当「被说出口的话」，跨城区轮转抽 8 条，交 RUMOR-CHAIN v1.0 在城里传 3-4 跳（掐头去尾/数目模糊/先垫一句 失真闭集），产出 cognition/rumors/rumors-2026-10-26.jsonl（8 链/29 跳/6 城区：GM MD NS OR QT RV）与 census/export/city-rumors.html（逐跳「谁→谁 + 时间 + 变形后的话」），已并入 census/export/index.html（19 页）
+- 闸门：双跑逐字节一致（HTML/JSONL 双 idempotent=True）；ruff_gate 1 file CLEAN；三件 FFFD=0 无 BOM；仅定向 add 本轮 4 件
+- 三行实况：当前活=让路窗确定性内容线（流言链投产）｜最近实物=C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-rumors.html（13.8KB·2026-10-26 18:4x）+ cognition/rumors/rumors-2026-10-26.jsonl（9.5KB）｜下个里程碑=19:00 让路窗解禁·年轮线批 3 席接续（rings 8157→8160+·ETA 19:30）
+- tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
+
