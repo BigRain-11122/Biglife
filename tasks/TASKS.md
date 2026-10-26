@@ -410,3 +410,12 @@
 - 实物：C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\gene-ledger.html（2026-10-26 17:26）
 - 实况三行：当前活=基因库供给扩充（b31 批已落库）｜最近实物=gene-ledger.html（registered 1517·17:26）｜下个里程碑=19:00 产量窗年轮线批 3 席 + 相遇轮按 T-20261026-03 rank1 直取（ETA 19:30）
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
+
+## R2245 · 2026-10-26 17:3x @BigLife-OSLoop（QC 巡检轮·让路窗确定性面）
+- 轮首：pull=Already up to date；水位差集 NEW=0（尾 D-20261026-15）；D-20261026-13 复验=HQ-FEEDBACK 258 行全 UTF-8 解码异常 0/U+FFFD=0 → 前轮已闭环，只记复验不改写（查重律）
+- 让路窗（D-20261020-02·工作日 09:00-19:00）→ 年轮/相遇/池三线 LLM 面按律跳过（evolve_citizen 实测输出 yield-window 后静默 rc=0）；池轮今日已 PASS 自终止
+- 实物：census/QC-REPORT.md 刷新（巡检 17:34·cards=10114·evolved=8157·problems=0·dup_rings=37/37）
+- 闸门：events_refresh --gate PASS（derive cards=10111 events=39241 shards=2；replay replayed=10111 schema_errors=0 mismatch=0）
+- 编码体检：census/QC-REPORT.md / tasks/TASKS.md / HQ-FEEDBACK.md 三件 UTF-8 解码异常 0、无 BOM
+- 下个里程碑：19:00 产量窗开——年轮线批 3 席（rings 8,157→8,160+）+ 相遇轮按 meet-candidates rank1 直取，ETA 19:30
+- tokens: local=0 api=0 api_reason=让路窗无 LLM 调用（确定性面）
