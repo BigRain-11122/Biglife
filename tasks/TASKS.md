@@ -1049,3 +1049,11 @@
 - 对外产物：census/export/city-growth.html（cards=10111 archives=10111 coverage=100.0%）+ census/export/index.html（pages=15）。
 - 三行实况：当前活=让路窗内确定性产物线（档案/回放/QC 三链全绿）；最近实物=C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-growth.html（2026-10-26 13:4x·100% 覆盖）；下个里程碑=19:00 年轮线解禁批 3 席（rings 8157→8160+·ETA 19:30）。
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
+
+## R2227 · 2026-10-26 13:4x @BigLife-OSLoop（让路窗·查重复核轮·零增量）
+- 轮首三步：pull=Already up to date（工作树净）；decisions 水位差集 NEW=0（D-20261026-13 已 R2222 闭环，本窗复核 HQ-FEEDBACK.md decode('utf-8') 零异常 246 行 / 187378B）；orders 无涉本司新件。
+- 查重律：并发窗 R2226（13:2x-13:5x）已落全量成长档案 10111/10111 + city-growth.html + QC + 事件闸，本窗**不重复产出**——同件复核实况：census/export/growth-archives 最新 mtime 13:24、QC problems=0、gate PASS events=39241 cards=10111 mismatch=0、pool_audit verdict=PASS（72/72 桶达标·SELF_TERMINATE）。
+- 年轮线/相遇轮：workday yield-window（D-20261020-02）挡下，19:00 解禁。
+- **现场缺陷（本轮新发现·低优先）**：Tools/growth_archive.py --next 400 在「无待补居民」时无任何输出并挂死 >5min（被 shell 5 分钟无输出守卫取消·零盘污、零半截文件）；成因疑为对 10111 份档案做整目录重扫而未先算差集。修法（下轮或空闲轮）=先读差集再遍历，无差集则立即打印 NO-PENDING 退出；--next 入口加 0 待补短路。影响面=仅离线工具调用体验，不阻塞产线。
+- 三行实况：当前活=让路窗内确定性维护线（本轮零增量·并发窗已覆盖）；最近实物=C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-growth.html（2026-10-26 13:4x·档案覆盖 100.0%）；下个里程碑=19:00 年轮线解禁批 3 席（rings 8157 → 8160+·ETA 2026-10-26 19:2x）。
+- tokens: local=0 api=0 api_reason=workday-yield-window + duplicate-guard（并发窗覆盖全部确定性产线）
