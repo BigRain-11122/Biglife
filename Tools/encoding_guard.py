@@ -32,6 +32,15 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MOJIBAKE_MARKS = ("锛", "銆", "鐨", "鏉", "绔", "馃", "闃", "閿")
 
 
+# 台账里合法「引用乱码样本」的行标记；命中即不参与乱码字告警计数
+EVIDENCE_MARKERS = ("乱码族", "乱码字", "GBK", "gbk", "mojibake", "Mojibake", "误解码")
+
+
+def is_evidence_line(line):
+    """该行是否在「记录/引用乱码证据」而非自身损坏。"""
+    return any(m in line for m in EVIDENCE_MARKERS)
+
+
 def gbk_repair(text):
     """把「UTF-8 被当 GBK 误解码」的串试着还原；还原不出返回 None。
 
@@ -138,8 +147,11 @@ def diagnose(raw, label, marks=True):
     if bad:
         problems.append("%s: 含 U+FFFD %d 处（正文被替换字符吞掉）" % (label, bad))
     if marks:
+        # 证据行豁免：台账里「引用乱码族原文」的合法行（如 HQ-FEEDBACK L8 记
+        # 五乱码族 闊抽/閿鎶/…）不该每轮报警——否则告警疲劳掩盖真损伤。
         for mark in MOJIBAKE_MARKS:
-            n = text.count(mark)
+            n = sum(line.count(mark) for line in text.splitlines()
+                    if not is_evidence_line(line))
             if n:
                 problems.append("%s: 疑似 GBK 乱码字 %r %d 处" % (label, mark, n))
         hits, samples = mojibake_scan(text)

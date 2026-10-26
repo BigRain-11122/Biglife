@@ -454,3 +454,13 @@
 - 对外实况面：docs/status-export.json 三行续鲜（当前活/最近实物指向 17:59 双件/下个里程碑 19:00 年轮+相遇 ETA 19:30）
 - 本轮计分：实物 0 分（让路窗保护态豁免面）；文件改动 1 处（状态面，纯记账 ≤5 处限额内）
 - tokens: local=0 api=0 api_reason=workday-yield-window（LLM 面全让路，仅确定性审计）
+
+## R2249 · 2026-10-26 18:2x @BigLife-OSLoop（让路窗·D-20261026-13 编码闸硬化）
+- 轮首：git status 干净；pull=Already up to date（HEAD 3cb98d015）；决策水位差集 NEW=0（水位已含 D-20261026-16~19，均非本司派工）
+- D-20261026-13 复核：HQ-FEEDBACK.md 实况=严格 UTF-8/无 BOM/U+FFFD=0/258 行（转码已于前窗落地，本轮无再转码必要）；唯一告警=L8 引用「五乱码族（闊抽/閿鎶/…）」的历史证据行=误报
+- 落件：Tools/encoding_guard.py 增证据行豁免（EVIDENCE_MARKERS=乱码族/乱码字/GBK/gbk/mojibake/Mojibake/误解码）——证据行不参与乱码字计数，硬判定（非 UTF-8 字节/BOM/U+FFFD）完全不变，防后续每轮告警疲劳
+- 自测（4 项）：①真损坏（GBK 字节混入）仍报「非 UTF-8 字节（偏移 60）」②仅证据行→0 告警 ③非证据行含 閿鎶 仍告警 ④全库 21000 文本 PASS（软告警 2 文件=历史归档 docs/watermark-v2.json / tasks/archive/TASKS-2026-09.md，非本轮面）
+- 让路窗（工作日 09:00-19:00·D-20261020-02）：年轮/相遇/reflect 延 19:00；语言池 17:4x 已全桶达标自终止，QC/事件闸 17:59 R2247 全绿且盘面零变动，本轮不复跑（避免确定性空跑噪声）
+- 对外状态面：docs/status-export.json 三行续鲜（当前活=编码闸硬化 / 最近实物=encoding_guard.py+17:59 双件 / 下个里程碑=19:00 夜窗年轮 3 席+相遇 1 对 ETA 19:30）
+- 本轮计分：实物 1 分（可复用编码闸硬化件，硬拦截能力实测未降）；文件改动 3 处（工具/状态面/任务板，记账 ≤5 处限额内）
+- tokens: local=0 api=0 api_reason=workday-yield-window（LLM 面全让路，仅确定性工具硬化）
