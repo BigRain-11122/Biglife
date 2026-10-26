@@ -19,6 +19,30 @@ OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
 MODEL = os.environ.get("BIGLIFE_MODEL", "qwen3.6-35b")
 LLM_URL = os.environ.get("BIGLIFE_LLM_URL", "http://127.0.0.1:8090/v1/chat/completions")
 
+
+def ollama_model():
+    """Local seat name for the /api/generate fallback.
+
+    R2285: the fallback reused MODEL (the :8090 lane name qwen3.6-35b), which
+    does not exist in Ollama, so every spotlight run while the 35B lane was down
+    died with HTTP 404 and reported "LLM unavail" (seen on C-08360). Probe the
+    installed tags the same way evolve_citizen._ollama_model does.
+    """
+    env = os.environ.get("BIGLIFE_OLLAMA_MODEL")
+    if env:
+        return env
+    try:
+        with urllib.request.urlopen(OLLAMA.rstrip("/") + "/api/tags", timeout=3) as r:
+            names = [m.get("name", "") for m in
+                     (json.loads(r.read().decode("utf-8")).get("models") or [])]
+    except Exception:
+        return None
+    for want in ("qwen3:4b-instruct", "qwen2.5:7b"):
+        if want in names:
+            return want
+    return names[0] if names else None
+
+
 sys.path.insert(0, HERE)
 from make_digests import find_card
 
@@ -80,9 +104,10 @@ def llm(prompt, temperature):
             return ((j.get("choices") or [{}])[0].get("message") or {}
                     ).get("content", "").strip()
     except Exception:
+        local = ollama_model() or MODEL
         req = urllib.request.Request(
             OLLAMA.rstrip("/") + "/api/generate",
-            data=json.dumps({"model": MODEL, "prompt": prompt, "stream": False,
+            data=json.dumps({"model": local, "prompt": prompt, "stream": False,
                              "options": {"temperature": temperature, "num_predict": 80}}).encode("utf-8"),
             headers={"Content-Type": "application/json"})
         with urllib.request.urlopen(req, timeout=90) as resp:
