@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-27 01:51",
+ "export_ts": "2026-10-27 02:01",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2296（年轮环·既有居民迭代·零新注册）**：C-08520~C-08528 共 9 席落环（batch 3 供给面实跑；C-08518 因 persistent violations [rain-invented, recent-dup-phrase] 过门失败留待下轮），环数 8512→8521，户籍 10114 不变。 **R2284（年轮批 10 席）**：C-08348~C-08357 落环（soft-concession 4 席，commit 47bf9c16e），行为线镜像 rows=10 ring=8351（3c4b62c37）；事件流回放闸 PASS（events=39442 cards=10111 replayed=10111 schema=0 mismatch=0）；城市看板重建 rings=8351 / 10114 居民。 **R2282（环线恢复）**：年轮批 10 席落环（C-08328~C-08337）+ 相遇轮 C-08333 金芳 × C-08335 盛秀英 + 事件回放闸 PASS（39420 events / 0 mismatch）+ QC 巡检 problems=0 + 今日城报重生成。",
+   "t": "**R2297（年轮环·既有居民迭代·零新注册）**：C-08529~C-08537 共 9 席落环（batch 3 供给面实跑；C-08518 因 persistent violations [rain-invented, recent-dup-phrase] 过门失败留待下轮），环数 8521→8530，户籍 10114 不变。 **R2296（年轮环·既有居民迭代·零新注册）**：C-08520~C-08528 共 9 席落环（batch 3 供给面实跑；C-08518 因 persistent violations [rain-invented, recent-dup-phrase] 过门失败留待下轮），环数 8512→8521，户籍 10114 不变。 **R2284（年轮批 10 席）**：C-08348~C-08357 落环（soft-concession 4 席，commit 47bf9c16e），行为线镜像 rows=10 ring=8351（3c4b62c37）；事件流回放闸 PASS（events=39442 cards=10111 replayed=10111 schema=0 mismatch=0）；城市看板重建 rings=8351 / 10114 居民。",
    "s": 1
   },
   {
@@ -1493,7 +1493,11 @@
   [
    "215",
    "年轮 9 席落环 + 事件流回放闸 PASS（events=39613 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0）；行为线镜像 rows=9 ring=8521；看板重建 rings=8521 / total=10114 / cards=160。"
+  ],
+  [
+   "224",
+   "年轮 9 席落环 + 事件流回放闸 PASS（events=39622 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0）；行为线镜像 rows=9 ring=8530；看板重建 rings=8530 / total=224 / cards=160；今日日报 rings=224 people=219 districts=6。"
   ]
  ],
- "t": "当前活：年轮线每轮转（本地 Ollama qwen3:4b-instruct 批量供给）+ 事件流回放闸守卫\n最近实物：census/export/city-dashboard.html（2026-10-27 01:5x 重建 rings=8521 / 户籍 10114）+ qa/EVENTS-REPLAY-REPORT.md（39613 事件 0 mismatch PASS）\n下个里程碑：下一轮年轮 10 席续产（ETA ≤40min）+ QC 不变量巡检（约 R2300 到点）"
+ "t": "当前活：年轮线每轮转（本地 Ollama qwen3:4b-instruct 批量供给）+ 事件流回放闸守卫\n最近实物：census/export/city-dashboard.html（2026-10-27 02:0x 重建 rings=8530 / 户籍 10114）+ census/export/city-today.html（今日 224 环 / 219 位居民 / 6 城区）\n下个里程碑：下一轮年轮 10 席续产（ETA ≤40min）+ QC 不变量巡检（约 R2300 到点）"
 }
