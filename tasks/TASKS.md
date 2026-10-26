@@ -1067,3 +1067,12 @@
 - 验证：①零待补 --next 400 16s→1s 输出 exported=0 pending_before=0 - NO-PENDING；②非空批 --next 2 --out <temp> exported=2 pending_before=10111 remaining=10109，两份 growth-*.json 正常落盘（临时目录已删·零盘污）；③--qc 全套回归 PASS（reserved refusal 3/3 + determinism double-run + invariants rings=3 anchors=3/3 + verdict PASS）。
 - 三行实况：当前活=让路窗内确定性线修复（年轮/相遇 LLM 面 19:00 解禁）；最近实物=Tools/growth_archive.py NO-PENDING 短路（2026-10-26 14:0x·16s→1s）+ 全量成长档案 10111/10111（13:28）；下个里程碑=19:00 年轮线解禁批 3 席（rings 8157→8160+·ETA 19:30）。
 - tokens: local=2 api=0 api_reason=workday-yield-window（本地 4b 未调用·LLM 面被让路闸挡）
+
+## R2229 · 2026-10-26 14:0x @BigLife-OSLoop（让路窗·新产物线：相遇编年史）
+- 轮首三步：pull=Already up to date；decisions 水位差集 NEW=0（尾 D-20261026-14 已含，doc_ids 全消费）；orders 无涉本司新件（PT-20261026-01 停摆质询已被本司今日 12:25-13:54 连续 10 笔 origin 提交与心跳证伪，本轮按查重律不再重复自证）。
+- 产线门控：evolve_citizen --batch 3 被脚本内 D-20261020-02 让路闸（工作日 09:00-19:00）挡下静默 exit=0，年轮/相遇轮 LLM 面 19:00 解禁；pool_audit verdict=PASS 全桶达标（72/72 + sprite 12/12 + greet 28 + faq 7 + neg 6/6，determinism mismatch=0）→ 池轮自终止跳过；QC 13:35 已刷（未到 6 轮周期）。
+- **产品实物（本轮主产出·确定性新页）**：新增 `Tools/build_city_meets.py` → `census/export/city-meets.html`（28,828B）＝全库相遇留痕按日编排的**双向对读编年史**：meets=77 条 / 成幕 41 幕（双向齐 36 + 单面留痕 5）/ 跨 18 个日期 / 涉事居民 78 人，按日期倒序分章、每幕左右两位居民的相遇原句并排，另列「相遇最多的居民」Top10。与既有 city-relations.html 的「相逢录」不是同一面（后者只取 recent_ring 单向近 30 条），本页是全量 + 成对拼幕。
+- 校验：生成器双跑同结果（幂等）；div 开闭 233/233 平衡、section 18、scene 41、单面 5 与统计卡一致；`build_export_index.py` 登记新页后 index pages 15→16。
+- 可见实物地址：C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-meets.html（2026-10-26 14:0x 生成）
+- 三行实况：当前活=让路窗内确定性产物线（新页落成 + 索引收口）；最近实物=census/export/city-meets.html@2026-10-26 14:0x（41 幕/77 条留痕）+ index.html pages=16；下个里程碑=19:00 年轮线解禁批 3 席（rings 8157→8160+，ETA 19:30）。
+- tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
