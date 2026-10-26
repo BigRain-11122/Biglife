@@ -1,0 +1,106 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 1,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 63.9,
+    "z": 41.18
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.66,
+    "z": 74.02
+   },
+   "work": {
+    "site": "玩家留言整理员·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.92,
+    "z": 152.05
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08137",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "用第一天的营业账本教会了半条街的孩子——这事只有档案馆知道",
+ "id": "C-08137",
+ "month_lines": [
+  "正在给阳台的花说“今天风好大，你先别晃，我一会儿回来补个话”，手边那盒老式胶卷还压着，拆开看看又不会坏——旧东西记得比人多。"
+ ],
+ "name": "秦阿宁",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "正在给阳台的花说“今天风好大，你先别晃，我一会儿回来补个话”，手边那盒老式胶卷还压着，拆开看看又不会坏——旧东西记得比人多。",
+   "text": "「正在给阳台的花说“今天风好大，你先别晃，我一会儿回来补个话”，手边那盒老式胶卷还压着，拆开看看又不会坏——旧东西记得比人多。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

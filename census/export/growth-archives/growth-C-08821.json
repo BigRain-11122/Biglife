@@ -1,0 +1,97 @@
+{
+ "age": 8,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 25,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -136.38,
+    "z": 13.77
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.46,
+    "z": 40.8
+   },
+   "work": {
+    "site": "像素学徒·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.73,
+    "z": 21.88
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08821",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "留着旧日历却从来不用",
+ "id": "C-08821",
+ "month_lines": [],
+ "name": "卢圆圆",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "household",
+   "src": "H-QT1792",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

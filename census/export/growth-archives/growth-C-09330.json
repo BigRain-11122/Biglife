@@ -1,0 +1,96 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 3,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 31.87,
+    "z": 55.64
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.99,
+    "z": 46.63
+   },
+   "work": {
+    "site": "像素画匠·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 126.6,
+    "z": 77.9
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09330",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "街坊的事，就是我的事。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能一眼认出会发光的纽扣的真伪——她自己也说不清为什么",
+ "id": "C-09330",
+ "month_lines": [],
+ "name": "席沐晴",
+ "profession": "像素画匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

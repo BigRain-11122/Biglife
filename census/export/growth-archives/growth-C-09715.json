@@ -1,0 +1,97 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 5,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 24.53,
+    "z": 155.02
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.2,
+    "z": 136.95
+   },
+   "work": {
+    "site": "玩家留言整理员·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 108.76,
+    "z": 29.45
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09715",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "试错要趁灯还亮着。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "逢人就讲褪色的灯笼骨架的故事——这事只有师父知道",
+ "id": "C-09715",
+ "month_lines": [],
+ "name": "姜简梨",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

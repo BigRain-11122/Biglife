@@ -1,0 +1,97 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 24,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.96,
+    "z": -235.29
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 0.38,
+    "z": -176.68
+   },
+   "work": {
+    "site": "江面巡游员·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 122.01,
+    "z": -200.66
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09309",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": null,
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "RV",
+ "gender": "无定",
+ "hook": "每次路过老式爆米花机的摇柄都要亮两下——他自己也说不清为什么",
+ "id": "C-09309",
+ "month_lines": [],
+ "name": "黑花火",
+ "profession": "江面巡游员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

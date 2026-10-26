@@ -1,0 +1,106 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -4,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.34,
+    "z": 126.99
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.71,
+    "z": 11.15
+   },
+   "work": {
+    "site": "防火墙巡林员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.54,
+    "z": 30.79
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07398",
+  "quirk": "night_run",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "每逢下雨就去修全城雨夜的录音合集——这事只有师父知道",
+ "id": "C-07398",
+ "month_lines": [
+  "扳手在掌心转了三圈，风从巷口直灌进来，把工具箱的盖子掀得哗啦响。塔顶白光还亮着，G08那扇窗又闪了下，像在说“别慌，我看了”。"
+ ],
+ "name": "老码·甲",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "扳手在掌心转了三圈，风从巷口直灌进来，把工具箱的盖子掀得哗啦响。塔顶白光还亮着，G08那扇窗又闪了下，像在说“别慌，我看了”。",
+   "text": "「扳手在掌心转了三圈，风从巷口直灌进来，把工具箱的盖子掀得哗啦响。塔顶白光还亮着，G08那扇窗又闪了下，像在说“别慌，我看了”。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

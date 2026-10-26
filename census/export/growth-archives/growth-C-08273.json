@@ -1,0 +1,96 @@
+{
+ "age": 82,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -5,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -113.04,
+    "z": -116.09
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.99,
+    "z": -20.8
+   },
+   "work": {
+    "site": "声优棚掌柜·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.01,
+    "z": -136.38
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08273",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "每年挑一天只为旧钟表铺的价目牌大扫除——据说是老辈传下的规矩",
+ "id": "C-08273",
+ "month_lines": [],
+ "name": "付建国",
+ "profession": "声优棚掌柜",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

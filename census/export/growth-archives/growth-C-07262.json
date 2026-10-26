@@ -1,0 +1,106 @@
+{
+ "age": 94,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -11,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.08,
+    "z": 137.53
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.85,
+    "z": 51.61
+   },
+   "work": {
+    "site": "资金金灯匠·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -59.49,
+    "z": 52.57
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07262",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "给旧牛奶箱的钥匙都起了名字——他自己也说不清为什么",
+ "id": "C-07262",
+ "month_lines": [
+  "手正捏着旧铜扳手，给扭塔金灯调一档养光——风刮得紧，灯丝颤，我偏要试错要趁灯亮。"
+ ],
+ "name": "严鸿奎",
+ "profession": "资金金灯匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手正捏着旧铜扳手，给扭塔金灯调一档养光——风刮得紧，灯丝颤，我偏要试错要趁灯亮。",
+   "text": "「手正捏着旧铜扳手，给扭塔金灯调一档养光——风刮得紧，灯丝颤，我偏要试错要趁灯亮。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

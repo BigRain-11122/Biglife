@@ -1,0 +1,106 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 0,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.04,
+    "z": 69.01
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.34,
+    "z": 66.2
+   },
+   "work": {
+    "site": "风控瞭望员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -35.23,
+    "z": 87.74
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07422",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件老式怀表链——据说是老辈传下的规矩",
+ "id": "C-07422",
+ "month_lines": [
+  "风从巷口直灌进来，我把记账本翻到今天那页，墨迹还新，第25天，饭点了，天大的事吃完再谈。"
+ ],
+ "name": "凌乐遥",
+ "profession": "风控瞭望员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风从巷口直灌进来，我把记账本翻到今天那页，墨迹还新，第25天，饭点了，天大的事吃完再谈。",
+   "text": "「风从巷口直灌进来，我把记账本翻到今天那页，墨迹还新，第25天，饭点了，天大的事吃完再谈。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

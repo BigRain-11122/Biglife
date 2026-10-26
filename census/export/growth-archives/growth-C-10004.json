@@ -1,0 +1,97 @@
+{
+ "age": 6,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 10,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.28,
+    "z": -10.26
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.6,
+    "z": -94.75
+   },
+   "work": {
+    "site": "像素小学学生·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.75,
+    "z": -146.36
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10004",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "给旧码头的汽笛阀都起了名字——这事全巷都知道",
+ "id": "C-10004",
+ "month_lines": [],
+ "name": "汪元宝",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

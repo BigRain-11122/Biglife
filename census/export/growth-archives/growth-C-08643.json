@@ -1,0 +1,96 @@
+{
+ "age": 94,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -8,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 41.26,
+    "z": 80.35
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.06,
+    "z": 125.95
+   },
+   "work": {
+    "site": "攻略誊写员·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 99.48,
+    "z": 136.34
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08643",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "口袋里总揣着全城灯火的第一张照片——没人知道为什么",
+ "id": "C-08643",
+ "month_lines": [],
+ "name": "曹招娣",
+ "profession": "攻略誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 3,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 57.56,
+    "z": 69.99
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.56,
+    "z": 92.36
+   },
+   "work": {
+    "site": "进度刻碑师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 115.5,
+    "z": 57.99
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08705",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": null,
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把旧钟表铺的价目牌的位置背得比自家门牌还熟",
+ "id": "C-08705",
+ "month_lines": [],
+ "name": "史涛",
+ "profession": "进度刻碑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

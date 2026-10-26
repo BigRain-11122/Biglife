@@ -1,0 +1,106 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": 2,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -112.27,
+    "z": 147.7
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.23,
+    "z": 31.23
+   },
+   "work": {
+    "site": "夜宵摊主·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -37.95,
+    "z": 70.44
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07347",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "灶上留一壶，路过的都是客。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持手写全城灯语的对照表——没人知道为什么",
+ "id": "C-07347",
+ "month_lines": [
+  "手在翻着小本，第23页的生日又划了勾——C-00197 的那句“G08 CrazyCampus: B2396 -> S2.5”我记在了后头，像灶台边的那口老铁锅，烧过就留了印。风一"
+ ],
+ "name": "阿硅-8",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在翻着小本，第23页的生日又划了勾——C-00197 的那句“G08 CrazyCampus: B2396 -> S2.5”我记在了后头，像灶台边的那口老铁锅，烧过就留了印。风一",
+   "text": "「手在翻着小本，第23页的生日又划了勾——C-00197 的那句“G08 CrazyCampus: B2396 -> S2.5”我记在了后头，像灶台边的那口老铁锅，烧过就留了印。风一」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

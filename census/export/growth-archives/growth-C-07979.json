@@ -1,0 +1,106 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -5,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.76,
+    "z": 41.11
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.7,
+    "z": 36.6
+   },
+   "work": {
+    "site": "像素学徒·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -24.1,
+    "z": 60.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07979",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "偷偷给褪色的戏票根上油保养——他自己也说不清为什么",
+ "id": "C-07979",
+ "month_lines": [
+  "手在磨着那枚旧螺帽，金属边沿磨出薄薄一层光。风大得说话要抬声，我盯着塔顶的云，今天云好，改天再说。"
+ ],
+ "name": "冯诺-2",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在磨着那枚旧螺帽，金属边沿磨出薄薄一层光。风大得说话要抬声，我盯着塔顶的云，今天云好，改天再说。",
+   "text": "「手在磨着那枚旧螺帽，金属边沿磨出薄薄一层光。风大得说话要抬声，我盯着塔顶的云，今天云好，改天再说。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

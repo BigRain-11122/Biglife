@@ -1,0 +1,97 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -9,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 59.65,
+    "z": 116.18
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.25,
+    "z": 149.53
+   },
+   "work": {
+    "site": "游戏楼门童·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 98.77,
+    "z": 47.64
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09533",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": null,
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能背出旧缝纫机踏板的全部班次",
+ "id": "C-09533",
+ "month_lines": [],
+ "name": "施洁",
+ "profession": "游戏楼门童",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

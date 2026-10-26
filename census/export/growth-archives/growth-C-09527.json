@@ -1,0 +1,96 @@
+{
+ "age": 93,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -14,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 63.41,
+    "z": 104.25
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.03,
+    "z": 56.34
+   },
+   "work": {
+    "site": "街区调解阿姨·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 113.41,
+    "z": 52.78
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09527",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "先把字写正，再想写快。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把消失的船班时刻表排成一排挨个擦——据说是老辈传下的规矩",
+ "id": "C-09527",
+ "month_lines": [],
+ "name": "陶锡金",
+ "profession": "街区调解阿姨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

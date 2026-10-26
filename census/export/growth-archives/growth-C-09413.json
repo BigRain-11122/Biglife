@@ -1,0 +1,96 @@
+{
+ "age": 86,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -5,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.0,
+    "z": -24.83
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 76.41,
+    "z": -150.18
+   },
+   "work": {
+    "site": "弄堂小囡·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.62,
+    "z": -86.66
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09413",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": null,
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "会为写了一半的市民歌谣推掉一整晚的生意——没人知道为什么",
+ "id": "C-09413",
+ "month_lines": [],
+ "name": "熊招娣",
+ "profession": "弄堂小囡",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "buddy",
+   "src": "茶友",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

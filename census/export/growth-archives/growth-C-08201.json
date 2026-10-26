@@ -1,0 +1,97 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 14,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.15,
+    "z": -110.1
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.51,
+    "z": -112.49
+   },
+   "work": {
+    "site": "像素小学学生·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.88,
+    "z": -117.29
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08201",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "好吃的东西，都急不得。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "还在用退役灯塔的透镜——据说是老辈传下的规矩",
+ "id": "C-08201",
+ "month_lines": [],
+ "name": "陈元宝",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

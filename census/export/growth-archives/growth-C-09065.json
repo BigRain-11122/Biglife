@@ -1,0 +1,96 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -8,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -39.44,
+    "z": 197.19
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 10.83,
+    "z": 225.88
+   },
+   "work": {
+    "site": "边缘杂货店主·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 63.79,
+    "z": 257.96
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09065",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": null,
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "还在用手抄的菜谱——他自己也说不清为什么",
+ "id": "C-09065",
+ "month_lines": [],
+ "name": "邹炯",
+ "profession": "边缘杂货店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

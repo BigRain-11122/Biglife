@@ -1,0 +1,97 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 8,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.17,
+    "z": 56.19
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.3,
+    "z": 115.74
+   },
+   "work": {
+    "site": "像素学徒·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -24.75,
+    "z": 154.03
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08902",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": null,
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "给退役的探针铭牌都编了号还建了册——这事全巷都知道",
+ "id": "C-08902",
+ "month_lines": [],
+ "name": "华一鸣",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

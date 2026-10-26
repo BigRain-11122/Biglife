@@ -1,0 +1,97 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 4,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.12,
+    "z": 106.93
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.44,
+    "z": 18.75
+   },
+   "work": {
+    "site": "盘口记录员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.0,
+    "z": 97.03
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08953",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": null,
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给旧热水瓶都编了号还建了册——她自己也说不清为什么",
+ "id": "C-08953",
+ "month_lines": [],
+ "name": "杭洁",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

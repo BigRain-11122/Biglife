@@ -1,0 +1,90 @@
+{
+ "age": 72,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -6,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -28.59,
+    "z": -234.3
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -18.51,
+    "z": -212.27
+   },
+   "work": {
+    "site": "江畔酒肆驻店诗翁·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 78.95,
+    "z": -244.33
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10010",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": null,
+ "creed": "诗要趁热写，酒要趁灯河最亮时喝。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "把替人写的诗收在不上锁的樟木箱里、任街坊随时来翻",
+ "id": "C-10010",
+ "month_lines": [],
+ "name": "李白",
+ "profession": "江畔酒肆驻店诗翁",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

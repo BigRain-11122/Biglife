@@ -1,0 +1,106 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 0,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.21,
+    "z": 124.3
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.08,
+    "z": 33.49
+   },
+   "work": {
+    "site": "回测农·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -36.36,
+    "z": 84.96
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07760",
+  "quirk": "umbrella",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "收藏老钟楼的齿轮且每件都记得来历——这事只有档案馆知道",
+ "id": "C-07760",
+ "month_lines": [
+  "风把树梢压弯了，我正给电波猫群添食，第三只小爪子蹭我手背，像去年秋收那批参数，收成没看，心先暖了。夜里冷，喝口热的再走。"
+ ],
+ "name": "方南汐",
+ "profession": "回测农",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风把树梢压弯了，我正给电波猫群添食，第三只小爪子蹭我手背，像去年秋收那批参数，收成没看，心先暖了。夜里冷，喝口热的再走。",
+   "text": "「风把树梢压弯了，我正给电波猫群添食，第三只小爪子蹭我手背，像去年秋收那批参数，收成没看，心先暖了。夜里冷，喝口热的再走。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 19,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -107.83,
+    "z": 152.16
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.22,
+    "z": 150.33
+   },
+   "work": {
+    "site": "像素学徒·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -57.24,
+    "z": 74.9
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07755",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "收藏三十年前的车铃且每件都记得来历——这事只有师父知道",
+ "id": "C-07755",
+ "month_lines": [
+  "手在敲着旧木桌边，钉子还留着上回师父刻的痕。风一阵紧一阵，像谁在巷口吹了口哨，我正想把G08的旧稿藏进箱底，又怕明天汤没趁烫。"
+ ],
+ "name": "孟天天",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在敲着旧木桌边，钉子还留着上回师父刻的痕。风一阵紧一阵，像谁在巷口吹了口哨，我正想把G08的旧稿藏进箱底，又怕明天汤没趁烫。",
+   "text": "「手在敲着旧木桌边，钉子还留着上回师父刻的痕。风一阵紧一阵，像谁在巷口吹了口哨，我正想把G08的旧稿藏进箱底，又怕明天汤没趁烫。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

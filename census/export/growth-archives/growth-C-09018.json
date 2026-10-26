@@ -1,0 +1,96 @@
+{
+ "age": 81,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -10,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -100.18,
+    "z": -81.94
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.1,
+    "z": -69.76
+   },
+   "work": {
+    "site": "8bit 乐师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -70.56,
+    "z": -31.58
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09018",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "逢人就讲旧钟表铺的价目牌的故事——这事全巷都知道",
+ "id": "C-09018",
+ "month_lines": [],
+ "name": "高有根",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

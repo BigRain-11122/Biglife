@@ -1,0 +1,96 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 4,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -122.13,
+    "z": 211.16
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -5.25,
+    "z": 172.6
+   },
+   "work": {
+    "site": "编年史誊录员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 78.76,
+    "z": 195.97
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08557",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": null,
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "梦话都在念叨褪色的红领巾——没人知道为什么",
+ "id": "C-08557",
+ "month_lines": [],
+ "name": "周强",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

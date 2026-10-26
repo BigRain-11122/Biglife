@@ -1,0 +1,59 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 25.47,
+    "z": 110.44
+   },
+   "social": {
+    "site": "织带集市巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.52,
+    "z": 119.67
+   },
+   "work": {
+    "site": "织带集市讲述织者·织带集市巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.38,
+    "z": 15.18
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10031",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "织带集市巷",
+ "born": null,
+ "creed": "线是直的，故事是弯的，两头都要拽住。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "每匹布都附一张手写「布故事卡」的织者——市集的孩子们攒了一沓",
+ "id": "C-10031",
+ "month_lines": [],
+ "name": "韦经纬",
+ "profession": "织带集市讲述织者",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

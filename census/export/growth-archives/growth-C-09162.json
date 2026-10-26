@@ -1,0 +1,96 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 3,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 22.32,
+    "z": 59.11
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.39,
+    "z": 17.75
+   },
+   "work": {
+    "site": "像素画匠·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 141.46,
+    "z": 85.72
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09162",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": null,
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "能背出旧织机的梭子的全部班次——据说是老辈传下的规矩",
+ "id": "C-09162",
+ "month_lines": [],
+ "name": "郁华",
+ "profession": "像素画匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

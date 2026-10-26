@@ -1,0 +1,106 @@
+{
+ "age": 15,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 13,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.11,
+    "z": -136.77
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.87,
+    "z": -128.09
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -38.12,
+    "z": -128.01
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07127",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "每逢下雨就去修褪色的游戏卡带——这事全巷都知道",
+ "id": "C-07127",
+ "month_lines": [
+  "手正捏着作业本翻页，第23页画了新光织物穿在身上，江对岸的commit光点稳稳在动，风大得说话要抬声，又学了一招。"
+ ],
+ "name": "童朵朵",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手正捏着作业本翻页，第23页画了新光织物穿在身上，江对岸的commit光点稳稳在动，风大得说话要抬声，又学了一招。",
+   "text": "「手正捏着作业本翻页，第23页画了新光织物穿在身上，江对岸的commit光点稳稳在动，风大得说话要抬声，又学了一招。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

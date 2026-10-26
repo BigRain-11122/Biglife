@@ -1,0 +1,96 @@
+{
+ "age": 88,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -10,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 27.74,
+    "z": -135.51
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.97,
+    "z": -25.8
+   },
+   "work": {
+    "site": "城市文书誊写员·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 141.76,
+    "z": -63.57
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09264",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": null,
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "梦话都在念叨褪色的戏票根——她自己也说不清为什么",
+ "id": "C-09264",
+ "month_lines": [],
+ "name": "崔珍珠",
+ "profession": "城市文书誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

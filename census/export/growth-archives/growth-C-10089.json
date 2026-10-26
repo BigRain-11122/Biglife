@@ -1,0 +1,59 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -71.19,
+    "z": 198.28
+   },
+   "social": {
+    "site": "旧楼后锅炉房旁小屋·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 17.66,
+    "z": 218.41
+   },
+   "work": {
+    "site": "锅炉房司炉工·旧楼后锅炉房旁小屋工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 54.59,
+    "z": 224.01
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10089",
+  "quirk": "umbrella",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "旧楼后锅炉房旁小屋",
+ "born": null,
+ "creed": "火候到了，人就暖和",
+ "district": "OR",
+ "gender": "男",
+ "hook": "一只保温桶，提手上缠着一圈红布条，冬天送饭时他把布条系成死结，怕半路松脱——就搁在锅炉房的值班桌上，红布条在灰房子里格外显眼",
+ "id": "C-10089",
+ "month_lines": [],
+ "name": "都德水",
+ "profession": "锅炉房司炉工",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

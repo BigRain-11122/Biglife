@@ -1,0 +1,97 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 10,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 63.25,
+    "z": -29.71
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.75,
+    "z": -103.6
+   },
+   "work": {
+    "site": "信使小跟班·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.75,
+    "z": -66.34
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09276",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": null,
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "会为弄堂的门牌号推掉一整晚的生意——这事全巷都知道",
+ "id": "C-09276",
+ "month_lines": [],
+ "name": "应果果",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 8,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -101.07,
+    "z": 90.56
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.83,
+    "z": 101.79
+   },
+   "work": {
+    "site": "数据搬运工·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -24.49,
+    "z": 22.22
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09646",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": null,
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "偷偷给老式的士票上油保养——据说是老辈传下的规矩",
+ "id": "C-09646",
+ "month_lines": [],
+ "name": "陶乐遥",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

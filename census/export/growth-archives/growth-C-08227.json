@@ -1,0 +1,97 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 0,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -129.4,
+    "z": 57.73
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.42,
+    "z": 53.7
+   },
+   "work": {
+    "site": "防火墙巡林员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.28,
+    "z": 96.06
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08227",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": null,
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能背出停产的暖光灯泡的全部班次——他自己也说不清为什么",
+ "id": "C-08227",
+ "month_lines": [],
+ "name": "姜阿Jay",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 3,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.72,
+    "z": -138.67
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.6,
+    "z": -110.0
+   },
+   "work": {
+    "site": "选题官·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -22.2,
+    "z": -98.02
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09047",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "守时是最便宜的本事，也是最难改的毛病。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "会给全城灯语的对照表织毛衣——这事只有师父知道",
+ "id": "C-09047",
+ "month_lines": [],
+ "name": "应诗涵",
+ "profession": "选题官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 93,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -15,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.79,
+    "z": 79.24
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.21,
+    "z": 25.65
+   },
+   "work": {
+    "site": "全城对时师·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -32.42,
+    "z": 19.88
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07587",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "会给老茶壶织毛衣",
+ "id": "C-07587",
+ "month_lines": [
+  "手里的老怀表指针正卡在21:08，风一阵紧一阵，塔顶白光亮着，像谁在天上轻轻敲了下钟。船到桥头自然直，我今儿就守着这刻，不差半秒。"
+ ],
+ "name": "韩招娣",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手里的老怀表指针正卡在21:08，风一阵紧一阵，塔顶白光亮着，像谁在天上轻轻敲了下钟。船到桥头自然直，我今儿就守着这刻，不差半秒。",
+   "text": "「手里的老怀表指针正卡在21:08，风一阵紧一阵，塔顶白光亮着，像谁在天上轻轻敲了下钟。船到桥头自然直，我今儿就守着这刻，不差半秒。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

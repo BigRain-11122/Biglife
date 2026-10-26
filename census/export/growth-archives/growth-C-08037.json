@@ -1,0 +1,106 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 7,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -136.61,
+    "z": 28.42
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.56,
+    "z": 60.18
+   },
+   "work": {
+    "site": "回测农·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -47.21,
+    "z": 149.5
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08037",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "收藏初代渡轮的船票夹且每件都记得来历——这事只有师父知道",
+ "id": "C-08037",
+ "month_lines": [
+  "手正翻着旧票根，一张2023年秋的公交卡收据，上头字迹已淡，背面还画着歪扭的樱花——稳住，别浪。风刮得招牌直晃，塔顶白光亮着，像谁在偷偷数日子。"
+ ],
+ "name": "田浩宇",
+ "profession": "回测农",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手正翻着旧票根，一张2023年秋的公交卡收据，上头字迹已淡，背面还画着歪扭的樱花——稳住，别浪。风刮得招牌直晃，塔顶白光亮着，像谁在偷偷数日子。",
+   "text": "「手正翻着旧票根，一张2023年秋的公交卡收据，上头字迹已淡，背面还画着歪扭的樱花——稳住，别浪。风刮得招牌直晃，塔顶白光亮着，像谁在偷偷数日子。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

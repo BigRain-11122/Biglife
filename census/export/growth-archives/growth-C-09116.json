@@ -1,0 +1,97 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -1,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.87,
+    "z": 157.59
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.27,
+    "z": 36.46
+   },
+   "work": {
+    "site": "算法调参师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -35.89,
+    "z": 33.68
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09116",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "像素越小，心眼越大。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能一眼认出旧热水瓶的真伪——没人知道为什么",
+ "id": "C-09116",
+ "month_lines": [],
+ "name": "贺炯",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

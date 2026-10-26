@@ -1,0 +1,97 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": -1,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.28,
+    "z": 99.02
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.95,
+    "z": 126.11
+   },
+   "work": {
+    "site": "缓存管理员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.62,
+    "z": 75.78
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09207",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": null,
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "留着旧当铺的票据夹却从来不用",
+ "id": "C-09207",
+ "month_lines": [],
+ "name": "谢燕",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 3,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 33.72,
+    "z": 139.57
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.09,
+    "z": 20.25
+   },
+   "work": {
+    "site": "bug 猎人·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 103.21,
+    "z": 97.55
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06872",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把心事只说给第一天的营业账本听——没人知道为什么",
+ "id": "C-06872",
+ "month_lines": [
+  "稳住，别浪。风把树梢压弯了，阳台那盆绿萝又歪了，我跟它说：“今天潮起，摊子照摆。"
+ ],
+ "name": "曾浩宇",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "稳住，别浪。风把树梢压弯了，阳台那盆绿萝又歪了，我跟它说：“今天潮起，摊子照摆。",
+   "text": "「稳住，别浪。风把树梢压弯了，阳台那盆绿萝又歪了，我跟它说：“今天潮起，摊子照摆。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

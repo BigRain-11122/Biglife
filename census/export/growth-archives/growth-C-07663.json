@@ -1,0 +1,105 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 8,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.2,
+    "z": -173.61
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 3.34,
+    "z": -183.62
+   },
+   "work": {
+    "site": "信号中继员·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 99.56,
+    "z": -190.09
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07663",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "把1990 年的真硬币的位置背得比自家门牌还熟——没人知道为什么",
+ "id": "C-07663",
+ "month_lines": [
+  "手正捏着第三块中继，风顶得人站不稳，信号在肩头跳着，像老友喘气。出锅喽——明天的料，先备着。"
+ ],
+ "name": "龚星野",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手正捏着第三块中继，风顶得人站不稳，信号在肩头跳着，像老友喘气。出锅喽——明天的料，先备着。",
+   "text": "「手正捏着第三块中继，风顶得人站不稳，信号在肩头跳着，像老友喘气。出锅喽——明天的料，先备着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 22,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -119.78,
+    "z": 104.76
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.58,
+    "z": 23.45
+   },
+   "work": {
+    "site": "像素学徒·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -67.31,
+    "z": 39.78
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08815",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "坚持手写爷爷的工作证",
+ "id": "C-08815",
+ "month_lines": [],
+ "name": "黎小杏",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

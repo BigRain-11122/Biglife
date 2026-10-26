@@ -1,0 +1,96 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 9,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.09,
+    "z": -54.95
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.91,
+    "z": -148.16
+   },
+   "work": {
+    "site": "穿城信使·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -47.02,
+    "z": -126.24
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09963",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "桥上不问来路，落水都得拉一把。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "给半张老电影票写了一整本观察笔记——他自己也说不清为什么",
+ "id": "C-09963",
+ "month_lines": [],
+ "name": "华向洋",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 5,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -115.15,
+    "z": 127.08
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.48,
+    "z": 110.18
+   },
+   "work": {
+    "site": "新市民安居顾问·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -68.8,
+    "z": 74.68
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09203",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": null,
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "每天跟手抄的菜谱打招呼——据说是老辈传下的规矩",
+ "id": "C-09203",
+ "month_lines": [],
+ "name": "老电子管·小",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

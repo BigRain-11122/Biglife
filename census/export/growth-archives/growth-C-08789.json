@@ -1,0 +1,96 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 1,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -69.42,
+    "z": 219.39
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -8.45,
+    "z": 255.66
+   },
+   "work": {
+    "site": "感知塔站值守员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 42.73,
+    "z": 234.99
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08789",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": null,
+ "creed": "先把字写正，再想写快。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "把心事只说给手抄的菜谱听——据说是老辈传下的规矩",
+ "id": "C-08789",
+ "month_lines": [],
+ "name": "阮倩",
+ "profession": "感知塔站值守员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

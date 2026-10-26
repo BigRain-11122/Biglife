@@ -1,0 +1,96 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -9,
+   "rate": 4,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.6,
+    "z": 19.91
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.05,
+    "z": 127.26
+   },
+   "work": {
+    "site": "游戏楼门童·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 123.0,
+    "z": 85.68
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08236",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "得之我幸，失之我睡。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把心事只说给老裁缝的画粉听——这事全巷都知道",
+ "id": "C-08236",
+ "month_lines": [],
+ "name": "高斯·老",
+ "profession": "游戏楼门童",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

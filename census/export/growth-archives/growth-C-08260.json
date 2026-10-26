@@ -1,0 +1,97 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#EC407A",
+   "eye": "#FFD27A",
+   "hair": "#C5E1FF",
+   "skin": "#F48FB1"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 14,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.71,
+    "z": -13.58
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.87,
+    "z": -104.37
+   },
+   "work": {
+    "site": "巡信使·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.9,
+    "z": -44.57
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08260",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "流量像潮水，我是灯塔不是渔船。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "高兴时会把光借给停摆的老挂钟——据说是老辈传下的规矩",
+ "id": "C-08260",
+ "month_lines": [],
+ "name": "黑信风",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

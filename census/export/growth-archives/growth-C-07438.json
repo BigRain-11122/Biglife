@@ -1,0 +1,106 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 8,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -113.71,
+    "z": 117.56
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.21,
+    "z": 86.22
+   },
+   "work": {
+    "site": "防火墙巡林员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.95,
+    "z": 51.54
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07438",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给消失的船班时刻表写了一整本观察笔记",
+ "id": "C-07438",
+ "month_lines": [
+  "风灌进领口发凉，我正把巡边路线的签核了一遍，袖口磨得毛边了，糖还揣着，一颗留自己，一颗预备给巷口那个总蹲着看小猫的娃。"
+ ],
+ "name": "赵之南",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风灌进领口发凉，我正把巡边路线的签核了一遍，袖口磨得毛边了，糖还揣着，一颗留自己，一颗预备给巷口那个总蹲着看小猫的娃。",
+   "text": "「风灌进领口发凉，我正把巡边路线的签核了一遍，袖口磨得毛边了，糖还揣着，一颗留自己，一颗预备给巷口那个总蹲着看小猫的娃。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

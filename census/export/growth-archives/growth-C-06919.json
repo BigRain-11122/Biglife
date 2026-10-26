@@ -1,0 +1,105 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -9,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 44.94,
+    "z": 15.64
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.8,
+    "z": 65.5
+   },
+   "work": {
+    "site": "像素画匠·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 111.06,
+    "z": 129.2
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06919",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "坚持手写雨声录音——没人知道为什么",
+ "id": "C-06919",
+ "month_lines": [
+  "火候到了自然就香，今天画桌前坐得稳，风顶得人站不稳，毛线帽歪了三回，还是没敢摘，这天阴着，可心是暖的。"
+ ],
+ "name": "糜燕",
+ "profession": "像素画匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "火候到了自然就香，今天画桌前坐得稳，风顶得人站不稳，毛线帽歪了三回，还是没敢摘，这天阴着，可心是暖的。",
+   "text": "「火候到了自然就香，今天画桌前坐得稳，风顶得人站不稳，毛线帽歪了三回，还是没敢摘，这天阴着，可心是暖的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

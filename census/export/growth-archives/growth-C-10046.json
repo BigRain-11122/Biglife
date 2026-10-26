@@ -1,0 +1,59 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -94.86,
+    "z": -223.52
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 12.44,
+    "z": -217.31
+   },
+   "work": {
+    "site": "趸船茶炉工·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 47.38,
+    "z": -224.75
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10046",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": null,
+ "creed": "一碗热茶，顶得住江风。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "缠满渡客红棉线的老敲火钎——趸船炉膛旁那把缠着一圈圈红棉线的老敲火钎，渡口叫它暖心钎",
+ "id": "C-10046",
+ "month_lines": [],
+ "name": "阮阿桂",
+ "profession": "趸船茶炉工",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

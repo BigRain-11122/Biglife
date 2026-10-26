@@ -1,0 +1,96 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -3,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.81,
+    "z": 232.13
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -0.52,
+    "z": 165.54
+   },
+   "work": {
+    "site": "数据牧人·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 27.46,
+    "z": 250.79
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08334",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": null,
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "能一眼认出手工风筝的竹篾的真伪——这事只有档案馆知道",
+ "id": "C-08334",
+ "month_lines": [],
+ "name": "江顺林",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

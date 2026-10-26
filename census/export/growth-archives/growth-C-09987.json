@@ -1,0 +1,96 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -1,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 61.7,
+    "z": 133.3
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.78,
+    "z": 19.22
+   },
+   "work": {
+    "site": "像素小店主·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 108.38,
+    "z": 43.89
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09987",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": null,
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "还在用老钟楼的齿轮——没人知道为什么",
+ "id": "C-09987",
+ "month_lines": [],
+ "name": "门格·叁",
+ "profession": "像素小店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

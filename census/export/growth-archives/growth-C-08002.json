@@ -1,0 +1,106 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 17,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 63.46,
+    "z": 37.41
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.92,
+    "z": 43.63
+   },
+   "work": {
+    "site": "声景师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 110.35,
+    "z": 153.16
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08002",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "在旧热水瓶上打过盹，还淌了一小滩光——没人知道为什么",
+ "id": "C-08002",
+ "month_lines": [
+  "正把最后一行声景稿塞进老屋檐的磁贴槽，风灌进领口发凉，江水在晨光里浮着薄光，开嗓前总得先听一回自己心跳的落点。"
+ ],
+ "name": "黑雪碧",
+ "profession": "声景师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "正把最后一行声景稿塞进老屋檐的磁贴槽，风灌进领口发凉，江水在晨光里浮着薄光，开嗓前总得先听一回自己心跳的落点。",
+   "text": "「正把最后一行声景稿塞进老屋檐的磁贴槽，风灌进领口发凉，江水在晨光里浮着薄光，开嗓前总得先听一回自己心跳的落点。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

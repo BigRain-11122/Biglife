@@ -1,0 +1,96 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 10,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.67,
+    "z": -62.85
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.96,
+    "z": -96.93
+   },
+   "work": {
+    "site": "字幕君·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -60.23,
+    "z": -11.55
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08358",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "坚持手写老式怀表链——据说是老辈传下的规矩",
+ "id": "C-08358",
+ "month_lines": [],
+ "name": "蒋星野",
+ "profession": "字幕君",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

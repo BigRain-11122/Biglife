@@ -1,0 +1,60 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.98,
+    "z": 127.91
+   },
+   "social": {
+    "site": "算力塔机房·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.5,
+    "z": 151.52
+   },
+   "work": {
+    "site": "算力塔机房老配电检修工·算力塔机房工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -34.67,
+    "z": 45.46
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10059",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "算力塔机房",
+ "born": null,
+ "creed": "闸响对了，灯才亮得踏实。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "算力塔配电间里那副磨白了指节的旧绝缘手套——算力塔配电间的师传手套，老闸刀每一回合闸的分寸全在这副掌心里",
+ "id": "C-10059",
+ "month_lines": [],
+ "name": "雷守闸",
+ "profession": "算力塔机房老配电检修工",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

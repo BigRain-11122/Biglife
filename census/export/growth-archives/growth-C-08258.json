@@ -1,0 +1,97 @@
+{
+ "age": 84,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -9,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -51.71,
+    "z": -255.87
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 2.76,
+    "z": -213.82
+   },
+   "work": {
+    "site": "渡轮船长·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 73.44,
+    "z": -207.54
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08258",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": null,
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "记得老照片底片的每一个来历——没人知道为什么",
+ "id": "C-08258",
+ "month_lines": [],
+ "name": "唐阿凤",
+ "profession": "渡轮船长",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

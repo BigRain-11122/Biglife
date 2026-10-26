@@ -1,0 +1,106 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 4,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 55.39,
+    "z": 22.71
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.5,
+    "z": 27.35
+   },
+   "work": {
+    "site": "像素小店主·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 116.3,
+    "z": 33.81
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07673",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "每年挑一天只为旧工牌大扫除——这事只有档案馆知道",
+ "id": "C-07673",
+ "month_lines": [
+  "风掀得衣角乱摆，正擦着那台老式喷枪——今天第三单手作sprite，老顾客陈姐又来，说她孙子要带去小学，说要“拆开看看又不会坏”。"
+ ],
+ "name": "屠春梅",
+ "profession": "像素小店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风掀得衣角乱摆，正擦着那台老式喷枪——今天第三单手作sprite，老顾客陈姐又来，说她孙子要带去小学，说要“拆开看看又不会坏”。",
+   "text": "「风掀得衣角乱摆，正擦着那台老式喷枪——今天第三单手作sprite，老顾客陈姐又来，说她孙子要带去小学，说要“拆开看看又不会坏”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

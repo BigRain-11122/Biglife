@@ -1,0 +1,96 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 2,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -132.84,
+    "z": -64.46
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.05,
+    "z": -21.23
+   },
+   "work": {
+    "site": "七段街区导游·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.88,
+    "z": -136.46
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08374",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "梦话都在念叨弄堂钥匙串——这事只有档案馆知道",
+ "id": "C-08374",
+ "month_lines": [],
+ "name": "管雨欣",
+ "profession": "七段街区导游",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

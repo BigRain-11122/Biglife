@@ -1,0 +1,96 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 8,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -83.4,
+    "z": 165.96
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 3.97,
+    "z": 242.37
+   },
+   "work": {
+    "site": "数据牧人·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 113.74,
+    "z": 191.24
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09418",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": null,
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "逢人就讲老式公交站牌的故事",
+ "id": "C-09418",
+ "month_lines": [],
+ "name": "贺一鸣",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

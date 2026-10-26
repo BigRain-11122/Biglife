@@ -1,0 +1,105 @@
+{
+ "age": 85,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -9,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.47,
+    "z": -21.46
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.91,
+    "z": -111.13
+   },
+   "work": {
+    "site": "视频修复师·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 136.6,
+    "z": -114.71
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07771",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把老式怀表链画进了自己的作品里——据说是老辈传下的规矩",
+ "id": "C-07771",
+ "month_lines": [
+  "手心里攥着旧胶片卷，一帧帧对时，风顶得人站不稳，胶片边角都快磨出毛边了。对时了，放心。"
+ ],
+ "name": "杜鸿奎",
+ "profession": "视频修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手心里攥着旧胶片卷，一帧帧对时，风顶得人站不稳，胶片边角都快磨出毛边了。对时了，放心。",
+   "text": "「手心里攥着旧胶片卷，一帧帧对时，风顶得人站不稳，胶片边角都快磨出毛边了。对时了，放心。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

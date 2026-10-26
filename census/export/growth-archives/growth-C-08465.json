@@ -1,0 +1,97 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 2,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.35,
+    "z": 254.89
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -3.25,
+    "z": 215.03
+   },
+   "work": {
+    "site": "信号中继员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 50.42,
+    "z": 193.14
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08465",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": null,
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "攒了满抽屉手写信从不给看——这事只有师父知道",
+ "id": "C-08465",
+ "month_lines": [],
+ "name": "唐一诺",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

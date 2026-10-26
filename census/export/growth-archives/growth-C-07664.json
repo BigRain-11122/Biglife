@@ -1,0 +1,106 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 0,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.31,
+    "z": 50.31
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.03,
+    "z": 62.73
+   },
+   "work": {
+    "site": "资金金灯匠·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -58.0,
+    "z": 10.47
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07664",
+  "quirk": "night_run",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "收藏旧船票且每件都记得来历——据说是老辈传下的规矩",
+ "id": "C-07664",
+ "month_lines": [
+  "手正捏着旧铜扳手，给上海中心扭塔的金灯缝补最后一道光缝——风把树梢压弯了，这灯得撑住，明天行情一开，光得稳，不晃。"
+ ],
+ "name": "奚慧",
+ "profession": "资金金灯匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手正捏着旧铜扳手，给上海中心扭塔的金灯缝补最后一道光缝——风把树梢压弯了，这灯得撑住，明天行情一开，光得稳，不晃。",
+   "text": "「手正捏着旧铜扳手，给上海中心扭塔的金灯缝补最后一道光缝——风把树梢压弯了，这灯得撑住，明天行情一开，光得稳，不晃。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

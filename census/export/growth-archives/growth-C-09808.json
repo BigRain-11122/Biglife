@@ -1,0 +1,96 @@
+{
+ "age": 82,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -13,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -94.82,
+    "z": 255.4
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 5.2,
+    "z": 216.61
+   },
+   "work": {
+    "site": "感知塔站值守员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 72.84,
+    "z": 190.89
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09808",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": null,
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "把修桥人的旧安全帽画进了自己的作品里",
+ "id": "C-09808",
+ "month_lines": [],
+ "name": "石鸿奎",
+ "profession": "感知塔站值守员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": 4,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.91,
+    "z": 37.27
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.69,
+    "z": 120.19
+   },
+   "work": {
+    "site": "数据清洗工·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.4,
+    "z": 65.63
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09275",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "先把字写正，再想写快。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件全城公交的老路线图——据说是老辈传下的规矩",
+ "id": "C-09275",
+ "month_lines": [],
+ "name": "降频·老",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

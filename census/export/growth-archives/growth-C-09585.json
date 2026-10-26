@@ -1,0 +1,97 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 6,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.71,
+    "z": 33.79
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.53,
+    "z": 120.39
+   },
+   "work": {
+    "site": "算法调参师·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -40.95,
+    "z": 80.32
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09585",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": null,
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每天跟写满字的光带打招呼——据说是老辈传下的规矩",
+ "id": "C-09585",
+ "month_lines": [],
+ "name": "茅天翼",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

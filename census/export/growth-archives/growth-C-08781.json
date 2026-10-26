@@ -1,0 +1,96 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 3,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 43.35,
+    "z": -16.52
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.12,
+    "z": -78.25
+   },
+   "work": {
+    "site": "塔区风筝队员·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 116.93,
+    "z": -23.54
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08781",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": null,
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把弄堂钥匙串排成一排挨个擦——这事只有师父知道",
+ "id": "C-08781",
+ "month_lines": [],
+ "name": "邱俊",
+ "profession": "塔区风筝队员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -10,
+   "rate": 1,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.2,
+    "z": 65.73
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.63,
+    "z": 108.88
+   },
+   "work": {
+    "site": "盘口记录员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -38.23,
+    "z": 131.56
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09687",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": null,
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "给手抄的菜谱都编了号还建了册——没人知道为什么",
+ "id": "C-09687",
+ "month_lines": [],
+ "name": "抖动·甲",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

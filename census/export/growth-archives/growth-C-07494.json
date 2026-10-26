@@ -1,0 +1,106 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 15,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.86,
+    "z": 132.21
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.78,
+    "z": 45.54
+   },
+   "work": {
+    "site": "像素学徒·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -40.98,
+    "z": 138.02
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07494",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每天跟第一天的营业账本打招呼——这事只有档案馆知道",
+ "id": "C-07494",
+ "month_lines": [
+  "手在搓着旧磁带，边角磨出毛边了。风从巷口直灌进来，吹得我袖口打转，像极了师父说的“火候到了自然就香”。"
+ ],
+ "name": "糜念念",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在搓着旧磁带，边角磨出毛边了。风从巷口直灌进来，吹得我袖口打转，像极了师父说的“火候到了自然就香”。",
+   "text": "「手在搓着旧磁带，边角磨出毛边了。风从巷口直灌进来，吹得我袖口打转，像极了师父说的“火候到了自然就香”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

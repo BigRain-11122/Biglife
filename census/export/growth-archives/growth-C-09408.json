@@ -1,0 +1,97 @@
+{
+ "age": 81,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -11,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -135.9,
+    "z": 140.84
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.45,
+    "z": 19.81
+   },
+   "work": {
+    "site": "风控官·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -50.24,
+    "z": 46.77
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09408",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能一眼认出老式邮戳的真伪——他自己也说不清为什么",
+ "id": "C-09408",
+ "month_lines": [],
+ "name": "何家树",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

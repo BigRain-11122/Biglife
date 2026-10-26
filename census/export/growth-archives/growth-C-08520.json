@@ -1,0 +1,97 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 2,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -132.0,
+    "z": 124.15
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.85,
+    "z": 36.59
+   },
+   "work": {
+    "site": "时空校准师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -59.87,
+    "z": 105.66
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08520",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "会为全城桥的名字推掉一整晚的生意——她自己也说不清为什么",
+ "id": "C-08520",
+ "month_lines": [],
+ "name": "邹蕾",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 7,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 47.55,
+    "z": -68.03
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.74,
+    "z": -64.1
+   },
+   "work": {
+    "site": "编年史馆员·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 147.63,
+    "z": -16.53
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08555",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": null,
+ "creed": "流量像潮水，我是灯塔不是渔船。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把消失的船班时刻表的位置背得比自家门牌还熟——这事只有档案馆知道",
+ "id": "C-08555",
+ "month_lines": [],
+ "name": "苏Momo",
+ "profession": "编年史馆员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

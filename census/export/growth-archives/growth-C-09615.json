@@ -1,0 +1,97 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": 1,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.34,
+    "z": -40.77
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.12,
+    "z": -12.7
+   },
+   "work": {
+    "site": "数据清洗工·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.77,
+    "z": -100.36
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09615",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "收藏半张老电影票且每件都记得来历——这事只有师父知道",
+ "id": "C-09615",
+ "month_lines": [],
+ "name": "打卡片-3",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

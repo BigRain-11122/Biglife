@@ -1,0 +1,97 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 5,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -115.66,
+    "z": 91.87
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.74,
+    "z": 43.48
+   },
+   "work": {
+    "site": "数据清洗工·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.93,
+    "z": 94.79
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08391",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每天跟弄堂的门牌号打招呼——她自己也说不清为什么",
+ "id": "C-08391",
+ "month_lines": [],
+ "name": "汪阿宁",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

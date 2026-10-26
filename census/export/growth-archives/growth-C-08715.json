@@ -1,0 +1,97 @@
+{
+ "age": 84,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -5,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -146.92,
+    "z": -105.19
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.07,
+    "z": -45.08
+   },
+   "work": {
+    "site": "粉丝回信人·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -28.69,
+    "z": -63.36
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08715",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "攒了满抽屉全城第一块砖的拓片从不给看——没人知道为什么",
+ "id": "C-08715",
+ "month_lines": [],
+ "name": "阿缓存-2·丁",
+ "profession": "粉丝回信人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

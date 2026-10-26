@@ -1,0 +1,90 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -5,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 27.28,
+    "z": -147.96
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.49,
+    "z": -48.46
+   },
+   "work": {
+    "site": "城市记忆馆管理员·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 132.47,
+    "z": -81.67
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10020",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": null,
+ "creed": "记得，是这座城最温柔的义务。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "能报出「哪本书被谁在第几页折过角」的居民——档案馆叫他「活目录」",
+ "id": "C-10020",
+ "month_lines": [],
+ "name": "蓝拾遗",
+ "profession": "城市记忆馆管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [],
+ "species": "memory-spirit",
+ "v": "1"
+}

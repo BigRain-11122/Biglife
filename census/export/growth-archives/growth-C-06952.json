@@ -1,0 +1,106 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -5,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.64,
+    "z": -134.18
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.36,
+    "z": -11.79
+   },
+   "work": {
+    "site": "数据菜市摊主·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.5,
+    "z": -75.77
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06952",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "还在用老裁缝铺的样衣——没人知道为什么",
+ "id": "C-06952",
+ "month_lines": [
+  "这城里好玩的东西一天比一天多。风把人往前推，我正把新到的青菜秤好，说送就送，账另算——这天阴着，秤杆比风控官还稳，收工前得绕江走半里。"
+ ],
+ "name": "高华",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "这城里好玩的东西一天比一天多。风把人往前推，我正把新到的青菜秤好，说送就送，账另算——这天阴着，秤杆比风控官还稳，收工前得绕江走半里。",
+   "text": "「这城里好玩的东西一天比一天多。风把人往前推，我正把新到的青菜秤好，说送就送，账另算——这天阴着，秤杆比风控官还稳，收工前得绕江走半里。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

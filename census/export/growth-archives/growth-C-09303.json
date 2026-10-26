@@ -1,0 +1,97 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 3,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.55,
+    "z": 79.49
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.41,
+    "z": 45.36
+   },
+   "work": {
+    "site": "K线屏画师·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.63,
+    "z": 59.63
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09303",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": null,
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "梦话都在念叨初代像素调色板——她自己也说不清为什么",
+ "id": "C-09303",
+ "month_lines": [],
+ "name": "丁梓涵",
+ "profession": "K线屏画师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 2,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -104.97,
+    "z": -120.37
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.75,
+    "z": -100.65
+   },
+   "work": {
+    "site": "视频修复师·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.95,
+    "z": -99.49
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08634",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "从不让弄堂钥匙串离开自己三步远",
+ "id": "C-08634",
+ "month_lines": [],
+ "name": "金涛",
+ "profession": "视频修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

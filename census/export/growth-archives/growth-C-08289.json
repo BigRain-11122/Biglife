@@ -1,0 +1,97 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 3,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.08,
+    "z": 128.97
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.01,
+    "z": 33.6
+   },
+   "work": {
+    "site": "尾盘茶室老板·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.47,
+    "z": 99.42
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08289",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "留着旧码头的汽笛阀却从来不用——这事只有档案馆知道",
+ "id": "C-08289",
+ "month_lines": [],
+ "name": "熊春梅",
+ "profession": "尾盘茶室老板",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

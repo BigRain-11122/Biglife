@@ -1,0 +1,106 @@
+{
+ "age": 14,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 20,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -111.81,
+    "z": 26.4
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.57,
+    "z": 134.41
+   },
+   "work": {
+    "site": "像素学徒·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -61.37,
+    "z": 15.8
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07746",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把褪色的游戏卡带排成一排挨个擦——她自己也说不清为什么",
+ "id": "C-07746",
+ "month_lines": [
+  "风从巷口直灌进来，我正拆着师父新给的旧磁盘盒，想给破旧的像素风扇加个光感模块，一句话的事，分一半是本分。"
+ ],
+ "name": "秦米粒",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风从巷口直灌进来，我正拆着师父新给的旧磁盘盒，想给破旧的像素风扇加个光感模块，一句话的事，分一半是本分。",
+   "text": "「风从巷口直灌进来，我正拆着师父新给的旧磁盘盒，想给破旧的像素风扇加个光感模块，一句话的事，分一半是本分。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

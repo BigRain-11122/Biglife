@@ -1,0 +1,96 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 4,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -100.84,
+    "z": -54.58
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.17,
+    "z": -14.52
+   },
+   "work": {
+    "site": "数据清洗工·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.61,
+    "z": -44.17
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09978",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把旧缝纫机踏板画进了自己的作品里——这事只有师父知道",
+ "id": "C-09978",
+ "month_lines": [],
+ "name": "付Ida",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

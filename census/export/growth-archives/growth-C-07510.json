@@ -1,0 +1,105 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 1,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -25.6,
+    "z": 189.68
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 9.29,
+    "z": 255.55
+   },
+   "work": {
+    "site": "信号中继员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 64.36,
+    "z": 223.71
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07510",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件老式爆米花机的摇柄——没人知道为什么",
+ "id": "C-07510",
+ "month_lines": [
+  "三块中继卡在衣兜里发烫，风灌进领口发凉，弄堂还是那个弄堂，G08的路标倒了，我扶着墙，把B2396的信号补进去了。"
+ ],
+ "name": "吕浩宇",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "三块中继卡在衣兜里发烫，风灌进领口发凉，弄堂还是那个弄堂，G08的路标倒了，我扶着墙，把B2396的信号补进去了。",
+   "text": "「三块中继卡在衣兜里发烫，风灌进领口发凉，弄堂还是那个弄堂，G08的路标倒了，我扶着墙，把B2396的信号补进去了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

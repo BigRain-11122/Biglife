@@ -1,0 +1,96 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 9,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -34.82,
+    "z": 200.96
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 13.03,
+    "z": 230.89
+   },
+   "work": {
+    "site": "城市气象播报员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 105.38,
+    "z": 184.77
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09486",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": null,
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "留着掉漆的糖果罐却从来不用——这事全巷都知道",
+ "id": "C-09486",
+ "month_lines": [],
+ "name": "阮梓涵",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 85,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -10,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.47,
+    "z": 108.82
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.72,
+    "z": 81.79
+   },
+   "work": {
+    "site": "数据粥铺摊主·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -72.06,
+    "z": 57.93
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08802",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每天跟老式的士票打招呼——据说是老辈传下的规矩",
+ "id": "C-08802",
+ "month_lines": [],
+ "name": "朱顺发",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

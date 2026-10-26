@@ -1,0 +1,90 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -1,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 27.97,
+    "z": 126.99
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.3,
+    "z": 82.7
+   },
+   "work": {
+    "site": "穿城包裹派送员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 111.86,
+    "z": 50.83
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10019",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": null,
+ "creed": "托付无小事，件件有回音。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "签收单按名字首字母排好、还给客户留一句备注的派送员",
+ "id": "C-10019",
+ "month_lines": [],
+ "name": "阿澄",
+ "profession": "穿城包裹派送员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

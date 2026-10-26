@@ -1,0 +1,96 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 9,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 62.18,
+    "z": -140.08
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.44,
+    "z": -128.54
+   },
+   "work": {
+    "site": "城市气象播报员·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 143.08,
+    "z": -102.4
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09046",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": null,
+ "creed": "清单上没有的事，一律排队。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "收藏全城最后一只手写信箱且每件都记得来历",
+ "id": "C-09046",
+ "month_lines": [],
+ "name": "肖行舟",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "buddy",
+   "src": "棋友",
+   "with": "C-00035"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

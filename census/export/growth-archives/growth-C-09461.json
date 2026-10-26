@@ -1,0 +1,97 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 2,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.4,
+    "z": 38.07
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.79,
+    "z": 109.75
+   },
+   "work": {
+    "site": "全城对时师·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -30.01,
+    "z": 63.72
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09461",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": null,
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "逢人就讲旧码头的汽笛阀的故事——这事只有师父知道",
+ "id": "C-09461",
+ "month_lines": [],
+ "name": "奚卫东",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

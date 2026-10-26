@@ -1,0 +1,96 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -5,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.4,
+    "z": -49.61
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.46,
+    "z": -139.84
+   },
+   "work": {
+    "site": "缓存管理员·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.45,
+    "z": -26.81
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09462",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "风吹哪页读哪页。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件老钢琴的琴键——据说是老辈传下的规矩",
+ "id": "C-09462",
+ "month_lines": [],
+ "name": "亨利·快",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

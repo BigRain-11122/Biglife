@@ -1,0 +1,105 @@
+{
+ "age": 15,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -10,
+   "rate": 3,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 23.19,
+    "z": 35.48
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.43,
+    "z": 35.02
+   },
+   "work": {
+    "site": "新市民安居顾问·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 143.53,
+    "z": 96.63
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08125",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "会给旧笔友的明信片织毛衣",
+ "id": "C-08125",
+ "month_lines": [
+  "我正把新来户的入住单往边上挪了挪，风好大，纸页哗啦响，像在说：慢一点，城又不会跑。"
+ ],
+ "name": "阿冗余·夜",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "我正把新来户的入住单往边上挪了挪，风好大，纸页哗啦响，像在说：慢一点，城又不会跑。",
+   "text": "「我正把新来户的入住单往边上挪了挪，风好大，纸页哗啦响，像在说：慢一点，城又不会跑。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

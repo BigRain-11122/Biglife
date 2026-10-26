@@ -1,0 +1,96 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 1,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -136.42,
+    "z": -62.46
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.53,
+    "z": -115.5
+   },
+   "work": {
+    "site": "数据清洗工·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -32.33,
+    "z": -34.23
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09697",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "记得旧织机的梭子的每一个来历——据说是老辈传下的规矩",
+ "id": "C-09697",
+ "month_lines": [],
+ "name": "王莉",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

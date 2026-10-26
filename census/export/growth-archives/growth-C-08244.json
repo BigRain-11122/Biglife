@@ -1,0 +1,97 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 10,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -134.37,
+    "z": 145.59
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.93,
+    "z": 27.03
+   },
+   "work": {
+    "site": "K线屏画师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.38,
+    "z": 74.59
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08244",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "街坊的事，就是我的事。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每逢下雨就去修褪色的戏票根——他自己也说不清为什么",
+ "id": "C-08244",
+ "month_lines": [],
+ "name": "黄Ida",
+ "profession": "K线屏画师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 51,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": 3,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.64,
+    "z": -121.51
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.38,
+    "z": -137.21
+   },
+   "work": {
+    "site": "城市接线生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -25.2,
+    "z": -73.48
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07626",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "口袋里总揣着褪色的游戏卡带",
+ "id": "C-07626",
+ "month_lines": [
+  "耳麦还插着，风从巷口直灌进来，我正把G08的转接码念给C-09127听——弄堂还是那个弄堂，灯灵昨夜又补了盏。"
+ ],
+ "name": "特斯拉-5",
+ "profession": "城市接线生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "耳麦还插着，风从巷口直灌进来，我正把G08的转接码念给C-09127听——弄堂还是那个弄堂，灯灵昨夜又补了盏。",
+   "text": "「耳麦还插着，风从巷口直灌进来，我正把G08的转接码念给C-09127听——弄堂还是那个弄堂，灯灵昨夜又补了盏。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

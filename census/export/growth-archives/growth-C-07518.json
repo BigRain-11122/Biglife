@@ -1,0 +1,105 @@
+{
+ "age": 86,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -12,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 63.95,
+    "z": 141.63
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.76,
+    "z": 153.67
+   },
+   "work": {
+    "site": "像素小店主·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 106.57,
+    "z": 73.0
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07518",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把老钢琴的琴键画进了自己的作品里——没人知道为什么",
+ "id": "C-07518",
+ "month_lines": [
+  "手在搓着那枚旧铜钱，纹路磨得发亮，风从巷口直灌进来，把门框吹得轻响。今天云好，改天再说。"
+ ],
+ "name": "杜根福",
+ "profession": "像素小店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在搓着那枚旧铜钱，纹路磨得发亮，风从巷口直灌进来，把门框吹得轻响。今天云好，改天再说。",
+   "text": "「手在搓着那枚旧铜钱，纹路磨得发亮，风从巷口直灌进来，把门框吹得轻响。今天云好，改天再说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 1,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 43.28,
+    "z": -110.6
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.75,
+    "z": -31.49
+   },
+   "work": {
+    "site": "穿城信使·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 99.45,
+    "z": -155.01
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08488",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": null,
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "记得旧船木做的镇纸的每一个来历——这事全巷都知道",
+ "id": "C-08488",
+ "month_lines": [],
+ "name": "邱清晚",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

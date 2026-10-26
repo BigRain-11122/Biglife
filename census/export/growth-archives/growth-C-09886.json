@@ -1,0 +1,97 @@
+{
+ "age": 75,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -13,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.7,
+    "z": 100.27
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.8,
+    "z": 89.55
+   },
+   "work": {
+    "site": "资金金灯匠·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.46,
+    "z": 16.48
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09886",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "能背出褪色的戏票根的全部班次——这事全巷都知道",
+ "id": "C-09886",
+ "month_lines": [],
+ "name": "黎惠芬",
+ "profession": "资金金灯匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

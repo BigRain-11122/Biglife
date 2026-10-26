@@ -1,0 +1,97 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 4,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -111.09,
+    "z": -92.94
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.08,
+    "z": -25.17
+   },
+   "work": {
+    "site": "平台对接员·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.3,
+    "z": -89.37
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09617",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "能一眼认出退租铺面的旧招牌的真伪——这事只有师父知道",
+ "id": "C-09617",
+ "month_lines": [],
+ "name": "叶小鹿",
+ "profession": "平台对接员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 70,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -12,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 55.52,
+    "z": 55.41
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.58,
+    "z": 26.51
+   },
+   "work": {
+    "site": "8bit 乐师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 123.18,
+    "z": 122.3
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09120",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": null,
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能一眼认出老式的士票的真伪——据说是老辈传下的规矩",
+ "id": "C-09120",
+ "month_lines": [],
+ "name": "尹桂芳",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

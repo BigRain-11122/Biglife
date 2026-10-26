@@ -1,0 +1,96 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 0,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 71.78,
+    "z": 61.0
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.26,
+    "z": 99.6
+   },
+   "work": {
+    "site": "玩家留言整理员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 132.08,
+    "z": 117.28
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08367",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": null,
+ "creed": "灶上留一壶，路过的都是客。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能背出旧当铺的票据夹的全部班次——据说是老辈传下的规矩",
+ "id": "C-08367",
+ "month_lines": [],
+ "name": "杨未晞",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

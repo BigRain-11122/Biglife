@@ -1,0 +1,96 @@
+{
+ "age": 84,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -14,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 33.26,
+    "z": -30.94
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.85,
+    "z": -130.09
+   },
+   "work": {
+    "site": "旧件修复师·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 99.0,
+    "z": -23.69
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08536",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": null,
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件淘汰的电话卡——没人知道为什么",
+ "id": "C-08536",
+ "month_lines": [],
+ "name": "蒋德明",
+ "profession": "旧件修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

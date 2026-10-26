@@ -1,0 +1,97 @@
+{
+ "age": 38,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 4,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 46.78,
+    "z": -146.16
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.47,
+    "z": -143.53
+   },
+   "work": {
+    "site": "城市气象播报员·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 120.86,
+    "z": -84.36
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08725",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": null,
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "用老药房的药柜抽屉教会了半条街的孩子——这事只有师父知道",
+ "id": "C-08725",
+ "month_lines": [],
+ "name": "蒋Seven",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

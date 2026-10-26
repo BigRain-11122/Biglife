@@ -1,0 +1,96 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -3,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 60.42,
+    "z": -22.51
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.4,
+    "z": -50.05
+   },
+   "work": {
+    "site": "感知网养线工·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 112.42,
+    "z": -93.65
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09969",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "历史立面群",
+ "born": null,
+ "creed": "自己淋过雨，就想给别人撑伞。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "能背出旧织机的梭子的全部班次——这事只有师父知道",
+ "id": "C-09969",
+ "month_lines": [],
+ "name": "三极管·老",
+ "profession": "感知网养线工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

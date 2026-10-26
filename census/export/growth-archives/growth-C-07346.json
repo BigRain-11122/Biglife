@@ -1,0 +1,105 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -3,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -118.65,
+    "z": -206.88
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 0.72,
+    "z": -193.8
+   },
+   "work": {
+    "site": "江岸数据钓手·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 76.95,
+    "z": -249.07
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07346",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "RV",
+ "gender": "无定",
+ "hook": "给三代人传下的顶针都起了名字",
+ "id": "C-07346",
+ "month_lines": [
+  "手在搓线，是旧钓竿的防滑纹。风刮得紧，江水浮着光，我盯着漂，一寸一寸等，不急，江水都不急我急啥。"
+ ],
+ "name": "尾递归-4",
+ "profession": "江岸数据钓手",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在搓线，是旧钓竿的防滑纹。风刮得紧，江水浮着光，我盯着漂，一寸一寸等，不急，江水都不急我急啥。",
+   "text": "「手在搓线，是旧钓竿的防滑纹。风刮得紧，江水浮着光，我盯着漂，一寸一寸等，不急，江水都不急我急啥。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

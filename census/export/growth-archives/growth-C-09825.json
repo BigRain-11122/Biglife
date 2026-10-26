@@ -1,0 +1,96 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 9,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 37.71,
+    "z": -127.89
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.21,
+    "z": -77.78
+   },
+   "work": {
+    "site": "编年史馆员·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 143.29,
+    "z": -31.56
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09825",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": null,
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把停摆的老挂钟的位置背得比自家门牌还熟",
+ "id": "C-09825",
+ "month_lines": [],
+ "name": "姚Leo",
+ "profession": "编年史馆员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

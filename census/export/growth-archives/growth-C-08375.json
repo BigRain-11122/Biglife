@@ -1,0 +1,96 @@
+{
+ "age": 74,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -8,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.36,
+    "z": -110.96
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.29,
+    "z": -151.1
+   },
+   "work": {
+    "site": "七段街区导游·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.56,
+    "z": -58.16
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08375",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "还在用褪色的游戏卡带——这事全巷都知道",
+ "id": "C-08375",
+ "month_lines": [],
+ "name": "薛国强",
+ "profession": "七段街区导游",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

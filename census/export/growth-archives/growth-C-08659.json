@@ -1,0 +1,97 @@
+{
+ "age": 79,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -11,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -143.21,
+    "z": -96.42
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.08,
+    "z": -138.85
+   },
+   "work": {
+    "site": "数据粥铺摊主·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.37,
+    "z": -85.39
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08659",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "每天跟手绘的城图打招呼",
+ "id": "C-08659",
+ "month_lines": [],
+ "name": "付珍珠",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

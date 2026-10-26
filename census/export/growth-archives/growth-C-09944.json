@@ -1,0 +1,96 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -5,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 42.19,
+    "z": -81.07
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.53,
+    "z": -131.63
+   },
+   "work": {
+    "site": "旧件修复师·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 122.01,
+    "z": -59.77
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09944",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": null,
+ "creed": "街坊的事，就是我的事。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把初代像素调色板的位置背得比自家门牌还熟——他自己也说不清为什么",
+ "id": "C-09944",
+ "month_lines": [],
+ "name": "郑顺林",
+ "profession": "旧件修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

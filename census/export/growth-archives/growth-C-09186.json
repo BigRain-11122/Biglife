@@ -1,0 +1,96 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 7,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -146.39,
+    "z": -87.97
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.73,
+    "z": -101.41
+   },
+   "work": {
+    "site": "新市民安居顾问·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.8,
+    "z": -156.06
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09186",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "把半张老电影票的位置背得比自家门牌还熟——这事只有师父知道",
+ "id": "C-09186",
+ "month_lines": [],
+ "name": "崔予安",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

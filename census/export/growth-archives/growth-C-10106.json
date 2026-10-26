@@ -1,0 +1,59 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 46.78,
+    "z": 38.75
+   },
+   "social": {
+    "site": "老游戏城一楼修表柜台·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.84,
+    "z": 116.56
+   },
+   "work": {
+    "site": "修表匠·老游戏城一楼修表柜台工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 132.23,
+    "z": 43.8
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10106",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老游戏城一楼修表柜台",
+ "born": null,
+ "creed": "表不走不是表的错，是没人对上它的节奏",
+ "district": "GM",
+ "gender": "男",
+ "hook": "一只放大镜夹在铁架上，镜片边缠着黑胶布，镜面留着一道擦不掉的指纹印。",
+ "id": "C-10106",
+ "month_lines": [],
+ "name": "苗守时",
+ "profession": "修表匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

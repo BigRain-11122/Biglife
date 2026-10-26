@@ -1,0 +1,97 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -1,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 46.94,
+    "z": 125.28
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.74,
+    "z": 30.31
+   },
+   "work": {
+    "site": "游戏策划·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 119.78,
+    "z": 62.54
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09524",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "把老式邮戳画进了自己的作品里——据说是老辈传下的规矩",
+ "id": "C-09524",
+ "month_lines": [],
+ "name": "三七·叁",
+ "profession": "游戏策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

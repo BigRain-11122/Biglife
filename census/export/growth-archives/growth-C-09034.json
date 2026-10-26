@@ -1,0 +1,96 @@
+{
+ "age": 56,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 1,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 33.04,
+    "z": 56.83
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.88,
+    "z": 82.37
+   },
+   "work": {
+    "site": "灯塔守望·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 131.29,
+    "z": 105.66
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09034",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "给旧茶馆的水牌都起了名字",
+ "id": "C-09034",
+ "month_lines": [],
+ "name": "程莉",
+ "profession": "灯塔守望",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "household",
+   "src": "H-GM1047",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -13,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -79.99,
+    "z": 217.56
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 5.91,
+    "z": 187.39
+   },
+   "work": {
+    "site": "感知网养线工·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 63.56,
+    "z": 232.64
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09818",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": null,
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "记得弄堂的门牌号的每一个来历——这事只有师父知道",
+ "id": "C-09818",
+ "month_lines": [],
+ "name": "陈磊",
+ "profession": "感知网养线工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "household",
+   "src": "H-OR0051",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

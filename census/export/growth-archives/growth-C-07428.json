@@ -1,0 +1,105 @@
+{
+ "age": 85,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -11,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.29,
+    "z": -124.84
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.79,
+    "z": -35.35
+   },
+   "work": {
+    "site": "粉丝回信人·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -47.35,
+    "z": -31.89
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07428",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "坚持给褪色的游戏卡带记日记——这事全巷都知道",
+ "id": "C-07428",
+ "month_lines": [
+  "手心搓着那封刚拆的回信，信纸角还留着昨夜的指纹。风不小，檐角的灯晃得快，清单第一，又一封要交了。"
+ ],
+ "name": "梁珍珠",
+ "profession": "粉丝回信人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手心搓着那封刚拆的回信，信纸角还留着昨夜的指纹。风不小，檐角的灯晃得快，清单第一，又一封要交了。",
+   "text": "「手心搓着那封刚拆的回信，信纸角还留着昨夜的指纹。风不小，檐角的灯晃得快，清单第一，又一封要交了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

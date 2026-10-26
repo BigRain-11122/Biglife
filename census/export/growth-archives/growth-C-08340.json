@@ -1,0 +1,97 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -2,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 70.72,
+    "z": 29.74
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.1,
+    "z": 140.21
+   },
+   "work": {
+    "site": "城门守门人·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 105.86,
+    "z": 131.08
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08340",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "像素越小，心眼越大。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "每天跟修桥人的旧安全帽打招呼——据说是老辈传下的规矩",
+ "id": "C-08340",
+ "month_lines": [],
+ "name": "阿读卡·晨",
+ "profession": "城门守门人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

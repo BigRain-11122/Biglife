@@ -1,0 +1,59 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -63.63,
+    "z": 197.64
+   },
+   "social": {
+    "site": "外环背街合租房·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 14.93,
+    "z": 182.34
+   },
+   "work": {
+    "site": "搬家背楼师傅·外环背街合租房工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 81.26,
+    "z": 196.04
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10084",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "外环背街合租房",
+ "born": null,
+ "creed": "楼有多高，肩就有多稳",
+ "district": "OR",
+ "gender": "男",
+ "hook": "一床卷起来的旧席子，边角用布条包了三道，夏天铺开时总把包边转到脚边——那是他缝工钱的地方，卷起来就压在床底",
+ "id": "C-10084",
+ "month_lines": [],
+ "name": "贺满仓",
+ "profession": "搬家背楼师傅",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

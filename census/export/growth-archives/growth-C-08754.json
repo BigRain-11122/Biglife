@@ -1,0 +1,96 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -5,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 24.74,
+    "z": 129.24
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.01,
+    "z": 53.21
+   },
+   "work": {
+    "site": "彩蛋埋藏师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 115.28,
+    "z": 102.14
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08754",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "记得初代城门钥匙的每一个来历——没人知道为什么",
+ "id": "C-08754",
+ "month_lines": [],
+ "name": "卡诺·丙",
+ "profession": "彩蛋埋藏师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

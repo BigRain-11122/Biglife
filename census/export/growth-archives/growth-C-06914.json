@@ -1,0 +1,106 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#42A5F5",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#B388FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 13,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -97.28,
+    "z": 98.19
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.02,
+    "z": 91.63
+   },
+   "work": {
+    "site": "风信使·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -50.31,
+    "z": 128.71
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06914",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "记得一台修了八次的老收音机出现过的每一个雨夜",
+ "id": "C-06914",
+ "month_lines": [
+  "风刮得紧，塔脚花园的风铃晃得快，我刚试了下，一声清鸣，像老邻居在喊话。收摊前给家里捎了热乎的糖糕，今儿个单日，得把老规矩守好。"
+ ],
+ "name": "阿弦月",
+ "profession": "风信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风刮得紧，塔脚花园的风铃晃得快，我刚试了下，一声清鸣，像老邻居在喊话。收摊前给家里捎了热乎的糖糕，今儿个单日，得把老规矩守好。",
+   "text": "「风刮得紧，塔脚花园的风铃晃得快，我刚试了下，一声清鸣，像老邻居在喊话。收摊前给家里捎了热乎的糖糕，今儿个单日，得把老规矩守好。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

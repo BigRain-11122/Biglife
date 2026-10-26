@@ -1,0 +1,96 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -2,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 44.91,
+    "z": 92.64
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.75,
+    "z": 48.73
+   },
+   "work": {
+    "site": "攻略誊写员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 109.27,
+    "z": 147.22
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09235",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": null,
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每年挑一天只为爷爷的工作证大扫除——他自己也说不清为什么",
+ "id": "C-09235",
+ "month_lines": [],
+ "name": "吕顺林",
+ "profession": "攻略誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

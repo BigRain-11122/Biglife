@@ -1,0 +1,97 @@
+{
+ "age": 93,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -11,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.85,
+    "z": -106.63
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.04,
+    "z": -108.93
+   },
+   "work": {
+    "site": "声优棚掌柜·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -28.8,
+    "z": -88.45
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09066",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "给掉漆的糖果罐都起了名字——没人知道为什么",
+ "id": "C-09066",
+ "month_lines": [],
+ "name": "冯鸿奎",
+ "profession": "声优棚掌柜",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

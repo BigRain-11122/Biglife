@@ -1,0 +1,91 @@
+{
+ "age": 3,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 22,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 61.29,
+    "z": 150.59
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.64,
+    "z": 64.51
+   },
+   "work": {
+    "site": "工坊巡线小狐·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.32,
+    "z": 12.33
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10025",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "夜巷的路，得有人一小步一小步量。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "把巡线路线敲成节拍留给夜巷听的小狐——匠人巷的猫都会哼那段调",
+ "id": "C-10025",
+ "month_lines": [],
+ "name": "小铜尾",
+ "profession": "工坊巡线小狐",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 59,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 3,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -62.75,
+    "z": 172.92
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 14.24,
+    "z": 236.46
+   },
+   "work": {
+    "site": "防火墙巡林员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 38.9,
+    "z": 228.84
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09197",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": null,
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "收藏一台修了八次的老收音机且每件都记得来历",
+ "id": "C-09197",
+ "month_lines": [],
+ "name": "黄琳",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

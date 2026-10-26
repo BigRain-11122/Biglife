@@ -1,0 +1,106 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 3,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -33.31,
+    "z": 166.53
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 2.57,
+    "z": 189.24
+   },
+   "work": {
+    "site": "感知塔站值守员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 126.29,
+    "z": 171.4
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07076",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "能一眼认出退役灯塔的透镜的真伪——这事全巷都知道",
+ "id": "C-07076",
+ "month_lines": [
+  "这城里好玩的东西一天比一天多。风把树梢压弯了，屋里的灯我挨个看了，G08游戏阶段又从B2396滑回S2.5，值班日志写得比昨天还厚。"
+ ],
+ "name": "杜星野",
+ "profession": "感知塔站值守员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "这城里好玩的东西一天比一天多。风把树梢压弯了，屋里的灯我挨个看了，G08游戏阶段又从B2396滑回S2.5，值班日志写得比昨天还厚。",
+   "text": "「这城里好玩的东西一天比一天多。风把树梢压弯了，屋里的灯我挨个看了，G08游戏阶段又从B2396滑回S2.5，值班日志写得比昨天还厚。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

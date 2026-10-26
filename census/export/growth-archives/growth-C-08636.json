@@ -1,0 +1,96 @@
+{
+ "age": 93,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -15,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -59.22,
+    "z": 190.22
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -5.41,
+    "z": 249.3
+   },
+   "work": {
+    "site": "旧件修复师·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 83.65,
+    "z": 214.62
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08636",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": null,
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "从不让全城雪夜的第一次合影离开自己三步远",
+ "id": "C-08636",
+ "month_lines": [],
+ "name": "史珍珠",
+ "profession": "旧件修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

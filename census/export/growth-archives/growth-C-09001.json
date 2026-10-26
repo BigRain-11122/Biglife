@@ -1,0 +1,97 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -3,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.76,
+    "z": 176.39
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 18.17,
+    "z": 235.23
+   },
+   "work": {
+    "site": "城市气象播报员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 69.27,
+    "z": 198.45
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09001",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": null,
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "留着退役的信使哨子却从来不用——这事只有档案馆知道",
+ "id": "C-09001",
+ "month_lines": [],
+ "name": "梁蕾",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "buddy",
+   "src": "老搭档",
+   "with": "C-00095"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

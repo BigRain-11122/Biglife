@@ -1,0 +1,96 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 5,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 49.09,
+    "z": 115.71
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.38,
+    "z": 70.26
+   },
+   "work": {
+    "site": "晨操领队·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 102.77,
+    "z": 80.55
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08228",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "梦话都在念叨爷爷的工作证——没人知道为什么",
+ "id": "C-08228",
+ "month_lines": [],
+ "name": "龚慧",
+ "profession": "晨操领队",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

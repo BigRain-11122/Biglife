@@ -1,0 +1,105 @@
+{
+ "age": 40,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": -2,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -94.76,
+    "z": -256.8
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -9.51,
+    "z": -254.53
+   },
+   "work": {
+    "site": "像素小店主·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 30.14,
+    "z": -178.67
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07614",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "从不让老式冰箱贴离开自己三步远",
+ "id": "C-07614",
+ "month_lines": [
+  "手在捏着一块新做的sprite，边缘还沾着昨夜的颜料，风从巷口直灌进来，吹得纸页哗啦响，有意思，我想想——这火候，该开锅了。"
+ ],
+ "name": "冯丽",
+ "profession": "像素小店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在捏着一块新做的sprite，边缘还沾着昨夜的颜料，风从巷口直灌进来，吹得纸页哗啦响，有意思，我想想——这火候，该开锅了。",
+   "text": "「手在捏着一块新做的sprite，边缘还沾着昨夜的颜料，风从巷口直灌进来，吹得纸页哗啦响，有意思，我想想——这火候，该开锅了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

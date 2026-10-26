@@ -1,0 +1,97 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 12,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 58.45,
+    "z": -147.96
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.25,
+    "z": -65.92
+   },
+   "work": {
+    "site": "信使小跟班·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.54,
+    "z": -70.53
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08869",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": null,
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "坚持手写手摇的旧胶片机——据说是老辈传下的规矩",
+ "id": "C-08869",
+ "month_lines": [],
+ "name": "邓团团",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "household",
+   "src": "H-NS0312",
+   "with": "C-00264"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

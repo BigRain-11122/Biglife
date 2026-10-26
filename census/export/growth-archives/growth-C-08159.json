@@ -1,0 +1,106 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 19,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.64,
+    "z": 17.86
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.58,
+    "z": 83.98
+   },
+   "work": {
+    "site": "沙盒建筑师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 105.32,
+    "z": 111.86
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08159",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能背出手绘的星空图的全部班次",
+ "id": "C-08159",
+ "month_lines": [
+  "正把新画的楼稿垫在窗台，风大得说话要抬声，江水在下头晃，像谁在轻轻敲门——急啥，汤还没开呢。"
+ ],
+ "name": "谢团团",
+ "profession": "沙盒建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "正把新画的楼稿垫在窗台，风大得说话要抬声，江水在下头晃，像谁在轻轻敲门——急啥，汤还没开呢。",
+   "text": "「正把新画的楼稿垫在窗台，风大得说话要抬声，江水在下头晃，像谁在轻轻敲门——急啥，汤还没开呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

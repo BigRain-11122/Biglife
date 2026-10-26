@@ -1,0 +1,97 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#82B1FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 22,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -69.28,
+    "z": 183.97
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 19.14,
+    "z": 204.9
+   },
+   "work": {
+    "site": "风信使·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 85.6,
+    "z": 235.99
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09672",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "边缘街区",
+ "born": null,
+ "creed": "好吃的东西，都急不得。",
+ "district": "OR",
+ "gender": "无定",
+ "hook": "跟着老式爆米花机的摇柄的节奏打过拍子——这事只有档案馆知道",
+ "id": "C-09672",
+ "month_lines": [],
+ "name": "白哑铃",
+ "profession": "风信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

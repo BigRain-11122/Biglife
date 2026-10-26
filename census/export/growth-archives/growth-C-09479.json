@@ -1,0 +1,96 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -10,
+   "rate": -5,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -112.14,
+    "z": -174.61
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 16.86,
+    "z": -212.98
+   },
+   "work": {
+    "site": "夜宵摊主·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 34.48,
+    "z": -224.94
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09479",
+  "quirk": "slow",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": null,
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "记得电波猫的每一个来历——据说是老辈传下的规矩",
+ "id": "C-09479",
+ "month_lines": [],
+ "name": "南桥·甲",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 1,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 25.83,
+    "z": -49.85
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.82,
+    "z": -27.04
+   },
+   "work": {
+    "site": "穿城信使·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 110.21,
+    "z": -148.31
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07122",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "把退役的风向标的位置背得比自家门牌还熟——据说是老辈传下的规矩",
+ "id": "C-07122",
+ "month_lines": [
+  "手在擦工具栏，风从巷口直灌进来，灯一盏盏亮着，我对着接单屏说：“侬晓得伐，今天单子多，新来的PushEvent，我跟C-09676说过了——数据不会骗人，人会。"
+ ],
+ "name": "华春梅",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在擦工具栏，风从巷口直灌进来，灯一盏盏亮着，我对着接单屏说：“侬晓得伐，今天单子多，新来的PushEvent，我跟C-09676说过了——数据不会骗人，人会。",
+   "text": "「手在擦工具栏，风从巷口直灌进来，灯一盏盏亮着，我对着接单屏说：“侬晓得伐，今天单子多，新来的PushEvent，我跟C-09676说过了——数据不会骗人，人会。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

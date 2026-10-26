@@ -1,0 +1,96 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 6,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.45,
+    "z": 48.31
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.95,
+    "z": 59.01
+   },
+   "work": {
+    "site": "彩蛋埋藏师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 113.95,
+    "z": 125.03
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09036",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": null,
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "逢人就讲旧城庆纪念章的故事——她自己也说不清为什么",
+ "id": "C-09036",
+ "month_lines": [],
+ "name": "徐Ruby",
+ "profession": "彩蛋埋藏师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

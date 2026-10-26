@@ -1,0 +1,97 @@
+{
+ "age": 15,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 12,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 44.48,
+    "z": 87.07
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.07,
+    "z": 66.46
+   },
+   "work": {
+    "site": "信使小跟班·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 122.04,
+    "z": 85.91
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09814",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "用老裁缝铺的样衣教会了半条街的孩子——这事只有档案馆知道",
+ "id": "C-09814",
+ "month_lines": [],
+ "name": "崔米粒",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

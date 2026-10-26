@@ -1,0 +1,96 @@
+{
+ "age": 44,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": -4,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.36,
+    "z": 150.77
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.76,
+    "z": 56.77
+   },
+   "work": {
+    "site": "bug 猎人·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 138.33,
+    "z": 23.96
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08348",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "在全城最后一只手写信箱上刻了一行没人认得的小字——这事只有档案馆知道",
+ "id": "C-08348",
+ "month_lines": [],
+ "name": "毛秀兰",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

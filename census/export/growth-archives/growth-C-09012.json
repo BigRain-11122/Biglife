@@ -1,0 +1,96 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -2,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.13,
+    "z": -146.49
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.08,
+    "z": -100.67
+   },
+   "work": {
+    "site": "缓存管理员·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.42,
+    "z": -151.39
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09012",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "攒了满抽屉巷口的第一盏灯从不给看——没人知道为什么",
+ "id": "C-09012",
+ "month_lines": [],
+ "name": "夏慧",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

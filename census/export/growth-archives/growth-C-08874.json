@@ -1,0 +1,97 @@
+{
+ "age": 93,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -8,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -119.24,
+    "z": 98.93
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.46,
+    "z": 146.45
+   },
+   "work": {
+    "site": "盘口记录员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -35.84,
+    "z": 19.3
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08874",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "好吃的东西，都急不得。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "会给旧信使地图的边角料织毛衣——这事只有档案馆知道",
+ "id": "C-08874",
+ "month_lines": [],
+ "name": "崔金花",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

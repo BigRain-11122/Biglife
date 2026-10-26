@@ -1,0 +1,97 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -6,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -129.36,
+    "z": -139.96
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.11,
+    "z": -38.46
+   },
+   "work": {
+    "site": "数据化妆师·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.5,
+    "z": -33.04
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08616",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "给初代广场舞光带都起了名字——这事只有档案馆知道",
+ "id": "C-08616",
+ "month_lines": [],
+ "name": "雷海峰",
+ "profession": "数据化妆师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

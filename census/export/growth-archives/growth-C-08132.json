@@ -1,0 +1,105 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": -5,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.12,
+    "z": -97.24
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.77,
+    "z": -117.4
+   },
+   "work": {
+    "site": "城市接线生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -57.73,
+    "z": -122.71
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08132",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件消失街区的路牌",
+ "id": "C-08132",
+ "month_lines": [
+  "手在耳麦上转了两圈，风把树梢压弯了，我正把“G08 CrazyCampus: B2396 -> S2.5”那句说给C-03500听，他耳朵一抖，转头就递给我一张旧纸——说谁家孩子的"
+ ],
+ "name": "阮丽",
+ "profession": "城市接线生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在耳麦上转了两圈，风把树梢压弯了，我正把“G08 CrazyCampus: B2396 -> S2.5”那句说给C-03500听，他耳朵一抖，转头就递给我一张旧纸——说谁家孩子的",
+   "text": "「手在耳麦上转了两圈，风把树梢压弯了，我正把“G08 CrazyCampus: B2396 -> S2.5”那句说给C-03500听，他耳朵一抖，转头就递给我一张旧纸——说谁家孩子的」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

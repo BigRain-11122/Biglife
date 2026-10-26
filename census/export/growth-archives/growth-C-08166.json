@@ -1,0 +1,97 @@
+{
+ "age": 23,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 6,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -71.67,
+    "z": 258.93
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 5.36,
+    "z": 180.4
+   },
+   "work": {
+    "site": "外环巡夜员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.21,
+    "z": 175.79
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08166",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": null,
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "用旧缝纫机踏板教会了半条街的孩子——他自己也说不清为什么",
+ "id": "C-08166",
+ "month_lines": [],
+ "name": "毛则铭",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -5,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -146.41,
+    "z": 81.99
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.3,
+    "z": 32.46
+   },
+   "work": {
+    "site": "盘口记录员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -58.01,
+    "z": 107.41
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09400",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "江水不争先后，该到总会到。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "偷偷给老茶壶上油保养——据说是老辈传下的规矩",
+ "id": "C-09400",
+ "month_lines": [],
+ "name": "黎琳",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

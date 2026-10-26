@@ -1,0 +1,105 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 10,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -135.55,
+    "z": -77.14
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.96,
+    "z": -90.98
+   },
+   "work": {
+    "site": "平台对接员·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -68.62,
+    "z": -148.84
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07574",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "梦话都在念叨退租铺面的旧招牌——没人知道为什么",
+ "id": "C-07574",
+ "month_lines": [
+  "手里还捏着那份刚对完的单子，风刮得紧，纸角翻着边，我笑了笑，潮水的事交给潮水。"
+ ],
+ "name": "吴CJ",
+ "profession": "平台对接员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手里还捏着那份刚对完的单子，风刮得紧，纸角翻着边，我笑了笑，潮水的事交给潮水。",
+   "text": "「手里还捏着那份刚对完的单子，风刮得紧，纸角翻着边，我笑了笑，潮水的事交给潮水。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

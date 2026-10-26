@@ -1,0 +1,105 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 2,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.06,
+    "z": -31.21
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.55,
+    "z": -91.81
+   },
+   "work": {
+    "site": "字幕君·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -38.27,
+    "z": -99.77
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07650",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "给初版城市地图写了一整本观察笔记——没人知道为什么",
+ "id": "C-07650",
+ "month_lines": [
+  "风从巷口直灌进来，耳机里还留着昨夜G08的轴声——出锅喽，B2396那帧，我轴得稳，没说错。"
+ ],
+ "name": "钟沐晴",
+ "profession": "字幕君",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风从巷口直灌进来，耳机里还留着昨夜G08的轴声——出锅喽，B2396那帧，我轴得稳，没说错。",
+   "text": "「风从巷口直灌进来，耳机里还留着昨夜G08的轴声——出锅喽，B2396那帧，我轴得稳，没说错。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

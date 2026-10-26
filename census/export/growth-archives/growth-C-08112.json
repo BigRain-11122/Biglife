@@ -1,0 +1,106 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#C5E1FF",
+   "skin": "#69F0AE"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 19,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.12,
+    "z": 41.75
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.57,
+    "z": 151.93
+   },
+   "work": {
+    "site": "夜灯员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -43.63,
+    "z": 85.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08112",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "在第一版户口簿的封面纸上打过盹，还淌了一小滩光——他自己也说不清为什么",
+ "id": "C-08112",
+ "month_lines": [
+  "手在灯串上缠了三圈，风不小，金属皮蹭着发烫，我正把B2396的旧数据卡往灯座里塞——今天这活不赶，我就按自己的性子来，执灯照径，照到谁就谁得亮。"
+ ],
+ "name": "黑蓝雀",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在灯串上缠了三圈，风不小，金属皮蹭着发烫，我正把B2396的旧数据卡往灯座里塞——今天这活不赶，我就按自己的性子来，执灯照径，照到谁就谁得亮。",
+   "text": "「手在灯串上缠了三圈，风不小，金属皮蹭着发烫，我正把B2396的旧数据卡往灯座里塞——今天这活不赶，我就按自己的性子来，执灯照径，照到谁就谁得亮。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 0,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.8,
+    "z": 112.09
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.86,
+    "z": 52.25
+   },
+   "work": {
+    "site": "大编译调律师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -69.74,
+    "z": 65.51
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08409",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每年挑一天只为旧城庆纪念章大扫除——这事只有师父知道",
+ "id": "C-08409",
+ "month_lines": [],
+ "name": "徐丽",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

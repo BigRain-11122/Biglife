@@ -1,0 +1,96 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 1,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 39.8,
+    "z": 111.26
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.43,
+    "z": 96.56
+   },
+   "work": {
+    "site": "8bit 乐师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 140.8,
+    "z": 37.94
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09596",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "坚持手写老式冰箱贴——这事全巷都知道",
+ "id": "C-09596",
+ "month_lines": [],
+ "name": "叶Momo",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

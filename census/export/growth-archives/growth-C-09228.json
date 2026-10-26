@@ -1,0 +1,96 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -5,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 44.41,
+    "z": -111.87
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.96,
+    "z": -150.59
+   },
+   "work": {
+    "site": "语义翻译官·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.3,
+    "z": -153.61
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09228",
+  "quirk": "night_run",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "白玉兰塔区",
+ "born": null,
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "把全城公交的老路线图修好再免费送人",
+ "id": "C-09228",
+ "month_lines": [],
+ "name": "老宽带-4",
+ "profession": "语义翻译官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

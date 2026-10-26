@@ -1,0 +1,106 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 14,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -120.82,
+    "z": -108.11
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.08,
+    "z": -134.1
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.38,
+    "z": -125.76
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07595",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "旧物件的温度，是新东西学不来的。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把心事只说给旧茶馆的水牌听",
+ "id": "C-07595",
+ "month_lines": [
+  "出锅喽——我刚把明天的料备好，手心里还留着今天commit光点过江的余温，风大得说话要抬声，江水清清的，像我昨天画的那条线，还歪在作业本里没改。"
+ ],
+ "name": "赵朵朵",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "出锅喽——我刚把明天的料备好，手心里还留着今天commit光点过江的余温，风大得说话要抬声，江水清清的，像我昨天画的那条线，还歪在作业本里没改。",
+   "text": "「出锅喽——我刚把明天的料备好，手心里还留着今天commit光点过江的余温，风大得说话要抬声，江水清清的，像我昨天画的那条线，还歪在作业本里没改。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

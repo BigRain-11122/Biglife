@@ -1,0 +1,59 @@
+{
+ "age": 66,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 32.98,
+    "z": -55.28
+   },
+   "social": {
+    "site": "北外滩老街铜器铺·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.69,
+    "z": -159.01
+   },
+   "work": {
+    "site": "铜匠·北外滩老街铜器铺工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 103.6,
+    "z": -20.37
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10116",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "北外滩老街铜器铺",
+ "born": null,
+ "creed": "铜是活的，敲对了它自己会应声",
+ "district": "NS",
+ "gender": "男",
+ "hook": "靠墙的条凳上立着一只木风箱，皮囊打过两块补丁，拉杆上头裹着旧布。",
+ "id": "C-10116",
+ "month_lines": [],
+ "name": "邹德水",
+ "profession": "铜匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

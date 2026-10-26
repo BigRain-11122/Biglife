@@ -1,0 +1,106 @@
+{
+ "age": 83,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -5,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.96,
+    "z": 132.77
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.35,
+    "z": 140.73
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -56.15,
+    "z": 83.42
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07588",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "攒了满抽屉初版城市地图从不给看——据说是老辈传下的规矩",
+ "id": "C-07588",
+ "month_lines": [
+  "手在翻勺，油星子跳进汤里，风把人往前推，我盯着那口锅，心里头说：这单我送，别跟我抢。"
+ ],
+ "name": "雷银娣",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在翻勺，油星子跳进汤里，风把人往前推，我盯着那口锅，心里头说：这单我送，别跟我抢。",
+   "text": "「手在翻勺，油星子跳进汤里，风把人往前推，我盯着那口锅，心里头说：这单我送，别跟我抢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

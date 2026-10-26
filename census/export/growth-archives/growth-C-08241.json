@@ -1,0 +1,96 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 4,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -74.63,
+    "z": 196.07
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 12.6,
+    "z": 228.33
+   },
+   "work": {
+    "site": "城市气象播报员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 45.47,
+    "z": 174.67
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08241",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": null,
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "把第一版户口簿的封面纸的位置背得比自家门牌还熟——这事只有师父知道",
+ "id": "C-08241",
+ "month_lines": [],
+ "name": "邵一诺",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

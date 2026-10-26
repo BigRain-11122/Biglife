@@ -1,0 +1,96 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#2E5E4E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -4,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -57.02,
+    "z": 165.39
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 17.93,
+    "z": 183.97
+   },
+   "work": {
+    "site": "信号中继员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 33.37,
+    "z": 229.07
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08751",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": null,
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "给全城公交的老路线图都编了号还建了册——这事只有师父知道",
+ "id": "C-08751",
+ "month_lines": [],
+ "name": "过载·小",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

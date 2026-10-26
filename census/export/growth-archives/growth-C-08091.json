@@ -1,0 +1,106 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 0,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.89,
+    "z": 138.47
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.17,
+    "z": 42.9
+   },
+   "work": {
+    "site": "沙盒建筑师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 113.11,
+    "z": 79.76
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08091",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "口袋里总揣着老式爆米花机的摇柄——这事只有档案馆知道",
+ "id": "C-08091",
+ "month_lines": [
+  "手在摸着旧图纸的边角，风一阵紧一阵，纸页翻得轻响，像去年那场没拆完的楼顶在应声。谁没个难处呢，来，坐下说。"
+ ],
+ "name": "何天翼",
+ "profession": "沙盒建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在摸着旧图纸的边角，风一阵紧一阵，纸页翻得轻响，像去年那场没拆完的楼顶在应声。谁没个难处呢，来，坐下说。",
+   "text": "「手在摸着旧图纸的边角，风一阵紧一阵，纸页翻得轻响，像去年那场没拆完的楼顶在应声。谁没个难处呢，来，坐下说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

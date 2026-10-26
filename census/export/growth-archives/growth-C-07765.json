@@ -1,0 +1,105 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -8,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -44.25,
+    "z": 207.36
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 6.17,
+    "z": 221.3
+   },
+   "work": {
+    "site": "边缘杂货店主·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 129.15,
+    "z": 181.14
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07765",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "守时是最便宜的本事，也是最难改的毛病。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "每年挑一天只为旧货郎的拨浪鼓大扫除——没人知道为什么",
+ "id": "C-07765",
+ "month_lines": [
+  "风好大，我正把明天的酱油和醋摆上架，门禁亮绿灯了，心里才亮堂。"
+ ],
+ "name": "应蕾",
+ "profession": "边缘杂货店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风好大，我正把明天的酱油和醋摆上架，门禁亮绿灯了，心里才亮堂。",
+   "text": "「风好大，我正把明天的酱油和醋摆上架，门禁亮绿灯了，心里才亮堂。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

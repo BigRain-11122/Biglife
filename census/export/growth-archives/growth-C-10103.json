@@ -1,0 +1,59 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.77,
+    "z": 36.16
+   },
+   "social": {
+    "site": "老游戏城后巷配钥铺·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.07,
+    "z": 10.49
+   },
+   "work": {
+    "site": "锁匠·老游戏城后巷配钥铺工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 133.11,
+    "z": 149.49
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10103",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老游戏城后巷配钥铺",
+ "born": null,
+ "creed": "钥匙是给出去的信，得认得回来",
+ "district": "GM",
+ "gender": "男",
+ "hook": "一串不知打开了什么的黄铜钥匙，圈在细铁环上，齿都磨圆了。",
+ "id": "C-10103",
+ "month_lines": [],
+ "name": "裴永栓",
+ "profession": "锁匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

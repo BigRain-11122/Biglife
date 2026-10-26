@@ -1,0 +1,59 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -101.82,
+    "z": 172.46
+   },
+   "social": {
+    "site": "监听哨街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 5.34,
+    "z": 200.31
+   },
+   "work": {
+    "site": "监听哨街区老邮所守所人·监听哨街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 86.73,
+    "z": 240.49
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10072",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "监听哨街区",
+ "born": null,
+ "creed": "信到得稳，家就不远。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "邮差的棕帆布邮包，包角起了毛边——监听哨街区老邮所的传所邮包，四邻家信的进出全在这只包上有个稳当的数",
+ "id": "C-10072",
+ "month_lines": [],
+ "name": "程万里",
+ "profession": "监听哨街区老邮所守所人",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

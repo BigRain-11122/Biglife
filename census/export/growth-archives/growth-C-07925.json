@@ -1,0 +1,106 @@
+{
+ "age": 1,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 21,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.22,
+    "z": 154.56
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.74,
+    "z": 78.92
+   },
+   "work": {
+    "site": "伴居灵·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -57.91,
+    "z": 103.76
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07925",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "绕着停产的暖光灯泡飞过整整三十圈——据说是老辈传下的规矩",
+ "id": "C-07925",
+ "month_lines": [
+  "尾尖轻拨过数据流，把昨晚那条未闭合的脉冲扫了下——风掀得衣角乱摆，G08的折叠线刚咬上B2396，我正蹭光，听见了它翻身的轻响。"
+ ],
+ "name": "黑波波",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "尾尖轻拨过数据流，把昨晚那条未闭合的脉冲扫了下——风掀得衣角乱摆，G08的折叠线刚咬上B2396，我正蹭光，听见了它翻身的轻响。",
+   "text": "「尾尖轻拨过数据流，把昨晚那条未闭合的脉冲扫了下——风掀得衣角乱摆，G08的折叠线刚咬上B2396，我正蹭光，听见了它翻身的轻响。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

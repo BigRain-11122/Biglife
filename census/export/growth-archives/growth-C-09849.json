@@ -1,0 +1,96 @@
+{
+ "age": 23,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 5,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 72.41,
+    "z": 17.55
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.41,
+    "z": 125.02
+   },
+   "work": {
+    "site": "算法调参师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 128.74,
+    "z": 148.5
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09849",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "坚持给手绘的城图记日记——这事全巷都知道",
+ "id": "C-09849",
+ "month_lines": [],
+ "name": "奚子轩",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

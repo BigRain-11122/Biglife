@@ -1,0 +1,96 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": -3,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -134.48,
+    "z": -112.62
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.69,
+    "z": -51.04
+   },
+   "work": {
+    "site": "声优棚掌柜·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.21,
+    "z": -155.53
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08880",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "在手抄的菜谱上刻了一行没人认得的小字——这事只有档案馆知道",
+ "id": "C-08880",
+ "month_lines": [],
+ "name": "刘静",
+ "profession": "声优棚掌柜",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

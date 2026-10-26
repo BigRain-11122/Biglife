@@ -1,0 +1,59 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -33.03,
+    "z": 258.41
+   },
+   "social": {
+    "site": "监听哨·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 14.77,
+    "z": 240.62
+   },
+   "work": {
+    "site": "监听哨老值机员·监听哨工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 55.72,
+    "z": 194.97
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10061",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "监听哨",
+ "born": null,
+ "creed": "耳朵值机，心里有数。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "监听哨岗亭里那轴缠剩的旧漆包铜线——监听哨的师传铜线，老值机员接过的每一处断头全在这轴上收口",
+ "id": "C-10061",
+ "month_lines": [],
+ "name": "席静波",
+ "profession": "监听哨老值机员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

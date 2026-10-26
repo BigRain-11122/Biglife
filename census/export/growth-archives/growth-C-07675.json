@@ -1,0 +1,106 @@
+{
+ "age": 6,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#EC407A",
+   "eye": "#FFD27A",
+   "hair": "#E1BEE7",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 21,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -146.25,
+    "z": 76.84
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.4,
+    "z": 136.47
+   },
+   "work": {
+    "site": "声景师·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -25.15,
+    "z": 121.31
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07675",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "风吹哪页读哪页。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "给褪色的红领巾传过最急的口信——这事只有档案馆知道",
+ "id": "C-07675",
+ "month_lines": [
+  "手在抖，不是风——是风顶得人站不稳，江岸的雨声蛙今天没开嗓，水纹平得像没开过嗓。"
+ ],
+ "name": "阿波波",
+ "profession": "声景师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在抖，不是风——是风顶得人站不稳，江岸的雨声蛙今天没开嗓，水纹平得像没开过嗓。",
+   "text": "「手在抖，不是风——是风顶得人站不稳，江岸的雨声蛙今天没开嗓，水纹平得像没开过嗓。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 1,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 45.64,
+    "z": 73.48
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.23,
+    "z": 128.1
+   },
+   "work": {
+    "site": "节日活动策划·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 137.96,
+    "z": 34.16
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10009",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": null,
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "会为退役巡夜灯灵的灯罩推掉一整晚的生意——据说是老辈传下的规矩",
+ "id": "C-10009",
+ "month_lines": [],
+ "name": "曾天翼",
+ "profession": "节日活动策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

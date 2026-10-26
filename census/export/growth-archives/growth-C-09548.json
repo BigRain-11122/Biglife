@@ -1,0 +1,97 @@
+{
+ "age": 59,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 15,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -143.03,
+    "z": -30.54
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.47,
+    "z": -53.2
+   },
+   "work": {
+    "site": "风信使·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -57.01,
+    "z": -25.22
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09548",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "把手绘的星空图当成了自己的老朋友",
+ "id": "C-09548",
+ "month_lines": [],
+ "name": "白南风",
+ "profession": "风信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

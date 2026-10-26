@@ -1,0 +1,97 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -15,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.1,
+    "z": 98.56
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.79,
+    "z": 114.95
+   },
+   "work": {
+    "site": "算法调参师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.84,
+    "z": 36.32
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09365",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "守时是最便宜的本事，也是最难改的毛病。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "能背出弄堂的门牌号的全部班次——这事只有档案馆知道",
+ "id": "C-09365",
+ "month_lines": [],
+ "name": "卢红",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

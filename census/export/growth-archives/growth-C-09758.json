@@ -1,0 +1,97 @@
+{
+ "age": 2,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": 0,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.82,
+    "z": 73.67
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.96,
+    "z": 88.56
+   },
+   "work": {
+    "site": "夜宵摊主·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.8,
+    "z": 132.03
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09758",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": null,
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "逢人就讲断了线的风筝的故事——这事全巷都知道",
+ "id": "C-09758",
+ "month_lines": [],
+ "name": "继电器-2",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

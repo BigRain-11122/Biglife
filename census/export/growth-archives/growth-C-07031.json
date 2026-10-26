@@ -1,0 +1,106 @@
+{
+ "age": 51,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -1,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -111.15,
+    "z": -83.96
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.31,
+    "z": -95.96
+   },
+   "work": {
+    "site": "城市接线生·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -70.99,
+    "z": -61.41
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07031",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "给旧日历都编了号还建了册——这事只有师父知道",
+ "id": "C-07031",
+ "month_lines": [
+  "新东西先看三天再用，今天这风大得说话要抬声，江边转角那盏老路灯晃得跟打摆子似的，我正想问问它是不是也像我一样，老了就只晓得闪。"
+ ],
+ "name": "华志明",
+ "profession": "城市接线生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "新东西先看三天再用，今天这风大得说话要抬声，江边转角那盏老路灯晃得跟打摆子似的，我正想问问它是不是也像我一样，老了就只晓得闪。",
+   "text": "「新东西先看三天再用，今天这风大得说话要抬声，江边转角那盏老路灯晃得跟打摆子似的，我正想问问它是不是也像我一样，老了就只晓得闪。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

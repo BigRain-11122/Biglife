@@ -1,0 +1,105 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 3,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 59.46,
+    "z": 51.42
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.0,
+    "z": 54.57
+   },
+   "work": {
+    "site": "bug 猎人·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 123.32,
+    "z": 24.54
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07639",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把退役的风向标修好再免费送人——这事只有师父知道",
+ "id": "C-07639",
+ "month_lines": [
+  "手在敲扳手，锈迹在牙缝里发亮。风顶得人站不稳，工具箱里的旧笔还攥着去年的账，潮水的事交给潮水，我只管把门禁线擦干净。"
+ ],
+ "name": "冯燕",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在敲扳手，锈迹在牙缝里发亮。风顶得人站不稳，工具箱里的旧笔还攥着去年的账，潮水的事交给潮水，我只管把门禁线擦干净。",
+   "text": "「手在敲扳手，锈迹在牙缝里发亮。风顶得人站不稳，工具箱里的旧笔还攥着去年的账，潮水的事交给潮水，我只管把门禁线擦干净。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

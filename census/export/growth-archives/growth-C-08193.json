@@ -1,0 +1,97 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -9,
+   "rate": 4,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 22.73,
+    "z": 13.88
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.96,
+    "z": 105.93
+   },
+   "work": {
+    "site": "算力楼运维·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 140.03,
+    "z": 64.96
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08193",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": null,
+ "creed": "试错要趁灯还亮着。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把手绘的星空图画进了自己的作品里——这事只有师父知道",
+ "id": "C-08193",
+ "month_lines": [],
+ "name": "串行-3",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

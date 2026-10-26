@@ -1,0 +1,106 @@
+{
+ "age": 23,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -9,
+   "rate": -3,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.12,
+    "z": 145.24
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.41,
+    "z": 92.93
+   },
+   "work": {
+    "site": "盘口记录员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -61.01,
+    "z": 89.06
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07061",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "会给老式邮差的背包织毛衣",
+ "id": "C-07061",
+ "month_lines": [
+  "趁热吃，今天风掀得衣角乱摆，路过游戏楼仰头数了数，B2396窗亮着的还是七格——对盘记得清，笔笔清。"
+ ],
+ "name": "卡诺·新",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "趁热吃，今天风掀得衣角乱摆，路过游戏楼仰头数了数，B2396窗亮着的还是七格——对盘记得清，笔笔清。",
+   "text": "「趁热吃，今天风掀得衣角乱摆，路过游戏楼仰头数了数，B2396窗亮着的还是七格——对盘记得清，笔笔清。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": -4,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 58.55,
+    "z": 117.85
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.71,
+    "z": 28.91
+   },
+   "work": {
+    "site": "NPC 服装师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.22,
+    "z": 44.6
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09876",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "收藏老裁缝铺的样衣且每件都记得来历——据说是老辈传下的规矩",
+ "id": "C-09876",
+ "month_lines": [],
+ "name": "彭莉",
+ "profession": "NPC 服装师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

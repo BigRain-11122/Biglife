@@ -1,0 +1,106 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -12,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.08,
+    "z": 143.75
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.48,
+    "z": 115.71
+   },
+   "work": {
+    "site": "数据菜市摊主·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -53.94,
+    "z": 19.88
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07580",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "逢人就讲旧挂历的故事——他自己也说不清为什么",
+ "id": "C-07580",
+ "month_lines": [
+  "手在秤杆上轻轻一推，铜锈蹭着掌心，风把树梢压弯了。昨夜菜价落了，今天早市的萝卜，照旧是三块六，一分一厘，走得稳才走得远。"
+ ],
+ "name": "杨军",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在秤杆上轻轻一推，铜锈蹭着掌心，风把树梢压弯了。昨夜菜价落了，今天早市的萝卜，照旧是三块六，一分一厘，走得稳才走得远。",
+   "text": "「手在秤杆上轻轻一推，铜锈蹭着掌心，风把树梢压弯了。昨夜菜价落了，今天早市的萝卜，照旧是三块六，一分一厘，走得稳才走得远。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 14,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 17,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -145.76,
+    "z": -33.71
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.22,
+    "z": -142.28
+   },
+   "work": {
+    "site": "像素小学学生·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -43.87,
+    "z": -70.72
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07699",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把半张老电影票排成一排挨个擦——据说是老辈传下的规矩",
+ "id": "C-07699",
+ "month_lines": [
+  "手正捏着那张作业本，江水映着光点，我数了数，又翻了一页。风顶得人站不稳，可我站直了别趴下，就差一寸，就能看见今日 commit 过江了。"
+ ],
+ "name": "姜念念",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手正捏着那张作业本，江水映着光点，我数了数，又翻了一页。风顶得人站不稳，可我站直了别趴下，就差一寸，就能看见今日 commit 过江了。",
+   "text": "「手正捏着那张作业本，江水映着光点，我数了数，又翻了一页。风顶得人站不稳，可我站直了别趴下，就差一寸，就能看见今日 commit 过江了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 91,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -11,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.98,
+    "z": -112.06
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.54,
+    "z": -43.31
+   },
+   "work": {
+    "site": "七段街区导游·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -43.03,
+    "z": -45.7
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09665",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "江水不争先后，该到总会到。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "偷偷给全城公交的老路线图上油保养——没人知道为什么",
+ "id": "C-09665",
+ "month_lines": [],
+ "name": "桂锡金",
+ "profession": "七段街区导游",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

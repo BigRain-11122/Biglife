@@ -1,0 +1,97 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#26A69A",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 22,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.16,
+    "z": -27.5
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.55,
+    "z": -56.59
+   },
+   "work": {
+    "site": "声景师·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -28.31,
+    "z": -28.63
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08693",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "在初代城门钥匙上打过盹，还淌了一小滩光",
+ "id": "C-08693",
+ "month_lines": [],
+ "name": "小阿雾",
+ "profession": "声景师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

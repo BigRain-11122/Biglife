@@ -1,0 +1,96 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 0,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -119.97,
+    "z": -76.55
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.9,
+    "z": -71.06
+   },
+   "work": {
+    "site": "热搜观测员·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -37.87,
+    "z": -35.04
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08971",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "给全城最后一只手写信箱写了一整本观察笔记——这事只有档案馆知道",
+ "id": "C-08971",
+ "month_lines": [],
+ "name": "魏Ruby",
+ "profession": "热搜观测员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

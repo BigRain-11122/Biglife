@@ -1,0 +1,60 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.65,
+    "z": 22.8
+   },
+   "social": {
+    "site": "老街中段描字铺·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.19,
+    "z": 45.27
+   },
+   "work": {
+    "site": "金属字牌翻新师·老街中段描字铺工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.87,
+    "z": 18.48
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10093",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老街中段描字铺",
+ "born": null,
+ "creed": "字要立得住，店才立得住",
+ "district": "QT",
+ "gender": "女",
+ "hook": "一盒只用了一半的金漆，盒盖内侧用铅笔写着三行字宽，贴字的模板就用这块盖当标尺。",
+ "id": "C-10093",
+ "month_lines": [],
+ "name": "裴秀鸾",
+ "profession": "金属字牌翻新师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

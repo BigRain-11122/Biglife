@@ -1,0 +1,106 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 7,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.97,
+    "z": 67.06
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.38,
+    "z": 118.46
+   },
+   "work": {
+    "site": "数据搬运工·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -37.84,
+    "z": 17.03
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07205",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每天跟初代城门钥匙打招呼——她自己也说不清为什么",
+ "id": "C-07205",
+ "month_lines": [
+  "手在数据卡上划了划，把今天新来的单子对了单——风掀得衣角乱摆，装卸口的灯还亮着，老主顾的生日我藏在本子里，这会儿刚好翻到。"
+ ],
+ "name": "崔桃桃",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在数据卡上划了划，把今天新来的单子对了单——风掀得衣角乱摆，装卸口的灯还亮着，老主顾的生日我藏在本子里，这会儿刚好翻到。",
+   "text": "「手在数据卡上划了划，把今天新来的单子对了单——风掀得衣角乱摆，装卸口的灯还亮着，老主顾的生日我藏在本子里，这会儿刚好翻到。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

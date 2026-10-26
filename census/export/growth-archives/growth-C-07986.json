@@ -1,0 +1,105 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 1,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 69.31,
+    "z": 148.94
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.5,
+    "z": 21.62
+   },
+   "work": {
+    "site": "攻略誊写员·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 143.85,
+    "z": 76.36
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07986",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "守时是最便宜的本事，也是最难改的毛病。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能背出消失街区的路牌的全部班次",
+ "id": "C-07986",
+ "month_lines": [
+  "我把手头的活从头数了一遍：GPU显存告急，G08区要调档，CrazyCampus的路径卡在B2396，数据不会骗人，人会。风从巷口直灌进来，我正对图。"
+ ],
+ "name": "朱红",
+ "profession": "攻略誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "我把手头的活从头数了一遍：GPU显存告急，G08区要调档，CrazyCampus的路径卡在B2396，数据不会骗人，人会。风从巷口直灌进来，我正对图。",
+   "text": "「我把手头的活从头数了一遍：GPU显存告急，G08区要调档，CrazyCampus的路径卡在B2396，数据不会骗人，人会。风从巷口直灌进来，我正对图。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

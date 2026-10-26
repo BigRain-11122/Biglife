@@ -1,0 +1,97 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 0,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -76.69,
+    "z": 237.41
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -0.65,
+    "z": 171.26
+   },
+   "work": {
+    "site": "防火墙巡林员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 44.99,
+    "z": 186.61
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09190",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": null,
+ "creed": "像素越小，心眼越大。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "从不让旧饭盒里的字条离开自己三步远——这事只有师父知道",
+ "id": "C-09190",
+ "month_lines": [],
+ "name": "范海峰",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

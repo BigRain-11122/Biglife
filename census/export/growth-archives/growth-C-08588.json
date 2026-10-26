@@ -1,0 +1,96 @@
+{
+ "age": 95,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -6,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 70.67,
+    "z": 125.33
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.35,
+    "z": 98.02
+   },
+   "work": {
+    "site": "攻略誊写员·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 118.81,
+    "z": 39.43
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08588",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "逢人就讲老式怀表链的故事——没人知道为什么",
+ "id": "C-08588",
+ "month_lines": [],
+ "name": "任珍珠",
+ "profession": "攻略誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

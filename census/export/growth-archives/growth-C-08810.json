@@ -1,0 +1,96 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -9,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 52.6,
+    "z": -61.42
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.22,
+    "z": -149.72
+   },
+   "work": {
+    "site": "弄堂茶馆掌柜·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 102.97,
+    "z": -10.11
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08810",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": null,
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "把老式冰箱贴修好再免费送人——这事只有档案馆知道",
+ "id": "C-08810",
+ "month_lines": [],
+ "name": "段雯",
+ "profession": "弄堂茶馆掌柜",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

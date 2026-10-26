@@ -1,0 +1,106 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -9,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -132.47,
+    "z": 22.19
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.21,
+    "z": 133.46
+   },
+   "work": {
+    "site": "尾盘茶室老板·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.29,
+    "z": 50.42
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07954",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件褪色的戏票根——这事只有师父知道",
+ "id": "C-07954",
+ "month_lines": [
+  "风灌进领口发凉，我正把最后一盏茶盖子拧紧，K线广场那边的灯还亮着，像没收摊的生意，有意思，我想想。"
+ ],
+ "name": "邓志明",
+ "profession": "尾盘茶室老板",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风灌进领口发凉，我正把最后一盏茶盖子拧紧，K线广场那边的灯还亮着，像没收摊的生意，有意思，我想想。",
+   "text": "「风灌进领口发凉，我正把最后一盏茶盖子拧紧，K线广场那边的灯还亮着，像没收摊的生意，有意思，我想想。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

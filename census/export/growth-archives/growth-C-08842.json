@@ -1,0 +1,97 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 1,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -118.12,
+    "z": 13.35
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.33,
+    "z": 120.3
+   },
+   "work": {
+    "site": "算力楼运维·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -46.99,
+    "z": 129.73
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08842",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": null,
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "坚持给褪色的戏票根记日记——这事只有师父知道",
+ "id": "C-08842",
+ "month_lines": [],
+ "name": "谢卡佳",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "buddy",
+   "src": "老搭档",
+   "with": "C-00081"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

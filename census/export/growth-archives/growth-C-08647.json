@@ -1,0 +1,96 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -14,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 50.0,
+    "z": 127.3
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.53,
+    "z": 39.59
+   },
+   "work": {
+    "site": "玩家留言整理员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 112.7,
+    "z": 110.24
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08647",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": null,
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "口袋里总揣着旧月台的站牌——据说是老辈传下的规矩",
+ "id": "C-08647",
+ "month_lines": [],
+ "name": "江秀兰",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

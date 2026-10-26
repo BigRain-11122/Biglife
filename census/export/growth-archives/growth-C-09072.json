@@ -1,0 +1,97 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 1,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -120.81,
+    "z": 39.53
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.87,
+    "z": 85.92
+   },
+   "work": {
+    "site": "盘口记录员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.95,
+    "z": 101.68
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09072",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": null,
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把退役的风向标画进了自己的作品里——这事只有师父知道",
+ "id": "C-09072",
+ "month_lines": [],
+ "name": "慢速-2",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

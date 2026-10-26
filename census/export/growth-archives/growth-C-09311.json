@@ -1,0 +1,97 @@
+{
+ "age": 56,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 5,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -120.91,
+    "z": 52.46
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.55,
+    "z": 159.83
+   },
+   "work": {
+    "site": "防火墙巡林员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.58,
+    "z": 115.01
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09311",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "用弄堂的门牌号教会了半条街的孩子——这事只有师父知道",
+ "id": "C-09311",
+ "month_lines": [],
+ "name": "吴健",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

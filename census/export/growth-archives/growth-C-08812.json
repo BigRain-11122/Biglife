@@ -1,0 +1,96 @@
+{
+ "age": 86,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -6,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.73,
+    "z": -231.79
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -8.66,
+    "z": -168.15
+   },
+   "work": {
+    "site": "渡轮船长·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 116.55,
+    "z": -172.75
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08812",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": null,
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "把写了一半的市民歌谣排成一排挨个擦——她自己也说不清为什么",
+ "id": "C-08812",
+ "month_lines": [],
+ "name": "糜惠芬",
+ "profession": "渡轮船长",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

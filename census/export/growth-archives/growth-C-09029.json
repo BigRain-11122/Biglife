@@ -1,0 +1,97 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4DD0E1",
+   "eye": "#FFD27A",
+   "hair": "#E1BEE7",
+   "skin": "#69F0AE"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 11,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -128.07,
+    "z": 117.6
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.3,
+    "z": 67.17
+   },
+   "work": {
+    "site": "伴居灵·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -42.88,
+    "z": 35.96
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09029",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": null,
+ "creed": "差之毫秒，谬以全城。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "看得见老皮匠的锥子里住着的光——这事全巷都知道",
+ "id": "C-09029",
+ "month_lines": [],
+ "name": "白阿过境",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

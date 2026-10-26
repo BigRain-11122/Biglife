@@ -1,0 +1,96 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -5,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 59.5,
+    "z": -76.23
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.56,
+    "z": -19.21
+   },
+   "work": {
+    "site": "城市气象播报员·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 141.74,
+    "z": -90.47
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08626",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "白玉兰塔区",
+ "born": null,
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "会给雨声录音织毛衣——他自己也说不清为什么",
+ "id": "C-08626",
+ "month_lines": [],
+ "name": "电压·拾",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 2,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -37.22,
+    "z": 228.2
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 8.65,
+    "z": 217.53
+   },
+   "work": {
+    "site": "旧件修复师·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 97.79,
+    "z": 221.59
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08685",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": null,
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "每天跟老药房的药柜抽屉打招呼——这事全巷都知道",
+ "id": "C-08685",
+ "month_lines": [],
+ "name": "卢芳",
+ "profession": "旧件修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 3,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.38,
+    "z": -132.23
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.92,
+    "z": -22.52
+   },
+   "work": {
+    "site": "节日活动策划·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -58.15,
+    "z": -47.85
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09534",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "给会发光的纽扣写了一整本观察笔记——他自己也说不清为什么",
+ "id": "C-09534",
+ "month_lines": [],
+ "name": "苏星野",
+ "profession": "节日活动策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

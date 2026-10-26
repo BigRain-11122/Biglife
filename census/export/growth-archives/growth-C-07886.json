@@ -1,0 +1,106 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 19,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 54.16,
+    "z": -147.9
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 76.78,
+    "z": -124.36
+   },
+   "work": {
+    "site": "塔区风筝队员·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.03,
+    "z": -98.29
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07886",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "梦话都在念叨旧挂历——她自己也说不清为什么",
+ "id": "C-07886",
+ "month_lines": [
+  "手在抽屉里翻着，一张旧票根蹭着边角，风刮得紧，风筝线绷得直，我轻轻一扯，尾巴上的愿望又抖了抖。拆开看看又不会坏。"
+ ],
+ "name": "孟糖糖",
+ "profession": "塔区风筝队员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在抽屉里翻着，一张旧票根蹭着边角，风刮得紧，风筝线绷得直，我轻轻一扯，尾巴上的愿望又抖了抖。拆开看看又不会坏。",
+   "text": "「手在抽屉里翻着，一张旧票根蹭着边角，风刮得紧，风筝线绷得直，我轻轻一扯，尾巴上的愿望又抖了抖。拆开看看又不会坏。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

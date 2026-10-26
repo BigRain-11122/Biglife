@@ -1,0 +1,106 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 21,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -37.02,
+    "z": -211.35
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -9.65,
+    "z": -209.89
+   },
+   "work": {
+    "site": "信使小跟班·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 49.83,
+    "z": -193.29
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06962",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "风吹哪页读哪页。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "坚持给老茶壶记日记——这事只有档案馆知道",
+ "id": "C-06962",
+ "month_lines": [
+  "慢慢来，比较快。 今儿个天阴着，风刮得紧，跑腿的路都走得发沉，数据菜市的时令萝卜刚摘，我蹲在摊前看，叶子还沾着露。"
+ ],
+ "name": "王团团",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "慢慢来，比较快。 今儿个天阴着，风刮得紧，跑腿的路都走得发沉，数据菜市的时令萝卜刚摘，我蹲在摊前看，叶子还沾着露。",
+   "text": "「慢慢来，比较快。 今儿个天阴着，风刮得紧，跑腿的路都走得发沉，数据菜市的时令萝卜刚摘，我蹲在摊前看，叶子还沾着露。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

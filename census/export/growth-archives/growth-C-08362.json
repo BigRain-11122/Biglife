@@ -1,0 +1,97 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -4,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -146.47,
+    "z": 29.35
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.93,
+    "z": 119.65
+   },
+   "work": {
+    "site": "量化策略研究员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -42.0,
+    "z": 123.44
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08362",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "灶上留一壶，路过的都是客。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "坚持手写全城第一块砖的拓片——这事全巷都知道",
+ "id": "C-08362",
+ "month_lines": [],
+ "name": "阿后台-7",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

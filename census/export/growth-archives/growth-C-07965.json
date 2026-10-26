@@ -1,0 +1,106 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -5,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.74,
+    "z": 10.54
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.08,
+    "z": 22.97
+   },
+   "work": {
+    "site": "数据清洗工·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.33,
+    "z": 149.31
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07965",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "每年挑一天只为旧船票大扫除——这事只有档案馆知道",
+ "id": "C-07965",
+ "month_lines": [
+  "风刮得招牌直晃，手里的数据筐还压着昨夜没洗完的行情断层。最后一筐补上，明天的料先备好。"
+ ],
+ "name": "主频·老",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风刮得招牌直晃，手里的数据筐还压着昨夜没洗完的行情断层。最后一筐补上，明天的料先备好。",
+   "text": "「风刮得招牌直晃，手里的数据筐还压着昨夜没洗完的行情断层。最后一筐补上，明天的料先备好。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

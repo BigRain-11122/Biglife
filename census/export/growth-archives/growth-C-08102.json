@@ -1,0 +1,105 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 6,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -31.64,
+    "z": -214.34
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 5.72,
+    "z": -201.31
+   },
+   "work": {
+    "site": "江面清波工·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 94.29,
+    "z": -216.39
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08102",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "留着初代渡轮的船票夹却从来不用——这事只有档案馆知道",
+ "id": "C-08102",
+ "month_lines": [
+  "手里的镜面还泛着水光，正对着江面调光——今天云好，改天再说。风刮得紧，水纹晃得利索，倒影里那条老船，又浮出来了。"
+ ],
+ "name": "朱简梨",
+ "profession": "江面清波工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手里的镜面还泛着水光，正对着江面调光——今天云好，改天再说。风刮得紧，水纹晃得利索，倒影里那条老船，又浮出来了。",
+   "text": "「手里的镜面还泛着水光，正对着江面调光——今天云好，改天再说。风刮得紧，水纹晃得利索，倒影里那条老船，又浮出来了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

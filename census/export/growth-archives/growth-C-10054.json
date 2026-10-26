@@ -1,0 +1,60 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -115.09,
+    "z": 62.8
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.41,
+    "z": 122.19
+   },
+   "work": {
+    "site": "K线广场糖画老手艺人·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -62.12,
+    "z": 26.65
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10054",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "糖要趁热，日子要趁甜。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "糖画摊边那口熬糖稀的小紫铜吊锅——K线广场糖画摊的舅舅传家吊锅，一锅糖稀的火候全在锅边挂霜里",
+ "id": "C-10054",
+ "month_lines": [],
+ "name": "蒲苇航",
+ "profession": "K线广场糖画老手艺人",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

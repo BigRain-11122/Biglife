@@ -1,0 +1,96 @@
+{
+ "age": 71,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 2,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.55,
+    "z": -64.91
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.56,
+    "z": -119.6
+   },
+   "work": {
+    "site": "视频修复师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -71.35,
+    "z": -19.83
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09425",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "得之我幸，失之我睡。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "给旧船木做的镇纸都起了名字——这事只有师父知道",
+ "id": "C-09425",
+ "month_lines": [],
+ "name": "织网者·老",
+ "profession": "视频修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

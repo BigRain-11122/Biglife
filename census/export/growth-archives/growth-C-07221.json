@@ -1,0 +1,106 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#B388FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 15,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -106.94,
+    "z": 27.28
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.13,
+    "z": 38.12
+   },
+   "work": {
+    "site": "江面巡游员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -53.9,
+    "z": 36.95
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07221",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "看得见旧棋谱里住着的光",
+ "id": "C-07221",
+ "month_lines": [
+  "手在灯杆上轻轻一拨，风刮得招牌直晃，江面浮光一跳，我正盯着水纹往那头看——G08的路又翻了，我只说了一句，后来谁也没接话。"
+ ],
+ "name": "白布谷",
+ "profession": "江面巡游员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在灯杆上轻轻一拨，风刮得招牌直晃，江面浮光一跳，我正盯着水纹往那头看——G08的路又翻了，我只说了一句，后来谁也没接话。",
+   "text": "「手在灯杆上轻轻一拨，风刮得招牌直晃，江面浮光一跳，我正盯着水纹往那头看——G08的路又翻了，我只说了一句，后来谁也没接话。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

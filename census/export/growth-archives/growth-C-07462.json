@@ -1,0 +1,106 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#26A69A",
+   "eye": "#FFD27A",
+   "hair": "#E1BEE7",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 11,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.18,
+    "z": 100.86
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.66,
+    "z": 97.49
+   },
+   "work": {
+    "site": "巡信使·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -58.36,
+    "z": 49.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07462",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "把老式冰箱贴当成了自己的老朋友——这事只有师父知道",
+ "id": "C-07462",
+ "month_lines": [
+  "风灌进领口发凉，我正把一沓落檐短笺夹进街角老钟楼的缝里——今儿个单日，灯都亮得稳，谁家孩子没个难处，就差个衔笺的人。"
+ ],
+ "name": "阿满月",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风灌进领口发凉，我正把一沓落檐短笺夹进街角老钟楼的缝里——今儿个单日，灯都亮得稳，谁家孩子没个难处，就差个衔笺的人。",
+   "text": "「风灌进领口发凉，我正把一沓落檐短笺夹进街角老钟楼的缝里——今儿个单日，灯都亮得稳，谁家孩子没个难处，就差个衔笺的人。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

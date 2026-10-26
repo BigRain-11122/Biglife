@@ -1,0 +1,96 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 3,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.84,
+    "z": -25.54
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.08,
+    "z": -71.65
+   },
+   "work": {
+    "site": "数据化妆师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -23.25,
+    "z": -101.11
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09916",
+  "quirk": "umbrella",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "从不让第一天的营业账本离开自己三步远——他自己也说不清为什么",
+ "id": "C-09916",
+ "month_lines": [],
+ "name": "陈华",
+ "profession": "数据化妆师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

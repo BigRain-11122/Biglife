@@ -1,0 +1,96 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 7,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -41.12,
+    "z": -220.1
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -3.5,
+    "z": -169.7
+   },
+   "work": {
+    "site": "信号中继员·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 64.09,
+    "z": -179.43
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09517",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": null,
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "会给全城雪夜的第一次合影织毛衣——据说是老辈传下的规矩",
+ "id": "C-09517",
+ "month_lines": [],
+ "name": "吕简梨",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "buddy",
+   "src": "忘年交",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

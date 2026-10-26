@@ -1,0 +1,60 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.87,
+    "z": 98.81
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.31,
+    "z": 32.56
+   },
+   "work": {
+    "site": "老城修表铺守钟人·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -42.77,
+    "z": 13.6
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10040",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": null,
+ "creed": "钟不哄人，人别哄钟。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "会替半条街守准头的老挂钟——修表铺墙上一快一慢两只旧挂钟，是他守了四十年的搭档",
+ "id": "C-10040",
+ "month_lines": [],
+ "name": "侯振声",
+ "profession": "老城修表铺守钟人",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

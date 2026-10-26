@@ -1,0 +1,106 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 2,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.72,
+    "z": 103.12
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.21,
+    "z": 98.05
+   },
+   "work": {
+    "site": "量化策略研究员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -67.93,
+    "z": 33.84
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07003",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "江水不争先后，该到总会到。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "给第一封妥投的加急件都起了名字——没人知道为什么",
+ "id": "C-07003",
+ "month_lines": [
+  "慢慢来，比较快。 今天天阴着，风顶得人站不稳，我还在扭塔里盯盘，把G08 CrazyCampus: B2396 -> S2.5那条路给C-04059讲了，泡面坨了也顾不上，江水不争"
+ ],
+ "name": "掺杂·午",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "慢慢来，比较快。 今天天阴着，风顶得人站不稳，我还在扭塔里盯盘，把G08 CrazyCampus: B2396 -> S2.5那条路给C-04059讲了，泡面坨了也顾不上，江水不争",
+   "text": "「慢慢来，比较快。 今天天阴着，风顶得人站不稳，我还在扭塔里盯盘，把G08 CrazyCampus: B2396 -> S2.5那条路给C-04059讲了，泡面坨了也顾不上，江水不争」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

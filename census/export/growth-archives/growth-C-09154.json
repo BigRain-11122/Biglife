@@ -1,0 +1,96 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 3,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -111.47,
+    "z": -171.42
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 15.15,
+    "z": -234.74
+   },
+   "work": {
+    "site": "信号中继员·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 38.73,
+    "z": -196.88
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09154",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": null,
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "偷偷给退役的探针铭牌上油保养——没人知道为什么",
+ "id": "C-09154",
+ "month_lines": [],
+ "name": "动规·甲",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

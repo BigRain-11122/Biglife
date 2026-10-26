@@ -1,0 +1,91 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 17,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 69.02,
+    "z": 54.02
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.97,
+    "z": 78.42
+   },
+   "work": {
+    "site": "像素小学三年级生·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 128.33,
+    "z": 157.87
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10023",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": null,
+ "creed": "先把作业写完，纸飞机才飞得远。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把作业写在小卖部窗台上还能写出全对的学生——老板娘给她留着那张凳",
+ "id": "C-10023",
+ "month_lines": [],
+ "name": "林小满",
+ "profession": "像素小学三年级生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

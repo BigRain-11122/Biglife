@@ -1,0 +1,59 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.59,
+    "z": -154.56
+   },
+   "social": {
+    "site": "导播台街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.39,
+    "z": -13.25
+   },
+   "work": {
+    "site": "导播台街区老灯笼匠·导播台街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -47.54,
+    "z": -95.93
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10073",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "导播台街区",
+ "born": null,
+ "creed": "灯亮着，日子就透亮。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "灯笼铺那把竹篾刮刀，刃口薄得能削出透光的篾青——导播台街区灯笼铺的传铺刮刀，巷子两头年节的亮全从这刃口里出来",
+ "id": "C-10073",
+ "month_lines": [],
+ "name": "庞守烛",
+ "profession": "导播台街区老灯笼匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

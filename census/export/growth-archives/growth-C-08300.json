@@ -1,0 +1,96 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": -5,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.9,
+    "z": 195.85
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 17.28,
+    "z": 195.61
+   },
+   "work": {
+    "site": "感知塔站值守员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.83,
+    "z": 204.59
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08300",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": null,
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "从不让手抄的菜谱离开自己三步远——这事只有师父知道",
+ "id": "C-08300",
+ "month_lines": [],
+ "name": "屠倩",
+ "profession": "感知塔站值守员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

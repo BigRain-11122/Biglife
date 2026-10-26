@@ -1,0 +1,96 @@
+{
+ "age": 95,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -12,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 64.96,
+    "z": 74.7
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.05,
+    "z": 153.64
+   },
+   "work": {
+    "site": "灯塔守望·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 137.38,
+    "z": 124.25
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09790",
+  "quirk": "slow",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把心事只说给褪色的灯笼骨架听——这事只有档案馆知道",
+ "id": "C-09790",
+ "month_lines": [],
+ "name": "侯鸿奎",
+ "profession": "灯塔守望",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

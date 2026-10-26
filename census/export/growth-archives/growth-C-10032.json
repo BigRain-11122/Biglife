@@ -1,0 +1,59 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -144.63,
+    "z": -92.62
+   },
+   "social": {
+    "site": "医馆巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.6,
+    "z": -134.01
+   },
+   "work": {
+    "site": "医馆巷坐堂医生·医馆巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -36.15,
+    "z": -23.92
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10032",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "医馆巷",
+ "born": null,
+ "creed": "病要快看，人要慢养。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "诊室夜灯常年不熄、门口长椅永远擦得干净的医生——街坊说那盏灯就是巷子的急诊号",
+ "id": "C-10032",
+ "month_lines": [],
+ "name": "程望闻",
+ "profession": "医馆巷坐堂医生",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

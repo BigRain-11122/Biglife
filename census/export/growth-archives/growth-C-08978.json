@@ -1,0 +1,96 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 3,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 61.82,
+    "z": 57.21
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.09,
+    "z": 38.88
+   },
+   "work": {
+    "site": "8bit 乐师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 131.45,
+    "z": 138.06
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08978",
+  "quirk": "slow",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": null,
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "坚持给老裁缝的画粉记日记——他自己也说不清为什么",
+ "id": "C-08978",
+ "month_lines": [],
+ "name": "老支线·叁",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

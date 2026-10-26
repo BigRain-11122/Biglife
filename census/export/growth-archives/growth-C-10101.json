@@ -1,0 +1,59 @@
+{
+ "age": 68,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 55.56,
+    "z": -99.59
+   },
+   "social": {
+    "site": "北外滩巷口青石摊·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.72,
+    "z": -15.91
+   },
+   "work": {
+    "site": "磨刀匠·北外滩巷口青石摊工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 117.3,
+    "z": -139.62
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10101",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "北外滩巷口青石摊",
+ "born": null,
+ "creed": "刀钝了不怪刀，怪没人磨",
+ "district": "NS",
+ "gender": "男",
+ "hook": "一块磨得中间凹下去的青石，两头垫着旧布，凹槽里积着铁屑和水的痕迹。",
+ "id": "C-10101",
+ "month_lines": [],
+ "name": "韩德茂",
+ "profession": "磨刀匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

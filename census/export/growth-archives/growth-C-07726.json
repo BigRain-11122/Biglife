@@ -1,0 +1,106 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 12,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.84,
+    "z": 118.48
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.13,
+    "z": 26.98
+   },
+   "work": {
+    "site": "像素学徒·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.95,
+    "z": 126.66
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07726",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每天跟退租铺面的旧招牌打招呼",
+ "id": "C-07726",
+ "month_lines": [
+  "正对着灯管调亮度，指尖蹭过像素板边缘——风灌进领口发凉，锅里油还热着，收了最后一单，得给妈捎个热汤圆。"
+ ],
+ "name": "蒋豆豆",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "正对着灯管调亮度，指尖蹭过像素板边缘——风灌进领口发凉，锅里油还热着，收了最后一单，得给妈捎个热汤圆。",
+   "text": "「正对着灯管调亮度，指尖蹭过像素板边缘——风灌进领口发凉，锅里油还热着，收了最后一单，得给妈捎个热汤圆。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

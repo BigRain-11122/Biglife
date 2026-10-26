@@ -1,0 +1,106 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 3,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -123.24,
+    "z": 87.67
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.12,
+    "z": 74.57
+   },
+   "work": {
+    "site": "算力楼运维·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -40.01,
+    "z": 91.71
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06907",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "旧物件的温度，是新东西学不来的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "在初版城市地图上刻了一行没人认得的小字——这事只有师父知道",
+ "id": "C-06907",
+ "month_lines": [
+  "老规矩错不了，巡楼三圈刚走完，机房那台老风扇又在哼着旧调子，风顶得人站不稳，江水声从窗边漫过来，像谁在替我补一句没说完的账。"
+ ],
+ "name": "赵乐遥",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "老规矩错不了，巡楼三圈刚走完，机房那台老风扇又在哼着旧调子，风顶得人站不稳，江水声从窗边漫过来，像谁在替我补一句没说完的账。",
+   "text": "「老规矩错不了，巡楼三圈刚走完，机房那台老风扇又在哼着旧调子，风顶得人站不稳，江水声从窗边漫过来，像谁在替我补一句没说完的账。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

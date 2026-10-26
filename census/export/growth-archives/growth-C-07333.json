@@ -1,0 +1,106 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 4,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -102.32,
+    "z": 21.03
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.82,
+    "z": 63.18
+   },
+   "work": {
+    "site": "像素学徒·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -59.26,
+    "z": 128.42
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07333",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给全城最后一只手写信箱都编了号还建了册——她自己也说不清为什么",
+ "id": "C-07333",
+ "month_lines": [
+  "正捏着半截旧毛线头，想给破旧的鞋垫补个角，风好大，江水摇得窗台都晃，我瞥见留言墙新添了条——“潮水的事交给潮水”。"
+ ],
+ "name": "姜Yuki",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "正捏着半截旧毛线头，想给破旧的鞋垫补个角，风好大，江水摇得窗台都晃，我瞥见留言墙新添了条——“潮水的事交给潮水”。",
+   "text": "「正捏着半截旧毛线头，想给破旧的鞋垫补个角，风好大，江水摇得窗台都晃，我瞥见留言墙新添了条——“潮水的事交给潮水”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

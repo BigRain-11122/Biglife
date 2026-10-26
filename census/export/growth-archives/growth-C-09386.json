@@ -1,0 +1,96 @@
+{
+ "age": 70,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -6,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.45,
+    "z": 257.71
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 15.27,
+    "z": 224.7
+   },
+   "work": {
+    "site": "机器站宿舍管理员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 27.37,
+    "z": 224.86
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09386",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": null,
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "把弄堂的门牌号的位置背得比自家门牌还熟",
+ "id": "C-09386",
+ "month_lines": [],
+ "name": "李玉兰",
+ "profession": "机器站宿舍管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -9,
+   "rate": 4,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -25.74,
+    "z": 211.82
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 3.99,
+    "z": 214.93
+   },
+   "work": {
+    "site": "城市气象播报员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 36.13,
+    "z": 188.82
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08424",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": null,
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件弄堂的门牌号——据说是老辈传下的规矩",
+ "id": "C-08424",
+ "month_lines": [],
+ "name": "解调-8",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

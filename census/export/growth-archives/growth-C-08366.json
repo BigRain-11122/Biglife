@@ -1,0 +1,96 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 0,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -84.53,
+    "z": 206.61
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 15.87,
+    "z": 198.96
+   },
+   "work": {
+    "site": "感知网养线工·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.6,
+    "z": 258.55
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08366",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": null,
+ "creed": "桥上不问来路，落水都得拉一把。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "梦话都在念叨停摆的老挂钟——这事全巷都知道",
+ "id": "C-08366",
+ "month_lines": [],
+ "name": "雷浩宇",
+ "profession": "感知网养线工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "buddy",
+   "src": "棋友",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 4,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -59.37,
+    "z": -249.64
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 17.06,
+    "z": -243.5
+   },
+   "work": {
+    "site": "江岸数据钓手·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 91.12,
+    "z": -175.69
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09136",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": null,
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "攒了满抽屉手抄的菜谱从不给看——这事全巷都知道",
+ "id": "C-09136",
+ "month_lines": [],
+ "name": "汪国平",
+ "profession": "江岸数据钓手",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

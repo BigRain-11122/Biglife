@@ -1,0 +1,96 @@
+{
+ "age": 3,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 0,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 61.86,
+    "z": 31.19
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.11,
+    "z": 56.09
+   },
+   "work": {
+    "site": "夜宵摊主·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 129.16,
+    "z": 124.34
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08297",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": null,
+ "creed": "扛得住事，才配得上街坊喊一声师傅。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "能背出老裁缝铺的样衣的全部班次——这事全巷都知道",
+ "id": "C-08297",
+ "month_lines": [],
+ "name": "编号十三·小",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 70,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -11,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -87.3,
+    "z": 230.9
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 7.45,
+    "z": 214.31
+   },
+   "work": {
+    "site": "机器站宿舍管理员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 119.8,
+    "z": 251.34
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09755",
+  "quirk": "night_run",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": null,
+ "creed": "扛得住事，才配得上街坊喊一声师傅。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "把停用的老式磅秤画进了自己的作品里——这事全巷都知道",
+ "id": "C-09755",
+ "month_lines": [],
+ "name": "曾建国",
+ "profession": "机器站宿舍管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

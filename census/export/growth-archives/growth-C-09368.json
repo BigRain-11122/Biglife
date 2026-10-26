@@ -1,0 +1,97 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 5,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -102.35,
+    "z": -118.55
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.55,
+    "z": -144.16
+   },
+   "work": {
+    "site": "城市气象播报员·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.82,
+    "z": -118.65
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09368",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "像素越小，心眼越大。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "能背出爷爷的工作证的全部班次——据说是老辈传下的规矩",
+ "id": "C-09368",
+ "month_lines": [],
+ "name": "肖卡佳",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

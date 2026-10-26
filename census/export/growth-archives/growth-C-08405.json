@@ -1,0 +1,96 @@
+{
+ "age": 85,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -11,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 70.43,
+    "z": 77.08
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.6,
+    "z": 152.94
+   },
+   "work": {
+    "site": "街区调解阿姨·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 114.99,
+    "z": 54.91
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08405",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "在旧时弄堂的灯绳上刻了一行没人认得的小字——没人知道为什么",
+ "id": "C-08405",
+ "month_lines": [],
+ "name": "王秀英",
+ "profession": "街区调解阿姨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

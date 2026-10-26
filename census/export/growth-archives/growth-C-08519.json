@@ -1,0 +1,96 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 0,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -107.9,
+    "z": -156.57
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.62,
+    "z": -151.28
+   },
+   "work": {
+    "site": "粉丝回信人·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -60.29,
+    "z": -20.54
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08519",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "能一眼认出第一天的营业账本的真伪——他自己也说不清为什么",
+ "id": "C-08519",
+ "month_lines": [],
+ "name": "老磁带-9",
+ "profession": "粉丝回信人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

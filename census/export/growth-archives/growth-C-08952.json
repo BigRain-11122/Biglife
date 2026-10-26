@@ -1,0 +1,96 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 0,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.48,
+    "z": -74.74
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.88,
+    "z": -143.7
+   },
+   "work": {
+    "site": "七段街区导游·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.9,
+    "z": -137.67
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08952",
+  "quirk": "slow",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "把会发光的纽扣的位置背得比自家门牌还熟——没人知道为什么",
+ "id": "C-08952",
+ "month_lines": [],
+ "name": "电流·拾",
+ "profession": "七段街区导游",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

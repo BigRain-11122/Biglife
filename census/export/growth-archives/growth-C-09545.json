@@ -1,0 +1,96 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 1,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -122.13,
+    "z": -93.05
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.66,
+    "z": -33.31
+   },
+   "work": {
+    "site": "语义翻译官·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -35.65,
+    "z": -50.99
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09545",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "把老码头缆桩的位置背得比自家门牌还熟——没人知道为什么",
+ "id": "C-09545",
+ "month_lines": [],
+ "name": "老花线·小",
+ "profession": "语义翻译官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

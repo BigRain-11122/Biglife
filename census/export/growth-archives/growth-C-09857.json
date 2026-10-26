@@ -1,0 +1,97 @@
+{
+ "age": 11,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 20,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.7,
+    "z": 38.78
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.23,
+    "z": 156.12
+   },
+   "work": {
+    "site": "像素小学学生·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.96,
+    "z": 112.89
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09857",
+  "quirk": "umbrella",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "给修桥人的旧安全帽都起了名字——这事只有师父知道",
+ "id": "C-09857",
+ "month_lines": [],
+ "name": "毛豆豆",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "buddy",
+   "src": "茶友",
+   "with": "C-00090"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

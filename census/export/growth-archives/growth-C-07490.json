@@ -1,0 +1,106 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 10,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -100.27,
+    "z": 72.15
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.76,
+    "z": 108.14
+   },
+   "work": {
+    "site": "算法调参师·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.31,
+    "z": 139.74
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07490",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "会为半张老电影票推掉一整晚的生意——他自己也说不清为什么",
+ "id": "C-07490",
+ "month_lines": [
+  "正用笔头在参数卡上刮一遍，把B2396那批旧值磨平，风刮得紧，手心都发烫，调参的味儿，还得一口口往里吞。"
+ ],
+ "name": "赵向洋",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "正用笔头在参数卡上刮一遍，把B2396那批旧值磨平，风刮得紧，手心都发烫，调参的味儿，还得一口口往里吞。",
+   "text": "「正用笔头在参数卡上刮一遍，把B2396那批旧值磨平，风刮得紧，手心都发烫，调参的味儿，还得一口口往里吞。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 15,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 20,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.17,
+    "z": -73.68
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.79,
+    "z": -147.59
+   },
+   "work": {
+    "site": "像素小学学生·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.26,
+    "z": -53.65
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08364",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": null,
+ "creed": "扛得住事，才配得上街坊喊一声师傅。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "把老式算命的签筒修好再免费送人——这事只有师父知道",
+ "id": "C-08364",
+ "month_lines": [],
+ "name": "屠米粒",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

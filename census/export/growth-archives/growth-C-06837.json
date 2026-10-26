@@ -1,0 +1,105 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 6,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.33,
+    "z": 143.89
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 76.41,
+    "z": 42.56
+   },
+   "work": {
+    "site": "8bit 乐师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 136.89,
+    "z": 37.05
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06837",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "坚持手写编年史馆的门票——据说是老辈传下的规矩",
+ "id": "C-06837",
+ "month_lines": [
+  "明儿又是新的一天。风刮得招牌直晃，我正扫着弦，G08那波转场的事又在脑里回了两遍，像老友说悄悄话。"
+ ],
+ "name": "曹阿宁",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "明儿又是新的一天。风刮得招牌直晃，我正扫着弦，G08那波转场的事又在脑里回了两遍，像老友说悄悄话。",
+   "text": "「明儿又是新的一天。风刮得招牌直晃，我正扫着弦，G08那波转场的事又在脑里回了两遍，像老友说悄悄话。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

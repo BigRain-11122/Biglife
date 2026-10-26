@@ -1,0 +1,90 @@
+{
+ "age": 74,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -13,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.76,
+    "z": -184.38
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 11.07,
+    "z": -220.57
+   },
+   "work": {
+    "site": "江边老戏台末排老生·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 106.08,
+    "z": -246.81
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10014",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": null,
+ "creed": "戏比天大，听戏的人比戏还大。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "谢幕的长揖永远朝江面作，说是谢「听戏的天地」，几十年没变过",
+ "id": "C-10014",
+ "month_lines": [],
+ "name": "盖鸣秋",
+ "profession": "江边老戏台末排老生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 11,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 17,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -106.69,
+    "z": -78.13
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.39,
+    "z": -30.03
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -22.64,
+    "z": -13.95
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06989",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "每天跟退役灯塔的透镜打招呼——这事只有档案馆知道",
+ "id": "C-06989",
+ "month_lines": [
+  "老地方见，今天风掀得衣角乱摆，commit光点过江了，电波猫群的食添了，抽屉里那张O-20261023-2317-bm-a的票根，还是老地方压着——天阴着，江水清清的。"
+ ],
+ "name": "蔡小满",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "老地方见，今天风掀得衣角乱摆，commit光点过江了，电波猫群的食添了，抽屉里那张O-20261023-2317-bm-a的票根，还是老地方压着——天阴着，江水清清的。",
+   "text": "「老地方见，今天风掀得衣角乱摆，commit光点过江了，电波猫群的食添了，抽屉里那张O-20261023-2317-bm-a的票根，还是老地方压着——天阴着，江水清清的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

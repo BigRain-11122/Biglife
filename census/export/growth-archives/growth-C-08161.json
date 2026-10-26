@@ -1,0 +1,106 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -5,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -122.71,
+    "z": 146.63
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.84,
+    "z": 28.77
+   },
+   "work": {
+    "site": "全城对时师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -36.69,
+    "z": 49.38
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08161",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "留着老式算命的签筒却从来不用——没人知道为什么",
+ "id": "C-08161",
+ "month_lines": [
+  "我正把老江边的钟摆调到八点零二，风好大，手一抖，指针差了半秒——这城的脉搏，得慢着点，才不作孽。"
+ ],
+ "name": "桂斌",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "我正把老江边的钟摆调到八点零二，风好大，手一抖，指针差了半秒——这城的脉搏，得慢着点，才不作孽。",
+   "text": "「我正把老江边的钟摆调到八点零二，风好大，手一抖，指针差了半秒——这城的脉搏，得慢着点，才不作孽。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

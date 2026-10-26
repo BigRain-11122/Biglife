@@ -1,0 +1,105 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 8,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -30.52,
+    "z": -201.95
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 8.05,
+    "z": -233.47
+   },
+   "work": {
+    "site": "信号中继员·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 114.45,
+    "z": -166.06
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07895",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "会给旧饭盒里的字条织毛衣——这事只有档案馆知道",
+ "id": "C-07895",
+ "month_lines": [
+  "手攥着第三块中继，风大得说话要抬声，屋里的灯我早查了——亮着，稳住，别浪。"
+ ],
+ "name": "应沈鱼",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手攥着第三块中继，风大得说话要抬声，屋里的灯我早查了——亮着，稳住，别浪。",
+   "text": "「手攥着第三块中继，风大得说话要抬声，屋里的灯我早查了——亮着，稳住，别浪。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

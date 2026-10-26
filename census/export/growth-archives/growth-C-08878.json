@@ -1,0 +1,96 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -2,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -71.66,
+    "z": -247.26
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -9.03,
+    "z": -259.5
+   },
+   "work": {
+    "site": "渡轮检票员·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 91.95,
+    "z": -228.19
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08878",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": null,
+ "creed": "清单上没有的事，一律排队。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件消失街区的路牌——她自己也说不清为什么",
+ "id": "C-08878",
+ "month_lines": [],
+ "name": "朱莉",
+ "profession": "渡轮检票员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

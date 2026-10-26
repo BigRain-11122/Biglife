@@ -1,0 +1,96 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 4,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 55.0,
+    "z": 43.44
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.76,
+    "z": 116.8
+   },
+   "work": {
+    "site": "关卡建筑师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 98.73,
+    "z": 39.19
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09062",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每天跟弄堂钥匙串打招呼",
+ "id": "C-09062",
+ "month_lines": [],
+ "name": "石沐辰",
+ "profession": "关卡建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

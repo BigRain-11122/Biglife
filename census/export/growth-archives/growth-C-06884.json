@@ -1,0 +1,106 @@
+{
+ "age": 14,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 20,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.25,
+    "z": 173.47
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -15.7,
+    "z": 199.94
+   },
+   "work": {
+    "site": "像素小学学生·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 83.59,
+    "z": 200.14
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06884",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "每年挑一天只为全城最后一只手写信箱大扫除——这事只有档案馆知道",
+ "id": "C-06884",
+ "month_lines": [
+  "谁的事就是谁的事，可街坊的事就是我的事。 放学还得绕路去看一眼今日 commit 光点过江，风把树梢压弯了，我站那儿数了数，亮着的窗又多了一盏。"
+ ],
+ "name": "刘小满",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "谁的事就是谁的事，可街坊的事就是我的事。 放学还得绕路去看一眼今日 commit 光点过江，风把树梢压弯了，我站那儿数了数，亮着的窗又多了一盏。",
+   "text": "「谁的事就是谁的事，可街坊的事就是我的事。 放学还得绕路去看一眼今日 commit 光点过江，风把树梢压弯了，我站那儿数了数，亮着的窗又多了一盏。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

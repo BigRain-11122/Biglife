@@ -1,0 +1,106 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 13,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -100.77,
+    "z": 89.11
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.41,
+    "z": 33.56
+   },
+   "work": {
+    "site": "像素学徒·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -37.0,
+    "z": 136.07
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08006",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "能一眼认出弄堂的门牌号的真伪",
+ "id": "C-08006",
+ "month_lines": [
+  "捏着盘扣的边儿，一针一针地穿，歪了就重来。风刮得紧，阳台的花说：“今天你真像师父教的，慢里头有劲。"
+ ],
+ "name": "陈小杏",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "捏着盘扣的边儿，一针一针地穿，歪了就重来。风刮得紧，阳台的花说：“今天你真像师父教的，慢里头有劲。",
+   "text": "「捏着盘扣的边儿，一针一针地穿，歪了就重来。风刮得紧，阳台的花说：“今天你真像师父教的，慢里头有劲。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,96 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 6,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -26.69,
+    "z": 228.22
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -16.51,
+    "z": 259.59
+   },
+   "work": {
+    "site": "外环巡夜员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 52.46,
+    "z": 245.75
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08425",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": null,
+ "creed": "旧物件的温度，是新东西学不来的。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "每逢下雨就去修旧货郎的拨浪鼓——据说是老辈传下的规矩",
+ "id": "C-08425",
+ "month_lines": [],
+ "name": "曹予安",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "buddy",
+   "src": "棋友",
+   "with": "C-00108"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

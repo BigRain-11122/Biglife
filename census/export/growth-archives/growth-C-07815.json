@@ -1,0 +1,106 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 3,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -106.47,
+    "z": 14.41
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.13,
+    "z": 96.22
+   },
+   "work": {
+    "site": "风控官·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -47.58,
+    "z": 130.1
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07815",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给编年史馆的门票写了一整本观察笔记——这事全巷都知道",
+ "id": "C-07815",
+ "month_lines": [
+  "手在翻旧账本，页角磨出了毛边，风一阵紧一阵，把纸页吹得直晃。刚把G08 CrazyCampus: B2396 -> S2.5那茬说给C-04375听，他耳朵尖，回头又抖了抖公告栏。"
+ ],
+ "name": "童琳",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在翻旧账本，页角磨出了毛边，风一阵紧一阵，把纸页吹得直晃。刚把G08 CrazyCampus: B2396 -> S2.5那茬说给C-04375听，他耳朵尖，回头又抖了抖公告栏。",
+   "text": "「手在翻旧账本，页角磨出了毛边，风一阵紧一阵，把纸页吹得直晃。刚把G08 CrazyCampus: B2396 -> S2.5那茬说给C-04375听，他耳朵尖，回头又抖了抖公告栏。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

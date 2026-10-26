@@ -1,0 +1,97 @@
+{
+ "age": 82,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -6,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -112.16,
+    "z": -15.58
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.32,
+    "z": -28.02
+   },
+   "work": {
+    "site": "声优棚掌柜·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -35.4,
+    "z": -149.93
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08275",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "梦话都在念叨手写信",
+ "id": "C-08275",
+ "month_lines": [],
+ "name": "陈阿炳",
+ "profession": "声优棚掌柜",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

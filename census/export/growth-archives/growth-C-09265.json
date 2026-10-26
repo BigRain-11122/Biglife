@@ -1,0 +1,97 @@
+{
+ "age": 76,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -9,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -107.15,
+    "z": 42.55
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.72,
+    "z": 135.77
+   },
+   "work": {
+    "site": "资金金灯匠·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -22.2,
+    "z": 80.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09265",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "慢一点，城又不会跑。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给老式爆米花的粮票写了一整本观察笔记——据说是老辈传下的规矩",
+ "id": "C-09265",
+ "month_lines": [],
+ "name": "云招娣",
+ "profession": "资金金灯匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

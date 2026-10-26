@@ -1,0 +1,106 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#FFA726",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 22,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 22.47,
+    "z": -52.89
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.22,
+    "z": -111.78
+   },
+   "work": {
+    "site": "江面巡游员·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 112.06,
+    "z": -69.59
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07710",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "搬家三次，钥匙一把不扔。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "绕着淘汰的电话卡飞过整整三十圈——据说是老辈传下的规矩",
+ "id": "C-07710",
+ "month_lines": [
+  "手捧水位计，风从巷口直灌进来，江面晃得我绒羽都翘起来了。测流刚过三十七，水位稳着，跃水的动静，就在这清气里。"
+ ],
+ "name": "小云脚",
+ "profession": "江面巡游员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手捧水位计，风从巷口直灌进来，江面晃得我绒羽都翘起来了。测流刚过三十七，水位稳着，跃水的动静，就在这清气里。",
+   "text": "「手捧水位计，风从巷口直灌进来，江面晃得我绒羽都翘起来了。测流刚过三十七，水位稳着，跃水的动静，就在这清气里。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

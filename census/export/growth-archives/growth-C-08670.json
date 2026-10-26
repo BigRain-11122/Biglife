@@ -1,0 +1,96 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 3,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 32.07,
+    "z": 12.14
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.32,
+    "z": 14.0
+   },
+   "work": {
+    "site": "节日活动策划·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 140.61,
+    "z": 51.35
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08670",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": null,
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "留着老裁缝的画粉却从来不用——没人知道为什么",
+ "id": "C-08670",
+ "month_lines": [],
+ "name": "伏特·慢",
+ "profession": "节日活动策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

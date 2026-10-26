@@ -1,0 +1,59 @@
+{
+ "age": 51,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -141.36,
+    "z": -61.92
+   },
+   "social": {
+    "site": "老档案楼地下一层库房·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.57,
+    "z": -150.33
+   },
+   "work": {
+    "site": "档案管理员·老档案楼地下一层库房工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -61.94,
+    "z": -101.16
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10099",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老档案楼地下一层库房",
+ "born": null,
+ "creed": "纸会烂，年份不会",
+ "district": "MD",
+ "gender": "女",
+ "hook": "一叠裁好的牛皮纸，最上面那张压着半枚蓝色印章，纸角卷得起毛。",
+ "id": "C-10099",
+ "month_lines": [],
+ "name": "蔺秋池",
+ "profession": "档案管理员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

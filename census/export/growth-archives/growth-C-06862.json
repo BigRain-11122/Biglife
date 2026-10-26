@@ -1,0 +1,105 @@
+{
+ "age": 70,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -11,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -119.57,
+    "z": -40.37
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.65,
+    "z": -95.62
+   },
+   "work": {
+    "site": "8bit 乐师·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -47.06,
+    "z": -57.04
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06862",
+  "quirk": "slow",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "会为旧笔友的明信片推掉一整晚的生意——这事只有档案馆知道",
+ "id": "C-06862",
+ "month_lines": [
+  "灯还是老灯亮堂，风灌进领口发凉，我正蹲在桥头扫弦，G08的窗一排排亮了，像是把旧谱子一页页翻了出来。"
+ ],
+ "name": "吴招娣",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "灯还是老灯亮堂，风灌进领口发凉，我正蹲在桥头扫弦，G08的窗一排排亮了，像是把旧谱子一页页翻了出来。",
+   "text": "「灯还是老灯亮堂，风灌进领口发凉，我正蹲在桥头扫弦，G08的窗一排排亮了，像是把旧谱子一页页翻了出来。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 66,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -11,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.34,
+    "z": 138.72
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.36,
+    "z": 82.31
+   },
+   "work": {
+    "site": "资金金灯匠·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.77,
+    "z": 102.32
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07065",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给老式的士票都编了号还建了册——没人知道为什么",
+ "id": "C-07065",
+ "month_lines": [
+  "风刮得招牌直晃，今天给上海中心扭塔加了档养光，金晕稳了又稳。留言墙前站了站，有人写“C-07065，灯亮一倍”，包在我身上。"
+ ],
+ "name": "茅珍珠",
+ "profession": "资金金灯匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风刮得招牌直晃，今天给上海中心扭塔加了档养光，金晕稳了又稳。留言墙前站了站，有人写“C-07065，灯亮一倍”，包在我身上。",
+   "text": "「风刮得招牌直晃，今天给上海中心扭塔加了档养光，金晕稳了又稳。留言墙前站了站，有人写“C-07065，灯亮一倍”，包在我身上。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

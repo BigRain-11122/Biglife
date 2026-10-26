@@ -1,0 +1,96 @@
+{
+ "age": 92,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -12,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 39.26,
+    "z": -121.83
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.32,
+    "z": -44.15
+   },
+   "work": {
+    "site": "街区调解阿姨·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 139.06,
+    "z": -33.0
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08220",
+  "quirk": "umbrella",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": null,
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "能一眼认出旧饭盒里的字条的真伪——据说是老辈传下的规矩",
+ "id": "C-08220",
+ "month_lines": [],
+ "name": "华银龙",
+ "profession": "街区调解阿姨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 8,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 13,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -128.44,
+    "z": 73.4
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.33,
+    "z": 42.59
+   },
+   "work": {
+    "site": "像素学徒·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -31.73,
+    "z": 76.35
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07017",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "逢人就讲老式公交站牌的故事——他自己也说不清为什么",
+ "id": "C-07017",
+ "month_lines": [
+  "弄堂还是那个弄堂，风刮得招牌直晃，我刚把师父交的那块像素板修完，收了尾，心里谢了主顾——这风劲儿，倒比前天还猛，可我这手艺，只管慢慢来。"
+ ],
+ "name": "任元宝",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "弄堂还是那个弄堂，风刮得招牌直晃，我刚把师父交的那块像素板修完，收了尾，心里谢了主顾——这风劲儿，倒比前天还猛，可我这手艺，只管慢慢来。",
+   "text": "「弄堂还是那个弄堂，风刮得招牌直晃，我刚把师父交的那块像素板修完，收了尾，心里谢了主顾——这风劲儿，倒比前天还猛，可我这手艺，只管慢慢来。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

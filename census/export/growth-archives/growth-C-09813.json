@@ -1,0 +1,96 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 5,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -107.04,
+    "z": -56.63
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.51,
+    "z": -156.42
+   },
+   "work": {
+    "site": "灯牌制作师·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -56.32,
+    "z": -70.7
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09813",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "留着全城桥的名字却从来不用——据说是老辈传下的规矩",
+ "id": "C-09813",
+ "month_lines": [],
+ "name": "背包·乙",
+ "profession": "灯牌制作师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

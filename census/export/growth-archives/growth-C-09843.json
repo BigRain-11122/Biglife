@@ -1,0 +1,96 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 1,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -128.04,
+    "z": 215.34
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 12.49,
+    "z": 214.04
+   },
+   "work": {
+    "site": "新市民安居顾问·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 51.2,
+    "z": 180.85
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09843",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": null,
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "还在用旧钟表铺的价目牌——据说是老辈传下的规矩",
+ "id": "C-09843",
+ "month_lines": [],
+ "name": "顾志明",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

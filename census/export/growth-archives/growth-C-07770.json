@@ -1,0 +1,106 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 0,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.23,
+    "z": 37.99
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.87,
+    "z": 27.84
+   },
+   "work": {
+    "site": "防火墙巡林员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -37.13,
+    "z": 62.48
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07770",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "用初代广场舞光带教会了半条街的孩子——这事全巷都知道",
+ "id": "C-07770",
+ "month_lines": [
+  "风从巷口直灌进来，灯还是老灯亮堂。今夜巡边到Q7，验签的单子刚落，顺手把G几CrazyCampus的旧事讲给C-07170听——听说C-03277又转着去了。"
+ ],
+ "name": "沈文倩",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风从巷口直灌进来，灯还是老灯亮堂。今夜巡边到Q7，验签的单子刚落，顺手把G几CrazyCampus的旧事讲给C-07170听——听说C-03277又转着去了。",
+   "text": "「风从巷口直灌进来，灯还是老灯亮堂。今夜巡边到Q7，验签的单子刚落，顺手把G几CrazyCampus的旧事讲给C-07170听——听说C-03277又转着去了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

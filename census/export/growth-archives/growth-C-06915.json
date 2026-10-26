@@ -1,0 +1,106 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 4,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -104.47,
+    "z": 204.88
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 17.55,
+    "z": 207.01
+   },
+   "work": {
+    "site": "感知塔站值守员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 110.88,
+    "z": 184.27
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06915",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "记得全城灯语的对照表的每一个来历——他自己也说不清为什么",
+ "id": "C-06915",
+ "month_lines": [
+  "风一阵紧一阵，天阴着，值机台前的电子屏闪了三下，我伸手对频了一下——下一版一定更好。"
+ ],
+ "name": "杭嘉树",
+ "profession": "感知塔站值守员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风一阵紧一阵，天阴着，值机台前的电子屏闪了三下，我伸手对频了一下——下一版一定更好。",
+   "text": "「风一阵紧一阵，天阴着，值机台前的电子屏闪了三下，我伸手对频了一下——下一版一定更好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

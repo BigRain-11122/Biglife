@@ -1,0 +1,59 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -97.51,
+    "z": -233.83
+   },
+   "social": {
+    "site": "棚户巷雨具摊·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -4.52,
+    "z": -248.92
+   },
+   "work": {
+    "site": "雨具修补摊主·棚户巷雨具摊工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 95.97,
+    "z": -176.64
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10083",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "棚户巷雨具摊",
+ "born": null,
+ "creed": "能修就不换",
+ "district": "RV",
+ "gender": "男",
+ "hook": "一件旧雨衣，领口补过三针，补线比布深一档，挂在门后不用看名字——棚户巷雨具摊的门后，谁都知道那是他的",
+ "id": "C-10083",
+ "month_lines": [],
+ "name": "裘守义",
+ "profession": "雨具修补摊主",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

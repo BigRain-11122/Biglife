@@ -1,0 +1,106 @@
+{
+ "age": 51,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 5,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 31.79,
+    "z": -142.29
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.56,
+    "z": -32.11
+   },
+   "work": {
+    "site": "全城对时师·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 110.22,
+    "z": -96.39
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07999",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "记得全城雪夜的第一次合影的每一个来历——这事只有师父知道",
+ "id": "C-07999",
+ "month_lines": [
+  "手正扶着老钟摆的边沿，一寸寸校对今天的秒针——风顶得人站不稳，可这钟，偏要走得清清楚楚。 pulse=2026-10-26T05:50:33 verdict=GPU_VRAM_LO"
+ ],
+ "name": "陶志明",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手正扶着老钟摆的边沿，一寸寸校对今天的秒针——风顶得人站不稳，可这钟，偏要走得清清楚楚。 pulse=2026-10-26T05:50:33 verdict=GPU_VRAM_LO",
+   "text": "「手正扶着老钟摆的边沿，一寸寸校对今天的秒针——风顶得人站不稳，可这钟，偏要走得清清楚楚。 pulse=2026-10-26T05:50:33 verdict=GPU_VRAM_LO」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

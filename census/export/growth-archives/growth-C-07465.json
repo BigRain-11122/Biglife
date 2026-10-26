@@ -1,0 +1,106 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 1,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.25,
+    "z": -226.43
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -12.09,
+    "z": -186.61
+   },
+   "work": {
+    "site": "江面清波工·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 57.42,
+    "z": -198.58
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07465",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "逢人就讲旧缝纫机踏板的故事——这事全巷都知道",
+ "id": "C-07465",
+ "month_lines": [
+  "我正对着江面那块老镜片调焦，风好大，水纹一甩一甩的，倒影都晃成串珠了。趁热吃，今天多想一步，明天少返三工。"
+ ],
+ "name": "姜知夏",
+ "profession": "江面清波工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "我正对着江面那块老镜片调焦，风好大，水纹一甩一甩的，倒影都晃成串珠了。趁热吃，今天多想一步，明天少返三工。",
+   "text": "「我正对着江面那块老镜片调焦，风好大，水纹一甩一甩的，倒影都晃成串珠了。趁热吃，今天多想一步，明天少返三工。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 0,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.82,
+    "z": 97.52
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.63,
+    "z": 16.45
+   },
+   "work": {
+    "site": "防火墙巡林员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -58.78,
+    "z": 96.84
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07902",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "逢人就讲修桥人的旧安全帽的故事——这事只有档案馆知道",
+ "id": "C-07902",
+ "month_lines": [
+  "风从巷口直灌进来，我正把巡边的验签单往口袋里塞，手心里还沾着昨夜那颗糖的甜味——包在我身上，这城的边，不许坏包越界。"
+ ],
+ "name": "夏南汐",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风从巷口直灌进来，我正把巡边的验签单往口袋里塞，手心里还沾着昨夜那颗糖的甜味——包在我身上，这城的边，不许坏包越界。",
+   "text": "「风从巷口直灌进来，我正把巡边的验签单往口袋里塞，手心里还沾着昨夜那颗糖的甜味——包在我身上，这城的边，不许坏包越界。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

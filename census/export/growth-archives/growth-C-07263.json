@@ -1,0 +1,106 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 11,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -104.85,
+    "z": 22.85
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.92,
+    "z": 31.85
+   },
+   "work": {
+    "site": "像素学徒·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -28.94,
+    "z": 68.38
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07263",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "在退役的风向标上刻了一行没人认得的小字——她自己也说不清为什么",
+ "id": "C-07263",
+ "month_lines": [
+  "手里捏着旧票根翻着，一个字一个字蹭着边，风一阵紧一阵，像谁在锅边晃着勺子。那年头的票根，总比现在烫得快。"
+ ],
+ "name": "钱糖糖",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手里捏着旧票根翻着，一个字一个字蹭着边，风一阵紧一阵，像谁在锅边晃着勺子。那年头的票根，总比现在烫得快。",
+   "text": "「手里捏着旧票根翻着，一个字一个字蹭着边，风一阵紧一阵，像谁在锅边晃着勺子。那年头的票根，总比现在烫得快。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

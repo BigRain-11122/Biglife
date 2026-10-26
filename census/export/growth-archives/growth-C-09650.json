@@ -1,0 +1,97 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#F48FB1"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 22,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 60.4,
+    "z": 65.19
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.27,
+    "z": 85.81
+   },
+   "work": {
+    "site": "风信使·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 105.97,
+    "z": 18.07
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09650",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "高兴时会把光借给旧工牌——他自己也说不清为什么",
+ "id": "C-09650",
+ "month_lines": [],
+ "name": "阿早潮",
+ "profession": "风信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

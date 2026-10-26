@@ -1,0 +1,106 @@
+{
+ "age": 67,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -6,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -139.38,
+    "z": 54.96
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.69,
+    "z": 148.23
+   },
+   "work": {
+    "site": "数据菜市摊主·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -30.06,
+    "z": 119.04
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07991",
+  "quirk": "night_run",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "会为一台修了八次的老收音机推掉一整晚的生意——这事只有师父知道",
+ "id": "C-07991",
+ "month_lines": [
+  "秤杆在手里 steady 地晃，风大得说话要抬声，我盯着那行菜价——昨天刚改的，今天又落了新单，灵感这东西，得喂它。"
+ ],
+ "name": "郑银娣",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "秤杆在手里 steady 地晃，风大得说话要抬声，我盯着那行菜价——昨天刚改的，今天又落了新单，灵感这东西，得喂它。",
+   "text": "「秤杆在手里 steady 地晃，风大得说话要抬声，我盯着那行菜价——昨天刚改的，今天又落了新单，灵感这东西，得喂它。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

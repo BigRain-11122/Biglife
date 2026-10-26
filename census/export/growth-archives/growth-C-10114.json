@@ -1,0 +1,59 @@
+{
+ "age": 68,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -75.05,
+    "z": 250.13
+   },
+   "social": {
+    "site": "外环早市磨刀摊·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 16.37,
+    "z": 218.8
+   },
+   "work": {
+    "site": "磨刀匠·外环早市磨刀摊工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 119.27,
+    "z": 174.66
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10114",
+  "quirk": "slow",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "外环早市磨刀摊",
+ "born": null,
+ "creed": "刀口听机器磨不出手上那道劲",
+ "district": "OR",
+ "gender": "男",
+ "hook": "一条长凳上装着砂轮，凳脚缠着铁丝，旁边搁一只豁口的陶罐装水，水面浮着一层铁屑。",
+ "id": "C-10114",
+ "month_lines": [],
+ "name": "邵阿虎",
+ "profession": "磨刀匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,59 @@
+{
+ "age": 68,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 39.66,
+    "z": 114.2
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.3,
+    "z": 107.08
+   },
+   "work": {
+    "site": "老城梆子戏木作坊掌作·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 147.08,
+    "z": 84.03
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10037",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "木头是有嗓子的，你对它上心，它才肯替你开口。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "会认主人的旧木梆——道具箱里那对缠红绸的老家什，是他出师之年的手笔",
+ "id": "C-10037",
+ "month_lines": [],
+ "name": "傅连奎",
+ "profession": "老城梆子戏木作坊掌作",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

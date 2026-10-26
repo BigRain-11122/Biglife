@@ -1,0 +1,105 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 2,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 54.33,
+    "z": 30.54
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.48,
+    "z": 48.75
+   },
+   "work": {
+    "site": "bug 猎人·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 98.3,
+    "z": 55.51
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08001",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "记得旧船木做的镇纸的每一个来历",
+ "id": "C-08001",
+ "month_lines": [
+  "手正把电波猫的食盒翻过来，喂食的那块小鱼干还在颤，门禁亮绿灯了，心里才亮堂——这会儿风刮得招牌直晃，像谁在暗处晃着灯。"
+ ],
+ "name": "云Leo",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手正把电波猫的食盒翻过来，喂食的那块小鱼干还在颤，门禁亮绿灯了，心里才亮堂——这会儿风刮得招牌直晃，像谁在暗处晃着灯。",
+   "text": "「手正把电波猫的食盒翻过来，喂食的那块小鱼干还在颤，门禁亮绿灯了，心里才亮堂——这会儿风刮得招牌直晃，像谁在暗处晃着灯。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

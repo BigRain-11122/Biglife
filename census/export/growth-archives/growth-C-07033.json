@@ -1,0 +1,105 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": -1,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 71.84,
+    "z": 84.37
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.93,
+    "z": 137.62
+   },
+   "work": {
+    "site": "像素画匠·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 139.93,
+    "z": 17.34
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07033",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "每逢下雨就去修老式的士票",
+ "id": "C-07033",
+ "month_lines": [
+  "出锅喽——画桌前又描了两笔G08的线，风好大，云厚着，阳台花儿说：“今天别怕，我撑得住。"
+ ],
+ "name": "江慧",
+ "profession": "像素画匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "出锅喽——画桌前又描了两笔G08的线，风好大，云厚着，阳台花儿说：“今天别怕，我撑得住。",
+   "text": "「出锅喽——画桌前又描了两笔G08的线，风好大，云厚着，阳台花儿说：“今天别怕，我撑得住。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

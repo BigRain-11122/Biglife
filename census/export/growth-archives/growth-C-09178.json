@@ -1,0 +1,96 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 5,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -35.0,
+    "z": -251.1
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -2.98,
+    "z": -205.32
+   },
+   "work": {
+    "site": "数据牧人·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 131.92,
+    "z": -241.83
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09178",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": null,
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "RV",
+ "gender": "无定",
+ "hook": "梦话都在念叨一台修了八次的老收音机——他自己也说不清为什么",
+ "id": "C-09178",
+ "month_lines": [],
+ "name": "蚀刻·乙",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

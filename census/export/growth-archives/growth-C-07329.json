@@ -1,0 +1,106 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 4,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.05,
+    "z": 141.02
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.62,
+    "z": 146.64
+   },
+   "work": {
+    "site": "算力楼运维·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.72,
+    "z": 157.76
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07329",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给全城灯语的对照表写了一整本观察笔记——这事只有档案馆知道",
+ "id": "C-07329",
+ "month_lines": [
+  "手在擦机房旧配电箱的铜接头，指腹磨出点茧了。风刮得招牌直晃，像谁在隔壁机房喊了句“跑分过线”，我耳朵尖，心也跟着抖了一下。"
+ ],
+ "name": "范一诺",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在擦机房旧配电箱的铜接头，指腹磨出点茧了。风刮得招牌直晃，像谁在隔壁机房喊了句“跑分过线”，我耳朵尖，心也跟着抖了一下。",
+   "text": "「手在擦机房旧配电箱的铜接头，指腹磨出点茧了。风刮得招牌直晃，像谁在隔壁机房喊了句“跑分过线”，我耳朵尖，心也跟着抖了一下。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

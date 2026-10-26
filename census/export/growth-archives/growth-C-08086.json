@@ -1,0 +1,106 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 4,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -51.03,
+    "z": -217.36
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 4.13,
+    "z": -174.9
+   },
+   "work": {
+    "site": "江面清波工·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 89.85,
+    "z": -244.97
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08086",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "把旧船锚残件的位置背得比自家门牌还熟",
+ "id": "C-08086",
+ "month_lines": [
+  "手在调匀浮水胶时，风灌进领口发凉，倒影里那盆老绿萝又歪了，我轻声说：“先试了再说。"
+ ],
+ "name": "余卡佳",
+ "profession": "江面清波工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在调匀浮水胶时，风灌进领口发凉，倒影里那盆老绿萝又歪了，我轻声说：“先试了再说。",
+   "text": "「手在调匀浮水胶时，风灌进领口发凉，倒影里那盆老绿萝又歪了，我轻声说：“先试了再说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

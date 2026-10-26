@@ -1,0 +1,106 @@
+{
+ "age": 15,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4DD0E1",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#82B1FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 22,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.92,
+    "z": 184.08
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 13.59,
+    "z": 244.17
+   },
+   "work": {
+    "site": "巡信使·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.43,
+    "z": 229.85
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07520",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "OR",
+ "gender": "无定",
+ "hook": "每次路过弄堂钥匙串都要亮两下",
+ "id": "C-07520",
+ "month_lines": [
+  "衔笺正飞着，风把树梢压弯了——这天清气朗，我刚把昨夜落檐的短笺全衔上，字都写得歪歪的，可心不歪，就怕哪天风一刮，信就飞了。"
+ ],
+ "name": "小三点半",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "衔笺正飞着，风把树梢压弯了——这天清气朗，我刚把昨夜落檐的短笺全衔上，字都写得歪歪的，可心不歪，就怕哪天风一刮，信就飞了。",
+   "text": "「衔笺正飞着，风把树梢压弯了——这天清气朗，我刚把昨夜落檐的短笺全衔上，字都写得歪歪的，可心不歪，就怕哪天风一刮，信就飞了。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

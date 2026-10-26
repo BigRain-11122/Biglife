@@ -1,0 +1,106 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": -5,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 41.36,
+    "z": 46.88
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.68,
+    "z": 102.32
+   },
+   "work": {
+    "site": "彩蛋埋藏师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 114.68,
+    "z": 78.18
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06976",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "从不让雨声录音离开自己三步远——这事只有师父知道",
+ "id": "C-06976",
+ "month_lines": [
+  "包在我身上。 今天风把人往前推，埋完彩蛋自己笑了三分钟，塔顶白光亮着，旧笔在手，账本翻了一页——就这，够了。"
+ ],
+ "name": "周萍",
+ "profession": "彩蛋埋藏师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "包在我身上。 今天风把人往前推，埋完彩蛋自己笑了三分钟，塔顶白光亮着，旧笔在手，账本翻了一页——就这，够了。",
+   "text": "「包在我身上。 今天风把人往前推，埋完彩蛋自己笑了三分钟，塔顶白光亮着，旧笔在手，账本翻了一页——就这，够了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

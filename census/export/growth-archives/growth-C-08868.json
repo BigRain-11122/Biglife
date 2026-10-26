@@ -1,0 +1,96 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": -4,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 38.31,
+    "z": -137.35
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.54,
+    "z": -150.97
+   },
+   "work": {
+    "site": "脑环广场管理员·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 100.97,
+    "z": -152.13
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08868",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": null,
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "坚持手写老裁缝铺的样衣——这事只有师父知道",
+ "id": "C-08868",
+ "month_lines": [],
+ "name": "田丽",
+ "profession": "脑环广场管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "household",
+   "src": "H-NS0378",
+   "with": "C-00049"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

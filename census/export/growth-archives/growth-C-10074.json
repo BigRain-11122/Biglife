@@ -1,0 +1,59 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -118.57,
+    "z": -192.75
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -9.71,
+    "z": -174.41
+   },
+   "work": {
+    "site": "江岸滩涂老磨坊主·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 55.55,
+    "z": -236.69
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10074",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": null,
+ "creed": "石磨转得慢，豆香熬得住。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "磨坊院角的老石磨，磨盘纹路里嵌着经年的豆香——江岸滩涂磨坊的家传石磨，街坊逢集那锅豆腐脑的香全从这纹路里转出来",
+ "id": "C-10074",
+ "month_lines": [],
+ "name": "邱盘石",
+ "profession": "江岸滩涂老磨坊主",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

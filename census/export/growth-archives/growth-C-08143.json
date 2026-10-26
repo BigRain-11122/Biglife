@@ -1,0 +1,106 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 7,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -115.19,
+    "z": 132.94
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.74,
+    "z": 110.55
+   },
+   "work": {
+    "site": "数据清洗工·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -40.47,
+    "z": 89.03
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08143",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把淘汰的电话卡排成一排挨个擦",
+ "id": "C-08143",
+ "month_lines": [
+  "手里的数据卡翻了三页，最后一行补缺的字段又标了红，我抿了一口茶，杯底那点水纹还晃着，就像昨夜没说出口的话，今早又浮上来。这事儿有讲究。"
+ ],
+ "name": "雷Alex",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手里的数据卡翻了三页，最后一行补缺的字段又标了红，我抿了一口茶，杯底那点水纹还晃着，就像昨夜没说出口的话，今早又浮上来。这事儿有讲究。",
+   "text": "「手里的数据卡翻了三页，最后一行补缺的字段又标了红，我抿了一口茶，杯底那点水纹还晃着，就像昨夜没说出口的话，今早又浮上来。这事儿有讲究。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

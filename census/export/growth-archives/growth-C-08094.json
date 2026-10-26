@@ -1,0 +1,105 @@
+{
+ "age": 81,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -13,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -73.0,
+    "z": 249.35
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 0.03,
+    "z": 251.51
+   },
+   "work": {
+    "site": "外环巡夜员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.11,
+    "z": 235.84
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08094",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "坚持手写旧织机的梭子",
+ "id": "C-08094",
+ "month_lines": [
+  "东西刚拿到手，还带着点余温，我顺手把明天的补光料塞进袖口——弄堂还是那个弄堂，灯灭一盏，他们就知道三秒。"
+ ],
+ "name": "姜根福",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "东西刚拿到手，还带着点余温，我顺手把明天的补光料塞进袖口——弄堂还是那个弄堂，灯灭一盏，他们就知道三秒。",
+   "text": "「东西刚拿到手，还带着点余温，我顺手把明天的补光料塞进袖口——弄堂还是那个弄堂，灯灭一盏，他们就知道三秒。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

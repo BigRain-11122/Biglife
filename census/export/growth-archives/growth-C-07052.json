@@ -1,0 +1,106 @@
+{
+ "age": 82,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -11,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.61,
+    "z": 91.79
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.31,
+    "z": 40.84
+   },
+   "work": {
+    "site": "时空校准师·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -50.58,
+    "z": 31.65
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07052",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着第一炉出炉的像素瓷——据说是老辈传下的规矩",
+ "id": "C-07052",
+ "month_lines": [
+  "包在我身上。风把树梢压弯了，铺子还没开，电波猫群的食得添，今儿单日，我坐的那张木凳又旧了点，可人心里的时区，得自己校准。"
+ ],
+ "name": "濮建国",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "包在我身上。风把树梢压弯了，铺子还没开，电波猫群的食得添，今儿单日，我坐的那张木凳又旧了点，可人心里的时区，得自己校准。",
+   "text": "「包在我身上。风把树梢压弯了，铺子还没开，电波猫群的食得添，今儿单日，我坐的那张木凳又旧了点，可人心里的时区，得自己校准。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

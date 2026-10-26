@@ -1,0 +1,59 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 39.62,
+    "z": -68.61
+   },
+   "social": {
+    "site": "老街广播匣铺·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.31,
+    "z": -16.0
+   },
+   "work": {
+    "site": "老街讲古匣·老街广播匣铺工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 140.69,
+    "z": -82.86
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10036",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老街广播匣铺",
+ "born": null,
+ "creed": "波段不乱，街坊的夜就有下文。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "能把街坊三十年点播全背下来的收音机灵——老街的孩子们叫他「匣子爷爷」",
+ "id": "C-10036",
+ "month_lines": [],
+ "name": "闻嘉音",
+ "profession": "老街讲古匣",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "artifact-spirit",
+ "v": "1"
+}

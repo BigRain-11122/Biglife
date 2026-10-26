@@ -1,0 +1,59 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -34.31,
+    "z": -174.87
+   },
+   "social": {
+    "site": "渔匠码头巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 16.99,
+    "z": -248.65
+   },
+   "work": {
+    "site": "渔匠码头巷老补网匠·渔匠码头巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 76.04,
+    "z": -212.72
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10076",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渔匠码头巷",
+ "born": null,
+ "creed": "网眼要匀，收成才有数。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "补网用的梭子插在腰后的布带里，青竹磨得溜滑，网脚堆着几团备用的旧麻线——渔匠码头补网棚的家传竹梭，江上收成的数全从这一梭一结里匀回来",
+ "id": "C-10076",
+ "month_lines": [],
+ "name": "柳千结",
+ "profession": "渔匠码头巷老补网匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,59 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.78,
+    "z": -34.3
+   },
+   "social": {
+    "site": "老城书画街裱画间·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.88,
+    "z": -90.46
+   },
+   "work": {
+    "site": "裱画师·老城书画街裱画间工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -30.55,
+    "z": -104.0
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10102",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老城书画街裱画间",
+ "born": null,
+ "creed": "画的命在纸背，不在正面",
+ "district": "MD",
+ "gender": "女",
+ "hook": "一卷裁剩的绢头布尾，红绳一捆，指尖蹭上去有点糙。",
+ "id": "C-10102",
+ "month_lines": [],
+ "name": "温来娣",
+ "profession": "裱画师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

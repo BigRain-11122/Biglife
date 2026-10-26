@@ -1,0 +1,106 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#2E5E4E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -3,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.97,
+    "z": 77.19
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.04,
+    "z": 53.92
+   },
+   "work": {
+    "site": "时空校准师·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.73,
+    "z": 116.93
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07602",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "攒了满抽屉全城灯语的对照表从不给看——这事全巷都知道",
+ "id": "C-07602",
+ "month_lines": [
+  "手头的游丝还在轻抖，我正给新来的小崽儿上弦——风从巷口直灌进来，撞得我腕间铜摆都晃了。搭把手的事儿，这会儿就来。"
+ ],
+ "name": "时钟树·慢",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手头的游丝还在轻抖，我正给新来的小崽儿上弦——风从巷口直灌进来，撞得我腕间铜摆都晃了。搭把手的事儿，这会儿就来。",
+   "text": "「手头的游丝还在轻抖，我正给新来的小崽儿上弦——风从巷口直灌进来，撞得我腕间铜摆都晃了。搭把手的事儿，这会儿就来。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

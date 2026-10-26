@@ -1,0 +1,105 @@
+{
+ "age": 74,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -15,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 53.23,
+    "z": -88.67
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.07,
+    "z": -73.13
+   },
+   "work": {
+    "site": "老克勒咖啡主·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 130.69,
+    "z": -29.39
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07400",
+  "quirk": "slow",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "给第一版户口簿的封面纸都起了名字",
+ "id": "C-07400",
+ "month_lines": [
+  "风把树梢压弯了，我正把新磨的豆子倒进壶里，听黑胶转了半圈，又听见G08 CrazyCampus从B2396蹦到S2.5了——老规矩，这回我得给电波猫群多添点食。"
+ ],
+ "name": "杨梅芳",
+ "profession": "老克勒咖啡主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风把树梢压弯了，我正把新磨的豆子倒进壶里，听黑胶转了半圈，又听见G08 CrazyCampus从B2396蹦到S2.5了——老规矩，这回我得给电波猫群多添点食。",
+   "text": "「风把树梢压弯了，我正把新磨的豆子倒进壶里，听黑胶转了半圈，又听见G08 CrazyCampus从B2396蹦到S2.5了——老规矩，这回我得给电波猫群多添点食。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 9,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.34,
+    "z": 116.25
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.83,
+    "z": 81.54
+   },
+   "work": {
+    "site": "穿城信使·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.82,
+    "z": 61.58
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09911",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "梦话都在念叨消失的船班时刻表——据说是老辈传下的规矩",
+ "id": "C-09911",
+ "month_lines": [],
+ "name": "高桃桃",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "buddy",
+   "src": "老主顾",
+   "with": "C-00125"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

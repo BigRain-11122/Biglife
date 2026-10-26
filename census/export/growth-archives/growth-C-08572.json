@@ -1,0 +1,96 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -9,
+   "rate": -1,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 69.92,
+    "z": 39.0
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.53,
+    "z": 47.35
+   },
+   "work": {
+    "site": "沙盒建筑师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 145.45,
+    "z": 29.72
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08572",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "坚持给退役探空气球的碎片记日记",
+ "id": "C-08572",
+ "month_lines": [],
+ "name": "真空管-9",
+ "profession": "沙盒建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

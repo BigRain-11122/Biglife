@@ -1,0 +1,97 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 10,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 52.74,
+    "z": 151.86
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.02,
+    "z": 97.86
+   },
+   "work": {
+    "site": "江面巡游员·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 141.29,
+    "z": 65.46
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09771",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "把旧船票当成了自己的老朋友",
+ "id": "C-09771",
+ "month_lines": [],
+ "name": "阿露水",
+ "profession": "江面巡游员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

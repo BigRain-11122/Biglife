@@ -1,0 +1,106 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 10,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.44,
+    "z": 123.58
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.7,
+    "z": 144.29
+   },
+   "work": {
+    "site": "穿城信使·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.38,
+    "z": 82.06
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07686",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "在爷爷的工作证上刻了一行没人认得的小字——这事只有师父知道",
+ "id": "C-07686",
+ "month_lines": [
+  "风从巷口直灌进来，小本子翻了页，我瞥见昨天那条单子——「the card's"
+ ],
+ "name": "杨一鸣",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风从巷口直灌进来，小本子翻了页，我瞥见昨天那条单子——「the card's",
+   "text": "「风从巷口直灌进来，小本子翻了页，我瞥见昨天那条单子——「the card's」，星星说话时我差点笑出声，规矩如钟，人情如江，这会儿江水清清的，心也顺了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

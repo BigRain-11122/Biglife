@@ -1,0 +1,59 @@
+{
+ "age": 71,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.39,
+    "z": -34.91
+   },
+   "social": {
+    "site": "老城印章街刻章铺·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.75,
+    "z": -136.7
+   },
+   "work": {
+    "site": "刻章人·老城印章街刻章铺工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -71.61,
+    "z": -26.75
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10108",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老城印章街刻章铺",
+ "born": null,
+ "creed": "印是替人立信的，落下去就收不回",
+ "district": "MD",
+ "gender": "男",
+ "hook": "一个窄木盒里排着十几把刀口各异的刻刀，每把缠着不同颜色的胶布，盒子底下垫着一层旧绒。",
+ "id": "C-10108",
+ "month_lines": [],
+ "name": "简伯衡",
+ "profession": "刻章人",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

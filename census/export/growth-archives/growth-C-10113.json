@@ -1,0 +1,60 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -98.37,
+    "z": 38.76
+   },
+   "social": {
+    "site": "计量新村楼里暗房冲印房·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.89,
+    "z": 126.32
+   },
+   "work": {
+    "site": "冲印师·计量新村楼里暗房冲印房工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -68.59,
+    "z": 86.81
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10113",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "计量新村楼里暗房冲印房",
+ "born": null,
+ "creed": "影像得慢慢出来，急不得也骗不得",
+ "district": "QT",
+ "gender": "男",
+ "hook": "三只白瓷药盆并排摆在暗台边，盆底沉着一点药渣，边上压着竹夹子和一叠晒相纸。",
+ "id": "C-10113",
+ "month_lines": [],
+ "name": "岑明远",
+ "profession": "冲印师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

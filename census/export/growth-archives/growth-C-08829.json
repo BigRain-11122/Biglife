@@ -1,0 +1,97 @@
+{
+ "age": 95,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -8,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.91,
+    "z": 139.87
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.94,
+    "z": 49.69
+   },
+   "work": {
+    "site": "尾盘茶室老板·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -39.83,
+    "z": 146.1
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08829",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "桥上不问来路，落水都得拉一把。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能背出拆迁前夜的门牌合影的全部班次——这事全巷都知道",
+ "id": "C-08829",
+ "month_lines": [],
+ "name": "席建国",
+ "profession": "尾盘茶室老板",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

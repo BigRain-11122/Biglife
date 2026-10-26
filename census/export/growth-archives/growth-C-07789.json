@@ -1,0 +1,105 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -4,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 28.75,
+    "z": -21.19
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.83,
+    "z": -137.33
+   },
+   "work": {
+    "site": "语义翻译官·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 105.66,
+    "z": -29.74
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07789",
+  "quirk": "umbrella",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "用写满字的光带教会了半条街的孩子——这事只有师父知道",
+ "id": "C-07789",
+ "month_lines": [
+  "手正捏着那本东北话词典，翻到“侬晓得伐”那页，底下夹着个旧标签——“GPU_VRAM_LOW”，茶凉了再倒就是，风好大。"
+ ],
+ "name": "付涛",
+ "profession": "语义翻译官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手正捏着那本东北话词典，翻到“侬晓得伐”那页，底下夹着个旧标签——“GPU_VRAM_LOW”，茶凉了再倒就是，风好大。",
+   "text": "「手正捏着那本东北话词典，翻到“侬晓得伐”那页，底下夹着个旧标签——“GPU_VRAM_LOW”，茶凉了再倒就是，风好大。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

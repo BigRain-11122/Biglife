@@ -1,0 +1,59 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -70.84,
+    "z": 168.7
+   },
+   "social": {
+    "site": "旧楼片区自家门厅当分拣间·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -3.45,
+    "z": 201.3
+   },
+   "work": {
+    "site": "旧信分拣员·旧楼片区自家门厅当分拣间工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 85.03,
+    "z": 233.97
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10095",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "旧楼片区自家门厅当分拣间",
+ "born": null,
+ "creed": "信走到门上，人才算落地",
+ "district": "OR",
+ "gender": "女",
+ "hook": "一辆二八式旧分拣车，车斗左侧焊过一块补贴铁片，推起来总往左偏，他就一直用左手扶把。",
+ "id": "C-10095",
+ "month_lines": [],
+ "name": "费云开",
+ "profession": "旧信分拣员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 11,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 13,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 62.83,
+    "z": -102.94
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.31,
+    "z": -67.14
+   },
+   "work": {
+    "site": "弄堂小囡·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.99,
+    "z": -105.13
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07773",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "逢人就讲爷爷的工作证的故事——她自己也说不清为什么",
+ "id": "C-07773",
+ "month_lines": [
+  "手在老唱片上摩挲，音槽里还留着去年秋日跳房子的回响。风刮得招牌直晃，我听见格子房子在夜里轻轻哼。"
+ ],
+ "name": "王果冻",
+ "profession": "弄堂小囡",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在老唱片上摩挲，音槽里还留着去年秋日跳房子的回响。风刮得招牌直晃，我听见格子房子在夜里轻轻哼。",
+   "text": "「手在老唱片上摩挲，音槽里还留着去年秋日跳房子的回响。风刮得招牌直晃，我听见格子房子在夜里轻轻哼。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

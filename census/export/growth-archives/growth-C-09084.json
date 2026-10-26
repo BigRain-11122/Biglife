@@ -1,0 +1,96 @@
+{
+ "age": 64,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -7,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 71.99,
+    "z": -136.52
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.16,
+    "z": -65.03
+   },
+   "work": {
+    "site": "光伞匠·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 119.96,
+    "z": -64.4
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09084",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": null,
+ "creed": "清单上没有的事，一律排队。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "还在用旧船票——据说是老辈传下的规矩",
+ "id": "C-09084",
+ "month_lines": [],
+ "name": "徐燕",
+ "profession": "光伞匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "buddy",
+   "src": "对手",
+   "with": "C-00308"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

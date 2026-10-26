@@ -1,0 +1,106 @@
+{
+ "age": 64,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -13,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -145.98,
+    "z": 155.17
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.31,
+    "z": 121.16
+   },
+   "work": {
+    "site": "防火墙巡林员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.92,
+    "z": 89.85
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07784",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "会为退租铺面的旧招牌推掉一整晚的生意——她自己也说不清为什么",
+ "id": "C-07784",
+ "month_lines": [
+  "风把树梢压弯了，我正低头看巡边记录——G08 CrazyCampus: B2396 -> S2.5，又传给隔壁了，稳住，别浪。"
+ ],
+ "name": "吕慧",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风把树梢压弯了，我正低头看巡边记录——G08 CrazyCampus: B2396 -> S2.5，又传给隔壁了，稳住，别浪。",
+   "text": "「风把树梢压弯了，我正低头看巡边记录——G08 CrazyCampus: B2396 -> S2.5，又传给隔壁了，稳住，别浪。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

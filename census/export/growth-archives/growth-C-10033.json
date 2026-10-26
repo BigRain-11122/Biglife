@@ -1,0 +1,59 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 37.34,
+    "z": 123.45
+   },
+   "social": {
+    "site": "面包坊街角·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.32,
+    "z": 100.22
+   },
+   "work": {
+    "site": "面包坊街角炉主·面包坊街角工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 126.95,
+    "z": 70.03
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10033",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "面包坊街角",
+ "born": null,
+ "creed": "面先醒好，天才能亮。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "给每位头炉客人在纸袋上画一撮小麦穗的面包师——街角的孩子们靠袋子认他",
+ "id": "C-10033",
+ "month_lines": [],
+ "name": "穆早炉",
+ "profession": "面包坊街角炉主",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

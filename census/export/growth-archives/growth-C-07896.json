@@ -1,0 +1,105 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 4,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 69.87,
+    "z": 59.19
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.79,
+    "z": 157.98
+   },
+   "work": {
+    "site": "关卡建筑师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.8,
+    "z": 79.2
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07896",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "从不让奖状离开自己三步远",
+ "id": "C-07896",
+ "month_lines": [
+  "手在搭景架，风不小，钢梁晃得有点利索。塔顶白光亮着，一句话的事——稳当。"
+ ],
+ "name": "谢炯",
+ "profession": "关卡建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在搭景架，风不小，钢梁晃得有点利索。塔顶白光亮着，一句话的事——稳当。",
+   "text": "「手在搭景架，风不小，钢梁晃得有点利索。塔顶白光亮着，一句话的事——稳当。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

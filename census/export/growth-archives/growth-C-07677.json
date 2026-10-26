@@ -1,0 +1,106 @@
+{
+ "age": 83,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -7,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 23.89,
+    "z": 119.39
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.79,
+    "z": 79.74
+   },
+   "work": {
+    "site": "进度刻碑师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 98.6,
+    "z": 86.58
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07677",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "用第一炉出炉的像素瓷教会了半条街的孩子——他自己也说不清为什么",
+ "id": "C-07677",
+ "month_lines": [
+  "手在磨边一块旧票根，边角卷着风，风刮得招牌直晃。试错要趁灯亮，这会儿天还清，刻得歪，整块重来。"
+ ],
+ "name": "何顺发",
+ "profession": "进度刻碑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在磨边一块旧票根，边角卷着风，风刮得招牌直晃。试错要趁灯亮，这会儿天还清，刻得歪，整块重来。",
+   "text": "「手在磨边一块旧票根，边角卷着风，风刮得招牌直晃。试错要趁灯亮，这会儿天还清，刻得歪，整块重来。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

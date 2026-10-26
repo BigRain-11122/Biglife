@@ -1,0 +1,105 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 3,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -118.38,
+    "z": -46.92
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.17,
+    "z": -84.07
+   },
+   "work": {
+    "site": "选题官·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -72.86,
+    "z": -135.96
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07833",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "收藏旧书店的竹梯且每件都记得来历",
+ "id": "C-07833",
+ "month_lines": [
+  "手在翻着留言墙的旧页，风刮得招牌直晃，第三页的字迹还带着昨夜的湿。稳住，别浪，这城的光，得自己点。"
+ ],
+ "name": "肖雨欣",
+ "profession": "选题官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在翻着留言墙的旧页，风刮得招牌直晃，第三页的字迹还带着昨夜的湿。稳住，别浪，这城的光，得自己点。",
+   "text": "「手在翻着留言墙的旧页，风刮得招牌直晃，第三页的字迹还带着昨夜的湿。稳住，别浪，这城的光，得自己点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

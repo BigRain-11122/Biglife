@@ -1,0 +1,59 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -53.09,
+    "z": 251.64
+   },
+   "social": {
+    "site": "机器站外环·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 5.28,
+    "z": 214.12
+   },
+   "work": {
+    "site": "机器站外环老明线巡线员·机器站外环工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 55.93,
+    "z": 226.03
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10057",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站外环",
+ "born": null,
+ "creed": "线走到头，灯就不会灭。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "铁齿磨圆又重开刃的那对巡线脚扣——机器站外环巡线班的师传脚扣，老明线一杆杆的松紧全凭它踩上去听",
+ "id": "C-10057",
+ "month_lines": [],
+ "name": "骆闻声",
+ "profession": "机器站外环老明线巡线员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

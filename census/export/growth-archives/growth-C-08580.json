@@ -1,0 +1,97 @@
+{
+ "age": 6,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#F48FB1"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 21,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -145.85,
+    "z": -25.47
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.49,
+    "z": -102.42
+   },
+   "work": {
+    "site": "伴居灵·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -69.2,
+    "z": -108.31
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08580",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "得之我幸，失之我睡。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "每次路过老钟楼的齿轮都要亮两下——据说是老辈传下的规矩",
+ "id": "C-08580",
+ "month_lines": [],
+ "name": "白汽水",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,59 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -129.29,
+    "z": -28.16
+   },
+   "social": {
+    "site": "老巷半间相馆暗房·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.01,
+    "z": -55.35
+   },
+   "work": {
+    "site": "暗房修复师·老巷半间相馆暗房工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -33.35,
+    "z": -123.56
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10091",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老巷半间相馆暗房",
+ "born": null,
+ "creed": "药水过了时间，脸就不真了",
+ "district": "MD",
+ "gender": "男",
+ "hook": "一只搪瓷显影盘，盘底有一道旧磕口，冲片时总把磕口朝外，怕刮到照片。",
+ "id": "C-10091",
+ "month_lines": [],
+ "name": "邵永昌",
+ "profession": "暗房修复师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

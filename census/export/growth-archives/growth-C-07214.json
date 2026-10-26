@@ -1,0 +1,106 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 1,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.9,
+    "z": 69.1
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.61,
+    "z": 95.13
+   },
+   "work": {
+    "site": "数据清洗工·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -60.49,
+    "z": 30.16
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07214",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能背出老式爆米花机的摇柄的全部班次——这事只有档案馆知道",
+ "id": "C-07214",
+ "month_lines": [
+  "手上正翻着最后一筐行情数据，风刮得紧，纸页哗啦直响，像极了十年前那年，老灯下我补缺的那批K线。最后一批，还得再过一遍。"
+ ],
+ "name": "邵Momo",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手上正翻着最后一筐行情数据，风刮得紧，纸页哗啦直响，像极了十年前那年，老灯下我补缺的那批K线。最后一批，还得再过一遍。",
+   "text": "「手上正翻着最后一筐行情数据，风刮得紧，纸页哗啦直响，像极了十年前那年，老灯下我补缺的那批K线。最后一批，还得再过一遍。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

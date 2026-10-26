@@ -1,0 +1,59 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.52,
+    "z": -47.74
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.67,
+    "z": -129.02
+   },
+   "work": {
+    "site": "档案馆区老修笔师·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 108.56,
+    "z": -129.91
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10067",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": null,
+ "creed": "笔尖正了，字才立得住。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "修笔铺案头一盘按尖嘴粗细排开的铱金笔尖——档案馆区修笔铺的师传笔尖盘，全城写字人手里那点分寸全从这盘里找回来",
+ "id": "C-10067",
+ "month_lines": [],
+ "name": "倪笔正",
+ "profession": "档案馆区老修笔师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 59,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#FFA726",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#B388FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 23,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 43.32,
+    "z": 158.69
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.81,
+    "z": 131.71
+   },
+   "work": {
+    "site": "巡信使·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.85,
+    "z": 11.87
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07681",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "看得见旧月台的站牌里住着的光——这事只有档案馆知道",
+ "id": "C-07681",
+ "month_lines": [
+  "手在捏着一张旧笺，边缘卷得像风刮过的小船。风好大，檐角的灯晃得像在说话，我听见G08的摊子又响了，从B2396滑进了S2.5。"
+ ],
+ "name": "黑皮蛋",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在捏着一张旧笺，边缘卷得像风刮过的小船。风好大，檐角的灯晃得像在说话，我听见G08的摊子又响了，从B2396滑进了S2.5。",
+   "text": "「手在捏着一张旧笺，边缘卷得像风刮过的小船。风好大，檐角的灯晃得像在说话，我听见G08的摊子又响了，从B2396滑进了S2.5。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

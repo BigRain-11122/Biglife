@@ -1,0 +1,106 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 13,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.04,
+    "z": 103.83
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.23,
+    "z": 129.29
+   },
+   "work": {
+    "site": "像素小学学生·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -72.91,
+    "z": 121.81
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07645",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件全城灯语的对照表——这事只有师父知道",
+ "id": "C-07645",
+ "month_lines": [
+  "我正把作业本翻到第一页，铅笔在纸上划出细痕，像江水过石缝——风好大，纸页都抖得直了，可我画的那座老桥，还稳稳立在commit光点跳动的中央。"
+ ],
+ "name": "应米粒",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "我正把作业本翻到第一页，铅笔在纸上划出细痕，像江水过石缝——风好大，纸页都抖得直了，可我画的那座老桥，还稳稳立在commit光点跳动的中央。",
+   "text": "「我正把作业本翻到第一页，铅笔在纸上划出细痕，像江水过石缝——风好大，纸页都抖得直了，可我画的那座老桥，还稳稳立在commit光点跳动的中央。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

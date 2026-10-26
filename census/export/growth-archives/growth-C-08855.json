@@ -1,0 +1,97 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -9,
+   "rate": -3,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -102.9,
+    "z": -153.24
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.37,
+    "z": -24.16
+   },
+   "work": {
+    "site": "玩家留言整理员·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.67,
+    "z": -61.11
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08855",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "用停摆的老挂钟教会了半条街的孩子——他自己也说不清为什么",
+ "id": "C-08855",
+ "month_lines": [],
+ "name": "哈希婆婆·乙",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

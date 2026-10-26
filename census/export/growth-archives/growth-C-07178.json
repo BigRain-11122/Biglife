@@ -1,0 +1,105 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -2,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 45.84,
+    "z": 153.75
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.17,
+    "z": 118.92
+   },
+   "work": {
+    "site": "新市民安居顾问·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 140.12,
+    "z": 117.7
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07178",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "会给旧饭票织毛衣",
+ "id": "C-07178",
+ "month_lines": [
+  "手里这把老式钥匙还在发光，风刮得紧，G08的CrazyCampus那条线，我昨晚又跟C-09620讲了一遍，他转头就给了C-05938。清单第一，今天新收的单子，我得把门禁亮绿灯的"
+ ],
+ "name": "余志明",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手里这把老式钥匙还在发光，风刮得紧，G08的CrazyCampus那条线，我昨晚又跟C-09620讲了一遍，他转头就给了C-05938。清单第一，今天新收的单子，我得把门禁亮绿灯的",
+   "text": "「手里这把老式钥匙还在发光，风刮得紧，G08的CrazyCampus那条线，我昨晚又跟C-09620讲了一遍，他转头就给了C-05938。清单第一，今天新收的单子，我得把门禁亮绿灯的」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

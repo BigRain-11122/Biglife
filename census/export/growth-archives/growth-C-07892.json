@@ -1,0 +1,105 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 4,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 68.79,
+    "z": -13.6
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.94,
+    "z": -146.05
+   },
+   "work": {
+    "site": "街区调解阿姨·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 101.52,
+    "z": -26.84
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07892",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "给退役的探针铭牌写了一整本观察笔记",
+ "id": "C-07892",
+ "month_lines": [
+  "手在灯罩上搓了搓，风把树梢压弯了，守夜灯灵的光还亮着。汤还没开呢，今夜的单子得等明早再接。"
+ ],
+ "name": "吕涛",
+ "profession": "街区调解阿姨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "buddy",
+   "src": "常客",
+   "with": "C-00174"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在灯罩上搓了搓，风把树梢压弯了，守夜灯灵的光还亮着。汤还没开呢，今夜的单子得等明早再接。",
+   "text": "「手在灯罩上搓了搓，风把树梢压弯了，守夜灯灵的光还亮着。汤还没开呢，今夜的单子得等明早再接。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

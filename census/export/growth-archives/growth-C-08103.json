@@ -1,0 +1,106 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 0,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 32.93,
+    "z": 38.65
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.83,
+    "z": 30.44
+   },
+   "work": {
+    "site": "像素学徒·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 101.01,
+    "z": 89.09
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08103",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "会给旧棋谱织毛衣——据说是老辈传下的规矩",
+ "id": "C-08103",
+ "month_lines": [
+  "我正把旧毛线团搓成小球，扔进匠人巷的陶罐里——风一阵紧一阵，像谁在巷口吹口哨，亮窗数到第十七个，就听见G08那边，又换了新段落。"
+ ],
+ "name": "周知夏",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "我正把旧毛线团搓成小球，扔进匠人巷的陶罐里——风一阵紧一阵，像谁在巷口吹口哨，亮窗数到第十七个，就听见G08那边，又换了新段落。",
+   "text": "「我正把旧毛线团搓成小球，扔进匠人巷的陶罐里——风一阵紧一阵，像谁在巷口吹口哨，亮窗数到第十七个，就听见G08那边，又换了新段落。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

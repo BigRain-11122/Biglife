@@ -1,0 +1,60 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -132.28,
+    "z": 142.16
+   },
+   "social": {
+    "site": "弄堂茶馆巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.41,
+    "z": 37.37
+   },
+   "work": {
+    "site": "老茶馆堂倌·弄堂茶馆巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.88,
+    "z": 140.86
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10048",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "弄堂茶馆巷",
+ "born": null,
+ "creed": "壶嘴不对人，话头不压人。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "壶嘴磕出缺口也不肯换的长流壶——老茶馆堂倌肩上那把白铜长流壶，满堂的话口全靠它续",
+ "id": "C-10048",
+ "month_lines": [],
+ "name": "童守拙",
+ "profession": "老茶馆堂倌",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

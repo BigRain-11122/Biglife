@@ -1,0 +1,59 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 51.98,
+    "z": -140.92
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 76.59,
+    "z": -155.09
+   },
+   "work": {
+    "site": "城市电台导播间老提词人·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 110.88,
+    "z": -79.52
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10041",
+  "quirk": "umbrella",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": null,
+ "creed": "话到了，场就热了。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "能垫住一场戏的老提词卡——导播台边那摞写满开播序号的提词卡，一张没漏过开麦",
+ "id": "C-10041",
+ "month_lines": [],
+ "name": "凌素芬",
+ "profession": "城市电台导播间老提词人",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

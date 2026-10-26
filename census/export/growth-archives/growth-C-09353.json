@@ -1,0 +1,97 @@
+{
+ "age": 83,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -5,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -111.37,
+    "z": 39.31
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.67,
+    "z": 136.78
+   },
+   "work": {
+    "site": "尾盘茶室老板·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -65.05,
+    "z": 82.06
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09353",
+  "quirk": "umbrella",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "会为第一版户口簿的封面纸推掉一整晚的生意——她自己也说不清为什么",
+ "id": "C-09353",
+ "month_lines": [],
+ "name": "丁桂芳",
+ "profession": "尾盘茶室老板",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "buddy",
+   "src": "棋友",
+   "with": "C-00101"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

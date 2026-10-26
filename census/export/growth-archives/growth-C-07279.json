@@ -1,0 +1,106 @@
+{
+ "age": 40,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 10,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.83,
+    "z": 47.59
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.05,
+    "z": 64.8
+   },
+   "work": {
+    "site": "巡信使·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -72.83,
+    "z": 138.48
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07279",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "在掉漆的糖果罐上打过盹，还淌了一小滩光——据说是老辈传下的规矩",
+ "id": "C-07279",
+ "month_lines": [
+  "翅尖轻叩着檐角，衔了张短笺往江边送——风顶得人站不稳，光纹在水里晃，像没说完的话。"
+ ],
+ "name": "小缆绳",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "翅尖轻叩着檐角，衔了张短笺往江边送——风顶得人站不稳，光纹在水里晃，像没说完的话。",
+   "text": "「翅尖轻叩着檐角，衔了张短笺往江边送——风顶得人站不稳，光纹在水里晃，像没说完的话。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

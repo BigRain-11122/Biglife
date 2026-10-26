@@ -1,0 +1,105 @@
+{
+ "age": 86,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -8,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.7,
+    "z": -53.3
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 76.97,
+    "z": -78.81
+   },
+   "work": {
+    "site": "脑环广场管理员·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 128.72,
+    "z": -75.67
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07915",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "每天跟停用的老式磅秤打招呼——这事只有档案馆知道",
+ "id": "C-07915",
+ "month_lines": [
+  "手正给守夜灯灵补一滴能量液，风顶得人站不稳，灯灵抖了抖，我笑说：“收摊了，明天见。"
+ ],
+ "name": "刘招娣",
+ "profession": "脑环广场管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "household",
+   "src": "H-NS0378",
+   "with": "C-00049"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手正给守夜灯灵补一滴能量液，风顶得人站不稳，灯灵抖了抖，我笑说：“收摊了，明天见。",
+   "text": "「手正给守夜灯灵补一滴能量液，风顶得人站不稳，灯灵抖了抖，我笑说：“收摊了，明天见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

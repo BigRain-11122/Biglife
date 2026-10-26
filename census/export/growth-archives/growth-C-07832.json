@@ -1,0 +1,105 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -1,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -132.65,
+    "z": -127.15
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.3,
+    "z": -115.63
+   },
+   "work": {
+    "site": "语义翻译官·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -71.55,
+    "z": -137.2
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07832",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把退役的路灯灯丝修好再免费送人——这事只有档案馆知道",
+ "id": "C-07832",
+ "month_lines": [
+  "手在词典里翻到“侬晓得伐”那页，旧的用的顺手，风把树梢压弯了，天清气朗，G08 从 B2396 涨回 S2.5 了，没毛病。"
+ ],
+ "name": "罗慧",
+ "profession": "语义翻译官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在词典里翻到“侬晓得伐”那页，旧的用的顺手，风把树梢压弯了，天清气朗，G08 从 B2396 涨回 S2.5 了，没毛病。",
+   "text": "「手在词典里翻到“侬晓得伐”那页，旧的用的顺手，风把树梢压弯了，天清气朗，G08 从 B2396 涨回 S2.5 了，没毛病。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

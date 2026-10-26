@@ -1,0 +1,59 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.7,
+    "z": -96.91
+   },
+   "social": {
+    "site": "老城巷口伞铺·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.1,
+    "z": -131.04
+   },
+   "work": {
+    "site": "修伞匠·老城巷口伞铺工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.19,
+    "z": -20.58
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10115",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老城巷口伞铺",
+ "born": null,
+ "creed": "一把伞撑得起三年，就别急着换新的",
+ "district": "MD",
+ "gender": "女",
+ "hook": "桌子上摊着一把拆开的伞，伞骨折了三根，旁边搁着一只扁铁盒，盒盖开着，几段钢丝和一柄小钳子搁在盖子上。",
+ "id": "C-10115",
+ "month_lines": [],
+ "name": "陆阿翠",
+ "profession": "修伞匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

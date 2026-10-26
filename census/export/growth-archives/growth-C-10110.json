@@ -1,0 +1,59 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -44.25,
+    "z": 182.37
+   },
+   "social": {
+    "site": "外环旧楼边修车棚·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 13.17,
+    "z": 253.79
+   },
+   "work": {
+    "site": "修车匠·外环旧楼边修车棚工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 109.68,
+    "z": 206.75
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10110",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "外环旧楼边修车棚",
+ "born": null,
+ "creed": "车推不动多半不是坏了，是没人给它上过油",
+ "district": "OR",
+ "gender": "女",
+ "hook": "一只油壶和一根撬胎扁铁，壶嘴压得扁了，铁杆上裹着防滑的旧布条。",
+ "id": "C-10110",
+ "month_lines": [],
+ "name": "曲秀兰",
+ "profession": "修车匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

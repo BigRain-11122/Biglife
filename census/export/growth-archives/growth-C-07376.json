@@ -1,0 +1,105 @@
+{
+ "age": 71,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -12,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -91.48,
+    "z": -169.76
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -17.85,
+    "z": -242.15
+   },
+   "work": {
+    "site": "渡轮检票员·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 77.25,
+    "z": -219.69
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07376",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "在手工风筝的竹篾上刻了一行没人认得的小字——她自己也说不清为什么",
+ "id": "C-07376",
+ "month_lines": [
+  "此刻正把一叠票撕得整整齐齐，风把树梢压弯了，码头的灯一个接一个亮起来，明儿又是新的一天。"
+ ],
+ "name": "侯雪英",
+ "profession": "渡轮检票员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "此刻正把一叠票撕得整整齐齐，风把树梢压弯了，码头的灯一个接一个亮起来，明儿又是新的一天。",
+   "text": "「此刻正把一叠票撕得整整齐齐，风把树梢压弯了，码头的灯一个接一个亮起来，明儿又是新的一天。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

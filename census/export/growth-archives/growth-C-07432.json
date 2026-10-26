@@ -1,0 +1,106 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -5,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 54.83,
+    "z": -59.97
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.59,
+    "z": -139.93
+   },
+   "work": {
+    "site": "节日活动策划·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.19,
+    "z": -146.02
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07432",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "给退役灯塔的透镜写了一整本观察笔记——这事只有师父知道",
+ "id": "C-07432",
+ "month_lines": [
+  "手在调灯绳上打了个结，又解开，风把人往前推，这绳子磨得发亮，像我昨天搭的那盏S2.5灯，现在正飘在B2396上头。"
+ ],
+ "name": "魏斌",
+ "profession": "节日活动策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在调灯绳上打了个结，又解开，风把人往前推，这绳子磨得发亮，像我昨天搭的那盏S2.5灯，现在正飘在B2396上头。",
+   "text": "「手在调灯绳上打了个结，又解开，风把人往前推，这绳子磨得发亮，像我昨天搭的那盏S2.5灯，现在正飘在B2396上头。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

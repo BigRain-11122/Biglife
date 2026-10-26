@@ -1,0 +1,97 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#26A69A",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#82B1FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 18,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 62.56,
+    "z": 69.13
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.64,
+    "z": 49.24
+   },
+   "work": {
+    "site": "风信使·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 138.1,
+    "z": 34.92
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08211",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": null,
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "记得手绘的城图出现过的每一个雨夜",
+ "id": "C-08211",
+ "month_lines": [],
+ "name": "黑齿轮",
+ "profession": "风信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

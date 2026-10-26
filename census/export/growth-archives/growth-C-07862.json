@@ -1,0 +1,106 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 7,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 63.32,
+    "z": 121.86
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.26,
+    "z": 53.4
+   },
+   "work": {
+    "site": "沙盒建筑师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 133.54,
+    "z": 72.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07862",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "给旧工牌写了一整本观察笔记——这事只有师父知道",
+ "id": "C-07862",
+ "month_lines": [
+  "手在杯沿转了三圈，茶色还温着，风刮得紧，檐角的灯影晃得跟沙盒里刚盖的楼一样——下一版一定更好。"
+ ],
+ "name": "余诗涵",
+ "profession": "沙盒建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在杯沿转了三圈，茶色还温着，风刮得紧，檐角的灯影晃得跟沙盒里刚盖的楼一样——下一版一定更好。",
+   "text": "「手在杯沿转了三圈，茶色还温着，风刮得紧，檐角的灯影晃得跟沙盒里刚盖的楼一样——下一版一定更好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

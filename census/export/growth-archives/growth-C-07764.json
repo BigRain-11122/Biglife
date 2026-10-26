@@ -1,0 +1,106 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 10,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.22,
+    "z": 86.32
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.35,
+    "z": 52.18
+   },
+   "work": {
+    "site": "沙盒建筑师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 112.33,
+    "z": 85.32
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07764",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把老钟楼的齿轮的位置背得比自家门牌还熟——他自己也说不清为什么",
+ "id": "C-07764",
+ "month_lines": [
+  "垫块在沙盒区新盖的楼，风不小，墙角咧着嘴似的。以前我们那儿……路灯亮着，人就敢在弄堂里跑。"
+ ],
+ "name": "任果果",
+ "profession": "沙盒建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "垫块在沙盒区新盖的楼，风不小，墙角咧着嘴似的。以前我们那儿……路灯亮着，人就敢在弄堂里跑。",
+   "text": "「垫块在沙盒区新盖的楼，风不小，墙角咧着嘴似的。以前我们那儿……路灯亮着，人就敢在弄堂里跑。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

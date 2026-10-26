@@ -1,0 +1,59 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -37.16,
+    "z": 175.15
+   },
+   "social": {
+    "site": "感知塔·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 17.96,
+    "z": 197.99
+   },
+   "work": {
+    "site": "外环感知塔擦镜师·感知塔工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 125.54,
+    "z": 166.7
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10044",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔",
+ "born": null,
+ "creed": "天看不清，先擦自己。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "映得出云脚的老镜面——感知塔顶那块边角发乌、被她擦了几十年的老镜面",
+ "id": "C-10044",
+ "month_lines": [],
+ "name": "鲁怀镜",
+ "profession": "外环感知塔擦镜师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

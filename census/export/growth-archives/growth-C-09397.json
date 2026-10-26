@@ -1,0 +1,97 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": 1,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.58,
+    "z": 80.5
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.63,
+    "z": 11.28
+   },
+   "work": {
+    "site": "盘口记录员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -56.9,
+    "z": 51.5
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09397",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": null,
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "偷偷给旧笔友的明信片上油保养——这事只有师父知道",
+ "id": "C-09397",
+ "month_lines": [],
+ "name": "阿并发-9",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

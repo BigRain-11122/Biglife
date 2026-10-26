@@ -1,0 +1,59 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -45.84,
+    "z": 165.26
+   },
+   "social": {
+    "site": "工地宿舍巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -6.09,
+    "z": 234.98
+   },
+   "work": {
+    "site": "外环夜市修灯摊主·工地宿舍巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 62.05,
+    "z": 170.39
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10079",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "工地宿舍巷",
+ "born": null,
+ "creed": "灯亮着，路就有人走。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "一只掉漆的铝饭盒，底部刻着三横一竖，是他刚进城时刻下的工号——外环工地宿舍巷摊上的旧饭盒，进城那年的一天一顿全刻在这三横一竖里",
+ "id": "C-10079",
+ "month_lines": [],
+ "name": "罗守灯",
+ "profession": "外环夜市修灯摊主",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

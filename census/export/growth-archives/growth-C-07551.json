@@ -1,0 +1,106 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 10,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.51,
+    "z": 61.83
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.92,
+    "z": 128.03
+   },
+   "work": {
+    "site": "新市民安居顾问·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.09,
+    "z": 11.32
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07551",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把旧饭盒里的字条的位置背得比自家门牌还熟——这事只有档案馆知道",
+ "id": "C-07551",
+ "month_lines": [
+  "手心里攥着两颗糖，一颗还温着，一颗刚给小巷口那个蹲着看车灯的娃。风一阵紧一阵，灯还是老灯亮堂。"
+ ],
+ "name": "董沈鱼",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手心里攥着两颗糖，一颗还温着，一颗刚给小巷口那个蹲着看车灯的娃。风一阵紧一阵，灯还是老灯亮堂。",
+   "text": "「手心里攥着两颗糖，一颗还温着，一颗刚给小巷口那个蹲着看车灯的娃。风一阵紧一阵，灯还是老灯亮堂。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

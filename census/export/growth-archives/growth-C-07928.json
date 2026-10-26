@@ -1,0 +1,105 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 5,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -118.28,
+    "z": -246.81
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -1.91,
+    "z": -252.86
+   },
+   "work": {
+    "site": "信号中继员·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 74.76,
+    "z": -199.08
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07928",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "口袋里总揣着旧像素图钉——这事全巷都知道",
+ "id": "C-07928",
+ "month_lines": [
+  "手里的第三块中继正贴着墙角，风把树梢压弯了，信号灯没亮，我晓得——慢一点，城又不会跑。"
+ ],
+ "name": "凌萍",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手里的第三块中继正贴着墙角，风把树梢压弯了，信号灯没亮，我晓得——慢一点，城又不会跑。",
+   "text": "「手里的第三块中继正贴着墙角，风把树梢压弯了，信号灯没亮，我晓得——慢一点，城又不会跑。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

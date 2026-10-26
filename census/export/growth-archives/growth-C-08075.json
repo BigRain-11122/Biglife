@@ -1,0 +1,106 @@
+{
+ "age": 69,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -13,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.48,
+    "z": -66.01
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.98,
+    "z": -85.77
+   },
+   "work": {
+    "site": "粉丝回信人·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -28.51,
+    "z": -153.26
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08075",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "留着断了线的风筝却从来不用——这事只有档案馆知道",
+ "id": "C-08075",
+ "month_lines": [
+  "正把最后一封粉丝信的邮戳盖上，风大得说话要抬声，这城里好玩的东西一天比一天多，手里的信纸都快被吹得翻页了。"
+ ],
+ "name": "陆建国",
+ "profession": "粉丝回信人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "正把最后一封粉丝信的邮戳盖上，风大得说话要抬声，这城里好玩的东西一天比一天多，手里的信纸都快被吹得翻页了。",
+   "text": "「正把最后一封粉丝信的邮戳盖上，风大得说话要抬声，这城里好玩的东西一天比一天多，手里的信纸都快被吹得翻页了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

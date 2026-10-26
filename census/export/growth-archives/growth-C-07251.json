@@ -1,0 +1,106 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 18,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.82,
+    "z": 79.35
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.53,
+    "z": 11.75
+   },
+   "work": {
+    "site": "像素学徒·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.5,
+    "z": 85.66
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07251",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "留着手写信却从来不用——没人知道为什么",
+ "id": "C-07251",
+ "month_lines": [
+  "手里这把砂纸在来回磨，磨得快，手心就发烫。风一阵紧一阵，像谁在巷口吹了口哨，我正想抬头看，对门的阿姐又喊我交作业了。"
+ ],
+ "name": "李念念",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手里这把砂纸在来回磨，磨得快，手心就发烫。风一阵紧一阵，像谁在巷口吹了口哨，我正想抬头看，对门的阿姐又喊我交作业了。",
+   "text": "「手里这把砂纸在来回磨，磨得快，手心就发烫。风一阵紧一阵，像谁在巷口吹了口哨，我正想抬头看，对门的阿姐又喊我交作业了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

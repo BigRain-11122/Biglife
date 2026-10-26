@@ -1,0 +1,96 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -4,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 70.78,
+    "z": 89.69
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.0,
+    "z": 28.35
+   },
+   "work": {
+    "site": "大编译调律师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 135.51,
+    "z": 55.49
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09026",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "从不让断了的帆船模型离开自己三步远——这事全巷都知道",
+ "id": "C-09026",
+ "month_lines": [],
+ "name": "陆春梅",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": 3,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -47.77,
+    "z": -238.33
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -10.2,
+    "z": -203.84
+   },
+   "work": {
+    "site": "江岸数据钓手·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 116.88,
+    "z": -251.09
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09422",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "渡轮航道",
+ "born": null,
+ "creed": "试错要趁灯还亮着。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件断了线的风筝——他自己也说不清为什么",
+ "id": "C-09422",
+ "month_lines": [],
+ "name": "老轴承-9",
+ "profession": "江岸数据钓手",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

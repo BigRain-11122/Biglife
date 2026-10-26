@@ -1,0 +1,97 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 21,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.3,
+    "z": -18.24
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.61,
+    "z": -146.37
+   },
+   "work": {
+    "site": "伴居灵·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.92,
+    "z": -57.81
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08756",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "风吹哪页读哪页。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "在初代广场舞光带上打过盹，还淌了一小滩光——这事只有师父知道",
+ "id": "C-08756",
+ "month_lines": [],
+ "name": "黑雹子",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

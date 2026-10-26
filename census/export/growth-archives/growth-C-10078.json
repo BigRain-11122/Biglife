@@ -1,0 +1,60 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.78,
+    "z": 135.62
+   },
+   "social": {
+    "site": "弄堂茶馆巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.31,
+    "z": 68.21
+   },
+   "work": {
+    "site": "弄堂茶馆巷老糖墩子匠·弄堂茶馆巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.04,
+    "z": 86.68
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10078",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "弄堂茶馆巷",
+ "born": null,
+ "creed": "糖壳咬得咔咔响，日子才过得脆。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "糖墩子的红果先拿竹签串好，码在木托盘上，糖稀在铜锅里咕嘟出细密的泡——弄堂茶馆巷糖坊的祖传铜锅，巷里娃那声咔咔响全从这锅里挂出来",
+ "id": "C-10078",
+ "month_lines": [],
+ "name": "唐串红",
+ "profession": "弄堂茶馆巷老糖墩子匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

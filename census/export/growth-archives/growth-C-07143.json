@@ -1,0 +1,106 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 0,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.73,
+    "z": -159.35
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.32,
+    "z": -158.39
+   },
+   "work": {
+    "site": "数据菜市摊主·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -61.8,
+    "z": -38.88
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07143",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "把旧笔友的明信片的位置背得比自家门牌还熟——据说是老辈传下的规矩",
+ "id": "C-07143",
+ "month_lines": [
+  "秤杆在手，天阴着，风一阵紧一阵。清单第一，G08 CrazyCampus: B2396 -> S2.5 落令了，我刚对完价，菜市的信号又抖了两下。"
+ ],
+ "name": "门格-2",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "秤杆在手，天阴着，风一阵紧一阵。清单第一，G08 CrazyCampus: B2396 -> S2.5 落令了，我刚对完价，菜市的信号又抖了两下。",
+   "text": "「秤杆在手，天阴着，风一阵紧一阵。清单第一，G08 CrazyCampus: B2396 -> S2.5 落令了，我刚对完价，菜市的信号又抖了两下。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

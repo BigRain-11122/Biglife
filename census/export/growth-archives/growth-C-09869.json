@@ -1,0 +1,97 @@
+{
+ "age": 40,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 0,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -109.38,
+    "z": -82.3
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.52,
+    "z": -108.75
+   },
+   "work": {
+    "site": "七段街区导游·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -24.4,
+    "z": -117.55
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09869",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "留着初代探针的日志纸带却从来不用——这事只有档案馆知道",
+ "id": "C-09869",
+ "month_lines": [],
+ "name": "阿调制-9",
+ "profession": "七段街区导游",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

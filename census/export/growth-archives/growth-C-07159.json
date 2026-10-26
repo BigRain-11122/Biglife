@@ -1,0 +1,106 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 0,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -101.04,
+    "z": -61.41
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.29,
+    "z": -11.49
+   },
+   "work": {
+    "site": "信号塔工·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.97,
+    "z": -125.33
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07159",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件旧饭票——没人知道为什么",
+ "id": "C-07159",
+ "month_lines": [
+  "手扶着阳台的金属栏，正把那盆吊兰的叶子一根根掰开——风顶得人站不稳，花是活的，得拆开看看又不会坏。"
+ ],
+ "name": "贺简梨",
+ "profession": "信号塔工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手扶着阳台的金属栏，正把那盆吊兰的叶子一根根掰开——风顶得人站不稳，花是活的，得拆开看看又不会坏。",
+   "text": "「手扶着阳台的金属栏，正把那盆吊兰的叶子一根根掰开——风顶得人站不稳，花是活的，得拆开看看又不会坏。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

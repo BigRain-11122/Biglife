@@ -1,0 +1,106 @@
+{
+ "age": 15,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 10,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.39,
+    "z": 126.33
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.49,
+    "z": 154.53
+   },
+   "work": {
+    "site": "沙盒建筑师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 103.85,
+    "z": 40.71
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07930",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "能一眼认出旧城庆纪念章的真伪——这事只有师父知道",
+ "id": "C-07930",
+ "month_lines": [
+  "风灌进领口发凉，口袋里那两颗糖还攥着，一颗给刚路过的小孩，一颗自己留着。阳台的花说：“今天水线在警戒，得说了。"
+ ],
+ "name": "席天天",
+ "profession": "沙盒建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风灌进领口发凉，口袋里那两颗糖还攥着，一颗给刚路过的小孩，一颗自己留着。阳台的花说：“今天水线在警戒，得说了。",
+   "text": "「风灌进领口发凉，口袋里那两颗糖还攥着，一颗给刚路过的小孩，一颗自己留着。阳台的花说：“今天水线在警戒，得说了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

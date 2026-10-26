@@ -1,0 +1,97 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -10,
+   "rate": -5,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.67,
+    "z": 91.9
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.24,
+    "z": 81.74
+   },
+   "work": {
+    "site": "缓存管理员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.41,
+    "z": 156.52
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09164",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "差之毫秒，谬以全城。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着褪色的游戏卡带——这事只有档案馆知道",
+ "id": "C-09164",
+ "month_lines": [],
+ "name": "守护进程·夜",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

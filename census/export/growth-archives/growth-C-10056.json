@@ -1,0 +1,59 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 52.8,
+    "z": 126.77
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.12,
+    "z": 158.43
+   },
+   "work": {
+    "site": "游戏楼街区老影像厅放映员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 103.1,
+    "z": 140.09
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10056",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": null,
+ "creed": "灯亮足，人才散得踏实。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "放映机旁那只分格数胶片的旧胶木匣子——游戏楼影像厅的师传胶木匣，几代人看过的旧片子全在这一格格数过",
+ "id": "C-10056",
+ "month_lines": [],
+ "name": "楚映阶",
+ "profession": "游戏楼街区老影像厅放映员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,59 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 70.18,
+    "z": 96.74
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.12,
+    "z": 40.3
+   },
+   "work": {
+    "site": "八号楼街区老书报亭主·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.85,
+    "z": 81.82
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10063",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "灯不灭，事就先知道。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "书报亭里那盏绿玻璃罩子的旧台灯——八号楼街区的叔传台灯，一城留底旧报的口气全在这盏灯下理齐",
+ "id": "C-10063",
+ "month_lines": [],
+ "name": "晏知秋",
+ "profession": "八号楼街区老书报亭主",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

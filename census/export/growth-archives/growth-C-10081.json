@@ -1,0 +1,59 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -75.58,
+    "z": 227.56
+   },
+   "social": {
+    "site": "旧楼三层楼梯口小屋·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -16.01,
+    "z": 191.22
+   },
+   "work": {
+    "site": "外环旧楼看线人·旧楼三层楼梯口小屋工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 30.54,
+    "z": 226.81
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10081",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "旧楼三层楼梯口小屋",
+ "born": null,
+ "creed": "邻家的窗口先亮，我这儿不着急",
+ "district": "OR",
+ "gender": "男",
+ "hook": "一把用旧电线弯成的衣架，缠胶布那一段总朝里，说是怕刮坏别人晾的被单——挂在旧楼公用晾晒区的铁丝上，一眼就认得",
+ "id": "C-10081",
+ "month_lines": [],
+ "name": "苏长庚",
+ "profession": "外环旧楼看线人",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

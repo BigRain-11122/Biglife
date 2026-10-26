@@ -1,0 +1,106 @@
+{
+ "age": 91,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -6,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -139.66,
+    "z": 91.55
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.18,
+    "z": 91.54
+   },
+   "work": {
+    "site": "盘口记录员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.84,
+    "z": 50.21
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07120",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着写满字的光带——这事只有档案馆知道",
+ "id": "C-07120",
+ "month_lines": [
+  "手在盘上搓了搓，两支笔尖对盘着，字迹还工整——风把人往前推，江边的灯全亮着，我晓得，这天阴着，是该走的路了。"
+ ],
+ "name": "龚家树",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在盘上搓了搓，两支笔尖对盘着，字迹还工整——风把人往前推，江边的灯全亮着，我晓得，这天阴着，是该走的路了。",
+   "text": "「手在盘上搓了搓，两支笔尖对盘着，字迹还工整——风把人往前推，江边的灯全亮着，我晓得，这天阴着，是该走的路了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

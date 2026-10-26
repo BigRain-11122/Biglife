@@ -1,0 +1,106 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 7,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -146.36,
+    "z": 72.18
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.59,
+    "z": 91.09
+   },
+   "work": {
+    "site": "风控瞭望员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -62.52,
+    "z": 89.36
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07873",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把手写信的位置背得比自家门牌还熟——没人知道为什么",
+ "id": "C-07873",
+ "month_lines": [
+  "手在红脉冲的扫描带上滑了三下，风好大，把哨岗的边角吹得哗啦响。这事儿有讲究，G08的屏跳了回来，我盯着那根绿灯线，心里头稳得像块铁。"
+ ],
+ "name": "尹斯年",
+ "profession": "风控瞭望员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在红脉冲的扫描带上滑了三下，风好大，把哨岗的边角吹得哗啦响。这事儿有讲究，G08的屏跳了回来，我盯着那根绿灯线，心里头稳得像块铁。",
+   "text": "「手在红脉冲的扫描带上滑了三下，风好大，把哨岗的边角吹得哗啦响。这事儿有讲究，G08的屏跳了回来，我盯着那根绿灯线，心里头稳得像块铁。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

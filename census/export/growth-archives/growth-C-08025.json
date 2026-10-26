@@ -1,0 +1,105 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 5,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.21,
+    "z": 52.31
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.38,
+    "z": 65.75
+   },
+   "work": {
+    "site": "玩家留言整理员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.68,
+    "z": 36.87
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08025",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "会为旧饭票推掉一整晚的生意——这事全巷都知道",
+ "id": "C-08025",
+ "month_lines": [
+  "我把手头的活从头数了一遍：G08 走了 S2.5，又回了 B2396，推了 BigMoney，也看了 BigCompute，最后把 Biglife 说给了 C-06788 听，风刮"
+ ],
+ "name": "魏嘉树",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "我把手头的活从头数了一遍：G08 走了 S2.5，又回了 B2396，推了 BigMoney，也看了 BigCompute，最后把 Biglife 说给了 C-06788 听，风刮",
+   "text": "「我把手头的活从头数了一遍：G08 走了 S2.5，又回了 B2396，推了 BigMoney，也看了 BigCompute，最后把 Biglife 说给了 C-06788 听，风刮」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

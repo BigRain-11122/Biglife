@@ -1,0 +1,106 @@
+{
+ "age": 82,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -7,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.1,
+    "z": 72.89
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.62,
+    "z": 102.46
+   },
+   "work": {
+    "site": "全城对时师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.02,
+    "z": 152.84
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08045",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着消失的船班时刻表——没人知道为什么",
+ "id": "C-08045",
+ "month_lines": [
+  "我把手头的钟摆对了一遍，风掀得衣角乱摆，街角那块旧铜牌还沾着昨夜的露，夜里冷，喝口热的再走。"
+ ],
+ "name": "曾有根",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "我把手头的钟摆对了一遍，风掀得衣角乱摆，街角那块旧铜牌还沾着昨夜的露，夜里冷，喝口热的再走。",
+   "text": "「我把手头的钟摆对了一遍，风掀得衣角乱摆，街角那块旧铜牌还沾着昨夜的露，夜里冷，喝口热的再走。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

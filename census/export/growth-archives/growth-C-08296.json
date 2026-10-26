@@ -1,0 +1,97 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 8,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 53.07,
+    "z": -143.82
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.91,
+    "z": -55.62
+   },
+   "work": {
+    "site": "感知网养线工·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 99.27,
+    "z": -36.92
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08296",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": null,
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把老式爆米花的粮票画进了自己的作品里——没人知道为什么",
+ "id": "C-08296",
+ "month_lines": [],
+ "name": "管沐辰",
+ "profession": "感知网养线工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

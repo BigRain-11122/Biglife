@@ -1,0 +1,97 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#F48FB1"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 12,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -56.61,
+    "z": -216.45
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 11.6,
+    "z": -202.57
+   },
+   "work": {
+    "site": "伴居灵·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 53.1,
+    "z": -189.89
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08589",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "光桥市集",
+ "born": null,
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "RV",
+ "gender": "无定",
+ "hook": "高兴时会把光借给第一炉出炉的像素瓷——这事只有档案馆知道",
+ "id": "C-08589",
+ "month_lines": [],
+ "name": "黑阿闪",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

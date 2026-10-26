@@ -1,0 +1,60 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -112.79,
+    "z": 133.7
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.6,
+    "z": 88.67
+   },
+   "work": {
+    "site": "城西货栈老账房·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -35.02,
+    "z": 80.68
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10039",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "账平了，人才睡得平。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能和新账本对着走的老账法——账房门后那杆吊着铜钱坠的旧界尺，几十年没差过一文",
+ "id": "C-10039",
+ "month_lines": [],
+ "name": "邬秉直",
+ "profession": "城西货栈老账房",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

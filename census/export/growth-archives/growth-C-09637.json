@@ -1,0 +1,97 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#26A69A",
+   "eye": "#FFD27A",
+   "hair": "#E1BEE7",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 13,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.31,
+    "z": -13.76
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.87,
+    "z": -147.2
+   },
+   "work": {
+    "site": "巡信使·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -32.67,
+    "z": -65.11
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09637",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "把退役巡夜灯灵的灯罩当成了自己的老朋友——据说是老辈传下的规矩",
+ "id": "C-09637",
+ "month_lines": [],
+ "name": "小阿全亮",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

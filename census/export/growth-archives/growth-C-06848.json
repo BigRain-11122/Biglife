@@ -1,0 +1,106 @@
+{
+ "age": 14,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 18,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 57.56,
+    "z": -142.2
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.56,
+    "z": -56.94
+   },
+   "work": {
+    "site": "塔区风筝队员·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.74,
+    "z": -30.72
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06848",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "坚持给手写信记日记",
+ "id": "C-06848",
+ "month_lines": [
+  "又学了一招，风把树梢压弯了，风筝线在风里颤，尾巴上那条愿望，是想把云都拉下来晒一晒。"
+ ],
+ "name": "汪阿果",
+ "profession": "塔区风筝队员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "又学了一招，风把树梢压弯了，风筝线在风里颤，尾巴上那条愿望，是想把云都拉下来晒一晒。",
+   "text": "「又学了一招，风把树梢压弯了，风筝线在风里颤，尾巴上那条愿望，是想把云都拉下来晒一晒。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

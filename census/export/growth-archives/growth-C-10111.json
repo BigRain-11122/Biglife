@@ -1,0 +1,59 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 61.56,
+    "z": 75.96
+   },
+   "social": {
+    "site": "老游戏城二楼改衣摊·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.18,
+    "z": 71.6
+   },
+   "work": {
+    "site": "改衣匠·老游戏城二楼改衣摊工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.04,
+    "z": 147.17
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10111",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老游戏城二楼改衣摊",
+ "born": null,
+ "creed": "衣裳旧了未必就该丢，改一改还能再穿几年",
+ "district": "GM",
+ "gender": "女",
+ "hook": "木架上插着一把大裁缝剪，剪轴处缠过布条，底下压一卷划粉，粉已经磨成一截短头。",
+ "id": "C-10111",
+ "month_lines": [],
+ "name": "潘月娥",
+ "profession": "改衣匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

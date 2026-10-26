@@ -1,0 +1,106 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 3,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -144.38,
+    "z": 148.38
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.97,
+    "z": 124.05
+   },
+   "work": {
+    "site": "算力楼运维·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -35.8,
+    "z": 103.92
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08081",
+  "quirk": "umbrella",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给退役探空气球的碎片都编了号还建了册——这事只有档案馆知道",
+ "id": "C-08081",
+ "month_lines": [
+  "桌角那点零碎又该理一理了，风掀得衣角乱摆，我把上月的跑分单翻出来，看云不用门票，G08那边从B2396掉回S2.5，我这台老机子嗓音还清清楚楚，绝了。"
+ ],
+ "name": "金琳",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "桌角那点零碎又该理一理了，风掀得衣角乱摆，我把上月的跑分单翻出来，看云不用门票，G08那边从B2396掉回S2.5，我这台老机子嗓音还清清楚楚，绝了。",
+   "text": "「桌角那点零碎又该理一理了，风掀得衣角乱摆，我把上月的跑分单翻出来，看云不用门票，G08那边从B2396掉回S2.5，我这台老机子嗓音还清清楚楚，绝了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 38,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 6,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 60.86,
+    "z": -151.43
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.06,
+    "z": -142.53
+   },
+   "work": {
+    "site": "穿城信使·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 120.13,
+    "z": -116.6
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07283",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "把初版城市地图画进了自己的作品里",
+ "id": "C-07283",
+ "month_lines": [
+  "手正抚着信使包角，风大得说话要抬声，清单第一，今天单子都排在明早的渡轮里。"
+ ],
+ "name": "刘之南",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手正抚着信使包角，风大得说话要抬声，清单第一，今天单子都排在明早的渡轮里。",
+   "text": "「手正抚着信使包角，风大得说话要抬声，清单第一，今天单子都排在明早的渡轮里。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

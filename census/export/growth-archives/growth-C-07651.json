@@ -1,0 +1,105 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -1,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -98.09,
+    "z": -252.31
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -15.86,
+    "z": -239.65
+   },
+   "work": {
+    "site": "江面清波工·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 129.01,
+    "z": -168.88
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07651",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "留着断了的帆船模型却从来不用——没人知道为什么",
+ "id": "C-07651",
+ "month_lines": [
+  "手在搓着江面的旧铜镜，镜面还泛着昨天收工时的水光。风顶得人站不稳，水也跟着晃，可这单我送，别跟我抢。"
+ ],
+ "name": "段志刚",
+ "profession": "江面清波工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在搓着江面的旧铜镜，镜面还泛着昨天收工时的水光。风顶得人站不稳，水也跟着晃，可这单我送，别跟我抢。",
+   "text": "「手在搓着江面的旧铜镜，镜面还泛着昨天收工时的水光。风顶得人站不稳，水也跟着晃，可这单我送，别跟我抢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

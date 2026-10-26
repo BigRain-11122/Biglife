@@ -1,0 +1,59 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -45.14,
+    "z": 227.01
+   },
+   "social": {
+    "site": "旧楼一层值班室·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 8.2,
+    "z": 174.42
+   },
+   "work": {
+    "site": "楼群夜班值守员·旧楼一层值班室工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 66.47,
+    "z": 212.99
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10086",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "旧楼一层值班室",
+ "born": null,
+ "creed": "门开着，灯就亮着",
+ "district": "OR",
+ "gender": "男",
+ "hook": "一把缺齿的铝梳，齿缝里卡着一根没清掉的短头发，他梳完总把梳子倒过来在掌心磕两下——就放在值班室桌角，谁进岗亭都看得见",
+ "id": "C-10086",
+ "month_lines": [],
+ "name": "卫振山",
+ "profession": "楼群夜班值守员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 59,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -9,
+   "rate": 3,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -63.97,
+    "z": -231.37
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 3.35,
+    "z": -213.95
+   },
+   "work": {
+    "site": "数据牧人·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 37.23,
+    "z": -202.05
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09344",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "光桥市集",
+ "born": null,
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "攒了满抽屉旧船木做的镇纸从不给看——据说是老辈传下的规矩",
+ "id": "C-09344",
+ "month_lines": [],
+ "name": "二极管·夜",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

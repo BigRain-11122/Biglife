@@ -1,0 +1,59 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -59.88,
+    "z": -168.5
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -16.88,
+    "z": -256.79
+   },
+   "work": {
+    "site": "江岸滩涂苇编匠人·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 58.94,
+    "z": -220.33
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10049",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": null,
+ "creed": "苇子认人，手上有情它才服帖。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "削苇口磨出浅凹的旧竹刀——江岸滩涂苇编匠人工具筐里那把父辈传下来的竹刀，苇编的花样全从这刀口过",
+ "id": "C-10049",
+ "month_lines": [],
+ "name": "麦冬生",
+ "profession": "江岸滩涂苇编匠人",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

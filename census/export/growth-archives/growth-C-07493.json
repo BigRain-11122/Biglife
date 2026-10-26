@@ -1,0 +1,106 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 19,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.58,
+    "z": 152.27
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.55,
+    "z": 103.85
+   },
+   "work": {
+    "site": "巡信使·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -38.51,
+    "z": 128.42
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07493",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "绕着旧热水瓶飞过整整三十圈——据说是老辈传下的规矩",
+ "id": "C-07493",
+ "month_lines": [
+  "我正把一沓落檐笺子翻过来，风掀得衣角乱摆，街角那盏旧灯灵还亮着，我瞧见它灯罩上落了层薄灰，像谁没说出口的话。"
+ ],
+ "name": "白蓝雀",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "我正把一沓落檐笺子翻过来，风掀得衣角乱摆，街角那盏旧灯灵还亮着，我瞧见它灯罩上落了层薄灰，像谁没说出口的话。",
+   "text": "「我正把一沓落檐笺子翻过来，风掀得衣角乱摆，街角那盏旧灯灵还亮着，我瞧见它灯罩上落了层薄灰，像谁没说出口的话。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

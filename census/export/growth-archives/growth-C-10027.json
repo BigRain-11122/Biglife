@@ -1,0 +1,60 @@
+{
+ "age": 66,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.94,
+    "z": 20.18
+   },
+   "social": {
+    "site": "弄堂茶馆巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.52,
+    "z": 18.56
+   },
+   "work": {
+    "site": "弄堂茶馆司茶师·弄堂茶馆巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -22.02,
+    "z": 43.68
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10027",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "弄堂茶馆巷",
+ "born": null,
+ "creed": "茶要慢慢烫，话要慢慢讲。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把茶客名字写在茶罐上、来一罐认一人的茶师——弄堂口的木柜存了上百罐",
+ "id": "C-10027",
+ "month_lines": [],
+ "name": "乔雨前",
+ "profession": "弄堂茶馆司茶师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

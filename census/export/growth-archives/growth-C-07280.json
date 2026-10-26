@@ -1,0 +1,106 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 0,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 69.95,
+    "z": 89.24
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.31,
+    "z": 62.74
+   },
+   "work": {
+    "site": "游戏策划·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 135.24,
+    "z": 131.3
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07280",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件手写信——这事只有档案馆知道",
+ "id": "C-07280",
+ "month_lines": [
+  "手在翻着G08新楼的图纸，风把树梢压弯了，纸页哗啦响，像在笑。有意思，我想想——B2396那块地，现在是不是该换个玩法了？"
+ ],
+ "name": "方嘉树",
+ "profession": "游戏策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在翻着G08新楼的图纸，风把树梢压弯了，纸页哗啦响，像在笑。有意思，我想想——B2396那块地，现在是不是该换个玩法了？",
+   "text": "「手在翻着G08新楼的图纸，风把树梢压弯了，纸页哗啦响，像在笑。有意思，我想想——B2396那块地，现在是不是该换个玩法了？」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 89,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -15,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 28.45,
+    "z": 28.65
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.8,
+    "z": 78.55
+   },
+   "work": {
+    "site": "8bit 乐师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.39,
+    "z": 77.33
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07632",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "给老式邮戳都起了名字——据说是老辈传下的规矩",
+ "id": "C-07632",
+ "month_lines": [
+  "手在谱架上摩挲着旧琴弦，风不小，吹得纸页翻了页。灶上有汤，自取——今儿这汤，是给桥上汽笛老伙计炖的。"
+ ],
+ "name": "桂招娣",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在谱架上摩挲着旧琴弦，风不小，吹得纸页翻了页。灶上有汤，自取——今儿这汤，是给桥上汽笛老伙计炖的。",
+   "text": "「手在谱架上摩挲着旧琴弦，风不小，吹得纸页翻了页。灶上有汤，自取——今儿这汤，是给桥上汽笛老伙计炖的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

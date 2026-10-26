@@ -1,0 +1,106 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -14,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -129.19,
+    "z": 82.36
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.04,
+    "z": 138.77
+   },
+   "work": {
+    "site": "穿城信使·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.14,
+    "z": 127.88
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07424",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "给旧船锚残件都起了名字——他自己也说不清为什么",
+ "id": "C-07424",
+ "month_lines": [
+  "手在搓着那个旧茶杯，杯底一圈裂痕，像江水涨了又退。风把树梢压弯了，单子还堆在腰上，对时了，放心。"
+ ],
+ "name": "秦炯",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在搓着那个旧茶杯，杯底一圈裂痕，像江水涨了又退。风把树梢压弯了，单子还堆在腰上，对时了，放心。",
+   "text": "「手在搓着那个旧茶杯，杯底一圈裂痕，像江水涨了又退。风把树梢压弯了，单子还堆在腰上，对时了，放心。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

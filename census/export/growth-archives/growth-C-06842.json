@@ -1,0 +1,106 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 6,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -121.8,
+    "z": 103.53
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.61,
+    "z": 37.41
+   },
+   "work": {
+    "site": "盘口记录员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.97,
+    "z": 43.69
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06842",
+  "quirk": "umbrella",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "风吹哪页读哪页。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "收藏雨声录音且每件都记得来历——这事只有档案馆知道",
+ "id": "C-06842",
+ "month_lines": [
+  "看天吃饭，看行情穿衣。风刮得紧，笔尖跟着抖，两支笔对盘，字迹却还工整——口袋里的糖，一颗留给街角小娃，一颗自己留着，嘴边甜，心里也清。"
+ ],
+ "name": "凌子轩",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "看天吃饭，看行情穿衣。风刮得紧，笔尖跟着抖，两支笔对盘，字迹却还工整——口袋里的糖，一颗留给街角小娃，一颗自己留着，嘴边甜，心里也清。",
+   "text": "「看天吃饭，看行情穿衣。风刮得紧，笔尖跟着抖，两支笔对盘，字迹却还工整——口袋里的糖，一颗留给街角小娃，一颗自己留着，嘴边甜，心里也清。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

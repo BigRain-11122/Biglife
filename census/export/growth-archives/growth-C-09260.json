@@ -1,0 +1,96 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -1,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 29.37,
+    "z": -54.93
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.18,
+    "z": -63.37
+   },
+   "work": {
+    "site": "脑环广场管理员·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 128.94,
+    "z": -117.74
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09260",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": null,
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "坚持手写会发光的纽扣——这事全巷都知道",
+ "id": "C-09260",
+ "month_lines": [],
+ "name": "栅极·晨",
+ "profession": "脑环广场管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

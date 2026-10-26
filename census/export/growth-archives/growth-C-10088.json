@@ -1,0 +1,59 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 31.47,
+    "z": -99.3
+   },
+   "social": {
+    "site": "北外滩早市路口摊·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.63,
+    "z": -49.64
+   },
+   "work": {
+    "site": "早市豆腐摊主·北外滩早市路口摊工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 99.17,
+    "z": -129.47
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10088",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "北外滩早市路口摊",
+ "born": null,
+ "creed": "豆腐要实，秤也要实",
+ "district": "NS",
+ "gender": "女",
+ "hook": "一沓用铁夹子夹着的旧票据，按月份排好，最上面那张的角上留着一个指甲掐出来的浅印——锁在摊子的抽屉里，收摊才拿出来对一遍",
+ "id": "C-10088",
+ "month_lines": [],
+ "name": "邵采莲",
+ "profession": "早市豆腐摊主",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

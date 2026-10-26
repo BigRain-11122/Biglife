@@ -1,0 +1,106 @@
+{
+ "age": 51,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 5,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -97.28,
+    "z": 120.67
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.13,
+    "z": 120.29
+   },
+   "work": {
+    "site": "盘口记录员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -61.03,
+    "z": 138.23
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06986",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "梦话都在念叨旧城庆纪念章——这事只有档案馆知道",
+ "id": "C-06986",
+ "month_lines": [
+  "门禁亮绿灯，心里才亮堂。 风刮得紧，笔尖一抖，G08从B2396滑回S2.5，笔笔清，对盘不松手。"
+ ],
+ "name": "奇偶·午",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "门禁亮绿灯，心里才亮堂。 风刮得紧，笔尖一抖，G08从B2396滑回S2.5，笔笔清，对盘不松手。",
+   "text": "「门禁亮绿灯，心里才亮堂。 风刮得紧，笔尖一抖，G08从B2396滑回S2.5，笔笔清，对盘不松手。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

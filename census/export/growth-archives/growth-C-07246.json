@@ -1,0 +1,106 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 5,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.19,
+    "z": 25.78
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.15,
+    "z": 76.05
+   },
+   "work": {
+    "site": "bug 猎人·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 139.7,
+    "z": 121.15
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07246",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "逢人就讲旧书店的竹梯的故事",
+ "id": "C-07246",
+ "month_lines": [
+  "手在窗台边扒着，风灌进领口发凉，江水在对面楼角晃，我正想翻查G08那条老线——S2.5到B2396的翻转，谁家门禁线又在夜里悄悄滑了？"
+ ],
+ "name": "余莉",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在窗台边扒着，风灌进领口发凉，江水在对面楼角晃，我正想翻查G08那条老线——S2.5到B2396的翻转，谁家门禁线又在夜里悄悄滑了？",
+   "text": "「手在窗台边扒着，风灌进领口发凉，江水在对面楼角晃，我正想翻查G08那条老线——S2.5到B2396的翻转，谁家门禁线又在夜里悄悄滑了？」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

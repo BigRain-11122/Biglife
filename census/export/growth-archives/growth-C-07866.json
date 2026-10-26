@@ -1,0 +1,105 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 2,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -48.83,
+    "z": -213.66
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 14.72,
+    "z": -216.15
+   },
+   "work": {
+    "site": "夜宵摊主·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 73.45,
+    "z": -221.29
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07866",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "给巷口的第一盏灯都编了号还建了册——这事只有师父知道",
+ "id": "C-07866",
+ "month_lines": [
+  "风从巷口直灌进来，我收了锅，灯笼还亮着，最后一位吃完的说“这味儿，是江水都不急我急啥”。"
+ ],
+ "name": "黎Ruby",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风从巷口直灌进来，我收了锅，灯笼还亮着，最后一位吃完的说“这味儿，是江水都不急我急啥”。",
+   "text": "「风从巷口直灌进来，我收了锅，灯笼还亮着，最后一位吃完的说“这味儿，是江水都不急我急啥”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

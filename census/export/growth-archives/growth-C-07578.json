@@ -1,0 +1,106 @@
+{
+ "age": 64,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -6,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -143.19,
+    "z": 97.76
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.34,
+    "z": 101.65
+   },
+   "work": {
+    "site": "缓存管理员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.84,
+    "z": 147.1
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07578",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "收藏旧像素图钉且每件都记得来历",
+ "id": "C-07578",
+ "month_lines": [
+  "手在翻那叠旧缓存日志，纸页边角有点卷，风从巷口直灌进来，吹得我眼镜片都颤，倒是阳台那朵紫花，今天说：“你记得的，比你忘的，还多。"
+ ],
+ "name": "潘华",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在翻那叠旧缓存日志，纸页边角有点卷，风从巷口直灌进来，吹得我眼镜片都颤，倒是阳台那朵紫花，今天说：“你记得的，比你忘的，还多。",
+   "text": "「手在翻那叠旧缓存日志，纸页边角有点卷，风从巷口直灌进来，吹得我眼镜片都颤，倒是阳台那朵紫花，今天说：“你记得的，比你忘的，还多。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

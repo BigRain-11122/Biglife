@@ -1,0 +1,97 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4DD0E1",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 17,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 38.91,
+    "z": 66.8
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.01,
+    "z": 104.64
+   },
+   "work": {
+    "site": "江面巡游员·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 118.57,
+    "z": 20.55
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08650",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": null,
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "把第一天的营业账本当成了自己的老朋友——这事只有档案馆知道",
+ "id": "C-08650",
+ "month_lines": [],
+ "name": "白霜花",
+ "profession": "江面巡游员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

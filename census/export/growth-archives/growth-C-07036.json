@@ -1,0 +1,105 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -3,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 50.8,
+    "z": 68.08
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.89,
+    "z": 97.34
+   },
+   "work": {
+    "site": "进度刻碑师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 111.58,
+    "z": 106.77
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07036",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "得之我幸，失之我睡。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把消失的船班时刻表修好再免费送人——没人知道为什么",
+ "id": "C-07036",
+ "month_lines": [
+  "风把人往前推，刻碑前净了手，门禁公告又翻了一遍——S2.5到B2396，翻了两遍，还是得从头磨边。"
+ ],
+ "name": "席伟",
+ "profession": "进度刻碑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风把人往前推，刻碑前净了手，门禁公告又翻了一遍——S2.5到B2396，翻了两遍，还是得从头磨边。",
+   "text": "「风把人往前推，刻碑前净了手，门禁公告又翻了一遍——S2.5到B2396，翻了两遍，还是得从头磨边。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

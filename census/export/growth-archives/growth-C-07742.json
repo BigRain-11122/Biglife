@@ -1,0 +1,106 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 0,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.05,
+    "z": 31.8
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.64,
+    "z": 60.0
+   },
+   "work": {
+    "site": "防火墙巡林员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.89,
+    "z": 125.61
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07742",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "攒了满抽屉第一封妥投的加急件从不给看",
+ "id": "C-07742",
+ "month_lines": [
+  "手里的巡边卡翻了三遍，风刮得紧，边角都卷了。验签的那行字，我刚看第二遍，差了毫秒，就错了。"
+ ],
+ "name": "秦之恒",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手里的巡边卡翻了三遍，风刮得紧，边角都卷了。验签的那行字，我刚看第二遍，差了毫秒，就错了。",
+   "text": "「手里的巡边卡翻了三遍，风刮得紧，边角都卷了。验签的那行字，我刚看第二遍，差了毫秒，就错了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

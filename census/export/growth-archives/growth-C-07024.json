@@ -1,0 +1,106 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 7,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -41.61,
+    "z": -244.11
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -5.05,
+    "z": -229.99
+   },
+   "work": {
+    "site": "光桥市集摊主·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 97.32,
+    "z": -231.08
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07024",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "每年挑一天只为老式怀表链大扫除——这事只有师父知道",
+ "id": "C-07024",
+ "month_lines": [
+  "老地方见，风把人往前推，三流江边的摊子还在，料儿都备好了，天阴着，风不小，这会儿江水晃得人心里也晃。"
+ ],
+ "name": "桂向洋",
+ "profession": "光桥市集摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "老地方见，风把人往前推，三流江边的摊子还在，料儿都备好了，天阴着，风不小，这会儿江水晃得人心里也晃。",
+   "text": "「老地方见，风把人往前推，三流江边的摊子还在，料儿都备好了，天阴着，风不小，这会儿江水晃得人心里也晃。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

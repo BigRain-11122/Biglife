@@ -1,0 +1,59 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -144.45,
+    "z": -155.49
+   },
+   "social": {
+    "site": "老城巷纸活铺·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.34,
+    "z": -139.49
+   },
+   "work": {
+    "site": "裱糊匠·老城巷纸活铺工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -57.49,
+    "z": -136.08
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10118",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老城巷纸活铺",
+ "born": null,
+ "creed": "纸糊得住窗，糊不住心虚",
+ "district": "MD",
+ "gender": "男",
+ "hook": "筐底压着一沓糊窗纸，边上裁出月牙形，糨糊碗里插着半截竹片。",
+ "id": "C-10118",
+ "month_lines": [],
+ "name": "郝长顺",
+ "profession": "裱糊匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

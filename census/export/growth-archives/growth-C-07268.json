@@ -1,0 +1,106 @@
+{
+ "age": 65,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -15,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 24.82,
+    "z": 79.69
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.32,
+    "z": 101.95
+   },
+   "work": {
+    "site": "光织物裁缝·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 111.66,
+    "z": 89.53
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07268",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "能一眼认出修桥人的旧安全帽的真伪——他自己也说不清为什么",
+ "id": "C-07268",
+ "month_lines": [
+  "手边的光织物在风里轻颤，我正给新来主顾的外套走线——风把树梢压弯了，线头也跟着歪了，又学了一招，稳住针脚，心才不乱。"
+ ],
+ "name": "凌银龙",
+ "profession": "光织物裁缝",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手边的光织物在风里轻颤，我正给新来主顾的外套走线——风把树梢压弯了，线头也跟着歪了，又学了一招，稳住针脚，心才不乱。",
+   "text": "「手边的光织物在风里轻颤，我正给新来主顾的外套走线——风把树梢压弯了，线头也跟着歪了，又学了一招，稳住针脚，心才不乱。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

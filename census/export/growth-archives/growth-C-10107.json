@@ -1,0 +1,59 @@
+{
+ "age": 59,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 69.0,
+    "z": -138.31
+   },
+   "social": {
+    "site": "北外滩弄堂口藤竹作坊·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.37,
+    "z": -99.91
+   },
+   "work": {
+    "site": "竹器匠·北外滩弄堂口藤竹作坊工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 137.48,
+    "z": -69.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10107",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "北外滩弄堂口藤竹作坊",
+ "born": null,
+ "creed": "藤条是有性子的，顺着它才编得久",
+ "district": "NS",
+ "gender": "女",
+ "hook": "一把弯头篾刀和一捆泡过水的藤条，刀刃上留着几处细口，藤皮蹭手上是一股潮味。",
+ "id": "C-10107",
+ "month_lines": [],
+ "name": "邬阿巧",
+ "profession": "竹器匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

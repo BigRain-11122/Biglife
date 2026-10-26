@@ -1,0 +1,59 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.58,
+    "z": -17.39
+   },
+   "social": {
+    "site": "导播台·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.74,
+    "z": -141.26
+   },
+   "work": {
+    "site": "导播台老切换师·导播台工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -37.41,
+    "z": -152.35
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10060",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "导播台",
+ "born": null,
+ "creed": "推子在手，声音不慌。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "导播台台面下那杆拧惯了旋钮的乌木柄小改锥——导播台的师传改锥，几代切换师拧过的旋钮全认这杆乌木柄",
+ "id": "C-10060",
+ "month_lines": [],
+ "name": "岑守频",
+ "profession": "导播台老切换师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

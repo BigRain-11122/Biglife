@@ -1,0 +1,59 @@
+{
+ "age": 51,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -129.06,
+    "z": -226.23
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 1.03,
+    "z": -179.11
+   },
+   "work": {
+    "site": "江岸渡口老检票员·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 50.82,
+    "z": -220.81
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10042",
+  "quirk": "umbrella",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": null,
+ "creed": "票是小事，过江是大事。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "认得每个常客的老船票夹——候船棚钉着的那排黄铜船票夹，几十年夹住两岸来来往往",
+ "id": "C-10042",
+ "month_lines": [],
+ "name": "沈长贵",
+ "profession": "江岸渡口老检票员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

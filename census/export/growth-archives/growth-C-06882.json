@@ -1,0 +1,106 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 5,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.5,
+    "z": 108.42
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.72,
+    "z": 133.35
+   },
+   "work": {
+    "site": "回测农·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -25.01,
+    "z": 84.52
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06882",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "会为旧茶馆的水牌推掉一整晚的生意——这事全巷都知道",
+ "id": "C-06882",
+ "month_lines": [
+  "风从巷口直灌进来，我正把回测田里的参数再筛一遍，第三遍了，想不出新法，就只把旧票根翻出来，看谁家的年轮写得比我还细。"
+ ],
+ "name": "严阿宁",
+ "profession": "回测农",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风从巷口直灌进来，我正把回测田里的参数再筛一遍，第三遍了，想不出新法，就只把旧票根翻出来，看谁家的年轮写得比我还细。",
+   "text": "「风从巷口直灌进来，我正把回测田里的参数再筛一遍，第三遍了，想不出新法，就只把旧票根翻出来，看谁家的年轮写得比我还细。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

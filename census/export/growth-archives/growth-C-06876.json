@@ -1,0 +1,106 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 5,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.32,
+    "z": 24.8
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.64,
+    "z": 104.28
+   },
+   "work": {
+    "site": "算法调参师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -65.77,
+    "z": 87.76
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06876",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件退役灯塔的透镜——这事全巷都知道",
+ "id": "C-06876",
+ "month_lines": [
+  "单子来了就接，不来就钓鱼。今早路过游戏楼，仰头数了数，G08 亮着的窗还是老样子，风不小，云厚着，我那瓶调参水又得续上一剂。"
+ ],
+ "name": "邹予安",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "单子来了就接，不来就钓鱼。今早路过游戏楼，仰头数了数，G08 亮着的窗还是老样子，风不小，云厚着，我那瓶调参水又得续上一剂。",
+   "text": "「单子来了就接，不来就钓鱼。今早路过游戏楼，仰头数了数，G08 亮着的窗还是老样子，风不小，云厚着，我那瓶调参水又得续上一剂。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

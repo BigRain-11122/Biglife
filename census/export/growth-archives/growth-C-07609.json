@@ -1,0 +1,105 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -2,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -137.13,
+    "z": -106.41
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.84,
+    "z": -41.5
+   },
+   "work": {
+    "site": "语义翻译官·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.1,
+    "z": -124.11
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07609",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "偷偷给旧钟表铺的价目牌上油保养——没人知道为什么",
+ "id": "C-07609",
+ "month_lines": [
+  "手正翻着《错误码词典》，指尖划过“GPU_VRAM_LOW”那页，纸页微卷，像老屋檐下的风铃。风好大，吹得词典页角都颤了，我把它贴在胸口，像贴着个旧年头的信。"
+ ],
+ "name": "袁明",
+ "profession": "语义翻译官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手正翻着《错误码词典》，指尖划过“GPU_VRAM_LOW”那页，纸页微卷，像老屋檐下的风铃。风好大，吹得词典页角都颤了，我把它贴在胸口，像贴着个旧年头的信。",
+   "text": "「手正翻着《错误码词典》，指尖划过“GPU_VRAM_LOW”那页，纸页微卷，像老屋檐下的风铃。风好大，吹得词典页角都颤了，我把它贴在胸口，像贴着个旧年头的信。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

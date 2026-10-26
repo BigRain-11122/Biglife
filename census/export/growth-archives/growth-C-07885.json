@@ -1,0 +1,106 @@
+{
+ "age": 73,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -13,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -107.53,
+    "z": -93.87
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.14,
+    "z": -155.69
+   },
+   "work": {
+    "site": "数据粥铺摊主·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -67.31,
+    "z": -16.83
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07885",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "能背出断了线的风筝的全部班次——这事只有师父知道",
+ "id": "C-07885",
+ "month_lines": [
+  "手在蒸笼盖上抹了把，暖光从屉缝里往上冒，风好大，掀了我半边衣角。今夜这笼子，蒸得真稳，像老伙计在等我开口。"
+ ],
+ "name": "尹永康",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在蒸笼盖上抹了把，暖光从屉缝里往上冒，风好大，掀了我半边衣角。今夜这笼子，蒸得真稳，像老伙计在等我开口。",
+   "text": "「手在蒸笼盖上抹了把，暖光从屉缝里往上冒，风好大，掀了我半边衣角。今夜这笼子，蒸得真稳，像老伙计在等我开口。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 4,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -104.2,
+    "z": 21.15
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.64,
+    "z": 46.97
+   },
+   "work": {
+    "site": "算力楼运维·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.63,
+    "z": 41.0
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07859",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能一眼认出旧挂历的真伪——这事全巷都知道",
+ "id": "C-07859",
+ "month_lines": [
+  "手在机箱边抠了抠，风大得说话要抬声，脉冲告警又跳出来——GPU_VRAM_LOW，老伙计又在打盹，得给它灌点新血，不然明天巡楼时，连风扇转速都听不分明了。"
+ ],
+ "name": "史卫东",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在机箱边抠了抠，风大得说话要抬声，脉冲告警又跳出来——GPU_VRAM_LOW，老伙计又在打盹，得给它灌点新血，不然明天巡楼时，连风扇转速都听不分明了。",
+   "text": "「手在机箱边抠了抠，风大得说话要抬声，脉冲告警又跳出来——GPU_VRAM_LOW，老伙计又在打盹，得给它灌点新血，不然明天巡楼时，连风扇转速都听不分明了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

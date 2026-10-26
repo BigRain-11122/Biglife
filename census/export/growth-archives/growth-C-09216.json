@@ -1,0 +1,97 @@
+{
+ "age": 2,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 13,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -122.81,
+    "z": 136.3
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.86,
+    "z": 106.97
+   },
+   "work": {
+    "site": "巡信使·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -24.36,
+    "z": 37.79
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09216",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": null,
+ "creed": "江水不争先后，该到总会到。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "每次路过旧邮局的分信格都要亮两下——这事全巷都知道",
+ "id": "C-09216",
+ "month_lines": [],
+ "name": "阿冰凌",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

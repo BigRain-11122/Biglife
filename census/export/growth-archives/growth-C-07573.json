@@ -1,0 +1,106 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 2,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -129.86,
+    "z": 64.94
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.34,
+    "z": 129.49
+   },
+   "work": {
+    "site": "量化策略研究员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.96,
+    "z": 120.33
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07573",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "坚持手写旧热水瓶——这事只有师父知道",
+ "id": "C-07573",
+ "month_lines": [
+  "手在键盘上敲了三下，风好大，灯全亮着，小本子翻到第23页，记得今天是单日，生日一个没忘，江水清清的，站直了别趴下。"
+ ],
+ "name": "缪一·拾",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "buddy",
+   "src": "牌友",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在键盘上敲了三下，风好大，灯全亮着，小本子翻到第23页，记得今天是单日，生日一个没忘，江水清清的，站直了别趴下。",
+   "text": "「手在键盘上敲了三下，风好大，灯全亮着，小本子翻到第23页，记得今天是单日，生日一个没忘，江水清清的，站直了别趴下。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,59 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 40.16,
+    "z": -116.14
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.5,
+    "z": -134.72
+   },
+   "work": {
+    "site": "历史立面群老排字工·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 128.54,
+    "z": -112.21
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10071",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": null,
+ "creed": "字要认得反的，才算认得透。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "印刷坊的老铅字盘，空格里嵌着几枚没抠干净的反字——历史立面群排字房的师传字盘，全城娃认字的老规矩全从这盘反字里传下去",
+ "id": "C-10071",
+ "month_lines": [],
+ "name": "齐墨林",
+ "profession": "历史立面群老排字工",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

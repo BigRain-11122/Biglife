@@ -1,0 +1,105 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 9,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -136.75,
+    "z": -55.82
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.03,
+    "z": -145.07
+   },
+   "work": {
+    "site": "穿城信使·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -22.34,
+    "z": -91.25
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07796",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "每逢下雨就去修掉漆的糖果罐——没人知道为什么",
+ "id": "C-07796",
+ "month_lines": [
+  "风把树梢压弯了，钥匙串还攥在手里，旧的用的顺手。今夜单子没来，电波猫群里那罐奶，我补上了。"
+ ],
+ "name": "董乐遥",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风把树梢压弯了，钥匙串还攥在手里，旧的用的顺手。今夜单子没来，电波猫群里那罐奶，我补上了。",
+   "text": "「风把树梢压弯了，钥匙串还攥在手里，旧的用的顺手。今夜单子没来，电波猫群里那罐奶，我补上了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 3,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.15,
+    "z": 92.29
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.99,
+    "z": 17.45
+   },
+   "work": {
+    "site": "资金金灯匠·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -70.5,
+    "z": 79.42
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07688",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "桥上不问来路，落水都得拉一把。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "坚持给写满字的光带记日记——这事只有师父知道",
+ "id": "C-07688",
+ "month_lines": [
+  "手在拧灯芯，金丝晃了晃，风把树梢压弯了，灯晕稳着，不晃不偏。夜里冷，喝口热的再走。"
+ ],
+ "name": "帕斯卡·快",
+ "profession": "资金金灯匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "buddy",
+   "src": "老搭档",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在拧灯芯，金丝晃了晃，风把树梢压弯了，灯晕稳着，不晃不偏。夜里冷，喝口热的再走。",
+   "text": "「手在拧灯芯，金丝晃了晃，风把树梢压弯了，灯晕稳着，不晃不偏。夜里冷，喝口热的再走。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

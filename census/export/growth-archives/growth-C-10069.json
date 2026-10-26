@@ -1,0 +1,59 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -56.96,
+    "z": -191.47
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -15.33,
+    "z": -232.61
+   },
+   "work": {
+    "site": "光桥市集老做秤师·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 88.65,
+    "z": -228.66
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10069",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": null,
+ "creed": "秤星不哄人，斤两才作数。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "做秤铺墙上挂着一串试秤用的标准铜砝码——光桥市集做秤铺的家传砝码串，每杆新秤的公道全先过这串铜星的手",
+ "id": "C-10069",
+ "month_lines": [],
+ "name": "岳执衡",
+ "profession": "光桥市集老做秤师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

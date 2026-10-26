@@ -1,0 +1,105 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 4,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 71.24,
+    "z": 84.96
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.0,
+    "z": 108.95
+   },
+   "work": {
+    "site": "新市民安居顾问·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 146.84,
+    "z": 135.5
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07288",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "在旧笔友的明信片上刻了一行没人认得的小字——她自己也说不清为什么",
+ "id": "C-07288",
+ "month_lines": [
+  "风把人往前推，我正把新来的那对合租户的房卡贴在门上，钥匙齿痕还带着昨夜的湿，趁热吃，这单得办完。"
+ ],
+ "name": "谢Vivi",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风把人往前推，我正把新来的那对合租户的房卡贴在门上，钥匙齿痕还带着昨夜的湿，趁热吃，这单得办完。",
+   "text": "「风把人往前推，我正把新来的那对合租户的房卡贴在门上，钥匙齿痕还带着昨夜的湿，趁热吃，这单得办完。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

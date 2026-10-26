@@ -1,0 +1,97 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#FFA726",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#F48FB1"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 24,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -63.11,
+    "z": 226.4
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 12.88,
+    "z": 193.87
+   },
+   "work": {
+    "site": "夜灯员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 98.02,
+    "z": 179.32
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09826",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "边缘街区",
+ "born": null,
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "OR",
+ "gender": "无定",
+ "hook": "绕着老式饭盒飞过整整三十圈——没人知道为什么",
+ "id": "C-09826",
+ "month_lines": [],
+ "name": "黑晚潮",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

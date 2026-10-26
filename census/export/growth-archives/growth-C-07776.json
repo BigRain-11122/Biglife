@@ -1,0 +1,105 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 8,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.98,
+    "z": -77.3
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.94,
+    "z": -74.84
+   },
+   "work": {
+    "site": "数据清洗工·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.16,
+    "z": -55.31
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07776",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "桥上不问来路，落水都得拉一把。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "用修桥人的旧安全帽教会了半条街的孩子——这事只有师父知道",
+ "id": "C-07776",
+ "month_lines": [
+  "手在抖，不是风，是刚把最后一筐行情数据补进清洗池——风不小，数据没漏，桥上的人也得有人拉一把。"
+ ],
+ "name": "段之恒",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在抖，不是风，是刚把最后一筐行情数据补进清洗池——风不小，数据没漏，桥上的人也得有人拉一把。",
+   "text": "「手在抖，不是风，是刚把最后一筐行情数据补进清洗池——风不小，数据没漏，桥上的人也得有人拉一把。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

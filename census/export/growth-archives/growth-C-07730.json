@@ -1,0 +1,106 @@
+{
+ "age": 59,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 0,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -129.17,
+    "z": 81.25
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.81,
+    "z": 41.32
+   },
+   "work": {
+    "site": "数据菜市摊主·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -53.32,
+    "z": 42.15
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07730",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "把1990 年的真硬币画进了自己的作品里",
+ "id": "C-07730",
+ "month_lines": [
+  "秤杆在手，风刮得紧，江水晃得我掌心发烫。灶上有汤，自取——今天菜价落令了，青菜比上周便宜三分，我留着那颗糖，给路过的小孩。"
+ ],
+ "name": "真空管-7",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "秤杆在手，风刮得紧，江水晃得我掌心发烫。灶上有汤，自取——今天菜价落令了，青菜比上周便宜三分，我留着那颗糖，给路过的小孩。",
+   "text": "「秤杆在手，风刮得紧，江水晃得我掌心发烫。灶上有汤，自取——今天菜价落令了，青菜比上周便宜三分，我留着那颗糖，给路过的小孩。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

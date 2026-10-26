@@ -1,0 +1,97 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -4,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.15,
+    "z": -100.85
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.46,
+    "z": -80.36
+   },
+   "work": {
+    "site": "平台对接员·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -53.72,
+    "z": -133.07
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08213",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": null,
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "用全城雪夜的第一次合影教会了半条街的孩子——据说是老辈传下的规矩",
+ "id": "C-08213",
+ "month_lines": [],
+ "name": "盐值·丙",
+ "profession": "平台对接员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

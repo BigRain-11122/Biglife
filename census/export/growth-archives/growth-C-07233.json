@@ -1,0 +1,106 @@
+{
+ "age": 14,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -4,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.36,
+    "z": 27.07
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.18,
+    "z": 76.08
+   },
+   "work": {
+    "site": "资金金灯匠·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -68.16,
+    "z": 91.61
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07233",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "口袋里总揣着雨声录音——没人知道为什么",
+ "id": "C-07233",
+ "month_lines": [
+  "手在拧着塔底那根旧铜线，光晕在风里晃，刮得招牌直晃。潮水的事交给潮水，这光，我得养到它自己亮。"
+ ],
+ "name": "继电器·老",
+ "profession": "资金金灯匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在拧着塔底那根旧铜线，光晕在风里晃，刮得招牌直晃。潮水的事交给潮水，这光，我得养到它自己亮。",
+   "text": "「手在拧着塔底那根旧铜线，光晕在风里晃，刮得招牌直晃。潮水的事交给潮水，这光，我得养到它自己亮。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

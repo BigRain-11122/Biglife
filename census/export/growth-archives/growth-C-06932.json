@@ -1,0 +1,106 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 0,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -118.92,
+    "z": -82.96
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.81,
+    "z": -108.82
+   },
+   "work": {
+    "site": "城市气象播报员·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -57.49,
+    "z": -148.4
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06932",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "逢人就讲褪色的戏票根的故事——这事只有师父知道",
+ "id": "C-06932",
+ "month_lines": [
+  "这城里好玩的东西一天比一天多。风把树梢压弯了，我正对着窗台那根老温度计轻抚，它三年没动过，心眼却比谁都大。"
+ ],
+ "name": "曾春梅",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "这城里好玩的东西一天比一天多。风把树梢压弯了，我正对着窗台那根老温度计轻抚，它三年没动过，心眼却比谁都大。",
+   "text": "「这城里好玩的东西一天比一天多。风把树梢压弯了，我正对着窗台那根老温度计轻抚，它三年没动过，心眼却比谁都大。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,97 @@
+{
+ "age": 36,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#26A69A",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 11,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -139.19,
+    "z": -81.55
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.48,
+    "z": -133.99
+   },
+   "work": {
+    "site": "声景师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.38,
+    "z": -38.67
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09181",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": null,
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "每次路过全城第一块砖的拓片都要亮两下——他自己也说不清为什么",
+ "id": "C-09181",
+ "month_lines": [],
+ "name": "阿发条",
+ "profession": "声景师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 71,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -14,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -123.7,
+    "z": 113.33
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.63,
+    "z": 88.11
+   },
+   "work": {
+    "site": "风控官·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.28,
+    "z": 115.29
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07049",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "记得老药房的药柜抽屉的每一个来历——据说是老辈传下的规矩",
+ "id": "C-07049",
+ "month_lines": [
+  "拆开看看又不会坏，这天阴着风掀得衣角乱摆，阳台那盆吊兰老伙计，今天可没说啥，我猜它也只晓得低头喘气。"
+ ],
+ "name": "邓顺发",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "buddy",
+   "src": "茶友",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "拆开看看又不会坏，这天阴着风掀得衣角乱摆，阳台那盆吊兰老伙计，今天可没说啥，我猜它也只晓得低头喘气。",
+   "text": "「拆开看看又不会坏，这天阴着风掀得衣角乱摆，阳台那盆吊兰老伙计，今天可没说啥，我猜它也只晓得低头喘气。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

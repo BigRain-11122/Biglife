@@ -1,0 +1,106 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 4,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 33.89,
+    "z": 48.03
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.21,
+    "z": 92.89
+   },
+   "work": {
+    "site": "NPC 服装师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 123.58,
+    "z": 105.78
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06875",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "记得断了的帆船模型的每一个来历——这事只有档案馆知道",
+ "id": "C-06875",
+ "month_lines": [
+  "这版本我等好久了——风大得说话要抬声，云厚得压得人想缩进衣领，我刚给老陈改完一套光织物，数据对了三遍，还是得再看一眼。"
+ ],
+ "name": "林俊",
+ "profession": "NPC 服装师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "这版本我等好久了——风大得说话要抬声，云厚得压得人想缩进衣领，我刚给老陈改完一套光织物，数据对了三遍，还是得再看一眼。",
+   "text": "「这版本我等好久了——风大得说话要抬声，云厚得压得人想缩进衣领，我刚给老陈改完一套光织物，数据对了三遍，还是得再看一眼。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

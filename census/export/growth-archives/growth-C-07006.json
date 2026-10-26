@@ -1,0 +1,106 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -10,
+   "rate": -3,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -121.69,
+    "z": 104.2
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.91,
+    "z": 121.7
+   },
+   "work": {
+    "site": "数据粥铺摊主·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.66,
+    "z": 21.9
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07006",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "收藏旧钟表铺的价目牌且每件都记得来历——这事全巷都知道",
+ "id": "C-07006",
+ "month_lines": [
+  "汤要趁烫，话要慢讲。 今早开窗听江声，风灌进领口发凉，花儿在阳台上点头说：“今天云厚，别晒了。"
+ ],
+ "name": "斐波那·午",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "汤要趁烫，话要慢讲。 今早开窗听江声，风灌进领口发凉，花儿在阳台上点头说：“今天云厚，别晒了。",
+   "text": "「汤要趁烫，话要慢讲。 今早开窗听江声，风灌进领口发凉，花儿在阳台上点头说：“今天云厚，别晒了。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,90 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 1,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.1,
+    "z": -128.26
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.81,
+    "z": -77.82
+   },
+   "work": {
+    "site": "老宅墨线师·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 143.54,
+    "z": -96.67
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10013",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": null,
+ "creed": "规矩不是捆人的绳，是扶人的手。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "修过的每面老墙上都藏着一行小字年份，档案馆叫它「墨线落款」",
+ "id": "C-10013",
+ "month_lines": [],
+ "name": "茅一山",
+ "profession": "老宅墨线师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

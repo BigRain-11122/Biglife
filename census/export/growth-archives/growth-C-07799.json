@@ -1,0 +1,106 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#2E5E4E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 1,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.62,
+    "z": 105.72
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.93,
+    "z": 158.07
+   },
+   "work": {
+    "site": "防火墙巡林员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.62,
+    "z": 77.45
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07799",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "偷偷给初代广场舞光带上油保养——他自己也说不清为什么",
+ "id": "C-07799",
+ "month_lines": [
+  "手在扳手盒里翻了翻，第17号螺丝刀还卡着旧标签——风大得说话要抬声，江水清清的，这城里好玩的东西一天比一天多。"
+ ],
+ "name": "法拉·叁",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在扳手盒里翻了翻，第17号螺丝刀还卡着旧标签——风大得说话要抬声，江水清清的，这城里好玩的东西一天比一天多。",
+   "text": "「手在扳手盒里翻了翻，第17号螺丝刀还卡着旧标签——风大得说话要抬声，江水清清的，这城里好玩的东西一天比一天多。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

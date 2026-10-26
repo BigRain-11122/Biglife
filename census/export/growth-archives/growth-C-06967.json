@@ -1,0 +1,106 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 1,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.41,
+    "z": 45.67
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.49,
+    "z": 68.99
+   },
+   "work": {
+    "site": "盘口记录员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.07,
+    "z": 55.94
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06967",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给老式邮差的背包写了一整本观察笔记——她自己也说不清为什么",
+ "id": "C-06967",
+ "month_lines": [
+  "潮水的事交给潮水，风顶得人站不稳，我手里的两支笔还稳着，笔笔清，对盘——今天这盘，没我输的，只有我写下的，字字不落空。"
+ ],
+ "name": "管卡佳",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "潮水的事交给潮水，风顶得人站不稳，我手里的两支笔还稳着，笔笔清，对盘——今天这盘，没我输的，只有我写下的，字字不落空。",
+   "text": "「潮水的事交给潮水，风顶得人站不稳，我手里的两支笔还稳着，笔笔清，对盘——今天这盘，没我输的，只有我写下的，字字不落空。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

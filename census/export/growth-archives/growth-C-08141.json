@@ -1,0 +1,106 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 11,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 69.01,
+    "z": 99.42
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.78,
+    "z": 48.81
+   },
+   "work": {
+    "site": "像素学徒·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 109.58,
+    "z": 47.69
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08141",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "桥上不问来路，落水都得拉一把。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "坚持手写旧牛奶箱的钥匙——这事只有档案馆知道",
+ "id": "C-08141",
+ "month_lines": [
+  "手里的螺丝刀刚旋了三圈，又把旧电池的引脚掰开看了看——这玩意儿我改过三回，现在能自己亮灯了，包在我身上。"
+ ],
+ "name": "施果果",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手里的螺丝刀刚旋了三圈，又把旧电池的引脚掰开看了看——这玩意儿我改过三回，现在能自己亮灯了，包在我身上。",
+   "text": "「手里的螺丝刀刚旋了三圈，又把旧电池的引脚掰开看了看——这玩意儿我改过三回，现在能自己亮灯了，包在我身上。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

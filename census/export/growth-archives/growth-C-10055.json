@@ -1,0 +1,60 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.56,
+    "z": 118.8
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.22,
+    "z": 59.51
+   },
+   "work": {
+    "site": "K线广场老行情抄录员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -30.76,
+    "z": 122.75
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10055",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": null,
+ "creed": "一笔归一笔，一天对一天。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "K线广场木架黑板下那只接粉笔头的藤壳小筐——K线广场行情摊的祖传小筐，一板大字行情的每一截粉笔头全归它接",
+ "id": "C-10055",
+ "month_lines": [],
+ "name": "韦九章",
+ "profession": "K线广场老行情抄录员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

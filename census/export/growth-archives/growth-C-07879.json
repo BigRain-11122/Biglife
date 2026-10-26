@@ -1,0 +1,105 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 5,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -47.78,
+    "z": -248.17
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 5.94,
+    "z": -218.76
+   },
+   "work": {
+    "site": "信号中继员·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 31.35,
+    "z": -224.09
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07879",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "每逢下雨就去修旧缝纫机踏板——这事全巷都知道",
+ "id": "C-07879",
+ "month_lines": [
+  "手里这第三块中继正发烫，信号在跳，像老唱片转到卡口。风顶得人站不稳，弄堂还是那个弄堂。"
+ ],
+ "name": "电解-6",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手里这第三块中继正发烫，信号在跳，像老唱片转到卡口。风顶得人站不稳，弄堂还是那个弄堂。",
+   "text": "「手里这第三块中继正发烫，信号在跳，像老唱片转到卡口。风顶得人站不稳，弄堂还是那个弄堂。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

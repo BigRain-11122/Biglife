@@ -1,0 +1,106 @@
+{
+ "age": 65,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -9,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -120.87,
+    "z": 33.33
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.82,
+    "z": 152.95
+   },
+   "work": {
+    "site": "全城对时师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.14,
+    "z": 92.31
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07199",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "得之我幸，失之我睡。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "梦话都在念叨手抄的菜谱——没人知道为什么",
+ "id": "C-07199",
+ "month_lines": [
+  "手在摩挲着那块铜绿斑驳的钟摆，指节有点发烫。风大得说话要抬声，我正把今天的授时单翻到下一页——今天云好，改天再说。"
+ ],
+ "name": "丁惠芬",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在摩挲着那块铜绿斑驳的钟摆，指节有点发烫。风大得说话要抬声，我正把今天的授时单翻到下一页——今天云好，改天再说。",
+   "text": "「手在摩挲着那块铜绿斑驳的钟摆，指节有点发烫。风大得说话要抬声，我正把今天的授时单翻到下一页——今天云好，改天再说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

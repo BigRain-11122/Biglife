@@ -1,0 +1,106 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 18,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -143.88,
+    "z": 29.92
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.79,
+    "z": 120.24
+   },
+   "work": {
+    "site": "像素学徒·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -46.44,
+    "z": 18.42
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07553",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "梦话都在念叨老式怀表链",
+ "id": "C-07553",
+ "month_lines": [
+  "手在翻着昨日留下的料单，风掀得衣角乱摆，指尖还沾着刚磨完的颜料渍。明天的料备好了，就放在匠人巷门口那块老石墩上，规矩如钟，人情如江。"
+ ],
+ "name": "吕小杏",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在翻着昨日留下的料单，风掀得衣角乱摆，指尖还沾着刚磨完的颜料渍。明天的料备好了，就放在匠人巷门口那块老石墩上，规矩如钟，人情如江。",
+   "text": "「手在翻着昨日留下的料单，风掀得衣角乱摆，指尖还沾着刚磨完的颜料渍。明天的料备好了，就放在匠人巷门口那块老石墩上，规矩如钟，人情如江。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

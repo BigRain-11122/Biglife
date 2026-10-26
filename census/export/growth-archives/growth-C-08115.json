@@ -1,0 +1,106 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 5,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.0,
+    "z": 123.68
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.82,
+    "z": 137.95
+   },
+   "work": {
+    "site": "数据搬运工·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.13,
+    "z": 18.11
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08115",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "会给初代像素调色板织毛衣——没人知道为什么",
+ "id": "C-08115",
+ "month_lines": [
+  "手里的数据夹一顿翻，B2396到S2.5的单子对了两遍，风一阵紧一阵，像谁在巷口甩了根鞭子。弄堂还是那个弄堂，锅热着，心稳着，油慢慢淋。"
+ ],
+ "name": "秦Yuki",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手里的数据夹一顿翻，B2396到S2.5的单子对了两遍，风一阵紧一阵，像谁在巷口甩了根鞭子。弄堂还是那个弄堂，锅热着，心稳着，油慢慢淋。",
+   "text": "「手里的数据夹一顿翻，B2396到S2.5的单子对了两遍，风一阵紧一阵，像谁在巷口甩了根鞭子。弄堂还是那个弄堂，锅热着，心稳着，油慢慢淋。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

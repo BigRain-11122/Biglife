@@ -1,0 +1,96 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -3,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -60.66,
+    "z": -220.74
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 1.27,
+    "z": -250.5
+   },
+   "work": {
+    "site": "江岸数据钓手·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 61.43,
+    "z": -208.3
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08288",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "光桥市集",
+ "born": null,
+ "creed": "旧物件的温度，是新东西学不来的。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "逢人就讲老裁缝铺的样衣的故事——这事全巷都知道",
+ "id": "C-08288",
+ "month_lines": [],
+ "name": "图灵-9-6",
+ "profession": "江岸数据钓手",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

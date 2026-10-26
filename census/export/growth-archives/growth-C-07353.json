@@ -1,0 +1,106 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 2,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.79,
+    "z": 63.91
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.23,
+    "z": 18.61
+   },
+   "work": {
+    "site": "防火墙巡林员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -56.78,
+    "z": 106.1
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07353",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每天跟褪色的灯笼骨架打招呼——这事只有师父知道",
+ "id": "C-07353",
+ "month_lines": [
+  "手在翻着巡边记录，第8页的G08转场又标了红圈，拆开看看又不会坏——风刮得招牌直晃，塔顶白光亮着，今儿这天气整活儿才对味儿。"
+ ],
+ "name": "林知夏",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在翻着巡边记录，第8页的G08转场又标了红圈，拆开看看又不会坏——风刮得招牌直晃，塔顶白光亮着，今儿这天气整活儿才对味儿。",
+   "text": "「手在翻着巡边记录，第8页的G08转场又标了红圈，拆开看看又不会坏——风刮得招牌直晃，塔顶白光亮着，今儿这天气整活儿才对味儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

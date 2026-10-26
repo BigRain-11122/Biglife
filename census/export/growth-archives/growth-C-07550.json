@@ -1,0 +1,106 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 17,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -109.61,
+    "z": -142.43
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.72,
+    "z": -155.74
+   },
+   "work": {
+    "site": "像素小学学生·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.67,
+    "z": -128.13
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07550",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "得之我幸，失之我睡。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把老式门铃的铜壳画进了自己的作品里",
+ "id": "C-07550",
+ "month_lines": [
+  "手在抠着作业本角，第23次想把G08的路线画成回旋梯，结果又画成歪脖子树。风刮得紧，江水清清的，commit光点正从对岸往我课桌方向晃。"
+ ],
+ "name": "雷朵朵",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在抠着作业本角，第23次想把G08的路线画成回旋梯，结果又画成歪脖子树。风刮得紧，江水清清的，commit光点正从对岸往我课桌方向晃。",
+   "text": "「手在抠着作业本角，第23次想把G08的路线画成回旋梯，结果又画成歪脖子树。风刮得紧，江水清清的，commit光点正从对岸往我课桌方向晃。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

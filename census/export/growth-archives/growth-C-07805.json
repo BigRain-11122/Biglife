@@ -1,0 +1,106 @@
+{
+ "age": 75,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -12,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -143.43,
+    "z": 97.66
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.49,
+    "z": 25.38
+   },
+   "work": {
+    "site": "时空校准师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.86,
+    "z": 87.97
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07805",
+  "quirk": "slow",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "还在用退役的风向标——据说是老辈传下的规矩",
+ "id": "C-07805",
+ "month_lines": [
+  "手正搭在老钟摆上，一缕风掀得衣角乱摆，钟面还卡在昨夜的刻度。谁没个难处呢，来，坐下说。"
+ ],
+ "name": "钟根娣",
+ "profession": "时空校准师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手正搭在老钟摆上，一缕风掀得衣角乱摆，钟面还卡在昨夜的刻度。谁没个难处呢，来，坐下说。",
+   "text": "「手正搭在老钟摆上，一缕风掀得衣角乱摆，钟面还卡在昨夜的刻度。谁没个难处呢，来，坐下说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

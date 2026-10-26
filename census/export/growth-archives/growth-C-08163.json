@@ -1,0 +1,105 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -2,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 24.71,
+    "z": 81.51
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.18,
+    "z": 86.33
+   },
+   "work": {
+    "site": "像素画匠·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.29,
+    "z": 125.39
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08163",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "把老裁缝的画粉的位置背得比自家门牌还熟——这事只有师父知道",
+ "id": "C-08163",
+ "month_lines": [
+  "笔尖在描点，墨迹未干就看见了新消息——那条老主顾的订单，又来了。灶上有汤，自取。"
+ ],
+ "name": "冗余-2-6",
+ "profession": "像素画匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "笔尖在描点，墨迹未干就看见了新消息——那条老主顾的订单，又来了。灶上有汤，自取。",
+   "text": "「笔尖在描点，墨迹未干就看见了新消息——那条老主顾的订单，又来了。灶上有汤，自取。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

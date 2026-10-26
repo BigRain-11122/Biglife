@@ -1,0 +1,105 @@
+{
+ "age": 73,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -11,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.25,
+    "z": -158.64
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.06,
+    "z": -98.06
+   },
+   "work": {
+    "site": "江边棋摊主·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 125.69,
+    "z": -34.53
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07212",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "用全城雨夜的录音合集教会了半条街的孩子——他自己也说不清为什么",
+ "id": "C-07212",
+ "month_lines": [
+  "手正稳稳捏着那杆旧铜棋杖，风不小，吹得江面泛着清光，我刚把「PushEvent BigDomain"
+ ],
+ "name": "茅承宗",
+ "profession": "江边棋摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手正稳稳捏着那杆旧铜棋杖，风不小，吹得江面泛着清光，我刚把「PushEvent BigDomain",
+   "text": "「手正稳稳捏着那杆旧铜棋杖，风不小，吹得江面泛着清光，我刚把「PushEvent BigDomain」对C-04244说了句，他转头就去跟C-08030说，我这摊子，差之毫秒，谬以全」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

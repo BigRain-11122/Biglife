@@ -1,0 +1,59 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 32.76,
+    "z": 85.29
+   },
+   "social": {
+    "site": "游戏城后巷纸灯铺·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.29,
+    "z": 67.8
+   },
+   "work": {
+    "site": "糊纸灯笼匠·游戏城后巷纸灯铺工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.11,
+    "z": 78.44
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10120",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏城后巷纸灯铺",
+ "born": null,
+ "creed": "灯要亮得稳，不能亮得急",
+ "district": "GM",
+ "gender": "女",
+ "hook": "房梁垂下一只旧篮，里头塞着几卷彩纸条和一把快秃的浆糊刷。",
+ "id": "C-10120",
+ "month_lines": [],
+ "name": "温素秋",
+ "profession": "糊纸灯笼匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,59 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -67.62,
+    "z": -224.51
+   },
+   "social": {
+    "site": "光桥桥头灯笼铺·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -4.18,
+    "z": -177.86
+   },
+   "work": {
+    "site": "光桥灯笼铺主·光桥桥头灯笼铺工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 110.37,
+    "z": -246.28
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10090",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥桥头灯笼铺",
+ "born": null,
+ "creed": "梯子先稳，灯才挂得正",
+ "district": "RV",
+ "gender": "男",
+ "hook": "一把缠麻绳的竹梯，第三档用铁丝重新绑过，靠墙放的时候总是绑过的那一档朝外——就靠在铺子门边，谁路过都能看见那圈新铁丝",
+ "id": "C-10090",
+ "month_lines": [],
+ "name": "彭照年",
+ "profession": "光桥灯笼铺主",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

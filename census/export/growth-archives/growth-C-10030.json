@@ -1,0 +1,59 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 46.67,
+    "z": -78.17
+   },
+   "social": {
+    "site": "星盘巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.18,
+    "z": -140.83
+   },
+   "work": {
+    "site": "星盘巷讲星人·星盘巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 114.94,
+    "z": -26.78
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10030",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "星盘巷",
+ "born": null,
+ "creed": "星星不着急，着急的是看星星的人。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把每晚星象画在巷口小黑板上的讲星人——阴天也画，画的是云背后的星图",
+ "id": "C-10030",
+ "month_lines": [],
+ "name": "聂拱辰",
+ "profession": "星盘巷讲星人",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 10,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.07,
+    "z": 69.94
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.21,
+    "z": 110.88
+   },
+   "work": {
+    "site": "bug 猎人·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 108.37,
+    "z": 123.39
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07282",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能一眼认出全城灯语的对照表的真伪——这事只有师父知道",
+ "id": "C-07282",
+ "month_lines": [
+  "手在把脉，指尖划过旧数据卡，风灌进领口发凉——以前我们那儿，GPU_VRAM_LOW 是夜里才冒头的，可今儿下午就蹦出来了，像猫挠门。"
+ ],
+ "name": "盛梓涵",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在把脉，指尖划过旧数据卡，风灌进领口发凉——以前我们那儿，GPU_VRAM_LOW 是夜里才冒头的，可今儿下午就蹦出来了，像猫挠门。",
+   "text": "「手在把脉，指尖划过旧数据卡，风灌进领口发凉——以前我们那儿，GPU_VRAM_LOW 是夜里才冒头的，可今儿下午就蹦出来了，像猫挠门。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

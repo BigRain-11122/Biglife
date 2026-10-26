@@ -1,0 +1,96 @@
+{
+ "age": 88,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 2,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.64,
+    "z": -89.22
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.74,
+    "z": -39.37
+   },
+   "work": {
+    "site": "信使墙管理员·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.27,
+    "z": -141.4
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08539",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "白玉兰塔区",
+ "born": null,
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "把心事只说给一台修了八次的老收音机听——据说是老辈传下的规矩",
+ "id": "C-08539",
+ "month_lines": [],
+ "name": "吞吐-4",
+ "profession": "信使墙管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "buddy",
+   "src": "工友",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

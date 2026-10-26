@@ -1,0 +1,105 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 5,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -128.9,
+    "z": -105.1
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.84,
+    "z": -65.79
+   },
+   "work": {
+    "site": "语义翻译官·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -39.2,
+    "z": -68.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07181",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "得之我幸，失之我睡。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "偷偷给老式爆米花的粮票上油保养——她自己也说不清为什么",
+ "id": "C-07181",
+ "month_lines": [
+  "手正翻着第三本词典，沪语那页的“侬晓得伐”边上，被风掀得页角乱摆，像极了今天这风。清单第一，推了推眼镜，又把“PushEvent Biglife”那句藏进肚里，不提也罢。"
+ ],
+ "name": "唐沈鱼",
+ "profession": "语义翻译官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手正翻着第三本词典，沪语那页的“侬晓得伐”边上，被风掀得页角乱摆，像极了今天这风。清单第一，推了推眼镜，又把“PushEvent Biglife”那句藏进肚里，不提也罢。",
+   "text": "「手正翻着第三本词典，沪语那页的“侬晓得伐”边上，被风掀得页角乱摆，像极了今天这风。清单第一，推了推眼镜，又把“PushEvent Biglife”那句藏进肚里，不提也罢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 3,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 32.07,
+    "z": 121.83
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.56,
+    "z": 56.51
+   },
+   "work": {
+    "site": "进度刻碑师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 115.9,
+    "z": 91.74
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07100",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把全城桥的名字修好再免费送人——这事全巷都知道",
+ "id": "C-07100",
+ "month_lines": [
+  "手在磨边一块旧碑，字还没刻完，风把树梢压弯了。多个人多双筷子，这活儿得靠人手稳着，不差半分。"
+ ],
+ "name": "茅卫东",
+ "profession": "进度刻碑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在磨边一块旧碑，字还没刻完，风把树梢压弯了。多个人多双筷子，这活儿得靠人手稳着，不差半分。",
+   "text": "「手在磨边一块旧碑，字还没刻完，风把树梢压弯了。多个人多双筷子，这活儿得靠人手稳着，不差半分。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

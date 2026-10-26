@@ -1,0 +1,106 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#FFA726",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#82B1FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 22,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 72.16,
+    "z": -138.89
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.39,
+    "z": -136.1
+   },
+   "work": {
+    "site": "夜灯员·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 131.11,
+    "z": -28.77
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07058",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "记得手抄的菜谱出现过的每一个雨夜——没人知道为什么",
+ "id": "C-07058",
+ "month_lines": [
+  "风刮得紧，街角那盏旧灯被吹得晃，我顺手调了调臂弯的灯芯——像素越小，心眼越大，这风里，总得有人照着路走。"
+ ],
+ "name": "白初雪",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风刮得紧，街角那盏旧灯被吹得晃，我顺手调了调臂弯的灯芯——像素越小，心眼越大，这风里，总得有人照着路走。",
+   "text": "「风刮得紧，街角那盏旧灯被吹得晃，我顺手调了调臂弯的灯芯——像素越小，心眼越大，这风里，总得有人照着路走。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,90 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -5,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -65.97,
+    "z": 250.33
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 16.0,
+    "z": 179.54
+   },
+   "work": {
+    "site": "驻坊机务师傅·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 108.1,
+    "z": 205.78
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10024",
+  "quirk": "night_run",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "机器站宿舍",
+ "born": null,
+ "creed": "修得了的东西，不兴扔。",
+ "district": "OR",
+ "gender": "无定",
+ "hook": "给每台修好的机器留一句「下回有话直说」的维修工——检修单背面全是他记的「机器话」",
+ "id": "C-10024",
+ "month_lines": [],
+ "name": "铆师傅",
+ "profession": "驻坊机务师傅",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

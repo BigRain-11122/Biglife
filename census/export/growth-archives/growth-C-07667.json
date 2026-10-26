@@ -1,0 +1,105 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 4,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -61.54,
+    "z": -237.61
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 9.53,
+    "z": -175.7
+   },
+   "work": {
+    "site": "江岸数据钓手·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 62.34,
+    "z": -183.55
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07667",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "把老茶壶排成一排挨个擦——他自己也说不清为什么",
+ "id": "C-07667",
+ "month_lines": [
+  "手在调线，漂子晃得慢，风大得说话要抬声。塘里没鱼，可我这杆子，还是照旧搭在弄堂墙角。"
+ ],
+ "name": "丁予安",
+ "profession": "江岸数据钓手",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "buddy",
+   "src": "牌友",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在调线，漂子晃得慢，风大得说话要抬声。塘里没鱼，可我这杆子，还是照旧搭在弄堂墙角。",
+   "text": "「手在调线，漂子晃得慢，风大得说话要抬声。塘里没鱼，可我这杆子，还是照旧搭在弄堂墙角。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

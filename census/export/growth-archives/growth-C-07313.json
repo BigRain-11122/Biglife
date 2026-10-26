@@ -1,0 +1,106 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 20,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.43,
+    "z": 99.9
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.27,
+    "z": 149.82
+   },
+   "work": {
+    "site": "像素小学学生·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.17,
+    "z": 105.89
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07313",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "逢人就讲旧棋谱的故事——没人知道为什么",
+ "id": "C-07313",
+ "month_lines": [
+  "我正把作业本翻到commit那页，指尖划过那帧旧房间的像素边，风掀得衣角乱摆，像在说：这帧走了，可手里的画还停在没交的那刻——有意思，我想想。"
+ ],
+ "name": "钟念念",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "我正把作业本翻到commit那页，指尖划过那帧旧房间的像素边，风掀得衣角乱摆，像在说：这帧走了，可手里的画还停在没交的那刻——有意思，我想想。",
+   "text": "「我正把作业本翻到commit那页，指尖划过那帧旧房间的像素边，风掀得衣角乱摆，像在说：这帧走了，可手里的画还停在没交的那刻——有意思，我想想。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 92,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -6,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -143.1,
+    "z": 79.28
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.51,
+    "z": 157.82
+   },
+   "work": {
+    "site": "大编译调律师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -41.97,
+    "z": 103.74
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07310",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "用老式的士票教会了半条街的孩子——这事只有师父知道",
+ "id": "C-07310",
+ "month_lines": [
+  "手在调音板上抹了抹，风刮得紧，旧房间那帧交接的声响，我耳朵还留着。包在我身上，G08：S2.5 -> B2396，这路调优，得踩准每一帧。"
+ ],
+ "name": "姜福生",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在调音板上抹了抹，风刮得紧，旧房间那帧交接的声响，我耳朵还留着。包在我身上，G08：S2.5 -> B2396，这路调优，得踩准每一帧。",
+   "text": "「手在调音板上抹了抹，风刮得紧，旧房间那帧交接的声响，我耳朵还留着。包在我身上，G08：S2.5 -> B2396，这路调优，得踩准每一帧。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,60 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -36.36,
+    "z": -166.23
+   },
+   "social": {
+    "site": "乐手角巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 17.27,
+    "z": -178.87
+   },
+   "work": {
+    "site": "街头纸花乐手·乐手角巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 131.62,
+    "z": -202.84
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10029",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "乐手角巷",
+ "born": null,
+ "creed": "琴是给街坊弹的，掌声是巷子给的。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "琴盒里存着全巷街坊点过歌的纸条的乐手——他说那是这条巷子的点歌本",
+ "id": "C-10029",
+ "month_lines": [],
+ "name": "路小弦",
+ "profession": "街头纸花乐手",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

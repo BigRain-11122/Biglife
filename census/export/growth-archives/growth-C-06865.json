@@ -1,0 +1,106 @@
+{
+ "age": 89,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -7,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -98.11,
+    "z": 62.24
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.35,
+    "z": 90.32
+   },
+   "work": {
+    "site": "数据菜市摊主·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -69.6,
+    "z": 142.65
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06865",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每天跟全城第一块砖的拓片打招呼——没人知道为什么",
+ "id": "C-06865",
+ "month_lines": [
+  "灵感这东西，得喂它——今早刚把‘PushEvent Biglife’那句传给C-07172，她又转给C-02133，我这老摊子的秤杆都晃了三下。风好大，阳台那盆吊兰说它要开花了，我"
+ ],
+ "name": "何玉兰",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "灵感这东西，得喂它——今早刚把‘PushEvent Biglife’那句传给C-07172，她又转给C-02133，我这老摊子的秤杆都晃了三下。风好大，阳台那盆吊兰说它要开花了，我",
+   "text": "「灵感这东西，得喂它——今早刚把‘PushEvent Biglife’那句传给C-07172，她又转给C-02133，我这老摊子的秤杆都晃了三下。风好大，阳台那盆吊兰说它要开花了，我」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

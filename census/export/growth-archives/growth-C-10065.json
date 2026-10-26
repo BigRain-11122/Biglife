@@ -1,0 +1,59 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -61.08,
+    "z": -195.06
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 10.73,
+    "z": -177.42
+   },
+   "work": {
+    "site": "光桥市集老白铁匠·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 80.66,
+    "z": -208.83
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10065",
+  "quirk": "umbrella",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": null,
+ "creed": "桶有价，手艺无价。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "白铁铺角落里那座磨出光面的老铁砧——光桥市集的师传铁砧，几十年壶底桶箍的敲打声全落在这方砧面上",
+ "id": "C-10065",
+ "month_lines": [],
+ "name": "练铁生",
+ "profession": "光桥市集老白铁匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

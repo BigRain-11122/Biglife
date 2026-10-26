@@ -1,0 +1,106 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 20,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 71.03,
+    "z": 80.52
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.32,
+    "z": 156.19
+   },
+   "work": {
+    "site": "信使小跟班·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 147.83,
+    "z": 129.64
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07899",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "给消失的船班时刻表都起了名字——这事全巷都知道",
+ "id": "C-07899",
+ "month_lines": [
+  "手在搓着信使袍的边角，风一阵紧一阵，像谁在巷口吹口哨。刚把C-06539那句“PushEvent Biglife”记进小本子，就听见数据菜市那边，新货上架了。"
+ ],
+ "name": "董小北",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在搓着信使袍的边角，风一阵紧一阵，像谁在巷口吹口哨。刚把C-06539那句“PushEvent Biglife”记进小本子，就听见数据菜市那边，新货上架了。",
+   "text": "「手在搓着信使袍的边角，风一阵紧一阵，像谁在巷口吹口哨。刚把C-06539那句“PushEvent Biglife”记进小本子，就听见数据菜市那边，新货上架了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

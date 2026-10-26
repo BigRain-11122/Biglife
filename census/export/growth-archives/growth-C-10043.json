@@ -1,0 +1,60 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 53.94,
+    "z": 114.85
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.0,
+    "z": 41.74
+   },
+   "work": {
+    "site": "老街机铺修机师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 105.61,
+    "z": 39.21
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10043",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": null,
+ "creed": "机器不老，人心别老。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "摇杆被手汗养出老光的对战机——游戏楼老街机铺铺堂正中那台修了又修的老对战机，续着整条街的少年时代",
+ "id": "C-10043",
+ "month_lines": [],
+ "name": "祁广顺",
+ "profession": "老街机铺修机师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

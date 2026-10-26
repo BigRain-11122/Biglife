@@ -1,0 +1,105 @@
+{
+ "age": 90,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -15,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 57.68,
+    "z": 39.17
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.56,
+    "z": 51.1
+   },
+   "work": {
+    "site": "城门守门人·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.78,
+    "z": 76.34
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07022",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把老照片底片排成一排挨个擦——这事全巷都知道",
+ "id": "C-07022",
+ "month_lines": [
+  "今天的事今天清。风刮得紧，门灯闪了三下，我顺手把老账本翻了页，旧笔在手，字歪了也认得——G08 CrazyCampus：B2396 -> S2.5，又有人听了去。"
+ ],
+ "name": "屠永康",
+ "profession": "城门守门人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "今天的事今天清。风刮得紧，门灯闪了三下，我顺手把老账本翻了页，旧笔在手，字歪了也认得——G08 CrazyCampus：B2396 -> S2.5，又有人听了去。",
+   "text": "「今天的事今天清。风刮得紧，门灯闪了三下，我顺手把老账本翻了页，旧笔在手，字歪了也认得——G08 CrazyCampus：B2396 -> S2.5，又有人听了去。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

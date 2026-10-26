@@ -1,0 +1,105 @@
+{
+ "age": 67,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -5,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.29,
+    "z": -80.6
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.58,
+    "z": -142.09
+   },
+   "work": {
+    "site": "数据菜市摊主·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.89,
+    "z": -56.96
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07480",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "收藏初代渡轮的船票夹且每件都记得来历——她自己也说不清为什么",
+ "id": "C-07480",
+ "month_lines": [
+  "秤杆在手里转了三圈，风把人往前推，我听见阳台的花说：“老主顾又来了。"
+ ],
+ "name": "梁雪英",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "秤杆在手里转了三圈，风把人往前推，我听见阳台的花说：“老主顾又来了。",
+   "text": "「秤杆在手里转了三圈，风把人往前推，我听见阳台的花说：“老主顾又来了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

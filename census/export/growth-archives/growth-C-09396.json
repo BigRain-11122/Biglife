@@ -1,0 +1,97 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 23,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.57,
+    "z": -25.01
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.3,
+    "z": -17.98
+   },
+   "work": {
+    "site": "伴居灵·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.89,
+    "z": -52.41
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09396",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": null,
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "给旧缝纫机踏板传过最急的口信——这事只有档案馆知道",
+ "id": "C-09396",
+ "month_lines": [],
+ "name": "小阿指北",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

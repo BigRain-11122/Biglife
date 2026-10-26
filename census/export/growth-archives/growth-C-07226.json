@@ -1,0 +1,105 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -2,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.43,
+    "z": -57.75
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.25,
+    "z": -96.23
+   },
+   "work": {
+    "site": "数据剪辑师·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -65.97,
+    "z": -57.52
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07226",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把旧货郎的拨浪鼓排成一排挨个擦——这事只有师父知道",
+ "id": "C-07226",
+ "month_lines": [
+  "手里这把剪刀刚削了下毛边，风刮得紧，江水哗哗响，老规矩——剪片子前得先听江声，这会儿心也稳了。"
+ ],
+ "name": "尹静",
+ "profession": "数据剪辑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手里这把剪刀刚削了下毛边，风刮得紧，江水哗哗响，老规矩——剪片子前得先听江声，这会儿心也稳了。",
+   "text": "「手里这把剪刀刚削了下毛边，风刮得紧，江水哗哗响，老规矩——剪片子前得先听江声，这会儿心也稳了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 2,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.48,
+    "z": 215.77
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 4.31,
+    "z": 197.34
+   },
+   "work": {
+    "site": "外环巡夜员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 66.16,
+    "z": 167.15
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07962",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "把退役灯塔的透镜修好再免费送人——这事只有师父知道",
+ "id": "C-07962",
+ "month_lines": [
+  "桌角那点零碎又该理一理了，补光灯亮了三秒，我听见G08 CrazyCampus的回声从旧电线杆上滑下来——饭点了，天大的事吃完再谈。"
+ ],
+ "name": "林炯",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "桌角那点零碎又该理一理了，补光灯亮了三秒，我听见G08 CrazyCampus的回声从旧电线杆上滑下来——饭点了，天大的事吃完再谈。",
+   "text": "「桌角那点零碎又该理一理了，补光灯亮了三秒，我听见G08 CrazyCampus的回声从旧电线杆上滑下来——饭点了，天大的事吃完再谈。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

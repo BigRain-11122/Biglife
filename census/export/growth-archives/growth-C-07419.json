@@ -1,0 +1,106 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": -5,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 37.49,
+    "z": 81.02
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.87,
+    "z": 149.67
+   },
+   "work": {
+    "site": "引擎医生·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.56,
+    "z": 10.87
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07419",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "口袋里总揣着全城第一块砖的拓片——没人知道为什么",
+ "id": "C-07419",
+ "month_lines": [
+  "手在翻出出诊箱，听诊头压在金属管上，风一阵紧一阵，管子在抖，像在咳。慢慢来，比较快——这城的管线，总在夜里叫人。"
+ ],
+ "name": "梁琳",
+ "profession": "引擎医生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在翻出出诊箱，听诊头压在金属管上，风一阵紧一阵，管子在抖，像在咳。慢慢来，比较快——这城的管线，总在夜里叫人。",
+   "text": "「手在翻出出诊箱，听诊头压在金属管上，风一阵紧一阵，管子在抖，像在咳。慢慢来，比较快——这城的管线，总在夜里叫人。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

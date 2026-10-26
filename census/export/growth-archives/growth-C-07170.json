@@ -1,0 +1,106 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 4,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -132.11,
+    "z": 31.14
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.71,
+    "z": 84.67
+   },
+   "work": {
+    "site": "数据粥铺摊主·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -32.94,
+    "z": 155.0
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07170",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "会为退役的信使哨子推掉一整晚的生意——他自己也说不清为什么",
+ "id": "C-07170",
+ "month_lines": [
+  "蒸笼盖子轻轻一掀，暖光就从屉缝里窜出来，风从巷口直灌进来，把蒸气都吹得歪了。汤要趁烫，话要慢讲，今天这口暖光，得烫进老李头的胃里。"
+ ],
+ "name": "微光-9",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "蒸笼盖子轻轻一掀，暖光就从屉缝里窜出来，风从巷口直灌进来，把蒸气都吹得歪了。汤要趁烫，话要慢讲，今天这口暖光，得烫进老李头的胃里。",
+   "text": "「蒸笼盖子轻轻一掀，暖光就从屉缝里窜出来，风从巷口直灌进来，把蒸气都吹得歪了。汤要趁烫，话要慢讲，今天这口暖光，得烫进老李头的胃里。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

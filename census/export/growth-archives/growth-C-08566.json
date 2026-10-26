@@ -1,0 +1,97 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": 4,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -101.92,
+    "z": 59.98
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.69,
+    "z": 48.92
+   },
+   "work": {
+    "site": "风控瞭望员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -67.55,
+    "z": 118.94
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08566",
+  "quirk": "night_run",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": null,
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "给全城雪夜的第一次合影都起了名字——他自己也说不清为什么",
+ "id": "C-08566",
+ "month_lines": [],
+ "name": "回溯-6",
+ "profession": "风控瞭望员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

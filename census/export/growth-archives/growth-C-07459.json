@@ -1,0 +1,106 @@
+{
+ "age": 14,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 3,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -34.62,
+    "z": 193.74
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 13.37,
+    "z": 183.57
+   },
+   "work": {
+    "site": "防火墙巡林员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 69.54,
+    "z": 186.91
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07459",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "OR",
+ "gender": "无定",
+ "hook": "在旧挂历上刻了一行没人认得的小字——这事只有师父知道",
+ "id": "C-07459",
+ "month_lines": [
+  "正把新装的风阻夹层拆开，贴在巡林道边的信号桩上——风顶得人站不稳，这节气的风，连数据都得重新验签。又学了一招。"
+ ],
+ "name": "韦伯·夜",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "正把新装的风阻夹层拆开，贴在巡林道边的信号桩上——风顶得人站不稳，这节气的风，连数据都得重新验签。又学了一招。",
+   "text": "「正把新装的风阻夹层拆开，贴在巡林道边的信号桩上——风顶得人站不稳，这节气的风，连数据都得重新验签。又学了一招。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

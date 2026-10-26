@@ -1,0 +1,105 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 3,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 44.53,
+    "z": 71.25
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.57,
+    "z": 56.44
+   },
+   "work": {
+    "site": "游戏策划·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 140.5,
+    "z": 49.05
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07769",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "流量像潮水，我是灯塔不是渔船。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "用老式的士票教会了半条街的孩子——没人知道为什么",
+ "id": "C-07769",
+ "month_lines": [
+  "手正摩挲着那块旧光织物，边角已磨出毛边，是CrazyCampus第一版试穿的料子。风掀得衣角乱摆，灯还亮着——G08层的灯，总在版本前夜最晚熄。"
+ ],
+ "name": "凌向洋",
+ "profession": "游戏策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手正摩挲着那块旧光织物，边角已磨出毛边，是CrazyCampus第一版试穿的料子。风掀得衣角乱摆，灯还亮着——G08层的灯，总在版本前夜最晚熄。",
+   "text": "「手正摩挲着那块旧光织物，边角已磨出毛边，是CrazyCampus第一版试穿的料子。风掀得衣角乱摆，灯还亮着——G08层的灯，总在版本前夜最晚熄。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

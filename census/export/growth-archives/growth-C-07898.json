@@ -1,0 +1,105 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -4,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 31.33,
+    "z": 127.39
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.84,
+    "z": 146.91
+   },
+   "work": {
+    "site": "晨操领队·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 101.08,
+    "z": 142.52
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07898",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "江水不争先后，该到总会到。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把旧船锚残件修好再免费送人——她自己也说不清为什么",
+ "id": "C-07898",
+ "month_lines": [
+  "手在调音，音响三分贝，风刮得紧，阳台那盆茉莉说“今天该晒了”，我回了句“船到桥头自然直”。"
+ ],
+ "name": "屠慧",
+ "profession": "晨操领队",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在调音，音响三分贝，风刮得紧，阳台那盆茉莉说“今天该晒了”，我回了句“船到桥头自然直”。",
+   "text": "「手在调音，音响三分贝，风刮得紧，阳台那盆茉莉说“今天该晒了”，我回了句“船到桥头自然直”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

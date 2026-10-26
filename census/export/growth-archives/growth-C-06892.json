@@ -1,0 +1,105 @@
+{
+ "age": 92,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -7,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 66.49,
+    "z": 157.99
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.64,
+    "z": 64.14
+   },
+   "work": {
+    "site": "像素画匠·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.7,
+    "z": 99.97
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06892",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "得之我幸，失之我睡。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "给初代探针的日志纸带都起了名字——这事只有师父知道",
+ "id": "C-06892",
+ "month_lines": [
+  "今天云好，改天再说。风把人往前推，画桌前的笔尖晃了晃，明天的料我先备着，等G08那茬儿真回了S2.5，我再描点。"
+ ],
+ "name": "杭德明",
+ "profession": "像素画匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "今天云好，改天再说。风把人往前推，画桌前的笔尖晃了晃，明天的料我先备着，等G08那茬儿真回了S2.5，我再描点。",
+   "text": "「今天云好，改天再说。风把人往前推，画桌前的笔尖晃了晃，明天的料我先备着，等G08那茬儿真回了S2.5，我再描点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

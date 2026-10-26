@@ -1,0 +1,106 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 18,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.1,
+    "z": -66.65
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.25,
+    "z": -19.17
+   },
+   "work": {
+    "site": "像素小学学生·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.06,
+    "z": -24.14
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07026",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "把手绘的星空图修好再免费送人——没人知道为什么",
+ "id": "C-07026",
+ "month_lines": [
+  "一句话的事——放学还得绕路去看commit光点过江，风从巷口直灌进来，抽屉里那张旧票根还贴着去年生日的糖纸，我偏要把它留着。"
+ ],
+ "name": "奚朵朵",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "一句话的事——放学还得绕路去看commit光点过江，风从巷口直灌进来，抽屉里那张旧票根还贴着去年生日的糖纸，我偏要把它留着。",
+   "text": "「一句话的事——放学还得绕路去看commit光点过江，风从巷口直灌进来，抽屉里那张旧票根还贴着去年生日的糖纸，我偏要把它留着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,59 @@
+{
+ "age": 70,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -86.85,
+    "z": 169.34
+   },
+   "social": {
+    "site": "老街口剃头棚·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -13.02,
+    "z": 198.67
+   },
+   "work": {
+    "site": "剃头匠·老街口剃头棚工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 61.87,
+    "z": 259.3
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10119",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老街口剃头棚",
+ "born": null,
+ "creed": "剃头是给人顺气，不是给头发过不去",
+ "district": "OR",
+ "gender": "男",
+ "hook": "桌腿上绑着一块磨刀石，石面凹成浅槽，槽底存着水。",
+ "id": "C-10119",
+ "month_lines": [],
+ "name": "秦广林",
+ "profession": "剃头匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

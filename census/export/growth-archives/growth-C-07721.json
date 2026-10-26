@@ -1,0 +1,106 @@
+{
+ "age": 59,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 5,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -135.35,
+    "z": 91.11
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.06,
+    "z": 141.67
+   },
+   "work": {
+    "site": "全城对时师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -47.45,
+    "z": 93.01
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07721",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "给褪色的戏票根都起了名字——据说是老辈传下的规矩",
+ "id": "C-07721",
+ "month_lines": [
+  "手正翻着老钟表册，一页页对齐新刻度，风掀得衣角乱摆，这节拍得稳，才不叫人心里慌。先试了再说，今儿这晴天，钟摆走得真清。"
+ ],
+ "name": "阮志明",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手正翻着老钟表册，一页页对齐新刻度，风掀得衣角乱摆，这节拍得稳，才不叫人心里慌。先试了再说，今儿这晴天，钟摆走得真清。",
+   "text": "「手正翻着老钟表册，一页页对齐新刻度，风掀得衣角乱摆，这节拍得稳，才不叫人心里慌。先试了再说，今儿这晴天，钟摆走得真清。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

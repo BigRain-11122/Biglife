@@ -1,0 +1,59 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 51.76,
+    "z": 67.0
+   },
+   "social": {
+    "site": "老游戏城二层维修间·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.85,
+    "z": 115.56
+   },
+   "work": {
+    "site": "街机维修师·老游戏城二层维修间工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.91,
+    "z": 136.63
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10096",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老游戏城二层维修间",
+ "born": null,
+ "creed": "机器不会骗人，会骗人的是电源",
+ "district": "GM",
+ "gender": "男",
+ "hook": "一只铝制饭盒，盖子内侧用刀刻着三个字，饭菜凉了也不肯换新的。",
+ "id": "C-10096",
+ "month_lines": [],
+ "name": "邵维钧",
+ "profession": "街机维修师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 38,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -4,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -144.97,
+    "z": -130.45
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.88,
+    "z": -149.23
+   },
+   "work": {
+    "site": "热搜观测员·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -24.94,
+    "z": -41.58
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07232",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "能背出老照片底片的全部班次",
+ "id": "C-07232",
+ "month_lines": [
+  "手在翻着流量气象台的旧数据页，风把树梢压弯了，G08的阶段又折回来了，明儿又是新的一天。"
+ ],
+ "name": "老晶振·叁",
+ "profession": "热搜观测员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在翻着流量气象台的旧数据页，风把树梢压弯了，G08的阶段又折回来了，明儿又是新的一天。",
+   "text": "「手在翻着流量气象台的旧数据页，风把树梢压弯了，G08的阶段又折回来了，明儿又是新的一天。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

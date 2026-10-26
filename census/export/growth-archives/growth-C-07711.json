@@ -1,0 +1,106 @@
+{
+ "age": 89,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -13,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.42,
+    "z": 232.31
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -15.98,
+    "z": 251.24
+   },
+   "work": {
+    "site": "旧件修复师·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 43.01,
+    "z": 187.74
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07711",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "还在用老茶壶——这事全巷都知道",
+ "id": "C-07711",
+ "month_lines": [
+  "正在给一台老光机除尘，指尖蹭过锈迹斑斑的接口，又学了一招——风顶得人站不稳，灯亮着，像小时候母亲哄我睡时的那盏小台灯。"
+ ],
+ "name": "高珍珠",
+ "profession": "旧件修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "正在给一台老光机除尘，指尖蹭过锈迹斑斑的接口，又学了一招——风顶得人站不稳，灯亮着，像小时候母亲哄我睡时的那盏小台灯。",
+   "text": "「正在给一台老光机除尘，指尖蹭过锈迹斑斑的接口，又学了一招——风顶得人站不稳，灯亮着，像小时候母亲哄我睡时的那盏小台灯。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

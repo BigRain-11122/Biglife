@@ -1,0 +1,60 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.94,
+    "z": 77.93
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.89,
+    "z": 47.44
+   },
+   "work": {
+    "site": "回测田老巡田人·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.7,
+    "z": 126.83
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10062",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": null,
+ "creed": "田埂上的事，脚底板说了算。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "回测田垄头那根量行距的自制老木卡尺——回测田的家传卡尺，每一垄行距的实数全凭这根木尺量出来",
+ "id": "C-10062",
+ "month_lines": [],
+ "name": "黎望畴",
+ "profession": "回测田老巡田人",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

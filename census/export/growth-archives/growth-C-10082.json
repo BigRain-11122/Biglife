@@ -1,0 +1,60 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.81,
+    "z": 26.56
+   },
+   "social": {
+    "site": "计量新村出租屋·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.09,
+    "z": 49.41
+   },
+   "work": {
+    "site": "水务抄表员·计量新村出租屋工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.38,
+    "z": 110.93
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10082",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "计量新村出租屋",
+ "born": null,
+ "creed": "数对上了，心里才不欠",
+ "district": "QT",
+ "gender": "女",
+ "hook": "一张折成四折的便条，铅笔写过又擦，纸背透出去年的字影，剩下的那行号码她不敢描重——压在抄表夹最里层，谁也没见她拿出来过",
+ "id": "C-10082",
+ "month_lines": [],
+ "name": "虞小满",
+ "profession": "水务抄表员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

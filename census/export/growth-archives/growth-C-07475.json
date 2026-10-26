@@ -1,0 +1,106 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#42A5F5",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 24,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.0,
+    "z": 141.92
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.19,
+    "z": 59.29
+   },
+   "work": {
+    "site": "夜灯员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -28.24,
+    "z": 145.03
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07475",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "每次路过全城最后一只手写信箱都要亮两下——据说是老辈传下的规矩",
+ "id": "C-07475",
+ "month_lines": [
+  "手上的灯芯在风大得说话要抬声里轻轻晃，我照着江面那道光纹，一歪一歪的，像极了昨夜没说完的那句——“好吃的东西，都急不得。"
+ ],
+ "name": "白朝霞",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手上的灯芯在风大得说话要抬声里轻轻晃，我照着江面那道光纹，一歪一歪的，像极了昨夜没说完的那句——“好吃的东西，都急不得。",
+   "text": "「手上的灯芯在风大得说话要抬声里轻轻晃，我照着江面那道光纹，一歪一歪的，像极了昨夜没说完的那句——“好吃的东西，都急不得。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

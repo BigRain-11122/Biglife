@@ -1,0 +1,105 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 7,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -118.02,
+    "z": -11.12
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.87,
+    "z": -58.97
+   },
+   "work": {
+    "site": "灯牌制作师·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.24,
+    "z": -141.2
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07000",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "得之我幸，失之我睡。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "会给手绘的星空图织毛衣——没人知道为什么",
+ "id": "C-07000",
+ "month_lines": [
+  "明儿又是新的一天。 风把人往前推，灯牌的走线又在刮，我今早赶着把「G08 : S2.5 -> B2396"
+ ],
+ "name": "彭阿宁",
+ "profession": "灯牌制作师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "明儿又是新的一天。 风把人往前推，灯牌的走线又在刮，我今早赶着把「G08 : S2.5 -> B2396",
+   "text": "「明儿又是新的一天。 风把人往前推，灯牌的走线又在刮，我今早赶着把「G08 : S2.5 -> B2396」说给C-02894听了，她后来转给了C-05042，我只记得那面灯牌，刻字」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

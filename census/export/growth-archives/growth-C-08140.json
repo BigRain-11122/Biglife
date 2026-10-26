@@ -1,0 +1,106 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 21,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -82.72,
+    "z": 191.15
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -18.25,
+    "z": 203.81
+   },
+   "work": {
+    "site": "像素小学学生·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 125.57,
+    "z": 169.21
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08140",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "收藏初代广场舞光带且每件都记得来历",
+ "id": "C-08140",
+ "month_lines": [
+  "这半页作业本还差几行才算齐，我正把那台老式电子钟的指针对准今天commit光点的位置，风把人往前推，像在说，稳着点走，路才真走得出。"
+ ],
+ "name": "梁朵朵",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "这半页作业本还差几行才算齐，我正把那台老式电子钟的指针对准今天commit光点的位置，风把人往前推，像在说，稳着点走，路才真走得出。",
+   "text": "「这半页作业本还差几行才算齐，我正把那台老式电子钟的指针对准今天commit光点的位置，风把人往前推，像在说，稳着点走，路才真走得出。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

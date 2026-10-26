@@ -1,0 +1,59 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 70.83,
+    "z": -13.46
+   },
+   "social": {
+    "site": "北外滩沿街理发铺·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.33,
+    "z": -105.75
+   },
+   "work": {
+    "site": "理发师·北外滩沿街理发铺工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 102.42,
+    "z": -14.94
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10098",
+  "quirk": "umbrella",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "北外滩沿街理发铺",
+ "born": null,
+ "creed": "头剃好了，人就直了",
+ "district": "NS",
+ "gender": "男",
+ "hook": "一把老式理发推子，刀齿缺了一角，剪到鬓角会夹一下，他总提前跟客人说。",
+ "id": "C-10098",
+ "month_lines": [],
+ "name": "俞秉义",
+ "profession": "理发师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

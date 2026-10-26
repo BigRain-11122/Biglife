@@ -1,0 +1,105 @@
+{
+ "age": 23,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 3,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 43.78,
+    "z": 54.58
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.7,
+    "z": 30.33
+   },
+   "work": {
+    "site": "彩蛋埋藏师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.13,
+    "z": 81.91
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07966",
+  "quirk": "umbrella",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "在旧时弄堂的灯绳上刻了一行没人认得的小字——这事只有师父知道",
+ "id": "C-07966",
+ "month_lines": [
+  "手在抖，不是风灌进领口发凉，是刚从G08的彩蛋箱里摸出那枚会发光的铜片，S2.5到B2396的路，我藏了半路笑。"
+ ],
+ "name": "夏浩宇",
+ "profession": "彩蛋埋藏师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在抖，不是风灌进领口发凉，是刚从G08的彩蛋箱里摸出那枚会发光的铜片，S2.5到B2396的路，我藏了半路笑。",
+   "text": "「手在抖，不是风灌进领口发凉，是刚从G08的彩蛋箱里摸出那枚会发光的铜片，S2.5到B2396的路，我藏了半路笑。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

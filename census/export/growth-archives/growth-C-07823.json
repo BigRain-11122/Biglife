@@ -1,0 +1,106 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 19,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -134.14,
+    "z": 191.89
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 16.06,
+    "z": 194.22
+   },
+   "work": {
+    "site": "夜灯员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.34,
+    "z": 195.65
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07823",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "OR",
+ "gender": "无定",
+ "hook": "高兴时会把光借给老皮匠的锥子——据说是老辈传下的规矩",
+ "id": "C-07823",
+ "month_lines": [
+  "翅尖抖了抖，把光尘扫进檐角——风大得说话要抬声，江面照着的光纹，像没写完的句子。执灯照径，今夜的路，照得清。"
+ ],
+ "name": "阿微光",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "翅尖抖了抖，把光尘扫进檐角——风大得说话要抬声，江面照着的光纹，像没写完的句子。执灯照径，今夜的路，照得清。",
+   "text": "「翅尖抖了抖，把光尘扫进檐角——风大得说话要抬声，江面照着的光纹，像没写完的句子。执灯照径，今夜的路，照得清。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 0,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -139.78,
+    "z": -48.97
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.27,
+    "z": -112.92
+   },
+   "work": {
+    "site": "直播布景师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -22.55,
+    "z": -134.16
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07976",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "每天跟掉漆的糖果罐打招呼——这事只有档案馆知道",
+ "id": "C-07976",
+ "month_lines": [
+  "风把树梢压弯了，我正低头调灯轨，把B2396那场CrazyCampus的打光方案再过一遍。夜里冷，喝口热的再走。"
+ ],
+ "name": "移位-4",
+ "profession": "直播布景师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风把树梢压弯了，我正低头调灯轨，把B2396那场CrazyCampus的打光方案再过一遍。夜里冷，喝口热的再走。",
+   "text": "「风把树梢压弯了，我正低头调灯轨，把B2396那场CrazyCampus的打光方案再过一遍。夜里冷，喝口热的再走。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

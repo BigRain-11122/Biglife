@@ -1,0 +1,106 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -1,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -107.76,
+    "z": -176.61
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 18.93,
+    "z": -192.97
+   },
+   "work": {
+    "site": "数据牧人·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 116.59,
+    "z": -201.77
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07192",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "从不让老药房的药柜抽屉离开自己三步远——没人知道为什么",
+ "id": "C-07192",
+ "month_lines": [
+  "手在擦工具栏，风把人往前推，数据包在掌心轻颤，毫秒也是时间——这会儿江面亮着，像谁在赶批，我认得那道光。"
+ ],
+ "name": "黎海峰",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在擦工具栏，风把人往前推，数据包在掌心轻颤，毫秒也是时间——这会儿江面亮着，像谁在赶批，我认得那道光。",
+   "text": "「手在擦工具栏，风把人往前推，数据包在掌心轻颤，毫秒也是时间——这会儿江面亮着，像谁在赶批，我认得那道光。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

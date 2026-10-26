@@ -1,0 +1,106 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 1,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.38,
+    "z": -121.89
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.27,
+    "z": -122.85
+   },
+   "work": {
+    "site": "数据剪辑师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -57.17,
+    "z": -98.1
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07949",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "从不让第一炉出炉的像素瓷离开自己三步远",
+ "id": "C-07949",
+ "month_lines": [
+  "手在翻片夹里捻了捻，风掀得衣角乱摆，X2806的share card停了漆，我正把这帧给剪进昨日的更新日志里——这城里好玩的东西一天比一天多。"
+ ],
+ "name": "蒋炯",
+ "profession": "数据剪辑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在翻片夹里捻了捻，风掀得衣角乱摆，X2806的share card停了漆，我正把这帧给剪进昨日的更新日志里——这城里好玩的东西一天比一天多。",
+   "text": "「手在翻片夹里捻了捻，风掀得衣角乱摆，X2806的share card停了漆，我正把这帧给剪进昨日的更新日志里——这城里好玩的东西一天比一天多。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

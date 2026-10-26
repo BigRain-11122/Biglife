@@ -1,0 +1,105 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 3,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 49.83,
+    "z": 149.25
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.1,
+    "z": 158.46
+   },
+   "work": {
+    "site": "8bit 乐师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 123.62,
+    "z": 32.01
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07046",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能一眼认出爷爷的工作证的真伪——这事只有师父知道",
+ "id": "C-07046",
+ "month_lines": [
+  "今天的事今天清。风刮得紧，桥上汽笛声一串串，扫弦写谱的手指都带风劲，钥匙串还拴在摊子上——旧笔写旧谱，不扔，不换。"
+ ],
+ "name": "沈一诺",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "今天的事今天清。风刮得紧，桥上汽笛声一串串，扫弦写谱的手指都带风劲，钥匙串还拴在摊子上——旧笔写旧谱，不扔，不换。",
+   "text": "「今天的事今天清。风刮得紧，桥上汽笛声一串串，扫弦写谱的手指都带风劲，钥匙串还拴在摊子上——旧笔写旧谱，不扔，不换。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

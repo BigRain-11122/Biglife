@@ -1,0 +1,60 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 48.56,
+    "z": -84.11
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.32,
+    "z": -22.65
+   },
+   "work": {
+    "site": "白玉兰塔区老霓虹灯匠·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 97.72,
+    "z": -148.04
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10053",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": null,
+ "creed": "灯亮着，街就没睡。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "工具袋里那支试霓虹的老氖泡电笔——老霓虹灯匠袋里的师传电笔，半条街的病灯全凭它一搭断症",
+ "id": "C-10053",
+ "month_lines": [],
+ "name": "温开阳",
+ "profession": "白玉兰塔区老霓虹灯匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

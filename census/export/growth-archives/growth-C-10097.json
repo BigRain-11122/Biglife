@@ -1,0 +1,59 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -144.81,
+    "z": -64.84
+   },
+   "social": {
+    "site": "老广播楼三层磁带间·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.76,
+    "z": -72.39
+   },
+   "work": {
+    "site": "开盘带修复员·老广播楼三层磁带间工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.56,
+    "z": -110.95
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10097",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "老广播楼三层磁带间",
+ "born": null,
+ "creed": "声音走了样，人也跟着走样",
+ "district": "MD",
+ "gender": "女",
+ "hook": "一台只亮绿字的电子表，秒针早停了，他还是每天对着广播校一次。",
+ "id": "C-10097",
+ "month_lines": [],
+ "name": "罗砚声",
+ "profession": "开盘带修复员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,59 @@
+{
+ "age": 66,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 52.68,
+    "z": -149.76
+   },
+   "social": {
+    "site": "弄堂茶馆二楼说书角·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.43,
+    "z": -54.13
+   },
+   "work": {
+    "site": "说书先生·弄堂茶馆二楼说书角工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 115.03,
+    "z": -80.7
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10105",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "弄堂茶馆二楼说书角",
+ "born": null,
+ "creed": "故事讲得再旧，只要有人听就是新的",
+ "district": "NS",
+ "gender": "男",
+ "hook": "一把折扇，扇骨缺了一根，用线缠着，扇面上写满了记不住的段子。",
+ "id": "C-10105",
+ "month_lines": [],
+ "name": "方鹤鸣",
+ "profession": "说书先生",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

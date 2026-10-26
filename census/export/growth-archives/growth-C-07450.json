@@ -1,0 +1,106 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 4,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.62,
+    "z": 100.23
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.35,
+    "z": 124.36
+   },
+   "work": {
+    "site": "缓存管理员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -58.22,
+    "z": 51.29
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07450",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "从不让全城雨夜的录音合集离开自己三步远——他自己也说不清为什么",
+ "id": "C-07450",
+ "month_lines": [
+  "手在键盘上敲了三下，风灌进领口发凉，屏幕亮着那行“G08 走完归零”的字，我盯着它，像盯着一个没说出口的承诺。这事儿有讲究。"
+ ],
+ "name": "浮点·新",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在键盘上敲了三下，风灌进领口发凉，屏幕亮着那行“G08 走完归零”的字，我盯着它，像盯着一个没说出口的承诺。这事儿有讲究。",
+   "text": "「手在键盘上敲了三下，风灌进领口发凉，屏幕亮着那行“G08 走完归零”的字，我盯着它，像盯着一个没说出口的承诺。这事儿有讲究。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

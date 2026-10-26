@@ -1,0 +1,105 @@
+{
+ "age": 69,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 5,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 41.96,
+    "z": 93.47
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.83,
+    "z": 121.37
+   },
+   "work": {
+    "site": "算法调参师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 99.38,
+    "z": 15.17
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07248",
+  "quirk": "umbrella",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "从不让旧月台的站牌离开自己三步远——这事只有档案馆知道",
+ "id": "C-07248",
+ "month_lines": [
+  "手在调参板上轻轻一滑，把B2396的参数曲线拉平了——风不小，正好炼丹，包在我身上。"
+ ],
+ "name": "温补-3",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在调参板上轻轻一滑，把B2396的参数曲线拉平了——风不小，正好炼丹，包在我身上。",
+   "text": "「手在调参板上轻轻一滑，把B2396的参数曲线拉平了——风不小，正好炼丹，包在我身上。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

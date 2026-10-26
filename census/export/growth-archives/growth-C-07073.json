@@ -1,0 +1,106 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 14,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 52.32,
+    "z": 158.16
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.89,
+    "z": 13.05
+   },
+   "work": {
+    "site": "像素小学学生·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 117.33,
+    "z": 63.64
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07073",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "扛得住事，才配得上街坊喊一声师傅。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "用旧日历教会了半条街的孩子——这事只有档案馆知道",
+ "id": "C-07073",
+ "month_lines": [
+  "谁的事就是谁的事，可街坊的事就是我的事。 放学还得绕路去看一眼今日 commit 光点过江，风掀得衣角乱摆，天阴着，22.9°C，江水清清的。"
+ ],
+ "name": "方小北",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "谁的事就是谁的事，可街坊的事就是我的事。 放学还得绕路去看一眼今日 commit 光点过江，风掀得衣角乱摆，天阴着，22.9°C，江水清清的。",
+   "text": "「谁的事就是谁的事，可街坊的事就是我的事。 放学还得绕路去看一眼今日 commit 光点过江，风掀得衣角乱摆，天阴着，22.9°C，江水清清的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

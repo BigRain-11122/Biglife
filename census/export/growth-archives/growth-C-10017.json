@@ -1,0 +1,90 @@
+{
+ "age": 88,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -7,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -123.69,
+    "z": -177.42
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 6.2,
+    "z": -246.26
+   },
+   "work": {
+    "site": "渡口守灯人·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 98.89,
+    "z": -191.76
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10017",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": null,
+ "creed": "灯亮着，夜路就不算远。",
+ "district": "RV",
+ "gender": "无定",
+ "hook": "睡觉也睁着一点光的居民——渡口街坊管那叫「守夜的眼睛」",
+ "id": "C-10017",
+ "month_lines": [],
+ "name": "灯伯",
+ "profession": "渡口守灯人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [],
+ "species": "artifact-spirit",
+ "v": "1"
+}

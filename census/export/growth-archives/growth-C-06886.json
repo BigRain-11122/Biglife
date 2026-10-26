@@ -1,0 +1,105 @@
+{
+ "age": 96,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -14,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -145.06,
+    "z": -111.19
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.07,
+    "z": -140.99
+   },
+   "work": {
+    "site": "8bit 乐师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -69.35,
+    "z": -28.01
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06886",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "能背出第一天的营业账本的全部班次——他自己也说不清为什么",
+ "id": "C-06886",
+ "month_lines": [
+  "规矩如钟，人情如江。今早扫弦写谱时，风灌进领口发凉，江面浮着灰云，像老唱片里没播完的尾音。"
+ ],
+ "name": "丁祥林",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "规矩如钟，人情如江。今早扫弦写谱时，风灌进领口发凉，江面浮着灰云，像老唱片里没播完的尾音。",
+   "text": "「规矩如钟，人情如江。今早扫弦写谱时，风灌进领口发凉，江面浮着灰云，像老唱片里没播完的尾音。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

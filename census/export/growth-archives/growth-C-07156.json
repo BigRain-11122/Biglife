@@ -1,0 +1,106 @@
+{
+ "age": 94,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -10,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -136.99,
+    "z": -26.89
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.73,
+    "z": -48.18
+   },
+   "work": {
+    "site": "数据粥铺摊主·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -46.1,
+    "z": -107.73
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07156",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "给爷爷的工作证都编了号还建了册——这事只有档案馆知道",
+ "id": "C-07156",
+ "month_lines": [
+  "手上这把木勺正搅着暖光粢饭，风把人往前推，热气撞上风，都升成亮光了——先试了再说，这锅得煮到灯还亮着。"
+ ],
+ "name": "应淑珍",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手上这把木勺正搅着暖光粢饭，风把人往前推，热气撞上风，都升成亮光了——先试了再说，这锅得煮到灯还亮着。",
+   "text": "「手上这把木勺正搅着暖光粢饭，风把人往前推，热气撞上风，都升成亮光了——先试了再说，这锅得煮到灯还亮着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

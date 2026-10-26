@@ -1,0 +1,105 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 5,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -113.79,
+    "z": 232.45
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -1.02,
+    "z": 258.05
+   },
+   "work": {
+    "site": "感知塔站值守员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 97.58,
+    "z": 188.39
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07913",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "旧物件的温度，是新东西学不来的。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "把老钟楼的齿轮排成一排挨个擦——这事只有师父知道",
+ "id": "C-07913",
+ "month_lines": [
+  "风掀得衣角乱摆，塔顶云层薄得能数清每一道纹路。刚对频了X2805的收尾日志，火候到了自然就香。"
+ ],
+ "name": "管沈鱼",
+ "profession": "感知塔站值守员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风掀得衣角乱摆，塔顶云层薄得能数清每一道纹路。刚对频了X2805的收尾日志，火候到了自然就香。",
+   "text": "「风掀得衣角乱摆，塔顶云层薄得能数清每一道纹路。刚对频了X2805的收尾日志，火候到了自然就香。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -1,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -109.05,
+    "z": 109.97
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.46,
+    "z": 116.63
+   },
+   "work": {
+    "site": "K线屏画师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -62.76,
+    "z": 155.26
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07380",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把全城公交的老路线图修好再免费送人——这事只有师父知道",
+ "id": "C-07380",
+ "month_lines": [
+  "正在给K线屏擦边，指尖划过那根刚换的橙色线——风不小，江水晃得屏面都发亮，像老友打了个哈欠。一句话的事，分一半是本分。"
+ ],
+ "name": "白海峰",
+ "profession": "K线屏画师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "正在给K线屏擦边，指尖划过那根刚换的橙色线——风不小，江水晃得屏面都发亮，像老友打了个哈欠。一句话的事，分一半是本分。",
+   "text": "「正在给K线屏擦边，指尖划过那根刚换的橙色线——风不小，江水晃得屏面都发亮，像老友打了个哈欠。一句话的事，分一半是本分。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,59 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 68.22,
+    "z": -73.79
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.6,
+    "z": -85.52
+   },
+   "work": {
+    "site": "档案馆区老裱画师·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 102.3,
+    "z": -43.62
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10064",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": null,
+ "creed": "好纸经得起等。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "裱画案头那把鬃毛磨秃的老排刷——档案馆区的师传排刷，几层命纸的分寸全在这把秃刷的腕上",
+ "id": "C-10064",
+ "month_lines": [],
+ "name": "平松年",
+ "profession": "档案馆区老裱画师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 79,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -8,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.5,
+    "z": 117.56
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.04,
+    "z": 157.82
+   },
+   "work": {
+    "site": "大编译调律师·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -63.99,
+    "z": 125.36
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07323",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持手写褪色的戏票根——他自己也说不清为什么",
+ "id": "C-07323",
+ "month_lines": [
+  "正用螺丝刀拧我那台老收音机的后盖，风一阵紧一阵的，像谁在键盘上敲了急促的音符——灵感这东西，得喂它。"
+ ],
+ "name": "段阿炳",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "正用螺丝刀拧我那台老收音机的后盖，风一阵紧一阵的，像谁在键盘上敲了急促的音符——灵感这东西，得喂它。",
+   "text": "「正用螺丝刀拧我那台老收音机的后盖，风一阵紧一阵的，像谁在键盘上敲了急促的音符——灵感这东西，得喂它。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

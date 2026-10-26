@@ -1,0 +1,106 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 10,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 30.63,
+    "z": 159.88
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.29,
+    "z": 94.84
+   },
+   "work": {
+    "site": "像素小学学生·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 128.56,
+    "z": 38.76
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08056",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "梦话都在念叨停用的老式磅秤——她自己也说不清为什么",
+ "id": "C-08056",
+ "month_lines": [
+  "这会儿手边最碍事的就是这些，作业本上画的commit光点正从江心往塔顶爬，风把人往前推，我得把笔尖压实了，才不辜负这天清气朗。"
+ ],
+ "name": "陈念念",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "这会儿手边最碍事的就是这些，作业本上画的commit光点正从江心往塔顶爬，风把人往前推，我得把笔尖压实了，才不辜负这天清气朗。",
+   "text": "「这会儿手边最碍事的就是这些，作业本上画的commit光点正从江心往塔顶爬，风把人往前推，我得把笔尖压实了，才不辜负这天清气朗。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 4,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -35.52,
+    "z": 182.64
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 5.9,
+    "z": 232.3
+   },
+   "work": {
+    "site": "新市民安居顾问·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 64.77,
+    "z": 244.09
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07616",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "把老钢琴的琴键画进了自己的作品里——她自己也说不清为什么",
+ "id": "C-07616",
+ "month_lines": [
+  "手在翻着阳台那盆绿萝的叶片，风把树梢压弯了，我盯着它颤了颤——灵感这东西，得喂它，今天总算听见了更新日志里头，那句“BigDomain”被说出来了。"
+ ],
+ "name": "王阿宁",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在翻着阳台那盆绿萝的叶片，风把树梢压弯了，我盯着它颤了颤——灵感这东西，得喂它，今天总算听见了更新日志里头，那句“BigDomain”被说出来了。",
+   "text": "「手在翻着阳台那盆绿萝的叶片，风把树梢压弯了，我盯着它颤了颤——灵感这东西，得喂它，今天总算听见了更新日志里头，那句“BigDomain”被说出来了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

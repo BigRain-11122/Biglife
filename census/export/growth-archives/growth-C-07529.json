@@ -1,0 +1,105 @@
+{
+ "age": 23,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 3,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.83,
+    "z": -74.32
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.04,
+    "z": -144.99
+   },
+   "work": {
+    "site": "平台对接员·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.89,
+    "z": -11.76
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07529",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "每年挑一天只为旧船票大扫除——据说是老辈传下的规矩",
+ "id": "C-07529",
+ "month_lines": [
+  "手在翻着旧门卡，边角磨得发亮，像去年冬天我给老主顾捎的那条消息，被风刮进江里，又浮上来。pulse=2026-10-25T20:05:13 verdict=GPU_VRAM_LOW"
+ ],
+ "name": "童浩宇",
+ "profession": "平台对接员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在翻着旧门卡，边角磨得发亮，像去年冬天我给老主顾捎的那条消息，被风刮进江里，又浮上来。pulse=2026-10-25T20:05:13 verdict=GPU_VRAM_LOW",
+   "text": "「手在翻着旧门卡，边角磨得发亮，像去年冬天我给老主顾捎的那条消息，被风刮进江里，又浮上来。pulse=2026-10-25T20:05:13 verdict=GPU_VRAM_LOW」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

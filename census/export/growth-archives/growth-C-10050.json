@@ -1,0 +1,59 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 72.69,
+    "z": 75.98
+   },
+   "social": {
+    "site": "广场市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.37,
+    "z": 26.51
+   },
+   "work": {
+    "site": "广场市集旧物换物摊掌摊人·广场市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.46,
+    "z": 58.88
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10050",
+  "quirk": "night_run",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "广场市集",
+ "born": null,
+ "creed": "旧物不折价，故事管够。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "专称小件旧物的乌木戥秤——广场市集换物摊摊角那杆奶奶传下的戥秤，小件旧物都过它一称",
+ "id": "C-10050",
+ "month_lines": [],
+ "name": "祝九如",
+ "profession": "广场市集旧物换物摊掌摊人",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

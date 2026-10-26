@@ -1,0 +1,105 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 0,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 64.83,
+    "z": 45.58
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.12,
+    "z": 46.62
+   },
+   "work": {
+    "site": "夜宵摊主·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 98.36,
+    "z": 28.88
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07150",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "还在用初代城门钥匙——她自己也说不清为什么",
+ "id": "C-07150",
+ "month_lines": [
+  "风灌进领口发凉，茶杯还搁在灶上，最后一道辣油刚收，就见公告栏亮了——G08 CrazyCampus那条，我讲给C-01979听了。"
+ ],
+ "name": "段春梅",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风灌进领口发凉，茶杯还搁在灶上，最后一道辣油刚收，就见公告栏亮了——G08 CrazyCampus那条，我讲给C-01979听了。",
+   "text": "「风灌进领口发凉，茶杯还搁在灶上，最后一道辣油刚收，就见公告栏亮了——G08 CrazyCampus那条，我讲给C-01979听了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

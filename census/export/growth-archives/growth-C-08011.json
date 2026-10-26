@@ -1,0 +1,105 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 0,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 61.71,
+    "z": 104.13
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 76.25,
+    "z": 35.1
+   },
+   "work": {
+    "site": "晨操领队·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 115.28,
+    "z": 96.45
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08011",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件旧工牌——没人知道为什么",
+ "id": "C-08011",
+ "month_lines": [
+  "手在抖，是风顶得人站不稳。光带音响三分贝，我刚把今天晨操的队形录进记账本，茶还热，改天再说。"
+ ],
+ "name": "贾华",
+ "profession": "晨操领队",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在抖，是风顶得人站不稳。光带音响三分贝，我刚把今天晨操的队形录进记账本，茶还热，改天再说。",
+   "text": "「手在抖，是风顶得人站不稳。光带音响三分贝，我刚把今天晨操的队形录进记账本，茶还热，改天再说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": 5,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 66.28,
+    "z": 47.66
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.95,
+    "z": 122.02
+   },
+   "work": {
+    "site": "光织物裁缝·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 101.84,
+    "z": 129.51
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07117",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "攒了满抽屉断了的帆船模型从不给看——这事只有师父知道",
+ "id": "C-07117",
+ "month_lines": [
+  "手在灯下理着旧线头，针尖碰了碰布面，风好大，江声从窗缝里钻进来，像谁在低声数着未完成的缝份。"
+ ],
+ "name": "电解·晨",
+ "profession": "光织物裁缝",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在灯下理着旧线头，针尖碰了碰布面，风好大，江声从窗缝里钻进来，像谁在低声数着未完成的缝份。",
+   "text": "「手在灯下理着旧线头，针尖碰了碰布面，风好大，江声从窗缝里钻进来，像谁在低声数着未完成的缝份。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

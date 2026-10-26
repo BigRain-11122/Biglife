@@ -1,0 +1,106 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 1,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -74.91,
+    "z": -227.86
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -1.33,
+    "z": -207.5
+   },
+   "work": {
+    "site": "数据牧人·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 88.56,
+    "z": -165.34
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07881",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "灵感是留给有准备的人的，比它先到的是手痒。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "还在用老式算命的签筒",
+ "id": "C-07881",
+ "month_lines": [
+  "手在翻旧账本，墨迹蹭了边，笔尖还沾着昨夜没擦干净的批流数据。风刮得招牌直晃，江面那块浮标晃得像在跳。先试了再说。"
+ ],
+ "name": "谢清晚",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在翻旧账本，墨迹蹭了边，笔尖还沾着昨夜没擦干净的批流数据。风刮得招牌直晃，江面那块浮标晃得像在跳。先试了再说。",
+   "text": "「手在翻旧账本，墨迹蹭了边，笔尖还沾着昨夜没擦干净的批流数据。风刮得招牌直晃，江面那块浮标晃得像在跳。先试了再说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

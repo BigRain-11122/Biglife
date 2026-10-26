@@ -1,0 +1,106 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#69F0AE"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 22,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.07,
+    "z": -136.15
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.63,
+    "z": -24.67
+   },
+   "work": {
+    "site": "江面巡游员·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 106.91,
+    "z": -133.71
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07077",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "每次路过消失街区的路牌都要亮两下——没人知道为什么",
+ "id": "C-07077",
+ "month_lines": [
+  "测流刚过，江面浪花翻了两下，风刮得招牌直晃，水位稳着，跃水声在暗处轻轻一颤——我伸手一拨，那根旧浮标晃了晃，又像在笑。"
+ ],
+ "name": "阿檐角",
+ "profession": "江面巡游员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "测流刚过，江面浪花翻了两下，风刮得招牌直晃，水位稳着，跃水声在暗处轻轻一颤——我伸手一拨，那根旧浮标晃了晃，又像在笑。",
+   "text": "「测流刚过，江面浪花翻了两下，风刮得招牌直晃，水位稳着，跃水声在暗处轻轻一颤——我伸手一拨，那根旧浮标晃了晃，又像在笑。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,59 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -35.31,
+    "z": -215.01
+   },
+   "social": {
+    "site": "渔匠码头巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -17.67,
+    "z": -217.88
+   },
+   "work": {
+    "site": "码头手作渔匠·渔匠码头巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 118.0,
+    "z": -203.73
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10028",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渔匠码头巷",
+ "born": null,
+ "creed": "船是木头的胆，得有人替它把胆养住。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "把修好的每条船都刻一个巴掌大船模送船主的渔匠——码头的木架摆满了一整排小船",
+ "id": "C-10028",
+ "month_lines": [],
+ "name": "岑刻舟",
+ "profession": "码头手作渔匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

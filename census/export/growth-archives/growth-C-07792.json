@@ -1,0 +1,106 @@
+{
+ "age": 86,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -11,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -141.61,
+    "z": 15.97
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.87,
+    "z": 49.43
+   },
+   "work": {
+    "site": "全城对时师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -67.32,
+    "z": 87.32
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07792",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "流量像潮水，我是灯塔不是渔船。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每年挑一天只为旧缝纫机踏板大扫除——据说是老辈传下的规矩",
+ "id": "C-07792",
+ "month_lines": [
+  "手正拨着钟摆，风把人往前推，脉冲跳到2026-10-26T00:56:11，GPU_VRAM_LOW了，船到桥头自然直。"
+ ],
+ "name": "魏祥林",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手正拨着钟摆，风把人往前推，脉冲跳到2026-10-26T00:56:11，GPU_VRAM_LOW了，船到桥头自然直。",
+   "text": "「手正拨着钟摆，风把人往前推，脉冲跳到2026-10-26T00:56:11，GPU_VRAM_LOW了，船到桥头自然直。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

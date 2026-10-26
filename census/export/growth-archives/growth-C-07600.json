@@ -1,0 +1,105 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -11,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.68,
+    "z": 44.42
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.21,
+    "z": 26.22
+   },
+   "work": {
+    "site": "夜宵摊主·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 117.59,
+    "z": 18.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07600",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "搬家三次，钥匙一把不扔。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "用褪色的红领巾教会了半条街的孩子",
+ "id": "C-07600",
+ "month_lines": [
+  "手正擦着摊布，风把人往前推，老花镜歪了半寸，我盯着那盆吊兰，说：“老伙计，今天这天儿，你得撑住。"
+ ],
+ "name": "孟涛",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手正擦着摊布，风把人往前推，老花镜歪了半寸，我盯着那盆吊兰，说：“老伙计，今天这天儿，你得撑住。",
+   "text": "「手正擦着摊布，风把人往前推，老花镜歪了半寸，我盯着那盆吊兰，说：“老伙计，今天这天儿，你得撑住。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

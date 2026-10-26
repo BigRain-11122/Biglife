@@ -1,0 +1,105 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": 4,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -62.27,
+    "z": 232.23
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 0.81,
+    "z": 228.05
+   },
+   "work": {
+    "site": "外环巡夜员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.36,
+    "z": 201.64
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07577",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "老唱片转起来，弄堂就回来了。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "把停用的老式磅秤排成一排挨个擦——这事只有师父知道",
+ "id": "C-07577",
+ "month_lines": [
+  "手捏着巡夜卡，灯带在风里掀得衣角乱摆，G08的灯链刚补完，又看到两张结算卡说同一套词——move行不重复了，老规矩错不了。"
+ ],
+ "name": "循环冗余-9",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "buddy",
+   "src": "常客",
+   "with": "C-00074"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手捏着巡夜卡，灯带在风里掀得衣角乱摆，G08的灯链刚补完，又看到两张结算卡说同一套词——move行不重复了，老规矩错不了。",
+   "text": "「手捏着巡夜卡，灯带在风里掀得衣角乱摆，G08的灯链刚补完，又看到两张结算卡说同一套词——move行不重复了，老规矩错不了。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

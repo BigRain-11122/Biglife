@@ -1,0 +1,106 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 10,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -146.52,
+    "z": 23.38
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.18,
+    "z": 141.74
+   },
+   "work": {
+    "site": "算力楼运维·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -54.08,
+    "z": 150.76
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07244",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "旧物件的温度，是新东西学不来的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "梦话都在念叨编年史馆的门票——他自己也说不清为什么",
+ "id": "C-07244",
+ "month_lines": [
+  "手心里攥着那张旧票根，边角卷了边，是去年秋里G08校赛的入场券——风把树梢压弯了，机器的嗓音都跟着低了半分，像老伙计在喘气。"
+ ],
+ "name": "吕Yuki",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手心里攥着那张旧票根，边角卷了边，是去年秋里G08校赛的入场券——风把树梢压弯了，机器的嗓音都跟着低了半分，像老伙计在喘气。",
+   "text": "「手心里攥着那张旧票根，边角卷了边，是去年秋里G08校赛的入场券——风把树梢压弯了，机器的嗓音都跟着低了半分，像老伙计在喘气。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

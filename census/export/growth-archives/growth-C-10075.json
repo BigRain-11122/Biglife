@@ -1,0 +1,59 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 47.72,
+    "z": -40.15
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.48,
+    "z": -78.27
+   },
+   "work": {
+    "site": "历史立面群老瓦匠·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.5,
+    "z": -91.11
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10075",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": null,
+ "creed": "瓦要一垄一垄铺，屋子才住得安稳。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "瓦匠的那把半圆形瓦刀，木柄让手汗浸得发黑，刃口还沾着未干的白灰——历史立面群瓦棚的师传瓦刀，街坊屋顶的安稳全从这刃口上一垄一垄匀出来",
+ "id": "C-10075",
+ "month_lines": [],
+ "name": "匡稳脊",
+ "profession": "历史立面群老瓦匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

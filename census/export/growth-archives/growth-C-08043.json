@@ -1,0 +1,106 @@
+{
+ "age": 75,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -15,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -146.14,
+    "z": 41.74
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.7,
+    "z": 24.29
+   },
+   "work": {
+    "site": "盘口记录员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -42.75,
+    "z": 23.05
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08043",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每逢下雨就去修全城公交的老路线图——没人知道为什么",
+ "id": "C-08043",
+ "month_lines": [
+  "笔尖在账页上一顿，又稳稳落下，两支笔尖并排，字迹工整如旧。风一阵紧一阵，把摊前的纸页吹得微微抖，我抬头看了眼，G08 CrazyCampus那条线，又从B2396滑回S2.5了，心"
+ ],
+ "name": "郑阿凤",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "笔尖在账页上一顿，又稳稳落下，两支笔尖并排，字迹工整如旧。风一阵紧一阵，把摊前的纸页吹得微微抖，我抬头看了眼，G08 CrazyCampus那条线，又从B2396滑回S2.5了，心",
+   "text": "「笔尖在账页上一顿，又稳稳落下，两支笔尖并排，字迹工整如旧。风一阵紧一阵，把摊前的纸页吹得微微抖，我抬头看了眼，G08 CrazyCampus那条线，又从B2396滑回S2.5了，心」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

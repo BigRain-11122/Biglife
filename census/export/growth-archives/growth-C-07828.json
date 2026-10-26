@@ -1,0 +1,106 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -2,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.08,
+    "z": 125.48
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.2,
+    "z": 146.96
+   },
+   "work": {
+    "site": "数据搬运工·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -42.81,
+    "z": 15.32
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07828",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "每逢下雨就去修旧船票——据说是老辈传下的规矩",
+ "id": "C-07828",
+ "month_lines": [
+  "手里的数据包还沾着昨夜的灰，风把人往前推，我正把「PushEvent Biglife"
+ ],
+ "name": "阿零·乙",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手里的数据包还沾着昨夜的灰，风把人往前推，我正把「PushEvent Biglife",
+   "text": "「手里的数据包还沾着昨夜的灰，风把人往前推，我正把「PushEvent Biglife」那句说给C-02133听——他转头又塞给了C-09984，像链条里一节没拧紧的螺丝，可城在动，」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

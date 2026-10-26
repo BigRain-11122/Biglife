@@ -1,0 +1,105 @@
+{
+ "age": 83,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -10,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 39.64,
+    "z": -87.49
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.64,
+    "z": -34.07
+   },
+   "work": {
+    "site": "数据菜市摊主·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 117.27,
+    "z": -20.15
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07431",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "每逢下雨就去修老式公交站牌——这事全巷都知道",
+ "id": "C-07431",
+ "month_lines": [
+  "秤杆在手里转了三圈，风一阵紧一阵，把昨夜那批新菜价吹得晃。灯还是老灯亮堂，老伙计们说的G08 CrazyCampus那茬，我只当是街角风吹过，没声没影。"
+ ],
+ "name": "张祥林",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "秤杆在手里转了三圈，风一阵紧一阵，把昨夜那批新菜价吹得晃。灯还是老灯亮堂，老伙计们说的G08 CrazyCampus那茬，我只当是街角风吹过，没声没影。",
+   "text": "「秤杆在手里转了三圈，风一阵紧一阵，把昨夜那批新菜价吹得晃。灯还是老灯亮堂，老伙计们说的G08 CrazyCampus那茬，我只当是街角风吹过，没声没影。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

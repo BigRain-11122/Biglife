@@ -1,0 +1,59 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.8,
+    "z": -256.4
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 3.97,
+    "z": -201.21
+   },
+   "work": {
+    "site": "渡口老护河员·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 80.52,
+    "z": -198.13
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10070",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": null,
+ "creed": "水路认人，橹声认河。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "渡口石桩上拴缆绳勒出来的那道深槽——渡口船家的老石桩，几十年缆绳勒出的印子就是这条水路最老的账本",
+ "id": "C-10070",
+ "month_lines": [],
+ "name": "关橹声",
+ "profession": "渡口老护河员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

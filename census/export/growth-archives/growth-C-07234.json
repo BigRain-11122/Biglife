@@ -1,0 +1,106 @@
+{
+ "age": 40,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 5,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -148.0,
+    "z": -25.84
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.01,
+    "z": -22.73
+   },
+   "work": {
+    "site": "穿城信使·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -46.23,
+    "z": -21.57
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07234",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "从不让三代人传下的顶针离开自己三步远——她自己也说不清为什么",
+ "id": "C-07234",
+ "month_lines": [
+  "风灌进领口发凉，手里这单子还卡在跨江渡轮口，试错要趁灯亮，得把B2396那批数据再拆开看看。"
+ ],
+ "name": "凌秀兰",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风灌进领口发凉，手里这单子还卡在跨江渡轮口，试错要趁灯亮，得把B2396那批数据再拆开看看。",
+   "text": "「风灌进领口发凉，手里这单子还卡在跨江渡轮口，试错要趁灯亮，得把B2396那批数据再拆开看看。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

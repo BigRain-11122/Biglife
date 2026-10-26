@@ -1,0 +1,106 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 25,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 57.73,
+    "z": 94.48
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.74,
+    "z": 17.63
+   },
+   "work": {
+    "site": "像素小学学生·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.15,
+    "z": 69.42
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07871",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把断了线的风筝修好再免费送人——她自己也说不清为什么",
+ "id": "C-07871",
+ "month_lines": [
+  "手心还攥着那张作业本，画着commit光点过江，风大得说话要抬声，夜里冷，喝口热的再走——今夜的灯灵，我道了辛苦。"
+ ],
+ "name": "吕果冻",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手心还攥着那张作业本，画着commit光点过江，风大得说话要抬声，夜里冷，喝口热的再走——今夜的灯灵，我道了辛苦。",
+   "text": "「手心还攥着那张作业本，画着commit光点过江，风大得说话要抬声，夜里冷，喝口热的再走——今夜的灯灵，我道了辛苦。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

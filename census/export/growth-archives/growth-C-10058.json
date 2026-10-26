@@ -1,0 +1,59 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -31.51,
+    "z": -239.88
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -3.11,
+    "z": -257.07
+   },
+   "work": {
+    "site": "渡轮航道老航道领航员·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.61,
+    "z": -217.52
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10058",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": null,
+ "creed": "潮有潮的钟点，船有船的路数。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "舵轮缠手处那圈盘得齐整的旧棕缆——渡轮舵位的师传棕缆，掌舵人手心的汗与分寸全盘在这一圈里",
+ "id": "C-10058",
+ "month_lines": [],
+ "name": "滕观潮",
+ "profession": "渡轮航道老航道领航员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

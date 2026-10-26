@@ -1,0 +1,105 @@
+{
+ "age": 86,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -7,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 45.06,
+    "z": 38.03
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.67,
+    "z": 97.78
+   },
+   "work": {
+    "site": "攻略誊写员·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 137.49,
+    "z": 18.95
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07087",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每逢下雨就去修第一封妥投的加急件",
+ "id": "C-07087",
+ "month_lines": [
+  "船到桥头自然直，今儿风顶得人站不稳，我正对着G08的旧地图对图——S2.5那页，补丁补到第三遍，字迹还比印刷体端正。"
+ ],
+ "name": "王学勤",
+ "profession": "攻略誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "船到桥头自然直，今儿风顶得人站不稳，我正对着G08的旧地图对图——S2.5那页，补丁补到第三遍，字迹还比印刷体端正。",
+   "text": "「船到桥头自然直，今儿风顶得人站不稳，我正对着G08的旧地图对图——S2.5那页，补丁补到第三遍，字迹还比印刷体端正。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

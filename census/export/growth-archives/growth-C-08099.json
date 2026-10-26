@@ -1,0 +1,106 @@
+{
+ "age": 64,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -4,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 53.4,
+    "z": 74.42
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.93,
+    "z": 147.93
+   },
+   "work": {
+    "site": "彩蛋埋藏师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 140.2,
+    "z": 90.54
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-08099",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把心事只说给老式算盘珠听——这事全巷都知道",
+ "id": "C-08099",
+ "month_lines": [
+  "手心里攥着两颗糖，一颗还温着，一颗刚递到巷口那小孩手里——风大得说话要抬声，他笑得像刚拆了开关的灯。"
+ ],
+ "name": "老宽带·晨",
+ "profession": "彩蛋埋藏师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手心里攥着两颗糖，一颗还温着，一颗刚递到巷口那小孩手里——风大得说话要抬声，他笑得像刚拆了开关的灯。",
+   "text": "「手心里攥着两颗糖，一颗还温着，一颗刚递到巷口那小孩手里——风大得说话要抬声，他笑得像刚拆了开关的灯。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

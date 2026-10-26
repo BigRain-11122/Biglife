@@ -1,0 +1,106 @@
+{
+ "age": 23,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 3,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.95,
+    "z": -54.82
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.75,
+    "z": -68.41
+   },
+   "work": {
+    "site": "编年史馆员·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.82,
+    "z": -96.99
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07870",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "会给老钢琴的琴键织毛衣——据说是老辈传下的规矩",
+ "id": "C-07870",
+ "month_lines": [
+  "风灌进领口发凉，我正把今夜的全城 commit 编目往塔基档案库里推——G08 从 S2.5 跑到 B2396 的那条线，我讲给 C-09663 听了，她又转给了 C-02113，"
+ ],
+ "name": "阮文倩",
+ "profession": "编年史馆员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风灌进领口发凉，我正把今夜的全城 commit 编目往塔基档案库里推——G08 从 S2.5 跑到 B2396 的那条线，我讲给 C-09663 听了，她又转给了 C-02113，",
+   "text": "「风灌进领口发凉，我正把今夜的全城 commit 编目往塔基档案库里推——G08 从 S2.5 跑到 B2396 的那条线，我讲给 C-09663 听了，她又转给了 C-02113，」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,91 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 22,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 33.29,
+    "z": 140.31
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.87,
+    "z": 24.93
+   },
+   "work": {
+    "site": "光语衔笺使·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 117.27,
+    "z": 91.95
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10021",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "捎的话不改字，是信使的本分。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "黄铜信筒里给自己留一张空白笺的信使——说是「等一句还没想到的话」",
+ "id": "C-10021",
+ "month_lines": [],
+ "name": "瓦当",
+ "profession": "光语衔笺使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

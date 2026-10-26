@@ -1,0 +1,105 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 0,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.9,
+    "z": -93.84
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.05,
+    "z": -137.72
+   },
+   "work": {
+    "site": "灯牌制作师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -61.59,
+    "z": -133.68
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07680",
+  "quirk": "umbrella",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "收藏编年史馆的门票且每件都记得来历",
+ "id": "C-07680",
+ "month_lines": [
+  "手在灯牌边刮着旧漆，扳手蹭了蹭铁框，风不小，灯丝得掐得稳。包在我身上，这墙亮了，人就活了。"
+ ],
+ "name": "茅沈鱼",
+ "profession": "灯牌制作师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在灯牌边刮着旧漆，扳手蹭了蹭铁框，风不小，灯丝得掐得稳。包在我身上，这墙亮了，人就活了。",
+   "text": "「手在灯牌边刮着旧漆，扳手蹭了蹭铁框，风不小，灯丝得掐得稳。包在我身上，这墙亮了，人就活了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

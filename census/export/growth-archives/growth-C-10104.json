@@ -1,0 +1,59 @@
+{
+ "age": 72,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -48.15,
+    "z": -202.24
+   },
+   "social": {
+    "site": "江边旧货棚补锅摊·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -9.13,
+    "z": -210.2
+   },
+   "work": {
+    "site": "补锅匠·江边旧货棚补锅摊工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 41.96,
+    "z": -243.63
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10104",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江边旧货棚补锅摊",
+ "born": null,
+ "creed": "锅漏了不怕，怕的是人嫌麻烦",
+ "district": "RV",
+ "gender": "女",
+ "hook": "一只小铁锤和一把剪铁皮的剪子，锤面上有几十年敲出来的密麻小坑。",
+ "id": "C-10104",
+ "month_lines": [],
+ "name": "詹有福",
+ "profession": "补锅匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 3,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 27.91,
+    "z": -56.41
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.76,
+    "z": -68.41
+   },
+   "work": {
+    "site": "光织物裁缝·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.16,
+    "z": -44.77
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07377",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "从不让弄堂的门牌号离开自己三步远",
+ "id": "C-07377",
+ "month_lines": [
+  "手在灯下理着新来单子的边缝，风刮得招牌直晃，光织物一铺开来，针脚都亮了起来。这城里好玩的东西一天比一天多。"
+ ],
+ "name": "蒋强",
+ "profession": "光织物裁缝",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "buddy",
+   "src": "棋友",
+   "with": "C-00049"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在灯下理着新来单子的边缝，风刮得招牌直晃，光织物一铺开来，针脚都亮了起来。这城里好玩的东西一天比一天多。",
+   "text": "「手在灯下理着新来单子的边缝，风刮得招牌直晃，光织物一铺开来，针脚都亮了起来。这城里好玩的东西一天比一天多。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

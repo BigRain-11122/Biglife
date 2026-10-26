@@ -1,0 +1,106 @@
+{
+ "age": 74,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -14,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -113.52,
+    "z": 22.16
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.75,
+    "z": 24.5
+   },
+   "work": {
+    "site": "时钟校准员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -43.11,
+    "z": 95.73
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07350",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "自己淋过雨，就想给别人撑伞。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把第一炉出炉的像素瓷的位置背得比自家门牌还熟",
+ "id": "C-07350",
+ "month_lines": [
+  "手正拨动时钟齿轮，风从巷口直灌进来，把旧指针吹得嗡嗡响。这城的时分，得靠我手里这根钢针，一毫秒都不差。"
+ ],
+ "name": "梁阿炳",
+ "profession": "时钟校准员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手正拨动时钟齿轮，风从巷口直灌进来，把旧指针吹得嗡嗡响。这城的时分，得靠我手里这根钢针，一毫秒都不差。",
+   "text": "「手正拨动时钟齿轮，风从巷口直灌进来，把旧指针吹得嗡嗡响。这城的时分，得靠我手里这根钢针，一毫秒都不差。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

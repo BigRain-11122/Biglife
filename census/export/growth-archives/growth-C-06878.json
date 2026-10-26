@@ -1,0 +1,106 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#FFD180"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 12,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 46.25,
+    "z": 33.63
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.57,
+    "z": 124.7
+   },
+   "work": {
+    "site": "风信使·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.64,
+    "z": 125.44
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06878",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "日子是过出来的，不是算出来的。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "看得见初版街景照片里住着的光",
+ "id": "C-06878",
+ "month_lines": [
+  "风刮得紧，塔脚花园的风铃打了三下，我听见夜里有谁在说G08 CrazyCampus：B2396->S2.5，像风穿过铁丝网，清脆又凉。今早的订单都落了，我试铃时，风声里还晃着旧日的"
+ ],
+ "name": "白雪绒",
+ "profession": "风信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风刮得紧，塔脚花园的风铃打了三下，我听见夜里有谁在说G08 CrazyCampus：B2396->S2.5，像风穿过铁丝网，清脆又凉。今早的订单都落了，我试铃时，风声里还晃着旧日的",
+   "text": "「风刮得紧，塔脚花园的风铃打了三下，我听见夜里有谁在说G08 CrazyCampus：B2396->S2.5，像风穿过铁丝网，清脆又凉。今早的订单都落了，我试铃时，风声里还晃着旧日的」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

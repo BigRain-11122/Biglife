@@ -1,0 +1,96 @@
+{
+ "age": 81,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 3,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -95.37,
+    "z": 194.67
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 6.86,
+    "z": 236.79
+   },
+   "work": {
+    "site": "城市气象播报员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 126.66,
+    "z": 202.18
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09387",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": null,
+ "creed": "搬家三次，钥匙一把不扔。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "把心事只说给全城灯火的第一张照片听——他自己也说不清为什么",
+ "id": "C-09387",
+ "month_lines": [],
+ "name": "时钟树·新",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

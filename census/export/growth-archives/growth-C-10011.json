@@ -1,0 +1,90 @@
+{
+ "age": 500,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -8,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -117.44,
+    "z": 218.85
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 12.82,
+    "z": 237.8
+   },
+   "work": {
+    "site": "城郊山林巡护队主心骨·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 60.57,
+    "z": 237.18
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10011",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": null,
+ "creed": "山是俺的山，也是全城人的山。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "巡护日志上给每座山头都起了小名，档案馆来抄录过三回",
+ "id": "C-10011",
+ "month_lines": [],
+ "name": "孙悟空",
+ "profession": "城郊山林巡护队主心骨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

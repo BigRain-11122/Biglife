@@ -1,0 +1,105 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 2,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.26,
+    "z": -109.14
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.77,
+    "z": -43.58
+   },
+   "work": {
+    "site": "视频修复师·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -42.02,
+    "z": -15.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07582",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "给老式怀表链都编了号还建了册——这事全巷都知道",
+ "id": "C-07582",
+ "month_lines": [
+  "手里的老胶卷在风灌进领口发凉的夜里轻轻颤，我正补帧一帧旧影像，花在阳台上说：“今天光是你的，不急。"
+ ],
+ "name": "沈卫东",
+ "profession": "视频修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手里的老胶卷在风灌进领口发凉的夜里轻轻颤，我正补帧一帧旧影像，花在阳台上说：“今天光是你的，不急。",
+   "text": "「手里的老胶卷在风灌进领口发凉的夜里轻轻颤，我正补帧一帧旧影像，花在阳台上说：“今天光是你的，不急。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 10,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.23,
+    "z": -89.93
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.82,
+    "z": -10.23
+   },
+   "work": {
+    "site": "字幕君·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.14,
+    "z": -51.72
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07569",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把心事只说给老式怀表链听——这事只有师父知道",
+ "id": "C-07569",
+ "month_lines": [
+  "风刮得招牌直晃，我正把糖塞进小摊边那颗歪头的娃手里——清单第一，今天这帧对齐了，GPU显存告急的轴，我得查到底。"
+ ],
+ "name": "刘Alex",
+ "profession": "字幕君",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "风刮得招牌直晃，我正把糖塞进小摊边那颗歪头的娃手里——清单第一，今天这帧对齐了，GPU显存告急的轴，我得查到底。",
+   "text": "「风刮得招牌直晃，我正把糖塞进小摊边那颗歪头的娃手里——清单第一，今天这帧对齐了，GPU显存告急的轴，我得查到底。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

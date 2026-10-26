@@ -1,0 +1,106 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": -3,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.76,
+    "z": 104.98
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.16,
+    "z": 82.1
+   },
+   "work": {
+    "site": "时钟校准员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -62.63,
+    "z": 156.63
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07130",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把手绘的城图的位置背得比自家门牌还熟——这事全巷都知道",
+ "id": "C-07130",
+ "month_lines": [
+  "手正拧着时钟的旋钮，指针卡在12点00分000毫秒，差了0.3，脸就红了。风刮得紧，江水在窗边拍着，灶上有汤，自取。"
+ ],
+ "name": "陶燕",
+ "profession": "时钟校准员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手正拧着时钟的旋钮，指针卡在12点00分000毫秒，差了0.3，脸就红了。风刮得紧，江水在窗边拍着，灶上有汤，自取。",
+   "text": "「手正拧着时钟的旋钮，指针卡在12点00分000毫秒，差了0.3，脸就红了。风刮得紧，江水在窗边拍着，灶上有汤，自取。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

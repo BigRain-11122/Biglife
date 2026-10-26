@@ -1,0 +1,59 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.98,
+    "z": -159.95
+   },
+   "social": {
+    "site": "医馆巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.9,
+    "z": -111.34
+   },
+   "work": {
+    "site": "医馆巷银针铺老打磨师·医馆巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.68,
+    "z": -45.09
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10052",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "医馆巷",
+ "born": null,
+ "creed": "针稳病家稳。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "针匣里那枚缠着细银丝柄的老探针——医馆巷银针铺的祖传探针，全套银针的锋钝全凭它一探",
+ "id": "C-10052",
+ "month_lines": [],
+ "name": "桑银针",
+ "profession": "医馆巷银针铺老打磨师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

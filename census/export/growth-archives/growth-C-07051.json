@@ -1,0 +1,106 @@
+{
+ "age": 9,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 16,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.35,
+    "z": -12.06
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.45,
+    "z": -45.92
+   },
+   "work": {
+    "site": "像素小学学生·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -53.5,
+    "z": -134.54
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07051",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "把心事只说给退役的路灯灯丝听——这事只有档案馆知道",
+ "id": "C-07051",
+ "month_lines": [
+  "夜里冷，喝口热的再走。 放学还得绕路去看一眼今日 commit 光点过江，风顶得人站不稳，江边的像素树叶子哗啦响，像在数着我画的作业本格子。"
+ ],
+ "name": "崔元宝",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "夜里冷，喝口热的再走。 放学还得绕路去看一眼今日 commit 光点过江，风顶得人站不稳，江边的像素树叶子哗啦响，像在数着我画的作业本格子。",
+   "text": "「夜里冷，喝口热的再走。 放学还得绕路去看一眼今日 commit 光点过江，风顶得人站不稳，江边的像素树叶子哗啦响，像在数着我画的作业本格子。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

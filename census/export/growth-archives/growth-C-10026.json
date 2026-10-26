@@ -1,0 +1,90 @@
+{
+ "age": 1,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 22,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -37.82,
+    "z": -224.13
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -6.06,
+    "z": -224.83
+   },
+   "work": {
+    "site": "天象报霁员·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 56.72,
+    "z": -213.22
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10026",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": null,
+ "creed": "雨总会停，停的时候要有人在场。",
+ "district": "RV",
+ "gender": "无定",
+ "hook": "把彩虹当鞋穿的居民——江岸的孩子管它叫「晴天的信」",
+ "id": "C-10026",
+ "month_lines": [],
+ "name": "小霁",
+ "profession": "天象报霁员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [],
+ "species": "imagery-spirit",
+ "v": "1"
+}

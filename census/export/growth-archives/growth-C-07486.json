@@ -1,0 +1,106 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 10,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.81,
+    "z": 43.86
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.5,
+    "z": 123.8
+   },
+   "work": {
+    "site": "风控瞭望员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -53.76,
+    "z": 71.58
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07486",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持给拆迁前夜的门牌合影记日记——据说是老辈传下的规矩",
+ "id": "C-07486",
+ "month_lines": [
+  "手在领口搓了搓，风灌进发凉，像有人从巷口推了把门。站直了别趴下，这天下得清清楚楚，光门绿了，我眼皮才敢合上。"
+ ],
+ "name": "朱Ruby",
+ "profession": "风控瞭望员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在领口搓了搓，风灌进发凉，像有人从巷口推了把门。站直了别趴下，这天下得清清楚楚，光门绿了，我眼皮才敢合上。",
+   "text": "「手在领口搓了搓，风灌进发凉，像有人从巷口推了把门。站直了别趴下，这天下得清清楚楚，光门绿了，我眼皮才敢合上。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

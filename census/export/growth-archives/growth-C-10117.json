@@ -1,0 +1,60 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -123.59,
+    "z": 135.26
+   },
+   "social": {
+    "site": "秦淮坊藤器巷口·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.88,
+    "z": 79.24
+   },
+   "work": {
+    "site": "藤编匠·秦淮坊藤器巷口工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -43.56,
+    "z": 105.19
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10117",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "秦淮坊藤器巷口",
+ "born": null,
+ "creed": "藤条认手，你急它就断",
+ "district": "QT",
+ "gender": "女",
+ "hook": "柜顶码着十几只扎好的篾架子，篾条削得一样薄，拿麻绳束成一捆。",
+ "id": "C-10117",
+ "month_lines": [],
+ "name": "何秀云",
+ "profession": "藤编匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

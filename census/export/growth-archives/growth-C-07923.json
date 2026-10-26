@@ -1,0 +1,106 @@
+{
+ "age": 14,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -1,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 48.71,
+    "z": 155.18
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.27,
+    "z": 154.9
+   },
+   "work": {
+    "site": "穿城信使·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 110.38,
+    "z": 81.54
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07923",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "攒钱就为了赎回一件老式爆米花机的摇柄——这事只有师父知道",
+ "id": "C-07923",
+ "month_lines": [
+  "手在翻单子，风一阵紧一阵，纸页哗啦响，像在接一个没说完的句子。又学了一招，这会儿天清气朗，守夜灯灵说它在等风。"
+ ],
+ "name": "回溯·夜",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "手在翻单子，风一阵紧一阵，纸页哗啦响，像在接一个没说完的句子。又学了一招，这会儿天清气朗，守夜灯灵说它在等风。",
+   "text": "「手在翻单子，风一阵紧一阵，纸页哗啦响，像在接一个没说完的句子。又学了一招，这会儿天清气朗，守夜灯灵说它在等风。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

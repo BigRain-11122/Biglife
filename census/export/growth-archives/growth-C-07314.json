@@ -1,0 +1,106 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 8,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -102.66,
+    "z": 10.48
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.98,
+    "z": 93.92
+   },
+   "work": {
+    "site": "算力楼运维·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -22.12,
+    "z": 58.78
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07314",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "逢人就讲老码头缆桩的故事——据说是老辈传下的规矩",
+ "id": "C-07314",
+ "month_lines": [
+  "手在机箱盖上轻轻一按，风扇转得稳，温度计红灯闪了两下——风从巷口直灌进来，机房味儿还留着，整片Q区的运行账，今天的事今天清。"
+ ],
+ "name": "邹之恒",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在机箱盖上轻轻一按，风扇转得稳，温度计红灯闪了两下——风从巷口直灌进来，机房味儿还留着，整片Q区的运行账，今天的事今天清。",
+   "text": "「手在机箱盖上轻轻一按，风扇转得稳，温度计红灯闪了两下——风从巷口直灌进来，机房味儿还留着，整片Q区的运行账，今天的事今天清。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 3,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.16,
+    "z": 93.0
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.44,
+    "z": 147.16
+   },
+   "work": {
+    "site": "尾盘茶室老板·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -61.9,
+    "z": 55.49
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07729",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "会为旧城庆纪念章推掉一整晚的生意——这事只有师父知道",
+ "id": "C-07729",
+ "month_lines": [
+  "手在茶匙上摩挲，油纸包的桂花糯米糍刚焐热，指尖还留着那口温润。风好大，吹得玻璃窗嗡嗡响，K线广场那边，灯还亮着，像没关的炉火。"
+ ],
+ "name": "毛红",
+ "profession": "尾盘茶室老板",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手在茶匙上摩挲，油纸包的桂花糯米糍刚焐热，指尖还留着那口温润。风好大，吹得玻璃窗嗡嗡响，K线广场那边，灯还亮着，像没关的炉火。",
+   "text": "「手在茶匙上摩挲，油纸包的桂花糯米糍刚焐热，指尖还留着那口温润。风好大，吹得玻璃窗嗡嗡响，K线广场那边，灯还亮着，像没关的炉火。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

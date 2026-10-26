@@ -1,0 +1,59 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 64.51,
+    "z": -49.58
+   },
+   "social": {
+    "site": "编年史馆档案巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.89,
+    "z": -81.88
+   },
+   "work": {
+    "site": "编年史馆户籍誊抄员·编年史馆档案巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 97.99,
+    "z": -38.62
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10080",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "编年史馆档案巷",
+ "born": null,
+ "creed": "写下的每一个字，将来都有人回头找。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "一只搪瓷缸，缸沿磕掉一小块瓷，她用透明胶带细细缠过两圈，说这么握着不硌手——编年史馆档案巷长桌上的旧缸，一缸热水陪她誊过一册又一册",
+ "id": "C-10080",
+ "month_lines": [],
+ "name": "岑记春",
+ "profession": "编年史馆户籍誊抄员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

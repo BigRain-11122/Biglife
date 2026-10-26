@@ -1,0 +1,97 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 21,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 29.16,
+    "z": 99.79
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.52,
+    "z": 137.61
+   },
+   "work": {
+    "site": "夜灯员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.94,
+    "z": 136.76
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09357",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": null,
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "绕着雨声录音飞过整整三十圈——他自己也说不清为什么",
+ "id": "C-09357",
+ "month_lines": [],
+ "name": "阿阿汛",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [],
+ "species": "sprite",
+ "v": "1"
+}

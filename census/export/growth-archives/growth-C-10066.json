@@ -1,0 +1,59 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.12,
+    "z": -155.2
+   },
+   "social": {
+    "site": "医馆巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.63,
+    "z": -134.62
+   },
+   "work": {
+    "site": "医馆巷老剃头挑子师傅·医馆巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.19,
+    "z": -156.51
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10066",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "医馆巷",
+ "born": null,
+ "creed": "熟客的后脑勺，认我这双手。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "剃头担子上那副报街用的旧唤头——医馆巷的家传唤头，巷口一声长鸣就是挑子到了的信号",
+ "id": "C-10066",
+ "month_lines": [],
+ "name": "曾稳山",
+ "profession": "医馆巷老剃头挑子师傅",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

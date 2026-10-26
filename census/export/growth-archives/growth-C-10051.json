@@ -1,0 +1,59 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -29.47,
+    "z": 213.82
+   },
+   "social": {
+    "site": "机器站巷口·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 11.8,
+    "z": 235.42
+   },
+   "work": {
+    "site": "老单车铺修车匠·机器站巷口工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 94.09,
+    "z": 219.23
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10051",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "机器站巷口",
+ "born": null,
+ "creed": "车正不怕路斜。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "修车摊里那把敲惯车圈的鸭嘴小锤——老单车铺修车匠的师传小锤，满街旧车的正轮全从它底下过",
+ "id": "C-10051",
+ "month_lines": [],
+ "name": "邝铁砧",
+ "profession": "老单车铺修车匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

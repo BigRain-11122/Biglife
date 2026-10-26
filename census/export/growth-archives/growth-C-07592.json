@@ -1,0 +1,106 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -13,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -124.06,
+    "z": 104.76
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.24,
+    "z": 114.36
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -33.27,
+    "z": 19.86
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07592",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "用全城灯火的第一张照片教会了半条街的孩子——这事只有档案馆知道",
+ "id": "C-07592",
+ "month_lines": [
+  "翻勺正利落，火候稳当。风把树梢压弯了，汤要趁烫，清单第一——今日绿行情，免费汤，照例来一碗。"
+ ],
+ "name": "云春梅",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "翻勺正利落，火候稳当。风把树梢压弯了，汤要趁烫，清单第一——今日绿行情，免费汤，照例来一碗。",
+   "text": "「翻勺正利落，火候稳当。风把树梢压弯了，汤要趁烫，清单第一——今日绿行情，免费汤，照例来一碗。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 55,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -5,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -129.41,
+    "z": 62.27
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.69,
+    "z": 125.75
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -71.44,
+    "z": 22.15
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07955",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每年挑一天只为初代广场舞光带大扫除",
+ "id": "C-07955",
+ "month_lines": [
+  "风大得说话要抬声，老伞柄在手里拧了三圈，还是没撑开——这天清气朗，我偏把昨天那把破伞留着，说好要借给谁，谁也没来。"
+ ],
+ "name": "白莉",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风大得说话要抬声，老伞柄在手里拧了三圈，还是没撑开——这天清气朗，我偏把昨天那把破伞留着，说好要借给谁，谁也没来。",
+   "text": "「风大得说话要抬声，老伞柄在手里拧了三圈，还是没撑开——这天清气朗，我偏把昨天那把破伞留着，说好要借给谁，谁也没来。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

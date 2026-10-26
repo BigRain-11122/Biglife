@@ -1,0 +1,105 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 10,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -120.41,
+    "z": -157.86
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.45,
+    "z": -135.51
+   },
+   "work": {
+    "site": "数据清洗工·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -22.59,
+    "z": -81.98
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07491",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "记得爷爷的工作证的每一个来历——她自己也说不清为什么",
+ "id": "C-07491",
+ "month_lines": [
+  "手上这筐行情数据还卡在B2396，风一阵紧一阵，像极了昨天那场G08 CrazyCampus的收尾。红灯面前没有老熟人，我倒想问问，谁在数据里藏了半截草稿？"
+ ],
+ "name": "桂之南",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "手上这筐行情数据还卡在B2396，风一阵紧一阵，像极了昨天那场G08 CrazyCampus的收尾。红灯面前没有老熟人，我倒想问问，谁在数据里藏了半截草稿？",
+   "text": "「手上这筐行情数据还卡在B2396，风一阵紧一阵，像极了昨天那场G08 CrazyCampus的收尾。红灯面前没有老熟人，我倒想问问，谁在数据里藏了半截草稿？」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

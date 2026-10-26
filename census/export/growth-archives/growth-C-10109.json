@@ -1,0 +1,60 @@
+{
+ "age": 44,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -115.19,
+    "z": 16.83
+   },
+   "social": {
+    "site": "计量新村玻璃装镶门市·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.58,
+    "z": 137.18
+   },
+   "work": {
+    "site": "装玻璃匠·计量新村玻璃装镶门市工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.4,
+    "z": 132.58
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10109",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "计量新村玻璃装镶门市",
+ "born": null,
+ "creed": "玻璃抬得稳，人才敢住得安心",
+ "district": "QT",
+ "gender": "男",
+ "hook": "一副吸盘和一根木尺，尺边用铅笔划着深浅不一的记号线，吸盘胶边已经发白。",
+ "id": "C-10109",
+ "month_lines": [],
+ "name": "罗敬堂",
+ "profession": "装玻璃匠",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

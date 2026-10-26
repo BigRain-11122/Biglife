@@ -1,0 +1,59 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.61,
+    "z": 62.33
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.8,
+    "z": 135.24
+   },
+   "work": {
+    "site": "八号楼街区老修表师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.45,
+    "z": 91.36
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10068",
+  "quirk": "",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": null,
+ "creed": "表走得准，日子不慌。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "修表铺玻璃柜里垫绒布的那格老怀表校准仪——八号楼街区修表铺的师传校准仪，街坊腕上老表的快慢全在这格绒布上听出来",
+ "id": "C-10068",
+ "month_lines": [],
+ "name": "宁守时",
+ "profession": "八号楼街区老修表师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

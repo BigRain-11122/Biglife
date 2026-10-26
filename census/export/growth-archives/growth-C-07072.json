@@ -1,0 +1,105 @@
+{
+ "age": 70,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -14,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 62.84,
+    "z": -11.78
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.42,
+    "z": -35.72
+   },
+   "work": {
+    "site": "全城对时师·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 110.69,
+    "z": -153.43
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07072",
+  "quirk": "night_run",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "逢人就讲老式爆米花的粮票的故事——这事只有师父知道",
+ "id": "C-07072",
+ "month_lines": [
+  "收摊了，明天见。风把人往前推，钟摆又稳了，那两颗糖还揣着，给小娃的那颗，今日没见着人，可心是热的。"
+ ],
+ "name": "凌金花",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "收摊了，明天见。风把人往前推，钟摆又稳了，那两颗糖还揣着，给小娃的那颗，今日没见着人，可心是热的。",
+   "text": "「收摊了，明天见。风把人往前推，钟摆又稳了，那两颗糖还揣着，给小娃的那颗，今日没见着人，可心是热的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

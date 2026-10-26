@@ -1,0 +1,59 @@
+{
+ "age": 44,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -82.96,
+    "z": -188.18
+   },
+   "social": {
+    "site": "光桥东岸维护站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 4.63,
+    "z": -232.81
+   },
+   "work": {
+    "site": "桥索检查员·光桥东岸维护站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 93.4,
+    "z": -247.77
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10094",
+  "quirk": "",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "光桥东岸维护站",
+ "born": null,
+ "creed": "没响不代表不会响",
+ "district": "RV",
+ "gender": "男",
+ "hook": "一只铜哨，哨嘴上拴着一段褪色的红塑料绳，挂脖子上，风大时把哨子塞进衣领里。",
+ "id": "C-10094",
+ "month_lines": [],
+ "name": "桑立冬",
+ "profession": "桥索检查员",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

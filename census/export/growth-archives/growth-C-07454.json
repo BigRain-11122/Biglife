@@ -1,0 +1,106 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 4,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 47.98,
+    "z": 140.27
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.99,
+    "z": 103.73
+   },
+   "work": {
+    "site": "游戏策划·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.19,
+    "z": 158.38
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07454",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "还在用旧船锚残件——他自己也说不清为什么",
+ "id": "C-07454",
+ "month_lines": [
+  "指尖在透明手板上划了道弧，把B2396的旧版草图擦了又涂，风刮得紧，纸面抖得像在跳。试错要趁灯亮，这会儿楼还亮着，我得把CrazyCampus的漏洞补上。"
+ ],
+ "name": "分页·老",
+ "profession": "游戏策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "指尖在透明手板上划了道弧，把B2396的旧版草图擦了又涂，风刮得紧，纸面抖得像在跳。试错要趁灯亮，这会儿楼还亮着，我得把CrazyCampus的漏洞补上。",
+   "text": "「指尖在透明手板上划了道弧，把B2396的旧版草图擦了又涂，风刮得紧，纸面抖得像在跳。试错要趁灯亮，这会儿楼还亮着，我得把CrazyCampus的漏洞补上。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,90 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -1,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -111.09,
+    "z": 222.26
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -3.35,
+    "z": 239.54
+   },
+   "work": {
+    "site": "外环巡线单元·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 77.1,
+    "z": 204.38
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10016",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": null,
+ "creed": "数据不撒谎。撒谎的是没校准的传感器。",
+ "district": "OR",
+ "gender": "无定",
+ "hook": "日志的备注栏里存着三百多条「非任务物资。温暖。」，全城独一份",
+ "id": "C-10016",
+ "month_lines": [],
+ "name": "钢十三",
+ "profession": "外环巡线单元",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

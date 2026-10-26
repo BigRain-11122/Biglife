@@ -1,0 +1,106 @@
+{
+ "age": 30,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 6,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 46.06,
+    "z": 81.22
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.96,
+    "z": 92.31
+   },
+   "work": {
+    "site": "穿城信使·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.17,
+    "z": 95.05
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07978",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件旧像素图钉——这事全巷都知道",
+ "id": "C-07978",
+ "month_lines": [
+  "风灌进领口发凉，我正把今天的急单按时间轴捋一遍——X2811关了，136px卡片还没发完，这版本我等好久了。"
+ ],
+ "name": "范清晚",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-26（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-26",
+   "quote": "风灌进领口发凉，我正把今天的急单按时间轴捋一遍——X2811关了，136px卡片还没发完，这版本我等好久了。",
+   "text": "「风灌进领口发凉，我正把今天的急单按时间轴捋一遍——X2811关了，136px卡片还没发完，这版本我等好久了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

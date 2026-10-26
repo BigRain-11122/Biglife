@@ -1,0 +1,106 @@
+{
+ "age": 92,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -12,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -96.76,
+    "z": -167.6
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 15.32,
+    "z": -188.62
+   },
+   "work": {
+    "site": "江边棋摊主·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 111.29,
+    "z": -253.21
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07089",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "把拆迁前夜的门牌合影画进了自己的作品里",
+ "id": "C-07089",
+ "month_lines": [
+  "有意思，我想想——今天风刮得招牌直晃，江对岸的灯塔晃得像在下棋，我刚让老张先走三步，他脸上的表情比落子还慢。"
+ ],
+ "name": "陶承宗",
+ "profession": "江边棋摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "有意思，我想想——今天风刮得招牌直晃，江对岸的灯塔晃得像在下棋，我刚让老张先走三步，他脸上的表情比落子还慢。",
+   "text": "「有意思，我想想——今天风刮得招牌直晃，江对岸的灯塔晃得像在下棋，我刚让老张先走三步，他脸上的表情比落子还慢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

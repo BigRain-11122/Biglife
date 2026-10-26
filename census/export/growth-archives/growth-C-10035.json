@@ -1,0 +1,59 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": null,
+  "voice_ref": null
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 23.81,
+    "z": -81.66
+   },
+   "social": {
+    "site": "花道小院巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.97,
+    "z": -102.57
+   },
+   "work": {
+    "site": "花道小院插花师·花道小院巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 138.07,
+    "z": -58.12
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-10035",
+  "quirk": "slow",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "花道小院巷",
+ "born": null,
+ "creed": "花不说谎，开到哪一步就是哪一步。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "把落花做成小标本送人的插花师——小院的窗台上排着一条「落花街」",
+ "id": "C-10035",
+ "month_lines": [],
+ "name": "叶知秋",
+ "profession": "花道小院插花师",
+ "reflections": [],
+ "relations_top": [],
+ "rings": [],
+ "species": "carbon",
+ "v": "1"
+}

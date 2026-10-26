@@ -1,0 +1,96 @@
+{
+ "age": 83,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -3,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 36.82,
+    "z": -94.45
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.24,
+    "z": -118.46
+   },
+   "work": {
+    "site": "城市气象播报员·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 119.4,
+    "z": -158.15
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-09797",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "脑环广场街区",
+ "born": null,
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "把老茶壶的位置背得比自家门牌还熟——据说是老辈传下的规矩",
+ "id": "C-09797",
+ "month_lines": [],
+ "name": "段页·丙",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [],
+ "species": "silicon",
+ "v": "1"
+}

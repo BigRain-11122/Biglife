@@ -1,0 +1,106 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 24,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.92,
+    "z": 96.5
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.16,
+    "z": 147.94
+   },
+   "work": {
+    "site": "沙盒建筑师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 117.61,
+    "z": 50.92
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-06954",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "餐饮街",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "还在用手工风筝的竹篾——她自己也说不清为什么",
+ "id": "C-06954",
+ "month_lines": [
+  "明儿又是新的一天，风从巷口直灌进来，我正把新图纸垫块在沙盒边——楼是租来的，可心是自个儿盖的。"
+ ],
+ "name": "薛团团",
+ "profession": "沙盒建筑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "明儿又是新的一天，风从巷口直灌进来，我正把新图纸垫块在沙盒边——楼是租来的，可心是自个儿盖的。",
+   "text": "「明儿又是新的一天，风从巷口直灌进来，我正把新图纸垫块在沙盒边——楼是租来的，可心是自个儿盖的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

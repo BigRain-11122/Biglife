@@ -1,0 +1,106 @@
+{
+ "age": 77,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -9,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -98.08,
+    "z": 22.24
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.76,
+    "z": 140.84
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -71.56,
+    "z": 65.14
+   }
+  },
+  "ctx": "tw=meal,wx=clear,wd=0",
+  "id": "C-07023",
+  "quirk": "",
+  "recovering": "shengji",
+  "slot": "餐饮街·软食铺",
+  "state": "meal",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "好东西遇到就是缘分，分一半是本分。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "能背出褪色的戏票根的全部班次——这事只有档案馆知道",
+ "id": "C-07023",
+ "month_lines": [
+  "搭把手的事儿，今天天阴着，风一阵紧一阵，食堂的汤锅刚开火，料都备好了，明天的葱花要先腌上，这风大的，灶台边得把门关严点。"
+ ],
+ "name": "屠珍珠",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-25（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-25",
+   "quote": "搭把手的事儿，今天天阴着，风一阵紧一阵，食堂的汤锅刚开火，料都备好了，明天的葱花要先腌上，这风大的，灶台边得把门关严点。",
+   "text": "「搭把手的事儿，今天天阴着，风一阵紧一阵，食堂的汤锅刚开火，料都备好了，明天的葱花要先腌上，这风大的，灶台边得把门关严点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}
