@@ -1,0 +1,103 @@
+{
+ "age": 38,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 5,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.5,
+    "z": -57.39
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.33,
+    "z": -156.35
+   },
+   "work": {
+    "site": "语义翻译官·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -53.62,
+    "z": -41.24
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04614",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "在半张老电影票上刻了一行没人认得的小字——这事只有师父知道",
+ "id": "C-04614",
+ "month_lines": [],
+ "name": "唐行舟",
+ "profession": "语义翻译官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "搭把手的事儿，今儿个天气正好，阴阴的不晒，心情挺爽。",
+   "text": "「搭把手的事儿，今儿个天气正好，阴阴的不晒，心情挺爽。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

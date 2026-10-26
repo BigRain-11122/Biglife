@@ -1,0 +1,103 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -7,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -121.97,
+    "z": -98.0
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.53,
+    "z": -96.93
+   },
+   "work": {
+    "site": "新市民安居顾问·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.77,
+    "z": -78.75
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04357",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "留着老式邮戳却从来不用——她自己也说不清为什么",
+ "id": "C-04357",
+ "month_lines": [],
+ "name": "施蕾",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "单子来了就接，不来就钓鱼，今儿个天气挺适合外出走走，正好给电波猫群添食。",
+   "text": "「单子来了就接，不来就钓鱼，今儿个天气挺适合外出走走，正好给电波猫群添食。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

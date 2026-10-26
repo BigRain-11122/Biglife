@@ -1,0 +1,103 @@
+{
+ "age": 74,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -9,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 66.5,
+    "z": -140.7
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.53,
+    "z": -32.42
+   },
+   "work": {
+    "site": "编年史誊录员·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 140.7,
+    "z": -65.11
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04325",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "逢人就讲老裁缝铺的样衣的故事——据说是老辈传下的规矩",
+ "id": "C-04325",
+ "month_lines": [],
+ "name": "黎祥林",
+ "profession": "编年史誊录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "搞快点，今天天气还清清爽爽的，誊录的进度正好。收摊了，明天见。",
+   "text": "「搞快点，今天天气还清清爽爽的，誊录的进度正好。收摊了，明天见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

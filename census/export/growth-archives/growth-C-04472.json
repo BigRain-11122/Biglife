@@ -1,0 +1,104 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 17,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 41.37,
+    "z": 38.08
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.83,
+    "z": 137.43
+   },
+   "work": {
+    "site": "信使小跟班·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.68,
+    "z": 31.84
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04472",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "偷偷给掉漆的糖果罐上油保养——她自己也说不清为什么",
+ "id": "C-04472",
+ "month_lines": [],
+ "name": "江果冻",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "这物件比我懂年头，今儿风挺大，收摊前得把明天的料先备好。",
+   "text": "「这物件比我懂年头，今儿风挺大，收摊前得把明天的料先备好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

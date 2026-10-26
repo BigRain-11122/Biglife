@@ -1,0 +1,103 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 0,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.17,
+    "z": 59.65
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.83,
+    "z": 43.46
+   },
+   "work": {
+    "site": "缓存管理员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.83,
+    "z": 45.97
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04275",
+  "quirk": "umbrella",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "把旧邮局的分信格的位置背得比自家门牌还熟——据说是老辈传下的规矩",
+ "id": "C-04275",
+ "month_lines": [],
+ "name": "降频·叁",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "这事儿有讲究，今天天气清清爽，收工后还得绕江走半里。",
+   "text": "「这事儿有讲究，今天天气清清爽，收工后还得绕江走半里。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

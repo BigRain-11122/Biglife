@@ -1,0 +1,104 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#C5E1FF",
+   "skin": "#69F0AE"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 22,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.29,
+    "z": 197.03
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 14.25,
+    "z": 165.68
+   },
+   "work": {
+    "site": "夜灯员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 87.37,
+    "z": 213.77
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04666",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "OR",
+ "gender": "无定",
+ "hook": "跟着停用的老式磅秤的节奏打过拍子——他自己也说不清为什么",
+ "id": "C-04666",
+ "month_lines": [],
+ "name": "小小暑",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "撑着伞巡逻，雨还在下，风挺大，得小心点。",
+   "text": "「撑着伞巡逻，雨还在下，风挺大，得小心点。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

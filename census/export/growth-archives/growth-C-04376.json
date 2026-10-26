@@ -1,0 +1,103 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": 2,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 41.94,
+    "z": -74.95
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.13,
+    "z": -77.25
+   },
+   "work": {
+    "site": "感知网养线工·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 105.07,
+    "z": -42.09
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04376",
+  "quirk": "slow",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "数据是新黄浦江，人还是要沿江散步。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "坚持手写第一封妥投的加急件——他自己也说不清为什么",
+ "id": "C-04376",
+ "month_lines": [],
+ "name": "熵·丙",
+ "profession": "感知网养线工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "老规矩错不了，今晚上江边散步还得多绕几圈，巡线的活儿就像伺候葡萄藤，得细心。",
+   "text": "「老规矩错不了，今晚上江边散步还得多绕几圈，巡线的活儿就像伺候葡萄藤，得细心。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,103 @@
+{
+ "age": 53,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 3,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 64.52,
+    "z": 126.83
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.3,
+    "z": 70.01
+   },
+   "work": {
+    "site": "数据菜市摊主·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 128.16,
+    "z": 133.81
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04574",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "给老式爆米花的粮票都起了名字——这事全巷都知道",
+ "id": "C-04574",
+ "month_lines": [],
+ "name": "林琳",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "灶上有汤，自取。今天清早风挺大，得赶紧收好摊上的小旗子。",
+   "text": "「灶上有汤，自取。今天清早风挺大，得赶紧收好摊上的小旗子。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

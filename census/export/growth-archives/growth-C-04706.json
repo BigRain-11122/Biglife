@@ -1,0 +1,103 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -10,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.38,
+    "z": -61.76
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.78,
+    "z": -19.26
+   },
+   "work": {
+    "site": "声优棚掌柜·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -26.17,
+    "z": -83.54
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04706",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "会为老码头缆桩推掉一整晚的生意——这事全巷都知道",
+ "id": "C-04706",
+ "month_lines": [],
+ "name": "金洁",
+ "profession": "声优棚掌柜",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "站直了别趴下，棚里今天又来了个新声线，得好好试音收声，得让这嗓子亮堂起来。这风挺大，得提醒下过路的小子们别着凉了。",
+   "text": "「站直了别趴下，棚里今天又来了个新声线，得好好试音收声，得让这嗓子亮堂起来。这风挺大，得提醒下过路的小子们别着凉了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,103 @@
+{
+ "age": 46,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 5,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 24.62,
+    "z": -75.17
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.46,
+    "z": -10.68
+   },
+   "work": {
+    "site": "江边棋摊主·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 139.49,
+    "z": -86.98
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04276",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "用旧日历教会了半条街的孩子——他自己也说不清为什么",
+ "id": "C-04276",
+ "month_lines": [],
+ "name": "黎斌",
+ "profession": "江边棋摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "今天云好，改天再说。江水清清的，棋摊上等你。",
+   "text": "「今天云好，改天再说。江水清清的，棋摊上等你。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

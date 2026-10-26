@@ -1,0 +1,112 @@
+{
+ "age": 6,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 21,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -99.26,
+    "z": 103.15
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.77,
+    "z": 26.07
+   },
+   "work": {
+    "site": "像素学徒·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -67.52,
+    "z": 35.74
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04045",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "坚持给老电报局的键记日记",
+ "id": "C-04045",
+ "month_lines": [
+  "风挺大，天阴着。这版本我等好久了，正好在弄堂口听江声，心里倒觉得适意。"
+ ],
+ "name": "奚果冻",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "这版本我等好久了，终于可以多练练手艺了。",
+   "text": "「这版本我等好久了，终于可以多练练手艺了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，天阴着。这版本我等好久了，正好在弄堂口听江声，心里倒觉得适意。",
+   "text": "「风挺大，天阴着。这版本我等好久了，正好在弄堂口听江声，心里倒觉得适意。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

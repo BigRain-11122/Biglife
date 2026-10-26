@@ -44,10 +44,9 @@
     "z": 132.5
    }
   },
-  "ctx": "tw=day,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-01227",
   "quirk": "",
-  "recovering": "shengji",
   "slot": "宅户·白天",
   "state": "home",
   "v": 1,

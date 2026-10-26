@@ -1,0 +1,103 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 1,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.26,
+    "z": -144.21
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.41,
+    "z": -104.5
+   },
+   "work": {
+    "site": "白玉兰园艺师·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 102.04,
+    "z": -14.82
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04600",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "用褪色的灯笼骨架教会了半条街的孩子",
+ "id": "C-04600",
+ "month_lines": [],
+ "name": "语义-9",
+ "profession": "白玉兰园艺师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "慢慢来，比较快。今天天气挺适合，白玉兰该是又要打苞了吧。",
+   "text": "「慢慢来，比较快。今天天气挺适合，白玉兰该是又要打苞了吧。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,103 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 1,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.66,
+    "z": 75.17
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.77,
+    "z": 29.68
+   },
+   "work": {
+    "site": "缓存管理员·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 112.38,
+    "z": 106.64
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04703",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "对的事，一个人也要站直了做。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每天跟停产的暖光灯泡打招呼——这事只有师父知道",
+ "id": "C-04703",
+ "month_lines": [],
+ "name": "席亦风",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "风挺大，今早开窗听江声都得捂紧了耳朵。这句话的事。",
+   "text": "「风挺大，今早开窗听江声都得捂紧了耳朵。这句话的事。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

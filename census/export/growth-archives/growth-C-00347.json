@@ -44,10 +44,9 @@
     "z": 80.68
    }
   },
-  "ctx": "tw=day,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-00347",
   "quirk": "night_run",
-  "recovering": "shengji",
   "slot": "公园·遛弯消食",
   "state": "leisure_park",
   "v": 1,

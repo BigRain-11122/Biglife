@@ -44,10 +44,10 @@
     "z": 54.37
    }
   },
-  "ctx": "tw=day,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-00882",
   "quirk": "night_run",
-  "recovering": "shengji",
+  "recovering": "haoqi",
   "slot": "学堂",
   "state": "school",
   "v": 1,

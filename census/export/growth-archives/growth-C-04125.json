@@ -1,0 +1,112 @@
+{
+ "age": 81,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#2E5E4E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -9,
+   "rate": 1,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.13,
+    "z": 254.46
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -0.47,
+    "z": 239.39
+   },
+   "work": {
+    "site": "外环巡夜员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 31.95,
+    "z": 171.65
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04125",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "会给退役的风向标织毛衣——这事全巷都知道",
+ "id": "C-04125",
+ "month_lines": [
+  "天清气朗，风不小。查完灯，哼着歌把阳台那盆新到的光织物花浇透，下一版一定更好。"
+ ],
+ "name": "超算·叁",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "下一版一定更好，今天风不小，但巡夜步频依旧恒定。",
+   "text": "「下一版一定更好，今天风不小，但巡夜步频依旧恒定。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "天清气朗，风不小。查完灯，哼着歌把阳台那盆新到的光织物花浇透，下一版一定更好。",
+   "text": "「天清气朗，风不小。查完灯，哼着歌把阳台那盆新到的光织物花浇透，下一版一定更好。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

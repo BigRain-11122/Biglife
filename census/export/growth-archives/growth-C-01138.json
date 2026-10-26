@@ -44,10 +44,10 @@
     "z": 74.5
    }
   },
-  "ctx": "tw=day,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-01138",
   "quirk": "",
-  "recovering": "shengji",
+  "recovering": "haoqi",
   "slot": "公园·遛弯消食",
   "state": "leisure_park",
   "v": 1,

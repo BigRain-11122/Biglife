@@ -1,0 +1,103 @@
+{
+ "age": 72,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -14,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.08,
+    "z": 92.39
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.51,
+    "z": 49.31
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -24.08,
+    "z": 48.52
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04422",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "留着爷爷的工作证却从来不用——这事只有档案馆知道",
+ "id": "C-04422",
+ "month_lines": [],
+ "name": "宋银龙",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "多个人多双筷子，今天这天还得端平点儿。",
+   "text": "「多个人多双筷子，今天这天还得端平点儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

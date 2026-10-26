@@ -1,0 +1,112 @@
+{
+ "age": 81,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -10,
+   "rate": -5,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -52.64,
+    "z": -172.76
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 0.37,
+    "z": -214.71
+   },
+   "work": {
+    "site": "穿城信使·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 27.41,
+    "z": -218.67
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04043",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "坚持给老钢琴的琴键记日记——这事只有师父知道",
+ "id": "C-04043",
+ "month_lines": [
+  "风挺大，吹得光桥信号直抖。单子没断，跨江时把稳舵先试了再说。"
+ ],
+ "name": "阿北桥·丙",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "先试了再说，这雨天单子确实多，得加快脚步了。",
+   "text": "「先试了再说，这雨天单子确实多，得加快脚步了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，吹得光桥信号直抖。单子没断，跨江时把稳舵先试了再说。",
+   "text": "「风挺大，吹得光桥信号直抖。单子没断，跨江时把稳舵先试了再说。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

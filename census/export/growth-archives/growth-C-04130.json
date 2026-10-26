@@ -1,0 +1,112 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 17,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -101.63,
+    "z": 139.9
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.0,
+    "z": 99.74
+   },
+   "work": {
+    "site": "像素小学学生·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -45.34,
+    "z": 139.79
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04130",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "把旧书店的竹梯的位置背得比自家门牌还熟——这事全巷都知道",
+ "id": "C-04130",
+ "month_lines": [
+  "风挺大，吹得江面波光粼粼的，正好瞧见GitHub的commit光点过江。我绕着江走半里，钥匙串在包里叮当响，弄堂还是那个弄堂。"
+ ],
+ "name": "屠圆圆",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "弄堂还是那个弄堂，今天天气清清爽爽的，正好适合去档案馆坐坐。",
+   "text": "「弄堂还是那个弄堂，今天天气清清爽爽的，正好适合去档案馆坐坐。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，吹得江面波光粼粼的，正好瞧见GitHub的commit光点过江。我绕着江走半里，钥匙串在包里叮当响，弄堂还是那个弄堂。",
+   "text": "「风挺大，吹得江面波光粼粼的，正好瞧见GitHub的commit光点过江。我绕着江走半里，钥匙串在包里叮当响，弄堂还是那个弄堂。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

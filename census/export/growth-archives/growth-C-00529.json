@@ -44,7 +44,7 @@
     "z": -75.75
    }
   },
-  "ctx": "tw=day,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-00529",
   "quirk": "slow",
   "slot": "工位/楼内窗影",

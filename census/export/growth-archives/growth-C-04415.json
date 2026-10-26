@@ -1,0 +1,104 @@
+{
+ "age": 87,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -11,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 37.76,
+    "z": 65.44
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.28,
+    "z": 140.01
+   },
+   "work": {
+    "site": "像素小店主·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 133.01,
+    "z": 92.88
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04415",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "逢人就讲手写信的故事",
+ "id": "C-04415",
+ "month_lines": [],
+ "name": "盛佩兰",
+ "profession": "像素小店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "旧的用的顺手，今儿这天气巴适得很，开店正好。",
+   "text": "「旧的用的顺手，今儿这天气巴适得很，开店正好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

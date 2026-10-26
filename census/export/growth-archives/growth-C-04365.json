@@ -1,0 +1,103 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 1,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -145.9,
+    "z": 15.79
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.9,
+    "z": 121.42
+   },
+   "work": {
+    "site": "缓存管理员·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -72.09,
+    "z": 54.01
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04365",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "一个人也能把日子过成合唱。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "口袋里总揣着老式爆米花机的摇柄——这事只有师父知道",
+ "id": "C-04365",
+ "month_lines": [],
+ "name": "曾雨欣",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "看天吃饭，看行情穿衣，今儿天气挺凉快，得赶紧把阳台的花说句话，好让它们别着凉。",
+   "text": "「看天吃饭，看行情穿衣，今儿天气挺凉快，得赶紧把阳台的花说句话，好让它们别着凉。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

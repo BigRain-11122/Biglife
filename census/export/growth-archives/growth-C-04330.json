@@ -1,0 +1,103 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 1,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.34,
+    "z": 10.63
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.61,
+    "z": 139.07
+   },
+   "work": {
+    "site": "尾盘茶室老板·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.21,
+    "z": 129.66
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04330",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "梦话都在念叨退役巡夜灯灵的灯罩——他自己也说不清为什么",
+ "id": "C-04330",
+ "month_lines": [],
+ "name": "奚军",
+ "profession": "尾盘茶室老板",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "旧钥匙开新锁，有时候还真开得开。今天这风挺大，正好给新来的顾客讲讲复盘局。",
+   "text": "「旧钥匙开新锁，有时候还真开得开。今天这风挺大，正好给新来的顾客讲讲复盘局。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

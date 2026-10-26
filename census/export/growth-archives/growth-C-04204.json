@@ -1,0 +1,104 @@
+{
+ "age": 6,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 12,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 43.36,
+    "z": 116.3
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.45,
+    "z": 106.05
+   },
+   "work": {
+    "site": "信使小跟班·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 145.26,
+    "z": 75.95
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04204",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "攒了满抽屉写了一半的市民歌谣从不给看",
+ "id": "C-04204",
+ "month_lines": [],
+ "name": "卢米粒",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "饭点了，天大的事吃完再谈。今天城里的事情挺多，得好好消化消化。",
+   "text": "「饭点了，天大的事吃完再谈。今天城里的事情挺多，得好好消化消化。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

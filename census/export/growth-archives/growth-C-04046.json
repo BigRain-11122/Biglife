@@ -1,0 +1,111 @@
+{
+ "age": 67,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -15,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -109.04,
+    "z": 101.67
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.45,
+    "z": 54.08
+   },
+   "work": {
+    "site": "盘口记录员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.73,
+    "z": 37.99
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04046",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把三十年前的车铃排成一排挨个擦",
+ "id": "C-04046",
+ "month_lines": [
+  "天阴着，风挺大。两只笔在手里敲得笔笔清，盘口对得平，这劲头比晴日里还透亮。收摊了，明天见。"
+ ],
+ "name": "雷顺发",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "好咯，今天天气清清爽爽的，收摊了，明天见。",
+   "text": "「好咯，今天天气清清爽爽的，收摊了，明天见。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "天阴着，风挺大。两只笔在手里敲得笔笔清，盘口对得平，这劲头比晴日里还透亮。收摊了，明天见。",
+   "text": "「天阴着，风挺大。两只笔在手里敲得笔笔清，盘口对得平，这劲头比晴日里还透亮。收摊了，明天见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

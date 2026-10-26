@@ -1,0 +1,111 @@
+{
+ "age": 76,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -11,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -144.18,
+    "z": 77.78
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.73,
+    "z": 117.65
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -68.5,
+    "z": 19.64
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04059",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "能一眼认出老式怀表链的真伪——她自己也说不清为什么",
+ "id": "C-04059",
+ "month_lines": [
+  "风挺大，卷得灶台火苗直晃。这阴沉沉的天儿，正好守着那锅老汤慢慢熬，清单第一，火候到了就是硬道理。"
+ ],
+ "name": "赵惠芬",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "清单第一，今儿这天挺适合外出走走。",
+   "text": "「清单第一，今儿这天挺适合外出走走。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，卷得灶台火苗直晃。这阴沉沉的天儿，正好守着那锅老汤慢慢熬，清单第一，火候到了就是硬道理。",
+   "text": "「风挺大，卷得灶台火苗直晃。这阴沉沉的天儿，正好守着那锅老汤慢慢熬，清单第一，火候到了就是硬道理。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

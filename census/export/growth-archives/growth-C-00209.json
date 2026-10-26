@@ -44,14 +44,14 @@
     "z": 27.5
    }
   },
-  "ctx": "tw=empk,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-00209",
   "quirk": "slow",
   "recovering": "haoqi",
-  "slot": "通勤街面",
-  "state": "commute",
+  "slot": "机房·工位",
+  "state": "work",
   "v": 1,
-  "visible": 1
+  "visible": 0
  },
  "block": "八号楼街区",
  "born": "2026-09-23",

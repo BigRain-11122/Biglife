@@ -1,0 +1,104 @@
+{
+ "age": 10,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 17,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -139.68,
+    "z": 25.26
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.4,
+    "z": 43.62
+   },
+   "work": {
+    "site": "像素小学学生·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -60.07,
+    "z": 30.61
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04602",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给手抄的菜谱都起了名字——这事只有师父知道",
+ "id": "C-04602",
+ "month_lines": [],
+ "name": "曹米粒",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "先复核一遍，今天天气还挺适合外出走走，正好可以绕路看看新commit的光点。",
+   "text": "「先复核一遍，今天天气还挺适合外出走走，正好可以绕路看看新commit的光点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

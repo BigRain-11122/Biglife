@@ -44,10 +44,9 @@
     "z": 152.95
    }
   },
-  "ctx": "tw=day,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-00452",
   "quirk": "",
-  "recovering": "shengji",
   "slot": "公园·遛弯消食",
   "state": "leisure_park",
   "v": 1,

@@ -1,0 +1,103 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 3,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.44,
+    "z": -148.2
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.14,
+    "z": -115.81
+   },
+   "work": {
+    "site": "信号塔工·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -40.11,
+    "z": -147.03
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04254",
+  "quirk": "slow",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "给老式邮差的背包都编了号还建了册——他自己也说不清为什么",
+ "id": "C-04254",
+ "month_lines": [],
+ "name": "夏健",
+ "profession": "信号塔工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "饭点了，天大的事吃完再谈。今天天气挺好的，爬塔前再看一眼预报，保证不给流量之光添堵。",
+   "text": "「饭点了，天大的事吃完再谈。今天天气挺好的，爬塔前再看一眼预报，保证不给流量之光添堵。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

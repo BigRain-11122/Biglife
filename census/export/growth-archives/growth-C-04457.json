@@ -1,0 +1,103 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 2,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.08,
+    "z": 60.26
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.95,
+    "z": 158.6
+   },
+   "work": {
+    "site": "游戏策划·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 101.25,
+    "z": 60.32
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04457",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "从不让老钢琴的琴键离开自己三步远——这事只有档案馆知道",
+ "id": "C-04457",
+ "month_lines": [],
+ "name": "董文倩",
+ "profession": "游戏策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "规矩如钟，人情如江，今天版本前夜，图纸上还得再琢磨琢磨。",
+   "text": "「规矩如钟，人情如江，今天版本前夜，图纸上还得再琢磨琢磨。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

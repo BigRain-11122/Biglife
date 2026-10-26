@@ -1,0 +1,104 @@
+{
+ "age": 51,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 0,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 23.39,
+    "z": -144.21
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.61,
+    "z": -57.35
+   },
+   "work": {
+    "site": "像素小店主·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 99.71,
+    "z": -17.08
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04300",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "给初代城门钥匙都编了号还建了册——没人知道为什么",
+ "id": "C-04300",
+ "month_lines": [],
+ "name": "郁海峰",
+ "profession": "像素小店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "又学了一招，今天开档晚了些，但老客来了还是破例早点开。",
+   "text": "「又学了一招，今天开档晚了些，但老客来了还是破例早点开。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

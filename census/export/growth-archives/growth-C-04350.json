@@ -1,0 +1,103 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 5,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.86,
+    "z": 101.95
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.58,
+    "z": 141.55
+   },
+   "work": {
+    "site": "盘口记录员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.46,
+    "z": 82.38
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04350",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "每逢下雨就去修旧信使地图的边角料——这事只有师父知道",
+ "id": "C-04350",
+ "month_lines": [],
+ "name": "陆向洋",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "乖乖，这天气清清爽爽的，正好适合多走两步路。老规矩错不了，笔笔清还是要做到位。",
+   "text": "「乖乖，这天气清清爽爽的，正好适合多走两步路。老规矩错不了，笔笔清还是要做到位。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

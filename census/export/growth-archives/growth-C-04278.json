@@ -1,0 +1,103 @@
+{
+ "age": 72,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -6,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 45.63,
+    "z": -11.66
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.09,
+    "z": -137.85
+   },
+   "work": {
+    "site": "江边棋摊主·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 142.62,
+    "z": -130.99
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04278",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "记得旧笔友的明信片的每一个来历——据说是老辈传下的规矩",
+ "id": "C-04278",
+ "month_lines": [],
+ "name": "宋根娣",
+ "profession": "江边棋摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "潮水的事交给潮水，今儿个阴天，得检查一遍屋里的灯。",
+   "text": "「潮水的事交给潮水，今儿个阴天，得检查一遍屋里的灯。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

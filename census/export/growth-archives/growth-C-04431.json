@@ -1,0 +1,103 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 4,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -132.47,
+    "z": -130.04
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.09,
+    "z": -141.61
+   },
+   "work": {
+    "site": "数据清洗工·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -34.03,
+    "z": -140.27
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04431",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "逢人就讲老电报局的键的故事——据说是老辈传下的规矩",
+ "id": "C-04431",
+ "month_lines": [],
+ "name": "陶沐辰",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "搭把手的事儿，最后一批数据洗完了，今晚还得加把力。",
+   "text": "「搭把手的事儿，最后一批数据洗完了，今晚还得加把力。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,103 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 3,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -123.72,
+    "z": -115.15
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.06,
+    "z": -41.09
+   },
+   "work": {
+    "site": "玩家留言整理员·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -38.7,
+    "z": -55.83
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04500",
+  "quirk": "umbrella",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件1990 年的真硬币——没人知道为什么",
+ "id": "C-04500",
+ "month_lines": [],
+ "name": "韩沐辰",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "出锅喽——今儿个风挺大，收摊时多绑了几道绳，得把摊子稳稳当当的。",
+   "text": "「出锅喽——今儿个风挺大，收摊时多绑了几道绳，得把摊子稳稳当当的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

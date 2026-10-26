@@ -1,0 +1,103 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 3,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 29.06,
+    "z": 152.02
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.37,
+    "z": 82.92
+   },
+   "work": {
+    "site": "像素学徒·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 111.44,
+    "z": 99.91
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04437",
+  "quirk": "night_run",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "搬家三次，钥匙一把不扔。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "从不让老式算盘珠离开自己三步远——这事只有档案馆知道",
+ "id": "C-04437",
+ "month_lines": [],
+ "name": "抖动·快",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "退退退，今天天气这么好，江水清清的，得去匠人巷琢磨琢磨新图案。",
+   "text": "「退退退，今天天气这么好，江水清清的，得去匠人巷琢磨琢磨新图案。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

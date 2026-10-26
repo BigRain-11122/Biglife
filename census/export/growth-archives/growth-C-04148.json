@@ -1,0 +1,111 @@
+{
+ "age": 88,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -15,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 40.38,
+    "z": 134.39
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 93.25,
+    "z": 89.69
+   },
+   "work": {
+    "site": "8bit 乐师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.8,
+    "z": 16.29
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04148",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "从不让旧饭盒里的字条离开自己三步远——这事全巷都知道",
+ "id": "C-04148",
+ "month_lines": [
+  "天清气朗，风不小。刚给守夜灯灵道过辛苦，这杯老茶正暖。毫秒也是时间，好咯。"
+ ],
+ "name": "孟鸿奎",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "buddy",
+   "src": "茶友",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "毫秒也是时间，今天天气云蒙蒙的，喝茶还是要用那个旧杯子，好咯。",
+   "text": "「毫秒也是时间，今天天气云蒙蒙的，喝茶还是要用那个旧杯子，好咯。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "天清气朗，风不小。刚给守夜灯灵道过辛苦，这杯老茶正暖。毫秒也是时间，好咯。",
+   "text": "「天清气朗，风不小。刚给守夜灯灵道过辛苦，这杯老茶正暖。毫秒也是时间，好咯。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

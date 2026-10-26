@@ -1,0 +1,103 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 7,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 34.95,
+    "z": 105.94
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.82,
+    "z": 113.37
+   },
+   "work": {
+    "site": "夜宵摊主·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 145.6,
+    "z": 61.82
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04649",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "记得老钟楼的齿轮的每一个来历——这事只有师父知道",
+ "id": "C-04649",
+ "month_lines": [],
+ "name": "吕清晚",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "看天吃饭，看行情穿衣，今朝出摊得等到茶凉些了。",
+   "text": "「看天吃饭，看行情穿衣，今朝出摊得等到茶凉些了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

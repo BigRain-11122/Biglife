@@ -1,0 +1,103 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 7,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.61,
+    "z": -16.74
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.53,
+    "z": -34.73
+   },
+   "work": {
+    "site": "玩家留言整理员·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.23,
+    "z": -53.83
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04456",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "攒了满抽屉淘汰的电话卡从不给看——没人知道为什么",
+ "id": "C-04456",
+ "month_lines": [],
+ "name": "段沈鱼",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "老地方见，今天天气挺适合出去走走，得劲。",
+   "text": "「老地方见，今天天气挺适合出去走走，得劲。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

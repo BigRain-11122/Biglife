@@ -1,0 +1,103 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -5,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 48.26,
+    "z": -81.46
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.84,
+    "z": -59.67
+   },
+   "work": {
+    "site": "视频修复师·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 133.3,
+    "z": -59.9
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04380",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "能一眼认出老皮匠的锥子的真伪——这事全巷都知道",
+ "id": "C-04380",
+ "month_lines": [],
+ "name": "姜静",
+ "profession": "视频修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "buddy",
+   "src": "牌友",
+   "with": "C-00037"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "急啥，汤还没开呢，修片子修到关键帧还是得屏住呼吸，这画面里住着魂嘛。",
+   "text": "「急啥，汤还没开呢，修片子修到关键帧还是得屏住呼吸，这画面里住着魂嘛。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

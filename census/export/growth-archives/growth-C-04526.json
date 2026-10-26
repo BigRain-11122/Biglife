@@ -1,0 +1,103 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 0,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -28.16,
+    "z": -177.13
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -15.03,
+    "z": -176.92
+   },
+   "work": {
+    "site": "夜宵摊主·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 36.69,
+    "z": -225.66
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04526",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "会给老式爆米花机的摇柄织毛衣——这事只有师父知道",
+ "id": "C-04526",
+ "month_lines": [],
+ "name": "茅未晞",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "别客气，就当自己家。今儿风挺大，江边站久了就得多穿点。",
+   "text": "「别客气，就当自己家。今儿风挺大，江边站久了就得多穿点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

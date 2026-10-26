@@ -1,0 +1,103 @@
+{
+ "age": 88,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -10,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.96,
+    "z": 35.71
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.96,
+    "z": 15.82
+   },
+   "work": {
+    "site": "资金金灯匠·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -70.99,
+    "z": 77.64
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04175",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "记得写了一半的市民歌谣的每一个来历——这事只有档案馆知道",
+ "id": "C-04175",
+ "month_lines": [],
+ "name": "汪福生",
+ "profession": "资金金灯匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "今天的事今天清，今早给塔身加了档金光，电波猫们吃的也添了。",
+   "text": "「今天的事今天清，今早给塔身加了档金光，电波猫们吃的也添了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

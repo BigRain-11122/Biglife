@@ -1,0 +1,103 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 7,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -94.1,
+    "z": 208.24
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -18.64,
+    "z": 192.81
+   },
+   "work": {
+    "site": "新市民安居顾问·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 94.52,
+    "z": 253.51
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04642",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "每天跟旧棋谱打招呼——没人知道为什么",
+ "id": "C-04642",
+ "month_lines": [],
+ "name": "林一诺",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "今早上班路遇老主顾，他搬家了，还特意来看看我。我送走的老主顾，比这城里一半的楼岁数都大。希望每一个新市民都能找到属于自己的温暖角落。",
+   "text": "「今早上班路遇老主顾，他搬家了，还特意来看看我。我送走的老主顾，比这城里一半的楼岁数都大。希望每一个新市民都能找到属于自己的温暖角落。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

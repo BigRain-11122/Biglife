@@ -1,0 +1,104 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#F8BBD0",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 20,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -93.47,
+    "z": 224.21
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 14.8,
+    "z": 181.47
+   },
+   "work": {
+    "site": "伴居灵·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 123.5,
+    "z": 259.28
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04623",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "OR",
+ "gender": "无定",
+ "hook": "绕着旧时弄堂的灯绳飞过整整三十圈",
+ "id": "C-04623",
+ "month_lines": [],
+ "name": "小霜降",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "蹭光蹭数据，尾巴天线依旧对准最热闹的方向。",
+   "text": "「蹭光蹭数据，尾巴天线依旧对准最热闹的方向。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

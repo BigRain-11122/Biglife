@@ -44,10 +44,10 @@
     "z": 27.51
    }
   },
-  "ctx": "tw=day,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-00393",
   "quirk": "umbrella",
-  "recovering": "shengji",
+  "recovering": "haoqi",
   "slot": "工位/楼内窗影",
   "state": "work",
   "v": 1,

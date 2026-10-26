@@ -44,10 +44,9 @@
     "z": 103.05
    }
   },
-  "ctx": "tw=day,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-00914",
   "quirk": "umbrella",
-  "recovering": "shengji",
   "slot": "宅户·白天",
   "state": "home",
   "v": 1,

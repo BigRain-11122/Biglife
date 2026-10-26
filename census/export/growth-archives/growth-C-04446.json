@@ -1,0 +1,103 @@
+{
+ "age": 80,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -3,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -109.57,
+    "z": -42.73
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.48,
+    "z": -23.0
+   },
+   "work": {
+    "site": "字幕君·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -32.65,
+    "z": -58.2
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04446",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "门禁不放人情，人情在门内。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件老药房的药柜抽屉——这事全巷都知道",
+ "id": "C-04446",
+ "month_lines": [],
+ "name": "阿零·甲",
+ "profession": "字幕君",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "今天的事今天清，对齐颗粒度嘛，得趁热打铁。天气清清爽爽的，街角的守夜灯灵辛苦了，得给他们多送颗糖。",
+   "text": "「今天的事今天清，对齐颗粒度嘛，得趁热打铁。天气清清爽爽的，街角的守夜灯灵辛苦了，得给他们多送颗糖。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

@@ -1,0 +1,103 @@
+{
+ "age": 83,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -8,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.76,
+    "z": 71.78
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.85,
+    "z": 139.64
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -60.32,
+    "z": 136.61
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04250",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给全城桥的名字写了一整本观察笔记——这事全巷都知道",
+ "id": "C-04250",
+ "month_lines": [],
+ "name": "黎梅芳",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "今天的事今天清，收盘铃一响就开饭了，绿色行情日例汤免费，记得多跟守夜灯灵道声辛苦。",
+   "text": "「今天的事今天清，收盘铃一响就开饭了，绿色行情日例汤免费，记得多跟守夜灯灵道声辛苦。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

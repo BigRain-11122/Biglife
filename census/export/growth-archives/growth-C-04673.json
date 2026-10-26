@@ -1,0 +1,103 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 9,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 50.39,
+    "z": 34.33
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.73,
+    "z": 65.61
+   },
+   "work": {
+    "site": "缓存管理员·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 100.16,
+    "z": 19.15
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04673",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能背出退役巡夜灯灵的灯罩的全部班次——据说是老辈传下的规矩",
+ "id": "C-04673",
+ "month_lines": [],
+ "name": "尹沐晴",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "退退退，今早出门就碰上这雨，撑着伞跟对门打了个照面，十年就是这么弄的。",
+   "text": "「退退退，今早出门就碰上这雨，撑着伞跟对门打了个照面，十年就是这么弄的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

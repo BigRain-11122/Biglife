@@ -1,0 +1,103 @@
+{
+ "age": 79,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -15,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 70.74,
+    "z": 13.75
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.7,
+    "z": 61.69
+   },
+   "work": {
+    "site": "城门守门人·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 145.85,
+    "z": 99.87
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04395",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "逢人就讲老式冰箱贴的故事——这事全巷都知道",
+ "id": "C-04395",
+ "month_lines": [],
+ "name": "贾银龙",
+ "profession": "城门守门人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "旧的用的顺手，今儿个天清气朗的，心情挺不错。",
+   "text": "「旧的用的顺手，今儿个天清气朗的，心情挺不错。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,103 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -15,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -104.54,
+    "z": -82.58
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.14,
+    "z": -86.37
+   },
+   "work": {
+    "site": "视频修复师·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -43.4,
+    "z": -95.65
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04671",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件老式爆米花的粮票——这事只有师父知道",
+ "id": "C-04671",
+ "month_lines": [],
+ "name": "宋红",
+ "profession": "视频修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "今早起来听窗外雨声滴答，撑着伞出门，路上的地上的水洼映着灰蒙蒙的天。老规矩错不了，手头的修复帧还得接着补。",
+   "text": "「今早起来听窗外雨声滴答，撑着伞出门，路上的地上的水洼映着灰蒙蒙的天。老规矩错不了，手头的修复帧还得接着补。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,104 @@
+{
+ "age": 14,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 17,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 68.48,
+    "z": 106.77
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.07,
+    "z": 66.35
+   },
+   "work": {
+    "site": "伴居灵·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 113.91,
+    "z": 89.73
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04434",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "绕着退役的路灯灯丝飞过整整三十圈——这事全巷都知道",
+ "id": "C-04434",
+ "month_lines": [],
+ "name": "黑阿咔哒",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "蹭光呢，今天天没亮就醒，城里的早鸟儿真精神。",
+   "text": "「蹭光呢，今天天没亮就醒，城里的早鸟儿真精神。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,104 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3A4E7E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": 4,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -89.66,
+    "z": 195.65
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -12.76,
+    "z": 220.65
+   },
+   "work": {
+    "site": "新市民安居顾问·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 71.89,
+    "z": 194.07
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04387",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "把心事只说给巷口的第一盏灯听——据说是老辈传下的规矩",
+ "id": "C-04387",
+ "month_lines": [],
+ "name": "波特-3",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "拆开看看又不会坏，今天又是忙忙碌碌的一天。",
+   "text": "「拆开看看又不会坏，今天又是忙忙碌碌的一天。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

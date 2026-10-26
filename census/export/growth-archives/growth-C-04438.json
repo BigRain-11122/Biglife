@@ -1,0 +1,104 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -14,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.75,
+    "z": -136.47
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.55,
+    "z": -131.27
+   },
+   "work": {
+    "site": "新市民安居顾问·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.06,
+    "z": -69.49
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04438",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "把心事只说给修桥人的旧安全帽听——这事只有档案馆知道",
+ "id": "C-04438",
+ "month_lines": [],
+ "name": "姜海峰",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "又学了一招，这风挺大，得穿厚点儿。今天还得帮新迁来的小伙伴安顿好，得让他们感受到城里的温暖。",
+   "text": "「又学了一招，这风挺大，得穿厚点儿。今天还得帮新迁来的小伙伴安顿好，得让他们感受到城里的温暖。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

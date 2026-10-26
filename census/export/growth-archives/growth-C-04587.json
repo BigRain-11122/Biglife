@@ -1,0 +1,104 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 12,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 72.15,
+    "z": -47.36
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.33,
+    "z": -99.58
+   },
+   "work": {
+    "site": "弄堂小囡·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 138.67,
+    "z": -17.6
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04587",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "给全城雨夜的录音合集都起了名字——这事全巷都知道",
+ "id": "C-04587",
+ "month_lines": [],
+ "name": "茅米粒",
+ "profession": "弄堂小囡",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "汤要趁烫，话要慢讲，这天正好适合多坐坐。",
+   "text": "「汤要趁烫，话要慢讲，这天正好适合多坐坐。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

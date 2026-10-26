@@ -1,0 +1,103 @@
+{
+ "age": 90,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -8,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 30.52,
+    "z": 25.12
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.7,
+    "z": 96.03
+   },
+   "work": {
+    "site": "游戏楼门童·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 135.97,
+    "z": 21.56
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04685",
+  "quirk": "slow",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "逢人就讲弄堂口的邮筒的故事——这事全巷都知道",
+ "id": "C-04685",
+ "month_lines": [],
+ "name": "董彩凤",
+ "profession": "游戏楼门童",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "红灯面前没有老熟人，今儿这雨还是不小，撑着伞出门的行人都急着找避雨的地方。我这儿还得等电梯，<data omitted>。",
+   "text": "「红灯面前没有老熟人，今儿这雨还是不小，撑着伞出门的行人都急着找避雨的地方。我这儿还得等电梯，<data omitted>。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

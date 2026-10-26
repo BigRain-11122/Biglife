@@ -44,10 +44,10 @@
     "z": 12.08
    }
   },
-  "ctx": "tw=day,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-00993",
   "quirk": "",
-  "recovering": "shengji",
+  "recovering": "haoqi",
   "slot": "宅户·白天",
   "state": "home",
   "v": 1,

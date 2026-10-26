@@ -1,0 +1,103 @@
+{
+ "age": 68,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -8,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -103.56,
+    "z": -57.91
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.39,
+    "z": -60.39
+   },
+   "work": {
+    "site": "视频修复师·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.83,
+    "z": -90.1
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04547",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "能背出老式门铃的铜壳的全部班次——她自己也说不清为什么",
+ "id": "C-04547",
+ "month_lines": [],
+ "name": "凌玉兰",
+ "profession": "视频修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "这事儿有讲究，今朝修到紧要关头，得全神贯注。",
+   "text": "「这事儿有讲究，今朝修到紧要关头，得全神贯注。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,104 @@
+{
+ "age": 15,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#2E5E4E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -3,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 65.88,
+    "z": 137.66
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.6,
+    "z": 147.5
+   },
+   "work": {
+    "site": "游戏策划·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 133.93,
+    "z": 127.33
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04589",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "用会发光的纽扣教会了半条街的孩子——他自己也说不清为什么",
+ "id": "C-04589",
+ "month_lines": [],
+ "name": "阿桥接·快",
+ "profession": "游戏策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "试错要趁灯亮，今天又是版本前夜，楼里亮得跟白昼一样。",
+   "text": "「试错要趁灯亮，今天又是版本前夜，楼里亮得跟白昼一样。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

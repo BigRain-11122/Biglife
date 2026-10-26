@@ -44,10 +44,9 @@
     "z": 150.59
    }
   },
-  "ctx": "tw=day,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-01188",
   "quirk": "",
-  "recovering": "shengji",
   "slot": "工位/楼内窗影",
   "state": "work",
   "v": 1,

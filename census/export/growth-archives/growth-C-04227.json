@@ -1,0 +1,103 @@
+{
+ "age": 78,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -14,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 64.99,
+    "z": -114.5
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.31,
+    "z": -51.92
+   },
+   "work": {
+    "site": "脑环广场管理员·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 109.56,
+    "z": -98.8
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04227",
+  "quirk": "umbrella",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "能一眼认出雨声录音的真伪",
+ "id": "C-04227",
+ "month_lines": [],
+ "name": "冯建国",
+ "profession": "脑环广场管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "规矩如钟，人情如江。今早走得有点急，旧笔还在手里攥着，笔尖都快磨秃了。",
+   "text": "「规矩如钟，人情如江。今早走得有点急，旧笔还在手里攥着，笔尖都快磨秃了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

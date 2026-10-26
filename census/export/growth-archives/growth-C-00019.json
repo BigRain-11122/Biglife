@@ -44,13 +44,13 @@
     "z": 107.98
    }
   },
-  "ctx": "tw=empk,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-00019",
   "quirk": "",
-  "slot": "通勤街面",
-  "state": "commute",
+  "slot": "机房·工位",
+  "state": "work",
   "v": 1,
-  "visible": 1
+  "visible": 0
  },
  "block": "八号楼街区",
  "born": null,

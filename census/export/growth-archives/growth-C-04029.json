@@ -1,0 +1,111 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -7,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -52.7,
+    "z": 206.82
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 9.67,
+    "z": 244.78
+   },
+   "work": {
+    "site": "防火墙巡林员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 125.86,
+    "z": 196.43
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04029",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "每天跟手摇的旧胶片机打招呼——据说是老辈传下的规矩",
+ "id": "C-04029",
+ "month_lines": [
+  "天阴着，风挺大，吹得巡线脚步都沉实。刚验完 BigMoney 的包，这活儿有讲究，得麻溜着干。"
+ ],
+ "name": "管琳",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "这事儿有讲究，今天巡边可得仔细着点儿。天气清清爽爽的，正好利于瞭望。",
+   "text": "「这事儿有讲究，今天巡边可得仔细着点儿。天气清清爽爽的，正好利于瞭望。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "天阴着，风挺大，吹得巡线脚步都沉实。刚验完 BigMoney 的包，这活儿有讲究，得麻溜着干。",
+   "text": "「天阴着，风挺大，吹得巡线脚步都沉实。刚验完 BigMoney 的包，这活儿有讲究，得麻溜着干。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

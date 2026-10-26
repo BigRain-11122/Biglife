@@ -1,0 +1,103 @@
+{
+ "age": 94,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -12,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -98.85,
+    "z": 139.87
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.87,
+    "z": 64.76
+   },
+   "work": {
+    "site": "数据菜市摊主·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -29.87,
+    "z": 150.82
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04294",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把淘汰的电话卡画进了自己的作品里——这事只有档案馆知道",
+ "id": "C-04294",
+ "month_lines": [],
+ "name": "屠锡金",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "buddy",
+   "src": "对手",
+   "with": "C-00061"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "慢慢来，比较快。今天这天儿正好，江水清清的，适合走走。",
+   "text": "「慢慢来，比较快。今天这天儿正好，江水清清的，适合走走。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

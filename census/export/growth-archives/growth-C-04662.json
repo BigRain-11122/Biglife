@@ -1,0 +1,104 @@
+{
+ "age": 8,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#EF5350",
+   "eye": "#FFD27A",
+   "hair": "#C5E1FF",
+   "skin": "#69F0AE"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 21,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 62.93,
+    "z": -137.59
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.3,
+    "z": -65.61
+   },
+   "work": {
+    "site": "风信使·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.38,
+    "z": -45.36
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04662",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "流量像潮水，我是灯塔不是渔船。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "看得见老茶壶里住着的光——没人知道为什么",
+ "id": "C-04662",
+ "month_lines": [],
+ "name": "白顺水",
+ "profession": "风信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "雨还在下，风挺大，得好好听着风声，别让重要信息给吹跑了。",
+   "text": "「雨还在下，风挺大，得好好听着风声，别让重要信息给吹跑了。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

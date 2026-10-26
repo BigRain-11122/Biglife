@@ -1,0 +1,103 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -2,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -104.16,
+    "z": 173.47
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -9.41,
+    "z": 211.98
+   },
+   "work": {
+    "site": "防火墙巡林员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 88.23,
+    "z": 220.52
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04269",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "物件的旧，是被人用出来的体面。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "每天跟旧船锚残件打招呼——据说是老辈传下的规矩",
+ "id": "C-04269",
+ "month_lines": [],
+ "name": "童伟",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "以前我们那儿总会在这样的天气出去走走，今天也正好。",
+   "text": "「以前我们那儿总会在这样的天气出去走走，今天也正好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

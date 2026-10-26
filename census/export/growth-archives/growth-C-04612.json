@@ -1,0 +1,103 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 6,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -65.79,
+    "z": 193.92
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -11.71,
+    "z": 233.92
+   },
+   "work": {
+    "site": "防火墙巡林员·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 59.55,
+    "z": 237.23
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04612",
+  "quirk": "night_run",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "把老药房的药柜抽屉画进了自己的作品里——这事只有师父知道",
+ "id": "C-04612",
+ "month_lines": [],
+ "name": "冯文倩",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "茶凉了再倒就是，今天这天气正好，出去走走巴适得很。",
+   "text": "「茶凉了再倒就是，今天这天气正好，出去走走巴适得很。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

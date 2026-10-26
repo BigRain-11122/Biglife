@@ -1,0 +1,111 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 6,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -136.39,
+    "z": 150.49
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.58,
+    "z": 48.31
+   },
+   "work": {
+    "site": "夜宵摊主·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -22.84,
+    "z": 30.95
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04157",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "留着消失的船班时刻表却从来不用",
+ "id": "C-04157",
+ "month_lines": [
+  "天清气朗，风挺大。江水都不急我急啥，收摊前给那加班族加辣，这火候，正好开锅。"
+ ],
+ "name": "廖知夏",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "江水都不急我急啥，今儿这摊上人挺多，得赶紧忙活。",
+   "text": "「江水都不急我急啥，今儿这摊上人挺多，得赶紧忙活。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "天清气朗，风挺大。江水都不急我急啥，收摊前给那加班族加辣，这火候，正好开锅。",
+   "text": "「天清气朗，风挺大。江水都不急我急啥，收摊前给那加班族加辣，这火候，正好开锅。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

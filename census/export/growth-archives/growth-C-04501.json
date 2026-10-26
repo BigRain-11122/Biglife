@@ -1,0 +1,104 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#26A69A",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 11,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -130.46,
+    "z": 129.47
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.87,
+    "z": 151.54
+   },
+   "work": {
+    "site": "声景师·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -56.78,
+    "z": 39.1
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04501",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "高兴时会把光借给写满字的光带——这事只有师父知道",
+ "id": "C-04501",
+ "month_lines": [],
+ "name": "小季风",
+ "profession": "声景师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "合唱又多了一首新曲，夜里听到的故事真能攒劲。",
+   "text": "「合唱又多了一首新曲，夜里听到的故事真能攒劲。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

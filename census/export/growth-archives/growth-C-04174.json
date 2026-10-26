@@ -1,0 +1,103 @@
+{
+ "age": 26,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 7,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 23.71,
+    "z": 17.85
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.6,
+    "z": 149.12
+   },
+   "work": {
+    "site": "像素画匠·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.73,
+    "z": 53.46
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04174",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "能背出旧茶馆的水牌的全部班次",
+ "id": "C-04174",
+ "month_lines": [],
+ "name": "管CJ",
+ "profession": "像素画匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "好咯，今天又得盯着那些盘扣不放了，哪怕就一个细节，也是不能马虎。",
+   "text": "「好咯，今天又得盯着那些盘扣不放了，哪怕就一个细节，也是不能马虎。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,103 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -7,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -108.93,
+    "z": -11.15
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.34,
+    "z": -27.24
+   },
+   "work": {
+    "site": "8bit 乐师·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -57.85,
+    "z": -50.97
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04165",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "偷偷给掉漆的糖果罐上油保养——这事只有师父知道",
+ "id": "C-04165",
+ "month_lines": [],
+ "name": "杭敏",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "夜里冷，喝口热的再走。好咯，今早听了一夜的汽笛声，灵感正浓呢。",
+   "text": "「夜里冷，喝口热的再走。好咯，今早听了一夜的汽笛声，灵感正浓呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,103 @@
+{
+ "age": 86,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -4,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -146.85,
+    "z": -41.45
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.21,
+    "z": -119.2
+   },
+   "work": {
+    "site": "选题官·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -34.26,
+    "z": -102.64
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04279",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "能一眼认出全城公交的老路线图的真伪——这事只有师父知道",
+ "id": "C-04279",
+ "month_lines": [],
+ "name": "里德所罗门·夜",
+ "profession": "选题官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "站直了别趴下，今天得赶紧毙几稿，留出好东西给玩家。天气阴着，屋里的灯得检查一下，别到时候黑灯瞎火的。",
+   "text": "「站直了别趴下，今天得赶紧毙几稿，留出好东西给玩家。天气阴着，屋里的灯得检查一下，别到时候黑灯瞎火的。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

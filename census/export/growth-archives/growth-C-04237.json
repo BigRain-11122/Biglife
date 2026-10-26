@@ -1,0 +1,104 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#FFA726",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 18,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -73.3,
+    "z": -234.0
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 7.66,
+    "z": -254.8
+   },
+   "work": {
+    "site": "巡信使·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 35.99,
+    "z": -196.25
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04237",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "RV",
+ "gender": "无定",
+ "hook": "把旧船木做的镇纸当成了自己的老朋友——没人知道为什么",
+ "id": "C-04237",
+ "month_lines": [],
+ "name": "阿融雪",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "衔笺忙，风不小，今天得为G08送些最新的消息。",
+   "text": "「衔笺忙，风不小，今天得为G08送些最新的消息。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

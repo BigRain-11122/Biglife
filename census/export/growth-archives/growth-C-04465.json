@@ -1,0 +1,103 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#CFC2AC"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -5,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -119.15,
+    "z": 135.22
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.51,
+    "z": 37.62
+   },
+   "work": {
+    "site": "数据清洗工·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -51.43,
+    "z": 62.05
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04465",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持手写写了一半的市民歌谣——这事只有师父知道",
+ "id": "C-04465",
+ "month_lines": [],
+ "name": "串行-7",
+ "profession": "数据清洗工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "出锅喽——今天天气挺适合外出走走，正好能看看新上线的行情数据优化成果。",
+   "text": "「出锅喽——今天天气挺适合外出走走，正好能看看新上线的行情数据优化成果。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

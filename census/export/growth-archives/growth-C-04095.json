@@ -1,0 +1,112 @@
+{
+ "age": 91,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -9,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.28,
+    "z": 40.48
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.45,
+    "z": 71.02
+   },
+   "work": {
+    "site": "数据粥铺摊主·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.35,
+    "z": 101.05
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04095",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "从不让三代人传下的顶针离开自己三步远——这事只有档案馆知道",
+ "id": "C-04095",
+ "month_lines": [
+  "风挺大，蒸笼里那团暖光粢饭的香气倒是稳当。这版本我等好久了，正好趁热喝口粥，回头说。"
+ ],
+ "name": "赵祥林",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "这版本我等好久了，今天天气风挺大，开档得早点呢。",
+   "text": "「这版本我等好久了，今天天气风挺大，开档得早点呢。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，蒸笼里那团暖光粢饭的香气倒是稳当。这版本我等好久了，正好趁热喝口粥，回头说。",
+   "text": "「风挺大，蒸笼里那团暖光粢饭的香气倒是稳当。这版本我等好久了，正好趁热喝口粥，回头说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

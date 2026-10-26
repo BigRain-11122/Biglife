@@ -1,0 +1,104 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -7,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -90.97,
+    "z": -259.07
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -16.1,
+    "z": -258.62
+   },
+   "work": {
+    "site": "像素小店主·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 70.35,
+    "z": -183.71
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04412",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "把心事只说给褪色的灯笼骨架听——这事只有师父知道",
+ "id": "C-04412",
+ "month_lines": [],
+ "name": "钱伟民",
+ "profession": "像素小店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "又学了一招，今天风挺大，江边走走思路更清晰。",
+   "text": "「又学了一招，今天风挺大，江边走走思路更清晰。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

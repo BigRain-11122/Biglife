@@ -1,0 +1,104 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 20,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.82,
+    "z": -65.09
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.96,
+    "z": -42.36
+   },
+   "work": {
+    "site": "像素小学学生·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 112.6,
+    "z": -18.43
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04345",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "用老电报局的键教会了半条街的孩子——据说是老辈传下的规矩",
+ "id": "C-04345",
+ "month_lines": [],
+ "name": "贺阿果",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "包在我身上，今儿天气清清爽爽的，作业本上又多了一幅超体城的截图。",
+   "text": "「包在我身上，今儿天气清清爽爽的，作业本上又多了一幅超体城的截图。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

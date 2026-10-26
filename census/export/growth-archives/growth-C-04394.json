@@ -1,0 +1,103 @@
+{
+ "age": 59,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#2E5E4E",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 0,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 51.21,
+    "z": 35.87
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.24,
+    "z": 139.74
+   },
+   "work": {
+    "site": "城门守门人·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 111.96,
+    "z": 49.65
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04394",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "话说出口，比盖了章还硬。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "每年挑一天只为手摇的旧胶片机大扫除——他自己也说不清为什么",
+ "id": "C-04394",
+ "month_lines": [],
+ "name": "功耗·快",
+ "profession": "城门守门人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "街坊一声喊，放下碗就到，今儿这风挺大，城门边值守正合适。",
+   "text": "「街坊一声喊，放下碗就到，今儿这风挺大，城门边值守正合适。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

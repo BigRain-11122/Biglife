@@ -1,0 +1,103 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#2E6E6E",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": 5,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -121.0,
+    "z": 97.35
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.74,
+    "z": 80.39
+   },
+   "work": {
+    "site": "K线屏画师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -46.99,
+    "z": 99.85
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04720",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能一眼认出旧船票的真伪——这事全巷都知道",
+ "id": "C-04720",
+ "month_lines": [],
+ "name": "老串口·午",
+ "profession": "K线屏画师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "先复核一遍，今天天气云厚，风挺大，给巨屏除尘可得快些利落。",
+   "text": "「先复核一遍，今天天气云厚，风挺大，给巨屏除尘可得快些利落。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

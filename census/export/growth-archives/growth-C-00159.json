@@ -44,14 +44,14 @@
     "z": 158.05
    }
   },
-  "ctx": "tw=empk,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-00159",
   "quirk": "",
   "recovering": "haoqi",
-  "slot": "广场·晨练",
-  "state": "exercise",
+  "slot": "宅户·白天",
+  "state": "home",
   "v": 1,
-  "visible": 1
+  "visible": 0
  },
  "block": "K线广场",
  "born": "2026-09-23",

@@ -1,0 +1,103 @@
+{
+ "age": 93,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -7,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -118.01,
+    "z": -157.62
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.78,
+    "z": -80.83
+   },
+   "work": {
+    "site": "视频修复师·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.02,
+    "z": -49.87
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04482",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "记得老裁缝的画粉的每一个来历——这事只有档案馆知道",
+ "id": "C-04482",
+ "month_lines": [],
+ "name": "丁玉兰",
+ "profession": "视频修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "规矩如钟，人情如江。今天这天还挺适合出去走走。",
+   "text": "「规矩如钟，人情如江。今天这天还挺适合出去走走。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

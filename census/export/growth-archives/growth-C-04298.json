@@ -1,0 +1,103 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 2,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 34.13,
+    "z": -68.99
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.32,
+    "z": -55.22
+   },
+   "work": {
+    "site": "光伞匠·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 136.08,
+    "z": -116.29
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04298",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "口袋里总揣着1990 年的真硬币",
+ "id": "C-04298",
+ "month_lines": [],
+ "name": "带宽·丁",
+ "profession": "光伞匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "收摊了，明天见。今天的事做完，明天才有得挑。",
+   "text": "「收摊了，明天见。今天的事做完，明天才有得挑。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

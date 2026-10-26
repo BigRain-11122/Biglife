@@ -44,10 +44,10 @@
     "z": 104.74
    }
   },
-  "ctx": "tw=day,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-01262",
   "quirk": "night_run",
-  "recovering": "shengji",
+  "recovering": "haoqi",
   "slot": "公园·遛弯消食",
   "state": "leisure_park",
   "v": 1,

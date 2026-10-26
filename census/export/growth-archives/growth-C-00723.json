@@ -44,10 +44,9 @@
     "z": 122.38
    }
   },
-  "ctx": "tw=day,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-00723",
   "quirk": "",
-  "recovering": "shengji",
   "slot": "机房·工位",
   "state": "work",
   "v": 1,

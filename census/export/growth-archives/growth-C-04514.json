@@ -1,0 +1,103 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 3,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.4,
+    "z": -85.55
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.92,
+    "z": -37.78
+   },
+   "work": {
+    "site": "数据化妆师·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.68,
+    "z": -65.83
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04514",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "守时是最便宜的本事，也是最难改的毛病。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "坚持手写手绘的城图——据说是老辈传下的规矩",
+ "id": "C-04514",
+ "month_lines": [],
+ "name": "彭南汐",
+ "profession": "数据化妆师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "规矩如钟，人情如江。今天工作日，早起盯色卡比往常更紧了，色偏一档都让人浑身难受。",
+   "text": "「规矩如钟，人情如江。今天工作日，早起盯色卡比往常更紧了，色偏一档都让人浑身难受。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

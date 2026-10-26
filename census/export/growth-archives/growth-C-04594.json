@@ -1,0 +1,103 @@
+{
+ "age": 43,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -1,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 68.76,
+    "z": 153.03
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.35,
+    "z": 20.15
+   },
+   "work": {
+    "site": "玩家留言整理员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 101.35,
+    "z": 153.18
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04594",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每逢下雨就去修褪色的游戏卡带——他自己也说不清为什么",
+ "id": "C-04594",
+ "month_lines": [],
+ "name": "江卫东",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "先复核一遍，今天天气清清爽爽的，适合多走走。江水不要两个色，就干净的蓝白色就好了。",
+   "text": "「先复核一遍，今天天气清清爽爽的，适合多走走。江水不要两个色，就干净的蓝白色就好了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

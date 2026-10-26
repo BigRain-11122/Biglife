@@ -1,0 +1,103 @@
+{
+ "age": 56,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#6E8E9E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 2,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 45.87,
+    "z": 64.38
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.18,
+    "z": 85.4
+   },
+   "work": {
+    "site": "8bit 乐师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.26,
+    "z": 39.92
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04524",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "把旧城庆纪念章的位置背得比自家门牌还熟——这事全巷都知道",
+ "id": "C-04524",
+ "month_lines": [],
+ "name": "快照·拾",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "稳住，别浪。天气清清爽爽的，正好适合去桥上听汽笛。",
+   "text": "「稳住，别浪。天气清清爽爽的，正好适合去桥上听汽笛。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

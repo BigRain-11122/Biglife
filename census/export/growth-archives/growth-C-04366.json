@@ -1,0 +1,103 @@
+{
+ "age": 93,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -7,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 72.65,
+    "z": 51.62
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.74,
+    "z": 140.76
+   },
+   "work": {
+    "site": "游戏楼门童·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 109.27,
+    "z": 46.33
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04366",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每逢下雨就去修老式邮差的背包——没人知道为什么",
+ "id": "C-04366",
+ "month_lines": [],
+ "name": "雷有根",
+ "profession": "游戏楼门童",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "谁没个难处呢，来，坐下说。今天这天气挺适合散散步，走走看看。",
+   "text": "「谁没个难处呢，来，坐下说。今天这天气挺适合散散步，走走看看。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

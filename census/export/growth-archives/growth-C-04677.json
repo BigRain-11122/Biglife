@@ -1,0 +1,103 @@
+{
+ "age": 84,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -14,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.88,
+    "z": 37.03
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -92.05,
+    "z": 61.59
+   },
+   "work": {
+    "site": "大编译调律师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -55.46,
+    "z": 44.29
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04677",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "口袋里总揣着旧时弄堂的灯绳——据说是老辈传下的规矩",
+ "id": "C-04677",
+ "month_lines": [],
+ "name": "张阿凤",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "旧钥匙开新锁，有时候还真开得开。雨还在下，撑着伞巡线得慢些，好在檐下避雨的地方还多了几个。",
+   "text": "「旧钥匙开新锁，有时候还真开得开。雨还在下，撑着伞巡线得慢些，好在檐下避雨的地方还多了几个。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,103 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 8,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 48.97,
+    "z": 40.9
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 86.82,
+    "z": 108.26
+   },
+   "work": {
+    "site": "NPC 服装师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.78,
+    "z": 137.45
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04382",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "流量像潮水，我是灯塔不是渔船。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "会为全城雨夜的录音合集推掉一整晚的生意——这事只有档案馆知道",
+ "id": "C-04382",
+ "month_lines": [],
+ "name": "屠诗涵",
+ "profession": "NPC 服装师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "船到桥头自然直，今天这天气清清爽爽的，正好适合去档案馆坐坐。",
+   "text": "「船到桥头自然直，今天这天气清清爽爽的，正好适合去档案馆坐坐。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

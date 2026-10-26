@@ -1,0 +1,103 @@
+{
+ "age": 45,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -2,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 34.33,
+    "z": 105.39
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.8,
+    "z": 147.7
+   },
+   "work": {
+    "site": "大编译调律师·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 109.92,
+    "z": 22.22
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04541",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "灶上留一壶，路过的都是客。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "会为弄堂口的邮筒推掉一整晚的生意——这事全巷都知道",
+ "id": "C-04541",
+ "month_lines": [],
+ "name": "黄涛",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "多个人多双筷子，今天天没亮就醒，起早的耳朵最灵。",
+   "text": "「多个人多双筷子，今天天没亮就醒，起早的耳朵最灵。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

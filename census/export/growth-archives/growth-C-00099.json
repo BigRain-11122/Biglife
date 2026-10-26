@@ -44,11 +44,11 @@
     "z": 53.82
    }
   },
-  "ctx": "tw=empk,wx=clear,wd=0",
+  "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-00099",
   "quirk": "",
-  "slot": "广场·晨练",
-  "state": "exercise",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
   "v": 1,
   "visible": 1
  },

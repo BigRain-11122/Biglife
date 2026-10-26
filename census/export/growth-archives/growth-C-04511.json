@@ -1,0 +1,103 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 1,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 27.06,
+    "z": 121.62
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.37,
+    "z": 126.24
+   },
+   "work": {
+    "site": "算力楼运维·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.41,
+    "z": 61.72
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04511",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "日子是过出来的，不是算出来的。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "用旧月台的站牌教会了半条街的孩子——这事只有档案馆知道",
+ "id": "C-04511",
+ "month_lines": [],
+ "name": "郁文倩",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "帮帮忙，灶上有汤，自取。今天天气清清爽爽的，正好适合巡楼三圈。",
+   "text": "「帮帮忙，灶上有汤，自取。今天天气清清爽爽的，正好适合巡楼三圈。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}
