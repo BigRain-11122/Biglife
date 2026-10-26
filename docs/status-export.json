@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-27 04:32",
+ "export_ts": "2026-10-27 04:46",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2322（年轮 10 席）**C-08783~C-08792 落环 + 事件流回放闸 PASS（events=39878 / cards=10111 / schema_errors=0 / mismatch=0）+ QC 例巡 problems=0（cards=10114） **R2321（04:2x 本司实况）**年轮批 evolved=10/10 席落环（C-08773~C-08782·锚定律全过）+ 事件流回放闸 PASS（cards=10111 / events=39868 / replayed=10111 / schema_errors=0 / mismatch=0）+ 城市看板重建 rings=8776 / 人口 10114 / 卡片 160；语言池全桶达标 SELF_TERMINATE 跳过，相遇轮当日 cap 满跳过。 **R2318（04:1x 本司实况）**年轮批 10/10 席落环（C-08744~C-08753）+ 事件流回放闸 PASS（cards=10111 / events=39839 / replayed=10111 / schema_errors=0 / mismatch=0）+ 城市看板重建 rings=8747 / 人口 10114 / 卡片 160；语言池自查 PASS（全桶达标，自终止）。",
+   "t": "**R2324（04:4x）年轮环 10 席**：C-08803~C-08812 全数落环（[锚] 注脚齐备，1 席 soft-concession gate 落地）+ 事件流回放闸 PASS（events=39898 / cards=10111 / schema_errors=0 / mismatch=0）+ 城市看板重建（rings=8806 / 人口 10114 / cards=160） **R2322（年轮 10 席）**C-08783~C-08792 落环 + 事件流回放闸 PASS（events=39878 / cards=10111 / schema_errors=0 / mismatch=0）+ QC 例巡 problems=0（cards=10114） **R2321（04:2x 本司实况）**年轮批 evolved=10/10 席落环（C-08773~C-08782·锚定律全过）+ 事件流回放闸 PASS（cards=10111 / events=39868 / replayed=10111 / schema_errors=0 / mismatch=0）+ 城市看板重建 rings=8776 / 人口 10114 / 卡片 160；语言池全桶达标 SELF_TERMINATE 跳过，相遇轮当日 cap 满跳过。",
    "s": 1
   },
   {
@@ -1521,7 +1521,11 @@
   [
    "480",
    "年轮 10 席落环 + 回放闸 PASS + 看板重建（rings=8786 / 人口 10114 / cards=160）；今日 [锚] 年轮机器直数 480"
+  ],
+  [
+   "500",
+   "年轮 10 席落环 + 回放闸 PASS + 看板重建（rings=8806 / 人口 10114 / cards=160）；今日 [锚] 年轮机器直数 500"
   ]
  ],
- "t": "当前活：年轮环批 + 事件回放闸复验 + 城市看板续鲜（工作让路窗 09:00 前）\n最近实物：census/export/city-dashboard.html（2026-10-27 04:4x · rings=8786 / 人口 10114）\n下个里程碑：下一轮年轮批 10 席 + 闸复验，ETA 2026-10-27 05:10"
+ "t": "当前活：年轮环批 + 事件流回放闸复验 + 城市看板续鲜（语言池全桶达标自终止·相遇轮今日 cap 已满）\n最近实物：census/export/city-dashboard.html（2026-10-27 04:4x 重建 · rings=8806 · 人口 10114 · 卡片 160）\n下个里程碑：下一轮年轮批 10 席 + 闸复验，ETA 2026-10-27 05:20"
 }
