@@ -436,3 +436,10 @@
 - 语言池自跑 audit：axes 72/sprite 12/greet 28/faq 7 全达标 hard_fails=0 → SELF_TERMINATE 跳过
 - 实物增量：城市看板重建（rings=8157/people=10114/cards=160，字节与上版一致=确定性无漂移）+ status-export 对外实况三行续鲜（最近实物指向 17:46 相遇候选 126 对）
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
+
+## R2247 · 2026-10-26 18:0x @BigLife-OSLoop（让路窗·QC与事件闸双清）
+- 轮首：pull=Already up to date；决策水位差集 NEW=0（226 已消费 / 文件内 172 ID）；orders 尾部无涉本司新令
+- 让路窗（工作日 09:00-19:00）：年轮/相遇/reflect 按 D-20261020-02 延至 19:00；语言池 audit 全桶达标（axes72/sprite12/greet28/faq7·hard_fails=0）→ SELF_TERMINATE 跳过
+- 实物增量①：QC 不变量巡检全绿—卡片 10114 / 已进化 8157 / 异常 0 / 轮轨去重 37⑵37 位，census/QC-REPORT.md 入库
+- 实物增量②：事件流回放闸 PASS—derive cards=10111 events=39241 shards=2；replay 10111/10111·schema_errors=0·mismatch=0（qa/EVENTS-REPLAY-REPORT.md 字节无漂移）
+- tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
