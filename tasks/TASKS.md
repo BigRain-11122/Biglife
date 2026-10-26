@@ -429,3 +429,10 @@
 - 让路窗（工作日 09:00-19:00）→ 年轮/相遇/池 LLM 面按律跳过，走确定性面
 - 实物增量：相遇候选队列 60→126 对（顶到约束上限），双跑 SHA256 一致；jsonl 62,373B + html 54,864B
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
+
+## R2246 · 2026-10-26 17:5x @BigLife-OSLoop（让路窗·对外实况面续鲜）
+- 轮首：pull=Already up to date；决策水位差集 NEW=0（水印含至 D-20261026-15）；orders 尾部无涉本司新令
+- 年轮/相遇/池 LLM 面按 D-20261020-02 让路；实测 bm-a-AutoYield-WorkEnd NextRunTime=2026-10-26 19:00、LastTaskResult=0（Ollama 停止=主动暂停非故障，无需修）
+- 语言池自跑 audit：axes 72/sprite 12/greet 28/faq 7 全达标 hard_fails=0 → SELF_TERMINATE 跳过
+- 实物增量：城市看板重建（rings=8157/people=10114/cards=160，字节与上版一致=确定性无漂移）+ status-export 对外实况三行续鲜（最近实物指向 17:46 相遇候选 126 对）
+- tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline

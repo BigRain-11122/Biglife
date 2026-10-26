@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-26 16:29",
+ "export_ts": "2026-10-26 17:53",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2239（2026-10-26 16:2x·让路窗·确定性线）**：本轮三件——①户籍不变量 QC 全量巡（10,114 片/8,157 已进化/异常 0/年轮重复组 37-37 benign）；②城市看板 `census/export/city-dashboard.html` 重建（16:2x，rings=8157/people=10114/cards=160，64,824B），CEO 可直接打开看全城现状；③上轮遗留疑似隐患结案——`city-today.html` 的 `rings=433` 经核为「今日新增年轮数」的正常语义（`Tools/build_daily_issue.py` 按 `by_day[today]` 取当日行，非全库总数），非缺陷、非串号，上轮标记撤销。语言线池 `pool_audit` 报 72/72+12/12+greet 28/28+faq 7/7+neg 6/6 全达标=SELF_TERMINATE，按自终止律不重复造池。 **R2234（2026-10-26 15:1x·让路窗内）**：集团派单 D-20261026-13（HQ-FEEDBACK.md 编码混档）执行收口——先核后改：派单所述 GBK 行已在 R2220 修复，本轮复核 UTF-8 严格通过 / U+FFFD=0；转为防复发的**全库编码守卫** `Tools/encoding_guard.py`（--check 全库体检 / --expect-lines 行数断言 exact+min / --append 出生地拦截式安全追加）。首次全库实跑 20990 文本文件 PASS，告警 3 档均为历史或引用证据（历史禁改写不动）。双向自测四例通过（拒 U+FFFD / 拒纯 GBK 乱码并给还原建议 / 拒已损坏目标 / 正常中文零误报）。 **R2233（2026-10-26 14:5x·让路窗内）**：成长档案册 7.5MB 单页不可打开 → 分 11 页 + 总目录（正文最大 1.07MB/页，1000 席/页）。判据=11 页 article 合计 10111=档案总数、U+FFFD=0、册内链接零断链、总目录不被分页撑成 12 张卡；工具 `build_growth_gallery.py --shard-size`（默认 1000），ruff_gate CLEAN。",
+   "t": "**R2246（让路窗确定性面**：年轮/相遇 LLM 面按 D-20261020-02 让路（bm-a AutoYield WorkEnd 实测 NextRunTime=2026-10-26 19:00·LastTaskResult=0 健康）；语言池全桶达标自终止（axes 72/sprite 12/greet 28/faq 7/hard_fails 0）；城市看板重建 + 状态续鲜，rings=8157/people=10114。 **R2239（2026-10-26 16:2x·让路窗·确定性线）**：本轮三件——①户籍不变量 QC 全量巡（10,114 片/8,157 已进化/异常 0/年轮重复组 37-37 benign）；②城市看板 `census/export/city-dashboard.html` 重建（16:2x，rings=8157/people=10114/cards=160，64,824B），CEO 可直接打开看全城现状；③上轮遗留疑似隐患结案——`city-today.html` 的 `rings=433` 经核为「今日新增年轮数」的正常语义（`Tools/build_daily_issue.py` 按 `by_day[today]` 取当日行，非全库总数），非缺陷、非串号，上轮标记撤销。语言线池 `pool_audit` 报 72/72+12/12+greet 28/28+faq 7/7+neg 6/6 全达标=SELF_TERMINATE，按自终止律不重复造池。 **R2234（2026-10-26 15:1x·让路窗内）**：集团派单 D-20261026-13（HQ-FEEDBACK.md 编码混档）执行收口——先核后改：派单所述 GBK 行已在 R2220 修复，本轮复核 UTF-8 严格通过 / U+FFFD=0；转为防复发的**全库编码守卫** `Tools/encoding_guard.py`（--check 全库体检 / --expect-lines 行数断言 exact+min / --append 出生地拦截式安全追加）。首次全库实跑 20990 文本文件 PASS，告警 3 档均为历史或引用证据（历史禁改写不动）。双向自测四例通过（拒 U+FFFD / 拒纯 GBK 乱码并给还原建议 / 拒已损坏目标 / 正常中文零误报）。",
    "s": 1
   },
   {
@@ -1479,5 +1479,5 @@
    "关单/产出：对外页面可用性修复 1 件（成长档案册分页化）· 年轮/相遇=让路窗静默 · 池自停 · QC 未到周期 · 盘点 434"
   ]
  ],
- "t": "当前活：确定性看板/QC 维护线（工作日 09:00-19:00 LLM 让路，D-20261020-02）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（10-26 16:2x 重建，rings=8157/people=10114/cards=160）+ C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\QC-REPORT.md（cards=10114/problems=0）\n下个里程碑：19:00 让路窗结束后年轮批 3 席（rings 8157→8160+）ETA 2026-10-26 19:30"
+ "t": "当前活：让路窗确定性维护（工作日 09:00-19:00 LLM 让路·D-20261020-02），19:00 后年轮/相遇批接续\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\meet-candidates.html（10-26 17:46·126 对同城区候选队列，双跑 SHA256 一致）+ C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（10-26 17:5x 重建·rings=8157/people=10114）\n下个里程碑：19:00 年轮批 3 席（rings 8157→8160+）+ 相遇轮 1 对（候选队列直取）ETA 2026-10-26 19:30"
 }
