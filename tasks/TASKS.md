@@ -248,12 +248,12 @@
   - tokens: local=10 api=0 api_reason=-
 
 
-- R1892 2026-10-24 06:0x @BigLife-OSLoop ????? pull=Already up to date??????? NEW=0?watermark ?? D-20261020-12?10-21~10-24 ??????????orders ??????
-  - ????????????cursor ? C-05097??? 10 ????
-  - ?????census/export/city-dashboard.html?rings=5091 / 10114 ?? / 2026-10-24 06:03 ???+ index.html?commit a1b86fc0 ?? origin
-  - ??????ring 5,091 ? 5,500?? 410 ? / ?? 10 ? ? 41h??48h??T-20261024-02 ??? aCCS<0.833 ??? GPU ?
-  - ???events_refresh --gate PASS?cards=10091 / events=36003 / schema=0 / mismatch=0?qa/EVENTS-REPLAY-REPORT.md ????pool_audit ????=SELF_TERMINATE?axes 72/72?sprite 12/12?hard_fails=0??QC ?? 05:55 problems=0 ?????
-  - ????????Tools/iteration_loop.ps1?CLOUD-OFF ?????????cognition/pools.json??????? add?.codely-cli/ ?????
+- R1892 2026-10-24 06:0x @BigLife-OSLoop 轮记：轮首 pull=Already up to date，决策水位差集 NEW=0（watermark 至 D-20261020-12，10-21~10-24 无本司新决策行），orders 尾无涉本司新令。
+  - 当前活：年轮线续转（cursor 至 C-05097）；10 席落环 + 行为线镜像 ring=5091（commit cd7e6381）
+  - 最近实物：census/export/city-dashboard.html（rings=5091 / 10114 居民 / 2026-10-24 06:03 刷新）+ index.html，commit a1b86fc0 已推送 origin
+  - 下个里程碑：ring 5,091 → 5,500（约 410 席 / 每轮 10 席 ≈ 41h，窗 ≤48h）；T-20261024-02 图像面 aCCS<0.833 判据候 GPU 窗
+  - 闸门：events_refresh --gate PASS（cards=10091 / events=36003 / schema=0 / mismatch=0，qa/EVENTS-REPLAY-REPORT.md 入库）；pool_audit 全桶达标=SELF_TERMINATE（axes 72/72 / sprite 12/12 / hard_fails=0）；QC 上轮 05:55 problems=0 未到复检轮
+  - 未入库（如实）：Tools/iteration_loop.ps1（他窗 CLOUD-OFF 守卫在途）、cognition/pools.json（行尾差异）为轮前既有改动，非本轮产出未 add；.codely-cli/ 运行时目录不入库
   - tokens: local=10 api=0 api_reason=-
 
 - R1893 2026-10-24 06:0x @BigLife-OSLoop 轮首：pull=Already up to date；决策差集 NEW=7（D-20261024-01~07），涉本司 1 行已消费——D-20261024-02 白名单探针裁定（qwen2.5:7b 降为 NEED-JUDGMENT 只记不删·机队单一口径 qwen3:4b-instruct）=本司零动作，4b 现行照跑；watermark 已回写
@@ -293,7 +293,7 @@
   - **实况三行**=当前活：年轮线（已进化 5,191/10,114）｜最近实物：10 张居民卡年轮 census/registry/*/C-05188~C-05197.md（2026-10-24 06:48）+ census/QC-REPORT.md（06:50）｜下个里程碑：下一 due 年轮批 + 6 轮周期 QC 例巡（窗 ≤48h）。
   - tokens: local=10 api=0 api_reason=-（本轮 Ollama qwen3:4b-instruct 年轮 10 席；其余闸为确定性脚本零 LLM）
 
-- **[R1903]** 2026-10-24 07:0x @BigLife-OSLoop ???pull=Already up to date????? NEW=0?watermark ?? D-20261024-07???? =10 ??C-05198~C-05207?qwen3:4b-instruct?+???? ring=5201+????? PASS(events=36113 schema=0 mismatch=0)+?????? rings=5201/10114????=?? cap 3 ???????? pool_audit ???? SELF_TERMINATE?axes 72/72?sprite 12/12?hard_fails=0??QC ?????problems=0??tokens: local=10 api=0 api_reason=-
+- **[R1903]** 2026-10-24 07:0x @BigLife-OSLoop 轮记：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 含至 D-20261024-07）；年轮批 10 席（C-05198~C-05207·qwen3:4b-instruct）+ 行为线镜像 ring=5201；事件回放闸 PASS（events=36113 / schema=0 / mismatch=0）+ 看板刷新 rings=5201/10114；相遇轮当日 cap 3 已满；pool_audit 全桶达标 SELF_TERMINATE（axes 72/72 / sprite 12/12 / hard_fails=0）；QC 全库 problems=0；tokens: local=10 api=0 api_reason=-
 - **[R1904]** 2026-10-24 07:0x @BigLife-OSLoop 轮记：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 含至 D-20261024-07）；orders 无涉本司新令；任务板 open 单仅 T-20260923-01（待 FluxVerse 回执）。
   - **产品增量**=年轮批 10 席真实新增 C-05208~C-05217 全部带 [锚]（commit 4a1fea7a，盘面有 diff）；行为线镜像 rows=10 ring=5211（commit 82c78125）；看板/导出索引刷新 rings=5211/10114（census/export/city-dashboard.html + index.html）。
   - **闸门**=事件回放闸 PASS（cards=10091 / events=36123 / schema=0 / mismatch=0，qa/EVENTS-REPLAY-REPORT.md 入库）；smoke 六项全绿（qa/smoke-R1904.log：poolgen tick 06:06 TOTAL=1440 / 今日年轮卡 900 / anchor 10111/10114 / behavior --qc rows=10114 bad=0 / 心跳 07:05 / 事件报告在档）；pool_audit 当日已 PASS 自停、相遇轮当日 cap 3 已满、QC 上次 06:50 未到 6 轮周期、反思今日 3 席已满——例份均如实跳过。
@@ -389,4 +389,15 @@
 - 闸门：ruff_gate 2 文件 CLEAN（F401/F811/F841/SIM115/RUF059）；encoding_guard PASS（3 文件·无 BOM·U+FFFD=0）；export-index pages 17→18（新页按 TITLE 非 fallback 注册）
 - 实物：C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\meet-candidates.html · census\export\meet-candidates.jsonl
 - 下个里程碑：19:00 产量窗开——年轮线批 3 席（rings 8,157→8,160+）＋相遇轮按本单 rank 1 直取（evolve_citizen.py --meet C-00042 C-07762），相遇维度 78→80，ETA 19:40
+- tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
+
+## R2243 · 2026-10-26 17:2x @BigLife-OSLoop（TASKS 第三类 ASCII 损伤清账·确定性）
+- 轮首：pull=Already up to date（本地==origin）；水位差集 NEW=0（尾 D-20261026-15）；orders 涉本司无新令（PT-20261026-01 推送停摆行已按推送恢复闭环）
+- 让路窗（D-20261020-02·09:00-19:00）→ 年轮/相遇/池三线 LLM 面按律跳过；pool_audit 本轮实测 PASS=SELF_TERMINATE（axes 72/72·sprite 12/12·hard_fails=0·determinism mismatch=0）；QC 上轮 R2241 17:00 problems=0 未到 6 轮复检；事件回放闸报告 qa/EVENTS-REPLAY-REPORT.md 16:59 PASS 在库
+- 真缺陷：TASKS.md 第 250-255 行（R1892 轮记 6 行）+ 第 295 行（R1903 轮记 1 行）仍为 ASCII [?] 顶替，共 7 行；T-20261020-04 当时只覆盖 R1810/R1819/R1824 三段，故其「全档高密度行复扫=0」结论与实际不符
+- 修法：按 T-20261020-04 既定正法（同轮 commit message + qa 日志旁证）逐行重写。旁证=0cf7e5e3f（R1892 轮记）·a1b86fc0（看板 rings=5091/10114·events=36003·mismatch=0）·cd7e6381（行为线 ring=5091）·aca738efd（R1903 年轮 10 席·看板 5201）；所有数字/编号/commit 短哈希取自残存片段或同轮提交，未新造事实，文风对齐相邻完好轮记（R1890/R1891/R1902/R1904）
+- 复扫：TASKS.md 内 [?] 密度≥5 的行=0（修前 7 行）；全仓同类扫描（.md/.json/.jsonl/.py/.txt）=仅 state/ 临时 UTF-16 dump（不入库，噪声）与 HQ-FEEDBACK.md 第 115 行
+- 残留（如实）：HQ-FEEDBACK.md 第 115 行（F-20261020-BL03·已 closed）描述格 112 个 [?] 未修——原文含「intake_batch17 批 5 …」等已不可复原片段，强行重写会掺入猜测，按诚实律留原状待旁证齐备
+- 实物：C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\tasks\TASKS.md（7 行复原·UTF-8 严格解码零异常）
+- 实况三行：当前活=让路窗内确定性数据面清账｜最近实物=TASKS.md R1892/R1903 轮记复原（2026-10-26 17:2x）｜下个里程碑=19:00 产量窗年轮线批 3 席（rings 8,157→8,160+）+ 相遇轮按 T-20261026-03 rank1 直取 C-00042/C-07762（ETA 19:30）
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
