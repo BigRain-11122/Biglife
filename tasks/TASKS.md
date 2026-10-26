@@ -695,3 +695,14 @@
 - tokens: local=10 api=0 api_reason=-
 
 - [2026-10-27 04:1x R2319] 轮记：start 04:13:40；git pull=Already up to date；水位差集 NEW=0（已核至 D-20261027-07）；orders 尾无本司新令；TASKS 无 open 单。**主产出**=年轮 --batch 3 实证 evolved=9/10 席位（C-08754~C-08763，C-08758 触 persistent violations[rain-invented] 闸跳过留到期；1 席 soft-concession recent-dup-phrase 落地），脚本自动提交 3137d8f22 + 行为线 047ad638e（rows=9 ring=8756）。**回放闸 PASS**：cards=10111 events=39848 replayed=10111 schema_errors=0 mismatch=0，qa/EVENTS-REPLAY-REPORT.md 入库。**对外实物重建** census/export/city-dashboard.html（rings=8756 / 人口 10114 / 席位 160）+ city-life.html（10114 行 states=4 quirk=1368 crash=2852 visible=641，page 20.3KB <300KB），提交 846b49a87 已推送。**语言线** pool_audit 全桶达标 SELF_TERMINATE（pool 18/12 + greet 17 + faq 3 + neg 8，hard_fails=0，determinism mismatch=0）零动。**相遇轮** 当日 cap 已满零动。**QC** 距上轮 03:5x 巡检 5 轮，下轮候选。**HQ 闸** ALREADY_REPORTED 零写入。tokens: local=10 api=0 api_reason=-
+## R2320 2026-10-27 04:1x-04:3x @BigLife-OSLoop
+- 轮首：git pull --ff-only=Already up to date；决策水位差集 NEW=0（已核至 D-20261027-07）；orders 尾无本司新令；TASKS 无 open 单
+- 主产出：年轮 --batch 3 实证 evolved=10/10 席位（C-08758 因 persistent violations[rain-invented] 闸跳过留到期、C-08764~C-08772 全数落环，1 例 soft-concession recent-dup-phrase 闸救）；脚本自动提交 12febdae6 + 行为线 74ff808a8（rows=10 ring=8766）
+- 回放闸：cards=10111 events=39858 replayed=10111 schema_errors=0 mismatch=0 -> PASS（qa/EVENTS-REPLAY-REPORT.md 入库）
+- QC 巡检：cards=10114 evolved=8766 problems=0 dup_rings=37/37（census/QC-REPORT.md 刷新）
+- 对外实物：census/export/city-dashboard.html（rings=8766 / 人口 10114 / 席位 160 / 65612B）+ docs/status-export.json 三行刷新
+- 语言线：pool_audit 全桶达标 SELF_TERMINATE（每日至多 1 次）→ 跳过；相遇轮当日 cap 3/3 已满 → 跳过
+- 集团日报闸：hq_feedback_daily --check=ALREADY_REPORTED（15 行）→ 零写入
+- **[PT-20261026-01 P0 自证]** 死因双因：①CoderServe/本地模型缺件——R1844（10-24 00:12）已登记「Ollama 空清单·10-21 起无新年轮」阻塞单，年轮线自 10-21 起无产出；②车道实例错过触发未补跑——与本机 10-26 22:36 事件班定谳同源（非正常关机 + StartWhenAvailable=False 错过触发被永久丢弃）。复明路径=Ollama 恢复可用模型（qwen3:4b-instruct 降级车道）后 10-26 20:01 首次复跑、22:35 续，10-27 00:0x 起连续 11 轮全产出（R2310~R2320），origin 已推进至 74ff808a8，无需让路令。差异勘正：本司末笔实为 10-24 00:34（非 12:59-13:41），静默 43.5h，与巡检 43.7h 口径一致。
+- 实况三行：当前活=年轮环批 + 回放闸复验 + 看板重建；最近实物=census/export/city-dashboard.html（2026-10-27 04:2x 重建 · rings 8766）；下个里程碑=下一轮年轮批 + 闸复验，ETA 2026-10-27 04:4x
+- tokens: local=10 api=0 api_reason=-
