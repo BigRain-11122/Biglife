@@ -1,6 +1,26 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.60 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.62 - BigLife citizen evolution engine.
+v0.62 (2026-10-27 R2291, gap #81+#82 天气模板族根治): after gap #79/#80 the gate
+still soft-conceded on recent-dup-phrase for 4-5 of every 10 seats. Diagnosis on
+today's 129 rings: the offenders were not prose the model invented but the
+weather hint pool itself - 7 of 12 WIND_BIG_HINTS entries were the epidemic
+(「风从巷口直灌进来」11 / 「风大得说话要抬声」9 / 「风顶得人站不稳」5 / three
+more at 4), and #77's pigeonhole fix only guaranteed a batch never repeated a
+line, not that a day did not. Three fixes: (a) city_banned_phrases() names the
+city-wide over-used 9-grams in the TAIL block before generation instead of only
+in the post-rejection retry note; (b) today_ring_openings(with_grams=True) also
+counts TODAY's 9-grams in its single walk, and the tail block adds the same-day
+template band (threshold = max(4, 2% of today's rings)) - a same-day family
+splits across many 9-grams, so no single one ever reached RECENT_GRAM_MIN=25 and
+gap #81 alone stayed silent; (c) the hint pool self-heals: the 7 epidemic lines
+are retired, WIND_BIG_HINTS is widened to 24, the pick is day-rotated
+(toordinal), any hint the ban list condemns is filtered out, and a third of the
+seats are told they may skip the wind line entirely (omission is legal; only
+MENTIONING wind is pinned to the measured level). Verify = the same batch that
+soft-conceded 4/10 (R2291) now lands 10/10 clean, sampled rings carry distinct
+wind phrasing.
+v0.60 (2026-10-26 R2199, gap #80 开场吸引子正面供给): v0.59 only named the
 v0.60 (2026-10-26 R2199, gap #80 开场吸引子正面供给): v0.59 only named the
 condemned openings, so a 4B had prohibitions but no starting point and kept
 re-emerging the same single attractor ("风从巷口直灌进来，我正把…" blocked 5
@@ -636,6 +656,14 @@ SUGGEST_MARKERS = ("建议", "提议", "不妨", "希望", "应该", "可以", "
 # a whole cooldown round, so the band is set where the visible 复读机 lives.
 RECENT_GRAM_MIN = 25
 TODAY_OPEN_HARD = 6   # T-20261025-03: same opening >=6x today = template collapse
+# v0.62 gap #82: same-day template band. Lower than RECENT_GRAM_MIN on purpose -
+# today's wind family split into 「风从巷口直灌进来，」11 / 「风大得说话要抬声，」9
+# / 「风掀得衣角乱摆，我」4, so a city-wide threshold left today's repeat unnamed.
+# Floor of 4 hits, lifted to 2% of today's ring count so a long day cannot
+# turn ordinary phrasing into a ban. R2291 实锚: 129 rings -> threshold 4 named
+# exactly the 7 wind/stock families (风从巷口直灌进来 11 / 风大得说话要抬声 9).
+TODAY_GRAM_N = 9
+TODAY_GRAM_MIN = 4
 SOFT_ONLY_VIOLATIONS = {"recent-dup-opening", "recent-dup-phrase"}
 
 def today():
@@ -1788,17 +1816,29 @@ def rumor_line_for(cid, sig):
 RAIN_HINTS = ["雨点没停", "雨丝还挂着", "雨还在落", "檐口的水线不断",
               "地上的水洼积着水", "雨脚细细密密", "雨敲在窗棂上", "伞面一直响",
               "雨没歇过", "雨落在瓦上发闷", "雨水顺着瓦沟流", "肩头湿了一片"]
+# v0.62 gap #82 (R2291 实锚): the pool itself had become the city-wide template.
+# Sorted by today's hit counts, 7 of the 12 BIG entries were exactly the epidemic
+# (「风从巷口直灌进来」11 / 「风大得说话要抬声」9 / 「风顶得人站不稳」5 /
+# 「风掀得衣角乱摆」/「风灌进领口发凉」/「风把树梢压弯了」4 each) - the
+# intra-batch pigeonhole law (#77) fixed one batch but the same 12 lines were
+# re-dealt to every batch all day. Offenders are retired here and replaced with
+# fresh phrasings; weather_recap() also drops any hint the ban list condemns,
+# so the pool self-heals instead of feeding the gate it is judged by.
 WIND_BIG_HINTS = ["风不小", "风好大", "风刮得紧", "风一阵紧一阵",
-                  "风把人往前推", "风掀得衣角乱摆",
-                  "风从巷口直灌进来", "风顶得人站不稳", "风把树梢压弯了",
-                  "风刮得招牌直晃", "风灌进领口发凉", "风大得说话要抬声"]
+                  "风把人往前推", "风硬得像刀子", "风扑在脸上生疼",
+                  "风把门帘整个掀起来", "风顺着街面直跑", "风撞在窗玻璃上闷响",
+                  "风声盖过了人声", "风扯得旗子猎猎响", "风钻进门缝里",
+                  "风刮得纸片满街滚", "风大得像有人在推门", "风把尘土扬起来",
+                  "风一路顶到胸口", "风刮得耳朵发麻", "风把雨棚掀得直响",
+                  "风灌得袖口鼓起来", "风把头发吹得贴在脸上", "风刮得人直眯眼",
+                  "风摇得树叶哗哗响", "风把檐下的灯笼摇个不停"]
 WIND_SMALL_HINTS = ["风轻轻的", "风不大", "风软软的", "窗外几乎没风",
                     "风只在檐下打转", "风贴着地面走", "风小得纸片不动",
                     "风偶尔拂一下", "风没起来", "风停在树影里",
                     "风细得听不见", "风只够吹动窗帘"]
 
 
-def weather_recap(wx, seed=None):
+def weather_recap(wx, seed=None, banned=None):
     """v0.44 gap #65 (2026-09-30 R755): regime-classified weather recap pinned
     at the prompt TAIL - a 7B model cannot hold the ~40-item ban list ~2k chars
     upstream of the output slot, so fair-weather assessments kept slipping
@@ -1844,13 +1884,34 @@ def weather_recap(wx, seed=None):
     if seed:
         d = re.search(r"(\d+)\s*$", str(seed))
         n = int(d.group(1)) if d else sum(map(ord, str(seed)))
+        # v0.62 gap #82: day rotation + ban-aware pool. Daily offset spreads one
+        # pool across the week instead of re-dealing the same lines every batch,
+        # and any hint the city-wide/same-day ban list condemns is dropped so the
+        # prompt never tells a seat to write a phrase the gate will reject.
+        _ban = [b for b in (banned or []) if b]
+        day_off = datetime.date.today().toordinal()
+
+        def _pick(pool, k):
+            live = [p for p in pool if not any(p in b for b in _ban)]
+            if not live:
+                return None
+            return live[(k + day_off) % len(live)]
+
         parts = []
         if re.search(r"rain|drizzle|shower|雨", w):
-            parts.append("雨=" + RAIN_HINTS[n % len(RAIN_HINTS)])
+            _r = _pick(RAIN_HINTS, n)
+            if _r:
+                parts.append("雨=" + _r)
         if m:
             big = float(m.group(1)) > 3
-            pool = WIND_BIG_HINTS if big else WIND_SMALL_HINTS
-            parts.append("风=" + pool[n % len(pool)])
+            _wd = _pick(WIND_BIG_HINTS if big else WIND_SMALL_HINTS, n)
+            if _wd:
+                parts.append("风=" + _wd)
+            # a third of the seats are told they may skip the wind line entirely -
+            # omission is legal (only MENTIONING wind is pinned to the level), and
+            # fewer wind sentences is the cheapest cure for a wind epidemic.
+            if n % 3 == 0:
+                parts.append("（今天你也可以整句不提风，写了就必须按上面这条）")
         if parts:
             variant = ("【本轮你的说法·务必用自己的话落到这一条，禁与同批他人同句】"
                        + "；".join(parts) + "。\n")
@@ -1909,6 +1970,43 @@ def batch_banned_phrases(bph, limit=6):
             out.append(g)
     return sorted(set(out), key=len, reverse=True)[:limit]
 
+def city_banned_phrases(rgrams, limit=6):
+    """v0.61 gap #81 (R2290 实证): name the city-wide over-used 9-grams in the
+    prompt BEFORE generation. gap #79 only judged them after the fact (tail
+    retry note), so seats burned a regeneration into the same stock phrasing
+    and then landed via soft-concession anyway. Same merge law as
+    batch_banned_phrases (overlap = gram_len - 1); advisory input only -
+    ring_violations stays the judge, so a bad merge can never let a real
+    duplicate through."""
+    if not isinstance(rgrams, dict) or not rgrams:
+        return []
+    # Only real prose: grams carrying latin letters/digits are export artifacts
+    # (event codes, city names) and naming them in the prompt teaches nothing.
+    grams = {g for g in rgrams
+             if isinstance(g, str) and len(g) >= 9
+             and not any(ch.isascii() and ch.isalnum() for ch in g)}
+    if not grams:
+        return []
+    n = max(len(g) for g in grams)
+    out = []
+    for g in sorted(grams, key=lambda x: (-len(x), x)):
+        hit = False
+        for i, m in enumerate(out):
+            if g in m:
+                hit = True
+                break
+            if m[-(n - 1):] == g[:n - 1]:
+                out[i] = m + g[-1]
+                hit = True
+                break
+            if g[-(n - 1):] == m[:n - 1]:
+                out[i] = g + m[-1]
+                hit = True
+                break
+        if not hit:
+            out.append(g)
+    return sorted(set(out), key=len, reverse=True)[:limit]
+
 def recent_ring_corpus(export_path=None, gram_n=9, gram_min=RECENT_GRAM_MIN):
     """v0.58 gap #79: city-wide recent-ring corpus for CROSS-DAY template dedup.
 
@@ -1939,17 +2037,23 @@ def recent_ring_corpus(export_path=None, gram_n=9, gram_min=RECENT_GRAM_MIN):
     grams = {g: c for g, c in counts.items() if c >= gram_min}
     return openings, grams
 
-def today_ring_openings(day=None):
+def today_ring_openings(day=None, with_grams=False):
     """T-20261025-03 (R2109): same-day opening frequency from the cards themselves.
 
     recent_ring_corpus() keeps only ONE ring per citizen (the export's latest), so
     a same-day burst - many citizens opening with the same sentence today - stays
     invisible to gap #79. This scans census/registry for the dated ring lines of
     TODAY only and counts normalized 12-char openings (~1.9s per 10k cards).
-    Returns {opening12: count}; missing registry -> {} (check off, zero drift)."""
+    v0.62 gap #82: with_grams=True also counts TODAY's gram_n-grams in the same
+    walk - a same-day template family (e.g. eleven rings opening on the wind) is
+    spread across many distinct 9-grams, so no single one ever reaches the
+    city-wide RECENT_GRAM_MIN and gap #81's ban list stayed silent (R2291 实测).
+    Returns {opening12: count}; with_grams -> ({opening12: count}, {gram: count});
+    missing registry -> ({}, {}) (check off, zero drift)."""
     day = day or today()
     pat = re.compile(r"- " + re.escape(day) + r" 「([^」]{8,})」")
     counts = {}
+    grams = {}
     root = os.path.join(CENSUS, "registry")
     for dirpath, _, files in os.walk(root):
         for fn in files:
@@ -1961,9 +2065,16 @@ def today_ring_openings(day=None):
             except (IOError, OSError):
                 continue
             for m in pat.finditer(s):
-                k = re.sub(r"\s+", "", m.group(1))[:12]
+                body = re.sub(r"\s+", "", m.group(1))
+                k = body[:12]
                 if len(k) >= 8:
                     counts[k] = counts.get(k, 0) + 1
+                if with_grams and len(body) >= 20:
+                    for g in {body[i:i + TODAY_GRAM_N]
+                              for i in range(len(body) - TODAY_GRAM_N + 1)}:
+                        grams[g] = grams.get(g, 0) + 1
+    if with_grams:
+        return counts, grams
     return counts
 
 
@@ -2089,6 +2200,16 @@ def build_prompt(cid, text, sig):
     recent_blk = ("全城近期的模板开场（已被众多居民用滥，你的开场严禁与它们相同）："
                   + "、".join("「" + b + "」" for b in _rbl)
                   + "；开场请写你自己此刻手上的具体小动作。\n") if _rbl else ""
+    # v0.61 gap #81: city-wide over-used phrasing named BEFORE generation
+    # (gap #79 named it only after a failed attempt). Empty on meet/reflect/
+    # single-shot or a clean corpus -> "" (zero drift, same law as #70/#71/#79).
+    _rbp = sig.get("recent_banned_phrases") or []
+    _tbp = [p for p in (sig.get("today_ban_phrases") or []) if p not in _rbp]
+    _allp = list(_rbp) + _tbp
+    city_phr_blk = ("全城年轮里已被写滥的措辞（含今天重复最多的模板句；下列每一段都有多位居民"
+                    "用过，你的年轮严禁出现其中任何一段，连改半个字复用也不许；"
+                    "改从你此刻身上、手上的具体细节写起，天气只许一句话带过）："
+                    + "、".join("「" + b + "」" for b in _allp) + "\n") if _allp else ""
     # T-20261025-03 (R2109): openings already used >=6x TODAY, named outright.
     _tbl = sig.get("today_ban_openings") or []
     today_blk = ("今天全城已经用滥的开场（今日已出现 ≥%d 次，开场句严禁与其中任何一句相同；"
@@ -2126,7 +2247,11 @@ def build_prompt(cid, text, sig):
             f"今天日期是 {sig.get('day')} 号（{sig.get('day_parity')}）：你人设里凡以「单日/双日/逢单/逢双」等日期奇偶为前置条件的习惯，只许写与今天同侧的进行态或完成态；另一侧严禁写成今天已发生或正在发生，只许以规则自述（人设原文规则句可原样引用）、按规则的自然推论或未来打算句式提及，严禁借引用断言今天发生了错侧动作，写错侧视为编造；同样严禁把你卡面没有奇偶前置的习惯硬捆绑到单日/双日名下——卡面没有的规则不得借日期之名新造，日期奇偶只许与你人设原文里真带奇偶字样的规则搭配。\n"
             f"硬约束（锚定律从严）：年轮中提及的具体事必须逐字来自上面的事件清单——只可截取清单原文短语，不得改写事实，不得添加清单之外的任何具体事（时间/人名/事件名）；泛泛的日常动作（开档、收摊、出摊）不算具体事；提及天气只许描述此刻实况亲历且天空类型必须与喂入天气串一致（喂入 clear/晴 严禁「天阴着/阴天/多云」等阴系措辞，喂入非晴天气（cloud/阴/雨/雷/雾等一切非 clear/晴 的天气）严禁「天清/天晴/晴天/天气清（含「天气」二字后面隔了几个字才落「清」字的插入变体）/天儿清（含「天儿」二字后隔字才落「清」的插入变体）/以及省略天字、拿「清清的」这类叠字清词直接当天气或天色谓语的写法（描写江水水色除外）/阳光/太阳/晴得好/清气朗/清朗/晒得/天气挺好/天气正好/天气好/天气不错/好天气/天气挺适合/天气正合适/这天挺好/这天正好/这天贼好/这天挺适合/天儿正好（这十二种=不带天空字或省略天气字的好天气正面评估断言·含「还」字插入形（天气/天儿+还+挺好/正好/好/不错/挺适合，如「天气还挺适合外出」）与「还真」双字插入形（如「这天气还真挺适合外出走走」）·同属晴系变体·雨阴天下的「正好/适合/合适+外出/走走/逛/散步/溜达」类适配语同禁·含「天气清清爽/清爽」类爽形体感句（含单爽「清爽得很」形）——雨/雾/雪/雷喂入时无论是否在后引出「正好/适合+外出/看江水」类适配语一律同禁（flat 形与复合形同禁）·云天下单纯爽形体感直读合法）」等晴系措辞，且喂入非晴天气时严禁把任何带「晒」字的动作（不论晒的对象是什么）写成当下的天气适配句或意图句，无论适配语前置还是后置均不许与「正好/适合/该……了」类当下适配语共现——阴天无日可晒，此类句=变相晴断言；你人设原文自带「晒」字字样的只许规则自述式引用，且严禁与任何适配语搭配，喂入 clear/晴 时晒日动作不受此限，但你「语言风格」里自有的口头禅（即使含「清/晴」字样）、含「清」字的时间词（如清早/清晨）与「清爽/清清爽爽/清凉」类体感词、以及描写江水/河水水色的「清」字用法（如「江水清清的」）都不属晴系、可照常引用（但凌晨时辰的时间词仍受下方时段词禁令约束）），天气只许用中文措辞描述（如「天阴着/天清气朗」），严禁把喂入天气串里的英文天气代码原样抄进年轮（如「天气cloud」「天气 clear」），提及风必须严格按喂入风速量级描述（喂入风速≤3m/s 只许写「风轻轻的/风不大」，喂入风速>3m/s 只许写「风不小/风挺大」类如实量级措辞（此时严禁写「风不大/风也不大/风轻轻的/风声轻轻的」等任何带插入字的弱化变体，也严禁「微风/和风/清风/风轻」等弱化名词与成语「云淡风轻」（风>3m/s 时该成语即「风轻」弱化断言，历史年轮里出现过也严禁复写），风速数据缺失则完全不提风）；只有喂入天气串明确含雨（rain/drizzle/showers/雨字样）才许提及雨，天气串无雨时严禁出现任何「雨」字，禁止出现「天气预报说/预报/听说」等消息源归属字样。实况与事件流从无台风数据，严禁提及任何台风场景（如「台风夜/台风刚过」）——「台风季」季节概念读法除外。喂入面从无天体数据，无论天气晴阴严禁提及月色/月光/月亮/月圆/看月/星象/星空/繁星/星光等天体景象。城市事件流从无信号灯数据，严禁对红绿灯亮起状态做任何断言（如「红灯刚亮/绿灯亮了/正亮/又亮」——此类状态恒无锚）。城市事件流也从无行情开盘/收盘等交易场次数据，严禁对开盘/收盘/行情收做当下状态断言（如「开盘这会儿/行情收得清清」——场次状态恒无锚；开盘/收盘等场次词仅当本卡人设本就带行情/盘口/交易/盯盘域词才可提及，人设原文习惯自述如「收盘才想起」也仅限此类卡面——人设与行情盘口无关的严禁出现任何场次词）。事件清单中的开发流水轮次号（如 round 156、R156）属开发循环内部标识而非市民可亲历的具体事，严禁以任何形式写进年轮。事件清单里的编号式分类码（形如 G08、S2.5、B2396 这类「字母+数字」的内部码）同样不是市民会说的话，严禁照抄进年轮，必须转述成生活化说法（例：不写「S2.5 卡住了」，写「那台机器的心跳又卡了一下」）。人设里带条件触发的行为（凡带『…时/每逢/节前/月圆夜』等前置条件的，如『广场人流峰值时绕场三圈』），条件未被事件清单或实况坐实时严禁触发该场景，严禁用『还是/照例/依旧』等惯常化措辞把条件行为写成惯常延续，只能写无条件的人设日常；提及时间只许锚定喂入的当前时刻，严禁编造开工/收班/时刻表/『再过几小时』等时间细节，严禁使用与当前时刻不符的时段词（如凌晨时辰写『今早/今晨/早晨/晨光/清晨/清早/晨风』、白天写『今晚/今夜/深夜』）；当前时刻未到放学时点（15 时前）严禁把放学写成已完成的事（如『今早放学绕路看了眼』——放学时刻无数据锚），只能写放学后的打算（如『放学还得绕路去看』）；只许写你卡面人设与你自己的生活，严禁写入不属于你人设的任何行为或场景（如你的人设没有学生身份就严禁提及『放学』类校园生活）；喂入面从无雾况数据，除非你卡面人设本身带「雾」字（如江雾习惯），严禁对雾做任何断言（如「江面上的雾挺大」）。\n"
             f"{diversity}\n"
-            f"{time_recap(sig)}{weather_recap(wx, seed=cid)}"
+            f"{time_recap(sig)}{weather_recap(wx, seed=cid, banned=(_rbp + _tbp))}"
+            # v0.61 gap #81: tail-pinned like the other retry notes - the 4B
+            # weights the last lines hardest, and a mid-prompt ban alone was
+            # ignored (R2291 实测 4/10 仍撞 recent-dup-phrase).
+            f"{city_phr_blk}"
             f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节），只输出这几句话本身。")
 
 def add_ring(path, cid, line, anchor_note):
@@ -2537,14 +2662,22 @@ def main():
     # the top over-used openings named in the prompt.
     sig["recent_open_ids"], sig["recent_grams"] = recent_ring_corpus()
     sig["recent_gram_min"] = RECENT_GRAM_MIN
+    # v0.61 gap #81: state the banned city-wide phrasing up front, not only in
+    # the post-rejection retry note, so a seat writes it right the first time.
+    sig["recent_banned_phrases"] = city_banned_phrases(sig["recent_grams"])
     sig["recent_banned_openings"] = [
         k for k, ids in sorted(sig["recent_open_ids"].items(),
                                key=lambda kv: -len(kv[1]))[:8]
         if len(k) >= 8 and len(ids) >= 3]
     # T-20261025-03: same-day burst face (one ring per citizen in the corpus above
     # cannot see today's repeats). Ledger lands in state/ for observability.
-    _tcount = today_ring_openings()
+    _tcount, _tgrams = today_ring_openings(with_grams=True)
     sig["today_open_ids"] = _tcount
+    # v0.62 gap #82: today's own template band, named in the tail block so the
+    # seat sees the repeat it would otherwise imitate from its neighbours.
+    _tmin = max(TODAY_GRAM_MIN, len(_tcount) // 50)
+    sig["today_ban_phrases"] = city_banned_phrases(
+        {g: c for g, c in _tgrams.items() if c >= _tmin})
     sig["today_ban_openings"] = {k for k, c in _tcount.items()
                                  if c >= TODAY_OPEN_HARD and len(k) >= 8}
     save_today_openings(_tcount)
