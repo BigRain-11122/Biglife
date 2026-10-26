@@ -18,5 +18,15 @@ $start = Get-Date -Minute 6 -Second 0
 while ($start -le (Get-Date)) { $start = $start.AddHours(1) }
 $t = New-ScheduledTaskTrigger -Once -At $start -RepetitionInterval (New-TimeSpan -Hours 1) -RepetitionDuration (New-TimeSpan -Days 3650)
 $s = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable -MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Minutes 15)
-Register-ScheduledTask -TaskName 'BigLife-PoolGenLoop' -Action $a -Trigger $t -Settings $s -Force | Out-Null
+# Preferred: S4U, not InteractiveToken - a non-interactive session means no child
+# console can reach the CEO desktop (fleet silence rule, 2026-09-29 23:17).
+# S4U registration needs an elevated token (0x80070005 otherwise), so fall back to
+# the interactive definition instead of leaving the loop unregistered.
+$p = New-ScheduledTaskPrincipal -UserId ([System.Security.Principal.WindowsIdentity]::GetCurrent().Name) -LogonType S4U -RunLevel Limited
+try {
+    Register-ScheduledTask -TaskName 'BigLife-PoolGenLoop' -Action $a -Trigger $t -Settings $s -Principal $p -Force -ErrorAction Stop | Out-Null
+} catch {
+    Write-Output "WARN: S4U register denied ($($_.Exception.Message.Trim())) - falling back to interactive"
+    Register-ScheduledTask -TaskName 'BigLife-PoolGenLoop' -Action $a -Trigger $t -Settings $s -Force | Out-Null
+}
 Write-Output "registered BigLife-PoolGenLoop (project=$Project), first fire $start"
