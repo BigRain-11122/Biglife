@@ -473,3 +473,15 @@
 - 三行实况：当前活=让路窗确定性内容线（流言链投产）｜最近实物=C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-rumors.html（13.8KB·2026-10-26 18:4x）+ cognition/rumors/rumors-2026-10-26.jsonl（9.5KB）｜下个里程碑=19:00 让路窗解禁·年轮线批 3 席接续（rings 8157→8160+·ETA 19:30）
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
 
+
+## R2251 · 2026-10-26 19:0x @BigLife-OSLoop（年轮内部码出生站拦截·源头品质修）
+- 轮首三步：pull=Already up to date（ahead/behind=0/0，工作树净）；决策水位差集 NEW=0；orders 尾部涉本司只 PT-20261026-01（R2217/R2223/R2239/R2245 四度自证 origin tip 齐平，查重律不重立）
+- 真实缺口（品质面·带计量）：年轮正文混入开发循环内部编号 G08/S2.5/B2396。全库扫描 10-20~10-26 共 4,183 条年轮中 766 条带码（18.3%）；按日 10-24 16.0% / 10-25 23.6% / 10-26 21.0% —— v0.64 提示词禁令实际上未生效。
+- 根因：锚定律要求「逐字截取喂入事件」，而 FluxVerse 喂入事件文本本身带码 → 禁令与锚定律自相矛盾，7B/35B 只能照抄。
+- 修法三面（出生站拦截）：①喂入面 real_signals() 加 scrub_event_codes() 清码（连带粘着的拉丁项目名）；②门内 ring_violations() 新增 event-code 违例 + gated_llm() 尾巴重写提示（示例话术：不写「S2.5 卡住了」，写「那台机器的心跳又卡了一下」）；③落环口 add_ring() 兜底拒写带码行（该席留 due 下轮再试）。居民 ID 带横杠（C-07743 / H-QT2232）不在判据内，零误伤。
+- 计量件：新增 Tools/ring_lint.py（零 LLM·每日可跑）+ qa/RING-LINT-REPORT.md（按日汇总+涉及居民）+ qa/ring-lint.jsonl（766 行机器清单）；--today-only 退出码=当日带码数>0 即 1，可作回归看守。
+- 自检 8/8 PASS（证据 qa/ring-lint-selftest.log）：带码判真 / 干净判假 / 相遇行居民 ID 判假 / 家户 ID 判假 / 门禁违例命中 / 干净不误报 / 喂入清洗正确 / add_ring 拒写且卡面零变化。
+- 存量 766 条带码年轮不回改（锚定律要求原文保全）→ 立单：是否回修由导演席裁定（禁止自动改写历史年轮）。
+- 让路窗：18:56 实弹批被 D-20261020-02 拒（workday 09:00-19:00 defer），故修复效果不做线上实证，改为 19:0x 夜窗首轮后跑 `ring_lint.py --today-only` 复核（判据=0）。
+- 本轮计分：实物 2 分（可跑工具 + 源头闸级修复）；文件改动 6 处（工具 2 / qa 3 / 记账 2）。
+- tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline

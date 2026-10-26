@@ -701,6 +701,9 @@ def real_signals():
                 for k in ("type", "zone", "actor", "text", "summary", "msg", "title"):
                     if e.get(k):
                         parts.append(str(e[k])[:60])
+                # 2026-10-26 R2251 (see EVENT_CODE_RE): a code reaching the prompt
+                # is a code the anchor law will make the resident quote verbatim.
+                parts = [p for p in (scrub_event_codes(x) for x in parts) if p]
                 if parts:
                     # V2-D: keep each event's zone aligned with it so the feed
                     # order can be rebuilt per resident district (viewpoint).
@@ -810,6 +813,29 @@ class SeatHeartbeat:
             self._t.join(timeout=1)
         return False
 
+# 2026-10-26 R2251: internal code face (G08 / S2.5 / B2396 / P104 ...). These are
+# dev-loop identifiers, never something a resident would say; census scan of
+# 10-24..10-26 rings showed ~20% carrying them despite the v0.64 prompt ban,
+# because the anchor law orders verbatim quoting of whatever the feed carries.
+# Two-sided fix: scrub the feed (patch above real_signals caller) and refuse the
+# line here. Hyphenated citizen IDs (C-07743 / H-QT2232) stay legal.
+EVENT_CODE_RE = re.compile(r"(?<![A-Za-z0-9-])[GBSPT]\d{1,4}(?:\.\d+)?(?![0-9])")
+# feed-side scrub also eats the latin project name glued to the code
+EVENT_CODE_FEED_RE = re.compile(
+    r"(?<![A-Za-z0-9-])[GBSPT]\d{1,4}(?:\.\d+)?(?![0-9])(?:\s+[A-Za-z][A-Za-z0-9_]*)*")
+
+
+def has_event_code(line):
+    return bool(EVENT_CODE_RE.search(line or ""))
+
+
+def scrub_event_codes(text):
+    """Drop internal code tokens (and any latin name glued to them) from feed text."""
+    out = EVENT_CODE_FEED_RE.sub("", text or "")
+    out = re.sub(r"\s{2,}", " ", out).strip(" /")
+    return out
+
+
 def ring_violations(line, sig):
     """gap #12 honesty gate: machine-check an LLM ring against the fed signals.
 
@@ -818,6 +844,13 @@ def ring_violations(line, sig):
     invented moon/celestial) are verified deterministically against sig
     (weather串/now) before落环."""
     v = []
+    # 2026-10-26 R2251: internal event codes leaked into prose. The v0.64 prompt
+    # hardening alone did not hold (10-24 16.0% / 10-25 23.6% / 10-26 21.0% of
+    # that day's rings carried G08 / S2.5 / B2396), so the birth station now
+    # refuses them and sends the line back for a rewrite. Citizen IDs stay legal
+    # (与 C-07743 相遇) because the pattern has no hyphen.
+    if has_event_code(line):
+        v.append("event-code")
     wx = sig.get("weather") or ""
     m = re.search(r"wind\s+([0-9.]+)\s*m/s", wx)
     if m:
@@ -1406,6 +1439,11 @@ def gated_llm(prompt, sig, max_regens=3):
         v = ring_violations(line, sig)
         if not v:
             return line
+        if "event-code" in v:
+            prompt = (prompt
+                      + "\n你刚才那句里写了内部编号（字母加数字的组合码，如 G08、S2.5、B2396）。"
+                        "重写：严禁出现任何字母加数字的码，把那件事说成市民会说的话"
+                        "（例：不写「S2.5 卡住了」，写「那台机器的心跳又卡了一下」）。")
         if "dup-history" in v:
             prompt = (prompt
                       + "\n你刚才写的句子与本居民既有年轮逐字重复了（「"
@@ -2095,6 +2133,11 @@ def add_ring(path, cid, line, anchor_note):
     with open(path, encoding="utf-8") as f:
         text = f.read()
     date = today()
+    # 2026-10-26 R2251: last line of defense - a line still carrying an internal
+    # code (gate exhausted its regens, or a caller bypassed gated_llm) is refused
+    # here, so the card never grows a polluted ring. The seat stays due.
+    if has_event_code(line):
+        return False
     # R1772 同日幂等闸（出生地拦截）：批次被击杀后重跑不得二次落环节。
     # 同一天最多一条年轮 + 一条相遇行，超出的写入静默拒绝（调用方按已写处理）。
     todays = re.findall(r"(?:^|\n)- %s ([^\n]*)" % re.escape(date), text)
