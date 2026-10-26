@@ -2746,10 +2746,10 @@ R2172 2026-10-26 00:00~00:06 压实录：pull=Already up to date；决策水位�
 - 卡点（如实）：growth_archive --all 无 offset 会每次从头重写、5 分钟窗口推进不了；正解=--next N 自推进分批（每批约 700 份/2-3 分钟）。
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
 
-- R2220 ʵ¼ 2026-10-26 11:4x~11:5x @BigLife-OSLoop������ pull=Already up to date��ˮλѰɱ NEW=0��watermark=220 / doc_ids=165����orders �ޱ�˾���PT-20261026-01 P0 ���� R2217 ��ִ��origin...HEAD=0/0����tasks open=2��T-20261024-02 aCCS GPU ��֤δ�ջ� / T-20260924-08 ��̬���������� pool_audit verdict=PASS ȫͰ��� SELF_TERMINATE���������������� yield-window��09:00-19:00��D-20261020-02��deferred��
-- **��Ʒʵ����ֿɼ�������**=�ɳ��������� 1400 �ݣ�5419��6819������ 10114 �˿� 67.4%���� census/export/growth-archives/���ɳ�����ҳ�ؽ� census/export/city-growth.html��cards=6819 / archives=6819 / coverage=67.4%�������� QC verdict=PASS��reserved refusal 3/3��determinism ˫��һ�¡�invariants rings=3 anchors=3/3�����¼����ط�բ PASS��cards=10111 / events=39241 / replayed=10111 / schema=0 / mismatch=0����
-- �ɿ�ʵ���ַ��C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-growth.html��2026-10-26 11:4x �ؽ���
-- commits��07656b705��+1400 ���� + ҳ���ؽ�����ʣ�� pending=3292 �ݣ�--next �ݵ��ƽ���
+- R2220 实录 2026-10-26 11:4x~11:5x @BigLife-OSLoop：轮首 pull=Already up to date；水位寻杀 NEW=0（watermark=220 / doc_ids=165）；orders 无本司新令（PT-20261026-01 P0 已由 R2217 回执、origin...HEAD=0/0）；tasks open=2（T-20261024-02 aCCS GPU 验证未闭环 / T-20260924-08 常态）；语言线 pool_audit verdict=PASS 全桶达标 SELF_TERMINATE（跳过）；年轮线 yield-window（09:00-19:00·D-20261020-02）deferred。
+- **产品实物（本轮可见增量）**=成长档案续导 1400 份（5419→6819·覆盖 10114 人口 67.4%）→ census/export/growth-archives/；成长档案页重建 census/export/city-growth.html（cards=6819 / archives=6819 / coverage=67.4%）；档案 QC verdict=PASS（reserved refusal 3/3、determinism 双跑一致、invariants rings=3 anchors=3/3）；事件流回放闸 PASS（cards=10111 / events=39241 / replayed=10111 / schema=0 / mismatch=0）。
+- 可看实物地址：C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-growth.html（2026-10-26 11:4x 重建）
+- commits：07656b705（+1400 档案 + 页面重建）；剩余 pending=3292 份，--next 幂等推进。
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
 - R20261026-1155 @BigLife-OSLoop：年轮线让路窗（工作日 09:00-19:00 CEO 车道·D-20261020-02）deferred；本轮走确定性线 pool_audit PASS(72/72 自终止)+qc_census problems=0(卡片 10114/已进化 8157)+events_refresh --gate PASS(events 39241 mismatch 0 schema 0)；基因轮追加 10 条（口头禅 3/钩子物件 3/钩子动作 2/转折点 2）并重建 gene-ledger/city-objects 图鉴（objects 791）。tokens: local=0 api=0 api_reason=yield-window-deferred
 
@@ -2760,3 +2760,11 @@ R2172 2026-10-26 00:00~00:06 压实录：pull=Already up to date；决策水位�
   - 缺陷留档：①growth_archive --next 单块 >800 席时无进度输出，被 shell 5 分钟静默护栏取消（898 席已落盘无损，--next 幂等故分块 700 续跑成功）——下轮起该工具批量一律分块 <=700；②tasks/TASKS.md 存在混合编码（R2220 行整行为 GBK 字节，整档非合法 UTF-8，读取需 errors=replace）——承 T-20261025-02 同类根因（非 UTF-8 管道写 md），本窗只做无害追加未再污染，工具侧写面待统一。
   - 可见面三行：当前活=确定性内容线（无 LLM）成长档案 100% 收口；最近实物=C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-growth.html（2026-10-26 12:2x·10111 卡）；下个里程碑=19:00 让步窗解除后年轮批转 10 席（rings 8157->8167+，ETA 2026-10-26 19:30）
   - tokens: local=0 api=0 api_reason=-
+- R2222 实录 2026-10-26 12:28~12:5x @BigLife-OSLoop：pull=Already up to date；水位寻杀 NEW=5（D-20261026-10..14），尾 D-20261026-14；consumed=219。订单面：orders 无本公司新令；tasks open=2（T-20261024-02 aCCS GPU 验证未收回 / T-20260924-08 稽核导流=长期留存），均无可控推进。工作时段让路窗（09:00-19:00·D-20261020-02）：evolve/meet/reflect LLM 面 deferred 至 19:00，未强攻。
+  - **治理件（集团 D 令）**=D-20261026-13 ①落地：HQ-FEEDBACK.md 末行（集团读数第 241 行）GBK 双字节 → 就地转码 UTF-8，语义无损；验收=全文 decode('utf-8') 零异常、行数 242 不变、首行无 BOM、末行内容完整可读（R2220 全线）。②已回执落 HQ-FEEDBACK。
+  - **顺带修同族缺陷**=（R2221 留档项）tasks/TASKS.md 第 2749-2752 行（R2220 段）整段 GBK → Tools/repair_tasks_utf8.py --apply：utf8=2759 / gbk=4 转码 / U+FFFD=0 / utf8_strict_after=OK，备份 state/TASKS.bak-20261026-123059.md（state 不入库）。
+  - **产品实物（本轮主产出·确定性线无 LLM）**=① city-today.html 重建（rings=433 people=429 districts=6 prev=1362 cards=10091）；② city-districts.html 重建（districts=6 citizens=10114·50.8KB）；③ index.html 重建（pages=15）。
+  - 闸面：pool_audit verdict=PASS 全桶达标 SELF_TERMINATE（72/72·hard_fails 0·确定性 192 pair mismatch=0）；events 回放闸 PASS（cards=10111 / events=39241 / replayed=10111 / schema_errors=0 / mismatch=0）；QC 巡检 problems=0（cards=10114 / evolved=8157 / dup_rings 37-37 已知基线）。
+  - 口径说明（非缺陷）：city-today 卡数只计 census/registry（10091），QC 口径含 census/anchors（+23）=10114，两处差异属统计范围不同，不修。
+  - 可见面三行：当前活=工作时段让路窗下确定性内容线刷新（LLM 面挂起至 19:00）；最近实物=C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-today.html（2026-10-26 12:3x）；下个里程碑=19:00 让步窗解除后年轮批 10 席（rings 8157→8167），≤48h。
+  - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
