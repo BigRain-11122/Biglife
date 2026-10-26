@@ -8,7 +8,12 @@ does the INCREMENTAL refresh: only citizens listed in state/evolve-cursor.json
 (ring-bearing) are re-read from their cards; rows still missing the v1.2
 fields are migrated in the same pass. Deterministic, zero LLM. Targeted git
 commit when anything changed (machine tail tag via --via, versioning 4.1).
-Usage: python -X utf8 sync_rings.py [--via BigLife-OSLoop]
+
+--full rescans every card in the export and repairs rows the cursor missed
+(e.g. rings written by interrupted batches); a row keeping a ring whose card
+yields none is left untouched and reported as unparsed. Also refreshes the
+cursor so later incremental runs stay cheap.
+Usage: python -X utf8 sync_rings.py [--via BigLife-OSLoop] [--full]
 """
 import argparse, datetime, json, os, subprocess, sys
 
@@ -32,24 +37,33 @@ def commit_light(msg):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--via", default="")
+    ap.add_argument("--full", action="store_true",
+                    help="rescan every card, not just evolve-cursor entries")
     args = ap.parse_args()
-    if not os.path.isfile(CURSOR):
+    if not args.full and not os.path.isfile(CURSOR):
         print("no cursor; nothing to sync")
         return 0
-    with open(CURSOR, encoding="utf-8") as f:
-        cursor = json.load(f)
+    cursor = {}
+    if os.path.isfile(CURSOR):
+        with open(CURSOR, encoding="utf-8") as f:
+            cursor = json.load(f)
     with open(LIGHT, encoding="utf-8") as f:
         rows = [json.loads(l) for l in f if l.strip()]
     changed = 0
     ring_synced = 0
+    unparsed = 0
     for r in rows:
         cid = r["id"]
         d = txt = None
-        if cid in cursor:
+        if args.full or cid in cursor:
             p = find_card(cid, r.get("district"))
             if p:
                 with open(p, encoding="utf-8") as fh:
                     d, txt = latest_ring(fh.read())
+            if (args.full and not txt and r.get("recent_ring")):
+                # keep the existing mirror rather than wiping it on a parse miss
+                unparsed += 1
+                continue
         new_date = d or ""
         new_txt = (txt or "")[:80]
         if r.get("recent_ring") != new_txt or r.get("recent_ring_date") != new_date:
@@ -65,12 +79,16 @@ def main():
             for r in rows:
                 f.write(json.dumps(r, ensure_ascii=False) + "\n")
         msg = "行为线 %s: 镜像 rows=%d ring=%d" % (
-            datetime.date.today(), changed, len(cursor))
+            datetime.date.today(), changed, len(cursor) if cursor else ring_synced)
+        if args.full:
+            msg = "行为线 %s: 全量校准 rows=%d ring_ok=%d unparsed=%d" % (
+                datetime.date.today(), changed, ring_synced, unparsed)
         if args.via:
             msg += " [via %s]" % args.via
         ok = commit_light(msg)
         print(("committed" if ok else "COMMIT FAILED (worktree?)")
-              + f" rows_changed={changed} ring_synced={ring_synced}")
+              + f" rows_changed={changed} ring_synced={ring_synced}"
+              + (f" unparsed={unparsed}" if args.full else ""))
     else:
         print("already in sync; zero write")
     return 0
