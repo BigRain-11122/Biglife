@@ -729,3 +729,5 @@
 - 跳过面：语言池 pool_audit=PASS 全桶达标 SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism mismatch=0）；相遇轮今日 cap 已满（3 场）；QC 本轮 04:41 已巡检新鲜（problems=0·dup_rings 37/37）；聚光灯本月已达标；基因无缺口。
 - 实况三行：当前活=年轮环批+回放闸复验+看板重建；最近实物=census/export/city-dashboard.html（2026-10-27 04:50 重建·rings=8816·人口 10114）；下个里程碑=下一轮年轮批 10 席+闸复验，ETA 2026-10-27 05:20
 - tokens: local=10 api=0 api_reason=-
+
+- R2326 2026-10-27 04:5x ??: ??10?(C-08823~C-08832)+???? rows=10/ring=8826+???PASS(39918/0/0)+???? rings=8826/??10114/??160+QC problems=0+???PASS???+????????+residents tokens: local=10 api=0 api_reason=-
