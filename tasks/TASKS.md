@@ -367,3 +367,14 @@
 - 实物：C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-coverage.html（46.3KB）· C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\coverage-backlog.jsonl（10,033 行）
 - 下个里程碑：19:00 产量窗开，年轮线批 3 席（rings 8,157→8,160+·ETA 19:30），取人改用 coverage-backlog 头部 ring 队列
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
+
+## R2240 · 2026-10-26 16:4x @BigLife-OSLoop（关系面 13 天陈数据重建）
+- 轮首：pull=Already up to date（本地==origin 0/0）；水位差集 NEW=0（尾 D-20261026-15）；orders 涉本司 PT-20261026-01（P0 推送停摆）→ 实读 origin/main 末笔=ed6b97235（10-26 16:30）已复证，不重立（查重律）；D-20261026-13（HQ-FEEDBACK GBK 单行转码）实测已闭环：254 行逐行 decode('utf-8') 零异常
+- 让路窗（D-20261020-02·09:00-19:00）→ evolve_citizen 实测回 yield-window 拦截（年轮/相遇轮 defer 19:00），本轮走确定性面
+- 真实缺口：citizen-relations.jsonl 自 10-13 01:26 未重建（13 天），其间年轮长到 8,157——消费方（city-relations / city-social-graph / 关系面读数）一直读旧图，相遇面该长却冻住
+- 重建：Tools/relations_manifest.py 全卡重解析 9s（纯解析确定性零 LLM）→ rows 2,841,105→2,851,573（block 2,822,314→2,832,760；**meet 31→53=+22 对相遇**；buddy 15,131 不变；household 3,629 不变）md5=0cf9d1772e75552bf28a4518aaf87b86
+- 下游同批重建：city-relations.html（16.1KB·edges 2,851,573 / nodes 10,054 / meets 36 对 / unparsed=0·双闸 页<300KB=True unparsed<0.1%=True）＋ census/city-social-graph.html（nodes=600 / edges=718 / social_nodes=9,849）
+- 闸门：两页 UTF-8 逐字节解码零异常 + DOCTYPE 起 / </html> 收 + 计数断言（2,851,573 / 10,054）全过
+- 实物：C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-relations.html · C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\city-social-graph.html
+- 下个里程碑：19:00 产量窗开，年轮线批 3 席（rings 8,157→8,160+·ETA 19:30）按 coverage-backlog 头部 ring 队列取人；相遇轮优先 recent_ring 非空者，新增相遇续落后台关系面
+- tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
