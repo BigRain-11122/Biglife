@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-27 05:58",
+ "export_ts": "2026-10-27 06:16",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2335（2026-10-27 05:5x）年轮环 10 席 + 反思批 3 席**：C-08942~C-08951 十席全部落环（[锚] 注脚齐备，soft-concession gate 落地：recent-dup-phrase x3）；反思批补 3 席入池（C-00047 陈招弟 / C-01363 冯雯 / C-01360 程一鸣），接 v1.6 召回池 kind=reflection x1.5；相遇轮当日 3/3 已满按闸停手。 **R2328（05:2x）年轮环 10 席 + 相遇轮封顶**：C-08871/C-08873~C-08881 十席全部落环（[锚] 注脚齐备，4 席 soft-concession gate 落地：recent-dup-opening ×1 / recent-dup-phrase ×3）；相邻同城区 QT 崔金花×陆伟民 相遇候选已选，meet-cap 当日 3/3 已满按闸停手，留作次日首单。 **R2324（04:4x）年轮环 10 席**：C-08803~C-08812 全数落环（[锚] 注脚齐备，1 席 soft-concession gate 落地）+ 事件流回放闸 PASS（events=39898 / cards=10111 / schema_errors=0 / mismatch=0）+ 城市看板重建（rings=8806 / 人口 10114 / cards=160）",
+   "t": "**R2337（2026-10-27 06:1x）年轮环 10 席**：C-08972~C-08981 十席全新年轮落环（[锚] 注脚齐备·soft-concession gate 零触发）；行为线镜像同步 rows=10 ring=8975。 **R2335（2026-10-27 05:5x）年轮环 10 席 + 反思批 3 席**：C-08942~C-08951 十席全部落环（[锚] 注脚齐备，soft-concession gate 落地：recent-dup-phrase x3）；反思批补 3 席入池（C-00047 陈招弟 / C-01363 冯雯 / C-01360 程一鸣），接 v1.6 召回池 kind=reflection x1.5；相遇轮当日 3/3 已满按闸停手。 **R2328（05:2x）年轮环 10 席 + 相遇轮封顶**：C-08871/C-08873~C-08881 十席全部落环（[锚] 注脚齐备，4 席 soft-concession gate 落地：recent-dup-opening ×1 / recent-dup-phrase ×3）；相邻同城区 QT 崔金花×陆伟民 相遇候选已选，meet-cap 当日 3/3 已满按闸停手，留作次日首单。",
    "s": 1
   },
   {
@@ -1533,7 +1533,11 @@
   [
    "639",
    "年轮进账 639 席；事件流回放闸 events=40037 / cards=10111 / mismatch=0 / schema=0 PASS；语言线 pool_audit=SELF_TERMINATE（全桶达标 72/72）；反思池 58→61 行。"
+  ],
+  [
+   "669",
+   "年轮 10 席落环 + 事件回放闸 events=40067 / cards=10111 / mismatch=0 / schema=0 PASS；语言池 pool_audit=SELF_TERMINATE（全桶达标 72/72）。"
   ]
  ],
- "t": "当前活：年轮线 R2335 — 10 席落环 + 反思批 3 席落池\n最近实物：census/reflections.jsonl 新 3 条感悟（2026-10-27 05:56）· 回放闸 PASS 40037 事件/0 mismatch（05:55）\n下个里程碑：下一轮年轮批 10 席（本轮 5 分钟族循环内续推，≤48h）"
+ "t": "当前活：R2337 年轮环 10 席（C-08972~C-08981）+ 回放闸复核\n最近实物：census/export/city-life.html 与 city-dashboard.html 重建（2026-10-27 06:14，rings=8975 / cards=10111）\n下个里程碑：下一批 10 席年轮 + 每 6 轮 QC 巡检（≤48h 内）"
 }
