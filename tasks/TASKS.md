@@ -633,3 +633,14 @@
 - 决策轮上报：hq_feedback_daily --check=ALREADY_REPORTED(15) → 零写入。
 - 实况三行：当前活=年轮环批 + 回放闸复验 + 看板重建；最近实物=census/export/city-dashboard.html（2026-10-27 03:39 重建·rings 8667）；下个里程碑=下一轮年轮 10 席 + 闸复验，ETA 2026-10-27 05:4x。
 - tokens: local=10 api=0 api_reason=-
+
+## R2311 2026-10-27 03:3x-03:4x @BigLife-OSLoop
+- 轮首：git 净；pull ff 已最新；决策水位至 D-20261027-07（无新行）；orders 物理件区无新增涉本司件。
+- 年轮线：evolve_citizen --batch 3 → evolved=10/10（C-08674~C-08683），自动入库（20d56c4b4）+ 行为线镜像入库（6426e34a2）。
+- 回放闸：cards=10111 events=39769 replayed=10111 schema_errors=0 mismatch=0 → PASS（05e3a9563）。
+- 相遇轮：meet-cap 今日已 3/3 → 跳过（不自造额度）。
+- 池轮：今日 R2310 已跑 pool_audit 全桶达标自终止 → 按每日至多 1 次跳过。
+- 看板重建：city-dashboard.html total=10114 rings=8677（+10）cards=160。
+- 决策轮上报：hq_feedback_daily --check=ALREADY_REPORTED(15 行) → 零写入。
+- 本轮实物：census/export/city-dashboard.html（2026-10-27 03:4x 重建，rings 8677）。
+- tokens: local=10 api=0 api_reason=-
