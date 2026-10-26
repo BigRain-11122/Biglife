@@ -20,6 +20,8 @@ BEH = os.path.join(EXP, "citizen-behavior.jsonl")
 NEED = os.path.join(EXP, "citizen-needs.jsonl")
 INIT = os.path.join(EXP, "citizen-initiatives.jsonl")
 LIGHT = os.path.join(EXP, "citizens-light.jsonl")
+SLOG = os.path.join(ROOT, "cognition", "surprise-log.jsonl")
+ICHAT = os.path.join(ROOT, "cognition", "interchat-ledger.jsonl")
 OUT = os.path.join(EXP, "city-life.html")
 
 STATE_CN = {
@@ -95,6 +97,8 @@ def main():
     need = load_jsonl(NEED)
     light = load_jsonl(LIGHT)
     init = load_jsonl(INIT) if os.path.exists(INIT) else []
+    slog = load_jsonl(SLOG) if os.path.exists(SLOG) else []
+    ichat = load_jsonl(ICHAT) if os.path.exists(ICHAT) else []
 
     total = len(beh)
     who = {r["id"]: r for r in light}
@@ -135,6 +139,29 @@ def main():
         )
         for r in crash_sample
     )
+
+    # 惊奇曲线（cognition/surprise-log.jsonl·FEP-lite 确定性派生）
+    slog_recent = sorted(slog, key=lambda r: r["date"])[-14:]
+    slog_max = max([r.get("day_max") or 0 for r in slog_recent] or [0]) or 1
+    slog_rows = "\n".join(
+        '<div class="row"><span class="lab">%s</span>'
+        '<span class="track"><i style="width:%.1f%%"></i></span>'
+        '<span class="num">%d 惊奇 · %d 事件</span></div>'
+        % (html.escape(r["date"][5:]), (r.get("day_max") or 0) / float(slog_max) * 100,
+           r.get("day_max") or 0, len(r.get("events") or []))
+        for r in slog_recent
+    ) or '<div class="sub">惊奇面暂无数据。</div>'
+
+    # 互聊台账（cognition/interchat-ledger.jsonl·append-only 派生）
+    ichat_kind = collections.Counter(r.get("kind") for r in ichat)
+    ichat_recent = ichat[-6:]
+    ichat_html = "\n".join(
+        '<li><b>%s</b><span class="d">%s</span><span class="x">%s</span></li>'
+        % (html.escape(str(r.get("date") or "")),
+           html.escape(str((r.get("participants") or ["—"])[0])),
+           html.escape((r.get("text") or "—")[:90]))
+        for r in reversed(ichat_recent)
+    ) or '<li><span class="x">互聊台账暂无数据。</span></li>'
 
     quirk_blocks = []
     for q in ("slow", "umbrella", "night_run"):
@@ -259,12 +286,21 @@ li .x{{color:#a9b6c4}}
 {init_sample_html}
 </ul>
 
-<h2>七 · 读法说明</h2>
+<h2>七 · 城市惊奇与互聊</h2>
+<div class="sub">惊奇度 = FEP-lite 确定性派生（同类事件首次出现 3 / 罕见 2 / 少现 1 / 常见 0），近 {len(slog_recent)} 天曲线如下。</div>
+{slog_rows}
+<div class="sub" style="margin-top:10px">互聊台账 {len(ichat)} 条（相遇互引 {ichat_kind.get("meet_ring", 0)} · 流言跳 {ichat_kind.get("rumor_hop", 0)}），最近 6 条原文：</div>
+<ul style="margin-top:10px">
+{ichat_html}
+</ul>
+
+<h2>八 · 读法说明</h2>
 <div class="note">
 <p><b>这不是个体实时状态。</b>behavior / needs 为启发式生成档（v=1），全城共享同一时段快照（{html.escape(ctx)}），说话的是分布，不是某位居民此刻真的站在哪里。</p>
 <p>抽样只为展示样式，按居民编号稳定排序取前 {SAMPLE_N} 位，不代表缺口最重的人。</p>
 <p>社交轴（shejiao）当前累计为 0，属行为模型覆盖缺口，已如实标注，不作成片结论引用。</p>
 <p>第六节「今日意向」是<b>计划，不是事实</b>：agency v0 由「需求轴×居民种子」确定性派生（同人同日同句），不代表当天真的做成；不得当作 [锚] 证据引用。</p>
+<p>第七节「惊奇」是<b>城市聚合面的稀有度</b>，不是某位居民的感受；互聊台账为卡面原文派生（append-only·荣誉席恒排除），仅供素材调用。</p>
 </div>
 
 <div class="foot">BigLife · 城市日常面 · 确定性生成（零 LLM） · 全部数据 offline 内嵌</div>

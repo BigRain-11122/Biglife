@@ -132,6 +132,18 @@ def cmd_feed():
     return 0
 
 
+def cmd_rebuild():
+    """全档重基线: 按源流现存日期集重派生全部行 (一次性修复·源流回填致存档失稳时用)。"""
+    rows = derive_all()
+    ordered = [rows[d][0] for d in sorted(rows)]
+    os.makedirs(os.path.dirname(SLOG), exist_ok=True)
+    with open(SLOG, "w", encoding="utf-8", newline="\n") as f:
+        f.writelines(row_bytes(r) + "\n" for r in ordered)
+    print("rebuild rows=%d span=%s..%s" % (
+        len(ordered), ordered[0]["date"], ordered[-1]["date"]))
+    return 0
+
+
 def cmd_show(target):
     row, md5 = derive_day(target)
     print(row_bytes(row))
@@ -217,12 +229,14 @@ def main():
         return qc()
     if "--feed" in sys.argv:
         return cmd_feed()
+    if "--rebuild" in sys.argv:
+        return cmd_rebuild()
     if "--date" in sys.argv:
         i = sys.argv.index("--date")
         if i + 1 < len(sys.argv):
             return cmd_show(sys.argv[i + 1])
     print(__doc__.splitlines()[0])
-    print("usage: surprise_log.py --qc | --feed | --date YYYY-MM-DD")
+    print("usage: surprise_log.py --qc | --feed | --rebuild | --date YYYY-MM-DD")
     return 0
 
 
