@@ -485,3 +485,5 @@
 - 让路窗：18:56 实弹批被 D-20261020-02 拒（workday 09:00-19:00 defer），故修复效果不做线上实证，改为 19:0x 夜窗首轮后跑 `ring_lint.py --today-only` 复核（判据=0）。
 - 本轮计分：实物 2 分（可跑工具 + 源头闸级修复）；文件改动 6 处（工具 2 / qa 3 / 记账 2）。
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
+- [R2252] 2026-10-26 19:1x @BigLife-OSLoop 夜轮：本地 Ollama 离线->静默拉起(qwen3:4b-instruct 本地席位，:8090 非 LLM 车道自动回退)；年轮 +9 席(C-08155/08165/08167/08168/08169/08170/08171/08172/08173；C-08166 三连 today-dup-opening 拒收留 due)；行为线 sync rows=9 ring=8166；事件回放闸 PASS(events=39250 cards=10111 mismatch=0 schema=0)；语言池全桶达标自终止；相遇轮今日 3 例已满(上限 3)按律跳过；QC 18:57 读数全绿沿用。计分：能看实物=2（9 条年轮入册+事件流 39250 可回放）。
+- tokens: local=10 api=0 api_reason=-
