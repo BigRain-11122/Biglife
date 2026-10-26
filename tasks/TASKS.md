@@ -378,3 +378,4 @@
 - 实物：C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-relations.html · C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\city-social-graph.html
 - 下个里程碑：19:00 产量窗开，年轮线批 3 席（rings 8,157→8,160+·ETA 19:30）按 coverage-backlog 头部 ring 队列取人；相遇轮优先 recent_ring 非空者，新增相遇续落后台关系面
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
+- [ ] **T-20261026-03 相遇候选单（确定性选人·零 LLM）**：Tools/meet_candidates.py 读 census/registry/*/*.md + citizens-light.jsonl，按「同城区 + 双方 recent_ring 非空 + 尚未相遇」确定性排序输出 census/export/meet-candidates.jsonl（top N 对，含选人理由一行），供 19:00 相遇轮直接 evolve_citizen.py --meet 消费——治相遇维度 78/10111（0.8%）最薄面。判据：脚本幂等、双跑同输出（determinism mismatch=0）、候选对不与 city-meets.html 已有对重复、页面/JSON 双落盘。status: open（R2241 立）
