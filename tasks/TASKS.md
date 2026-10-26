@@ -487,3 +487,5 @@
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
 - [R2252] 2026-10-26 19:1x @BigLife-OSLoop 夜轮：本地 Ollama 离线->静默拉起(qwen3:4b-instruct 本地席位，:8090 非 LLM 车道自动回退)；年轮 +9 席(C-08155/08165/08167/08168/08169/08170/08171/08172/08173；C-08166 三连 today-dup-opening 拒收留 due)；行为线 sync rows=9 ring=8166；事件回放闸 PASS(events=39250 cards=10111 mismatch=0 schema=0)；语言池全桶达标自终止；相遇轮今日 3 例已满(上限 3)按律跳过；QC 18:57 读数全绿沿用。计分：能看实物=2（9 条年轮入册+事件流 39250 可回放）。
 - tokens: local=10 api=0 api_reason=-
+- [R2253] 2026-10-26 19:3x @BigLife-OSLoop 基因轮：本地模型席位不可达(11434/8090 皆拒连)->年轮批按律静默跳过(不修不报障)；语言池全桶达标自终止；QC 巡检 problems=0 dup_rings=37/37；基因库 +12 条(b32：5 钩子物件/3 转折点/4 口头禅补薄轴 较真·手艺·修补·专注)，gene_nearcheck 12/12 CLEAN，台账页刷新 census/export/gene-ledger.html(122.3KB)。计分：能看实物=2（12 条新基因入池 + 台账可翻）。
+- tokens: local=0 api=0 api_reason=local-llm-offline-deterministic-gene-round
