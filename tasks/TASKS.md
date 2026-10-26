@@ -745,3 +745,5 @@
 - 一面：语言池 pool_audit=PASS 全桶达标 SELF_TERMINATE（axes 72/72、sprite 12/12、greet 28/28、faq 7/7、neg 6/6、hard_fails=0、determinism mismatch=0）；QC 上轮 R2327 刚跑 problems=0 未满 6 轮不重复；meet-cap 今日已满·跳过。
 - 实况三行：当前活=年轮环+回放闸+看板重建；最近实物=census/export/city-dashboard.html（2026-10-27 05:1x 重建，rings=8856 / 人口 10114 / 卡片 160 / 66691B）+ qa/EVENTS-REPLAY-REPORT.md（39948 事件 PASS）；下个里程碑=下一轮年轮 10 席 C-08863 起 + 回放闸 PASS，ETA 2026-10-27 05:35。
 - tokens: local=10 api=0 api_reason=-
+
+- [2026-10-27 05:1x R2325] 轮记：git pull=Already up to date、树净；决策水位差集 NEW=0（已含 D-20261027-07）；orders 尾无本司新令；TASKS 无 open 可领单；HQ 上报闸 ALREADY_REPORTED（15 行·零写入）。**产品增量**=年轮 --batch 3 实跑 evolved=9/10 席落环（C-08863~C-08870、C-08872；C-08871 触 persistent violations[mist-import] 闸跳过留到期；1 席 soft-concession recent-dup-phrase 软让落环），脚本自提交 + 行为线自动收口；**事件回放闸 PASS**（cards=10111 events=39957 replayed=10111 mismatch=0 schema=0，qa/EVENTS-REPLAY-REPORT.md 入库）；**QC 巡检 problems=0**（cards=10114 evolved=8865 dup_rings=37/37 观测面）；**看板重建**=census/export/city-dashboard.html rings=8865 + index.html（19 页）；语言池 PASS/SELF_TERMINATE；相遇日额已用（今日 2 对）跳过。commit b14ff4e4f 已 push。tokens: local=9 api=0 api_reason=-
