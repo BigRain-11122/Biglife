@@ -48,8 +48,8 @@
   "id": "C-00034",
   "quirk": "",
   "recovering": "haoqi",
-  "slot": "宅户·白天",
-  "state": "home",
+  "slot": "家户·歇晌",
+  "state": "rest_nap",
   "v": 1,
   "visible": 0
  },

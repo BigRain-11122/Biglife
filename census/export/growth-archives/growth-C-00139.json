@@ -47,8 +47,9 @@
   "ctx": "tw=day,wx=cloud,wd=0",
   "id": "C-00139",
   "quirk": "",
-  "slot": "宅户·白天",
-  "state": "home",
+  "recovering": "shengji",
+  "slot": "家户·歇晌",
+  "state": "rest_nap",
   "v": 1,
   "visible": 0
  },
