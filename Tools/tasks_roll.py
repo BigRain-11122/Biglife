@@ -247,6 +247,89 @@ def run_sections(a):
     return 0
 
 
+CARD_HDR = re.compile(r"^- \[([ x])\] ")
+CARD_ID = re.compile(r"T-(20\d{2})(\d{2})\d{2}")
+
+
+def card_blocks(lines):
+    """顶层勾选卡块：'- [x]/[ ]' 起，至下一张卡或下一个 ## 标题止。"""
+    i = 0
+    while i < len(lines):
+        if CARD_HDR.match(lines[i]):
+            s = i
+            j = i + 1
+            while j < len(lines):
+                if CARD_HDR.match(lines[j]) or lines[j].startswith("## "):
+                    break
+                j += 1
+            yield s, j, lines[s]
+            i = j
+        else:
+            i += 1
+
+
+def run_closed_cards(a):
+    """已结卡（- [x]）整卡逐字移入月档；open 卡零触碰、零漂移。"""
+    txt = io.open(BOARD, encoding="utf-8").read()
+    lines = txt.split("\n")
+    open_before = sum(1 for l in lines if l.startswith("- [ ]"))
+    picked = [(s, e, h) for s, e, h in card_blocks(lines) if h.startswith("- [x]")]
+    if not picked:
+        print("nothing to roll (no closed cards)")
+        return 0
+    moved = ["\n".join(lines[s:e]).rstrip("\n") for s, e, _h in picked]
+    pay = sum(len(b.encode("utf-8")) + 2 for b in moved)
+    print("cards=%d move_bytes=%d board_before=%d board_after=%d open=%d"
+          % (len(picked), pay, len(txt.encode("utf-8")),
+             len(txt.encode("utf-8")) - pay, open_before))
+    if a.dry_run:
+        for s, _e, h in picked[:12]:
+            print("  L%d %s" % (s + 1, h[:60]))
+        return 0
+
+    days = __import__("datetime").date.today().isoformat()
+    os.makedirs(ARCH_DIR, exist_ok=True)
+    groups = {}
+    for (s, _e, h), body in zip(picked, moved):
+        m = CARD_ID.search(h)
+        ym = "%s-%s" % (m.group(1), m.group(2)) if m else days[:7]
+        groups.setdefault(ym, []).append(body)
+    for ym, items in sorted(groups.items()):
+        arch = os.path.join(ARCH_DIR, "TASKS-%s.md" % ym)
+        old = io.open(arch, encoding="utf-8").read() if os.path.exists(arch) else "# BigLife 任务板月档 %s\n" % ym
+        head = "\n\n## 已结卡整卡归档 %s（%d 卡 · 逐字移入）\n" % (days, len(items))
+        new_arch = old.rstrip("\n") + head + "\n" + "\n\n".join(items) + "\n"
+        bad = [b for b in items if b not in new_arch]
+        if bad:
+            print("VERIFY FAIL: %s missing %d cards" % (ym, len(bad)))
+            return 1
+        io.open(arch, "w", encoding="utf-8", newline="\n").write(new_arch)
+        print("rolled %d cards -> %s" % (len(items), os.path.relpath(arch, ROOT)))
+
+    drop = set()
+    for s, e, _h in picked:
+        drop.update(range(s, e))
+    out = []
+    first = min(s for s, _e, _h in picked)
+    for i, line in enumerate(lines):
+        if i == first:
+            out.append("> 已结卡整卡归档 → tasks/archive/TASKS-*.md（%s · %d 卡）"
+                       % (days, len(picked)))
+        if i in drop:
+            continue
+        out.append(line)
+    new_board = re.sub(r"\n{4,}", "\n\n\n", "\n".join(out))
+    open_after = sum(1 for l in new_board.split("\n") if l.startswith("- [ ]"))
+    if open_after != open_before:
+        print("VERIFY FAIL: open drift %d -> %d" % (open_before, open_after))
+        return 1
+    io.open(BOARD, "w", encoding="utf-8", newline="\n").write(new_board)
+    print("board: %d -> %d bytes" % (len(txt.encode("utf-8")), len(new_board.encode("utf-8"))))
+    print("verify: %d/%d cards verbatim · open %d unchanged · U+FFFD=%d"
+          % (len(picked), len(picked), open_after, new_board.count("\ufffd")))
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--before", default=None, help="归档该日（含）之前的实录段 YYYY-MM-DD")
@@ -254,8 +337,12 @@ def main():
                     help="段内行级切片：段标题子串（配合 --before 用）")
     ap.add_argument("--roll-sections", action="store_true",
                     help="轮记族整段滚动（标题带日期·段内无 open 单才移）")
+    ap.add_argument("--roll-closed-cards", action="store_true",
+                    help="已结卡（- [x]）整卡滚动入月档，open 单零触碰")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
+    if a.roll_closed_cards:
+        return run_closed_cards(a)
     if not a.before:
         print("need --before YYYY-MM-DD")
         return 2
