@@ -30,8 +30,10 @@ TITLE = {
     "city-meets.html": ("相遇编年史", "全库相遇留痕按日编排：同一幕双向对读 / 单面留痕 / 跨城区一幕"),
     "city-today.html": ("今日日报", "当天全量年轮（不抽样）+ 城区分布 + 与昨日对比"),
     "city-dossiers.html": ("深层档案册", "深年轮居民逐人档案：全部年轮原文 / 信条 / 钩子 / 进化史"),
-    "city-growth.html": ("成长档案册", "逐人成长档案：年轮原文 / 当月心声 / 档案覆盖进度"),
+    "city-growth.html": ("成长档案册", "逐人成长档案：年轮原文 / 当月心声 / 档案覆盖进度（分页 · 单页 <1.1MB）"),
 }
+# 成长档案册的分页正文不入总目录（总目录只收册子的入口页，避免一册被拆成十几张卡）
+PAGED_PREFIX = "city-growth-p"
 ORDER = list(TITLE)
 
 
@@ -40,7 +42,11 @@ def esc(s: str) -> str:
 
 
 def rows() -> tuple[str, int]:
-    files = [(f, f) for f in os.listdir(EXP) if f.endswith(".html") and f != "index.html"]
+    files = [
+        (f, f)
+        for f in os.listdir(EXP)
+        if f.endswith(".html") and f != "index.html" and not f.startswith(PAGED_PREFIX)
+    ]
     # 社交图谱落在 census/ 根下（历史位置），以相对路径一并收进目录
     if os.path.exists(os.path.join(ROOT, "census", "city-social-graph.html")):
         files.append(("city-social-graph.html", "../city-social-graph.html"))
