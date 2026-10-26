@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-26 08:24",
+ "export_ts": "2026-10-26 08:49",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2207（10-26 08:2x）**：年轮批落环 8 席（C-08121~C-08128，[锚] 实锚当日真实城市事件+北京时间），ring 8112→8120；行为线镜像随环收口（rows=8）；事件回放闸 PASS（cards=10091/events=39043/replayed=10091/mismatch 0/schema 0）；语言池全桶达标 SELF_TERMINATE 本轮不重跑；城市看板重建 64.1KB；GPU util 4% 让路解除后恢复年轮批（D-20261024-16 合规）。 **R2205（2026-10-26 08:2x）**：年轮批落环 7 席（C-08107~C-08114），rings 8098→8105；evolve_citizen v0.63 到期筛选修复＝按卡面「今日已落环」前置过滤并自愈游标（旧法先切片后判重，已进化席位可占满整批致零增量）；事件回放闸 PASS（cards=10091/events=39028/mismatch 0/schema 0）。 **R2199（2026-10-26 05:4x）**：年轮批两轮共落 11 席（第一轮 C-07990~C-07993·4 席；验证轮 C-07926/C-07938/C-07974/C-07995/C-07996/C-07997 等 7 席），rings=7988；行为线 sync_rings 随环自动收口；事件回放闸 PASS（cards=10091/events=38911/replayed=10091/mismatch 0/schema 0）；城市看板重建 61.5KB（rings=7988/people=10114/cards=160）；**工具改进 v0.60**：新增 per-citizen 开场骨架注入（opening_seed_block），验证轮 10 席落 7 席、0 席因 today-dup-opening 硬拦，此前卡住的三席成功落环",
+   "t": "**R2208（10-26 08:4x）**：年轮批落环 10 席（C-08145~C-08154，[锚] 实锚当日真实城市事件+北京时间），ring 8138→8148；行为线镜像随环收口（rows=10）；事件回放闸 PASS（cards=10091/events=39071/replayed=10091/mismatch 0/schema 0）；语言池全桶达标 SELF_TERMINATE 本轮不重跑；GPU util 4% 空闲，D-20261024-16 让路条合规非让路窗。 **R2207（10-26 08:2x）**：年轮批落环 8 席（C-08121~C-08128，[锚] 实锚当日真实城市事件+北京时间），ring 8112→8120；行为线镜像随环收口（rows=8）；事件回放闸 PASS（cards=10091/events=39043/replayed=10091/mismatch 0/schema 0）；语言池全桶达标 SELF_TERMINATE 本轮不重跑；城市看板重建 64.1KB；GPU util 4% 让路解除后恢复年轮批（D-20261024-16 合规）。 **R2205（2026-10-26 08:2x）**：年轮批落环 7 席（C-08107~C-08114），rings 8098→8105；evolve_citizen v0.63 到期筛选修复＝按卡面「今日已落环」前置过滤并自愈游标（旧法先切片后判重，已进化席位可占满整批致零增量）；事件回放闸 PASS（cards=10091/events=39028/mismatch 0/schema 0）。",
    "s": 1
   },
   {
@@ -1469,7 +1469,11 @@
   [
    "397",
    "R2207 机器直数 397 人：有年轮 8120 / 卡片 160 / QC problems=0。"
+  ],
+  [
+   "425",
+   "R2208 机器直数 425 人：有年轮 8148 / 卡片 160 / QC problems=0。"
   ]
  ],
- "t": "当前活：居民年轮线（qwen3:4b-instruct 本地推理，每轮 6-12 席）+ 事件流回放闸\n最近实物：census/registry 年轮 8 席（C-08121~C-08128，2026-10-26 08:2x）+ census/export/city-dashboard.html（rings=8120/people=10114）+ qa/EVENTS-REPLAY-REPORT.md（PASS）\n下个里程碑：ring 8150（差 30 圈，ETA 2026-10-26 20:00 前）"
+ "t": "当前活：居民年轮线（本地推理，每轮 6-12 席）+ 事件流回放闸\n最近实物：census/registry 年轮 10 席（C-08145~C-08154，2026-10-26 08:4x）+ census/export/city-dashboard.html（rings=8148/people=10114）+ qa/EVENTS-REPLAY-REPORT.md（cards=10091/events=39071/PASS）\n下个里程碑：ring 8200（差 52 圈，ETA 2026-10-27 06:00 前）"
 }
