@@ -2103,6 +2103,25 @@ def add_ring(path, cid, line, anchor_note):
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(text)
 
+def _ringed_today(path):
+    """v0.63 (R2205): card-content face of the same-day idempotency gate.
+
+    state/evolve-cursor.json can disagree with the card (batch killed after the
+    ring landed, or a second instance wrote the card first). Slicing `due`
+    before the content check let already-done seats fill the whole batch, so a
+    round could end with zero new rings. Check content, then slice.
+    """
+    if not path:
+        return False
+    try:
+        with open(path, encoding="utf-8") as f:
+            text = f.read()
+    except Exception:
+        return False
+    lines = re.findall(r"(?:^|\n)- %s ([^\n]*)" % re.escape(today()), text)
+    return bool(lines) and not all("相遇：" in l for l in lines)
+
+
 def due_citizens(cursor, batch, force=None):
     all_ids = []
     for sub in ("anchors", "registry"):
@@ -2131,7 +2150,22 @@ def due_citizens(cursor, batch, force=None):
                     again.append(cid)
             except Exception:
                 again.append(cid)
-    return (fresh + again)[:batch]
+    picked = []
+    for cid in fresh + again:
+        p = find_card(cid)
+        if _ringed_today(p):
+            # Self-heal the cursor so a stale due entry does not cost a
+            # filesystem read every round.
+            if cursor.get(cid, {}).get("last") != today():
+                cursor[cid] = {"v": 1, "last": today(),
+                               "next": (datetime.date.today() + datetime.timedelta(days=COOLDOWN_DAYS)).isoformat(),
+                               "n": cursor.get(cid, {}).get("n", 0) + 1}
+                save_cursor(cursor)
+            continue
+        picked.append(cid)
+        if len(picked) >= batch:
+            break
+    return picked
 
 def commit_files(paths, msg):
     try:

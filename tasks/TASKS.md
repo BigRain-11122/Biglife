@@ -2629,3 +2629,9 @@ R2172 2026-10-26 00:00~00:06 压实录：pull=Already up to date；决策水位�
   - 最近实物：census/anchors/4v/（500 包，2026-10-26 08:0x）+ 8 枚年轮卡（2026-10-26）
   - 下个里程碑：ring 8098→8500（约 400 席，Ollama 恢复后每轮 8-12 席，窗 ≤48h）
   - tokens: local=0 api=0 api_reason=-（Ollama DOWN 本轮零 LLM 调用，产出全为确定性脚本）
+
+- R2205 实录 2026-10-26 08:0x~08:2x @BigLife-OSLoop：轮首 pull=Already up to date；水位键 NEW=0（尾 D-20261026-09·consumed=214·D-20261026-01..09 全消费）；orders 无涉本司新令；tasks open=2（T-20261024-02 aCCS 验证 GPU 窗 / T-20260924-08 常设导出）。**产品实物**=①年轮批落环 7 席（C-08107/C-08108/C-08110/C-08111/C-08112/C-08113/C-08114），ring 8098->8105，[锚] 实锚 2026-10-26 真实城市事件+北京时间（qwen3:4b-instruct 本地推理），脚本自提交 62b05a066；②行为线 sync_rings rows=7 ring=8105（脚本自提交 1db59b2ce）；③事件回放闸 PASS（cards=10091/events=39028/replayed=10091/schema 0/mismatch 0，qa/EVENTS-REPLAY-REPORT.md 入库）；④城市看板重建 rings=8105/people=10114/cards=160（census/export/city-dashboard.html 63.9KB）；⑤对外实况三行刷新 ts=08:06（total=382）。
+  - **工具改进（gap #81·evolve_citizen v0.63）**：R2200/R2204 留档缺陷「到期判定与实际卡内容不同步→已进化居民占满批次名额、整轮零增量」已修——新增 _ringed_today() 卡面判重面，due_citizens 由「先切片后判重」改为「逐席判重取满 batch + 游标自愈」，签名不变（既有调用点零改动）。验证：编译 OK；试跑到期列表 10 席全部 _ringed_today=False（无已进化席位入列）。
+  - 质量留档（承 R2197/R2198）：C-08110 台词仍混入原始事件码「心跳波形还卡在 S2.5」——事件码生活化转述仍未进 prompt 硬化项，下轮继续（优先级低于产出）。
+  - 闸况：语言线 pool_audit 上一轮 PASS 全桶达标 SELF_TERMINATE（今日不重跑）；相遇轮今日 cap 3 已满（跳过）；QC 巡检 6 轮窗未到（上轮 R2204 problems=0）；census 注册维持冻结（唯 CEO 解禁）。
+  - 下个里程碑=ring 8200（差 95 圈）ETA 2026-10-27 08:00 前；tokens: local=7 api=0 api_reason=-
