@@ -1057,3 +1057,13 @@
 - **现场缺陷（本轮新发现·低优先）**：Tools/growth_archive.py --next 400 在「无待补居民」时无任何输出并挂死 >5min（被 shell 5 分钟无输出守卫取消·零盘污、零半截文件）；成因疑为对 10111 份档案做整目录重扫而未先算差集。修法（下轮或空闲轮）=先读差集再遍历，无差集则立即打印 NO-PENDING 退出；--next 入口加 0 待补短路。影响面=仅离线工具调用体验，不阻塞产线。
 - 三行实况：当前活=让路窗内确定性维护线（本轮零增量·并发窗已覆盖）；最近实物=C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-growth.html（2026-10-26 13:4x·档案覆盖 100.0%）；下个里程碑=19:00 年轮线解禁批 3 席（rings 8157 → 8160+·ETA 2026-10-26 19:2x）。
 - tokens: local=0 api=0 api_reason=workday-yield-window + duplicate-guard（并发窗覆盖全部确定性产线）
+
+
+## R2228 · 2026-10-26 14:0x @BigLife-OSLoop（让路窗·真缺陷修复轮）
+- 轮首三步：pull=Already up to date（工作树净）；decisions 水位差集 NEW=0（尾 D-20261026-14 已含）；orders 无涉本司新件。PT-20261026-01 停摆质询已于 R2217/R2223 二次自证（origin 今日 12:25-13:42 连提 10 笔·ahead=0），本轮按查重律不重复自证。
+- 产线门控复核：evolve_citizen.py --batch 3 被脚本内 D-20261020-02 让路闸拦下（workday 09:00-19:00 LLM 面延后·法条成立不擅改）；pool_audit=PASS SELF_TERMINATE（72/72 桶+greet 28+faq 7 全达标·determinism mismatch=0）→ 池轮按自终止律跳过；QC-REPORT 13:35 已刷（未到 6 轮周期）。
+- 任务板收口复核（T-20261026-02）：	asks_roll.py --roll-sections --before 2026-10-20 --dry-run → sections=0（唯一命中段含 open 单被 SKIP）；实测零 open 段仅约 52KB（L852 23KB / L953 15KB / L110 14KB），板面 316KB 里 54304B+35570B+28025B 三大段各带 open 单——**降到 100KB 线需拆分 open 单记录，属深层重构，非单轮预算**，本轮不硬做。
+- **本轮实物：修复 growth_archive.py --next 零待补慢路径（R2227 挂死缺陷真因）**。真因=零待补也要先全量装载 citizen-relations/reflections/citizen-behavior/citizen-voice/citizen-atlas 五个大 jsonl（10111 席档案），实测 16s 无输出，被 shell 5 分钟无输出守卫误判为挂死。修法=args.next 分支在重装载之前先算差集，空则打印 \- NO-PENDING\ 立即返回。
+- 验证：①零待补 --next 400 16s→1s 输出 exported=0 pending_before=0 - NO-PENDING；②非空批 --next 2 --out <temp> exported=2 pending_before=10111 remaining=10109，两份 growth-*.json 正常落盘（临时目录已删·零盘污）；③--qc 全套回归 PASS（reserved refusal 3/3 + determinism double-run + invariants rings=3 anchors=3/3 + verdict PASS）。
+- 三行实况：当前活=让路窗内确定性线修复（年轮/相遇 LLM 面 19:00 解禁）；最近实物=Tools/growth_archive.py NO-PENDING 短路（2026-10-26 14:0x·16s→1s）+ 全量成长档案 10111/10111（13:28）；下个里程碑=19:00 年轮线解禁批 3 席（rings 8157→8160+·ETA 19:30）。
+- tokens: local=2 api=0 api_reason=workday-yield-window（本地 4b 未调用·LLM 面被让路闸挡）

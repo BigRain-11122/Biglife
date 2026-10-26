@@ -147,6 +147,17 @@ def main():
 
     reserved = _reserved_ids()
     light = _light_index()
+    if args.next:
+        # NO-PENDING short circuit: the four heavy jsonl loads below cost ~16s
+        # even when there is nothing to export, which the OS loop saw as a hang
+        # behind a 5-minute no-output guard (R2227).
+        os.makedirs(args.out, exist_ok=True)
+        pending = [c for c in sorted(light) if c not in reserved
+                   and not os.path.exists(os.path.join(args.out, "growth-%s.json" % c))]
+        if not pending:
+            print("OK --next exported=0 pending_before=0 remaining=0 "
+                  "(reserved skipped=%d) - NO-PENDING" % len(reserved))
+            return
     rel_rows = _load_jsonl(os.path.join(EXPORT, "citizen-relations.jsonl"))
     refl_rows = _load_jsonl(os.path.join(ROOT, "census", "reflections.jsonl"))
     beh_by_id, voice_by_id, atlas_by_id = {}, {}, {}
