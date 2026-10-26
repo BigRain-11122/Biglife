@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""一次性登记工具（R213y 基因轮·b28）：读 state/gene-cand-b28.txt 的 4 钩子物件+3 转折点+3 口头禅，
+追加进 genes/lives.json 与 genes/language.json。只做原文追加，不改动既有条目（不整体 dump）。
+候选已过 gene_nearcheck 预筛（near=0）。
+"""
+import io
+import json
+import re
+
+CAND = "state/gene-cand-b28.txt"
+LIVES = "genes/lives.json"
+LANG = "genes/language.json"
+
+raw = io.open(CAND, encoding="utf-8").read().splitlines()
+hos = [l.split("|", 1)[1].strip() for l in raw if l.startswith("ho|")]
+tps = [l.split("|", 1)[1].strip() for l in raw if l.startswith("tp|")]
+cps = [(l.split("|")[1].strip(), l.split("|")[2].strip()) for l in raw if l.startswith("cp|")]
+assert len(hos) == 4 and len(tps) == 3 and len(cps) == 3, (len(hos), len(tps), len(cps))
+
+
+def append(path, key, rendered):
+    t = io.open(path, encoding="utf-8").read()
+    m = re.search(r'("%s":\s*\[)(.*?)(\n\s*\])' % key, t, re.S)
+    if not m:
+        raise SystemExit("no array found: %s in %s" % (key, path))
+    add = "".join(",\n      " + x for x in rendered)
+    t = t[: m.end(2)] + add + t[m.end(2) :]
+    io.open(path, "w", encoding="utf-8", newline="\n").write(t)
+
+
+append(LIVES, "hook_objects", [json.dumps(x, ensure_ascii=False) for x in hos])
+append(LIVES, "turning_points", [json.dumps(x, ensure_ascii=False) for x in tps])
+append(
+    LANG,
+    "catchphrases",
+    [
+        '{\n      "text": %s,\n      "axis": %s\n    }'
+        % (json.dumps(tx, ensure_ascii=False), json.dumps(ax, ensure_ascii=False))
+        for tx, ax in cps
+    ],
+)
+
+lives = json.load(io.open(LIVES, encoding="utf-8"))
+lang = json.load(io.open(LANG, encoding="utf-8"))
+print(
+    "counts ho=%d tp=%d cp=%d"
+    % (len(lives["hook_objects"]), len(lives["turning_points"]), len(lang["catchphrases"]))
+)
+for x in hos:
+    assert x in lives["hook_objects"], x
+for x in tps:
+    assert x in lives["turning_points"], x
+for tx, ax in cps:
+    assert any(e.get("text") == tx and e.get("axis") == ax for e in lang["catchphrases"]), tx
+print("verify: all 10 landed")
