@@ -605,3 +605,16 @@
 - **本轮主产出（基因轮 b33·距上批 10-26 19:36 满 32h）**：+12 条内容基因——钩子物件 4／转折点 4／口头禅 4（补薄轴 实干·夜班·较真·手艺）；nearcheck 四轮收敛 12/12 CLEAN 才落库（首轮 9 近重→逐条换词）；库容 ho 813→817·tp 619→623·cp 1377→1381，gene-ledger 已重建
 - 实况面三行：当前活=基因母库扩容收口（下批起供年轮取材）｜最近实物=genes/lives.json + genes/language.json（03:2x · +12 条 · 12/12 CLEAN）+ census/export/gene-ledger.html（重建）｜下个里程碑=下一批 10 席年轮 + 池/相遇日闸复位，ETA ≤2026-10-27 05:40
 - tokens: local=10 api=0 api_reason=-
+
+### R2308 轮记（2026-10-27 03:13-03:27 · 本年轮环 15min 预算）
+
+- 轮首：pull --ff-only=Already up to date；decisions 水位差集 NEW=0（水位含 D-20261027-05）；物理件区无新增涉本司项。
+- 年轮线：evolve --batch 3 实走 10 席（C-08645~C-08654·qwen3:4b-instruct）→ evolved=9，C-08653 被 gate 拦（signal-state/recent-dup 三项违例，留 due 下轮）；行为线 sync_rings 自动收口 rows=9 ring=8647。
+- 事件回放闸：cards=10111 events=39739 shards=2 replay 10111 schema_errors=0 mismatch=0 PASS（qa/EVENTS-REPLAY-REPORT.md 入库）。
+- 语言池：pool_audit verdict=PASS（axes 72/72 + sprite 12/12 + greet 28 + faq 7 全达标）→ SELF_TERMINATE 跳过。
+- 相遇轮：meet-cap 3/3 今日已满（他窗交付）→ 跳过。
+- QC 巡检：cards=10114 problems=0 dup_rings=37/37（census/QC-REPORT.md 入库）。
+- 看板：city-dashboard.html 重建 total=10114 rings=8647 cards=160。
+- 决策轮上报：hq_feedback_daily --check=ALREADY_REPORTED(15) → 零写入。
+- 实况三行：当前活=年轮环批 + 回放闸；最近实物=census/export/city-dashboard.html（2026-10-27 03:2x 重建）；下个里程碑=下一轮年轮 10 席 + 闸复验，ETA 2026-10-27 05:4x。
+- tokens: local=10 api=0 api_reason=-
