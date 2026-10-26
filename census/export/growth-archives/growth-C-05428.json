@@ -1,0 +1,106 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -5,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -145.16,
+    "z": -11.62
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -81.36,
+    "z": -95.44
+   },
+   "work": {
+    "site": "数据化妆师·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -27.79,
+    "z": -146.37
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05428",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "把心事只说给老码头缆桩听——没人知道为什么",
+ "id": "C-05428",
+ "month_lines": [
+  "地上的水洼积着水，风把人往前推，我蹲着调色板边的那块色卡，偏了半档，手一抖，又稳住了——这城里好玩的东西一天比一天多。"
+ ],
+ "name": "何明",
+ "profession": "数据化妆师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风把人往前推，我蹲着调色板边的那块色卡，偏了半档，手一抖，又稳住了——这城里好玩的东西一天比一天多。",
+   "text": "「地上的水洼积着水，风把人往前推，我蹲着调色板边的那块色卡，偏了半档，手一抖，又稳住了——这城里好玩的东西一天比一天多。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

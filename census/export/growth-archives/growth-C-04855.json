@@ -1,0 +1,103 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 7,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 67.29,
+    "z": 36.43
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.76,
+    "z": 65.81
+   },
+   "work": {
+    "site": "节日活动策划·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.47,
+    "z": 51.38
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04855",
+  "quirk": "night_run",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "留着旧月台的站牌却从来不用——他自己也说不清为什么",
+ "id": "C-04855",
+ "month_lines": [],
+ "name": "曹亦风",
+ "profession": "节日活动策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "清单第一，雨还在下，布景架底子得收好，免得到时候湿哒哒的。",
+   "text": "「清单第一，雨还在下，布景架底子得收好，免得到时候湿哒哒的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

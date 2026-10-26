@@ -1,0 +1,103 @@
+{
+ "age": 84,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -6,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -123.59,
+    "z": -33.62
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.57,
+    "z": -48.86
+   },
+   "work": {
+    "site": "数据菜市摊主·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -72.75,
+    "z": -159.49
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04762",
+  "quirk": "slow",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "能背出旧货郎的拨浪鼓的全部班次——这事全巷都知道",
+ "id": "C-04762",
+ "month_lines": [],
+ "name": "奚建国",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "旧钥匙开新锁，有时候还真开得开。今儿这雨还在下，撑着伞出门，地上的水洼反射着街灯，倒也不至于全然不便。",
+   "text": "「旧钥匙开新锁，有时候还真开得开。今儿这雨还在下，撑着伞出门，地上的水洼反射着街灯，倒也不至于全然不便。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

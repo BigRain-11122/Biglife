@@ -1,0 +1,103 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -9,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 62.21,
+    "z": 86.21
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.84,
+    "z": 96.52
+   },
+   "work": {
+    "site": "像素小店主·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 102.54,
+    "z": 49.16
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04779",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "留着老钢琴的琴键却从来不用——这事全巷都知道",
+ "id": "C-04779",
+ "month_lines": [],
+ "name": "贾涛",
+ "profession": "像素小店主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "今早开店早，顾客还稀稀拉拉的，撑着伞刚送走一位老客，这雨还不小。别客气，就当自己家。",
+   "text": "「今早开店早，顾客还稀稀拉拉的，撑着伞刚送走一位老客，这雨还不小。别客气，就当自己家。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

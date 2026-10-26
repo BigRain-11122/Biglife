@@ -1,0 +1,105 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 10,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 25.89,
+    "z": 145.41
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.74,
+    "z": 129.88
+   },
+   "work": {
+    "site": "游戏策划·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 136.26,
+    "z": 99.32
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05236",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "给初版街景照片都编了号还建了册——这事只有师父知道",
+ "id": "C-05236",
+ "month_lines": [
+  "趁热吃，G08楼的CrazyCampus又翻了，B2396退成S2.5了，檐下雨打得发亮，风挺大，旧笔在记账本上划出的线，还歪着呢。"
+ ],
+ "name": "曹卡佳",
+ "profession": "游戏策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "趁热吃，G08楼的CrazyCampus又翻了，B2396退成S2.5了，檐下雨打得发亮，风挺大，旧笔在记账本上划出的线，还歪着呢。",
+   "text": "「趁热吃，G08楼的CrazyCampus又翻了，B2396退成S2.5了，檐下雨打得发亮，风挺大，旧笔在记账本上划出的线，还歪着呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

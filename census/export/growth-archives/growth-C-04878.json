@@ -1,0 +1,106 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -4,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.37,
+    "z": -26.03
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.56,
+    "z": -136.06
+   },
+   "work": {
+    "site": "节日活动策划·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 132.71,
+    "z": -79.7
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04878",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "梦话都在念叨旧书店的竹梯——据说是老辈传下的规矩",
+ "id": "C-04878",
+ "month_lines": [
+  "这会儿天还黑着，雨还在下，风挺大，檐下漏水的灯泡抖得厉害——下一版灯饰，得加个防风的弹性支架，不然再亮也撑不住。"
+ ],
+ "name": "语义·拾",
+ "profession": "节日活动策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这会儿天还黑着，雨还在下，风挺大，檐下漏水的灯泡抖得厉害——下一版灯饰，得加个防风的弹性支架，不然再亮也撑不住。",
+   "text": "「这会儿天还黑着，雨还在下，风挺大，檐下漏水的灯泡抖得厉害——下一版灯饰，得加个防风的弹性支架，不然再亮也撑不住。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

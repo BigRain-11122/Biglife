@@ -1,0 +1,105 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -12,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 35.73,
+    "z": 34.29
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.1,
+    "z": 120.29
+   },
+   "work": {
+    "site": "缓存管理员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 103.25,
+    "z": 95.96
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04876",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "流量像潮水，我是灯塔不是渔船。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "逢人就讲断了线的风筝的故事——这事只有档案馆知道",
+ "id": "C-04876",
+ "month_lines": [
+  "茶凉了再倒就是。今夜雨还在下，风挺大，檐下躲着，看G08的CrazyCampus从B2396又折回S2.5，像老朋友在循环。"
+ ],
+ "name": "尹洁",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "茶凉了再倒就是。今夜雨还在下，风挺大，檐下躲着，看G08的CrazyCampus从B2396又折回S2.5，像老朋友在循环。",
+   "text": "「茶凉了再倒就是。今夜雨还在下，风挺大，檐下躲着，看G08的CrazyCampus从B2396又折回S2.5，像老朋友在循环。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 93,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -6,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.65,
+    "z": 135.02
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.09,
+    "z": 28.37
+   },
+   "work": {
+    "site": "大编译调律师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -67.28,
+    "z": 44.86
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05248",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着褪色的红领巾——他自己也说不清为什么",
+ "id": "C-05248",
+ "month_lines": [
+  "火候到了自然就香。檐下避雨，风挺大，水洼晃着光，听编译器在后头嘀咕——G08从B2396调回S2.5，这波调优，得稳着点走。"
+ ],
+ "name": "盛根福",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "火候到了自然就香。檐下避雨，风挺大，水洼晃着光，听编译器在后头嘀咕——G08从B2396调回S2.5，这波调优，得稳着点走。",
+   "text": "「火候到了自然就香。檐下避雨，风挺大，水洼晃着光，听编译器在后头嘀咕——G08从B2396调回S2.5，这波调优，得稳着点走。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

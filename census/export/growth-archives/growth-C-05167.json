@@ -1,0 +1,105 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 2,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -125.47,
+    "z": -76.34
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.26,
+    "z": -47.93
+   },
+   "work": {
+    "site": "选题官·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.92,
+    "z": -27.49
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05167",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "在旧货郎的拨浪鼓上刻了一行没人认得的小字——这事只有档案馆知道",
+ "id": "C-05167",
+ "month_lines": [
+  "老规矩错不了，脉搏告警了，GPU显存低，檐下雨还在下，风挺大，我手里的扳手都快被吹歪了。"
+ ],
+ "name": "余沈鱼",
+ "profession": "选题官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "老规矩错不了，脉搏告警了，GPU显存低，檐下雨还在下，风挺大，我手里的扳手都快被吹歪了。",
+   "text": "「老规矩错不了，脉搏告警了，GPU显存低，檐下雨还在下，风挺大，我手里的扳手都快被吹歪了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

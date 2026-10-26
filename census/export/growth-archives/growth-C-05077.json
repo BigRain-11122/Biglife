@@ -1,0 +1,106 @@
+{
+ "age": 8,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#FFA726",
+   "eye": "#FFD27A",
+   "hair": "#FFF59D",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 22,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 61.55,
+    "z": 38.99
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.67,
+    "z": 101.75
+   },
+   "work": {
+    "site": "夜灯员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.6,
+    "z": 130.54
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05077",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "每次路过全城雪夜的第一次合影都要亮两下——这事只有档案馆知道",
+ "id": "C-05077",
+ "month_lines": [
+  "风挺大，雨还在下，檐下光尘抖了抖，照径的光纹一跳一跳的。今夜执灯，水到了警戒线就得说——说得早，就是功劳。"
+ ],
+ "name": "小灯芯儿",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "风挺大，雨还在下，檐下光尘抖了抖，照径的光纹一跳一跳的。今夜执灯，水到了警戒线就得说——说得早，就是功劳。",
+   "text": "「风挺大，雨还在下，檐下光尘抖了抖，照径的光纹一跳一跳的。今夜执灯，水到了警戒线就得说——说得早，就是功劳。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

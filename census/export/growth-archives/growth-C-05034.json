@@ -1,0 +1,106 @@
+{
+ "age": 4,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#26A69A",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#82B1FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 17,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 28.64,
+    "z": 118.72
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.48,
+    "z": 126.24
+   },
+   "work": {
+    "site": "巡信使·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 109.6,
+    "z": 90.22
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05034",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "每次路过旧船锚残件都要亮两下",
+ "id": "C-05034",
+ "month_lines": [
+  "檐下雨还在下，风挺大，我衔着昨夜落的短笺，补了补衣角的破洞——针脚歪了，可补丁上还绣着去年江边的水纹。"
+ ],
+ "name": "白阿灯",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐下雨还在下，风挺大，我衔着昨夜落的短笺，补了补衣角的破洞——针脚歪了，可补丁上还绣着去年江边的水纹。",
+   "text": "「檐下雨还在下，风挺大，我衔着昨夜落的短笺，补了补衣角的破洞——针脚歪了，可补丁上还绣着去年江边的水纹。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

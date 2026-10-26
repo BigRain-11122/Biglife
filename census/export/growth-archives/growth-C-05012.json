@@ -1,0 +1,106 @@
+{
+ "age": 19,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 1,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -128.53,
+    "z": 58.51
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.63,
+    "z": 104.56
+   },
+   "work": {
+    "site": "量化策略研究员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -72.08,
+    "z": 13.06
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05012",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把手绘的星空图的位置背得比自家门牌还熟",
+ "id": "C-05012",
+ "month_lines": [
+  "试错要趁灯亮，这会儿雨还在下，风挺大，檐下水洼映着灯，数据没断，我盯着屏，一滴一滴像回撤。"
+ ],
+ "name": "刘子轩",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "试错要趁灯亮，这会儿雨还在下，风挺大，檐下水洼映着灯，数据没断，我盯着屏，一滴一滴像回撤。",
+   "text": "「试错要趁灯亮，这会儿雨还在下，风挺大，檐下水洼映着灯，数据没断，我盯着屏，一滴一滴像回撤。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 31,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#EC407A",
+   "eye": "#FFD27A",
+   "hair": "#E1BEE7",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 18,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 40.19,
+    "z": 86.56
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.92,
+    "z": 94.33
+   },
+   "work": {
+    "site": "伴居灵·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 130.12,
+    "z": 54.79
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04991",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "跟着旧棋谱的节奏打过拍子——这事只有档案馆知道",
+ "id": "C-04991",
+ "month_lines": [
+  "这会儿我正把旧数据卡往屋顶晾，雨还在下，风挺大，檐下抖——尾巴天线扫过三城边角，蹭到新推的G08 CrazyCampus：B2396 → S2.5，数据尘簌簌落进水洼里。"
+ ],
+ "name": "阿江离",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这会儿我正把旧数据卡往屋顶晾，雨还在下，风挺大，檐下抖——尾巴天线扫过三城边角，蹭到新推的G08 CrazyCampus：B2396 → S2.5，数据尘簌簌落进水洼里。",
+   "text": "「这会儿我正把旧数据卡往屋顶晾，雨还在下，风挺大，檐下抖——尾巴天线扫过三城边角，蹭到新推的G08 CrazyCampus：B2396 → S2.5，数据尘簌簌落进水洼里。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

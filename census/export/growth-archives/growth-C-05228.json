@@ -1,0 +1,105 @@
+{
+ "age": 74,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -9,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -115.76,
+    "z": 12.21
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.1,
+    "z": 73.88
+   },
+   "work": {
+    "site": "大编译调律师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -56.46,
+    "z": 69.27
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05228",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "给全城雨夜的录音合集写了一整本观察笔记——没人知道为什么",
+ "id": "C-05228",
+ "month_lines": [
+  "包在我身上，雨还在下，风挺大，檐下那盏旧灯晃得厉害，我听见编译器又在吱呀，调优一遍，得让告警音零响。"
+ ],
+ "name": "糜阿凤",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "包在我身上，雨还在下，风挺大，檐下那盏旧灯晃得厉害，我听见编译器又在吱呀，调优一遍，得让告警音零响。",
+   "text": "「包在我身上，雨还在下，风挺大，檐下那盏旧灯晃得厉害，我听见编译器又在吱呀，调优一遍，得让告警音零响。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E3E50",
+   "eye": "#40F0E0",
+   "hair": "#88A8C8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -5,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -131.73,
+    "z": 25.62
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.71,
+    "z": 124.65
+   },
+   "work": {
+    "site": "数据搬运工·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -71.57,
+    "z": 32.28
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04948",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "在全城灯语的对照表上刻了一行没人认得的小字——据说是老辈传下的规矩",
+ "id": "C-04948",
+ "month_lines": [
+  "又学了一招，这会儿雨还在下，风挺大，檐下水洼映着塔顶白光，我揣着两颗糖，一颗给娃，一颗自己留着——缓存满了，明天再对单。"
+ ],
+ "name": "阿缓存·丁",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "又学了一招，这会儿雨还在下，风挺大，檐下水洼映着塔顶白光，我揣着两颗糖，一颗给娃，一颗自己留着——缓存满了，明天再对单。",
+   "text": "「又学了一招，这会儿雨还在下，风挺大，檐下水洼映着塔顶白光，我揣着两颗糖，一颗给娃，一颗自己留着——缓存满了，明天再对单。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

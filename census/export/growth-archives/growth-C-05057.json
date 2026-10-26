@@ -1,0 +1,106 @@
+{
+ "age": 32,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 1,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 47.39,
+    "z": 107.12
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.35,
+    "z": 123.94
+   },
+   "work": {
+    "site": "bug 猎人·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.9,
+    "z": 106.13
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05057",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件旧棋谱——这事全巷都知道",
+ "id": "C-05057",
+ "month_lines": [
+  "新东西先看三天再用——这会儿雨还在下，风挺大，檐下漏水，我正盯着G08的bug归因日志，想看它会不会在夜深时呼吸一声。"
+ ],
+ "name": "奚一诺",
+ "profession": "bug 猎人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "新东西先看三天再用——这会儿雨还在下，风挺大，檐下漏水，我正盯着G08的bug归因日志，想看它会不会在夜深时呼吸一声。",
+   "text": "「新东西先看三天再用——这会儿雨还在下，风挺大，檐下漏水，我正盯着G08的bug归因日志，想看它会不会在夜深时呼吸一声。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

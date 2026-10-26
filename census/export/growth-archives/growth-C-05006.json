@@ -1,0 +1,105 @@
+{
+ "age": 65,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -9,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -93.8,
+    "z": 216.54
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 14.11,
+    "z": 195.72
+   },
+   "work": {
+    "site": "感知塔站值守员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 47.64,
+    "z": 180.74
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05006",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "每天跟旧牛奶箱的钥匙打招呼——她自己也说不清为什么",
+ "id": "C-05006",
+ "month_lines": [
+  "手正扶着铁架调校雨棚角度，檐下雨还在下，风挺大。"
+ ],
+ "name": "贾珍珠",
+ "profession": "感知塔站值守员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "手正扶着铁架调校雨棚角度，檐下雨还在下，风挺大。",
+   "text": "「手正扶着铁架调校雨棚角度，檐下雨还在下，风挺大。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

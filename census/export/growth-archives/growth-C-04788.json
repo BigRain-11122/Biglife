@@ -1,0 +1,104 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 10,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.06,
+    "z": -16.05
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.34,
+    "z": -117.13
+   },
+   "work": {
+    "site": "弄堂小囡·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 145.42,
+    "z": -61.89
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04788",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "坚持手写弄堂钥匙串——他自己也说不清为什么",
+ "id": "C-04788",
+ "month_lines": [],
+ "name": "毛天天",
+ "profession": "弄堂小囡",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "灶上有汤，自取。雨还在下，撑着伞去电波猫群那边添食。",
+   "text": "「灶上有汤，自取。雨还在下，撑着伞去电波猫群那边添食。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

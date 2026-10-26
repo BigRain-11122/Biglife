@@ -1,0 +1,103 @@
+{
+ "age": 73,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -7,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 63.18,
+    "z": 59.89
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.45,
+    "z": 20.65
+   },
+   "work": {
+    "site": "灯塔守望·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.32,
+    "z": 74.27
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04799",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "给老式的士票写了一整本观察笔记——没人知道为什么",
+ "id": "C-04799",
+ "month_lines": [],
+ "name": "范德明",
+ "profession": "灯塔守望",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "好咯，雨还在下，今儿这天真是急啥，汤还没开呢。",
+   "text": "「好咯，雨还在下，今儿这天真是急啥，汤还没开呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

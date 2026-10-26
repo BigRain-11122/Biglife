@@ -1,0 +1,103 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -5,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.42,
+    "z": 149.99
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -79.81,
+    "z": 49.46
+   },
+   "work": {
+    "site": "大编译调律师·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -65.47,
+    "z": 146.93
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04814",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "梦话都在念叨旧当铺的票据夹——她自己也说不清为什么",
+ "id": "C-04814",
+ "month_lines": [],
+ "name": "王萍",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "慢慢来，比较快，今天这雨还在下，撑着伞去巡线，风挺大，得小心点。",
+   "text": "「慢慢来，比较快，今天这雨还在下，撑着伞去巡线，风挺大，得小心点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

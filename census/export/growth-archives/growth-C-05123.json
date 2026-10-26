@@ -1,0 +1,105 @@
+{
+ "age": 42,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -4,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -42.26,
+    "z": -234.68
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 15.4,
+    "z": -228.2
+   },
+   "work": {
+    "site": "数据牧人·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.25,
+    "z": -169.74
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05123",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "流量像潮水，我是灯塔不是渔船。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "给老式邮戳都编了号还建了册",
+ "id": "C-05123",
+ "month_lines": [
+  "单子来了就接，雨还在下，风挺大，檐下躲着看留言墙，一行字写着“C-05123，你那枚盘扣，我试了，真稳”。"
+ ],
+ "name": "李涛",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "单子来了就接，雨还在下，风挺大，檐下躲着看留言墙，一行字写着“C-05123，你那枚盘扣，我试了，真稳”。",
+   "text": "「单子来了就接，雨还在下，风挺大，檐下躲着看留言墙，一行字写着“C-05123，你那枚盘扣，我试了，真稳”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

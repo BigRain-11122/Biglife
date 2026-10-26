@@ -1,0 +1,103 @@
+{
+ "age": 95,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -14,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -140.88,
+    "z": -96.4
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.47,
+    "z": -81.27
+   },
+   "work": {
+    "site": "数据菜市摊主·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -52.62,
+    "z": -109.77
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04823",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "扛得住事，才配得上街坊喊一声师傅。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "给老码头缆桩都起了名字——这事只有师父知道",
+ "id": "C-04823",
+ "month_lines": [],
+ "name": "濮承宗",
+ "profession": "数据菜市摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "今天云好，改天再说，撑着伞去摊位上瞧瞧，地上的水洼多了几处。",
+   "text": "「今天云好，改天再说，撑着伞去摊位上瞧瞧，地上的水洼多了几处。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 90,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -8,
+   "rate": -14,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -121.11,
+    "z": -110.6
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.8,
+    "z": -25.2
+   },
+   "work": {
+    "site": "七段街区导游·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.24,
+    "z": -105.95
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04985",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "梦话都在念叨手绘的星空图——据说是老辈传下的规矩",
+ "id": "C-04985",
+ "month_lines": [
+  "这物件比我懂年头，雨还在下，风挺大，我举的小旗子在檐下晃，一眼眼看见塔顶白光没亮——今夜的G08 Stage又调了，我记着呢。"
+ ],
+ "name": "赵锡金",
+ "profession": "七段街区导游",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这物件比我懂年头，雨还在下，风挺大，我举的小旗子在檐下晃，一眼眼看见塔顶白光没亮——今夜的G08 Stage又调了，我记着呢。",
+   "text": "「这物件比我懂年头，雨还在下，风挺大，我举的小旗子在檐下晃，一眼眼看见塔顶白光没亮——今夜的G08 Stage又调了，我记着呢。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

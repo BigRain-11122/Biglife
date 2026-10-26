@@ -1,0 +1,105 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 7,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 29.65,
+    "z": 138.29
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.6,
+    "z": 104.61
+   },
+   "work": {
+    "site": "像素画匠·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 100.61,
+    "z": 72.16
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04874",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "坚持给全城桥的名字记日记——她自己也说不清为什么",
+ "id": "C-04874",
+ "month_lines": [
+  "江水都不急我急啥，檐下雨还在下，风挺大，画桌上的旧茶杯边沿都快磨出毛边了。"
+ ],
+ "name": "卢Seven",
+ "profession": "像素画匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "江水都不急我急啥，檐下雨还在下，风挺大，画桌上的旧茶杯边沿都快磨出毛边了。",
+   "text": "「江水都不急我急啥，檐下雨还在下，风挺大，画桌上的旧茶杯边沿都快磨出毛边了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

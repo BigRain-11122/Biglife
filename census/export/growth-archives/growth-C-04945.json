@@ -1,0 +1,106 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#8A9AB8",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -5,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -96.07,
+    "z": -256.74
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -16.21,
+    "z": -167.3
+   },
+   "work": {
+    "site": "信号中继员·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 38.21,
+    "z": -208.43
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04945",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "像素越小，心眼越大。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "能一眼认出旧当铺的票据夹的真伪——据说是老辈传下的规矩",
+ "id": "C-04945",
+ "month_lines": [
+  "手边这台中继正啃着B2396的信号包，雨点砸在伞沿上，风挺大，像在啃我这根信号线。"
+ ],
+ "name": "过载·丙",
+ "profession": "信号中继员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "手边这台中继正啃着B2396的信号包，雨点砸在伞沿上，风挺大，像在啃我这根信号线。",
+   "text": "「手边这台中继正啃着B2396的信号包，雨点砸在伞沿上，风挺大，像在啃我这根信号线。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

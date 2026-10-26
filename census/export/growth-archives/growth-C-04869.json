@@ -1,0 +1,106 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 3,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -101.55,
+    "z": -117.67
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.85,
+    "z": -91.62
+   },
+   "work": {
+    "site": "灯牌制作师·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -65.24,
+    "z": -10.42
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04869",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把旧时弄堂的灯绳修好再免费送人——这事全巷都知道",
+ "id": "C-04869",
+ "month_lines": [
+  "新东西先看三天再用，这会儿檐下避雨，风挺大，灯牌的走线还卡在半路，我就不急着收摊——灯要亮，人得先站稳。"
+ ],
+ "name": "赵桃桃",
+ "profession": "灯牌制作师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "新东西先看三天再用，这会儿檐下避雨，风挺大，灯牌的走线还卡在半路，我就不急着收摊——灯要亮，人得先站稳。",
+   "text": "「新东西先看三天再用，这会儿檐下避雨，风挺大，灯牌的走线还卡在半路，我就不急着收摊——灯要亮，人得先站稳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

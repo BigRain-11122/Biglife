@@ -1,0 +1,106 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 0,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 51.29,
+    "z": 112.99
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 76.12,
+    "z": 99.93
+   },
+   "work": {
+    "site": "像素画匠·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 118.62,
+    "z": 69.08
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05173",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把心事只说给褪色的红领巾听——这事只有师父知道",
+ "id": "C-05173",
+ "month_lines": [
+  "拆开看看又不会坏，楼顶那片雨帘里，我数了数，C216的窗还亮着，风挺大，纸页都抖，可画桌上的稿子，一个点没少描。"
+ ],
+ "name": "石雨欣",
+ "profession": "像素画匠",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "拆开看看又不会坏，楼顶那片雨帘里，我数了数，C216的窗还亮着，风挺大，纸页都抖，可画桌上的稿子，一个点没少描。",
+   "text": "「拆开看看又不会坏，楼顶那片雨帘里，我数了数，C216的窗还亮着，风挺大，纸页都抖，可画桌上的稿子，一个点没少描。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

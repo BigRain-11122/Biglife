@@ -1,0 +1,105 @@
+{
+ "age": 20,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 2,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -75.49,
+    "z": 215.4
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 3.69,
+    "z": 176.28
+   },
+   "work": {
+    "site": "新市民安居顾问·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.98,
+    "z": 232.22
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04965",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "每年挑一天只为停摆的老挂钟大扫除",
+ "id": "C-04965",
+ "month_lines": [
+  "老地方见，这会儿天还黑着，雨还在下，风挺大，我摊子上的灯泡被吹得晃，我估摸着得把绳子再捆紧点。"
+ ],
+ "name": "田星野",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "老地方见，这会儿天还黑着，雨还在下，风挺大，我摊子上的灯泡被吹得晃，我估摸着得把绳子再捆紧点。",
+   "text": "「老地方见，这会儿天还黑着，雨还在下，风挺大，我摊子上的灯泡被吹得晃，我估摸着得把绳子再捆紧点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

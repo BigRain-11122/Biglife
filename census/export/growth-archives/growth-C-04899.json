@@ -1,0 +1,105 @@
+{
+ "age": 88,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -9,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -128.79,
+    "z": 69.94
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.48,
+    "z": 19.59
+   },
+   "work": {
+    "site": "大编译调律师·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -64.58,
+    "z": 18.14
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04899",
+  "quirk": "umbrella",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "守时是最便宜的本事，也是最难改的毛病。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把旧钟表铺的价目牌修好再免费送人——这事只有档案馆知道",
+ "id": "C-04899",
+ "month_lines": [
+  "灶上有汤，自取。这会儿天还黑着，雨还在下，风挺大，檐下水洼翻着浪，我口袋里的糖一颗给娃，一颗揣着，听编译器在后台哼着调，零响没来，就等下个tick。"
+ ],
+ "name": "姚福生",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "灶上有汤，自取。这会儿天还黑着，雨还在下，风挺大，檐下水洼翻着浪，我口袋里的糖一颗给娃，一颗揣着，听编译器在后台哼着调，零响没来，就等下个tick。",
+   "text": "「灶上有汤，自取。这会儿天还黑着，雨还在下，风挺大，檐下水洼翻着浪，我口袋里的糖一颗给娃，一颗揣着，听编译器在后台哼着调，零响没来，就等下个tick。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

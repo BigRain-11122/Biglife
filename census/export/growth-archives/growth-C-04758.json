@@ -1,0 +1,104 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 13,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -147.11,
+    "z": 88.05
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.31,
+    "z": 40.75
+   },
+   "work": {
+    "site": "像素学徒·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -67.41,
+    "z": 12.26
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04758",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "给祖传的修表镊子都起了名字——据说是老辈传下的规矩",
+ "id": "C-04758",
+ "month_lines": [],
+ "name": "董豆豆",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "这事儿有讲究，今天雨还在下，得撑着伞去匠人巷，风挺大，得抓紧点儿。",
+   "text": "「这事儿有讲究，今天雨还在下，得撑着伞去匠人巷，风挺大，得抓紧点儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

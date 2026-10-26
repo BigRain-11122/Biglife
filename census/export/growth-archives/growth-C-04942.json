@@ -1,0 +1,105 @@
+{
+ "age": 33,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": 3,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 72.39,
+    "z": 103.22
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.31,
+    "z": 79.91
+   },
+   "work": {
+    "site": "游戏策划·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 138.41,
+    "z": 75.63
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04942",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件旧船锚残件——据说是老辈传下的规矩",
+ "id": "C-04942",
+ "month_lines": [
+  "毫秒也是时间，这会儿雨还在下，风挺大，我蹲在摊子边啃着半块冷掉的饼，檐下积水晃成一片黑。"
+ ],
+ "name": "冯予安",
+ "profession": "游戏策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "毫秒也是时间，这会儿雨还在下，风挺大，我蹲在摊子边啃着半块冷掉的饼，檐下积水晃成一片黑。",
+   "text": "「毫秒也是时间，这会儿雨还在下，风挺大，我蹲在摊子边啃着半块冷掉的饼，檐下积水晃成一片黑。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

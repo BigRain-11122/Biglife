@@ -1,0 +1,103 @@
+{
+ "age": 52,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -4,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 44.22,
+    "z": 21.78
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.98,
+    "z": 122.89
+   },
+   "work": {
+    "site": "夜宵摊主·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.84,
+    "z": 21.56
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04794",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "早起的鸟看得见城醒来的样子。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每年挑一天只为旧货郎的拨浪鼓大扫除——这事全巷都知道",
+ "id": "C-04794",
+ "month_lines": [],
+ "name": "彭俊",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "撑着伞出摊，雨还在下，风挺大，先试了再说。",
+   "text": "「撑着伞出摊，雨还在下，风挺大，先试了再说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

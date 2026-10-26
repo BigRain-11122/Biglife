@@ -1,0 +1,103 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": 4,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.49,
+    "z": -52.55
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.31,
+    "z": -32.89
+   },
+   "work": {
+    "site": "缓存管理员·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -34.59,
+    "z": -26.09
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04806",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "梦话都在念叨旧像素图钉——没人知道为什么",
+ "id": "C-04806",
+ "month_lines": [],
+ "name": "蒋华",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "buddy",
+   "src": "工友",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "数据不会骗人，人会。这雨还挺大的，出门得备好伞。",
+   "text": "「数据不会骗人，人会。这雨还挺大的，出门得备好伞。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

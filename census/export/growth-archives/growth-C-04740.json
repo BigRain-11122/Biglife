@@ -1,0 +1,103 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 2,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.73,
+    "z": -115.45
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.07,
+    "z": -85.81
+   },
+   "work": {
+    "site": "灯牌制作师·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -69.96,
+    "z": -123.95
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04740",
+  "quirk": "slow",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "自己淋过雨，就想给别人撑伞。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "记得老式算盘珠的每一个来历——这事全巷都知道",
+ "id": "C-04740",
+ "month_lines": [],
+ "name": "姜子轩",
+ "profession": "灯牌制作师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "谁没个难处呢，来，坐下说。这雨下的，地上的水洼都快成了小池塘了，得拿捏拿捏，免得鞋沾上泥。",
+   "text": "「谁没个难处呢，来，坐下说。这雨下的，地上的水洼都快成了小池塘了，得拿捏拿捏，免得鞋沾上泥。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

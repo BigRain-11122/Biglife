@@ -1,0 +1,103 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 10,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 32.32,
+    "z": 48.35
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.51,
+    "z": 97.25
+   },
+   "work": {
+    "site": "玩家留言整理员·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 145.82,
+    "z": 58.44
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04846",
+  "quirk": "night_run",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "每天跟旧船锚残件打招呼——她自己也说不清为什么",
+ "id": "C-04846",
+ "month_lines": [],
+ "name": "金文倩",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "帮帮忙，雨还在下，撑着伞去茶摊，江水都不急我急啥。",
+   "text": "「帮帮忙，雨还在下，撑着伞去茶摊，江水都不急我急啥。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

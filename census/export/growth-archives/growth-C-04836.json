@@ -1,0 +1,104 @@
+{
+ "age": 39,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#2E4E6E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": 0,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.04,
+    "z": 153.12
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.27,
+    "z": 59.64
+   },
+   "work": {
+    "site": "盘口记录员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -36.08,
+    "z": 70.47
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04836",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "收藏手绘的星空图且每件都记得来历",
+ "id": "C-04836",
+ "month_lines": [],
+ "name": "封装-6",
+ "profession": "盘口记录员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "下一版一定更好，今天的雨还在下，风挺大，手速跟不上盘口就用两支笔，字迹始终工整。",
+   "text": "「下一版一定更好，今天的雨还在下，风挺大，手速跟不上盘口就用两支笔，字迹始终工整。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

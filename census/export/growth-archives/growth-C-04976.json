@@ -1,0 +1,106 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 4,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.94,
+    "z": -77.42
+   },
+   "social": {
+    "site": "信号塔街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -85.29,
+    "z": -145.02
+   },
+   "work": {
+    "site": "粉丝回信人·信号塔街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.23,
+    "z": -93.15
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04976",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "信号塔街区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "攒钱就为了赎回一件初代广场舞光带",
+ "id": "C-04976",
+ "month_lines": [
+  "有意思，我想想——这会儿天还黑着，雨还在下，风挺大，摊子边的灯亮着，檐下我收了最后一封信，纸角都卷了，像被风吹过。"
+ ],
+ "name": "龚伟",
+ "profession": "粉丝回信人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00024"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00042"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00050"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "信号塔街区",
+   "with": "C-00075"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "有意思，我想想——这会儿天还黑着，雨还在下，风挺大，摊子边的灯亮着，檐下我收了最后一封信，纸角都卷了，像被风吹过。",
+   "text": "「有意思，我想想——这会儿天还黑着，雨还在下，风挺大，摊子边的灯亮着，檐下我收了最后一封信，纸角都卷了，像被风吹过。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

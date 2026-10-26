@@ -1,0 +1,103 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 0,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 58.83,
+    "z": 132.78
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.08,
+    "z": 119.22
+   },
+   "work": {
+    "site": "NPC 服装师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 134.32,
+    "z": 128.93
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04746",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "记住来路的人，不怕认不清去路。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把老钟楼的齿轮的位置背得比自家门牌还熟——这事全巷都知道",
+ "id": "C-04746",
+ "month_lines": [],
+ "name": "章阿宁",
+ "profession": "NPC 服装师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "今早摊子多绑了三道绳，雨还在下，撑着伞忙活。老规矩错不了。",
+   "text": "「今早摊子多绑了三道绳，雨还在下，撑着伞忙活。老规矩错不了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 11,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 21,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 70.44,
+    "z": -148.48
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.34,
+    "z": -113.63
+   },
+   "work": {
+    "site": "塔区风筝队员·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 141.21,
+    "z": -144.05
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05138",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "梦话都在念叨老式门铃的铜壳——这事只有师父知道",
+ "id": "C-05138",
+ "month_lines": [
+  "以前我们那儿……风挺大，雨还在下，我正把风筝尾巴上的愿望收进竹框里，线轴一转，檐下水洼晃得像星星。"
+ ],
+ "name": "吕糖糖",
+ "profession": "塔区风筝队员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "以前我们那儿……风挺大，雨还在下，我正把风筝尾巴上的愿望收进竹框里，线轴一转，檐下水洼晃得像星星。",
+   "text": "「以前我们那儿……风挺大，雨还在下，我正把风筝尾巴上的愿望收进竹框里，线轴一转，檐下水洼晃得像星星。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

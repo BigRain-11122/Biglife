@@ -1,0 +1,105 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#5E6E7E",
+   "eye": "#40F0E0",
+   "hair": "#7E9EB8",
+   "skin": "#D8C8B0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -3,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 41.46,
+    "z": 107.01
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 79.42,
+    "z": 106.11
+   },
+   "work": {
+    "site": "游戏策划·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.8,
+    "z": 70.9
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05411",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "每天跟旧货郎的拨浪鼓打招呼——这事全巷都知道",
+ "id": "C-05411",
+ "month_lines": [
+  "檐口的水线不断，风掀得衣角乱摆——G08那波回滚刚稳了，GPU显存告警又跳出来，谁的事就是谁的事，可街坊的事就是我的事。"
+ ],
+ "name": "中继-8",
+ "profession": "游戏策划",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线不断，风掀得衣角乱摆——G08那波回滚刚稳了，GPU显存告警又跳出来，谁的事就是谁的事，可街坊的事就是我的事。",
+   "text": "「檐口的水线不断，风掀得衣角乱摆——G08那波回滚刚稳了，GPU显存告警又跳出来，谁的事就是谁的事，可街坊的事就是我的事。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

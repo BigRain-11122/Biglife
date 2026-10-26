@@ -1,0 +1,104 @@
+{
+ "age": 77,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -9,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 51.72,
+    "z": 96.89
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.27,
+    "z": 68.68
+   },
+   "work": {
+    "site": "晨操领队·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.28,
+    "z": 106.82
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04805",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能背出退役的探针铭牌的全部班次——她自己也说不清为什么",
+ "id": "C-04805",
+ "month_lines": [],
+ "name": "龚彩凤",
+ "profession": "晨操领队",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "灵感这东西，得喂它。今天这雨，正好给新光带降降温。风挺大，收摊前得多检查几遍，别让灯头淋着了。",
+   "text": "「灵感这东西，得喂它。今天这雨，正好给新光带降降温。风挺大，收摊前得多检查几遍，别让灯头淋着了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

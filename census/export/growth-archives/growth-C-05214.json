@@ -1,0 +1,106 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 17,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -141.4,
+    "z": -12.27
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.01,
+    "z": -75.71
+   },
+   "work": {
+    "site": "像素小学学生·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.53,
+    "z": -109.07
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05214",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "留着祖传的修表镊子却从来不用——据说是老辈传下的规矩",
+ "id": "C-05214",
+ "month_lines": [
+  "红灯面前没有老熟人，雨还在下，风挺大，我站在留言墙前看了两眼，同桌的笔迹又歪了，值日的扫帚在檐下扫着水洼。"
+ ],
+ "name": "陶阿果",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "buddy",
+   "src": "老搭档",
+   "with": "C-00051"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "红灯面前没有老熟人，雨还在下，风挺大，我站在留言墙前看了两眼，同桌的笔迹又歪了，值日的扫帚在檐下扫着水洼。",
+   "text": "「红灯面前没有老熟人，雨还在下，风挺大，我站在留言墙前看了两眼，同桌的笔迹又歪了，值日的扫帚在檐下扫着水洼。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

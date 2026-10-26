@@ -1,0 +1,104 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 19,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -101.21,
+    "z": -214.01
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 17.88,
+    "z": -188.91
+   },
+   "work": {
+    "site": "信使小跟班·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 31.87,
+    "z": -175.93
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04784",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "今天多想一步，明天少返三工。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "梦话都在念叨初版城市地图——这事只有档案馆知道",
+ "id": "C-04784",
+ "month_lines": [],
+ "name": "陆豆豆",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "跑腿儿的活儿今儿雨大风挺大，撑着伞来回跑，地上的水洼多了，得小心点儿。今天多想一步，明天少返三工。",
+   "text": "「跑腿儿的活儿今儿雨大风挺大，撑着伞来回跑，地上的水洼多了，得小心点儿。今天多想一步，明天少返三工。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 5,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -128.26,
+    "z": -75.19
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.46,
+    "z": -124.24
+   },
+   "work": {
+    "site": "数据剪辑师·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -63.21,
+    "z": -139.22
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04944",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "扛得住事，才配得上街坊喊一声师傅。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "口袋里总揣着消失街区的路牌——这事只有师父知道",
+ "id": "C-04944",
+ "month_lines": [
+  "街坊一声喊，放下碗就到。檐下避雨，风挺大，片子剪到一半，手抖得像断了线的毛线，可C-00483那句“PushEvent Biglife”我耳朵还留着，今夜得把B2396的回路再捋一"
+ ],
+ "name": "黎阿宁",
+ "profession": "数据剪辑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "街坊一声喊，放下碗就到。檐下避雨，风挺大，片子剪到一半，手抖得像断了线的毛线，可C-00483那句“PushEvent Biglife”我耳朵还留着，今夜得把B2396的回路再捋一",
+   "text": "「街坊一声喊，放下碗就到。檐下避雨，风挺大，片子剪到一半，手抖得像断了线的毛线，可C-00483那句“PushEvent Biglife”我耳朵还留着，今夜得把B2396的回路再捋一」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

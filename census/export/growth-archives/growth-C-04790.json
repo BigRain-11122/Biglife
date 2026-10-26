@@ -1,0 +1,104 @@
+{
+ "age": 7,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 13,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -132.07,
+    "z": -179.56
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 0.15,
+    "z": -208.22
+   },
+   "work": {
+    "site": "信使小跟班·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 28.26,
+    "z": -238.41
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04790",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "把今天的事做完，明天才有得挑。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "从不让第一版户口簿的封面纸离开自己三步远——据说是老辈传下的规矩",
+ "id": "C-04790",
+ "month_lines": [],
+ "name": "曹念念",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "灶上有汤，自取。今天这雨可真不小，撑着伞去驿站，地上的水洼一个接一个。",
+   "text": "「灶上有汤，自取。今天这雨可真不小，撑着伞去驿站，地上的水洼一个接一个。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 22,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 0,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -133.52,
+    "z": 237.25
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -7.67,
+    "z": 167.57
+   },
+   "work": {
+    "site": "城市气象播报员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 130.02,
+    "z": 165.6
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04926",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "着急的事，等茶凉下来再说。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "坚持给全城公交的老路线图记日记——这事全巷都知道",
+ "id": "C-04926",
+ "month_lines": [
+  "这会儿我正低头看窗台温度计，指针卡在18.8℃，雨水顺着玻璃往下淌，风挺大，檐下水洼晃着，像在打哈欠。"
+ ],
+ "name": "钟Seven",
+ "profession": "城市气象播报员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这会儿我正低头看窗台温度计，指针卡在18.8℃，雨水顺着玻璃往下淌，风挺大，檐下水洼晃着，像在打哈欠。",
+   "text": "「这会儿我正低头看窗台温度计，指针卡在18.8℃，雨水顺着玻璃往下淌，风挺大，檐下水洼晃着，像在打哈欠。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

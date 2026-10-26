@@ -1,0 +1,105 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": -1,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 53.32,
+    "z": -18.48
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.57,
+    "z": -72.48
+   },
+   "work": {
+    "site": "晨操领队·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 129.37,
+    "z": -59.26
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05074",
+  "quirk": "slow",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "在消失街区的路牌上刻了一行没人认得的小字",
+ "id": "C-05074",
+ "month_lines": [
+  "先复核一遍。手里的茶壶还冒着热气，雨点砸在屋檐，风挺大，檐下水洼晃着灯，像没关的旧收音机。"
+ ],
+ "name": "梁雯",
+ "profession": "晨操领队",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "先复核一遍。手里的茶壶还冒着热气，雨点砸在屋檐，风挺大，檐下水洼晃着灯，像没关的旧收音机。",
+   "text": "「先复核一遍。手里的茶壶还冒着热气，雨点砸在屋檐，风挺大，檐下水洼晃着灯，像没关的旧收音机。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 2,
+   "rate": 2,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -127.88,
+    "z": 104.79
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -83.67,
+    "z": 150.37
+   },
+   "work": {
+    "site": "防火墙巡林员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -48.25,
+    "z": 132.91
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05274",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "会为老式算盘珠推掉一整晚的生意——他自己也说不清为什么",
+ "id": "C-05274",
+ "month_lines": [
+  "啥子雨还在下，风挺大，檐下水洼翻着浪，我巡边走到半路，听见G08那头又蹦出个新段，要得，拆开看看，是最大的敬意。"
+ ],
+ "name": "盛浩宇",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "啥子雨还在下，风挺大，檐下水洼翻着浪，我巡边走到半路，听见G08那头又蹦出个新段，要得，拆开看看，是最大的敬意。",
+   "text": "「啥子雨还在下，风挺大，檐下水洼翻着浪，我巡边走到半路，听见G08那头又蹦出个新段，要得，拆开看看，是最大的敬意。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

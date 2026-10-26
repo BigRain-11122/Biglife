@@ -1,0 +1,106 @@
+{
+ "age": 62,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -14,
+   "vol": 88
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.41,
+    "z": -54.07
+   },
+   "social": {
+    "site": "脑环广场街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.09,
+    "z": -91.92
+   },
+   "work": {
+    "site": "城市文书誊写员·脑环广场街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 135.14,
+    "z": -29.23
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05066",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "脑环广场街区",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "梦话都在念叨手工风筝的竹篾——她自己也说不清为什么",
+ "id": "C-05066",
+ "month_lines": [
+  "这版本我等好久了——檐下避雨，风挺大，水洼里倒着霓虹，我替花儿说了一句“别怕，有我在”。"
+ ],
+ "name": "沈倩",
+ "profession": "城市文书誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00010"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00012"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00056"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00071"
+  },
+  {
+   "rel": "block",
+   "src": "脑环广场街区",
+   "with": "C-00146"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这版本我等好久了——檐下避雨，风挺大，水洼里倒着霓虹，我替花儿说了一句“别怕，有我在”。",
+   "text": "「这版本我等好久了——檐下避雨，风挺大，水洼里倒着霓虹，我替花儿说了一句“别怕，有我在”。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,106 @@
+{
+ "age": 96,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -5,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.58,
+    "z": 189.0
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -8.05,
+    "z": 227.18
+   },
+   "work": {
+    "site": "机器站宿舍管理员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 92.98,
+    "z": 190.86
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04905",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "每逢下雨就去修旧书店的竹梯",
+ "id": "C-04905",
+ "month_lines": [
+  "这单我送，别跟我抢。檐下避雨，风挺大，机器站的灯还亮着，我给老B324的铺盖上了油，它昨夜又漏电了，拆开看看，是最大的敬意。"
+ ],
+ "name": "王招娣",
+ "profession": "机器站宿舍管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这单我送，别跟我抢。檐下避雨，风挺大，机器站的灯还亮着，我给老B324的铺盖上了油，它昨夜又漏电了，拆开看看，是最大的敬意。",
+   "text": "「这单我送，别跟我抢。檐下避雨，风挺大，机器站的灯还亮着，我给老B324的铺盖上了油，它昨夜又漏电了，拆开看看，是最大的敬意。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

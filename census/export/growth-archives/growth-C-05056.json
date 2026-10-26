@@ -1,0 +1,105 @@
+{
+ "age": 48,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -2,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -126.93,
+    "z": 76.23
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -84.22,
+    "z": 40.49
+   },
+   "work": {
+    "site": "风控官·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -53.4,
+    "z": 77.66
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05056",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "街坊的事，就是我的事。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "坚持给旧船票记日记——这事只有师父知道",
+ "id": "C-05056",
+ "month_lines": [
+  "手里的数据卡正对着G08的旧日志，墨迹晕开，雨还在下，风挺大，檐下灯泡晃得跟个老眼似的。"
+ ],
+ "name": "冯军",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "手里的数据卡正对着G08的旧日志，墨迹晕开，雨还在下，风挺大，檐下灯泡晃得跟个老眼似的。",
+   "text": "「手里的数据卡正对着G08的旧日志，墨迹晕开，雨还在下，风挺大，檐下灯泡晃得跟个老眼似的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

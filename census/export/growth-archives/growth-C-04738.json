@@ -1,0 +1,103 @@
+{
+ "age": 57,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": -5,
+   "vol": 97
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -85.46,
+    "z": 238.78
+   },
+   "social": {
+    "site": "机器站宿舍·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 14.33,
+    "z": 213.78
+   },
+   "work": {
+    "site": "旧件修复师·机器站宿舍工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 54.18,
+    "z": 210.64
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04738",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "机器站宿舍",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "留着老式算盘珠却从来不用——没人知道为什么",
+ "id": "C-04738",
+ "month_lines": [],
+ "name": "奚芳",
+ "profession": "旧件修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00031"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00074"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00142"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00144"
+  },
+  {
+   "rel": "block",
+   "src": "机器站宿舍",
+   "with": "C-00156"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "乖乖，这雨还真挺大的，得赶紧收摊，地上的水洼越来越多了。",
+   "text": "「乖乖，这雨还真挺大的，得赶紧收摊，地上的水洼越来越多了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

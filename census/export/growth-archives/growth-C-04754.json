@@ -1,0 +1,103 @@
+{
+ "age": 61,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -6,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 58.14,
+    "z": 149.17
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.05,
+    "z": 71.24
+   },
+   "work": {
+    "site": "新市民安居顾问·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 97.55,
+    "z": 81.06
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04754",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "潮起潮落，摊子照摆。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把断了的帆船模型排成一排挨个擦——没人知道为什么",
+ "id": "C-04754",
+ "month_lines": [],
+ "name": "谭强",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "退退退，这雨这么大，还是在家多待会儿吧，等会儿再出门办入住手续，风挺大，得小心点。",
+   "text": "「退退退，这雨这么大，还是在家多待会儿吧，等会儿再出门办入住手续，风挺大，得小心点。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

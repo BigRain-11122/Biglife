@@ -1,0 +1,106 @@
+{
+ "age": 13,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 11,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -73.08,
+    "z": 200.68
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -18.37,
+    "z": 177.59
+   },
+   "work": {
+    "site": "像素小学学生·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 118.22,
+    "z": 224.87
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05305",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "帮人不图还，图还就别伸手。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "把断了线的风筝排成一排挨个擦——他自己也说不清为什么",
+ "id": "C-05305",
+ "month_lines": [
+  "包在我身上，放学还得绕路去看一眼今日 commit 光点过江——雨还在下，风挺大，檐下有人撑伞，我踩着水洼往回走，同桌小满说她画的江水边老屋，今天突然活了。"
+ ],
+ "name": "黄小北",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "包在我身上，放学还得绕路去看一眼今日 commit 光点过江——雨还在下，风挺大，檐下有人撑伞，我踩着水洼往回走，同桌小满说她画的江水边老屋，今天突然活了。",
+   "text": "「包在我身上，放学还得绕路去看一眼今日 commit 光点过江——雨还在下，风挺大，檐下有人撑伞，我踩着水洼往回走，同桌小满说她画的江水边老屋，今天突然活了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

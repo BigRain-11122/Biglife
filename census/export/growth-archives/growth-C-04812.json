@@ -1,0 +1,103 @@
+{
+ "age": 44,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -5,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -137.38,
+    "z": -92.28
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -91.51,
+    "z": -106.83
+   },
+   "work": {
+    "site": "直播布景师·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -50.65,
+    "z": -89.46
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04812",
+  "quirk": "umbrella",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "把心事只说给老式的士票听——没人知道为什么",
+ "id": "C-04812",
+ "month_lines": [],
+ "name": "茅军",
+ "profession": "直播布景师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "多个人多双筷子，今天这雨不大，风挺大，得撑着伞干活儿。",
+   "text": "「多个人多双筷子，今天这雨不大，风挺大，得撑着伞干活儿。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

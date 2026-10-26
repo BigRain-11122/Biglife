@@ -1,0 +1,106 @@
+{
+ "age": 88,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -14,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 62.73,
+    "z": 134.62
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.72,
+    "z": 25.25
+   },
+   "work": {
+    "site": "数据粥铺摊主·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 115.7,
+    "z": 103.72
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04868",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "在老式爆米花的粮票上刻了一行没人认得的小字——这事只有师父知道",
+ "id": "C-04868",
+ "month_lines": [
+  "又学了一招：雨天蒸笼里暖光也能透出来，风挺大，檐下摆着个旧铁皮桶，水洼里反着天光，我瞅着，这光，比昨儿还稳。"
+ ],
+ "name": "江玉兰",
+ "profession": "数据粥铺摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "又学了一招：雨天蒸笼里暖光也能透出来，风挺大，檐下摆着个旧铁皮桶，水洼里反着天光，我瞅着，这光，比昨儿还稳。",
+   "text": "「又学了一招：雨天蒸笼里暖光也能透出来，风挺大，檐下摆着个旧铁皮桶，水洼里反着天光，我瞅着，这光，比昨儿还稳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

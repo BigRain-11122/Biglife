@@ -1,0 +1,103 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": 3,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 70.78,
+    "z": -158.26
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.31,
+    "z": -154.75
+   },
+   "work": {
+    "site": "档案修护师·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 111.52,
+    "z": -32.0
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04797",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "NS",
+ "gender": "男",
+ "hook": "收藏退役灯塔的透镜且每件都记得来历——他自己也说不清为什么",
+ "id": "C-04797",
+ "month_lines": [],
+ "name": "糜强",
+ "profession": "档案修护师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "搭把手的事儿，今早开窗听江声，雨还在下，地上的水洼映着灰蒙蒙的天，撑着伞去办公室，风挺大，有点儿冷。",
+   "text": "「搭把手的事儿，今早开窗听江声，雨还在下，地上的水洼映着灰蒙蒙的天，撑着伞去办公室，风挺大，有点儿冷。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

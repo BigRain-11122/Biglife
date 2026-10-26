@@ -1,0 +1,105 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 2,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 52.34,
+    "z": 66.24
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.64,
+    "z": 47.32
+   },
+   "work": {
+    "site": "穿城信使·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 121.51,
+    "z": 132.01
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05299",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "江水不争先后，该到总会到。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "给旧时弄堂的灯绳写了一整本观察笔记",
+ "id": "C-05299",
+ "month_lines": [
+  "单子来了就接，雨声是加班费，风挺大檐下躲了会儿，地上水洼倒映着亮着的窗——G08的CrazyCampus，B2396转S2.5，我数了，又数了。"
+ ],
+ "name": "桂Ruby",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "单子来了就接，雨声是加班费，风挺大檐下躲了会儿，地上水洼倒映着亮着的窗——G08的CrazyCampus，B2396转S2.5，我数了，又数了。",
+   "text": "「单子来了就接，雨声是加班费，风挺大檐下躲了会儿，地上水洼倒映着亮着的窗——G08的CrazyCampus，B2396转S2.5，我数了，又数了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

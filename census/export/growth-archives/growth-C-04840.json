@@ -1,0 +1,103 @@
+{
+ "age": 75,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -10,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -94.17,
+    "z": 201.24
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 5.26,
+    "z": 240.21
+   },
+   "work": {
+    "site": "外环巡夜员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 48.74,
+    "z": 183.94
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04840",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "给写了一半的市民歌谣都起了名字",
+ "id": "C-04840",
+ "month_lines": [],
+ "name": "应玉兰",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "灶上有汤，自取。今早雨还在下，撑着伞巡夜去。",
+   "text": "「灶上有汤，自取。今早雨还在下，撑着伞巡夜去。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

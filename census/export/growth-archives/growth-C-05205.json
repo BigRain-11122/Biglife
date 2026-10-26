@@ -1,0 +1,105 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 4,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.88,
+    "z": -52.53
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -88.57,
+    "z": -126.02
+   },
+   "work": {
+    "site": "字幕君·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -72.31,
+    "z": -43.42
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05205",
+  "quirk": "night_run",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "攒了满抽屉旧茶馆的水牌从不给看——这事只有师父知道",
+ "id": "C-05205",
+ "month_lines": [
+  "夜里冷，喝口热的再走——雨还在下，风挺大，檐下躲着，字幕轴对齐了，G08 走到 S2.5 了，这单子得接，不拖。"
+ ],
+ "name": "钟之恒",
+ "profession": "字幕君",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "夜里冷，喝口热的再走——雨还在下，风挺大，檐下躲着，字幕轴对齐了，G08 走到 S2.5 了，这单子得接，不拖。",
+   "text": "「夜里冷，喝口热的再走——雨还在下，风挺大，檐下躲着，字幕轴对齐了，G08 走到 S2.5 了，这单子得接，不拖。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

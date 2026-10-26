@@ -1,0 +1,105 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 2,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 60.91,
+    "z": 33.15
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.69,
+    "z": 89.44
+   },
+   "work": {
+    "site": "攻略誊写员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 147.07,
+    "z": 92.68
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04918",
+  "quirk": "night_run",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "吃亏可以，吃相不能难看。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "把退役的信使哨子画进了自己的作品里——没人知道为什么",
+ "id": "C-04918",
+ "month_lines": [
+  "此刻正誊写G08新阶段的坐标对图，雨点敲在窗上像打在日志页边，风挺大，檐角的灯在抖。"
+ ],
+ "name": "彭红",
+ "profession": "攻略誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "此刻正誊写G08新阶段的坐标对图，雨点敲在窗上像打在日志页边，风挺大，檐角的灯在抖。",
+   "text": "「此刻正誊写G08新阶段的坐标对图，雨点敲在窗上像打在日志页边，风挺大，檐角的灯在抖。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

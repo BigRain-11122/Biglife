@@ -1,0 +1,105 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#B0C4C8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": 3,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 36.12,
+    "z": 75.42
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 76.05,
+    "z": 33.45
+   },
+   "work": {
+    "site": "玩家留言整理员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.67,
+    "z": 125.36
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05230",
+  "quirk": "slow",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "把褪色的灯笼骨架排成一排挨个擦——这事全巷都知道",
+ "id": "C-05230",
+ "month_lines": [
+  "火候到了自然就香。檐下雨还在下，风挺大，我蹲着给守夜灯灵道了声辛苦，墙上的年轮又添了两句——“G08从B2396转回S2.5”，“FluxVerseTick第二轮闸门通过”。"
+ ],
+ "name": "二极管-4",
+ "profession": "玩家留言整理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "火候到了自然就香。檐下雨还在下，风挺大，我蹲着给守夜灯灵道了声辛苦，墙上的年轮又添了两句——“G08从B2396转回S2.5”，“FluxVerseTick第二轮闸门通过”。",
+   "text": "「火候到了自然就香。檐下雨还在下，风挺大，我蹲着给守夜灯灵道了声辛苦，墙上的年轮又添了两句——“G08从B2396转回S2.5”，“FluxVerseTick第二轮闸门通过”。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

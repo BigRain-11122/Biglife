@@ -1,0 +1,105 @@
+{
+ "age": 65,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 1,
+   "rate": -7,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -145.45,
+    "z": 106.82
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.25,
+    "z": 114.06
+   },
+   "work": {
+    "site": "时钟校准员·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -31.81,
+    "z": 71.18
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05303",
+  "quirk": "night_run",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "渔汛有汛期，人有人的时辰。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "坚持给旧码头的汽笛阀记日记——这事只有档案馆知道",
+ "id": "C-05303",
+ "month_lines": [
+  "江水都不急我急啥，雨还在下，风挺大，檐下躲着看时钟，零点零秒对过，差了三百毫秒——脸红了，可这城脉还在走。"
+ ],
+ "name": "严淑珍",
+ "profession": "时钟校准员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "江水都不急我急啥，雨还在下，风挺大，檐下躲着看时钟，零点零秒对过，差了三百毫秒——脸红了，可这城脉还在走。",
+   "text": "「江水都不急我急啥，雨还在下，风挺大，檐下躲着看时钟，零点零秒对过，差了三百毫秒——脸红了，可这城脉还在走。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 51,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -3,
+   "rate": -5,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -64.43,
+    "z": -255.07
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -6.19,
+    "z": -167.09
+   },
+   "work": {
+    "site": "江边棋摊主·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 116.67,
+    "z": -191.4
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04937",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "能背出旧船锚残件的全部班次——这事只有师父知道",
+ "id": "C-04937",
+ "month_lines": [
+  "今天云好，改天再说。檐下避雨，风挺大，棋子歪了三格，我也没动，落子无悔，摆棋的人总在雨里。"
+ ],
+ "name": "余顺林",
+ "profession": "江边棋摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "今天云好，改天再说。檐下避雨，风挺大，棋子歪了三格，我也没动，落子无悔，摆棋的人总在雨里。",
+   "text": "「今天云好，改天再说。檐下避雨，风挺大，棋子歪了三格，我也没动，落子无悔，摆棋的人总在雨里。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

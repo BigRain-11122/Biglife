@@ -1,0 +1,104 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 15,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 61.82,
+    "z": 93.79
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.2,
+    "z": 79.47
+   },
+   "work": {
+    "site": "像素小学学生·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 97.94,
+    "z": 76.44
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04773",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "新东西不怕多试，旧东西不怕多用。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "记得拆迁前夜的门牌合影的每一个来历——没人知道为什么",
+ "id": "C-04773",
+ "month_lines": [],
+ "name": "罗小满",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "buddy",
+   "src": "茶友",
+   "with": "C-00094"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "这版本我等好久了，终于下雨了，撑着伞放学路有点长，但地上的水洼反射着光点，挺有意思的。",
+   "text": "「这版本我等好久了，终于下雨了，撑着伞放学路有点长，但地上的水洼反射着光点，挺有意思的。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

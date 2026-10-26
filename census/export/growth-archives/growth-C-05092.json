@@ -1,0 +1,106 @@
+{
+ "age": 41,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 3,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -138.59,
+    "z": 26.19
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.56,
+    "z": 43.68
+   },
+   "work": {
+    "site": "回测农·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -37.94,
+    "z": 112.94
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05092",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每天跟老药房的药柜抽屉打招呼——这事只有档案馆知道",
+ "id": "C-05092",
+ "month_lines": [
+  "这会儿天还黑着，雨还在下，风挺大，檐下水洼晃得厉害。刚把阳台的花说了一句“今天你撑伞的样子真像我当年种下的那颗参数”，下一版一定更好。"
+ ],
+ "name": "童春梅",
+ "profession": "回测农",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这会儿天还黑着，雨还在下，风挺大，檐下水洼晃得厉害。刚把阳台的花说了一句“今天你撑伞的样子真像我当年种下的那颗参数”，下一版一定更好。",
+   "text": "「这会儿天还黑着，雨还在下，风挺大，檐下水洼晃得厉害。刚把阳台的花说了一句“今天你撑伞的样子真像我当年种下的那颗参数”，下一版一定更好。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

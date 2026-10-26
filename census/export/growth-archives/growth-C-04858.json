@@ -1,0 +1,105 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -8,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 69.2,
+    "z": 138.04
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 88.08,
+    "z": 84.52
+   },
+   "work": {
+    "site": "NPC 服装师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 142.5,
+    "z": 152.94
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04858",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "一分一厘都是路，走得稳才走得远。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "坚持手写初代城门钥匙——这事全巷都知道",
+ "id": "C-04858",
+ "month_lines": [
+  "汤要趁烫，话要慢讲。今夜雨还在下，风挺大，檐下那把旧伞借了又借，最后只剩自己淋——旧笔写账，墨痕歪，但数字对得上，心就稳。"
+ ],
+ "name": "邓红",
+ "profession": "NPC 服装师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "汤要趁烫，话要慢讲。今夜雨还在下，风挺大，檐下那把旧伞借了又借，最后只剩自己淋——旧笔写账，墨痕歪，但数字对得上，心就稳。",
+   "text": "「汤要趁烫，话要慢讲。今夜雨还在下，风挺大，檐下那把旧伞借了又借，最后只剩自己淋——旧笔写账，墨痕歪，但数字对得上，心就稳。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

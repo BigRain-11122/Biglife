@@ -1,0 +1,103 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#3E6E9E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 8,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -114.66,
+    "z": -58.02
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -76.87,
+    "z": -90.95
+   },
+   "work": {
+    "site": "城市接线生·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.95,
+    "z": -53.47
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04767",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "规矩不是绳，是栏杆。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "把老电报局的键画进了自己的作品里——没人知道为什么",
+ "id": "C-04767",
+ "month_lines": [],
+ "name": "雷诗涵",
+ "profession": "城市接线生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "清单第一，今天雨还在下，耳麦里全是询问的声线，得闲饮茶时也得抓紧回个单。",
+   "text": "「清单第一，今天雨还在下，耳麦里全是询问的声线，得闲饮茶时也得抓紧回个单。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

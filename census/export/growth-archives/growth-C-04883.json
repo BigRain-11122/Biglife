@@ -1,0 +1,105 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 1,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -53.22,
+    "z": 234.25
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -7.62,
+    "z": 207.98
+   },
+   "work": {
+    "site": "感知塔站值守员·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 39.81,
+    "z": 255.4
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04883",
+  "quirk": "umbrella",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "OR",
+ "gender": "女",
+ "hook": "给祖传的修表镊子都起了名字——没人知道为什么",
+ "id": "C-04883",
+ "month_lines": [
+  "对时了，放心。雨还在下，风挺大，檐下的灯泡晃得厉害，守夜灯灵今夜又多了一圈水痕，我知它辛苦。"
+ ],
+ "name": "田沐晴",
+ "profession": "感知塔站值守员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "对时了，放心。雨还在下，风挺大，檐下的灯泡晃得厉害，守夜灯灵今夜又多了一圈水痕，我知它辛苦。",
+   "text": "「对时了，放心。雨还在下，风挺大，檐下的灯泡晃得厉害，守夜灯灵今夜又多了一圈水痕，我知它辛苦。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

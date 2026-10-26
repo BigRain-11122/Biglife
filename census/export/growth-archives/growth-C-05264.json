@@ -1,0 +1,105 @@
+{
+ "age": 86,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -7,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -118.4,
+    "z": 116.5
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.07,
+    "z": 141.4
+   },
+   "work": {
+    "site": "风控官·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.81,
+    "z": 84.46
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05264",
+  "quirk": "night_run",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "自己淋过雨，就想给别人撑伞。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "坚持给旧饭盒里的字条记日记——这事全巷都知道",
+ "id": "C-05264",
+ "month_lines": [
+  "包在我身上。檐下雨还在下，风挺大，花说：“今天你要撑住，别让雨淋湿了阳台的绿意。"
+ ],
+ "name": "杭金花",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "包在我身上。檐下雨还在下，风挺大，花说：“今天你要撑住，别让雨淋湿了阳台的绿意。",
+   "text": "「包在我身上。檐下雨还在下，风挺大，花说：“今天你要撑住，别让雨淋湿了阳台的绿意。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 40,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 3,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -76.24,
+    "z": 206.55
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 5.95,
+    "z": 229.49
+   },
+   "work": {
+    "site": "外环巡夜员·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 108.05,
+    "z": 202.27
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05019",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "旧灯不灭，新路不亮。",
+ "district": "OR",
+ "gender": "男",
+ "hook": "攒了满抽屉手抄的菜谱从不给看——据说是老辈传下的规矩",
+ "id": "C-05019",
+ "month_lines": [
+  "这会儿在老街口补光，灯管裂了三根，雨还在下，风挺大，手心都快被雨泡透了。"
+ ],
+ "name": "施健",
+ "profession": "外环巡夜员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这会儿在老街口补光，灯管裂了三根，雨还在下，风挺大，手心都快被雨泡透了。",
+   "text": "「这会儿在老街口补光，灯管裂了三根，雨还在下，风挺大，手心都快被雨泡透了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

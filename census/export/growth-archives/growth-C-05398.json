@@ -1,0 +1,106 @@
+{
+ "age": 16,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 14,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -134.26,
+    "z": 15.69
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -89.09,
+    "z": 56.88
+   },
+   "work": {
+    "site": "像素小学学生·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -44.93,
+    "z": 81.46
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05398",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "日子是过出来的，不是算出来的。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "逢人就讲手绘的城图的故事——据说是老辈传下的规矩",
+ "id": "C-05398",
+ "month_lines": [
+  "雨敲在窗棂上，风把人往前推，我站在楼角看commit光点过江，水面上的波纹一晃一晃的，像在数我今天收的单子——每一条都值。"
+ ],
+ "name": "曾圆圆",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨敲在窗棂上，风把人往前推，我站在楼角看commit光点过江，水面上的波纹一晃一晃的，像在数我今天收的单子——每一条都值。",
+   "text": "「雨敲在窗棂上，风把人往前推，我站在楼角看commit光点过江，水面上的波纹一晃一晃的，像在数我今天收的单子——每一条都值。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

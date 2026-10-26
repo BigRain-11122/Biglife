@@ -1,0 +1,106 @@
+{
+ "age": 11,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 12,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 67.06,
+    "z": 141.34
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 78.87,
+    "z": 29.36
+   },
+   "work": {
+    "site": "像素学徒·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 120.17,
+    "z": 81.05
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05175",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "能背出全城雪夜的第一次合影的全部班次——这事只有档案馆知道",
+ "id": "C-05175",
+ "month_lines": [
+  "毫秒也是时间，檐下雨还在下，风挺大，我正把师父给的旧扳手擦得发亮——工具不沾灰，日子才不闷。"
+ ],
+ "name": "熊小满",
+ "profession": "像素学徒",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "毫秒也是时间，檐下雨还在下，风挺大，我正把师父给的旧扳手擦得发亮——工具不沾灰，日子才不闷。",
+   "text": "「毫秒也是时间，檐下雨还在下，风挺大，我正把师父给的旧扳手擦得发亮——工具不沾灰，日子才不闷。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -15,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 60.87,
+    "z": 137.84
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.91,
+    "z": 37.79
+   },
+   "work": {
+    "site": "8bit 乐师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 130.36,
+    "z": 97.06
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05183",
+  "quirk": "umbrella",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "先把字写正，再想写快。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "坚持手写退租铺面的旧招牌——没人知道为什么",
+ "id": "C-05183",
+ "month_lines": [
+  "红灯面前没有老熟人，檐下躲着雨，风挺大，六根弦都绷得发麻——扫了半宿的谱，今天这雨，像当年桥头那阵汽笛，硬是把人刮进了老城根里。"
+ ],
+ "name": "尹蕾",
+ "profession": "8bit 乐师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "红灯面前没有老熟人，檐下躲着雨，风挺大，六根弦都绷得发麻——扫了半宿的谱，今天这雨，像当年桥头那阵汽笛，硬是把人刮进了老城根里。",
+   "text": "「红灯面前没有老熟人，檐下躲着雨，风挺大，六根弦都绷得发麻——扫了半宿的谱，今天这雨，像当年桥头那阵汽笛，硬是把人刮进了老城根里。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

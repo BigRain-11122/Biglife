@@ -1,0 +1,106 @@
+{
+ "age": 50,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": -1,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 39.67,
+    "z": 20.42
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.57,
+    "z": 78.3
+   },
+   "work": {
+    "site": "缓存管理员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 144.63,
+    "z": 47.0
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05345",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "能背出老式门铃的铜壳的全部班次——这事只有档案馆知道",
+ "id": "C-05345",
+ "month_lines": [
+  "有意思，我想想——雨还在下，风挺大，我刚把摊子绑了三道绳，檐下那把伞借出去只剩自己淋，数据过期就驱逐，试错得趁灯还亮着。"
+ ],
+ "name": "糜秀兰",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "有意思，我想想——雨还在下，风挺大，我刚把摊子绑了三道绳，檐下那把伞借出去只剩自己淋，数据过期就驱逐，试错得趁灯还亮着。",
+   "text": "「有意思，我想想——雨还在下，风挺大，我刚把摊子绑了三道绳，檐下那把伞借出去只剩自己淋，数据过期就驱逐，试错得趁灯还亮着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

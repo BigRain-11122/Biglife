@@ -1,0 +1,106 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#40F0E0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 24,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 26.8,
+    "z": -24.51
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 77.96,
+    "z": -77.82
+   },
+   "work": {
+    "site": "伴居灵·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.25,
+    "z": -93.32
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05212",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "给编年史馆的门票传过最急的口信——这事全巷都知道",
+ "id": "C-05212",
+ "month_lines": [
+  "雨点敲着屋檐，风挺大，尾巴天线歪着对准巷口——那盏灯，又亮了三秒，是昨夜没关的摊主，说“再亮会儿”。"
+ ],
+ "name": "小阿浮标",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨点敲着屋檐，风挺大，尾巴天线歪着对准巷口——那盏灯，又亮了三秒，是昨夜没关的摊主，说“再亮会儿”。",
+   "text": "「雨点敲着屋檐，风挺大，尾巴天线歪着对准巷口——那盏灯，又亮了三秒，是昨夜没关的摊主，说“再亮会儿”。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

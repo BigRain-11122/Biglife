@@ -1,0 +1,105 @@
+{
+ "age": 69,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#2E5E4E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -14,
+   "vol": 83
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 52.05,
+    "z": 96.39
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 83.92,
+    "z": 122.61
+   },
+   "work": {
+    "site": "灯塔守望·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 126.87,
+    "z": 117.11
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05002",
+  "quirk": "",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "红灯是为所有人亮的，包括我。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "偷偷给退役灯塔的透镜上油保养——她自己也说不清为什么",
+ "id": "C-05002",
+ "month_lines": [
+  "茶还温着，檐下雨滴砸在铁皮上风挺大，我数了数G08的窗，亮着的有七扇，像极了当年老住户的灯塔。"
+ ],
+ "name": "杨美娟",
+ "profession": "灯塔守望",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "茶还温着，檐下雨滴砸在铁皮上风挺大，我数了数G08的窗，亮着的有七扇，像极了当年老住户的灯塔。",
+   "text": "「茶还温着，檐下雨滴砸在铁皮上风挺大，我数了数G08的窗，亮着的有七扇，像极了当年老住户的灯塔。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

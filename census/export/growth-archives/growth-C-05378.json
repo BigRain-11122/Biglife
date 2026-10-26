@@ -1,0 +1,105 @@
+{
+ "age": 64,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#5E4E7E",
+   "eye": "#40F0E0",
+   "hair": "#4E8E8E",
+   "skin": "#B8AC98"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": 3,
+   "vol": 99
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -145.06,
+    "z": -124.44
+   },
+   "social": {
+    "site": "选题馆街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.78,
+    "z": -30.39
+   },
+   "work": {
+    "site": "新市民安居顾问·选题馆街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -24.69,
+    "z": -159.23
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05378",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "选题馆街区",
+ "born": "2026-09-23",
+ "creed": "灶上留一壶，路过的都是客。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "能一眼认出第一天的营业账本的真伪——这事只有档案馆知道",
+ "id": "C-05378",
+ "month_lines": [
+  "雨还在落，风刮得紧，我刚路过游戏楼，亮着的窗又数到二十三九，急啥，汤还没开呢。"
+ ],
+ "name": "继电器·快",
+ "profession": "新市民安居顾问",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00023"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00048"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00052"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00073"
+  },
+  {
+   "rel": "block",
+   "src": "选题馆街区",
+   "with": "C-00083"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "雨还在落，风刮得紧，我刚路过游戏楼，亮着的窗又数到二十三九，急啥，汤还没开呢。",
+   "text": "「雨还在落，风刮得紧，我刚路过游戏楼，亮着的窗又数到二十三九，急啥，汤还没开呢。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

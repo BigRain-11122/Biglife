@@ -1,0 +1,106 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3A4E7E",
+   "eye": "#FFD27A",
+   "hair": "#6B4A32",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 7,
+   "vol": 84
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 56.89,
+    "z": 38.1
+   },
+   "social": {
+    "site": "像素匠人巷·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 92.02,
+    "z": 93.99
+   },
+   "work": {
+    "site": "缓存管理员·像素匠人巷工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 137.7,
+    "z": 116.04
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05351",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "像素匠人巷",
+ "born": "2026-09-23",
+ "creed": "拆开看看，是最大的敬意。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "每逢下雨就去修三十年前的车铃——没人知道为什么",
+ "id": "C-05351",
+ "month_lines": [
+  "拆开看看又不会坏。檐下避雨，风挺大，水洼晃着光，我盯着那片反光，像在看一个没写完的版本日志。"
+ ],
+ "name": "朱则铭",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00018"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00029"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00039"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00053"
+  },
+  {
+   "rel": "block",
+   "src": "像素匠人巷",
+   "with": "C-00066"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "拆开看看又不会坏。檐下避雨，风挺大，水洼晃着光，我盯着那片反光，像在看一个没写完的版本日志。",
+   "text": "「拆开看看又不会坏。檐下避雨，风挺大，水洼晃着光，我盯着那片反光，像在看一个没写完的版本日志。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

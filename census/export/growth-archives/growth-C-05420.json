@@ -1,0 +1,105 @@
+{
+ "age": 29,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#5E4E2E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 4,
+   "vol": 91
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 32.39,
+    "z": 82.87
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.43,
+    "z": 61.34
+   },
+   "work": {
+    "site": "缓存管理员·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 126.29,
+    "z": 109.0
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05420",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "口袋里总揣着电波猫——没人知道为什么",
+ "id": "C-05420",
+ "month_lines": [
+  "地上的水洼积着水，风刮得紧。今天的事今天清，G08 CrazyCampus从B2396到S2.5的那段路，我记在本子上了。"
+ ],
+ "name": "黄CJ",
+ "profession": "缓存管理员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "地上的水洼积着水，风刮得紧。今天的事今天清，G08 CrazyCampus从B2396到S2.5的那段路，我记在本子上了。",
+   "text": "「地上的水洼积着水，风刮得紧。今天的事今天清，G08 CrazyCampus从B2396到S2.5的那段路，我记在本子上了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

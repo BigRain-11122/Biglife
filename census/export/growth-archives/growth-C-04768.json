@@ -1,0 +1,104 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#26A69A",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#F48FB1"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 15,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 27.49,
+    "z": 43.14
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 76.61,
+    "z": 34.12
+   },
+   "work": {
+    "site": "江面巡游员·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.34,
+    "z": 94.37
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04768",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "在半张老电影票上打过盹，还淌了一小滩光——他自己也说不清为什么",
+ "id": "C-04768",
+ "month_lines": [],
+ "name": "小阿萤",
+ "profession": "江面巡游员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "buddy",
+   "src": "老主顾",
+   "with": "C-00038"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "雨还在下，撑着伞慢悠悠地走着，江面上的水洼泛着光。今天的日子还是得悠着点过。",
+   "text": "「雨还在下，撑着伞慢悠悠地走着，江面上的水洼泛着光。今天的日子还是得悠着点过。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

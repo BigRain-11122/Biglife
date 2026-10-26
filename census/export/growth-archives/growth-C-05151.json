@@ -1,0 +1,105 @@
+{
+ "age": 47,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E6E9E",
+   "eye": "#40F0E0",
+   "hair": "#C8D4E8",
+   "skin": "#AEBEC0"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": 2,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -144.35,
+    "z": 49.15
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.94,
+    "z": 85.39
+   },
+   "work": {
+    "site": "穿城信使·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -63.89,
+    "z": 62.89
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05151",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "记得拆迁前夜的门牌合影的每一个来历——他自己也说不清为什么",
+ "id": "C-05151",
+ "month_lines": [
+  "老地方见，雨还在下，风挺大，檐下躲了会儿，水洼映着光桥的影，单子又多了一笔——O-20261023-2317-bm-a，回头说。"
+ ],
+ "name": "阿桥接·叁",
+ "profession": "穿城信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "老地方见，雨还在下，风挺大，檐下躲了会儿，水洼映着光桥的影，单子又多了一笔——O-20261023-2317-bm-a，回头说。",
+   "text": "「老地方见，雨还在下，风挺大，檐下躲了会儿，水洼映着光桥的影，单子又多了一笔——O-20261023-2317-bm-a，回头说。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

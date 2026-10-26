@@ -1,0 +1,103 @@
+{
+ "age": 90,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#D8D8D0",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -10,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 68.4,
+    "z": 138.98
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.47,
+    "z": 107.54
+   },
+   "work": {
+    "site": "进度刻碑师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 114.93,
+    "z": 64.43
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04845",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "得之我幸，失之我睡。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "用退役的探针铭牌教会了半条街的孩子",
+ "id": "C-04845",
+ "month_lines": [],
+ "name": "钱锡金",
+ "profession": "进度刻碑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "单子来了就接，不来就钓鱼，今儿这雨还在下，搞掂这些碑刻可得躲躲檐下。",
+   "text": "「单子来了就接，不来就钓鱼，今儿这雨还在下，搞掂这些碑刻可得躲躲檐下。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

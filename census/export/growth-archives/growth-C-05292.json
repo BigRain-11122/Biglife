@@ -1,0 +1,105 @@
+{
+ "age": 51,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#6E7E8E",
+   "eye": "#40F0E0",
+   "hair": "#5E7E9E",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -4,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 32.68,
+    "z": 78.5
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 91.68,
+    "z": 39.51
+   },
+   "work": {
+    "site": "算法调参师·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.78,
+    "z": 58.8
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05292",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "在退役的路灯灯丝上刻了一行没人认得的小字",
+ "id": "C-05292",
+ "month_lines": [
+  "侬晓得伐，今天雨还在下，风挺大，檐下水洼映着街灯，我刚把G08的参数调完，炉火里那锅“CraazyCampus”的炼丹水咕嘟着，要不就收摊了，反正双日不晒，今天的事今天清。"
+ ],
+ "name": "主频·夜",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "侬晓得伐，今天雨还在下，风挺大，檐下水洼映着街灯，我刚把G08的参数调完，炉火里那锅“CraazyCampus”的炼丹水咕嘟着，要不就收摊了，反正双日不晒，今天的事今天清。",
+   "text": "「侬晓得伐，今天雨还在下，风挺大，檐下水洼映着街灯，我刚把G08的参数调完，炉火里那锅“CraazyCampus”的炼丹水咕嘟着，要不就收摊了，反正双日不晒，今天的事今天清。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

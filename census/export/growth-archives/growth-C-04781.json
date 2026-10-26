@@ -1,0 +1,103 @@
+{
+ "age": 64,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -9,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 25.04,
+    "z": -68.93
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 89.01,
+    "z": -130.72
+   },
+   "work": {
+    "site": "视频修复师·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 113.62,
+    "z": -132.02
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04781",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "把老式饭盒的位置背得比自家门牌还熟",
+ "id": "C-04781",
+ "month_lines": [],
+ "name": "阮雯",
+ "profession": "视频修复师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "灶上有汤，自取。雨还在下，撑着伞修片，这风挺大，手冻得不行。",
+   "text": "「灶上有汤，自取。雨还在下，撑着伞修片，这风挺大，手冻得不行。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

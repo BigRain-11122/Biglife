@@ -1,0 +1,105 @@
+{
+ "age": 58,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#2E2A26",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -4,
+   "rate": -1,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 39.24,
+    "z": 142.9
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 87.33,
+    "z": 76.12
+   },
+   "work": {
+    "site": "进度刻碑师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 129.78,
+    "z": 20.95
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05387",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "搬家三次，钥匙一把不扔。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "给旧缝纫机踏板都编了号还建了册——没人知道为什么",
+ "id": "C-05387",
+ "month_lines": [
+  "檐口的水线不断，风掀得衣角乱摆，我刚把G08 CrazyCampus从B2396刻到S2.5的碑立在街角，汤要趁烫，话要慢讲，这回刻得稳，没磨边。"
+ ],
+ "name": "肖健",
+ "profession": "进度刻碑师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "檐口的水线不断，风掀得衣角乱摆，我刚把G08 CrazyCampus从B2396刻到S2.5的碑立在街角，汤要趁烫，话要慢讲，这回刻得稳，没磨边。",
+   "text": "「檐口的水线不断，风掀得衣角乱摆，我刚把G08 CrazyCampus从B2396刻到S2.5的碑立在街角，汤要趁烫，话要慢讲，这回刻得稳，没磨边。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

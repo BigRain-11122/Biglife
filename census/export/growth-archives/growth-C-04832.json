@@ -1,0 +1,103 @@
+{
+ "age": 71,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -1,
+   "rate": -8,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 71.86,
+    "z": 140.7
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.62,
+    "z": 94.51
+   },
+   "work": {
+    "site": "大编译调律师·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 143.68,
+    "z": 81.67
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04832",
+  "quirk": "",
+  "slot": "街角·循声围看",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "清单上没有的事，一律排队。",
+ "district": "GM",
+ "gender": "女",
+ "hook": "记得老式冰箱贴的每一个来历",
+ "id": "C-04832",
+ "month_lines": [],
+ "name": "秦美娟",
+ "profession": "大编译调律师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "火候到了自然就香，今早江水还是清清的，撑着伞巡线，风挺大，檐下避雨才收工。",
+   "text": "「火候到了自然就香，今早江水还是清清的，撑着伞巡线，风挺大，檐下避雨才收工。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

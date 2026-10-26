@@ -1,0 +1,104 @@
+{
+ "age": 18,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#5A5A5A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 8,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -63.88,
+    "z": -236.66
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 12.93,
+    "z": -175.43
+   },
+   "work": {
+    "site": "光桥市集摊主·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 77.8,
+    "z": -222.11
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04831",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "把手工风筝的竹篾修好再免费送人——没人知道为什么",
+ "id": "C-04831",
+ "month_lines": [],
+ "name": "屠亦风",
+ "profession": "光桥市集摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "帮帮忙，这雨下的，地上的水洼多了去了，得小心脚滑。汤要趁烫，话要慢讲，今天这摊位怕是要少些生意了。",
+   "text": "「帮帮忙，这雨下的，地上的水洼多了去了，得小心脚滑。汤要趁烫，话要慢讲，今天这摊位怕是要少些生意了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,105 @@
+{
+ "age": 40,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 0,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -112.86,
+    "z": -37.98
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.38,
+    "z": -17.18
+   },
+   "work": {
+    "site": "数据搬运工·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -42.15,
+    "z": -75.91
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04925",
+  "quirk": "umbrella",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "夜路一起走，灯就亮一倍。",
+ "district": "MD",
+ "gender": "女",
+ "hook": "口袋里总揣着旧饭盒里的字条——这事只有档案馆知道",
+ "id": "C-04925",
+ "month_lines": [
+  "这会儿手上还攥着一包刚卸下的数据包，檐下有雨，风挺大，我把它码在旧木架上，旧的用得顺手，搁这儿也像块地基。"
+ ],
+ "name": "郑萍",
+ "profession": "数据搬运工",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "这会儿手上还攥着一包刚卸下的数据包，檐下有雨，风挺大，我把它码在旧木架上，旧的用得顺手，搁这儿也像块地基。",
+   "text": "「这会儿手上还攥着一包刚卸下的数据包，檐下有雨，风挺大，我把它码在旧木架上，旧的用得顺手，搁这儿也像块地基。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,103 @@
+{
+ "age": 81,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#A83A3A",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -8,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 49.12,
+    "z": -73.19
+   },
+   "social": {
+    "site": "白玉兰塔区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.83,
+    "z": -33.87
+   },
+   "work": {
+    "site": "城市文书誊写员·白玉兰塔区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 139.71,
+    "z": -108.03
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04849",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "白玉兰塔区",
+ "born": "2026-09-23",
+ "creed": "路走得再远，弄堂口的路灯最亮。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "攒钱就为了赎回一件手工风筝的竹篾",
+ "id": "C-04849",
+ "month_lines": [],
+ "name": "刘彩凤",
+ "profession": "城市文书誊写员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00037"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00076"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00086"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00089"
+  },
+  {
+   "rel": "block",
+   "src": "白玉兰塔区",
+   "with": "C-00103"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-30（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-30",
+   "quote": "今早起来雨还在下，撑着伞去单位，风挺大，檐下避雨的街坊不少。弄堂还是那个弄堂，路走得再远，弄堂口的路灯最亮。",
+   "text": "「今早起来雨还在下，撑着伞去单位，风挺大，檐下避雨的街坊不少。弄堂还是那个弄堂，路走得再远，弄堂口的路灯最亮。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

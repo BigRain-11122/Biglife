@@ -1,0 +1,106 @@
+{
+ "age": 15,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4E7A3E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 15,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -50.02,
+    "z": -209.97
+   },
+   "social": {
+    "site": "光桥市集·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -14.74,
+    "z": -186.29
+   },
+   "work": {
+    "site": "信使小跟班·光桥市集工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.93,
+    "z": -178.64
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-04996",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "光桥市集",
+ "born": "2026-09-23",
+ "creed": "好吃的东西，都急不得。",
+ "district": "RV",
+ "gender": "女",
+ "hook": "每逢下雨就去修老茶壶——据说是老辈传下的规矩",
+ "id": "C-04996",
+ "month_lines": [
+  "手里的信封还皱着，是驿站新发的带路卡，雨点打在檐角像敲小鼓，风挺大，檐下漏水的纸角都跟着晃。"
+ ],
+ "name": "邓果冻",
+ "profession": "信使小跟班",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00026"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00134"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00148"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00176"
+  },
+  {
+   "rel": "block",
+   "src": "光桥市集",
+   "with": "C-00257"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "手里的信封还皱着，是驿站新发的带路卡，雨点打在檐角像敲小鼓，风挺大，檐下漏水的纸角都跟着晃。",
+   "text": "「手里的信封还皱着，是驿站新发的带路卡，雨点打在檐角像敲小鼓，风挺大，檐下漏水的纸角都跟着晃。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

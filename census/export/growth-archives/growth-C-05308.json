@@ -1,0 +1,105 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 6,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -116.28,
+    "z": 127.59
+   },
+   "social": {
+    "site": "扭塔算力街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -90.67,
+    "z": 24.28
+   },
+   "work": {
+    "site": "夜宵摊主·扭塔算力街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -53.2,
+    "z": 62.83
+   }
+  },
+  "ctx": "tw=day,wx=cloud,wd=0",
+  "id": "C-05308",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "扭塔算力街区",
+ "born": "2026-09-23",
+ "creed": "风吹哪页读哪页。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "收藏老式冰箱贴且每件都记得来历——没人知道为什么",
+ "id": "C-05308",
+ "month_lines": [
+  "潮水的事交给潮水，檐下躲着雨，风挺大，水洼里倒着街灯，我这摊子收了，灯还亮着。"
+ ],
+ "name": "茅清晚",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00014"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00045"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00067"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00072"
+  },
+  {
+   "rel": "block",
+   "src": "扭塔算力街区",
+   "with": "C-00081"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-10-24（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-24",
+   "quote": "潮水的事交给潮水，檐下躲着雨，风挺大，水洼里倒着街灯，我这摊子收了，灯还亮着。",
+   "text": "「潮水的事交给潮水，檐下躲着雨，风挺大，水洼里倒着街灯，我这摊子收了，灯还亮着。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}
