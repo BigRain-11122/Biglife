@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-27 07:26",
+ "export_ts": "2026-10-27 07:37",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2349（2026-10-27 07:2x）**：年轮线居民进化批 evolved=10/10（C-09089~C-09098 十席，环内 3 席过 soft-concession 门禁落环）；行为线镜像自动收口 rows=10；事件流回放闸 PASS（cards=10111 / events=40184 / replayed=10111 / schema_errors=0 / mismatch=0）；语言池审计 PASS 全桶达标 SELF_TERMINATE（axes 72/sprite 12/greet 28/faq 7/neg 6·hard_fails=0）；QC 人口不变量巡检补跑（上次 R1833/10-20·间隔 7 天）cards=10114 evolved=9092 problems=0 重环 37/37。 **R2348（2026-10-27 07:1x）**：年轮线居民进化批 evolved=10/10 due（C-09075~C-09088 块·MD/GM/NS/QT 多城区）；事件流回放闸 PASS（cards=10111 / events=40174 / replayed=10111 / schema_errors=0 / mismatch=0）；语言池审计 PASS 全桶达标 SELF_TERMINATE（axes 72/sprite 12/greet 28/faq 7/neg 6·hard_fails=0）。 **R2347（2026-10-27 07:1x）**：年轮线居民进化批 evolved=9/10（C-09070/C-09071/C-09072/C-09073/C-09074/C-09076/C-09077/C-09078/C-09079·GM/MD/NS/QT 四城区；C-09075 触发 persistent violations 门禁留存待下轮 due）；事件流回放闸 PASS（cards=10111 / events=40164 / replayed=10111 / schema_errors=0 / mismatch=0）；可见面重建 city-today rings=766 people=761 districts=6、city-dashboard rings=9072；语言池审计 PASS 全桶达标 SELF_TERMINATE（axes 72/sprite 12/greet 28/faq 7/neg 6·hard_fails=0）。",
+   "t": "**R2351（2026-10-27 07:4x）**：年轮线居民进化批 evolved=10/10（C-09109~C-09118 十席落环·3 席过 soft-concession 门禁 recent-dup-phrase 记录）；事件流回放闸 PASS（cards=10111 / events=40204 / replayed=10111 / schema_errors=0 / mismatch=0）；QC 人口不变量巡检 cards=10114 evolved=9112 problems=0 重环 37/37；语言池审计 PASS 全桶达标 SELF_TERMINATE（axes 72/sprite 12/greet 28/faq 7/neg 6·hard_fails=0）；相遇轮 meet-cap 3/3 已满跳过。 **R2349（2026-10-27 07:2x）**：年轮线居民进化批 evolved=10/10（C-09089~C-09098 十席，环内 3 席过 soft-concession 门禁落环）；行为线镜像自动收口 rows=10；事件流回放闸 PASS（cards=10111 / events=40184 / replayed=10111 / schema_errors=0 / mismatch=0）；语言池审计 PASS 全桶达标 SELF_TERMINATE（axes 72/sprite 12/greet 28/faq 7/neg 6·hard_fails=0）；QC 人口不变量巡检补跑（上次 R1833/10-20·间隔 7 天）cards=10114 evolved=9092 problems=0 重环 37/37。 **R2348（2026-10-27 07:1x）**：年轮线居民进化批 evolved=10/10 due（C-09075~C-09088 块·MD/GM/NS/QT 多城区）；事件流回放闸 PASS（cards=10111 / events=40174 / replayed=10111 / schema_errors=0 / mismatch=0）；语言池审计 PASS 全桶达标 SELF_TERMINATE（axes 72/sprite 12/greet 28/faq 7/neg 6·hard_fails=0）。",
    "s": 1
   },
   {
@@ -1557,7 +1557,11 @@
   [
    "786",
    "R2349 尾行计数：今日累计 [锚] 年轮 786 条（机器直数）。"
+  ],
+  [
+   "806",
+   "R2351 年轮 10 席落环 + 回放闸 40204 事件 / mismatch=0 / schema=0 PASS + QC 0 异常；累计 [锚] 年轮 806 条（机器直数）。"
   ]
  ],
- "t": "当前活：年轮进化线（居民年轮批 + 行为线收口 + 事件回放闸）+ QC 人口不变量巡检补跑\n最近实物：census/registry/*/C-09089~C-09098 十席年轮 + census/QC-REPORT.md（problems=0·2026-10-27 07:25）+ qa/EVENTS-REPLAY-REPORT.md（40184 事件 PASS）\n下个里程碑：下一批 10 席年轮 + 相遇轮（今日 cap 已满，次日恢复）ETA 2026-10-27 07:45"
+ "t": "当前活：年轮进化线 R2351 批 10 席落环 + 回放闸/QC 双 PASS 已推送\n最近实物：commit 6641d0e9f qa/EVENTS-REPLAY-REPORT.md + census/QC-REPORT.md（2026-10-27 07:35）\n下个里程碑：R2352 起下一批年轮 10 席 + 明日相遇轮（2026-10-28 首个 due 窗）"
 }
