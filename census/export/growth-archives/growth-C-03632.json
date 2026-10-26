@@ -1,0 +1,112 @@
+{
+ "age": 28,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#66BB6A",
+   "eye": "#FFD27A",
+   "hair": "#E1BEE7",
+   "skin": "#82B1FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 19,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -27.79,
+    "z": 224.62
+   },
+   "social": {
+    "site": "边缘街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -17.63,
+    "z": 191.9
+   },
+   "work": {
+    "site": "巡信使·边缘街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 124.45,
+    "z": 258.53
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03632",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "边缘街区",
+ "born": "2026-09-23",
+ "creed": "老手艺不死，只会换皮再活一次。",
+ "district": "OR",
+ "gender": "无定",
+ "hook": "绕着退役探空气球的碎片飞过整整三十圈",
+ "id": "C-03632",
+ "month_lines": [
+  "天阴着，风不小，翅尖得攥紧些才敢落檐。刚衔了笺，绕街三圈后，还得去探探 C-03695 的动静。"
+ ],
+ "name": "白阿塔影",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00028"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00044"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00047"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00060"
+  },
+  {
+   "rel": "block",
+   "src": "边缘街区",
+   "with": "C-00095"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "衔笺又来，今早风不小，得注意别被吹跑。",
+   "text": "「衔笺又来，今早风不小，得注意别被吹跑。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "天阴着，风不小，翅尖得攥紧些才敢落檐。刚衔了笺，绕街三圈后，还得去探探 C-03695 的动静。",
+   "text": "「天阴着，风不小，翅尖得攥紧些才敢落檐。刚衔了笺，绕街三圈后，还得去探探 C-03695 的动静。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

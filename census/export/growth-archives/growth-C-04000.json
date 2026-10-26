@@ -1,0 +1,111 @@
+{
+ "age": 49,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#8C6A4A",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": 1,
+   "vol": 85
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -120.12,
+    "z": 33.24
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -78.11,
+    "z": 156.74
+   },
+   "work": {
+    "site": "算力楼运维·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -50.07,
+    "z": 94.87
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-04000",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "热的东西别急着碰，凉的东西别急着扔。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "把老式怀表链的位置背得比自家门牌还熟——据说是老辈传下的规矩",
+ "id": "C-04000",
+ "month_lines": [
+  "风挺大，天阴着。灶上有汤，自取。"
+ ],
+ "name": "范华",
+ "profession": "算力楼运维",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "灶上有汤，自取。今早巡楼三圈，机器的嗓音还是那么熟悉。",
+   "text": "「灶上有汤，自取。今早巡楼三圈，机器的嗓音还是那么熟悉。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，天阴着。灶上有汤，自取。",
+   "text": "「风挺大，天阴着。灶上有汤，自取。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

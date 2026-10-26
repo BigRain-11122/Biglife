@@ -1,0 +1,112 @@
+{
+ "age": 44,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#7E57C2",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#B388FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 25,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -105.73,
+    "z": -31.91
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.32,
+    "z": -51.96
+   },
+   "work": {
+    "site": "伴居灵·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -69.39,
+    "z": -23.31
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03675",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "最老的那盏灯，照过的路最多。",
+ "district": "MD",
+ "gender": "无定",
+ "hook": "绕着手抄的菜谱飞过整整三十圈——这事只有档案馆知道",
+ "id": "C-03675",
+ "month_lines": [
+  "吱——尾巴天线抖落12.1m/s的劲风，正把G08 CrazyCampus: B2166 -> S2.5的传闻蹭给C-09899。工具箱里的扳手按户口排得齐整，老规矩不能乱。"
+ ],
+ "name": "黑南风",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "蹭光转角遇到老友，尾巴天线依旧对准最热闹的方向。",
+   "text": "「蹭光转角遇到老友，尾巴天线依旧对准最热闹的方向。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "吱——尾巴天线抖落12.1m/s的劲风，正把G08 CrazyCampus: B2166 -> S2.5的传闻蹭给C-09899。工具箱里的扳手按户口排得齐整，老规矩不能乱。",
+   "text": "「吱——尾巴天线抖落12.1m/s的劲风，正把G08 CrazyCampus: B2166 -> S2.5的传闻蹭给C-09899。工具箱里的扳手按户口排得齐整，老规矩不能乱。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

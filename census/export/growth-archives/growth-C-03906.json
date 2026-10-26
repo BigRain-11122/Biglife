@@ -1,0 +1,112 @@
+{
+ "age": 54,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#EAB308",
+   "cloth": "#4DD0E1",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#B388FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 18,
+   "vol": 86
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 63.74,
+    "z": 131.89
+   },
+   "social": {
+    "site": "X026 城门区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 90.04,
+    "z": 153.61
+   },
+   "work": {
+    "site": "声景师·X026 城门区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 107.13,
+    "z": 131.37
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03906",
+  "quirk": "slow",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "X026 城门区",
+ "born": "2026-09-23",
+ "creed": "门槛是用来迈的，不是用来等的。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "把老式邮戳当成了自己的老朋友——这事全巷都知道",
+ "id": "C-03906",
+ "month_lines": [
+  "风挺大，吹得光纹都乱了。刚把江岸湿地的声景调好，这单子接得踏实。"
+ ],
+ "name": "黑顺水",
+ "profession": "声景师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00021"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00033"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00034"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00038"
+  },
+  {
+   "rel": "block",
+   "src": "X026 城门区",
+   "with": "C-00046"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "开嗓了，今早的江面可真清，替打盹的摊主把灯多亮一会儿，心情不错。",
+   "text": "「开嗓了，今早的江面可真清，替打盹的摊主把灯多亮一会儿，心情不错。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，吹得光纹都乱了。刚把江岸湿地的声景调好，这单子接得踏实。",
+   "text": "「风挺大，吹得光纹都乱了。刚把江岸湿地的声景调好，这单子接得踏实。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

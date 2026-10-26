@@ -1,0 +1,112 @@
+{
+ "age": 12,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#7A746A",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#B88A5E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 10,
+   "rate": 12,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 44.41,
+    "z": -66.35
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 85.08,
+    "z": -68.36
+   },
+   "work": {
+    "site": "塔区风筝队员·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.16,
+    "z": -121.75
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03914",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "收藏老式邮差的背包且每件都记得来历——这事全巷都知道",
+ "id": "C-03914",
+ "month_lines": [
+  "拆开看看又不会坏。天阴着风挺大，线绷得紧，正好适合放线。"
+ ],
+ "name": "云念念",
+ "profession": "塔区风筝队员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "拆开看看又不会坏，今早放线有点儿风大，线绷得紧紧的。",
+   "text": "「拆开看看又不会坏，今早放线有点儿风大，线绷得紧紧的。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "拆开看看又不会坏。天阴着风挺大，线绷得紧，正好适合放线。",
+   "text": "「拆开看看又不会坏。天阴着风挺大，线绷得紧，正好适合放线。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

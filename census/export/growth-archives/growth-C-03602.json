@@ -1,0 +1,112 @@
+{
+ "age": 17,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#5EEAD4",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 6,
+   "rate": 19,
+   "vol": 90
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 28.79,
+    "z": 62.38
+   },
+   "social": {
+    "site": "游戏楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 82.66,
+    "z": 83.86
+   },
+   "work": {
+    "site": "像素小学学生·游戏楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 106.94,
+    "z": 129.33
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03602",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "学堂",
+  "state": "school",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "游戏楼街区",
+ "born": "2026-09-23",
+ "creed": "慢一点，城又不会跑。",
+ "district": "GM",
+ "gender": "男",
+ "hook": "记得旧时弄堂的灯绳的每一个来历——这事全巷都知道",
+ "id": "C-03602",
+ "month_lines": [
+  "灵额，天阴着风挺大，江水都不急我急啥。刚跟对门打过照面，今早那波 FluxVerse 的 tick 跑完 gate PASS，值日清单又清空一列，妥帖。"
+ ],
+ "name": "丁阿果",
+ "profession": "像素小学学生",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00020"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00040"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00041"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00088"
+  },
+  {
+   "rel": "block",
+   "src": "游戏楼街区",
+   "with": "C-00110"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "江水都不急我急啥，今早又多看了眼commit光点过江。",
+   "text": "「江水都不急我急啥，今早又多看了眼commit光点过江。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "灵额，天阴着风挺大，江水都不急我急啥。刚跟对门打过照面，今早那波 FluxVerse 的 tick 跑完 gate PASS，值日清单又清空一列，妥帖。",
+   "text": "「灵额，天阴着风挺大，江水都不急我急啥。刚跟对门打过照面，今早那波 FluxVerse 的 tick 跑完 gate PASS，值日清单又清空一列，妥帖。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

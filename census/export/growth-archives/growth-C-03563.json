@@ -1,0 +1,112 @@
+{
+ "age": 93,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#9E4E7E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -13,
+   "vol": 96
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -129.78,
+    "z": 68.6
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.56,
+    "z": 48.09
+   },
+   "work": {
+    "site": "QUANT 食堂大厨·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -66.26,
+    "z": 44.78
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03563",
+  "quirk": "umbrella",
+  "recovering": "haoqi",
+  "slot": "宅户·白天",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "更新日志里藏着城市的明天。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "能背出写了一半的市民歌谣的全部班次——据说是老辈传下的规矩",
+ "id": "C-03563",
+ "month_lines": [
+  "风挺大，刮得阳台那盆像素草直晃悠，我对时了，放心。整点热乎的，这阴沉沉的天色，正好把昨晚翻勺的余热煨透。"
+ ],
+ "name": "蒋永康",
+ "profession": "QUANT 食堂大厨",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "对时了，放心。今天又是绿行情日，U229说江水要干净，食堂里头得有个好开始。",
+   "text": "「对时了，放心。今天又是绿行情日，U229说江水要干净，食堂里头得有个好开始。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，刮得阳台那盆像素草直晃悠，我对时了，放心。整点热乎的，这阴沉沉的天色，正好把昨晚翻勺的余热煨透。",
+   "text": "「风挺大，刮得阳台那盆像素草直晃悠，我对时了，放心。整点热乎的，这阴沉沉的天色，正好把昨晚翻勺的余热煨透。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 37,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#EC407A",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 8,
+   "rate": 21,
+   "vol": 92
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 39.44,
+    "z": -53.61
+   },
+   "social": {
+    "site": "档案馆区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 81.17,
+    "z": -115.5
+   },
+   "work": {
+    "site": "巡信使·档案馆区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 111.44,
+    "z": -100.87
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03926",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "档案馆区",
+ "born": "2026-09-23",
+ "creed": "名次是别人排的，日子是自己过的。",
+ "district": "NS",
+ "gender": "无定",
+ "hook": "看得见奖状里住着的光——这事全巷都知道",
+ "id": "C-03926",
+ "month_lines": [
+  "风挺大，把云压得低低的。刚把G08的捷报衔回，光调暗半档，陪老灯灵歇会儿，不争名次，只赶日子。"
+ ],
+ "name": "小阿咔哒",
+ "profession": "巡信使",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00011"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00013"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00032"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00035"
+  },
+  {
+   "rel": "block",
+   "src": "档案馆区",
+   "with": "C-00049"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "衔笺转角遇故人，江水清清的好天气。",
+   "text": "「衔笺转角遇故人，江水清清的好天气。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，把云压得低低的。刚把G08的捷报衔回，光调暗半档，陪老灯灵歇会儿，不争名次，只赶日子。",
+   "text": "「风挺大，把云压得低低的。刚把G08的捷报衔回，光调暗半档，陪老灯灵歇会儿，不争名次，只赶日子。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

@@ -1,0 +1,111 @@
+{
+ "age": 21,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 4,
+   "vol": 87
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.95,
+    "z": 35.97
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.27,
+    "z": 76.03
+   },
+   "work": {
+    "site": "防火墙巡林员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -62.58,
+    "z": 99.07
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03810",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "火候到了，一切都会开锅。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着停用的老式磅秤——这事只有师父知道",
+ "id": "C-03810",
+ "month_lines": [
+  "天阴着，风挺大，吹得巡林线都乱了几分。灶上有汤，自取；单号巡边，回头说。"
+ ],
+ "name": "顾天翼",
+ "profession": "防火墙巡林员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "灶上有汤，自取。今天的工作日，就从对门那声早安开始吧。",
+   "text": "「灶上有汤，自取。今天的工作日，就从对门那声早安开始吧。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "天阴着，风挺大，吹得巡林线都乱了几分。灶上有汤，自取；单号巡边，回头说。",
+   "text": "「天阴着，风挺大，吹得巡林线都乱了几分。灶上有汤，自取；单号巡边，回头说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

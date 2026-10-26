@@ -1,0 +1,112 @@
+{
+ "age": 25,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FBBF24",
+   "cloth": "#EC407A",
+   "eye": "#FFD27A",
+   "hair": "#E0F8FF",
+   "skin": "#FF8A80"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 9,
+   "rate": 22,
+   "vol": 98
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.26,
+    "z": 126.92
+   },
+   "social": {
+    "site": "K线广场·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -80.07,
+    "z": 107.24
+   },
+   "work": {
+    "site": "夜灯员·K线广场工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -37.88,
+    "z": 144.05
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03845",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "K线广场",
+ "born": "2026-09-23",
+ "creed": "不出错的日子，就是最风光的日子。",
+ "district": "QT",
+ "gender": "无定",
+ "hook": "把退租铺面的旧招牌当成了自己的老朋友——这事只有档案馆知道",
+ "id": "C-03845",
+ "month_lines": [
+  "风不小，塔顶那团云厚得发沉。我把灯芯拨亮些，照径去。这阴沉沉的天，正好适合慢慢走，不急。"
+ ],
+ "name": "小十点整",
+ "profession": "夜灯员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00016"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00057"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00058"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00061"
+  },
+  {
+   "rel": "block",
+   "src": "K线广场",
+   "with": "C-00062"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "照径还清，今日夜城风不小，得时刻亮着，莫让独行客迷了路。",
+   "text": "「照径还清，今日夜城风不小，得时刻亮着，莫让独行客迷了路。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风不小，塔顶那团云厚得发沉。我把灯芯拨亮些，照径去。这阴沉沉的天，正好适合慢慢走，不急。",
+   "text": "「风不小，塔顶那团云厚得发沉。我把灯芯拨亮些，照径去。这阴沉沉的天，正好适合慢慢走，不急。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

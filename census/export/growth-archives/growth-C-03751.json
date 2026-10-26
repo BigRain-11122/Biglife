@@ -1,0 +1,111 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#3E7A72",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 3,
+   "rate": 1,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -145.06,
+    "z": 50.24
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -86.54,
+    "z": 136.17
+   },
+   "work": {
+    "site": "量化策略研究员·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -71.1,
+    "z": 17.07
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03751",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "水到了警戒线就得说，说得早就是功劳。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "用停摆的老挂钟教会了半条街的孩子——这事只有师父知道",
+ "id": "C-03751",
+ "month_lines": [
+  "风挺大，吹得屏幕直晃。CrazyCampus那波B2166到S2.5的急转，因子算得真利索，乖乖，这行情折腾得人心跳加速。"
+ ],
+ "name": "奚浩宇",
+ "profession": "量化策略研究员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "搞快点，这行情变化真快，昨晚还S2.5，今儿就B653了，以前我们那儿可没这么激烈。",
+   "text": "「搞快点，这行情变化真快，昨晚还S2.5，今儿就B653了，以前我们那儿可没这么激烈。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，吹得屏幕直晃。CrazyCampus那波B2166到S2.5的急转，因子算得真利索，乖乖，这行情折腾得人心跳加速。",
+   "text": "「风挺大，吹得屏幕直晃。CrazyCampus那波B2166到S2.5的急转，因子算得真利索，乖乖，这行情折腾得人心跳加速。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,111 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#3A3A44",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 0,
+   "rate": -11,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -115.41,
+    "z": 37.38
+   },
+   "social": {
+    "site": "风控高地·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -77.55,
+    "z": 98.62
+   },
+   "work": {
+    "site": "全城对时师·风控高地工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -63.78,
+    "z": 92.64
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03784",
+  "quirk": "",
+  "slot": "街头·驻足望塔",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "风控高地",
+ "born": "2026-09-23",
+ "creed": "布要顺着纹路剪，日子要顺着人心过。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "每逢下雨就去修旧饭盒里的字条——这事只有档案馆知道",
+ "id": "C-03784",
+ "month_lines": [
+  "汤要趁烫，话要慢讲。天阴着，风刮得大，正好借这劲头把钟差抹平。"
+ ],
+ "name": "苏芳",
+ "profession": "全城对时师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00015"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00054"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00055"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00121"
+  },
+  {
+   "rel": "block",
+   "src": "风控高地",
+   "with": "C-00137"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "汤要趁烫，话要慢讲，今儿这雨下得正合适。",
+   "text": "「汤要趁烫，话要慢讲，今儿这雨下得正合适。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "汤要趁烫，话要慢讲。天阴着，风刮得大，正好借这劲头把钟差抹平。",
+   "text": "「汤要趁烫，话要慢讲。天阴着，风刮得大，正好借这劲头把钟差抹平。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

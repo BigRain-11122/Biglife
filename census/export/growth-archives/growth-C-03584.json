@@ -1,0 +1,111 @@
+{
+ "age": 74,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#6E5E3E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E6B184"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -11,
+   "vol": 80
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -141.41,
+    "z": 23.64
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.97,
+    "z": 108.97
+   },
+   "work": {
+    "site": "风控官·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -62.25,
+    "z": 28.04
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03584",
+  "quirk": "",
+  "slot": "街头·驻足望塔",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "手艺人靠手，普通人靠不凑合。",
+ "district": "QT",
+ "gender": "女",
+ "hook": "会给奖状织毛衣",
+ "id": "C-03584",
+ "month_lines": [
+  "风挺大，天阴着。今早的城最真，把风控高地的擦干净，收摊了，明天见。"
+ ],
+ "name": "叶彩凤",
+ "profession": "风控官",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "收摊了，明天见。今早的城最真，外面雨声正好。",
+   "text": "「收摊了，明天见。今早的城最真，外面雨声正好。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，天阴着。今早的城最真，把风控高地的擦干净，收摊了，明天见。",
+   "text": "「风挺大，天阴着。今早的城最真，把风控高地的擦干净，收摊了，明天见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,111 @@
+{
+ "age": 65,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#4A6E8E",
+   "eye": "#FFD27A",
+   "hair": "#3E7A72",
+   "skin": "#DBAF85"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -5,
+   "rate": -6,
+   "vol": 100
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -123.37,
+    "z": -134.76
+   },
+   "social": {
+    "site": "七段街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -93.16,
+    "z": -159.82
+   },
+   "work": {
+    "site": "粉丝回信人·七段街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -22.52,
+    "z": -105.69
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03667",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "七段街区",
+ "born": "2026-09-23",
+ "creed": "锅要热，心要稳，油要慢慢淋。",
+ "district": "MD",
+ "gender": "男",
+ "hook": "还在用旧饭票——这事只有档案馆知道",
+ "id": "C-03667",
+ "month_lines": [
+  "风挺大，吹得窗纸呼啦啦响。乖乖，先拆这封亲阅，老地方见。"
+ ],
+ "name": "章祥林",
+ "profession": "粉丝回信人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00022"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00059"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00068"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00084"
+  },
+  {
+   "rel": "block",
+   "src": "七段街区",
+   "with": "C-00097"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "老地方见，今儿雨这么大，伞借出去只剩我一个了。",
+   "text": "「老地方见，今儿雨这么大，伞借出去只剩我一个了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，吹得窗纸呼啦啦响。乖乖，先拆这封亲阅，老地方见。",
+   "text": "「风挺大，吹得窗纸呼啦啦响。乖乖，先拆这封亲阅，老地方见。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

@@ -1,0 +1,112 @@
+{
+ "age": 92,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#8E3A5E",
+   "eye": "#FFD27A",
+   "hair": "#C9A56A",
+   "skin": "#E8C098"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -7,
+   "vol": 94
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -43.68,
+    "z": -250.71
+   },
+   "social": {
+    "site": "渡轮航道·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -11.66,
+    "z": -190.36
+   },
+   "work": {
+    "site": "光桥市集摊主·渡轮航道工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 104.11,
+    "z": -171.76
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03636",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "渡轮航道",
+ "born": "2026-09-23",
+ "creed": "每个转角都该藏一个惊喜。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "偷偷给旧饭票上油保养——这事只有师父知道",
+ "id": "C-03636",
+ "month_lines": [
+  "风不小，吹得光桥栏杆直响。拆开看看又不会坏，这阴天出摊，心里踏实。"
+ ],
+ "name": "熊学勤",
+ "profession": "光桥市集摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00025"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00105"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00107"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00114"
+  },
+  {
+   "rel": "block",
+   "src": "渡轮航道",
+   "with": "C-00187"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "拆开看看又不会坏，今早出摊得早些，江边的空气挺清的。",
+   "text": "「拆开看看又不会坏，今早出摊得早些，江边的空气挺清的。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风不小，吹得光桥栏杆直响。拆开看看又不会坏，这阴天出摊，心里踏实。",
+   "text": "「风不小，吹得光桥栏杆直响。拆开看看又不会坏，这阴天出摊，心里踏实。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

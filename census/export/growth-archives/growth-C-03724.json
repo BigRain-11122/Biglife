@@ -1,0 +1,111 @@
+{
+ "age": 27,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#4E5E6E",
+   "eye": "#40F0E0",
+   "hair": "#9E7EB8",
+   "skin": "#C2B8A8"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -2,
+   "rate": -1,
+   "vol": 95
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.76,
+    "z": 234.34
+   },
+   "social": {
+    "site": "感知塔站·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -11.28,
+    "z": 206.09
+   },
+   "work": {
+    "site": "数据牧人·感知塔站工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 47.28,
+    "z": 227.13
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03724",
+  "quirk": "",
+  "slot": "机房·工位",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "感知塔站",
+ "born": "2026-09-23",
+ "creed": "江水不争先后，该到总会到。",
+ "district": "OR",
+ "gender": "无定",
+ "hook": "把手写信修好再免费送人——这事只有师父知道",
+ "id": "C-03724",
+ "month_lines": [
+  "茶凉了再倒就是。"
+ ],
+ "name": "门格·甲",
+ "profession": "数据牧人",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00027"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00030"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00036"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00043"
+  },
+  {
+   "rel": "block",
+   "src": "感知塔站",
+   "with": "C-00096"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "茶凉了再倒就是，今儿江面批流还挺大的。",
+   "text": "「茶凉了再倒就是，今儿江面批流还挺大的。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "茶凉了再倒就是。",
+   "text": "「茶凉了再倒就是。」天阴着，江面风挺大，正赶着批流过境。手里这包数据圈得紧实，稳当。」"
+  }
+ ],
+ "species": "silicon",
+ "v": "1"
+}

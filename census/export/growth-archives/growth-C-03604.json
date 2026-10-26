@@ -1,0 +1,111 @@
+{
+ "age": 60,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#FB923C",
+   "cloth": "#B3A23E",
+   "eye": "#FFD27A",
+   "hair": "#8A4A32",
+   "skin": "#C9986B"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -7,
+   "rate": -6,
+   "vol": 89
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -31.24,
+    "z": -234.22
+   },
+   "social": {
+    "site": "江岸滩涂·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 9.07,
+    "z": -254.46
+   },
+   "work": {
+    "site": "夜宵摊主·江岸滩涂工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 131.07,
+    "z": -200.32
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03604",
+  "quirk": "",
+  "slot": "公园·遛弯消食",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "江岸滩涂",
+ "born": "2026-09-23",
+ "creed": "看云不用门票，看榜要费心血。",
+ "district": "RV",
+ "gender": "男",
+ "hook": "梦话都在念叨修桥人的旧安全帽——这事只有档案馆知道",
+ "id": "C-03604",
+ "month_lines": [
+  "茶凉了再倒就是。天阴着，风挺大，把摊子支好，等晚归人。"
+ ],
+ "name": "何卫东",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00113"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00122"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00196"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00236"
+  },
+  {
+   "rel": "block",
+   "src": "江岸滩涂",
+   "with": "C-00295"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-28（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-28",
+   "quote": "茶凉了再倒就是，今早江水还是清清的，收摊了。",
+   "text": "「茶凉了再倒就是，今早江水还是清清的，收摊了。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "茶凉了再倒就是。天阴着，风挺大，把摊子支好，等晚归人。",
+   "text": "「茶凉了再倒就是。天阴着，风挺大，把摊子支好，等晚归人。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

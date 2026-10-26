@@ -1,0 +1,111 @@
+{
+ "age": 34,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#A78BFA",
+   "cloth": "#8A5A3E",
+   "eye": "#FFD27A",
+   "hair": "#A8A89E",
+   "skin": "#CFA070"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 4,
+   "rate": 1,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -142.34,
+    "z": 82.39
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -82.13,
+    "z": 120.65
+   },
+   "work": {
+    "site": "算法调参师·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -67.11,
+    "z": 144.83
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03759",
+  "quirk": "",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "风控做得好，是没人夸的那种好。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "口袋里总揣着初代探针的日志纸带",
+ "id": "C-03759",
+ "month_lines": [
+  "天阴着，风挺大。刚把C2004的M2雷达轻扫mod配平，灵感这东西，得喂它。"
+ ],
+ "name": "梁浩宇",
+ "profession": "算法调参师",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "灵感这东西，得喂它。参数不收敛就绝不睡觉。",
+   "text": "「灵感这东西，得喂它。参数不收敛就绝不睡觉。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "天阴着，风挺大。刚把C2004的M2雷达轻扫mod配平，灵感这东西，得喂它。",
+   "text": "「天阴着，风挺大。刚把C2004的M2雷达轻扫mod配平，灵感这东西，得喂它。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

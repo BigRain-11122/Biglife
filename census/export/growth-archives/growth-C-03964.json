@@ -1,0 +1,112 @@
+{
+ "age": 35,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#60A5FA",
+   "cloth": "#B86A4A",
+   "eye": "#FFD27A",
+   "hair": "#4A3A2A",
+   "skin": "#C9A47E"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 5,
+   "rate": 9,
+   "vol": 82
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 55.16,
+    "z": -80.0
+   },
+   "social": {
+    "site": "历史立面群·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 80.18,
+    "z": -151.44
+   },
+   "work": {
+    "site": "编年史馆员·历史立面群工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 127.21,
+    "z": -20.95
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03964",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "工位/楼内窗影",
+  "state": "work",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "历史立面群",
+ "born": "2026-09-23",
+ "creed": "没有做不出来的，只有还没想到的。",
+ "district": "NS",
+ "gender": "女",
+ "hook": "把心事只说给全城灯语的对照表听——没人知道为什么",
+ "id": "C-03964",
+ "month_lines": [
+  "风挺大，吹得档案库那几页旧代码哗啦啦响。趁这凉快劲，我把刚合入的 FluxGroup 补丁录进全史，一句话的事，定准了。"
+ ],
+ "name": "郑雨欣",
+ "profession": "编年史馆员",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00212"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00244"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00262"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00306"
+  },
+  {
+   "rel": "block",
+   "src": "历史立面群",
+   "with": "C-00337"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "一句话的事，今天的工作还得抓紧时间优化一下代码，显存紧张呢。",
+   "text": "「一句话的事，今天的工作还得抓紧时间优化一下代码，显存紧张呢。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，吹得档案库那几页旧代码哗啦啦响。趁这凉快劲，我把刚合入的 FluxGroup 补丁录进全史，一句话的事，定准了。",
+   "text": "「风挺大，吹得档案库那几页旧代码哗啦啦响。趁这凉快劲，我把刚合入的 FluxGroup 补丁录进全史，一句话的事，定准了。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}

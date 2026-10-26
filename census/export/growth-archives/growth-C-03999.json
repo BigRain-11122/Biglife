@@ -1,0 +1,112 @@
+{
+ "age": 24,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#4ADE80",
+   "cloth": "#4DD0E1",
+   "eye": "#FFD27A",
+   "hair": "#B9F6CA",
+   "skin": "#7DE3FF"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": 7,
+   "rate": 11,
+   "vol": 93
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": 40.3,
+    "z": 121.57
+   },
+   "social": {
+    "site": "八号楼街区·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": 84.79,
+    "z": 115.02
+   },
+   "work": {
+    "site": "伴居灵·八号楼街区工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": 103.15,
+    "z": 114.92
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03999",
+  "quirk": "night_run",
+  "recovering": "haoqi",
+  "slot": "栖位",
+  "state": "home",
+  "v": 1,
+  "visible": 0
+ },
+ "block": "八号楼街区",
+ "born": "2026-09-23",
+ "creed": "差之毫秒，谬以全城。",
+ "district": "GM",
+ "gender": "无定",
+ "hook": "每次路过旧船锚残件都要亮两下——这事只有师父知道",
+ "id": "C-03999",
+ "month_lines": [
+  "尾尖天线高频震颤，正对着 G08 的波段「蹭光"
+ ],
+ "name": "黑阿浮标",
+ "profession": "伴居灵",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00019"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00063"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00065"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00079"
+  },
+  {
+   "rel": "block",
+   "src": "八号楼街区",
+   "with": "C-00085"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "清早的电波已上线，尾巴天线对准了最热闹的方向，准备捕捉今天的第一丝异响。",
+   "text": "「清早的电波已上线，尾巴天线对准了最热闹的方向，准备捕捉今天的第一丝异响。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "尾尖天线高频震颤，正对着 G08 的波段「蹭光",
+   "text": "「尾尖天线高频震颤，正对着 G08 的波段「蹭光」。风挺大，吹得像素毛乱飞，正好把旧账本里那点噪点扫净。」"
+  }
+ ],
+ "species": "sprite",
+ "v": "1"
+}

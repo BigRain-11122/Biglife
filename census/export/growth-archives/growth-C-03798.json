@@ -1,0 +1,112 @@
+{
+ "age": 63,
+ "assets": {
+  "sprite_slots": {
+   "badge": "#F472B6",
+   "cloth": "#C07A2E",
+   "eye": "#FFD27A",
+   "hair": "#6E5A80",
+   "skin": "#D8A87A"
+  },
+  "voice_ref": {
+   "base": "sapi-huihui-zh-CN",
+   "pitch": -6,
+   "rate": -12,
+   "vol": 81
+  }
+ },
+ "behavior_last": {
+  "anchor": {
+   "home": {
+    "win": [
+     20,
+     9
+    ],
+    "x": -110.16,
+    "z": 157.27
+   },
+   "social": {
+    "site": "回测田·社交角",
+    "win": [
+     18,
+     20
+    ],
+    "x": -87.65,
+    "z": 87.52
+   },
+   "work": {
+    "site": "夜宵摊主·回测田工位",
+    "win": [
+     9,
+     18
+    ],
+    "x": -49.46,
+    "z": 122.28
+   }
+  },
+  "ctx": "tw=day,wx=clear,wd=0",
+  "id": "C-03798",
+  "quirk": "",
+  "recovering": "haoqi",
+  "slot": "街头·驻足望塔",
+  "state": "leisure_park",
+  "v": 1,
+  "visible": 1
+ },
+ "block": "回测田",
+ "born": "2026-09-23",
+ "creed": "试错要趁灯还亮着。",
+ "district": "QT",
+ "gender": "男",
+ "hook": "给旧月台的站牌写了一整本观察笔记——据说是老辈传下的规矩",
+ "id": "C-03798",
+ "month_lines": [
+  "风挺大，吹得账本哗啦响。C2006 收口批刚过，S2.5 还在跑，脑子三十个方案排队，先喝口水再说。"
+ ],
+ "name": "雷建平",
+ "profession": "夜宵摊主",
+ "reflections": [],
+ "relations_top": [
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00017"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00064"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00078"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00093"
+  },
+  {
+   "rel": "block",
+   "src": "回测田",
+   "with": "C-00101"
+  }
+ ],
+ "rings": [
+  {
+   "anchor": "[锚]城市实况 2026-09-29（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-09-29",
+   "quote": "今天云好，改天再说，摊子还得再熬会儿。",
+   "text": "「今天云好，改天再说，摊子还得再熬会儿。」"
+  },
+  {
+   "anchor": "[锚]城市实况 2026-10-17（FluxVerse 事件流+真实时间天气）",
+   "date": "2026-10-17",
+   "quote": "风挺大，吹得账本哗啦响。C2006 收口批刚过，S2.5 还在跑，脑子三十个方案排队，先喝口水再说。",
+   "text": "「风挺大，吹得账本哗啦响。C2006 收口批刚过，S2.5 还在跑，脑子三十个方案排队，先喝口水再说。」"
+  }
+ ],
+ "species": "carbon",
+ "v": "1"
+}
