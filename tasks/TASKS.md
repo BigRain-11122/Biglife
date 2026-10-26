@@ -2,6 +2,15 @@
 
 ## 转办件跟踪
 
+- [x] **T-20261026-01**（缺陷单·R213x 实弹·事件流漏 20 位锚卡居民 + 计数器历史多记）：QC 卡数 10114 vs 事件派生 10091 差 23 → 探明=事件派生/回放只读 census/registry，手写展示锚 census/anchors 20 位（C-00010~C-00029·有年轮有相遇·导出面在册）无任何出生/年轮/关系事件，FluxVerse 消费面完全看不见；另 reserved 荣誉席 3 张按脱敏律继续排除。
+  - status: closed·2026-10-26 10:2x @BigLife-OSLoop 修复关单
+  - 修法：events_derive.py 新增 card_paths()（registry+anchors 合集），main 与 events_replay 同源使用（单口径·禁双枚举）→ 派生卡 10091→10111、事件 39080→39241（+161）。
+  - 连带实锚：纳入后回放 mismatch=16，全为「声明圈数 = 实际年轮行 +1」——git 实证 8f31f3d72（10-17 批 年轮 7→9 只加一行）=历史双记；以内容行为真值校正 16 张锚卡计数器（内容零增删）。
+  - 防复发：qc_census.py 新增「年轮计数器 vs 年轮段行数」一致性闸（出生地拦截）。
+  - 证据：gate PASS events=39241 cards=10111 schema=0 mismatch=0；QC problems=0；ruff 3 文件 CLEAN；qa/EVENTS-REPLAY-REPORT.md。
+  - tokens: local=0 api=0 api_reason=年轮线被 AutoYield 工作日让路窗挡下·本轮无 LLM 调用
+
+
 - [x] **T-20261025-01**（缺陷单·R2023 实弹·年轮游标非原子写入）：evolve_citizen.py 只在批末尾写 state/evolve-cursor.json；批次被外部中断时（本轮回合 5 分钟无输出被 shell 自动取消）卡面年轮已落盘而游标未记 → sync_rings 以「cid in cursor」判定跳过，行为线镜像与 city-dashboard 双双漏计（实弹 7 圈：6397→6404 已手工补正）。
 - [x] **T-20261025-02**（缺陷单·R2053 实弹·文档面编码损失）：tasks/TASKS.md 与 HQ-FEEDBACK.md 共 17 行含连续 '?' 串（ASCII 0x3F 落盘，非 Unicode 替换符；文件本身是合法 UTF-8），成因=历轮用 PowerShell 非 UTF-8 管道直写 md，中文字符被有损转换成 '?'。原文不可从 git 回溯（引入该 commit 已是损坏态）。处置=本轮只结单唯一 open 的受损行（R1879，按存留 ASCII 事实重建）；其余 16 行为历史实录，标注为不可恢复，禁再重扫。防复发=md 写入一律走 python UTF-8（禁 Set-Content 无 -Encoding）。
   - status: closed（2026-10-25 01:5x @BigLife-OSLoop R2030 修复关单）

@@ -12,7 +12,7 @@ qa/EVENTS-REPLAY-REPORT.md (evidence face) and state/events-replay.json.
 import io, json, pathlib, sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from events_derive import parse_card, decode  # noqa: E402
+from events_derive import parse_card, card_paths  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 EV = ROOT / "events"
@@ -59,7 +59,7 @@ def replay():
 def compare(state):
     mism = []
     cards = 0
-    for p in sorted(REG.rglob("C-*.md")):
+    for p in card_paths():
         c = parse_card(p)
         cards += 1
         s = state.get(c["citizen"])

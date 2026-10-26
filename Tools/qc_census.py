@@ -110,6 +110,13 @@ def main():
             for _d, _n in _bydate.items():
                 if _n > 1:
                     problems.append(f"{fn}: duplicate same-day rings {_d} x{_n}")
+            # 2026-10-26 计数器-内容一致性闸：事件流纳入 anchors 后暴露历史多记
+            # （10-17 批声明 年轮 7→9 而只加一行，16 张锚卡曾漂 +1）。
+            _md = re.search(r"年轮\s*(\d+)\s*圈", text)
+            if _md and _byc:
+                _cnt = len(re.findall(r"(?:^|\n)- \d{4}-\d{2}-\d{2}", _byc.group(1)))
+                if int(_md.group(1)) != _cnt:
+                    problems.append(f"{fn}: ring counter {_md.group(1)} != lines {_cnt}")
             # T-20261011-01 「逐字重复环」观测扫描：本人历史环内同句对计数。
             # 观测面不计 problems：历史环不回溯修复（#41 判例），新面自
             # evolve_citizen v0.45 dedup 闸封（dup-history）。R826 口头禅整句

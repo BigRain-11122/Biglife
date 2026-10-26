@@ -11,7 +11,13 @@ import argparse, io, json, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 REG = ROOT / "census" / "registry"
+ANCH = ROOT / "census" / "anchors"  # 手写展示锚居民（CODEX §十二 4·展示级锚覆盖全物种派系×城区）
 OUT = ROOT / "events"
+
+
+def card_paths():
+    """可派生卡全集=生成卡（registry）+ 手写锚卡（anchors）。reserved 荣誉席不参与叙事事件流。"""
+    return sorted(REG.rglob("C-*.md")) + sorted(ANCH.rglob("C-*.md"))
 
 RE_ID = re.compile(r"C-\d{5}")
 RE_HH = re.compile(r"H-[A-Z]{2}\d{4}")
@@ -113,7 +119,7 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
 
-    cards = sorted(REG.rglob("C-*.md"))
+    cards = card_paths()
     if args.limit:
         cards = cards[: args.limit]
 
