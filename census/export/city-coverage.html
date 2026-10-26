@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>硅基城市库覆盖 · 缺口面板</title>
+<style>
+:root{--bg:#0d1117;--fg:#e6edf3;--dim:#8b949e;--line:#21262d;--acc:#4f9cf9;--warm:#f0a35e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:22px;margin:0 0 4px;letter-spacing:.5px}
+.sub{color:var(--dim);font-size:12px;margin-bottom:28px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:28px}
+.kpi{background:#161b22;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.kpi b{display:block;font-size:24px;color:var(--acc);line-height:1.2}
+.kpi span{color:var(--dim);font-size:12px}
+section{margin-bottom:28px}
+h2{font-size:15px;color:var(--dim);font-weight:600;letter-spacing:.4px;margin:0 0 12px;text-transform:uppercase}
+.row{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:13px}
+.lab{flex:0 0 130px;color:var(--fg)}
+.track{flex:1;height:8px;background:#161b22;border-radius:4px;overflow:hidden}
+.track i{display:block;height:100%;background:linear-gradient(90deg,#3d7dd6,#63b3ff);border-radius:4px}
+.num{flex:0 0 140px;text-align:right;color:var(--dim);font-variant-numeric:tabular-nums}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+th{color:var(--dim);font-weight:600;font-size:12px}
+td{font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
+.card{background:#161b22;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card header{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.card header b{font-size:14px}
+.card time{color:var(--warm);font-size:11px;font-variant-numeric:tabular-nums}
+.meta{color:var(--dim);font-size:11px;margin:2px 0 8px}
+.ring{margin:0;font-size:13px;color:#c9d1d9}
+footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--line);padding-top:14px}
+</style></head><body><div class="wrap">
+<h1>硅基城市库覆盖 · 缺口面板</h1>
+<div class="sub">五维覆盖与缺口清单 · 数据截至 2026-10-26 08:57 · 源 census/export/citizens-light.jsonl + growth-archives + registry 卡面</div>
+
+<div class="kpis">
+  <div class="kpi"><b>10114</b><span>在册居民（含荣誉席 3 · 不计缺口）</span></div>
+  <div class="kpi"><b>78</b><span>五维齐备</span></div>
+  <div class="kpi"><b>10033</b><span>有缺口席 · 占管线圈 99.2%</span></div>
+  <div class="kpi"><b>78</b><span>有相遇留痕</span></div>
+</div>
+
+<section><h2>五维覆盖</h2>
+<div class="row"><span class="lab">人设信条</span><span class="track"><i style="width:100.0%"></i></span><span class="num">10111 · 100.0% · 缺 0</span></div>
+<div class="row"><span class="lab">认知摘要</span><span class="track"><i style="width:100.0%"></i></span><span class="num">10111 · 100.0% · 缺 0</span></div>
+<div class="row"><span class="lab">年轮</span><span class="track"><i style="width:80.6%"></i></span><span class="num">8154 · 80.6% · 缺 1957</span></div>
+<div class="row"><span class="lab">成长档案</span><span class="track"><i style="width:100.0%"></i></span><span class="num">10111 · 100.0% · 缺 0</span></div>
+<div class="row"><span class="lab">相遇留痕</span><span class="track"><i style="width:0.8%"></i></span><span class="num">78 · 0.8% · 缺 10033</span></div>
+</section>
+
+<section><h2>分街区缺口均值（每位居民平均缺几维）</h2>
+<table><thead><tr><th>街区</th><th>居民数</th><th>平均缺口</th></tr></thead>
+<tbody>
+<tr><td>GM</td><td>2817</td><td>1.18</td></tr>
+<tr><td>QT</td><td>2516</td><td>1.19</td></tr>
+<tr><td>MD</td><td>2013</td><td>1.18</td></tr>
+<tr><td>NS</td><td>1228</td><td>1.19</td></tr>
+<tr><td>OR</td><td>1018</td><td>1.19</td></tr>
+<tr><td>RV</td><td>519</td><td>1.20</td></tr>
+</tbody></table>
+</section>
+
+<section><h2>缺口名单（按缺口维度数排序 · 前 240 席）</h2>
+<div class="grid">
+<article class="card"><header><b>徐文倩</b><time>C-08155</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>伏特-3</b><time>C-08165</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>毛则铭</b><time>C-08166</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>林建国</b><time>C-08167</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>王芳</b><time>C-08168</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>黎银娣</b><time>C-08169</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>超算-4</b><time>C-08170</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>袁则铭</b><time>C-08171</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阮星野</b><time>C-08172</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>龚多多</b><time>C-08173</time></header><p class="meta">河岸 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>章一诺</b><time>C-08174</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>濮珍珠</b><time>C-08175</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>余惠芬</b><time>C-08176</time></header><p class="meta">河岸 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阿时序-6</b><time>C-08177</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>崔健</b><time>C-08178</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>丁Leo</b><time>C-08179</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>徐静</b><time>C-08180</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>石敏</b><time>C-08181</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>段圆圆</b><time>C-08182</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>钱嘉树</b><time>C-08183</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>降频-6</b><time>C-08184</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>范Nova</b><time>C-08185</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>奚桃桃</b><time>C-08186</time></header><p class="meta">河岸 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>小余晖</b><time>C-08187</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>热插拔·小</b><time>C-08188</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>小齿轮</b><time>C-08189</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>谭鸿奎</b><time>C-08190</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>应嘉树</b><time>C-08191</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>董银龙</b><time>C-08192</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>串行-3</b><time>C-08193</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>袁行舟</b><time>C-08194</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>闸门-8</b><time>C-08195</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>糜斯年</b><time>C-08196</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>顾亦风</b><time>C-08197</time></header><p class="meta">河岸 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>张Alex</b><time>C-08198</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>程强</b><time>C-08199</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>比特·老</b><time>C-08200</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>陈元宝</b><time>C-08201</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>尹军</b><time>C-08202</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>孟行舟</b><time>C-08203</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>老支线·快</b><time>C-08204</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>杭国平</b><time>C-08205</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>小露水</b><time>C-08206</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>黑分针</b><time>C-08207</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>邵像素仔</b><time>C-08208</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>刘多多</b><time>C-08209</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>濮伟</b><time>C-08210</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>黑齿轮</b><time>C-08211</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>冗余-2-3</b><time>C-08212</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>盐值·丙</b><time>C-08213</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>高卡佳</b><time>C-08214</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>贺沐晴</b><time>C-08215</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阿时序·拾</b><time>C-08216</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>王国强</b><time>C-08217</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>邱未晞</b><time>C-08218</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>杭梓涵</b><time>C-08219</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>华银龙</b><time>C-08220</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>宋行舟</b><time>C-08221</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>任雯</b><time>C-08222</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>秦向洋</b><time>C-08223</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阿提灯</b><time>C-08224</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>薛银娣</b><time>C-08225</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>门格-7</b><time>C-08226</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>姜阿Jay</b><time>C-08227</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>龚慧</b><time>C-08228</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>曹元宝</b><time>C-08229</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>龚洁</b><time>C-08230</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>朱招娣</b><time>C-08231</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>石未晞</b><time>C-08232</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>小满月</b><time>C-08233</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>缪一·叁</b><time>C-08234</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>范大壮</b><time>C-08235</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>高斯·老</b><time>C-08236</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>侯银娣</b><time>C-08237</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阮Leo</b><time>C-08238</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阿后台·丙</b><time>C-08239</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>严星野</b><time>C-08240</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>邵一诺</b><time>C-08241</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>郑Nova</b><time>C-08242</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>魏Kai</b><time>C-08243</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>黄Ida</b><time>C-08244</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>宋萍</b><time>C-08245</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>王家树</b><time>C-08246</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>薛美娟</b><time>C-08247</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>周圆圆</b><time>C-08248</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>邵根福</b><time>C-08249</time></header><p class="meta">河岸 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>二极管·午</b><time>C-08250</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>魏朵朵</b><time>C-08251</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>江行舟</b><time>C-08252</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>钱阿凤</b><time>C-08253</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>廖一诺</b><time>C-08254</time></header><p class="meta">河岸 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>黄顺林</b><time>C-08255</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>薛莉</b><time>C-08256</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>章秀英</b><time>C-08257</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>唐阿凤</b><time>C-08258</time></header><p class="meta">河岸 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>罗丽</b><time>C-08259</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>黑信风</b><time>C-08260</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>陈像素仔</b><time>C-08261</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>郁明</b><time>C-08262</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>严Seven</b><time>C-08263</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阿时序·乙</b><time>C-08264</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>程Pixie</b><time>C-08265</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>奚Momo</b><time>C-08266</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>奈奎·丙</b><time>C-08267</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>谭豆豆</b><time>C-08268</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>凌星野</b><time>C-08269</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>罗梓涵</b><time>C-08270</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>席海峰</b><time>C-08271</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>重启·拾</b><time>C-08272</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>付建国</b><time>C-08273</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>程卫东</b><time>C-08274</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>陈阿炳</b><time>C-08275</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>曹雨欣</b><time>C-08276</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>潘丽</b><time>C-08277</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>潘子轩</b><time>C-08278</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>奈奎-7</b><time>C-08279</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>薛嘉树</b><time>C-08280</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>贺雨欣</b><time>C-08281</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>茅斯年</b><time>C-08282</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>侯子轩</b><time>C-08283</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>卡诺·叁</b><time>C-08284</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>丁金花</b><time>C-08285</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>吕磊</b><time>C-08286</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>谭Seven</b><time>C-08287</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>图灵-9-6</b><time>C-08288</time></header><p class="meta">河岸 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>熊春梅</b><time>C-08289</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>史斯年</b><time>C-08290</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>唐秀兰</b><time>C-08291</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阿晚潮</b><time>C-08292</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>黄建平</b><time>C-08293</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>金乐遥</b><time>C-08294</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>袁德明</b><time>C-08295</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>管沐辰</b><time>C-08296</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>编号十三·小</b><time>C-08297</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>方Yuki</b><time>C-08298</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>语义·叁</b><time>C-08299</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>屠倩</b><time>C-08300</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>郁秀兰</b><time>C-08301</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>姜星野</b><time>C-08302</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>云雯</b><time>C-08303</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>濮敏</b><time>C-08304</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>屠德明</b><time>C-08305</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>石伟</b><time>C-08306</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>濮小满</b><time>C-08307</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>断点·小</b><time>C-08308</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>陶彩凤</b><time>C-08309</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>姜涛</b><time>C-08310</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>曹则铭</b><time>C-08311</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>铂电阻-2</b><time>C-08312</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>三七-3</b><time>C-08313</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>贾志明</b><time>C-08314</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阿稳定·慢</b><time>C-08315</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>屠桃桃</b><time>C-08316</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>廖圆圆</b><time>C-08317</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>黎倩</b><time>C-08318</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>付春梅</b><time>C-08319</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>周豆豆</b><time>C-08320</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>叶行舟</b><time>C-08321</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>凌琳</b><time>C-08322</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>毛涛</b><time>C-08323</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>熊蕾</b><time>C-08324</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>付果果</b><time>C-08325</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>刘倩</b><time>C-08326</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>贾Momo</b><time>C-08327</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>张强</b><time>C-08328</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>孟桂芳</b><time>C-08329</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>程有根</b><time>C-08330</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>姚星野</b><time>C-08331</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>彭敏</b><time>C-08332</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>金芳</b><time>C-08333</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>江顺林</b><time>C-08334</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>盛秀英</b><time>C-08335</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>孟斌</b><time>C-08336</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>吴强</b><time>C-08337</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>郑斌</b><time>C-08338</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>席琳</b><time>C-08339</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阿读卡·晨</b><time>C-08340</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>黄果冻</b><time>C-08341</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>熊予安</b><time>C-08342</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>金惠芬</b><time>C-08343</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>闸门·乙</b><time>C-08344</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>苏明</b><time>C-08345</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>编年史-Ⅲ-8</b><time>C-08346</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>唐朵朵</b><time>C-08347</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>毛秀兰</b><time>C-08348</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>贾志刚</b><time>C-08349</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阮小满</b><time>C-08350</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阿后台·乙</b><time>C-08351</time></header><p class="meta">河岸 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阳极-3</b><time>C-08352</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>章伟民</b><time>C-08353</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>杨果果</b><time>C-08354</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>孟子轩</b><time>C-08355</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>施志刚</b><time>C-08356</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>邱红</b><time>C-08357</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>蒋星野</b><time>C-08358</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阿时序·丁</b><time>C-08359</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>钱亦风</b><time>C-08360</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>顾春梅</b><time>C-08361</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>阿后台-7</b><time>C-08362</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>崔炯</b><time>C-08363</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>屠米粒</b><time>C-08364</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>龚淑珍</b><time>C-08365</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>雷浩宇</b><time>C-08366</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>杨未晞</b><time>C-08367</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>夏建平</b><time>C-08368</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>童Pixie</b><time>C-08369</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>安培·叁</b><time>C-08370</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>罗南汐</b><time>C-08371</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>崔锡金</b><time>C-08372</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>濮家树</b><time>C-08373</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>管雨欣</b><time>C-08374</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>薛国强</b><time>C-08375</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>张多多</b><time>C-08376</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>邵嘉树</b><time>C-08377</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>彭念念</b><time>C-08378</time></header><p class="meta">河岸 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>陶德明</b><time>C-08379</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>卢豆豆</b><time>C-08380</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>潘晓东</b><time>C-08381</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>伯努利·小</b><time>C-08382</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>门格·老</b><time>C-08383</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>谭惠芬</b><time>C-08384</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>李志刚</b><time>C-08385</time></header><p class="meta">河岸 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>方国平</b><time>C-08386</time></header><p class="meta">旧站台 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>侯一诺</b><time>C-08387</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>钱春梅</b><time>C-08388</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>小早潮</b><time>C-08389</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>雷蕾</b><time>C-08390</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>汪阿宁</b><time>C-08391</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>功耗·甲</b><time>C-08392</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>江糖糖</b><time>C-08393</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>叶华</b><time>C-08394</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>王诗涵</b><time>C-08395</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>高斯·夜</b><time>C-08396</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>黑涟漪</b><time>C-08397</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>彭伟民</b><time>C-08398</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>韩Ida</b><time>C-08399</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>方斯年</b><time>C-08400</time></header><p class="meta">北槐街区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>陈文倩</b><time>C-08401</time></header><p class="meta">中央市集 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>回溯-3</b><time>C-08402</time></header><p class="meta">低语巷 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+<article class="card"><header><b>带宽-2</b><time>C-08403</time></header><p class="meta">机房区 · 缺 2 维</p><p class="ring">待补：年轮、相遇留痕</p></article>
+</div>
+</section>
+
+<footer>机器清单：census/export/coverage-backlog.jsonl（10033 行·夜间年轮批可照单开工）· 生成器 Tools/build_coverage.py（零 LLM·幂等）</footer>
+</div></body></html>

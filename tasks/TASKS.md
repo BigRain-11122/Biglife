@@ -353,3 +353,17 @@
 - 交付面：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\gene-ledger.html（钩子物件 189/800 在册承载，未落册 611 为 19:00 后年轮线选题池）
 - 下个里程碑：19:00 产量窗开，年轮线 3 席（rings 8157→8160+）ETA 19:30；新入册 12 条按载体就近消费。
 - tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
+
+## R2237 · 2026-10-26 16:1x @BigLife-OSLoop（库覆盖缺口面·新页 + 机器清单）
+- 轮首：pull=Already up to date；水位差集 NEW=0（尾 D-20261026-15）；orders 涉本司 PT-20261026-01（P0 推送停摆）→ R2217/R2223 已两次自证，本轮不重立（查重律）
+- 让路窗（D-20261020-02·09:00-19:00）→ 年轮线/相遇轮/池轮 LLM 面按律跳过，走确定性面
+- 真实缺口（CEO 过程可见面）：全库五维覆盖从未有一页聚合——谁还没长年轮、成长档案缺席、相遇面多薄，散在 27 张页里看不出；夜间年轮批也只按游标顺序取人，不看缺口
+- 新建 Tools/build_coverage.py（确定性·零 LLM·幂等）：户籍 10,114 × 五维（信条/认知摘要/年轮/成长档案/相遇留痕）交叉，产 city-coverage.html（46.3KB）+ coverage-backlog.jsonl（机器清单）
+- 口径修正：荣誉三席（C-00001..C-00003·T0 人设权 CEO 保留面）不计入缺口统计（初版误计为欠账，已豁免），管线圈=10,111
+- 实测覆盖：信条 100%、认知摘要 100%、成长档案 100%、年轮 8,154/10,111=80.6%、相遇 78/10,111=0.8%（相遇=当前最薄面）
+- 缺口 10,033 席：待补年轮 1,957（next_action=ring·恰为夜间批队列，gaps 降序排最前）/ 待补相遇 8,076；页面含分街区缺口均值表 + 缺口前 240 席名单
+- 接线：build_export_index.py TITLE 增「库覆盖缺口」条目，入口页 17 页可直达（非 fallback 标题）
+- 闸门：qc_census problems=0（cards=10114 evolved=8157 dup_rings 37/37）；ruff_gate 2 文件 CLEAN（顺手清 RUF059 未用解包）
+- 实物：C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-coverage.html（46.3KB）· C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\coverage-backlog.jsonl（10,033 行）
+- 下个里程碑：19:00 产量窗开，年轮线批 3 席（rings 8,157→8,160+·ETA 19:30），取人改用 coverage-backlog 头部 ring 队列
+- tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline
