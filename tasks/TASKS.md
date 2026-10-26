@@ -2644,3 +2644,8 @@ R2172 2026-10-26 00:00~00:06 压实录：pull=Already up to date；决策水位�
   - 质量留档：C-08128 台词仍混入事件码「B2396」（承 R2197/R2206 同缺陷——事件码生活化转述未进 prompt 硬化项），下轮优先修；本批 2 席被 recent-dup-opening/today-dup-opening 拦下（C-08101/C-08117 stays due），v0.62 开场骨架池生效但未清零。
   - 闸况：语言池 pool_audit PASS 全桶达标 SELF_TERMINATE（不重跑）；相遇轮今日 cap 3 已满（跳过）；QC 报告 07:44 problems=0（6 轮窗未到）；census 注册维持冻结（唯 CEO 解禁）；tasks open=2（T-20261024-02 aCCS 验证 GPU 门 / T-20260924-08 常设导出）。
   - 下个里程碑：ring 8150（差 30 圈）ETA 2026-10-26 20:00 前。tokens: local=8 api=0 api_reason=-（年轮批 qwen3:4b-instruct 8 次调用；相遇轮被 cap 拦下未调用）
+
+- R2208 实录 2026-10-26 08:2x~08:3x @BigLife-OSLoop｜轮首 pull=Already up to date，水位差 NEW=0（尾 D-20261026-09，consumed=214）；orders 无涉本司新物理件；**产品实物**=年轮 18 席落环（首批 8：C-08129~C-08136；验证批 10：C-08101/C-08117/C-08137~C-08144）+ 事件回放闸 PASS（cards=10091 events=39051 schema_errors=0 mismatch=0）。
+  - **缺陷根治（v0.65）**：R2207 有 2 席因 today-dup-opening 跳过，根因=开场骨架按 id 哈希碰撞、4B 照抄骨架导致同一开场（C-08101/C-08117 都落在「这会儿手边最碍事的就是这些，」）；修法=骨架选择先剔除今日已用过的骨架（比对 sig['today_open_ids'] 的 opening12）。验证=同批 10/10 零跳过（修复前 8/10）。
+  - 闸面：pool_audit PASS 全桶达标 SELF_TERMINATE（跳过）；相遇轮今日已达 3 次上限（cap 3）跳过；QC 巡检未到 6 轮档期（上次 07:44 problems=0）；census 注册维持冻结（唯 CEO 解禁）。
+  - 下个里程碑=ring 8200 齐（当前 8138，+62 圈），ETA 2026-10-26 20:00 前｜tokens: local=13 api=0 api_reason=-

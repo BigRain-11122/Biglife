@@ -1984,11 +1984,26 @@ OPENING_SKELETONS = (
 )
 
 
-def opening_seed_block(cid):
-    """Per-citizen opening skeleton (deterministic, stable per id)."""
+def opening_seed_block(cid, sig=None):
+    """Per-citizen opening skeleton (deterministic, stable per id).
+
+    v0.65 (2026-10-26 R2208): skeleton reuse, not skeleton count, was the real
+    today-dup-opening source - a 4B copies the skeleton verbatim, so two citizens
+    hashed onto the same skeleton wrote the same opening12 and the gate skipped
+    the seat (R2207: C-08101/C-08117 both landed on 「这会儿手边最碍事的就是这些」).
+    Widening 12 -> 24 only delayed the collision. Fix = drop skeletons whose own
+    opening12 already appears in today's live counter before hashing, so each
+    same-day ring gets a skeleton nobody has used yet today."""
     cid = cid or ""
     n = sum((i + 1) * ord(ch) for i, ch in enumerate(cid))
-    sk = OPENING_SKELETONS[n % len(OPENING_SKELETONS)]
+    skels = OPENING_SKELETONS
+    used = sig.get("today_open_ids") if sig else None
+    if isinstance(used, dict) and used:
+        fresh = [s for s in skels
+                 if re.sub(r"\s+", "", s)[:12] not in used]
+        if fresh:
+            skels = fresh
+    sk = skels[n % len(skels)]
     return ("本轮你的开场句式骨架（只借用这个起句的骨架，词必须自己换；"
             "骨架里不写天气、不写街景套话，填进去的动作只能是你人设里本来就有的日常）："
             "「" + sk + "」——严禁原样照抄这句，换掉其中每一个词。\n")
@@ -2043,7 +2058,7 @@ def build_prompt(cid, text, sig):
                  + "、".join("「" + b + "」" for b in _tbl) + "\n") if _tbl else ""
     # v0.60 gap #80: per-citizen opening skeleton, placed BEFORE the ban list so
     # the model has something concrete to start from instead of only prohibitions.
-    opening_blk = opening_seed_block(cid)
+    opening_blk = opening_seed_block(cid, sig)
     # T-20260925-01/T-20260925-18 soft guidance (NOT a gate): open with your OWN
     # catchphrase; standing per-prompt constraint caps generic pool-gene quotes at
     # 1 per ring (cross-card quotes stay LEGAL per C-00695 R192 - diversity nudge
