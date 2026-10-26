@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """城市日常面生成器（确定性·零 LLM·幂等）
 
-读 census/export/citizen-behavior.jsonl + citizen-needs.jsonl + citizens-light.jsonl，
-产出 census/export/city-life.html：此刻全城在做什么 / 四轴需求 / 好奇缺口 / 怪癖横截面 / 可见面。
-数据内嵌为聚合与抽样，单文件零依赖，可离线打开。
+读 census/export/citizen-behavior.jsonl + citizen-needs.jsonl + citizens-light.jsonl
++ citizen-initiatives.jsonl（agency v0 当日意向），
+产出 census/export/city-life.html：此刻全城在做什么 / 四轴需求 / 好奇缺口 / 怪癖横截面 /
+可见面 / 今日意向。数据内嵌为聚合与抽样，单文件零依赖，可离线打开。
 
 用法: python -X utf8 Tools/build_city_life.py
 """
@@ -17,6 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXP = os.path.join(ROOT, "census", "export")
 BEH = os.path.join(EXP, "citizen-behavior.jsonl")
 NEED = os.path.join(EXP, "citizen-needs.jsonl")
+INIT = os.path.join(EXP, "citizen-initiatives.jsonl")
 LIGHT = os.path.join(EXP, "citizens-light.jsonl")
 OUT = os.path.join(EXP, "city-life.html")
 
@@ -75,6 +77,7 @@ def main():
     beh = load_jsonl(BEH)
     need = load_jsonl(NEED)
     light = load_jsonl(LIGHT)
+    init = load_jsonl(INIT) if os.path.exists(INIT) else []
 
     total = len(beh)
     who = {r["id"]: r for r in light}
@@ -152,6 +155,20 @@ def main():
     axis_label = [NEED_CN.get(k, k) for k, _ in axis_sum.most_common()]
     silent_axes = [NEED_CN[k] for k in ("anwen", "shengji", "shejiao", "haoqi") if axis_sum.get(k, 0) == 0]
 
+    # 今日意向（agency v0·确定性派生）：top 轴分布 + 稳定抽样
+    init_active = [r for r in init if (r.get("initiatives") or []) and not r.get("blocked")]
+    init_top = collections.Counter(r.get("top") or "—" for r in init_active)
+    init_sample = sorted(init_active, key=lambda r: r["id"])[:SAMPLE_N]
+    init_sample_html = "\n".join(
+        person_line(
+            (who.get(r["id"]) or {}).get("name", r["id"]),
+            district_of(r["id"]),
+            "｜".join(r["initiatives"]),
+        )
+        for r in init_sample
+    )
+    init_date = init[0].get("date") if init else "—"
+
     page = f"""<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -219,11 +236,19 @@ li .x{{color:#a9b6c4}}
 <div class="sub">共 {len(visible_rows)} 人此刻落在他人视野里，是城市最先被看见的那一层。</div>
 {bar(visible_by_district.most_common(), len(visible_rows))}
 
-<h2>六 · 读法说明</h2>
+<h2>六 · 今日居民意向</h2>
+<div class="sub">意向日期 {html.escape(str(init_date))} · 有自发念头的居民 {len(init_active)} 人（agency v0 确定性派生·零 LLM）· 按主导需求轴分布如下，抽样 {len(init_sample)} 位（按编号稳定排序）。</div>
+{bar([(NEED_CN.get(k, k), c) for k, c in init_top.most_common()], len(init_active)) if init_active else '<div class="sub">今日意向面暂无数据。</div>'}
+<ul style="margin-top:14px">
+{init_sample_html}
+</ul>
+
+<h2>七 · 读法说明</h2>
 <div class="note">
 <p><b>这不是个体实时状态。</b>behavior / needs 为启发式生成档（v=1），全城共享同一时段快照（{html.escape(ctx)}），说话的是分布，不是某位居民此刻真的站在哪里。</p>
 <p>抽样只为展示样式，按居民编号稳定排序取前 {SAMPLE_N} 位，不代表缺口最重的人。</p>
 <p>社交轴（shejiao）当前累计为 0，属行为模型覆盖缺口，已如实标注，不作成片结论引用。</p>
+<p>第六节「今日意向」是<b>计划，不是事实</b>：agency v0 由「需求轴×居民种子」确定性派生（同人同日同句），不代表当天真的做成；不得当作 [锚] 证据引用。</p>
 </div>
 
 <div class="foot">BigLife · 城市日常面 · 确定性生成（零 LLM） · 全部数据 offline 内嵌</div>
