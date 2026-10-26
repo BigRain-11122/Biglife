@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-26 18:07",
+ "export_ts": "2026-10-27 04:26",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2318（04:1x 本司实况）**年轮批 10/10 席落环（C-08744~C-08753）+ 事件流回放闸 PASS（cards=10111 / events=39839 / replayed=10111 / schema_errors=0 / mismatch=0）+ 城市看板重建 rings=8747 / 人口 10114 / 卡片 160；语言池自查 PASS（全桶达标，自终止）。 **R2309（03:2x 本司实况）**年轮批 10/10 席价落（C-08653/C-08655~C-08663）+ 事件流回放闸 PASS（cards=10111 / events=39749 / replayed=10111 / schema_errors=0 / mismatch=0）+ 城市看板重建 rings=8657 / 人口 10114 / 卡片 160。 **R2299（年轮线）**：10 席落环（C-08555~C-08564·rings=8558），事件回放闸 PASS（cards 10111/events 39650/mismatch 0/schema 0），QC 例巡 problems=0；看板与今日日报同日重建",
+   "t": "**R2321（04:2x 本司实况）**年轮批 evolved=10/10 席落环（C-08773~C-08782·锚定律全过）+ 事件流回放闸 PASS（cards=10111 / events=39868 / replayed=10111 / schema_errors=0 / mismatch=0）+ 城市看板重建 rings=8776 / 人口 10114 / 卡片 160；语言池全桶达标 SELF_TERMINATE 跳过，相遇轮当日 cap 满跳过。 **R2318（04:1x 本司实况）**年轮批 10/10 席落环（C-08744~C-08753）+ 事件流回放闸 PASS（cards=10111 / events=39839 / replayed=10111 / schema_errors=0 / mismatch=0）+ 城市看板重建 rings=8747 / 人口 10114 / 卡片 160；语言池自查 PASS（全桶达标，自终止）。 **R2309（03:2x 本司实况）**年轮批 10/10 席价落（C-08653/C-08655~C-08663）+ 事件流回放闸 PASS（cards=10111 / events=39749 / replayed=10111 / schema_errors=0 / mismatch=0）+ 城市看板重建 rings=8657 / 人口 10114 / 卡片 160。",
    "s": 1
   },
   {
@@ -1513,7 +1513,11 @@
   [
    "441",
    "R2318 收口：年轮 10 席 + 回放闸 PASS + 看板重建（rings=8747 / 人口 10114 / cards=160）；registry+anchors 实物文件直数 441。"
+  ],
+  [
+   "470",
+   "R2321 收口：年轮 10 席 + 回放闸 PASS + 看板重建（rings=8776 / 人口 10114 / cards=160）；今日 [锚] 年轮机器直数 470。"
   ]
  ],
- "t": "当前活：让路窗确定性维护（工作日 09:00-19:00 LLM 让路·D-20261020-02）；本轮轮首决策水位并入 D-20261026-16~19（均非本司派工），语言池全桶达标自终止（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·hard_fails=0·determinism 192+25 pairs mismatch=0），QC 与事件回放闸沿用 17:59 R2247 全绿读数（cards=10114/evolved=8157/problems=0/dup 37-37；events=39241 mismatch=0 schema=0）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\QC-REPORT.md（10-26 17:59·全库不变量全绿）+ C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\EVENTS-REPLAY-REPORT.md（10-26 17:59·回放 PASS）\n下个里程碑：19:00 让路窗解除后年轮批 3 席（rings 8157→8160+）+ 相遇轮 1 对（候选队列 126 对直取）ETA 2026-10-26 19:30"
+ "t": "当前活：年轮环批 + 事件回放闸复验 + 城市看板续鲜（让路窗 09:00 前）\n最近实物：census/export/city-dashboard.html（2026-10-27 04:2x · rings=8776 人口 10114）\n下个里程碑：下一轮年轮批 10 席 + 闸复验，ETA 2026-10-27 05:10"
 }
