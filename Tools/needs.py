@@ -24,7 +24,8 @@ CO = os.path.dirname(HERE)
 LIGHT = os.path.join(CO, "census", "export", "citizens-light.jsonl")
 OUT = os.path.join(CO, "census", "export", "citizen-needs.jsonl")
 TASKS_OUT = os.path.join(CO, "census", "export", "citizen-tasks.jsonl")  # T-20260925-12 R3 face
-ROOT = os.path.abspath(os.path.join(CO, "..", ".."))
+import group_root as _group_root  # D-20261028-04 组根解析律
+ROOT = _group_root.resolve()  # D-20261028-04: git rev-parse 认活树，禁 ..\.. 盲跳
 FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
 
 NEED_KEYS = ["anwen", "shengji", "shejiao", "haoqi"]  # 安稳/生计/社交/好奇

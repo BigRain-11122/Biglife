@@ -18,7 +18,8 @@ from datetime import datetime, timedelta, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
-ROOT = os.path.abspath(os.path.join(CO, "..", ".."))
+import group_root as _group_root  # D-20261028-04 组根解析律
+ROOT = _group_root.resolve()  # D-20261028-04: git rev-parse 认活树，禁 ..\.. 盲跳
 FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
 DEFAULT_CALENDAR = os.path.join(CO, "cognition", "mood-calendar.json")
 

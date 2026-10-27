@@ -13,7 +13,8 @@ import argparse, datetime, glob, json, os, re, sys, urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
 LIGHT = os.path.join(CO, "census", "export", "citizens-light.jsonl")
-ROOT = os.path.abspath(os.path.join(CO, "..", ".."))
+import group_root as _group_root  # D-20261028-04 组根解析律
+ROOT = _group_root.resolve()  # D-20261028-04: git rev-parse 认活树，禁 ..\.. 盲跳
 FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
 OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
 MODEL = os.environ.get("BIGLIFE_MODEL", "qwen3.6-35b")

@@ -29,7 +29,8 @@ CRASH_AXES = ("anwen", "shengji", "shejiao", "haoqi")
 CRASH_CAP = 0.05   # same-district visible crash residents (speech face)
 CITY_CAP = 0.03    # whole-city crash population
 LIGHT = os.path.join(CO, "census", "export", "citizens-light.jsonl")
-ROOT = os.path.abspath(os.path.join(CO, "..", ".."))
+import group_root as _group_root  # D-20261028-04 组根解析律
+ROOT = _group_root.resolve()  # D-20261028-04: git rev-parse 认活树，禁 ..\.. 盲跳
 FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
 
 CONTEXTS = ["morning", "dusk", "night", "weekend", "rain", "typhoon",
