@@ -829,3 +829,4 @@
 
 - 2026-10-27 10:3x R2375 @BigLife-OSLoop（让路窗轮·确定性产出）：基因轮 b38 落库 8 条（口头禅2/钩子物件2/转折点2/习惯1/近况1）——16 条候选过 gene_nearcheck 双闸，8 条 FLAG 换句重验后才入库，池面 ho 827→829 / tp 634→636 / ha 45→46 / pr 45→46 / cp 1391→1393，既有条目零改动；同轮 QC 万人不变量异常 0（cards=10114/dup_rings 37 观测面）、事件流回放闸 PASS（events=40322/replayed=10111/schema_errors=0/mismatch=0）；export 三行续鲜；ruff CLEAN。年轮/相遇/反思线按 D-20261020-02 让路窗顺延 19:00 后（本班无 LLM 调用）。
   - tokens: local=0 api=0 api_reason=-
+  - [2026-10-27 10:48 @BigLife-OSLoop] metering: tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+pool SELF_TERMINATE; QC cards=10114 evolved=9230 problems=0; events replay 40322 events/10111 cards mismatch=0 schema=0 PASS
