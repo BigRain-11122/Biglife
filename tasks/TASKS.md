@@ -913,3 +913,9 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：census/export/city-ring-trend.html（10-27 14:0x · 22 生产日 · 今日缺陷率 14.5%）
   - 下个里程碑：19:00 让路窗解除后年轮批 3 席 + 质量重写队列头 3 席（C-00713 等），届时用本趋势页验重写波成效，ETA 2026-10-27 19:30
   - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性建页
+
+- **[R2397]** 2026-10-27 14:0x-14:1x @BigLife-OSLoop 值守（让路窗·零 LLM）：pull=Already up to date；决策水位差集 NEW=0（已至 D-20261027-13）；orders 尾无本司新令；TASKS 无 open 单。**产品增量=QC 不变量巡检（欠跑 7 天补账）**：上次 QC 为 R1833（10-20 17:02），此后轮次密集但步 3「每约 6 轮」未落——本轮补跑 \Tools/qc_census.py\：cards=10114 / evolved=9230 / problems=0（编号唯一·姓名唯一·必备段齐备·年轮锚定律四项全过），产物入库 census/QC-REPORT.md。附带两面观测：①逐字重复环 37/37 位（本人历史环内同句·观测面·历史环不回溯·落环侧 v0.45 dedup 闸已封新面）；②epair_dup_rings.py\ 干跑 cards=0 lines_removed=0——同日二次落环存量为零，说明 R1772 清污后未复发。语言线 \pool_audit.py\ = 72/72 桶达标 + sprite 12/12 + greet 28/28 + faq 7/7 + neg 6/6，hard_fails=0，determinism 192 对零 mismatch → SELF_TERMINATE 跳过。让路窗 D-20261020-02（09:00-19:00）生效→年轮/相遇/反思 defer 19:00（evolve_citizen 直接返回 yield-window 提示，未起 LLM）。HQ 日报闸 ALREADY_REPORTED（今日 15 行·零写入）。commit 已推。
+  - 当前活：工作日让路窗零 LLM 确定性产出（QC 巡检补账）
+  - 最近实物：census/QC-REPORT.md（10-27 14:0x · 10114 卡 · problems=0）
+  - 下个里程碑：19:00 让路窗解除后年轮批 3 席 + 37 位复读环居民重写候选，ETA 2026-10-27 19:30
+  - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性巡检
