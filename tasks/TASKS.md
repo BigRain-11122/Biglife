@@ -999,3 +999,10 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：census/registry 9 席新环（2026-10-27 19:30）+ qa/EVENTS-REPLAY-REPORT.md PASS（events=40351）+ docs/status-export.json 19:32
   - 下个里程碑：2026-10-28 03:07 班次续跑年轮批（尾单 C-09257 重试）+ QC 不变量巡检
   - tokens: local=10 api=0 api_reason=本地 Ollama qwen3:4b-instruct 10 席（1 席判重未落环）
+- **[R2422]** 2026-10-27 19:39-19:4x @BigLife-OSLoop 年轮环（让路解除后第 2 轮）：轮首三步 pull=Already up to date／决策水位差集 NEW=0（已核至 D-20261027-16，无 17+ 新行）／orders 尾无本司新物理件；TASKS 无 open 新单。
+  - 本环实物：年轮批实跑=到期 10 席落环 **9 席**（C-02324/C-02099/C-09257/C-09258/C-09259/C-09260/C-09261/C-09262/C-09263），C-02008 因 moon-invented+mist-import 硬闸留 due；行为线镜像 rows=9
+  - 闸门：events_refresh --gate = replay 10111/10111 · schema_errors=0 · mismatch=0 PASS（events=40360）；pool_audit 全桶达标=SELF_TERMINATE（六轴 72/像素灵 12/greet 28/faq 7/neg 6 全 at_target·hard_fails=0）；相遇轮今日 cap 3 已满→跳过
+  - 合规：D-20261026-25 ⑤ 执行——HQ-FEEDBACK R2256 行标 closed（S4U 降级态=设计态，并入 C-20261016-04 提权窗·复核 2026-11-08）
+  - 最近实物：census/registry 9 席新环（19:39）+ qa/EVENTS-REPLAY-REPORT.md（19:40 PASS）+ docs/status-export.json（19:43 三行实况刷新）
+  - 下个里程碑：2026-10-28 03:07 班次续跑年轮批（尾单 C-02008 复测）+ 下一年窗相遇轮
+  - tokens: local=10 api=0 api_reason=本地 Ollama qwen3:4b-instruct 10 席（1 席硬闸未落环）
