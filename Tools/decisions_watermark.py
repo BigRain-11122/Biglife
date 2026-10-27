@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -24,7 +25,6 @@ STATE = ROOT / "state"
 V2_FILE = STATE / "decisions-watermark-v2.json"
 V1_FILE = STATE / "decisions-watermark.txt"
 CHECK_LOG = STATE / "watermark-v2-check.log"
-GROUP_REPO = Path(r"C:\Users\sjs20\Desktop\FluxGroup")
 SRC_PATH = "docs/decisions.md"
 SRC_REPO = "FluxGroup"
 
@@ -43,6 +43,35 @@ def _git(args: list[str], cwd: Path) -> str:
     if out.returncode != 0:
         raise RuntimeError(out.stderr.decode("utf-8", "replace").strip() or "git failed")
     return out.stdout.decode("utf-8", "replace")
+
+
+def _resolve_group_root() -> Path:
+    """D-20261028-04 组根解析律：活树只认 `git rev-parse --show-toplevel`，
+    多候选时取 cph4/evolution-ledger.md mtime 最新者；禁 `..\\..` 跳层与硬编码镜像路径
+    （镜像 D:\\FluxGroup 已陈旧，读它会静默拿旧台账）。
+    """
+    cands = [ROOT.parent.parent]  # life/BigLife -> life -> 组根（工作树推定，非跳层解析）
+    env = os.environ.get("BIGLIFE_GROUP_ROOT")
+    if env:
+        cands.insert(0, Path(env))
+    best: tuple[float, Path] | None = None
+    for c in cands:
+        if not c.is_dir():
+            continue
+        try:
+            top = Path(_git(["rev-parse", "--show-toplevel"], c).strip())
+        except RuntimeError:
+            continue
+        if not (top / "cph4").is_dir():
+            continue
+        ledger = top / "cph4" / "evolution-ledger.md"
+        mtime = ledger.stat().st_mtime if ledger.is_file() else 0.0
+        if best is None or mtime > best[0]:
+            best = (mtime, top)
+    return best[1] if best else ROOT.parent.parent
+
+
+GROUP_REPO = _resolve_group_root()
 
 
 def current_tuple() -> dict:

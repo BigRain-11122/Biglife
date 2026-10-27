@@ -44,7 +44,10 @@ def repair(text):
     if not removed:
         return text, 0
     text = "\n".join(out)
-    count = len(re.findall(r"(?:^|\n)- \d{4}-\d{2}-\d{2} ", text))
+    # 2026-10-28: count the 年轮 block only — a card-wide scan also counts 反思
+    # lines and inflates the declared ring count by one (C-00014/C-00015 replay gate).
+    ring_block = re.search(r"\*\*年轮\*\*\n((?:- .*\n)+)", text)
+    count = len(re.findall(r"- \d{4}-\d{2}-\d{2} ", ring_block.group(1))) if ring_block else 0
     text = re.sub(r"\*\*进化\*\* .*",
                   f"**进化** v1.{count} · 出生 2026-09-23 · 年轮 {count} 圈 · 锚定律见 docs/CODEX.md §九",
                   text, count=1)

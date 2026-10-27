@@ -2402,7 +2402,12 @@ def add_ring(path, cid, line, anchor_note):
             text = re.sub(r"\*\*年轮\*\*\n", ring + "\n" + entry + "\n", text, count=1)
     else:
         text = re.sub(r"(\n\*\*进化\*\*)", "\n" + ring + "\n" + entry + r"\n\1", text, count=1)
-    count = len(re.findall(r"(?:^|\n)- \d{4}-\d{2}-\d{2} ", text))
+    # v0.64 (2026-10-28): count only the 年轮 block. The old card-wide scan also
+    # matched 反思 lines ("- 2026-10-15 ..." under **反思**), so every card carrying a
+    # reflection declared one ring more than it had (C-00014 10 vs 9 / C-00015 9 vs 8,
+    # caught by the events replay gate).
+    ring_block = re.search(r"\*\*年轮\*\*\n((?:- .*\n)+)", text)
+    count = len(re.findall(r"- \d{4}-\d{2}-\d{2} ", ring_block.group(1))) if ring_block else 0
     text = re.sub(r"\*\*进化\*\* .*", f"**进化** v1.{count} · 出生 2026-09-23 · 年轮 {count} 圈 · 锚定律见 docs/CODEX.md §九", text, count=1)
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(text)
