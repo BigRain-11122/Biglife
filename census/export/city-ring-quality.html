@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>年轮品质透视 · BigLife</title>
+<style>
+:root{--bg:#12141a;--fg:#e6e6e6;--dim:#8d94a3;--line:#262a33;--accent:#7fb0d8;--warn:#d89a7f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 "Noto Sans SC","Microsoft YaHei",sans-serif}
+header{padding:28px 20px 12px;border-bottom:1px solid var(--line)}
+h1{margin:0 0 6px;font-size:20px;font-weight:600}
+.sub{color:var(--dim);font-size:13px}
+.kpis{display:flex;gap:14px;flex-wrap:wrap;padding:16px 20px;border-bottom:1px solid var(--line)}
+.kpi{border:1px solid var(--line);border-radius:6px;padding:10px 14px;background:#171a21;min-width:150px}
+.kpi b{display:block;font-size:22px;font-weight:600}
+.kpi span{color:var(--dim);font-size:12px}
+h2.sec{padding:20px 20px 6px;font-size:16px;margin:0}
+table{border-collapse:collapse;margin:0 20px 10px;font-size:14px}
+th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}
+th{color:var(--dim);font-weight:500}
+main{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:14px;padding:14px 20px 60px}
+.card{border:1px solid var(--line);border-radius:6px;padding:14px 16px;background:#171a21}
+.card h2{margin:0 0 4px;font-size:16px;font-weight:600}
+.id{color:var(--dim);font-size:12px;margin-left:8px;font-weight:400}
+.meta{margin:0 0 8px;color:var(--warn);font-size:13px}
+.rings{margin:0;padding-left:18px}
+.rings li{margin:0 0 8px}
+.rings time{color:var(--dim);font-size:12px;display:block}
+.rings p{margin:2px 0 0}
+footer{padding:16px 20px 40px;color:var(--dim);font-size:12px;border-top:1px solid var(--line)}
+</style></head>
+<body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 城市目录</a></div>
+<header>
+<h1>年轮品质透视</h1>
+<p class="sub">扫描面 2026-09-01 起 · 年轮 14876 圈 / 居民 9207 位 ·
+相邻复读 829 处 / 空洞偏短 689 处 · 生成 2026-10-27（零 LLM·确定性可复算）</p>
+</header>
+<div class="kpis">
+<div class="kpi"><b>828</b><span>复读居民（相邻相似 ≥40%）</span></div>
+<div class="kpi"><b>689</b><span>偏短年轮（正文 &lt;45 字）</span></div>
+<div class="kpi"><b>1127</b><span>命中全局模板句的年轮</span></div>
+<div class="kpi"><b>400</b><span>夜班重写队列条数</span></div>
+</div>
+<h2 class="sec">被最多居民共用的句块（8 字窗口 · 前 20）</h2>
+<table><tr><th>句块</th><th>涉及居民</th></tr><tr><td>这会儿天还黑着雨还在</td><td>224</td></tr><tr><td>儿天还黑着雨还在下风</td><td>223</td></tr><tr><td>会儿天还黑着雨还在下</td><td>223</td></tr><tr><td>天还黑着雨还在下风挺</td><td>219</td></tr><tr><td>还黑着雨还在下风挺大</td><td>219</td></tr><tr><td>着雨还在下风挺大檐下</td><td>166</td></tr><tr><td>黑着雨还在下风挺大檐</td><td>166</td></tr><tr><td>雨还在下风挺大檐下水</td><td>152</td></tr><tr><td>还在下风挺大檐下水洼</td><td>146</td></tr><tr><td>城里好玩的东西一天比</td><td>131</td></tr><tr><td>玩的东西一天比一天多</td><td>131</td></tr><tr><td>好玩的东西一天比一天</td><td>131</td></tr><tr><td>里好玩的东西一天比一</td><td>131</td></tr><tr><td>这城里好玩的东西一天</td><td>131</td></tr><tr><td>「这会儿天还黑着雨还</td><td>123</td></tr><tr><td>CrazyCampu</td><td>113</td></tr><tr><td>razyCampus</td><td>113</td></tr><tr><td>「夜里冷喝口热的再走</td><td>111</td></tr><tr><td>谁没个难处呢来坐下说</td><td>110</td></tr><tr><td>街坊一声喊放下碗就到</td><td>107</td></tr></table>
+<h2 class="sec">复读最重的居民（按最重相邻相似排序 · 前 12 位）</h2>
+<main><article class="card"><h2>董子轩<span class="id">C-00299</span></h2><p class="meta">NS · 年轮 3 圈 · 最重相邻相似 100%</p><ul class="rings"><li><time>2026-09-24</time><p>[tmpl] 「这城里好玩的东西一天比一天多，今儿风挺大，布景架上的小物件都刮得紧贴着我。」</p></li><li><time>2026-10-11</time><p>[sim=100%+tmpl] 「这城里好玩的东西一天比一天多，今儿风挺大，布景架上的小物件都刮得紧贴着我。」</p></li><li><time>2026-10-19</time><p>[tmpl] 「这城里好玩的东西一天比一天多。风不小，吹得布景架上的旧零件咔咔响，比人记性好，今儿先不折腾，等它们旧了再用。」</p></li></ul></article><article class="card"><h2>糜之南<span class="id">C-00524</span></h2><p class="meta">QT · 年轮 3 圈 · 最重相邻相似 100%</p><ul class="rings"><li><time>2026-09-25</time><p>[tmpl] 「这城里好玩的东西一天比一天多，今早风挺大，擦完工具心里踏实得很。」</p></li><li><time>2026-10-11</time><p>[sim=100%+tmpl] 「这城里好玩的东西一天比一天多，今早风挺大，擦完工具心里踏实得很。」</p></li><li><time>2026-10-19</time><p>[tmpl] 「风不小，吹得Q区霓虹都晃了晃。手里这筐脏数据正除噪，这城里好玩的东西一天比一天多，收摊前再把工具擦一遍才踏实。」</p></li></ul></article><article class="card"><h2>席简梨<span class="id">C-00547</span></h2><p class="meta">GM · 年轮 3 圈 · 最重相邻相似 100%</p><ul class="rings"><li><time>2026-09-25</time><p>[tmpl] 「这城里好玩的东西一天比一天多，今天灵感来了，通宵写谱都不嫌累。风挺大，吹得我多穿了件外套。」</p></li><li><time>2026-10-11</time><p>[sim=100%+tmpl] 「这城里好玩的东西一天比一天多，今天灵感来了，通宵写谱都不嫌累。风挺大，吹得我多穿了件外套。」</p></li><li><time>2026-10-19</time><p>[tmpl] 「天阴着，风挺大。刚扫完一段8bit旋律，这城里好玩的东西一天比一天多，绝了。」</p></li></ul></article><article class="card"><h2>濮根娣<span class="id">C-00051</span></h2><p class="meta">MD · 年轮 4 圈 · 最重相邻相似 100%</p><ul class="rings"><li><time>2026-09-24</time><p>[tmpl] 「夜里冷，喝口热的再走。今儿个摊上来了个新玩意，手痒痒的正打算研究研究呢。」</p></li><li><time>2026-10-10</time><p>[sim=100%+tmpl] 「夜里冷，喝口热的再走。今儿个摊上来了个新玩意，手痒痒的正打算研究研究呢。」</p></li><li><time>2026-10-17</time><p>[] 「风挺大，吹得摊子直晃悠。手里这新零件正上手，拆得正起劲，夜里冷，喝口热的再走。」</p></li><li><time>2026-10-24</time><p>[] 「雨还在下，风挺大，摊子摇得厉害。这会儿天还黑着，我正瞅着江边那盏旧灯，手心热乎的，像蒸笼里升腾的暖光，没被风吹散。」</p></li></ul></article><article class="card"><h2>叶沐辰<span class="id">C-00110</span></h2><p class="meta">GM · 年轮 4 圈 · 最重相邻相似 100%</p><ul class="rings"><li><time>2026-09-24</time><p>[] 「这版本我等好久了，终于修复了那个老bug，这风挺大，得多穿点。」</p></li><li><time>2026-10-10</time><p>[sim=100%] 「这版本我等好久了，终于修复了那个老bug，这风挺大，得多穿点。」</p></li><li><time>2026-10-17</time><p>[] 「这版本我等好久了。风挺大，天阴着，先把这行代码跑通再睡。」</p></li><li><time>2026-10-24</time><p>[tmpl] 「这版本我等好久了。雨还在下，风挺大，檐下水洼晃得人眼晕，我正盯着那行c.json的flag根，补丁没补完，就先搁着——等天亮了再看。」</p></li></ul></article><article class="card"><h2>汪炯<span class="id">C-00171</span></h2><p class="meta">QT · 年轮 3 圈 · 最重相邻相似 100%</p><ul class="rings"><li><time>2026-09-24</time><p>[short] 「天阴着，因子们还在跳舞，有意思，我想想。」</p></li><li><time>2026-10-11</time><p>[short+sim=100%] 「天阴着，因子们还在跳舞，有意思，我想想。」</p></li><li><time>2026-10-18</time><p>[] 「雨还在下，风挺大，窗玻璃敲得慌。BigMoney 那边刚推了新包，因子在动，有意思，我想想。」</p></li></ul></article><article class="card"><h2>金沐辰<span class="id">C-00229</span></h2><p class="meta">MD · 年轮 3 圈 · 最重相邻相似 100%</p><ul class="rings"><li><time>2026-09-24</time><p>[short] 「对时了，放心。今天风挺大，盯色卡得更紧些。」</p></li><li><time>2026-10-11</time><p>[short+sim=100%] 「对时了，放心。今天风挺大，盯色卡得更紧些。」</p></li><li><time>2026-10-19</time><p>[] 「雨下得正紧，风也不小。对时了，放心，刚把G08的色相调匀，咱这M区的一亩三分地，还得我自己盯着才踏实。」</p></li></ul></article><article class="card"><h2>桂嘉树<span class="id">C-00401</span></h2><p class="meta">RV · 年轮 3 圈 · 最重相邻相似 100%</p><ul class="rings"><li><time>2026-09-24</time><p>[short] 「搞快点，这风挺大，中继器的螺丝别松了。」</p></li><li><time>2026-10-11</time><p>[short+sim=100%] 「搞快点，这风挺大，中继器的螺丝别松了。」</p></li><li><time>2026-10-19</time><p>[] 「试错要趁灯亮，这风不小，赶紧给中继器紧两圈螺丝。 乖乖，外环的信号得稳住，别让我这老伙计们掉链子。」</p></li></ul></article><article class="card"><h2>老支线<span class="id">C-00713</span></h2><p class="meta">GM · 年轮 3 圈 · 最重相邻相似 100%</p><ul class="rings"><li><time>2026-09-25</time><p>[short+tmpl] 「夜里冷，喝口热的再走，今天的事今天清。」</p></li><li><time>2026-10-11</time><p>[short+sim=100%+tmpl] 「夜里冷，喝口热的再走。今天的事今天清。」</p></li><li><time>2026-10-20</time><p>[] 「天阴着，风不大。夜里冷，喝口热的再走，今日缓存已清。」</p></li></ul></article><article class="card"><h2>茅Momo<span class="id">C-01097</span></h2><p class="meta">QT · 年轮 3 圈 · 最重相邻相似 100%</p><ul class="rings"><li><time>2026-09-25</time><p>[] 「退退退，今儿这风挺大，巡边时得多留个神。旧的用的顺手，这防火墙巡林员的活儿，还得按老规矩来。」</p></li><li><time>2026-10-12</time><p>[sim=100%] 「退退退，今儿这风挺大，巡边时得多留个神。旧的用的顺手，这防火墙巡林员的活儿还得按老规矩来。」</p></li><li><time>2026-10-24</time><p>[tmpl] 「退退退，这会儿天还黑着，雨还在下，风挺大，檐下水珠噼里啪啦的，我巡边的路早就湿透了。旧的用的顺手，这防火墙巡林员的活儿，得按老规矩来。」</p></li></ul></article><article class="card"><h2>蓝雀<span class="id">C-00083</span></h2><p class="meta">MD · 年轮 4 圈 · 最重相邻相似 100%</p><ul class="rings"><li><time>2026-09-24</time><p>[] 「落檐抖了抖翅膀，今夜风不小，巡信时多了一份清凉。」</p></li><li><time>2026-10-10</time><p>[sim=100%] 「落檐抖了抖翅膀，今夜风不小，巡信时多了一份清凉。」</p></li><li><time>2026-10-17</time><p>[] 「风不小，吹得翅尖有些发颤。落檐抖了抖光尘，替老灯灵分担了半截夜路，一个人把日子过成合唱，也挺踏实。」</p></li><li><time>2026-10-24</time><p>[] 「风挺大，雨还在下，檐下滴答着，我抖了抖翅膀，光尘沾了水，也补了补旧补丁，像把日子缝进这雨里——一人一笺，也够了。」</p></li></ul></article><article class="card"><h2>袁阿凤<span class="id">C-00121</span></h2><p class="meta">QT · 年轮 3 圈 · 最重相邻相似 100%</p><ul class="rings"><li><time>2026-09-24</time><p>[] 「今早炖的汤味道正好，家人们肯定喜欢。这风挺大，出门收摊得多穿点儿。」</p></li><li><time>2026-10-11</time><p>[sim=100%] 「今早炖的汤味道正好，家人们肯定喜欢。这风挺大，出门收摊得多穿点儿。」</p></li><li><time>2026-10-18</time><p>[] 「雨还在下，风挺大，檐下的水洼都溅成了一片。擦完灶台的手心里有点潮，心里倒踏实，这一锅汤得炖得够味儿，才配得上街坊喊一声师傅。」</p></li></ul></article></main>
+<footer>判据：同居民相邻年轮正文（去 [锚] 注脚）字符 3-gram Jaccard ≥ 0.40 记一处复读；正文 &lt; 45 字记偏短；
+模板句=8 字窗口被 ≥ 20 位居民共用。存量不回改（锚定律），只计量并进队列。
+队列文件：state/ring-quality-queue.json</footer>
+</body></html>

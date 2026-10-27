@@ -36,6 +36,7 @@ TITLE = {
     "city-growth.html": ("成长档案册", "逐人成长档案：年轮原文 / 当月心声 / 档案覆盖进度（分页 · 单页 <1.1MB）"),
     "city-rumors.html": ("城市流言录", "当天年轮经口耳相传的变形长链：源起居民 / 每一跳怎么说 / 走街时间（RUMOR-CHAIN v1.0 确定性引擎）"),
     "city-ops.html": ("产线实况页", "轮次心跳 / 最近提交 / 页面新鲜度 / 库体量：产线正在跑什么摊成一张表（确定性读盘·零 LLM）"),
+    "city-ring-quality.html": ("年轮品质透视", "相邻复读 / 偏短空洞 / 全局模板句三查：按居民排出的重写队列（确定性·零 LLM），对应 state/ring-quality-queue.json"),
 }
 # 成长档案册的分页正文不入总目录（总目录只收册子的入口页，避免一册被拆成十几张卡）
 PAGED_PREFIX = "city-growth-p"
