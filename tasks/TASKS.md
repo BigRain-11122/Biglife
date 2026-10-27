@@ -903,3 +903,7 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：census/export/city-ring-picks.html（2026-10-27 13:39·924 圈精选 36 条）
   - 下个里程碑：19:00 让路窗解除后年轮批 3 席 + 质量重写队列头 3 席（C-00713 等），ETA 2026-10-27 19:30
   - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性建页
+- **[R2395]** 2026-10-27 13:4x-14:0x @BigLife-OSLoop 值守（让路窗·LLM 停）：pull=Already up to date；决策水位 NEW=0（已含 D-20261027-13）；orders 尾无本司令；TASKS 无 open 单；Ollama 探测 11434 不通=让路窗预期，年轮/相遇线 defer 19:00。**产品增量=习惯池 b46 补 8 条（80→88）**：候选 13 条过 gene_nearcheck 双层判据（ha 阈值 70），5 条 FLAG（带伞/磨刀/腌菜坛/凉席/孩子考学）弃用不落库，8 条 CLEAN 落 genes/lives.json——天气应对（窗缝塞报纸）、公共资源（水房排队位/公交卡余额/楼道灯当晚换）、旧物（收音机定时/旧照片次序/旧手机当闹钟/站着接电话）三面稀区。台账重建 gene-ledger registered 1625→1641、habits 28/88 使用中；目录页与 city-ops 页重建（pages=22 / pages=32 · ring_queue=400 席候 19:00 窗）。闸：pool_audit PASS（under_target NONE·SELF_TERMINATE 72/72 轴 + 12/12 灵 + greet 28 + faq 7 + neg 6/6，determinism=0）、encoding_guard VERDICT PASS（U+FFFD=0）、ruff_gate 1 file CLEAN、JSON 断言 8/8 landed、页面 fffd=0。commit 24cef663a 已推送（origin tip 实锚）。让路线 D-20261020-02（09:00-19:00）。
+  - 本轮实物：census/export/gene-ledger.html（habits 28/88，1641 条已登记）+ genes/lives.json 88 条习惯池（2026-10-27 13:5x）
+  - 下个里程碑：19:00 让路解除后年轮批 3 席 + 品质修复配额 3 席（C-00713 等队头），ETA 2026-10-27 19:30
+  - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性基因面工作
