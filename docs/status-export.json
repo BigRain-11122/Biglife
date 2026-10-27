@@ -1,5 +1,5 @@
 {
- "export_ts": "2026-10-27 21:58",
+ "export_ts": "2026-10-26 18:07",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
@@ -1611,5 +1611,5 @@
    "R2437 年轮 10 席落环；事件回放闸 PASS（replayed=10111 mismatch=0 schema=0）；池线 SELF_TERMINATE 维持；相遇配额今日 3/3 已满。环覆盖 1150。"
   ]
  ],
- "t": "当前活：年轮线批产 + 相遇闸修复收口（本地 Ollama qwen3:4b-instruct，零云端）\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/MEET-SYMMETRY-T-20261027-01.md（21:5x 相遇互引不对称修复+验收证据）· census/registry/ 10 张新年轮卡（21:54 落环）\n下个里程碑：年轮覆盖 9390 → 10000（ETA 2026-10-30）+ 下一批年轮"
+ "t": "当前活：让路窗确定性维护（工作日 09:00-19:00 LLM 让路·D-20261020-02）；本轮轮首决策水位并入 D-20261026-16~19（均非本司派工），语言池全桶达标自终止（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·hard_fails=0·determinism 192+25 pairs mismatch=0），QC 与事件回放闸沿用 17:59 R2247 全绿读数（cards=10114/evolved=8157/problems=0/dup 37-37；events=39241 mismatch=0 schema=0）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\QC-REPORT.md（10-26 17:59·全库不变量全绿）+ C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\EVENTS-REPLAY-REPORT.md（10-26 17:59·回放 PASS）\n下个里程碑：19:00 让路窗解除后年轮批 3 席（rings 8157→8160+）+ 相遇轮 1 对（候选队列 126 对直取）ETA 2026-10-26 19:30"
 }
