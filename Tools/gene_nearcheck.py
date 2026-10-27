@@ -6,25 +6,32 @@
 rapidfuzz→本件=工作流变更落点）；分步① 阈值定谳=R417（数据锚定=阈值略高于各池自配对基线峰值）。
 双层判据: Layer A=候选 4-gram 对基因库全文本池重叠扫描（跨池命中合法报——R417「自己退到后」跨池
 判例·Layer A 扫全文本池非仅同型池）；Layer B=同型池 rapidfuzz fuzz.ratio 全串阈值层（高于池内
-任意两条既有条目间最高相似度=统计离群=近重候选·THRESHOLDS cp92/ho95/tp50——cp/ho=R417 基线
+任意两条既有条目间最高相似度=统计离群=近重候选·THRESHOLDS cp92/ho95/tp50/ha70/pr37——cp/ho=R417 基线
 91.667/94.118 定谳值·tp 44→50=CODEX §十二 v3.59 再定谳〔R1319 实锤池内自配对新峰值 48.889
-「工牌」对·照 R417 原式「略高于峰值」重推导〕）。
+「工牌」对·照 R417 原式「略高于峰值」重推导〕·ha/pr=T-20261027-01 增型〔同法推导：峰值
+69.565/36.364 → 70/37〕）。Layer A 前 `{obj}` 类占位符归一到「〇」，修同池模板句结构性假阳性。
 红线: 不替换既有禁触发词扫描面（SKILL 查二）与跨面撞句扫描（查三），只加近重候选层；史前近重对
 零触碰只记档（基因库既有条目零字节改动）；预检纯确定性零 LLM。
-用法: --file <候选清单>（每行 `type|text`·type∈cp/ho/tp）或 --candidate "type|text"（可多参）——
+用法: --file <候选清单>（每行 `type|text`·type∈cp/ho/tp/ha/pr）或 --candidate "type|text"（可多参）——
 近重候选 exit 1=须换句再验；--baseline 三池自配对基线复核（漂移监控）；--qc 断言电池。
 """
-import io, os, sys, json, tempfile
+import io, os, re, sys, json, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
 GENES = os.path.join(CO, "genes")
+
+# 占位符归一（T-20261027-01）：`{obj}`/`{thing}` 等模板槽位在 Layer A 前统一折叠，禁作文本面参与近重比对
+PLACEHOLDER_RE = re.compile(r"\{[^{}]*\}")
 
 # 同型池注册表（type -> (池键, Layer B 阈值)·cp/ho=R417 定谳·tp50=§十二 v3.59 再定谳·再改走 T2）
 TYPE_POOLS = {
     "cp": ("language.catchphrases", 92.0),
     "ho": ("lives.hook_objects", 95.0),
     "tp": ("lives.turning_points", 50.0),
+    # T-20261027-01 增型（同法推导：同池自配对峰值 ha 69.565→70、pr 36.364→37·「略高于峰值」）
+    "ha": ("lives.hook_actions", 70.0),
+    "pr": ("lives.presents", 37.0),
 }
 
 
@@ -57,6 +64,8 @@ def load_pools():
 
 def grams4(text):
     """候选 4-gram 滑窗序列（<4 字返空——短条目天然不入 Layer A）。"""
+    # T-20261027-01：`{obj}` 类占位符先归一到「〇」，否则同池模板句恒因占位符片段互相命中（结构性假阳性）
+    text = PLACEHOLDER_RE.sub("\u3007", text)
     return [text[i:i + 4] for i in range(len(text) - 3)] if len(text) >= 4 else []
 
 
@@ -164,6 +173,13 @@ def qc():
     # 7) 基线判据成立（阈值仍高于池内自配对峰值=注册判据在效·漂移监控）
     base = baseline(pools)
     check("baseline-criterion", all(v["criterion_ok"] for v in base.values()))
+    # 7b) T-20261027-01 增型在册：ha/pr 两型可检（同型池在册 + 阈值高于各自池峰值）
+    check("ha-pr-registered", "ha" in TYPE_POOLS and "pr" in TYPE_POOLS
+          and base["ha"]["criterion_ok"] and base["pr"]["criterion_ok"])
+    # 7c) 占位符归一：同槽位不同名的模板句 4-gram 等价，且产出 gram 不含花括号。
+    #     （修 T-20261027-01 实测的 `{obj}` 结构性假阳性）
+    check("placeholder-mask", grams4("坚持手写 {obj}") == grams4("坚持手写 {thing}")
+          and all("{" not in g and "}" not in g for g in grams4("会给 {obj} 织毛衣")))
     # 8) 史前近重对哨兵（cp 91.667/ho 94.118/tp 48.889 三峰值在位=既有条目零触碰在证·tp 峰=v3.59 改判新基线）
     check("baseline-sentinel", base["cp"]["max_ratio"] == 91.667
           and base["ho"]["max_ratio"] == 94.118 and base["tp"]["max_ratio"] == 48.889)
