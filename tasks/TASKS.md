@@ -1069,3 +1069,12 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 回放闸：replay 10111/10111、schema_errors=0、mismatch=0 → PASS（events=40470），qa/EVENTS-REPLAY-REPORT.md 入库 commit dbbc11356。
   - 推送：origin/main 已同步。
   - tokens: local=10 api=0 api_reason=-（10 席 × 一次 Ollama qwen3:4b-instruct）
+
+- **R2433** 2026-10-27 21:13-21:3x @BigLife-OSLoop 年轮环+出生地拦截：pull=Already up to date；水位差集 NEW=0（已核至 D-20261027-16）；orders 尾无本司令；TASKS 无 open 单；HQ 日闸=ALREADY_REPORTED（day=2026-10-27 lines=15 零写入）；语言池与相遇轮当日配额已达标 →
+  - 产品增量=年轮 20 席落环（两批各 10）：批一 C-01963/C-01850/C-02091/C-09341~C-09347（4 席软让步闸）；批二 C-02178/C-02281/C-02197/C-09348~C-09354（2 席软让步）；环卡 commit 5b3d65f84 + 行为镜像 ec8dee57d
+  - **缺陷发现与修复（本轮主件）**：抽查年轮发现工程语汇被照抄进文（C-01850「commit 光点过江」）→ 全库扫描 708/10114 条（7.0%）带拉丁技术词（commit×193/gpu×57/pushevent×53/biglife×50/tick×41…），根因=FluxVerse 事件流 type/summary 属开发流水，锚定律令居民逐字引用
+  - 修法两面试修（承 R2251 事件码同族范式）：①喂料侧 `scrub_machine_words`（type/actor 机器词与裸拉丁词剥离；英文占比>35% 的整段丢弃）；②落环闸 `tech-word` 违规族 + `add_ring` 末道拒绝 + 提示词尾钉 `tech_blk`；白名单仅 CEO 家人名（qiqi/rain/ceo）
+  - 验证：py_compile OK / ruff_gate CLEAN / 实跑 10 席零拉丁泄漏（新环全部为具象生活细节）/ replay 10111/10111 schema=0 mismatch=0 PASS（events=40490）
+  - 可见面：city-today.html rings=1092 people=1087 districts=6、city-dashboard.html rings=9348（较上轮 1072/1067 与 9341 递增）
+  - 历史 708 条不回溯修（#41 前朝不追溯判例），仅新环拦截
+  - tokens: local=20 api=0 api_reason=-
