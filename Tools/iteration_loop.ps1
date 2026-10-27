@@ -34,6 +34,37 @@ $roundOut = Join-Path $logDir "round_$stamp.out"
 $roundErr = Join-Path $logDir "round_$stamp.err"
 $heart = Join-Path $Project 'state\heartbeat.txt'
 
+# v3 (2026-10-28 group-root resolution, decisions D-20261028-03 / D-20261028-04):
+# resolve the group repo root ONLY through `git rev-parse --show-toplevel` over
+# the repo root and its parents. Never assume a fixed relative depth (`..\..`)
+# and never trust a hard-coded mirror path: a stale mirror (D:\FluxGroup)
+# resolves successfully yet silently serves an old world (false green).
+# Several candidates may resolve (each nested repo reports its own top); the
+# live tree wins by cph4\evolution-ledger.md mtime. Returns $null when nothing
+# resolves - callers must then fail closed.
+function Resolve-GroupRoot([string]$Start) {
+    $tops = New-Object System.Collections.Generic.List[string]
+    $cur = $Start
+    for ($i = 0; $i -lt 6 -and $cur; $i++) {
+        $top = $null
+        try { $top = (& git -C $cur rev-parse --show-toplevel 2>$null | Select-Object -First 1) } catch { $top = $null }
+        if ($top) {
+            $top = $top.Trim()
+            if ((Test-Path (Join-Path $top 'cph4')) -and -not ($tops -contains $top)) { $tops.Add($top) }
+        }
+        $cur = Split-Path -Parent $cur
+    }
+    $best = $null
+    $bestTicks = -1L
+    foreach ($t in $tops) {
+        $ledger = Join-Path $t 'cph4\evolution-ledger.md'
+        $ticks = 0L
+        if (Test-Path $ledger) { $ticks = (Get-Item $ledger).LastWriteTimeUtc.Ticks }
+        if ($ticks -gt $bestTicks) { $bestTicks = $ticks; $best = $t }
+    }
+    return $best
+}
+
 function Log([string]$m) {
     $line = "$(Get-Date -Format 'HH:mm:ss') $m"
     Write-Output $line
@@ -141,8 +172,13 @@ try {
     $argLine = '-y -p "' + $prompt + '"'
     Log "spawning headless round (hard-cap ${RoundTimeoutMinutes}min, silence-kill ${RoundSilenceMinutes}min, prompt_chars=$($prompt.Length))"
     # T0 CLOUD-OFF guard (CEO 2026-10-20): automation is local-only; never spawn the cloud CLI.
-    $__co = $PSScriptRoot
-    while ($__co -and -not (Test-Path (Join-Path $__co 'cph4\fleet\CLOUD-OFF-LOCAL-ONLY-v1.md'))) { $__co = Split-Path -Parent $__co }
+    $__co = Resolve-GroupRoot $Project
+    if (-not $__co) {
+        # Fail closed (D-20261028-03 @3): an unresolvable group root counts as
+        # cloud-off, so no round is spawned against an unknown world.
+        Log 'CLOUD-OFF guard: group root unresolved -> fail-closed, round suppressed'
+        exit 0
+    }
     if ($__co) {
         $__cl = Join-Path $__co 'media\logs\cloud-off-suppressed.log'
         $__cd = Split-Path -Parent $__cl
