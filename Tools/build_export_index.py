@@ -16,7 +16,7 @@ EXP = os.path.join(ROOT, "census", "export")
 OUT = os.path.join(EXP, "index.html")
 
 TITLE = {
-    "city-coverage.html": ("库覆盖缺口", "五维覆盖（信条/认知/年轮/成长/相遇）覆盖率 + 缺口名单 + 机器清单 coverage-backlog.jsonl"),
+    "city-coverage.html": ("库覆盖缺口", "可管四维覆盖（信条/认知/年轮/成长）+ 缺口名单 + 相遇容量面 + 机器清单 coverage-backlog.jsonl"),
     "city-dashboard.html": ("城市看板", "全城一人一卡的分布面：物种 / 派系 / 城区 / 代际 / 六轴"),
     "resident-gallery.html": ("居民图谱", "万人名册可搜索：按物种筛选、看最近年轮"),
     "city-map.html": ("城市地图", "七城区分布 + 人口密度与社交锚"),

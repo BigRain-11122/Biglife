@@ -3,10 +3,12 @@
 
 读 census/export/citizens-light.jsonl（户籍）+ census/export/growth-archives/（成长档案）
 + census/registry 卡面（相遇留痕），产出：
-  1) census/export/city-coverage.html —— 五维覆盖率 + 分街区覆盖表 + 缺口名单
+  1) census/export/city-coverage.html —— 可管四维覆盖率 + 分街区覆盖表 + 缺口名单 + 相遇容量面
   2) census/export/coverage-backlog.jsonl —— 缺口清单（夜间年轮批可直接照单开工）
 
-五维：人设信条 creed / 认知摘要 brain_digest / 年轮 recent_ring / 成长档案 / 相遇留痕
+可管四维（管线欠账·逐人可补）：人设信条 creed / 认知摘要 brain_digest / 年轮 recent_ring / 成长档案
+容量维度（不计个人缺口）：相遇留痕——受每日相遇轮上限（3 对/日）硬约束，属城市级稀缺指标；
+把它算进每人缺口会让「齐备」恒为 0、清单一万行全红而不可操作（2026-10-27 口径勘正）。
 用法: python -X utf8 Tools/build_coverage.py
 """
 import datetime
@@ -27,13 +29,17 @@ TOP = 240
 sys.path.insert(0, os.path.join(ROOT, "Tools"))
 from build_city_meets import DISTRICT_CN, load_cards  # noqa: E402
 
+# 可管四维：由管线逐人补齐，缺=欠账
 DIMS = [
     ("creed", "人设信条"),
     ("brain", "认知摘要"),
     ("ring", "年轮"),
     ("growth", "成长档案"),
-    ("meet", "相遇留痕"),
 ]
+MEET_LABEL = "相遇留痕"
+MEET_PER_DAY = 3  # 相遇轮每日上限（轮 prompt 步 4 · meet-cap）
+# 补齐优先级：年轮是其余维度的入口，先年轮再认知/信条，成长档案随年轮批自动生成
+ACTION_ORDER = ["ring", "brain", "creed", "growth"]
 
 
 def load_rows():
@@ -81,6 +87,7 @@ def main():
     dim_cnt = {k: 0 for k, _ in DIMS}
     by_dist = {}
     reserved = 0
+    meet_people = 0
     for r in rows:
         cid = r.get("id") or ""
         # 荣誉席（T0 人设权·CEO 保留面）不参与缺口统计：其内容由 CEO 亲定，非管线欠账
@@ -94,6 +101,8 @@ def main():
             "growth": cid in arch,
             "meet": meet_n.get(cid, 0) > 0,
         }
+        if have["meet"]:
+            meet_people += 1
         for k, _ in DIMS:
             if have[k]:
                 dim_cnt[k] += 1
@@ -112,8 +121,9 @@ def main():
                     "missing": miss,
                     "gaps": len(miss),
                     "has_ring": have["ring"],
-                    # 下一动作：先补年轮（年轮是其余维度的入口），有年轮者再排相遇
-                    "next_action": "ring" if not have["ring"] else "meet",
+                    # 相遇不计个人缺口，仅作旁注供选人参考
+                    "met": have["meet"],
+                    "next_action": next(k for k in ACTION_ORDER if not have[k]),
                 }
             )
 
@@ -146,6 +156,7 @@ def main():
         )
 
     gen = datetime.datetime.fromtimestamp(os.path.getmtime(SRC)).strftime("%Y-%m-%d %H:%M")
+    meet_eta = ((scope - meet_people) / (MEET_PER_DAY * 2.0)) if scope > meet_people else 0
     doc = """<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -179,20 +190,29 @@ td{font-variant-numeric:tabular-nums}
 .card time{color:var(--warm);font-size:11px;font-variant-numeric:tabular-nums}
 .meta{color:var(--dim);font-size:11px;margin:2px 0 8px}
 .ring{margin:0;font-size:13px;color:#c9d1d9}
+.note{color:var(--dim);font-size:12.5px;line-height:1.8;margin:10px 0 0}
+.note a{color:var(--acc);text-decoration:none}
 footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--line);padding-top:14px}
 </style></head><body><div class="wrap">
 <h1>硅基城市库覆盖 · 缺口面板</h1>
-<div class="sub">五维覆盖与缺口清单 · 数据截至 %(gen)s · 源 census/export/citizens-light.jsonl + growth-archives + registry 卡面</div>
+<div class="sub">可管四维覆盖与缺口清单 + 相遇容量面 · 数据截至 %(gen)s · 源 census/export/citizens-light.jsonl + growth-archives + registry 卡面</div>
 
 <div class="kpis">
   <div class="kpi"><b>%(total)d</b><span>在册居民（含荣誉席 %(res)d · 不计缺口）</span></div>
-  <div class="kpi"><b>%(full)d</b><span>五维齐备</span></div>
+  <div class="kpi"><b>%(full)d</b><span>四维齐备 · 占管线圈 %(fullpct).1f%%</span></div>
   <div class="kpi"><b>%(gapn)d</b><span>有缺口席 · 占管线圈 %(gappct).1f%%</span></div>
-  <div class="kpi"><b>%(meetp)d</b><span>有相遇留痕</span></div>
+  <div class="kpi"><b>%(meetp)d</b><span>有相遇留痕 · 城市级稀缺面</span></div>
 </div>
 
-<section><h2>五维覆盖</h2>
+<section><h2>可管四维覆盖（缺=管线欠账·逐人可补）</h2>
 %(bars)s
+</section>
+
+<section><h2>相遇容量面（不计个人缺口）</h2>
+<div class="row"><span class="lab">%(meetlab)s</span><span class="track"><i style="width:%(meetpct).1f%%"></i></span><span class="num">%(meetp)d · %(meetpct).1f%%</span></div>
+<p class="note">相遇受每日相遇轮上限 %(cap)d 对/日 硬约束：留痕人数 %(meetp)d ≈ 相遇对数 × 2。
+按当前产能覆盖全员需约 <b>%(meeteta)s</b> 天——这是容量问题不是欠账，故不进缺口清单、不占「齐备」判定。
+想看今晚该让谁遇见谁：<a href="meet-candidates.html">相遇候选单</a> · 已发生的：<a href="city-meets.html">相遇编年史</a>。</p>
 </section>
 
 <section><h2>分街区缺口均值（每位居民平均缺几维）</h2>
@@ -216,8 +236,13 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
         "res": reserved,
         "gappct": (len(gaps) / scope * 100 if scope else 0),
         "full": full,
+        "fullpct": (full / scope * 100 if scope else 0),
         "gapn": len(gaps),
-        "meetp": dim_cnt["meet"],
+        "meetp": meet_people,
+        "meetpct": (meet_people / scope * 100 if scope else 0),
+        "meetlab": MEET_LABEL,
+        "cap": MEET_PER_DAY,
+        "meeteta": "%.0f 天（≈%.1f 年）" % (meet_eta, meet_eta / 365.0),
         "bars": bars,
         "dist": "\n".join(dist_rows),
         "top": min(TOP, len(gaps)),
@@ -227,8 +252,9 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
         f.write(doc)
 
     print(
-        "coverage: people=%d reserved=%d scope=%d full=%d gaps=%d meet=%d backlog=%s"
-        % (total, reserved, scope, full, len(gaps), dim_cnt["meet"], os.path.basename(OUT_JSONL))
+        "coverage: people=%d reserved=%d scope=%d full=%d gaps=%d meet_people=%d (%d 条留痕) backlog=%s"
+        % (total, reserved, scope, full, len(gaps), meet_people, len(meets),
+           os.path.basename(OUT_JSONL))
     )
     for k, lab in DIMS:
         print("  %s %d/%d %.1f%%" % (lab, dim_cnt[k], scope, dim_cnt[k] / scope * 100))
