@@ -945,3 +945,5 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 下个里程碑：19:00 让路窗解除→年轮批 3 + 相遇轮，ETA 2026-10-27 19:30
   - 发现：基因池未落地 1238 条（ho 650/tp 507），下批 intake 选题应从既有未落地池取材（禁再加新基因）
   - tokens: local=0 api=0 api_reason=yield-window(workday 让路·D-20261020-02)+确定性核验
+- **[R2403]** 2026-10-27 15:2x-16:0x @BigLife-OSLoop 值守轮（让路窗·确定性产出）：pull=Already up to date；水位差集 NEW=0（已含 D-20261027-13）；orders 尾无本司新令；TASKS 无 open 卡。**产品增量=39 席居民多出一段真实过往**：把 `genes/lives.json` 里已登记未落地的 turning_points 按亲和度扣进居民「经历」行（`Tools/gene_adopt.py` 新增·纯确定性零 LLM），台账 turning_points 使用 173/641、unused 507→468。建脚本时拦下四类质量缺陷：同卡近似重复（连续 8 字跨卡指纹）、经历行同事件重写（6 字）、跨卡同一事件换句复写（首段 8 字全城指纹）、职业域不沾边（职业/生计/钩子锚定 + ≥3 稀有 2-gram 命中）；另修句号双写与「一卡两条追加」——10 席曾双追加已回滚重做，现 39 卡 multi=0。闸门：QC cards=10114 problems=0；events replay events=40322 schema=0 mismatch=0 PASS；encoding 39 文件 PASS；ruff_gate CLEAN。导出页重建 growth 11 页 / index pages=23 / gene-ledger 同步。让路窗 D-20261020-02（09:00-19:00）年轮/相遇/池线 defer 19:00。HQ 日报闸 ALREADY_REPORTED（15 行）零写入。
+- tokens: local=0 api=0 api_reason=yield-window(workday 让路·D-20261020-02)+确定性产出
