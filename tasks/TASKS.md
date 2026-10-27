@@ -870,3 +870,9 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：census/export/meet-candidates.html（2026-10-27 12:3x，60 对候选，top1 C-08226 x C-08333）
   - 下个里程碑：19:00 恢复后首轮年轮批 3 席 + 重写队列头 3 席，ETA 2026-10-27 19:30
   - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性重算
+
+- **[R2387]** 2026-10-27 12:3x-12:5x @BigLife-OSLoop 值守：工作日让路窗（D-20261020-02·09:00-19:00）零 LLM。pull=Already up to date；决策水位差集 NEW=0（watermark 已至 D-20261027-13）；orders 尾无本司新令；TASKS 无 open 单。**产品增量=基因库 b43 批 8 条落地**：24 候选过 gene_nearcheck 双闸，8 CLEAN 入库（钩子物件 4 / 习惯 3 / 随身物 1）→ ho 835→839 / ha 58→61 / pr 54→55，\--qc\ 电池 17 PASS 0 FAIL；台账重建 census/export/gene-ledger.html（ho 189/839·tp 134/641·pr 34/55·ha 28/61 使用中）+ 目录索引 pages=21。机器闸：pool_audit PASS/under_target NONE/SELF_TERMINATE（72/72 六轴 + 12/12 像素灵 + greet 28 + faq 7 + neg 40）、QC 巡检 cards=10114 evolved=9230 problems=0 dup_rings=37/37、事件回放闸 PASS（40322 events / 10111 cards / schema=0 / mismatch=0）、HQ 日报闸 ALREADY_REPORTED（15 行·零写入）、encoding_guard PASS、ruff_gate 1 file CLEAN。对外实况三行已刷新（dept/top/heartbeat）。19:00 让路窗解除后回年轮线。
+  - 当前活：让路窗零 LLM 确定性值守（基因扩容 + 机器闸巡检）
+  - 最近实物：genes/lives.json b43 +8 条（12:4x）· census/export/gene-ledger.html · census/QC-REPORT.md（12:4x）
+  - 下个里程碑：19:00 后年轮线 batch 3 席 + 质量重写龙头 3 席（C-00713 等），ETA 2026-10-27 19:30
+  - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性脚本产出
