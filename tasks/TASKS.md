@@ -1342,3 +1342,15 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
 - 本轮实物: 40ad3be54 年轮10环 + 08e5be36b 行为线镜像 rows=10（2026-10-28 02:44）+ qa/EVENTS-REPLAY-REPORT.md 刷新
 - 下个里程碑: 2026-10-29 00:00 决策水位刷新 + 次日年轮批（环族按 2 分钟间隔连续排产）
 - tokens: local=10 api=0 api_reason=-
+
+
+### R2485 实录 2026-10-28 02:5x @BigLife-OSLoop
+- 产品增量: 年轮环 10/10（C-02085/C-02092/C-02103/C-09705/C-09706/C-09707/C-09708/C-09709/C-09710/C-09711）· 4 席 soft-concession(recent-dup-phrase) 软让落地 + 行为线镜像 rows=10 ring=9705
+- 回放闸: PASS events=41007 cards=10111 replayed=10111 schema_errors=0 mismatch=0 coverage unexpected_missing=0
+- QC 巡检: PASS cards=10114 evolved=9705 problems=0（年轮重复 37/37=历史同文观察面·非违规·环内 dedup 闸保留）
+- 自停面: pool_audit 全桶达标 SELF_TERMINATE（18/12 pool + 28 greet + 7 faq + 8 neg，hard_fails=0）；meet 日帽已满（今日已落 2 对）；HQ=ALREADY_REPORTED(day=2026-10-28 lines=4)
+- 台账: 决策水位差集 NEW=0（尾 D-20261028-04，尾扫 decisions 派工板块涉本司新行=0）；集团物理件区涉本司行=0
+- 当前活: 年轮批→回放闸→QC 全链闭环，等下一批到期居民
+- 最近实物: 3d15a040b 年轮 10 环 + 5437b256c 行为线镜像（2026-10-28 02:50）+ census/QC-REPORT.md（02:51）
+- 下个里程碑: 2026-10-29 00:00 决策水位刷新 + 次日年轮批
+- tokens: local=10 api=0 api_reason=-
