@@ -933,3 +933,8 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：census/export/city-today.html（2026-10-27 14:4x ·「此刻城市」6 槽位 + 924 圈当日年轮）
   - 下个里程碑：19:00 让路窗解除→年轮批 3 席 + 品质重写 3 席，ETA 2026-10-27 19:30
   - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性建页
+- **[R2402]** 2026-10-27 14:4x-15:0x @BigLife-OSLoop 值守（让路窗·零 LLM）：pull=Already up to date；水位差集 NEW=0（止于 D-20261027-13）；orders 物理件区无本司新项；Ollama 11434 不通=让路窗预期（D-20261020-02）→年轮/相遇/语言线 defer 19:00。**产品增量=今日日报人口口径对齐 QC（真缺陷修复）**：city-today.html 头条报 cards=10091，而 QC/导出面权威值 10114——差 23 = census/anchors 21 张锚定席 + census/reserved 3 张荣誉席（C-00001 大圣 / C-00002 Qiqi / C-00003 Rain）- 1 张重叠编号；即创始人家庭与锚定席被漏在「城市居民总数」之外。修 Tools/build_daily_issue.py：新增 card_paths()（registry 一层 + anchors/** + reserved/** 递归）与按编号 seen 去重，load() 返回唯一居民数而非 registry 文件数。实锚重跑：cards=10114（==QC 10114）、distinct_ring_ids=9230（==QC evolved 9230）；荣誉席三卡解析正常（rings 3/4/3·无当日年轮故不入当日名录=脱敏律不变）。同轮 QC 巡检：cards=10114 evolved=9230 problems=0 dup_rings=37/37。闸：ruff_gate CLEAN(1 file)、encoding_guard VERDICT PASS（U+FFFD=0 / 无 BOM）。HQ 日闸 ALREADY_REPORTED（15 行·零写入）。
+  - 当前活：让路窗确定性产出（日报人口口径与 QC 对齐）
+  - 最近实物：census/export/city-today.html（2026-10-27 14:5x · 10114 居民 · 924 圈当日年轮）
+  - 下个里程碑：19:00 让路窗解除→年轮批 3 + 相遇轮（R2397 留单），ETA 2026-10-27 19:30
+  - tokens: local=0 api=0 api_reason=yield-window(workday 让路·D-20261020-02)+确定性核验

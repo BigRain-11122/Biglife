@@ -24,6 +24,12 @@ import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CARDS = os.path.join(ROOT, "census", "registry")
+# 荣誉席与锚定席不落 registry，但同属真实居民（创始家庭三席即在此）。
+# 口径与 qc_census 对齐：registry ** + anchors ** + reserved，按编号去重。
+EXTRA_CARD_DIRS = (
+    os.path.join(ROOT, "census", "anchors"),
+    os.path.join(ROOT, "census", "reserved"),
+)
 OUT = os.path.join(ROOT, "census", "export", "city-today.html")
 BEHAVIOR = os.path.join(ROOT, "census", "export", "citizen-behavior.jsonl")
 LIGHT = os.path.join(ROOT, "census", "export", "citizens-light.jsonl")
@@ -50,18 +56,28 @@ def dist_label(d: str) -> str:
     return d + "城" if d.isascii() else d
 
 
+def card_paths() -> list[str]:
+    """全部居民卡片：registry 一层 + anchors/reserved 递归（去重按编号）。"""
+    paths = sorted(glob.glob(os.path.join(CARDS, "*", "C-*.md")))
+    for d in EXTRA_CARD_DIRS:
+        paths += sorted(glob.glob(os.path.join(d, "**", "C-*.md"), recursive=True))
+    return paths
+
+
 def load(target: str):
     """返回 {date: [(id, name, dist, job, text), ...], ...} 与居民总数."""
     by_day: dict[str, list[tuple]] = {}
-    cards = 0
-    for path in glob.glob(os.path.join(CARDS, "*", "C-*.md")):
+    seen: set[str] = set()
+    for path in card_paths():
         with io.open(path, encoding="utf-8") as f:
             txt = f.read()
         head = CARD_RE.search(txt)
         if not head:
             continue
-        cards += 1
         cid, name = head.group(1), head.group(2).strip()
+        if cid in seen:  # 同一编号多份卡（锚定席/荣誉席与 registry 重叠）只计一次
+            continue
+        seen.add(cid)
         dm = DIST_RE.search(txt)
         # 城区字段有两种写法：「GAME 城 · X026 城门区」与老卡「北外滩·治理岸 · 档案馆区」
         # 取首段统称（城/区名）作为分组键，两种写法都得到同一层级的城区名。
@@ -72,7 +88,7 @@ def load(target: str):
         for m in RING_RE.finditer(txt):
             day, text = m.group(1), m.group(2).strip()
             by_day.setdefault(day, []).append((cid, name, dist, job, text))
-    return by_day, cards
+    return by_day, len(seen)
 
 
 def live_block(limit_slots: int = 6, samples: int = 3) -> str:
