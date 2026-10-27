@@ -1207,3 +1207,15 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：census 卡尾新增 2026-10-28 年轮 9 席（带 [锚] 注脚）commit d053f39d6（01:24）；本轮 QC/回放两份报告刷新（本 commit）
   - 下个里程碑：C-09606 下轮重试（守门项收窄后重写）；2026-10-29 前恢复相遇日额 + 下窗 QC（每 6 轮）
   - tokens: local=10 api=0 api_reason=-（年轮 10 席 qwen3:4b-instruct·9 落 1 跳）
+
+- **[R2467]** 2026-10-28 01:28-01:40 @BigLife-OSLoop 年轮轮+基因轮: pull=Already up to date；决策水位键差集 NEW=0（水位已含 D-20261028-04，R2464 自检 CLEAN 留档）；orders 涉本司=0；TASKS open=0。
+  - 产品实物（2 分）：年轮线 --batch 3 实跑 evolved=**10/10**（C-02631/C-02640/C-02662/C-09606/C-09608/C-09609/C-09610/C-09611/C-09612/C-09613，全部落环，6 席走 soft-concession〔recent-dup-opening/phrase〕仍带 [锚] 入卡）；脚本自动提交 48e669b23（年轮环）+ 89a2d7ef6（行为线 rows=10 ring=9607）。
+  - 事件回放闸 **PASS**：cards=10111 events=**40864** replayed=10111 schema_errors=0 mismatch=0 coverage unexpected_missing=0；qa/EVENTS-REPLAY-REPORT.md 随轮刷新。
+  - 基因轮（本日首轮·无单时）：新增 **8 条**（turning_points 1 / hook_objects 2 / hook_actions 2 / catchphrases 3），全部先过 gene_nearcheck 近重预检 **CLEAN** 才登记（首轮 13 条候选全被近重闸打回，已 git checkout 回退零残留，第二轮换差异化候选通过）；build_gene_ledger 重建 registered=1690（ho 843/tp 645/presents 72）。
+  - 语言线池轮：pool_audit=**PASS/SELF_TERMINATE**（axes 72/72、sprite 12/12、greet 28/28、faq 7/7、neg 6/6、hard_fails=0、determinism 双抽 mismatch=0）→ 达标自停，不生成。
+  - 相遇轮今日已执行（R2464 C-09589×09593，每日 cap=1）→ 本轮跳过；QC 巡检今日已 R2466 problems=0 → 本轮不重复。
+  - 决策轮上报闸：hq_feedback_daily --check=**ALREADY_REPORTED**（day=2026-10-28 lines=3）→ 零写入。
+  - 当前活：年轮线（既有居民迭代·零新注册）evolved=9607/10114=95.0%
+  - 最近实物：census 居民年轮 2026-10-28 新增 10 席带 [锚] 注脚（commit 48e669b23，01:29）+ genes/ 8 条新基因与 gene-ledger.html 重建
+  - 下个里程碑：C-09606 类持久违规判定观察（近日无复现即结）；下一轮年轮批 + 回放闸（2026-10-28 白天班）
+  - tokens: local=10 api=0 api_reason=-
