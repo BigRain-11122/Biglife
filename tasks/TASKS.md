@@ -1036,3 +1036,11 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - tokens: local=10 api=0 api_reason=-（年轮 10 席各 1 次本地 Ollama qwen3:4b-instruct 调用）
 
 - R2426 2026-10-27 20:17 年轮批 10 席落环·回放闸 PASS(cards=10111 events=40400 mismatch=0 schema=0)·城市页重建 pages=24；tokens: local=10 api=0 api_reason=-
+
+- R2427 2026-10-27 20:18-20:2x 年轮环（两批）+QC 巡检：轮首 pull=Already up to date；决策水位差集 NEW=0（已核至 D-20261027-16）；orders 尾无本司新物理件；TASKS 无 open 单；HQ 日闸=ALREADY_REPORTED
+  - **产品增量=年轮 20 席落环（2 批 ×10）**：批一 C-00575/C-00722/C-00814/C-09292~C-09298（ring 9285→9292）；批二 C-00732/C-00191/C-00675/C-09299~C-09305（ring 9292→9299，新面孔 7 席）；各批 3 席走软让步闸（recent-dup-phrase）落地
+  - 回放闸：replay 10111/10111 · schema_errors=0 · mismatch=0 → PASS（events=40410）
+  - QC 巡检：cards=10114 evolved=9292 problems=0 dup_rings=37/37 → census/QC-REPORT.md 入库
+  - 可见面：city-today.html 重建 rings=1022 people=1017 districts=6（较上轮 992/987 增 30/30）；index.html pages=24 nav_patched=1
+  - 语言池：本轮跳过（今日 19:39 已判 SELF_TERMINATE 全桶达标）· 相遇轮：meet-cap 今日 3/3 已达 → 跳过
+  - tokens: local=20 api=0 api_reason=-（两批各 10 席 × 本地 Ollama qwen3:4b-instruct）
