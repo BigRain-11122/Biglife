@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-27 17:0x",
+ "export_ts": "2026-10-27 18:37",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2408（2026-10-27 17:0x）**：让路窗·基因库 b48 批落地——只补两个最薄桶（心愿 presents 55 / 钩子动作 hook_actions 43，两桶均由 generate_census 逐居民取样进卡面，桶浅=全库重复率高）：31 条候选过 gene_nearcheck 双层判据（ha 阈 70 / pr 阈 37），首轮 20 投 9 CLEAN、换句 11 投 5 CLEAN，合计 14 条入库（pr 55→61 / ha 43→51），既有条目零改动、hook_objects 839 未动断言过；同轮 rebuild gene-ledger.html（cards=10091 registered=1659 used=442 presents 34/61 已落地）。年轮/相遇/反思线延后 19:00（D-20261020-02）。 **R2406（2026-10-27 16:2x）**：让路窗确定性产线——环品质趋势页 22 日重算（今日 924 环缺陷率 14.5%，历史最优 14.3%〔10-20〕）+ QC 例巡 problems=0（cards=10114 / evolved=9230）+ 事件回放闸 events=40322 mismatch=0 schema=0 PASS；年轮/相遇线延后 19:00（D-20261020-02）。 **R2387（12:5x）让路窗·基因库 b43 批落地：16+8 候选过 gene_nearcheck 双闸，8 CLEAN 入库（钩子物件 4 / 习惯 3 / 随身物 1）→ ho 835→839 / ha 58→61 / pr 54→55；-qc 电池 17 PASS 0 FAIL。同步 rebuild：gene-ledger.html + export/index.html(pages=21)。机器闸：pool_audit PASS/under_target NONE/SELF_TERMINATE（72/72 六轴桶 + 12/12 像素灵桶 + greet 28 + faq 7 + neg 6/6）、qc_census problems=0(cards=10114 evolved=9230)、events 回放闸 PASS（40322 events / 10111 cards / schema=0 / mismatch=0）、HQ 日报闸 ALREADY_REPORTED（15 行·零写入）。 **R2376（2026-10-27 10:5x）：** 基因轮 b39——+10 条新基因（gene_nearcheck 双闸：28 条候选弃 18）落库：钩子物件 2 + 转折点 3 + 习惯 2 + 近况 1 + 口头禅 2（秩序「不急，等它自己凉。」/ 侠气「能帮就帮一把，举手的事。」）；池面 ho 829→831 / tp 636→639 / ha 46→48 / pr 46→47 / cp 1393→1395，既有条目零改动。同轮重建基因总账页 gene-ledger.html（registered=1583 / used=403 / unused=1180 / mentions=63163），未落地条目即下一批 intake 的内容选题单。让路窗 D-20261020-02 生效中，年轮/相遇/反思线顺延 19:00 后。",
+   "t": "**R2418（2026-10-27 18:4x）**：让路窗（09:00-19:00·D-20261020-02）年轮/相遇/聚光灯三线顺延 19:00；确定性面两查——gene_adopt 亲和门实测 0 命中（turning_points 未落地 471 条全数不满足稀有 2-gram 亲和门槛，拒绝降阈值凑数零写盘）＋池审计全桶达标 SELF_TERMINATE（pool 1296/72 桶、sprite 144/12、greet 476/28、faq 42/7、neg 40/recovering 8、hard_fails=0、确定性双抽 mismatch=0）；对外实况三行面与 export_ts 刷新至 18:4x。 **R2408（2026-10-27 17:0x）**：让路窗·基因库 b48 批落地——只补两个最薄桶（心愿 presents 55 / 钩子动作 hook_actions 43，两桶均由 generate_census 逐居民取样进卡面，桶浅=全库重复率高）：31 条候选过 gene_nearcheck 双层判据（ha 阈 70 / pr 阈 37），首轮 20 投 9 CLEAN、换句 11 投 5 CLEAN，合计 14 条入库（pr 55→61 / ha 43→51），既有条目零改动、hook_objects 839 未动断言过；同轮 rebuild gene-ledger.html（cards=10091 registered=1659 used=442 presents 34/61 已落地）。年轮/相遇/反思线延后 19:00（D-20261020-02）。 **R2406（2026-10-27 16:2x）**：让路窗确定性产线——环品质趋势页 22 日重算（今日 924 环缺陷率 14.5%，历史最优 14.3%〔10-20〕）+ QC 例巡 problems=0（cards=10114 / evolved=9230）+ 事件回放闸 events=40322 mismatch=0 schema=0 PASS；年轮/相遇线延后 19:00（D-20261020-02）。",
    "s": 1
   },
   {
@@ -1579,5 +1579,5 @@
    "R2362：本日年轮累计 924 行（registry 直数），城市累计 9230 轮；回放闸 schema=0 mismatch=0。"
   ]
  ],
- "t": "当前活：让路窗确定性产线（基因库 b48 补薄桶），年轮批 19:00 恢复\n最近实物：genes/lives.json 心愿 55→61 / 钩子动作 43→51（31 候选过 gene_nearcheck 双闸收 14 条），与 census/export/gene-ledger.html 重算（presents 34/61 已落地）\n下个里程碑：19:00 让路窗解除→年轮批 3 席 + 相遇轮，ETA 2026-10-27 19:40"
+ "t": "当前活：让路窗确定性校验（基因落地亲和门实测 0 命中→如实收手不凑数）\n最近实物：docs/status-export.json export_ts=2026-10-27 18:4x（cards=10114 / evolved=9230 / 池 72 桶达标）\n下个里程碑：19:00 让路窗解除→年轮批 3 席 + 相遇轮（R2397 留单），ETA 2026-10-27 19:40"
 }
