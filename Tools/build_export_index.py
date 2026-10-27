@@ -39,6 +39,7 @@ TITLE = {
     "city-ring-quality.html": ("年轮品质透视", "相邻复读 / 偏短空洞 / 全局模板句三查：按居民排出的重写队列（确定性·零 LLM），对应 state/ring-quality-queue.json"),
     "city-ring-trend.html": ("年轮品质走势", "按生产日摊开的圈级缺陷率（偏短/复读/模板）与产量：品质在往好还是往坏走，一眼可比（确定性·零 LLM），对应 state/ring-trend-latest.json"),
     "city-ring-picks.html": ("今日年轮精选", "当天新写年轮的可读读本：每城区 6 条 + 末尾观察位，逐条带质量信号（确定性·零 LLM），对应 state/ring-picks-latest.json"),
+    "city-goals.html": ("居民目标志", "L4 目标系统试点面：四型分布 / 达成进度 / 城区分布 / 试点名册（确定性派生·零 LLM）"),
 }
 # 成长档案册的分页正文不入总目录（总目录只收册子的入口页，避免一册被拆成十几张卡）
 PAGED_PREFIX = "city-growth-p"
