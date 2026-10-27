@@ -1034,3 +1034,5 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - QC：今日 19:49 已跑（census/QC-REPORT.md）→ 本轮跳过。
   - 状态面：docs/status-export.json 刷新 OK（total=992 reg=992 dept/qc/results/top/hb 六读 True，ts=20:08）；state/export-payload-R2425.json 入档。
   - tokens: local=10 api=0 api_reason=-（年轮 10 席各 1 次本地 Ollama qwen3:4b-instruct 调用）
+
+- R2426 2026-10-27 20:17 年轮批 10 席落环·回放闸 PASS(cards=10111 events=40400 mismatch=0 schema=0)·城市页重建 pages=24；tokens: local=10 api=0 api_reason=-
