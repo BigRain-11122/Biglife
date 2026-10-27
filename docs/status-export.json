@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-27 08:18",
+ "export_ts": "2026-10-27 09:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2357（2026-10-27 08:1x）**：年轮线居民进化批 evolved=10/10（C-09167~C-09176 十席落环·5 席 soft-concession 记录 recent-dup-phrase 但落环）；行为线镜像 rows=10 ring=9170 自动收口；事件流回放闸 PASS（cards=10111 / events=40262 / replayed=10111 / schema_errors=0 / mismatch=0）；**产品面刷新三件**=深层档案册重建到今日（125 位深年轮居民 / rings_total=517·原 10-26 12:44 陈旧面）＋城市流言录 2026-10-27 新生成（chains=8 / hops=27 / cognition/rumors/rumors-2026-10-27.jsonl）＋产物目录补 city-rumors 卡标题（原显示裸文件名）并重扫入册 19 页；语言池审计 PASS 全桶达标 SELF_TERMINATE（axes 72/72 · sprite 12/12 · hard_fails=0）；相遇轮 meet-cap 今日已满跳过。 **R2355（2026-10-27 08:0x）**：年轮线居民进化批 evolved=10/10（C-09129 / C-09148~C-09156 十席落环·5 席 soft-concession 记录 recent-dup-phrase）；行为线镜像 rows=10 ring=9150 自动收口；事件流回放闸 PASS（cards=10111 / events=40242 / replayed=10111 / schema_errors=0 / mismatch=0）；城市看板重建 rings=9150 / 人口 10114 / 卡片 160。 **R2354（2026-10-27 07:5x）**：年轮线居民进化批 evolved=9/10（C-09139~C-09147 九席落环·3 席 soft-concession 记录 recent-dup-phrase）；行为线镜像 rows=9 ring=9140 自动收口；今日年轮刊重建 rings=834 / people=829 / 6 区；事件流回放闸 PASS（cards=10111 / events=40232 / replayed=10111 / schema_errors=0 / mismatch=0）；QC 人口不变量巡检 cards=10114 evolved=9140 problems=0 重环 37/37；语言池审计 PASS 全桶达标 SELF_TERMINATE（axes 72/72 · sprite 12/12 · greet 28/28 · faq 7/7 · neg 6/6）；相遇轮 meet-cap 3/3 今日已满跳过；日反馈闸 ALREADY_REPORTED 零写入（spam 闸在役）。",
+   "t": "**R2362（2026-10-27 09:00 年轮线）：** 居民进化批 10 席落环（C-09227~C-09236）——[锚] 注脚齐备，soft-concession 闸拦下 2 席·recent-dup-phrase 复用不落环；行为线自动收口 rows=10；事件流回放闸 PASS（cards=10111 / events=40322 / replayed=10111 / schema_errors=0 / mismatch=0）；城市看板重建（rings=9230 / cards=160 / 66,809B）。 **R2357（2026-10-27 08:1x）**：年轮线居民进化批 evolved=10/10（C-09167~C-09176 十席落环·5 席 soft-concession 记录 recent-dup-phrase 但落环）；行为线镜像 rows=10 ring=9170 自动收口；事件流回放闸 PASS（cards=10111 / events=40262 / replayed=10111 / schema_errors=0 / mismatch=0）；**产品面刷新三件**=深层档案册重建到今日（125 位深年轮居民 / rings_total=517·原 10-26 12:44 陈旧面）＋城市流言录 2026-10-27 新生成（chains=8 / hops=27 / cognition/rumors/rumors-2026-10-27.jsonl）＋产物目录补 city-rumors 卡标题（原显示裸文件名）并重扫入册 19 页；语言池审计 PASS 全桶达标 SELF_TERMINATE（axes 72/72 · sprite 12/12 · hard_fails=0）；相遇轮 meet-cap 今日已满跳过。 **R2355（2026-10-27 08:0x）**：年轮线居民进化批 evolved=10/10（C-09129 / C-09148~C-09156 十席落环·5 席 soft-concession 记录 recent-dup-phrase）；行为线镜像 rows=10 ring=9150 自动收口；事件流回放闸 PASS（cards=10111 / events=40242 / replayed=10111 / schema_errors=0 / mismatch=0）；城市看板重建 rings=9150 / 人口 10114 / 卡片 160。",
    "s": 1
   },
   {
@@ -1573,7 +1573,11 @@
   [
    "864",
    "R2357 收口：年轮 10 席落环（ring=9170）+ 回放闸 PASS（40262 / mismatch=0 / schema=0）+ 深层档案册重建（125 位 / 517 环）+ 城市流言录 2026-10-27（8 链 27 跳）+ 产物目录 rumors 卡标题修复；今日 [锚] 年轮机器直数 864。"
+  ],
+  [
+   "924",
+   "R2362：本日年轮累计 924 行（registry 直数），城市累计 9230 轮；回放闸 schema=0 mismatch=0。"
   ]
  ],
- "t": "当前活：年轮进化线 R2357 批 10 席落环（C-09167~C-09176）+ 产品面三件刷新，回放闸 PASS 已推送\n最近实物：census/export/city-rumors.html（城市流言录 2026-10-27·8 链 27 跳）+ census/export/city-dossiers.html（125 位深年轮居民·rings_total=517）· 2026-10-27 08:1x\n下个里程碑：年轮累计破 9200 环（约 3 轮 ≈ 15min）+ 相遇轮次日窗口（明日 00:0x 解封）窗 ≤48h"
+ "t": "当前活：年轮进化线每轮转，10 席/轮写真实城市事件年轮\n最近实物：census/export/city-dashboard.html（2026-10-27 09:00 重建，rings=9230）+ qa/EVENTS-REPLAY-REPORT.md（2026-10-27 09:00 回放闸 PASS）\n下个里程碑：下一轮 10 席年轮 + 6 轮一次 QC 巡检"
 }
