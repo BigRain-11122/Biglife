@@ -1024,3 +1024,13 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - HQ 日闸：ALREADY_REPORTED（day=2026-10-27 lines=15）→ 零写入
   - 下一步里程碑：2026-10-28 03:07 守夜窗值守轮 + 语言池维持达标自停观测
   - tokens: local=10 api=0 api_reason=-（年轮 10 席各 1 次本地 Ollama qwen3:4b-instruct 调用）
+
+- **[R2425]** 2026-10-27 20:0x-20:1x @BigLife-OSLoop 年轮环：轮首 pull=Already up to date；决策水位差集 NEW=0（内容寻杀·已核至 D-20261027-16）；orders 尾无本司新物理件；TASKS 无 open 单；HQ 日闸=ALREADY_REPORTED（day=2026-10-27 lines=15·零写入）。
+  - **产品增量=到期居民 10 席全落环（10/10）**：C-00287/C-00470/C-00527/C-09278/C-09279/C-09280/C-09281/C-09282/C-09283/C-09284，4 席走软让步闸（recent-dup-phrase / recent-dup-opening）落地；环卡片 commit 81be237de，行为线 commit feb0f541d（rows=10 ring=9278）。
+  - 事件回放闸：cards=10111 events=40390 replayed=10111 schema_errors=0 mismatch=0 → PASS（qa/EVENTS-REPLAY-REPORT.md 入库）。
+  - 可见面收口：census/export/city-today.html 重建 rings=992 people=987 districts=6，新环抽样在页核验 5/5 命中；index.html 重建 pages=24 nav_patched=2。
+  - 语言池：pool_audit 全桶达标（72/72 axes·12/12 sprite·greet 28·faq 7·neg 6/6·hard_fails=0）→ SELF_TERMINATE 跳过。
+  - 相遇轮：meet-cap 今日已 3/3 → 跳过（不为长而长）。
+  - QC：今日 19:49 已跑（census/QC-REPORT.md）→ 本轮跳过。
+  - 状态面：docs/status-export.json 刷新 OK（total=992 reg=992 dept/qc/results/top/hb 六读 True，ts=20:08）；state/export-payload-R2425.json 入档。
+  - tokens: local=10 api=0 api_reason=-（年轮 10 席各 1 次本地 Ollama qwen3:4b-instruct 调用）

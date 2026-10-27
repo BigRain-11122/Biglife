@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-27 20:01",
+ "export_ts": "2026-10-27 20:08",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2424（19:58-20:0x 年轮线·全链绿）** 实物=到期居民 **10 席全落环**（C-01610/C-01430/C-00164/C-09271/C-09272/C-09273/C-09274/C-09275/C-09276/C-09277，OK evolved=10 of 10，3 席走软让步 dup-opening/dup-phrase 仍落环）；回放闸 replay 10111/10111 schema_errors=0 mismatch=0 PASS（events=40380）；语言线 pool_audit 全桶达标=SELF_TERMINATE；相遇轮 cap 3/3 已满跳；HQ 日闸 ALREADY_REPORTED 零写入 **R2423（19:5x 年轮批·降级 3/3）** 实况=到期 10 席落环 8 席（C-01427/C-01490/C-09264/C-09265/C-09266/C-09267/C-09268/C-09270），C-02008 与 C-09269 连续第二轮被 mist-import+recent-dup-phrase 硬闸留 due；事件回放闸 replay 10111/10111 schema_errors=0 mismatch=0 PASS；池 audit 全桶达标（axes 72/72·sprite 12/12·greet 28·faq 7·neg 6）=SELF_TERMINATE；QC 全量巡检 cards=10114 / evolved=9263 / problems=0 / dup_rings=37-37；计量 cap 3/3 未超。 **R2422（19:4x 年轮线批 3）** 实跑=到期 10 席落环 9 席（C-02324/C-02099/C-09257/C-09258/C-09259/C-09260/C-09261/C-09262/C-09263），C-02008 因 moon-invented+mist-import 硬闸留 due；行为线镜像同步（rows=9）；事件回放闸 replay 10111/10111 schema=0 mismatch=0 PASS；语言池 audit 全桶达标=SELF_TERMINATE；相遇轮今日 cap 3 已满跳过。",
+   "t": "**R2425（20:0x 年轮环）**：到期居民 10 席全落环（C-00287/C-00470/C-00527/C-09278~C-09284），4 席走软让步闸（dup-phrase/dup-opening）落地；回放闸 PASS（cards=10111 events=40390 mismatch=0 schema=0）；当日城市页重建 rings=992 并核验新环在页（5/5 命中）；语言池全桶达标 SELF_TERMINATE；相遇轮今日 cap=3 已满故跳过。 **R2424（19:58-20:0x 年轮线·全链绿）** 实物=到期居民 **10 席全落环**（C-01610/C-01430/C-00164/C-09271/C-09272/C-09273/C-09274/C-09275/C-09276/C-09277，OK evolved=10 of 10，3 席走软让步 dup-opening/dup-phrase 仍落环）；回放闸 replay 10111/10111 schema_errors=0 mismatch=0 PASS（events=40380）；语言线 pool_audit 全桶达标=SELF_TERMINATE；相遇轮 cap 3/3 已满跳；HQ 日闸 ALREADY_REPORTED 零写入 **R2423（19:5x 年轮批·降级 3/3）** 实况=到期 10 席落环 8 席（C-01427/C-01490/C-09264/C-09265/C-09266/C-09267/C-09268/C-09270），C-02008 与 C-09269 连续第二轮被 mist-import+recent-dup-phrase 硬闸留 due；事件回放闸 replay 10111/10111 schema_errors=0 mismatch=0 PASS；池 audit 全桶达标（axes 72/72·sprite 12/12·greet 28·faq 7·neg 6）=SELF_TERMINATE；QC 全量巡检 cards=10114 / evolved=9263 / problems=0 / dup_rings=37-37；计量 cap 3/3 未超。",
    "s": 1
   },
   {
@@ -1597,7 +1597,11 @@
   [
    "982",
    "R2424 年轮环 10 席全落环，回放闸零偏差，语言池维持达标自停；"
+  ],
+  [
+   "992",
+   "R2425 年轮 10 席落环 + 当日城市页重建（rings=992 · 新环在页 5/5 命中）"
   ]
  ],
- "t": "当前活：R2424 年轮线 10 席全落环（10/10）+ 事件回放闸 PASS\n最近实物：census/registry 10 席新年轮（2026-10-27 20:00）+ qa/EVENTS-REPLAY-REPORT.md（20:01 PASS）\n下个里程碑：下一守夜窗 2026-10-28 03:07 值守轮 + 语言池维持达标自停"
+ "t": "当前活：R2425 年轮环收口（10 席落环 + 回放闸 PASS + 当日页重建）\n最近实物：census/export/city-today.html（2026-10-27 20:15 重建·rings=992）+ 10 席新环卡片（commit 81be237de）\n下个里程碑：2026-10-27 20:3x 下一轮年轮线续转；2026-10-28 03:07 守夜窗值守"
 }
