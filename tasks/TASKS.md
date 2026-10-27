@@ -1268,3 +1268,14 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：census 居民年轮 2026-10-28 02:03 新增 10 席带 [锚] 注脚（commit c983678be）+ 回放闸 PASS 报告（commit a88f23d5e·已推送）
   - 下个里程碑：下一轮年轮批 + 相遇轮（2026-10-29 换日窗口·今日 cap 已满）；QC 巡检 2026-10-28 晚班
   - tokens: local=10 api=0 api_reason=-
+
+## R2477 · 2026-10-28 02:1x @BigLife-OSLoop
+- 年轮线: evolved=9/10 due (C-02683,C-01721,C-01725,C-09655,C-09656,C-09657,C-09659,C-09660,C-09661) 已落环 commit e460cc48b；C-09658 门卡(persistent: time-morning/recent-dup-phrase) 保持 due 下轮续
+- 行为线: sync_rings 自动收口 rows=9 commit b0dd01a60
+- 回放闸: replay PASS events=40932 cards=10111 replayed=10111 schema_errors=0 mismatch=0 coverage unexpected_missing=0
+- QC 巡检: cards=10114 evolved=9654 problems=0 dup_rings=37/37 → census/QC-REPORT.md（commit 8137591eb）
+- 自停面: pool_audit 全桶达标 SELF_TERMINATE；相遇 cap 3/3 skip；HQ 上报闸 ALREADY_REPORTED
+- 当前活: 年轮已进化 9654/10114 = 95.4%
+- 最近实物: census/registry 年轮 9 张 2026-10-28 02:09 + QC-REPORT（commit 8137591eb）
+- 下个里程碑: 下一轮年轮批 + 相遇轮（2026-10-29 日切后 cap 重置，窗 ≤48h）
+- tokens: local=10 api=0 api_reason=-
