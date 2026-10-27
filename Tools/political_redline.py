@@ -96,7 +96,7 @@ def qc():
     innocent = [
         "城主塔顶的光今天格外亮，巡线员说信号灯全绿。",
         "荣誉市民席保留给 CEO 点名入册的三位家人。",
-        "像素小学学生放学绕路看 commit 光点过江，得劲！",
+        "像素小学学生放学绕路看 信号光点过江，得劲！",
         "茶炉工给趸船上的老街坊续了第三道水。",
     ]
     check("innocent-zero", all(scan_text(s) == [] for s in innocent))
