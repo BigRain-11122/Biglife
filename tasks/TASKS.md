@@ -1115,3 +1115,11 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 语言池 pool_audit PASS 全桶达标（六轴 72/72、像素灵 12/12、greet 28/28、faq 7/7、neg 6/6）=SELF_TERMINATE 跳过。
   - 可见面刷新 census/export/city-today.html：今日 rings=1169 / people=1164 / districts=6 / prev=591（21:35 版 rings=1112，+57 圈）。
   - tokens: local=10 api=0 api_reason=-
+
+- **R2440** 2026-10-27 22:18-22:3x @BigLife-OSLoop 年轮环+QC+看板：pull=Already up to date；决策水位差集 NEW=0（已含 D-20261027-16）；orders 尾无本司项；HQ 闸=ALREADY_REPORTED 零写入。
+  - 年轮线两批：批1 evolved=9/10（C-00477 硬闸 skip 保 due）、批2 10/10；**实况核对=本批所选居民当日已持有 2026-10-27 圈（disk 与 HEAD 均 1173 卡持有，逐文件比对 0 差异）——属幂等重写非净新增**，如实记，禁宣称新增圈数。
+  - 事件回放闸 PASS：events=40576 cards=10111 replayed=10111 schema_errors=0 mismatch=0；coverage unexpected_missing=0。
+  - 池语言线 pool_audit PASS 全桶达标（hard_fails=0）=SELF_TERMINATE 跳过；QC problems=0 cards=10114 rings=9410 dup=37/37。
+  - 可见面刷新：city-dashboard.html（rings=9417/10114）、city-today.html、city-ring-picks.html、index.html（pages=24）。
+  - commit b6546a450（已 push）。
+  - tokens: local=20 api=0 api_reason=-
