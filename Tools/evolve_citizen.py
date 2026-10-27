@@ -1579,6 +1579,39 @@ def self_dup_history(line, ct):
     cands = {base, base[:90]}
     return any((t or "").strip() in cands for _d, t in ents)
 
+def fit_ring_line(line, limit=90):
+    """v0.55 gap #74 (2026-10-27 R2357): the write-face cleanup (outer-quote
+    strip + 90-char trim) belongs BEFORE the gates that read that face, not
+    after them. It used to live only in main(), behind gated_llm, and it broke
+    two legal shapes on the way out:
+      (a) .strip('「」"“”') ate a legal CLOSING ” at the tail, leaving one
+          unpaired U+201C (C-08464 R2356: 「…花在阳台说：“今天你可别急，
+          我等你来晒新颜。), 28 such rings landed today;
+      (b) [:90] sliced mid-sentence and cut the closing ”/。 with it
+          (C-09177 R2356: 「…说了句：“…像没睡醒。).
+    Now: trim on the last clause boundary, then close a dangling speech quote
+    instead of deleting its opener (1-vs-0 shape only; other shapes drop the
+    stray pair outright)."""
+    line = re.sub(r"\s+", " ", line or "").strip()
+    for a, b in (("「", "」"), ("“", "”")):
+        if line.startswith(a) and line.endswith(b):
+            line = line[1:-1].strip()
+    if len(line) > limit:
+        head = line[:limit]
+        for sep in ("。", "！", "？", "；", "，"):
+            i = head.rfind(sep)
+            if i >= limit // 2:
+                head = head[:i + 1]
+                break
+        line = head.rstrip("，；、 ")
+    oc, cc = line.count("\u201c"), line.count("\u201d")
+    if oc != cc:
+        if oc == cc + 1 and line.endswith(("。", "！", "？", "…")):
+            line = line[:-1] + "\u201d" + line[-1]
+        else:
+            line = line.replace("\u201c", "").replace("\u201d", "")
+    return line.strip()
+
 def reflect_due(cursor):
     """V2-B due list (T-20260924-04): cursor-only scan so never-evolved cards
     can't false-trigger; n >= 3 rings; 7-day cooldown like the ring line;
@@ -2768,7 +2801,7 @@ def main():
         if line is None:
             print("gate: skip", cid, "(stays due)", flush=True)
             continue
-        line = re.sub(r"\s+", " ", line).strip().strip('「」"“”')[:90]
+        line = fit_ring_line(line)  # v0.55 gap #74: trim before the dup gate
         if len(line) < 8:
             line = "今天照常出摊/上岗，江上的光点还是那么多。"
         # v0.45 gap #66 fallback face: the fixed default line can repeat too
