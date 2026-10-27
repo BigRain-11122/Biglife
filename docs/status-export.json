@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-27 21:34",
+ "export_ts": "2026-10-27 21:58",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2435（21:29-21:33 年轮环）**：到期居民 10 席全落环（C-01642/C-01472/C-01444/C-09362~C-09368），3 席走软让步闸（recent-dup-phrase）；事件回放闸 PASS（cards=10111 events=40510 mismatch=0 schema=0）；QC 不变量巡检 problems=0（dup_rings=37/37）；语言池全桶达标 SELF_TERMINATE；相遇轮日额 3/3 按律跳过；今日年轮精选页重建 rings=1112。 **R2425（20:0x 年轮环）**：到期居民 10 席全落环（C-00287/C-00470/C-00527/C-09278~C-09284），4 席走软让步闸（dup-phrase/dup-opening）落地；回放闸 PASS（cards=10111 events=40390 mismatch=0 schema=0）；当日城市页重建 rings=992 并核验新环在页（5/5 命中）；语言池全桶达标 SELF_TERMINATE；相遇轮今日 cap=3 已满故跳过。 **R2424（19:58-20:0x 年轮线·全链绿）** 实物=到期居民 **10 席全落环**（C-01610/C-01430/C-00164/C-09271/C-09272/C-09273/C-09274/C-09275/C-09276/C-09277，OK evolved=10 of 10，3 席走软让步 dup-opening/dup-phrase 仍落环）；回放闸 replay 10111/10111 schema_errors=0 mismatch=0 PASS（events=40380）；语言线 pool_audit 全桶达标=SELF_TERMINATE；相遇轮 cap 3/3 已满跳；HQ 日闸 ALREADY_REPORTED 零写入",
+   "t": "**R2437（2026-10-27 21:5x）**：年轮批 10/10 落环（C-00626/C-00728/C-00893/C-09390~C-09396）+ 事件回放闸 PASS（cards=10111 events=40548 schema=0 mismatch=0）+ 语言池全桶达标 SELF_TERMINATE；本轮回填任务板 T-20261027-01（相遇互引不对称）——写前 `meet-dup` 过滤 + 写后双向断言（不对称回滚不 commit），自测 3/3 PASS，证据 qa/MEET-SYMMETRY-T-20261027-01.md。 **R2435（21:29-21:33 年轮环）**：到期居民 10 席全落环（C-01642/C-01472/C-01444/C-09362~C-09368），3 席走软让步闸（recent-dup-phrase）；事件回放闸 PASS（cards=10111 events=40510 mismatch=0 schema=0）；QC 不变量巡检 problems=0（dup_rings=37/37）；语言池全桶达标 SELF_TERMINATE；相遇轮日额 3/3 按律跳过；今日年轮精选页重建 rings=1112。 **R2425（20:0x 年轮环）**：到期居民 10 席全落环（C-00287/C-00470/C-00527/C-09278~C-09284），4 席走软让步闸（dup-phrase/dup-opening）落地；回放闸 PASS（cards=10111 events=40390 mismatch=0 schema=0）；当日城市页重建 rings=992 并核验新环在页（5/5 命中）；语言池全桶达标 SELF_TERMINATE；相遇轮今日 cap=3 已满故跳过。",
    "s": 1
   },
   {
@@ -1605,7 +1605,11 @@
   [
    "1112",
    "R2435 年轮 10 席落环 + 回放闸 PASS(40510) + QC 0 异常 · 当日环数 1112"
+  ],
+  [
+   "1150",
+   "R2437 年轮 10 席落环；事件回放闸 PASS（replayed=10111 mismatch=0 schema=0）；池线 SELF_TERMINATE 维持；相遇配额今日 3/3 已满。环覆盖 1150。"
   ]
  ],
- "t": "当前活：年轮环 10 席落地（21:29）+ 事件回放闸 PASS\n最近实物：census/export/city-ring-picks.html（2026-10-27 21:33 rings=1112）\n下个里程碑：累计进化 9362→10000 ETA 2026-10-30"
+ "t": "当前活：年轮线批产 + 相遇闸修复收口（本地 Ollama qwen3:4b-instruct，零云端）\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/MEET-SYMMETRY-T-20261027-01.md（21:5x 相遇互引不对称修复+验收证据）· census/registry/ 10 张新年轮卡（21:54 落环）\n下个里程碑：年轮覆盖 9390 → 10000（ETA 2026-10-30）+ 下一批年轮"
 }

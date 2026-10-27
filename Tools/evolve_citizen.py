@@ -2426,6 +2426,43 @@ def _ringed_today(path):
     return bool(lines) and not all("相遇：" in l for l in lines)
 
 
+def _meet_ring_today(path):
+    """T-20261027-01: same-day meet face of the idempotency gate.
+
+    Returns the partner id when the card already carries a meet ring dated
+    today, else None. add_ring() silently refuses a second meet ring on the
+    same card, so writing a pair without this pre-check ends with A naming B
+    while B names somebody else (historical asymmetry defect).
+    """
+    if not path:
+        return None
+    try:
+        with open(path, encoding="utf-8") as f:
+            text = f.read()
+    except Exception:
+        return None
+    for l in re.findall(r"(?:^|\n)- %s ([^\n]*)" % re.escape(today()), text):
+        if "相遇：" in l:
+            m = re.search(r"与 (C-\d+) 相遇：", l)
+            return m.group(1) if m else "?"
+    return None
+
+
+def _meet_pair_check(ids):
+    """T-20261027-01: bidirectional assertion for a two-citizen meet.
+
+    Returns a list of '<id>-><partner>(want <other>)' strings for every side
+    that does not name its counterpart. Empty list = the pair is symmetric.
+    """
+    bad = []
+    for cid in ids:
+        other = ids[1] if cid == ids[0] else ids[0]
+        partner = _meet_ring_today(find_card(cid))
+        if partner != other:
+            bad.append("%s->%s(want %s)" % (cid, partner, other))
+    return bad
+
+
 QUALITY_QUEUE = os.path.join(CO, "state", "ring-quality-queue.json")
 
 def quality_queue_order():
@@ -2755,13 +2792,23 @@ def main():
             print("meet-cap: %d meets already logged today (cap 3) - skip" % n_meet_today)
             return
         ids = args.meet
-        texts = []
+        texts, originals = [], {}
         for cid in ids:
             p = find_card(cid)
             if not p:
                 print("skip: card not found", cid); return
             with open(p, encoding="utf-8") as f:
-                texts.append(f.read())
+                originals[p] = f.read()
+            texts.append(originals[p])
+        # T-20261027-01: candidate filter on the write face. A card that already
+        # met somebody today cannot take a second meet ring (add_ring refuses),
+        # so pairing it again yields one-sided prose. Refuse before LLM spend.
+        for cid in ids:
+            partner = _meet_ring_today(find_card(cid))
+            if partner:
+                print("meet-dup: %s already met %s today - skip (T-20261027-01)"
+                      % (cid, partner))
+                return
         ev = "\n".join("- " + e for e in sig["events"]) or "- （今日无新城市事件）"
         n0 = card_name(texts[0]) or ids[0]
         n1 = card_name(texts[1]) or ids[1]
@@ -2789,6 +2836,16 @@ def main():
             other = ids[1] if cid == ids[0] else ids[0]
             add_ring(p, cid, f"与 {other} 相遇：{line}", anchor_note)
             paths.append(p)
+        # T-20261027-01: bidirectional assertion. add_ring() can still refuse a
+        # half (race with another writer), which used to leave A's card naming B
+        # while B's card named a third party. Verify both sides, else roll back.
+        bad = _meet_pair_check(ids)
+        if bad:
+            for p, text in originals.items():
+                with open(p, "w", encoding="utf-8", newline="\n") as f:
+                    f.write(text)
+            print("meet-asymmetry: %s - rolled back, no commit" % ", ".join(bad))
+            sys.exit(1)
         commit_files(paths, "相遇 %s: %s%s" % (today(), " ".join(ids), via))
         sync_light(args.via)
         print("OK meet:", " ".join(ids))
