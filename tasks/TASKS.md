@@ -1230,3 +1230,12 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：census 居民年轮 2026-10-28 01:44 新增 9 席带 [锚] 注脚（commit 6b052a5ee）+ 回放闸 PASS 报告（commit ae3ea5279）
   - 下个里程碑：下一轮年轮批 + 回放闸（2026-10-28 白天班）；C-09621 违规复现观察（下轮再失败则归因 prompt 天气约束面）
   - tokens: local=10 api=0 api_reason=-
+
+- **[R2470]** 2026-10-28 01:48-01:5x @BigLife-OSLoop 年轮+闸+QC：轮首 pull=Already up to date、工作树净；决策水位差集 NEW=0（内容寻杀 168/168 全消费·尾 D-20261028-04）；orders 无涉本司新令；TASKS open=0。
+  **产品实物（2 分）**：年轮线 --batch 3 实跑 evolved=**10/10**（C-02528/C-02571/C-02592/C-09621/C-09628~C-09633 全落环，commit 81b074c04）+ 行为线 sync_rings 自动收口（rows=10 ring=9627，commit b048eba54）——上轮留存 C-09621 本轮成功落环，写入面自愈。
+  **闸门（1 分）**：事件回放闸 PASS events=40893 cards=10111 replayed=10111 schema_errors=0 mismatch=0（qa/EVENTS-REPLAY-REPORT.md 入库）；QC 不变量全 PASS（10114 名/9627 有年轮/problems=0/dup_rings 37·census/QC-REPORT.md）。
+  **自停面**：语言线 pool_audit=PASS/SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28·faq 7·neg 6/6·hard_fails=0）；相遇轮今日 cap 3 已满（skip）；HQ 上报闸 ALREADY_REPORTED（零写入）。
+  - 当前活：年轮线（既有居民迭代·零新注册）evolved=9627/10114=95.2%
+  - 最近实物：census 居民年轮 2026-10-28 01:49 新增 10 席带 [锚] 注脚（commit 81b074c04）+ 回放闸 PASS 报告
+  - 下个里程碑：下一轮年轮批 + 回放闸（2026-10-28 白天班）；相遇轮 2026-10-29 新日额
+  - tokens: local=10 api=0 api_reason=-
