@@ -18,6 +18,8 @@
   - **v3.55 behavior 导出面空间锚点字段通知**（2026-09-29 · T-20260929-06 分步③ · T2 登记=CODEX §十二 v3.55 · 否决窗至 10-06）：`citizen-behavior.jsonl`（R3 再生面·gitignored·`Tools/behavior.py --auto` 跨桶/跨天气自动再生）每行新增 `anchor` 字段=**三锚点+时间窗**（`{home:{x,z,win:[20,9]}, work:{x,z,win:[9,18],site}, social:{x,z,win:[18,20],site}}`·win=24h 制 [start,end) 静态生活空间包络·荣誉席 3 席 anchor=null）——与 v3.54 `citizen-anchors.jsonl` 同 md5 seed 同锚点（单源律·双面逐行全等 QC 机检）·**既有 state/slot/visible/quirk/ctx 字段零 breaking**（纯追加字段·按需取用）·社交锚点=新增第三锚点（x 向 0.44-0.56 中央社交带·与住宅/工位带结构性 disjoint）·个体化时间窗留 v2；消费方=FluxVerse 城市重构 R0-R6 居民流（O-019 ④三锚点生活空间直承）；DevLoop 回执时一并确认。
   - **v3.56 polygon 装配映射面新增导出面通知**（2026-09-29 · T-20260929-06 step④ · T2 登记=CODEX §十二 v3.56 · 否决窗至 10-06）：新增独立导出面 `census/export/citizen-assembly.jsonl`（R3 再生面·gitignored·`Tools/citizen_assembly.py` 按需秒级再生 10030 行）=居民→polygon 角色确定性形象档案（md5(id) seed **同居民永远同外观**·census 匹配律三层=族源三分碳源 7517/硅源 2003/城源 507→族系特征/年龄→AD-024 儿童件 1410/六轴→服装风格·AD-042+AD-011 722+AD-024+AD-018 装配管线·atlas v2.4 五 hex 单源镜像·荣誉席 reserved 零代创）——**不改既有导出面零 breaking**，消费方=City3D polygon 角色装配/FluxVerse R0-R6（O-020 BigLife 总责·投影律消费·BigLife=事实源不变）；DevLoop 回执时一并确认。
 ## 自领池（OS 循环/交互会话按优先级自领）
+- [ ] **T-20261027-01**（R2434 立·R2436 复核确认）相遇行互引不对称修复：`Tools/evolve_citizen.py --meet` 选人侧未校验对方是否已有同日配对，导致 A 卡记「与 B 相遇」而 B 卡当日相遇行对的是 C（历史多对同病）。修法=候选池过滤「当日已有相遇行」的居民 + 落环后断言双向互引（mismatch=0 才 commit）；历史行按 #41 前朝不追溯判例不回溯改，仅新环拦截。
+  - status: open（2026-10-27 立·值班面待领）
 - [ ] **T-20260923-06** 素材面：居民像素立绘需求出现时走集团 Art Assets AA 登记制（候选 AA-016 现代人物生成器 L2 直用通道），禁双建禁双购。
 - [ ] **T-20260923-07**（迭代批·2026-09-23 已接线）OS 循环持续任务（CODEX §十四 人口生态自迭代律）：①语言线池轮=先 `Tools/pool_audit.py` 看欠深桶（六轴<15/像素灵<10·v1.8 水位 648→1200+·CODEX §十二·09-24 R102 已达标自停），有欠深才 `pool_gen.py --append --target 15 --sprite-target 10`（裸调用即新水位），audit PASS 才 commit，全达标自停（已入 OSLoop mandate 第 2 项）；②确定性回归=pool_audit 内建同版本双跑逐字节一致；③spotlight 抽验（只提所喂事实·≥2 例/月）——结果记此单证据行。
   - [2026-09-25 19:1x @BigLife-OSLoop R240] **U208 清理整合分步③·①项水位判据回落标注（标注非删改·原文保全铁律）**：①项内「六轴<15/像素灵<10·`--target 15 --sprite-target 10`」=v1.8 时点（648→1200+）滞留参数，**已回落**——现役水位=六轴 18 条/像素灵 12 条（1440·v3.6·2026-09-25 CEO 定向开工令批），权威判据面=**cognition/README.md L58**（自带历史水位 8/6=648、15/10=1200 锁档标注）；CLI 旧值实跑无害（--append 幂等·桶已 18>旧目标=零动作）。②③项维持现役。
@@ -1087,3 +1089,10 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - **缺陷立案**：相遇行存在互引不对称（C-08226 记「与 C-08319 相遇」，而 C-08319 当日相遇行对的是 C-08320）——违反「双卡互引」，历史多对同病，待修（选人侧未校验对方是否已有同日配对）。
   - tokens: local=10 api=0 api_reason=-
 - [2026-10-27 21:3x] R2435 轮记：年轮 10 席落环（3 席软让步）+ 事件回放闸 PASS(40510/10111/0/0) + QC 巡检 problems=0 + 池审计 SELF_TERMINATE + 相遇轮日额 3/3 按律跳过 + 今日年轮精选页重建 rings=1112 + 对外实况三行刷新；tokens: local=10 api=0 api_reason=-
+
+- **R2436** 2026-10-27 21:39-21:4x @BigLife-OSLoop 年轮线轮：pull=Already up to date；决策差集 NEW=0（水位已至 D-20261027-16）；TASKS 无 open 单；HQ 日清闸 ALREADY_REPORTED（day=2026-10-27 lines=15 零写入）。
+  - 产品增量=年轮 9 席落地（C-01541/C-01627/C-09369/C-09370/C-09371/C-09372/C-09373/C-09374/C-09375），脚本自动定向提交 3c28a0fcf（年轮环）+ 88864504b（行为线镜像 rows=9 ring=9369）；C-01624 因 tech-word/recent-dup-phrase 硬违禁跳过（stays due）。
+  - 事件流闸：coverage derived=10111 reserved=3 unexpected_missing=0；replay events=40519 cards=10111 replayed=10111 schema_errors=0 mismatch=0 -> PASS（qa/EVENTS-REPLAY-REPORT.md 入库）。
+  - 池审计：72 轴桶 72 at_target、像素灵 12/12、greet 28/28、faq 7/7、负面面 6/6，hard_fails=0，determinism mismatch=0 -> PASS，语言线自终止（零生成）。
+  - 相遇轮：今日配额已满（meet-cap），本轮跳过。
+  - tokens: local=10 api=0 api_reason=-
