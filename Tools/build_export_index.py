@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import html
 import os
+import re
 from datetime import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -69,6 +70,46 @@ def rows() -> tuple[str, int]:
     return "".join(out), len(files)
 
 
+NAV_MARK = "<!--bl-nav:index-->"
+NAV_TMPL = (
+    NAV_MARK
+    + '<div style="position:fixed;left:12px;top:12px;z-index:9999">'
+      '<a href="{href}" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);'
+      'border:1px solid #303740;border-radius:4px;color:#c8a06a;'
+      'font:12px/1 \'Songti SC\',Georgia,serif;text-decoration:none">← 产物目录</a></div>'
+)
+
+
+def ensure_nav() -> int:
+    """给每张产物页补一个回总目录的固定入口（幂等，只认标记行）。
+
+    页面各自由不同脚本生成、样式互不相通，故导航条自带内联样式，插在 <body> 之后。
+    索引页自己跳过；链接一律按目标页到 index.html 的相对层级给出。
+    """
+    targets: list[tuple[str, str]] = []
+    for f in sorted(os.listdir(EXP)):
+        if f.endswith(".html") and f != "index.html":
+            targets.append((os.path.join(EXP, f), "index.html"))
+    social = os.path.join(ROOT, "census", "city-social-graph.html")
+    if os.path.exists(social):
+        targets.append((social, "export/index.html"))
+
+    patched = 0
+    for path, href in targets:
+        with open(path, encoding="utf-8", errors="replace") as fh:
+            page = fh.read()
+        if NAV_MARK in page:
+            continue
+        m = re.search(r"<body[^>]*>", page, re.I)
+        if not m:
+            continue
+        page = page[: m.end()] + NAV_TMPL.format(href=href) + page[m.end() :]
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write(page)
+        patched += 1
+    return patched
+
+
 def main() -> int:
     body, n = rows()
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -104,7 +145,8 @@ footer{{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(
 """
     with open(OUT, "w", encoding="utf-8") as f:
         f.write(page)
-    print(f"export-index: {os.path.relpath(OUT, ROOT)}  {len(page.encode('utf-8')) / 1024:.1f} KB  pages={n}")
+    nav = ensure_nav()
+    print(f"export-index: {os.path.relpath(OUT, ROOT)}  {len(page.encode('utf-8')) / 1024:.1f} KB  pages={n}  nav_patched={nav}")
     return 0
 
 
