@@ -13,16 +13,25 @@
 from __future__ import annotations
 
 import argparse
+import collections
 import datetime
 import glob
 import html
 import io
+import json
 import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CARDS = os.path.join(ROOT, "census", "registry")
 OUT = os.path.join(ROOT, "census", "export", "city-today.html")
+BEHAVIOR = os.path.join(ROOT, "census", "export", "citizen-behavior.jsonl")
+LIGHT = os.path.join(ROOT, "census", "export", "citizens-light.jsonl")
+BEHAVIOR_LAST = os.path.join(ROOT, "state", "behavior-last.json")
+
+BUCKET_CN = {"day": "白天", "eve": "傍晚", "night": "深夜", "morn": "清晨"}
+WEATHER_CN = {"clear": "晴", "cloud": "多云", "rain": "雨", "fog": "雾", "snow": "雪"}
+SOUND_CN = {"fest": "节日声景", "alarm": "警报声景", "": "静默"}
 
 CARD_RE = re.compile(r"^# (C-\d+) · (.+)$", re.M)
 DIST_RE = re.compile(r"城区\*\*\s*([^｜|\n]+)")
@@ -64,6 +73,94 @@ def load(target: str):
             day, text = m.group(1), m.group(2).strip()
             by_day.setdefault(day, []).append((cid, name, dist, job, text))
     return by_day, cards
+
+
+def live_block(limit_slots: int = 6, samples: int = 3) -> str:
+    """此刻城市面：读行为导出面（R3 再生面）与居民轻量面，零推断。
+
+    导出面缺位时返回空串（页面不留占位假数据）。取样=按编号排序取前 N 位，
+    同一天同一数据面重跑逐字节一致。
+    """
+    if not os.path.exists(BEHAVIOR):
+        return ""
+    names: dict[str, tuple[str, str, bool]] = {}
+    if os.path.exists(LIGHT):
+        with io.open(LIGHT, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                r = json.loads(line)
+                names[r.get("id", "")] = (
+                    r.get("name", ""),
+                    r.get("profession", ""),
+                    r.get("faction") == "honored",
+                )
+    counts: collections.Counter = collections.Counter()
+    members: dict[str, list[str]] = {}
+    total = 0
+    with io.open(BEHAVIOR, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            r = json.loads(line)
+            total += 1
+            slot = r.get("slot") or ("（未标槽位）")
+            counts[slot] += 1
+            members.setdefault(slot, []).append(r.get("id", ""))
+
+    meta: dict = {}
+    if os.path.exists(BEHAVIOR_LAST):
+        try:
+            with io.open(BEHAVIOR_LAST, encoding="utf-8") as f:
+                meta = json.load(f)
+        except (ValueError, OSError):
+            meta = {}
+    face_ts = str(meta.get("ts", ""))[:16].replace("T", " ")
+    ctx = " · ".join(
+        x for x in (
+            BUCKET_CN.get(meta.get("time_bucket", ""), meta.get("time_bucket", "")),
+            WEATHER_CN.get(meta.get("weather_kind", ""), meta.get("weather_kind", "")),
+            SOUND_CN.get(meta.get("sound", ""), meta.get("sound", "")),
+        ) if x
+    )
+
+    order = sorted(counts, key=lambda s: (-counts[s], s))
+    top = order[:limit_slots]
+    maxn = max((counts[s] for s in top), default=1)
+    rows = []
+    for slot in top:
+        n = counts[slot]
+        w = max(2, int(round(n * 100.0 / maxn)))
+        who = []
+        for cid in sorted(members[slot]):
+            nm, job, honored = names.get(cid, ("", "", False))
+            if honored:  # 荣誉席（CEO 家人三席）不作代表样本（身份细节脱敏律）
+                continue
+            tag = nm or cid
+            if job:
+                tag += "·" + job
+            who.append(f'<span class="who">{esc(cid)} {esc(tag)}</span>')
+            if len(who) >= samples:
+                break
+        rows.append(
+            f'<div class="lrow"><span class="lslot">{esc(slot)}</span>'
+            f'<span class="lbar"><span class="lbf" style="width:{w}%"></span></span>'
+            f'<span class="ln">{n}</span></div>'
+            f'<div class="lwho">{"".join(who)}</div>'
+        )
+
+    head = f"行为面 {esc(total)} 位居民" + (f" · {esc(ctx)}" if ctx else "")
+    if face_ts:
+        head += f" · 面生成 {esc(face_ts)}"
+    return (
+        '<section class="now"><h2>此刻城市<em>' + esc(head) + "</em></h2>"
+        '<p class="nnote">当下各槽位人数与代表居民（槽位来自行为导出面 R3 再生面；'
+        "代表=按编号取前 3 位，非抽样推断）。</p>"
+        + "".join(rows)
+        + "</section>"
+    )
 
 
 def main() -> int:
@@ -134,6 +231,7 @@ def main() -> int:
     )
 
     ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+    now_html = live_block()
     page = f"""<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -156,6 +254,17 @@ padding:3px 0;color:inherit;text-decoration:none;font:12.5px/1.6 ui-monospace,mo
 .bf{{display:block;height:100%;background:var(--acc);opacity:.55}}
 .bn{{text-align:right;color:var(--acc)}}
 .search{{padding:12px 20px;border-bottom:1px solid var(--line)}}
+.now{{padding:14px 20px 16px;border-bottom:1px solid var(--line)}}
+.now h2{{margin:0 0 4px}}
+.nnote{{margin:0 0 10px;color:var(--dim);font-size:12px}}
+.lrow{{display:grid;grid-template-columns:150px 1fr 46px;gap:10px;align-items:center;padding:3px 0;
+font:12.5px/1.6 ui-monospace,monospace}}
+.lslot{{color:#c9c4ba}}
+.lbar{{display:block;height:7px;background:#171c23;border-radius:2px;overflow:hidden}}
+.lbf{{display:block;height:100%;background:#7fa8c8;opacity:.6}}
+.ln{{text-align:right;color:#7fa8c8}}
+.lwho{{padding:0 0 6px;font-size:12px;color:#6f757d}}
+.lwho .who{{margin-right:14px}}
 input{{width:100%;max-width:420px;padding:8px 10px;background:#151a20;border:1px solid var(--line);
 color:var(--fg);border-radius:4px;font:14px/1.4 inherit}}
 main{{padding:8px 24px 60px;max-width:1000px}}
@@ -177,6 +286,7 @@ footer{{padding:18px 24px;color:#6a7078;font-size:12px;border-top:1px solid var(
 <div class="sub">当天全量年轮（不抽样）· 数据源 census/registry 只读 · 生成 {esc(ts)}</div></header>
 <div class="kpi">{kpi}</div>
 <div class="bars">{''.join(bars)}</div>
+{now_html}
 <div class="search"><input id="q" placeholder="检索姓名 / 编号 / 职业 / 引文…" autocomplete="off"></div>
 <main>{empty}{''.join(secs)}</main>
 <footer>本页由 Tools/build_daily_issue.py 确定性生成（零 LLM·幂等）·锚定律见 docs/CODEX.md §九 ·
