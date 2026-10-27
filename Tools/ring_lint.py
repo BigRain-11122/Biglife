@@ -17,8 +17,11 @@ B2396）。提示词 v0.64 已禁照抄但仍漏（10-24 16.0%、10-25 23.6%、1
   qa/ring-lint.jsonl       机器清单（date/card/name/codes/text/mtime/phase）
 退出码：
   0 = 切点后零带码（存量不计）；1 = 切点后仍有新产带码
-口径（2026-10-26 R2260）：出生站修复落在 18:57，同日内修前/修后混杂，
-日级切点分不开——故带码行按**卡片文件 mtime** 划 pre/post 两段。
+口径（2026-10-26 R2260 / 2026-10-27 修订）：出生站修复落在 18:57，同日内修前/修后混杂，
+日级切点分不开——带码行按 pre/post 两段划。划段先查 **违规指纹基线**
+（`qa/ring-lint-baseline.json`：修复当刻扫描件逐环 id|日期|正文 md5 冻结），命中即存量；
+未命中再用卡片 mtime 与切点比较。缘由：卡片被合法重写（turning_points 补段/去重）会刷新
+mtime，若只看 mtime，旧环原文会被误判成「修后新产」——10-27 15:32 补段批即触发 4 条假警。
 存量带码不回归（锚定律保全原文），只计量；只有 post 段带码才判回归失败。
 """
 from __future__ import annotations
@@ -26,6 +29,7 @@ from __future__ import annotations
 import argparse
 import datetime
 import glob
+import hashlib
 import io
 import json
 import os
@@ -35,6 +39,8 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPORT = os.path.join(ROOT, "qa", "RING-LINT-REPORT.md")
 MACHINE = os.path.join(ROOT, "qa", "ring-lint.jsonl")
+# 修复当刻违规指纹基线（由 06cbdf461 的 qa/ring-lint.jsonl 逐环指纹冻结生成）
+BASELINE = os.path.join(ROOT, "qa", "ring-lint-baseline.json")
 
 RING_RE = re.compile(r"^- (\d{4}-\d{2}-\d{2}) [ \t]*(.+)$", re.M)
 HEAD_RE = re.compile(r"^#\s*(C-\d+)\s*·\s*(.+)$")
@@ -42,6 +48,23 @@ HEAD_RE = re.compile(r"^#\s*(C-\d+)\s*·\s*(.+)$")
 CODE_RE = re.compile(r"(?<![A-Za-z0-9-])[GBSPT]\d{1,4}(?:\.\d+)?(?![0-9])")
 # 出生站修复切点（commit 06cbdf461 2026-10-26 18:57 三面收口：喂入清码/门内拒收/落环兜底）
 DEFAULT_FIX_CUT = "2026-10-26T18:57"
+
+
+def ring_fingerprint(cid: str, date: str, body: str) -> str:
+    """单条年轮的稳定指纹（id|日期|正文 md5）——卡片重写换不掉它，用于区分历史冻结与真回炉。"""
+    return "%s|%s|%s" % (cid, date, hashlib.md5(body.encode("utf-8")).hexdigest())
+
+
+def load_baseline() -> tuple[set[str], dict]:
+    """读修复当刻指纹基线；缺席=纯 mtime 口径（旧行为），不新增失败面。"""
+    if not os.path.exists(BASELINE):
+        return set(), {}
+    try:
+        with io.open(BASELINE, encoding="utf-8") as fh:
+            data = json.load(fh)
+        return set(data.get("fingerprints") or []), data.get("meta") or {}
+    except (OSError, ValueError):
+        return set(), {}
 
 
 def card_mtime(path: str) -> str:
@@ -76,6 +99,7 @@ def main() -> int:
     fix_cut = args.fix_cut.replace(" ", "T")[:16]
     today = datetime.date.today().isoformat()
     floor = today if args.today_only else args.since
+    baseline, baseline_meta = load_baseline()
 
     per_day: dict[str, list[int]] = {}
     rows: list[dict] = []
@@ -92,6 +116,13 @@ def main() -> int:
             if not codes:
                 continue
             bucket[1] += 1
+            fp = ring_fingerprint(cid, date, body)
+            # 划段三判：①基线命中=修复当刻已存在的存量（哪怕卡片后来被合法重写刷了 mtime）
+            # ②mtime 早于切点=存量 ③其余=修后新产（回归指标）
+            if fp in baseline:
+                phase = "pre"
+            else:
+                phase = "pre" if (mtime and mtime < fix_cut) else "post"
             rows.append({
                 "date": date,
                 "card": os.path.relpath(path, ROOT).replace("\\", "/"),
@@ -100,7 +131,8 @@ def main() -> int:
                 "codes": codes,
                 "text": body[:160],
                 "mtime": mtime,
-                "phase": "pre" if (mtime and mtime < fix_cut) else "post",
+                "fingerprint": fp,
+                "phase": phase,
             })
 
     total = sum(v[0] for v in per_day.values())
@@ -136,7 +168,11 @@ def main() -> int:
         "",
         "## 修复切点对照",
         "",
-        "切点=%s（出生站三面收口 commit 06cbdf461）· 划段依据=卡片文件 mtime" % fix_cut,
+        "切点=%s（出生站三面收口 commit 06cbdf461）· 划段依据=违规指纹基线 %s 条（源 %s）+ 卡片 mtime 兜底"
+        % (fix_cut, len(baseline), baseline_meta.get("source_commit", "缺席")),
+        "",
+        "划段口径（2026-10-27 修订）：卡片文件被合法重写（补段/去重）会刷新 mtime，旧环原文按锚定律不回改——"
+        "故先查指纹基线，命中即判存量，消除「重写即回炉」假警。",
         "",
         "| 阶段 | 带码年轮 | 口径 |",
         "| --- | ---: | --- |",
