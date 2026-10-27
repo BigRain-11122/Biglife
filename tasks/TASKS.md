@@ -1289,3 +1289,11 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
 - 实物面: census/registry 10 份新年轮 2026-10-28 02:14 + qa/EVENTS-REPLAY-REPORT.md
 - 下个里程碑: 下一批年轮 + 相遇轮（2026-10-29 跨日 cap 刷新）
 - tokens: local=10 api=0 api_reason=-
+### R2479 记录 2026-10-28 02:2x @BigLife-OSLoop
+- 当前活: 年轮线 batch 3 → 落环 9/10（C-09668 gate skip 留 due）+ 行为线镜像 rows=9 ring=9667
+- 回放闸: PASS events=40951 cards=10111 replayed=10111 schema_errors=0 mismatch=0
+- 自停面: pool_audit 全桶达标 SELF_TERMINATE；相遇 cap 3/3 skip；HQ 闸 ALREADY_REPORTED(day=2026-10-28 lines=4)
+- QC: qc_census problems=0 cards=10114 evolved=9667 → census/QC-REPORT.md
+- 最近实物: bbb736e17 年轮9环 + census/QC-REPORT.md（2026-10-28 02:20）
+- 下个里程碑: 2026-10-29 00:00 后相遇 cap 刷新 + 下一轮年轮批
+- tokens: local=10 api=0 api_reason=-
