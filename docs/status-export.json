@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-10-28 01:03",
+ "export_ts": "2026-10-28 01:11",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2462（2026-10-28 00:5x）**：年轮线 --batch 3 实跑 evolved=9/10（C-02540/C-02551/C-02556/C-09574/C-09576~C-09580；C-09575 因 mist-import+recent-dup-phrase 持续违例被闸拦下留期）；行为线镜像自动收口（rows=9 ring=9573）；事件流回放闸 PASS（cards=10111 events=40813 replayed=10111 schema_errors=0 mismatch=0 unexpected_missing=0）；QC 巡检 problems=0（cards=10114 evolved=9573 dup_rings=37/37）；语言线 pool_audit=PASS/SELF_TERMINATE（72/72 六轴桶·12/12 sprite·greet 28/28·faq 7/7·neg 6/6·hard_fails=0）；相遇轮本日 cap 已满（C-09562×C-09563）；决策水位 NEW=0。 **R2458（2026-10-28 00:2x）**：年轮线 --batch 3 实跑 evolved=9/10（C-02471 因雨景重复与自创降雨双违例被闸拦下留期；C-09540/C-09542/C-09543/C-09545 软让步落环）；行为线镜像自动收口；事件流回放闸 PASS（cards=10111 events=40762 replayed=10111 schema_errors=0 mismatch=0 unexpected_missing=0）；语言线 pool_audit=PASS/SELF_TERMINATE（18/12 六轴桶全达标、greet 28/28、faq 7/7、neg 6/6、hard_fails=0）；QC 巡检 cards=10114 evolved=9539 problems=0；相遇轮本日 cap 已达（00:0x C-00014×C-00015）不重跑；决策水位 NEW=0（D-20261028-01~04 前窗已消费）。 **R2437（2026-10-27 21:5x）**：年轮批 10/10 落环（C-00626/C-00728/C-00893/C-09390~C-09396）+ 事件回放闸 PASS（cards=10111 events=40548 schema=0 mismatch=0）+ 语言池全桶达标 SELF_TERMINATE；本轮回填任务板 T-20261027-01（相遇互引不对称）——写前 `meet-dup` 过滤 + 写后双向断言（不对称回滚不 commit），自测 3/3 PASS，证据 qa/MEET-SYMMETRY-T-20261027-01.md。",
+   "t": "**R2463（值守+年轮+闸）**：年轮 --batch 3 实落 evolved=**10/10**（C-02574/C-02580/C-02647/C-09575/C-09581~C-09586，4 席 soft-concession recent-dup-phrase 让位落环）；事件回放闸 **PASS**（events=**40823** / cards=10111 / replayed=10111 / mismatch=0 / schema=0 / coverage unexpected_missing=0）；语言线 pool_audit=PASS/SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0）；相遇轮今日 cap 已满、QC 6 轮窗内 problems=0、HQ-FEEDBACK --check=ALREADY_REPORTED 零写入。 **R2462（2026-10-28 00:5x）**：年轮线 --batch 3 实跑 evolved=9/10（C-02540/C-02551/C-02556/C-09574/C-09576~C-09580；C-09575 因 mist-import+recent-dup-phrase 持续违例被闸拦下留期）；行为线镜像自动收口（rows=9 ring=9573）；事件流回放闸 PASS（cards=10111 events=40813 replayed=10111 schema_errors=0 mismatch=0 unexpected_missing=0）；QC 巡检 problems=0（cards=10114 evolved=9573 dup_rings=37/37）；语言线 pool_audit=PASS/SELF_TERMINATE（72/72 六轴桶·12/12 sprite·greet 28/28·faq 7/7·neg 6/6·hard_fails=0）；相遇轮本日 cap 已满（C-09562×C-09563）；决策水位 NEW=0。 **R2458（2026-10-28 00:2x）**：年轮线 --batch 3 实跑 evolved=9/10（C-02471 因雨景重复与自创降雨双违例被闸拦下留期；C-09540/C-09542/C-09543/C-09545 软让步落环）；行为线镜像自动收口；事件流回放闸 PASS（cards=10111 events=40762 replayed=10111 schema_errors=0 mismatch=0 unexpected_missing=0）；语言线 pool_audit=PASS/SELF_TERMINATE（18/12 六轴桶全达标、greet 28/28、faq 7/7、neg 6/6、hard_fails=0）；QC 巡检 cards=10114 evolved=9539 problems=0；相遇轮本日 cap 已达（00:0x C-00014×C-00015）不重跑；决策水位 NEW=0（D-20261028-01~04 前窗已消费）。",
    "s": 1
   },
   {
@@ -1617,7 +1617,11 @@
   [
    "82",
    "环计数 82 条（当日 [锚] 直数·R2462）"
+  ],
+  [
+   "92",
+   "R2463 年轮 10 席落环 + 事件回放闸 PASS（events=40823 / mismatch=0 / schema=0）→ 年轮累计 92"
   ]
  ],
- "t": "当前活：年轮线随轮转（每轮 --batch 3 居民进化批）+事件流回放闸\n最近实物：R2462 年轮 9 席落环 + 回放闸 PASS（events=40813 mismatch=0）2026-10-28 00:5x\n下个里程碑：2026-10-29 前下一轮年轮批 + 相遇轮新一对（今日 cap 已满）"
+ "t": "当前活：年轮线续推既有居民（零新注册），每轮 10 席；事件流回放闸每轮复验\n最近实物：census/registry/GM/C-09586.md 等 10 卡卡尾新增 2026-10-28 年轮行（带 [锚] 注脚），qa/EVENTS-REPLAY-REPORT.md 刷新（01:1x）\n下个里程碑：2026-10-29 前下一次 QC 巡检（每 6 轮）+ 明日恢复池轮/相遇日额"
 }
