@@ -740,7 +740,12 @@ def real_signals():
                         parts.append(str(e[k])[:60])
                 # 2026-10-26 R2251 (see EVENT_CODE_RE): a code reaching the prompt
                 # is a code the anchor law will make the resident quote verbatim.
-                parts = [p for p in (scrub_event_codes(x) for x in parts) if p]
+                # 2026-10-27 R2433: same disease, latin vocabulary face - census
+                # scan found 708/10114 rings (7.0%) carrying machine words the
+                # feed supplied (commit x193, gpu x57, pushevent x53, biglife x50,
+                # tick x41 ...). Machine language is scrubbed at the feed too.
+                parts = [p for p in (scrub_machine_words(scrub_event_codes(x))
+                                     for x in parts) if p]
                 if parts:
                     # V2-D: keep each event's zone aligned with it so the feed
                     # order can be rebuilt per resident district (viewpoint).
@@ -873,6 +878,39 @@ def scrub_event_codes(text):
     return out
 
 
+# 2026-10-27 R2433: latin machine vocabulary is the second feed-leak family after
+# event codes. The dev-loop feed's own `type` value (COMMIT / DEV / SYNC) and its
+# repo/engine words (gpu, sprite, tick, bigmoney...) reached prose verbatim - a
+# resident wrote 「commit 光点过江」 as if git were a city phenomenon (C-01850 this
+# round; census 708/10114 = 7.0% rings). Two-sided fix, same protocol as R2251:
+# feed side drops machine types + bare latin words, gate refuses the残面.
+TECH_WORD_RE = re.compile(r"(?<![A-Za-z0-9-])[A-Za-z]{2,}(?![A-Za-z0-9-])")
+# machine `type` values never name a city event; they map to one neutral word.
+MACHINE_TYPE_WORDS = {
+    "commit", "commits", "dev", "deploy", "push", "merge", "patch", "sync",
+    "build", "test", "release", "log", "tick", "run", "job", "job", "ops",
+    "ci", "mr", "pr", "cron", "probe",
+}
+# legal latin in an in-world line: honored-seat registration rings only.
+RING_LATIN_WHITELIST = {"qiqi", "rain", "ceo"}
+
+
+def scrub_machine_words(text):
+    """Drop machine type words and bare latin tokens from a feed part.
+
+    A part that is mostly latin (an English dev-loop summary) names no city
+    event at all: it is dropped whole rather than left as stripped debris.
+    """
+    t = text or ""
+    latin = sum(len(w) for w in TECH_WORD_RE.findall(t))
+    letters = sum(1 for ch in t if ch.isalpha())
+    if letters and latin / float(letters) > 0.35:
+        return ""
+    t = TECH_WORD_RE.sub("", t)
+    t = re.sub(r"\s{2,}", " ", t).strip(" /:-,.;|")
+    return t
+
+
 def ring_violations(line, sig):
     """gap #12 honesty gate: machine-check an LLM ring against the fed signals.
 
@@ -888,6 +926,16 @@ def ring_violations(line, sig):
     # (与 C-07743 相遇) because the pattern has no hyphen.
     if has_event_code(line):
         v.append("event-code")
+    # 2026-10-27 R2433: latin machine words (commit/gpu/pushevent/bigmoney ...)
+    # are the same leak family as event codes - the anchor law orders verbatim
+    # quoting of whatever the feed carries, so prompt bans alone never held.
+    # Feed side now scrubs them; this gate catches the residue. Hyphenated
+    # citizen IDs pass (pattern has no hyphen); honored-seat registration rings
+    # keep their legal CEO family names via the whitelist.
+    for _w in TECH_WORD_RE.findall(line or ""):
+        if _w.lower() not in RING_LATIN_WHITELIST:
+            v.append("tech-word")
+            break
     wx = sig.get("weather") or ""
     m = re.search(r"wind\s+([0-9.]+)\s*m/s", wx)
     if m:
@@ -2296,6 +2344,11 @@ def build_prompt(cid, text, sig):
     fog_blk = ("" if "雾" in _pcard else
                "最后一条（最容易犯，犯即整句退回重写）：严禁出现「雾」字，也不要写"
                "「水汽/白气浮在江面上像雾」这类雾状比喻——本城实况与事件流从无雾况数据。\n")
+    # 2026-10-27 R2433: latin machine vocabulary tail-pin (same slot as fog_blk,
+    # where the 4B weights hardest).
+    tech_blk = ("再一条（犯即整句退回重写）：年轮里严禁出现任何拉丁字母词——"
+                "「commit/GPU/token/bug」这类工作台词汇与项目名（biglife/bigmoney/"
+                "fluxgroup/crazycampus 等）都不是市民会说的话，一律换成生活化的中文说法。\n")
     return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
             f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
@@ -2311,6 +2364,7 @@ def build_prompt(cid, text, sig):
             # ignored (R2291 实测 4/10 仍撞 recent-dup-phrase).
             f"{city_phr_blk}"
             f"{fog_blk}"
+            f"{tech_blk}"
             f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节），只输出这几句话本身。")
 
 def add_ring(path, cid, line, anchor_note):
@@ -2321,6 +2375,9 @@ def add_ring(path, cid, line, anchor_note):
     # code (gate exhausted its regens, or a caller bypassed gated_llm) is refused
     # here, so the card never grows a polluted ring. The seat stays due.
     if has_event_code(line):
+        return False
+    # 2026-10-27 R2433: same last-line rule for latin machine vocabulary.
+    if any(w.lower() not in RING_LATIN_WHITELIST for w in TECH_WORD_RE.findall(line)):
         return False
     # R1772 同日幂等闸（出生地拦截）：批次被击杀后重跑不得二次落环节。
     # 同一天最多一条年轮 + 一条相遇行，超出的写入静默拒绝（调用方按已写处理）。
