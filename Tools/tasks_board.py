@@ -11,8 +11,8 @@
   Get-Content 片段 | python -X utf8 Tools/tasks_board.py --append-stdin
 """
 import argparse
-import io
 import os
+import re
 import sys
 
 BOARD = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tasks", "TASKS.md")
@@ -20,10 +20,27 @@ BOARD = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 典型 UTF-8 被当成 GBK 再回写的乱码特征字（只用于新增内容体检，不改历史）
 MOJIBAKE_MARKS = ("锛", "銆", "鐨", "鏉", "绔", "馃")
 
+# ASCII 顶替（第三类损伤·R2392 判例）：正文中文被写成 '?'（编码通道降级为 ascii+errors=replace），
+# 特征是整行零 CJK 且残留「??」连段——正常中文疑问句不会连写两个问号。
+QMARK_RUN = re.compile(r"\?{2,}")
+
 
 def read_board_bytes():
     with open(BOARD, "rb") as f:
         return f.read()
+
+
+def ascii_mangled(text):
+    """返回 (行号, '?' 连段数) 清单：整行零 CJK 且出现 >=2 段 '??' = ASCII 顶替候选。"""
+    hits = []
+    for i, line in enumerate(text.splitlines(), 1):
+        runs = QMARK_RUN.findall(line)
+        if len(runs) < 2:
+            continue
+        if any("\u4e00" <= c <= "\u9fff" for c in line):
+            continue
+        hits.append((i, len(runs)))
+    return hits
 
 
 def diagnose(raw, label="board"):
@@ -42,6 +59,13 @@ def diagnose(raw, label="board"):
         n = text.count(mark)
         if n:
             problems.append("%s: 疑似 GBK 乱码字 %r %d 处" % (label, mark, n))
+    mangled = ascii_mangled(text)
+    if mangled:
+        nums = ",".join(str(n) for n, _ in mangled[:10])
+        problems.append(
+            "%s: %d 行疑似 ASCII '?' 顶替 CJK 正文（行 %s；编码通道降级为 ascii）"
+            % (label, len(mangled), nums)
+        )
     return problems
 
 
@@ -52,7 +76,10 @@ def check():
             print("FAIL", p)
         return 1
     text = read_board_bytes().decode("utf-8")
-    print("OK tasks/TASKS.md: utf-8 无 BOM / U+FFFD=0 / 乱码字=0 / 行数=%d" % (text.count("\n") + 1))
+    print(
+        "OK tasks/TASKS.md: utf-8 无 BOM / U+FFFD=0 / 乱码字=0 / ASCII顶替=0 / 行数=%d"
+        % (text.count("\n") + 1)
+    )
     return 0
 
 
