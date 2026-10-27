@@ -919,3 +919,10 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：census/QC-REPORT.md（10-27 14:0x · 10114 卡 · problems=0）
   - 下个里程碑：19:00 让路窗解除后年轮批 3 席 + 37 位复读环居民重写候选，ETA 2026-10-27 19:30
   - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性巡检
+
+
+- **[R2398]** 2026-10-27 14:0x-14:2x @BigLife-OSLoop 值守轮（让路窗·零 LLM）：pull=Already up to date；决策水位差集 NEW=0（D-20261027-13 内）；orders 物理件区无本司新增；**查重律命中**=同窗 R2397（14:01 轮）已落 QC 巡检+池审计并提交 a15c7222c，本窗不重记账不重提交（撤销本窗仅时间戳变化的 census/QC-REPORT.md 改动，工作树复净）。**本轮真增量=事件流卡口径闸**：跑 events_refresh --gate 得 derive cards=10111 / replay 40322 events / mismatch=0 PASS，但与 QC 的 cards=10114 存 3 差——查实=荣誉席 C-00001~03（CODEX §十二 4 明规不进叙事事件流），属设计口径非缺陷；遂把该口径固化为 Tools/events_refresh.py 新 coverage() 断言（导出卡-派生卡只允许荣誉席差，其余即 DRIFT 并使 --gate 非零退出），实跑 coverage: derived=10111 reserved=3 exported=10114 unexpected_missing=0；ruff_gate CLEAN；HQ 日报闸 ALREADY_REPORTED（15 行·零写入）。
+  - 当前活：让路窗确定性校验（事件流卡口径闸补齐）
+  - 最近实物：Tools/events_refresh.py coverage 闸（10-27 14:2x·40322 事件/10111 派生卡/0 漂移）
+  - 下个里程碑：19:00 让路窗结束→年轮批 3 席 + 相遇轮（续 R2397 留单）·ETA 2026-10-27 19:30
+  - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性校验
