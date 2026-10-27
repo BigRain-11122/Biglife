@@ -938,3 +938,10 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：census/export/city-today.html（2026-10-27 14:5x · 10114 居民 · 924 圈当日年轮）
   - 下个里程碑：19:00 让路窗解除→年轮批 3 + 相遇轮（R2397 留单），ETA 2026-10-27 19:30
   - tokens: local=0 api=0 api_reason=yield-window(workday 让路·D-20261020-02)+确定性核验
+
+## 轮次实录 2026-10-27 15:0x（BigLife-OSLoop）
+  - 当前活：让路窗确定性产出（QC 巡检 + 基因总账重算 + 事件流回放闸）
+  - 最近实物：census/export/gene-ledger.html（2026-10-27 15:0x · 登记1641/在册403/未落地1238=24.5%）与 census/QC-REPORT.md（异常0）
+  - 下个里程碑：19:00 让路窗解除→年轮批 3 + 相遇轮，ETA 2026-10-27 19:30
+  - 发现：基因池未落地 1238 条（ho 650/tp 507），下批 intake 选题应从既有未落地池取材（禁再加新基因）
+  - tokens: local=0 api=0 api_reason=yield-window(workday 让路·D-20261020-02)+确定性核验
