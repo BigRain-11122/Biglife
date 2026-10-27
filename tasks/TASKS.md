@@ -1279,3 +1279,13 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
 - 最近实物: census/registry 年轮 9 张 2026-10-28 02:09 + QC-REPORT（commit 8137591eb）
 - 下个里程碑: 下一轮年轮批 + 相遇轮（2026-10-29 日切后 cap 重置，窗 ≤48h）
 - tokens: local=10 api=0 api_reason=-
+
+## R2478 · 2026-10-28 02:2x @BigLife-OSLoop
+- 年轮线: evolved=10/10 due (C-01727,C-01775,C-01793,C-09658,C-09662,C-09663,C-09664,C-09665,C-09666,C-09667) 自动 commit 6b9615def；4 席 soft-concession(recent-dup-phrase) 落环
+- 行为线: sync_rings 自动收口 rows=10 ring=9661 commit dda147626
+- 回放闸: replay PASS events=40942 cards=10111 replayed=10111 schema_errors=0 mismatch=0 coverage unexpected_missing=0（报告本轮入库）
+- 自停面: pool_audit 全桶达标 SELF_TERMINATE；相遇 cap 3/3 skip；HQ 闸 ALREADY_REPORTED(day=2026-10-28 lines=4)；TASKS open=0；D-20261028-04 本司路径面 R2464 已自检 CLEAN（Tools 走 git rev-parse，仅注释提及 ..\..）
+- 当前面: 年轮已解锁 9661/10114
+- 实物面: census/registry 10 份新年轮 2026-10-28 02:14 + qa/EVENTS-REPLAY-REPORT.md
+- 下个里程碑: 下一批年轮 + 相遇轮（2026-10-29 跨日 cap 刷新）
+- tokens: local=10 api=0 api_reason=-
