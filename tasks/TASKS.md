@@ -1006,3 +1006,12 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：census/registry 9 席新环（19:39）+ qa/EVENTS-REPLAY-REPORT.md（19:40 PASS）+ docs/status-export.json（19:43 三行实况刷新）
   - 下个里程碑：2026-10-28 03:07 班次续跑年轮批（尾单 C-02008 复测）+ 下一年窗相遇轮
   - tokens: local=10 api=0 api_reason=本地 Ollama qwen3:4b-instruct 10 席（1 席硬闸未落环）
+- **[R2423]** 2026-10-27 19:48-19:5x @BigLife-OSLoop 值守（全路可用·LLM 恢复）：pull=Already up to date；水位差集 NEW=0（已含 D-20261027-16·晚间 17+ 行）；orders 尾无本司令；TASKS 无 open 单。
+  - **本轮实物=年轮 10 席全部落环（正常批 8 席 + 补 2 席）**：正常批 C-01427/C-01490/C-09264/C-09265/C-09266/C-09267/C-09268/C-09270 rows=8；C-02008、C-09269 连续第二轮被 mist-import+recent-dup-phrase 硬闸留 due。
+  - **根因修复（出生地拦截）**：两席均为「人设无雾却写江面雾」→ 4B 无视中段禁令。Tools/evolve_citizen.py 新增 fog_blk 尾锚禁令（人设无「雾」字者，prompt 末尾加「严禁「雾」字与雾状比喻」·同 v0.61 gap#81 尾锚处理）。`--force C-02008 C-09269` 复验 **2/2 落环**，新环零「雾」字实证（C-02008「江水清清的…船头老灯」/C-09269「笔尖…盘口记得清」）。
+  - 闸门：events_refresh --gate **PASS**（coverage derived=10111 reserved=3 exported=10114 unexpected_missing=0；cards=10111 / events=40370 / replayed=10111 / schema_errors=0 / mismatch=0）；pool_audit **全桶达标 SELF_TERMINATE**（axes 72/72·sprite 12/12·greet 28·faq 7·neg 6·hard_fails=0·determinism 双绘 mismatch=0）；qc_census **cards=10114 / evolved=9263 / problems=0 / dup_rings=37-37**（编号唯一+姓名唯一+必备段齐备+年轮锚定律全通过）。
+  - 实况面：docs/status-export.json 刷新至 19:51（total=970 账平 dept/results/top/hb 四段 True）+ state/export-payload-R2423.json 入档。
+  - 质检：ruff_gate 1 file CLEAN；encoding_guard --check 4 文件 VERDICT PASS（U+FFFD=0·无 BOM）。
+  - HQ 日闸：ALREADY_REPORTED（day=2026-10-27 lines=15）零写入。
+  - 下个里程碑：2026-10-28 03:07 值守年窗批次 + fog_blk 在新窗口的首日回归观察（是否有新变体绕过）。
+  - tokens: local=12 api=0 api_reason=-（正常批 10 次尝试 + 补批 2 次·本地 Ollama qwen3:4b-instruct）

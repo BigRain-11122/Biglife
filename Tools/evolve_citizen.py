@@ -2288,6 +2288,14 @@ def build_prompt(cid, text, sig):
                    "严禁重复这些旧事，一切具体事仍只许来自下面的今日清单与此刻实况；"
                    "旧环字句（含当时天气下的「云淡风轻/风不大」类措辞）只反映当天的旧实况，"
                    "严禁原样复写进今天的新环，今天的天气一律按今日实况重新措辞）：\n" + mem + "\n")
+    # R2423: chronic mist-import seats (C-02008 / C-09269 skipped two rounds running)
+    # never obey the mid-prompt fog ban - tail-pin it for fog-free personas, where
+    # the 4B weights hardest (same treatment as v0.61 gap #81).
+    _pcard = "".join(str(p.get(k) or "") for k in
+                     ("species", "prof", "traits", "creed", "language", "behavior"))
+    fog_blk = ("" if "雾" in _pcard else
+               "最后一条（最容易犯，犯即整句退回重写）：严禁出现「雾」字，也不要写"
+               "「水汽/白气浮在江面上像雾」这类雾状比喻——本城实况与事件流从无雾况数据。\n")
     return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
             f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
@@ -2302,6 +2310,7 @@ def build_prompt(cid, text, sig):
             # weights the last lines hardest, and a mid-prompt ban alone was
             # ignored (R2291 实测 4/10 仍撞 recent-dup-phrase).
             f"{city_phr_blk}"
+            f"{fog_blk}"
             f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节），只输出这几句话本身。")
 
 def add_ring(path, cid, line, anchor_note):
