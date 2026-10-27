@@ -164,6 +164,44 @@ def notes(n: int) -> list[str]:
     return [line.lstrip("- ").strip() for _num, line in picked]
 
 
+def persona_depth() -> dict:
+    """人格深化面实读：citizen-persona.jsonl 的行数、习惯覆盖与语体覆盖。"""
+    import json
+
+    path = os.path.join(EXP, "citizen-persona.jsonl")
+    rows = active = habit_slots = 0
+    habits, dialects = set(), set()
+    try:
+        with open(path, encoding="utf-8", errors="replace") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                rows += 1
+                try:
+                    r = json.loads(line)
+                except ValueError:
+                    continue
+                if r.get("blocked"):
+                    continue
+                active += 1
+                hs = [h for h in (r.get("habits") or []) if isinstance(h, str) and h]
+                habit_slots += len(hs)
+                habits.update(hs)
+                if r.get("dialect"):
+                    dialects.add(r["dialect"])
+    except OSError:
+        return {"rows": 0, "active": 0, "habits": 0, "avg": 0.0, "dialects": 0}
+
+    return {
+        "rows": rows,
+        "active": active,
+        "habits": len(habits),
+        "avg": (habit_slots / active) if active else 0.0,
+        "dialects": len(dialects),
+    }
+
+
 def age_text(delta: timedelta) -> str:
     mins = int(delta.total_seconds() // 60)
     if mins < 60:
@@ -186,6 +224,7 @@ def main() -> int:
     cm = commits(COMMIT_SHOW)
     pg = pages()
     vol = volumes()
+    pd = persona_depth()
     nt = notes(NOTE_SHOW)
 
     stale_pages = [p for p in pg if (now - p[2]) > timedelta(minutes=STALE_MIN)]
@@ -295,6 +334,15 @@ footer{{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(
 <tr><td>城市事件（events/*.jsonl）</td><td class="n">{vol['events']}</td></tr>
 </tbody></table>
 
+<h2>人格深化面<em>census/export/citizen-persona.jsonl 实读 · 确定性派生</em></h2>
+<table><thead><tr><th>面</th><th>数值</th></tr></thead><tbody>
+<tr><td>人格记录</td><td class="n">{pd['rows']}</td></tr>
+<tr><td>参与居民（非荣誉席位）</td><td class="n">{pd['active']}</td></tr>
+<tr><td>习惯基因实际覆盖</td><td class="n">{pd['habits']}</td></tr>
+<tr><td>人均习惯条数</td><td class="n">{pd['avg']:.2f}</td></tr>
+<tr><td>方言语体覆盖</td><td class="n">{pd['dialects']}</td></tr>
+</tbody></table>
+
 <h2>最近轮记<em>tasks/TASKS.md 内的轮号行</em></h2>
 <ul>
 {note_rows}
@@ -309,7 +357,11 @@ footer{{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(
         f.write(page)
     print(
         "city-ops.html written: pages=%d commits=%d hb=%d citizens=%d rings=%d events=%d stale=%d"
-        % (len(pg), len(cm), len(hb), vol["citizens"], vol["rings"], vol["events"], len(stale_pages))
+        " persona=%d habit_genes=%d"
+        % (
+            len(pg), len(cm), len(hb), vol["citizens"], vol["rings"], vol["events"],
+            len(stale_pages), pd["active"], pd["habits"],
+        )
     )
     return 0
 

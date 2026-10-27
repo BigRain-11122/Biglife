@@ -22,6 +22,7 @@ from make_digests import find_card, grab
 
 LIGHT = os.path.join(CO, "census", "export", "citizens-light.jsonl")
 GENES = os.path.join(CO, "genes", "persona-v2.json")
+LIVES = os.path.join(CO, "genes", "lives.json")
 OUT = os.path.join(CO, "census", "export", "citizen-persona.jsonl")
 HONORED = {"C-00001", "C-00002", "C-00003"}
 
@@ -33,7 +34,20 @@ def pick(cid, salt, seq):
 
 def load_genes():
     with open(GENES, encoding="utf-8") as f:
-        return json.load(f)
+        genes = json.load(f)
+    # 习惯池分布在两个库（persona-v2 15 条 / lives 72 条），新基因只落 lives，
+    # 不并集的话人格面永远看不到新习惯。装载时按序去重并集，让源自动打通。
+    try:
+        with open(LIVES, encoding="utf-8") as f:
+            extra = json.load(f).get("habits") or []
+    except (OSError, ValueError):
+        extra = []
+    pool = list(genes.get("habits") or [])
+    for h in extra:
+        if isinstance(h, str) and h.strip() and h.strip() not in pool:
+            pool.append(h.strip())
+    genes["habits"] = pool
+    return genes
 
 def parse_traits(personality_line):
     # "手痒（...） · 清旧账（...）" -> [("手痒","..."), ...]

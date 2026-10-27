@@ -879,3 +879,9 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
 - **[R2388]** 2026-10-27 12:4x-12:5x @BigLife-OSLoop 值守（让路窗·零 LLM 确定性产出）：pull=Already up to date；水位集 NEW=0（D-20261027-13）；orders 尾无本司新令；TASKS 无 open 单。**产品增量=b44 批 +11 条习惯基因（习惯池 61→72·+18%）**：选型依据=基因账本实测 catchphrases 1399 条供过于求 3.5 倍（used 403）而 habits=61 是唯一稀缺 gated 型池，全员共用同一小池=年轮相似度的结构性来源之一，故本轮只补稀缺面、停向饱和面堆量（自终止律）。24 候选过 gene_nearcheck 双闸，11 CLEAN 落地（13 FLAG 弃用不替换）；每周六窗台/电饭煲/鞋子摆向等生活细颗粒，--qc 17 PASS 0 FAIL。台账重建 census/export/gene-ledger.html（registered=1625 used=403 unused=1222·habits 28/72 在用）+ 目录 pages=21。水位/QC/池闸本轮未新增跑（水位 NEW=0，池 audit 12:0x 已 PASS/SELF_TERMINATE 72/72）。HQ 上报闸 ALREADY_REPORTED（15 行·零写入）。**产品质面**：19:00 后年轮重写通道接管质量队列 400 席（353 席到期可用）。tokens: local=0 api=0 api_reason=让路窗 LLM 禁用·本轮全确定性
 
 - [2026-10-27 12:5x @BigLife-OSLoop R2389] 让路窗轮实录：年轮线 defer（09:00-19:00 让路·D-20261020-02）·pool_audit PASS 全桶达标自停·qc_census PASS cards=10114 evolved=9230 problems=0·ring_lint PASS(rings=5264 coded=766 pre=766 post=0)·ring_simile_audit 复读 829/偏短 689/模板 1127/夜班队列 400 已接线 R2385 配额位·repair_dup_rings dry-run 0 件·日清闸 ALREADY_REPORTED 零写入。tokens: local=0 api=0 api_reason=yield-window-defer
+
+- **[R2390]** 2026-10-27 12:5x-13:1x @BigLife-OSLoop 值守（让路窗·零 LLM）：pull=Already up to date；决策水位差集 NEW=0（已至 D-20261027-13）；orders 尾无本司新令；TASKS 无 open 单。**产品增量=人格深化面习惯池打通（源头修法）**：查出两库分家——居民人格面读 genes/persona-v2.json（习惯池仅 15 条），今日 b43/b44 新增 19 条基因全落 genes/lives.json（72 条），人格面永远看不到 → persona_enrich.load_genes() 改装载时按序去重并集（lives 缺失/损坏降级不阻塞）。实证：distinct habits **15→85**、active=10111、坏行 0、QC PASS（双跑逐字节一致）；产线实况页新增「人格深化面」KPI 段（记录/参与居民/习惯基因覆盖/人均/语体）。闸况：ruff_gate 2 文件 CLEAN、city-ops 重建 pages=31 persona=10111 habit_genes=85。
+  - 当前活：让路窗确定性值守（人格/基因面接线 + 机器闸）
+  - 最近实物：census/export/city-ops.html（人格深化面 KPI·13:1x）· census/export/citizen-persona.jsonl（10111 席·习惯覆盖 85）
+  - 下个里程碑：19:00 让路窗解除后年轮批 3 席 + 质量重写队列头 3 席，ETA 2026-10-27 19:30
+  - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性改码与实读
