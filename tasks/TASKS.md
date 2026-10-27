@@ -1096,3 +1096,12 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 池审计：72 轴桶 72 at_target、像素灵 12/12、greet 28/28、faq 7/7、负面面 6/6，hard_fails=0，determinism mismatch=0 -> PASS，语言线自终止（零生成）。
   - 相遇轮：今日配额已满（meet-cap），本轮跳过。
   - tokens: local=10 api=0 api_reason=-
+
+
+- **R2437** 2026-10-27 21:43-21:5x @BigLife-OSLoop 年轮线+出生地拦截(人设喂料去污染)：pull=Already up to date；决策差集 NEW=0（水位至 D-20261027-16）；orders 无本司新令；TASKS 无 open 单。
+  - 产品增量=年轮 19 席落环（批一 9 席 commit 3c28a0fcf 前轮末+本轮 10 席 C-01624/C-00424/C-00547/C-09383~C-09389 commit 100ca2f78 + 行为镜像 1826b4479）。
+  - **本轮主件·缺陷根因**：C-01624 连三轮被 tech-word/recent-dup 硬拒（每轮白占一个席位）→ 查得泄漏不在喂料侧而在**基因模板**：genes/professions.json「bug 猎人」「手作 sprite」「夜里的 bug」「今日 commit 光点过江」、personality/lives/anchors「commit 光点过江」等 11 处模板词，出生即铸进卡面职业/行为，人设逐字进提示词 → 4B 照抄 → 落环闸永拒。
+  - 修法三面：①模板改中文同义（信号光点/捉虫人/像素画/光点编目/夜里的虫子），②既有卡面人设头规范化 1283 处/1283 卡（年轮历史不动·#41 前朝不追溯），③「近期记忆」旧环也过 scrub_machine_words，断回喂回声。脚本 Tools/decontaminate_persona_20261027.py（--dry-run 可复跑·幂等）。commit 8af8a2618。
+  - 验证：py_compile OK；political_redline 自测 exit 0；修复后批 10/10 全落环（C-01624 解卡）；replay events=40538 cards=10111 schema_errors=0 mismatch=0 PASS。
+  - **留单下轮**：prompt-fed 字段仍有 5 类拉丁词——NPC 服装师(82)/CODEX 服装律(82)/git 全史(139)/QUANT 食堂大厨(67)/KPI(43)，同族修法（扩 REPLACEMENTS 表+跑脚本+复跑池审计），预算原因未在本轮做；另 城区名 GAME/QUANT/MEDIA 属卡头城区字段，需先定中文城区名再改，暂不动。
+  - tokens: local=20 api=0 api_reason=-
