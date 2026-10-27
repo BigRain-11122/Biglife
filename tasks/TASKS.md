@@ -885,3 +885,9 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：census/export/city-ops.html（人格深化面 KPI·13:1x）· census/export/citizen-persona.jsonl（10111 席·习惯覆盖 85）
   - 下个里程碑：19:00 让路窗解除后年轮批 3 席 + 质量重写队列头 3 席，ETA 2026-10-27 19:30
   - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性改码与实读
+
+- **[R2391]** 2026-10-27 13:0x-13:2x @BigLife-OSLoop 轮记（让路窗·零 LLM）：pull=Already up to date；决策水位差集 NEW=0（watermark 已至 D-20261027-13）；orders 尾无本司新令；TASKS 无 open 单。**产品增量=成长档案册渲染「习惯」基因**（接 R2390 两库并集后的可见面缺口——习惯池 85 条已算进人格面，但 11 页 10111 席档案无一字显示）：①`Tools/build_growth_gallery.py` 新增 `habit_map()`，直接复用 `persona_enrich.load_genes()/derive()` 同一套 md5 分工（不另存副本、不写回任何正本，缺失/异常降级为空），每席在 hook 下渲一行「习惯 · A；B」；②页头与总目录加「习惯基因覆盖 N 席」计数。实测：cards=10111 habit_paras=10111（全覆盖）fffd=0 标签配平 全绿；抽样 C-00042 阿硅="每周必去一次数据菜市，只买时令的；烧水壶响了不马上去倒，非要等那阵哨音自己落下去"。边界（诚实律）：只改 CEO 侧档案册可见面，`citizens-light.jsonl` 与消费契约零改动，PUBLIC-WHITELIST 新增字段一律深水区之规不受影响。闸况：pool_audit PASS/under_target NONE/SELF_TERMINATE（72/72 六轴 + 12/12 精灵 + greet 28 + faq 7 + neg 6/6）；QC/回放闸 12:4x 刚过不重跑；encoding_guard VERDICT PASS；ruff_gate 1 file CLEAN；HQ 日报闸 ALREADY_REPORTED（当日 15 行·零写入）。commit 033fedfb4 已推送；export 索引 pages=21 续鲜。
+  - 当前活：工作日让路窗零 LLM 确定性产出（可见面补渲染 + 机器闸巡检）
+  - 最近实物：census/export/city-growth-p01..p11.html（习惯行·10111/10111 席·13:1x）
+  - 下个里程碑：19:00 让路窗解除后年轮批 3 席 + 质量重写队列头 3 席（C-00713 等），ETA 2026-10-27 19:30
+  - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性改码与重建
