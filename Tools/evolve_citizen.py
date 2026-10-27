@@ -2355,6 +2355,27 @@ def _ringed_today(path):
     return bool(lines) and not all("相遇：" in l for l in lines)
 
 
+QUALITY_QUEUE = os.path.join(CO, "state", "ring-quality-queue.json")
+
+def quality_queue_order():
+    """Ring-quality priority layer (queue built by ring_simile_audit.py).
+
+    Maps citizen id -> rank for rings flagged as repetitive, hollow-short or
+    global-template prose. Deterministic read: a missing or unparsable queue
+    degrades to an empty layer instead of blocking evolution.
+    """
+    try:
+        with open(QUALITY_QUEUE, encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception:
+        return {}, None
+    rank = {}
+    for i, item in enumerate(data.get("items") or []):
+        cid = item.get("id")
+        if cid and cid not in rank:
+            rank[cid] = i
+    return rank, data.get("generated")
+
 def due_citizens(cursor, batch, force=None):
     all_ids = []
     for sub in ("anchors", "registry"):
@@ -2383,8 +2404,27 @@ def due_citizens(cursor, batch, force=None):
                     again.append(cid)
             except Exception:
                 again.append(cid)
+    # R2385: quality layer. Ring quality queue (ring_simile_audit.py) ranks
+    # rings already flagged as repetitive / hollow-short / template prose, but
+    # those cards sit behind 5k+ never-evolved ones, so pure ordering would
+    # starve repair indefinitely. Reserve a slice of every batch (>=1, up to a
+    # third) for the worst due flagged residents; the rest still go to fresh
+    # coverage (R1883).
+    rank, generated = quality_queue_order()
+    if rank:
+        again.sort(key=lambda c: (rank.get(c, len(rank)), c))
+    quota = []
+    if rank and batch > 1:
+        # A queue entry is stale once the card was re-ringed after the audit
+        # snapshot was taken (cursor "last" > data["generated"]): the flagged
+        # line already got replaced, so let it fall back to normal rotation.
+        fresh_enough = [c for c in again if c in rank
+                        and (not generated
+                             or str(cursor.get(c, {}).get("last") or "") <= generated)]
+        quota = fresh_enough[:max(1, batch // 3)]
+    queue_head = set(quota)
     picked = []
-    for cid in fresh + again:
+    for cid in quota + fresh + [c for c in again if c not in queue_head]:
         p = find_card(cid)
         if _ringed_today(p):
             # Self-heal the cursor so a stale due entry does not cost a

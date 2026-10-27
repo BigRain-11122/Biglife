@@ -81,6 +81,21 @@ def parse(path: str) -> tuple[str, str, list[tuple[str, str]]]:
     return cid, name, rings
 
 
+def repair_quota() -> tuple[int, int]:
+    """Seats per evolution round reserved for queue repair (R2385 wiring).
+
+    Mirrors evolve_citizen.due_citizens: max(1, batch // 3) where batch is
+    max(launcher --batch 3, Tools/batch-policy.json floor). Read-only config.
+    """
+    floor = 0
+    try:
+        with io.open(os.path.join(ROOT, "Tools", "batch-policy.json"), encoding="utf-8") as f:
+            floor = int(json.load(f).get("batch", 0))
+    except Exception:
+        floor = 0
+    batch = max(3, floor)
+    return batch, max(1, batch // 3)
+
 def build_page(stats: dict, tmpl: list[dict], heavy: list[dict]) -> str:
     e = html.escape
     rows = []
@@ -138,6 +153,7 @@ footer{{padding:16px 20px 40px;color:var(--dim);font-size:12px;border-top:1px so
 <div class="kpi"><b>{stats['short_rows']}</b><span>偏短年轮（正文 &lt;45 字）</span></div>
 <div class="kpi"><b>{stats['tmpl_rows']}</b><span>命中全局模板句的年轮</span></div>
 <div class="kpi"><b>{stats['queue']}</b><span>夜班重写队列条数</span></div>
+<div class="kpi"><b>{stats['quota']}/{stats['batch']}</b><span>每轮预留重写席（批 {stats['batch']} 中）</span></div>
 </div>
 <h2 class="sec">被最多居民共用的句块（8 字窗口 · 前 20）</h2>
 <table><tr><th>句块</th><th>涉及居民</th></tr>{tmpl_rows or '<tr><td colspan="2">（无）</td></tr>'}</table>
@@ -145,7 +161,8 @@ footer{{padding:16px 20px 40px;color:var(--dim);font-size:12px;border-top:1px so
 <main>{''.join(rows) or '<p class="meta">（无）</p>'}</main>
 <footer>判据：同居民相邻年轮正文（去 [锚] 注脚）字符 3-gram Jaccard ≥ 0.40 记一处复读；正文 &lt; 45 字记偏短；
 模板句=8 字窗口被 ≥ {TMPL_CITIZENS} 位居民共用。存量不回改（锚定律），只计量并进队列。
-队列文件：state/ring-quality-queue.json</footer>
+队列文件：state/ring-quality-queue.json · 重写通道已接线（R2385）：每轮批 {stats['batch']} 席预留 {stats['quota']} 席按本队列顺序重写，
+已重写者（年轮日期晚于本快照生成日）自动退出队列，余席仍走新人首环。</footer>
 </body></html>
 """
 
@@ -239,7 +256,9 @@ def main() -> int:
                                                        if f["date"] == r["date"]), "")) + r["text"]}
                              for r in c["rings_for_page"]]} for c in heavy]
 
-    stats = {"since": args.since, "day": day, "citizens": len(per_citizen),
+    batch, quota = repair_quota()
+    stats = {"since": args.since, "day": day, "batch": batch, "quota": quota,
+             "citizens": len(per_citizen),
              "rings": sum(c["count"] for c in per_citizen.values()),
              "sim_rows": sim_rows, "short_rows": short_rows,
              "sim_citizens": sum(1 for c in per_citizen.values() if c["worst"] > 0),
@@ -292,8 +311,10 @@ def main() -> int:
         "## 处置口径",
         "",
         "- 存量年轮不回改（锚定律保全原文），只计量。",
-        "- 队列 `state/ring-quality-queue.json` 供夜班 `evolve_citizen.py` 重写时优先取用；",
-        "  重写须换事实锚（新事件/新天气），不得换词不换意。",
+        "- 队列 `state/ring-quality-queue.json` 已接线 `evolve_citizen.py`（R2385）：每轮批 %d 席"
+        % stats["batch"],
+        "  预留 %d 席按队列顺序优先重写；年轮日期晚于本快照生成日者自动退出队列，余席走新人首环。" % quota,
+        "- 重写须换事实锚（新事件/新天气），不得换词不换意。",
         "- 出生站闸建议：落环口对「与本卡上一圈相似 ≥ %.2f」判 REGEN（待立法窗授权）。" % SIM_TH,
         "",
         "可视化：`census/export/city-ring-quality.html`",

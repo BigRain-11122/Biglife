@@ -856,3 +856,11 @@
   - 最近实物：census/QC-REPORT.md（10-27 12:09）、qa/EVENTS-REPLAY-REPORT.md（10-27 12:10）、genes b42 批 +7（commit f628d2f4c）
   - 下个里程碑：19:00 让路窗解除后首轮跑年轮批 3 席 + 抽取年轮质量续写队列，ETA 2026-10-27 19:30
   - tokens: local=0 api=0 api_reason=yield-window(workday CPU let-pass·D-20261020-02)+零 LLM 确定性值守
+
+
+- **[R2385]** 2026-10-27 12:3x @BigLife-OSLoop 轮记（让路窗确定性轮·零 LLM）：**产品增量=年轮质量重写通道接线**（R2381 留的「队列未接线」单闭环）——①Tools/evolve_citizen.py 新增 quality_queue_order()（读 state/ring-quality-queue.json，缺失/损坏降级为空层不阻塞）+ due_citizens 配额切片：每轮批 10 席预留 3 席（max(1, batch//3)）按队列顺序重写给最差年轮，余席仍走新人首环（R1883 覆盖律不动）；②陈旧自动退队=卡片年轮日期晚于队列快照日（cursor.last > generated）即视为已重写，回落常规轮换；③Tools/ring_simile_audit.py 增 
+epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报告处置节。实证：batch 3→quota [C-00713]+2 新人，batch 10→quota [C-00713,C-02338,C-01900]+7 新人；伪陈旧（C-00713 last=2026-10-28）→ 自动跳过换 C-02338；队列缺失路径=dangrade 无异常。闸况：ruff_gate 2 文件 CLEAN、encoding_guard VERDICT PASS（U+FFFD=0）、页面 fffd=0 且 nav 标记 1、审计重跑 rings=14876 citizens=9207 sim=829 short=689 tmpl=1127 queue=400。轮首：pull=Already up to date（净树）、决策水位差集 NEW=0、orders 尾无本司新令、TASKS 无 open 单。年轮/相遇/反思线按 D-20261020-02 让路窗顺延 19:00——19:00 后首轮即按本通道重写队列头 3 位（C-00713 等）。
+  - 当前活：让路窗值守 + 年轮质量重写通道
+  - 最近实物：census/export/city-ring-quality.html（2026-10-27 12:3x，含 3/10 重写席 KPI）、qa/RING-SIMILE-REPORT.md、Tools/evolve_citizen.py 接线
+  - 下个里程碑：19:00 后首轮年轮批按队列头重写 3 位 + 新人 7 席，ETA 2026-10-27 19:30
+  - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性改码/校验
