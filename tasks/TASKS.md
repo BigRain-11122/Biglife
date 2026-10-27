@@ -1354,3 +1354,9 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
 - 最近实物: 3d15a040b 年轮 10 环 + 5437b256c 行为线镜像（2026-10-28 02:50）+ census/QC-REPORT.md（02:51）
 - 下个里程碑: 2026-10-29 00:00 决策水位刷新 + 次日年轮批
 - tokens: local=10 api=0 api_reason=-
+
+- **[R2486]** 2026-10-28 02:5x @BigLife-OSLoop 值守：pull=Already up to date；水位差集 NEW=0（尾 D-20261028-04；本司 D-04 部署根固化已于 01:36 零残留闭环）；orders 物理件区无本司项；年轮线 due=10 落环 9（C-02105/02119/02126/09712-09716/09718；C-09717 三连违禁 skip 保 due）；行为线 sync_rings 自动收口 rows=9 ring=9711；事件回放闸 cards=10111 events=41016 replayed=10111 mismatch=0 schema=0 PASS；语言线 72/72+12/12 SELF_TERMINATE 自停；QC 02:51 problems=0、相遇 cap 3/3、基因轮 02:30 已落 8 条、聚光灯本月 2/2 —— 均不重跑；TASKS open=0；HQ 闸 ALREADY_REPORTED 零写入。
+  - 当前活: 值守收轮（本批年轮已入库）
+  - 最近实物: census/registry 9 位居民年轮 2026-10-28 02:54 + qa/EVENTS-REPLAY-REPORT.md
+  - 下个里程碑: 2026-10-29 00:00 前下一批年轮 + 水位刷新
+  - tokens: local=10 api=0 api_reason=-
