@@ -36,6 +36,25 @@ NEED_KEYS = ["anwen", "shengji", "shejiao", "haoqi"]  # 安稳/生计/社交/好
 AXIS_FACE = {"anwen": "ledger", "shengji": "lines", "shejiao": "greet",
              "haoqi": "lecturer"}
 
+# T-20261028-01 (TASKS): persona thought axis -> need lift. Time bases alone
+# zeroed 生计/社交 city-wide (every citizen shares one clock ctx); the axis map
+# keeps needs a function of who the citizen is, not only what hour it is.
+AXIS_NEED = {
+    "求新": ("haoqi",),
+    "怀旧": ("anwen",), "念旧": ("anwen",), "惜物": ("anwen",),
+    "安稳": ("anwen",),
+    "秩序": ("shengji",), "实在": ("shengji",), "踏实": ("shengji",),
+    "守时": ("shengji",), "守规": ("shengji",), "稳妥": ("shengji",),
+    "较真": ("shengji",), "细致": ("shengji",), "耐心": ("shengji",),
+    "耐性": ("shengji",), "克己": ("shengji",), "清醒": ("shengji",),
+    "烟火": ("shengji", "shejiao"),
+    "侠气": ("shejiao",), "仗义": ("shejiao",), "和气": ("shejiao",),
+    "热忱": ("shejiao",), "厚道": ("shejiao",), "守信": ("shejiao",),
+    "逍遥": ("shejiao", "haoqi"), "豁达": ("shejiao", "haoqi"),
+    "好奇": ("haoqi",), "讲究": ("haoqi",), "警觉": ("anwen",),
+    "沉稳": ("anwen",), "利落": ("shengji",),
+}
+
 # T-20260924-16d (contract cognition/NEEDS-CRASH.md v1.0): crash thresholds,
 # all parameterized - CEO can retune with one line (engine recalibrates by
 # measured distribution, recorded in task log).
@@ -138,13 +157,15 @@ def derive_full(r, sig, hb, reg_rows=()):
         sh += 1
     # 好奇 curiosity: 求新 axis, sprites and the young (persona base)
     qi = 0
-    if ax == "求新":
-        qi += 1
     if sp == "sprite":
         qi += 1
     if sp == "carbon" and isinstance(age, int) and age <= 17:
         qi += 1
     needs = {"anwen": an, "shengji": sj, "shejiao": sh, "haoqi": qi}
+    # T-20261028-01 persona axis base: the six thought axes must drive all
+    # four needs, otherwise night/weekday clock alone zeroes whole axes city-wide.
+    for k in AXIS_NEED.get(ax, ()):
+        needs[k] += 1
     satisfied = set()
     for row in reg_rows:
         fact = str(row.get("fact", ""))
