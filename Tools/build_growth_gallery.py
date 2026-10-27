@@ -19,6 +19,7 @@ import io
 import json
 import math
 import os
+import sys
 from datetime import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -54,7 +55,9 @@ main{padding:18px 24px 60px;display:grid;gap:14px;grid-template-columns:repeat(a
 .c header span{color:var(--dim);font-size:12px}
 .c header i{margin-left:auto;color:var(--dim);font-size:12px;font-style:normal}
 .creed{margin:8px 0 2px;color:#cfd5e4}
-.hook{margin:2px 0 10px;color:var(--dim);font-size:13px}
+.hook{margin:2px 0 4px;color:var(--dim);font-size:13px}
+.habit{margin:2px 0 10px;color:#9fb3c8;font-size:13px}
+.habit em{color:var(--dim);font-style:normal;font-size:11.5px;letter-spacing:.4px;margin-right:6px}
 .rings{margin:0;padding-left:18px}
 .rings li{margin:6px 0;font-size:13.5px}
 .rings em{display:block;color:var(--dim);font-style:normal;font-size:11.5px;letter-spacing:.4px}
@@ -107,7 +110,35 @@ def population() -> int:
     return n
 
 
-def render_card(d: dict) -> str:
+def habit_map() -> dict[str, list[str]]:
+    """id -> habits，走 persona_enrich 同一套基因池与 md5 分工（确定性，不另存副本）。
+
+    习惯基因池今日已两库并集（persona_enrich.load_genes），但此前没有任何可见面渲染它。
+    """
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    try:
+        import persona_enrich as pe
+
+        genes = pe.load_genes()
+    except Exception:
+        return {}
+    out: dict[str, list[str]] = {}
+    with io.open(LIGHT, encoding="utf-8") as fh:
+        for ln in fh:
+            ln = ln.strip()
+            if not ln:
+                continue
+            try:
+                row = json.loads(ln)
+                d, _ = pe.derive(row, genes)
+            except Exception:
+                continue
+            if d.get("id") and not d.get("blocked"):
+                out[d["id"]] = [h for h in (d.get("habits") or []) if h]
+    return out
+
+
+def render_card(d: dict, habits: list[str] | None = None) -> str:
     rings = d.get("rings") or []
     lines = d.get("month_lines") or []
     dist = DISTRICT_CN.get(d.get("district", ""), d.get("district", "") or "—")
@@ -115,6 +146,9 @@ def render_card(d: dict) -> str:
         f'<li><em>{esc(r.get("date", ""))}</em>{esc(r.get("quote", ""))}</li>' for r in rings
     )
     line_html = "".join(f"<p>{esc(t)}</p>" for t in lines[:2])
+    habit_html = (
+        f'<p class="habit"><em>习惯</em>{esc("；".join(habits[:2]))}</p>' if habits else ""
+    )
     search = " ".join(
         [d.get("id", ""), d.get("name", ""), d.get("profession", ""), d.get("block", ""), dist]
     ).lower()
@@ -124,6 +158,7 @@ def render_card(d: dict) -> str:
         f'<i>{esc(d.get("profession", ""))} · {esc(dist)} · {esc(d.get("age", ""))}岁</i></header>'
         f'<p class="creed">{esc(d.get("creed", ""))}</p>'
         f'<p class="hook">{esc(d.get("hook", ""))}</p>'
+        f'{habit_html}'
         f'<ol class="rings">{ring_html}</ol>'
         f'<div class="mon">{line_html}</div></article>'
     )
@@ -163,6 +198,8 @@ def main() -> int:
 
     items, total_files = cards(args.limit)
     pop = population()
+    habits = habit_map()
+    with_habit = sum(1 for d in items if habits.get(d.get("id")))
     cover = (total_files * 100.0 / pop) if pop else 0.0
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
     size = max(50, args.shard_size)
@@ -178,11 +215,12 @@ def main() -> int:
             '<header class="top"><h1><a href="city-growth.html">成长档案册</a>'
             f"<span class=\"meta\"> · 第 {idx} 页</span></h1>"
             f'<div class="meta">已出档案 <b>{total_files}</b> 席 / 全体居民 <b>{pop}</b> 席 · '
-            f"覆盖 <b>{cover:.1f}%</b> · 本页第 <b>{lo}-{hi}</b> 席（按年轮厚薄排序） · 生成 {esc(now)}</div></header>\n"
+            f"覆盖 <b>{cover:.1f}%</b> · 本页第 <b>{lo}-{hi}</b> 席（按年轮厚薄排序） · "
+            f"习惯基因覆盖 <b>{with_habit}</b>/{len(items)} 席 · 生成 {esc(now)}</div></header>\n"
             f'{nav_html(idx, total)}\n'
             '<div class="bar"><input id="q" type="search" placeholder="本页内搜 编号 / 姓名 / 职业 / 街区">'
             f'<select id="d"><option value="">全部城区</option>{opts}</select></div>\n'
-            '<main id="m">' + "".join(render_card(d) for d in chunk) + "</main>\n"
+            '<main id="m">' + "".join(render_card(d, habits.get(d.get("id"))) for d in chunk) + "</main>\n"
             '<script>\n'
             "const q=document.getElementById('q'),d=document.getElementById('d');\n"
             "function f(){const t=q.value.trim().toLowerCase(),v=d.value;\n"
@@ -217,7 +255,8 @@ def main() -> int:
     body = (
         '<header class="top"><h1>成长档案册</h1>'
         f'<div class="meta">已出档案 <b>{total_files}</b> 席 / 全体居民 <b>{pop}</b> 席 · '
-        f"覆盖 <b>{cover:.1f}%</b> · 共 <b>{len(items)}</b> 席分 {total} 页 · 生成 {esc(now)}</div></header>\n"
+        f"覆盖 <b>{cover:.1f}%</b> · 共 <b>{len(items)}</b> 席分 {total} 页 · "
+        f"习惯基因覆盖 <b>{with_habit}</b> 席 · 生成 {esc(now)}</div></header>\n"
         f'<div class="dist">城区分布：{dist_line}</div>\n'
         '<div class="toc">' + "".join(toc) + "</div>\n"
     )
@@ -227,7 +266,7 @@ def main() -> int:
     stats = " ".join(f"{n}={c}" for n, c in written)
     print(
         f"OK city-growth.html pages={total} cards={len(items)} archives={total_files} "
-        f"population={pop} coverage={cover:.1f}% [{stats}]"
+        f"population={pop} coverage={cover:.1f}% habit_cards={with_habit} [{stats}]"
     )
     return 0
 
