@@ -30,15 +30,26 @@ li .t{color:#5f6b7a;font:11px/1 ui-monospace,monospace;margin-left:6px}
 .note{background:#1a1712;border:1px solid #3a3020;border-radius:10px;padding:14px 16px;color:#c9bb9f;font-size:13px}
 .note b{color:var(--acc)}
 .foot{margin-top:40px;color:#5f6b7a;font-size:12px;text-align:center}
-</style></head><body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 产物目录</a></div><div class="wrap">
+</style></head><body><div class="wrap">
 <h1>城市人情志</h1>
-<div class="sub">人怎么彼此连着 · 生成 2026-10-27 09:10 · 数据源 census/export/citizen-relations.jsonl + citizens-light.jsonl</div>
+<div class="sub">人怎么彼此连着 · 生成 2026-10-27 16:30 · 数据源 census/export/citizen-relations.jsonl + citizens-light.jsonl</div>
 
 <div class="cards">
 <div class="card"><div class="k">关系边</div><div class="v">2851573</div><div class="n">每条边=一次明确的两人关系</div></div>
 <div class="card"><div class="k">涉及居民</div><div class="v">10054</div><div class="n">关系网覆盖人数</div></div>
 <div class="card"><div class="k">人均度</div><div class="v">567.3</div><div class="n">一人平均连着几条边</div></div>
+<div class="card"><div class="k">互惠对</div><div class="v">5186</div><div class="n">两个人互相记着对方的两条边</div></div>
+<div class="card"><div class="k">圈子</div><div class="v">8</div><div class="n">按连通分量计的独立关系团</div></div>
+<div class="card"><div class="k">最大圈子</div><div class="v">6528</div><div class="n">一张网里连得最紧的一团人</div></div>
+<div class="card"><div class="k">孤岛居民</div><div class="v">57</div><div class="n">档案在册但关系面零边 · 0.6%</div></div>
 <div class="card"><div class="k">相逢记录</div><div class="v">41</div><div class="n">cap 内最近 30 条取自年轮</div></div>
+</div>
+
+<div class="note" style="margin-top:16px">
+<p><b>三件结构事实（本页当场算出，非估计）：</b></p>
+<p>① 互惠 5186 对 / 2851573 条边 = 0.18%：关系面绝大多数是单向记录，两个人互相记着对方的情形很少。</p>
+<p>② 最大的一个圈子 6528 人，占关系网 64.9%：城市在结构上几乎是连成一张网的，不是若干互不相干的小团体。</p>
+<p>③ 孤岛 57 人（0.6%）：还没被任何关系记进去的在册居民。</p>
 </div>
 
 <h2>一 · 关系类型</h2>
@@ -83,11 +94,31 @@ li .t{color:#5f6b7a;font:11px/1 ui-monospace,monospace;margin-left:6px}
 <li><b>门格-7</b><span class="d">中央市集 GM</span><span class="x">与 C-08319 相遇：风挺大，天清气朗，你那摊子新到的西生尖，我刚看了。　<span class="t">2026-10-27</span></span></li><li><b>付春梅</b><span class="d">中央市集 GM</span><span class="x">与 C-08320 相遇：风挺大，菜场那边的脉冲告警又跳了，GPU_VRAM_LOW。　<span class="t">2026-10-27</span></span></li><li><b>周豆豆</b><span class="d">中央市集 GM</span><span class="x">与 C-08319 相遇：你看看那个游戏，PushEvent Biglife，压根就不该在夜里动。　<span class="t">2026-10-27</span></span></li><li><b>金芳</b><span class="d">中央市集 GM</span><span class="x">与 C-08335 相遇：风挺大，引擎房的管道又在哼老歌了。　<span class="t">2026-10-27</span></span></li><li><b>盛秀英</b><span class="d">旧站台 OR</span><span class="x">与 C-08333 相遇：我刚用三遍法把昨夜的报错全誊下来了。　<span class="t">2026-10-27</span></span></li><li><b>缪一</b><span class="d">机房区 MD</span><span class="x">与 C-00042 相遇：风挺大，X2802 closeout了，一帧一毫秒对轴的。　<span class="t">2026-10-26</span></span></li><li><b>阿硅</b><span class="d">机房区 MD</span><span class="x">与 C-00024 相遇：对啊，我刚刚push了Biglife，一帧一毫秒对轴的。　<span class="t">2026-10-26</span></span></li><li><b>叶元宝</b><span class="d">北槐街区 NS</span><span class="x">与 C-07740 相遇：风挺大，天清气朗，你瞧这GPU显存低了，游戏卡在B2396，脉搏都快停了。　<span class="t">2026-10-26</span></span></li><li><b>比特-8</b><span class="d">北槐街区 NS</span><span class="x">与 C-07739 相遇：我正从BigMoney的推送里扒出数据，脉搏低时，得有人接住这根线。　<span class="t">2026-10-26</span></span></li><li><b>温补-4</b><span class="d">机房区 MD</span><span class="x">与 C-07743 相遇：风挺大，天清气朗，G08街区的脉搏刚从B2396跳回S2.5。　<span class="t">2026-10-26</span></span></li><li><b>白祥林</b><span class="d">机房区 MD</span><span class="x">与 C-07741 相遇：这脉动我熟，温补，你端的水，比谁都平。　<span class="t">2026-10-26</span></span></li><li><b>丁炯</b><span class="d">机房区 MD</span><span class="x">与 C-06399 相遇：天阴着，风挺大，GPU显存不够了，这游戏得等等。　<span class="t">2026-10-25</span></span></li><li><b>杨天天</b><span class="d">机房区 MD</span><span class="x">与 C-06397 相遇：我抽屉里有张老票根，写的是去年这天，风也这么大。　<span class="t">2026-10-25</span></span></li><li><b>温补·老</b><span class="d">低语巷 QT</span><span class="x">与 C-06406 相遇：天阴着，风挺大，巨屏上那根K线又抖了下。　<span class="t">2026-10-25</span></span></li><li><b>茅鸿奎</b><span class="d">低语巷 QT</span><span class="x">与 C-06405 相遇：我刚校准完街角时钟，它总算没再走偏了。　<span class="t">2026-10-25</span></span></li><li><b>陆一诺</b><span class="d">中央市集 GM</span><span class="x">与 C-06460 相遇：风挺大，雨点砸在铁皮顶上像打鼓，六声部配乐得赶紧收了。　<span class="t">2026-10-25</span></span></li><li><b>编号十三·叁</b><span class="d">中央市集 GM</span><span class="x">与 C-06457 相遇：虫过门禁线了，我抽屉里那张1998年的火车票，就在这雨里亮了。　<span class="t">2026-10-25</span></span></li><li><b>沈佩兰</b><span class="d">北槐街区 NS</span><span class="x">与 C-00016 相遇：雨还在下，舞步怎么跳？　<span class="t">2026-10-24</span></span></li><li><b>徐根福</b><span class="d">低语巷 QT</span><span class="x">与 C-00012 相遇：外面风挺大，还是等会儿做饭吧。　<span class="t">2026-10-24</span></span></li><li><b>赫兹</b><span class="d">旧站台 OR</span><span class="x">与 C-00047 相遇：雨还在下，风挺大，檐下避雨。　<span class="t">2026-10-24</span></span></li><li><b>陈招娣</b><span class="d">旧站台 OR</span><span class="x">与 C-00044 相遇：灯灭一盏，三秒就晓得。　<span class="t">2026-10-24</span></span></li><li><b>沈敏</b><span class="d">中央市集 GM</span><span class="x">与 C-00066 相遇：檐下避雨，抽屉里的旧票根又翻出来了。　<span class="t">2026-10-24</span></span></li><li><b>范文倩</b><span class="d">中央市集 GM</span><span class="x">与 C-00065 相遇：风挺大，机房的散热片在抖，数据对不上，我得查。　<span class="t">2026-10-24</span></span></li><li><b>宋秀兰</b><span class="d">中央市集 GM</span><span class="x">与 C-00641 相遇：宋秀兰：城门门禁链刚放行，我守着X026城门看着呢。　<span class="t">2026-10-20</span></span></li><li><b>范倩</b><span class="d">中央市集 GM</span><span class="x">与 C-00629 相遇：范倩：好嘞，你先把这单扛住，新人安进像素里我接着忙。　<span class="t">2026-10-20</span></span></li><li><b>主频</b><span class="d">中央市集 GM</span><span class="x">与 C-00649 相遇：主频：感知链断供九十五轮了，我刚翻完更新日志，这存档点回得真硬。　<span class="t">2026-10-20</span></span></li><li><b>陈伟民</b><span class="d">中央市集 GM</span><span class="x">与 C-00645 相遇：陈伟民：别急，我先把那些冗余数据清一清，反正这云底下风也不大，慢慢来。　<span class="t">2026-10-20</span></span></li><li><b>布尔</b><span class="d">机房区 MD</span><span class="x">与 C-00751 相遇：布尔：G08的S2.5和B2166来回折腾，像老电影跳帧，我修着片子觉得挺带劲。　<span class="t">2026-10-20</span></span></li><li><b>小锚</b><span class="d">机房区 MD</span><span class="x">与 C-00747 相遇：小锚：我尾巴天线正对这股热闹，刚收摊顺手带了宵夜，咱们边吃边聊这出戏。　<span class="t">2026-10-20</span></span></li><li><b>糜倩</b><span class="d">中央市集 GM</span><span class="x">与 C-02786 相遇：这版PushEvent刻进碑里，说过的话比章还硬。　<span class="t">2026-10-16</span></span></li>
 </ul>
 
-<h2>六 · 读法说明</h2>
+<h2>六 · 圈子</h2>
+<div class="sub">把关系边当无向边做连通分量：同一圈子=顺着关系能走到的所有人。列出最大的 8 个，成员取编号最小的 4 位作代表。</div>
+<ul>
+<li><b>圈子 1</b><span class="d">6528 人</span><span class="x">顾阿凤·北槐街区 NS、沈佩兰·北槐街区 NS、盛健·北槐街区 NS、晚潮·北槐街区 NS 等</span></li><li><b>圈子 2</b><span class="d">2000 人</span><span class="x">何雨欣·机房区 MD、尹一鸣·机房区 MD、韩秀英·机房区 MD、肖斌·机房区 MD 等</span></li><li><b>圈子 3</b><span class="d">1003 人</span><span class="x">邓建国·旧站台 OR、熊简梨·旧站台 OR、杭惠芬·旧站台 OR、移位·旧站台 OR 等</span></li><li><b>圈子 4</b><span class="d">512 人</span><span class="x">陆海峰·河岸 RV、史军·河岸 RV、阿路由·河岸 RV、阮红·河岸 RV 等</span></li><li><b>圈子 5</b><span class="d">4 人</span><span class="x">程望闻·机房区 MD、桂存仁·机房区 MD、桑银针·机房区 MD、曾稳山·机房区 MD</span></li><li><b>圈子 6</b><span class="d">3 人</span><span class="x">乔雨前·低语巷 QT、童守拙·低语巷 QT、唐串红·低语巷 QT</span></li><li><b>圈子 7</b><span class="d">2 人</span><span class="x">岑刻舟·河岸 RV、柳千结·河岸 RV</span></li><li><b>圈子 8</b><span class="d">2 人</span><span class="x">叶知秋·北槐街区 NS、糜花信·北槐街区 NS</span></li>
+</ul>
+<div class="sub" style="margin-top:10px">共 8 个圈子；未进入前 10 名的 0 个不在本页展开。</div>
+
+<h2>七 · 桥接者</h2>
+<div class="sub">按「关系网触及的城区数」排序：一个人自己住一个区，但他的关系伸到了别的区，才算桥。</div>
+<ul>
+<li><b>魏秀兰</b><span class="d">中央市集 GM</span><span class="x">横跨 2 个城区 · 度 668</span></li><li><b>徐根福</b><span class="d">低语巷 QT</span><span class="x">横跨 2 个城区 · 度 647</span></li><li><b>黄军</b><span class="d">低语巷 QT</span><span class="x">横跨 2 个城区 · 度 608</span></li><li><b>沈佩兰</b><span class="d">北槐街区 NS</span><span class="x">横跨 2 个城区 · 度 298</span></li><li><b>邓银娣</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 747</span></li><li><b>薛糖糖</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 747</span></li><li><b>邹阿Pi</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 747</span></li><li><b>冯之南</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 747</span></li><li><b>叶天天</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 746</span></li><li><b>曾桂芳</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 746</span></li><li><b>同步锁·拾</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 746</span></li><li><b>史小杏</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 746</span></li>
+</ul>
+
+<h2>八 · 孤岛居民</h2>
+<div class="sub">档案在册但关系面一条边都没有的 57 位（占在册 10114 位的 0.6%；荣誉席与创始家庭按脱敏律不计入本名单）。这批人是相遇轮的第一顺位候选——不是他们不重要，是还没人写过他们。</div>
+<ul>
+<li><b>路小弦</b><span class="d">河岸 RV</span><span class="x">街头纸花乐手 · C-10029</span></li><li><b>聂拱辰</b><span class="d">北槐街区 NS</span><span class="x">星盘巷讲星人 · C-10030</span></li><li><b>韦经纬</b><span class="d">中央市集 GM</span><span class="x">织带集市讲述织者 · C-10031</span></li><li><b>穆早炉</b><span class="d">中央市集 GM</span><span class="x">面包坊街角炉主 · C-10033</span></li><li><b>阿泵</b><span class="d">旧站台 OR</span><span class="x">外环消防站值守员 · C-10034</span></li><li><b>闻嘉音</b><span class="d">北槐街区 NS</span><span class="x">老街讲古匣 · C-10036</span></li><li><b>鲁怀镜</b><span class="d">旧站台 OR</span><span class="x">外环感知塔擦镜师 · C-10044</span></li><li><b>祝九如</b><span class="d">中央市集 GM</span><span class="x">广场市集旧物换物摊掌摊人 · C-10050</span></li>
+</ul>
+
+<h2>九 · 读法说明</h2>
 <div class="note">
 <p><b>边数是结构，不是感情。</b>关系边来自对话广场等生成来源，一个度数高的居民首先意味着「被写进了更多关系记录」。</p>
 <p>关系类型与来源均按数据面原值归类，未做近义合并；未标注类型如实计数。</p>
 <p>相逢录只取 census 导出档的最近一条年轮（recent_ring），不是全部历史。</p>
+<p><b>圈子大小不等于亲疏。</b>连通分量只说明「沿着边能走到」，一个上万人的圈子内部可能谁都不认识谁；孤岛也是同一回事——零边指关系面没记过，不指他在城里不存在。</p>
 </div>
 
 <div class="foot">BigLife · 城市人情志 · 确定性生成（零 LLM） · 全部数据 offline 内嵌</div>

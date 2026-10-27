@@ -41,6 +41,8 @@ DISTRICT_CN = {
 }
 HUB_N = 12
 MEET_N = 30
+CLIQUE_N = 10
+ISLAND_N = 8
 
 
 def parse_edge(line):
@@ -77,6 +79,8 @@ def load_light():
                 "profession": d.get("profession", "") or "",
                 "ring": ring,
                 "date": d.get("recent_ring_date", "") or "",
+                # 荣誉席（创始家庭三席）身份细节脱敏：仅供本页剔除，不落到任何名单
+                "honored": d.get("faction") == "honored",
             }
             if "相遇" in ring:
                 meets.append(cid)
@@ -130,6 +134,54 @@ def meet_line(cid, info):
     )
 
 
+class UnionFind:
+    """按需建节点的并查集：只用来数「圈子」（连通分量）大小。"""
+
+    def __init__(self):
+        self.parent: dict[str, str] = {}
+
+    def find(self, x):
+        parent = self.parent
+        parent.setdefault(x, x)
+        root = x
+        while parent[root] != root:
+            root = parent[root]
+        while parent[x] != root:
+            parent[x], x = root, parent[x]
+        return root
+
+    def union(self, a, b):
+        ra, rb = self.find(a), self.find(b)
+        if ra != rb:
+            self.parent[rb] = ra
+
+
+def clique_line(rank, members, size, info):
+    names = []
+    for cid in members:
+        p = info.get(cid, {})
+        tag = p.get("name", cid)
+        dist = p.get("district", "")
+        names.append(html.escape(("%s·%s" % (tag, dist)).strip("·")))
+    return (
+        '<li><b>圈子 %d</b><span class="d">%d 人</span><span class="x">%s%s</span></li>'
+        % (rank, size, "、".join(names), " 等" if size > len(members) else "")
+    )
+
+
+def bridge_line(cid, spread, deg, info):
+    p = info.get(cid, {})
+    return (
+        '<li><b>%s</b><span class="d">%s</span><span class="x">横跨 %d 个城区 · 度 %d</span></li>'
+        % (
+            html.escape(p.get("name", cid)),
+            html.escape(p.get("district", "—")),
+            spread,
+            deg,
+        )
+    )
+
+
 def main():
     info, meet_ids = load_light()
 
@@ -137,6 +189,9 @@ def main():
     src_cnt = collections.Counter()
     degree = collections.Counter()
     pair_cnt = collections.Counter()
+    und_pair = collections.Counter()
+    reach = {}
+    uf = UnionFind()
     edges = 0
     unparsed = 0
     nodes = set()
@@ -162,6 +217,17 @@ def main():
             db = info.get(b, {}).get("district", "")
             if da and db:
                 pair_cnt[(da, db)] += 1
+            # 结构层：无向对（互惠计数）、城区触达集（桥接者）、并查集（圈子）
+            und_pair[(a, b) if a <= b else (b, a)] += 1
+            uf.union(a, b)
+            if da:
+                reach.setdefault(a, set()).add(da)
+            if db:
+                reach.setdefault(b, set()).add(db)
+            if da:
+                reach.setdefault(b, set()).add(da)
+            if db:
+                reach.setdefault(a, set()).add(db)
 
     total_deg = sum(degree.values())
     avg_deg = (total_deg / len(degree)) if degree else 0
@@ -172,6 +238,19 @@ def main():
     meet_ids.sort(key=lambda c: info.get(c, {}).get("date", ""), reverse=True)
     meet_rows = meet_ids[:MEET_N]
     meet_total = len(meet_ids)
+
+    # 结构层：互惠对 / 圈子（连通分量）/ 桥接者（城区触达）/ 孤岛居民
+    mutual = sum(1 for v in und_pair.values() if v >= 2)
+    groups: dict[str, list[str]] = {}
+    for cid in uf.parent:
+        groups.setdefault(uf.find(cid), []).append(cid)
+    cliques = sorted(groups.values(), key=lambda m: (-len(m), m[0]))
+    bridge_top = sorted(
+        ((cid, len(d)) for cid, d in reach.items()),
+        key=lambda t: (-t[1], -degree[t[0]], t[0]),
+    )[:HUB_N]
+    islands = sorted(cid for cid in info if cid not in nodes and not info[cid].get("honored"))
+    iso_rate = (len(islands) / len(info) * 100) if info else 0
 
     now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
 
@@ -215,7 +294,18 @@ li .t{{color:#5f6b7a;font:11px/1 ui-monospace,monospace;margin-left:6px}}
 {card("关系边", edges, "每条边=一次明确的两人关系")}
 {card("涉及居民", len(nodes), "关系网覆盖人数")}
 {card("人均度", "%.1f" % avg_deg, "一人平均连着几条边")}
+{card("互惠对", mutual, "两个人互相记着对方的两条边")}
+{card("圈子", len(cliques), "按连通分量计的独立关系团")}
+{card("最大圈子", len(cliques[0]) if cliques else 0, "一张网里连得最紧的一团人")}
+{card("孤岛居民", len(islands), "档案在册但关系面零边 · %.1f%%" % iso_rate)}
 {card("相逢记录", meet_total, "cap 内最近 %d 条取自年轮" % MEET_N)}
+</div>
+
+<div class="note" style="margin-top:16px">
+<p><b>三件结构事实（本页当场算出，非估计）：</b></p>
+<p>① 互惠 {mutual} 对 / {edges} 条边 = {(mutual / edges * 100 if edges else 0):.2f}%：关系面绝大多数是单向记录，两个人互相记着对方的情形很少。</p>
+<p>② 最大的一个圈子 {len(cliques[0]) if cliques else 0} 人，占关系网 {((len(cliques[0]) / len(nodes) * 100) if cliques and nodes else 0):.1f}%：城市在结构上几乎是连成一张网的，不是若干互不相干的小团体。</p>
+<p>③ 孤岛 {len(islands)} 人（{iso_rate:.1f}%）：还没被任何关系记进去的在册居民。</p>
 </div>
 
 <h2>一 · 关系类型</h2>
@@ -241,11 +331,31 @@ li .t{{color:#5f6b7a;font:11px/1 ui-monospace,monospace;margin-left:6px}}
 {"".join(meet_line(c, info) for c in meet_rows) if meet_rows else '<li><span class="x">本段暂无记录。</span></li>'}
 </ul>
 
-<h2>六 · 读法说明</h2>
+<h2>六 · 圈子</h2>
+<div class="sub">把关系边当无向边做连通分量：同一圈子=顺着关系能走到的所有人。列出最大的 {len(cliques[:CLIQUE_N])} 个，成员取编号最小的 4 位作代表。</div>
+<ul>
+{"".join(clique_line(i + 1, m[:4], len(m), info) for i, m in enumerate(cliques[:CLIQUE_N])) if cliques else '<li><span class="x">本段暂无记录。</span></li>'}
+</ul>
+<div class="sub" style="margin-top:10px">共 {len(cliques)} 个圈子；未进入前 {CLIQUE_N} 名的 {max(0, len(cliques) - CLIQUE_N)} 个不在本页展开。</div>
+
+<h2>七 · 桥接者</h2>
+<div class="sub">按「关系网触及的城区数」排序：一个人自己住一个区，但他的关系伸到了别的区，才算桥。</div>
+<ul>
+{"".join(bridge_line(c, s, degree[c], info) for c, s in bridge_top) if bridge_top else '<li><span class="x">本段暂无记录。</span></li>'}
+</ul>
+
+<h2>八 · 孤岛居民</h2>
+<div class="sub">档案在册但关系面一条边都没有的 {len(islands)} 位（占在册 {len(info)} 位的 {iso_rate:.1f}%；荣誉席与创始家庭按脱敏律不计入本名单）。这批人是相遇轮的第一顺位候选——不是他们不重要，是还没人写过他们。</div>
+<ul>
+{"".join("<li><b>%s</b><span class=\"d\">%s</span><span class=\"x\">%s · %s</span></li>" % (html.escape(info[c].get("name", c)), html.escape(info[c].get("district", "—")), html.escape(info[c].get("profession", "") or "职业未标"), html.escape(c)) for c in islands[:ISLAND_N]) if islands else '<li><span class="x">无孤岛居民。</span></li>'}
+</ul>
+
+<h2>九 · 读法说明</h2>
 <div class="note">
 <p><b>边数是结构，不是感情。</b>关系边来自对话广场等生成来源，一个度数高的居民首先意味着「被写进了更多关系记录」。</p>
 <p>关系类型与来源均按数据面原值归类，未做近义合并；未标注类型如实计数。</p>
 <p>相逢录只取 census 导出档的最近一条年轮（recent_ring），不是全部历史。</p>
+<p><b>圈子大小不等于亲疏。</b>连通分量只说明「沿着边能走到」，一个上万人的圈子内部可能谁都不认识谁；孤岛也是同一回事——零边指关系面没记过，不指他在城里不存在。</p>
 </div>
 
 <div class="foot">BigLife · 城市人情志 · 确定性生成（零 LLM） · 全部数据 offline 内嵌</div>
@@ -259,6 +369,9 @@ li .t{{color:#5f6b7a;font:11px/1 ui-monospace,monospace;margin-left:6px}}
     print("city-relations: %s  %.1f KB  edges=%d nodes=%d rel=%d src=%d pairs=%d meets=%d unparsed=%d"
           % (os.path.relpath(OUT, ROOT), kb, edges, len(nodes), len(rel_cnt), len(src_cnt),
              len(pair_cnt), meet_total, unparsed))
+    print("structure: mutual=%d cliques=%d max_clique=%d bridges=%d islands=%d (%.1f%% of %d)"
+          % (mutual, len(cliques), len(cliques[0]) if cliques else 0, len(bridge_top),
+             len(islands), iso_rate, len(info)))
     print("checks: page<300KB=%s  unparsed_rate<0.1%%=%s"
           % (kb < 300, (unparsed / edges * 100 if edges else 0) < 0.1))
 
