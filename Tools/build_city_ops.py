@@ -202,6 +202,43 @@ def persona_depth() -> dict:
     }
 
 
+def ring_quality() -> dict:
+    """年轮质量待修队列实读：state/ring-quality-queue.json（ring_simile_audit 产出）。
+
+    cap 封顶，队列本身是抽样工作单，不是全量缺陷数——页面须显式标注 cap。
+    """
+    import json
+
+    path = os.path.join(ROOT, "state", "ring-quality-queue.json")
+    empty = {"generated": "未取到", "since": "未取到", "cap": 0, "items": [], "tags": []}
+    try:
+        with open(path, encoding="utf-8", errors="replace") as f:
+            data = json.load(f)
+    except (OSError, ValueError):
+        return empty
+    if not isinstance(data, dict):
+        return empty
+    items = [i for i in (data.get("items") or []) if isinstance(i, dict)]
+    order, counted = [], {}
+    for it in items:
+        for tag in str(it.get("reason") or "").split("+"):
+            tag = tag.strip()
+            if not tag:
+                continue
+            key = "sim" if tag.startswith("sim=") else tag
+            if key not in counted:
+                order.append(key)
+                counted[key] = 0
+            counted[key] += 1
+    return {
+        "generated": str(data.get("generated") or "未取到"),
+        "since": str(data.get("since") or "未取到"),
+        "cap": int(data.get("cap") or 0),
+        "items": items,
+        "tags": [(k, counted[k]) for k in order],
+    }
+
+
 def age_text(delta: timedelta) -> str:
     mins = int(delta.total_seconds() // 60)
     if mins < 60:
@@ -225,6 +262,7 @@ def main() -> int:
     pg = pages()
     vol = volumes()
     pd = persona_depth()
+    rq = ring_quality()
     nt = notes(NOTE_SHOW)
 
     stale_pages = [p for p in pg if (now - p[2]) > timedelta(minutes=STALE_MIN)]
@@ -267,6 +305,14 @@ def main() -> int:
 
     note_rows = "\n".join("<li>%s</li>" % esc(x) for x in nt) or "<li>未取到轮记</li>"
 
+    rq_tags = " · ".join("%s %d" % (esc(k), n) for k, n in rq["tags"]) or "未取到"
+    rq_rows = "\n".join(
+        '<tr><td class="h">%s</td><td>%s</td><td class="t">%s</td><td>%s</td></tr>'
+        % (esc(it.get("id") or "?"), esc(it.get("name") or "?"),
+           esc(it.get("date") or "?"), esc(it.get("reason") or ""))
+        for it in rq["items"][:8]
+    ) or '<tr><td colspan="4">未取到待修队列</td></tr>'
+
     page = f"""<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -308,6 +354,7 @@ footer{{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(
 <div class="kpi"><b>{esc(cm[0][1] if cm else '未取到')}</b><span>最近提交时间</span></div>
 <div class="kpi{' bad' if stale_pages else ''}"><b>{len(stale_pages)}</b><span>超过 {STALE_MIN} 分钟未刷新的页</span></div>
 <div class="kpi"><b>{vol['citizens']}</b><span>居民（轻量册）</span></div>
+<div class="kpi{' bad' if rq['items'] else ''}"><b>{len(rq['items'])}</b><span>年轮待修队列（cap {rq['cap'] or '未取到'}）</span></div>
 </div>
 
 <h2>最近轮次心跳<em>state/heartbeat.txt 尾 {HEARTBEAT_SHOW} 条 · 最后一条：{esc(last_line)}</em></h2>
@@ -343,6 +390,15 @@ footer{{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(
 <tr><td>方言语体覆盖</td><td class="n">{pd['dialects']}</td></tr>
 </tbody></table>
 
+<h2>年轮质量面<em>state/ring-quality-queue.json 实读 · 抽样工作单 cap {rq['cap'] or '未取到'}（不是全量缺陷数）· 生成 {esc(rq['generated'])} · 回溯起点 {esc(rq['since'])}</em></h2>
+<table><thead><tr><th>缺陷口径</th><th colspan="3">分类计数（同一条可计入多个口径）</th></tr></thead><tbody>
+<tr><td>合计</td><td colspan="3" class="n">{rq_tags}</td></tr>
+</tbody></table>
+<table><thead><tr><th>席位</th><th>姓名</th><th>年轮日期</th><th>判负理由</th></tr></thead><tbody>
+{rq_rows}
+</tbody></table>
+<div class="note">全量复读/过短/模板三段判负由 Tools/ring_simile_audit.py 产出；修复走 19:00 后让路窗的 evolve 批（LLM 复写），本页只呈现队列，不改写任何年轮文本。</div>
+
 <h2>最近轮记<em>tasks/TASKS.md 内的轮号行</em></h2>
 <ul>
 {note_rows}
@@ -357,10 +413,10 @@ footer{{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(
         f.write(page)
     print(
         "city-ops.html written: pages=%d commits=%d hb=%d citizens=%d rings=%d events=%d stale=%d"
-        " persona=%d habit_genes=%d"
+        " persona=%d habit_genes=%d ring_queue=%d"
         % (
             len(pg), len(cm), len(hb), vol["citizens"], vol["rings"], vol["events"],
-            len(stale_pages), pd["active"], pd["habits"],
+            len(stale_pages), pd["active"], pd["habits"], len(rq["items"]),
         )
     )
     return 0

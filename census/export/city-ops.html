@@ -30,19 +30,22 @@ ul{margin:0;padding-left:20px}
 li{font-size:13px;color:#b9b6ae;margin:4px 0}
 .note{color:var(--dim);font-size:12px;margin-top:10px}
 footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(--line)}
-</style></head><body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 产物目录</a></div>
+</style></head><body>
 <header><h1>城市产线实况</h1>
-<div class="sub">本页由 Tools/build_city_ops.py 确定性生成（零 LLM）· 生成于 2026-10-27 12:57 · 数据全部取自本仓盘上与 git</div></header>
+<div class="sub">本页由 Tools/build_city_ops.py 确定性生成（零 LLM）· 生成于 2026-10-27 13:16 · 数据全部取自本仓盘上与 git</div></header>
 <main>
 <div class="kpis">
-<div class="kpi"><b>6 分钟前</b><span>最近一次轮次心跳</span></div>
-<div class="kpi"><b>10-27 12:50</b><span>最近提交时间</span></div>
-<div class="kpi"><b>0</b><span>超过 180 分钟未刷新的页</span></div>
+<div class="kpi"><b>8 分钟前</b><span>最近一次轮次心跳</span></div>
+<div class="kpi"><b>10-27 13:08</b><span>最近提交时间</span></div>
+<div class="kpi bad"><b>10</b><span>超过 180 分钟未刷新的页</span></div>
 <div class="kpi"><b>10114</b><span>居民（轻量册）</span></div>
+<div class="kpi bad"><b>400</b><span>年轮待修队列（cap 400）</span></div>
 </div>
 
 <h2>最近轮次心跳<em>state/heartbeat.txt 尾 10 条 · 最后一条：os-loop: round done exit=0</em></h2>
 <table><thead><tr><th>时间</th><th>记录</th></tr></thead><tbody>
+<tr><td class="t">10-27 13:08:07</td><td>os-loop: round done exit=0</td></tr>
+<tr><td class="t">10-27 12:58:29</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">10-27 12:50:38</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">10-27 12:47:35</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">10-27 12:42:40</td><td>os-loop: round done exit=0</td></tr>
@@ -51,12 +54,13 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td class="t">10-27 12:21:11</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">10-27 12:13:08</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">10-27 12:03:56</td><td>os-loop: round done exit=0</td></tr>
-<tr><td class="t">10-27 11:52:40</td><td>os-loop: round done exit=0</td></tr>
-<tr><td class="t">10-27 11:33:21</td><td>os-loop: round done exit=0</td></tr>
 </tbody></table>
 
 <h2>最近产物提交<em>git log 尾 12 条</em></h2>
 <table><thead><tr><th>时间</th><th>commit</th><th>说明</th></tr></thead><tbody>
+<tr><td class="t">10-27 13:08</td><td class="h">f8922e35e</td><td>chore(board): R2391 轮记 - 成长册习惯行可见面 + 闸况 [via BigLife-OSLoop]</td></tr>
+<tr><td class="t">10-27 13:07</td><td class="h">033fedfb4</td><td>feat(growth): 成长档案册每席渲染习惯基因（10111/10111 席可见）+ 覆盖计数 - 习惯池今日两库并集后仍无任何可见面，补渲染即让 CEO 在居民页看见人格颗粒 [via BigLife-OSLoop]</td></tr>
+<tr><td class="t">10-27 12:58</td><td class="h">7fc0eae2f</td><td>persona: 习惯池两库并集打通（居民习惯覆盖 15-&gt;85）+ 实况页人格深化面 KPI [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">10-27 12:50</td><td class="h">9a6689e47</td><td>chore(qa): R2389 让路窗轮 - QC/年轮质量三闸复跑全绿入档（复读829/模板1127/夜班队列400）[via BigLife-OSLoop]</td></tr>
 <tr><td class="t">10-27 12:47</td><td class="h">cd346b5da</td><td>chore(board): R2388 值守实录 - b44 稀缺面补量 + 质量队列 19:00 接管备忘 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">10-27 12:46</td><td class="h">ba622f8d8</td><td>feat(genes): b44 批 +11 条习惯基因入库（最稀缺 gated 池 61-&gt;72）- 只补稀缺面不再向饱和面堆量 [via BigLife-OSLoop]</td></tr>
@@ -66,14 +70,13 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td class="t">10-27 12:20</td><td class="h">044e384cc</td><td>chore(osloop): R2384 工作日让路窗值守 - 决策水位消费至 D-20261027-13, 全闸 PASS 免重跑 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">10-27 12:12</td><td class="h">f628d2f4c</td><td>BigLife R2383: 基因轮 b42 批 7 条入库（ho/ha/pr/tp 各型）+ 池轴/QC/事件回放闸全 PASS [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">10-27 12:03</td><td class="h">134080252</td><td>品质闸计量面：年轮复读/空洞/模板句三查落成工具+队列+视图</td></tr>
-<tr><td class="t">10-27 11:52</td><td class="h">622ada022</td><td>chore(osloop): 工作日让路窗内确定性视图刷新（事件回放 PASS + QC 0 问题 + 四视图重建）</td></tr>
-<tr><td class="t">10-27 11:33</td><td class="h">094d92bbc</td><td>feat(genes): b41 基因批补 10 条按薄轴配平 - 近况4/习惯4/钩子物件2 (pr49-&gt;53 ha50-&gt;54 ho832-&gt;834), 13候选过近重双闸留10, 台账重built [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">10-27 11:25</td><td class="h">21aa058ca</td><td>feat(genes): b40 基因批补 10 条 - 物件1/转折1/习惯2/近况2/口头禅4(补1计数薄轴), 52候选过近重双闸留10; 视野台账重built [via BigLife-OSLoop]</td></tr>
 </tbody></table>
 
 <h2>页面新鲜度<em>census/export 下的单页 · 按更新时间倒序</em></h2>
 <table><thead><tr><th>页面</th><th>体积</th><th>更新</th><th>状态</th></tr></thead><tbody>
-<tr><td><a href="gene-ledger.html">gene-ledger.html</a></td><td class="n">132 KB</td><td class="t">10-27 12:54</td><td>新</td></tr>
+<tr><td><a href="gene-ledger.html">gene-ledger.html</a></td><td class="n">132 KB</td><td class="t">10-27 13:07</td><td>新</td></tr>
+<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">15 KB</td><td class="t">10-27 13:07</td><td>新</td></tr>
+<tr><td><a href="city-growth.html">city-growth.html</a></td><td class="n">5 KB</td><td class="t">10-27 13:07</td><td>新</td></tr>
 <tr><td><a href="city-ring-quality.html">city-ring-quality.html</a></td><td class="n">13 KB</td><td class="t">10-27 12:49</td><td>新</td></tr>
 <tr><td><a href="meet-candidates.html">meet-candidates.html</a></td><td class="n">28 KB</td><td class="t">10-27 12:32</td><td>新</td></tr>
 <tr><td><a href="city-today.html">city-today.html</a></td><td class="n">519 KB</td><td class="t">10-27 12:01</td><td>新</td></tr>
@@ -81,19 +84,17 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td><a href="city-life.html">city-life.html</a></td><td class="n">20 KB</td><td class="t">10-27 12:00</td><td>新</td></tr>
 <tr><td><a href="city-dashboard.html">city-dashboard.html</a></td><td class="n">66 KB</td><td class="t">10-27 12:00</td><td>新</td></tr>
 <tr><td><a href="city-coverage.html">city-coverage.html</a></td><td class="n">44 KB</td><td class="t">10-27 11:13</td><td>新</td></tr>
-<tr><td><a href="resident-gallery.html">resident-gallery.html</a></td><td class="n">2684 KB</td><td class="t">10-27 10:15</td><td>新</td></tr>
-<tr><td><a href="city-voices.html">city-voices.html</a></td><td class="n">15 KB</td><td class="t">10-27 10:15</td><td>新</td></tr>
-<tr><td><a href="city-relations.html">city-relations.html</a></td><td class="n">16 KB</td><td class="t">10-27 10:15</td><td>新</td></tr>
-<tr><td><a href="city-objects.html">city-objects.html</a></td><td class="n">87 KB</td><td class="t">10-27 10:15</td><td>新</td></tr>
-<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">14 KB</td><td class="t">10-27 10:15</td><td>新</td></tr>
-<tr><td><a href="city-meets.html">city-meets.html</a></td><td class="n">30 KB</td><td class="t">10-27 10:15</td><td>新</td></tr>
-<tr><td><a href="city-map.html">city-map.html</a></td><td class="n">864 KB</td><td class="t">10-27 10:15</td><td>新</td></tr>
-<tr><td><a href="city-lexicon.html">city-lexicon.html</a></td><td class="n">102 KB</td><td class="t">10-27 10:15</td><td>新</td></tr>
-<tr><td><a href="city-growth.html">city-growth.html</a></td><td class="n">5 KB</td><td class="t">10-27 10:15</td><td>新</td></tr>
-<tr><td><a href="city-dossiers.html">city-dossiers.html</a></td><td class="n">208 KB</td><td class="t">10-27 10:15</td><td>新</td></tr>
-<tr><td><a href="city-districts.html">city-districts.html</a></td><td class="n">52 KB</td><td class="t">10-27 10:15</td><td>新</td></tr>
-<tr><td><a href="city-chronicle.html">city-chronicle.html</a></td><td class="n">93 KB</td><td class="t">10-27 10:15</td><td>新</td></tr>
-<tr><td><a href="city-growth-p01.html">city-growth-p*.html（11 页）</a></td><td class="n">7405 KB</td><td class="t">10-27 10:15</td><td>新</td></tr>
+<tr><td><a href="resident-gallery.html">resident-gallery.html</a></td><td class="n">2684 KB</td><td class="t">10-27 10:15</td><td>陈旧</td></tr>
+<tr><td><a href="city-voices.html">city-voices.html</a></td><td class="n">15 KB</td><td class="t">10-27 10:15</td><td>陈旧</td></tr>
+<tr><td><a href="city-relations.html">city-relations.html</a></td><td class="n">16 KB</td><td class="t">10-27 10:15</td><td>陈旧</td></tr>
+<tr><td><a href="city-objects.html">city-objects.html</a></td><td class="n">87 KB</td><td class="t">10-27 10:15</td><td>陈旧</td></tr>
+<tr><td><a href="city-meets.html">city-meets.html</a></td><td class="n">30 KB</td><td class="t">10-27 10:15</td><td>陈旧</td></tr>
+<tr><td><a href="city-map.html">city-map.html</a></td><td class="n">864 KB</td><td class="t">10-27 10:15</td><td>陈旧</td></tr>
+<tr><td><a href="city-lexicon.html">city-lexicon.html</a></td><td class="n">102 KB</td><td class="t">10-27 10:15</td><td>陈旧</td></tr>
+<tr><td><a href="city-dossiers.html">city-dossiers.html</a></td><td class="n">208 KB</td><td class="t">10-27 10:15</td><td>陈旧</td></tr>
+<tr><td><a href="city-districts.html">city-districts.html</a></td><td class="n">52 KB</td><td class="t">10-27 10:15</td><td>陈旧</td></tr>
+<tr><td><a href="city-chronicle.html">city-chronicle.html</a></td><td class="n">93 KB</td><td class="t">10-27 10:15</td><td>陈旧</td></tr>
+<tr><td><a href="city-growth-p01.html">city-growth-p*.html（11 页）</a></td><td class="n">8407 KB</td><td class="t">10-27 13:07</td><td>新</td></tr>
 </tbody></table>
 
 <h2>库体量<em>居民卡与事件流实读</em></h2>
@@ -113,6 +114,22 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td>人均习惯条数</td><td class="n">1.33</td></tr>
 <tr><td>方言语体覆盖</td><td class="n">6</td></tr>
 </tbody></table>
+
+<h2>年轮质量面<em>state/ring-quality-queue.json 实读 · 抽样工作单 cap 400（不是全量缺陷数）· 生成 2026-10-27 · 回溯起点 2026-09-01</em></h2>
+<table><thead><tr><th>缺陷口径</th><th colspan="3">分类计数（同一条可计入多个口径）</th></tr></thead><tbody>
+<tr><td>合计</td><td colspan="3" class="n">short 49 · sim 400 · tmpl 66</td></tr>
+</tbody></table>
+<table><thead><tr><th>席位</th><th>姓名</th><th>年轮日期</th><th>判负理由</th></tr></thead><tbody>
+<tr><td class="h">C-00713</td><td>老支线</td><td class="t">2026-10-11</td><td>short+sim=100%+tmpl</td></tr>
+<tr><td class="h">C-02338</td><td>邵军</td><td class="t">2026-10-15</td><td>short+sim=56%</td></tr>
+<tr><td class="h">C-01900</td><td>范芳</td><td class="t">2026-10-14</td><td>short+sim=43%</td></tr>
+<tr><td class="h">C-02069</td><td>魏淑珍</td><td class="t">2026-10-14</td><td>short+sim=71%</td></tr>
+<tr><td class="h">C-02202</td><td>谢桃桃</td><td class="t">2026-10-14</td><td>short+sim=59%</td></tr>
+<tr><td class="h">C-02234</td><td>魏雨欣</td><td class="t">2026-10-14</td><td>short+sim=67%</td></tr>
+<tr><td class="h">C-01864</td><td>梁斯年</td><td class="t">2026-10-14</td><td>short+sim=40%</td></tr>
+<tr><td class="h">C-01910</td><td>卢乐遥</td><td class="t">2026-10-14</td><td>short+sim=58%</td></tr>
+</tbody></table>
+<div class="note">全量复读/过短/模板三段判负由 Tools/ring_simile_audit.py 产出；修复走 19:00 后让路窗的 evolve 批（LLM 复写），本页只呈现队列，不改写任何年轮文本。</div>
 
 <h2>最近轮记<em>tasks/TASKS.md 内的轮号行</em></h2>
 <ul>
