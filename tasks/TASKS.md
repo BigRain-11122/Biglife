@@ -898,3 +898,8 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：genes/lives.json 习惯池 80 条（b45 +8·13:3x）
   - 下个里程碑：19:00 让路窗解除后年轮批 3 席 + 质量重写队列头 3 席（C-00713 等），ETA 2026-10-27 19:30
   - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性改码与重建
+- **[R2394]** 2026-10-27 13:3x-13:5x @BigLife-OSLoop 值守：让路窗零 LLM 确定性产出。pull=Already up to date；水位差集 NEW=0（watermark 至 D-20261027-13）；orders 尾无本司新令；TASKS 无 open 单。**产品增量=新读本页 `census/export/city-ring-picks.html`（今日年轮精选·924 圈）**：新脚本 `Tools/build_ring_picks.py`（确定性零 LLM·约 5s 跑完）把当天 924 圈年轮按可解释信号排序——每城区取 6 条共 36 条可读位 + 末位 12 条观察位；信号=偏短−45 / 同日同质−35 / 自重复−40 / 相遇句式−30 / 长度 24-56 字+10 / 具体度（正文数字·城市具体物地标）+6 每项，编号 C-xxxxx 不计入具体度。实锚：当日年轮长度 30-91 字（中位 64）、同日最高同质仅 0.21、带标记 5 条（全为相遇模板，属可选优化非缺陷）——**对照历史模板句面（1127 圈 tmpl / 689 圈偏短），今日写作面质量已明显抬升**。总目录 `census/export/index.html` 同步刷新 pages=22 nav_patched=1，TITLE 表已登记读本页口径。闸况：ruff_gate 2 files CLEAN；encoding_guard VERDICT PASS（U+FFFD=0）；页面结构 div/article/table/tr/td 全平衡、fffd=0。让路窗 D-20261020-02（09:00-19:00）生效→年轮/相遇/反思 defer 19:00；QC 与事件回放闸本轮因无数据面改动未下发（cards/events 未动）。
+  - 当前活：工作日让路窗零 LLM 确定性产出（读本面/质量面）
+  - 最近实物：census/export/city-ring-picks.html（2026-10-27 13:39·924 圈精选 36 条）
+  - 下个里程碑：19:00 让路窗解除后年轮批 3 席 + 质量重写队列头 3 席（C-00713 等），ETA 2026-10-27 19:30
+  - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性建页
