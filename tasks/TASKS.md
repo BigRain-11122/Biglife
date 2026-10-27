@@ -864,3 +864,9 @@ epair_quota() 并把接线口径写进可视页 KPI（3/10 席）与页脚、报
   - 最近实物：census/export/city-ring-quality.html（2026-10-27 12:3x，含 3/10 重写席 KPI）、qa/RING-SIMILE-REPORT.md、Tools/evolve_citizen.py 接线
   - 下个里程碑：19:00 后首轮年轮批按队列头重写 3 位 + 新人 7 席，ETA 2026-10-27 19:30
   - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性改码/校验
+
+- [2026-10-27 12:3x] R2386 小结: 工作日让路窗（machine-state.flag=pausedLite，09:00-19:00）年轮/相遇/反思线顺延；零 LLM 确定性产出=相遇候选重算 top60（pairs=60 pool=9207 met=43 districts GM11/MD8/NS10/OR10/QT14/RV7，top1 C-08226 门格-7 x C-08333 金芳）+ 导出索引刷新 pages=21 nav_patched=1；决策水位差集 NEW=0（watermark 已至 D-20261027-13）；HQ-FEEDBACK 机械闸=ALREADY_REPORTED（当日 15 行·零写入）；pool_audit/qc_census/events 闸无新内容不重跑。
+  - 当前活：让路窗值守（零 LLM 面）
+  - 最近实物：census/export/meet-candidates.html（2026-10-27 12:3x，60 对候选，top1 C-08226 x C-08333）
+  - 下个里程碑：19:00 恢复后首轮年轮批 3 席 + 重写队列头 3 席，ETA 2026-10-27 19:30
+  - tokens: local=0 api=0 api_reason=yield-window(workday CPU 让路·D-20261020-02)+确定性重算
