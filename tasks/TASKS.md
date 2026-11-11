@@ -1469,3 +1469,13 @@ tokens: local=10 api=0 api_reason=-
 - **机制修复（出生地拦截）**：断供根因=城谱写入只挂在人工 `--feed`，协议无每轮钩子，全闸仍绿。已在 `Tools/events_refresh.py`（协议每轮必跑）加 `chronicle_freshness()`：末行日期距今 > 1 天即自动 `--feed`，异常不阻断回放闸。双向负控实测=陈旧→feed 一次、新鲜→0 次调用（禁每轮重写）。
 - 相遇轮：`--meet C-00014 C-00015` 被 meet-cap(3/日) 拦下 → 本轮合规跳过（他窗已在跑）。
 - tokens: local=12 api=0 api_reason=-
+
+## 轮记 R2520（2026-11-12 02:3x @BigLife-OSLoop·15min 预算）
+- 轮首：git pull already up to date；决策水位无新差集（watermark 已含 D-20261112-01~06）；集团 orders 无涉本司新物理件；HQ 日清闸 --check=ALREADY_REPORTED（当日 1 行），按机械闸零写入。
+- 年轮线：evolve_citizen --batch 3 → evolved=9/10 落环（C-00470 云南汐 / C-00527 影子盘 / C-00842 刘则铭 / C-09940 史炯 / C-09941 曾海峰 / C-09942 廖银娣 / C-09943 袁晓东 / C-09944 郑顺林 / C-09945 秦沐晴）；C-09935 因 persistent violations(dup-phrase) 被 gate 拦下留队（闸正常，不补跑）。脚本自提交 78f775233；行为线镜像 rows=9 ring=9938 自提交 608bff500。
+- 回放闸：events_refresh --gate PASS（cards=10111 / events=41357 / replayed=10111 / mismatch=0 / schema_errors=0；coverage unexpected_missing=0；chronicle fresh gap=0d）。
+- 语言池：pool_audit PASS / 全桶达标 SELF_TERMINATE（72 轴桶 + 12 精灵桶 + greet 28 + faq 7 + neg 6/6，hard_fails=0）→ 按自终止律跳过本日池轮。
+- 产品可见面：重建 census/export/city-dashboard.html（total=10114 rings=9938 cards=160，02:3x）。
+- 相遇轮：--meet C-00470 C-00527 被 meet-cap(3/日) 拦下（他窗已跑满）→ 合规跳过。
+- QC：本小时已跑（census/QC-REPORT.md 02:26 cards=10114 problems=0），未到 6 轮周期，不重复。
+- tokens: local=12 api=0 api_reason=-
