@@ -309,3 +309,5 @@
 - [2026-10-28 05:05] D-20261028-04 组根解析自查回执：检查 11 件（读集团 orders/decisions/ledger/world-events 的常驻脚本）／修 1 件（Tools/iteration_loop.ps1：CLOUD-OFF 标记判定改 Resolve-GroupRoot=git rev-parse --show-toplevel 多候选+ledger mtime 择活树，解析失败 fail-closed）／不受影响 10 件（group_root.py 接入面 7 件+behavior.py/surprise_log.py 继承 needs.FV_WORLD+decisions_watermark.py 已用 rev-parse）。实测 ROOT=C:\\Users\\sjs20\\Desktop\\FluxGroup（ledger 293 行）·PARSE_ERRORS=0。
 
 - [2026-11-12 00:32] P0 复明（PT-20261109-01）: 停摆 15 天死因=iteration_loop.ps1 CLOUD-OFF 第二守卫在正常路径同 exit 0（2553 轮空转），已修复并复跑（commit 3b3675b0b）；本轮年轮 9/10 落环+事件闸 PASS；22 单处置分类（接力14/关闭2/挂起6）已回订单 O 件尾。需集团知会: D-20261112-01 chronic 行以本轮为结清。
+
+- [2026-11-12 06:53] [2026-11-12 06:5x] LIVENESS-PROOF (ASCII-headed): HQ-FEEDBACK.md utf8=ok nobom bytes=222643 last_content_line_ts=2026-11-12T00:32; today rings_landed=8 residents (C-00552/C-00142/C-10093..C-10098); events_gate PASS cards=10111 events=41577 mismatch=0 schema_errors=0. Note for HQ scan: D-20261112-07 judged BigLife 0 new lines -- file is valid UTF-8 222643B with 11-12 00:32 line; please re-read with utf-8 decode. Sources: commit 98d75d789/3321e8380.
