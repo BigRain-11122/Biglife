@@ -875,6 +875,21 @@ EVENT_CODE_RE = re.compile(r"(?<![A-Za-z0-9-])[GBSPT]\d{1,4}(?:\.\d+)?(?![0-9])"
 # feed-side scrub also eats the latin project name glued to the code
 EVENT_CODE_FEED_RE = re.compile(
     r"(?<![A-Za-z0-9-])[GBSPT]\d{1,4}(?:\.\d+)?(?![0-9])(?:\s+[A-Za-z][A-Za-z0-9_]*)*")
+# 2026-11-12 (C-10021 实弹): two more machine-token shapes escaped BOTH gates.
+# EVENT_CODE_RE only knows letter+digit (G08), and TECH_WORD_RE's
+# (?![A-Za-z0-9-]) lookahead kills any latin token adjacent to a hyphen, so the
+# fed event id "BG-A" never matched, and the ISO stamp glued to it
+# ("2026-11-12T04:06:57+08:00") carries no 2+ letter run at all - the ring
+# shipped carrying that raw stamp. Two-sided fix, same protocol as R2251/R2433:
+# refuse at the gate, scrub on the feed side. Citizen ids stay legal
+# (C-07743 / H-QT2232 put a digit right after the hyphen group, so the trailing
+# lookahead fails).
+MACHINE_TOKEN_ALT = (
+    r"|(?<![A-Za-z0-9-])[A-Z]{1,4}-[A-Z]{1,4}(?![A-Za-z0-9-])"
+    r"|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?(?:[+-]\d{2}:\d{2})?"
+)
+EVENT_CODE_RE = re.compile(EVENT_CODE_RE.pattern + MACHINE_TOKEN_ALT)
+EVENT_CODE_FEED_RE = re.compile(EVENT_CODE_FEED_RE.pattern + MACHINE_TOKEN_ALT)
 
 
 def has_event_code(line):
