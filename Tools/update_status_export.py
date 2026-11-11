@@ -154,8 +154,10 @@ def apply_refresh(payload, dry_run=False, heartbeat=False):
 
     # --- 对外实况三行（产品优先律 5：幂等=文本已同不重写） ---
     top_text = payload.get("top_text")
-    if top_text and d.get("t") != top_text:
+    # 双键同源：legacy 消费方读 top_text，新消费方读 t，任一不同步都会让 CEO 面停在旧轮
+    if top_text and (d.get("t") != top_text or d.get("top_text") != top_text):
         d["t"] = top_text
+        d["top_text"] = top_text
         changed["top"] = True
 
     # --- results: 尾行追加（幂等：尾行计数==机器直数不重append） ---
@@ -185,6 +187,7 @@ def apply_refresh(payload, dry_run=False, heartbeat=False):
     assert d2["depts"][0]["t"].startswith("**R"), "roundtrip dept0"
     if top_text:
         assert d2.get("t") == top_text, "roundtrip top_text"
+        assert d2.get("top_text") == top_text, "roundtrip legacy top_text"
 
     # --- heartbeat（可选·幂等：尾行含本轮标记不重写） ---
     if heartbeat:
