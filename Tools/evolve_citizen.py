@@ -925,7 +925,17 @@ RING_LATIN_WHITELIST = {"qiqi", "rain", "ceo"}
 # as a hard gate. 算力/缓存/参数 stay LEGAL on purpose: 927/944/996 face hits
 # make them part of the silicon-city vocabulary, and the same scan showed
 # 带宽/进程 (43/33 face, 0 ring) never leak into prose at all.
-CHINESE_TECH_RE = re.compile(r"显存|显卡|服务器|线程")
+CHINESE_TECH_RE = re.compile(r"显存|显卡|服务器|线程|三机|机队|轮次|产能实况")
+# 2026-11-12 R2533: the FLEET-ops half of the same leak (C-10036 shipped
+# 「三机产能实况」as a radio broadcast item). Measured on all 10091 cards
+# (ring section split off): 三机 face=0/ring=1, 机队 face=0/ring=13,
+# 轮次 face=0/ring=6, 产能实况 face=0/ring=0 - zero persona owns them, so a
+# hard refuse cannot misfire. Deliberately NOT banned: 心跳 face=3/ring=155
+# and 实况 face=228 are citizen body/plain language, 停摆 face=86 (a stopped
+# clock is a city object), 巡检 face=4 / 派单 face=1 / 管线 face=140 - banning
+# them would kill legal prose. 产能 bare word left out for the same reason;
+# the 4-char 产能实况 carries the ops sense without touching a workshop's
+# production talk.
 
 
 def scrub_machine_words(text):
