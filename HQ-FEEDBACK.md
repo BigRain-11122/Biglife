@@ -307,3 +307,5 @@
 - [2026-10-28 01:36] D-20261028-04 组根解析律回执：检查 12 件／修 0 件（前轮已接入 Tools/group_root.py，8 脚本经 git rev-parse 认活树，resolver 实测返回 C:\Users\sjs20\Desktop\FluxGroup 活树）／不受影响 4 件（atlas_manifest.py、lowpoly_samples.py、poolgen_loop.ps1、register_poolgen_loop.ps1＝仅注释引用 docs/orders.md 无运行时读）。D-20261026-13 编码闸复核：HQ-FEEDBACK.md 306 行／221199B 全量 utf-8 解码零异常，已闭合。
 
 - [2026-10-28 05:05] D-20261028-04 组根解析自查回执：检查 11 件（读集团 orders/decisions/ledger/world-events 的常驻脚本）／修 1 件（Tools/iteration_loop.ps1：CLOUD-OFF 标记判定改 Resolve-GroupRoot=git rev-parse --show-toplevel 多候选+ledger mtime 择活树，解析失败 fail-closed）／不受影响 10 件（group_root.py 接入面 7 件+behavior.py/surprise_log.py 继承 needs.FV_WORLD+decisions_watermark.py 已用 rev-parse）。实测 ROOT=C:\\Users\\sjs20\\Desktop\\FluxGroup（ledger 293 行）·PARSE_ERRORS=0。
+
+- [2026-11-12 00:32] P0 复明（PT-20261109-01）: 停摆 15 天死因=iteration_loop.ps1 CLOUD-OFF 第二守卫在正常路径同 exit 0（2553 轮空转），已修复并复跑（commit 3b3675b0b）；本轮年轮 9/10 落环+事件闸 PASS；22 单处置分类（接力14/关闭2/挂起6）已回订单 O 件尾。需集团知会: D-20261112-01 chronic 行以本轮为结清。
