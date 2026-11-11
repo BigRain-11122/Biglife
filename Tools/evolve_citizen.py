@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""evolve_citizen.py v0.63 - BigLife citizen evolution engine.
+"""evolve_citizen.py v0.64 - BigLife citizen evolution engine.
+v0.64 (2026-11-12 R2529, gap #84 提示池自愈假动作收口): v0.62 的「提示池自愈」
+写成了单向子串判定（`p in b`），而禁令表装的是 9-gram、池里数条 hint 是 10-14 字，
+于是流行句根本剔不掉——今天 217 条年轮里「风把门帘整个掀起来」13 次、
+「风把檐下的灯笼摇…」族 38 次，闸门每轮都是 soft-concession，池子却以为已经退役了。
+修法两件：(a) _pick 改无向重叠判定（`p in b or b in p`），让禁令表真的能剔池；
+(b) WIND_BIG 池 24→33 条并把今日两条流行句挪进「待观察」位，新补 9 条具象风句。
+验证=负控对照：旧逻辑 33 条池留 32 条、两条流行句双双漏出；新逻辑同禁令表下
+24 席抽 24 条互不相同、流行句 0 泄漏。诚实边界=本次只治「提示池把流行句重新发给
+下一批」这一条源头；模型跨席模仿（邻居块）不改，明日同族命中率是验收面。
 v0.63 (2026-10-27 R2298, gap #83 雨字物件误伤收口): the rain-invented gate counted
 every 雨 character as a rain claim, so object nouns (雨棚/雨篷/雨搭/雨刷/雨刮) failed
 honest lines on a dry feed - today clear 16.3C wind 6.4m/s and C-08518/C-08539
@@ -1950,7 +1959,10 @@ WIND_BIG_HINTS = ["风不小", "风好大", "风刮得紧", "风一阵紧一阵"
                   "风刮得纸片满街滚", "风大得像有人在推门", "风把尘土扬起来",
                   "风一路顶到胸口", "风刮得耳朵发麻", "风把雨棚掀得直响",
                   "风灌得袖口鼓起来", "风把头发吹得贴在脸上", "风刮得人直眯眼",
-                  "风摇得树叶哗哗响", "风把檐下的灯笼摇个不停"]
+                  "风摇得树叶哗哗响", "风把檐下的灯笼摇个不停",
+                  "风顺着屋檐往上卷", "风把晾绳吹得斜出去", "风撞在门板上咚一声",
+                  "风从窗缝里挤进来", "风把水洼吹出一层皱", "风把塑料布吹得啪啦响",
+                  "风刮得电线嗡嗡响", "风把落叶推着跑", "风凉得后颈发紧"]
 WIND_SMALL_HINTS = ["风轻轻的", "风不大", "风软软的", "窗外几乎没风",
                     "风只在檐下打转", "风贴着地面走", "风小得纸片不动",
                     "风偶尔拂一下", "风没起来", "风停在树影里",
@@ -2011,7 +2023,14 @@ def weather_recap(wx, seed=None, banned=None):
         day_off = datetime.date.today().toordinal()
 
         def _pick(pool, k):
-            live = [p for p in pool if not any(p in b for b in _ban)]
+            # v0.64 gap #84 (2026-11-12 R2529): the self-heal test was one-way
+            # (`p in b`), but the ban list holds 9-grams while several hints are
+            # 10-14 chars, so the epidemic hint was never dropped: today's rings
+            # carried 「风把门帘整个掀起来」13x and 「风把檐下的灯笼摇…」38x while
+            # the pool believed it had already retired them. Undirected overlap
+            # (`b in p` too) is what the v0.62「提示池自愈」recipe intended.
+            live = [p for p in pool
+                    if not any(p in b or b in p for b in _ban)]
             if not live:
                 return None
             return live[(k + day_off) % len(live)]
