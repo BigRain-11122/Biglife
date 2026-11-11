@@ -911,6 +911,13 @@ def scrub_machine_words(text):
     event at all: it is dropped whole rather than left as stripped debris.
     """
     t = text or ""
+    # 2026-11-12 R2528: the feed itself is where the Chinese-side leak was born -
+    # gaming-zone RESIDENT_SAY lines ("显存紧张了…" since 2026-09-23) rode into the
+    # prompt as city facts, so residents who never saw a machine wrote 显存. A part
+    # carrying machine vocabulary names no city-life event: drop it whole, same
+    # treatment as the latin-majority rule.
+    if CHINESE_TECH_RE.search(t):
+        return ""
     latin = sum(len(w) for w in TECH_WORD_RE.findall(t))
     letters = sum(1 for ch in t if ch.isalpha())
     if letters and latin / float(letters) > 0.35:
@@ -2367,7 +2374,9 @@ def build_prompt(cid, text, sig):
     # where the 4B weights hardest).
     tech_blk = ("再一条（犯即整句退回重写）：年轮里严禁出现任何拉丁字母词——"
                 "「commit/GPU/token/bug」这类工作台词汇与项目名（biglife/bigmoney/"
-                "fluxgroup/crazycampus 等）都不是市民会说的话，一律换成生活化的中文说法。\n")
+                "fluxgroup/crazycampus 等）都不是市民会说的话，一律换成生活化的中文说法。"
+                "同样严禁出现机房词汇的中文写法——「显存/显卡/服务器/线程」都不属于市民的生活，"
+                "写「显存稳了」「线程卡了」这类句子视为跑题，一律换成人能摸到的东西（灶火、雨水、门板、路口）。\n")
     return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
             f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
@@ -2397,6 +2406,10 @@ def add_ring(path, cid, line, anchor_note):
         return False
     # 2026-10-27 R2433: same last-line rule for latin machine vocabulary.
     if any(w.lower() not in RING_LATIN_WHITELIST for w in TECH_WORD_RE.findall(line)):
+        return False
+    # 2026-11-12 R2528: and for the Chinese half of the same vocabulary - the gate
+    # already counted it, but a line that survived regenerations must never land.
+    if CHINESE_TECH_RE.search(line):
         return False
     # R1772 同日幂等闸（出生地拦截）：批次被击杀后重跑不得二次落环节。
     # 同一天最多一条年轮 + 一条相遇行，超出的写入静默拒绝（调用方按已写处理）。
