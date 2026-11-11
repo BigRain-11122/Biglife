@@ -12,13 +12,49 @@ Usage:
   python -X utf8 Tools/events_refresh.py           # derive + replay
   python -X utf8 Tools/events_refresh.py --gate    # same, exit 1 on replay FAIL
 """
-import argparse, pathlib, subprocess, sys
+import argparse, datetime, json, pathlib, subprocess, sys
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent
 
 
 RESERVED_OK = ("C-00001", "C-00002", "C-00003")  # 荣誉席：CODEX §十二 4 明规不进叙事事件流
+
+CHRONICLE = ROOT / "cognition" / "city-chronicle.jsonl"
+CHRONICLE_MAX_GAP_DAYS = 1
+
+
+def chronicle_freshness():
+    """城谱新鲜度自愈：断供 > 1 天就补 feed 一次。
+
+    Why: 城市年谱的写入只挂在人工/特定轮的 `city_chronicle.py --feed` 上，没有任何
+    每轮必跑的钩子；2026-10-26 → 11-12 静默断供 15 天，集团复盘按「零当日新行」
+    计违例，而所有闸仍绿。把补喂挂到本工具（协议每轮必跑）让缺席自己变成产物，
+    而不是等下一次人眼发现。失败不阻断回放闸（返回 rc 仅供日志）。
+    """
+    try:
+        if not CHRONICLE.exists():
+            return 0, "chronicle: absent"
+        last = ""
+        with open(CHRONICLE, encoding="utf-8", errors="replace") as fh:
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    last = json.loads(line).get("date") or last
+                except Exception:
+                    pass
+        today = datetime.date.today()
+        if last:
+            gap = (today - datetime.date.fromisoformat(last)).days
+            if gap <= CHRONICLE_MAX_GAP_DAYS:
+                return 0, f"chronicle: fresh last={last} gap={gap}d"
+        rc, out, err = run("city_chronicle.py", "--feed")
+        tail = (out or err).splitlines()[-1] if (out or err) else "-"
+        return rc, f"chronicle: fed last={last or '-'} -> {tail}"
+    except Exception as exc:  # 自愈面永不阻断主闸
+        return 0, f"chronicle: skip ({type(exc).__name__})"
 
 
 def coverage():
@@ -64,12 +100,14 @@ def main():
     if rc_d != 0:
         print(f"derive FAIL rc={rc_d} {err_d[-300:]}")
         return 2
-    rc_r, out_r, err_r = run("events_replay.py")
-    rc_c = coverage()
+    rc_c, out_c, err_c = run("events_replay.py")
+    rc_cov = coverage()
+    rc_ch, msg_ch = chronicle_freshness()
     print(f"derive: {out_d.splitlines()[-1] if out_d else '-'}")
-    print(f"replay: {out_r or err_r[-300:]}")
-    if args.gate and (rc_r != 0 or rc_c != 0):
-        return rc_r or rc_c
+    print(f"replay: {out_c or err_c[-300:]}")
+    print(msg_ch)
+    if args.gate and (rc_c != 0 or rc_cov != 0):
+        return rc_c or rc_cov
     return 0
 
 

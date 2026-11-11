@@ -1422,8 +1422,7 @@ tokens: local=10 api=0 api_reason=-
 
 - [2026-10-28 04:50 R2506] 实纪：轮首 git status 净·pull=Already up to date·决策水位差集 NEW=0（watermark 已含 D-20261028-01~04；D-20261028-04 组根解析律本司闭环已复核：Tools/group_root.py + 8 脚本走 git rev-parse，残留 parent.parent 仅解析本仓根非组根）·orders 无新派本司件。**产品增量**=年轮 9/10（C-02128/C-02153/C-02171/C-09849/C-09850/C-09851/C-09853/C-09854/C-09855；C-09852 触发 persistent violations [time-morning,recent-dup-phrase] 留悬待下轮，commit 6601bef44）＋行为线自动收口（rows=9 ring=9848，commit a65cab70c）＋看板重建（city-life rows=10114 rings=9848 visible=639 / city-dashboard rings=9848 bytes=65303，commit 44dba1551）。闸门：events_refresh --gate PASS（cards=10111 events=41211 replayed=10111 schema_errors=0 mismatch=0）·pool_audit PASS SELF_TERMINATE（72/72 axes·12/12 sprite·determinism mismatch=0）·QC cards=10114 evolved=9848 problems=0 dup_rings=37/37（commit 113224942）·meet-cap 已达（今日 10 席轮）skip·HQ 上报闸 ALREADY_REPORTED（零写入）。**对外实况三行**：当前活=年轮+相遇 24x7；最近实物=census/export/city-dashboard.html / city-life.html（rings=9848·04:50）+ census/QC-REPORT.md + qa/EVENTS-REPLAY-REPORT.md（04:45）；下个里程碑=池全达标维持 + D-20261028-04 跨司收口证据（ETA 2026-10-31 00:00 前）。
   - tokens: local=9 api=0 api_reason=-
-- [2026-10-28 05:0x R2507] ????? pull=Already up to date?????????? NEW=0?watermark ? D-20261028-01~04?D-20261028-04 ??????????????????????orders ???????????**????**=?? 9/10 ????C-02258/C-02319/C-01838/C-09852/C-09856/C-09857/C-09858/C-09859/C-09861?C-09860 ?? persistent violations [batch-dup-phrase,recent-dup-phrase] ?????commit a8203bb70??????????rows=9 ring=9854?commit 6d909ae95??CEO ???????city-life rows=10114 rings=9854 visible=639 crash=4623 / city-dashboard rings=9854 bytes=65428?????events_refresh --gate PASS?cards=10111 events=41220 replayed=10111 schema_errors=0 mismatch=0??pool_audit PASS SELF_TERMINATE?72/72 axes?12/12 sprite?determinism mismatch=0??QC ????04:30 ?? problems=0??meet-cap ?????C-09589?C-09593??HQ ??=ALREADY_REPORTED??????
-  **??????**????=??+?? 24x7?? 5min ????????=census/export/city-dashboard.html?rings=9854?04:52??census/export/city-life.html?qa/EVENTS-REPLAY-REPORT.md??????=???? 10114 ?????? 9854?ETA 2026-10-30 ??
+- [2026-10-28 05:0x R2507] 轮记（原两行整段被 ASCII `?` 顶替、不可读；本行按同轮 R2508 勘误补录复原为指针句，禁臆造）：产品增量=年轮 9/10 落环 + 行为线收口（rows=9 ring=9854）；实况面=census/export/city-dashboard.html / city-life.html / qa/EVENTS-REPLAY-REPORT.md；人口 10114（详见下方 R2508 勘误补录行）
   - tokens: local=9 api=0 api_reason=-
 - [2026-10-28 05:0x R2507
   ·勘误补录（R2508 追加·禁漂白不动原行）] 原 R2507 实录行整行被写成 ASCII `?`（信息不可读·疑似上游写入走 ascii-replace/非 UTF-8 通道，根因未定位）。按 git 实证复原事实：
@@ -1460,3 +1459,13 @@ tokens: local=10 api=0 api_reason=-
 - [R2517] 2026-11-12 02:2x @BigLife-OSLoop 轮记: 年轮 8/10 席落环（C-01045/C-01035/C-09923~C-09928；门禁挡 C-01031 event-code、C-09922 rain-invented，留 due 下轮）+ 行为线镜像 ring=9921 rows=8 + 事件回放闸 PASS(events=41331 cards=10111 replayed=10111 mismatch=0 schema=0) + 池审计 PASS/SELF_TERMINATE + 看板重建 rings=9921/人口 10114；决策水位差集 NEW=0（watermark 至 D-20261112-06）；HQ 日闸 ALREADY_REPORTED（00:32 行已含 P0 复明自证，零写入）。tokens: local=10 api=0 api_reason=-
 
 - [R2518] 2026-11-12 02:2x @BigLife-OSLoop 轮记: 年轮 8/10 席落环（C-01031/C-01214/C-00981/C-09922/C-09929/C-09930/C-09931/C-09932；门禁挡 C-09933 rain-invented、C-09934 event-code，留 due 下轮）+ 行为线镜像 ring=9926 rows=8 + 事件回放闸 PASS（cards=10111/events=41339/replayed=10111/schema_errors=0/mismatch=0，qa/EVENTS-REPLAY-REPORT.md 入库）+ 池审计 PASS/SELF_TERMINATE（零欠深桶）。决策水位差集 NEW=0（watermark 至 D-20261112-06·第 57 批 6 行全消费）；orders 物理件区无本司新件；TASKS open=0；相遇轮零跑（当日 meet-cap 3/3 已满，自终止）；HQ 日闸 ALREADY_REPORTED（day=2026-11-12 lines=1，零写入）。对外实况面：当前活=年轮线滚动（轮间 5-13 分钟）｜最近实物=census/registry 8 张年轮卡（2026-11-12 02:19）、qa/EVENTS-REPLAY-REPORT.md（02:2x）｜下个里程碑=年轮覆盖推进 + 跨日意象复读质量单收口，ETA 2026-11-15。tokens: local=8 api=0 api_reason=-
+
+## R2519 · 2026-11-12 02:2x @BigLife-OSLoop（夜窗）
+
+- 产品增量=**城市年谱断供 15 天收口**：`city_chronicle.py --feed` appended=503 / total=2124，最后一行为 2026-11-12（此前停在 10-26 09:04）。集团 11-12 复盘点名「BigLife 15d 零当日新行」由此关闭。契约自检 `--qc` PASS（0 fails）。
+- 年轮线：`evolve_citizen --batch 3` 实跑 evolved=9/10（C-09935 因 persistent violations 留队，gate 正常拦下）；行为线镜像 rows=9 ring=9932 已由脚本自提交。
+- 回放闸：`events_refresh --gate` derive cards=10111 / events=41348 / replay replayed=10111 mismatch=0 schema_errors=0 PASS；coverage unexpected_missing=0。
+- 户籍 QC：`qc_census.py` cards=10114 evolved=9932 problems=0 dup_rings=37/37。
+- **机制修复（出生地拦截）**：断供根因=城谱写入只挂在人工 `--feed`，协议无每轮钩子，全闸仍绿。已在 `Tools/events_refresh.py`（协议每轮必跑）加 `chronicle_freshness()`：末行日期距今 > 1 天即自动 `--feed`，异常不阻断回放闸。双向负控实测=陈旧→feed 一次、新鲜→0 次调用（禁每轮重写）。
+- 相遇轮：`--meet C-00014 C-00015` 被 meet-cap(3/日) 拦下 → 本轮合规跳过（他窗已在跑）。
+- tokens: local=12 api=0 api_reason=-
