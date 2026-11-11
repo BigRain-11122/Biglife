@@ -1437,3 +1437,7 @@ tokens: local=10 api=0 api_reason=-
 - [2026-10-28 05:0x R2508 基因轮] 无 open 单，按序第 6 项补基因：口头禅 +4（求新「旧法子留着，新法子先试三天。」/逍遥「店关了灯还亮着，人就不算散。」/侠气「你这单我搭把手，回头别记我账上。」/怀旧「那年江面还没桥，靠一声哨子认船。」）；钩子物件 +2（一只补过三次的搪瓷缸 / 褪了字的轮班牌）；转折点 +2（雨夜顶班巡检 / 让工位改楼顶小屋）。判重幂等（已存在跳过）·纯追加零 schema 变更·totals cp=1417 obj=845 tp=647。
   - tokens: local=0 api=0 api_reason=-（确定性追加零 LLM）
 
+- [2026-11-12 00:3x R2509 复明轮] **P0 复明（裁定①）**：死因=`Tools/iteration_loop.ps1` 的 CLOUD-OFF 第二段守卫在 group root 正常解析时同样 `exit 0`，自 2026-10-28 05:04:25 起 2,553 轮零产出（`Start-Process` 永不执行）；修复=R35 删除误伤守卫（保留 v3 fail-closed）+ spawn 包 try/catch（失败落日志行 rc=3，原静默 throw+rc=0 掩盖 15 天）。本轮产品增量=年轮 9/10 席落环（C-02338/C-01900/C-09868~C-09874；C-00713 触发 persistent violations [sky-mismatch, recent-dup-phrase] 留悬下轮），行为线 sync 自动收口；闸门 `events_refresh --gate` PASS（cards=10111/events=41239/replayed=10111/schema_errors=0/mismatch=0）。P0 回执落 `orders/O-20261109-0947-HQ-C.md` 尾（处置分类：接力 14/关闭 2/挂起 6；实扫 22 行 vs 巡检计 23，差 1 行已如实标注）。
+**对外实况三行**：当前活=年轮线 24x7 + 循环 R35 修复后复跑；最近实物=census/ 新增 9 环（2026-11-12 00:29）+ qa/EVENTS-REPLAY-REPORT.md（00:30）；下个里程碑=补回停摆两周的年轮覆盖，向 10114 卡全量推进，ETA 2026-11-19。
+  - tokens: local=9 api=0 api_reason=-
+

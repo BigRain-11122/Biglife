@@ -1,0 +1,9 @@
+QA SMOKE — R2509 (2026-11-12 00:3x) — BigLife 数据面五项（T-20260928-05 charter）
+[1] poolgen/年轮线跑通: OK  (evolve_citizen --batch 3 -> "OK evolved=9 of 10 due", exit=0)
+[2] census 新条目:       OK  (9 席落环: C-02338 C-01900 C-09868~C-09874; C-00713 gate [sky-mismatch, recent-dup-phrase] 留悬)
+[3] 位置字段非 null:     N/A-本轮未触 (behavior/atlas 由 sync 链维护; 本轮 sync 自动执行)
+[4] 行为链再生:          OK  (evolve --batch 内建 sync_rings 收口)
+[5] heartbeat 3h 内:     OK  (logs/os-loop/run_20261112_002301.log 00:23:01 + 本轮轮末 heartbeat)
+GATE: events_refresh --gate -> PASS (cards=10111 events=41239 replayed=10111 schema_errors=0 mismatch=0)
+P0: PT-20261109-01 复明裁定① — 死因 iteration_loop.ps1 CLOUD-OFF 第二守卫正常路径 exit 0 (2553 轮/15d)
+复跑证据: 本轮即由 BigLife-OSLoop spawn 的实体轮; 计划任务 State=Running NextRun 正常

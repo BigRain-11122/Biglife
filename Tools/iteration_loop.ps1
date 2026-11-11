@@ -179,14 +179,21 @@ try {
         Log 'CLOUD-OFF guard: group root unresolved -> fail-closed, round suppressed'
         exit 0
     }
-    if ($__co) {
-        $__cl = Join-Path $__co 'media\logs\cloud-off-suppressed.log'
-        $__cd = Split-Path -Parent $__cl
-        if (-not (Test-Path $__cd)) { New-Item -ItemType Directory -Force -Path $__cd | Out-Null }
-        Add-Content -Path $__cl -Value ((Get-Date -Format 'yyyy-MM-dd HH:mm:ss') + ' | ' + [System.IO.Path]::GetFileName($PSCommandPath) + ' | suppressed cloud round (T0)') -Encoding UTF8
-        exit 0
+    # R35 repair (2026-11-12, BigLife patrol seat; supersedes R25-1/R34-1):
+    # the v3 guard above already fails closed when the group root cannot be
+    # resolved. The second block that lived here (`if ($__co) { ... exit 0 }`)
+    # fired on the NORMAL path (root resolved), so every tick suppressed itself
+    # and Start-Process below was unreachable - 2,553 zero-product rounds since
+    # 2026-10-28 05:04:25. Removed: a resolved world spawns the round again.
+    # R35: a spawn that throws must leave a log row + non-zero task result
+    # (silent throw + rc=0 is what hid this defect for 15 days).
+    try {
+        $p = Start-Process -FilePath $codelyPath -ArgumentList $argLine -WorkingDirectory $Project -PassThru -NoNewWindow -RedirectStandardOutput $roundOut -RedirectStandardError $roundErr -ErrorAction Stop
+    } catch {
+        Log "FATAL: Start-Process failed: $($_.Exception.Message)"
+        Beat 'error spawn-failed'
+        exit 3
     }
-    $p = Start-Process -FilePath $codelyPath -ArgumentList $argLine -WorkingDirectory $Project -PassThru -NoNewWindow -RedirectStandardOutput $roundOut -RedirectStandardError $roundErr
     $null = $p.Handle
     # hold the worker pid in the lock: if this launcher is hard-killed, an
     # orphaned worker is still detected as alive by the next tick (D-20260925-03)
