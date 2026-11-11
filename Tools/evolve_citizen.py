@@ -894,6 +894,14 @@ MACHINE_TYPE_WORDS = {
 }
 # legal latin in an in-world line: honored-seat registration rings only.
 RING_LATIN_WHITELIST = {"qiqi", "rain", "ceo"}
+# 2026-11-12 R2527: the latin gate above never saw the Chinese half of the same
+# leak. 显存 reached 72 rings (and 显卡 5 / 服务器 20 / 线程 1) while every one of
+# them scored 0 on the card-face scan of all 10091 residents - i.e. no resident
+# persona owns the word, it only ever arrives from the city-status feed. Banned
+# as a hard gate. 算力/缓存/参数 stay LEGAL on purpose: 927/944/996 face hits
+# make them part of the silicon-city vocabulary, and the same scan showed
+# 带宽/进程 (43/33 face, 0 ring) never leak into prose at all.
+CHINESE_TECH_RE = re.compile(r"显存|显卡|服务器|线程")
 
 
 def scrub_machine_words(text):
@@ -937,6 +945,11 @@ def ring_violations(line, sig):
         if _w.lower() not in RING_LATIN_WHITELIST:
             v.append("tech-word")
             break
+    # 2026-11-12 R2527: Chinese side of the same leak (显存/显卡/服务器/线程).
+    # Zero card-face hits across 10091 residents = no persona owns it, so a hard
+    # refuse cannot misfire on a resident's own wording.
+    if CHINESE_TECH_RE.search(line or ""):
+        v.append("tech-word-cn")
     wx = sig.get("weather") or ""
     m = re.search(r"wind\s+([0-9.]+)\s*m/s", wx)
     if m:
