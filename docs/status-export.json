@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-12 06:19",
+ "export_ts": "2026-11-12 07:54",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2540（11-12 06:06-06:11 窗）**：年轮批 9 席落环（C-00477/C-00794/C-00846/C-10080~C-10085）·事件回放闸 PASS（events=41559·mismatch=0）·池 SELF_TERMINATE·对外实况面分线文案修复（四线同文缺陷治愈）",
+   "t": "**R2550（2026-11-12 07:5x）**：年轮线 8/10 落环（C-02344/C-02355/C-02357/C-02386/C-02393/C-02437/C-02453/C-02469；C-03614 sun-fit+dup、C-03187 rain-invented+dup 闸拒留 due）；事件回放闸 PASS（cards=10111/events=41632/replayed=10111/schema_errors=0/mismatch=0）；语言池 72 桶全达标 SELF_TERMINATE 跳过；软宽恕 3/8（37.5%，较 R2541 的 8/10 明显回落）。 **R2540（11-12 06:06-06:11 窗）**：年轮批 9 席落环（C-00477/C-00794/C-00846/C-10080~C-10085）·事件回放闸 PASS（events=41559·mismatch=0）·池 SELF_TERMINATE·对外实况面分线文案修复（四线同文缺陷治愈）",
    "s": 1
   },
   {
@@ -1701,8 +1701,12 @@
   [
    "329",
    "2026-11-12 06:11 本轮收口：今日年轮落环 329 行（registry+anchors 机器直数）·回放闸 PASS mismatch=0·QC 05:45 problems=0"
+  ],
+  [
+   "402",
+   "今日年轮落环 402 行（本轮 R2550 新增 8 行·回放闸 mismatch=0/schema=0）"
   ]
  ],
- "t": "当前活：R2540 年轮批 9 席落环 + 事件回放闸 PASS（41559 events·mismatch=0）\n最近实物：census/registry/ 9 张居民年轮（C-00477/C-00794/C-00846/C-10080~C-10085·2026-11-12 06:06）+ qa/EVENTS-REPLAY-REPORT.md + census/QC-REPORT.md（05:45 problems=0）\n下个里程碑：下一轮年轮批（OSLoop 约 06:2x 自动起）·相遇轮今日 3/3 封顶，明日 00:00 重置",
- "top_text": "当前活：R2540 年轮批 9 席落环 + 事件回放闸 PASS（41559 events·mismatch=0）\n最近实物：census/registry/ 9 张居民年轮（C-00477/C-00794/C-00846/C-10080~C-10085·2026-11-12 06:06）+ qa/EVENTS-REPLAY-REPORT.md + census/QC-REPORT.md（05:45 problems=0）\n下个里程碑：下一轮年轮批（OSLoop 约 06:2x 自动起）·相遇轮今日 3/3 封顶，明日 00:00 重置"
+ "t": "当前活：居民年轮线滚动（每 5min 一轮）+ 事件回放闸随轮验证\n最近实物：census 年轮卡 8 张（2026-11-12 07:49）·qa/EVENTS-REPLAY-REPORT.md（07:5x PASS）\n下个里程碑：覆盖 10111 卡全量年轮化 ETA 2026-11-15",
+ "top_text": "当前活：居民年轮线滚动（每 5min 一轮）+ 事件回放闸随轮验证\n最近实物：census 年轮卡 8 张（2026-11-12 07:49）·qa/EVENTS-REPLAY-REPORT.md（07:5x PASS）\n下个里程碑：覆盖 10111 卡全量年轮化 ETA 2026-11-15"
 }
