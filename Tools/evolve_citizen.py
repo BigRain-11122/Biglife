@@ -684,6 +684,9 @@ TODAY_OPEN_HARD = 6   # T-20261025-03: same opening >=6x today = template collap
 TODAY_GRAM_N = 9
 TODAY_GRAM_MIN = 4
 SOFT_ONLY_VIOLATIONS = {"recent-dup-opening", "recent-dup-phrase"}
+# v0.66 gap #86 (2026-11-12 R2544): family-collapse hard line. An opening shared
+# by >=8 cards is a template, not a voice; below it ordinary reuse stays soft.
+OPEN_FAMILY_HARD = 8
 
 def today():
     return datetime.date.today().isoformat()
@@ -1528,8 +1531,19 @@ def ring_violations(line, sig):
     roi = sig.get("recent_open_ids")
     if isinstance(roi, dict) and roi:
         op = re.sub(r"\s+", "", line or "").strip("「」\"“”")[:12]
-        if len(op) >= 8 and (roi.get(op, set()) - {sig.get("cid") or ""}):
-            v.append("recent-dup-opening")
+        _others = roi.get(op, set()) - {sig.get("cid") or ""}
+        if len(op) >= 8 and _others:
+            # v0.66 gap #86 (2026-11-12 R2544): opening FAMILIES never blocked.
+            # R2538/R2541 实测：soft 闸放行了「这会儿天还黑着，雨还在下」116 卡 /
+            # 「雨丝还挂着…」27 卡等 57 个 >=8 卡开头族（存量 1201 卡=12%），
+            # 每轮照落，模板塌陷只被记录不被拦。判据=同一 12 字开头在语料里
+            # >=OPEN_FAMILY_HARD 张卡（族塌陷，非正常复用：2-7 卡小族不拦）且
+            # 不在本卡自身文本（own-catchphrase 豁免，承 T-20260925-01 人设声口）。
+            if (len(_others) + 1 >= OPEN_FAMILY_HARD
+                    and op not in re.sub(r"\s+", "", sig.get("card_text") or "")):
+                v.append("recent-family-opening")
+            else:
+                v.append("recent-dup-opening")
     rgr = sig.get("recent_grams")
     if isinstance(rgr, dict) and rgr:
         nl = re.sub(r"\s+", "", line or "")
