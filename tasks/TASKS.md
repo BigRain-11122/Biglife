@@ -29,6 +29,8 @@
   - [2026-10-15 03:1x @BigLife-OSLoop R1263] **③ spotlight 抽验加抽 2 例全 PASS**（10 月配额 2/2 已于 R725/R728 首日兑现〔status-export 城脑面在案〕·本轮=超额健康冗余不占配额·如实记）：C-02416 许淑珍「拆开看看，是最大的敬意。」（池面零事实句·PASS）+C-02423 余倩「天气预报不准，得多穿点，自己添一件。」（天气=当日喂入事实域·零编造·PASS）——验收线 6「只提所喂事实」双例过（Tools/spotlight.py --id 实跑·台词池 v2 池面零事实模板设计面）。
 - [ ] **T-20260924-08**（集团接口批·P-61/P-64·2026-09-24 R102 立单并同轮首落）轮内维护 `docs/status-export.json` 新鲜度（export_ts ≤24h 新鲜度闸·规范=R-20260924-silicon-watch §六批2）：OS 循环每轮轮末刷新 export_ts+depts/outs/results 按当轮实据派生（F3 律禁写死·计数以 census export+audit 实测为准）；实质状态变更（水位达标/新产出/QC 结果）即更。回执=F-20260924-BL04（48h SLA 内已落）。
   - status: open（常设维护单·R102 首落 docs/status-export.json·下轮起轮末例行）
+  - [2026-11-12 06:1x @BigLife-OSLoop R2540] **对外实况面「多线同文」缺陷治愈**：status-export 六条部门线原为同一段文案（历史一次刷写遗留），CEO 面板读不出各线在干什么。修法=`Tools/update_status_export.py` 新增 `depts_map` 段（depts[1:] 按线名整段替换·幂等=文本已同不重写·未知名 fail-fast `DEPTS_MAP_NAME_GUARD`），自检电池 6/6 PASS，随后按真实实测写入六线各自「当前活/最近实物/下个里程碑」——核验 `UNIQUE_DEPT_TEXTS 6 of 6`，ts=2026-11-12 06:19。
+  - [2026-11-12 06:2x @BigLife-OSLoop R2540] 本轮计量：tokens: local=10 api=0 api_reason=-（年轮批 10 试落环 9 张·本地 Ollama qwen3:4b-instruct；池 audit 零 LLM=已全达标自停；相遇轮今日 3/3 封顶零调用；QC 05:45 已巡零调用）
   - 【实录已归档】1 行批实录（2026-09）已逐字移至 tasks/archive/TASKS-2026-09.md——T-20260926-05 拆月归档（原文保全·检索走 rg 全文）
   - [2026-09-23 23:55 @BigLife-OSLoop] spotlight 月度抽验 2/2 例：C-00010 顾阿凤「侬晓得伐，今朝粢饭加辣点儿嘞！」、C-00022 何雨欣「今晚的流量小高潮，我就是那盏不熄的灯。」——均零编造零越权（纯人设日常，未提清单外具体事、未声称执行集团任务），验收线 6「只提所喂事实」PASS。
   - [2026-09-30 03:5x @BigLife-OSLoop R725] spotlight 10 月首例 2 席（10 月配额 1/2）：C-04507 何银龙「灯还是老灯亮堂，这天气适合多站会儿。」、C-04512 余小杏「新设计总是要有点试错，今儿天公作美，正好验验货。」——均零编造零越权（纯人设日常，未提清单外具体事、未声称执行集团任务），验收线 6「只提所喂事实」PASS。

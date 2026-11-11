@@ -17,6 +17,7 @@ payload JSON（声明式，由轮次 write_file 落盘，规避 CLI CJK 引号�
                                             # 措辞须含「今日/本轮」限定，禁写成「居民卡 N 张在库」（R2515 判例）
     "qc_text": null | "**R1506 例巡条...**", # 可选，QC 巡检线前插条
     "top_text": "当前活：...\\n最近实物：...\\n下个里程碑：...",  # 可选，对外实况三行（产品优先律 5）
+    "depts_map": {"语言线·台词池": "..."},   # 可选，depts[1:] 按线名整段替换（治愈四线同文）
     "expect_total": 326                      # 可选，账平断言；缺省=信任机器直数
   }
 
@@ -151,6 +152,25 @@ def apply_refresh(payload, dry_run=False, heartbeat=False):
                 break
         else:
             raise SystemExit("QC_DEPT_NOT_FOUND")
+
+    # --- 各业务线分述（depts[1:] 独立文案；治愈历史「四线同文」缺陷 R2540） ---
+    # 语义：depts[0] 走滚动窗、QC 线走例巡前插，其余线按名称整段替换（幂等=文本已同不重写）。
+    depts_map = payload.get("depts_map") or {}
+    if depts_map:
+        seen = set()
+        for dep in d["depts"][1:]:
+            nm = dep.get("n")
+            txt = depts_map.get(nm)
+            if txt is None:
+                continue
+            seen.add(nm)
+            txt = txt.strip()
+            if dep.get("t") != txt:
+                dep["t"] = txt
+                changed["dept"] = True
+        missing = set(depts_map) - seen
+        if missing:
+            raise SystemExit("DEPTS_MAP_NAME_GUARD unknown=%r" % sorted(missing))
 
     # --- 对外实况三行（产品优先律 5：幂等=文本已同不重写） ---
     top_text = payload.get("top_text")

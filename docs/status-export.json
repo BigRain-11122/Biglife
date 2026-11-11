@@ -1,35 +1,35 @@
 {
- "export_ts": "2026-11-12 06:00",
+ "export_ts": "2026-11-12 06:19",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
- "t": "当前活：年轮线 R2539（窗 05:53-06:00）已收轮，事件回放闸 PASS；下一轮 OSLoop 自动起\n最近实物：census/registry/ 9 张居民年轮（C-00228/C-00348/C-00416/C-10074~C-10079·2026-11-12 05:54）+ qa/EVENTS-REPLAY-REPORT.md（events=41550·mismatch=0）+ cognition/pools.json audit PASS\n下个里程碑：下一轮年轮批（OSLoop 约 06:0x 自动起）·相遇轮 3/3 封顶已满，明日 00:00 重置",
+   "t": "**R2540（11-12 06:06-06:11 窗）**：年轮批 9 席落环（C-00477/C-00794/C-00846/C-10080~C-10085）·事件回放闸 PASS（events=41559·mismatch=0）·池 SELF_TERMINATE·对外实况面分线文案修复（四线同文缺陷治愈）",
    "s": 1
   },
   {
    "n": "基因库补给线",
- "t": "当前活：年轮线 R2539（窗 05:53-06:00）已收轮，事件回放闸 PASS；下一轮 OSLoop 自动起\n最近实物：census/registry/ 9 张居民年轮（C-00228/C-00348/C-00416/C-10074~C-10079·2026-11-12 05:54）+ qa/EVENTS-REPLAY-REPORT.md（events=41550·mismatch=0）+ cognition/pools.json audit PASS\n下个里程碑：下一轮年轮批（OSLoop 约 06:0x 自动起）·相遇轮 3/3 封顶已满，明日 00:00 重置",
+   "t": "当前活：基因库待单——本轮无基因轮（任务板优先·低频线）\n最近实物：genes/ 9 个基因件在库（2026-11-12 复核）\n下个里程碑：任务板无单时补 5-10 条新基因（先登记后使用）",
    "s": 1
   },
   {
    "n": "语言线·台词池",
- "t": "当前活：年轮线 R2539（窗 05:53-06:00）已收轮，事件回放闸 PASS；下一轮 OSLoop 自动起\n最近实物：census/registry/ 9 张居民年轮（C-00228/C-00348/C-00416/C-10074~C-10079·2026-11-12 05:54）+ qa/EVENTS-REPLAY-REPORT.md（events=41550·mismatch=0）+ cognition/pools.json audit PASS\n下个里程碑：下一轮年轮批（OSLoop 约 06:0x 自动起）·相遇轮 3/3 封顶已满，明日 00:00 重置",
+   "t": "当前活：池全达标自停（72 桶 at_target）\n最近实物：cognition/pools.json 1440 行·determinism 192 对 mismatch=0（2026-11-12 06:07 audit PASS）\n下个里程碑：出现欠深桶才补（自终止律·不为长而长）",
    "s": 2
   },
   {
    "n": "行为面镜像线",
- "t": "当前活：年轮线 R2539（窗 05:53-06:00）已收轮，事件回放闸 PASS；下一轮 OSLoop 自动起\n最近实物：census/registry/ 9 张居民年轮（C-00228/C-00348/C-00416/C-10074~C-10079·2026-11-12 05:54）+ qa/EVENTS-REPLAY-REPORT.md（events=41550·mismatch=0）+ cognition/pools.json audit PASS\n下个里程碑：下一轮年轮批（OSLoop 约 06:0x 自动起）·相遇轮 3/3 封顶已满，明日 00:00 重置",
+   "t": "当前活：行为线随年轮环自动同步（每环落环即镜像重生成）\n最近实物：census/export/citizen-behavior.jsonl 重生成 rows=9 ring=10078（2026-11-12 06:07）\n下个里程碑：下一环同步（OSLoop 自动）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
- "t": "当前活：年轮线 R2539（窗 05:53-06:00）已收轮，事件回放闸 PASS；下一轮 OSLoop 自动起\n最近实物：census/registry/ 9 张居民年轮（C-00228/C-00348/C-00416/C-10074~C-10079·2026-11-12 05:54）+ qa/EVENTS-REPLAY-REPORT.md（events=41550·mismatch=0）+ cognition/pools.json audit PASS\n下个里程碑：下一轮年轮批（OSLoop 约 06:0x 自动起）·相遇轮 3/3 封顶已满，明日 00:00 重置",
+   "t": "当前活：QC 巡检线 idle——今日 05:45 例巡已完成（problems=0）\n最近实物：census/QC-REPORT.md（10114 卡·已进化 10066·异常 0）\n下个里程碑：下一轮六轮一巡（OSLoop 自动·异常当轮修）",
    "s": 1
   },
   {
    "n": "城脑服务面",
- "t": "当前活：年轮线 R2539（窗 05:53-06:00）已收轮，事件回放闸 PASS；下一轮 OSLoop 自动起\n最近实物：census/registry/ 9 张居民年轮（C-00228/C-00348/C-00416/C-10074~C-10079·2026-11-12 05:54）+ qa/EVENTS-REPLAY-REPORT.md（events=41550·mismatch=0）+ cognition/pools.json audit PASS\n下个里程碑：下一轮年轮批（OSLoop 约 06:0x 自动起）·相遇轮 3/3 封顶已满，明日 00:00 重置",
+   "t": "当前活：城脑服务面随轮刷新（status-export/spotlight 调用面）\n最近实物：docs/status-export.json ts=2026-11-12 06:15（分线文案修复后首次）\n下个里程碑：本月 spotlight 抽验 ≥2 例（T-07 证据行）",
    "s": 1
   }
  ],
@@ -1697,8 +1697,12 @@
   [
    "311",
    "R2538：今日年轮落环 9 席（C-00424/C-00728/C-00893/C-10067~C-10071/C-10073），事件回放闸 events=41541 mismatch=0 PASS"
+  ],
+  [
+   "329",
+   "2026-11-12 06:11 本轮收口：今日年轮落环 329 行（registry+anchors 机器直数）·回放闸 PASS mismatch=0·QC 05:45 problems=0"
   ]
  ],
- "t": "当前活：年轮线 R2539（窗 05:53-06:00）已收轮，事件回放闸 PASS；下一轮 OSLoop 自动起\n最近实物：census/registry/ 9 张居民年轮（C-00228/C-00348/C-00416/C-10074~C-10079·2026-11-12 05:54）+ qa/EVENTS-REPLAY-REPORT.md（events=41550·mismatch=0）+ cognition/pools.json audit PASS\n下个里程碑：下一轮年轮批（OSLoop 约 06:0x 自动起）·相遇轮 3/3 封顶已满，明日 00:00 重置",
- "top_text": "当前活：年轮线 R2539（窗 05:53-06:00）已收轮，事件回放闸 PASS；下一轮 OSLoop 自动起\n最近实物：census/registry/ 9 张居民年轮（C-00228/C-00348/C-00416/C-10074~C-10079·2026-11-12 05:54）+ qa/EVENTS-REPLAY-REPORT.md（events=41550·mismatch=0）+ cognition/pools.json audit PASS\n下个里程碑：下一轮年轮批（OSLoop 约 06:0x 自动起）·相遇轮 3/3 封顶已满，明日 00:00 重置"
+ "t": "当前活：R2540 年轮批 9 席落环 + 事件回放闸 PASS（41559 events·mismatch=0）\n最近实物：census/registry/ 9 张居民年轮（C-00477/C-00794/C-00846/C-10080~C-10085·2026-11-12 06:06）+ qa/EVENTS-REPLAY-REPORT.md + census/QC-REPORT.md（05:45 problems=0）\n下个里程碑：下一轮年轮批（OSLoop 约 06:2x 自动起）·相遇轮今日 3/3 封顶，明日 00:00 重置",
+ "top_text": "当前活：R2540 年轮批 9 席落环 + 事件回放闸 PASS（41559 events·mismatch=0）\n最近实物：census/registry/ 9 张居民年轮（C-00477/C-00794/C-00846/C-10080~C-10085·2026-11-12 06:06）+ qa/EVENTS-REPLAY-REPORT.md + census/QC-REPORT.md（05:45 problems=0）\n下个里程碑：下一轮年轮批（OSLoop 约 06:2x 自动起）·相遇轮今日 3/3 封顶，明日 00:00 重置"
 }
