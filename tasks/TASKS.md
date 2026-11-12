@@ -1753,3 +1753,10 @@ uff_gate 1 file CLEAN／重建后 --check stale=0。
   **诚实边界**：只覆盖「正文自报生成时点」的面，完全不写时点的面仍只能靠 mtime；阈值 1 天刻意宽松，容忍分钟级偏差只抓天级伪造。
   **实况三行**：当前活=round_daily v0.9 判据加固（堵住 mtime 伪造面永久跳过）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-growth.html + city-meets.html（11-12 17:01/17:02）与 qa/ROUND-DAILY-MTIME-FAKED-20261112.md；下个里程碑=19:00 年轮批 3 席·开头族硬闸与第二句软引导首验（ETA 2026-11-12 19:10）。
   tokens: local=0 api=0 api_reason=yield-window-09:00-19:00
+
+- [R2610] 2026-11-12 17:2x-17:3x @BigLife-OSLoop 轮记：轮首 pull=Already up to date·树净；决策水位差集 NEW=0（尾 D-20261112-15 已消费，第 59 批三条均非本司派工）；orders 物理件区无涉本司新件；TASKS open=T-20261112-01/04/05（均 19:00 观测窗）。**让路窗**=年轮/相遇/反思 09:00-19:00 结构性让路（D-20261020-02，evolve 实跑返回 yield-window）；round_daily 31 面 stale=0 PASS；pool_audit 全桶达标 SELF_TERMINATE（1440 行·72/72 axes·hard_fails=0·双抽 192+25 对零失配）→ 池轮按自终止律跳过；QC 不变量 problems=0（cards=10114 dup_rings=37/37）；HQ 日闸 ALREADY_REPORTED(day=2026-11-12 lines=2) 零写入。
+  **本轮产品增量（CEO 可见面读数低报 12 点根治·1 件判据修复 + 1 面读数纠正）**：①实证缺口——census/export/city-ring-trend.html 对 CEO 报 HAND_DEICTIC **42.8%(200/467)**，而同源探针 ing_open_family.py --scan 同日读 **55.0%(257/467)**，差 57 条、12 个百分点；根因=R2608 升级族真值表后页面未重建，而 round_daily 的 fresh 判据只比输出 mtime，代码口径变了照旧判 fresh ⇒ 可见面永久滞后。②修法 round_daily v0.10：新增 sha256 判据 _script_changed（脚本内容变且输出未重建即 stale）；**用哈希不用 mtime**——git checkout 会把 Tools/*.py 的 mtime 刷成当日（v0.9 同坑），只有内容真变才重建；基线首跑只登记不重建；失败面保留旧哈希下轮再选（不把失败伪装成已对齐）；收尾复检改用更新后口径防自判 STALE。③读数已纠正：趋势页 KPI 由 42.8% 改 55.0%，与闸口同源一致（T-04 验收面从此不再低报）。
+  **门禁**：py_compile rc=0／ruff_gate 1 file CLEAN／负控双向＝仅抖 mtime→skipped-fresh 不重建（免疫 checkout 刷 mtime）、改内容→rebuilt script-changed 且 verdict PASS／撤销探测后全量 --check stale=0 PASS。
+  **诚实边界**：本判据只覆盖「生成器脚本自身」的内容变更；脚本 import 的共享判据模块（如 ring_open_family.py）升级仍不会自动触发下游重建——本轮即由人工发现，是否扩到 deps 清单待 19:00 首批后按实际发生率再定（避免为 30 面各挂依赖表造成过度工程）。
+  **实况三行**：当前活=可见面口径一致性（让路窗内零 LLM 确定性面）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-ring-trend.html（11-12 17:3x 重建·HAND_DEICTIC 55.0%）+ Tools/round_daily.py v0.10（commit d746f129f）；下个里程碑=19:00 年轮首批 3 席（T-04 HAND_DEICTIC 配额闸首验点 + T-05 第二句观测，ETA 2026-11-12 19:10）。
+  tokens: local=0 api=0 api_reason=yield-window（确定性判据修复面零 LLM）
