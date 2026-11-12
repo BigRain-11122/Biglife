@@ -1724,7 +1724,7 @@ def gated_llm(prompt, sig, max_regens=3):
                       + "\n你刚才那句的开头（「"
                       + line.strip()[:20]
                       + "」）与本轮另一位居民雷同。重写：第一个短句必须完全换一种写法，"
-                        "先写本居民此刻手上正在做的一件小事，再带今日实况。")
+                      + "先写本居民此刻" + _hand_word(sig) + "正在做的一件小事，再带今日实况。")
         if "batch-dup-phrase" in v:
             # v0.53 gap #72 (2026-10-24 R1930, T-20261024-09): the phrase gate
             # had no tail note, so the same citizens regenerated into the same
@@ -1750,8 +1750,9 @@ def gated_llm(prompt, sig, max_regens=3):
             prompt = (prompt
                       + "\n你刚才那句的开头（「"
                       + line.strip()[:20]
-                      + "」）是全城近期用滥的模板开场。重写：开头第一句换成你此刻手上的"
-                        "一个具体小动作（带旧物、工具、身体细节），严禁再用"
+                      + "」）是全城近期用滥的模板开场。重写：开头第一句换成你此刻"
+                      + _hand_word(sig)
+                      + "的一个具体小动作（带旧物、工具、身体细节），严禁再用"
                         "「雨还在下」「这会儿天还黑着」「风挺大」这类公共开场。")
         if "recent-dup-phrase" in v:
             _n2 = re.sub(r"\s+", "", line or "")
@@ -1766,6 +1767,18 @@ def gated_llm(prompt, sig, max_regens=3):
                           + "」「".join(_b2[:3])
                           + "」）已在全城许多居民的年轮里反复出现。重写：这段措辞禁用，"
                             "换成只有本居民才会说的具体细节。")
+        # v0.68 R2588: the family-quota gate shipped without any retry note, so a
+        # rejected seat regenerated the SAME prompt that caused the rejection.
+        # Name the banned shapes at the tail (gap #68/#70/#79 tail-pin law).
+        if "opening-family-quota" in v:
+            prompt = (prompt
+                      + "\n你刚才那句的开头（「"
+                      + line.strip()[:12]
+                      + "」）属于今天全城已经用滥的一类起句骨架，禁止再用。重写："
+                        "第一个短句不要从「手上/手在/手心/手掌/手肘/手背/我正」起，"
+                        "也不要从「这会儿/今早/天还黑着/檐下/雨还在下/风里」起；"
+                        "改从一件具体的物、一个去处、或你正看着的另一样东西写起。"
+                        "身体和手的细节可以写，但只许放在第二个短句或句中。")
     # v0.58 gap #79c: template dedup is BEST-EFFORT, honesty is not. A seat
     # that only keeps tripping recent-dup-* must land anyway - the first live
     # batch lost 5/10 seats that way (4B cannot stop writing 「夜里冷，喝口热的
@@ -2418,6 +2431,24 @@ OPENING_SKELETONS = (
 )
 
 
+# v0.68 (2026-11-12 R2588, T-20261112-04 副作用收口): 闸禁一族起句、提示词却把模型
+# 往同一族推的自相矛盾。五处「手上」引导（city_phr/today/second 三块 + 两条
+# regen 尾注）+ 24 条骨架里 2 条本身落在被禁族，而 today_ban_families 只喂闸与
+# 控制台，从没告诉模型——3 次重写同提示词必重入同一吸引子（gap #68），19:00 首批
+# 会把三位全留 due。修法：闸不动（T-04 验收线保持），提示词改说人话 + 骨架过滤。
+FAMILY_OPEN_HINTS = {
+    "HAND_DEICTIC": "以「手上」「手在」「手心」「手掌」「手肘」「手背」或「我正」起句",
+    "TIME_OPEN": "以「这会儿」「今早」「天还黑着」「天刚亮」「天擦黑」「这阵子」「这年头」起句",
+    "WEATHER_ABSTRACT": "以「雨还在下」「檐下」「雨停了」「风里」「天阴沉」「云压得低」起句",
+}
+
+
+def _hand_word(sig):
+    """当日 HAND_DEICTIC 被禁 → 「身上」，否则「手上」（无禁时逐字零漂移）。"""
+    _b = sig.get("today_ban_families") if isinstance(sig, dict) else None
+    return "身上" if (_b and "HAND_DEICTIC" in _b) else "手上"
+
+
 def opening_seed_block(cid, sig=None):
     """Per-citizen opening skeleton (deterministic, stable per id).
 
@@ -2437,6 +2468,16 @@ def opening_seed_block(cid, sig=None):
                  if re.sub(r"\s+", "", s)[:12] not in used]
         if fresh:
             skels = fresh
+    # v0.68 R2588: never hand out a skeleton whose own family is banned today.
+    # The old filter only dropped used opening12, so 「手上的活儿排到第三件…」
+    # (HAND_DEICTIC) and 「这会儿手边最碍事的就是这些，」(TIME_OPEN) walked
+    # straight into the hard quota gate - the prompt asked for what the gate
+    # refused. Missing set / unknown family = no-op (zero drift, #70/#71 law).
+    _ban = (sig or {}).get("today_ban_families") or set()
+    if _ban and _ring_family_of is not None:
+        _keep = [s for s in skels if _ring_family_of(s) not in _ban]
+        if _keep:
+            skels = _keep
     sk = skels[n % len(skels)]
     return ("本轮你的开场句式骨架（只借用这个起句的骨架，词必须自己换；"
             "骨架里不写天气、不写街景套话，填进去的动作只能是你人设里本来就有的日常）："
@@ -2505,14 +2546,16 @@ def build_prompt(cid, text, sig):
     _rbp = sig.get("recent_banned_phrases") or []
     _tbp = [p for p in (sig.get("today_ban_phrases") or []) if p not in _rbp]
     _allp = list(_rbp) + _tbp
+    # v0.68 R2588: 被禁族当天改说「身上」——原句「身上、手上」被 4B 读成开场提示。
+    _hw = _hand_word(sig)
     city_phr_blk = ("全城年轮里已被写滥的措辞（含今天重复最多的模板句；下列每一段都有多位居民"
                     "用过，你的年轮严禁出现其中任何一段，连改半个字复用也不许；"
-                    "改从你此刻身上、手上的具体细节写起，天气只许一句话带过）："
+                    f"改从你此刻身上、{_hw}的具体细节写起，天气只许一句话带过）："
                     + "、".join("「" + b + "」" for b in _allp) + "\n") if _allp else ""
     # T-20261025-03 (R2109): openings already used >=6x TODAY, named outright.
     _tbl = sig.get("today_ban_openings") or []
     today_blk = ("今天全城已经用滥的开场（今日已出现 ≥%d 次，开场句严禁与其中任何一句相同；"
-                 "请从你自己此刻手上正在做的具体小动作写起）：" % TODAY_OPEN_HARD
+                 "请从你自己此刻%s正在做的具体小动作写起）：" % (TODAY_OPEN_HARD, _hw)
                  + "、".join("「" + b + "」" for b in _tbl) + "\n") if _tbl else ""
     # v0.67 T-20261112-05: 第二句软引导（越线族点名）。空集 -> ""（零漂移，
     # 同 #70/#71/#79 的面缺失即关闭律）；只写提示词，不进 ring_violations。
@@ -2521,7 +2564,20 @@ def build_prompt(cid, text, sig):
                   + "；".join((_ring_second_label(f) if _ring_second_label else f)
                              for f in sorted(_sb))
                   + "。天气只许一句话带过，并且不要用风来带出动作；"
-                    "改从你自己此刻手上、身上的具体细节写起。\n") if _sb else ""
+                  + "改从你自己此刻" + _hw + "、身上的具体细节写起。\n") if _sb else ""
+    # v0.68 (2026-11-12 R2588, T-20261112-04 副作用收口): 把被禁骨架族用**人话**说给
+    # 模型听，并明确「禁的是起句形状不是内容」。此前 today_ban_families 只进
+    # ring_violations 与控制台打印，模型每轮被拒而不知为何，正是 gap #68
+    # persistent-skip 的复现条件（同提示词 → 同吸引子 → 3 次用尽 → 席位留 due）。
+    # 空集 -> ""（零漂移，同 #70/#71/#79 的面缺失即关闭律）。
+    _fb = sig.get("today_ban_families") or set()
+    family_blk = ("再一条硬约束（最容易犯，犯即整句退回重写）：今天全城年轮的开头已经有超过 "
+                  + str(int(round(_RING_FAMILY_QUOTA * 100))) + "% 落在同一类骨架里，本批严禁再用这种起句——"
+                  + "；".join(FAMILY_OPEN_HINTS.get(f, f) for f in sorted(_fb))
+                  + "。禁的是**起句形状**不是内容：手上、身上的细节照写（放第二句或句中很好），"
+                    "但第一个短句不要从「手」字起、不要用「我正」起句。换这几种开头之一："
+                    "写一件物的状态（「那口锅底又薄了一层」）、写你正看着的另一样东西"
+                    "（「账本翻到第三页」）、写一个去处（「回测田的田埂上……」）。\n") if _fb else ""
     # v0.60 gap #80: per-citizen opening skeleton, placed BEFORE the ban list so
     # the model has something concrete to start from instead of only prohibitions.
     opening_blk = opening_seed_block(cid, sig)
@@ -2580,6 +2636,7 @@ def build_prompt(cid, text, sig):
             # ignored (R2291 实测 4/10 仍撞 recent-dup-phrase).
             f"{city_phr_blk}"
             f"{second_blk}"
+            f"{family_blk}"
             f"{fog_blk}"
             f"{tech_blk}"
             f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节），只输出这几句话本身。")

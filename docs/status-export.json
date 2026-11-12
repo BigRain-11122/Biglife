@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-12 10:35",
+ "export_ts": "2026-11-12 13:06",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2573（10:3x-11:1x）：沉默断供面系统性接线** —— round_daily 登记表 20→24 项，补登 city-lexicon（停更 15.7 天）、city-ring-quality、city-ring-trend 三面；新增 data 档与注册行 argv 支持；惊奇日志全史回填 48 行（2026-09-23..11-12，停更 16.8 天后补齐）。 **R2569（2026-11-12 09:5x·让路窗）** 工作日 09:00-19:00 让路窗内年轮/相遇线按 D-20261020-02 延后；本轮改走 CPU 面实物：复活停产 16 天的城市流言录（8 链/29 跳）+ 重建当日日报页 + 事件回放闸 + QC 巡检。 **R2550（2026-11-12 07:5x）**：年轮线 8/10 落环（C-02344/C-02355/C-02357/C-02386/C-02393/C-02437/C-02453/C-02469；C-03614 sun-fit+dup、C-03187 rain-invented+dup 闸拒留 due）；事件回放闸 PASS（cards=10111/events=41632/replayed=10111/schema_errors=0/mismatch=0）；语言池 72 桶全达标 SELF_TERMINATE 跳过；软宽恕 3/8（37.5%，较 R2541 的 8/10 明显回落）。",
+   "t": "**R2588（2026-11-12 13:1x）：开头族硬闸与提示词自相矛盾—出生站修复。** 实读今日基线 HAND_DEICTIC 200/467=42.8% OVER，而提示词五处仍在教模型「从手上写起」、从未告知禁哪一族（24 条骨架另有 2 条在被禁族）——按 gap #68 路径 19:00 首批会全留 due。修法：闸不动，新增人话禁令块 + 骨架按族过滤 + `opening-family-quota` 专属重写尾注；常驻回归件 `qa/test_family_prompt_consistency.py` 8/8 PASS。 **R2573（10:3x-11:1x）：沉默断供面系统性接线** —— round_daily 登记表 20→24 项，补登 city-lexicon（停更 15.7 天）、city-ring-quality、city-ring-trend 三面；新增 data 档与注册行 argv 支持；惊奇日志全史回填 48 行（2026-09-23..11-12，停更 16.8 天后补齐）。 **R2569（2026-11-12 09:5x·让路窗）** 工作日 09:00-19:00 让路窗内年轮/相遇线按 D-20261020-02 延后；本轮改走 CPU 面实物：复活停产 16 天的城市流言录（8 链/29 跳）+ 重建当日日报页 + 事件回放闸 + QC 巡检。",
    "s": 1
   },
   {
@@ -1711,6 +1711,6 @@
    "今日年轮落环行数 469（465 位居民·6 城区·卡片 10114）；流言录 8 链/29 跳落盘；事件回放 41699 事件/10111 卡 mismatch=0 schema=0 PASS"
   ]
  ],
- "t": "当前活：沉默断供面接线与零 LLM 派生物回填（让路窗内确定性面）\n最近实物：census/export/city-lexicon.html（重建 101.8KB·10:3x）+ cognition/surprise-log.jsonl（48 行全史回填）+ Tools/round_daily.py v0.3（24 项登记）\n下个里程碑：19:00 年轮批 3 位 + T-20261112-01 tmpl 缺陷率/human_rows 首验（ETA 2026-11-12 19:10）",
- "top_text": "当前活：沉默断供面接线与零 LLM 派生物回填（让路窗内确定性面）\n最近实物：census/export/city-lexicon.html（重建 101.8KB·10:3x）+ cognition/surprise-log.jsonl（48 行全史回填）+ Tools/round_daily.py v0.3（24 项登记）\n下个里程碑：19:00 年轮批 3 位 + T-20261112-01 tmpl 缺陷率/human_rows 首验（ETA 2026-11-12 19:10）"
+ "t": "当前活：开头族闸副作用的出生站修复（让路窗内确定性面）\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/test_family_prompt_consistency.py（13:1x）+ qa/RING-FAMILY-PROMPT-CONSISTENCY-20261112.md\n下个里程碑：19:00 年轮批 3 席·开头族硬闸与第二句软引导首验（ETA 2026-11-12 19:10）",
+ "top_text": "当前活：开头族闸副作用的出生站修复（让路窗内确定性面）\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/test_family_prompt_consistency.py（13:1x）+ qa/RING-FAMILY-PROMPT-CONSISTENCY-20261112.md\n下个里程碑：19:00 年轮批 3 席·开头族硬闸与第二句软引导首验（ETA 2026-11-12 19:10）"
 }
