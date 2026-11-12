@@ -1,0 +1,301 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""v1.0 (2026-11-12 R2581, T-20261112-04): 年轮开头骨架族配额闸（源头出生站）。
+
+病根（qa/RING-OPENING-SKELETON-20261112.md R2580 实证）：修掉抽象天气族
+（雨还在下/檐下，10-24 峰值 1011 → 11-12 32）之后，模型把开头换成了具象
+骨架「手在X／手上的X／我正把X」，占当日产出 10-19 0.0% → 11-12 42.2% 单调
+爬升。1663/2143 高频开头（76.2%）无法用口头禅库解释 = 模型自创句法，不是
+人设。
+
+裁决（同审计 §五）：**不做首 12 字跨卡永久去重硬闸**（会误杀 135 卡共用
+口头禅的合法人设）；改为**骨架族配额闸**——按族统计当日占比，>25% 即拒稿
+重写。禁的是配额不是词：一次「手心的汗」合法，全天四成居民都从手开讲才
+是病。
+
+设计边界（gate-rigor 六问）：
+  标定依据 = R2580 全库 16249 环按日实测（本模块 --scan 可复现）；
+  唯一判据 = 开头（去空白后前 12 字）命中族正则的数量／当日环数 > 25%；
+  负控 = --selftest 四探针（口头禅正例必须不被拦 / 句中身体描写不算开头）；
+  能力边界 = 只判开头骨架位置，不评正文中后段品质，不判词面好坏；
+  失效条件 = registry 缺失 → 返回空统计、闸关闭（零漂移，同 evolve_citizen
+             gap #70/#71 law）；
+  验证记录 = qa/RING-FAMILY-GATE-20261112.md。
+
+零 LLM / 零 GPU / 确定性：同一 registry 双跑输出逐字节一致。
+"""
+import argparse
+import collections
+import json
+import os
+import random
+import re
+import sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CENSUS = os.path.join(ROOT, "census")
+REGISTRY = os.path.join(CENSUS, "registry")
+
+OPENING_LEN = 12          # 与 evolve_citizen.today_ring_openings 同口径
+FAMILY_QUOTA = 0.25       # T-20261112-04 验收线：>25% 触发拒稿
+FAMILY_MIN_DENOM = 8      # 当日 <8 环不判（小样本噪声）
+
+# 族定义：锚定开头位置（^），只认句式骨架不认词义。
+# 每族 = (说明, 正则列表)。扩展新族=fail-safe（未命中即不算）。
+FAMILIES = collections.OrderedDict([
+    ("HAND_DEICTIC", (
+        "手部指示+第一人称进行时骨架（手在X／手上的X／我正把X）——"
+        "R2580 实证单调爬升族；裸「我正+动词」同源（我正低头磨…／我正对着…），"
+        "今日 8 条，计入同族",
+        [r"^手在", r"^手上的", r"^手底下", r"^手心", r"^手掌", r"^手肘",
+         r"^手背", r"^我正"],
+    )),
+    ("TIME_OPEN", (
+        "时点开场骨架（这会儿／今早／天还黑着）——时间状语不承接前文",
+        [r"^这会儿", r"^今早", r"^天还黑着", r"^天刚亮", r"^天还没亮",
+         r"^天擦黑", r"^这会儿天", r"^这阵子", r"^这年头"],
+    )),
+    ("WEATHER_ABSTRACT", (
+        "抽象天气开场（雨还在下／檐下／风里）——10-24 峰值 1011 已压住，"
+        "留族防回流",
+        [r"^雨还在下", r"^檐下", r"^雨停了", r"^风里", r"^天阴沉",
+         r"^云压得低"],
+    )),
+])
+
+_COMPILED = collections.OrderedDict(
+    (name, [re.compile(p) for p in pats]) for name, (_, pats) in FAMILIES.items())
+
+
+def norm(text):
+    """去空白后取前 12 字，与 evolve_citizen 的开头口径一致。"""
+    return re.sub(r"\s+", "", text or "")[:OPENING_LEN]
+
+
+def family_of(text):
+    """返回开头所属骨架族名；不属于任何族 → None。
+
+    只匹配开头（norm 后的前 12 字），所以「她把信折好，手心的汗」这类
+    句中合法身体描写永不命中——这是负控探针 2 的契约。
+    """
+    op = norm(text)
+    if len(op) < 2:
+        return None
+    for name, pats in _COMPILED.items():
+        for p in pats:
+            if p.match(op):
+                return name
+    return None
+
+
+def _ring_pat(day):
+    return re.compile(r"- " + re.escape(day) + r" 「([^」]{8,})」")
+
+
+def scan_day(day, registry=None):
+    """扫描某日全部年轮 → (总数, {族: 命中数})。
+
+    registry 缺失或为空 → (0, {})，调用方据此关闭闸（零漂移）。
+    """
+    root = registry or REGISTRY
+    pat = _ring_pat(day)
+    total = 0
+    fam = collections.Counter()
+    for dirpath, _, files in os.walk(root):
+        for fn in files:
+            if not fn.endswith(".md"):
+                continue
+            try:
+                with open(os.path.join(dirpath, fn), encoding="utf-8") as f:
+                    s = f.read()
+            except (IOError, OSError):
+                continue
+            for m in pat.finditer(s):
+                body = m.group(1)
+                if len(re.sub(r"\s+", "", body)) < 8:
+                    continue
+                total += 1
+                f = family_of(body)
+                if f:
+                    fam[f] += 1
+    return total, dict(fam)
+
+
+def scan_days(days, registry=None):
+    """批量按日扫描 → [(day, total, {fam: n})]。"""
+    return [(d,) + scan_day(d, registry) for d in days]
+
+
+def production_days(limit=14, registry=None, today=None):
+    """registry 内有年轮产出的最近 limit 个日期（升序）。"""
+    root = registry or REGISTRY
+    seen = set()
+    pat = re.compile(r"- (\d{4}-\d{2}-\d{2}) 「[^」]{8,}」")
+    for dirpath, _, files in os.walk(root):
+        for fn in files:
+            if not fn.endswith(".md"):
+                continue
+            try:
+                with open(os.path.join(dirpath, fn), encoding="utf-8") as f:
+                    s = f.read()
+            except (IOError, OSError):
+                continue
+            seen.update(pat.findall(s))
+    out = sorted(seen)
+    if today:
+        out = [d for d in out if d <= today]
+    return out[-limit:]
+
+
+def over_quota(total, fam, quota=FAMILY_QUOTA, min_denom=FAMILY_MIN_DENOM):
+    """返回超过配额的族列表（total 不足 min_denom 时一律空=不判）。"""
+    if total < min_denom:
+        return []
+    return sorted(f for f, c in (fam or {}).items() if c / float(total) > quota)
+
+
+def ban_set_from_openings(openings, quota=FAMILY_QUOTA, min_denom=FAMILY_MIN_DENOM):
+    """由 {opening12: count} 台账算出应禁族集合（evolve_citizen 批内直接消费）。
+
+    复用当日开头台账，避免二次扫盘（~1.9s/10k 卡）。
+    """
+    total = 0
+    fam = collections.Counter()
+    for op, c in (openings or {}).items():
+        try:
+            c = int(c)
+        except (TypeError, ValueError):
+            continue
+        if c <= 0:
+            continue
+        total += c
+        f = family_of(op)
+        if f:
+            fam[f] += c
+    return set(over_quota(total, dict(fam), quota=quota, min_denom=min_denom))
+
+
+def _production(registry=None):
+    root = registry or REGISTRY
+    pat = re.compile(r"- (\d{4}-\d{2}-\d{2}) 「([^」]{8,})」")
+    rows = []
+    for dirpath, _, files in os.walk(root):
+        for fn in files:
+            if not fn.endswith(".md"):
+                continue
+            try:
+                with open(os.path.join(dirpath, fn), encoding="utf-8") as f:
+                    s = f.read()
+            except (IOError, OSError):
+                continue
+            for m in pat.finditer(s):
+                rows.append((m.group(1), m.group(2)))
+    return sorted(rows)
+
+
+def _selftest():
+    """负控四探针 + 正控两探针。任一不符 → rc=1。"""
+    probes = [
+        # (标签, 文本, 期望族)
+        ("neg-catchphrase", "这城里好玩的东西一天比一天多，我在巷口又碰见老周。", None),
+        ("neg-body-midsentence", "她把信折好放进铁盒，手心的汗把纸洇了一小块。", None),
+        ("neg-legit-hand-detail", "第三道钉星的路还留着昨夜的汗。", None),
+        ("neg-hand-not-at-opening", "灯芯爆了一下，手在灯罩上停了停。", None),
+        ("pos-hand-skeleton", "手在楼梯扶手上摩挲，木头被磨得发亮。", "HAND_DEICTIC"),
+        ("pos-time-skeleton", "今早的天还没亮透，江面就起了雾。", "TIME_OPEN"),
+    ]
+    bad = 0
+    for label, text, want in probes:
+        got = family_of(text)
+        ok = got == want
+        print("%-24s got=%-16s want=%-16s %s" % (label, got, want, "OK" if ok else "FAIL"))
+        if not ok:
+            bad += 1
+    # 台账口径正控：42% 手族当日必须判 over
+    fake = {"手在楼梯扶手上摩挲": 42, "今早的天还没亮透": 8, "这城里好玩的东西一天比一天多": 50}
+    bans = ban_set_from_openings(fake)
+    live = "HAND_DEICTIC" in bans
+    print("%-24s bans=%s %s" % ("pos-ledger-quota", sorted(bans), "OK" if live else "FAIL"))
+    if not live:
+        bad += 1
+    # 小样本不判：3 环全手族仍应放行（噪声保护）
+    tiny = ban_set_from_openings({"手在楼梯扶手上摩挲": 3, "手上的老茧": 1})
+    ok = not tiny
+    print("%-24s bans=%s %s" % ("neg-tiny-denominator", sorted(tiny), "OK" if ok else "FAIL"))
+    if not ok:
+        bad += 1
+    print("selftest: %s (%d fail)" % ("PASS" if bad == 0 else "FAIL", bad))
+    return 0 if bad == 0 else 1
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(description="年轮开头骨架族配额闸（确定性·零 LLM）")
+    ap.add_argument("--scan", action="store_true", help="按生产日打印各族占比表")
+    ap.add_argument("--days", type=int, default=14, help="扫描最近 N 个生产日")
+    ap.add_argument("--check", metavar="DATE", help="判某日是否超配额（PASS/OVER）")
+    ap.add_argument("--json", action="store_true", help="--scan/--check 输出 JSON")
+    ap.add_argument("--sample", type=int, metavar="N", help="抽 N 条某族年轮供人读")
+    ap.add_argument("--family", default="HAND_DEICTIC", help="--sample 的族名")
+    ap.add_argument("--day", help="--sample 限定日期")
+    ap.add_argument("--seed", type=int, default=0, help="--sample 抽样种子（默认按日期）")
+    ap.add_argument("--selftest", action="store_true", help="负控/正控探针")
+    args = ap.parse_args(argv)
+
+    if args.selftest:
+        return _selftest()
+
+    if args.check:
+        total, fam = scan_day(args.check)
+        over = over_quota(total, fam)
+        detail = {f: (fam.get(f, 0), round(fam.get(f, 0) / total * 100, 1) if total else 0.0)
+                  for f in FAMILIES}
+        if args.json:
+            print(json.dumps({"date": args.check, "total": total, "families": detail,
+                              "over": over, "quota": FAMILY_QUOTA,
+                              "verdict": "OVER" if over else "PASS"},
+                             ensure_ascii=False, indent=1))
+        else:
+            print("date=%s rings=%d quota=%.0f%%" % (args.check, total, FAMILY_QUOTA * 100))
+            for f, (c, pct) in detail.items():
+                print("  %-18s %5d  %5.1f%%%s" % (f, c, pct, "  <- OVER" if f in over else ""))
+            print("verdict: %s" % ("OVER" if over else "PASS"))
+        return 0 if not over else 2
+
+    if args.scan:
+        days = production_days(args.days)
+        rows = scan_days(days)
+        names = list(FAMILIES)
+        if args.json:
+            print(json.dumps([{"date": d, "total": t, "families": f,
+                               "over": over_quota(t, f)} for d, t, f in rows],
+                             ensure_ascii=False, indent=1))
+            return 0
+        print("date        rings  " + "  ".join("%-18s" % n for n in names))
+        for d, t, f in rows:
+            cells = []
+            for n in names:
+                c = f.get(n, 0)
+                cells.append("%-18s" % ("%d(%.1f%%)" % (c, c / t * 100 if t else 0.0)))
+            flag = "  OVER:" + ",".join(over_quota(t, f)) if over_quota(t, f) else ""
+            print("%s  %5d  %s%s" % (d, t, "  ".join(cells), flag))
+        return 0
+
+    if args.sample:
+        rows = _production()
+        if args.day:
+            rows = [r for r in rows if r[0] == args.day]
+        pool = [r for r in rows if family_of(r[1]) == args.family]
+        seed = args.seed or (int(args.day.replace("-", "")) if args.day else 0)
+        rnd = random.Random(seed)
+        pick = pool if len(pool) <= args.sample else rnd.sample(pool, args.sample)
+        print("family=%s pool=%d sampled=%d" % (args.family, len(pool), len(pick)))
+        for i, (d, body) in enumerate(pick, 1):
+            print("%2d. %s  %s" % (i, d, body))
+        return 0
+
+    ap.print_help()
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -616,6 +616,25 @@ CENSUS = os.path.join(CO, "census")
 STATE_DIR = os.path.join(CO, "state")
 CURSOR = os.path.join(STATE_DIR, "evolve-cursor.json")
 import group_root as _group_root  # D-20261028-04 组根解析律
+# v0.65 (2026-11-12 R2581, T-20261112-04): 开头骨架族配额闸。R2580 实证
+# 「修一个吸引子生一个」——抽象天气族压住后，手在X/我正把X 骨架 17 天单调
+# 爬到 42.8%，而 76.2% 高频开头无法用口头禅库解释（模型自创句法，不是人设）。
+# 硬去重会误杀 135 卡共用口头禅，故改为按族占比配额：当日该族 >25% 即拒稿
+# 重写。模块缺失 → 闸关闭（零漂移，同 gap #70/#71 law）。
+try:
+    if HERE not in sys.path:
+        sys.path.insert(0, HERE)
+    from ring_open_family import (
+        ban_set_from_openings as _ring_family_ban,
+        family_of as _ring_family_of,
+        FAMILY_QUOTA as _RING_FAMILY_QUOTA,
+        FAMILY_MIN_DENOM as _RING_FAMILY_MIN_DENOM,
+    )
+except Exception:  # noqa: BLE001 - 任何导入失败都退化为「闸关闭」
+    _ring_family_ban = None
+    _ring_family_of = None
+    _RING_FAMILY_QUOTA = 0.25
+    _RING_FAMILY_MIN_DENOM = 8
 ROOT = _group_root.resolve()  # D-20261028-04: git rev-parse 认活树，禁 ..\.. 盲跳
 FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
 OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
@@ -1037,6 +1056,17 @@ def ring_violations(line, sig):
     invented moon/celestial) are verified deterministically against sig
     (weather串/now) before落环."""
     v = []
+    # v0.65 T-20261112-04: skeleton-family quota. Only fires when the batch
+    # pre-computed an over-quota family set (sig["today_ban_families"]); a
+    # missing key/empty set keeps every other caller byte-identical (zero drift,
+    # same law as #70/#71). The family is judged on the OPENING only, so a legal
+    # mid-sentence body description the model happens to write still passes -
+    # what the gate refuses is the fourth-in-ten same-shaped first clause.
+    _bfam = sig.get("today_ban_families") if isinstance(sig, dict) else None
+    if _bfam and _ring_family_of is not None:
+        _fam = _ring_family_of(line or "")
+        if _fam in _bfam:
+            v.append("opening-family-quota")
     # 2026-10-26 R2251: internal event codes leaked into prose. The v0.64 prompt
     # hardening alone did not hold (10-24 16.0% / 10-25 23.6% / 10-26 21.0% of
     # that day's rings carried G08 / S2.5 / B2396), so the birth station now
@@ -3064,6 +3094,25 @@ def main():
     # cannot see today's repeats). Ledger lands in state/ for observability.
     _tcount, _tgrams = today_ring_openings(with_grams=True)
     sig["today_open_ids"] = _tcount
+    # v0.65 T-20261112-04: family quota, computed once from today's own opening
+    # ledger (no second disk walk). 11-12 实测 HAND_DEICTIC 200/467=42.8%, so the
+    # first seat of the 19:00 batch already gets the family refused instead of the
+    # city producing another 42% hand-shaped morning.
+    sig["today_ban_families"] = set()
+    sig["today_family_counts"] = {}
+    sig["today_family_total"] = 0
+    if _ring_family_ban is not None and isinstance(_tcount, dict):
+        for _op, _c in _tcount.items():
+            _f = _ring_family_of(_op) if _ring_family_of else None
+            if _f:
+                sig["today_family_counts"][_f] = (
+                    sig["today_family_counts"].get(_f, 0) + int(_c))
+            sig["today_family_total"] += int(_c)
+        sig["today_ban_families"] = _ring_family_ban(_tcount)
+    if sig["today_ban_families"]:
+        print("today-family quota banned (%.0f%%): %s" % (
+            _RING_FAMILY_QUOTA * 100, ",".join(sorted(sig["today_ban_families"]))),
+            flush=True)
     # v0.62 gap #82: today's own template band, named in the tail block so the
     # seat sees the repeat it would otherwise imitate from its neighbours.
     _tmin = max(TODAY_GRAM_MIN, len(_tcount) // 50)
@@ -3152,6 +3201,19 @@ def main():
         # gap #70: record the accepted opening so later seats in this batch must
         # vary theirs (same-round cross-card repetition is not a per-card defect).
         sig["batch_openings"].add(re.sub(r"\s+", "", line)[:12])
+        # v0.65 T-20261112-04: keep the family share live inside the batch, so a
+        # family that crosses 25% mid-batch stops the NEXT seat (same live-ledger
+        # pattern as today_open_ids below, which #70/#82 already ride).
+        if _ring_family_of is not None and sig.get("today_family_counts") is not None:
+            _fam = _ring_family_of(line)
+            sig["today_family_total"] = sig.get("today_family_total", 0) + 1
+            if _fam:
+                _fc = sig["today_family_counts"]
+                _fc[_fam] = _fc.get(_fam, 0) + 1
+                _tot = sig["today_family_total"]
+                if (_tot >= _RING_FAMILY_MIN_DENOM
+                        and _fc[_fam] / float(_tot) > _RING_FAMILY_QUOTA):
+                    sig["today_ban_families"].add(_fam)
         # gap #71: feed the accepted line into the batch phrase counter + the
         # prompt avoid list (both consumed by the NEXT seat in this batch).
         _norm_ln = re.sub(r"\s+", "", line)
