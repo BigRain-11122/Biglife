@@ -41,9 +41,12 @@ DISTRICTS = (
     ("QUANT 城 · K线广场", "quant", 1),
 )
 
-# 六个句式族（错开骨架，避免 6 条母题长成一个模板）。
+# 八个句式族（错开骨架，避免母题长成一个模板）。
 # 全部避开天气词（雨/晴/太阳/风/晒/雾/月/星）与时段词（今早/傍晚/夜），
 # 因为这些断言归真实天气与真实时刻管，母题库不许越权。
+# 族数必须 ≥ 每批条数（当前 8 条 = DISTRICTS 权重合计）：6 族时 8 条必有两族
+# 重出（2026-11-12 R2585 实测「把X挪到门口搁着」「拿X换Y…」各 2 次），
+# 直接喂进年轮批变模板句。改动族数前先核算 DISTRICTS 权重合计。
 FRAMES = (
     "{d}的{prof}把{obj}挪到门口搁着，{habit}。",
     "巷子里有人拿{obj}来换{obj2}，{prof}说值不值另讲，先用着。",
@@ -51,6 +54,8 @@ FRAMES = (
     "{prof}把{obj}用布包好压在箱底，箱角还塞着{obj2}。",
     "邻家小孩围着{obj}看，{prof}讲了半天来历，说得自己先笑了。",
     "{prof}家的{obj}被借走三天，还回来时多了道磕痕，谁也没提。",
+    "{prof}把{obj}挨个摆开，摆完才想起没数。",
+    "{prof}拿{obj2}换了{obj}，回家路上谁也没提这茬。",
 )
 
 
@@ -102,11 +107,14 @@ def build(date_str):
         return []
 
     n = 0
+    # 族序按日期整体轮转：同日内各条不重族（前提=族数 ≥ 批条数），跨日首条族不同，
+    # 免得「每天第一条都是同一骨架」沉淀成跨日模板。
+    frame_off = int(m(date_str, "frame-off")[0:2], 16) % len(FRAMES)
     rows = []
     for district, zone, weight in DISTRICTS:
         for k in range(weight):
             seed = m(date_str, district, k)
-            frame = FRAMES[n % len(FRAMES)]
+            frame = FRAMES[(n + frame_off) % len(FRAMES)]
             obj = objs[int(seed[2:10], 16) % len(objs)]
             obj2 = objs[int(seed[10:18], 16) % len(objs)]
             if obj2 == obj:
