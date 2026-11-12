@@ -32,23 +32,23 @@ li .t{color:#5f6b7a;font:11px/1 ui-monospace,monospace;margin-left:6px}
 .foot{margin-top:40px;color:#5f6b7a;font-size:12px;text-align:center}
 </style></head><body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 产物目录</a></div><div class="wrap">
 <h1>城市人情志</h1>
-<div class="sub">人怎么彼此连着 · 生成 2026-11-12 10:05 · 数据源 census/export/citizen-relations.jsonl + citizens-light.jsonl</div>
+<div class="sub">人怎么彼此连着 · 生成 2026-11-12 20:01 · 数据源 census/export/citizen-relations.jsonl + citizens-light.jsonl</div>
 
 <div class="cards">
-<div class="card"><div class="k">关系边</div><div class="v">2851573</div><div class="n">每条边=一次明确的两人关系</div></div>
+<div class="card"><div class="k">关系边</div><div class="v">2851580</div><div class="n">每条边=一次明确的两人关系</div></div>
 <div class="card"><div class="k">涉及居民</div><div class="v">10054</div><div class="n">关系网覆盖人数</div></div>
 <div class="card"><div class="k">人均度</div><div class="v">567.3</div><div class="n">一人平均连着几条边</div></div>
-<div class="card"><div class="k">互惠对</div><div class="v">5186</div><div class="n">两个人互相记着对方的两条边</div></div>
-<div class="card"><div class="k">圈子</div><div class="v">8</div><div class="n">按连通分量计的独立关系团</div></div>
-<div class="card"><div class="k">最大圈子</div><div class="v">6528</div><div class="n">一张网里连得最紧的一团人</div></div>
+<div class="card"><div class="k">互惠对</div><div class="v">5188</div><div class="n">两个人互相记着对方的两条边</div></div>
+<div class="card"><div class="k">圈子</div><div class="v">7</div><div class="n">按连通分量计的独立关系团</div></div>
+<div class="card"><div class="k">最大圈子</div><div class="v">7531</div><div class="n">一张网里连得最紧的一团人</div></div>
 <div class="card"><div class="k">孤岛居民</div><div class="v">57</div><div class="n">档案在册但关系面零边 · 0.6%</div></div>
 <div class="card"><div class="k">相逢记录</div><div class="v">49</div><div class="n">cap 内最近 30 条取自年轮</div></div>
 </div>
 
 <div class="note" style="margin-top:16px">
 <p><b>三件结构事实（本页当场算出，非估计）：</b></p>
-<p>① 互惠 5186 对 / 2851573 条边 = 0.18%：关系面绝大多数是单向记录，两个人互相记着对方的情形很少。</p>
-<p>② 最大的一个圈子 6528 人，占关系网 64.9%：城市在结构上几乎是连成一张网的，不是若干互不相干的小团体。</p>
+<p>① 互惠 5188 对 / 2851580 条边 = 0.18%：关系面绝大多数是单向记录，两个人互相记着对方的情形很少。</p>
+<p>② 最大的一个圈子 7531 人，占关系网 74.9%：城市在结构上几乎是连成一张网的，不是若干互不相干的小团体。</p>
 <p>③ 孤岛 57 人（0.6%）：还没被任何关系记进去的在册居民。</p>
 </div>
 
@@ -56,7 +56,7 @@ li .t{color:#5f6b7a;font:11px/1 ui-monospace,monospace;margin-left:6px}
 <div class="row"><span class="lab">同业</span><span class="track"><i style="width:49.7%"></i></span><span class="num">2832760 · 50%</span></div>
 <div class="row"><span class="lab">伙伴</span><span class="track"><i style="width:0.3%"></i></span><span class="num">15131 · 0%</span></div>
 <div class="row"><span class="lab">同户</span><span class="track"><i style="width:0.1%"></i></span><span class="num">3629 · 0%</span></div>
-<div class="row"><span class="lab">meet</span><span class="track"><i style="width:0.0%"></i></span><span class="num">53 · 0%</span></div>
+<div class="row"><span class="lab">meet</span><span class="track"><i style="width:0.0%"></i></span><span class="num">60 · 0%</span></div>
 <div class="sub" style="margin-top:10px">未标注类型 0 条，按原值保留在数据面，不在此页归并。</div>
 
 <h2>二 · 关系从哪里来</h2>
@@ -79,14 +79,16 @@ li .t{color:#5f6b7a;font:11px/1 ui-monospace,monospace;margin-left:6px}
 
 <h2>四 · 城区互往</h2>
 <div class="sub">两端都登记了城区的边，按城区对聚合（含同区内部边）；空城区已排除。</div>
-<div class="row"><span class="lab">中央市集 GM ↔ 中央市集 GM</span><span class="track"><i style="width:34.8%"></i></span><span class="num">992109 · 35%</span></div>
-<div class="row"><span class="lab">低语巷 QT ↔ 低语巷 QT</span><span class="track"><i style="width:27.7%"></i></span><span class="num">789447 · 28%</span></div>
+<div class="row"><span class="lab">中央市集 GM ↔ 中央市集 GM</span><span class="track"><i style="width:34.8%"></i></span><span class="num">992111 · 35%</span></div>
+<div class="row"><span class="lab">低语巷 QT ↔ 低语巷 QT</span><span class="track"><i style="width:27.7%"></i></span><span class="num">789449 · 28%</span></div>
 <div class="row"><span class="lab">机房区 MD ↔ 机房区 MD</span><span class="track"><i style="width:23.5%"></i></span><span class="num">669963 · 23%</span></div>
 <div class="row"><span class="lab">北槐街区 NS ↔ 北槐街区 NS</span><span class="track"><i style="width:6.5%"></i></span><span class="num">186312 · 7%</span></div>
-<div class="row"><span class="lab">旧站台 OR ↔ 旧站台 OR</span><span class="track"><i style="width:5.9%"></i></span><span class="num">169230 · 6%</span></div>
+<div class="row"><span class="lab">旧站台 OR ↔ 旧站台 OR</span><span class="track"><i style="width:5.9%"></i></span><span class="num">169231 · 6%</span></div>
 <div class="row"><span class="lab">河岸 RV ↔ 河岸 RV</span><span class="track"><i style="width:1.6%"></i></span><span class="num">44510 · 2%</span></div>
 <div class="row"><span class="lab">北槐街区 NS ↔ 低语巷 QT</span><span class="track"><i style="width:0.0%"></i></span><span class="num">1 · 0%</span></div>
 <div class="row"><span class="lab">中央市集 GM ↔ 低语巷 QT</span><span class="track"><i style="width:0.0%"></i></span><span class="num">1 · 0%</span></div>
+<div class="row"><span class="lab">中央市集 GM ↔ 旧站台 OR</span><span class="track"><i style="width:0.0%"></i></span><span class="num">1 · 0%</span></div>
+<div class="row"><span class="lab">低语巷 QT ↔ 中央市集 GM</span><span class="track"><i style="width:0.0%"></i></span><span class="num">1 · 0%</span></div>
 
 <h2>五 · 相逢录</h2>
 <div class="sub">年轮里留下「相遇」事件记录的最近 30 位（共 49 位），是双卡互引那一类事件的可见面。</div>
@@ -95,16 +97,16 @@ li .t{color:#5f6b7a;font:11px/1 ui-monospace,monospace;margin-left:6px}
 </ul>
 
 <h2>六 · 圈子</h2>
-<div class="sub">把关系边当无向边做连通分量：同一圈子=顺着关系能走到的所有人。列出最大的 8 个，成员取编号最小的 4 位作代表。</div>
+<div class="sub">把关系边当无向边做连通分量：同一圈子=顺着关系能走到的所有人。列出最大的 7 个，成员取编号最小的 4 位作代表。</div>
 <ul>
-<li><b>圈子 1</b><span class="d">6528 人</span><span class="x">顾阿凤·北槐街区 NS、沈佩兰·北槐街区 NS、盛健·北槐街区 NS、晚潮·北槐街区 NS 等</span></li><li><b>圈子 2</b><span class="d">2000 人</span><span class="x">何雨欣·机房区 MD、尹一鸣·机房区 MD、韩秀英·机房区 MD、肖斌·机房区 MD 等</span></li><li><b>圈子 3</b><span class="d">1003 人</span><span class="x">邓建国·旧站台 OR、熊简梨·旧站台 OR、杭惠芬·旧站台 OR、移位·旧站台 OR 等</span></li><li><b>圈子 4</b><span class="d">512 人</span><span class="x">陆海峰·河岸 RV、史军·河岸 RV、阿路由·河岸 RV、阮红·河岸 RV 等</span></li><li><b>圈子 5</b><span class="d">4 人</span><span class="x">程望闻·机房区 MD、桂存仁·机房区 MD、桑银针·机房区 MD、曾稳山·机房区 MD</span></li><li><b>圈子 6</b><span class="d">3 人</span><span class="x">乔雨前·低语巷 QT、童守拙·低语巷 QT、唐串红·低语巷 QT</span></li><li><b>圈子 7</b><span class="d">2 人</span><span class="x">岑刻舟·河岸 RV、柳千结·河岸 RV</span></li><li><b>圈子 8</b><span class="d">2 人</span><span class="x">叶知秋·北槐街区 NS、糜花信·北槐街区 NS</span></li>
+<li><b>圈子 1</b><span class="d">7531 人</span><span class="x">顾阿凤·北槐街区 NS、沈佩兰·北槐街区 NS、盛健·北槐街区 NS、晚潮·北槐街区 NS 等</span></li><li><b>圈子 2</b><span class="d">2000 人</span><span class="x">何雨欣·机房区 MD、尹一鸣·机房区 MD、韩秀英·机房区 MD、肖斌·机房区 MD 等</span></li><li><b>圈子 3</b><span class="d">512 人</span><span class="x">陆海峰·河岸 RV、史军·河岸 RV、阿路由·河岸 RV、阮红·河岸 RV 等</span></li><li><b>圈子 4</b><span class="d">4 人</span><span class="x">程望闻·机房区 MD、桂存仁·机房区 MD、桑银针·机房区 MD、曾稳山·机房区 MD</span></li><li><b>圈子 5</b><span class="d">3 人</span><span class="x">乔雨前·低语巷 QT、童守拙·低语巷 QT、唐串红·低语巷 QT</span></li><li><b>圈子 6</b><span class="d">2 人</span><span class="x">岑刻舟·河岸 RV、柳千结·河岸 RV</span></li><li><b>圈子 7</b><span class="d">2 人</span><span class="x">叶知秋·北槐街区 NS、糜花信·北槐街区 NS</span></li>
 </ul>
-<div class="sub" style="margin-top:10px">共 8 个圈子；未进入前 10 名的 0 个不在本页展开。</div>
+<div class="sub" style="margin-top:10px">共 7 个圈子；未进入前 10 名的 0 个不在本页展开。</div>
 
 <h2>七 · 桥接者</h2>
 <div class="sub">按「关系网触及的城区数」排序：一个人自己住一个区，但他的关系伸到了别的区，才算桥。</div>
 <ul>
-<li><b>魏秀兰</b><span class="d">中央市集 GM</span><span class="x">横跨 2 个城区 · 度 668</span></li><li><b>徐根福</b><span class="d">低语巷 QT</span><span class="x">横跨 2 个城区 · 度 647</span></li><li><b>黄军</b><span class="d">低语巷 QT</span><span class="x">横跨 2 个城区 · 度 608</span></li><li><b>沈佩兰</b><span class="d">北槐街区 NS</span><span class="x">横跨 2 个城区 · 度 298</span></li><li><b>邓银娣</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 747</span></li><li><b>薛糖糖</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 747</span></li><li><b>邹阿Pi</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 747</span></li><li><b>冯之南</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 747</span></li><li><b>叶天天</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 746</span></li><li><b>曾桂芳</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 746</span></li><li><b>同步锁·拾</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 746</span></li><li><b>史小杏</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 746</span></li>
+<li><b>金芳</b><span class="d">中央市集 GM</span><span class="x">横跨 2 个城区 · 度 733</span></li><li><b>彭莉</b><span class="d">中央市集 GM</span><span class="x">横跨 2 个城区 · 度 731</span></li><li><b>魏秀兰</b><span class="d">中央市集 GM</span><span class="x">横跨 2 个城区 · 度 668</span></li><li><b>徐根福</b><span class="d">低语巷 QT</span><span class="x">横跨 2 个城区 · 度 647</span></li><li><b>黄军</b><span class="d">低语巷 QT</span><span class="x">横跨 2 个城区 · 度 608</span></li><li><b>苏阿果</b><span class="d">低语巷 QT</span><span class="x">横跨 2 个城区 · 度 606</span></li><li><b>盛秀英</b><span class="d">旧站台 OR</span><span class="x">横跨 2 个城区 · 度 331</span></li><li><b>沈佩兰</b><span class="d">北槐街区 NS</span><span class="x">横跨 2 个城区 · 度 298</span></li><li><b>邓银娣</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 747</span></li><li><b>薛糖糖</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 747</span></li><li><b>邹阿Pi</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 747</span></li><li><b>冯之南</b><span class="d">中央市集 GM</span><span class="x">横跨 1 个城区 · 度 747</span></li>
 </ul>
 
 <h2>八 · 孤岛居民</h2>
