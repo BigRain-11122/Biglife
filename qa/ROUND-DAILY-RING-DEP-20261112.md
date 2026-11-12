@@ -25,3 +25,7 @@
 ## 残余风险
 - 冷却窗内（≤60min）新环不进面属预期设计，非缺陷；跨轮次最多滞后 1 小时。
 - `state/evolve-cursor.json` 在 `.gitignore`（state/），换机首轮若该档缺失则依赖信号为空 → 面按日期档照常跑，退化安全（不报错、不重建）。
+
+## 追加·真实件正控（同日 20:0x 实弹）
+- 对真件 census/export/city-ring-trend.html 造 61 分钟前 mtime → --check --only ring_trend 报 dep-mtime:state/evolve-cursor.json（stale=1，判据在真实路径上生效）；
+- --run --only ring_trend 回补 → 再体检 resh（stale=0）——触发-重建-转绿闭环成立，无需等真实 60 分钟窗口。
