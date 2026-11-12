@@ -29,6 +29,8 @@ OUT_DIR = os.path.join(ROOT, "cognition", "rumors")
 OUT_HTML = os.path.join(ROOT, "census", "export", "city-rumors.html")
 
 ANCHOR_TAIL = re.compile(r"\[锚\][^\n]*$")
+# 相遇年轮以「与 C-09875 相遇：…」开头；编号不该出现在城里人的口头话里（台账味），剥掉前缀留事本体。
+MEET_PREFIX = re.compile(r"^\s*与\s*C-\d+\s*相遇\s*[：:]\s*")
 OPS_CN = {"trunc": "掐头去尾", "fuzz": "数目模糊", "pad": "先垫一句", "noop": "原话照搬"}
 
 sys.path.insert(0, TOOLS)
@@ -41,6 +43,28 @@ def md5(*parts) -> str:
 
 def esc(s) -> str:
     return html.escape(str(s), quote=True)
+
+
+def _ingest_filters():
+    """判据单源：抽样口径必须与年轮 ingest 同口径（evolve_citizen.rumor_line_for）。
+
+    供给端只从「可消费」候选里抽，堵住 T-20261112-01 的假绿闭环：文件每日新鲜、
+    但随机抽到的一批整条被 ingest 拦掉，有效供给恒 0。
+    """
+    import evolve_citizen as ec  # noqa: E402
+
+    return ec.RUMOR_TRIGGERS, ec.RUMOR_DEV_ID
+
+
+def consumable(text: str, triggers, dev_id) -> bool:
+    """与 rumor_line_for 的过滤段逐字同口径。"""
+    if not text:
+        return False
+    if any(tok in text for tok in triggers):
+        return False
+    if dev_id.search(text):
+        return False
+    return True
 
 
 def load_people():
@@ -92,33 +116,43 @@ def load_rings(day: str):
     return [(cid, seen[cid][0], seen[cid][1]) for cid in order]
 
 
-def pick(rings, people, per_day):
-    """跨城区轮转抽样：每个城区轮流各取一条，全域铺开而非永远同一批人。"""
+def pick(rings, people, per_day, ok=None):
+    """跨城区轮转抽样：每个城区轮流各取一条，全域铺开而非永远同一批人。
+
+    ok(cand)->bool 为供给端可消费口径：不合格候选按区顺延，不占名额
+    （每区独立指针，避免一个区的废候选吃掉别区的名额）。
+    """
     buckets = {}
     for cid, ts, text in rings:
         d = people.get(cid, ("", ""))[1] or "未落区"
         buckets.setdefault(d, []).append((cid, ts, text))
     for d in buckets:
         buckets[d].sort(key=lambda r: md5("pick", r[0]))
-    picked, keys = [], sorted(buckets)
-    idx = 0
+    keys = sorted(buckets)
+    ptr = {d: 0 for d in keys}
+    picked = []
     while len(picked) < per_day and keys:
-        alive = False
+        moved = False
         for d in keys:
-            if idx < len(buckets[d]):
-                picked.append((d, buckets[d][idx]))
-                alive = True
-                if len(picked) >= per_day:
+            if len(picked) >= per_day:
+                break
+            b = buckets[d]
+            while ptr[d] < len(b):
+                cand = b[ptr[d]]
+                ptr[d] += 1
+                moved = True
+                if ok is None or ok(cand):
+                    picked.append((d, cand))
                     break
-        if not alive:
+        if not moved:
             break
-        idx += 1
     return picked
 
 
 def clean_text(text: str) -> str:
-    t = ANCHOR_TAIL.sub("", text).strip()
-    t = t.strip("「」").strip()
+    t = ANCHOR_TAIL.sub("", text).strip().strip("「」").strip()
+    # 年轮正文常被「」包住，前缀剥离必须发生在去括号之后。
+    t = MEET_PREFIX.sub("", t).strip().strip("「」").strip()
     return t
 
 
@@ -126,7 +160,14 @@ def build(day: str, per_day: int):
     people = load_people()
     rc.CENSUS = rc.load_census()
     rings = load_rings(day)
-    picked = pick(rings, people, per_day)
+    triggers, dev_id = _ingest_filters()
+
+    def ok(cand):
+        body = clean_text(cand[2])
+        return len(body) >= 8 and consumable(body, triggers, dev_id)
+
+    picked = pick(rings, people, per_day, ok)
+    stats = {"rings": len(rings), "eligible": sum(1 for r in rings if ok(r))}
     base = datetime.datetime.strptime(day + " 00:00", "%Y-%m-%d %H:%M")
     out = []
     for district, (cid, ts, text) in picked:
@@ -140,7 +181,7 @@ def build(day: str, per_day: int):
         out.append({"day": day, "district": district, "origin": cid,
                     "origin_name": people.get(cid, (cid, ""))[0], "text": body,
                     "chain": chain})
-    return out
+    return out, stats
 
 
 def render(day: str, items, people) -> str:
@@ -208,9 +249,9 @@ def main():
     args = ap.parse_args()
     day = args.date or datetime.date.today().isoformat()
     people = load_people()
-    items = build(day, args.per_day)
+    items, stats = build(day, args.per_day)
     if not items:
-        print("no rings for", day)
+        print("no rings for", day, "eligible=%d/%d" % (stats["eligible"], stats["rings"]))
         return
     os.makedirs(OUT_DIR, exist_ok=True)
     jl = os.path.join(OUT_DIR, "rumors-%s.jsonl" % day)
@@ -220,7 +261,8 @@ def main():
     with open(OUT_HTML, "w", encoding="utf-8", newline="\n") as f:
         f.write(render(day, items, people))
     hops = sum(len(it["chain"]["hops"]) for it in items)
-    print("chains=%d hops=%d jsonl=%s html=%s" % (len(items), hops, jl, OUT_HTML))
+    print("chains=%d hops=%d pool=%d eligible=%d jsonl=%s html=%s"
+          % (len(items), hops, stats["rings"], stats["eligible"], jl, OUT_HTML))
 
 
 if __name__ == "__main__":
