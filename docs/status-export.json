@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-12 22:13",
+ "export_ts": "2026-11-12 23:00",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2636（2026-11-12 22:1x）：年轮批 9 席落环 + 事件闸 PASS + 日更自愈**——C-02054 冯琬、C-00043、C-00049、C-00059、C-02064、C-02080、C-00041、C-00044、C-00045 共 9 张新年轮落环（C-00040 因重复开局被质量闸拦下留 due）；行为线镜像 rows=9；事件回放闸 events=41877 cards=10111 replayed=10111 mismatch=0 schema_errors=0 PASS；round_daily 重建 city-dashboard.html + index.html，stale=1 ran=2 failed=0；QC 巡检 cards=10114 evolved=10114 problems=0；语言池 SELF_TERMINATE。 **R2629（2026-11-12 21:0x）：年轮批 10 席全落环 + 事件闸 PASS + 日更自愈**——C-02128 茅阿凤、C-01902 阿海明·丁、C-01897 赵静、C-00019 老晶振、C-00022 何雨欣、C-02153 谭建国、C-02171 奇偶·乙、C-02258 石念念、C-02319 魏雪英、C-01928 赵福生共计 10 张新卡落环；行为线镜像 rows=10 ring=10114；事件回放闸 events=41809 cards=10111 mismatch=0 schema=0 PASS；round_daily 自愈 city-dashboard.html + index.html；QC 巡检 problems=0；语言池 SELF_TERMINATE。 **R2625（19:54-20:0x）**：年轮线实跑 10/10 落环（C-02150/C-01949/C-01748/C-02154/C-02163/C-02203/C-02211/C-02212/C-02214/C-02236），事件回放闸 PASS（cards=10111 / events=41751 / mismatch=0 / schema_errors=0 / chronicle gap=0d）；发现「当日面按日判新鲜」盲区——19:35 与 19:54 两批新环未进 CEO 可见面，已用 `round_daily.py --run --all --only` 强制重建 9 面（器灵/城区志/陈列/关系/拾萃/同质审计/趋势/今日/index），全部 rebuilt 零失败；语言池全桶达标 SELF_TERMINATE（零 LLM）；相遇轮今日 3/3 封顶。",
+   "t": "**R2642（2026-11-12 22:5x）：年轮批 10 席全落环 + 事件闸 PASS + 日更面自愈**——C-02108 袁之恒、C-02025 史嘉树、C-00079 阿零、C-00083 蓝雀、C-00086 史朵朵、C-02237 吴Vivi、C-00078 席桃桃、C-00080 钱沐辰、C-00081 赵雨欣、C-00082 任桃桃共 10 张新年轮落环（袁之恒连续三轮被质量闸拦的固定开局本轮已换掉）；行为线镜像 rows=10；事件回放闸 events=41922 cards=10111 replayed=10111 mismatch=0 schema_errors=0 PASS；round_daily 仅重建 index、其余面全新鲜（stale=1 ran=2 failed=0）；语言池全桶达标 SELF_TERMINATE；相遇轮今日 cap 已满跳过。 **R2636（2026-11-12 22:1x）：年轮批 9 席落环 + 事件闸 PASS + 日更自愈**——C-02054 冯琬、C-00043、C-00049、C-00059、C-02064、C-02080、C-00041、C-00044、C-00045 共 9 张新年轮落环（C-00040 因重复开局被质量闸拦下留 due）；行为线镜像 rows=9；事件回放闸 events=41877 cards=10111 replayed=10111 mismatch=0 schema_errors=0 PASS；round_daily 重建 city-dashboard.html + index.html，stale=1 ran=2 failed=0；QC 巡检 cards=10114 evolved=10114 problems=0；语言池 SELF_TERMINATE。 **R2629（2026-11-12 21:0x）：年轮批 10 席全落环 + 事件闸 PASS + 日更自愈**——C-02128 茅阿凤、C-01902 阿海明·丁、C-01897 赵静、C-00019 老晶振、C-00022 何雨欣、C-02153 谭建国、C-02171 奇偶·乙、C-02258 石念念、C-02319 魏雪英、C-01928 赵福生共计 10 张新卡落环；行为线镜像 rows=10 ring=10114；事件回放闸 events=41809 cards=10111 mismatch=0 schema=0 PASS；round_daily 自愈 city-dashboard.html + index.html；QC 巡检 problems=0；语言池 SELF_TERMINATE。",
    "s": 1
   },
   {
@@ -1725,8 +1725,12 @@
   [
    "647",
    "本轮落环 **647** 条新年轮（自愿进化·零新注册），行为线与事件流同步刷新。"
+  ],
+  [
+   "692",
+   "本轮新增 10 张年轮卡；今日累计落环 692 行（真实城市事件 + 北京时间/天气喂养，本地 qwen3:4b-instruct，全部带 [锚] 注脚）。"
   ]
  ],
- "t": "当前活：年轮线每轮脉冲式进化 + 事件流回放闸 + 日更面自愈\n最近实物：census/registry/ 9 张新年轮卡（C-02054 冯琬等，2026-11-12 22:1x）\n下个里程碑：下一轮年轮批落环，2026-11-12 23:0x 夜窗前",
- "top_text": "当前活：年轮线每轮脉冲式进化 + 事件流回放闸 + 日更面自愈\n最近实物：census/registry/ 9 张新年轮卡（C-02054 冯琬等，2026-11-12 22:1x）\n下个里程碑：下一轮年轮批落环，2026-11-12 23:0x 夜窗前"
+ "t": "当前活：年轮线持续批产 + 20 个可见面日更维护（本轮事件回放闸 PASS：41922 事件 / mismatch 0 / schema_errors 0）\n最近实物：census/registry（2026-11-12 22:56 落盘 10 张年轮卡：C-02108 袁之恒 / C-02025 史嘉树 / C-00079 阿零 / C-00083 蓝雀 / C-00086 史朵朵 / C-02237 吴Vivi / C-00078 席桃桃 / C-00080 钱沐辰 / C-00081 赵雨欣 / C-00082 任桃桃）与 qa/EVENTS-REPLAY-REPORT.md（22:5x · 41922 事件全量 replay PASS）\n下个里程碑：下一批年轮 ≥10 张 + 日更面刷新，ETA 2026-11-12 23:30",
+ "top_text": "当前活：年轮线持续批产 + 20 个可见面日更维护（本轮事件回放闸 PASS：41922 事件 / mismatch 0 / schema_errors 0）\n最近实物：census/registry（2026-11-12 22:56 落盘 10 张年轮卡：C-02108 袁之恒 / C-02025 史嘉树 / C-00079 阿零 / C-00083 蓝雀 / C-00086 史朵朵 / C-02237 吴Vivi / C-00078 席桃桃 / C-00080 钱沐辰 / C-00081 赵雨欣 / C-00082 任桃桃）与 qa/EVENTS-REPLAY-REPORT.md（22:5x · 41922 事件全量 replay PASS）\n下个里程碑：下一批年轮 ≥10 张 + 日更面刷新，ETA 2026-11-12 23:30"
 }
