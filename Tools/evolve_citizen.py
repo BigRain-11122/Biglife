@@ -2449,6 +2449,19 @@ def _hand_word(sig):
     return "身上" if (_b and "HAND_DEICTIC" in _b) else "手上"
 
 
+def _body_phrase(sig, hand_first=False):
+    """顺着「、」连写的身体词串，禁/不禁两路各自拼得通。
+
+    R2589 (2026-11-12): 原两处模板字面已带「身上、」前缀，再拼 _hand_word 就会
+    渲染成「身上、身上的具体细节」——重复词正好落在 4B 权重最高的尾区，读起来
+    像错字。改为单源生成；禁族当天只留「身上」，不禁时按各块原有顺序输出，
+    保证非禁路径逐字零漂移（city 块=身上、手上；second 块=手上、身上）。
+    """
+    if _hand_word(sig) == "身上":
+        return "身上"
+    return "手上、身上" if hand_first else "身上、手上"
+
+
 def opening_seed_block(cid, sig=None):
     """Per-citizen opening skeleton (deterministic, stable per id).
 
@@ -2548,9 +2561,10 @@ def build_prompt(cid, text, sig):
     _allp = list(_rbp) + _tbp
     # v0.68 R2588: 被禁族当天改说「身上」——原句「身上、手上」被 4B 读成开场提示。
     _hw = _hand_word(sig)
+    _bp = _body_phrase(sig)
     city_phr_blk = ("全城年轮里已被写滥的措辞（含今天重复最多的模板句；下列每一段都有多位居民"
                     "用过，你的年轮严禁出现其中任何一段，连改半个字复用也不许；"
-                    f"改从你此刻身上、{_hw}的具体细节写起，天气只许一句话带过）："
+                    f"改从你此刻{_bp}的具体细节写起，天气只许一句话带过）："
                     + "、".join("「" + b + "」" for b in _allp) + "\n") if _allp else ""
     # T-20261025-03 (R2109): openings already used >=6x TODAY, named outright.
     _tbl = sig.get("today_ban_openings") or []
@@ -2564,7 +2578,7 @@ def build_prompt(cid, text, sig):
                   + "；".join((_ring_second_label(f) if _ring_second_label else f)
                              for f in sorted(_sb))
                   + "。天气只许一句话带过，并且不要用风来带出动作；"
-                  + "改从你自己此刻" + _hw + "、身上的具体细节写起。\n") if _sb else ""
+                  + "改从你自己此刻" + _body_phrase(sig, hand_first=True) + "的具体细节写起。\n") if _sb else ""
     # v0.68 (2026-11-12 R2588, T-20261112-04 副作用收口): 把被禁骨架族用**人话**说给
     # 模型听，并明确「禁的是起句形状不是内容」。此前 today_ban_families 只进
     # ring_violations 与控制台打印，模型每轮被拒而不知为何，正是 gap #68
@@ -2574,7 +2588,7 @@ def build_prompt(cid, text, sig):
     family_blk = ("再一条硬约束（最容易犯，犯即整句退回重写）：今天全城年轮的开头已经有超过 "
                   + str(int(round(_RING_FAMILY_QUOTA * 100))) + "% 落在同一类骨架里，本批严禁再用这种起句——"
                   + "；".join(FAMILY_OPEN_HINTS.get(f, f) for f in sorted(_fb))
-                  + "。禁的是**起句形状**不是内容：手上、身上的细节照写（放第二句或句中很好），"
+                  + "。禁的是**起句形状**不是内容：身体本身的动作与感觉照写（放第二句或句中很好），"
                     "但第一个短句不要从「手」字起、不要用「我正」起句。换这几种开头之一："
                     "写一件物的状态（「那口锅底又薄了一层」）、写你正看着的另一样东西"
                     "（「账本翻到第三页」）、写一个去处（「回测田的田埂上……」）。\n") if _fb else ""

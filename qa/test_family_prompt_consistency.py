@@ -7,11 +7,12 @@ today_ban_families 只喂闸与控制台，从没告诉模型禁哪一族；24 �
 2 条本身落在被禁族。结果＝3 次重写同提示词必重入同一吸引子（gap #68），
 19:00 首批会把应产席位全留 due。
 
-判据（8 探针，全 PASS 即 rc=0）：
+判据（10 探针，全 PASS 即 rc=0）：
   T1 禁 HAND_DEICTIC 时不得再发该族骨架　T2 禁 TIME_OPEN 同理
   T3 无禁时提示词骨架逐字零漂移　　　　　T4 _hand_word 按禁令切换「手上/身上」
   T5 硬闸仍按族拒稿（未被削弱）　　　　　T6 句中/第二句身体描写不被误拦
   T7 FAMILY_OPEN_HINTS 覆盖族定义全部族　T8 双跑逐字一致
+  T9 尾区身体词串单源（禁族不复读）　　　T10 模板不得再硬编码重复前缀
 
 用法：python -X utf8 qa/test_family_prompt_consistency.py  （rc=0 即通过）
 """
@@ -78,6 +79,23 @@ _check("T8 determinism",
         for s in IDS[:50]] ==
        [E.opening_seed_block(s, {"today_ban_families": {"HAND_DEICTIC"}})
         for s in IDS[:50]])
+
+# T9/T10 (R2589): 尾区身体词串单源化。原两处模板自带「身上、」前缀再拼
+# _hand_word，禁族当天渲染成「身上、身上的具体细节」——重复词正好落在 4B 权重
+# 最高的尾区。此处钉住两路输出：禁=只留「身上」；不禁=按各块原序逐字零漂移。
+_ban = {"today_ban_families": {"HAND_DEICTIC"}}
+_check("T9 body phrase no-dup",
+       E._body_phrase(_ban) == "身上"
+       and E._body_phrase(_ban, hand_first=True) == "身上"
+       and E._body_phrase({}) == "身上、手上"
+       and E._body_phrase({}, hand_first=True) == "手上、身上",
+       (E._body_phrase(_ban), E._body_phrase({})))
+
+with open(os.path.join(ROOT, "Tools", "evolve_citizen.py"), encoding="utf-8") as _fh:
+    _src = _fh.read()
+_check("T10 no literal re-dup",
+       "身上、{" not in _src and '+ _hw + "、身上的' not in _src,
+       "template still hardcodes the duplicate prefix")
 
 print("RESULT:", "ALL PASS" if not fails else "FAIL " + ",".join(fails))
 sys.exit(0 if not fails else 1)
