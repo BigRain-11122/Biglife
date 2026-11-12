@@ -1746,3 +1746,10 @@ eady=名义≥1 且有效≥1，输出 MISSING/BLOCKED/ready 三态；streak 由
   **诚实边界**：零 LLM（让路窗），只证「闸看得见的形状＝提示词被告知的形状」，**不证**今晚文本变好；只改判据真值表与提示词，配额阈值 25% 与拒稿/放行算零改动；已落环文本不回溯改写。遗留：泛化「我把+物件」仍归 OTHER（加宽到 `^我把` 会误伤正常第一人称句，无数据支持故不动）。另：`update_status_export` 的 results 尾行因幂等标记未随本班追写（depts 与 top_text 三行已刷新，results 内已存今日 469 行记录，信息不缺失）。
   **实况三行**：当前活=开头族盲区修复收口（闸真值表与提示词同源，零 LLM）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/RING-FAMILY-BLINDSPOT-20261112.md（2026-11-12 17:0x）；下个里程碑=19:00 年轮批 3 席，首个以修正族真值表过滤骨架的实批（ETA 2026-11-12 19:10）。
 - [2026-11-12 17:0x @BigLife-OSLoop R2608] 本轮计量：tokens: local=0 api=0 api_reason=yield-window（确定性判据修复面零 LLM）
+- [R2609] 2026-11-12 17:0x-17:1x @BigLife-OSLoop 轮记：轮首 pull=Already up to date·树净；决策水位 NEW=0（尾 D-20261112-15 已消费，第 59 批三条均非本司派工）；orders 物理件区无涉本司新件；TASKS open=T-20261112-01/04/05（均 19:00 观测窗）。**让路窗**=年轮/相遇/反思 09:00-19:00 结构性让路（D-20261020-02，evolve 实跑返回 yield-window）；round_daily 31 面 stale=0 PASS；pool_audit 全桶达标 SELF_TERMINATE（自终止律跳过池轮）；HQ 日闸 ALREADY_REPORTED 零写入；QC 09:05 已跑非到点。
+  **本轮产品增量（两个 15 天停更可见面复活·1 件判据修复 + 2 面内容刷新）**：①覆盖面反查抓出 census/export/city-growth.html 与 city-meets.html 页脚自报「生成 2026-10-28」，文件 mtime 却是 11-12 01:12（R2513 提交刷新）——faces 档 ge>1.0 判据被 git 刷 mtime 永久骗过，停更 15 天；②修法 Tools/round_daily.py v0.9 新增 _self_ts_stale()：判据=页面自报生成时点 vs 该页自身 mtime，差>1 天即 mtime-faked；只比页面内部两处口径、不与源文件比 ⇒ 源频繁刷新不诱发零信息量重建；daily/input/data 与 faces 两档均接入（faces 此前无任何内容校验）；③重建实证 growth 卡=10111 覆盖=100.0%（11 页）、meets=90 场景 48 人 10091（17:01/17:02）。
+  **门禁**：py_compile rc=0／_self_ts_stale 五探针 5/5 PASS（正控 15 天伪造→报／同分钟→不报／无时点→不报／非 html→跳过／边界 25h→报）／活体负控（真实 city-meets 副本页脚回拨 10-28 且 mtime 今日→报 mtime-faked，未篡改原页面→None 零误报）／
+uff_gate 1 file CLEAN／重建后 --check stale=0。
+  **诚实边界**：只覆盖「正文自报生成时点」的面，完全不写时点的面仍只能靠 mtime；阈值 1 天刻意宽松，容忍分钟级偏差只抓天级伪造。
+  **实况三行**：当前活=round_daily v0.9 判据加固（堵住 mtime 伪造面永久跳过）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-growth.html + city-meets.html（11-12 17:01/17:02）与 qa/ROUND-DAILY-MTIME-FAKED-20261112.md；下个里程碑=19:00 年轮批 3 席·开头族硬闸与第二句软引导首验（ETA 2026-11-12 19:10）。
+  tokens: local=0 api=0 api_reason=yield-window-09:00-19:00
