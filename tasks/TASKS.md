@@ -1012,3 +1012,7 @@ ing_open_family.py --scan 同日读 **55.0%(257/467)**，差 57 条、12 个百�
   **待观察**：年轮质量闸 `recent-dup-phrase` 软让行本批 8/10 命中（年轮仍落环但句式复用偏高），下次年轮质量轮建议核查 prompt 多样性，非阻塞。
   commit f04725829（5 files, +18/-18）已推送 e6ba02b96..f04725829。
   tokens: local=10 api=0 api_reason=-
+- [R2654] 2026-11-13 01:09-01:15 @BigLife-OSLoop 夜值轮：轮首 pull=Already up to date·树净；决策水位差集 NEW=0（唯一命中=文件名 disabled-20261023-2358 误匹配，已核非决策行；已覆盖至 D-20261112-16）；orders 物理件区无涉本司新件；TASKS open=0。
+  **本轮产品增量（实物）**：①年轮线 due=10 **落环 9/10**（C-00185/C-00188/C-00189/C-00241/C-00190/C-00192/C-00193/C-00195/C-00197，本地 qwen3:4b-instruct；C-00196 gate=persistent violations 留到期下轮）；②日更面重建 3 面（city-dashboard/city-ring-trend/index）+ city-today 刷新，stale=3 ran=4 failed=0 verdict=PASS；③事件回放闸 cards=10111 events=42046 mismatch=0 schema_errors=0 PASS；④QC 巡检 cards=10114 evolved=10114 problems=0。
+  **自停面**：pool_audit=SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0）→ 零 pool 动作；hq_feedback_daily=ALREADY_REPORTED → 零写入。
+  tokens: local=10 api=0 api_reason=-
