@@ -1684,3 +1684,10 @@ ound_daily.py v0.6 INPUTS 档 data tier，先于面重建执行 ⇒ 此后每轮
   **诚实边界**：让路窗内零 LLM，只证基因库扩容与台账可见面刷新，不证今晚年轮文本用上新基因（消费侧要等 19:00 批次）；gene_nearcheck --qc 的 2 项 FAIL 为既有态、本轮未修（已立单）。
   **实况三行**：当前活=让路窗内确定性面 + 基因库 b53 扩容（零 LLM）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/gene-ledger.html（15:0x·135.6KB）+ Tools/_append_genes_b53.py；下个里程碑=19:00 年轮批 3 席·开头族硬闸+第二句软引导+跨城区选区联合首验（ETA 2026-11-12 19:10）。
   - [2026-11-12 15:0x @BigLife-OSLoop R2597] 本轮计量：tokens: local=0 api=0 api_reason=yield-window（确定性面零 LLM）
+
+- [R2598] 2026-11-12 15:0x-15:1x @BigLife-OSLoop 轮记：轮首 pull=Already up to date·树净；决策水位 NEW=0（尾 D-20261112-15 已消费，D-13 判本司 15 天停摆 chronic 结清）；orders 物理件区无涉本司新件；TASKS open=T-20261112-01/04/05/06（均待 19:00 观测窗或他轮）。**让路窗**=年轮/相遇/反思 09:00-19:00 结构性让路（D-20261020-02，evolve 实跑返回 yield-window）；round_daily 28 面 stale=0 PASS；事件面 QC 15:0x cards=10114／evolved=10114／problems=0；pool_audit 72 轴桶+12 像素桶+28 greet+7 faq 全达标 SELF_TERMINATE；HQ 日闸 ALREADY_REPORTED(day=2026-11-12 lines=2) 零写入。
+  **本轮产品增量（CEO 可见面数字纠错＋一道内容级闸·2 件）**：①实读发现 `census/export/city-dashboard.html` 仍显示「数据截至 08:54:25 / 今日新增年轮 **456**」，而源头 `citizens-light.jsonl` 当日真值已 **465**（`sync_rings --full` 复核=already in sync，导出面无缺）——页面 mtime 是今天故 round_daily 判 fresh＝**假绿**；②重建看板后为 465，与源头一致（`city-today.html` 469 系 registry「环数」口径、看板 465 系「有今日环的居民数」口径，两数不冲突，非 bug）；③**根因修复**：`Tools/round_daily.py` 新增 `_content_stale()`——按 `SNAPSHOT_SOURCES` 比对页面内嵌「数据截至」与来源文件 mtime，不一致即判 `content-stale` 强行重建（mtime 只证「页面被重写过」，不证「页面读的是新鲜源」）。
+  **负控三态实测**：把看板时间戳注入为 `08:00:00` → `--check` 命中 `content-stale:src=2026-11-12 08:59:15`（抓得到）→ `--run` 自动 `rebuilt`（修得了）→ 时间戳与数字复原 465（零残留）。**门禁**：py_compile rc=0；ruff_gate 1 file CLEAN（F401,F811,F841,SIM115,RUF059）。
+  **诚实边界**：只治「页面读旧源」这一类；其它 27 面仍是 mtime 判据（未见实锚问题，不预铺闸）。`city-today.html` 内嵌的是生成时刻而非源快照，未纳入 SNAPSHOT_SOURCES。
+  **实况三行**：当前活=CEO 可见面内容对账闸（让路窗内确定性面）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（15:1x·465）+ Tools/round_daily.py；下个里程碑=19:00 年轮批 3 席·开头族硬闸与第二句软引导双首验（ETA 2026-11-12 19:10）。
+  - [2026-11-12 15:1x @BigLife-OSLoop R2598] 本轮计量：tokens: local=0 api=0 api_reason=yield-window（确定性面零 LLM）

@@ -23,8 +23,10 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import io
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -112,6 +114,35 @@ def _age_days(path: str) -> float | None:
     return (time.time() - os.path.getmtime(path)) / 86400.0
 
 
+# 页面内嵌「数据截至」必须等于来源文件 mtime。mtime 判据只看页面重写时间，
+# 源头未刷新时页面会被误判为当日新鲜（2026-11-12 看板 456 vs 真值 465 实锚）。
+SNAPSHOT_SOURCES = {"city-dashboard.html": "citizens-light.jsonl"}
+SNAPSHOT_TS_RE = re.compile(r"数据截至\s*(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)")
+
+
+def _content_stale(out_paths: list[str]) -> str | None:
+    for p in out_paths:
+        src_name = SNAPSHOT_SOURCES.get(os.path.basename(p))
+        if not src_name:
+            continue
+        src = os.path.join(EXP, src_name)
+        if not (os.path.exists(p) and os.path.exists(src)):
+            continue
+        try:
+            with io.open(p, encoding="utf-8", errors="replace") as f:
+                text = f.read()
+        except OSError:
+            continue
+        m = SNAPSHOT_TS_RE.search(text)
+        if not m:
+            continue
+        want = datetime.datetime.fromtimestamp(
+            os.path.getmtime(src)).strftime("%Y-%m-%d %H:%M:%S")
+        if m.group(1) != want:
+            return "content-stale:src=%s" % want
+    return None
+
+
 def _is_stale(entry, now_date: datetime.date, out_paths: list[str]) -> tuple[bool, str]:
     _key, tier, _script, _names = entry[:4]
     ages = []
@@ -124,6 +155,10 @@ def _is_stale(entry, now_date: datetime.date, out_paths: list[str]) -> tuple[boo
         max(os.path.getmtime(p) for p in out_paths))
     if tier in ("daily", "input", "data"):
         stale = mdate != now_date
+        if not stale:
+            drift = _content_stale(out_paths)
+            if drift:
+                return True, drift
         return stale, ("outdated:%sd" % int(age) if stale else "fresh")
     stale = age > 1.0
     return stale, ("outdated:%sd" % int(age) if stale else "fresh")
