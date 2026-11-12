@@ -63,6 +63,15 @@ REGISTRY = [
     ("lexicon",     "faces", "city_lexicon.py",           ["city-lexicon.html"]),
     ("ring_quality", "faces", "ring_simile_audit.py",     ["city-ring-quality.html"]),
     ("ring_trend",  "daily", "ring_quality_trend.py",     ["city-ring-trend.html"]),
+    # v0.7 (2026-11-12 R2606): 覆盖面核查抓出两个「被可见面链接、却无任何轮次引用」的面
+    # ——同 T-20261112-02 病根第四/五例。判据=逐个 Tools 生成器 × export html 反查，
+    # 不看 mtime（mtime 只会告诉你已经烂了，不会告诉你会烂）。
+    #   a) 社交图谱：index.html 卡片直接展示「10-27 10:15 更新」，停更 17 天；
+    #      且默认输出在 census/ 根而非 export/，故用 ROOT 相对路径。
+    #   b) 相遇候选单：city-coverage / city-ops / index 三处链接，今晚相遇轮要照单开工，
+    #      断了等于让居民反复配同一批人。
+    ("social_graph", "rootface", "build_social_graph.py",   ["census/city-social-graph.html"]),
+    ("meet_candidates", "daily", "meet_candidates.py",      ["meet-candidates.jsonl", "meet-candidates.html"]),
     # 索引必须最后跑：它登记的是本轮重建后的文件清单
     ("index",      "index", "build_export_index.py",      ["index.html"]),
 ]
@@ -105,7 +114,14 @@ def _out_paths(entry) -> list[str]:
     _key, tier, _script, names = entry[:4]
     base = ROOT if tier in ("input", "data") else EXP
     day = datetime.date.today().isoformat()
-    return [os.path.join(base, n.replace("{date}", day)) for n in names]
+    out = []
+    for n in names:
+        n = n.replace("{date}", day)
+        # v0.7 (2026-11-12): 少数面故意落在 export 之外（社交图谱=census/ 根），
+        # 索引里按 ../ 相对链接。带目录分隔符的名字一律按 ROOT 相对解析，
+        # 否则会被拼成 export/census/... 的幻影路径而永远判 missing。
+        out.append(os.path.join(ROOT, n) if "/" in n else os.path.join(base, n))
+    return out
 
 
 def _age_days(path: str) -> float | None:
@@ -246,6 +262,18 @@ def main() -> int:
     if payload["failed"]:
         print("FAILED: " + ",".join(payload["failed"]))
         return 1
+    # v0.7 (2026-11-12): 体检必须诚实——上面那行 stale= 是「跑之前」的口径，
+    # 旧版无论剩多少陈旧都印 verdict: PASS（社交图谱就是这样烂了 17 天没人发现：
+    # 索引卡片写着 10-27，而闸每次都说 PASS）。改为跑完后再判一次真实余量，
+    # 余量为零才 PASS；否则 STALE + rc=2（同 ring_material_check 的未达码约定）。
+    remaining = []
+    for e in entries:
+        still, why = _is_stale(e, today, _out_paths(e))
+        if still:
+            remaining.append("%s(%s)" % (e[0], why))
+    if remaining:
+        print("verdict: STALE remaining=%d %s" % (len(remaining), ",".join(remaining)))
+        return 2
     print("verdict: PASS")
     return 0
 
