@@ -151,6 +151,42 @@ def _fmt_mtime(path: str, precision: str) -> str:
     return datetime.datetime.fromtimestamp(os.path.getmtime(path)).strftime(fmt)
 
 
+# v0.9 (2026-11-12): mtime 自身也会说谎——git 提交/检出会把文件 mtime 刷成当日，
+# 内容却停在半个月前。实证：city-growth.html / city-meets.html 页脚自报
+# 「生成 2026-10-28」，mtime 却是 11-12 01:12（R2513 提交刷新），faces 档按
+# age>1.0 判 fresh ⇒ 日更闸永久跳过 15 天（T-20261112-04 同族第三面）。
+# 判据=页面自报生成时点 vs 该页自身 mtime：自报旧于 mtime 超 1 天即「mtime 被伪造」。
+# 只比页面内部两处口径、不与源文件比 ⇒ 源频繁刷新不会诱发零信息量重建。
+_SELF_TS = re.compile(r"(?:生成|更新|快照|数据截至)(?:于)?\s*(\d{4}-\d\d-\d\d[ T]\d\d:\d\d)")
+
+
+def _self_ts_stale(out_paths: list[str]) -> str | None:
+    for p in out_paths:
+        if not p.endswith(".html") or not os.path.exists(p):
+            continue
+        try:
+            with io.open(p, encoding="utf-8", errors="replace") as f:
+                text = f.read()
+        except OSError:
+            continue
+        m = _SELF_TS.search(text)
+        if not m:
+            continue
+        try:
+            claimed = datetime.datetime.strptime(
+                m.group(1).replace("T", " "), "%Y-%m-%d %H:%M")
+        except ValueError:
+            continue
+        actual = datetime.datetime.fromtimestamp(
+            os.path.getmtime(p)).replace(second=0, microsecond=0)
+        if (actual - claimed).total_seconds() > 86400:
+            return "mtime-faked:%s claimed=%s mtime=%s" % (
+                os.path.basename(p),
+                claimed.strftime("%Y-%m-%d %H:%M"),
+                actual.strftime("%Y-%m-%d %H:%M"))
+    return None
+
+
 def _content_stale(out_paths: list[str]) -> str | None:
     by_name = {os.path.basename(p): p for p in out_paths}
     for page, src, ts_re, precision in SNAPSHOT_SPECS:
@@ -184,11 +220,15 @@ def _is_stale(entry, now_date: datetime.date, out_paths: list[str]) -> tuple[boo
     if tier in ("daily", "input", "data"):
         stale = mdate != now_date
         if not stale:
-            drift = _content_stale(out_paths)
+            drift = _content_stale(out_paths) or _self_ts_stale(out_paths)
             if drift:
                 return True, drift
         return stale, ("outdated:%sd" % int(age) if stale else "fresh")
     stale = age > 1.0
+    if not stale:
+        faked = _self_ts_stale(out_paths)
+        if faked:
+            return True, faked
     return stale, ("outdated:%sd" % int(age) if stale else "fresh")
 
 
