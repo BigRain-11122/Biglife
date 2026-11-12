@@ -1059,3 +1059,11 @@ ing_open_family.py --scan 同日读 **55.0%(257/467)**，差 57 条、12 个百�
   **自停面**：pool_audit 全桶达标 SELF_TERMINATE（pool 18/12+greet 17+faq 3+neg 8 全齐）→ 零 pool_gen；相遇轮 meet-cap 3/3 已达 → 跳过（拟配 GM 区任华×华祥林留明日）；HQ 日清闸 ALREADY_REPORTED → 零写入。
   **提交**：7a3965399（年轮 9 席）/ ad4fbe771（行为镜像）/ 22025a107（日更面+回放报告）。
   tokens: local=10 api=0 api_reason=-
+
+- [2026-11-13 02:3x R2671] 轮记：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（已覆盖至 D-20261112-16，集团无 D-20261113-* 新行）；orders 物理件区无涉本司件；TASKS open=0（常设单 T-20260924-08 本轮已例行刷新）。
+  **产品增量（实物）**：年轮线 --batch 3 实发 due=10 → 落环 10/10（C-00279（上轮被拦、本轮过闸）/C-00282/C-00284/C-00295/C-00311/C-00281/C-00283/C-00285/C-00286/C-00288，本地 qwen3:4b-instruct；4 席 soft-concession recent-dup 软让行）→ 脚本自提交 ccfc265e2 + 行为线自动 sync 9b610822c（mirror rows=10，ring=10114）→ CEO 可见面 census/export/city-dashboard.html（02:35 重建）。
+  **日更面**：verdict=PASS，stale=1 ran=2 failed=0（dashboard content-stale 重建 + index 重建，其余 skipped-fresh）。
+  **回放闸**：cards=10111 events=42133 replay=10111 schema_errors=0 mismatch=0 → PASS（qa/EVENTS-REPLAY-REPORT.md）。
+  **自停面**：pool_audit 全桶达标 SELF_TERMINATE（72/72 轴桶、12/12 精灵桶、1440 行、determinism 192+25 对 mismatch=0）→ 零 pool_gen；相遇轮 meet-cap 3/3 已达 → 跳过；QC 今日 02:16 已巡 problems=0，6 轮节律未到。
+  **对外实况面**：docs/status-export.json 刷新（ts=02:37，dept0 换 R2671 段 + top_text 三行同步本轮实物）。
+  tokens: local=10 api=0 api_reason=-
