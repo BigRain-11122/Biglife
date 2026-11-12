@@ -24,11 +24,15 @@ GENES = os.path.join(CO, "genes")
 # 占位符归一（T-20261027-01）：`{obj}`/`{thing}` 等模板槽位在 Layer A 前统一折叠，禁作文本面参与近重比对
 PLACEHOLDER_RE = re.compile(r"\{[^{}]*\}")
 
-# 同型池注册表（type -> (池键, Layer B 阈值)·cp/ho=R417 定谳·tp50=§十二 v3.59 再定谳·再改走 T2）
+# 同型池注册表（type -> (池键, Layer B 阈值)·cp/ho=R417 定谳·再改走 T2）
+# tp 阈值=T-20261112-06 重推：池 659→660 条自配对峰值 53.968（「把攒了半年的钱借给邻居应急…」×
+# 「把攒了三年的钱借给邻居救急…」），旧阈 50.0 已被超线=判据老化非新污染（HEAD 659 条隔离复算
+# 峰值与最大对完全相同，b53 八条不参与任何峰值对）。按 gate-rigor「略高于峰值」惯例（cp +0.36%／
+# ho +0.94%／ha +0.63%／pr +1.75%）取 55.0（+1.9% 边距）。再超线时同样只重推本值+登记新峰值证据。
 TYPE_POOLS = {
     "cp": ("language.catchphrases", 92.0),
     "ho": ("lives.hook_objects", 95.0),
-    "tp": ("lives.turning_points", 50.0),
+    "tp": ("lives.turning_points", 55.0),
     # T-20261027-01 增型（同法推导：同池自配对峰值 ha 69.565→70、pr 36.364→37·「略高于峰值」）
     "ha": ("lives.hook_actions", 70.0),
     "pr": ("lives.presents", 37.0),
@@ -180,9 +184,11 @@ def qc():
     #     （修 T-20261027-01 实测的 `{obj}` 结构性假阳性）
     check("placeholder-mask", grams4("坚持手写 {obj}") == grams4("坚持手写 {thing}")
           and all("{" not in g and "}" not in g for g in grams4("会给 {obj} 织毛衣")))
-    # 8) 史前近重对哨兵（cp 91.667/ho 94.118/tp 48.889 三峰值在位=既有条目零触碰在证·tp 峰=v3.59 改判新基线）
+    # 8) 史前近重对哨兵（基线峰值登记值在位=既有条目零触碰在证）。三者均为「登记值」：池合法追加
+    #    会使峰值上移，此时须带隔离复算证据重登记（T-20261112-06：tp 48.889→53.968，证据=HEAD 659
+    #    条复算峰值与最大对完全相同），禁无证据改数字。
     check("baseline-sentinel", base["cp"]["max_ratio"] == 91.667
-          and base["ho"]["max_ratio"] == 94.118 and base["tp"]["max_ratio"] == 48.889)
+          and base["ho"]["max_ratio"] == 94.118 and base["tp"]["max_ratio"] == 53.968)
     # 9) 行解析：type|text 切分+违例行检出
     check("parse-line", parse_candidate_line("cp| 慢慢来 ") == ("cp", "慢慢来")
           and parse_candidate_line("无竖线行")[0] is None)
