@@ -629,12 +629,22 @@ try:
         family_of as _ring_family_of,
         FAMILY_QUOTA as _RING_FAMILY_QUOTA,
         FAMILY_MIN_DENOM as _RING_FAMILY_MIN_DENOM,
+        second_attrs_of as _ring_second_of,
+        second_ban_set as _ring_second_ban,
+        second_label as _ring_second_label,
+        second_scan as _ring_second_scan,
+        SECOND_QUOTA as _RING_SECOND_QUOTA,
     )
 except Exception:  # noqa: BLE001 - 任何导入失败都退化为「闸关闭」
     _ring_family_ban = None
     _ring_family_of = None
     _RING_FAMILY_QUOTA = 0.25
     _RING_FAMILY_MIN_DENOM = 8
+    _ring_second_of = None
+    _ring_second_ban = None
+    _ring_second_label = None
+    _ring_second_scan = None
+    _RING_SECOND_QUOTA = 0.40
 ROOT = _group_root.resolve()  # D-20261028-04: git rev-parse 认活树，禁 ..\.. 盲跳
 FV_WORLD = os.environ.get("FV_WORLD", os.path.join(ROOT, "gaming", "FluxVerse", "world"))
 OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
@@ -2504,6 +2514,14 @@ def build_prompt(cid, text, sig):
     today_blk = ("今天全城已经用滥的开场（今日已出现 ≥%d 次，开场句严禁与其中任何一句相同；"
                  "请从你自己此刻手上正在做的具体小动作写起）：" % TODAY_OPEN_HARD
                  + "、".join("「" + b + "」" for b in _tbl) + "\n") if _tbl else ""
+    # v0.67 T-20261112-05: 第二句软引导（越线族点名）。空集 -> ""（零漂移，
+    # 同 #70/#71/#79 的面缺失即关闭律）；只写提示词，不进 ring_violations。
+    _sb = sig.get("second_ban") or set()
+    second_blk = ("你那句年轮**从第二句起**已经有太多居民这样写，本轮严禁再用："
+                  + "；".join((_ring_second_label(f) if _ring_second_label else f)
+                             for f in sorted(_sb))
+                  + "。天气只许一句话带过，并且不要用风来带出动作；"
+                    "改从你自己此刻手上、身上的具体细节写起。\n") if _sb else ""
     # v0.60 gap #80: per-citizen opening skeleton, placed BEFORE the ban list so
     # the model has something concrete to start from instead of only prohibitions.
     opening_blk = opening_seed_block(cid, sig)
@@ -2561,6 +2579,7 @@ def build_prompt(cid, text, sig):
             # weights the last lines hardest, and a mid-prompt ban alone was
             # ignored (R2291 实测 4/10 仍撞 recent-dup-phrase).
             f"{city_phr_blk}"
+            f"{second_blk}"
             f"{fog_blk}"
             f"{tech_blk}"
             f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节），只输出这几句话本身。")
@@ -3113,6 +3132,25 @@ def main():
         print("today-family quota banned (%.0f%%): %s" % (
             _RING_FAMILY_QUOTA * 100, ",".join(sorted(sig["today_ban_families"]))),
             flush=True)
+    # v0.67 T-20261112-05 (2026-11-12 R2586): 第二句吸引子软引导。开头族压住后
+    # 模型把吸引子挪到下一句——WIND_ACTION 3.3%(10-20)→49.9%(11-12)，R2581 二十
+    # 条人读已在句 2 亲眼见到「风把门帘整个掀起来」类重复。此处只喂提示词、不拒稿
+    # （理由见 ring_open_family.SECOND_QUOTA 注），故为零风险面：模块缺失即关闭。
+    sig["second_ban"] = set()
+    sig["second_counts"] = {}
+    sig["second_total"] = 0
+    if _ring_second_ban is not None and _ring_second_scan is not None:
+        try:
+            _stot, _shit = _ring_second_scan(today())
+        except Exception:  # noqa: BLE001 - 观测面失败一律不阻塞生产
+            _stot, _shit = 0, {}
+        sig["second_total"] = int(_stot or 0)
+        sig["second_counts"] = dict(_shit or {})
+        sig["second_ban"] = _ring_second_ban(_stot, _shit)
+    if sig["second_ban"]:
+        print("second-sentence soft-ban (>%d%% of %d): %s" % (
+            int(_RING_SECOND_QUOTA * 100), sig["second_total"],
+            ",".join(sorted(sig["second_ban"]))), flush=True)
     # v0.62 gap #82: today's own template band, named in the tail block so the
     # seat sees the repeat it would otherwise imitate from its neighbours.
     _tmin = max(TODAY_GRAM_MIN, len(_tcount) // 50)
@@ -3214,6 +3252,15 @@ def main():
                 if (_tot >= _RING_FAMILY_MIN_DENOM
                         and _fc[_fam] / float(_tot) > _RING_FAMILY_QUOTA):
                     sig["today_ban_families"].add(_fam)
+        # v0.67 T-20261112-05: 第二句吸引子同样随批内落环滚动——本批前半场若把
+        # 风族又写回 40% 上方，后半场座位会立刻被点名（软引导，不拒稿）。
+        if _ring_second_of is not None and sig.get("second_counts") is not None:
+            sig["second_total"] = sig.get("second_total", 0) + 1
+            for _sf in _ring_second_of(line):
+                sig["second_counts"][_sf] = sig["second_counts"].get(_sf, 0) + 1
+            if _ring_second_ban is not None:
+                for _sf in _ring_second_ban(sig["second_total"], sig["second_counts"]):
+                    sig["second_ban"].add(_sf)
         # gap #71: feed the accepted line into the batch phrase counter + the
         # prompt avoid list (both consumed by the NEXT seat in this batch).
         _norm_ln = re.sub(r"\s+", "", line)

@@ -79,6 +79,35 @@ SECOND_ATTRS = collections.OrderedDict([
 _SECOND_COMPILED = collections.OrderedDict(
     (name, [re.compile(p) for p in pats]) for name, (_, pats) in SECOND_ATTRS.items())
 
+# T-20261112-05 (2026-11-12 R2586): 第二句面从「只观测」升到「软引导」。
+# 依据 R2582 实测 WIND_ACTION 3.3%(10-20)→49.9%(11-12)，与开头族 42.8% 同量级，
+# 即开头被压住后吸引子后移一格。两条刻意保留的区别：
+#   ① 只走提示词（prompt steering），不拒稿——第二句面误杀代价远高于开头
+#      （合法天气描写、合法比况都会命中），R2581 立的「先有读数再谈立法」也未到期；
+#   ② 线定 40% 而非开头族的 25%——软引导只需在明显越线时点名，避免每轮碎碎念
+#      把模型逼成不敢写天气。
+SECOND_QUOTA = 0.40
+SECOND_LABELS = collections.OrderedDict([
+    ("WIND_ACTION", "用风来带出动作（风掀／风灌／风扑／风刮／风撞／风扯／风吹…）"),
+    ("SIMILE_WHO", "「像谁在…」式的比况从句"),
+])
+
+
+def second_ban_set(total, hits, quota=SECOND_QUOTA, min_denom=FAMILY_MIN_DENOM):
+    """第二句吸引子软引导集合：返回越线族名（只喂提示词，永不用于拒稿）。
+
+    total 不足 min_denom -> 空集（小样本噪声保护，与开头族同口径）。
+    """
+    if int(total or 0) < min_denom:
+        return set()
+    return {f for f, c in (hits or {}).items()
+            if c / float(total) > quota}
+
+
+def second_label(name):
+    """族名 -> 提示词里可直接点名的一句人话（未知族退化为族名本身）。"""
+    return SECOND_LABELS.get(name, name)
+
 
 def norm(text):
     """去空白后取前 12 字，与 evolve_citizen 的开头口径一致。"""
@@ -286,6 +315,20 @@ def _selftest():
         print("%-24s got=%-24s want=%-24s %s"
               % (label, ",".join(got) or "None", ",".join(want) or "None",
                  "OK" if ok else "FAIL"))
+        if not ok:
+            bad += 1
+    # T-20261112-05 软引导配额三探针：越线点名／未越线沉默／小样本不判
+    quota_probes = [
+        ("pos-second-quota-over", 100, {"WIND_ACTION": 50}, {"WIND_ACTION"}),
+        ("neg-second-quota-under", 100, {"WIND_ACTION": 20}, set()),
+        ("neg-second-tiny-denom", 4, {"WIND_ACTION": 4}, set()),
+    ]
+    for label, tot, hits, want in quota_probes:
+        got = second_ban_set(tot, hits)
+        ok = got == want
+        print("%-24s bans=%-20s want=%-20s %s"
+              % (label, ",".join(sorted(got)) or "None",
+                 ",".join(sorted(want)) or "None", "OK" if ok else "FAIL"))
         if not ok:
             bad += 1
     print("selftest: %s (%d fail)" % ("PASS" if bad == 0 else "FAIL", bad))
