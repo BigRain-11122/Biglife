@@ -1000,3 +1000,8 @@ ing_open_family.py --scan 同日读 **55.0%(257/467)**，差 57 条、12 个百�
   **违规如实记录**：相遇轮 **超日限 1 次**——今日 00:0x R2649 已用掉当日 1 幕（C-00147xC-00044），本轮又派 1 幕（C-00010x C-00011），且该对 10-11/10-19 已相遇过（配对新鲜度不足）。根因=交互式轮未先读相遇日限计数器（循环轮会读）。产出无害（双卡互引合规、锚定律齐），故保留不撤；下轮起派相遇前先查当日计数与既有配对，超限即跳过、优先未配对新偶。
   **对外实况面**：docs/status-export.json 三行 + results 尾行刷新（ts=00:36，total=34=今日带 2026-11-13 年轮行卡 32 + 锚位相遇 2）。
   计分：能跑能看实物=2 分（10 篇新年轮 + 1 幕相遇双卡互引 + 7 面重建 + 闸 PASS 证据）+ 文件改动=1 分。commit=8201b0acd 已推。tokens: local=11 api=0 api_reason=本地 qwen3:4b 年轮批 10 席+相遇 1 幕
+
+- [R2652] 2026-11-13 00:43-00:52 @BigLife-OSLoop 夜值轮：轮首 pull=Already up to date·树净；决策水位差集 NEW=0（已覆盖至 D-20261112-16，集团无 D-20261113-* 新行）；orders 物理件区无涉本司新件（bm-b 开机为机队物理件）；TASKS open=0。
+  **本轮产品增量（实物）**：①年轮线 --batch 3 实跑 due=10 **落环 10/10**（C-00163/C-00165/C-00166/C-00172/C-00173/C-00175/C-00168/C-00169/C-00176/C-00212，本地 qwen3:4b-instruct；C-00175 命中 soft-concession recent-dup 软让行仍落环），脚本自提交 71126c0ff + 行为线镜像 860a51d46（rows=10）；②相遇轮 1 幕——MD 城区 **C-00163 × C-00172**（今日同批进化双卡互引，卡面行 2026-11-13 实落），commit e286b501a + 镜像 b9f15edd0（rows=2）；③相遇编年史面重建 census/export/city-meets.html（meets=94 场/scenes=50/full=44/half=6/dates=22/people=10091）。
+  **验收**：事件流回放闸 PASS（events=42025 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage exported=10114 unexpected_missing=0 / chronicle gap=1d）；round_daily --run 两趟合计 stale=2 ran=3 failed=0 verdict=PASS（city-dashboard 内容过期+city-lexicon 依赖 mtime+index 重建）；语言池 pool_audit 全桶达标 SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）零重烧；QC 巡检周期未到（上巡 R2649 problems=0）；HQ 日报闸上轮 ALREADY_REPORTED，本轮无新阻塞项。
+  tokens: local=11 api=0 api_reason=-
