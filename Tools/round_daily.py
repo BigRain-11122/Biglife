@@ -130,32 +130,44 @@ def _age_days(path: str) -> float | None:
     return (time.time() - os.path.getmtime(path)) / 86400.0
 
 
-# 页面内嵌「数据截至」必须等于来源文件 mtime。mtime 判据只看页面重写时间，
+# 页面内嵌的源时点必须与来源文件 mtime 对上。mtime 判据只看页面重写时间，
 # 源头未刷新时页面会被误判为当日新鲜（2026-11-12 看板 456 vs 真值 465 实锚）。
-SNAPSHOT_SOURCES = {"city-dashboard.html": "citizens-light.jsonl"}
-SNAPSHOT_TS_RE = re.compile(r"数据截至\s*(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)")
+# 只登记「页面正文展示的就是该源的数据」的面；时点纯属装饰的面不登记——否则
+# 源每刷一次就触发一次零信息量重建（meet-candidates / coverage 属此类，勿加）。
+SNAPSHOT_SPECS = [
+    # (页面名, 来源绝对路径, 时点正则, 页面时间精度)
+    ("city-dashboard.html", os.path.join(EXP, "citizens-light.jsonl"),
+     re.compile(r"数据截至\s*(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)"), "sec"),
+    # v0.8 (2026-11-12 R2607):「此刻城市」页正文（槽位人数/时段/天气）全部取自
+    # state/behavior-last.json，此前只有 mtime 判据 ⇒ 该源 15:13 刷新、页面停在
+    # 10:06 仍判 fresh，CEO 读到「面生成 09:38」差 5.5 小时（T-20261112-04 同族）。
+    ("city-today.html", os.path.join(ROOT, "state", "behavior-last.json"),
+     re.compile(r"面生成\s*(\d{4}-\d\d-\d\d \d\d:\d\d)"), "min"),
+]
+
+
+def _fmt_mtime(path: str, precision: str) -> str:
+    fmt = "%Y-%m-%d %H:%M" if precision == "min" else "%Y-%m-%d %H:%M:%S"
+    return datetime.datetime.fromtimestamp(os.path.getmtime(path)).strftime(fmt)
 
 
 def _content_stale(out_paths: list[str]) -> str | None:
-    for p in out_paths:
-        src_name = SNAPSHOT_SOURCES.get(os.path.basename(p))
-        if not src_name:
-            continue
-        src = os.path.join(EXP, src_name)
-        if not (os.path.exists(p) and os.path.exists(src)):
+    by_name = {os.path.basename(p): p for p in out_paths}
+    for page, src, ts_re, precision in SNAPSHOT_SPECS:
+        p = by_name.get(page)
+        if not p or not (os.path.exists(p) and os.path.exists(src)):
             continue
         try:
             with io.open(p, encoding="utf-8", errors="replace") as f:
                 text = f.read()
         except OSError:
             continue
-        m = SNAPSHOT_TS_RE.search(text)
+        m = ts_re.search(text)
         if not m:
             continue
-        want = datetime.datetime.fromtimestamp(
-            os.path.getmtime(src)).strftime("%Y-%m-%d %H:%M:%S")
+        want = _fmt_mtime(src, precision)
         if m.group(1) != want:
-            return "content-stale:src=%s" % want
+            return "content-stale:%s src=%s" % (page, want)
     return None
 
 
