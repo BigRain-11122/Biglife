@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import hashlib
 import io
 import json
 import os
@@ -34,6 +35,7 @@ import time
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXP = os.path.join(ROOT, "census", "export")
 STATE_OUT = os.path.join(ROOT, "state", "round-daily.json")
+SCRIPT_HASHES = os.path.join(ROOT, "state", "round-daily-script-hashes.json")
 
 # key, tier, script, outputs
 REGISTRY = [
@@ -207,7 +209,42 @@ def _content_stale(out_paths: list[str]) -> str | None:
     return None
 
 
-def _is_stale(entry, now_date: datetime.date, out_paths: list[str]) -> tuple[bool, str]:
+# v0.10 (2026-11-12 R2610): 生成器脚本「内容」变了而输出未重建。
+# round_daily 原先只比输出 mtime ⇒ 判据模块升级后页面照旧算 fresh。
+# 实锚：R2608 改族识别后 city-ring-trend.html 仍报 HAND_DEICTIC 42.8%(200/467)，
+# 而与它同源的探针已读 55.0%(257/467)——CEO 可见面低报 12 个百分点。
+# 判据用 sha256 而非 mtime：git checkout 会把 Tools/*.py 的 mtime 刷成当日（v0.9 同坑），
+# 只有内容真变才重建，免疫 mtime 说谎。
+# 基线：首跑无历史时只登记不重建（prev 缺失 ⇒ None），避免一次全量误重建。
+def _load_script_hashes() -> dict:
+    try:
+        with io.open(SCRIPT_HASHES, encoding="utf-8") as f:
+            got = json.load(f)
+        return got if isinstance(got, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def _script_sha(script: str) -> str | None:
+    try:
+        with open(os.path.join(ROOT, "Tools", script), "rb") as f:
+            return hashlib.sha256(f.read()).hexdigest()
+    except OSError:
+        return None
+
+
+def _script_changed(script: str, known_sha: dict | None) -> str | None:
+    if not script or known_sha is None:
+        return None
+    sha = _script_sha(script)
+    prev = known_sha.get(script)
+    if sha and prev and prev != sha:
+        return "script-changed:%s" % script
+    return None
+
+
+def _is_stale(entry, now_date: datetime.date, out_paths: list[str],
+              known_sha: dict | None = None) -> tuple[bool, str]:
     _key, tier, _script, _names = entry[:4]
     ages = []
     for p in out_paths:
@@ -220,13 +257,14 @@ def _is_stale(entry, now_date: datetime.date, out_paths: list[str]) -> tuple[boo
     if tier in ("daily", "input", "data"):
         stale = mdate != now_date
         if not stale:
-            drift = _content_stale(out_paths) or _self_ts_stale(out_paths)
+            drift = (_content_stale(out_paths) or _self_ts_stale(out_paths)
+                     or _script_changed(_script, known_sha))
             if drift:
                 return True, drift
         return stale, ("outdated:%sd" % int(age) if stale else "fresh")
     stale = age > 1.0
     if not stale:
-        faked = _self_ts_stale(out_paths)
+        faked = _self_ts_stale(out_paths) or _script_changed(_script, known_sha)
         if faked:
             return True, faked
     return stale, ("outdated:%sd" % int(age) if stale else "fresh")
@@ -260,13 +298,14 @@ def main() -> int:
 
     only = set(x.strip() for x in args.only.split(",") if x.strip()) if args.only else None
     today = datetime.date.today()
+    known_sha = _load_script_hashes()
     # 输入档在前：年轮线要吃的当日文件优先补齐，再重建可见面
     entries = [e for e in (INPUTS + REGISTRY) if (only is None or e[0] in only)]
 
     plan = []
     for e in entries:
         outs = _out_paths(e)
-        stale, why = _is_stale(e, today, outs)
+        stale, why = _is_stale(e, today, outs, known_sha)
         plan.append({"key": e[0], "tier": e[1], "script": e[2],
                      "outputs": e[3], "stale": stale, "why": why,
                      "extra": (list(e[4]) if len(e) > 4 else [])})
@@ -298,6 +337,24 @@ def main() -> int:
         "failed": [r["key"] for r in results if r["action"] == "failed"],
         "items": results,
     }
+
+    # 只有「确认新鲜」或「重建成功」的面才登记新哈希；失败面保留旧值，
+    # 下一轮仍会因 script-changed 再次选中（不把失败伪装成已对齐）。
+    if args.run:
+        nxt = dict(known_sha)
+        for r in results:
+            if r["action"] in ("skipped-fresh", "skipped-nochange", "rebuilt"):
+                sha = _script_sha(r["script"])
+                if sha:
+                    nxt[r["script"]] = sha
+        try:
+            os.makedirs(os.path.dirname(SCRIPT_HASHES), exist_ok=True)
+            with open(SCRIPT_HASHES, "w", encoding="utf-8", newline="\n") as f:
+                json.dump(nxt, f, ensure_ascii=False, indent=1, sort_keys=True)
+                f.write("\n")
+        except OSError:
+            pass
+        known_sha = nxt  # 收尾复检必须用同一口径，否则会把自己刚重建的面误报 STALE
     os.makedirs(os.path.dirname(STATE_OUT), exist_ok=True)
     with open(STATE_OUT, "w", encoding="utf-8", newline="\n") as f:
         json.dump(payload, f, ensure_ascii=False, indent=1)
@@ -320,7 +377,7 @@ def main() -> int:
     # 余量为零才 PASS；否则 STALE + rc=2（同 ring_material_check 的未达码约定）。
     remaining = []
     for e in entries:
-        still, why = _is_stale(e, today, _out_paths(e))
+        still, why = _is_stale(e, today, _out_paths(e), known_sha)
         if still:
             remaining.append("%s(%s)" % (e[0], why))
     if remaining:
