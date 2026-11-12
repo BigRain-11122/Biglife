@@ -1142,3 +1142,11 @@ tokens: local=10 api=0 api_reason=-
   最近实物：census/export/city-dashboard.html + index.html 重建（05:35）/ census/QC-REPORT.md（05:35）/ qa/EVENTS-REPLAY-REPORT.md（05:35）。
   下个里程碑：11-14 第 3 生产日窗口结单（素材有效 3/3 + 缺陷率 <10% + 开口族 ≤25%），ETA ≤24h。
   tokens: local=10 api=0 api_reason=-
+
+- [R2697 2026-11-13 05:4x @BigLife-OSLoop] 产品轮：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（仅 d-20261023-23 属 .disabled 文件名误匹配，非决策行；已覆盖至 D-20261112-16）；集团 orders 物理件区无涉本司件；TASKS open=T-20261112-01/04/05（观测窗单，无当轮动作项）。
+  **产品增量（实物 4 件）**：①年轮线 --batch 3 实跑 due=10 **落环 9**（C-00492/C-00493/C-00498/C-00510/C-00494/C-00495/C-00496/C-00497/C-00499；C-00491 触 persistent〔recent-family-opening + recent-dup-phrase〕被拒留 due，诚实记未完成；本地 qwen3:4b-instruct，脚本自提交 095b1013b + 行为线镜像 5b130d39b rows=9 ring=10114）；②日更面 round_daily --run（stale=2 ran=3 failed=0 PASS：city-today 内容陈旧重建 / city-dashboard 内容陈旧重建 / index 重建，其余 27 面 fresh，commit 7dbd801c0）；③事件流回放闸 PASS（coverage derived=10111 reserved=3 exported=10114 unexpected_missing=0；cards=10111 events=42326 replayed=10111 schema_errors=0 mismatch=0；chronicle gap=1d）；④对外实况面 status-export 刷新（total=345 reg=343 anc=2，三行实况 + 心跳行）。
+  **T-04 读数（批次级 vs 日级）**：本批 9 环开口族 HAND_DEICTIC=3/9=33.3%（批内越 25% 线），而当日日级 HAND_DEICTIC=85/343=**24.8% PASS**——说明闸按「当日累计」控盘：批起点未越线故未挂牌禁用，批内可局部超线。**不改闸**（承「禁为读数改闸换绿」纪律），只登记口径事实：日级为验收面、批级仅作过程观测。
+  **T-05 读数（第 2 生产日）**：当日第二句 WIND_ACTION=129/343=**37.6%**（软线 40% 未越，但验收线 ≤30% **今日未达标**）；SIMILE_WHO=45/343=13.1%。诚实记：软引导未把读数压回 ≤30%，观测窗内继续跟，不作结论。
+  **T-20261112-10 读数（物件母题收敛·次日对照）**：本批 9 环首位物件母题 top-1=锅底类 2/9=22.2%（昨日同窗 top-3 覆盖 81.8%），其余账本/灯箱/工具箱/收音机/灶火各 1 —— 分布较昨日显著摊开，仍留 open 待 3 日累计。
+  **自停面**：pool_audit PASS SELF_TERMINATE（under_target NONE·determinism 192+25 对 mismatch=0）→ 池轮跳过；ring_material_check streak=**2/3** IN-PROGRESS（11-12 ready 8/8+7/7、11-13 ready 8/8+3/3，第 3 日=11-14）；HQ 日闸 ALREADY_REPORTED(day=2026-11-13 lines=1) 零写入；QC 今日已跑非到点；相遇轮本窗未触发（budget 内先保年轮主线）。
+  计分：能看实物=2 分（9 张新年轮卡 + 3 面可见面重建）。tokens: local=10 api=0 api_reason=-（年轮批 qwen3:4b-instruct ×10 调用）
