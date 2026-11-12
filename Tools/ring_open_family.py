@@ -66,6 +66,19 @@ FAMILIES = collections.OrderedDict([
 _COMPILED = collections.OrderedDict(
     (name, [re.compile(p) for p in pats]) for name, (_, pats) in FAMILIES.items())
 
+# 第二句吸引子（只读探针·不入闸）：开头族被压住后模型通常把吸引子往
+# 后一段迁移，R2581 的 20 条人读已实证（风…掀/灌/扑 + 像谁在…）。
+# 只观测不拒稿——先有读数再谈立法（避免修一个生一个的连环闸）。
+SECOND_ATTRS = collections.OrderedDict([
+    ("WIND_ACTION", ("风+掀/灌/扑/刮/撞/扯/吹（第二句起）",
+                     [r"风[^。]{0,8}(掀|灌|扑|刮|撞|扯|吹)"])),
+    ("SIMILE_WHO", ("比况从句「像谁在…」（第二句起）",
+                    [r"像谁在"])),
+])
+
+_SECOND_COMPILED = collections.OrderedDict(
+    (name, [re.compile(p) for p in pats]) for name, (_, pats) in SECOND_ATTRS.items())
+
 
 def norm(text):
     """去空白后取前 12 字，与 evolve_citizen 的开头口径一致。"""
@@ -119,6 +132,42 @@ def scan_day(day, registry=None):
                 if f:
                     fam[f] += 1
     return total, dict(fam)
+
+
+def second_attrs_of(text):
+    """返回正文「开头 12 字之后」命中的第二句吸引子集合（只读探针用）。"""
+    tail = re.sub(r"\s+", "", text or "")[OPENING_LEN:]
+    return [name for name, pats in _SECOND_COMPILED.items()
+            if any(p.search(tail) for p in pats)]
+
+
+def second_scan(day, registry=None):
+    """按日统计「第二句起」的吸引子占比 → (环总数, {族: 命中数})。
+
+    只取开头 12 字之后的正文，故开头位置命中不计入（与 scan_day 分工不重叠）。
+    只读观测：不参与 any ban 判定，失败不影响生产。
+    """
+    root = registry or REGISTRY
+    pat = _ring_pat(day)
+    total = 0
+    hits = collections.Counter()
+    for dirpath, _, files in os.walk(root):
+        for fn in files:
+            if not fn.endswith(".md"):
+                continue
+            try:
+                with open(os.path.join(dirpath, fn), encoding="utf-8") as f:
+                    s = f.read()
+            except (IOError, OSError):
+                continue
+            for m in pat.finditer(s):
+                body = re.sub(r"\s+", "", m.group(1))
+                if len(body) < 8:
+                    continue
+                total += 1
+                for name in second_attrs_of(body):
+                    hits[name] += 1
+    return total, dict(hits)
 
 
 def scan_days(days, registry=None):
@@ -224,6 +273,21 @@ def _selftest():
     print("%-24s bans=%s %s" % ("neg-tiny-denominator", sorted(tiny), "OK" if ok else "FAIL"))
     if not ok:
         bad += 1
+    # 第二句探针：只认开头 12 字之后的正文（与开头口径不重叠）
+    sec_probes = [
+        ("pos-second-wind", "手在灯管上蹭了蹭，抬手抹了下额角，风把门帘整个掀起来，巷子里全是油烟。", ["WIND_ACTION"]),
+        ("pos-second-simile", "手心还攥着旧扳手，风把檐下的灯笼摇个不停，像谁在背后推我。",
+         ["SIMILE_WHO"]),
+        ("neg-wind-at-opening", "风把门帘整个掀起来，我赶紧把窗关好，热气散了一半。", []),
+    ]
+    for label, text, want in sec_probes:
+        got = second_attrs_of(text)
+        ok = got == want
+        print("%-24s got=%-24s want=%-24s %s"
+              % (label, ",".join(got) or "None", ",".join(want) or "None",
+                 "OK" if ok else "FAIL"))
+        if not ok:
+            bad += 1
     print("selftest: %s (%d fail)" % ("PASS" if bad == 0 else "FAIL", bad))
     return 0 if bad == 0 else 1
 
@@ -235,6 +299,8 @@ def main(argv=None):
     ap.add_argument("--check", metavar="DATE", help="判某日是否超配额（PASS/OVER）")
     ap.add_argument("--json", action="store_true", help="--scan/--check 输出 JSON")
     ap.add_argument("--sample", type=int, metavar="N", help="抽 N 条某族年轮供人读")
+    ap.add_argument("--second", action="store_true",
+                    help="第二句吸引子只读探针（只观测不拒稿）")
     ap.add_argument("--family", default="HAND_DEICTIC", help="--sample 的族名")
     ap.add_argument("--day", help="--sample 限定日期")
     ap.add_argument("--seed", type=int, default=0, help="--sample 抽样种子（默认按日期）")
@@ -278,6 +344,22 @@ def main(argv=None):
                 cells.append("%-18s" % ("%d(%.1f%%)" % (c, c / t * 100 if t else 0.0)))
             flag = "  OVER:" + ",".join(over_quota(t, f)) if over_quota(t, f) else ""
             print("%s  %5d  %s%s" % (d, t, "  ".join(cells), flag))
+        return 0
+
+    if args.second:
+        days = [args.day] if args.day else production_days(args.days)
+        rows = [(d,) + second_scan(d) for d in days]
+        names = list(SECOND_ATTRS)
+        if args.json:
+            print(json.dumps([{"date": d, "rings": t, "second": h} for d, t, h in rows],
+                             ensure_ascii=False, indent=1))
+            return 0
+        print("second-position attractors (read-only, no gate)")
+        print("date        rings  " + "  ".join("%-22s" % n for n in names))
+        for d, t, h in rows:
+            cells = ["%-22s" % ("%d(%.1f%%)" % (h.get(n, 0), h.get(n, 0) / t * 100 if t else 0.0))
+                     for n in names]
+            print("%s  %5d  %s" % (d, t, "  ".join(cells)))
         return 0
 
     if args.sample:
