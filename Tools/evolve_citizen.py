@@ -720,6 +720,15 @@ def save_cursor(c):
         os.fsync(f.fileno())
     os.replace(tmp, CURSOR)
 
+# v0.63 (2026-11-12 R2566): fleet bookkeeping event types never carry resident
+# life. Kept as an *exclusion* set so an unknown human type still reaches the
+# prompt (30-line probe: 21/30 rows were machine ledgers that scrub to ""/">").
+MACHINE_EVENT_TYPES = frozenset({
+    "COMMIT", "GITHUB_EVENT", "GATE_PASS", "GATE_FAIL",
+    "OS_TICK_START", "OS_TICK_DONE", "PUSH_OK", "HEARTBEAT", "CI", "BUILD",
+})
+
+
 def real_signals():
     """Collect REAL city signals: FluxVerse world events tail + world state (read-only)."""
     now = datetime.datetime.now()
@@ -741,11 +750,18 @@ def real_signals():
     if files:
         try:
             with open(files[0], encoding="utf-8", errors="replace") as f:
-                lines = f.readlines()[-30:]
+                lines = f.readlines()[-200:]
             for ln in lines:
                 try:
                     e = json.loads(ln)
                 except Exception:
+                    continue
+                # v0.63 (2026-11-12 R2566): skip machine-ledger rows at the feed.
+                # They carry no resident life, scrub to ""/">"，and only eat the
+                # 8-slot window - the anchor law then quotes the fleet's own
+                # bookkeeping instead of the city. An all-machine tail still
+                # yields the old "no events" feed (no silent invention).
+                if str(e.get("type") or "") in MACHINE_EVENT_TYPES:
                     continue
                 parts = []
                 for k in ("type", "zone", "actor", "text", "summary", "msg", "title"):
@@ -759,6 +775,14 @@ def real_signals():
                 # tick x41 ...). Machine language is scrubbed at the feed too.
                 parts = [p for p in (scrub_machine_words(scrub_event_codes(x))
                                      for x in parts) if p]
+                # v0.63 (2026-11-12 R2566): a row only counts as a city event
+                # when a CONTENT field survives scrub with real Chinese in it.
+                # Progress-bar residue ("GAME_STAGE" -> ">") and actor-only rows
+                # are not life; feeding them made every ring quote the fleet.
+                content = [p for p in (scrub_machine_words(scrub_event_codes(str(e.get(k))[:60]))
+                                       for k in ("text", "summary", "msg", "title") if e.get(k)) if p]
+                if not any(re.search(r"[\u4e00-\u9fff]", p) for p in content):
+                    continue
                 if parts:
                     # V2-D: keep each event's zone aligned with it so the feed
                     # order can be rebuilt per resident district (viewpoint).
