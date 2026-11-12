@@ -10,6 +10,7 @@ city-ops / city-relations / city-chronicle / resident-gallery 等 18 个面
 两个档：
   daily  当日必新（日报/流言/城市生活/看板/索引）——输出 mtime 非当日即陈旧
   faces  结构性面（城区志/名人录/物件志/居民陈列…）——输出 mtime 超 1 日即陈旧
+  input  生成器当日喂料（街区母题/流言链）——dated 文件缺失或非当日即补建
 
 用法:
   python -X utf8 Tools/round_daily.py --check            # 只体检，不重建
@@ -56,11 +57,23 @@ REGISTRY = [
     ("index",      "index", "build_export_index.py",      ["index.html"]),
 ]
 
+# v0.2 (2026-11-12 R2571): 输入档 —— 面新鲜不等于喂料新鲜。
+# 病根补记（T-20261112-01/02）：面重建了，但年轮线要吃的「当日文件」可能不存在
+# （换日第一批、让路窗内年轮不跑、跨机首跑都常见），居民就只剩天气可锚。
+# 输入档判据=当日 dated 文件存在且 mtime 是今天；缺失即调确定性生成器补（零 LLM）。
+INPUTS = [
+    ("life_motifs", "input", "city_life_events.py",       ["events/life/{date}.jsonl"]),
+    ("rumor_chain", "input", "build_rumors.py",           ["cognition/rumors/rumors-{date}.jsonl"]),
+]
+
 TIMEOUT_SEC = 240
 
 
-def _out_paths(names: list[str]) -> list[str]:
-    return [os.path.join(EXP, n) for n in names]
+def _out_paths(entry) -> list[str]:
+    _key, tier, _script, names = entry
+    base = ROOT if tier == "input" else EXP
+    day = datetime.date.today().isoformat()
+    return [os.path.join(base, n.replace("{date}", day)) for n in names]
 
 
 def _age_days(path: str) -> float | None:
@@ -79,7 +92,7 @@ def _is_stale(entry, now_date: datetime.date, out_paths: list[str]) -> tuple[boo
     age = max(ages)
     mdate = datetime.date.fromtimestamp(
         max(os.path.getmtime(p) for p in out_paths))
-    if tier == "daily":
+    if tier in ("daily", "input"):
         stale = mdate != now_date
         return stale, ("outdated:%sd" % int(age) if stale else "fresh")
     stale = age > 1.0
@@ -113,11 +126,12 @@ def main() -> int:
 
     only = set(x.strip() for x in args.only.split(",") if x.strip()) if args.only else None
     today = datetime.date.today()
-    entries = [e for e in REGISTRY if (only is None or e[0] in only)]
+    # 输入档在前：年轮线要吃的当日文件优先补齐，再重建可见面
+    entries = [e for e in (INPUTS + REGISTRY) if (only is None or e[0] in only)]
 
     plan = []
     for e in entries:
-        outs = _out_paths(e[3])
+        outs = _out_paths(e)
         stale, why = _is_stale(e, today, outs)
         plan.append({"key": e[0], "tier": e[1], "script": e[2],
                      "outputs": e[3], "stale": stale, "why": why})
