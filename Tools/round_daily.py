@@ -80,6 +80,13 @@ INPUTS = [
     # 另有「需外部喂源」一层：daily_interchat.py 取当日 rumors 首条链作源，
     # 无源即 SKIP 且不刷 mtime（源断供仍如实 stale）。
     ("interchat", "data", "daily_interchat.py",           ["cognition/interchat-ledger.jsonl"]),
+    # v0.5 (2026-11-12): 派生数据面 = 「页面新鲜但数据陈旧」更深一层病灶。
+    # 病根实证：goals 面当日重建（10:06），但它读的 census/export/citizen-goals.jsonl
+    # 停在 10-26（16.8 天）——CEO 看到的「目标系统」整页是上月口径（55 行 month=2026-10），
+    # 页面 mtime 天天新，内容却没人校验。故把派生数据本身纳入日更闸：
+    # goals.py --regen 确定性零 LLM（同 (cid, month, date) 双跑逐字节一致），
+    # 每日再生 → 跨月自动换 target/steps，页面随之反映当月。
+    ("citizen_goals", "data", "goals.py",                 ["census/export/citizen-goals.jsonl"], ["--regen"]),
 ]
 
 TIMEOUT_SEC = 240
