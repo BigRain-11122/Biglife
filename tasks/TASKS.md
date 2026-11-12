@@ -1531,6 +1531,7 @@ tokens: local=10 api=0 api_reason=-
 
 
 - [ ] **T-20261112-01 事件流人味密度缺口（源头·P1）**（2026-11-12 09:3x @BigLife-OSLoop R2566 立）
+  - **[R2600 判据修复·假绿堵口]** 名义 ready 被证伪：今日流言 8 条文件齐全且 mtime 当日，但年轮 ingest 的 trigger-free 纪律（`RUMOR_TRIGGERS` 含风/雨/云/雾）把 8 条**全部**拦掉 → **有效通过 0/8**（阻塞词 风 8／雨 1／雾 1）。`Tools/ring_material_check.py` 已补有效量两列（过滤器从 evolve_citizen 直接 import＝判据单源），`ready` 改为「名义≥1 且有效≥1」，输出 MISSING/BLOCKED/ready 三态；正负控 PASS（合法动作句不误杀）、py_compile rc=0。streak 因此由 1/3 **诚实回退为 0/3**（真值非退步）。证据=qa/RING-MATERIAL-EFFECTIVE-20261112.md。供给侧治本另立 T-20261112-07。
   - status: in-progress（2026-11-12 09:5x @BigLife-OSLoop R2567 落修法②：Tools/city_life_events.py 母题池 + evolve_citizen 素材库口径接线；待「连续 3 生产日窗口非空」验收）｜**R2568 追加主因拆分**：修法② 只补供给，未治「模板句照抄」——今日 tmpl 78 条中 30 条来自提示池活句，已退役（qa/RING-TMPL-SOURCE-20261112.md）；余 18+ 条属口头禅基因 135 卡共用（待新发卡去重决策，存量不回改）
   - 验收载体（2026-11-12 11:3x @BigLife-OSLoop R2579）：`python -X utf8 Tools/ring_material_check.py` —— 逐日判 motif/rumor 供给，连续 3 日 ready→rc=0、未达→rc=2；实证 streak=1/3（11-12 首日 ready：motif=8/rumor=8）。验收不再挂人话载体（D-20261112-08）
   - 证据：FluxVerse world/world-events.jsonl 尾部 200 行类型分布 = GITHUB_EVENT 62 / GAME_STAGE 57 / COMMIT 26 / OS_TICK 30 / GATE 15 / RESIDENT_SAY 8 / HEARTBEAT 2；经 scrub_machine_words+scrub_event_codes 后**含中文内容字段的行 = 0**（RESIDENT_SAY 8 条原文均为「显存稳…轮转，城主夜安。」，命中 R2527/R2533 的 CHINESE_TECH_RE 被整体丢弃，判据本身正确）。
@@ -1606,6 +1607,13 @@ ound_daily.py v0.5 把该派生数据登记为输入档（每轮 --regen·先于
   - 现役载体：`Tools/ring_open_family.py --second [--day|--days]`（只读·不入闸·selftest 11 探针含 3 条新探针）。
   - 判负条件：开头族连续 3 生产日 ≤25% **而** WIND_ACTION 列继续爬升 ⇒ 判定「迁移式假达标」，届时再议第二句配额闸；绝对值不单独判负（含合法风叙述）。
   - status: in-progress（2026-11-12 12:4x @BigLife-OSLoop R2586 判：**观测面已足→升提示词软引导**，仍不拒稿。`ring_open_family.SECOND_QUOTA=0.40` + `second_ban_set`；`evolve_citizen` v0.67 批前扫当日第二句族、批内滚动越线即点名后半场座位、提示词尾区插 `second_blk`（只禁句式不禁天气）。今日实读 rings=467 WIND_ACTION=233(49.9%) → ban=['WIND_ACTION']，19:00 首批即生效。证据=qa/RING-SECOND-STEERING-20261112.md。验收线=3 生产日内 ≤30%，且含风句占比不得塌到 <30%（防副作用）。观测窗=11-12 19:00 首批起 3 个生产日）
+
+- [ ] **T-20261112-07 流言供给侧去触发词（P1·治本·T-01 姊妹单）**（2026-11-12 15:3x @BigLife-OSLoop R2600 立）
+  - 病根（R2600 实锚）：年轮吸引子（WIND_ACTION 开头族 49.9%、句中风叙述密集）→ 流言文本取自居民年轮 → 流言 8/8 命中 `RUMOR_TRIGGERS`（风/雨/雾）→ 被 trigger-free 纪律整条拦 → 有效供给恒 0 → 居民回到只剩天气。名义文件天天新鲜，闭环永远断在 ingest 门口。
+  - 判据：不改消费面护栏（防抄天气预报的护栏是对的），改**供给侧文本**——`rumor_chain` 文本源须去天气触发词（或生成后逐条过 ingest 同口径过滤，不过则换源重抽）；落地后 `ring_material_check.py` 的 `rumors_eff` 应 ≥1/日。
+  - 验收：连续 3 生产日 `rumors_eff ≥ 1`（rc=0 变绿），且流言抽样人读 10 条不掉味（禁为过滤把句子削成干巴台账）。
+  - 前置风险：改文本生成会动品质，须单独一轮带抽样人读，禁与判据修复混做（R2600 已按此纪律拆单）。
+  - 证据：qa/RING-MATERIAL-EFFECTIVE-20261112.md（8/8 blocked 量化 + 三态判据）。
 
 - [R2582] 2026-11-12 12:0x @BigLife-OSLoop 轮记：轮首 pull=Already up to date·树净；决策水位 NEW=0（尾 D-20261112-12 已消费）；orders 物理件区无涉本司新件；TASKS open=T-20261112-04/05。**让路窗**=年轮/相遇/反思 09:00-19:00 结构性让路（D-20261020-02）；round_daily --check 28 项 stale=0 PASS；pool_audit SELF_TERMINATE；QC 今日 09:05 已跑非到点。**本轮产品增量（闭环上轮自陈缺口 1 件 + 新读数 1 类）**：①补完 T-20261112-04 ④「人读 20 条」＝`--sample 20 --day 2026-11-12` 逐条读毕，**分类零误判**（20/20 均为开头位手部骨架，无口头禅驱动合法开头被误算、无句中身体描写被误算）；②同批人读暴露真缺陷：`风把门帘整个掀起来` 原句重复 3 次（#1/#3/#12）、`风扑在脸上生疼` 3 次、`像谁在…` 6 次 ⇒ 吸引子后移到第二句；③新增只读探针 `ring_open_family.py --second`（口径=开头 12 字之后，只观测不拒稿），7 日读数 WIND_ACTION **3.3%→49.9%**、SIMILE_WHO 0.0%→9.2%；④证据落 qa/RING-FAMILY-GATE-20261112.md §七，立 T-20261112-05 观测单。**门禁面**：selftest **11/11 PASS**（首跑发现自建探针开口 9 字导致风落在 12 字内假 FAIL，改文案后 PASS＝负控有效）；py_compile rc=0；`--check 2026-11-12` 仍 OVER（200/467=42.8%），闸口语义未变。**诚实边界**：49.9% 是趋势读数非缺陷率（合法风叙述计入分子）；第二句只量两条候选句式非全量普查。**实况三行**：当前活=年轮骨架闸验收补证与第二句迁移读数（让路窗内确定性面）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/RING-FAMILY-GATE-20261112.md（§七·12:0x）＋Tools/ring_open_family.py（--second 探针）；下个里程碑=19:00 年轮批 3 位·开头族与第二句双列首验（ETA 2026-11-12 19:10）。tokens: local=0 api=0 api_reason=yield-window
 
@@ -1700,3 +1708,10 @@ ound_daily.py v0.6 INPUTS 档 data tier，先于面重建执行 ⇒ 此后每轮
   **诚实边界**：只动 tp 单池，cp/ho/ha/pr 未触；Layer B 对 tp 的拦截下限客观**上移 3.968pp**（这是修复池内自相矛盾的必要代价，已写入证据件）；逐条候选门机制与拒稿路径未变、b53 八条在新旧阈值下均 CLEAN；失效条件=峰值再破 55.0 时按同法「重推+带证据重登」，禁只删 FAIL。
   **实况三行**：当前活=让路窗内确定性面 + 年轮近重判据老化收口（零 LLM）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/GENE-BASELINE-RETUNE-20261112.md（15:3x）+ Tools/gene_nearcheck.py（`--qc` 17 PASS/0 FAIL）；下个里程碑=19:00 年轮批 3 席·开头族硬闸+第二句软引导+跨城区选区联合首验（ETA 2026-11-12 19:10）。
   - [2026-11-12 15:3x @BigLife-OSLoop R2599] 本轮计量：tokens: local=0 api=0 api_reason=yield-window（确定性面零 LLM）
+
+- [R2600] 2026-11-12 15:34 @BigLife-OSLoop 轮记：轮首 pull=Already up to date·树净；决策水位 NEW=0（尾 D-20261112-15 已消费；D-20261112-13 判本司 15 天停摆 chronic 结清、D-14 属 HQ 云闸、D-15 属 bm-c）；orders 物理件区无涉本司新件；HQ 日闸 ALREADY_REPORTED(day=2026-11-12 lines=2) 零写入。**让路窗**=年轮/相遇/反思 09:00-19:00 结构性让路（D-20261020-02，evolve 实跑返回 yield-window）；round_daily --run 28 面 stale=0 PASS（幂等零重建）；qc_census cards=10114/evolved=10114/problems=0/dup_rings=37/37；pool_audit 前轮 SELF_TERMINATE。
+  **本轮产品增量（判据假绿堵口 1 件 + 证据 1 件）**：T-20261112-01 的验收载体原先只判「文件存在」，实测今日流言 8 条**有效通过 0 条**——年轮 ingest 的 trigger-free 纪律（RUMOR_TRIGGERS 含风/雨/云/雾）把 8/8 全拦（阻塞词 风 8／雨 1／雾 1），闭环断在 ingest 门口：年轮吸引子→流言文本→被拦→居民回到只剩天气。修法=Tools/ring_material_check.py 增 motif_eff／rumor_eff 两列，过滤器**从 evolve_citizen 直接 import**（判据单源），
+eady=名义≥1 且有效≥1，输出 MISSING/BLOCKED/ready 三态；streak 由 1/3 **诚实回退 0/3**（真值非退步）。
+  **门禁面**：py_compile rc=0；正负控 PASS（无天气词句/纯动作句 PASS，含风/雨句 BLOCK，证明闸非恒红不误杀）；--json 机读面可用（motifs_eff/rumors_eff）。**诚实边界**：只对齐判据不动护栏、不动供给文本；供给侧治本（流言去触发词）另立 T-20261112-07，须单独一轮带抽样人读。
+  **实况三行**：当前活=年轮素材有效供给判据修复（让路窗内零 LLM）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/RING-MATERIAL-EFFECTIVE-20261112.md（15:3x）+ Tools/ring_material_check.py（三态+有效量）；下个里程碑=19:00 年轮批 3 席·开头族/第二句双闸首验 + 素材有效量复测（ETA 2026-11-12 19:10）。
+  - [2026-11-12 15:34 @BigLife-OSLoop R2600] 本轮计量：tokens: local=0 api=0 api_reason=yield-window（确定性面零 LLM）
