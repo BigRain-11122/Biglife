@@ -616,7 +616,7 @@ CENSUS = os.path.join(CO, "census")
 STATE_DIR = os.path.join(CO, "state")
 CURSOR = os.path.join(STATE_DIR, "evolve-cursor.json")
 import group_root as _group_root  # D-20261028-04 组根解析律
-# v0.65 (2026-11-12 R2581, T-20261112-04): 开头骨架族配额闸。R2580 实证
+# v0.65 (2026-11-12 R2581, T-20261112-08): 开头骨架族配额闸。R2580 实证
 # 「修一个吸引子生一个」——抽象天气族压住后，手在X/我正把X 骨架 17 天单调
 # 爬到 42.8%，而 76.2% 高频开头无法用口头禅库解释（模型自创句法，不是人设）。
 # 硬去重会误杀 135 卡共用口头禅，故改为按族占比配额：当日该族 >25% 即拒稿
@@ -1066,7 +1066,7 @@ def ring_violations(line, sig):
     invented moon/celestial) are verified deterministically against sig
     (weather串/now) before落环."""
     v = []
-    # v0.65 T-20261112-04: skeleton-family quota. Only fires when the batch
+    # v0.65 T-20261112-08: skeleton-family quota. Only fires when the batch
     # pre-computed an over-quota family set (sig["today_ban_families"]); a
     # missing key/empty set keeps every other caller byte-identical (zero drift,
     # same law as #70/#71). The family is judged on the OPENING only, so a legal
@@ -1799,11 +1799,46 @@ def rings_of(text):
     ents = re.findall(r"- (\d{4}-\d{2}-\d{2}) 「(.*?)」", m.group(1))
     return m.group(1), ents
 
+# v0.66 (2026-11-12 R2611, T-20261112-08): the verbatim face alone only catches
+# a byte-identical copy. Today's census (467 rings on 11-12) showed 37
+# adjacent-ring pairs at 3-gram Jaccard 0.51-0.72 carrying the SAME skeleton
+# with only the wind clause swapped (「我把手边的X往边儿上一搁，扫了扫弦，
+# <风句>，可这城里好玩的东西一天比一天多呢。」). Skeleton reuse, not verbatim
+# copy, is the live 复读机 face. Calibration over all 6022 adjacent pairs in
+# census/registry: >=0.60 = 8.2% (skeleton-identical band); 0.50-0.60 = 8.9%,
+# sampled 5/5 still same-skeleton (e.g. C-01799 「这物件比我懂年头，今早头
+# 一件事又是开窗听江声。」-> 18 days later 「今晨」 same line, 0.52), but that
+# band also holds legit same-theme returns a shorter line can pull down. So:
+# the hard face is >=0.60, and 0.50-0.60 needs the normalized 12-char opening
+# to match as well (every sampled culprit does; a mere theme return usually
+# opens differently). Window = last 5 rings, so an old attractor cannot veto a
+# genuinely new theme forever.
+SELF_DUP_SIM = 0.60
+SELF_DUP_HEAD_SIM = 0.50
+SELF_DUP_HEAD_CHARS = 12
+SELF_DUP_WINDOW = 5
+
+
+def _tri_grams(text):
+    s = re.sub(r"[\s\W_]", "", text or "")
+    return {s[i:i + 3] for i in range(max(0, len(s) - 2))}
+
+
+def _tri_jaccard(a, b):
+    if not a or not b:
+        return 0.0
+    return len(a & b) / len(a | b)
+
+
 def self_dup_history(line, ct):
-    """v0.45 gap #66 (T-20261011-01): True if the candidate ring text equals one
-    of the card's OWN historical ring entries on the normalized write face
-    (whitespace collapsed, quote marks stripped, [:90] truncation).
-    Deterministic exact match; ct absent/unparsable -> False (check off)."""
+    """v0.45 gap #66 verbatim face + v0.66 near-duplicate face.
+
+    True if the candidate ring equals one of the card's OWN historical ring
+    entries on the normalized write face (whitespace collapsed, quote marks
+    stripped, [:90] truncation), OR re-runs the skeleton of one of the last
+    SELF_DUP_WINDOW rings: 3-gram Jaccard >= SELF_DUP_SIM, or
+    >= SELF_DUP_HEAD_SIM with the same normalized SELF_DUP_HEAD_CHARS opening.
+    Deterministic; ct absent/unparsable -> False (check off)."""
     try:
         _corpus, ents = rings_of(ct)
     except Exception:
@@ -1812,7 +1847,19 @@ def self_dup_history(line, ct):
     if not base:
         return False
     cands = {base, base[:90]}
-    return any((t or "").strip() in cands for _d, t in ents)
+    if any((t or "").strip() in cands for _d, t in ents):
+        return True
+    g = _tri_grams(base)
+    head = re.sub(r"[\s\W_]", "", base)[:SELF_DUP_HEAD_CHARS]
+    for _d, t in ents[-SELF_DUP_WINDOW:]:
+        j = _tri_jaccard(g, _tri_grams(t))
+        if j >= SELF_DUP_SIM:
+            return True
+        if (j >= SELF_DUP_HEAD_SIM
+                and head
+                and head == re.sub(r"[\s\W_]", "", t or "")[:SELF_DUP_HEAD_CHARS]):
+            return True
+    return False
 
 def fit_ring_line(line, limit=90):
     """v0.55 gap #74 (2026-10-27 R2357): the write-face cleanup (outer-quote
@@ -2451,7 +2498,7 @@ OPENING_SKELETONS = (
 )
 
 
-# v0.68 (2026-11-12 R2588, T-20261112-04 副作用收口): 闸禁一族起句、提示词却把模型
+# v0.68 (2026-11-12 R2588, T-20261112-08 副作用收口): 闸禁一族起句、提示词却把模型
 # 往同一族推的自相矛盾。五处「手上」引导（city_phr/today/second 三块 + 两条
 # regen 尾注）+ 24 条骨架里 2 条本身落在被禁族，而 today_ban_families 只喂闸与
 # 控制台，从没告诉模型——3 次重写同提示词必重入同一吸引子（gap #68），19:00 首批
@@ -2611,7 +2658,7 @@ def build_prompt(cid, text, sig):
                              for f in sorted(_sb))
                   + "。天气只许一句话带过，并且不要用风来带出动作；"
                   + "改从你自己此刻" + _body_phrase(sig, hand_first=True) + "的具体细节写起。\n") if _sb else ""
-    # v0.68 (2026-11-12 R2588, T-20261112-04 副作用收口): 把被禁骨架族用**人话**说给
+    # v0.68 (2026-11-12 R2588, T-20261112-08 副作用收口): 把被禁骨架族用**人话**说给
     # 模型听，并明确「禁的是起句形状不是内容」。此前 today_ban_families 只进
     # ring_violations 与控制台打印，模型每轮被拒而不知为何，正是 gap #68
     # persistent-skip 的复现条件（同提示词 → 同吸引子 → 3 次用尽 → 席位留 due）。
@@ -3286,7 +3333,7 @@ def main():
     # cannot see today's repeats). Ledger lands in state/ for observability.
     _tcount, _tgrams = today_ring_openings(with_grams=True)
     sig["today_open_ids"] = _tcount
-    # v0.65 T-20261112-04: family quota, computed once from today's own opening
+    # v0.65 T-20261112-08: family quota, computed once from today's own opening
     # ledger (no second disk walk). 11-12 实测 HAND_DEICTIC 200/467=42.8%, so the
     # first seat of the 19:00 batch already gets the family refused instead of the
     # city producing another 42% hand-shaped morning.
@@ -3412,7 +3459,7 @@ def main():
         # gap #70: record the accepted opening so later seats in this batch must
         # vary theirs (same-round cross-card repetition is not a per-card defect).
         sig["batch_openings"].add(re.sub(r"\s+", "", line)[:12])
-        # v0.65 T-20261112-04: keep the family share live inside the batch, so a
+        # v0.65 T-20261112-08: keep the family share live inside the batch, so a
         # family that crosses 25% mid-batch stops the NEXT seat (same live-ledger
         # pattern as today_open_ids below, which #70/#82 already ride).
         if _ring_family_of is not None and sig.get("today_family_counts") is not None:

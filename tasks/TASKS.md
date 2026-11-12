@@ -1760,3 +1760,8 @@ uff_gate 1 file CLEAN／重建后 --check stale=0。
   **诚实边界**：本判据只覆盖「生成器脚本自身」的内容变更；脚本 import 的共享判据模块（如 ring_open_family.py）升级仍不会自动触发下游重建——本轮即由人工发现，是否扩到 deps 清单待 19:00 首批后按实际发生率再定（避免为 30 面各挂依赖表造成过度工程）。
   **实况三行**：当前活=可见面口径一致性（让路窗内零 LLM 确定性面）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-ring-trend.html（11-12 17:3x 重建·HAND_DEICTIC 55.0%）+ Tools/round_daily.py v0.10（commit d746f129f）；下个里程碑=19:00 年轮首批 3 席（T-04 HAND_DEICTIC 配额闸首验点 + T-05 第二句观测，ETA 2026-11-12 19:10）。
   tokens: local=0 api=0 api_reason=yield-window（确定性判据修复面零 LLM）
+
+- [x] **T-20261112-08 自我复读近重复面（P1·出生站拦截·同轮已修）**（2026-11-12 17:3x @BigLife-OSLoop R2611 立）：`self_dup_history` 原判据=逐字/前90字相等，模型从不逐字复制 → 今日 467 环中 37 例「同骨架只换风句」（Jaccard 0.51-0.72）全部逃闸，实测旧闸今日拦截 **0**。修法=双条件近重复闸（≥0.60 硬判；0.50-0.60 且规范化开头 12 字同才判；窗口=最近 5 圈），标定=全库 6022 相邻对分布 + 0.50-0.55 抽检 5/5 同骨架；命中走既有 `dup-history` tail-pinned 处置链，软让步面与族闸未动。证据 `qa/RING-SELF-DUP-NEAR-20261112.md`／回归 `qa/test_self_dup_near.py` 4/4 PASS／回放 NEW_TOTAL=17（旧闸 0）。历史行按 #41 不回溯。**待观测**=今晚 19:00 后首批真实批次的 skip 率（异常则 SELF_DUP_SIM→0.62 或窗口→3）。
+- [R2611] 2026-11-12 17:2x-17:5x @BigLife-OSLoop 轮记：轮首 pull=Already up to date·树净；决策水位差集 NEW=0（尾 D-20261112-15 已消费）；orders 物理件区无涉本司新件；让路窗内（evolve 返回 yield-window）→ 年轮/相遇/反思结构性跳过。**本轮产品增量（出生站拦截·1 件闸 + 1 件回归 + 1 件证据）**：实读今日 467 环发现 37 例同骨架复读（旧逐字闸今日 0 拦截），标定 6022 相邻对后升级双条件近重复闸，回放今日拦截 17 条。门禁：py_compile rc=0／ruff_gate 2 file CLEAN／单测 4/4／round_daily 31 面 stale=0／pool SELF_TERMINATE／QC problems=0／事件闸 PASS(41699/0/0)／HQ 日闸 ALREADY_REPORTED 零写入。
+- tokens: local=0 api=0 api_reason=-（让路窗零 LLM；本轮全部为确定性面与闸位标定）
+- **实况三行**：当前活=年轮自我复读出生站拦截（近重复闸升级与标定，零 LLM）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/RING-SELF-DUP-NEAR-20261112.md（2026-11-12 17:4x）；下个里程碑=19:00 后首批年轮实测新闸 skip 率（≤19:00-20:00 窗内回填读数）
