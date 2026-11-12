@@ -1023,3 +1023,6 @@ ing_open_family.py --scan 同日读 **55.0%(257/467)**，差 57 条、12 个百�
   **对外实况面**：docs/status-export.json 三行（当前活/最近实物/下个里程碑）+ results 尾行刷新（total=75=今日年轮落环行卡 73 + 锚位相遇双卡 2，ts=01:23）。
   计分：能跑能看实物=2 分（10 篇新年轮可读 + 3 面重建 + 闸 PASS 报告）+ 文件改动=1 分。commit 见轮末。tokens: local=10 api=0 api_reason=本地 qwen3:4b 年轮批 10 席
 - [R2664] 2026-11-13 01:3x @BigLife-OSLoop 产品轮：年轮批 10/10 落环（C-00207/208/209/210/211/213/214/215/221/250·gate soft 5 仍落）→行为线 sync 零写→事件回放闸 PASS（cards=10111 events=42066 mismatch=0 schema=0）；日更面 31 面全新鲜 stale=0；相遇轮今日 cap 3 已满按律跳过；QC 今日 problems=0；HQ 日清 ALREADY_REPORTED 零写。tokens: local=10 api=0 api_reason=-
+- [R2665] 2026-11-13 01:4x @BigLife-OSLoop 产品轮：年轮批 10 席（C-00216/217/218/236/251/219/220/222/223/225）→ **卡面零字节增量**（十席当日环与仓内既有成文逐字一致，无重复行入卡；重复环专项分析：36 组历史重复、涉当日=0）；事件回放闸 PASS（cards=10111 events=42076 replay mismatch=0 schema=0）；日更面 stale=7→重建 8 面（gallery/ring_picks/ring_quality/index 等·verdict PASS）；QC 巡检 cards=10114 problems=0；池轮 SELF_TERMINATE（全桶达标）；决策水位差集 NEW=0（已至 D-20261112-16）；HQ 反馈日闸 ALREADY_REPORTED 零写入。
+  - **新单 T-20261113-01（open）**：年轮选人幂等闸复检——十席卡内已含当日环仍被派单并跑满 LLM（cursor n 3→4 而卡面零 diff）；事后探针 _ringed_today(C-00216)=True\、现选人已正确跳至 C-00226/C-00230/C-00231，故闸本身在工作，疑点在 scan 自愈前的 due 快照或 reflect 路径；下轮加一次探针定位（成本 ≤1 次读），定位后决定是否加写前二次断言。
+  - 计分：能看实物=2 分（8 面重建 HTML 可直接打开 + 回放/QC 报告入库）+ 文件改动=1 分。tokens: local=10 api=0 api_reason=本地 qwen3:4b 年轮批 10 席
