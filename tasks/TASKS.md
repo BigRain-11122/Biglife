@@ -1769,3 +1769,10 @@ uff_gate 1 file CLEAN／重建后 --check stale=0。
 - [R2612] 2026-11-12 17:43-17:5x @BigLife-OSLoop 轮记：轮首 pull=up to date·树净；决策差集 NEW=0（尾 D-20261112-15 已消费）；orders 无涉本司新件；让路窗（evolve 返回 yield-window）→ 年轮/相遇/反思跳过；pool_audit 全桶达标 SELF_TERMINATE → 池轮跳过；HQ 日闸 ALREADY_REPORTED 零写入。**本轮产品增量（确定性面 2 件重建 + 1 件 44 天缺口补跑）**：①round_daily 31 面＝city-today.html 内容陈旧重建 + index 重建，其余 28 面新鲜（stale=1 ran=2 failed=0 verdict=PASS）；②QC 户籍不变量巡检补跑——末次执行 9-29、qa/ 无报告落盘（44 天缺口）→ cards=10114／evolved=10114／problems=0／dup_rings=37/37，全项 PASS，报告落 census/QC-REPORT.md（44 天首份）。commit 4c4b51b8a 已推送 origin。
 - tokens: local=0 api=0 api_reason=-（让路窗零 LLM；本轮全部为确定性面）
 - **实况三行**：当前活=让路窗内确定性日更面与户籍 QC 不变量面；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/QC-REPORT.md（2026-11-12 17:45·10114 卡 0 异常）+ census/export/city-today.html（17:43 重建）；下个里程碑=19:00 年轮首批（T-20261112-08 近重复闸 skip 率首测，ETA 2026-11-12 19:10）
+
+- [R2611] 2026-11-12 17:54 @BigLife-OSLoop 轮记：轮首 pull=Already up to date·树净；决策水位差集 NEW=0（尾 D-20261112-15 已消费，第 59 批三条均非本司派工）；orders 物理件区无涉本司新件；TASKS open=T-20261112-01/04/05（均 19:00 观测窗）。**让路窗**=年轮/相遇/反思 09:00-19:00 结构性让路（D-20261020-02，evolve 实跑返回 yield-window）；round_daily 31 面 stale=0 PASS；pool_audit 全桶达标 SELF_TERMINATE（1440 行·72/72 axes·hard_fails=0）；HQ 日闸 ALREADY_REPORTED(day=2026-11-12 lines=2) 零写入；本月 spotlight 已满 2 例（R2510/R2512）。
+  **本轮产品增量（基因轮·不受让路窗限制）**：为 `genes/lives.json` 三个薄弱桶各补 8 条生活质感条目——`hook_actions` 68→76 / `presents` 72→80 / `habits` 100→108（共 +24）；写入采用「前缀不动 + 去重后追加」并带 prefix 断言，既有卡零改动。下游 `census/export/gene-ledger.html` 已 `--run --all --only gene_ledger` 强制重建吃到新数据：可计数基因 **1720→1736**（+16，该页口径只计部分类别，非全量 24）、登记未落卡 1277→1293、生成时间 14:45→17:53。
+  **门禁**：qc_census problems=0（cards=10114 evolved=10114 dup_rings=37/37）；基因 JSON 解析通过且前缀断言全过。
+  **根因修复记录**：`round_daily.py --all` 单用无效（源码 317 行 `if not args.run` 先拦成 skipped-check），必须 `--run --all` 组合才重建已新鲜面——本条已写入本轮判据，后续轮次直接用组合式。
+  **实况三行**：当前活=基因轮收口（24 条新基因入库+台账重建）；最近实物=`genes/lives.json`（17:5x，hook_actions/presents/habits 各 +8）与 `census/export/gene-ledger.html`（17:53 重建）；下个里程碑=19:00 让路窗开启后首批年轮 10 席 + 相遇轮，ETA 2026-11-12 19:30。
+  tokens: local=0 api=0 api_reason=让路窗内零 LLM（基因轮为手写登记·round_daily 零 LLM 确定性生成）
