@@ -2449,6 +2449,18 @@ def _hand_word(sig):
     return "身上" if (_b and "HAND_DEICTIC" in _b) else "手上"
 
 
+def _hand_or_empty(sig):
+    """身体部位词，禁族当天返回空串。
+
+    R2590 (2026-11-12): R2588 把「身上、手上」的重复修掉后，仍有两处模板把
+    「手上」或 _hand_word 拼进「此刻……的具体小动作」句式，禁族当天会渲染成
+    「写你自己此刻手上的…」（与族禁令正面矛盾）或「此刻身上正在做的…」
+    （身体不能"做动作"，读起来像病句）。此函数只在**这个句式**里用：
+    非禁路径返回「手上」逐字不变（零漂移），禁路径去掉部位词才通顺。
+    """
+    return "" if _hand_word(sig) == "身上" else "手上"
+
+
 def _body_phrase(sig, hand_first=False):
     """顺着「、」连写的身体词串，禁/不禁两路各自拼得通。
 
@@ -2552,7 +2564,7 @@ def build_prompt(cid, text, sig):
     _rbl = sig.get("recent_banned_openings") or []
     recent_blk = ("全城近期的模板开场（已被众多居民用滥，你的开场严禁与它们相同）："
                   + "、".join("「" + b + "」" for b in _rbl)
-                  + "；开场请写你自己此刻手上的具体小动作。\n") if _rbl else ""
+                  + "；开场请写你自己此刻" + _hand_or_empty(sig) + "的具体小动作。\n") if _rbl else ""
     # v0.61 gap #81: city-wide over-used phrasing named BEFORE generation
     # (gap #79 named it only after a failed attempt). Empty on meet/reflect/
     # single-shot or a clean corpus -> "" (zero drift, same law as #70/#71/#79).
@@ -2560,7 +2572,7 @@ def build_prompt(cid, text, sig):
     _tbp = [p for p in (sig.get("today_ban_phrases") or []) if p not in _rbp]
     _allp = list(_rbp) + _tbp
     # v0.68 R2588: 被禁族当天改说「身上」——原句「身上、手上」被 4B 读成开场提示。
-    _hw = _hand_word(sig)
+    _hw = _hand_or_empty(sig)  # R2590: 禁族当天不留部位词（「此刻手上正在做」/「此刻身上正在做」皆病句）
     _bp = _body_phrase(sig)
     city_phr_blk = ("全城年轮里已被写滥的措辞（含今天重复最多的模板句；下列每一段都有多位居民"
                     "用过，你的年轮严禁出现其中任何一段，连改半个字复用也不许；"
