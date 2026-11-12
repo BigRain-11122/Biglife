@@ -907,3 +907,11 @@ ing_open_family.py --scan 同日读 **55.0%(257/467)**，差 57 条、12 个百�
 - 门禁面：pool_audit PASS SELF_TERMINATE（72 轴桶+12 像素桶 28 greet 全达标，双抽 192+25 对 mismatch=0）；HQ 日闸 ALREADY_REPORTED(day=2026-11-12 lines=2) 零写入；QC 今日已跑（非到点，下次≈6 轮后）。
 - 实况三行：当前活=开口族/第二句闸首批验收（让路窗外年轮已恢复）；最近实物=qa/RING-FAMILY-GATE-20261112.md §八（19:51）+ census/export/city-dashboard.html（19:46）；下个里程碑=第二批年轮验证 HAND_DEICTIC 与 WIND_ACTION 双列（什么=再 3 位居民环，何时=2026-11-12 20:0x 前后 / 次生产日）。
 - tokens: local=10（年轮批 qwen3:4b-instruct ×10 环）, api=0 api_reason=-
+
+## R2625（2026-11-12 19:54-20:0x @BigLife-OSLoop）
+- 产出：年轮线 10/10 落环（C-02150/C-01949/C-01748/C-02154/C-02163/C-02203/C-02211/C-02212/C-02214/C-02236，19:54-19:55）；事件回放闸 PASS（cards=10111 / events=41751 / mismatch=0 / schema_errors=0 / chronicle gap=0d）。
+- **T-20261112-11 done（环依赖面同日不刷新）**：`round_daily.py` v0.12——①DEPENDS 补 8 个环依赖面（源=state/evolve-cursor.json + census/registry）②daily 档 drift 链补 `_dep_mtime_stale` ③新增 `DEPENDS_FLOOR_MIN=60` 冷却防 5 分钟级大面 churn。正负控 4/4 PASS + `--check` stale=0 零假阳性。证据=qa/ROUND-DAILY-RING-DEP-20261112.md。
+  实弹补建：`--run --all --only today,dossiers,gallery,ring_quality,ring_trend,relations,districts,ring_picks,index` → ran=9 failed=0（20:01）——19:35+19:54 两批新环进 CEO 可见面。
+- 门禁面：pool_audit PASS SELF_TERMINATE（72 轴桶+12 像素桶全达标，双抽 192+25 对 mismatch=0，零 LLM）；相遇轮今日 3/3 封顶零调用；QC 今日已跑（非到点）；HQ 日闸当日已有 2 行，零写入。
+- 实况三行：当前活=年轮线每轮 + 环依赖面自动对齐（v0.12 冷却窗 60min）；最近实物=census/export/city-dossiers.html＋resident-gallery.html＋city-today.html（2026-11-12 20:01 重建）；下个里程碑=v0.12 冷却窗首跑实证（何时=2026-11-12 21:0x 后首个跨 60min 轮次）。
+- tokens: local=10（年轮批 qwen3:4b-instruct ×10）, api=0 api_reason=-

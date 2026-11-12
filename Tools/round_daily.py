@@ -121,7 +121,23 @@ DEPENDS = {
     # city_lexicon.py 读三个 cognition 池面
     "lexicon": ["cognition/pools.json", "cognition/greetings.json",
                 "cognition/pools-negative.json"],
+    # 环依赖面（v0.12 2026-11-12）：年轮批落进户卡后，这些面同日不再刷新。
+    # 源信号取 evolve-cursor（每批年轮必写）+ registry 目录（新注册卡）。
+    # 目录 mtime 只反映增删不反映内容改写，故 cursor 才是环落地的主信号。
+    "today": ["state/evolve-cursor.json", "census/registry"],
+    "dossiers": ["state/evolve-cursor.json", "census/registry"],
+    "gallery": ["state/evolve-cursor.json", "census/registry"],
+    "relations": ["state/evolve-cursor.json", "census/registry"],
+    "districts": ["state/evolve-cursor.json", "census/registry"],
+    "ring_picks": ["state/evolve-cursor.json", "census/registry"],
+    "ring_quality": ["state/evolve-cursor.json", "census/registry"],
+    "ring_trend": ["state/evolve-cursor.json", "census/registry"],
 }
+
+# 环依赖面的重建下限间隔（分钟）。年轮批约每轮落地一次，若按 mtime 逐次重建，
+# 2.9MB 的陈列面会每 5 分钟刷新一次并被 commit，违反 REPO-SLIM 律；60 分钟
+# 冷却=同日新环最迟 1 小时内进 CEO 面，同时把日更面写入量压到可接受水位。
+DEPENDS_FLOOR_MIN = 60
 
 TIMEOUT_SEC = 240
 
@@ -274,6 +290,9 @@ def _dep_mtime_stale(key: str, out_paths: list[str]) -> str | None:
         return None
     oldest_out = min(os.path.getmtime(p) for p in out_paths)
     if newest > oldest_out:
+        # 冷却下限：刚重建过的面不因下一批年轮立刻再刷（防 5 分钟级大面 churn）
+        if (time.time() - oldest_out) < DEPENDS_FLOOR_MIN * 60:
+            return None
         return "dep-mtime:%s" % newest_rel
     return None
 
@@ -293,7 +312,8 @@ def _is_stale(entry, now_date: datetime.date, out_paths: list[str],
         stale = mdate != now_date
         if not stale:
             drift = (_content_stale(out_paths) or _self_ts_stale(out_paths)
-                     or _script_changed(_script, known_sha))
+                     or _script_changed(_script, known_sha)
+                     or _dep_mtime_stale(_key, out_paths))
             if drift:
                 return True, drift
         return stale, ("outdated:%sd" % int(age) if stale else "fresh")
