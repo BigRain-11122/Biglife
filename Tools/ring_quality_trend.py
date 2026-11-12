@@ -43,16 +43,24 @@ from ring_simile_audit import (  # noqa: E402
     jaccard,
     parse,
 )
+from ring_open_family import (  # noqa: E402
+    FAMILY_MIN_DENOM,
+    FAMILY_QUOTA,
+    family_of,
+    over_quota,
+    second_attrs_of,
+)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAGE = os.path.join(ROOT, "census", "export", "city-ring-trend.html")
 SNAP = os.path.join(ROOT, "state", "ring-trend-latest.json")
 
 
-def collect(since: str) -> tuple[list[dict], dict[str, int]]:
-    """逐圈明细 + 全局模板句计数。"""
+def collect(since: str) -> tuple[list[dict], dict[str, int], dict[str, list[str]]]:
+    """逐圈明细 + 全局模板句计数 + 按日正文（开头族判据复用同一趟扫盘）。"""
     rows: list[dict] = []
     gram_citizens: dict[str, set[str]] = collections.defaultdict(set)
+    bodies: dict[str, list[str]] = collections.defaultdict(list)
     for path in sorted(glob.glob(os.path.join(ROOT, "census", "registry", "**", "*.md"),
                                  recursive=True)):
         cid, _name, rings = parse(path)
@@ -63,6 +71,7 @@ def collect(since: str) -> tuple[list[dict], dict[str, int]]:
             continue
         prev = None
         for date, body in rings:
+            bodies[date].append(body)
             c = core(body)
             clean = PUNCT_RE.sub("", c)
             sh = {clean[i:i + TMPL_GRAM]
@@ -73,7 +82,48 @@ def collect(since: str) -> tuple[list[dict], dict[str, int]]:
             rows.append({"date": date, "cid": cid, "chars": len(clean),
                          "sh": sh, "sim": sim})
             prev = grams(c)
-    return rows, {k: len(v) for k, v in gram_citizens.items()}
+    return rows, {k: len(v) for k, v in gram_citizens.items()}, bodies
+
+
+def _opening_body(text: str) -> str:
+    """剥掉年轮引号，复现闸口 _ring_pat 的 group(1) 口径（含/不含「」差 1 字即错位）。"""
+    t = (text or "").strip()
+    if t[:1] in ("「", "『"):
+        t = t[1:]
+    if t[-1:] in ("」", "』"):
+        t = t[:-1]
+    return t
+
+
+def family_daily(bodies: dict[str, list[str]]) -> list[dict]:
+    """按生产日统计开头骨架族与第二句吸引子占比。
+
+    判据单源=ring_open_family（family_of／second_attrs_of／over_quota），
+    与 evolve_citizen 拒稿闸同一套 regex，故本页读数即闸口读数，不会漂移。
+    """
+    out = []
+    for date in sorted(bodies):
+        texts = [t for t in (_opening_body(x) for x in bodies[date])
+                 if len("".join(t.split())) >= 8]
+        total = len(texts)
+        fam = collections.Counter(f for f in (family_of(t) for t in texts) if f)
+        sec: collections.Counter = collections.Counter()
+        for t in texts:
+            for name in second_attrs_of(t):
+                sec[name] += 1
+        hand = fam.get("HAND_DEICTIC", 0)
+        wind = sec.get("WIND_ACTION", 0)
+        out.append({
+            "date": date,
+            "rings": total,
+            "fam": dict(fam),
+            "hand": hand,
+            "hand_rate": round(100.0 * hand / total, 1) if total else 0.0,
+            "wind_rate": round(100.0 * wind / total, 1) if total else 0.0,
+            "over": over_quota(total, dict(fam)),
+            "judged": total >= FAMILY_MIN_DENOM,
+        })
+    return out
 
 
 def daily(rows: list[dict], gram_citizens: dict[str, int]) -> list[dict]:
@@ -127,12 +177,19 @@ def spark(days: list[dict], key: str, ink: str, unit: str) -> str:
             % (max(w, 1), h + 20, h + 20, "".join(parts)))
 
 
-def build_page(days: list[dict], stats: dict) -> str:
+def build_page(days: list[dict], stats: dict, fams: list[dict]) -> str:
     e = html.escape
     recent = days[-stats["days"]:]
+    fam_recent = fams[-stats["days"]:]
+    fam_table = "".join(
+        "<tr><td>%s</td><td>%d</td><td>%d</td><td>%.1f%%</td><td>%.1f%%</td><td>%s</td></tr>"
+        % (e(f["date"]), f["rings"], f["hand"], f["hand_rate"], f["wind_rate"],
+           "—" if not f["judged"] else ("OVER" if f["over"] else "OK"))
+        for f in reversed(fam_recent))
+    row_fmt = ("<tr><td>%s</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td>"
+               "<td>%d</td><td>%.1f%%</td></tr>")
     rows = "".join(
-        "<tr><td>%s</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td>"
-        "<td>%d</td><td>%.1f%%</td></tr>"
+        row_fmt
         % (e(d["date"]), d["rings"], d["citizens"], d["chars_median"],
            d["short"], d["dup"], d["tmpl"], d["defect_rate"])
         for d in reversed(recent))
@@ -170,11 +227,20 @@ footer{{padding:16px 20px 40px;color:var(--dim);font-size:12px;border-top:1px so
 <div class="kpi"><b>{stats['recent_rate']:.1f}%</b><span>近 7 日圈级缺陷率</span></div>
 <div class="kpi"><b>{stats['best'][0]}</b><span>最佳日缺陷率（{stats['best'][1]}）</span></div>
 <div class="kpi"><b>{stats['worst'][0]}</b><span>最差日缺陷率（{stats['worst'][1]}）</span></div>
+<div class="kpi"><b>{stats['hand_now']:.1f}%</b><span>最近生产日手部指示开头（闸线 {stats['quota']:.0f}%）</span></div>
+<div class="kpi"><b>{stats['hand_verdict']}</b><span>开头族闸判定（{stats['hand_day']}·{stats['hand_rings']} 环）</span></div>
 </div>
 <h2 class="sec">每日年轮产量</h2>
 <div class="chart">{spark(recent, 'rings', '#7fb0d8', ' 圈')}</div>
 <h2 class="sec">每日圈级缺陷率（越低越好）</h2>
 <div class="chart">{spark(recent, 'defect_rate', '#d89a7f', '%')}</div>
+<h2 class="sec">年轮开头骨架族占比（源头闸判据 · 闸线 {stats['quota']:.0f}%）</h2>
+<div class="chart">{spark(fam_recent, 'hand_rate', '#d89a7f', '%')}</div>
+<h2 class="sec">逐日开头族 / 第二句吸引子（日期倒序）</h2>
+<table><tr><th>日期</th><th>年轮</th><th>HAND_DEICTIC</th><th>占比</th><th>第二句 WIND_ACTION</th><th>闸判定</th></tr>{fam_table}</table>
+<p class="meta">开头族只量正文前 12 字，句中合法身体描写（如下半句的「手心的汗」）不计入；
+闸判定 OVER = 该族当日占比 &gt; {stats['quota']:.0f}%（{stats['min_denom']} 环以下不判，记「—」）。
+第二句 WIND_ACTION 为只观测指标，尚未入闸（T-20261112-05 观测窗）。</p>
 <h2 class="sec">逐日明细（近 {len(recent)} 日 · 日期倒序）</h2>
 <table><tr><th>日期</th><th>年轮</th><th>居民</th><th>中位字数</th><th>偏短</th><th>复读</th><th>模板</th><th>缺陷率</th></tr>{rows}</table>
 <p class="meta">缺陷判定为圈级去重计数：同一圈命中多项只算一次，故「偏短+复读+模板」三列之和可能大于缺陷数。</p>
@@ -194,11 +260,14 @@ def main() -> int:
     args = ap.parse_args()
 
     day = datetime.date.today().isoformat()
-    rows, gram_citizens = collect(args.since)
+    rows, gram_citizens, bodies = collect(args.since)
     days = daily(rows, gram_citizens)
     if not days:
         print("no rings since %s" % args.since)
         return 1
+    fams = family_daily(bodies)
+    judged = [f for f in fams if f["judged"]] or fams
+    now = judged[-1] if judged else {"date": day, "hand_rate": 0.0, "rings": 0, "over": []}
 
     last7 = days[-7:]
     recent_def = sum(d["defect"] for d in last7)
@@ -211,14 +280,21 @@ def main() -> int:
         "recent_rate": 100.0 * recent_def / recent_rings if recent_rings else 0.0,
         "best": ("%.1f%%" % ranked[0]["defect_rate"], ranked[0]["date"]),
         "worst": ("%.1f%%" % ranked[-1]["defect_rate"], ranked[-1]["date"]),
+        "hand_now": now["hand_rate"],
+        "hand_day": now["date"],
+        "hand_rings": now["rings"],
+        "hand_verdict": "OVER" if now["over"] else "OK",
+        "quota": 100.0 * FAMILY_QUOTA,
+        "min_denom": FAMILY_MIN_DENOM,
     }
 
     os.makedirs(os.path.dirname(PAGE), exist_ok=True)
     os.makedirs(os.path.dirname(SNAP), exist_ok=True)
     with io.open(PAGE, "w", encoding="utf-8", newline="\n") as f:
-        f.write(build_page(days, stats))
+        f.write(build_page(days, stats, fams))
     with io.open(SNAP, "w", encoding="utf-8", newline="\n") as f:
-        json.dump({"generated": day, "since": args.since, "days": days},
+        json.dump({"generated": day, "since": args.since, "days": days,
+                   "families": fams, "family_quota": FAMILY_QUOTA},
                   f, ensure_ascii=False, indent=1)
 
     tail = days[-stats["days"]:]
@@ -226,6 +302,9 @@ def main() -> int:
           % (stats["active_days"], stats["rings"], stats["recent_rate"],
              stats["best"][0], stats["best"][1], stats["worst"][0], stats["worst"][1],
              os.path.relpath(PAGE, ROOT)))
+    print("opening-family: %s %d圈 HAND_DEICTIC=%.1f%% (线 %.0f%%) verdict=%s"
+          % (stats["hand_day"], stats["hand_rings"], stats["hand_now"],
+             stats["quota"], stats["hand_verdict"]))
     print("last: " + ", ".join("%s %d圈/%.1f%%" % (d["date"][5:], d["rings"], d["defect_rate"])
                                for d in tail[-6:]))
     return 0
