@@ -1530,7 +1530,7 @@ tokens: local=10 api=0 api_reason=-
 
 
 - [ ] **T-20261112-01 事件流人味密度缺口（源头·P1）**（2026-11-12 09:3x @BigLife-OSLoop R2566 立）
-  - status: open
+  - status: in-progress（2026-11-12 09:5x @BigLife-OSLoop R2567 落修法②：Tools/city_life_events.py 母题池 + evolve_citizen 素材库口径接线；待「连续 3 生产日窗口非空」验收）
   - 证据：FluxVerse world/world-events.jsonl 尾部 200 行类型分布 = GITHUB_EVENT 62 / GAME_STAGE 57 / COMMIT 26 / OS_TICK 30 / GATE 15 / RESIDENT_SAY 8 / HEARTBEAT 2；经 scrub_machine_words+scrub_event_codes 后**含中文内容字段的行 = 0**（RESIDENT_SAY 8 条原文均为「显存稳…轮转，城主夜安。」，命中 R2527/R2533 的 CHINESE_TECH_RE 被整体丢弃，判据本身正确）。
   - 后果：
 eal_signals() 的 8 条事件窗口恒空 → 年轮 prompt 只剩天气（cloud 16.5°C wind 4m/s）可锚 → 居民靠 LLM 惯性套话，今日 tmpl 78/467（16.7%）、defect_rate 22.9%（7 日 32.7%，历史最好 14.3%）。
@@ -1538,3 +1538,5 @@ eal_signals() 的 8 条事件窗口恒空 → 年轮 prompt 只剩天气（cloud
   - 验收：连续 3 个生产日 events 窗口非空且 human_rows/200 > 0；tmpl 缺陷率降至 <10%。
 
 - [R2566] 2026-11-12 09:3x @BigLife-OSLoop 交互轮值轮记：轮首 pull=Already up to date、树净；决策水位 NEW=5（D-20261112-08~12 全判 @HQ 机制席·本司零执行项）；orders 物理件无涉本司件。**让路窗**=年轮/相遇/反思 09:00-19:00 让路（D-20261020-02 实测返回），语言池 pool_audit PASS SELF_TERMINATE 跳过，QC 09:05 已跑（cards=10114 problems=0），回放闸 09:14 PASS。**本轮产品增量（2 件）**：①census/export/city-ring-trend.html 重建（21 日走势·今日 467 环/缺陷率 22.9%/7 日 32.7%/历史最好 14.3%，CEO 可见面）；②Tools/evolve_citizen.py v0.63 feed 修复——新增 MACHINE_EVENT_TYPES 排除 + 事件窗口 30→200 行 + 内容判据（须有中文内容字段存活），修复前 8 条事件窗口全为 scrub 残渣 >（居民会把 > 当城市事实引用），修复后诚实返回 0 条（无事件优于垃圾）。py_compile OK + ruff_gate 1 file CLEAN。**源头发现（立单 T-20261112-01）**=事件流 200 行内人味事件 = 0，机器台账占满窗口，这才是「品质差」的供给侧病根；scrub 判据无过、不能靠放松闸求绿。日清闸 ALREADY_REPORTED(day=2026-11-12 lines=2) 零写入。**实况三行**：当前活=事件供给侧缺口定量与 feed 修复（T-20261112-01 open）；最近实物=city-ring-trend.html（09:20）+ evolve_citizen v0.63（09:2x）；下个里程碑=19:00 年轮续批并用新 feed 观察 tmpl 缺陷率是否下降（ETA 11-13 首验）。tokens: local=0 api=0 api_reason=yield-window
+
+- [R2567] 2026-11-12 09:5x @BigLife-OSLoop 轮记：轮首 pull=Already up to date、树净；决策水位 NEW=0（尾 D-20261112-12）；orders 物理件区无涉本司；本窗=15min 交互轮·让路窗内（年轮/相遇/反思三条 LLM 面 09:00-19:00 顺延）。**产品增量（源头修·2 件）**：①Tools/city_life_events.py 街区日常母题池——按 census 真实人口加权的 6 街区 × 6 句式族，从 genes/ 母题库 md5 确定性抽件，落 events/life/<date>.jsonl（META 行写死「kind=motif·非当日新闻」诚实声明），同 run 幂等（unchanged）；②evolve_citizen.real_signals() 接线 load_life_motifs() + uild_prompt() 新增「街区日常母题（素材库·不是今日新闻）」块 + 锚注脚按素材面追加「+街区日常母题素材库」。**为什么不写 FluxVerse 流**：兄弟仓只读（铁律④），合成事件冒充城市新闻=破诚实律。**闸面**：py_compile OK / ruff_gate 2 files CLEAN / 负控三态 PASS（无文件=块不出现·delta=274 字符·缺日期→[]）/ 事件回放闸 PASS（cards=10111 events=41699 replayed=10111 schema=0 mismatch=0·新增文件在 events/life/ 不入回放面）。**今日母题样例**：游戏楼街区「时空校准师把老式怀表链挪到门口搁着，吃面先喝半口汤再放醋」。**验收（下轮起观察）**：连续 3 生产日 events/life 存在且 prompt 非空 → tmpl 缺陷率 22.9% 是否降到 <10%（ETA 2026-11-15）。**实况三行**：当前活=居民年轮供给侧补齐（母题池上线·19:00 后首批消费）；最近实物=events/life/2026-11-12.jsonl（8 条母题·09:5x）+ Tools/city_life_events.py；下个里程碑=19:00 年轮批用新 feed 生成首 10 环（ETA 今晚）。tokens: local=0 api=0 api_reason=yield-window

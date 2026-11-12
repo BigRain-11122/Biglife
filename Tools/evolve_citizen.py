@@ -729,6 +729,46 @@ MACHINE_EVENT_TYPES = frozenset({
 })
 
 
+def load_life_motifs(now):
+    """T-20261112-01 修法② (2026-11-12 R2567): 街区日常母题池（素材库）。
+
+    FluxVerse 的生产事件流只承载机器台账（尾部 200 行 scrub 后中文内容行 = 0），
+    居民因此只剩天气可锚、年轮靠惯性套话。上游流是兄弟仓只读面，合成事件更不许
+    冒充城市新闻 —— 所以这里只喂 BigLife 自有母题库按日确定性抽出的「街区长期
+    日常」（events/life/<date>.jsonl，META 行写明 kind=motif、非当日新闻）。
+    缺文件/坏文件 -> []，prompt 面字节不变（零漂移律，同 rumor/city/goal）。
+    """
+    try:
+        p = os.path.join(CO, "events", "life", now.strftime("%Y-%m-%d") + ".jsonl")
+        if not os.path.isfile(p):
+            # 自愈：本轮没人生成过当天的母题就现场造（确定性，同日期同字节），
+            # 否则跨机/换日的第一批会静默失去素材（本次修法的产出面不能靠外部定时器）。
+            try:
+                import city_life_events as cle
+                cle.write(now.strftime("%Y-%m-%d"), cle.build(now.strftime("%Y-%m-%d")), quiet=True)
+            except Exception:
+                return []
+        out = []
+        with open(p, encoding="utf-8") as f:
+            for ln in f:
+                ln = ln.strip()
+                if not ln:
+                    continue
+                try:
+                    e = json.loads(ln)
+                except Exception:
+                    continue
+                if e.get("type") != "LIFE_MOTIF":
+                    continue
+                t = str(e.get("text") or "").strip()
+                if not t or not re.search(r"[\u4e00-\u9fff]", t):
+                    continue
+                out.append((str(e.get("zone") or ""), t))
+        return out[:4]
+    except Exception:
+        return []
+
+
 def real_signals():
     """Collect REAL city signals: FluxVerse world events tail + world state (read-only)."""
     now = datetime.datetime.now()
@@ -813,6 +853,7 @@ def real_signals():
                 sig["weather"] += " wind %sm/s" % wind
         except Exception:
             pass
+    sig["life_motifs"] = load_life_motifs(now)
     return sig
 
 # T-20261014-01 (tenacity adoption, OH-20261013-biglife slice 2): 6 rounds of
@@ -2370,6 +2411,20 @@ def build_prompt(cid, text, sig):
     # string -> the prompt is byte-identical to the pre-wiring build.
     rumor = (sig.get("rumor") or "").strip()
     rumor_blk = (rumor + "\n") if rumor else ""
+    # T-20261112-01 修法② (R2567): 街区日常母题块。零漂移律同上：无文件 -> ""。
+    # 口径必须写在 prompt 里：这是这条街长期就有的生活底子（素材库），不是今天
+    # 新发生的事 —— 否则 4B 会把母题当新闻转述，锚注脚就成了假溯源。
+    _lm = sig.get("life_motifs") or []
+    if _lm:
+        _zone = citizen_zone(text)
+        _lm = sorted(_lm, key=lambda zt: (bool(_zone) and zt[0] != _zone,))
+        life_blk = ("街区日常母题（素材库·不是今日新闻：这些是这条街长期就有的生活底子，"
+                    "只能当作你身边本来的日常写进句子，严禁写成今天新发生的事、"
+                    "严禁当作城里传开的新消息转述、严禁添加清单外的具体物名与人名，"
+                    "也严禁给它们安上任何天气或时段说法——那归下面的实况天气与真实时刻管）：\n"
+                    + "\n".join("- " + t for _, t in _lm) + "\n")
+    else:
+        life_blk = ""
     # T-20260926-11 (L5 城市年谱·消费点 A): optional 本周城市大事 block. Empty
     # chronicle / no in-window rows -> "" and the prompt is byte-identical to
     # the pre-wiring build (zero-drift law, same as the rumor block).
@@ -2462,7 +2517,7 @@ def build_prompt(cid, text, sig):
     return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
             f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
-            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{rumor_blk}{city_blk}{goal_blk}{batch_blk}{bad_blk}{recent_blk}{today_blk}{opening_blk}"
+            f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{life_blk}{rumor_blk}{city_blk}{goal_blk}{batch_blk}{bad_blk}{recent_blk}{today_blk}{opening_blk}"
             f"现在真实北京时间 {sig['now']}，今天{sig.get('weekday','')}（{'周末' if sig.get('weekend') else '工作日'}），上海实况天气：{wx}。\n"
             f"今天属于上面标明的工作日/周末：你人设里凡以「周末」或「工作日」为前置条件的习惯，只许写与今天同侧的进行态或完成态，另一侧只许作为未来打算句提及，写错侧视为编造。\n"
             f"今天日期是 {sig.get('day')} 号（{sig.get('day_parity')}）：你人设里凡以「单日/双日/逢单/逢双」等日期奇偶为前置条件的习惯，只许写与今天同侧的进行态或完成态；另一侧严禁写成今天已发生或正在发生，只许以规则自述（人设原文规则句可原样引用）、按规则的自然推论或未来打算句式提及，严禁借引用断言今天发生了错侧动作，写错侧视为编造；同样严禁把你卡面没有奇偶前置的习惯硬捆绑到单日/双日名下——卡面没有的规则不得借日期之名新造，日期奇偶只许与你人设原文里真带奇偶字样的规则搭配。\n"
@@ -2868,7 +2923,8 @@ def main():
     via = (" [via %s]" % args.via) if args.via else ""
     cursor = load_cursor()
     sig = real_signals()
-    anchor_note = "城市实况 " + today() + "（FluxVerse 事件流+真实时间天气）"
+    anchor_note = ("城市实况 " + today() + "（FluxVerse 事件流+真实时间天气"
+                   + ("+街区日常母题素材库" if sig.get("life_motifs") else "") + "）")
 
     # D-20261020-02 日间让路窗排程闸: LLM 批面（batch/meet/reflect）工作日 09:00-19:00 零改道，
     # 周末全窗自领；水线批/池产出排程限非让路窗 19:00-09:00。本地路径（--qc/确定性件）不受影响。

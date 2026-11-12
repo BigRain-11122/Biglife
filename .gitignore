@@ -28,5 +28,9 @@ __pycache__/
 !qa/*.log
 
 # Event shards derived from census cards (regenerable: Tools/events_derive.py)
-events/
+events/*
+# 例外：街区日常母题池是年轮线的输入素材（非 census 派生），按日确定性生成、
+# 需入库供跨机与 CEO 过程可见（T-20261112-01 修法②）。
+!events/life/
+!events/life/*.jsonl
 .codely-cli/
