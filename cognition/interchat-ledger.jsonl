@@ -120,3 +120,23 @@
 {"date":"2026-10-10","kind":"meet_ring","source_ref":"census/anchors/C-00026.md:L27","participants":["C-00026","C-00025"],"text":"地上的水洼映着路灯，走快点。"}
 {"date":"2026-10-19","kind":"meet_ring","source_ref":"census/anchors/C-00027.md:L28","participants":["C-00027","C-01090"],"text":"雨下得正紧，风也挺大，G08 这局从 S2.5 变成 B2166，你那边光缆没积水吧？"}
 {"date":"2026-10-17","kind":"meet_ring","source_ref":"census/anchors/C-00029.md:L28","participants":["C-00029","C-00021"],"text":"咪喱：喵，亮处最热闹呀。王多多嘴真甜，连 Tick 2026-10-17 02:36:02 的 PASS 都懂。"}
+{"date":"2026-10-27","kind":"meet_ring","source_ref":"census/registry/GM/C-08226.md:L26","participants":["C-08226","C-08319"],"text":"风挺大，天清气朗，你那摊子新到的西生尖，我刚看了。"}
+{"date":"2026-10-27","kind":"meet_ring","source_ref":"census/registry/GM/C-08319.md:L26","participants":["C-08319","C-08320"],"text":"风挺大，菜场那边的脉冲告警又跳了，GPU_VRAM_LOW。"}
+{"date":"2026-10-27","kind":"meet_ring","source_ref":"census/registry/GM/C-08320.md:L26","participants":["C-08320","C-08319"],"text":"你看看那个游戏，PushEvent Biglife，压根就不该在夜里动。"}
+{"date":"2026-10-27","kind":"meet_ring","source_ref":"census/registry/GM/C-08333.md:L26","participants":["C-08333","C-08335"],"text":"风挺大，引擎房的管道又在哼老歌了。"}
+{"date":"2026-11-12","kind":"meet_ring","source_ref":"census/registry/GM/C-09876.md:L26","participants":["C-09876","C-09875"],"text":"苏阿果，你画的城门那幅，我看了三遍，盘扣是歪的。"}
+{"date":"2026-11-12","kind":"meet_ring","source_ref":"census/registry/OR/C-02328.md:L28","participants":["C-02328","C-02561"],"text":"天阴着，风挺大，昨夜派单闸的恢复路径又卡了。"}
+{"date":"2026-11-12","kind":"meet_ring","source_ref":"census/registry/OR/C-02561.md:L28","participants":["C-02561","C-02328"],"text":"我刚把信号中继的回路调通，您那旧光机魂的唤醒流程，是不是还卡在执行死锁里？"}
+{"date":"2026-10-27","kind":"meet_ring","source_ref":"census/registry/OR/C-08335.md:L26","participants":["C-08335","C-08333"],"text":"我刚用三遍法把昨夜的报错全誊下来了。"}
+{"date":"2026-10-28","kind":"meet_ring","source_ref":"census/registry/QT/C-09562.md:L26","participants":["C-09562","C-09563"],"text":"天清气朗，风挺大，你坐的位置，我认得。"}
+{"date":"2026-10-28","kind":"meet_ring","source_ref":"census/registry/QT/C-09563.md:L26","participants":["C-09563","C-09562"],"text":"数据洗得干净，就该这么稳，不添新衣，也照得见光。"}
+{"date":"2026-10-28","kind":"meet_ring","source_ref":"census/registry/QT/C-09589.md:L26","participants":["C-09589","C-09593"],"text":"风挺大，粥铺的蒸笼里暖光晃得人眼睛发直。"}
+{"date":"2026-10-28","kind":"meet_ring","source_ref":"census/registry/QT/C-09593.md:L26","participants":["C-09593","C-09589"],"text":"这茶室的扳手都有户口，我早想好，今夜就换一把新锁。"}
+{"date":"2026-11-12","kind":"meet_ring","source_ref":"census/registry/QT/C-09875.md:L26","participants":["C-09875","C-09876"],"text":"风挺大，天阴着，我刚把新一批布料的样衣翻出来，怕晒坏。"}
+{"date":"2026-11-12","kind":"meet_ring","source_ref":"census/anchors/C-00010.md:L35","participants":["C-00010","C-00012"],"text":"风不小，吹得我那数据粥的蒸笼都微微晃，烫手的暖光在云里浮着。"}
+{"date":"2026-11-12","kind":"meet_ring","source_ref":"census/anchors/C-00012.md:L32","participants":["C-00012","C-00010"],"text":"你这晨操步子踏得稳，天阴着，云厚，可人心里头是亮的。"}
+{"date":"2026-10-28","kind":"meet_ring","source_ref":"census/anchors/C-00014.md:L33","participants":["C-00014","C-00015"],"text":"风挺大，江水在塔边翻着浪。"}
+{"date":"2026-10-28","kind":"meet_ring","source_ref":"census/anchors/C-00015.md:L32","participants":["C-00015","C-00014"],"text":"过不过，我先看这水纹动不动。"}
+{"date":"2026-11-12","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261112-C-02654:seed=C-02654:at=2026-11-12 17:14:hop=1","participants":["C-02654","C-09496"],"text":"手还攥着半截调参笔，笔尖磨得发亮，墨迹干了也没擦——风从窗缝里挤进来，我拆开看看又不会坏，参数在心里晃，像小时候烧的那锅老汤，咕嘟着，也不急。"}
+{"date":"2026-11-12","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261112-C-02654:seed=C-02654:at=2026-11-12 17:14:hop=2","participants":["C-09496","C-02172"],"text":"手还攥着半截调参笔，笔尖磨得发亮，墨迹干了也没擦——风从窗缝里挤进来，我拆开看看又不会坏，参数在心里晃，像小时候烧的那锅老汤，咕嘟着，也不急。"}
+{"date":"2026-11-12","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261112-C-02654:seed=C-02654:at=2026-11-12 17:14:hop=3","participants":["C-02172","C-07732"],"text":"好像手还攥着半截调参笔，笔尖磨得发亮，墨迹干了也没擦——风从窗缝里挤进来，我拆开看看又不会坏，参数在心里晃，像小时候烧的那锅老汤，咕嘟着，也不急。"}

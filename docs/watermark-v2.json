@@ -1,13 +1,13 @@
 {
   "repo": "git@github.com:BigRain-11122/FluxGroup.git",
   "path": "docs/decisions.md",
-  "commit_sha": "94335837a463dcb785dc5b0d7b18c53f37f51ec5",
+  "commit_sha": "d4597a53fd3962e64fd4dbd8795aa8544d8af553",
   "blob_bytes": 73848,
   "sha256": "0a841c4b70745b050df59a1856dd0be6bf8bcff91f52c77bf338669bd4e72f2c",
   "fetch_commands": {
-    "fetch": "git -C \"C:\\Users\\sjs20\\Desktop\\FluxGroup\" show 94335837a463dcb785dc5b0d7b18c53f37f51ec5:docs/decisions.md",
+    "fetch": "git -C \"C:\\Users\\sjs20\\Desktop\\FluxGroup\" show d4597a53fd3962e64fd4dbd8795aa8544d8af553:docs/decisions.md",
     "fetch_origin_main": "git -C \"C:\\Users\\sjs20\\Desktop\\FluxGroup\" show origin/main:docs/decisions.md",
-    "verify_sha256": "python -X utf8 -c \"import hashlib,subprocess,sys;b=subprocess.run(['git','-C',r'C:\\Users\\sjs20\\Desktop\\FluxGroup','show','94335837a463dcb785dc5b0d7b18c53f37f51ec5:docs/decisions.md'],capture_output=True).stdout;print(len(b), hashlib.sha256(b).hexdigest())\"",
+    "verify_sha256": "python -X utf8 -c \"import hashlib,subprocess,sys;b=subprocess.run(['git','-C',r'C:\\Users\\sjs20\\Desktop\\FluxGroup','show','d4597a53fd3962e64fd4dbd8795aa8544d8af553:docs/decisions.md'],capture_output=True).stdout;print(len(b), hashlib.sha256(b).hexdigest())\"",
     "note": "verify_sha256 必须整条跑（禁经 PowerShell 文本管道，字节会被转码）"
   },
   "consumed": [
@@ -179,13 +179,28 @@
     "D-20261028-02",
     "D-20261028-03",
     "D-20261028-04",
+    "D-20261108-01",
+    "D-20261108-02",
+    "D-20261108-12",
+    "D-20261109-05",
+    "D-20261109-08",
+    "D-20261110-01",
+    "D-20261110-06",
+    "D-20261110-09",
+    "D-20261111-01",
     "D-20261112-01",
     "D-20261112-02",
     "D-20261112-03",
     "D-20261112-04",
     "D-20261112-05",
-    "D-20261112-06"
+    "D-20261112-06",
+    "D-20261112-07",
+    "D-20261112-08",
+    "D-20261112-09",
+    "D-20261112-10",
+    "D-20261112-11",
+    "D-20261112-12"
   ],
-  "updated_at": "2026-11-12T06:29:48+08:00",
+  "updated_at": "2026-11-12T10:43:06+08:00",
   "last_stale_reason": "source-mismatch:commit_sha"
 }

@@ -76,6 +76,10 @@ INPUTS = [
     # 确定性零 LLM，却因无任何轮次引用而停更 16.8 天（至 10-26 的最后一行）。
     # 输出在 cognition/ 而非 census/export/，故走 data 档（base=ROOT，判当日）。
     ("surprise", "data", "surprise_log.py",               ["cognition/surprise-log.jsonl"], ["--feed"]),
+    # v0.4 (2026-11-12): 互聊台账接线（T-20261112-03 修法②）——同 surprise 病根，
+    # 另有「需外部喂源」一层：daily_interchat.py 取当日 rumors 首条链作源，
+    # 无源即 SKIP 且不刷 mtime（源断供仍如实 stale）。
+    ("interchat", "data", "daily_interchat.py",           ["cognition/interchat-ledger.jsonl"]),
 ]
 
 TIMEOUT_SEC = 240
