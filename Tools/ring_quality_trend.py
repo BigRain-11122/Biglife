@@ -113,6 +113,9 @@ def family_daily(bodies: dict[str, list[str]]) -> list[dict]:
                 sec[name] += 1
         hand = fam.get("HAND_DEICTIC", 0)
         wind = sec.get("WIND_ACTION", 0)
+        over_fams = sorted(
+            ((k, round(100.0 * n / total, 1)) for k, n in fam.items() if n / total > FAMILY_QUOTA),
+            key=lambda x: -x[1])
         out.append({
             "date": date,
             "rings": total,
@@ -121,6 +124,7 @@ def family_daily(bodies: dict[str, list[str]]) -> list[dict]:
             "hand_rate": round(100.0 * hand / total, 1) if total else 0.0,
             "wind_rate": round(100.0 * wind / total, 1) if total else 0.0,
             "over": over_quota(total, dict(fam)),
+            "over_fams": over_fams,
             "judged": total >= FAMILY_MIN_DENOM,
         })
     return out
@@ -181,10 +185,17 @@ def build_page(days: list[dict], stats: dict, fams: list[dict]) -> str:
     e = html.escape
     recent = days[-stats["days"]:]
     fam_recent = fams[-stats["days"]:]
+    def _verdict(f: dict) -> str:
+        if not f["judged"]:
+            return "—"
+        if not f["over"]:
+            return "OK"
+        # 表内只列 HAND_DEICTIC，超线族可能是另两族，必须点名防误读为「本列超线」
+        return "OVER（%s）" % "、".join("%s %.1f%%" % x for x in f["over_fams"])
+
     fam_table = "".join(
         "<tr><td>%s</td><td>%d</td><td>%d</td><td>%.1f%%</td><td>%.1f%%</td><td>%s</td></tr>"
-        % (e(f["date"]), f["rings"], f["hand"], f["hand_rate"], f["wind_rate"],
-           "—" if not f["judged"] else ("OVER" if f["over"] else "OK"))
+        % (e(f["date"]), f["rings"], f["hand"], f["hand_rate"], f["wind_rate"], _verdict(f))
         for f in reversed(fam_recent))
     row_fmt = ("<tr><td>%s</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td>"
                "<td>%d</td><td>%.1f%%</td></tr>")
@@ -228,7 +239,7 @@ footer{{padding:16px 20px 40px;color:var(--dim);font-size:12px;border-top:1px so
 <div class="kpi"><b>{stats['best'][0]}</b><span>最佳日缺陷率（{stats['best'][1]}）</span></div>
 <div class="kpi"><b>{stats['worst'][0]}</b><span>最差日缺陷率（{stats['worst'][1]}）</span></div>
 <div class="kpi"><b>{stats['hand_now']:.1f}%</b><span>最近生产日手部指示开头（闸线 {stats['quota']:.0f}%）</span></div>
-<div class="kpi"><b>{stats['hand_verdict']}</b><span>开头族闸判定（{stats['hand_day']}·{stats['hand_rings']} 环）</span></div>
+<div class="kpi"><b>{stats['hand_verdict']}</b><span>开头族闸判定（{stats['hand_day']}·{stats['hand_rings']} 环{('·超线 ' + stats['hand_over']) if stats['hand_over'] else ''}）</span></div>
 </div>
 <h2 class="sec">每日年轮产量</h2>
 <div class="chart">{spark(recent, 'rings', '#7fb0d8', ' 圈')}</div>
@@ -239,7 +250,8 @@ footer{{padding:16px 20px 40px;color:var(--dim);font-size:12px;border-top:1px so
 <h2 class="sec">逐日开头族 / 第二句吸引子（日期倒序）</h2>
 <table><tr><th>日期</th><th>年轮</th><th>HAND_DEICTIC</th><th>占比</th><th>第二句 WIND_ACTION</th><th>闸判定</th></tr>{fam_table}</table>
 <p class="meta">开头族只量正文前 12 字，句中合法身体描写（如下半句的「手心的汗」）不计入；
-闸判定 OVER = 该族当日占比 &gt; {stats['quota']:.0f}%（{stats['min_denom']} 环以下不判，记「—」）。
+闸判定 OVER = HAND_DEICTIC／TIME_OPEN／WEATHER_ABSTRACT <b>任一</b>族当日占比 &gt; {stats['quota']:.0f}%（{stats['min_denom']} 环以下不判，记「—」）；
+本表只列 HAND_DEICTIC，故 0.0% 仍可能判 OVER——括号内点名超线族。
 第二句 WIND_ACTION 为只观测指标，尚未入闸（T-20261112-05 观测窗）。</p>
 <h2 class="sec">逐日明细（近 {len(recent)} 日 · 日期倒序）</h2>
 <table><tr><th>日期</th><th>年轮</th><th>居民</th><th>中位字数</th><th>偏短</th><th>复读</th><th>模板</th><th>缺陷率</th></tr>{rows}</table>
@@ -284,6 +296,7 @@ def main() -> int:
         "hand_day": now["date"],
         "hand_rings": now["rings"],
         "hand_verdict": "OVER" if now["over"] else "OK",
+        "hand_over": "、".join("%s %.1f%%" % x for x in now.get("over_fams") or []),
         "quota": 100.0 * FAMILY_QUOTA,
         "min_denom": FAMILY_MIN_DENOM,
     }
@@ -302,9 +315,10 @@ def main() -> int:
           % (stats["active_days"], stats["rings"], stats["recent_rate"],
              stats["best"][0], stats["best"][1], stats["worst"][0], stats["worst"][1],
              os.path.relpath(PAGE, ROOT)))
-    print("opening-family: %s %d圈 HAND_DEICTIC=%.1f%% (线 %.0f%%) verdict=%s"
+    print("opening-family: %s %d圈 HAND_DEICTIC=%.1f%% (线 %.0f%%) verdict=%s%s"
           % (stats["hand_day"], stats["hand_rings"], stats["hand_now"],
-             stats["quota"], stats["hand_verdict"]))
+             stats["quota"], stats["hand_verdict"],
+             (" [超线 " + stats["hand_over"] + "]") if stats["hand_over"] else ""))
     print("last: " + ", ".join("%s %d圈/%.1f%%" % (d["date"][5:], d["rings"], d["defect_rate"])
                                for d in tail[-6:]))
     return 0

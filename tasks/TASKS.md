@@ -1651,3 +1651,11 @@ ecent_blk\（v0.58 gap #79 模板）**写死「开场请写你自己此刻手上
   **诚实边界**：让路窗内零 LLM，只证选人面生效、不证今晚文本变好；无城区卡（due 池前 48 席占 10）无法提供多样性，属存量卡面缺口留观测。
   **实况三行**：当前活=19:00 首批前的选区多样性修复（让路窗内确定性面）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/RING-DISTRICT-SPREAD-20261112.md（14:1x）+ qa/test_due_district_spread.py；下个里程碑=19:00 年轮批 3 席·开头族硬闸+第二句软引导+跨城区选区联合首验（ETA 2026-11-12 19:10）。
   - [2026-11-12 14:1x @BigLife-OSLoop R2593] 本轮计量：tokens: local=0 api=0 api_reason=yield-window
+
+- [R2594] 2026-11-12 14:1x @BigLife-OSLoop 轮记：轮首 pull=Already up to date、树净；决策水位 NEW=0（尾 D-20261112-15 已消费，D-13 判本司 15 天停摆 chronic 结清）；orders 物理件区无涉本司新件；TASKS open=T-20261112-04/05（均 19:00 观测窗）。**让路窗**=年轮/相遇/反思 09:00-19:00 结构性让路（D-20261020-02，evolve 实跑返回 yield-window）；round_daily --run 28 面 stale=0 PASS；事件回放闸 PASS（cards=10111/events=41699/replayed=10111/mismatch=0/schema_errors=0/chronicle gap=0d）；pool_audit 72 轴桶+12 像素桶+28 greet+7 faq 全达标 SELF_TERMINATE（hard_fails=0）。
+  **本轮产品增量（CEO 可见面判读缺陷修复·1 件）**：census/export/city-ring-trend.html 的「闸判定」列存在**误导性口径**——判定实为 HAND_DEICTIC／TIME_OPEN／WEATHER_ABSTRACT **三族任一超线**（over_quota），但表内只列 HAND_DEICTIC 一列，故 2026-10-18 出现「手部 0.0% + 判定 OVER」的读不通行（真因 WEATHER_ABSTRACT 60/90=66.7%，
+ing_open_family --check 2026-10-18 源值复核一致）。修法（判据零改动·只改呈现）：①amily_daily 增算 over_fams（按超线幅度降序）；②表内判定列改为点名式 OVER（WEATHER_ABSTRACT 66.7%）；③KPI 副标补「·超线 HAND_DEICTIC 42.8%」；④脚注改「任一族超线」并明写「本表只列 HAND_DEICTIC，故 0.0% 仍可能判 OVER——括号内点名超线族」；⑤控制台输出同步带超线族。
+  **验证**：py_compile rc=0／Tools/ruff_gate.py 1 file CLEAN(F401,F811,F841,SIM115,RUF059)／10-18 行实读=「OVER（WEATHER_ABSTRACT 66.7%）」／11-12 行=「OVER（HAND_DEICTIC 42.8%）」／10-25 行=OK（22.0% 未越线，负控未被污染）／双跑 md5 1FBC77F0FB9CA28F523572BB55F32C95 一致。
+  **诚实边界**：只改呈现口径与点名，闸线 25%、族定义、拒稿路径全部未动，T-20261112-04/05 验收线保持；本轮零 LLM。
+  **实况三行**：当前活=让路窗内确定性面与 CEO 可见面判读修正；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-ring-trend.html（14:1x·判定列点名超线族）；下个里程碑=19:00 年轮批 3 席·开头族硬闸+第二句软引导+跨城区选区联合首验（ETA 2026-11-12 19:10）。
+  - [2026-11-12 14:1x @BigLife-OSLoop R2594] 本轮计量：tokens: local=0 api=0 api_reason=yield-window
