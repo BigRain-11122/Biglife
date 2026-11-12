@@ -2788,6 +2788,42 @@ def quality_queue_order():
             rank[cid] = i
     return rank, data.get("generated")
 
+SCAN_CAP = 48
+
+
+def _pick_spread(cands, zones, batch):
+    """Seat `batch` from an ordered candidate list, preferring distinct zones.
+
+    The head keeps its priority (quality-repair quota / fresh coverage), so the
+    worst-flagged resident is still served first. Remaining seats take the
+    first candidate from a zone not yet used; when the whole window sits in one
+    district the fallback keeps plain order, so no seat is ever lost.
+    """
+    if batch <= 1 or not cands:
+        return cands[:max(batch, 0)]
+    # A card whose 城区 line does not resolve still occupies a bucket, so a
+    # batch cannot be filled entirely with unzoned cards either.
+    picked = [cands[0]]
+    used = {zones.get(cands[0], "") or "?"}
+    rest = cands[1:]
+    for cid in rest:
+        if len(picked) >= batch:
+            break
+        lbl = zones.get(cid, "") or "?"
+        if lbl in used:
+            continue
+        picked.append(cid)
+        used.add(lbl)
+    if len(picked) < batch:
+        for cid in rest:
+            if len(picked) >= batch:
+                break
+            if cid in picked:
+                continue
+            picked.append(cid)
+    return picked[:batch]
+
+
 def due_citizens(cursor, batch, force=None):
     all_ids = []
     for sub in ("anchors", "registry"):
@@ -2835,22 +2871,56 @@ def due_citizens(cursor, batch, force=None):
                              or str(cursor.get(c, {}).get("last") or "") <= generated)]
         quota = fresh_enough[:max(1, batch // 3)]
     queue_head = set(quota)
-    picked = []
-    for cid in quota + fresh + [c for c in again if c not in queue_head]:
-        p = find_card(cid)
-        if _ringed_today(p):
-            # Self-heal the cursor so a stale due entry does not cost a
-            # filesystem read every round.
-            if cursor.get(cid, {}).get("last") != today():
-                cursor[cid] = {"v": 1, "last": today(),
-                               "next": (datetime.date.today() + datetime.timedelta(days=COOLDOWN_DAYS)).isoformat(),
-                               "n": cursor.get(cid, {}).get("n", 0) + 1}
-                save_cursor(cursor)
-            continue
-        picked.append(cid)
-        if len(picked) >= batch:
-            break
-    return picked
+    ordered = quota + fresh + [c for c in again if c not in queue_head]
+
+    def scan(limit, skip, stop_at):
+        """Eligible seats in priority order, reading at most `limit` cards.
+
+        Cards already ringed today are skipped and their cursor self-healed so
+        a stale due entry does not cost a filesystem read every round. The zone
+        comes free with the same read when a spread is wanted.
+        """
+        out, zn, reads = [], {}, 0
+        for cid in ordered:
+            if len(out) >= stop_at:
+                break
+            if cid in skip:
+                continue
+            if limit is not None and reads >= limit:
+                break
+            p = find_card(cid)
+            if not p:
+                continue
+            reads += 1
+            if _ringed_today(p):
+                if cursor.get(cid, {}).get("last") != today():
+                    cursor[cid] = {"v": 1, "last": today(),
+                                   "next": (datetime.date.today() + datetime.timedelta(days=COOLDOWN_DAYS)).isoformat(),
+                                   "n": cursor.get(cid, {}).get("n", 0) + 1}
+                    save_cursor(cursor)
+                continue
+            out.append(cid)
+            try:
+                with open(p, encoding="utf-8") as f:
+                    zn[cid] = citizen_zone(f.read())
+            except Exception:
+                zn[cid] = ""
+        return out, zn
+
+    if batch <= 1:
+        picked, _ = scan(None, set(), 1)
+        return picked
+    # R2593: district spread. Population sits ~95% in one zone, so plain ID
+    # order gave every seat of a batch the same district and therefore the
+    # same motif set (R2590). Look at a small window and seat the batch across
+    # districts when the city offers them; priority order still heads the
+    # batch, and a single-district city falls back to plain order losing none.
+    picked, zones = scan(SCAN_CAP, set(), SCAN_CAP)
+    if len(picked) < batch:
+        more, zn = scan(None, set(picked), batch)
+        picked += more
+        zones.update(zn)
+    return _pick_spread(picked, zones, batch)
 
 def commit_files(paths, msg):
     try:
