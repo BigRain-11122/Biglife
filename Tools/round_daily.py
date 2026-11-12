@@ -11,6 +11,7 @@ city-ops / city-relations / city-chronicle / resident-gallery 等 18 个面
   daily  当日必新（日报/流言/城市生活/看板/索引）——输出 mtime 非当日即陈旧
   faces  结构性面（城区志/名人录/物件志/居民陈列…）——输出 mtime 超 1 日即陈旧
   input  生成器当日喂料（街区母题/流言链）——dated 文件缺失或非当日即补建
+  data   派生物面（惊奇日志…）——输出在仓内非 export 目录，同样按当日判新鲜
 
 用法:
   python -X utf8 Tools/round_daily.py --check            # 只体检，不重建
@@ -53,6 +54,13 @@ REGISTRY = [
     ("ring_picks", "faces", "build_ring_picks.py",        ["city-ring-picks.html"]),
     ("growth",     "faces", "build_growth_gallery.py",    ["city-growth.html"]),
     ("meets",      "faces", "build_city_meets.py",        ["city-meets.html"]),
+    # v0.3 (2026-11-12 R2573): 补登记三个「有生成器、有页面、无任何轮次引用」的沉默断供面。
+    # 病根同 T-20261112-02：city-lexicon.html 停更 15.7 天无人发现；
+    # city-ring-quality / city-ring-trend 只靠偶发手工跑活着，断供只是时间问题。
+    # 三者均确定性零 LLM，可直接纳入日更闸。
+    ("lexicon",     "faces", "city_lexicon.py",           ["city-lexicon.html"]),
+    ("ring_quality", "faces", "ring_simile_audit.py",     ["city-ring-quality.html"]),
+    ("ring_trend",  "daily", "ring_quality_trend.py",     ["city-ring-trend.html"]),
     # 索引必须最后跑：它登记的是本轮重建后的文件清单
     ("index",      "index", "build_export_index.py",      ["index.html"]),
 ]
@@ -64,14 +72,18 @@ REGISTRY = [
 INPUTS = [
     ("life_motifs", "input", "city_life_events.py",       ["events/life/{date}.jsonl"]),
     ("rumor_chain", "input", "build_rumors.py",           ["cognition/rumors/rumors-{date}.jsonl"]),
+    # v0.3 (2026-11-12 R2573): 派生物面 —— 从 FluxVerse world-events 只读派生，
+    # 确定性零 LLM，却因无任何轮次引用而停更 16.8 天（至 10-26 的最后一行）。
+    # 输出在 cognition/ 而非 census/export/，故走 data 档（base=ROOT，判当日）。
+    ("surprise", "data", "surprise_log.py",               ["cognition/surprise-log.jsonl"], ["--feed"]),
 ]
 
 TIMEOUT_SEC = 240
 
 
 def _out_paths(entry) -> list[str]:
-    _key, tier, _script, names = entry
-    base = ROOT if tier == "input" else EXP
+    _key, tier, _script, names = entry[:4]
+    base = ROOT if tier in ("input", "data") else EXP
     day = datetime.date.today().isoformat()
     return [os.path.join(base, n.replace("{date}", day)) for n in names]
 
@@ -83,7 +95,7 @@ def _age_days(path: str) -> float | None:
 
 
 def _is_stale(entry, now_date: datetime.date, out_paths: list[str]) -> tuple[bool, str]:
-    _key, tier, _script, _names = entry
+    _key, tier, _script, _names = entry[:4]
     ages = []
     for p in out_paths:
         if not os.path.exists(p):
@@ -92,15 +104,16 @@ def _is_stale(entry, now_date: datetime.date, out_paths: list[str]) -> tuple[boo
     age = max(ages)
     mdate = datetime.date.fromtimestamp(
         max(os.path.getmtime(p) for p in out_paths))
-    if tier in ("daily", "input"):
+    if tier in ("daily", "input", "data"):
         stale = mdate != now_date
         return stale, ("outdated:%sd" % int(age) if stale else "fresh")
     stale = age > 1.0
     return stale, ("outdated:%sd" % int(age) if stale else "fresh")
 
 
-def _run_one(script: str) -> tuple[int, str]:
+def _run_one(script: str, extra=None) -> tuple[int, str]:
     cmd = [sys.executable, "-X", "utf8", os.path.join(ROOT, "Tools", script)]
+    cmd.extend(extra or [])
     try:
         proc = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True,
                               encoding="utf-8", errors="replace",
@@ -134,7 +147,8 @@ def main() -> int:
         outs = _out_paths(e)
         stale, why = _is_stale(e, today, outs)
         plan.append({"key": e[0], "tier": e[1], "script": e[2],
-                     "outputs": e[3], "stale": stale, "why": why})
+                     "outputs": e[3], "stale": stale, "why": why,
+                     "extra": (list(e[4]) if len(e) > 4 else [])})
 
     results = []
     ran = 0
@@ -150,7 +164,7 @@ def main() -> int:
         elif not (args.all or item["stale"]):
             results.append(dict(item, action="skipped-fresh", rc=None, msg=""))
             continue
-        rc, msg = _run_one(item["script"])
+        rc, msg = _run_one(item["script"], item.get("extra"))
         ran += 1
         results.append(dict(item, action="rebuilt" if rc == 0 else "failed",
                             rc=rc, msg=msg))
