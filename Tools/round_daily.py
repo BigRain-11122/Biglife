@@ -109,6 +109,20 @@ INPUTS = [
     ("derive_audit", "data", "derive_audit.py",           ["state/derive-audit.json"], ["--run"]),
 ]
 
+# v0.11 (2026-11-12 · T-20261112-09 收单): faces 档 stale 判据补「依赖源 mtime」面。
+# 病根=日期粒度只问「产物是不是今天写的」，不问「喂它的源今天改过没有」。
+# 实证=18:37 写 11 条基因（genes/language.json + lives.json）后，--run 仍判
+# gene_ledger/lexicon fresh 零重建——那一步靠人手补跑生成器才对上；人手缺席时
+# CEO 面静默停在写入前口径。判据=任一登记源 mtime > 产物 mtime 即 stale。
+# 源缺失不在此处判（源断供归 data/input 档如实报），故 only-existing 语义。
+DEPENDS = {
+    # build_gene_ledger.py 只读这两处：基因正本 + 户卡正文目录
+    "gene_ledger": ["genes/lives.json", "census/registry"],
+    # city_lexicon.py 读三个 cognition 池面
+    "lexicon": ["cognition/pools.json", "cognition/greetings.json",
+                "cognition/pools-negative.json"],
+}
+
 TIMEOUT_SEC = 240
 
 
@@ -243,6 +257,27 @@ def _script_changed(script: str, known_sha: dict | None) -> str | None:
     return None
 
 
+def _dep_mtime_stale(key: str, out_paths: list[str]) -> str | None:
+    """依赖源比产物新即 stale（同日内的源变更，日期粒度看不见）。"""
+    srcs = DEPENDS.get(key)
+    if not srcs:
+        return None
+    newest, newest_rel = None, None
+    for rel in srcs:
+        p = os.path.join(ROOT, rel)
+        if not os.path.exists(p):
+            continue
+        m = os.path.getmtime(p)
+        if newest is None or m > newest:
+            newest, newest_rel = m, rel
+    if newest is None:
+        return None
+    oldest_out = min(os.path.getmtime(p) for p in out_paths)
+    if newest > oldest_out:
+        return "dep-mtime:%s" % newest_rel
+    return None
+
+
 def _is_stale(entry, now_date: datetime.date, out_paths: list[str],
               known_sha: dict | None = None) -> tuple[bool, str]:
     _key, tier, _script, _names = entry[:4]
@@ -264,7 +299,8 @@ def _is_stale(entry, now_date: datetime.date, out_paths: list[str],
         return stale, ("outdated:%sd" % int(age) if stale else "fresh")
     stale = age > 1.0
     if not stale:
-        faked = _self_ts_stale(out_paths) or _script_changed(_script, known_sha)
+        faked = (_self_ts_stale(out_paths) or _script_changed(_script, known_sha)
+                 or _dep_mtime_stale(_key, out_paths))
         if faked:
             return True, faked
     return stale, ("outdated:%sd" % int(age) if stale else "fresh")

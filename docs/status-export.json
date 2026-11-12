@@ -1,35 +1,35 @@
 {
- "export_ts": "2026-11-12 18:26",
+ "export_ts": "2026-11-12 18:49",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2616（2026-11-12 18:2x）让路窗内确定性面收口**：工作日 09:00-19:00 CEO 车道优先（D-20261020-02），年轮/相遇 LLM 批顺延至 19:00 后首轮；本轮改为可照跑的确定性面全过——日更闸 28 面体检 stale=1（city-today.html 源时点 18:23，旧页判 fresh 实为内容滞后）重建+index 重建 PASS；事件回放闸 events=41699/replayed=10111/mismatch=0/schema_errors=0 PASS；QC 例巡 cards=10114/evolved=10114/problems=0；语言池 1440 行全桶 at_target SELF_TERMINATE（determinism 192 对 mismatch=0）。**R2614（18:1x）任务板瘦身**：TASKS.md 573KB→336KB（-41.3%），2026-09~10 历史实录 50 段整段轮转归档 tasks/archive/。**R2611（17:4x）自我复读出生站拦截**：今日 467 环实测 37 例近重复全部逃过旧逐字闸，升级双条件近重复闸（≥0.60 硬判／0.50-0.60 且规范化开头 12 字相同才判，窗口=最近 5 圈），今日回放拦截 17 条，回归 qa/test_self_dup_near.py 4/4 PASS。 **R2611（2026-11-12 17:4x）自我复读出生站拦截**：今日 467 环实测 37 例「同骨架只换风句」（Jaccard 0.51-0.72）全部逃过旧逐字闸（今日拦截 0）；标定全库 6022 相邻圈对相似度分布后升级为双条件近重复闸（≥0.60 硬判；0.50-0.60 且规范化开头 12 字相同才判；窗口=最近 5 圈），今日回放拦截 17 条。回归 `qa/test_self_dup_near.py` 4/4 PASS，证据 `qa/RING-SELF-DUP-NEAR-20261112.md`；历史行按 #41 不回溯。 **R2610（17:2x）：可见面读数低报根治 + 生成器内容哈希判据（CEO 可见面口径滞后收口）**",
+   "t": "**R2618（2026-11-12 18:4x）门禁闸口修复：同日源更新→面静默停更这一类病灶收口（T-20261112-09 done）**：`round_daily.py` 升 v0.11，faces 档 stale 判据新增「依赖源 mtime」面（DEPENDS 登记 gene_ledger→genes/lives.json+census/registry、lexicon→cognition 三个池面；`_dep_mtime_stale()` 判 源 mtime > 产物 mtime）。三控实跑：负控 touch 基因源 → 精确点名 `gene_ledger(dep-mtime:genes/lives.json)` 且 lexicon 不误报；正控 `--run` 重建后复检与全量 `--check` 均 stale=0；产物 mtime 18:48:07 追平源 18:47:33。病根同 T-20261112-02 家族（面 mtime 天天新、内容无人校验）的第六面。当轮其余门禁：日更闸 31 面 stale=0 PASS（幂等）、pool_audit PASS SELF_TERMINATE（72/72 轴桶+12/12 像素桶、1440 行、hard_fails=0）、QC 18:24 刚巡不重复、spotlight 11 月配额 2 例已满、HQ 反馈 ALREADY_REPORTED。 **R2616（2026-11-12 18:2x）让路窗内确定性面收口**：工作日 09:00-19:00 CEO 车道优先（D-20261020-02），年轮/相遇 LLM 批顺延至 19:00 后首轮；本轮改为可照跑的确定性面全过——日更闸 28 面体检 stale=1（city-today.html 源时点 18:23，旧页判 fresh 实为内容滞后）重建+index 重建 PASS；事件回放闸 events=41699/replayed=10111/mismatch=0/schema_errors=0 PASS；QC 例巡 cards=10114/evolved=10114/problems=0；语言池 1440 行全桶 at_target SELF_TERMINATE（determinism 192 对 mismatch=0）。 **R2614（18:1x）任务板瘦身**：TASKS.md 573KB→336KB（-41.3%），2026-09~10 历史实录 50 段整段轮转归档 tasks/archive/。",
    "s": 1
   },
   {
    "n": "基因库补给线",
-   "t": "当前活：待单——本轮任务板优先，基因轮未启动（低频线）\n最近实物：genes/ 9 个基因件在库（2026-11-12 复核）\n下个里程碑：任务板无单时补 5-10 条新基因（先登记后使用），窗 ≤48h",
+   "t": "当前活：待单——本轮任务板优先，基因轮未启动（低频线）\n最近实物：genes/ 9 个基因件在库（2026-11-12 18:37 复核）\n下个里程碑：任务板无单时补 5-10 条新基因（先登记后使用），窗 ≤48h",
    "s": 1
   },
   {
    "n": "语言线·台词池",
-   "t": "当前活：全桶达标自停（72 轴桶+12 像素桶 at_target）\n最近实物：cognition/pools.json 1440 行·determinism 192 对 mismatch=0（2026-11-12 18:2x audit PASS）\n下个里程碑：出现欠深桶才补（自终止律·不为长而长）",
+   "t": "当前活：全桶达标自停（72 轴桶+12 像素桶 at_target）\n最近实物：cognition/pools.json 1440 行·determinism 192 对 mismatch=0（2026-11-12 18:4x audit PASS）\n下个里程碑：出现欠深桶才补（自终止律·不为长而长）",
    "s": 2
   },
   {
    "n": "行为面镜像线",
-   "t": "当前活：随年轮环自动同步（每环落环即镜像重生成）\n最近实物：census/export/citizen-behavior.jsonl 重生成（ring=10078·2026-11-12）\n下个里程碑：19:00 后下一环自动同步",
+   "t": "当前活：随年轮环自动同步（每环落环即镜像重生成）\n最近实物：census/export/citizen-behavior.jsonl（ring=10111·2026-11-12）\n下个里程碑：19:00 后下一环自动同步",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "当前活：本轮例巡完成（18:2x）\n最近实物：census/QC-REPORT.md cards=10114／problems=0／dup_rings=37/37；事件闸 41699/0/0 PASS\n下个里程碑：下一轮六轮一巡（OSLoop 自动·异常当轮修）",
+   "t": "当前活：本轮改做闸口验收（六轮节律未到，QC 18:24 已巡 problems=0）\n最近实物：census/QC-REPORT.md（18:24，cards=10114／problems=0）；T-20261112-09 三控证据入任务板\n下个里程碑：下一轮六轮一巡（OSLoop 自动·异常当轮修）",
    "s": 1
   },
   {
    "n": "城脑服务面",
-   "t": "当前活：实况面按轮刷新（status-export/spotlight 调用面）\n最近实物：docs/status-export.json ts=2026-11-12 18:2x（本轮六线各自文案核验）\n下个里程碑：11 月 spotlight 抽验 ≥2 例补齐（T-07 证据行），窗 ≤48h",
+   "t": "当前活：实况面按轮刷新（status-export／日更闸可读面）\n最近实物：docs/status-export.json ts=2026-11-12 18:4x（本轮六线各自文案核验）\n下个里程碑：让路窗解除后年轮线复位（19:00 首轮，检验 dep-mtime 闸在真实写入链上的表现）",
    "s": 1
   }
  ],
@@ -1711,6 +1711,6 @@
    "今日年轮落环行数 469（465 位居民·6 城区·卡片 10114）；流言录 8 链/29 跳落盘；事件回放 41699 事件/10111 卡 mismatch=0 schema=0 PASS"
   ]
  ],
- "t": "当前活：让路窗（工作日 09:00-19:00 CEO 车道优先）内跑确定性面——日更闸/事件回放闸/QC/池审计全过\n最近实物：site/city-today.html 重建（2026-11-12 18:2x，源时点 18:23）＋census/QC-REPORT.md（problems=0）\n下个里程碑：19:00 后首轮恢复居民年轮批（3 人落环+事件闸），ETA 2026-11-12 19:30",
- "top_text": "当前活：让路窗（工作日 09:00-19:00 CEO 车道优先）内跑确定性面——日更闸/事件回放闸/QC/池审计全过\n最近实物：site/city-today.html 重建（2026-11-12 18:2x，源时点 18:23）＋census/QC-REPORT.md（problems=0）\n下个里程碑：19:00 后首轮恢复居民年轮批（3 人落环+事件闸），ETA 2026-11-12 19:30"
+ "t": "当前活：让路窗（工作日 09:00-19:00 CEO 车道优先）内做零 LLM 面——本轮修 round_daily 依赖源 mtime 判据（T-20261112-09）\n最近实物：Tools/round_daily.py v0.11（2026-11-12 18:4x，三控实跑全过）＋census/export/gene-ledger.html 重建 18:48\n下个里程碑：19:00 后首轮恢复居民年轮批（3 人落环+事件回放闸），ETA 2026-11-12 19:30",
+ "top_text": "当前活：让路窗（工作日 09:00-19:00 CEO 车道优先）内做零 LLM 面——本轮修 round_daily 依赖源 mtime 判据（T-20261112-09）\n最近实物：Tools/round_daily.py v0.11（2026-11-12 18:4x，三控实跑全过）＋census/export/gene-ledger.html 重建 18:48\n下个里程碑：19:00 后首轮恢复居民年轮批（3 人落环+事件回放闸），ETA 2026-11-12 19:30"
 }
