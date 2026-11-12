@@ -1659,3 +1659,11 @@ ing_open_family --check 2026-10-18 源值复核一致）。修法（判据零改
   **诚实边界**：只改呈现口径与点名，闸线 25%、族定义、拒稿路径全部未动，T-20261112-04/05 验收线保持；本轮零 LLM。
   **实况三行**：当前活=让路窗内确定性面与 CEO 可见面判读修正；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-ring-trend.html（14:1x·判定列点名超线族）；下个里程碑=19:00 年轮批 3 席·开头族硬闸+第二句软引导+跨城区选区联合首验（ETA 2026-11-12 19:10）。
   - [2026-11-12 14:1x @BigLife-OSLoop R2594] 本轮计量：tokens: local=0 api=0 api_reason=yield-window
+
+
+- [R2595] 2026-11-12 14:2x @BigLife-OSLoop 轮记：轮首 pull=Already up to date、树净；决策水位 NEW=0（尾 D-20261112-15 已消费）；orders 物理件区无涉本司新件；TASKS open=T-20261112-01/04/05（均 19:00 后观测窗）。**让路窗**=machine-state paused 13:04（CEO 用机），年轮/相遇/反思 09:00-19:00 结构性让路（D-20261020-02）；round_daily --run 28 面 stale=0 PASS；pool_audit 72 轴桶+12 像素桶全达标 SELF_TERMINATE（hard_fails=0）；QC 今日 09:05 已跑非到点；HQ 日闸 ALREADY_REPORTED 零写入。
+  **本轮产品增量（T-20261112-04 同族第二批·1 件工具 + 7 个派生面归位）**：①**实测发现七个 R3 派生面无任何轮次引用**，盘面停在 10-26/10-27（anchors/assembly/persona 16d、relations/voice/initiatives 17d、atlas 49d），而依赖它们的 city-map/relations/ops/life/growth 当日照常重建 ⇒ 页面 mtime 是今天、数据是半个月前；②**实测内容漂移**：再生比对 md5 后 atlas（A7D02D15→EE5A682B）与 initiatives（D25D45B3→FAE7C2A3）**真实内容漂移**（页面此前读旧画像/旧意向），其余五个 SAME（仅 mtime 陈旧）——正是「mtime 闸会误判」的实证；relations 全量再生 14.5s/285 万行；③**修法**：新建 Tools/derive_audit.py v1.0（再生→md5 比对→SAME/DRIFT/CREATED/ERROR→**仅漂移时**重建 dependents），接线 
+ound_daily.py v0.6 INPUTS 档 data tier，先于面重建执行 ⇒ 此后每轮自动审计。**正控**=向 voice 面注入脏行 → 报 DRIFT 且 growth 重建（assembly 因依赖 atlas 连带 DRIFT，依赖链正确）；**负控**=回拨状态档 mtime −2d → check 报 outdated:2d stale=1、run 报 rebuilt；**幂等**=二次跑全 SAME verdict PASS，脏行被再生抹除（voice md5 复原 926BE7EA）。**门禁**：py_compile rc=0；ruff_gate 2 file CLEAN；derive_audit --selftest 4/4 PASS；round_daily --check stale=0 PASS。
+  **诚实边界**：只保证派生面与可见面读数一致，不判派生规则本身正确（relations 285 万边分布未评）；atlas/assembly 无本仓可见面消费（面向 FluxVerse M2），其漂移只进报告不产生页面动作；让路窗内零 LLM 零 GPU。
+  **实况三行**：当前活=派生面漂移审计接线与归位（让路窗内确定性面）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/DERIVE-AUDIT-20261112.md（14:2x）+ Tools/derive_audit.py；下个里程碑=19:00 年轮批 3 带·开头族硬闸+第二句软引导+跨城区选区联合首验（ETA 2026-11-12 19:10）。
+  - [2026-11-12 14:2x @BigLife-OSLoop R2595] 本轮计量：tokens: local=0 api=0 api_reason=yield-window

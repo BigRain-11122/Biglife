@@ -87,6 +87,13 @@ INPUTS = [
     # goals.py --regen 确定性零 LLM（同 (cid, month, date) 双跑逐字节一致），
     # 每日再生 → 跨月自动换 target/steps，页面随之反映当月。
     ("citizen_goals", "data", "goals.py",                 ["census/export/citizen-goals.jsonl"], ["--regen"]),
+    # v0.6 (2026-11-12 R2595): 派生面漂移审计 —— 把 v0.5 只覆盖 goals 的病根补全。
+    # 实证：七个 R3 派生面停在 10-26/10-27（16-17 天），而 city-map/relations/ops/
+    # life/growth 每天照常重建 ⇒ 页面 mtime 是今天、数据是半个月前。
+    # 判据用内容漂移而非 mtime：md5(id) 确定性派生，输入不变再生逐字节相同，
+    # 按「当日必新」判等于每天白写 190MB（relations 2.85M 行）却零信息。
+    # 漂移时才重建 dependents；稳定日仅 16s 盘读零页面动作。
+    ("derive_audit", "data", "derive_audit.py",           ["state/derive-audit.json"], ["--run"]),
 ]
 
 TIMEOUT_SEC = 240
