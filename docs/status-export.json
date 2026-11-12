@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-13 00:24",
+ "export_ts": "2026-11-13 00:36",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2650（2026-11-13 00:2x 夜值轮）：年轮线 --batch 3 实跑 due=10 **落环 10/10**（C-00141/C-00143/C-00145/C-00148/C-00149/C-00150/C-00151/C-00152/C-00153/C-00194，本地 qwen3:4b-instruct；1 席 soft-concession recent-dup 软让行仍落环），脚本自提交 d20d53b4a + 行为线镜像 935313d40 rows=10 ring=10114；事件流回放闸 PASS（cards=10111 events=42003 replayed=10111 schema_errors=0 mismatch=0 coverage derived=10111 reserved=3 exported=10114 unexpected_missing=0 chronicle gap=1d，qa/EVENTS-REPLAY-REPORT.md 入库）；round_daily --run 28 面体检：city-dashboard.html 内容过期重建 + index.html 重建，其余 26 面全新鲜（stale=1 ran=2 failed=0 verdict=PASS）；语言池全桶达标 SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）零重烧；相遇轮今日 00:0x 已 1 幕（日限 1 次）跳轮；QC 巡检 00:09 刚巡 problems=0，6 轮间隔未到；HQ 日报闸 ALREADY_REPORTED 零写入；决策水位差集 NEW=0（尾 D-20261112-16）。** **R2649（2026-11-13 00:0x 夜值轮）：年轮线 10/10 席落环（C-00131/C-00133/C-00135/C-00147/C-00174/C-00132/C-00136/C-00137/C-00138/C-00139，3 席 soft-concession 软让行仍落环），行为线自动收口 rows=10；相遇轮 1 幕——旧站台·边缘街区 C-00147 钱南汐（carbon·秩序）× C-00044 赫兹（silicon·逍遥），候选 rank1 score=120，双卡互引落环、行为线 rows=2；事件回放闸 PASS（events=41991 / cards=10111 / replayed=10111 / mismatch=0 / schema=0 / coverage exported=10114 unexpected_missing=0）；round_daily 两趟合计重建 12 个可见面（rumors/surprise/interchat/citizen_goals/derive_audit/today/life/dashboard/ring_trend/meet_candidates/index 等）stale=11 ran=12 failed=0→二次刷新 stale=1 ran=2 verdict=PASS；语言池全桶达标 SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28·faq 7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）不重烧；QC 巡检 cards=10114 evolved=10114 problems=0 dup_rings=37/37。** **R2647（2026-11-12 23:4x 轮）：年轮线 10/10 席满席落环（C-01405/C-00109/C-00118/C-00121/C-01410/C-00113/C-00114/C-00115/C-00116/C-00119，1 席 soft-concession 软让行），行为线自动收口 rows=10；事件回放闸 PASS（events=41971 / cards=10111 / replayed=10111 / mismatch=0 / schema=0）；round_daily 体检 28 面：仅 city-dashboard 内容过期重建 + index 重建，其余全新鲜（stale=1 ran=2 failed=0）；语言池 72/72 轴 + 12/12 精灵 + greet/faq/neg 全 at_target、hard_fails=0、determinism 192+25 对 mismatch=0 → SELF_TERMINATE 不重烧；QC 巡检 23:37 刚巡 problems=0，6 轮间隔未到；相遇轮今日 cap 3/3 已满按律跳过；任务板 open=0；HQ 反馈日闸 ALREADY_REPORTED（今日已 2 行：P0 复明 + liveness proof，零写入）。集团 D-20261112-13 已将本司 15 天停摆 chronic 结清。**",
+   "t": "**R2651（2026-11-13 00:28-00:40 夜值轮）**：年轮线 10/10 落环（C-00154/C-00155/C-00156/C-00157/C-00158/C-00159/C-00160/C-00161/C-00162/C-00203）；相遇 1 幕（C-00010 顾阿凤 x C-00011 朱鸿奎，双卡互引）；事件回放闸 PASS（events=42013 cards=10111 mismatch=0 schema=0）；日更面 7 面重建（dashboard/relations/districts/dossiers/gallery/ring_picks/ring_quality+index）PASS。 **R2650（2026-11-13 00:2x 夜值轮）：年轮线 --batch 3 实跑 due=10 **落环 10/10**（C-00141/C-00143/C-00145/C-00148/C-00149/C-00150/C-00151/C-00152/C-00153/C-00194，本地 qwen3:4b-instruct；1 席 soft-concession recent-dup 软让行仍落环），脚本自提交 d20d53b4a + 行为线镜像 935313d40 rows=10 ring=10114；事件流回放闸 PASS（cards=10111 events=42003 replayed=10111 schema_errors=0 mismatch=0 coverage derived=10111 reserved=3 exported=10114 unexpected_missing=0 chronicle gap=1d，qa/EVENTS-REPLAY-REPORT.md 入库）；round_daily --run 28 面体检：city-dashboard.html 内容过期重建 + index.html 重建，其余 26 面全新鲜（stale=1 ran=2 failed=0 verdict=PASS）；语言池全桶达标 SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）零重烧；相遇轮今日 00:0x 已 1 幕（日限 1 次）跳轮；QC 巡检 00:09 刚巡 problems=0，6 轮间隔未到；HQ 日报闸 ALREADY_REPORTED 零写入；决策水位差集 NEW=0（尾 D-20261112-16）。** **R2649（2026-11-13 00:0x 夜值轮）：年轮线 10/10 席落环（C-00131/C-00133/C-00135/C-00147/C-00174/C-00132/C-00136/C-00137/C-00138/C-00139，3 席 soft-concession 软让行仍落环），行为线自动收口 rows=10；相遇轮 1 幕——旧站台·边缘街区 C-00147 钱南汐（carbon·秩序）× C-00044 赫兹（silicon·逍遥），候选 rank1 score=120，双卡互引落环、行为线 rows=2；事件回放闸 PASS（events=41991 / cards=10111 / replayed=10111 / mismatch=0 / schema=0 / coverage exported=10114 unexpected_missing=0）；round_daily 两趟合计重建 12 个可见面（rumors/surprise/interchat/citizen_goals/derive_audit/today/life/dashboard/ring_trend/meet_candidates/index 等）stale=11 ran=12 failed=0→二次刷新 stale=1 ran=2 verdict=PASS；语言池全桶达标 SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28·faq 7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）不重烧；QC 巡检 cards=10114 evolved=10114 problems=0 dup_rings=37/37。**",
    "s": 1
   },
   {
@@ -1749,8 +1749,12 @@
   [
    "22",
    "R2650 补 10 席年轮 → 今日累计 22 行落环（本轮 --batch 3 满席 10/10；累计口径=今日带 2026-11-13 年轮行的卡张数）"
+  ],
+  [
+   "34",
+   "R2651 收口：今日年轮落环行数 34 行（本轮 +10 席，C-00154~C-00162/C-00203），事件闸 PASS，7 面重建零失败。"
   ]
  ],
- "t": "当前活：年轮进化线 R2650 满席落环 10/10（本地 qwen3:4b）+ 事件回放闸 PASS + 日更面 PASS\n最近实物：census/registry/*/C-00141~C-00194 十张新年轮卡（commit d20d53b4a，2026-11-13 00:21）；qa/EVENTS-REPLAY-REPORT.md（00:21 PASS）\n下个里程碑：下一轮年轮批 + 相遇轮（今日 cap 已满，明日 1 幕）；窗 ≤48h",
- "top_text": "当前活：年轮进化线 R2650 满席落环 10/10（本地 qwen3:4b）+ 事件回放闸 PASS + 日更面 PASS\n最近实物：census/registry/*/C-00141~C-00194 十张新年轮卡（commit d20d53b4a，2026-11-13 00:21）；qa/EVENTS-REPLAY-REPORT.md（00:21 PASS）\n下个里程碑：下一轮年轮批 + 相遇轮（今日 cap 已满，明日 1 幕）；窗 ≤48h"
+ "t": "当前活：年轮线批跑 + 日更面重建（R2651·11-13 00:40）\n最近实物：census/registry/QT/C-00154.md 等 10 张卡的 2026-11-13 年轮行（00:29 落盘）·census/export/city-dashboard.html（00:30 重建）\n下个里程碑：11-13 内继续跟进年轮滚动与相遇轮日限内 1 幕，事件闸每轮 PASS 保持",
+ "top_text": "当前活：年轮线批跑 + 日更面重建（R2651·11-13 00:40）\n最近实物：census/registry/QT/C-00154.md 等 10 张卡的 2026-11-13 年轮行（00:29 落盘）·census/export/city-dashboard.html（00:30 重建）\n下个里程碑：11-13 内继续跟进年轮滚动与相遇轮日限内 1 幕，事件闸每轮 PASS 保持"
 }
