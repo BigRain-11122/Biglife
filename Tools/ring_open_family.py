@@ -167,6 +167,53 @@ def scan_day(day, registry=None):
     return total, dict(fam)
 
 
+# v1.1 (2026-11-13 R2685, T-20261112-01 归因面): 年轮来源拆分。
+# R2586 记「247 环按来源（evolve 批/meet/reflect）拆分开口族归属」待办；
+# 实读 evolve_citizen 后改正口径：reflect 写的是卡面「反思」段（add_reflection），
+# 不落年轮行，故年轮来源只有两类——批量日更（--batch）与相遇（--meet，行首
+# 固定「与 C-xxxxx 相遇：」）。归因只读、确定性，不改任何闸判定。
+MEET_RE = re.compile(r"与\s*C-\d+\s*相遇[：:]")
+SOURCE_ORDER = ("batch", "meet")
+
+
+def source_of(body):
+    """年轮正文 → 来源名（meet／batch）。meet 行首由 evolve_citizen 固定拼出。"""
+    return "meet" if MEET_RE.search(body or "") else "batch"
+
+
+def scan_day_by_source(day, registry=None):
+    """按来源拆分某日年轮 → {来源: {"total": n, "families": {族: n}}}。
+
+    与 scan_day 同口径（同正则、同 8 字下限），故各来源 total 之和恒等于
+    scan_day 的 total——调用方可据此自校验（_selftest 有断言）。
+    """
+    root = registry or REGISTRY
+    pat = _ring_pat(day)
+    out = collections.OrderedDict(
+        (s, {"total": 0, "families": collections.Counter()}) for s in SOURCE_ORDER)
+    for dirpath, _, files in os.walk(root):
+        for fn in files:
+            if not fn.endswith(".md"):
+                continue
+            try:
+                with open(os.path.join(dirpath, fn), encoding="utf-8") as f:
+                    s = f.read()
+            except (IOError, OSError):
+                continue
+            for m in pat.finditer(s):
+                body = m.group(1)
+                if len(re.sub(r"\s+", "", body)) < 8:
+                    continue
+                slot = out[source_of(body)]
+                slot["total"] += 1
+                f = family_of(body)
+                if f:
+                    slot["families"][f] += 1
+    return collections.OrderedDict(
+        (k, {"total": v["total"], "families": dict(v["families"])})
+        for k, v in out.items())
+
+
 def second_attrs_of(text):
     """返回正文「开头 12 字之后」命中的第二句吸引子集合（只读探针用）。"""
     tail = re.sub(r"\s+", "", text or "")[OPENING_LEN:]
@@ -335,6 +382,29 @@ def _selftest():
                  ",".join(sorted(want)) or "None", "OK" if ok else "FAIL"))
         if not ok:
             bad += 1
+    # T-20261112-01 归因面探针：meet 行识别正例／日更行不误判；
+    # 且按来源拆分之和必须与 scan_day 同口径守恒。
+    src_probes = [
+        ("pos-source-meet", "与 C-00044 相遇：我们在旧站台聊了半宿，雨声替我们数着话头。", "meet"),
+        ("neg-source-batch", "手在楼梯扶手上摩挲，木头被磨得发亮。", "batch"),
+        ("neg-source-meet-in-body", "她说起与 C-07991 相遇那晚，灯一直没熄。", "batch"),
+    ]
+    for label, text, want in src_probes:
+        got = source_of(text)
+        ok = got == want
+        print("%-24s got=%-12s want=%-12s %s" % (label, got, want, "OK" if ok else "FAIL"))
+        if not ok:
+            bad += 1
+    days = production_days(3)
+    if days:
+        d = days[-1]
+        per = scan_day_by_source(d)
+        total, _fam = scan_day(d)
+        s = sum(v["total"] for v in per.values())
+        ok = s == total
+        print("%-24s %d==%d %s" % ("pos-source-sum-" + d, s, total, "OK" if ok else "FAIL"))
+        if not ok:
+            bad += 1
     print("selftest: %s (%d fail)" % ("PASS" if bad == 0 else "FAIL", bad))
     return 0 if bad == 0 else 1
 
@@ -351,11 +421,39 @@ def main(argv=None):
     ap.add_argument("--family", default="HAND_DEICTIC", help="--sample 的族名")
     ap.add_argument("--day", help="--sample 限定日期")
     ap.add_argument("--seed", type=int, default=0, help="--sample 抽样种子（默认按日期）")
+    ap.add_argument("--by-source", metavar="DATE",
+                    help="按来源（batch 日更／meet 相遇）拆分某日开口族占比")
     ap.add_argument("--selftest", action="store_true", help="负控/正控探针")
     args = ap.parse_args(argv)
 
     if args.selftest:
         return _selftest()
+
+    if args.by_source:
+        per = scan_day_by_source(args.by_source)
+        total, fam = scan_day(args.by_source)
+        if args.json:
+            print(json.dumps({"date": args.by_source, "total": total,
+                              "families": {f: fam.get(f, 0) for f in FAMILIES},
+                              "by_source": per, "quota": FAMILY_QUOTA,
+                              "verdict": "OVER" if over_quota(total, fam) else "PASS"},
+                             ensure_ascii=False, indent=1))
+            return 0
+        print("date=%s rings=%d (by source, quota=%.0f%%)"
+              % (args.by_source, total, FAMILY_QUOTA * 100))
+        for src, d in per.items():
+            t = d["total"]
+            cells = []
+            for f in FAMILIES:
+                c = d["families"].get(f, 0)
+                cells.append("%s=%d(%.1f%%)" % (f, c, c / t * 100 if t else 0.0))
+            print("  %-6s rings=%4d  %s" % (src, t, "  ".join(cells)))
+        sum_src = sum(d["total"] for d in per.values())
+        print("  sum(by source)=%d vs scan_day=%d %s"
+              % (sum_src, total, "OK" if sum_src == total else "MISMATCH"))
+        over = over_quota(total, fam)
+        print("verdict: %s" % (("OVER:" + ",".join(over)) if over else "PASS"))
+        return 0
 
     if args.check:
         total, fam = scan_day(args.check)

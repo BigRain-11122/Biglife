@@ -42,3 +42,29 @@
 ## 五、诚实边界
 
 缺陷率 3.2% 是「模板句/重复短语」口径，不等于「好看」；本档只证明机械缺陷显著收敛，审美与情感面仍由 CEO 终审与 spotlight 抽验把守。
+
+## 六、开口族越线归因（T-20261112-01 待办结案·2026-11-13 05:4x @BigLife-OSLoop）
+
+口径修正（先改口径再复算）：`Tools/evolve_citizen.py` 实读确认 **reflect 模式写的是卡面「反思」段（`add_reflection`），不落年轮行**——故年轮来源只有两类：批量日更（`--batch`）与相遇（`--meet`，行首固定「与 C-xxxxx 相遇：」）。原待办写的「evolve 批/meet/reflect 三路拆分」不成立，按两路复算。
+
+取证工具（本轮新增能力，可复现·零 LLM·确定性）：`Tools/ring_open_family.py --by-source <DATE>`（+ `--json`），自检加 4 探针（meet 正例／日更不误判／句中提及不算／拆分总和守恒）。
+
+实测（2026-11-13 收盘时点，`--by-source 2026-11-13`）：
+
+| 来源 | 环数 | HAND_DEICTIC | 占该来源 |
+|---|---|---|---|
+| batch（日更批） | 320 | 81 | 25.3% |
+| meet（相遇） | 4 | 0 | 0.0% |
+| 合计 | 324 | 81 | **25.0%** |
+
+结论三条：
+1. **越线归属=批量日更面，相遇面 0 环**——04:0x 的「247 环 25.1% OVER / 62 环比线多 1 环」是小分母时点的边际读数；环数涨到 324 后全日占比落在 **25.0%（等于线、非越线）**，官方闸 `--check 2026-11-13` verdict=**PASS**。
+2. **批外路径不进台账的假设被否定**（simplest explanation 优先）：批外只有 4 环且 0 命中，即使全不计入也无法解释任何越线；故无需补台账、无需改闸。
+3. **闸不动**：`FAMILY_QUOTA=0.25` 与批内配额实现维持原样（承 T-20261112-05「禁为 1 环改闸换绿」），本档只把「谁贡献的」说清楚。
+
+复检命令（随时可重跑）：
+```
+python -X utf8 Tools/ring_open_family.py --check 2026-11-13
+python -X utf8 Tools/ring_open_family.py --by-source 2026-11-13
+python -X utf8 Tools/ring_open_family.py --selftest
+```

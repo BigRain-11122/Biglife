@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-13 04:38",
+ "export_ts": "2026-11-13 05:30",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2679（2026-11-13 04:3x 产品轮）**：年轮线 due=10 → 落环 8/10（C-00413/C-00414/C-00417/C-00418/C-00419/C-00420/C-00421/C-00423，本地 Ollama qwen3:4b-instruct；2 席被 recent-family-opening/recent-dup-phrase 闸拦下留 due，闸正常工作）；行为线镜像自动收口 rows=8 ring=10114。事件回放闸 cards=10111 events=42258 replay=10111 schema_errors=0 mismatch=0 → PASS；日更面 verdict=PASS（stale=1 ran=2 failed=0：city-dashboard.html + index.html 重建）；语言池审计 72 桶全达标 SELF_TERMINATE 零 LLM；相遇轮今日 cap 3/3 已满零调用；决策水位无新差集、HQ 反馈闸 ALREADY_REPORTED 零写入。 **R2678（2026-11-13 03:4x 产品轮）**：年轮线 --batch 3 due=10 → 落环 7/10（C-00368/C-00369/C-00370/C-00371/C-00373/C-00375/C-00378，本地 Ollama qwen3:4b-instruct）；3 席被 batch-dup-phrase/时间窗闸拦下留 due（钩子物件「老收音机」在批内重复，属闸正常工作）。事件回放闸 cards=10111 events=42210 replay=10111 schema_errors=0 mismatch=0 → PASS；日更面 verdict=PASS（stale=1 ran=2 failed=0：city-today.html + index.html 重建）；语言池审计 72 桶全达标 SELF_TERMINATE 零 LLM；相遇轮今日 cap 3/3 已满零调用；年轮内部编号泄漏扫描 0 命中（历史缺陷类保持零）。 **R2674（2026-11-13 03:0x 产品轮）**：年轮线 --batch 3 due=10 → 落环 10/10（C-00309/C-00312/C-00313/C-00315/C-00316/C-00317/C-00318/C-00320/C-00332/C-00334，本地 qwen3:4b-instruct；4 席 soft-concession recent-dup 软让行）；事件回放闸 cards=10111 events=42163 replay=10111 schema_errors=0 mismatch=0 PASS；QC 巡检 cards=10114 evolved=10114 problems=0；日更面 verdict=PASS（stale=2 ran=3 failed=0）。",
+   "t": "**R2685（05:2x–05:4x）**：年轮线 --batch 3 落环 10/10（C-00467/00469/00475/00476/00485/00471/00472/00473/00474/00479）→ 事件回放闸 PASS（cards=10111 events=42307 replayed=10111 schema=0 mismatch=0）→ 日更面 PASS（city-dashboard + index 重建）→ **T-20261112-01 开口族越线归因结案**：源头全在批量日更面（81/320=25.3%），相遇面 0 命中，全日 81/324=25.0% 恰在验收线上、官方闸 verdict=PASS；同轮把归因做成可复现能力 `ring_open_family.py --by-source`（自检新增 4 探针全绿·拆分总和守恒 324==324）。 **R2679（2026-11-13 04:3x 产品轮）**：年轮线 due=10 → 落环 8/10（C-00413/C-00414/C-00417/C-00418/C-00419/C-00420/C-00421/C-00423，本地 Ollama qwen3:4b-instruct；2 席被 recent-family-opening/recent-dup-phrase 闸拦下留 due，闸正常工作）；行为线镜像自动收口 rows=8 ring=10114。事件回放闸 cards=10111 events=42258 replay=10111 schema_errors=0 mismatch=0 → PASS；日更面 verdict=PASS（stale=1 ran=2 failed=0：city-dashboard.html + index.html 重建）；语言池审计 72 桶全达标 SELF_TERMINATE 零 LLM；相遇轮今日 cap 3/3 已满零调用；决策水位无新差集、HQ 反馈闸 ALREADY_REPORTED 零写入。 **R2678（2026-11-13 03:4x 产品轮）**：年轮线 --batch 3 due=10 → 落环 7/10（C-00368/C-00369/C-00370/C-00371/C-00373/C-00375/C-00378，本地 Ollama qwen3:4b-instruct）；3 席被 batch-dup-phrase/时间窗闸拦下留 due（钩子物件「老收音机」在批内重复，属闸正常工作）。事件回放闸 cards=10111 events=42210 replay=10111 schema_errors=0 mismatch=0 → PASS；日更面 verdict=PASS（stale=1 ran=2 failed=0：city-today.html + index.html 重建）；语言池审计 72 桶全达标 SELF_TERMINATE 零 LLM；相遇轮今日 cap 3/3 已满零调用；年轮内部编号泄漏扫描 0 命中（历史缺陷类保持零）。",
    "s": 1
   },
   {
@@ -24,7 +24,7 @@
   },
   {
    "n": "QC 巡检线",
-   "t": "**R2674 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37 → PASS**（census/QC-REPORT.md 本轮首落）。 **R2668 例巡条（02:06）**：cards=10114 evolved=10114 problems=0 dup_rings=37/37 → 全绿。 **R2655 例巡条**：QC 上巡 R2654 problems=0（6 轮间隔未到，本轮零重扫）；语言池 pool_audit 全桶达标 SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）→ 按自终止律零 pool_gen；相遇轮今日 3/3 达上限（cap 3）自动跳过。 **R2649 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——编号/姓名唯一、必备段齐备、年轮锚定律无违例；事件回放 41991 全量比对 mismatch=0。 **R2646 例巡条：QC cards=10114 evolved=10114 problems=0；事件回放 41961 全量比对 mismatch=0 —— 不变量无异常。** **R2636 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——编号/姓名唯一、必备段齐备、年轮锚定律无违例 **R2629 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——不变量扫描全绿，编号/姓名唯一、必备段齐备、年轮锚定律无违例 当前活：本轮做批次级验收（T-04 骨架族配额闸 22 席 HAND_DEICTIC=0.0% PASS）\n最近实物：census/QC-REPORT.md（problems=0）；新立单 T-20261112-10 母题收敛（top-3 母题占 81.8%）",
+   "t": "**R2685 例巡条（归因面）**：`ring_open_family --check 2026-11-13` → HAND_DEICTIC 81/324=25.0%，PASS（未越线）；`--by-source` 拆分 batch 320 : meet 4，守恒校验通过。 **R2674 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37 → PASS**（census/QC-REPORT.md 本轮首落）。 **R2668 例巡条（02:06）**：cards=10114 evolved=10114 problems=0 dup_rings=37/37 → 全绿。 **R2655 例巡条**：QC 上巡 R2654 problems=0（6 轮间隔未到，本轮零重扫）；语言池 pool_audit 全桶达标 SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）→ 按自终止律零 pool_gen；相遇轮今日 3/3 达上限（cap 3）自动跳过。 **R2649 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——编号/姓名唯一、必备段齐备、年轮锚定律无违例；事件回放 41991 全量比对 mismatch=0。 **R2646 例巡条：QC cards=10114 evolved=10114 problems=0；事件回放 41961 全量比对 mismatch=0 —— 不变量无异常。** **R2636 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——编号/姓名唯一、必备段齐备、年轮锚定律无违例 **R2629 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——不变量扫描全绿，编号/姓名唯一、必备段齐备、年轮锚定律无违例 当前活：本轮做批次级验收（T-04 骨架族配额闸 22 席 HAND_DEICTIC=0.0% PASS）\n最近实物：census/QC-REPORT.md（problems=0）；新立单 T-20261112-10 母题收敛（top-3 母题占 81.8%）",
    "s": 1
   },
   {
@@ -1785,8 +1785,12 @@
   [
    "277",
    "本轮年轮落环 8 行；今日带 2026-11-13 年轮行的卡 277 张；events 42258 / cards 10111 replay 全量 0 mismatch；日更 verdict=PASS（stale=1 ran=2 failed=0）。"
+  ],
+  [
+   "326",
+   "今日年轮落环行数 326（本档同口径=census/registry 卡面 2026-11-13 环行机器直数；本轮新增 10 席）"
   ]
  ],
- "t": "当前活：年轮线常态批（本地 qwen3:4b 依真实城市事件写年轮）+ 事件回放闸守门 + 确定性日更面体检\n最近实物：census/registry/ 7 张新年轮卡（03:40 落环）+ census/export/city-today.html、index.html 重建（03:41）+ qa/EVENTS-REPLAY-REPORT.md（42210 事件 replay 0 mismatch）\n下个里程碑：下一轮年轮批 3 席 + 今日 227 张年轮卡汇聚成城区志/名人录刷新（ETA 2026-11-13 04:00 前）",
- "top_text": "当前活：年轮线常态批（本地 qwen3:4b 依真实城市事件写年轮）+ 事件回放闸守门 + 确定性日更面体检\n最近实物：census/registry/ 7 张新年轮卡（03:40 落环）+ census/export/city-today.html、index.html 重建（03:41）+ qa/EVENTS-REPLAY-REPORT.md（42210 事件 replay 0 mismatch）\n下个里程碑：下一轮年轮批 3 席 + 今日 227 张年轮卡汇聚成城区志/名人录刷新（ETA 2026-11-13 04:00 前）"
+ "t": "当前活：T-20261112-01 年轮品质三日窗口验收（第 3 日窗口 11-14 结单）+ 开口族配额闸日常值守。\n最近实物：qa/RING-QUALITY-20261113.md §六 归因档（05:4x）+ Tools/ring_open_family.py v1.1 `--by-source` 能力（自检全绿）+ 10 张居民卡新 2026-11-13 年轮。\n下个里程碑：11-14 第 3 生产日窗口结单（连续 3 日素材有效 + 缺陷率 <10% + 开口族 ≤25%），ETA ≤24h。",
+ "top_text": "当前活：T-20261112-01 年轮品质三日窗口验收（第 3 日窗口 11-14 结单）+ 开口族配额闸日常值守。\n最近实物：qa/RING-QUALITY-20261113.md §六 归因档（05:4x）+ Tools/ring_open_family.py v1.1 `--by-source` 能力（自检全绿）+ 10 张居民卡新 2026-11-13 年轮。\n下个里程碑：11-14 第 3 生产日窗口结单（连续 3 日素材有效 + 缺陷率 <10% + 开口族 ≤25%），ETA ≤24h。"
 }
