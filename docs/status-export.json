@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-13 21:33",
+ "export_ts": "2026-11-13 23:29",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2816（2026-11-13 21:3x 夜窗）**：年轮批 evolved=10/10（C-04291/C-04294/C-04295/C-04296/C-04297/C-04298/C-04299/C-04300/C-04301/C-04302 落环）+ 日更面 3 面重建（city-dashboard / gene-ledger / index）+ 可见面覆盖体检 stale=0（39 登记面）；闸全绿：事件回放 42667 事件 / 0 schema / 0 mismatch、chronicle gap=0d、语言池 SELF_TERMINATE、反思线今日 31 行达日上限。 **R2808（2026-11-13 20:0x 夜窗）**：年轮批 evolved=7/10（C-04216/C-04218/C-04219/C-04220/C-04221/C-04226/C-04235 落环）+ 反思线 5 条（今日累计 25 行·连续日验收第 1 日）+ 日更面 5 面重建（city-today / city-dashboard / gene_ledger / lexicon / index）；闸全绿：事件回放 42593 事件 / 0 schema / 0 mismatch、QC cards=10114 evolved=10114 problems=0、语言池 SELF_TERMINATE。 **R2795（16:5x·让路窗内确定性面）：心跳丢失可见化守卫上线**——修 T-20261113-01：心跳里 2 条状态行（格式化串残渣行无时间戳、首行带 BOM）一直被渲染层静默丢弃，CEO 面表现为「少了两轮」且无人报错。修法=把丢失变成看得见：`build_city_ops.py` 抽出 `parse_heartbeat_text()`，无时间戳状态行显式计数并上 KPI（标红），BOM 行剥掉后正常入表；数据侧回填两条（R2734 行补 10:20:00 并标注回填来源，邻行夹逼）。",
+   "t": "**R2829（2026-11-13 23:2x 夜窗）**：年轮批 evolved=10/10 落环（C-04404/C-04405/C-04406/C-04407/C-04408/C-04409/C-04410/C-04411/C-04412/C-04431，其中 C-04404 是 R2828 遗留 stays-due 的首补）+ 行为线镜像 rows=10 自动收口 + 事件回放闸 PASS（events=42779、cards=10111、schema_errors=0、mismatch=0）+ 日更面 3 面重建（city-dashboard/gene-ledger/index） **R2816（2026-11-13 21:3x 夜窗）**：年轮批 evolved=10/10（C-04291/C-04294/C-04295/C-04296/C-04297/C-04298/C-04299/C-04300/C-04301/C-04302 落环）+ 日更面 3 面重建（city-dashboard / gene-ledger / index）+ 可见面覆盖体检 stale=0（39 登记面）；闸全绿：事件回放 42667 事件 / 0 schema / 0 mismatch、chronicle gap=0d、语言池 SELF_TERMINATE、反思线今日 31 行达日上限。 **R2808（2026-11-13 20:0x 夜窗）**：年轮批 evolved=7/10（C-04216/C-04218/C-04219/C-04220/C-04221/C-04226/C-04235 落环）+ 反思线 5 条（今日累计 25 行·连续日验收第 1 日）+ 日更面 5 面重建（city-today / city-dashboard / gene_ledger / lexicon / index）；闸全绿：事件回放 42593 事件 / 0 schema / 0 mismatch、QC cards=10114 evolved=10114 problems=0、语言池 SELF_TERMINATE。",
    "s": 1
   },
   {
@@ -1821,8 +1821,12 @@
   [
    "686",
    "今日年轮落环 686 行（机器直数·registry/anchors）"
+  ],
+  [
+   "798",
+   "今日年轮落环 798 行（机器直数·registry/anchors）"
   ]
  ],
- "t": "当前活：夜窗年轮线续批（21:29 批 evolved=10/10 落环）\n最近实物：census/registry/GM/C-04291.md 等 10 席年轮（2026-11-13 21:29）+ census/export/city-dashboard.html（21:30 重建）\n下个里程碑：2026-11-14 19:00 年轮批下一轮 + 反思线连续 3 生产日验收（11-15 判定）",
- "top_text": "当前活：夜窗年轮线续批（21:29 批 evolved=10/10 落环）\n最近实物：census/registry/GM/C-04291.md 等 10 席年轮（2026-11-13 21:29）+ census/export/city-dashboard.html（21:30 重建）\n下个里程碑：2026-11-14 19:00 年轮批下一轮 + 反思线连续 3 生产日验收（11-15 判定）"
+ "t": "当前活：夜窗年轮批连续第 2 日推进（本轮 10 席落环，含 R2828 遗留首补）\n最近实物：census/export/city-dashboard.html（2026-11-13 23:2x，含 10114 席全量年轮）+ census/registry/OR/C-04404.md 等 10 张今日年轮卡\n下个里程碑：2026-11-14 夜窗年轮批（--batch 3）+ 反思线连续 3 生产日验收（11-15 判定）",
+ "top_text": "当前活：夜窗年轮批连续第 2 日推进（本轮 10 席落环，含 R2828 遗留首补）\n最近实物：census/export/city-dashboard.html（2026-11-13 23:2x，含 10114 席全量年轮）+ census/registry/OR/C-04404.md 等 10 张今日年轮卡\n下个里程碑：2026-11-14 夜窗年轮批（--batch 3）+ 反思线连续 3 生产日验收（11-15 判定）"
 }
