@@ -1388,3 +1388,11 @@ tokens: local=10 api=0 api_reason=-
   **对外实况三行**：当前活＝年轮开口族盲区读数上线（让路窗内确定性面）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\Tools\ring_open_family.py（unclassified 三处接线）+ C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-trend.html（今日 552 环·缺陷率 9.4% 历史最好·双族越线标红）｜下个里程碑＝19:00 年轮批 3 席 + 提案线首批（`--propose` 已 default=True），实测 HAND/PROP 是否被禁集压回 ≤25%（ETA 2026-11-13 19:20）。
   计分：能跑实物=2 分（族盲区读数已进三处输出并可复跑）｜文件改动=1 分｜零 LLM。
   tokens: local=0 api=0 api_reason=workday-yield-window
+
+- [R2778] 2026-11-13 13:38-13:50 @BigLife-OSLoop 让路窗产品轮（周五工作日·D-20261020-02 年轮/相遇/提案顺延 19:00）：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团无 2026-11-13 新行）；orders 物理件区无涉本司新件；TASKS open=2 全在观测窗（T-20261113-02 待 19:00 实批 / T-20261112-01 streak 2/3）。
+  **产品增量（源头·可量化缺陷→修）**：`census/export/citizens-light.jsonl` 实测 10114 张卡中 8553 张带钩子尾巴，而尾巴只有 6 种——单条最高 1464 人共用（「——这事全巷都知道」），平均 1425 人/条，属人设文案重复率硬缺陷（CEO「品质差」的直接来源之一）。`genes/lives.json` 的 `hook_scopes` 6→24：新增 18 条（账本/半张旧收据/邮局排队/摊主知道底细/档案上只写了半句 等具体介质+俗世悬念，去 AI 味的短句），长度 9-15 字与旧池同区间，幂等追加无重复；序列化往返实测 indent=2/CRLF 逐字节一致（零无关 diff，19 insertions/1 deletion 全在池内）。
+  **可见面（CEO 首屏可点）**：`city-objects.html` 第三节「徽记语境」6→24 条全列（13:43:46 · 94.2KB · 新句 6/6 命中已核）；`gene-ledger.html` 同步重建（round_daily dep-mtime 正确把 genes/lives.json 变更判为 stale→重建，说明依赖链是活的）；`index.html` 目录刷新；`round_daily --check` verdict=PASS stale=0。
+  **诚实边界**：①`gene_nearcheck --qc` = 15 PASS 2 FAIL（baseline-criterion / ha-pr-registered），对照实验证明 HEAD 版本同样 15 PASS 2 FAIL → 既有基线问题，非本轮引入，记观察项不宣称全绿；②存量 8553 张卡的 6 条集中尾巴**不回改**（承 R2760「修前存量不回改」判例），本轮只治新增；治存量需 cards→events 重生（42535 条事件全量 replay），另立单后再动；③新增尾巴对物件的实际分配比例要等 19:00 后新生成卡才显现，本轮只证「池已扩容 + 面已渲染」。
+  **对外实况三行**：当前活=基因徽记语境扩容落地（让路窗内确定性面，19:00 起年轮批消费新池）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-objects.html（2026-11-13 13:43，徽记语境 24 条）｜下个里程碑=19:00 年轮 --batch 3 落环 + 提案线首批实批（T-20261113-02 验收：新增提案行 ≥1 且带 [锚]/ring_ref，ETA 19:20）。
+  计分：能看实物=2 分（物件志/台账双面可点开，24 条语境）｜文件改动=1 分｜零 LLM。
+  tokens: local=0 api=0 api_reason=workday-yield-window
