@@ -63,6 +63,11 @@ REGISTRY = [
     # 断供只能靠人肉翻 jsonl 才发现。本页确定性零 LLM，同时把供给缺口（距最近一条
     # 几天）、早期机读串行标注、日上限口径摆在一屏。纳入 faces 档隨日更闸自发重建。
     ("proposals",  "faces", "build_city_proposals.py",    ["city-proposals.html"]),
+    # v0.19 (2026-11-13 R2780): 叙龄面新立 —— 趋势页管质量、覆盖页管结构欠账，
+    # 但「多少居民多久没说过话」此前没有任何可见面。实测 10111 席中 72.9% 叙龄
+    # 14-29 天、14.4% 超 30 天，而当日只落 551 环（覆盖一轮 17.4 天）——产能真相
+    # 只能人肉读导出才发现。faces 档：叙龄是日粒度量，不必逐轮重写。
+    ("ring_recency", "faces", "build_ring_recency.py",    ["city-ring-recency.html"]),
     # v0.3 (2026-11-12 R2573): 补登记三个「有生成器、有页面、无任何轮次引用」的沉默断供面。
     # 病根同 T-20261112-02：city-lexicon.html 停更 15.7 天无人发现；
     # city-ring-quality / city-ring-trend 只靠偶发手工跑活着，断供只是时间问题。
@@ -167,6 +172,10 @@ DEPENDS = {
     "ring_picks": ["state/evolve-cursor.json", "census/registry"],
     "ring_quality": ["state/evolve-cursor.json", "census/registry"],
     "ring_trend": ["state/evolve-cursor.json", "census/registry"],
+    # v0.19 (2026-11-13 R2780): 叙龄同时吃户籍轻量导出（行为线每轮重写）与环落地信号，
+    # 两者任一更新都会改变分档，故双源登记。
+    "ring_recency": ["census/export/citizens-light.jsonl", "state/evolve-cursor.json",
+                     "census/registry"],
     # v0.17 (2026-11-13 R2760): 看板的三行实况取自 docs/status-export.json，
     # 主数据取自 citizens-light.jsonl，但登记表只比「构建脚本 vs 产物」mtime。
     # 实证：R2760 刷新 top_text 后 --run 仍判 dashboard fresh、ran=0，CEO 面继续

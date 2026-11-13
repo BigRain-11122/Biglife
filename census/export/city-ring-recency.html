@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>硅基城市叙龄 · 谁还开着口</title>
+<style>
+:root{--bg:#0d1117;--fg:#e6edf3;--dim:#8b949e;--line:#21262d;--acc:#4f9cf9;--warm:#f0a35e;--red:#e5605c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:22px;margin:0 0 4px;letter-spacing:.5px}
+.sub{color:var(--dim);font-size:12px;margin-bottom:28px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:28px}
+.kpi{background:#161b22;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.kpi b{display:block;font-size:24px;color:var(--acc);line-height:1.2}
+.kpi span{color:var(--dim);font-size:12px}
+.kpi.warn b{color:var(--warm)}
+.kpi.bad b{color:var(--red)}
+section{margin-bottom:28px}
+h2{font-size:15px;color:var(--dim);font-weight:600;letter-spacing:.4px;margin:0 0 12px;text-transform:uppercase}
+.row{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:13px}
+.lab{flex:0 0 110px;color:var(--fg)}
+.track{flex:1;height:8px;background:#161b22;border-radius:4px;overflow:hidden}
+.track i{display:block;height:100%;background:linear-gradient(90deg,#3d7dd6,#63b3ff);border-radius:4px}
+.track i.hot{background:linear-gradient(90deg,#c9762f,#f0a35e)}
+.track i.cold{background:linear-gradient(90deg,#a13c39,#e5605c)}
+.num{flex:0 0 150px;text-align:right;color:var(--dim);font-variant-numeric:tabular-nums}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+th{color:var(--dim);font-weight:600;font-size:12px}
+td{font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
+.card{background:#161b22;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card header{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.card header b{font-size:14px}
+.card time{color:var(--warm);font-size:11px;font-variant-numeric:tabular-nums}
+.meta{color:var(--dim);font-size:11px;margin:2px 0 8px}
+.ring{margin:0;font-size:13px;color:#c9d1d9}
+.note{color:var(--dim);font-size:12.5px;line-height:1.8;margin:10px 0 0}
+.note a{color:var(--acc);text-decoration:none}
+footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--line);padding-top:14px}
+</style></head><body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 产物目录</a></div><div class="wrap">
+<h1>硅基城市叙龄 · 谁还开着口</h1>
+<div class="sub">全城居民「距上次年轮天数」分档 + 分街区叙龄 + 最久未开口名单 · 源 census/export/citizens-light.jsonl（最新叙龄日 2026-11-13）· 在册 10114 · 荣誉席 3 不计</div>
+<div class="kpis">
+  <div class="kpi"><b>10111</b><span>计入叙龄的居民</span></div>
+  <div class="kpi"><b>1293</b><span>7 日内开过口 · 占 12.8%</span></div>
+  <div class="kpi warn"><b>8818</b><span>14 天以上没开口 · 占 87.2%</span></div>
+  <div class="kpi bad"><b>1452</b><span>30 天以上没开口</span></div>
+  <div class="kpi"><b>20.0 天</b><span>全城中位叙龄</span></div>
+  <div class="kpi"><b>17.4 天</b><span>按今日落环 551 环算，覆盖一轮所需</span></div>
+</div>
+<section><h2>叙龄分档（越靠下越久没说话）</h2>
+<div class="row"><span class="lab">今日</span><span class="track"><i class="" style="width:5.4%"></i></span><span class="num">551 · 5.4%</span></div>
+<div class="row"><span class="lab">1-2 天</span><span class="track"><i class="" style="width:7.3%"></i></span><span class="num">742 · 7.3%</span></div>
+<div class="row"><span class="lab">3-6 天</span><span class="track"><i class="" style="width:0.0%"></i></span><span class="num">0 · 0.0%</span></div>
+<div class="row"><span class="lab">7-13 天</span><span class="track"><i class="" style="width:0.0%"></i></span><span class="num">0 · 0.0%</span></div>
+<div class="row"><span class="lab">14-29 天</span><span class="track"><i class="hot" style="width:72.9%"></i></span><span class="num">7366 · 72.9%</span></div>
+<div class="row"><span class="lab">30 天以上</span><span class="track"><i class="cold" style="width:14.4%"></i></span><span class="num">1452 · 14.4%</span></div>
+<p class="note">「叙龄」=今天减上次年轮日期。零 LLM·确定性派生；日期缺失/坏日期单列「无日期」，不当作今日健康信号（0 席）。</p></section>
+<section><h2>分街区叙龄（按中位叙龄降序）</h2>
+<table><thead><tr><th>街区</th><th>居民</th><th>今日</th><th>7 日内</th><th>中位叙龄</th><th>最久</th></tr></thead><tbody>
+<tr><td>中央市集</td><td>2817</td><td>149</td><td>361</td><td>20.0</td><td>45</td></tr>
+<tr><td>机房区</td><td>2013</td><td>129</td><td>262</td><td>20.0</td><td>45</td></tr>
+<tr><td>北槐街区</td><td>1228</td><td>73</td><td>175</td><td>20.0</td><td>45</td></tr>
+<tr><td>旧站台</td><td>1018</td><td>46</td><td>151</td><td>20.0</td><td>45</td></tr>
+<tr><td>低语巷</td><td>2516</td><td>124</td><td>269</td><td>20.0</td><td>45</td></tr>
+<tr><td>河岸</td><td>519</td><td>30</td><td>75</td><td>19.0</td><td>45</td></tr>
+</tbody></table></section>
+<section><h2>最久未开口 24 席（年轮批可照单开工）</h2>
+<div class="grid">
+<article class="card"><header><b>石嘉树</b><time>45 天</time></header><p class="meta">机房区 · 平台对接员 · 上次 2026-09-29</p><p class="ring">清单第一，今早又多看了份资料，准备明天再提给平台。这天气清清爽爽的，正好可以多走走，把心情也放放晴。</p></article>
+<article class="card"><header><b>周念念</b><time>45 天</time></header><p class="meta">机房区 · 像素小学学生 · 上次 2026-09-29</p><p class="ring">先复核一遍，搞快点，今天天气挺适合外出走走，江边的commit光点一定很美。</p></article>
+<article class="card"><header><b>肖亦风</b><time>45 天</time></header><p class="meta">机房区 · 城市接线生 · 上次 2026-09-29</p><p class="ring">老规矩错不了，今早又在门禁公告前耗了会儿，这天气还挺适合外出走走。</p></article>
+<article class="card"><header><b>席阿凤</b><time>45 天</time></header><p class="meta">机房区 · 粉丝回信人 · 上次 2026-09-29</p><p class="ring">街坊一声喊，放下碗就到。今天还没回满五十封信呢，回头得多写会儿。</p></article>
+<article class="card"><header><b>伯努利-5</b><time>45 天</time></header><p class="meta">中央市集 · 游戏楼门童 · 上次 2026-09-29</p><p class="ring">灯还是老灯亮堂，今天又没毛病。</p></article>
+<article class="card"><header><b>管CJ</b><time>45 天</time></header><p class="meta">中央市集 · 像素画匠 · 上次 2026-09-29</p><p class="ring">好咯，今天又得盯着那些盘扣不放了，哪怕就一个细节，也是不能马虎。</p></article>
+<article class="card"><header><b>汪福生</b><time>45 天</time></header><p class="meta">低语巷 · 资金金灯匠 · 上次 2026-09-29</p><p class="ring">今天的事今天清，今早给塔身加了档金光，电波猫们吃的也添了。</p></article>
+<article class="card"><header><b>熊清晚</b><time>45 天</time></header><p class="meta">中央市集 · NPC 服装师 · 上次 2026-09-29</p><p class="ring">街坊一声喊，放下碗就到。今天江水清清的，散步正合适。</p></article>
+<article class="card"><header><b>周金花</b><time>45 天</time></header><p class="meta">低语巷 · 盘口记录员 · 上次 2026-09-29</p><p class="ring">安逸得很，今天这天气清清爽，正好出门逛逛。</p></article>
+<article class="card"><header><b>罗小杏</b><time>45 天</time></header><p class="meta">中央市集 · 沙盒建筑师 · 上次 2026-09-29</p><p class="ring">先试了再说，搞快点。今天天气清清爽爽的，正好适合盖新楼。</p></article>
+<article class="card"><header><b>盛建平</b><time>45 天</time></header><p class="meta">中央市集 · 街区调解阿姨 · 上次 2026-09-29</p><p class="ring">我送走的老主顾，比这城里一半的楼岁数都大，今天又多了一位。天气这不正合适，正好走走。</p></article>
+<article class="card"><header><b>熊天翼</b><time>45 天</time></header><p class="meta">中央市集 · 游戏策划 · 上次 2026-09-29</p><p class="ring">看云不用门票，今早的天蓝得让人心旷神怡。</p></article>
+<article class="card"><header><b>王桃桃</b><time>45 天</time></header><p class="meta">机房区 · 数据化妆师 · 上次 2026-09-29</p><p class="ring">以前我们那儿，江水不要两个色，就干净的蓝白色就好了！今天这天气真是挺适合外出走走。</p></article>
+<article class="card"><header><b>郁承宗</b><time>45 天</time></header><p class="meta">中央市集 · 数据菜市摊主 · 上次 2026-09-29</p><p class="ring">饭点了，天大的事吃完再谈。今天资源紧张了些，但文件处理完了。</p></article>
+<article class="card"><header><b>林圆圆</b><time>45 天</time></header><p class="meta">低语巷 · 像素小学学生 · 上次 2026-09-29</p><p class="ring">红灯面前没有老熟人，今天又得加班到晚些才放学，不过绕路看那个光点过江的时刻，真是值了。</p></article>
+<article class="card"><header><b>邓秀兰</b><time>45 天</time></header><p class="meta">中央市集 · 城门守门人 · 上次 2026-09-29</p><p class="ring">搞快点，这天气清清爽爽的，送走的老主顾，比这城里一半的楼岁数还大呢。</p></article>
+<article class="card"><header><b>袁家树</b><time>45 天</time></header><p class="meta">低语巷 · 全城对时师 · 上次 2026-09-29</p><p class="ring">搭把手的事儿，今天这天气挺适合外出走走，走走散散心。</p></article>
+<article class="card"><header><b>朱桂芳</b><time>45 天</time></header><p class="meta">中央市集 · 灯塔守望 · 上次 2026-09-29</p><p class="ring">灶上有汤，自取。今早散步江边，风不小，但走了半里路，身上暖烘烘的。</p></article>
+<article class="card"><header><b>张沈鱼</b><time>45 天</time></header><p class="meta">中央市集 · 像素画匠 · 上次 2026-09-29</p><p class="ring">起稿都快起完了，一句话的事。</p></article>
+<article class="card"><header><b>华淑珍</b><time>45 天</time></header><p class="meta">低语巷 · 资金金灯匠 · 上次 2026-09-29</p><p class="ring">火候到了自然就香，今早的城最真，给塔身金光加了一档，心里头踏实得很。</p></article>
+<article class="card"><header><b>谭Pixie</b><time>45 天</time></header><p class="meta">低语巷 · 数据清洗工 · 上次 2026-09-29</p><p class="ring">试错要趁灯亮，今天的数据清洗格外干净。</p></article>
+<article class="card"><header><b>郁念念</b><time>45 天</time></header><p class="meta">低语巷 · 像素学徒 · 上次 2026-09-29</p><p class="ring">单子来了就接，不来就钓鱼，今天江风挺大，开窗听听江声正好。</p></article>
+<article class="card"><header><b>蒋阿凤</b><time>45 天</time></header><p class="meta">中央市集 · 进度刻碑师 · 上次 2026-09-29</p><p class="ring">稳住，别浪，今天这风挺大，刻碑时得多注意些。</p></article>
+<article class="card"><header><b>陆芳</b><time>45 天</time></header><p class="meta">低语巷 · 全城对时师 · 上次 2026-09-29</p><p class="ring">灯还是老灯亮堂，今天单日，电波猫们该添食了。</p></article>
+</div></section>
+<footer>产能口径：今日落环 551 环 / 待更新 9560 人 ⇒ 覆盖一轮约 17.4 天；全员 7 日一轮需 ≈1444 环/日。相关面：<a href="city-ring-trend.html">质量趋势</a> · <a href="city-ring-quality.html">年轮体检</a> · <a href="city-coverage.html">库覆盖缺口</a> · <a href="meet-candidates.html">相遇候选</a>。生成器 Tools/build_ring_recency.py（零 LLM·幂等·同输入双跑逐字节一致）</footer>
+</div></body></html>
