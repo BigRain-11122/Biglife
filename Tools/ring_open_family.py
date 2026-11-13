@@ -49,7 +49,7 @@ FAMILY_MIN_DENOM = 8      # 当日 <8 环不判（小样本噪声）
 # 病根：族表是代码常量、没有生效时间，改一次正则就等于把过去的日子重判一遍，
 # 读数和当日决策各看各的口径。此处只加"读得出来"的守卫（不改阈值、不改闸）：
 # 每次族表（FAMILIES 结构或其正则集合）变更必须 bump TABLE_EPOCH，批起登记。
-TABLE_EPOCH = "2026-11-13T15:10"   # 族表最后一次变更（=BOOK_LEDGER_DEICTIC 立族·v1.3）
+TABLE_EPOCH = "2026-11-13T15:38"   # 族表最后一次变更（=RAIN_SETTING_DEICTIC 立族·v1.4）
 EPOCH_LOG = os.path.join(ROOT, "state", "ring-family-epochs.json")
 
 # 族定义：锚定开头位置（^），只认句式骨架不认词义。
@@ -94,6 +94,18 @@ FAMILIES = collections.OrderedDict([
         "11-12 42.2%），按 T-20261112-04 判据在其出生日截获，不等到占三成再回溯。"
         "族按形状判：一句翻账本合法，全天多人从同一页起句才是病。",
         [r"^账本", r"^账簿"],
+    )),
+    ("RAIN_SETTING_DEICTIC", (
+        "雨天具象布景开场（雨水顺着X／檐口的水线／雨脚／雨敲窗棂）——v1.4 "
+        "2026-11-13 R2789 实测新生吸引子：11-12 5/729=0.7% → 11-13 15/552=2.7%，"
+        "一日 3 倍。与 WEATHER_ABSTRACT 的分界＝抽象天气断言（雨还在下／风里／天阴沉）"
+        "由旧族承担，本族只收「降水落到具体物件上」的布景形状；单句合法，"
+        "全天多人在开头搭同一套雨景才是病（与 HAND/PROP 同判据）。"
+        "15 条实测分布：檐口的水线 5／雨水顺着瓦沟 3／雨脚细细密密 2／雨敲在窗棂上 2／"
+        "雨点没停 1——同形状不同词，故按「物件+降水共现」判，不按整句锁。",
+        [r"^雨水", r"^雨脚", r"^雨敲", r"^雨点", r"^雨丝", r"^雨声",
+         r"^雨幕", r"^细雨", r"^小雨", r"^檐口.{0,8}(水|滴|雨)",
+         r"^瓦沟.{0,8}(水|雨)", r"^窗棂.{0,8}(雨|水|响)"],
     )),
 ])
 
@@ -427,6 +439,14 @@ def _selftest():
         # 账簿族（BOOK_LEDGER_DEICTIC·v1.3）两组探针：开头正例 / 句中不误伤。
         ("pos-book-ledger", "账本翻到第三页，雨声在铁皮上敲得急。", "BOOK_LEDGER_DEICTIC"),
         ("neg-book-midsentence", "她把账本合上，第三页的墨迹还没干透。", None),
+        # 雨天布景族（RAIN_SETTING_DEICTIC·v1.4）四探针：物件+降水正例 /
+        # 抽象天气旧族不被抢（^雨还在下 仍归 WEATHER_ABSTRACT）/ 句中不误伤 /
+        # 无降水的檐口描写不误伤（檐口的蜘蛛网）。
+        ("pos-rain-eaves", "檐口的水线一直往下淌，风把雨棚掀得啪啪响。", "RAIN_SETTING_DEICTIC"),
+        ("pos-rain-gutter", "雨水顺着瓦沟流，我正把一件件货往里头挪。", "RAIN_SETTING_DEICTIC"),
+        ("pos-rain-abstract-keeps", "雨还在下，铁皮棚上的动静一天没停。", "WEATHER_ABSTRACT"),
+        ("neg-rain-midsentence", "她把伞收好，雨水顺着瓦沟流到脚边。", None),
+        ("neg-rain-eaves-norain", "檐口的蜘蛛网挂了一整年，没人上去扫。", None),
     ]
     bad = 0
     for label, text, want in probes:

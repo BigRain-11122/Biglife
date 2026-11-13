@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-13 15:16",
+ "export_ts": "2026-11-13 15:37",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2788（2026-11-13 15:1x）**：让路窗确定性面——日更可见面重建 3 个（city-today/city-goals/index），QC 巡检 10114 卡零异常，语言池 72+12 桶全达标自终止。 **R2781（2026-11-13 14:2x·让路窗质量读数）**：年轮开头族日终读数——今日 552 环 HAND_DEICTIC 40.0%、PROP_DEICTIC 31.0% 双越 25% 线，而同日 05:31 读数为全日 25.0% PASS；差量算术闭合=其后新落 232 席中 140 席属 HAND(60.3%)，即「上午在线内、下午批推过线」。已立 T-20261113-03（三条待查候选入单，禁改阈值换绿）并落证 qa/RING-OPEN-FAMILY-20261113.md。年轮/相遇/提案三条 LLM 面按 D-20261020-02 工作日让路窗顺延 19:00。 **R2762（2026-11-13 13:0x）：洗码残渣出生站拦截 v0.69** —— 可见面实抓 C-00110 两代残句（10-24「c.json的flag根」/ 11-12「c.的根」）：喂入面只吃 2 字母以上拉丁词，c.json 被抹成 c.，模型再照抄自己旧环放大。双侧修复=喂入洗码清「字母+句点+紧跟汉字」+ 落环口新增 latin-debris 硬门；全库 17063 圈用真实门函数复核仅命中这 2 例，P楼/G区/Q区/G系 与居民 ID 零误伤；回归 qa/test_latin_debris.py 11/11 PASS（零 LLM）。",
+   "t": "**R2789（2026-11-13 15:4x）**：年轮开头族表升 v1.4，立 `RAIN_SETTING_DEICTIC`（雨天具象布景族）——11-12 5/729=0.7% → 11-13 15/552=2.7%（一日 3 倍），按出生日截获判据入表；今日未归类盲区 23.2%→20.5%、11-12 32.5%→31.8%；消费方 hint 同步登记（缺登记会把族名机器码拼进提示词）；自检 30 探针 0 fail。 **R2788（2026-11-13 15:1x）**：让路窗确定性面——日更可见面重建 3 个（city-today/city-goals/index），QC 巡检 10114 卡零异常，语言池 72+12 桶全达标自终止。 **R2781（2026-11-13 14:2x·让路窗质量读数）**：年轮开头族日终读数——今日 552 环 HAND_DEICTIC 40.0%、PROP_DEICTIC 31.0% 双越 25% 线，而同日 05:31 读数为全日 25.0% PASS；差量算术闭合=其后新落 232 席中 140 席属 HAND(60.3%)，即「上午在线内、下午批推过线」。已立 T-20261113-03（三条待查候选入单，禁改阈值换绿）并落证 qa/RING-OPEN-FAMILY-20261113.md。年轮/相遇/提案三条 LLM 面按 D-20261020-02 工作日让路窗顺延 19:00。",
    "s": 1
   },
   {
@@ -24,7 +24,7 @@
   },
   {
    "n": "QC 巡检线",
-   "t": "**R2788 例巡条：** cards=10114 evolved=10114 problems=0 dup_rings=37/37 **R2762 例巡条**：日更面 36 项 verdict=PASS；事件闸 events=42535 cards=10111 mismatch=0 schema=0；`ring_lint --today-only` rings=552 coded=0；可见面链接 37 文件 209 链接 0 断链；登记表对 export 可见面覆盖完整（growth 分页同源）。 **R2732 例巡条**：qc_census 实跑 cards=10114 evolved=10114 problems=0（编号/姓名唯一、必备段齐备、年轮锚定律）；dup_rings=37/37 为观测面存量，不回溯改写历史。 **R2704 例巡条：qc_census 补跑（上次巡检 10-20 已逾期）problems=0（cards=10114），dup_rings 37/37 全量标记入册，不变量全绿。** **R2701 例巡条：qc_census problems=0（cards=10114），dup_rings 37/37 全量标记入册。** **R2685 例巡条（归因面）**：`ring_open_family --check 2026-11-13` → HAND_DEICTIC 81/324=25.0%，PASS（未越线）；`--by-source` 拆分 batch 320 : meet 4，守恒校验通过。 **R2674 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37 → PASS**（census/QC-REPORT.md 本轮首落）。 **R2668 例巡条（02:06）**：cards=10114 evolved=10114 problems=0 dup_rings=37/37 → 全绿。 **R2655 例巡条**：QC 上巡 R2654 problems=0（6 轮间隔未到，本轮零重扫）；语言池 pool_audit 全桶达标 SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）→ 按自终止律零 pool_gen；相遇轮今日 3/3 达上限（cap 3）自动跳过。 **R2649 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——编号/姓名唯一、必备段齐备、年轮锚定律无违例；事件回放 41991 全量比对 mismatch=0。 **R2646 例巡条：QC cards=10114 evolved=10114 problems=0；事件回放 41961 全量比对 mismatch=0 —— 不变量无异常。** **R2636 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——编号/姓名唯一、必备段齐备、年轮锚定律无违例 **R2629 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——不变量扫描全绿，编号/姓名唯一、必备段齐备、年轮锚定律无违例 当前活：本轮做批次级验收（T-04 骨架族配额闸 22 席 HAND_DEICTIC=0.0% PASS）\n最近实物：census/QC-REPORT.md（problems=0）；新立单 T-20261112-10 母题收敛（top-3 母题占 81.8%）",
+   "t": "**R2789 例巡条**：`ring_lint --today-only` 552 环 coded=0 PASS；`ring_open_family --selftest` 30 探针 0 fail；`round_daily --run` 29 面 fresh stale=0；`pool_audit` 72 桶全达标 SELF_TERMINATE。 **R2788 例巡条：** cards=10114 evolved=10114 problems=0 dup_rings=37/37 **R2762 例巡条**：日更面 36 项 verdict=PASS；事件闸 events=42535 cards=10111 mismatch=0 schema=0；`ring_lint --today-only` rings=552 coded=0；可见面链接 37 文件 209 链接 0 断链；登记表对 export 可见面覆盖完整（growth 分页同源）。 **R2732 例巡条**：qc_census 实跑 cards=10114 evolved=10114 problems=0（编号/姓名唯一、必备段齐备、年轮锚定律）；dup_rings=37/37 为观测面存量，不回溯改写历史。 **R2704 例巡条：qc_census 补跑（上次巡检 10-20 已逾期）problems=0（cards=10114），dup_rings 37/37 全量标记入册，不变量全绿。** **R2701 例巡条：qc_census problems=0（cards=10114），dup_rings 37/37 全量标记入册。** **R2685 例巡条（归因面）**：`ring_open_family --check 2026-11-13` → HAND_DEICTIC 81/324=25.0%，PASS（未越线）；`--by-source` 拆分 batch 320 : meet 4，守恒校验通过。 **R2674 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37 → PASS**（census/QC-REPORT.md 本轮首落）。 **R2668 例巡条（02:06）**：cards=10114 evolved=10114 problems=0 dup_rings=37/37 → 全绿。 **R2655 例巡条**：QC 上巡 R2654 problems=0（6 轮间隔未到，本轮零重扫）；语言池 pool_audit 全桶达标 SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）→ 按自终止律零 pool_gen；相遇轮今日 3/3 达上限（cap 3）自动跳过。 **R2649 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——编号/姓名唯一、必备段齐备、年轮锚定律无违例；事件回放 41991 全量比对 mismatch=0。 **R2646 例巡条：QC cards=10114 evolved=10114 problems=0；事件回放 41961 全量比对 mismatch=0 —— 不变量无异常。** **R2636 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——编号/姓名唯一、必备段齐备、年轮锚定律无违例 **R2629 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——不变量扫描全绿，编号/姓名唯一、必备段齐备、年轮锚定律无违例 当前活：本轮做批次级验收（T-04 骨架族配额闸 22 席 HAND_DEICTIC=0.0% PASS）\n最近实物：census/QC-REPORT.md（problems=0）；新立单 T-20261112-10 母题收敛（top-3 母题占 81.8%）",
    "s": 1
   },
   {
@@ -1815,6 +1815,6 @@
    "本轮（2026-11-13 09:58-10:1x）今日年轮落环 554 行 / 551 人（事件流直数）；日更面重建 2 面 + 事件回放闸 PASS；全程零云端调用、零 LLM 调用（让路窗）。"
   ]
  ],
- "t": "当前活：让路窗确定性面（日更可见面/QC 巡检/池审计）\n最近实物：census/export/city-today.html（2026-11-13 15:1x，294,704B）\n下个里程碑：19:00 让路窗结束→年轮批恢复（ETA 2026-11-13 19:00）",
- "top_text": "当前活：让路窗确定性面（日更可见面/QC 巡检/池审计）\n最近实物：census/export/city-today.html（2026-11-13 15:1x，294,704B）\n下个里程碑：19:00 让路窗结束→年轮批恢复（ETA 2026-11-13 19:00）"
+ "t": "当前活：年轮开头族表 v1.4（雨天布景族立族＋消费方 hint 登记·让路窗内确定性面）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-ring-openings.html（2026-11-13 15:41，6 族口径，盲区 20.5%）\n下个里程碑：19:00 让路窗解→年轮 --batch 3 落环＋相遇轮",
+ "top_text": "当前活：年轮开头族表 v1.4（雨天布景族立族＋消费方 hint 登记·让路窗内确定性面）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-ring-openings.html（2026-11-13 15:41，6 族口径，盲区 20.5%）\n下个里程碑：19:00 让路窗解→年轮 --batch 3 落环＋相遇轮"
 }

@@ -50,6 +50,16 @@
 
 ## 已结
 
+## R2789 · 2026-11-13 15:3x @BigLife-OSLoop（雨天布景族出生日截获·族表 v1.4）
+- 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，`Select-String D-20261113` 零命中）；orders 物理件区无涉本司新件；HQ 日闸=`ALREADY_REPORTED`（day=2026-11-13 lines=1）零写入。
+- 让路窗（周五工作日 09:00-19:00·D-20261020-02 实读 `FLAG: pausedLite 2026-11-13T09:00:01`）：年轮/相遇顺延 19:00；`round_daily --run` 29 面全 fresh stale=0 PASS；`pool_audit` 72 桶全达标 SELF_TERMINATE；`ring_lint --today-only` 552 环 coded=0 PASS。
+- **产品增量（源头拦截·2 分）**：族表新增 `RAIN_SETTING_DEICTIC`（雨天具象布景族）。取证链＝今日 128 条未归类开口按前缀聚类，雨景形状合计 **15/552=2.7%**，且 11-12 仅 5/729=0.7% ⇒ **一日 3 倍**；分布＝檐口的水线 5／雨水顺着瓦沟 3／雨脚细细密密 2／雨敲在窗棂上 2／雨点没停 1（同形状不同词，故按「物件+降水共现」判，不按整句锁）。与 `WEATHER_ABSTRACT` 分界＝抽象天气断言归旧族、降水落到具体物件归新族；`^雨还在下` 仍判旧族（探针 `pos-rain-abstract-keeps` 守此边界）。立族后今日未归类 **23.2%→20.5%**、11-12 **32.5%→31.8%**；新族 2.7% 远低于 25% 配额 ⇒ 零新增拒稿。
+- **同批修一处潜伏坑**：`evolve_citizen.py` 的 `FAMILY_OPEN_HINTS` 缺新族条目时，`.get(f, f)` 会把族名原文（`RAIN_SETTING_DEICTIC`）直接拼进提示词（模型读到一串机器码）——已同批登记人话 hint。另 `ring_quality_trend.py` 页内判据文案原写死「HAND/TIME_OPEN/WEATHER_ABSTRACT 任一」，与现役 6 族不符，改为「族表中任一族」（CEO 可见面口径纠偏）。
+- 验证：`ring_open_family --selftest` **30 探针 0 fail**（新增 5：`pos-rain-eaves`／`pos-rain-gutter`／`pos-rain-abstract-keeps`／`neg-rain-midsentence`／`neg-rain-eaves-norain`）；`TABLE_EPOCH` bump 至 2026-11-13T15:38（v1.2 跨口径守卫律）；`build_ring_openings.py` 重建（rings=17032 days=25 unclassified=20.5%）；`ring_quality_trend.py` 重建（today defect 9.4%·best）。
+- 诚实边界＝`--check 2026-11-13` 仍报 HAND 40.0%/PROP 31.0% OVER，系 12:09 立族的追溯重分类（R2786 定谳·日有效口径 25.0%），本轮不动；`update_status_export` 报 `results=False`（results_note 未含 `{N}` 占位，尾部行未追），另单可修。
+- 计分：能看实物=2 分（开口面/趋势面重建＋盲区下降可复核）｜文件改动=1 分｜零 LLM。
+- tokens: local=0 api=0 api_reason=workday-yield-window
+
 ## R2787 · 2026-11-13 15:0x @BigLife-OSLoop（账簿族出生日截获·族表 v1.3）
 - 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团无 D-20261113-* 行）；orders 物理件区无涉本司新件；HQ 日闸=ALREADY_REPORTED（day=2026-11-13 lines=1）零写入。
 - 让路窗（周五工作日 09:00-19:00·D-20261020-02）：年轮/相遇/反思顺延 19:00（evolve 原样返回 yield-window）；round_daily --check 全 32 面 fresh stale=0 PASS；pool_audit PASS SELF_TERMINATE；QC 实跑 cards=10114 problems=0 dup_rings=37/37。

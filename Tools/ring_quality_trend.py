@@ -250,7 +250,7 @@ footer{{padding:16px 20px 40px;color:var(--dim);font-size:12px;border-top:1px so
 <h2 class="sec">逐日开头族 / 第二句吸引子（日期倒序）</h2>
 <table><tr><th>日期</th><th>年轮</th><th>HAND_DEICTIC</th><th>占比</th><th>第二句 WIND_ACTION</th><th>闸判定</th></tr>{fam_table}</table>
 <p class="meta">开头族只量正文前 12 字，句中合法身体描写（如下半句的「手心的汗」）不计入；
-闸判定 OVER = HAND_DEICTIC／TIME_OPEN／WEATHER_ABSTRACT <b>任一</b>族当日占比 &gt; {stats['quota']:.0f}%（{stats['min_denom']} 环以下不判，记「—」）；
+闸判定 OVER = 族表中 <b>任一</b>族当日占比 &gt; {stats['quota']:.0f}%（{stats['min_denom']} 环以下不判，记「—」）；
 本表只列 HAND_DEICTIC，故 0.0% 仍可能判 OVER——括号内点名超线族。
 第二句 WIND_ACTION 为只观测指标，尚未入闸（T-20261112-05 观测窗）。</p>
 <h2 class="sec">逐日明细（近 {len(recent)} 日 · 日期倒序）</h2>
