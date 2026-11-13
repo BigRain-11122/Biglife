@@ -1397,3 +1397,11 @@ tokens: local=10 api=0 api_reason=-
   计分：能看实物=2 分（物件志/台账双面可点开，24 条语境）｜文件改动=1 分｜零 LLM。
   tokens: local=0 api=0 api_reason=workday-yield-window
   **[R2778 自检补正·同日 13:4x]** 逐条过性别与歧义：`swap_pronouns(hook_scope, gender)` 在 `generate_census.py:265` 对尾巴做他/她替换（女性卡「他自己信」→「她自己信」，已核路径存在），故 18 条含「他」的句子不会在女性卡上错配；但「——他妈也当没听过」单看易被读成粗口，虽语义是「他的妈妈」——品质律下不留歧义，已替换为「——家里人当没听过」并重建面（24 条无重复）。
+
+- [R2779] 2026-11-13 13:45-14:0x @BigLife-OSLoop 让路窗合规校验轮（周五工作日·D-20261020-02 年轮/相遇/提案顺延 19:00）：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团 decisions 无 D-20261113-* 行）；orders 物理件区无涉本司新件；TASKS open=2 全在观测窗（T-20261113-02 待 19:00 实批 / T-20261113-01 属外部启动器模板）。
+  **各线执行实录（无新整产·全部因已达标或让路闸）**：①年轮线 `evolve_citizen --batch 3` 返回 `yield-window: workday 09:00-19:00 deferred`（让路闸生效，非失败，零 LLM 零显存占用）；②日更面 `round_daily --check` 36 面全 fresh、stale=0、verdict=PASS（幂等零动作，无重建）；③HQ 日闸 `hq_feedback_daily --check` = ALREADY_REPORTED（day=2026-11-13 lines=1）零写入，防日报 spam；④QC 与 pool 同日 13:29/13:2x 已跑（problems=0 / SELF_TERMINATE），按每日一次上限不重跑。
+  **本轮新增校验（mtime 之外的内容级面·防"面新鲜但内容假"）**：三个 CEO 主面实读断言——`city-today.html` 152,238B 含 2026-11-13、`city-dashboard.html` 41,408B 含当日、`city-chronicle.html` 61,423B 含当日 → 内容级新鲜成立（补 R2743「dir mtime 不反映正文改写」的另一半：现验正文本身带当日标记）。
+  **假阳性定谳（省后续重复追查）**：36 面占位符扫描中 17 面命中 `}}`，取样 `city-today.html` 上下文实证为 CSS 媒体查询收尾 `...{display:none}}`，**非模板泄漏**（且全库无 `{{` 配对）→ 判假阳性，本轮零改动；若日后把该扫描做成闸，须排除 `<style>` 段内成对花括号，否则必误报。
+  **对外实况三行**：当前活=让路窗内确定性面维护与内容级校验（年轮/相遇/提案 19:00 恢复）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-today.html（2026-11-13 13:04 · 152KB · 当日标记已核）+ city-dashboard.html（13:23）｜下个里程碑=19:00 让路窗解→年轮 --batch 3 落环 + T-20261113-02 提案线首批实批（验收：新增提案行 ≥1 带 [锚]/ring_ref，ETA 19:20）。
+  计分：能看实物=2 分（三主面内容级新鲜已实证）｜文件改动=1 分（本记录）｜零 LLM。
+  tokens: local=0 api=0 api_reason=workday-yield-window
