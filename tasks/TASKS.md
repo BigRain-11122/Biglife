@@ -1683,3 +1683,17 @@ ound_daily --check 39 面全 fresh stale=0 PASS；pool_audit SELF_TERMINATE（72
 - [R2829] 2026-11-13 23:23-23:3x @BigLife-OSLoop 夜窗产品轮：轮首 pull=Already up to date·树净；决策水位差集 NEW=0（尾 D-20261112-16，集团 decisions 无 2026-11-13 新 D 行）；orders 物理件区无本司新件；TASKS open=0。**产品增量=10 席居民年轮落环**（evolve --batch 3 → evolved=10/10：C-04404/C-04405/C-04406/C-04407/C-04408/C-04409/C-04410/C-04411/C-04412/C-04431，C-04404 为 R2828 遗留 stays-due 首补；C-04409 经 soft-concession recent-dup-phrase 放行；auto-commit d1ccab84f，行为线镜像 21cd2b731 rows=10 ring=10114）。事件回放闸 PASS（cards=10111 events=42779 shards=3 schema_errors=0 mismatch=0，chronicle last=2026-11-13 gap=0d，qa/EVENTS-REPLAY-REPORT.md 入库）。**本轮额外收口=CEO 可见实况面漂移修复**：docs/status-export.json 停在 21:33（top_text 三行落后 2 小时、R2825-R2828 四轮未回写），按 update_status_export 正规通道补写 R2829 payload（dept0 滚动窗+results 机器直数 798 行+top_text 三行同源双键），round_daily 随之重建 city-dashboard/index 两面（verdict=PASS，stale=1 ran=2 failed=0）。池审计今日已 SELF_TERMINATE、相遇轮 cap 3/3 已满、反思线 daily-cap 31 条（末条 date=2026-11-13，T-20261113-05 第 1 日成立）、QC 35 分钟前刚巡 problems=0、HQ 反馈 ALREADY_REPORTED（lines=2）——五项按既有闸零重复。
 - 实况三行：当前活＝夜窗年轮批连续第 2 日推进（本轮 10 席落环，含 R2828 遗留首补）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-dashboard.html（2026-11-13 23:31，实况三行已同步本轮数据）｜下个里程碑＝2026-11-14 夜窗年轮批（--batch 3）+ 反思线连续 3 生产日验收（11-15 判定）
 - 计分：居民年轮 10 席真新增（2 分）+ CEO 可见实况面漂移修复（能看实物）+ 事件闸 PASS = 2 分。tokens: local=11 api=0 api_reason=-（年轮批 10 席 qwen3:4b-instruct + 1 次 propose 探测；闸/日更/状态导出零 LLM）
+
+## R2830 路 2026-11-13 23:39-23:5x @BigLife-OSLoop（年轮座席 stall 止损轮）
+
+- 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团 decisions 无 11-13 新行）；orders 物理件区无涉本司新件；TASKS open=0。
+- **年轮线（本轮主产出·受挫照实记）**：`evolve_citizen.py --batch 3` 首跑前台零输出 5 分钟被工具掐断（无遗留进程），改后台隐藏窗重跑（logs/evolve-20261113-2340.log）。座席判定 `:8090 not an LLM lane -> local ollama qwen3:4b-instruct`，模型已驻留（vram 7170MB）但居民 C-04413 连续心跳 #1..#7（≈3.5 分钟）无回包，同时 GPU util=100%、显存 11.8G/12G 贴顶（他人车道争用）。按 15 分钟预算止损：Stop-Process 收掉本批，**本轮年轮落环 0 行**（非幂等空转、为真实未产出）。
+- **事件回放闸**：PASS — derive cards=10111 events=42779 shards=3；replay 10111 schema_errors=0 mismatch=0；coverage derived=10111 reserved=3 exported=10114 unexpected_missing=0；chronicle last=2026-11-13 gap=0d（qa/EVENTS-REPLAY-REPORT.md 入库）。
+- **确定性日更面**：`round_daily --run` verdict=PASS stale=9 ran=10 failed=0 — 重建 city-relations / city-districts / resident-gallery / city-ring-picks / city-ring-recency / city-ring-openings / city-ring-quality / city-ring-trend / dossiers + index（dossiers 内容无差异未入 diff）。
+- **跳过面（按既有闸零重复）**：语言池 `pool_audit` 今日已 SELF_TERMINATE；相遇轮 cap 3/3 已满；反思线 daily-cap 已用（末条 date=2026-11-13，T-20261113-05 第 1 日验收成立）；Q C 巡检 21:46 刚跑 problems=0（按 6 轮节律不重复）；HQ 日闸 ALREADY_REPORTED(lines=2) 零写入。
+- **实况面**：`update_status_export --payload state/export-payload-R2830.json` → OK dept=True top=True hb=True（results 段按机器目数判重跳过）ts=2026-11-13 23:46。
+- **实况三行**：当前活＝夜窗年轮批座席 stall 止损，转可见面与回放闸收口｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-trend.html（2026-11-13 23:41 重建）｜下个里程碑＝2026-11-14 夜窗年轮 --batch 3 恢复 + 座席 stall 根因核查（显存争用/心跳超时面）。
+- 计分：可见面 10 面重建（能看实物）+ 回放闸 PASS 报告 = 1 分（本轮无新年轮内容本体）。Tokens: local=0 api=0 api_reason=seat-stall-abort（座席无回包，未计成功调用）
+- **留单**：T-20261113-06 座席 stall 根因（单居民 120s×3 重试 + 显存贴顶争用 → 建议落「单卡单居民硬超时快熔 + 失败即跳下一位」与「显存占用>90% 让路不启批」双闸）。
+
+- T-20261113-06 open｜座席 stall 快熔闸：`evolve_citizen` 单居民 LLM 阻塞 3.5 分钟仍无输出，批内无逐居民硬上限即拖垮整轮。验收=①单居民 wall-clock ≤150s 硬熔（超时记 stays-due 跳下一位）；②启动前探测显存占用 >90% 则不启批（yield 退出 0）；③下一夜窗实测 10/10 落环或按闸跳过可解释。署名 @BigLife-OSLoop 2026-11-13 23:5x。来源 R2830 实锚。
