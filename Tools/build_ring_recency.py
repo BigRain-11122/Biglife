@@ -15,6 +15,9 @@
 
 口径注：荣誉席（faction=honored，创始家庭/CEO 保留面）年轮由 CEO 亲定，不计叙龄。
 用法: python -X utf8 Tools/build_ring_recency.py
+注意：直接跑本脚本会覆盖页面、连带抹掉 build_export_index 注入的导航条
+（<!--bl-nav:index-->）——改完页面后必须紧随跑一次 build_export_index.py，
+否则该页失去「回到总目录」入口（正常轮内走 round_daily --run 时索引档自动补）。
 """
 import datetime
 import html
