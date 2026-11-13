@@ -1327,3 +1327,13 @@ tokens: local=10 api=0 api_reason=-
   计分：能跑/能看实物=2 分（8 面刷新 + 5 席经历行）+ 文件改动=1 分 · commit 2cbd77dbb 已推送
   waiting: yield-window ETA 2026-11-13 19:00
   tokens: local=0 api=0 api_reason=yield-window
+
+
+- [R2744] 2026-11-13 11:53 @BigLife-OSLoop 让路窗确定性产品轮：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16）；orders 物理件区无涉本司新件。
+  **闸面**：round_daily --check 28 项全 fresh（stale=0）；pool_audit 全桶达标 SELF_TERMINATE（语言线跳）；qc_census cards=10114 evolved=10114 problems=0；ring_material_check 今日 motif=8/8 eff、rumor=3/3 eff ready（streak 2/3·明日验收）；HQ 日闸 ALREADY_REPORTED 零写入。
+  **年轮/相遇/提案=0**：工作日让路窗（09:00-19:00·D-20261020-02）结构性延后，19:00 恢复，不重扫。
+  **假绿体检（跨 35 个导出面）**：编码 FFFD=0 全清；无空页/无陈旧面；city-ops.html 三行实况在位、docs/status-export.json 11:44 新鲜（T-20260924-08 维持）。
+  **产品增量（CEO 首屏可见面补缺）**：主看板 city-dashboard.html 原先无三行实况（产品优先律 5 只落在 ops 面）——新增 live_lines() 读 docs/status-export.json top_text 渲染实况块；**负控三态**=缺文件→[] 不渲染 / 仅两行→[]（不半渲染）/ 完整三行→逐行转义输出；重建后 63064B、FFFD=0、连续两次重建 MD5 一致（幂等非假绿）。
+  计分：能看实物=2 分（city-dashboard.html 带实况块）+ 文件改动=1 分
+  waiting: yield-window ETA 2026-11-13 19:00
+  tokens: local=0 api=0 api_reason=yield-window

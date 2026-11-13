@@ -59,6 +59,21 @@ def bar(items, total, limit=None):
     return "\n".join(out)
 
 
+def live_lines():
+    """对外实况三行（产品优先律 5）：读 docs/status-export.json 的 top_text。
+
+    取不到就返回空列表（页面不渲染该块）——不编造、不用心跳猜。
+    """
+    src = os.path.join(ROOT, "docs", "status-export.json")
+    try:
+        with open(src, encoding="utf-8") as f:
+            top = (json.load(f) or {}).get("top_text") or ""
+    except Exception:
+        return []
+    lines = [x.strip() for x in top.splitlines() if x.strip()]
+    return lines[:3] if len(lines) >= 3 else []
+
+
 def main():
     rows = load()
     total = len(rows)
@@ -108,6 +123,12 @@ def main():
     # 用数据源 mtime 作「截至」时间，保证同源输入字节级幂等
     gen_at = datetime.datetime.fromtimestamp(os.path.getmtime(SRC)).strftime("%Y-%m-%d %H:%M:%S")
     cov = len(rings) / total * 100 if total else 0
+    live = live_lines()
+    live_html = ""
+    if live:
+        live_html = '<div class="live">%s</div>' % "".join(
+            "<div>%s</div>" % html.escape(x) for x in live
+        )
     doc = """<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -119,6 +140,8 @@ body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.65 -apple-system,
 .wrap{max-width:1080px;margin:0 auto;padding:32px 20px 64px}
 h1{font-size:22px;margin:0 0 4px;letter-spacing:.5px}
 .sub{color:var(--dim);font-size:12px;margin-bottom:28px}
+.live{background:#161b22;border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:8px;padding:10px 14px;margin:0 0 24px;font-size:12.5px;color:#c9d1d9}
+.live div+div{margin-top:4px}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:28px}
 .kpi{background:#161b22;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
 .kpi b{display:block;font-size:24px;color:var(--acc);line-height:1.2}
@@ -143,6 +166,7 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
 </style></head><body><div class="wrap">
 <h1>硅基城市脉搏</h1>
 <div class="sub">居民聚合面板 · 数据截至 %(gen)s · 源=census/export/citizens-light.jsonl</div>
+%(live)s
 
 <div class="kpis">
   <div class="kpi"><b>%(total)d</b><span>在册居民</span></div>
@@ -180,6 +204,7 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
 </div></body></html>
 """ % {
         "gen": gen_at,
+        "live": live_html,
         "total": total,
         "rings": len(rings),
         "cov": cov,
