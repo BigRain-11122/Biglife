@@ -49,6 +49,15 @@
 
 ## 已结
 
+## R2787 · 2026-11-13 15:0x @BigLife-OSLoop（账簿族出生日截获·族表 v1.3）
+- 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团无 D-20261113-* 行）；orders 物理件区无涉本司新件；HQ 日闸=ALREADY_REPORTED（day=2026-11-13 lines=1）零写入。
+- 让路窗（周五工作日 09:00-19:00·D-20261020-02）：年轮/相遇/反思顺延 19:00（evolve 原样返回 yield-window）；round_daily --check 全 32 面 fresh stale=0 PASS；pool_audit PASS SELF_TERMINATE；QC 实跑 cards=10114 problems=0 dup_rings=37/37。
+- **产品增量（源头拦截·2 分）**：族表新增 `BOOK_LEDGER_DEICTIC`。取证链＝当日 552 环 unclassified 159（28.8%），按前缀聚类头名「账本翻到第三页，」**31 条（5.6%）且 30 条逐字同句**；按日回扫 11-12 首现 33/729=4.5%、此前各日 0 条——与 HAND 族 10-19 0.0%→11-12 42.2% 的爬升同形，属新生吸引子第 2 天，按 T-20261112-04 判据在出生日截获。立族后 unclassified 159→128（28.8%→23.2%），BOOK 当日 5.6% 远低于 25% 配额 ⇒ **零新增拒稿**（纯覆盖率增量，未改阈值、未改历史年轮）。
+- 验证：`--selftest` 全绿，含新增两组探针（`pos-book-ledger` 正例命中新族／`neg-book-midsentence` 句中账本不误伤）；`TABLE_EPOCH` bump 至 2026-11-13T15:10（v1.2 跨口径守卫律）；`city-ring-openings.html` 重建（rings=17032 days=25 unclassified=23.2%）。诚实边界＝`--check 2026-11-13` 仍报 HAND 40.0%/PROP 31.0% OVER，系 12:09 才立族的追溯重分类（R2786 定谳，日有效口径 25.0%），本轮不动。
+- 实况三行：当前活＝年轮开口族覆盖率抬升（让路窗内确定性面）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-openings.html（2026-11-13 15:03，含账簿族）｜下个里程碑＝19:00 让路窗解→年轮 --batch 3 落环 + 提案线首批实批（T-20261113-02 验收）。
+- 计分：能看实物=2 分（页面新增族读数 + 盲区下降可复核）｜文件改动=1 分｜零 LLM。
+- tokens: local=0 api=0 api_reason=workday-yield-window
+
 ## R2762 · 2026-11-13 13:0x @BigLife-OSLoop（洗码残渣出生站拦截·v0.69）
 - 缺陷实证（先在 CEO 可见面抓到）：`census/export/city-ring-quality.html`（12:29 版）读出 C-00110 两代残句——10-24「那行 **c.json** 的 flag 根」、11-12「那行 **c.** 的根」。成因=喂入面 `TECH_WORD_RE` 只吃 2 字母以上拉丁词，`c.json` 被抹掉后留下单字母+句点；再经「模型照抄自己旧环」回灌放大（同 gap #68 吸引子族）⇒ 残渣自我复制、不随轮次衰减。
 - 双侧修复（沿用 R2251/R2433 协议）：①喂入面 `scrub_machine_words()` 追加清理「1-3 拉丁字母 + 句点 + 紧跟汉字」；②落环口 `ring_violations()` 新增硬门 `latin-debris`（字母残渣+句点 / 文件名扩展名），命中即 gated_llm 重生成。

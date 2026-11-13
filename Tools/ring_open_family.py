@@ -49,7 +49,7 @@ FAMILY_MIN_DENOM = 8      # 当日 <8 环不判（小样本噪声）
 # 病根：族表是代码常量、没有生效时间，改一次正则就等于把过去的日子重判一遍，
 # 读数和当日决策各看各的口径。此处只加"读得出来"的守卫（不改阈值、不改闸）：
 # 每次族表（FAMILIES 结构或其正则集合）变更必须 bump TABLE_EPOCH，批起登记。
-TABLE_EPOCH = "2026-11-13T12:09"   # 族表最后一次变更（=PROP_DEICTIC 立族 + ^手里 补盲）
+TABLE_EPOCH = "2026-11-13T15:10"   # 族表最后一次变更（=BOOK_LEDGER_DEICTIC 立族·v1.3）
 EPOCH_LOG = os.path.join(ROOT, "state", "ring-family-epochs.json")
 
 # 族定义：锚定开头位置（^），只认句式骨架不认词义。
@@ -86,6 +86,14 @@ FAMILIES = collections.OrderedDict([
         "一句「那口锅」合法，全天近三成居民从指示代词起句才是病（R2581 同判据）。",
         [r"^那[台口架把扇盏辆本件个只座棵张块根条片串副支]",
          r"^这[台口架把扇盏辆本件个只座棵张块根条片串副支]"],
+    )),
+    ("BOOK_LEDGER_DEICTIC", (
+        "账簿翻页开场（账本／账簿 + 翻到第X页）——v1.3 2026-11-13 R2787 实测"
+        "新生吸引子：2026-11-12 首现 33/729=4.5%、11-13 31/552=5.6%，且 31 条里"
+        "30 条逐字同句「账本翻到第三页，」。曲线与 HAND 族同形（10-19 0.0% →"
+        "11-12 42.2%），按 T-20261112-04 判据在其出生日截获，不等到占三成再回溯。"
+        "族按形状判：一句翻账本合法，全天多人从同一页起句才是病。",
+        [r"^账本", r"^账簿"],
     )),
 ])
 
@@ -416,6 +424,9 @@ def _selftest():
         ("pos-prop-this", "这把旧扳手我用了九年，柄上的胶布换过三回。", "PROP_DEICTIC"),
         ("neg-prop-midsentence", "灯芯爆了一下，那台老收音机又跳了个台。", None),
         ("neg-prop-body", "我把信折好放进铁盒，那口锅还在灶上咕嘟着。", None),
+        # 账簿族（BOOK_LEDGER_DEICTIC·v1.3）两组探针：开头正例 / 句中不误伤。
+        ("pos-book-ledger", "账本翻到第三页，雨声在铁皮上敲得急。", "BOOK_LEDGER_DEICTIC"),
+        ("neg-book-midsentence", "她把账本合上，第三页的墨迹还没干透。", None),
     ]
     bad = 0
     for label, text, want in probes:
