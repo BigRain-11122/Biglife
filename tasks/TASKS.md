@@ -1396,3 +1396,4 @@ tokens: local=10 api=0 api_reason=-
   **对外实况三行**：当前活=基因徽记语境扩容落地（让路窗内确定性面，19:00 起年轮批消费新池）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-objects.html（2026-11-13 13:43，徽记语境 24 条）｜下个里程碑=19:00 年轮 --batch 3 落环 + 提案线首批实批（T-20261113-02 验收：新增提案行 ≥1 且带 [锚]/ring_ref，ETA 19:20）。
   计分：能看实物=2 分（物件志/台账双面可点开，24 条语境）｜文件改动=1 分｜零 LLM。
   tokens: local=0 api=0 api_reason=workday-yield-window
+  **[R2778 自检补正·同日 13:4x]** 逐条过性别与歧义：`swap_pronouns(hook_scope, gender)` 在 `generate_census.py:265` 对尾巴做他/她替换（女性卡「他自己信」→「她自己信」，已核路径存在），故 18 条含「他」的句子不会在女性卡上错配；但「——他妈也当没听过」单看易被读成粗口，虽语义是「他的妈妈」——品质律下不留歧义，已替换为「——家里人当没听过」并重建面（24 条无重复）。
