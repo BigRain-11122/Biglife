@@ -26,6 +26,7 @@
 """
 import argparse
 import collections
+import datetime
 import json
 import os
 import random
@@ -39,6 +40,17 @@ REGISTRY = os.path.join(CENSUS, "registry")
 OPENING_LEN = 12          # 与 evolve_citizen.today_ring_openings 同口径
 FAMILY_QUOTA = 0.25       # T-20261112-04 验收线：>25% 触发拒稿
 FAMILY_MIN_DENOM = 8      # 当日 <8 环不判（小样本噪声）
+
+# v1.2（2026-11-13 R2786, T-20261113-03）：跨口径日守卫。
+# 判例：11-13 全日读到 HAND 40.0%「越线」，但用当日生产时真正生效的族表
+# （无 ^手里、无 PROP_DEICTIC 族，二者 12:09 才立）回算是 138/552=25.0%——
+# 天然生产的 254 环里 83 条「手里…」+171 条「那台/这把…」生来就不在族表里。
+# 即「已开仍越线」是**立族时点在当日之后**造成的追溯重分类，不是闸被绕过。
+# 病根：族表是代码常量、没有生效时间，改一次正则就等于把过去的日子重判一遍，
+# 读数和当日决策各看各的口径。此处只加"读得出来"的守卫（不改阈值、不改闸）：
+# 每次族表（FAMILIES 结构或其正则集合）变更必须 bump TABLE_EPOCH，批起登记。
+TABLE_EPOCH = "2026-11-13T12:09"   # 族表最后一次变更（=PROP_DEICTIC 立族 + ^手里 补盲）
+EPOCH_LOG = os.path.join(ROOT, "state", "ring-family-epochs.json")
 
 # 族定义：锚定开头位置（^），只认句式骨架不认词义。
 # 每族 = (说明, 正则列表)。扩展新族=fail-safe（未命中即不算）。
@@ -330,6 +342,44 @@ def ban_set_from_openings(openings, quota=FAMILY_QUOTA, min_denom=FAMILY_MIN_DEN
     return set(over_quota(total, dict(fam), quota=quota, min_denom=min_denom))
 
 
+def note_epoch(day=None, epoch=None, ts=None):
+    """批起登记「当日生产用的是哪版族表」→ state/ring-family-epochs.json。
+
+    幂等：同日同 epoch 只记一行（值=首见时间戳）。只记账面，不参与闸判定；
+    落盘失败一律吞掉（观测面失败不阻塞生产，同 evolve_citizen 观测面律）。
+    返回既有 epoch 列表（升序）。
+    """
+    day = day or datetime.date.today().isoformat()
+    epoch = epoch or TABLE_EPOCH
+    ts = ts or datetime.datetime.now().isoformat(timespec="seconds")
+    data = {}
+    try:
+        with open(EPOCH_LOG, encoding="utf-8") as f:
+            data = json.load(f) or {}
+    except (IOError, OSError, ValueError):
+        data = {}
+    rows = data.setdefault(day, [])
+    if not any(r.get("epoch") == epoch for r in rows):
+        rows.append({"epoch": epoch, "first_seen": ts})
+    try:
+        os.makedirs(os.path.dirname(EPOCH_LOG), exist_ok=True)
+        with open(EPOCH_LOG, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=1, sort_keys=True)
+    except (IOError, OSError, ValueError):
+        pass
+    return [r.get("epoch") for r in rows]
+
+
+def epochs_of(day):
+    """某日生产期用过的族表版本列表（无记录 → []，早于守卫上线）。"""
+    try:
+        with open(EPOCH_LOG, encoding="utf-8") as f:
+            data = json.load(f) or {}
+    except (IOError, OSError, ValueError):
+        return []
+    return [r.get("epoch") for r in (data.get(day) or []) if r.get("epoch")]
+
+
 def _production(registry=None):
     root = registry or REGISTRY
     pat = re.compile(r"- (\d{4}-\d{2}-\d{2}) 「([^」]{8,})」")
@@ -507,6 +557,7 @@ def main(argv=None):
     if args.check:
         total, fam = scan_day(args.check)
         over = over_quota(total, fam)
+        _ep = epochs_of(args.check)
         detail = {f: (fam.get(f, 0), round(fam.get(f, 0) / total * 100, 1) if total else 0.0)
                   for f in FAMILIES}
         _uc_n, _uc_pct = unclassified(total, fam)
@@ -514,6 +565,7 @@ def main(argv=None):
             print(json.dumps({"date": args.check, "total": total, "families": detail,
                               "over": over, "quota": FAMILY_QUOTA,
                               "unclassified": {"n": _uc_n, "pct": round(_uc_pct, 1)},
+                              "table_epoch": TABLE_EPOCH, "epochs": _ep,
                               "verdict": "OVER" if over else "PASS"},
                              ensure_ascii=False, indent=1))
         else:
@@ -521,6 +573,12 @@ def main(argv=None):
             for f, (c, pct) in detail.items():
                 print("  %-18s %5d  %5.1f%%%s" % (f, c, pct, "  <- OVER" if f in over else ""))
             print("  %-18s %5d  %5.1f%%  (盲区：未被任何族识别)" % ("unclassified", _uc_n, _uc_pct))
+            if len(_ep) > 1:
+                print("  口径：族表当日变更 %d 次 %s → 占比跨口径，"
+                      "勿与配额线直接对账（本日读数混有立族前出生的环）"
+                      % (len(_ep), ",".join(_ep)))
+            elif not _ep:
+                print("  口径：本日无族表版本登记（守卫 v1.2 之前的日子）→ 与当前族表同口径不可假设")
             print("verdict: %s" % ("OVER" if over else "PASS"))
         return 0 if not over else 2
 

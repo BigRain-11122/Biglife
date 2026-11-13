@@ -635,10 +635,12 @@ try:
         second_label as _ring_second_label,
         second_scan as _ring_second_scan,
         SECOND_QUOTA as _RING_SECOND_QUOTA,
+        note_epoch as _ring_note_epoch,
     )
 except Exception:  # noqa: BLE001 - 任何导入失败都退化为「闸关闭」
     _ring_family_ban = None
     _ring_family_of = None
+    _ring_note_epoch = None
     _RING_FAMILY_QUOTA = 0.25
     _RING_FAMILY_MIN_DENOM = 8
     _ring_second_of = None
@@ -3403,6 +3405,14 @@ def main():
         print("today-family quota banned (%.0f%%): %s" % (
             _RING_FAMILY_QUOTA * 100, ",".join(sorted(sig["today_ban_families"]))),
             flush=True)
+    # v1.2 T-20261113-03（R2786）: 登记本批所用的族表版本。族表是代码常量，改一次
+    # 正则就把过去的日子重判一遍——11-13 的「HAND 40.0% 越线」实为立族后追溯重分类
+    # （用当日生效族表回算 138/552=25.0%）。落一行 epoch，让「跨口径日」可被读出。
+    if _ring_note_epoch is not None:
+        try:
+            _ring_note_epoch(day=today())
+        except Exception:  # noqa: BLE001 - 记账面失败不阻塞生产
+            pass
     # v0.67 T-20261112-05 (2026-11-12 R2586): 第二句吸引子软引导。开头族压住后
     # 模型把吸引子挪到下一句——WIND_ACTION 3.3%(10-20)→49.9%(11-12)，R2581 二十
     # 条人读已在句 2 亲眼见到「风把门帘整个掀起来」类重复。此处只喂提示词、不拒稿
