@@ -1631,3 +1631,16 @@ ound_daily --check 39 面全 fresh stale=0 PASS；pool_audit SELF_TERMINATE（72
 - 实况三行：当前活=夜窗产品轮收尾｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（2026-11-13 21:45:43 重建）+ census/QC-REPORT.md（21:46，problems=0）｜下个里程碑=2026-11-14 年轮批（新到期居民）+ T-20261113-05 反思线连续 3 日验收（11-14/11-15 续跑）
 - 计分：日更 3 面（能看实物）+ QC 巡检报告 + 事件闸报告 = 2 分。tokens: local=10 api=0 api_reason=-
 - [R2819] 2026-11-13 21:53-22:0x @BigLife-OSLoop 夜窗产品轮：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团无 D-20261113-* 新行）；orders 物理件区无涉本司新件。**产品增量=9 席居民年轮落环**（evolve --batch 3 → evolved=9 of 10 due：C-04321/04322/04323/04331/04341/04324/04326/04327/04328，commit 7db1eda86，其中 C-04341/C-04328 为 soft-concession 放行；C-04329 因 recent-family-opening+recent-dup-phrase 硬门留 due）+ 行为线镜像 rows=9 ring=10114（commit d95cdcc51，脚本自动收口）。**事件回放闸** PASS：cards=10111 events=42695 replayed=10111 schema_errors=0 mismatch=0；coverage unexpected_missing=0；chronicle gap=0d。**确定性日更** stale=2 ran=3 failed=0 verdict=PASS（重建 gene-ledger dep-mtime + index）。**语言池** PASS SELF_TERMINATE（72/72 轴桶·12/12 像素桶·28/28 greet·7/7 faq·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）。**反思线** daily-cap 拦截（当日已 31 条，零重复写入）。**相遇轮** 日额已满跳过。**HQ 反馈闸** ALREADY_REPORTED 零写入。计量：tokens: local=10 api=0 api_reason=-
+
+## R2820 · 2026-11-13 22:04-22:2x @BigLife-OSLoop（夜窗·年轮批 10 席 + 日更面）
+
+- 轮首：git pull --ff-only = Already up to date，树净；决策水位差集 NEW=0（尾 D-20261112-16，集团 decisions 无 D-20261113-* 新行）；orders 物理件区无涉本司新件。
+- **年轮线（本轮主产出）**：`evolve_citizen.py --batch 3` → evolved=10 of 10 due，脚本自动落环 commit **3eb47bf90**（22:05）：C-04329/04332/04335/04336/04343/04330/04333/04334/04337/04338 各 +1 帧 2026-11-13 年轮（其中 3 条按 soft-concession『recent-dup-phrase』放行）；行为线收口 commit **6faae23e4**（22:06，镜像 rows=10 ring=10114）。
+- **事件回放闸**：PASS —— cards=10111 events=42705 shards=3，replayed=10111，schema_errors=0，mismatch=0；coverage derived=10111 reserved=3 exported=10114 unexpected_missing=0；chronicle gap=0d（qa/EVENTS-REPLAY-REPORT.md 入库）。
+- **确定性日更**：verdict=PASS（stale=4 ran=5 failed=0；city-lexicon 因 cognition/pools.json 依赖 mtime 重建、index 重建，其余 skipped-fresh）。可见面实证前进：今日新增年轮 714→724、事件总数 42695→42705。
+- **语言池**：PASS SELF_TERMINATE（轴桶 72/72、像素桶 12/12、greet 28/28、faq 7/7、neg 6/6，hard_fails=0，determinism 192+25 对 mismatch=0，under_target=NONE）→ 语言线按自终止律本轮零动作，零 LLM。
+- **反思线**：当日已产 31 条，daily-cap 拦截，零写入（T-20261113-05 验收=11-14/11-15 续跑判）。
+- **相遇轮**：meet-cap 3/3 已满，跳过（脚本自报 3 meets already logged today）。
+- **HQ 反馈闸**：ALREADY_REPORTED（day=2026-11-13 lines=2），零写入。
+- **判读坑留档（本轮自查纠错·重要）**：年轮批落环后我用「工作树 vs HEAD 逐卡 diff」判增量，得 0 差异并一度误记「同日幂等空转」——实因为 evolve/sync 脚本**自带 auto-commit**，HEAD 在跑完时已前移（3eb47bf90/6faae23e4）。正解口径：增量证据=`git log` 新增 commit + 卡面该日年轮行，**禁**以「status 净/工作树 diff=0」判定脚本产出为零。此坑若被下一轮沿用会误删真实产出计量，故入档。
+- 计分：居民年轮 10 帧（内容本体）+ 日更 5 面重建（能看实物）+ 事件闸 PASS 报告 = 2 分。tokens: local≈10（年轮批 10 席 qwen3:4b-instruct；池/反思/相遇零调用）api=0 api_reason=-
