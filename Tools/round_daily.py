@@ -107,6 +107,14 @@ INPUTS = [
     # 按「当日必新」判等于每天白写 190MB（relations 2.85M 行）却零信息。
     # 漂移时才重建 dependents；稳定日仅 16s 盘读零页面动作。
     ("derive_audit", "data", "derive_audit.py",           ["state/derive-audit.json"], ["--run"]),
+    # v0.13 (2026-11-13 R2734): QC 证据面同病根第七例 —— ring_lint.py 有脚本、
+    # 有产出、无任何轮次引用，qa/RING-LINT-REPORT.md 静默停更 17 天（生成日 10-27，
+    # 期间 10-28/11-12/11-13 三批共 1778 条年轮从未被内部码巡检覆盖）。
+    # 手工补跑实证修复稳固：7451 条里 coded=766 全部落在 ≤10-26 旧段，
+    # 10-28 起的三个批次 coded=0（0.0%）——违规面已被历史修复切断，无需再修卡。
+    # 故只接巡检不断供（faces 档=>1 日才重建，避免零变化的逐日 churn）；
+    # 真出回归时距离上次巡检 ≤2 日即可被看见。
+    ("ring_lint", "faces", "ring_lint.py",                ["qa/RING-LINT-REPORT.md"]),
 ]
 
 # v0.11 (2026-11-12 · T-20261112-09 收单): faces 档 stale 判据补「依赖源 mtime」面。
