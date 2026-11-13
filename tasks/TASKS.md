@@ -64,6 +64,7 @@
 - 体检：`round_daily --run` stale=1 ran=2 verdict=PASS（ring_openings 重建 + index 补导航条）；`events_refresh --gate` events=42535 cards=10111 mismatch=0 schema=0 PASS；`pool_audit`/QC 本轮未跑（池自终止、QC 16:5x 已巡 problems=0）。
 - 实况三行：当前活＝让路窗内开口族口径诚实化（跨口径日不再误报越线）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-openings.html（2026-11-13 17:0x，含口径列与纪元 reading）｜下个里程碑＝19:00 让路窗解→年轮 --batch 3 落环 + 提案线首批实批（T-20261113-02 验收）。
 - 本轮计量：tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline（让路窗 D-20261020-02：年轮/相遇/提案顺延 19:00 后，本轮零 LLM 调用）。
+- **自踩实录（诚实记）**：本轮写实况心跳行时同一处 `%s` 漏参病复发（T-20261113-01 同族），被 R2795 立的守卫当场抓出（`build_city_ops` 报 orphans=1 并指名该行）——已就地补时间戳，重建后 `hb=111 orphans=0`；另修一条历史坏行 `2026-11-13 04:1x`（非法分钟）→ 88 分位回填 04:10。守卫有效性由此得到反向实证。
 
 ## R2794 · 2026-11-13 16:3x-17:0x @BigLife-OSLoop（提案面片段级脱敏·零可读面治愈）
 - 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团无 D-20261113-* 行）；orders 物理件区无涉本司新件；HQ 日闸 `ALREADY_REPORTED`（day=2026-11-13 lines=1）零写入。
