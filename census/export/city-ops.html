@@ -35,16 +35,17 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <div class="sub">本页由 Tools/build_city_ops.py 确定性生成（零 LLM）· 生成于 2026-11-13 16:52 · 数据全部取自本仓盘上与 git</div></header>
 <main>
 <div class="kpis">
-<div class="kpi"><b>10 分钟前</b><span>最近一次轮次心跳</span></div>
-<div class="kpi"><b>11-13 16:40</b><span>最近提交时间</span></div>
+<div class="kpi"><b>0 分钟前</b><span>最近一次轮次心跳</span></div>
+<div class="kpi"><b>11-13 16:52</b><span>最近提交时间</span></div>
 <div class="kpi bad"><b>28</b><span>超过 180 分钟未刷新的页</span></div>
 <div class="kpi"><b>0</b><span>无时间戳状态行（被丢弃，需修）</span></div>
 <div class="kpi"><b>10114</b><span>居民（轻量册）</span></div>
 <div class="kpi bad"><b>400</b><span>年轮待修队列（cap 400）</span></div>
 </div>
 
-<h2>最近轮次心跳<em>state/heartbeat.txt 尾 10 条 · 最后一条：os-loop: round done exit=0 · 无时间戳状态行 <b>0</b> 条（有时间戳才会进本表）</em></h2>
+<h2>最近轮次心跳<em>state/heartbeat.txt 尾 10 条 · 最后一条：R2795 round done lane=deterministic product=heartbeat-orphan-guard commit=cd3e3483b | 当前活=让路窗内确定性面（心跳丢失可见化守卫） | 最近实物=qa/HEARTBEAT-ORPHAN-GUARD-20261113.md 16:5x + city-ops.html orphans 2-&gt;0 | 下个里程碑=19:00 让路窗结束后年轮批恢复 | landed_this_round=0 qc=problems:0 events=PASS(42203) daily=PASS(24 faces) pool=SELF_TERMINATE meet=cap3 hq=ALREADY_REPORTED | tokens: local=0 api=0 · 无时间戳状态行 <b>0</b> 条（有时间戳才会进本表）</em></h2>
 <table><thead><tr><th>时间</th><th>记录</th></tr></thead><tbody>
+<tr><td class="t">11-13 16:52:45</td><td>R2795 round done lane=deterministic product=heartbeat-orphan-guard commit=cd3e3483b | 当前活=让路窗内确定性面（心跳丢失可见化守卫） | 最近实物=qa/HEARTBEAT-ORPHAN-GUARD-20261113.md 16:5x + city-ops.html orphans 2-&gt;0 | 下个里程碑=19:00 让路窗结束后年轮批恢复 | landed_this_round=0 qc=problems:0 events=PASS(42203) daily=PASS(24 faces) pool=SELF_TERMINATE meet=cap3 hq=ALREADY_REPORTED | tokens: local=0 api=0</td></tr>
 <tr><td class="t">11-13 16:41:11</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-13 16:32:30</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-13 16:20:01</td><td>os-loop: round done exit=0</td></tr>
@@ -54,11 +55,11 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td class="t">11-13 15:27:55</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-13 15:19:01</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-13 15:18:08</td><td>R2788 round done: workday-yield-window (D-20261020-02); round_daily PASS rebuilt city-today/city-goals/index; qc_census cards=10114 problems=0 dup_rings=37/37; pool SELF_TERMINATE 72+12; status-export ts=15:16 today_ring=554; commits f99355fa4/536912f85/d1b420dc5 pushed; tokens=local0 api0 api_reason=yield-window</td></tr>
-<tr><td class="t">11-13 15:05:25</td><td>os-loop: round done exit=0</td></tr>
 </tbody></table>
 
 <h2>最近产物提交<em>git log 尾 12 条</em></h2>
 <table><thead><tr><th>时间</th><th>commit</th><th>说明</th></tr></thead><tbody>
+<tr><td class="t">11-13 16:52</td><td class="h">cd3e3483b</td><td>R2795 heartbeat-orphan-guard: 心跳里被静默丢弃的状态行变成看得见</td></tr>
 <tr><td class="t">11-13 16:40</td><td class="h">9792e06ee</td><td>R2794 轮记：提案面脱敏轮实录与计量</td></tr>
 <tr><td class="t">11-13 16:39</td><td class="h">64cffdf38</td><td>提案面片段级脱敏：9/9 提案从零可读恢复为全可读</td></tr>
 <tr><td class="t">11-13 16:32</td><td class="h">e1c05a3a5</td><td>R2793b 兑现常设单 T-20260924-08：对外状态面按当轮实据刷新</td></tr>
@@ -70,12 +71,11 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td class="t">11-13 15:26</td><td class="h">909f40672</td><td>R2789 让路窗确定性轮：看板/索引重建 + QC 10114 卡 0 异常 + 事件回放闸 PASS（42535 事件 mismatch=0） [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-13 15:17</td><td class="h">d1b420dc5</td><td>轮号勘误 R2788（实际最新 R2787）+ 状态面/任务板同步 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-13 15:16</td><td class="h">536912f85</td><td>对外实况面刷新 R2740（今日环 554·让路窗确定性面）+ 任务板计量行 [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-13 15:10</td><td class="h">f99355fa4</td><td>日更面重建 today/goals/index + QC 巡检 10114 卡 0 异常 [via BigLife-OSLoop]</td></tr>
 </tbody></table>
 
 <h2>页面新鲜度<em>census/export 下的单页 · 按更新时间倒序</em></h2>
 <table><thead><tr><th>页面</th><th>体积</th><th>更新</th><th>状态</th></tr></thead><tbody>
-<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">17 KB</td><td class="t">11-13 16:50</td><td>新</td></tr>
+<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">17 KB</td><td class="t">11-13 16:52</td><td>新</td></tr>
 <tr><td><a href="city-proposals.html">city-proposals.html</a></td><td class="n">7 KB</td><td class="t">11-13 16:46</td><td>新</td></tr>
 <tr><td><a href="city-dashboard.html">city-dashboard.html</a></td><td class="n">62 KB</td><td class="t">11-13 16:46</td><td>新</td></tr>
 <tr><td><a href="city-chronicle.html">city-chronicle.html</a></td><td class="n">107 KB</td><td class="t">11-13 16:16</td><td>新</td></tr>
