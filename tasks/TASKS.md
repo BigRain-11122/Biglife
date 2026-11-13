@@ -850,7 +850,8 @@ ecent_blk\（v0.58 gap #79 模板）**写死「开场请写你自己此刻手上
 
 - [R2594] 2026-11-12 14:1x @BigLife-OSLoop 轮记：轮首 pull=Already up to date、树净；决策水位 NEW=0（尾 D-20261112-15 已消费，D-13 判本司 15 天停摆 chronic 结清）；orders 物理件区无涉本司新件；TASKS open=T-20261112-04/05（均 19:00 观测窗）。**让路窗**=年轮/相遇/反思 09:00-19:00 结构性让路（D-20261020-02，evolve 实跑返回 yield-window）；round_daily --run 28 面 stale=0 PASS；事件回放闸 PASS（cards=10111/events=41699/replayed=10111/mismatch=0/schema_errors=0/chronicle gap=0d）；pool_audit 72 轴桶+12 像素桶+28 greet+7 faq 全达标 SELF_TERMINATE（hard_fails=0）。
   **本轮产品增量（CEO 可见面判读缺陷修复·1 件）**：census/export/city-ring-trend.html 的「闸判定」列存在**误导性口径**——判定实为 HAND_DEICTIC／TIME_OPEN／WEATHER_ABSTRACT **三族任一超线**（over_quota），但表内只列 HAND_DEICTIC 一列，故 2026-10-18 出现「手部 0.0% + 判定 OVER」的读不通行（真因 WEATHER_ABSTRACT 60/90=66.7%，
-ing_open_family --check 2026-10-18 源值复核一致）。修法（判据零改动·只改呈现）：①amily_daily 增算 over_fams（按超线幅度降序）；②表内判定列改为点名式 OVER（WEATHER_ABSTRACT 66.7%）；③KPI 副标补「·超线 HAND_DEICTIC 42.8%」；④脚注改「任一族超线」并明写「本表只列 HAND_DEICTIC，故 0.0% 仍可能判 OVER——括号内点名超线族」；⑤控制台输出同步带超线族。
+ing_open_family --check 2026-10-18 源值复核一致）。修法（判据零改动·只改呈现）：①
+amily_daily 增算 over_fams（按超线幅度降序）；②表内判定列改为点名式 OVER（WEATHER_ABSTRACT 66.7%）；③KPI 副标补「·超线 HAND_DEICTIC 42.8%」；④脚注改「任一族超线」并明写「本表只列 HAND_DEICTIC，故 0.0% 仍可能判 OVER——括号内点名超线族」；⑤控制台输出同步带超线族。
   **验证**：py_compile rc=0／Tools/ruff_gate.py 1 file CLEAN(F401,F811,F841,SIM115,RUF059)／10-18 行实读=「OVER（WEATHER_ABSTRACT 66.7%）」／11-12 行=「OVER（HAND_DEICTIC 42.8%）」／10-25 行=OK（22.0% 未越线，负控未被污染）／双跑 md5 1FBC77F0FB9CA28F523572BB55F32C95 一致。
   **诚实边界**：只改呈现口径与点名，闸线 25%、族定义、拒稿路径全部未动，T-20261112-04/05 验收线保持；本轮零 LLM。
   **实况三行**：当前活=让路窗内确定性面与 CEO 可见面判读修正；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-ring-trend.html（14:1x·判定列点名超线族）；下个里程碑=19:00 年轮批 3 席·开头族硬闸+第二句软引导+跨城区选区联合首验（ETA 2026-11-12 19:10）。
@@ -1378,8 +1379,10 @@ tokens: local=10 api=0 api_reason=-
   tokens: local=0 api=0 api_reason=yield-window
 
 - [R2740] 2026-11-13 11:1x-11:2x @BigLife-OSLoop 让路窗覆盖治理轮：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 尾 D-20261112-16，集团无 2026-11-13 新行）；orders 物理件区无涉本司新件；TASKS 无 open 可动单（T-01 streak 2/3 待 11-14、T-02 提案线候 19:00）。
-  **产品增量（本轮两处真缺口，均由上轮新增的面覆盖工具自己报出来）**：①ace_coverage.py 的「盘上无产物 32 条」此前只是不可审计的计数——本轮逐条归因（placeholder=3／external-readonly=2／inert-input=25／unexplained=2→修后 0），并把归因写入报告：此后新候选落不进任一类即出现在 unexplained 表，不再埋在噪声桶里；同时补齐解析目录表 docs/research（R-20260926-sublimation-census.md 实际存在却被误报无产物）；②derive_audit.py 的 REPORT_MD 是声明后从未写入的死常量（审计结果只活在被忽略的 stdout，无持久证据面）→ 改为**例外式落盘**：漂移日写 qa/DERIVE-AUDIT-<date>.md（与既有 11-12 件同形），干净日零文件不刷脏工作树。
-  **实证**=py_compile 双绿；derive_audit --selftest 4/4 PASS；ace_coverage 重跑 missing 32→30、**unexplained=0**、stale=0；负控（GHOST-REPORT.md/notes.jsonl → unexplained，{PAGED_PREFIX}01.html→placeholder，world-state.json→external-readonly，*.schema.json→inert-input）全按预期；今日 verdict=PASS 故未生成漂移报告（例外式策略按设计为静默）。
+  **产品增量（本轮两处真缺口，均由上轮新增的面覆盖工具自己报出来）**：①
+ace_coverage.py 的「盘上无产物 32 条」此前只是不可审计的计数——本轮逐条归因（placeholder=3／external-readonly=2／inert-input=25／unexplained=2→修后 0），并把归因写入报告：此后新候选落不进任一类即出现在 unexplained 表，不再埋在噪声桶里；同时补齐解析目录表 docs/research（R-20260926-sublimation-census.md 实际存在却被误报无产物）；②derive_audit.py 的 REPORT_MD 是声明后从未写入的死常量（审计结果只活在被忽略的 stdout，无持久证据面）→ 改为**例外式落盘**：漂移日写 qa/DERIVE-AUDIT-<date>.md（与既有 11-12 件同形），干净日零文件不刷脏工作树。
+  **实证**=py_compile 双绿；derive_audit --selftest 4/4 PASS；
+ace_coverage 重跑 missing 32→30、**unexplained=0**、stale=0；负控（GHOST-REPORT.md/notes.jsonl → unexplained，{PAGED_PREFIX}01.html→placeholder，world-state.json→external-readonly，*.schema.json→inert-input）全按预期；今日 verdict=PASS 故未生成漂移报告（例外式策略按设计为静默）。
   **闸面**=round_daily --run 34 面 PASS stale=0（11:14）；pool_audit PASS SELF_TERMINATE；事件回放闸今晨已 PASS（cards=10111 mismatch=0），6 轮节律未到不重复；QC 今早 10:09 problems=0，不重复；HQ 反馈闸当日已有行。
   **三行实况**：当前活=让路窗内覆盖治理（年轮/相遇/提案 19:00 恢复）｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/FACE-COVERAGE-REPORT.md（2026-11-13 11:18·unexplained=0）+ Tools/face_coverage.py、Tools/derive_audit.py｜下个里程碑=19:00 让路窗解→年轮批 3 位落环 + T-20261113-02 提案线复活（窗 ≤48h）
   waiting: yield-window（pausedLite 工作日 09:00-19:00，年轮/相遇/反思延后）ETA 2026-11-13 19:00
@@ -1672,4 +1675,4 @@ ound_daily --check 39 面全 fresh stale=0 PASS；pool_audit SELF_TERMINATE（72
 - [R2827] 2026-11-13 23:04-23:1x @BigLife-OSLoop 夜窗产品轮：轮首 pull=up-to-date·树净；决策水位差集 NEW=0（尾 D-20261112-16，今日无 D-20261113 行）；物理件区无本司新件。年轮批 10/10 落环且为真新品（C-04384 等 10 席各新增唯一当日年轮行·进化 v1.1→v1.2，非幂等空转）；行为线 sync_rings 自动收口（镜像 rows=10·ring=10114）；事件流闸 events=42760/cards=10111/schema_errors=0/mismatch=0 PASS（chronicle gap=0d）；round_daily 体检 stale=3 → 重建 city-today/city-dashboard/gene-ledger + index 四面 verdict=PASS；池审计 PASS=SELF_TERMINATE（无欠深桶，守自终止律零动作）；反思线 daily-cap 命中（今日已 31 条，末条 date=2026-11-13 验收达标）；HQ 日上报 ALREADY_REPORTED（今日 2 行）。
 - 实况三行：当前活＝夜窗年轮批连续第 2 日（本轮 10 席进 2 圈）｜最近实物=C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-11-13 23:0x，含 10114 席全量年轮）｜下个里程碑＝2026-11-14 夜窗年轮批 + 反思线第 3 日验收（reflections.jsonl 尾部 date=当日）
 - 计分：居民年轮 10 席（真新增 10 行·2 分）+ 日更 4 面重建 + 事件闸 PASS = 2 分。tokens: local=12 api=0 api_reason=-（年轮批 10 席 qwen3:4b-instruct；闸/日更/池审计/反思全部零 LLM）
-- [判据] 2026-11-13 23:2x 「当日双年轮」为假阳性：单卡同日可合法并存「独写年轮」与「与 C-xxxxx 相遇」两类行（相遇轮设计产出）。复核口径＝剔除 \- DATE 「与 C-\ 前缀行后再计；本日实测 true_dup_solo_rings=0（774 卡有当日行/3 卡看似双行全部为相遇行）。此后同类扫描按此口径，免重蹈误判。
+- [判据] 2026-11-13 23:2x 「当日双年轮」为假阳性：单卡同日可合法并存「独写年轮」与「与 C-xxxxx 相遇」两类行（相遇轮设计产出）。复核口径＝剔除以「与 C-」开头的相遇行后再计独写年轮；本日实测 true_dup_solo_rings=0（774 卡有当日行，3 卡看似双行全部为相遇行）。此后同类扫描按此口径，免重蹈误判。
