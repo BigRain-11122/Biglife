@@ -1485,3 +1485,12 @@ tokens: local=10 api=0 api_reason=-
 - 对外实况面：status-export 刷新（total=554 reg=552 anc=2·dept0 滚动窗 + top 三行 + results 尾行 N=552）。
 - 让路窗：工作日 09:00-19:00 年轮/相遇/提案顺延（D-20261020-02），19:00 后首轮点火 `--batch 3`（含提案默认开启，T-20261113-02 待实批验收）。
 - 计分：实物 2 分（可跑判据 + 两个可见面重建）｜文件改动 1 分｜tokens: local=0 api=0 api_reason=workday-yield-window
+
+## R2793 · 2026-11-13 16:2x @BigLife-OSLoop（让路窗确定性轮·索引/分页覆盖核查）
+- 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（覆盖至 D-20261112-16，集团 decisions 尾读无 D-20261113-* 涉本司行）；orders 物理件区无涉本司新件；HQ 日闸 `ALREADY_REPORTED`（day=2026-11-13 lines=1）零写入。
+- 让路窗（周五工作日 09:00-19:00·D-20261020-02）生效：`evolve_citizen --batch 3` 直接返回 yield-window，年轮/相遇/反思顺延 19:00 后。
+- **确定性面实跑**：`round_daily --run`=stale=2 ran=3 verdict=PASS（重建 city-social-graph.html／city-dashboard.html／index.html）；`qc_census`=cards=10114 problems=0 dup_rings=37/37；`pool_audit`=72 轴桶+12 像素桶全达标 SELF_TERMINATE 零 LLM（determinism 192+25 双验 mismatch=0）；`events_refresh --gate`=derive OK cards=10111 events=42535 replay 10111 mismatch=0 schema_errors=0 PASS，chronicle fresh last=2026-11-13 gap=0d。
+- **假绿核查（无缺陷，结论入档）**：①索引覆盖面=`index.html` 23 条顶级链接 vs `census/export` 34 个 city 页，差集 11 全部是 `city-growth-p01..p11` 分页，经查由 `city-growth.html` 内部 TOC 直链（每页 1000 席＋最深年轮名），**顶层索引不重复收分页＝设计如此，非漏面**；②最小面 `city-growth.html` 5,071B / mtime 11-12 17:44 属结构面 1 日窗内（22.7h）fresh，正文为分页 TOC＋搜索卡，无空面。
+- 对外实况面：`docs/status-export.json` export_ts=2026-11-13 16:18 新鲜（os-loop 轮内刷新），六线 depts 在位。
+- 实况三行：当前活＝让路窗内确定性面体检（索引/分页覆盖核查）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-social-graph.html（2026-11-13 16:24，社交图重建）｜下个里程碑＝19:00 让路窗解→年轮 `--batch 3` 落环 + 提案线首批实批（T-20261113-02 验收）。
+- 计分：可见面实物 2 分（3 个面重建）｜文件改动 1 分｜tokens: local=0 api=0 api_reason=workday-yield-window
