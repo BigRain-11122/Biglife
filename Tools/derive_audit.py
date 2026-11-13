@@ -40,7 +40,10 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXPORT = os.path.join(ROOT, "census", "export")
 STATE_OUT = os.path.join(ROOT, "state", "derive-audit.json")
-REPORT_MD = os.path.join(ROOT, "qa", "DERIVE-AUDIT-REPORT.md")
+# 例外式落盘（2026-11-13）：漂移日才写 qa/DERIVE-AUDIT-<date>.md，干净日不产文件。
+# 旧常量 REPORT_MD 声明后从未被写入（死码，面覆盖审计把它报成 unexplained）——
+# 改按日期命名与既有 11-12 证据件同形，且不因每日 ts 改写把工作树刷脏。
+QA_DIR = os.path.join(ROOT, "qa")
 
 # (key, 生成器, 输出面, 依赖的可见面 key（round_daily REGISTRY 键）)
 DERIVE = [
@@ -123,6 +126,27 @@ def selftest() -> int:
     return 0 if fails == 0 else 1
 
 
+def _write_report(payload: dict) -> str:
+    """漂移证据面：只在有漂移时落盘，README 式人读摘要 + 逐行状态。"""
+    os.makedirs(QA_DIR, exist_ok=True)
+    out = os.path.join(QA_DIR, "DERIVE-AUDIT-%s.md"
+                       % payload["date"].replace("-", ""))
+    lines = ["# 派生面漂移审计（%s）" % payload["ts"], "",
+             "- verdict：**%s**" % payload["verdict"],
+             "- 漂移面：%s" % (", ".join(payload["drifted"]) or "-"),
+             "- 重建：%s" % (
+                 ", ".join(payload["rebuilt"][0]["faces"])
+                 if payload["rebuilt"] else "-"), "",
+             "| 派生面 | 产物 | 状态 | 说明 |", "|---|---|---|---|"]
+    for r in payload["rows"]:
+        lines.append("| %s | `%s` | %s | %s |"
+                     % (r["key"], r["face"], r["status"], r["msg"]))
+    with open(out, "w", encoding="utf-8", newline="\n") as f:
+        f.write("\n".join(lines) + "\n")
+    print("written: qa/%s" % os.path.basename(out))
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", action="store_true", help="漂移时重建依赖可见面")
@@ -161,6 +185,9 @@ def main() -> int:
     os.makedirs(os.path.dirname(STATE_OUT), exist_ok=True)
     with open(STATE_OUT, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=1)
+
+    if drifted:
+        _write_report(payload)
 
     if args.json:
         print(json.dumps(payload, ensure_ascii=False, indent=1))

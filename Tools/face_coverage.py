@@ -40,7 +40,8 @@ ART_RE = re.compile(
 
 # 落盘解析顺序：先摸清各仓内产物目录，再退回仓根（社交图谱等故意落根的例外）
 SEARCH_DIRS = ["census/export", "", "census", "cognition", "cognition/rumors",
-               "qa", "state", "docs", "genes", "events", "events/life"]
+               "qa", "state", "docs", "docs/research", "genes", "events",
+               "events/life"]
 
 # 非产物：脚本自身引用、schema、锁文件
 SKIP_SUFFIX = (".py", ".ps1", ".psd1", ".cmd", ".bat", ".exe", ".lock")
@@ -55,6 +56,38 @@ SKIP_SUFFIX = (".py", ".ps1", ".psd1", ".cmd", ".bat", ".exe", ".lock")
 APPEND_ONLY = {"proposals.jsonl", "city-chronicle.jsonl", "reflections.jsonl",
                "interchat-ledger.jsonl", "surprise-log.jsonl",
                "citizen-relations.jsonl", "derive-audit.json"}
+
+# 「盘上无产物」候选的分类（2026-11-13 全 32 条逐条核验后落定）。
+# 未分类的缺口才是真缺口——若不分，一个真死生成器会埋在这个噪声桶里永远看不见。
+# 分类只解释「为什么不落盘」，不改判据；新候选落不进任何一类 → unexplained，必须人看。
+_EXAMPLE_CITIZEN = re.compile(r"^C-\d+\.md$")
+INERT_PLACEHOLDER = ("{", "}")           # {PAGED_PREFIX}01.html / {month}.jsonl
+INERT_EMPTY_JOIN = re.compile(r"-\.[a-z]+$")   # rumors-.jsonl = 变量为空时的拼接串
+# 外部只读输入（兄弟司正典，本司只读不产）
+INERT_EXTERNAL = {"world-state.json", "world-events.jsonl"}
+# schema / 参考件 / 纯读工具的输入名——存在即被读，不存在也不该由本司生产
+INERT_INPUT = {"citizen-behavior.schema.json", "citizen-needs.schema.json",
+               "citizen-tasks.schema.json", "citizens-light.schema.json",
+               ".jsonl", "decisions.md", "evolution-ledger.md", "TASKS.md",
+               "batch-policy.json", "ledger.jsonl", "manifest.json",
+               "tokens.txt", "lexicon-zh.txt", "lexicon-us-en.txt",
+               "gene_nearcheck_qc.txt", "benchmark-gap-biglife.jsonl",
+               "sublimate-gate.jsonl", "no-such-chronicle.jsonl"}
+
+
+def _missing_class(name: str) -> str:
+    """给「盘上无产物」的候选归因；返回 unexplained 即真缺口。"""
+    if name in INERT_INPUT:
+        return "inert-input"
+    if name in INERT_EXTERNAL:
+        return "external-readonly"
+    if _EXAMPLE_CITIZEN.match(name) or name.endswith(".schema.json"):
+        return "inert-input"
+    if any(ch in name for ch in INERT_PLACEHOLDER):
+        return "placeholder"
+    if INERT_EMPTY_JOIN.search(name):
+        return "placeholder"
+    return "unexplained"
 
 
 def _is_face(name: str, path: str) -> bool:
@@ -140,7 +173,8 @@ def main() -> int:
             continue
         p = _resolve(base)
         if p is None:
-            missing.append({"name": base, "from": scripts})
+            missing.append({"name": base, "from": scripts,
+                            "class": _missing_class(base)})
             continue
         if not _is_face(base, p):
             continue
@@ -157,6 +191,7 @@ def main() -> int:
 
     unregistered.sort(key=lambda x: -x["age_days"])
     ledger_gap.sort(key=lambda x: -x["age_days"])
+    unexplained = [m for m in missing if m["class"] == "unexplained"]
     payload = {
         "ts": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "registered": len(reg),
@@ -164,6 +199,7 @@ def main() -> int:
         "unregistered_stale": len(unregistered),
         "unregistered_fresh": len(fresh_unreg),
         "unregistered_missing": len(missing),
+        "missing_unexplained": len(unexplained),
         "ledger_gap": len(ledger_gap),
         "items": unregistered,
         "fresh": fresh_unreg,
@@ -175,9 +211,9 @@ def main() -> int:
         sys.stdout.write(json.dumps(payload, ensure_ascii=False, indent=1) + "\n")
     else:
         print("== face_coverage (%s) ==" % payload["ts"])
-        print("registered=%d candidates=%d stale=%d fresh=%d ledger_gap=%d missing=%d"
+        print("registered=%d candidates=%d stale=%d fresh=%d ledger_gap=%d missing=%d (unexplained=%d)"
               % (len(reg), len(cand), len(unregistered),
-                 len(fresh_unreg), len(ledger_gap), len(missing)))
+                 len(fresh_unreg), len(ledger_gap), len(missing), len(unexplained)))
         if unregistered:
             print("-- 未登记且已超 %.0f 天（下一个会静默停更的面）--" % args.max_age)
             for it in unregistered:
@@ -203,7 +239,8 @@ def main() -> int:
                  "- 未登记且超 %.0f 天：**%d**" % (args.max_age, len(unregistered)),
                  "- 未登记但新鲜：%d" % len(fresh_unreg),
                  "- append-only 台账供料缺口：%d" % len(ledger_gap),
-                 "- 未登记且盘上无产物（纯读面/模板/已删）：%d" % len(missing), ""]
+                 "- 未登记且盘上无产物：%d（其中**未解释 %d**）"
+                 % (len(missing), len(unexplained)), ""]
         if unregistered:
             lines += ["## 风险序（下一个会静默停更的面）", "",
                       "| 年龄 | 产物 | 最后写入 | 生成器 |", "|---|---|---|---|"]
@@ -228,6 +265,25 @@ def main() -> int:
                              % (it["age_days"], it["name"], it["mtime"],
                                 ", ".join(it["from"][:3])))
             lines.append("")
+        if missing:
+            cls_count = {}
+            for m in missing:
+                cls_count[m["class"]] = cls_count.get(m["class"], 0) + 1
+            lines += ["## 盘上无产物候选（已归因）", "",
+                      "> 归因只解释「为什么不落盘」，不改判据。"
+                      "**unexplained 非零＝真缺口，必须人看**；"
+                      "新候选落不进任何一类就会出现在这里。", "",
+                      "- 分类计数：" + "／".join(
+                          "%s=%d" % (k, cls_count[k]) for k in sorted(cls_count)), ""]
+            if unexplained:
+                lines += ["### unexplained（真缺口）", "",
+                          "| 候选 | 生成器 |", "|---|---|"]
+                for m in unexplained:
+                    lines.append("| `%s` | %s |"
+                                 % (m["name"], ", ".join(m["from"][:3])))
+                lines.append("")
+            else:
+                lines += ["**unexplained = 0**（当前无真缺口，本轮无动作）", ""]
         out = os.path.join(ROOT, "qa", "FACE-COVERAGE-REPORT.md")
         os.makedirs(os.path.dirname(out), exist_ok=True)
         with io.open(out, "w", encoding="utf-8", newline="\n") as f:

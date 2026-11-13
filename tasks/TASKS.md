@@ -1280,3 +1280,11 @@ tokens: local=10 api=0 api_reason=-
   **三行实况**：当前活=让路窗内覆盖面自动发现与闸接线（年轮/相遇 19:00 恢复）｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/FACE-COVERAGE-REPORT.md（2026-11-13 10:56）+ C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/Tools/face_coverage.py｜下个里程碑=19:00 让路窗解→议员提案线复活（T-20261113-02）+ 年轮批续产
   waiting: yield-window（pausedLite 工作日 09:00-19:00，年轮/相遇/反思延后）ETA 2026-11-13 19:00
   tokens: local=0 api=0 api_reason=yield-window
+
+- [R2740] 2026-11-13 11:1x-11:2x @BigLife-OSLoop 让路窗覆盖治理轮：轮首 pull=Already up to date；决策水位差集 NEW=0（watermark 尾 D-20261112-16，集团无 2026-11-13 新行）；orders 物理件区无涉本司新件；TASKS 无 open 可动单（T-01 streak 2/3 待 11-14、T-02 提案线候 19:00）。
+  **产品增量（本轮两处真缺口，均由上轮新增的面覆盖工具自己报出来）**：①ace_coverage.py 的「盘上无产物 32 条」此前只是不可审计的计数——本轮逐条归因（placeholder=3／external-readonly=2／inert-input=25／unexplained=2→修后 0），并把归因写入报告：此后新候选落不进任一类即出现在 unexplained 表，不再埋在噪声桶里；同时补齐解析目录表 docs/research（R-20260926-sublimation-census.md 实际存在却被误报无产物）；②derive_audit.py 的 REPORT_MD 是声明后从未写入的死常量（审计结果只活在被忽略的 stdout，无持久证据面）→ 改为**例外式落盘**：漂移日写 qa/DERIVE-AUDIT-<date>.md（与既有 11-12 件同形），干净日零文件不刷脏工作树。
+  **实证**=py_compile 双绿；derive_audit --selftest 4/4 PASS；ace_coverage 重跑 missing 32→30、**unexplained=0**、stale=0；负控（GHOST-REPORT.md/notes.jsonl → unexplained，{PAGED_PREFIX}01.html→placeholder，world-state.json→external-readonly，*.schema.json→inert-input）全按预期；今日 verdict=PASS 故未生成漂移报告（例外式策略按设计为静默）。
+  **闸面**=round_daily --run 34 面 PASS stale=0（11:14）；pool_audit PASS SELF_TERMINATE；事件回放闸今晨已 PASS（cards=10111 mismatch=0），6 轮节律未到不重复；QC 今早 10:09 problems=0，不重复；HQ 反馈闸当日已有行。
+  **三行实况**：当前活=让路窗内覆盖治理（年轮/相遇/提案 19:00 恢复）｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/FACE-COVERAGE-REPORT.md（2026-11-13 11:18·unexplained=0）+ Tools/face_coverage.py、Tools/derive_audit.py｜下个里程碑=19:00 让路窗解→年轮批 3 位落环 + T-20261113-02 提案线复活（窗 ≤48h）
+  waiting: yield-window（pausedLite 工作日 09:00-19:00，年轮/相遇/反思延后）ETA 2026-11-13 19:00
+  tokens: local=0 api=0 api_reason=yield-window
