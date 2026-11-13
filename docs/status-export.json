@@ -1,35 +1,35 @@
 {
- "export_ts": "2026-11-13 15:52",
+ "export_ts": "2026-11-13 16:18",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2790（2026-11-13 15:5x）**：年轮族表纪元口径收口——立族后漏登记会让 --check 把「新表重扫旧环」误报成「本轮生产越线」（R2789 15:38 立族 v1.4 实况：当日仅登记 12:09 一条，整日 HAND 40%/PROP 31% 越线实为追溯重分类）。修法三件：①新增纯函数 epoch_mix_state（none/multi/curr-missing/single）与 check_verdict（三态），自测 39 探针 0 fail；②build_ring_openings 重建即自动 note_epoch（立族登记不再靠人记得），并补登记 15:38 纪元（当日 2 版在册）；③--check 与趋势面同步改三态——混口径标 CROSS-EPOCH/「跨口径」且不阻断（rc=0），只有同口径才判 OVER/PASS。实跑：日更 29 面 fresh stale=0、事件闸 42535 环 0 mismatch 0 schema。 **R2789（2026-11-13 15:4x）**：年轮开头族表升 v1.4，立 `RAIN_SETTING_DEICTIC`（雨天具象布景族）——11-12 5/729=0.7% → 11-13 15/552=2.7%（一日 3 倍），按出生日截获判据入表；今日未归类盲区 23.2%→20.5%、11-12 32.5%→31.8%；消费方 hint 同步登记（缺登记会把族名机器码拼进提示词）；自检 30 探针 0 fail。 **R2788（2026-11-13 15:1x）**：让路窗确定性面——日更可见面重建 3 个（city-today/city-goals/index），QC 巡检 10114 卡零异常，语言池 72+12 桶全达标自终止。",
+   "t": "**R2791（2026-11-13 16:0x-16:4x @BigLife-OSLoop·让路窗确定性产品轮）**：城区志台账补齐 59 行（`city_chronicle.py --feed`，累计 2183 行，11-13 由 0 行→当日行入谱）——此前 1.6 天断供，年轮批的「本周城市大事」窄喂入无料可锚；同时抓到并修掉台账→页面的**第五个静默陈旧面**：`round_daily.py` v0.21 给 chronicle/proposals/life 三面登记 agent 依赖（append-only 台账 mtime > 产物即 stale），实证就是本轮——台账 16:13 已补 59 行，`city-chronicle.html`（10:09 版）仍被判 fresh、ran=0；修后该页 16:16 重建。QC 全库 10114 卡 problems=0；事件回放闸 events=42535 / cards=10111 / mismatch=0 / schema=0 PASS。 **R2790（2026-11-13 15:5x）**：年轮族表纪元口径收口——立族后漏登记会让 --check 把「新表重扫旧环」误报成「本轮生产越线」（R2789 15:38 立族 v1.4 实况：当日仅登记 12:09 一条，整日 HAND 40%/PROP 31% 越线实为追溯重分类）。修法三件：①新增纯函数 epoch_mix_state（none/multi/curr-missing/single）与 check_verdict（三态），自测 39 探针 0 fail；②build_ring_openings 重建即自动 note_epoch（立族登记不再靠人记得），并补登记 15:38 纪元（当日 2 版在册）；③--check 与趋势面同步改三态——混口径标 CROSS-EPOCH/「跨口径」且不阻断（rc=0），只有同口径才判 OVER/PASS。实跑：日更 29 面 fresh stale=0、事件闸 42535 环 0 mismatch 0 schema。 **R2789（2026-11-13 15:4x）**：年轮开头族表升 v1.4，立 `RAIN_SETTING_DEICTIC`（雨天具象布景族）——11-12 5/729=0.7% → 11-13 15/552=2.7%（一日 3 倍），按出生日截获判据入表；今日未归类盲区 23.2%→20.5%、11-12 32.5%→31.8%；消费方 hint 同步登记（缺登记会把族名机器码拼进提示词）；自检 30 探针 0 fail。",
    "s": 1
   },
   {
    "n": "基因库补给线",
-   "t": "当前活：待单——本轮任务板优先，基因轮未启动（低频线）\n最近实物：genes/ 9 个基因件在库（2026-11-12 18:37 复核）\n下个里程碑：任务板无单时补 5-10 条新基因（先登记后使用），窗 ≤48h",
+   "t": "让路窗内零生成：语言池 72 轴桶 + 12 像素灵桶 + 28 问候桶全达标（pool_audit verdict=PASS·SELF_TERMINATE），基因轮无欠料",
    "s": 1
   },
   {
    "n": "语言线·台词池",
-   "t": "当前活：全桶达标自停\n最近实物：cognition/pools.json（1440 行·axes 72/72·sprite 12/12·greet 28/28·faq 7/7·hard_fails=0·determinism 192+25 对零失配）",
+   "t": "pool_audit 全桶达标：axes=1296 行/at_target=72、sprite=144/12、greet=476/28、faq=42/7、负向面 40 行；确定性双抽 mismatch=0 empty_draw=0",
    "s": 2
   },
   {
    "n": "行为面镜像线",
-   "t": "当前活：随年轮环自动同步\n最近实物：census/export/citizens-light.jsonl（commit 01f9c061f，rows=10 镜像同步）",
+   "t": "事件回放闸 PASS（events=42535 / cards=10111 / replayed=10111 / mismatch=0 / schema=0）；city_chronicle --feed 补 59 行（1.6 天断供已闭·累计 2183 行）",
    "s": 1
   },
   {
    "n": "QC 巡检线",
-   "t": "**R2789 例巡条**：`ring_lint --today-only` 552 环 coded=0 PASS；`ring_open_family --selftest` 30 探针 0 fail；`round_daily --run` 29 面 fresh stale=0；`pool_audit` 72 桶全达标 SELF_TERMINATE。 **R2788 例巡条：** cards=10114 evolved=10114 problems=0 dup_rings=37/37 **R2762 例巡条**：日更面 36 项 verdict=PASS；事件闸 events=42535 cards=10111 mismatch=0 schema=0；`ring_lint --today-only` rings=552 coded=0；可见面链接 37 文件 209 链接 0 断链；登记表对 export 可见面覆盖完整（growth 分页同源）。 **R2732 例巡条**：qc_census 实跑 cards=10114 evolved=10114 problems=0（编号/姓名唯一、必备段齐备、年轮锚定律）；dup_rings=37/37 为观测面存量，不回溯改写历史。 **R2704 例巡条：qc_census 补跑（上次巡检 10-20 已逾期）problems=0（cards=10114），dup_rings 37/37 全量标记入册，不变量全绿。** **R2701 例巡条：qc_census problems=0（cards=10114），dup_rings 37/37 全量标记入册。** **R2685 例巡条（归因面）**：`ring_open_family --check 2026-11-13` → HAND_DEICTIC 81/324=25.0%，PASS（未越线）；`--by-source` 拆分 batch 320 : meet 4，守恒校验通过。 **R2674 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37 → PASS**（census/QC-REPORT.md 本轮首落）。 **R2668 例巡条（02:06）**：cards=10114 evolved=10114 problems=0 dup_rings=37/37 → 全绿。 **R2655 例巡条**：QC 上巡 R2654 problems=0（6 轮间隔未到，本轮零重扫）；语言池 pool_audit 全桶达标 SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）→ 按自终止律零 pool_gen；相遇轮今日 3/3 达上限（cap 3）自动跳过。 **R2649 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——编号/姓名唯一、必备段齐备、年轮锚定律无违例；事件回放 41991 全量比对 mismatch=0。 **R2646 例巡条：QC cards=10114 evolved=10114 problems=0；事件回放 41961 全量比对 mismatch=0 —— 不变量无异常。** **R2636 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——编号/姓名唯一、必备段齐备、年轮锚定律无违例 **R2629 例巡条：cards=10114 evolved=10114 problems=0 dup_rings=37/37（零异常）**——不变量扫描全绿，编号/姓名唯一、必备段齐备、年轮锚定律无违例 当前活：本轮做批次级验收（T-04 骨架族配额闸 22 席 HAND_DEICTIC=0.0% PASS）\n最近实物：census/QC-REPORT.md（problems=0）；新立单 T-20261112-10 母题收敛（top-3 母题占 81.8%）",
+   "t": "qc_census 10114 卡 problems=0 dup_rings=37/37；round_daily 39 面 stale=1 ran=2 failed=0 verdict=PASS",
    "s": 1
   },
   {
    "n": "城脑服务面",
-   "t": "当前活：实况面按轮刷新\n最近实物：docs/status-export.json（R2621 刷新）+ census/export/city-today.html（19:2x 重建）",
+   "t": "提案线源码侧已修（--propose default=True·35f2e9767），等 19:00 实批验收；开口族闸归因 T-20261113-03 结案（族表扩面 TABLE_EPOCH）",
    "s": 1
   }
  ],
@@ -1815,6 +1815,6 @@
    "本轮（2026-11-13 09:58-10:1x）今日年轮落环 554 行 / 551 人（事件流直数）；日更面重建 2 面 + 事件回放闸 PASS；全程零云端调用、零 LLM 调用（让路窗）。"
   ]
  ],
- "t": "当前活：年轮族表纪元口径收口（--check 三态判定 + 立族重建即自动登记）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-ring-trend.html（2026-11-13 16:0x，今日判定由误报 OVER 改为「跨口径」不可比）\n下个里程碑：19:00 让路窗解 → 年轮批恢复本地 qwen3:4b 生产（同日已落 554 环）",
- "top_text": "当前活：年轮族表纪元口径收口（--check 三态判定 + 立族重建即自动登记）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-ring-trend.html（2026-11-13 16:0x，今日判定由误报 OVER 改为「跨口径」不可比）\n下个里程碑：19:00 让路窗解 → 年轮批恢复本地 qwen3:4b 生产（同日已落 554 环）"
+ "t": "当前活：台账→可见面的静默陈旧族第五面收口（round_daily v0.21 依赖登记 chronicle/proposals/life）\n最近实物：census/export/city-chronicle.html（2026-11-13 16:16 重建·107KB·今日行入谱）+ cognition/city-chronicle.jsonl（16:13 补 59 行·2183 行）\n下个里程碑：19:00 让路窗解 → 年轮 --batch 3（含 --propose 恢复提案线·验收=新增行 ≥1 且带 [锚]/ring_ref），ETA 2026-11-13 19:30",
+ "top_text": "当前活：台账→可见面的静默陈旧族第五面收口（round_daily v0.21 依赖登记 chronicle/proposals/life）\n最近实物：census/export/city-chronicle.html（2026-11-13 16:16 重建·107KB·今日行入谱）+ cognition/city-chronicle.jsonl（16:13 补 59 行·2183 行）\n下个里程碑：19:00 让路窗解 → 年轮 --batch 3（含 --propose 恢复提案线·验收=新增行 ≥1 且带 [锚]/ring_ref），ETA 2026-11-13 19:30"
 }

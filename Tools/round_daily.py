@@ -192,6 +192,15 @@ DEPENDS = {
     # v0.18 (2026-11-13): 看板逐日曲线改从卡面数圈（全部圈），故 registry 也是数据源。
     "dashboard": ["docs/status-export.json", "census/export/citizens-light.jsonl",
                   "census/registry"],
+    # v0.21 (2026-11-13 R2791): append-only 台账被补跑后，其消费者面仍按「当日 mtime」
+    # 判 fresh——台账当日已被改写、页面停在改写前。实证：16:13 city_chronicle --feed
+    # 补 59 行（2183 总计），city-chronicle.html（10:09 版）仍判 fresh、ran=0。
+    # 同族第五面（前四：gene_ledger R2743 / dashboard R2760 / ring 面 v0.12 / 伪新 v0.9）。
+    "chronicle": ["cognition/city-chronicle.jsonl"],
+    # 提案台账 19:00 年轮批恢复供给后同类问题：页面不重建则 CEO 面停在旧提案。
+    "proposals": ["cognition/proposals.jsonl"],
+    # 城市生活页吃两张 append-only 台账（惊奇曲线 + 互聊），同为补跑型源。
+    "life": ["cognition/surprise-log.jsonl", "cognition/interchat-ledger.jsonl"],
 }
 
 # 环依赖面的重建下限间隔（分钟）。年轮批约每轮落地一次，若按 mtime 逐次重建，
@@ -205,7 +214,11 @@ DEPENDS_FLOOR_MIN = 60
 # 刚补的经历行在台账上最多压一小时看不见。这两面逐次重建成本 <1s，冷却归零。
 # v0.17 (2026-11-13 R2760): dashboard 同理且更硬——它的三行实况是 CEO 过程可见面，
 # 每轮更新一次 top_text 就必须当轮可见；63KB 重建 <1s，60 分钟冷却等于让 CEO 看旧话。
-DEPENDS_FLOOR_OVERRIDE = {"gene_ledger": 0, "lexicon": 0, "dashboard": 0}
+DEPENDS_FLOOR_OVERRIDE = {"gene_ledger": 0, "lexicon": 0, "dashboard": 0,
+                          # v0.21: 台账消费者三面同为百 KB 级、重建 <1s，且源由
+                          # 补跑型动作改写（chronicle --feed / proposal 批）——
+                          # 冷却会让补进去的内容压一小时看不见。
+                          "chronicle": 0, "proposals": 0, "life": 0}
 
 TIMEOUT_SEC = 240
 
