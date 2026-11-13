@@ -58,6 +58,11 @@ REGISTRY = [
     ("ring_picks", "faces", "build_ring_picks.py",        ["city-ring-picks.html"]),
     ("growth",     "faces", "build_growth_gallery.py",    ["city-growth.html"]),
     ("meets",      "faces", "build_city_meets.py",        ["city-meets.html"]),
+    # v0.16 (2026-11-13 R2770): 议会提案面补入口 —— proposals.jsonl 自 10-24 起
+    # 停供 19.6 天（T-20261113-02：旗标无人按），此前连「看得见」的页面都没有，
+    # 断供只能靠人肉翻 jsonl 才发现。本页确定性零 LLM，同时把供给缺口（距最近一条
+    # 几天）、早期机读串行标注、日上限口径摆在一屏。纳入 faces 档隨日更闸自发重建。
+    ("proposals",  "faces", "build_city_proposals.py",    ["city-proposals.html"]),
     # v0.3 (2026-11-12 R2573): 补登记三个「有生成器、有页面、无任何轮次引用」的沉默断供面。
     # 病根同 T-20261112-02：city-lexicon.html 停更 15.7 天无人发现；
     # city-ring-quality / city-ring-trend 只靠偶发手工跑活着，断供只是时间问题。

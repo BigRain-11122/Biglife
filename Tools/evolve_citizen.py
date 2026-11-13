@@ -1024,6 +1024,12 @@ RING_LATIN_WHITELIST = {"qiqi", "rain", "ceo"}
 # make them part of the silicon-city vocabulary, and the same scan showed
 # 带宽/进程 (43/33 face, 0 ring) never leak into prose at all.
 CHINESE_TECH_RE = re.compile(r"显存|显卡|服务器|线程|三机|机队|轮次|产能实况")
+# 2026-11-13 R2770: the governance half of the same leak. 旧提案 PR-20261024-3284
+# 写出了「建议决策委员会统计时也听听雨声蛙的合唱」——集团机构名进了市民口吻，
+# 而 CITY 里没有这个机构（城里有议会）。量面：10091 张卡人设域/年轮域三词全 0
+# （决策委员会 0/0、集团 0/0、任务单 0/0），Ollama 唯一出现处就是那条提案 ⇒
+# 零人设占用＝硬拒不会误伤。产线 face=0/ring=20 故意不禁（既成事实·另有存量口径）。
+CHINESE_TECH_RE = re.compile(r"显存|显卡|服务器|线程|三机|机队|轮次|产能实况|决策委员会|集团|任务单")
 # 2026-11-12 R2533: the FLEET-ops half of the same leak (C-10036 shipped
 # 「三机产能实况」as a radio broadcast item). Measured on all 10091 cards
 # (ring section split off): 三机 face=0/ring=1, 机队 face=0/ring=13,
