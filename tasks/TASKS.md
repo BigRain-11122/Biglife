@@ -1303,3 +1303,16 @@ tokens: local=10 api=0 api_reason=-
   计分：能看实物=2 分（日报页当日刷新 + 提案线复活闭环）｜文件改动=1 分。
   waiting: yield-window ETA 2026-11-13 19:00
   tokens: local=0 api=0 api_reason=yield-window
+
+
+- [R2742] 2026-11-13 11:3x-11:4x @BigLife-OSLoop 让路窗确定性产品轮：轮首 pull=Already up to date、树净（除上一轮遗留 QC-REPORT 时间戳）；决策水位差集 NEW=0（watermark 尾 D-20261112-16，集团 decisions 末批=11-12 18:00 第 60 批，无 2026-11-13 新行）；orders 物理件区无涉本司新件；TASKS open 全在观测窗（T-20261113-02 待 19:00 实批、T-20261112-01/02/03/04 待连续 3 生产日窗口）。
+  **年轮/相遇/提案=0**：工作日让路窗（09:00-19:00，D-20261020-02）内 LLM 面结构性延后，19:00 恢复，不重扫。
+  **日更面（本轮主产出）**：round_daily --check 首检 stale=1（today 内容过期：源事件 11:33 更新晚于页面渲染）到 --run 重建 city-today.html + index.html 导航重排，stale=1 ran=2 failed=0 verdict=PASS；复跑 --check stale=0（幂等）。余 38 面全 fresh，说明 10-27 起的 12 面停更病根未复发。
+  **事件回放闸本轮未跑（诚实边界）**：本轮零环落卡、卡面零改动，闸的比对源未变，按「有环才验」省算力；19:00 年轮批后照常跑。
+  **语言线**：按自终止律今日已达标，不重跑 pool_audit（零 LLM 轮不为长而长）。
+  **HQ 日闸**：hq_feedback_daily --check = day=2026-11-13 lines=1 ALREADY_REPORTED，零写入。
+  **清账**：census/QC-REPORT.md（11:05 上一轮 QC 产物，仅时间戳差异 10:10→11:05、异常数 0）随本轮一并入库，工作树复归干净——上轮按定向 add 律未提交，本轮作为遗留产物显式补交。
+  **三行实况**：当前活=让路窗内确定性日更面维护（年轮/相遇/提案 19:00 恢复）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-today.html（2026-11-13 11:4x 重建）｜下个里程碑=19:00 让路窗解→年轮批落环 + 提案线首批自动产出（T-20261113-02 验收，窗 ≤48h）
+  计分：能跑/能看实物=2 分（当日日报页重渲，CEO 可直接打开）｜文件改动=1 分。
+  waiting: yield-window ETA 2026-11-13 19:00
+  tokens: local=0 api=0 api_reason=yield-window
