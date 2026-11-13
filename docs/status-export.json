@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-14 01:48",
+ "export_ts": "2026-11-14 02:27",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2843（2026-11-14 01:4x）**：反思线可见面新立 `census/export/city-reflections.html`（97 条/78 人/覆盖 0.77%，近 14 日产出条 + 最新 24 席卡），并接入日更闸 faces 档（幂等双跑一致）。本轮 LLM 三线让路：vram-guard 93%>90% yield（ComfyUI 他线占用，不抢不杀）+ Ollama API 无应答 ⇒ 年轮零落环。 **R2838（2026-11-14 00:48-01:0x）：年轮 10 环落环 + 日更面重建 3 面 + 事件闸 PASS + 语言池自终止**——evolve_citizen --batch 3 → evolved=10 of 10 due（C-04451/C-04452/C-04454/C-04468/C-04480/C-04453/C-04455/C-04456/C-04457/C-04458，1 处 recent-dup 软让步仍落环）；events_refresh --gate → events=42835 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0 PASS；round_daily --run → stale=2 ran=3 failed=0 PASS（看板/基因台账/索引重建）；pool_audit → 72 桶全达标，SELF_TERMINATE 零生成；相遇轮今日 cap 3 已满，跳过。 **R2837（2026-11-14 00:39-00:5x）：年轮 10 环落环 + 12 面读者面重建 + 事件闸 PASS**——evolve_citizen --batch 3 → evolved=10 of 10 due（C-04443/C-04446/C-04449/C-04459/C-04477/C-04444/C-04445/C-04447/C-04448/C-04450，3 处 recent-dup 软让步仍落环）；events_refresh --gate → events=42823 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0 PASS；round_daily --run → stale=11 ran=12 failed=0 PASS（看板/城区志/名人录/物件志/相遇/提案/环龄/环开篇/环品质/基因台账/索引重建）；相遇 1 对（C-04444 彭未晞 × C-04448 吕莉，同城区 GM）。",
+   "t": "**R2851（2026-11-14 02:2x 夜窗产品轮）**：年轮批 9/10 席落环（1 席语言闸 stays-due）→ 行为线镜像 rows=9 → 事件回放闸 PASS（events=42914 / mismatch=0 / schema_errors=0）→ 可见面 3 面重建；相遇轮今日 3/3 已满按闸跳过。 **R2843（2026-11-14 01:4x）**：反思线可见面新立 `census/export/city-reflections.html`（97 条/78 人/覆盖 0.77%，近 14 日产出条 + 最新 24 席卡），并接入日更闸 faces 档（幂等双跑一致）。本轮 LLM 三线让路：vram-guard 93%>90% yield（ComfyUI 他线占用，不抢不杀）+ Ollama API 无应答 ⇒ 年轮零落环。 **R2838（2026-11-14 00:48-01:0x）：年轮 10 环落环 + 日更面重建 3 面 + 事件闸 PASS + 语言池自终止**——evolve_citizen --batch 3 → evolved=10 of 10 due（C-04451/C-04452/C-04454/C-04468/C-04480/C-04453/C-04455/C-04456/C-04457/C-04458，1 处 recent-dup 软让步仍落环）；events_refresh --gate → events=42835 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0 PASS；round_daily --run → stale=2 ran=3 failed=0 PASS（看板/基因台账/索引重建）；pool_audit → 72 桶全达标，SELF_TERMINATE 零生成；相遇轮今日 cap 3 已满，跳过。",
    "s": 1
   },
   {
@@ -1837,8 +1837,12 @@
   [
    "96",
    "本轮今日年轮落环 94 行（今日累计，含本窗之前批次）；本窗 LLM 三线 vram-guard yield（93%>90%）零新增。产品增量=反思录可见面 1 件（97 条/78 人首次上屏）。"
+  ],
+  [
+   "135",
+   "年轮落环：本轮 9 席（C-04531/04532/04534/04535/04536/04539/04540/04549/04563），1 席 C-04537 语言闸 stays-due 留待下批；行为线随环同步 rows=9；事件闸 replay 10111 卡零 mismatch。"
   ]
  ],
- "t": "当前活：反思线可见面新立并接入日更闸（city-reflections.html），LLM 三线等 GPU 释放\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-reflections.html（2026-11-14 02:0x，97 条/78 人/0.77%）\n下个里程碑：GPU 释放后 `evolve_citizen --batch 3` 复产年轮（本轮 vram-guard 93% 拦住，ETA 视 ComfyUI 批次）",
- "top_text": "当前活：反思线可见面新立并接入日更闸（city-reflections.html），LLM 三线等 GPU 释放\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-reflections.html（2026-11-14 02:0x，97 条/78 人/0.77%）\n下个里程碑：GPU 释放后 `evolve_citizen --batch 3` 复产年轮（本轮 vram-guard 93% 拦住，ETA 视 ComfyUI 批次）"
+ "t": "当前活：夜窗年轮批 9 席落环 + 可见面刷新收口\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-today.html（2026-11-14 02:2x 重建）\n下个里程碑：下一班年轮批 10 席（ETA ≤10min 循环轮）",
+ "top_text": "当前活：夜窗年轮批 9 席落环 + 可见面刷新收口\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-today.html（2026-11-14 02:2x 重建）\n下个里程碑：下一班年轮批 10 席（ETA ≤10min 循环轮）"
 }
