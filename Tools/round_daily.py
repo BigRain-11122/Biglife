@@ -107,6 +107,13 @@ INPUTS = [
     # 按「当日必新」判等于每天白写 190MB（relations 2.85M 行）却零信息。
     # 漂移时才重建 dependents；稳定日仅 16s 盘读零页面动作。
     ("derive_audit", "data", "derive_audit.py",           ["state/derive-audit.json"], ["--run"]),
+    # v0.14 (2026-11-13): 任务候选项面同病根第八例（T-20261112-02 同族）。
+    # needs.py --tasks 产 census/export/citizen-tasks.jsonl（消费方按 axis→face 领活），
+    # 有生成器、有 schema（Tools/schemas/citizen-tasks.schema.json）、有 QC 挂点，
+    # 却无任何轮次引用：实测停在 09-26（48 天），而 needs 侧 10-28 改过 AXIS_NEED 口径
+    # ⇒ 下游拿到的是上月「动机→任务」映射。纳入 data 档每日再生：
+    # 确定性零 LLM（同日同输入双跑 28536 行逐字节一致），单跑秒级。
+    ("citizen_tasks", "data", "needs.py",                 ["census/export/citizen-tasks.jsonl"], ["--tasks"]),
     # v0.13 (2026-11-13 R2734): QC 证据面同病根第七例 —— ring_lint.py 有脚本、
     # 有产出、无任何轮次引用，qa/RING-LINT-REPORT.md 静默停更 17 天（生成日 10-27，
     # 期间 10-28/11-12/11-13 三批共 1778 条年轮从未被内部码巡检覆盖）。

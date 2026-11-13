@@ -1262,3 +1262,9 @@ tokens: local=10 api=0 api_reason=-
   **闸面**=repair_dup_rings 干跑 cards=0（无重复环）；基因轮本日已由 R2733 落 7 条，不重复；语言池 SELF_TERMINATE；QC/事件回放闸 10:09/10:12 已跑，本轮不重复。
   waiting: yield-window（pausedLite 工作日 09:00-19:00，年轮/相遇/反思延后）ETA 2026-11-13 19:00
   tokens: local=0 api=0 api_reason=yield-window
+- [R2737] 2026-11-13 10:43-10:5x @BigLife-OSLoop 让路窗确定性产品轮：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（watermark 尾 D-20261112-16，集团 decisions 无 2026-11-13 新行）；orders 无涉本司新件；TASKS 无 open 可动单（T-01 streak 2/3 待 11-14 判、T-02/03/04/05 观测窗）。**让路窗**=年轮/相遇/反思 09:00-19:00 结构性让路（D-20261020-02）。
+  **产品增量**=任务候选项面断供收口（T-20261112-02 同病根第八例）：`census/export/citizen-tasks.jsonl` 有生成器（needs.py --tasks）、有 schema、有 QC 挂点，却无任何轮次引用——实测停在 09-26（48 天），而 needs 侧 10-28 改过 AXIS_NEED 口径，下游按 axis→face 领活拿到的是上月「动机→任务」映射。本轮重建 28536 行 + 全行 schema 校验 bad=0 + 双跑 md5 一致（D849B9F4…）；并接入 `Tools/round_daily.py` INPUTS data 档（每日再生、秒级、零 LLM），防再次静默停更。
+  **三态负控**=① fresh→PASS ② mtime 回拨 -2d→`outdated:2d` STALE ③ `--run`→rebuilt 且内容 md5 不变（幂等不 churn）⇒ 闸判据真在工作；随后全量 `--check` 37 面 stale=0 PASS。
+  **三行实况**：当前活=让路窗内确定性面维护（年轮/相遇批 19:00 恢复）｜最近实物=citizen-tasks.jsonl 28536 行（2026-11-13 10:48）+ round_daily 面登记｜下个里程碑=19:00 让路窗解→年轮批续产 + T-01 streak 3/3 判定（11-14 窗口）。
+  waiting: yield-window（pausedLite 工作日 09:00-19:00，年轮/相遇/反思延后）ETA 2026-11-13 19:00
+  tokens: local=0 api=0 api_reason=yield-window
