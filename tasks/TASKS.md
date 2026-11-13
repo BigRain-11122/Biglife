@@ -635,7 +635,8 @@ tokens: local=10 api=0 api_reason=-
   - 事实：11-13 全日 552 环 HAND_DEICTIC 221(40.0%)/PROP_DEICTIC 171(31.0%)，两族同越 25% 线；而同日 05:31 读数 batch 81/320=25.3%、全日 25.0% PASS。差量=其后新落 232 席中 140 席 HAND_DEICTIC(60.3%) → 上午在线内、下午批把全日推过线。
   - 待查三候选：①`ban_set_from_openings` 滚动窗口 + `FAMILY_MIN_DENOM` 致小批不生成禁用集，各批自洽而全日累计越线；②`SOFT_ONLY_VIOLATIONS` 不含 `opening-family-quota`（evolve_citizen L716），理论应硬拒 → 查是否有落环路径（meet/reflect/fallback）未经 `ring_violations`；③PROP_DEICTIC 12:09 才立族（074c61457），其 31% 部分属立族前产出，但 HAND 族立族更早，40% 不由此解释。
   - 验收：能指出一可复现的最小路径（给定批输入 → 越线环仍落环），或证否并给出「为何全日 40% 仍合规」的口径解释；禁改阈值换绿。证据=`qa/RING-OPEN-FAMILY-20261113.md`。
-  - status: open
+  - **[R2783 第一轮归因·三候选两证伪]** 2026-11-13 14:4x：候选②**证伪**（`SOFT_ONLY_VIOLATIONS` 不含 `opening-family-quota`，evolve 批路径为硬拒，L716/L1819）；候选①**部分证伪**（`sig["today_family_total"]` 在批起时按当日全量台账初始化，`FAMILY_MIN_DENOM=8` 恒满足，小批不生成禁用集不成立；但 `over_quota` 用严格 `>`，25.0% 不触发，每批仍可净增 1 席「贴线爬」，只能解释 +1/批）；候选③不足以解释 HAND。**算术反证**：05:31→14:2x 总量仅增 232 席（≈77 批×3），HAND 若受闸约束净增上限≈77 席，实测 +140 席＝超上限 1.8 倍 → **存在一批 HAND 环在 ban 集已含 HAND 时仍落环**。待查收敛为 4 点：`gated_llm` 重试耗尽兜底分支／`add_ring` 全调用点穷举／重写句落入 unclassified 后判据失明／`save_today_openings` 落盘快照与实扫是否口径分叉。证据=`qa/RING-FAMILY-GATE-ATTRIB-20261113.md`（含复跑一行）。
+  - status: in-progress（第一轮归因完成·范围已收敛到上列 4 点；零阈值改动、零闸逻辑改动）
 - [ ] **T-20261112-01 事件流人味密度缺口（源头·P1）**（2026-11-12 09:3x @BigLife-OSLoop R2566 立）
   - **[R2600 判据修复·假绿堵口]** 名义 ready 被证伪：今日流言 8 条文件齐全且 mtime 当日，但年轮 ingest 的 trigger-free 纪律（`RUMOR_TRIGGERS` 含风/雨/云/雾）把 8 条**全部**拦掉 → **有效通过 0/8**（阻塞词 风 8／雨 1／雾 1）。`Tools/ring_material_check.py` 已补有效量两列（过滤器从 evolve_citizen 直接 import＝判据单源），`ready` 改为「名义≥1 且有效≥1」，输出 MISSING/BLOCKED/ready 三态；正负控 PASS（合法动作句不误杀）、py_compile rc=0。streak 因此由 1/3 **诚实回退为 0/3**（真值非退步）。证据=qa/RING-MATERIAL-EFFECTIVE-20261112.md。供给侧治本另立 T-20261112-07。
   - status: in-progress（2026-11-12 09:5x @BigLife-OSLoop R2567 落修法②：Tools/city_life_events.py 母题池 + evolve_citizen 素材库口径接线；待「连续 3 生产日窗口非空」验收）｜**R2568 追加主因拆分**：修法② 只补供给，未治「模板句照抄」——今日 tmpl 78 条中 30 条来自提示池活句，已退役（qa/RING-TMPL-SOURCE-20261112.md）；余 18+ 条属口头禅基因 135 卡共用（待新发卡去重决策，存量不回改）
@@ -1417,4 +1418,14 @@ tokens: local=10 api=0 api_reason=-
 
 - [R2782] 2026-11-13 14:19-14:3x @BigLife-OSLoop 让路窗日更轮（周五工作日·D-20261020-02 年轮/相遇/提案顺延 19:00）：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团 decisions 无 2026-11-13 新行）；orders 物理件区无涉本司新件；TASKS open=2 均在观测窗（T-20261113-02 待 19:00 实批 / T-20261112-01 streak 2/3）。**让路窗实录**=evolve_citizen --batch 3 原样返回 yield-window（09:00-19:00 结构性让路，零 LLM）。**日更面 --run verdict=PASS**：stale=2 rebuilt=3 failed=0——city-today.html 内容级重建（554 今日年轮 / 551 开口居民 / 6 城区 / 10114 卡 / 面生成 14:18）、city-dashboard.html 因 docs/status-export.json 依赖更新重建、index.html 索引重建；其余 28 面全 fresh。**事件流回放闸 PASS**：cards=10111 events=42535 replayed=10111 schema_errors=0 mismatch=0 coverage unexpected_missing=0（qa/EVENTS-REPLAY-REPORT.md）。QC 13:54 刚巡（census/QC-REPORT.md）、语言池今日已 SELF_TERMINATE、相遇 cap 顺延、基因轮 10:16 已做 b54——按节律不重复。HQ 反馈闸 ALREADY_REPORTED（day=2026-11-13 lines=1）零写入。
   计分：能看实物=2 分（今日城市日报三面内容级新鲜·CEO 可直接翻）｜文件改动=1 分｜纯记账 0。
+  tokens: local=0 api=0 api_reason=workday-yield-window
+
+- [R2783] 2026-11-13 14:3x-14:5x @BigLife-OSLoop 让路窗归因轮（周五工作日·D-20261020-02 年轮/相遇/提案顺延 19:00）：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（集团 decisions 无 D-20261113-* 行，尾仍 D-20261112-16）；orders 物理件区无涉本司新件；TASKS open 三单（T-20261113-02 待 19:00 实批／T-20261113-03 本轮领办／T-20261112-01 streak 2/3）。
+  **让路窗实录**=`evolve_citizen --batch 3` 原样返回 yield-window（09:00-19:00 结构性让路，零 LLM 零显存）；`round_daily --run` verdict=PASS stale=0 ran=0 failed=0（36 面全新鲜，幂等零动作）。
+  **产品增量（P1 归因单实做·2 分）**：领办 **T-20261113-03** 开头族闸「已开仍越线」，三条待查候选**两证伪一收窄**——①候选②证伪（`opening-family-quota` 不在 `SOFT_ONLY_VIOLATIONS`，批路径硬拒）；②候选①部分证伪（批起时 `sig["today_family_total"]` 按当日全量台账初始化，`FAMILY_MIN_DENOM=8` 恒满足；但 `over_quota` 严格 `>` 留了「每批贴线净增 1 席」的窗口，只够解释 +1/批）；③**算术反证锁范围**＝05:31→14:2x 总量仅增 232 席（≈77 批×3），闸约束下 HAND 净增上限≈77 席，实测 **+140 席=超上限 1.8 倍** ⇒ 必有 HAND 环在 ban 集已含该族时仍落环。待查收敛为 4 点（`gated_llm` 重试耗尽兜底／`add_ring` 全调用点／重写句落 unclassified 致判据失明／`save_today_openings` 快照与实扫口径分叉）。证据=`qa/RING-FAMILY-GATE-ATTRIB-20261113.md`（含一行复跑命令）。
+  **本轮实测读数**（CEO 可复跑）：`ban_set_from_openings` 14:4x 返回 `['HAND_DEICTIC','PROP_DEICTIC']`，entries=541/total=552/unclassified=159(28.8%)、HAND 221(40.0%)、PROP 171(31.0%) —— 判据函数活着，问题在落环路径而非判据本身。
+  **闸面**：QC 13:54 已巡（problems=0）、pool 今日 SELF_TERMINATE、相遇 cap 顺延、基因轮 10:16 已做 b54 —— 按节律不重复。
+  **诚实边界**：零阈值改动、零闸逻辑改动、零数据面改动（承「禁改阈值换绿」）；**未宣称修复**，40%/31% 仍越线。
+  **对外实况三行**：当前活＝开头族「已开仍越线」P1 归因（让路窗内确定性面）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-FAMILY-GATE-ATTRIB-20261113.md（2026-11-13 14:5x）｜下个里程碑＝19:00 让路窗解→年轮批 3 席 + 提案线首批实批（T-20261113-02 验收：新增提案行 ≥1 带 [锚]/ring_ref），并复测 HAND/PROP 是否被 ban 集压回 ≤25%。
+  计分：能跑实物=2 分（三候选实测证伪 + 算术反证收敛范围，均可复跑）｜文件改动=1 分（qa 证据件 + 单面）｜零 LLM。
   tokens: local=0 api=0 api_reason=workday-yield-window
