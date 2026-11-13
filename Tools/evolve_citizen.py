@@ -3347,6 +3347,10 @@ def main():
                          "flag, so the line idled 19.6 days - caught by face_coverage)")
     ap.add_argument("--no-propose", dest="propose", action="store_false",
                     help="explicitly skip councilor proposals this run")
+    ap.add_argument("--audit-due", action="store_true",
+                    help="T-20261114-01 regression gate: read-only, prints the due set "
+                         "and fails (exit 1) if any of them already carries a year ring "
+                         "dated today - zero LLM, safe in the CEO yield window")
     ap.add_argument("--via", default=None, help="committer-identity tail, e.g. BigLife-OSLoop")
     args = ap.parse_args()
     via = (" [via %s]" % args.via) if args.via else ""
@@ -3357,7 +3361,8 @@ def main():
 
     # D-20261020-02 日间让路窗排程闸: LLM 批面（batch/meet/reflect）工作日 09:00-19:00 零改道，
     # 周末全窗自领；水线批/池产出排程限非让路窗 19:00-09:00。本地路径（--qc/确定性件）不受影响。
-    if (args.batch or args.meet or args.reflect) and yield_window_active():
+    if (args.batch or args.meet or args.reflect) and not args.audit_due \
+            and yield_window_active():
         print("yield-window: workday 09:00-19:00 CEO lane-priority - evolve/meet/reflect "
               "deferred to 19:00-09:00/weekend (D-20261020-02)")
         return
@@ -3467,6 +3472,17 @@ def main():
             reflect_step(cursor, via)
         return
     due = due_citizens(cursor, args.batch, args.force)
+    if args.audit_due:
+        # T-20261114-01 回归断言: due 集合与「卡内已有今日年轮」必须零交集.
+        # 选人面 (scan) 与生成面 (in-loop guard) 各有一道同日幂等闸; 本断言把
+        # 两道闸的一致性钉成可跑证据，防未来改选人逻辑时静默回退成「白烧席位」。
+        leaks = [cid for cid in due
+                 if (p := find_card(cid)) and _ringed_today(p)]
+        print("audit-due: due=%d leaked=%d %s"
+              % (len(due), len(leaks), " ".join(leaks) if leaks else "-"),
+              flush=True)
+        print("audit-due: %s" % ("FAIL" if leaks else "PASS"), flush=True)
+        sys.exit(1 if leaks else 0)
     if not due:
         print("no due citizens; cooldown healthy")
         if args.reflect:
