@@ -171,7 +171,9 @@ DEPENDS = {
     # 主数据取自 citizens-light.jsonl，但登记表只比「构建脚本 vs 产物」mtime。
     # 实证：R2760 刷新 top_text 后 --run 仍判 dashboard fresh、ran=0，CEO 面继续
     # 显示上一轮的三行（R2743 dep-mtime 同族第二例，那次补的是 gene_ledger 依赖）。
-    "dashboard": ["docs/status-export.json", "census/export/citizens-light.jsonl"],
+    # v0.18 (2026-11-13): 看板逐日曲线改从卡面数圈（全部圈），故 registry 也是数据源。
+    "dashboard": ["docs/status-export.json", "census/export/citizens-light.jsonl",
+                  "census/registry"],
 }
 
 # 环依赖面的重建下限间隔（分钟）。年轮批约每轮落地一次，若按 mtime 逐次重建，

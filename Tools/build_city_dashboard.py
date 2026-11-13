@@ -7,14 +7,17 @@
 """
 import collections
 import datetime
+import glob
 import html
 import json
 import os
+import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "census", "export", "citizens-light.jsonl")
 OUT = os.path.join(ROOT, "census", "export", "city-dashboard.html")
 FEED_LIMIT = 160
+RING_LINE = re.compile(r"^- (\d{4}-\d{2}-\d{2}) ")
 
 SPECIES_CN = {
     "carbon": "碳基",
@@ -74,6 +77,28 @@ def live_lines():
     return lines[:3] if len(lines) >= 3 else []
 
 
+def ring_day_counts():
+    """按卡面日期统计全部年轮圈数（逐日）。
+
+    citizens-light 每位居民只留最新一圈，按它统计会把「同日多圈」与历史圈
+    全丢掉（2026-11-13 实测今日 551 vs 真实 554、昨日 742 vs 751），且
+    一旦某日无最新圈就显示 0——所以逐日曲线必须回卡面数圈。
+    """
+    days = collections.Counter()
+    files = glob.glob(os.path.join(ROOT, "census", "registry", "**", "*.md"), recursive=True)
+    files += glob.glob(os.path.join(ROOT, "census", "anchors", "*.md"))
+    for p in files:
+        try:
+            with open(p, encoding="utf-8", errors="replace") as f:
+                for line in f:
+                    m = RING_LINE.match(line)
+                    if m:
+                        days[m.group(1)] += 1
+        except OSError:
+            continue
+    return days
+
+
 def main():
     rows = load()
     total = len(rows)
@@ -82,11 +107,36 @@ def main():
     prof = collections.Counter((r.get("profession") or "(未记)") for r in rows)
     rings = [r for r in rows if r.get("recent_ring")]
     by_date = collections.Counter((r.get("recent_ring_date") or "-") for r in rings)
+    ring_days = ring_day_counts()
 
     today = datetime.date.today()
     days = [(today - datetime.timedelta(days=i)).isoformat() for i in range(6, -1, -1)]
-    day_counts = [(d, by_date.get(d, 0)) for d in days]
+    day_counts = [(d, ring_days.get(d, 0)) for d in days]
     day_max = max([c for _, c in day_counts] + [1])
+
+    # 供给断供显式化：老日期全 0 曾连 14 天无人发现（10-29→11-11），不能只靠肉眼读条。
+    # 按近 21 日全史找最长空窗段（今日之前），窗口内空窗与窗外延续段都能报出。
+    streak = best = 0
+    best_end = ""
+    for i in range(20, 0, -1):
+        d = (today - datetime.timedelta(days=i)).isoformat()
+        if ring_days.get(d, 0):
+            streak = 0
+        else:
+            streak += 1
+            if streak >= best:
+                best, best_end = streak, d
+    last_day = max(ring_days) if ring_days else ""
+    if ring_days.get(today.isoformat(), 0) == 0:
+        gap_line = "今日暂未落环"
+        if last_day:
+            gap_line += "，最后一圈 %s" % last_day
+    elif best >= 3:
+        start = (datetime.date.fromisoformat(best_end) - datetime.timedelta(days=best - 1)).isoformat()
+        gap_line = "近三周最长断供 %d 天（%s → %s 无新增，最后一圈 %s）" % (
+            best, start, best_end, last_day)
+    else:
+        gap_line = ""
 
     feed = sorted(
         rings,
@@ -120,7 +170,9 @@ def main():
                html.escape(r.get("recent_ring") or ""))
         )
 
-    # 用数据源 mtime 作「截至」时间，保证同源输入字节级幂等
+    # 用数据源 mtime 作「截至」时间，保证同源输入字节级幂等。
+    # 注意：此串是 round_daily 内容闸的契约（SNAPSHOT_SPECS 对 citizens-light），
+    # 卡面年轮数只改曲线口径，不改这个时间戳，否则每一轮都会被判 content-stale。
     gen_at = datetime.datetime.fromtimestamp(os.path.getmtime(SRC)).strftime("%Y-%m-%d %H:%M:%S")
     cov = len(rings) / total * 100 if total else 0
     live = live_lines()
@@ -155,6 +207,7 @@ h2{font-size:15px;color:var(--dim);font-weight:600;letter-spacing:.4px;margin:0 
 .track{flex:1;height:8px;background:#161b22;border-radius:4px;overflow:hidden}
 .track i{display:block;height:100%%;background:linear-gradient(90deg,#3d7dd6,#63b3ff);border-radius:4px}
 .num{flex:0 0 88px;text-align:right;color:var(--dim);font-variant-numeric:tabular-nums}
+.gap{margin:10px 0 0;font-size:12px;color:var(--warm)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
 .card{background:#161b22;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
 .card header{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
@@ -165,7 +218,7 @@ h2{font-size:15px;color:var(--dim);font-weight:600;letter-spacing:.4px;margin:0 
 footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--line);padding-top:14px}
 </style></head><body><div class="wrap">
 <h1>硅基城市脉搏</h1>
-<div class="sub">居民聚合面板 · 数据截至 %(gen)s · 源=census/export/citizens-light.jsonl</div>
+<div class="sub">居民聚合面板 · 数据截至 %(gen)s · 源=census/export/citizens-light.jsonl + census/registry 卡面年轮</div>
 %(live)s
 
 <div class="kpis">
@@ -177,8 +230,9 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
   <div class="kpi"><b>%(today)d</b><span>今日新增年轮</span></div>
 </div>
 
-<section><h2>近 7 日年轮新增</h2>
+<section><h2>近 7 日年轮新增 · 全圈</h2>
 %(daybars)s
+%(gap)s
 </section>
 
 <div class="two">
@@ -210,8 +264,9 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
         "cov": cov,
         "nd": len(dist),
         "np": len(prof),
-        "today": by_date.get(today.isoformat(), 0),
+        "today": ring_days.get(today.isoformat(), 0),
         "daybars": day_bars,
+        "gap": ('<p class="gap">%s</p>' % html.escape(gap_line)) if gap_line else "",
         "sp": bar([(SPECIES_CN.get(k, k), v) for k, v in sp.most_common()], total),
         "dist": bar([(DISTRICT_CN.get(k, k), v) for k, v in dist.most_common()], total),
         "prof": bar(prof.most_common(), total, limit=12),

@@ -24,6 +24,7 @@ h2{font-size:15px;color:var(--dim);font-weight:600;letter-spacing:.4px;margin:0 
 .track{flex:1;height:8px;background:#161b22;border-radius:4px;overflow:hidden}
 .track i{display:block;height:100%;background:linear-gradient(90deg,#3d7dd6,#63b3ff);border-radius:4px}
 .num{flex:0 0 88px;text-align:right;color:var(--dim);font-variant-numeric:tabular-nums}
+.gap{margin:10px 0 0;font-size:12px;color:var(--warm)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
 .card{background:#161b22;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
 .card header{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
@@ -34,7 +35,7 @@ h2{font-size:15px;color:var(--dim);font-weight:600;letter-spacing:.4px;margin:0 
 footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--line);padding-top:14px}
 </style></head><body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 产物目录</a></div><div class="wrap">
 <h1>硅基城市脉搏</h1>
-<div class="sub">居民聚合面板 · 数据截至 2026-11-13 09:01:23 · 源=census/export/citizens-light.jsonl</div>
+<div class="sub">居民聚合面板 · 数据截至 2026-11-13 09:01:23 · 源=census/export/citizens-light.jsonl + census/registry 卡面年轮</div>
 <div class="live"><div>当前活：洗码残渣出生站拦截已上线（v0.69），19:00 后首批年轮即受新闸约束</div><div>最近实物：qa/test_latin_debris.py 11/11 PASS + Tools/evolve_citizen.py 新门（2026-11-13 12:58，commit 6a0b487d2）</div><div>下个里程碑：19:00 解冻后年轮批 + 提案线恢复供料（--propose 默认 ON），当轮用 ring_lint 复核残渣为 0</div></div>
 
 <div class="kpis">
@@ -43,17 +44,18 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
   <div class="kpi"><b>100%</b><span>年轮覆盖率</span></div>
   <div class="kpi"><b>7</b><span>街区</span></div>
   <div class="kpi"><b>209</b><span>职业</span></div>
-  <div class="kpi"><b>551</b><span>今日新增年轮</span></div>
+  <div class="kpi"><b>554</b><span>今日新增年轮</span></div>
 </div>
 
-<section><h2>近 7 日年轮新增</h2>
+<section><h2>近 7 日年轮新增 · 全圈</h2>
 <div class="row"><span class="lab">11-07</span><span class="track"><i style="width:0.0%"></i></span><span class="num">0</span></div>
 <div class="row"><span class="lab">11-08</span><span class="track"><i style="width:0.0%"></i></span><span class="num">0</span></div>
 <div class="row"><span class="lab">11-09</span><span class="track"><i style="width:0.0%"></i></span><span class="num">0</span></div>
 <div class="row"><span class="lab">11-10</span><span class="track"><i style="width:0.0%"></i></span><span class="num">0</span></div>
 <div class="row"><span class="lab">11-11</span><span class="track"><i style="width:0.0%"></i></span><span class="num">0</span></div>
-<div class="row"><span class="lab">11-12</span><span class="track"><i style="width:100.0%"></i></span><span class="num">742</span></div>
-<div class="row"><span class="lab">11-13</span><span class="track"><i style="width:74.3%"></i></span><span class="num">551</span></div>
+<div class="row"><span class="lab">11-12</span><span class="track"><i style="width:100.0%"></i></span><span class="num">751</span></div>
+<div class="row"><span class="lab">11-13</span><span class="track"><i style="width:73.8%"></i></span><span class="num">554</span></div>
+<p class="gap">近三周最长断供 14 天（2026-10-29 → 2026-11-11 无新增，最后一圈 2026-11-13）</p>
 </section>
 
 <div class="two">
