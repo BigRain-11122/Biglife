@@ -1235,3 +1235,5 @@ tokens: local=10 api=0 api_reason=-
   实况三行：当前活=让路窗内确定性面巡检（LLM 面顺延 19:00）；最近实物=census/export/city-*.html 31 面全新鲜（09:24）+ qa/EVENTS-REPLAY-REPORT.md（09:24 PASS）；下个里程碑=19:00 让路窗结束起年轮进化批 3 位（ETA 2026-11-13 19:30）。
   waiting: yield-window（pausedLite 工作日 09:00-19:00）ETA 2026-11-13 19:00
   tokens: local=0 api=0 api_reason=yield-window
+- [R2729] 2026-11-13 09:4x @BigLife-OSLoop 让路窗产品轮：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（watermark 尾 D-20261112-16，集团无 D-20261113-* 新行）；orders 物理件区无涉本司新件；TASKS open 全在观测窗（T-01 streak 2/3 待 11-14 判）。**让路律**=machine-state pausedLite(09:00)+VRAM 7910MB 被 BigCompute-ResidentQA 占 → 年轮/相遇/池三线 LLM 面顺延，只跑确定性面。**产品增量**=①编码扫描器 Tools/ascii_mangle_scan.py 新增「已知基线抑制」（--update-baseline）；qa/ascii-mangle-baseline.json 收 17 条不可逆损坏（tasks/archive/TASKS-2026-10.md 2026-10-24 批中文被写成 ?，原字节已丢失），三态验证 FOUND(17)→baseline(17 条)→CLEAN(suppressed=17,rc=0) + 负控（新造损坏行 rc=1 仍 FOUND，基线未掩蔽新缺陷）；②城区年轮审计 qa/RING-TOKEN-DISTRICT-20261113.md（cards=10091 dirty=956 density=9.5% over_threshold=0，GM 13.2% 最高未越线）；③日更面 stale=1→rebuilt 2（city-today/index）verdict=PASS。commit 16df26ddb 已推 origin。
+  tokens: local=0 api=0 api_reason=让路窗内 GPU 被 ResidentQA 占、LLM 面顺延
