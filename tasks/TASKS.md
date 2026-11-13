@@ -1551,3 +1551,5 @@ ound_daily --check 39 面全 fresh stale=0 PASS；pool_audit SELF_TERMINATE（72
 - 实况三行：当前活＝让路窗内确定性面巡检（QC 不变量全 PASS；年轮/相遇/提案 19:00 恢复）｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/QC-REPORT.md（2026-11-13 18:15）｜下个里程碑＝19:00 解窗→年轮 --batch 3 落环（新饥饿修复序首验）+ 提案线首批实批（T-20261113-02，ETA 19:20）。
 - 计分：文件改动=1 分（QC 报告刷新，无新增内容）｜零 LLM。
 - tokens: local=0 api=0 api_reason=workday-yield-window
+- [2026-11-13 18:2x R2802 @BigLife-OSLoop] **坑录（写 md 必读）**：PowerShell 双引号内的 `` 是转义符，用 `python -c "..."`` 往 md 里写内联代码会静默吞字——实测 ``again.sort(`` 落盘成 BEL(0x07)+``gain.sort(``，且全部反引号消失、命令照跑 exit=0（无任何报错面）。正法=**写含反引号/反斜杠的文本一律走 ``write_file`` 或临时 .py 文件再用 chr(96) 拼接**，禁在 ``python -c "..."` 里内联 md。姊妹面：`git push` 正常输出走 stderr，PowerShell 会报 NativeCommandError 并给 exit=1——判成败一律用 `git rev-parse`/`rev-list --left-right --count` 复核，禁凭 exit code。本窗实证：5f802f43e 附录被吞→已按原文重写修复并推送 dcea3bd15（blob 复核 ctrl=0／反引号=58／四处断言全 True）。
+- tokens: local=0 api=0 api_reason=post-round-repair
