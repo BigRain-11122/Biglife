@@ -23,18 +23,20 @@ tr:hover td{background:#151922}
 .tag.warn{background:#2a2318;color:var(--warn)}
 footer{margin-top:40px;color:var(--dim);font-size:12px}
 a{color:var(--acc);text-decoration:none}
-</style></head><body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 产物目录</a></div><div class="wrap">
+</style></head><body><div class="wrap">
 <h1>城市议会 · 提案志</h1>
 <p class="sub">好奇位达标的叙事市民轮值出任议员，依托当日真实城市事件向城里提一条建议。每日上限 3 条（珍稀律）。数据源 <code>cognition/proposals.jsonl</code>。</p>
 <div class="metrics">
-<div class="m"><b>9</b><span>提案总数</span></div>
-<div class="m"><b>9</b><span>出过议员的居民</span></div>
-<div class="m"><b>0</b><span>今日新增</span></div>
-<div class="m"><b>19.9 天</b><span>距最近一条</span></div>
+<div class="m"><b>12</b><span>提案总数</span></div>
+<div class="m"><b>12</b><span>出过议员的居民</span></div>
+<div class="m"><b>3</b><span>今日新增</span></div>
+<div class="m"><b>0.0 天</b><span>距最近一条</span></div>
 </div>
-<div class="note"><b>供给实况</b>：提案台账最近一条是 2026-10-24 20:03，距今 19.9 天。根因＝<code>--propose</code> 是年轮批的附加旗标，而轮值批只调 <code>--batch</code>，开关长期无人按下（脚本本身可用）。2026-11-13 已从源码侧改为默认开启（保留 <code>--no-propose</code> 逃生口，日上限 3 不变），当日晚间批次起自动恢复出提案。账见 <code>tasks/TASKS.md</code> T-20261113-02。</div>
 <h2>提案名册</h2>
 <table><thead><tr><th>时间</th><th>议员</th><th>提案</th><th>咬合人设</th></tr></thead><tbody>
+<tr><td class="id">2026-11-13 20:40</td><td>C-04241·邓小北·低语巷·像素学徒</td><td>夜里冷，喝口热的再走——建议数据菜市加个暖光小摊，让赶路的像素学徒们也能在江边暖手、交作业。</td><td><span class="tag">是</span></td></tr>
+<tr><td class="id">2026-11-13 20:40</td><td>C-04240·潘涛·机房区·8bit 乐师</td><td>试错要趁灯亮——今夜桥上汽笛声稳，不妨把六声部谱子扫进夜风，让老街区的回响，替城主早安多一拍。</td><td><span class="tag">是</span></td></tr>
+<tr><td class="id">2026-11-13 20:40</td><td>C-04236·华蕾·低语巷·夜宵摊主</td><td>建议夜宵摊加辣一档，趁灯亮，给归人一碗热汤——云是塔顶的，胃是地下的，都得靠味觉撑着。</td><td><span class="dim">否</span></td></tr>
 <tr><td class="id">2026-10-24 20:03</td><td>C-06168·濮小北·中央市集·像素学徒</td><td>建议在〔城市事件〕的转变节点，先复核一遍流程，别急着跳— <span class="muted">（原句含机读串，已就地隐去 8 处）</span></td><td><span class="tag">是</span></td></tr>
 <tr><td class="id">2026-10-24 20:03</td><td>C-06167·尹小满·机房区·像素小学学生</td><td>建议把「〔城市事件〕」这段光路，连成同桌间的每日通路，让值日生也能看见门内人情。 <span class="muted">（原句含机读串，已就地隐去 4 处）</span></td><td><span class="dim">否</span></td></tr>
 <tr><td class="id">2026-10-24 20:03</td><td>C-06164·丁清晚·旧站台·防火墙巡林员</td><td>建议把「〔城市事件〕」这段路变成巡边新路线，好咯，今天多想一步，明天少返三工。 <span class="muted">（原句含机读串，已就地隐去 4 处）</span></td><td><span class="tag">是</span></td></tr>
@@ -46,10 +48,10 @@ a{color:var(--acc);text-decoration:none}
 <tr><td class="id">2026-09-27 01:36</td><td>C-02312·苏健·旧站台·感知网养线工</td><td>建议「〔专名〕反弹」时，所有护缆工新东西先看三天再用，确保数据畅通无阻。 <span class="muted">（原句含机读串，已就地隐去 2 处）</span></td><td><span class="tag">是</span></td></tr>
 </tbody></table>
 <h2>口径</h2><ul class="dim">
-<li>可读行 9 / 9 条：命中门禁词的提案采用<strong>片段级脱敏</strong>——只隐去机读串本身（专名/事件码→〔专名〕〔城市事件〕），建议正文照常展示；脱敏后复检仍有残留者才整条遮蔽。</li>
+<li>可读行 12 / 12 条：命中门禁词的提案采用<strong>片段级脱敏</strong>——只隐去机读串本身（专名/事件码→〔专名〕〔城市事件〕），建议正文照常展示；脱敏后复检仍有残留者才整条遮蔽。</li>
 <li>台账不动：命中行 9 条为早期落账，按「存量不回改」口径 <code>cognition/proposals.jsonl</code> 原文保留。</li>
 <li>「咬合人设」＝提案文本与本人卡面人设域有 4 字以上重合（契约 §一 face_hit 标记）。</li>
 <li>本页只读罗列，不改写提案文本、不补写未发生的提案。</li>
 </ul>
-<footer>数据源：cognition/proposals.jsonl（9 行）· 数据截止：2026-10-24 20:03 · BigLife 城市议会</footer>
+<footer>数据源：cognition/proposals.jsonl（12 行）· 数据截止：2026-11-13 20:40 · BigLife 城市议会</footer>
 </div></body></html>

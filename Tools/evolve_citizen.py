@@ -3136,7 +3136,13 @@ def proposal_violations(line, sig, evs):
     + 锚定校验 (anchor-missing) + 建议/计划语态闭集标记 (voice-missing — AGENCY
     意图句律同源的确定性代理, 非状态断言)。"""
     v = ring_violations(line, sig)
-    if anchor_event(line, evs)[1] is None:
+    # 2026-11-13 R2810 (T-20261113-02 修法②): FluxVerse 事件流可整日零生活行
+    # （当日/近日尾部全为 GAME_STAGE/COMMIT/OS_TICK 机器账＋机队显存报告，本司
+    # scrub 后全灭 → sig["events"]=0）。空清单下事件锚不可满足，恒 anchor-missing
+    # 会把提案线冻成 0 产（11-13 全天 proposals=0 实锚）。空清单改锚真实实况
+    # （天气/时刻/人设日常），编造面由 ring_violations 的天气/时刻/复数闸兜住；
+    # 有事件时事件锚照旧生效，诚实律不降级。
+    if evs and anchor_event(line, evs)[1] is None:
         v.append("anchor-missing")
     if not any(m in line for m in SUGGEST_MARKERS):
         v.append("voice-missing")
@@ -3170,8 +3176,11 @@ def build_propose_prompt(cid, text, sig, evs, hot):
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n"
             f"城市真实事件清单（你提的建议只能围绕这里面真实发生的事）：\n{ev}\n{hot_blk}"
             f"请以你自己的口吻，向这座城提一条一句话建议（30-80 字），三条规矩："
-            f"①建议必须依托清单里某一件真实事件，并逐字引用该事件原文中的一个短语；"
-            f"②用建议或计划的口吻（如「建议…」「不妨…」「希望…」），不得写成已经发生的陈述；"
+            + ("①今日事件清单为空（城市事件流今日没有生活事件）——你的建议只能依托真实实况"
+               "（此刻天气、时刻）和你自己的日常领域，严禁编造任何具体事件、地点事故或人物；"
+               if not evs else
+               "①建议必须依托清单里某一件真实事件，并逐字引用该事件原文中的一个短语；")
+            + f"②用建议或计划的口吻（如「建议…」「不妨…」「希望…」），不得写成已经发生的陈述；"
             f"③只谈你人设领域内的事，不得声称集团任务由你执行，不得编造清单外的任何具体事。"
             f"只输出这一句话本身。")
 
@@ -3214,10 +3223,21 @@ def propose_step(cursor, via, done, sig):
             print("propose: gate: skip", cid, "(stays rare; next window)", first_v)
             continue
         frag = anchor_event(line, evs)[1]
+        # R2810: 空事件清单下不得写「FluxVerse 事件流」当锚（那会是假溯源），
+        # 改记真实实况锚并显式标注 no-event 模式，便于日后审。
+        if frag:
+            anchor_str = "「%s」 城市实况 %s（FluxVerse 事件流）" % (frag, t)
+            anchor_mode = "event"
+        else:
+            wx = sig.get("weather") or "天气数据暂缺"
+            anchor_str = "本日事件流零生活行 · 实况锚 %s %s（%s）" % (
+                sig.get("now") or t, wx, sig.get("weekday") or "")
+            anchor_mode = "no-event"
         rec = {"proposal_id": "PR-%s-%s" % (t.replace("-", ""), cid[-4:]),
                "citizen_id": cid,
                "ring_ref": "环%d @ %s" % (len(days), t),
-               "anchor": "「%s」 城市实况 %s（FluxVerse 事件流）" % (frag, t),
+               "anchor": anchor_str,
+               "anchor_mode": anchor_mode,
                "text": line,
                "face_hit": face_hit_of(line, text),
                "surprise": day_max,
