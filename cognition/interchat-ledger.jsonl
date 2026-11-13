@@ -144,3 +144,13 @@
 {"date":"2026-11-13","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261113-C-00174:seed=C-00174:at=2026-11-13 09:41:hop=2","participants":["C-07289","C-01440"],"text":"手上的老式磁带机正卡在第三秒，我轻轻一推，声音没出来，却听见铁皮盒里传来细碎的嗡鸣，像谁在打盹。"}
 {"date":"2026-11-13","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261113-C-00174:seed=C-00174:at=2026-11-13 09:41:hop=3","participants":["C-01440","C-01308"],"text":"好像手上的老式磁带机正卡在第三秒，我轻轻一推，声音没出来，却听见铁皮盒里传来细碎的嗡鸣，像谁在打盹。"}
 {"date":"2026-11-13","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261113-C-00174:seed=C-00174:at=2026-11-13 09:41:hop=4","participants":["C-01308","C-05342"],"text":"好像手上的老式磁带机正卡在第三秒，我轻轻一推，声音没出来，却听见铁皮盒里传来细碎的嗡鸣，像谁在打盹。"}
+{"date":"2026-11-13","kind":"meet_ring","source_ref":"census/registry/MD/C-00163.md:L29","participants":["C-00163","C-00172"],"text":"天阴着，风挺大，你那本子上画的城，我昨夜新做了一盏灯，亮着呢。"}
+{"date":"2026-11-13","kind":"meet_ring","source_ref":"census/registry/MD/C-00172.md:L29","participants":["C-00172","C-00163"],"text":"我收摊第一件事，是给你家捎了两块桂花糕，你记得去年生日那日。"}
+{"date":"2026-11-13","kind":"meet_ring","source_ref":"census/registry/OR/C-00044.md:L31","participants":["C-00044","C-00147"],"text":"“你天天看塔顶的云，是想看见某天云散了，天就亮了？”"}
+{"date":"2026-11-13","kind":"meet_ring","source_ref":"census/registry/OR/C-00147.md:L29","participants":["C-00147","C-00044"],"text":"手里这把旧钥匙在灯下晃了晃，没锈，却有点发黑。"}
+{"date":"2026-11-13","kind":"meet_ring","source_ref":"census/anchors/C-00010.md:L37","participants":["C-00010","C-00011"],"text":"蒸笼盖边的暖光晃了晃，顾阿凤说：这蒸笼里四只大金刚，一个没少。"}
+{"date":"2026-11-13","kind":"meet_ring","source_ref":"census/anchors/C-00011.md:L34","participants":["C-00011","C-00010"],"text":"朱鸿奎低头看手里的镊子，说：我修了三十年汤，一滴不漏，你也得按数来。"}
+{"date":"2026-11-14","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261114-C-04419:seed=C-04419:at=2026-11-14 16:02:hop=1","participants":["C-04419","C-08750"],"text":"手里的导管还沾着昨夜的露，我正用棉布擦着接口，指尖一碰，那根老线就轻轻颤了下——像谁在夜里悄悄摸了摸我的门板。"}
+{"date":"2026-11-14","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261114-C-04419:seed=C-04419:at=2026-11-14 16:02:hop=2","participants":["C-08750","C-06436"],"text":"手里的导管还沾着昨夜的露，我正用棉布擦着接口，指尖一碰，那根老线就轻轻颤了下——像谁在夜里悄悄摸了摸我的门板。"}
+{"date":"2026-11-14","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261114-C-04419:seed=C-04419:at=2026-11-14 16:02:hop=3","participants":["C-06436","C-05879"],"text":"手里的导管还沾着昨夜的露，我正用棉布擦着接口，指尖一碰，那根老线就轻轻颤了下——像谁在夜里悄悄摸了摸我的门板。"}
+{"date":"2026-11-14","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261114-C-04419:seed=C-04419:at=2026-11-14 16:02:hop=4","participants":["C-05879","C-07072"],"text":"听说手里的导管还沾着昨夜的露，我正用棉布擦着接口，指尖一碰，那根老线就轻轻颤了下——像谁在夜里悄悄摸了摸我的门板。"}
