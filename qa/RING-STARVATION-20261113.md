@@ -58,14 +58,13 @@ again.sort(key=lambda c: (rank.get(c, len(rank)),
 python -X utf8 -c "import sys,json;sys.path.insert(0,'Tools');import evolve_citizen as E;cur=json.load(open('state/evolve-cursor.json',encoding='utf-8'));print(E.due_citizens(cur,10))"
 ```
 
-
 ## 附：19:00 首点火预检（2026-11-13 18:2x·零 LLM·只读模拟）
 
-- 分配序现状（R2794 修复在树）：gain.sort(key=(rank, cursor.last, cid))——最久未演化者优先。
-- 只读模拟 due_citizens(cursor, 10)（未点火、未写盘）：选中 10 席，段分布 **4000×8 / 8000×1 / 9000×1**；
+- 分配序现状（R2794 修复在树）：`again.sort(key=(rank, cursor.last, cid))`——最久未演化者优先。
+- 只读模拟 `due_citizens(cursor, 10)`（未点火、未写盘）：选中 10 席，段分布 **4000×8 / 8000×1 / 9000×1**；
   含 **C-04166 last=2026-09-29（45 天未演化）**、C-04173/4169/4170/4172/4174/4175/4176 同为 09-29。
   → 与 R2794 预测一致：修复前该段永远轮不到，19:00 首批应首现 4000+/8000+ 段居民。
-- 提案线：cognition/proposals.jsonl 总 9 行、末行 PR-20261024-6168 环1 @ 2026-10-24（19.6 天断供）；
-  今日 PR-20261113-* 计数 **0/3**（珍稀律配额未占）→ 19:00 批若落环即可产 ≤3 条带 ring_ref 提案。
-- 让路闸边界：yield_window_active() = weekday<5 and 9*60 <= mins < 19*60 → **19:00 整点放开**（非 20:00、非次日）。
-- 判负条件（19:00 首轮验收用）：不出现 4000+ 段席位 = 修复未生效；proposals.jsonl 无 PR-20261113-* 新行 = 提案线仍未复活。
+- 提案线：`cognition/proposals.jsonl` 总 9 行、末行 `PR-20261024-6168 环1 @ 2026-10-24`（19.6 天断供）；
+  今日 `PR-20261113-*` 计数 **0/3**（珍稀律配额未占）→ 19:00 批若落环即可产 ≤3 条带 ring_ref 提案。
+- 让路闸边界：`yield_window_active()` = `weekday<5 and 9*60 <= mins < 19*60` → **19:00 整点放开**（非 20:00、非次日）。
+- 判负条件（19:00 首轮验收用）：不出现 4000+ 段席位 = 修复未生效；`proposals.jsonl` 无 `PR-20261113-*` 新行 = 提案线仍未复活。
