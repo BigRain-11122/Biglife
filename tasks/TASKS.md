@@ -49,6 +49,14 @@
 
 ## 已结
 
+## R2762 · 2026-11-13 13:0x @BigLife-OSLoop（洗码残渣出生站拦截·v0.69）
+- 缺陷实证（先在 CEO 可见面抓到）：`census/export/city-ring-quality.html`（12:29 版）读出 C-00110 两代残句——10-24「那行 **c.json** 的 flag 根」、11-12「那行 **c.** 的根」。成因=喂入面 `TECH_WORD_RE` 只吃 2 字母以上拉丁词，`c.json` 被抹掉后留下单字母+句点；再经「模型照抄自己旧环」回灌放大（同 gap #68 吸引子族）⇒ 残渣自我复制、不随轮次衰减。
+- 双侧修复（沿用 R2251/R2433 协议）：①喂入面 `scrub_machine_words()` 追加清理「1-3 拉丁字母 + 句点 + 紧跟汉字」；②落环口 `ring_violations()` 新增硬门 `latin-debris`（字母残渣+句点 / 文件名扩展名），命中即 gated_llm 重生成。
+- 零误伤实证：全库 17063 圈用**真实门函数**扫描仅命中 2 例（即上述同一卡两代残句）；合法面名 P楼 / G区 / Q区 / G系灯塔 与居民 ID C-07743 / H-QT2232 全部 0 命中。回归 `qa/test_latin_debris.py` 11/11 PASS（零 LLM、零仓写入）。
+- 存量 2 例按锚定律不回改（#41 不追溯判例）；本闸对 19:00 后首轮批即刻生效。
+- 本轮顺带取证（均为 PASS，无新增缺陷）：日更面 36 项全新鲜 verdict=PASS；事件回放闸 events=42535 / cards=10111 / mismatch=0 / schema=0；池审计 72 桶全达标 SELF_TERMINATE；QC problems=0；`ring_lint --today-only` rings=552 coded=0；可见面链接完整性 37 文件 209 链接 0 断链；日更登记表对 export 全部可见面覆盖完整（growth 分页与主表同源）。
+- 本轮计分：实物 2 分（可跑工具 + 源头硬闸）；tokens: local=0 api=0 api_reason=workday-yield-window
+
 ## R2251 · 2026-10-26 19:0x @BigLife-OSLoop（年轮内部码出生站拦截·源头品质修）
 - 轮首三步：pull=Already up to date（ahead/behind=0/0，工作树净）；决策水位差集 NEW=0；orders 尾部涉本司只 PT-20261026-01（R2217/R2223/R2239/R2245 四度自证 origin tip 齐平，查重律不重立）
 - 真实缺口（品质面·带计量）：年轮正文混入开发循环内部编号 G08/S2.5/B2396。全库扫描 10-20~10-26 共 4,183 条年轮中 766 条带码（18.3%）；按日 10-24 16.0% / 10-25 23.6% / 10-26 21.0% —— v0.64 提示词禁令实际上未生效。

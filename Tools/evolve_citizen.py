@@ -1061,6 +1061,10 @@ def scrub_machine_words(text):
     if letters and latin / float(letters) > 0.35:
         return ""
     t = TECH_WORD_RE.sub("", t)
+    # v0.69 (2026-11-13 R2762): 上一步只吃 2 字母以上的拉丁词，文件名/代码词被抹掉
+    # 后单字母会连句点留在中文里（"c.json的根" -> "c.的根"），正是 11-12 C-00110
+    # 残句的来源。同一判据面清掉「字母残渣 + 句点 + 紧贴汉字」的形状。
+    t = re.sub(r"(?<![A-Za-z0-9])[A-Za-z]{1,3}\.(?=[\u4e00-\u9fff])", "", t)
     t = re.sub(r"\s{2,}", " ", t).strip(" /:-,.;|")
     return t
 
@@ -1600,6 +1604,19 @@ def ring_violations(line, sig):
     if re.search(r"[\u0400-\u04FF\u0370-\u03FF\uAC00-\uD7AF"
                  r"\u0600-\u06FF\u0590-\u05FF\u0E00-\u0E7F\u0900-\u097F]", line):
         v.append("garbled-chars")
+    # v0.69 (2026-11-13 R2762): 洗码残渣闸。喂入面洗码把半个拉丁词留在原地——
+    # 10-24 C-00110 收到「那行c.json的flag根」，TECH_WORD_RE 只吃 2 字母以上的
+    # 词，于是 "json"/"flag" 被抹掉、单字母 "c" 与句点留下；11-12 同卡新环又写出
+    # 「那行c.的根」——模型照抄自己的旧环（同 gap #68 回灌吸引子族），残渣会自我
+    # 复制而不衰减。全库 17063 圈实测命中 2 例（10-24 / 11-12），合法面名
+    # P楼/G区/Q区/G系 与居民 ID（C-07743 / H-QT2232）零误伤：判据限定「1-3 个
+    # 拉丁字母 + 句点 + 紧跟汉字」与「文件名扩展名 + 非拉丁尾」，不比裸字母松。
+    # 双侧修复同 R2251/R2433 协议：喂入面 scrub_machine_words 同步清残，
+    # 此处为落环口兜底（命中即 gated_llm 重生成）。
+    if re.search(r"(?<![A-Za-z0-9])[A-Za-z]{1,3}\.(?=[\u4e00-\u9fff])"
+                 r"|\.(?:jsonl|json|md|py|html|csv|txt|log)(?![A-Za-z0-9])",
+                 line or "", re.I):
+        v.append("latin-debris")
     # v0.45 gap #66 (2026-10-11 R868, T-20261011-01): verbatim self-ring dedup -
     # a new ring byte-identical to one of THIS card's own historical rings is a
     # zero-increment copy (复读机面); the card-FACE catchphrase repeat stays legal
