@@ -1429,3 +1429,12 @@ tokens: local=10 api=0 api_reason=-
   **对外实况三行**：当前活＝开头族「已开仍越线」P1 归因（让路窗内确定性面）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-FAMILY-GATE-ATTRIB-20261113.md（2026-11-13 14:5x）｜下个里程碑＝19:00 让路窗解→年轮批 3 席 + 提案线首批实批（T-20261113-02 验收：新增提案行 ≥1 带 [锚]/ring_ref），并复测 HAND/PROP 是否被 ban 集压回 ≤25%。
   计分：能跑实物=2 分（三候选实测证伪 + 算术反证收敛范围，均可复跑）｜文件改动=1 分（qa 证据件 + 单面）｜零 LLM。
   tokens: local=0 api=0 api_reason=workday-yield-window
+
+- [R2784] 2026-11-13 14:38-15:1x @BigLife-OSLoop 让路窗仪表轮（周五工作日·D-20261020-02 年轮/相遇/提案顺延 19:00）：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团无 2026-11-13 新行）；orders 物理件区无涉本司新件；TASKS open=3（T-20261113-02 待 19:00 实批／T-20261113-03 待查 4 点／T-20261112-01 streak 2/3）。
+  **产品增量（新可见面·2 分）**：新建 `Tools/build_ring_openings.py` → `census/export/city-ring-openings.html`（11.4KB）。补的空白：T-20261112-04 验收线（开口族 >25% 拒稿）此前只有 CLI 读数，R2781/R2783 两轮归因全在终端，CEO 在页面上看不到「今天哪些族越线、越多少、哪些句式在重复」。页面三节=①逐日族构成（总环/各族占比/越线标红/未归族占比）②「当日越线族 vs 全期禁集」两分母并列③全期重复开头 Top20（人数+所属族）。
+  **为什么要并列两分母**：实测当日 HAND_DEICTIC 40.0%/PROP_DEICTIC 31.0% 越线，而全期禁集为空（25.0%）——同一份数据的两个面，正是「闸开着却仍越线」这一新病症的可视佐证；只给一个分母会被读成判定自相矛盾。
+  **验证**：py_compile 三文件 rc=0；同输入双跑 md5 一致（幂等 596A4FE6…）；页面 None/%s/nan 残留均为 0；round_daily --run 与 --check 均 verdict=PASS stale=0；索引 pages 26→27 且卡片中文标题断言 True；接入 faces 档 + DEPENDS(evolve-cursor/registry) 随轮自刷。
+  **诚实边界**：只读观测面——零阈值改动、零闸逻辑改动、零历史年轮回改；族覆盖表仍人工登记，未立族的新句式仍会隐身（页面已列未归族占比作覆盖率看守）。
+  **实况三行**：当前活=年轮开口族仪表上线（让路窗内确定性面）；最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-openings.html（2026-11-13 14:5x 路 11.4KB）；下个里程碑=19:00 让路窗解→年轮 --batch 3 落环 + 提案线首批实批（T-20261113-02 验收：新增提案行 ≥1 且带 [锚]/ring_ref，ETA 19:20）。
+  计分：能看实物=2 分｜文件改动=1 分｜commit ef34edef8 已推。
+  tokens: local=0 api=0 api_reason=workday-yield-window
