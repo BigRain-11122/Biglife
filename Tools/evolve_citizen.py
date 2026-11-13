@@ -1078,6 +1078,14 @@ def ring_violations(line, sig):
         _fam = _ring_family_of(line or "")
         if _fam in _bfam:
             v.append("opening-family-quota")
+    # R2760（2026-11-13）照抄示例原句闸：提示词里的括注示例本是形状示意，模型却
+    # 会逐字复写——今日「账本翻到第三页」×30、「那口锅底又薄了一层」×18（合计
+    # 8.7%），两句都出自上一次迭代的逃生示例。只禁这几条 canned 句，不伤正常创作：
+    # 示例句本身不是居民会说的人话，禁掉零表达损失；新增示例必须同步登记台账。
+    _opn = re.sub(r"\s+", "", line or "")[:16]
+    if any(core and core in _opn
+           for core in (re.sub(r"\s+", "", x)[:10] for x in PROMPT_EXAMPLE_ECHO)):
+        v.append("prompt-example-echo")
     # 2026-10-26 R2251: internal event codes leaked into prose. The v0.64 prompt
     # hardening alone did not hold (10-24 16.0% / 10-25 23.6% / 10-26 21.0% of
     # that day's rings carried G08 / S2.5 / B2396), so the birth station now
@@ -2504,10 +2512,23 @@ OPENING_SKELETONS = (
 # regen 尾注）+ 24 条骨架里 2 条本身落在被禁族，而 today_ban_families 只喂闸与
 # 控制台，从没告诉模型——3 次重写同提示词必重入同一吸引子（gap #68），19:00 首批
 # 会把三位全留 due。修法：闸不动（T-04 验收线保持），提示词改说人话 + 骨架过滤。
+# R2760（2026-11-13）提示词示例原句台账：这些句子只作形状示意，出现即判照抄。
+# 新增示例句必须同时登记到此，否则下一次迭代又会以一个 canned 句成为全城开头。
+PROMPT_EXAMPLE_ECHO = (
+    "那口锅底又薄了一层",
+    "账本翻到第三页",
+    "回测田的田埂上",
+    "灶上的水刚开，我把它端下来",
+    "巷口信筒今天塞满了",
+    "一整条街的灯一盏盏灭下去",
+)
 FAMILY_OPEN_HINTS = {
     "HAND_DEICTIC": "以「手上」「手在」「手边」「手头」「手心」「手掌」「手肘」「手背」起句，或以「我正」「我把手边」「我把手头」起句",
     "TIME_OPEN": "以「这会儿」「今早」「天还黑着」「天刚亮」「天擦黑」「这阵子」「这年头」起句",
     "WEATHER_ABSTRACT": "以「雨还在下」「檐下」「雨停了」「风里」「天阴沉」「云压得低」起句",
+    # R2760（2026-11-13）：器物指示族今日 171/552=31.0% 越配额。提示词必须说人话，
+    # 否则模型被拒而不知为何（gap #68 同型）。
+    "PROP_DEICTIC": "以「那台」「那口」「那架」「那把」「这把」等指示代词＋器物起句",
 }
 
 
@@ -2669,9 +2690,11 @@ def build_prompt(cid, text, sig):
                   + str(int(round(_RING_FAMILY_QUOTA * 100))) + "% 落在同一类骨架里，本批严禁再用这种起句——"
                   + "；".join(FAMILY_OPEN_HINTS.get(f, f) for f in sorted(_fb))
                   + "。禁的是**起句形状**不是内容：身体本身的动作与感觉照写（放第二句或句中很好），"
-                    "但第一个短句不要从「手」字起、不要用「我正」起句。换这几种开头之一："
-                    "写一件物的状态（「那口锅底又薄了一层」）、写你正看着的另一样东西"
-                    "（「账本翻到第三页」）、写一个去处（「回测田的田埂上……」）。\n") if _fb else ""
+                    "但第一个短句不要从「手」字起、不要用「我正」起句。"
+                    "下面括注只是**形状示意，严禁照抄原句**（照抄即整句退回）："
+                    "写你手上活计的一个动作（「灶上的水刚开，我把它端下来」）、"
+                    "写一个去处或路线（「巷口信筒今天塞满了」）、"
+                    "写全城同时发生的一件小事（「一整条街的灯一盏盏灭下去」）。\n") if _fb else ""
     # v0.60 gap #80: per-citizen opening skeleton, placed BEFORE the ban list so
     # the model has something concrete to start from instead of only prohibitions.
     opening_blk = opening_seed_block(cid, sig)

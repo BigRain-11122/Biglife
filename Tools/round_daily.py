@@ -155,6 +155,11 @@ DEPENDS = {
     "ring_picks": ["state/evolve-cursor.json", "census/registry"],
     "ring_quality": ["state/evolve-cursor.json", "census/registry"],
     "ring_trend": ["state/evolve-cursor.json", "census/registry"],
+    # v0.17 (2026-11-13 R2760): 看板的三行实况取自 docs/status-export.json，
+    # 主数据取自 citizens-light.jsonl，但登记表只比「构建脚本 vs 产物」mtime。
+    # 实证：R2760 刷新 top_text 后 --run 仍判 dashboard fresh、ran=0，CEO 面继续
+    # 显示上一轮的三行（R2743 dep-mtime 同族第二例，那次补的是 gene_ledger 依赖）。
+    "dashboard": ["docs/status-export.json", "census/export/citizens-light.jsonl"],
 }
 
 # 环依赖面的重建下限间隔（分钟）。年轮批约每轮落地一次，若按 mtime 逐次重建，
@@ -166,7 +171,9 @@ DEPENDS_FLOOR_MIN = 60
 # 用的（今天重建过就别再写），但 gene_ledger/lexicon 是百 KB 级台账面，且它们的源
 # 恰恰会被「补数据」类动作改写（gene_adopt 写既有卡正文）——按 60 分钟冷却会让人
 # 刚补的经历行在台账上最多压一小时看不见。这两面逐次重建成本 <1s，冷却归零。
-DEPENDS_FLOOR_OVERRIDE = {"gene_ledger": 0, "lexicon": 0}
+# v0.17 (2026-11-13 R2760): dashboard 同理且更硬——它的三行实况是 CEO 过程可见面，
+# 每轮更新一次 top_text 就必须当轮可见；63KB 重建 <1s，60 分钟冷却等于让 CEO 看旧话。
+DEPENDS_FLOOR_OVERRIDE = {"gene_ledger": 0, "lexicon": 0, "dashboard": 0}
 
 TIMEOUT_SEC = 240
 
