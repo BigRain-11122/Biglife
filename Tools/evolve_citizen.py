@@ -609,7 +609,7 @@ Usage:
   python -X utf8 evolve_citizen.py --batch 3 --no-propose # skip the proposal line for this run
   --via BigLife-OSLoop  # committer-identity tail on every commit (cph4/versioning.md 4.1)
 """
-import argparse, datetime, glob, json, os, re, socket, subprocess, sys, threading, urllib.error, urllib.request
+import argparse, datetime, glob, json, os, re, socket, subprocess, sys, threading, time, urllib.error, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
@@ -910,8 +910,79 @@ except ImportError:  # synced machine without the local pip: single-shot, as bef
     def _llm_retry(fn):
         return fn
 
+class SeatTimeout(Exception):
+    """T-20261113-06: one seat exceeded its wall-clock fuse; the citizen stays due."""
+
+_SEAT_DEADLINE = None  # time.monotonic() deadline of the seat call in flight
+
+
+def vram_guard(limit=0.90):
+    """T-20261113-06 ②: refuse to start an LLM batch on an already-busy GPU.
+
+    Probe failure passes (no nvidia-smi on some fleet machines / no GPU) - the
+    guard must never become a new silent stop for the lane. Returns the used
+    fraction when it blocks, None when the lane may start.
+    """
+    try:
+        r = subprocess.run(
+            ["nvidia-smi", "--query-gpu=memory.used,memory.total",
+             "--format=csv,noheader,nounits"],
+            capture_output=True, timeout=15)
+        rows = (r.stdout or b"").decode("utf-8", "replace").strip().splitlines()
+        if not rows:
+            return None
+        used, total = [float(x) for x in rows[0].split(",")[:2]]
+        if total <= 0:
+            return None
+        frac = used / total
+        if frac > limit:
+            print("vram-guard: used %.0f%% > %.0f%% (%.0f/%.0f MiB) - batch not "
+                  "started, yield (T-20261113-06)" % (
+                      frac * 100, limit * 100, used, total), flush=True)
+            return frac
+    except Exception:  # noqa: BLE001 - probe failure must never block the lane
+        return None
+    return None
+
+
+def seat_call(prompt, sig, fuse=None, max_regens=3):
+    """T-20261113-06 ①: hard wall-clock fuse around one resident's seat.
+
+    R2830 实锚: a stalled seat emitted nothing for 3.5 min and dragged the whole
+    batch. gated_llm() is pure (returns a line, writes nothing), so it can run in
+    a daemon worker: on fuse the caller records stays-due and moves to the next
+    citizen, while the abandoned worker's deadline makes its further retries
+    raise SeatTimeout instead of competing for the GPU again.
+    """
+    global _SEAT_DEADLINE
+    fuse = int(fuse or os.environ.get("BIGLIVE_SEAT_FUSE", "150"))
+    _SEAT_DEADLINE = time.monotonic() + fuse
+    box = {}
+
+    def _work():
+        try:
+            box["line"] = gated_llm(prompt, sig, max_regens=max_regens)
+        except BaseException as exc:  # noqa: BLE001 - surfaces to the caller as-is
+            box["err"] = exc
+
+    t = threading.Thread(target=_work, daemon=True)
+    t.start()
+    t.join(fuse + 5)
+    _SEAT_DEADLINE = None
+    if t.is_alive():
+        raise SeatTimeout("seat fuse %ds exceeded" % fuse)
+    if "err" in box:
+        raise box["err"]
+    return box.get("line")
+
+
 @_llm_retry
 def llm(prompt):
+    remain = None
+    if _SEAT_DEADLINE is not None:
+        remain = _SEAT_DEADLINE - time.monotonic()
+        if remain <= 0:
+            raise SeatTimeout("seat fuse: deadline already passed")
     url, model = seat()
     req = urllib.request.Request(
         url,
@@ -929,8 +1000,11 @@ def llm(prompt):
                          "reasoning_effort": "none"}).encode("utf-8"),
         headers={"Content-Type": "application/json"})
     # BIGLIVE_LLM_TIMEOUT: 35B-A3B fleet brain lane (:8090, O-20261015-1335), ~38 chars/s.
-    with urllib.request.urlopen(
-        req, timeout=int(os.environ.get("BIGLIVE_LLM_TIMEOUT", "120"))) as r:
+    # T-20261113-06: the socket wait never outlives the seat fuse's remaining budget.
+    _to = int(os.environ.get("BIGLIVE_LLM_TIMEOUT", "120"))
+    if remain is not None:
+        _to = max(5, min(_to, int(remain)))
+    with urllib.request.urlopen(req, timeout=_to) as r:
         j = json.loads(r.read().decode("utf-8"))
         return ((j.get("choices") or [{}])[0].get("message") or {}
                 ).get("content", "").strip()
@@ -3288,6 +3362,11 @@ def main():
               "deferred to 19:00-09:00/weekend (D-20261020-02)")
         return
 
+    # T-20261113-06 ②: an LLM lane start on a >90% GPU piles a stalled seat on
+    # top of someone else's job - yield the round instead (exit 0, not an error).
+    if vram_guard():
+        return
+
     if args.meet:
         # v0.36 meet 日额闸 (2026-10-11 R858): R834 超帽违例曾立「git log --grep 前置检」
         # (人查), R858 未执行该前置检复发第 6 场=人查闸证伪, 按「闸失效即升格」律改脚本断言:
@@ -3522,7 +3601,12 @@ def main():
                 except Exception:
                     sig["city_digest"] = ""
             with SeatHeartbeat(cid):
-                line = gated_llm(build_prompt(cid, text, sig), sig)
+                # T-20261113-06 ①: per-resident wall-clock fuse (default 150s).
+                line = seat_call(build_prompt(cid, text, sig), sig)
+        except SeatTimeout:
+            print("seat-fuse skip", cid, "(stays due, >%ss wall-clock)"
+                  % os.environ.get("BIGLIVE_SEAT_FUSE", "150"), flush=True)
+            continue
         except (socket.timeout, TimeoutError):
             # T-20261020-01: a stalled seat must not kill the batch - skip it,
             # the citizen stays due for the next round.
