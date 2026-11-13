@@ -74,6 +74,11 @@ REGISTRY = [
     # 质量分布，均不给族归属明细。本页把「当日越线族」与「全期禁集」两个分母并列，
     # 使「闸开着却仍越线」这一新病症可见（当日 40%/31% vs 全期 25.0% 的同一数据两面）。
     ("ring_openings", "faces", "build_ring_openings.py",  ["city-ring-openings.html"]),
+    # v0.21 (2026-11-14 R2843): 反思录面新立 —— 中层记忆合成（reflect_citizen.py，
+    # ≤40 字一条/30 天冷却）自 2026-09-25 上线起就是「盘上有数据、零可见面」：
+    # 停 17.6 天与恢复产出都只有人肉读 jsonl 才知道（T-20261113-05 同病根）。
+    # growth 页把它并进逐人档案，看不出「这条腿今天产没产、覆盖多少人」。
+    ("reflections", "faces", "build_city_reflections.py", ["city-reflections.html"]),
     # v0.3 (2026-11-12 R2573): 补登记三个「有生成器、有页面、无任何轮次引用」的沉默断供面。
     # 病根同 T-20261112-02：city-lexicon.html 停更 15.7 天无人发现；
     # city-ring-quality / city-ring-trend 只靠偶发手工跑活着，断供只是时间问题。
