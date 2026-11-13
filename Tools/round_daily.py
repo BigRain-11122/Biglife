@@ -122,6 +122,14 @@ INPUTS = [
     # 故只接巡检不断供（faces 档=>1 日才重建，避免零变化的逐日 churn）；
     # 真出回归时距离上次巡检 ≤2 日即可被看见。
     ("ring_lint", "faces", "ring_lint.py",                ["qa/RING-LINT-REPORT.md"]),
+    # v0.15 (2026-11-13 R2738): 面覆盖自动发现 —— 登记表本身也要被看住。
+    # 病根续例：REGISTRY 是人手表，于是「有生成器、有产物、无轮次引用」的面
+    # 只能一轮发现一个（10-27 起 12 面 15 天、lexicon 15.7 天、social-graph 17 天、
+    # ring_lint 17 天、citizen-tasks 48 天，同一病理的连续个案）。
+    # face_coverage.py 自动扫 Tools 产物字面量 × 本登记表做差集（零 LLM 只读），
+    # 报告按 faces 档保持 ≤1 日新鲜 —— 下一批漏登记面在烂掉之前就会出现在报告首屏。
+    ("face_coverage", "faces", "face_coverage.py",        ["qa/FACE-COVERAGE-REPORT.md"],
+     ["--write"]),
 ]
 
 # v0.11 (2026-11-12 · T-20261112-09 收单): faces 档 stale 判据补「依赖源 mtime」面。

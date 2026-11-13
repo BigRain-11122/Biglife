@@ -616,6 +616,11 @@ tokens: local=10 api=0 api_reason=-
 - [R2564] 2026-11-12 09:2x @BigLife-OSLoop 轮记：轮首 pull=Already up to date、树净；决策水位 NEW=0（尾 D-20261112-12·第 57/58 批无涉本司执行项）；orders 物理件区无涉本司新件；TASKS open=0。**让路窗实录**=年轮线脚本原样返回 `yield-window: workday 09:00-19:00 CEO lane-priority - evolve/meet/reflect deferred`（D-20261020-02）→ 年轮/相遇/反思三条 LLM 面本轮结构性让路，19:00 后续批。**产品增量（零 LLM 面）**=基因轮 b51 入库 23 条新基因：口头禅 8（六主轴不再堆量，补功能轴口径）/转折点 5/钩子物件 5/钩子动作 5，总量 1435/658/854/66（此前 1427/653/850/61）；登记脚本 `Tools/_append_genes_b51.py`（承 b50 惯例·只追尾不去重改写）幂等复跑实测 added=0 skipped=23，JSON 双件 load 通过。**门禁**=事件回放闸 PASS（cards=10111 events=41699 replayed=10111 schema_errors=0 mismatch=0 coverage unexpected_missing=0 chronicle gap=0d）；QC 巡检 cards=10114 evolved=10114 problems=0 dup_rings=37/37；pool_audit PASS SELF_TERMINATE（pool 18/12+greet 17+faq 3+neg 8·hard_fails=0·双抽 192+25 对 mismatch=0）→ 语言线跳过。日清闸 ALREADY_REPORTED(day=2026-11-12 lines=2) 零写入。**一处澄清（诚实律）**=本轮 `git diff` 曾显示 hook_actions 一条疑似乱码行，逐字复查盘上文本为「连着三年替隔壁摊主收着{obj}，也没想着还」正确原文——系控制台转码显示假象，非数据缺陷，不改不报障。**实况三行**：当前活=工作日让路窗内确定性面（回放闸/QC/池审计随轮跑），19:00 后恢复年轮批；最近实物=genes/ 23 条新基因（09:15）+ census/QC-REPORT.md（09:04 重生成）；下个里程碑=19:00 年轮续批（覆盖 10114 卡全量年轮化 ETA 2026-11-15）。tokens: local=0 api=0 api_reason=yield-window-09:00-19:00
 
 
+- [ ] **T-20261113-02 议员提案线停产 19.6 天（P1·产线断供）**（2026-11-13 10:5x @BigLife-OSLoop R2738 立）
+  - 病根：`cognition/proposals.jsonl` 最后一行 2026-10-24 20:03，静默 19.6 天。`--propose` 是 `evolve_citizen.py` 的附加旗标（`--batch 3 --propose`），而 OS 循环年轮批只调 `--batch 3`、从不带该旗标 ⇒ 议会提案线自 10-24 起无人点火（脚本没坏，是没人按开关）。
+  - 发现法：新增 `Tools/face_coverage.py`（零 LLM·扫 Tools 产物字面量 × `round_daily` 登记表做差集），首跑即把两个 append-only 台账的供料缺口列清（另一个 `city-chronicle.jsonl` 1.4 天＝当日无显著事件，属正常；确定性未登记面 stale=0，说明前几轮补登记已追平）。
+  - 修法（待 19:00 让路窗后执行·LLM 依赖）：年轮批同轮追加 `--propose`（`PROPOSE_CAP=3/日` 不变），验收=新增行 ≥1 且带 `[锚]`/`ring_ref`。
+  - status: open（卡点=workday yield-window + 本地 LLM，ETA 2026-11-13 19:00）
 - [ ] **T-20261112-01 事件流人味密度缺口（源头·P1）**（2026-11-12 09:3x @BigLife-OSLoop R2566 立）
   - **[R2600 判据修复·假绿堵口]** 名义 ready 被证伪：今日流言 8 条文件齐全且 mtime 当日，但年轮 ingest 的 trigger-free 纪律（`RUMOR_TRIGGERS` 含风/雨/云/雾）把 8 条**全部**拦掉 → **有效通过 0/8**（阻塞词 风 8／雨 1／雾 1）。`Tools/ring_material_check.py` 已补有效量两列（过滤器从 evolve_citizen 直接 import＝判据单源），`ready` 改为「名义≥1 且有效≥1」，输出 MISSING/BLOCKED/ready 三态；正负控 PASS（合法动作句不误杀）、py_compile rc=0。streak 因此由 1/3 **诚实回退为 0/3**（真值非退步）。证据=qa/RING-MATERIAL-EFFECTIVE-20261112.md。供给侧治本另立 T-20261112-07。
   - status: in-progress（2026-11-12 09:5x @BigLife-OSLoop R2567 落修法②：Tools/city_life_events.py 母题池 + evolve_citizen 素材库口径接线；待「连续 3 生产日窗口非空」验收）｜**R2568 追加主因拆分**：修法② 只补供给，未治「模板句照抄」——今日 tmpl 78 条中 30 条来自提示池活句，已退役（qa/RING-TMPL-SOURCE-20261112.md）；余 18+ 条属口头禅基因 135 卡共用（待新发卡去重决策，存量不回改）
@@ -1266,5 +1271,12 @@ tokens: local=10 api=0 api_reason=-
   **产品增量**=任务候选项面断供收口（T-20261112-02 同病根第八例）：`census/export/citizen-tasks.jsonl` 有生成器（needs.py --tasks）、有 schema、有 QC 挂点，却无任何轮次引用——实测停在 09-26（48 天），而 needs 侧 10-28 改过 AXIS_NEED 口径，下游按 axis→face 领活拿到的是上月「动机→任务」映射。本轮重建 28536 行 + 全行 schema 校验 bad=0 + 双跑 md5 一致（D849B9F4…）；并接入 `Tools/round_daily.py` INPUTS data 档（每日再生、秒级、零 LLM），防再次静默停更。
   **三态负控**=① fresh→PASS ② mtime 回拨 -2d→`outdated:2d` STALE ③ `--run`→rebuilt 且内容 md5 不变（幂等不 churn）⇒ 闸判据真在工作；随后全量 `--check` 37 面 stale=0 PASS。
   **三行实况**：当前活=让路窗内确定性面维护（年轮/相遇批 19:00 恢复）｜最近实物=citizen-tasks.jsonl 28536 行（2026-11-13 10:48）+ round_daily 面登记｜下个里程碑=19:00 让路窗解→年轮批续产 + T-01 streak 3/3 判定（11-14 窗口）。
+  waiting: yield-window（pausedLite 工作日 09:00-19:00，年轮/相遇/反思延后）ETA 2026-11-13 19:00
+  tokens: local=0 api=0 api_reason=yield-window
+- [R2738] 2026-11-13 10:54-11:0x @BigLife-OSLoop 让路窗覆盖治理轮：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（watermark 尾 D-20261112-16，集团无 2026-11-13 新行）；orders 物理件区无涉本司新件；TASKS open 见 T-20261113-02（本轮新立）。
+  **产品增量**=面覆盖自动发现（不再一轮救一个面的根治病）：前七/八/九/十例（10-27 起 12 面 15 天、lexicon 15.7 天、social-graph 17 天、ring_lint 17 天、citizen-tasks 48 天）全是同一病理——round_daily 的 REGISTRY 是人手登记表，漏登记的面只能靠人眼一轮发现一个。新增 `Tools/face_coverage.py`（零 LLM 只读）：扫 Tools/*.py 产物字面量 → 逐个落盘解析 → 与 REGISTRY+INPUTS 差集 → 按 mtime 年龄出风险序；并把 append-only 台账单列（按上游有料增长，不可按日重建，否则写假行），报告落 qa/FACE-COVERAGE-REPORT.md。同时把该审计面登记进 round_daily faces 档，防它自己变成下一个盲区。
+  **首跑实证**=registered=34 candidates=134 stale(确定性未登记)=0 fresh=3 ledger_gap=2 missing=32：①确定性面已无未登记欠供 → 前几轮补登记确实追平，覆盖面收口；②`proposals.jsonl` 静默 19.6 天（最后一行 10-24 20:03）＝议员提案线实际停产——根因非脚本坏，而是 `--propose` 是附加旗标、年轮批从不带它，无人点火；③`city-chronicle.jsonl` 1.4 天＝当日无显著事件，正常，不动作。后者立 T-20261113-02（ETA 19:00 让路窗后补跑，验收=新增行≥1 且带 [锚]/ring_ref）。
+  **闸面**=py_compile 双绿；`round_daily --check` 39 面 stale=0 verdict=PASS（新登记 face_coverage 首日即 fresh）。
+  **三行实况**：当前活=让路窗内覆盖面自动发现与闸接线（年轮/相遇 19:00 恢复）｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/FACE-COVERAGE-REPORT.md（2026-11-13 10:56）+ C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/Tools/face_coverage.py｜下个里程碑=19:00 让路窗解→议员提案线复活（T-20261113-02）+ 年轮批续产
   waiting: yield-window（pausedLite 工作日 09:00-19:00，年轮/相遇/反思延后）ETA 2026-11-13 19:00
   tokens: local=0 api=0 api_reason=yield-window
