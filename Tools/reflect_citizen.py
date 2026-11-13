@@ -218,6 +218,33 @@ def main():
         print("yield-window: workday 09:00-19:00 CEO lane-priority - reflect deferred "
               "to 19:00-09:00/weekend (D-20261020-02)")
         sys.exit(0)
+    # R2809 (T-20261113-05 配套·缺陷出生地拦截): 规程写「每晚至多 1 次」，但靠规程自觉
+    # 已两次失效——R2806 自记当日跑了 2 次，R2809 在已读到该教训后仍第三次开跑（轮初
+    # 不查当日既跑记录）。日间窗闸能挡白天，挡不住夜窗连跑。此处按台账实测拦截：
+    # 当日 reflections.jsonl 已有 date==today 的行即视为本夜额已用，整体 yield；
+    # --force 保人工追批逃生口。
+    if not a.force:
+        _td = _n.date().isoformat()
+        _n_today = 0
+        try:
+            with open(OUT, encoding="utf-8") as _f:
+                for _ln in _f:
+                    _ln = _ln.strip()
+                    if not _ln:
+                        continue
+                    # 台账行用紧凑分隔符（"date":"..."），字符串比对会漏；按 JSON 判。
+                    try:
+                        if json.loads(_ln).get("date") == _td:
+                            _n_today += 1
+                    except (ValueError, AttributeError):
+                        continue
+        except FileNotFoundError:
+            pass
+        if _n_today:
+            print("daily-cap: %d reflection(s) already written today (%s) - at most one "
+                  "pass per night (T-20261113-05); use --force to append anyway"
+                  % (_n_today, _td))
+            sys.exit(0)
     raw = a.batch.strip() if a.batch else a.id
     if raw.isdigit():
         # R1934: numeric --batch means "auto-pick N eligible citizens" (parity
