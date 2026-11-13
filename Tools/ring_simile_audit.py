@@ -48,6 +48,24 @@ SHORT_CHARS = 20  # 全库正文字数 p5=20（中位 38）——取尾部 5% �
 TMPL_GRAM = 10
 TMPL_CITIZENS = 20
 QUEUE_CAP = 400
+RECENT_DAYS = 3  # 新近保底窗口：近 N 日缺陷不被历史积压挤出队列
+
+
+def echo_phrases():
+    """判据单源：提示词示例原句台账取 evolve_citizen.PROMPT_EXAMPLE_ECHO，禁重抄。
+
+    R2761（2026-11-13）：出生站闸只拦「开头 16 字」照抄，正文中段抄的旧环仍在库
+    （实测 112 环含示例原句，三判据 sim/short/tmpl 一条都没抓到）——检测面留盲区，
+    质检与修复队列都看不见它们。装载失败返回 None，报告显式标注，不静默算绿。
+    """
+    tools_dir = os.path.join(ROOT, "Tools")
+    if tools_dir not in sys.path:
+        sys.path.insert(0, tools_dir)
+    try:
+        import evolve_citizen as ec  # noqa: E402
+        return tuple(getattr(ec, "PROMPT_EXAMPLE_ECHO", ()) or ())
+    except Exception:
+        return None
 
 
 def core(body: str) -> str:
@@ -152,6 +170,7 @@ footer{{padding:16px 20px 40px;color:var(--dim);font-size:12px;border-top:1px so
 <div class="kpi"><b>{stats['sim_citizens']}</b><span>复读居民（相邻相似 ≥40%）</span></div>
 <div class="kpi"><b>{stats['short_rows']}</b><span>偏短年轮（正文 &lt;45 字）</span></div>
 <div class="kpi"><b>{stats['tmpl_rows']}</b><span>命中全局模板句的年轮</span></div>
+<div class="kpi"><b>{stats['echo_rows'] if stats['echo_loaded'] else '—'}</b><span>照抄提示词示例原句</span></div>
 <div class="kpi"><b>{stats['queue']}</b><span>夜班重写队列条数</span></div>
 <div class="kpi"><b>{stats['quota']}/{stats['batch']}</b><span>每轮预留重写席（批 {stats['batch']} 中）</span></div>
 </div>
@@ -176,7 +195,9 @@ def main() -> int:
     day = datetime.date.today().isoformat()
     gram_citizens: dict[str, set[str]] = collections.defaultdict(set)
     per_citizen: dict[str, dict] = {}
-    sim_rows = short_rows = 0
+    sim_rows = short_rows = echo_rows = 0
+    ECHO_PHRASES = echo_phrases()
+    echo_loaded = ECHO_PHRASES is not None
 
     for path in sorted(glob.glob(os.path.join(ROOT, "census", "registry", "**", "*.md"),
                                  recursive=True)):
@@ -207,7 +228,16 @@ def main() -> int:
                     reasons.append("sim=%.0f%%" % (score * 100))
                     sim_rows += 1
                     worst = max(worst, score)
-            records.append({"date": date, "text": c[:200], "sh": sh, "reasons": reasons})
+            hit = None
+            for p in (ECHO_PHRASES or ()):
+                if p in clean:
+                    hit = p
+                    break
+            if hit:
+                reasons.append("echo")
+                echo_rows += 1
+            records.append({"date": date, "text": c[:200], "sh": sh, "reasons": reasons,
+                            "echo": hit})
             prev = g
         per_citizen[cid] = {
             "id": cid, "name": name, "where": where,
@@ -237,13 +267,27 @@ def main() -> int:
     queue = []
     for c in per_citizen.values():
         for f in c["flags"]:
-            weight = ("sim" in f["reason"]) * 3 + ("short" in f["reason"]) * 2 + ("tmpl" in f["reason"])
+            weight = (("sim" in f["reason"]) * 3 + ("short" in f["reason"]) * 2
+                      + ("tmpl" in f["reason"]) + ("echo" in f["reason"]) * 8)
             queue.append({"card": f["card"], "id": c["id"], "name": c["name"],
                           "date": f["date"], "reason": f["reason"], "text": f["text"],
                           "_w": weight})
     queue.sort(key=lambda r: r["date"], reverse=True)
     queue.sort(key=lambda r: -r["_w"])  # 稳定排序：同权重内保持日期倒序
-    queue = queue[:QUEUE_CAP]
+    # 新近保底（R2761·2026-11-13）：纯 tmpl 新环权重最低（=1），若只按权重截断，
+    # 400 席会被旧的高权重积压占满——实测当日 552 环 0 条入队、例文复写环 0 条入队，
+    # 最新生产日的缺陷永远排不到修复席位。故为近 RECENT_DAYS 日保留半数席位。
+    cut = (datetime.date.fromisoformat(day)
+           - datetime.timedelta(days=RECENT_DAYS)).isoformat()
+    recent_idx = [i for i, r in enumerate(queue) if r["date"] >= cut]
+    older_idx = [i for i, r in enumerate(queue) if r["date"] < cut]
+    reserve = min(len(recent_idx), max(1, QUEUE_CAP // 2))
+    pick = recent_idx[:reserve] + older_idx[:QUEUE_CAP - reserve]
+    if len(pick) < QUEUE_CAP:
+        pick += recent_idx[reserve:][:QUEUE_CAP - len(pick)]
+    pick = set(pick)
+    queue = [r for i, r in enumerate(queue) if i in pick]  # 保留严重度次序（rank 即队列序）
+    queue_recent = sum(1 for r in queue if r["date"] >= cut)
     for r in queue:
         r.pop("_w", None)
 
@@ -262,12 +306,15 @@ def main() -> int:
              "rings": sum(c["count"] for c in per_citizen.values()),
              "sim_rows": sim_rows, "short_rows": short_rows,
              "sim_citizens": sum(1 for c in per_citizen.values() if c["worst"] > 0),
-             "tmpl_rows": tmpl_rows, "queue": len(queue)}
+             "tmpl_rows": tmpl_rows, "queue": len(queue),
+             "echo_rows": echo_rows, "echo_loaded": echo_loaded,
+             "queue_recent": queue_recent, "recent_days": RECENT_DAYS}
 
     os.makedirs(os.path.join(ROOT, "qa"), exist_ok=True)
     os.makedirs(os.path.join(ROOT, "state"), exist_ok=True)
     with io.open(QUEUE, "w", encoding="utf-8", newline="\n") as f:
         json.dump({"generated": day, "since": args.since, "cap": QUEUE_CAP,
+                   "recent_days": RECENT_DAYS, "queue_recent": queue_recent,
                    "items": queue}, f, ensure_ascii=False, indent=1)
 
     lines = [
@@ -289,7 +336,9 @@ def main() -> int:
         "| 复读居民数 | %d |" % stats["sim_citizens"],
         "| 偏短年轮 | %d |" % short_rows,
         "| 命中模板句年轮 | %d |" % tmpl_rows,
+        "| 照抄提示词示例原句 | %s |" % (echo_rows if echo_loaded else "未装载（evolve_citizen 导入失败）"),
         "| 夜班重写队列 | %d（上限 %d） |" % (len(queue), QUEUE_CAP),
+        "| ↳ 其中近 %d 日（新近保底席位） | %d |" % (RECENT_DAYS, stats["queue_recent"]),
         "",
         "## 被最多居民共用的句块（前 20）",
         "",
