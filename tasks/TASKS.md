@@ -620,7 +620,8 @@ tokens: local=10 api=0 api_reason=-
   - 病根：`cognition/proposals.jsonl` 最后一行 2026-10-24 20:03，静默 19.6 天。`--propose` 是 `evolve_citizen.py` 的附加旗标（`--batch 3 --propose`），而 OS 循环年轮批只调 `--batch 3`、从不带该旗标 ⇒ 议会提案线自 10-24 起无人点火（脚本没坏，是没人按开关）。
   - 发现法：新增 `Tools/face_coverage.py`（零 LLM·扫 Tools 产物字面量 × `round_daily` 登记表做差集），首跑即把两个 append-only 台账的供料缺口列清（另一个 `city-chronicle.jsonl` 1.4 天＝当日无显著事件，属正常；确定性未登记面 stale=0，说明前几轮补登记已追平）。
   - 修法（待 19:00 让路窗后执行·LLM 依赖）：年轮批同轮追加 `--propose`（`PROPOSE_CAP=3/日` 不变），验收=新增行 ≥1 且带 `[锚]`/`ring_ref`。
-  - status: open（卡点=workday yield-window + 本地 LLM，ETA 2026-11-13 19:00）
+  - **[R2741 根因侧修复·不再依赖调用面]** 2026-11-13 11:2x：原修法（改提示词带上 `--propose`）不牢——轮次提示词不在本仓（只在 `.codely-cli/auto-saves` 历史快照里），改不了就会再次漂移。改从源头修：`--propose` 改为 `default=True`，新增 `--no-propose` 逃生口（commit 35f2e9767）。`PROPOSE_CAP=3/日`、`[锚]` 逐字引用、语态断言三闸原样保留；`--meet` 在 3299 提前 return，提案只在批路径触发（已核）。候选择域实测 4286 人有 curiosity=2，供给充足。存量 9 行正好落在 09-27/09-28/10-24 三个手工跑过的日子各 3 条，反证「只有人手点火才出提案」。
+  - status: in-progress（源码侧已修 35f2e9767·py_compile+argparse 双验；验收仍卡实批=19:00 让路窗后新增行 ≥1 且带 `[锚]`/`ring_ref`，ETA 2026-11-13 19:00）
 - [ ] **T-20261112-01 事件流人味密度缺口（源头·P1）**（2026-11-12 09:3x @BigLife-OSLoop R2566 立）
   - **[R2600 判据修复·假绿堵口]** 名义 ready 被证伪：今日流言 8 条文件齐全且 mtime 当日，但年轮 ingest 的 trigger-free 纪律（`RUMOR_TRIGGERS` 含风/雨/云/雾）把 8 条**全部**拦掉 → **有效通过 0/8**（阻塞词 风 8／雨 1／雾 1）。`Tools/ring_material_check.py` 已补有效量两列（过滤器从 evolve_citizen 直接 import＝判据单源），`ready` 改为「名义≥1 且有效≥1」，输出 MISSING/BLOCKED/ready 三态；正负控 PASS（合法动作句不误杀）、py_compile rc=0。streak 因此由 1/3 **诚实回退为 0/3**（真值非退步）。证据=qa/RING-MATERIAL-EFFECTIVE-20261112.md。供给侧治本另立 T-20261112-07。
   - status: in-progress（2026-11-12 09:5x @BigLife-OSLoop R2567 落修法②：Tools/city_life_events.py 母题池 + evolve_citizen 素材库口径接线；待「连续 3 生产日窗口非空」验收）｜**R2568 追加主因拆分**：修法② 只补供给，未治「模板句照抄」——今日 tmpl 78 条中 30 条来自提示池活句，已退役（qa/RING-TMPL-SOURCE-20261112.md）；余 18+ 条属口头禅基因 135 卡共用（待新发卡去重决策，存量不回改）
@@ -1287,4 +1288,17 @@ tokens: local=10 api=0 api_reason=-
   **闸面**=round_daily --run 34 面 PASS stale=0（11:14）；pool_audit PASS SELF_TERMINATE；事件回放闸今晨已 PASS（cards=10111 mismatch=0），6 轮节律未到不重复；QC 今早 10:09 problems=0，不重复；HQ 反馈闸当日已有行。
   **三行实况**：当前活=让路窗内覆盖治理（年轮/相遇/提案 19:00 恢复）｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/FACE-COVERAGE-REPORT.md（2026-11-13 11:18·unexplained=0）+ Tools/face_coverage.py、Tools/derive_audit.py｜下个里程碑=19:00 让路窗解→年轮批 3 位落环 + T-20261113-02 提案线复活（窗 ≤48h）
   waiting: yield-window（pausedLite 工作日 09:00-19:00，年轮/相遇/反思延后）ETA 2026-11-13 19:00
+  tokens: local=0 api=0 api_reason=yield-window
+
+- [R2741] 2026-11-13 11:23-11:3x @BigLife-OSLoop 让路窗产品修复轮：
+  轮首 pull=Already up to date；水位差集 NEW=0（尾 D-20261112-16，集团无 11-13 本司新行）；HQ 反馈闸 ALREADY_REPORTED 零写入。
+  **年轮/相遇=0**：evolve_citizen 报 yield-window（工作日 09:00-19:00 让路，D-20261020-02）静默延后，19:00 恢复，不重扫。
+  **日更面**：round_daily --run verdict=PASS stale=3 ran=4 failed=0（今日重建 city-today / gene-ledger / index + derive_audit 与 face_coverage 两报告；34 面全新鲜）。
+  **事件闸**：events_refresh --gate PASS（cards=10111 events=42535 replayed=10111 schema_errors=0 mismatch=0；unexpected_missing=0）。
+  **语言线**：pool_audit PASS/SELF_TERMINATE（72/72 axes·12/12 sprite·1440 行·hard_fails=0·determinism 192 对零差），按自终止律不跑 pool_gen。
+  **本轮实物=T-20261113-02 源头修复**：--propose 改 default=True + --no-propose 逃生口（commit 35f2e9767）。证据=py_compile rc=0、--help 双旗标可见、--meet 提前 return 已核、curiosity=2 候选 4286 人。议员提案线不再依赖外部提示词是否带旗标，19:00 首批应自动出提案。
+  遗留：census/QC-REPORT.md 为 11:05 上一轮产物，按定向 add 律未随本轮提交，仍在工作树。
+  **三行实况**：当前活=让路窗内产线断供修复（年轮/相遇/提案 19:00 恢复）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-today.html（2026-11-13 11:24）+ C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\FACE-COVERAGE-REPORT.md（11:24·unexplained=0）｜下个里程碑=19:00 让路窗解→年轮批落环 + 提案线首批自动产出（T-20261113-02 验收，窗 ≤48h）
+  计分：能看实物=2 分（日报页当日刷新 + 提案线复活闭环）｜文件改动=1 分。
+  waiting: yield-window ETA 2026-11-13 19:00
   tokens: local=0 api=0 api_reason=yield-window
