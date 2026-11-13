@@ -2978,8 +2978,15 @@ def due_citizens(cursor, batch, force=None):
     # third) for the worst due flagged residents; the rest still go to fresh
     # coverage (R1883).
     rank, generated = quality_queue_order()
-    if rank:
-        again.sort(key=lambda c: (rank.get(c, len(rank)), c))
+    # R2794 (2026-11-13): starvation fix. Ordering `again` by cid made the low-id
+    # cohort (0-4165) recycle on its 7-day cooldown and eat the whole ~550
+    # seats/day budget, so 4166+ never got a turn: measured 11-13, band 5000-7999
+    # sat at 100% due (3000/3000) and C-04166 had not been ringed since 09-29
+    # (45 days). Sort least-recently-evolved first (cursor "last") so the daily
+    # budget sweeps the whole city; repair `rank` still wins the head (R2385) and
+    # cid stays as the deterministic tie-break.
+    again.sort(key=lambda c: (rank.get(c, len(rank)),
+                              str(cursor.get(c, {}).get("last") or ""), c))
     quota = []
     if rank and batch > 1:
         # A queue entry is stale once the card was re-ringed after the audit
