@@ -710,6 +710,12 @@ tokens: local=10 api=0 api_reason=-
   - 事实：`over_quota` 用严格 `>`，25.0% 不触发；且每落一席非该族的环都会拉低占比、把该族「解禁」给下一批 → 只要还有别族在产出，族占比就能沿 25% 线一路爬（今日 138/552=25.0% 正是线上取值的产物）。
   - 修法候选（**均属改判据形状，须口径批准后才动**）：①批内构成闸（3 席同族 ≤1 席）；②`>=` 替代 `>`；③日累计绝对值上限（按当日预计产出线性）。禁为读数改阈值换绿（承 T-20261113-03 验收条款）。
   - 验收：**不适用数值线**，待委员会口径；本单只保「缺陷不被遗忘」，勿在产物轮内自行改闸。
+- [ ] **T-20261113-05 反思线从未接入规程（P1·静默断供）**（2026-11-13 18:5x @BigLife-OSLoop R2799 立）
+  - status: in-progress（本轮落修法①：`Tools/iteration_prompt.txt` 新增步 1C「19:00 后至多 1 次 `reflect_citizen.py --batch 5`」+ 病根注记；待「连续 3 生产日 reflections.jsonl 尾部 date=当日」验收）
+  - 事实：`census/reflections.jsonl` **61 行 / 10114 人（0.60%）·末行 2026-10-27·停更 17.6 天**；`Tools/iteration_prompt.txt` 步骤 1/1B/2..8 **零处提及 reflect**——历轮轮记却统一按「反思随年轮/相遇让路窗顺延」记账，把「无步骤」误当「已接线」。候选池实测可供（`pick_ids(8)` 即刻返回 8 席），故非无料可产，纯接线缺失。
+  - 算术缺口：低频律 30 天/人 → 覆盖 10114 人需 ≈337 条/日；步 1C 批 5/日只能维持 ≈1.5% 月覆盖 → **本单只治「有产出不停更」，覆盖达标属产能口径，须委员会定，勿自行加大批量挤占 CEO 车道**。
+  - 验收：连续 3 个生产日 `census/reflections.jsonl` 尾部 date=当日 且 `reflect_citizen.py --qc` PASS；单轮 LLM 调用 ≤5。
+  - 证据=`qa/REFLECT-STARVATION-20261113.md`（实测表+覆盖算术+正负控命令+诚实边界）。
 - [ ] **T-20261112-01 事件流人味密度缺口（源头·P1）**（2026-11-12 09:3x @BigLife-OSLoop R2566 立）
   - **[R2600 判据修复·假绿堵口]** 名义 ready 被证伪：今日流言 8 条文件齐全且 mtime 当日，但年轮 ingest 的 trigger-free 纪律（`RUMOR_TRIGGERS` 含风/雨/云/雾）把 8 条**全部**拦掉 → **有效通过 0/8**（阻塞词 风 8／雨 1／雾 1）。`Tools/ring_material_check.py` 已补有效量两列（过滤器从 evolve_citizen 直接 import＝判据单源），`ready` 改为「名义≥1 且有效≥1」，输出 MISSING/BLOCKED/ready 三态；正负控 PASS（合法动作句不误杀）、py_compile rc=0。streak 因此由 1/3 **诚实回退为 0/3**（真值非退步）。证据=qa/RING-MATERIAL-EFFECTIVE-20261112.md。供给侧治本另立 T-20261112-07。
   - status: in-progress（2026-11-12 09:5x @BigLife-OSLoop R2567 落修法②：Tools/city_life_events.py 母题池 + evolve_citizen 素材库口径接线；待「连续 3 生产日窗口非空」验收）｜**R2568 追加主因拆分**：修法② 只补供给，未治「模板句照抄」——今日 tmpl 78 条中 30 条来自提示池活句，已退役（qa/RING-TMPL-SOURCE-20261112.md）；余 18+ 条属口头禅基因 135 卡共用（待新发卡去重决策，存量不回改）

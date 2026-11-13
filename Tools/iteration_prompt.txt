@@ -18,6 +18,8 @@
    ——脚本读真实城市事件（FluxVerse world 只读+真实北京时间/天气）喂本地 Ollama qwen2.5:7b，给到期居民写「年轮」（必带 [锚] 注脚，锚定律=docs/CODEX.md §九），定向 commit；落环后自动跑 sync_rings（行为线收口，勿手动重复）；随后必跑 python -X utf8 Tools/events_refresh.py --gate ——事件流回放闸（cards→events 重生+replay 全量比对，mismatch/schema 必为 0，FAIL 即当轮修；qa/EVENTS-REPLAY-REPORT.md 入库，R-20261023-scan-silicon-city 动作 1 接线）；Ollama 挂=脚本静默跳过，不修不报障。
 1B.【每轮·确定性日更面】python -X utf8 Tools/round_daily.py --run
    ——登记表内 20 个可见面（日报/流言/城市生活/看板/城区志/名人录/物件志/居民陈列/基因台账/索引）逐个查输出 mtime：当日面非当日、结构面超 1 日即重建，全新鲜则零动作（幂等·零 LLM·让路窗内照跑；`--check` 只体检不改盘）。病根=2026-10-27 起 12 个面静默停更 15 天无人发现（T-20261112-02·R2570 接线）。
+1C.【每晚 19:00 后至多 1 次·反思线·低频】python -X utf8 Tools/reflect_citizen.py --batch 5
+   ——中层记忆合成：只喂该居民自己的年轮，产出一条高层洞察（≤40 字，锚包含闸）落 census/reflections.jsonl（append-only·每居民 30 天冷却·零写入即跳过）。让路窗内脚本自带闸返回 yield-window 不必绕；Ollama 挂=静默跳过。病根=该腿自 2026-09-25 上线后从未进轮次规程，61 行/10114 人（覆盖 0.6%）·末次 2026-10-27 停更 17.6 天，而历轮轮记均按「反思顺延夜窗」记账＝假设存在而实际无步骤（T-20261113-05·R2799 接线）。验收=连续 3 生产日 reflections.jsonl 尾部 date=当日。
 2.【每日至多 1 次·语言线·池轮】先跑 python -X utf8 Tools/pool_audit.py ——若报「全桶达标」=本轮跳过（自终止律：不为长而长）；若有欠深桶（六轴<8 / 像素灵<6）：python -X utf8 Tools/pool_gen.py --append --target 8 --sprite-target 6，跑完必再跑 pool_audit.py，判 PASS 才 commit（cognition/pools.json + cognition/README.md 迭代判据=门禁）；预算不够做完 72 桶就留单下轮（--append 幂等，做多少收多少）。
 3.【每 6 轮约 1 次·QC 巡检】python -X utf8 Tools/qc_census.py ——不变量扫描（编号/姓名唯一、必备段齐备、年轮锚定律），QC-REPORT.md 随轮入库；异常=当轮修复或立 tasks/TASKS.md 单。
 4.【每日至多 1 次·相遇轮】python -X utf8 Tools/evolve_citizen.py --meet C-xxxxx C-yyyyy --via BigLife-OSLoop ——同城区两位居民围绕当天真实事件各写一句年轮式互动，双卡互引；选人看 census/export/citizens-light.jsonl（recent_ring 非空者优先——让有故事的居民继续长故事）。
