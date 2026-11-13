@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-13 07:27",
+ "export_ts": "2026-11-13 10:02",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2711（07:23-07:38）：年轮批落环 8/10**（C-00588/C-00589/C-00590/C-00591/C-00593/C-00594/C-00595/C-00596；C-00520 与 C-00592 触质量闸 recent-dup-phrase+recent-family-opening / sun-fit+sky-mismatch，留 due 不降门换绿）；行为线自动收口 rows=8 evolved=10114；事件回放闸 PASS（cards=10111 events=42415 schema_errors=0 mismatch=0）；日更面 round_daily verdict=PASS（dashboard+index 重建，余 18 面 fresh）；语言线池 72 桶全达标 SELF_TERMINATE 零 LLM；相遇轮今日 cap 3/3 已满不发；决策水位无新差集（无 D-20261113 行）。 **R2704（06:48-06:58）：年轮批落环 8/10**（C-00551/C-00556/C-00569/C-00553/C-00554/C-00558/C-00559/C-00561；C-00491/C-00520 持续触质量闸 recent-family-opening + recent-dup-phrase，留 due 不降门换绿）；事件回放闸 PASS（cards=10111 events=42383 schema_errors=0 mismatch=0）；日更面 round_daily verdict=PASS（dashboard+index 重建，余 18 面 fresh）；语言线池 72 桶全达标 SELF_TERMINATE 零 LLM；相遇轮今日 cap 3/3 已满不发；QC 巡检补跑 cards=10114 problems=0。 **R2701（06:18-06:26）：年轮批落环 8/10**（C-00526/C-00539/C-00557/C-00528/C-00529/C-00530/C-00531/C-00532；C-00491/C-00520 触质量闸拒留 due，不降门换绿）；日更面 round_daily verdict=PASS（dashboard+index 重建，余面 fresh）；事件回放闸 PASS（replayed=10111 schema_errors=0 mismatch=0）；QC cards=10114 problems=0。语言线池全桶达标自终止；相遇轮今日已满不重复。",
+   "t": "**R2731（09:58-10:1x）：让路窗确定性产品轮**（pausedLite 09:00 生效，年轮/相遇/聚光灯三线 defer 19:00）。日更面 round_daily verdict=PASS（stale=1、ran=2：gene-ledger.html 依赖基因库 mtime 重建 138KB、index.html 重建 8KB，余 26 面 fresh）；事件流回放闸 PASS（cards=10111 events=42535 replayed=10111 schema_errors=0 mismatch=0，qa/EVENTS-REPLAY-REPORT.md 入库）；今日实况 554 环 / 551 人（事件流 ts 口径直数）；决策水位差集 NEW=0（无 D-20261113 行，已覆盖至 D-20261112-16）；TASKS 无新增可动 open 单（T-20260924-08 对外实况面维护即本轮动作）。 **R2711（07:23-07:38）：年轮批落环 8/10**（C-00588/C-00589/C-00590/C-00591/C-00593/C-00594/C-00595/C-00596；C-00520 与 C-00592 触质量闸 recent-dup-phrase+recent-family-opening / sun-fit+sky-mismatch，留 due 不降门换绿）；行为线自动收口 rows=8 evolved=10114；事件回放闸 PASS（cards=10111 events=42415 schema_errors=0 mismatch=0）；日更面 round_daily verdict=PASS（dashboard+index 重建，余 18 面 fresh）；语言线池 72 桶全达标 SELF_TERMINATE 零 LLM；相遇轮今日 cap 3/3 已满不发；决策水位无新差集（无 D-20261113 行）。 **R2704（06:48-06:58）：年轮批落环 8/10**（C-00551/C-00556/C-00569/C-00553/C-00554/C-00558/C-00559/C-00561；C-00491/C-00520 持续触质量闸 recent-family-opening + recent-dup-phrase，留 due 不降门换绿）；事件回放闸 PASS（cards=10111 events=42383 schema_errors=0 mismatch=0）；日更面 round_daily verdict=PASS（dashboard+index 重建，余 18 面 fresh）；语言线池 72 桶全达标 SELF_TERMINATE 零 LLM；相遇轮今日 cap 3/3 已满不发；QC 巡检补跑 cards=10114 problems=0。",
    "s": 1
   },
   {
@@ -1809,8 +1809,12 @@
   [
    "434",
    "本轮（2026-11-13 07:23-07:38）年轮新落环 8 行；全程本地 qwen3:4b-instruct，零云端调用。"
+  ],
+  [
+   "554",
+   "本轮（2026-11-13 09:58-10:1x）今日年轮落环 554 行 / 551 人（事件流直数）；日更面重建 2 面 + 事件回放闸 PASS；全程零云端调用、零 LLM 调用（让路窗）。"
   ]
  ],
- "t": "当前活：年轮批 + 事件回放闸 + 日更面幂等（本轮 07:23-07:38）。\n最近实物：census/registry 8 位居民 2026-11-13 新年轮（07:24-07:25）/ qa/EVENTS-REPLAY-REPORT.md PASS（07:26）/ census/export/city-dashboard.html+index.html（07:26 重建）。\n下个里程碑：11-14 第 3 生产日窗口结单（人味密度复测 + tmpl 缺陷率 <10% 首验），ETA ≤24h。",
- "top_text": "当前活：年轮批 + 事件回放闸 + 日更面幂等（本轮 07:23-07:38）。\n最近实物：census/registry 8 位居民 2026-11-13 新年轮（07:24-07:25）/ qa/EVENTS-REPLAY-REPORT.md PASS（07:26）/ census/export/city-dashboard.html+index.html（07:26 重建）。\n下个里程碑：11-14 第 3 生产日窗口结单（人味密度复测 + tmpl 缺陷率 <10% 首验），ETA ≤24h。"
+ "t": "当前活：让路窗确定性面——日更面幂等重建 + 事件回放闸 + 对外实况面刷新（本轮 09:58-10:1x）。\n最近实物：census/export/gene-ledger.html（138KB·按基因库 mtime 重建 10:0x）+ index.html / qa/EVENTS-REPLAY-REPORT.md PASS（42535 事件·mismatch=0）/ 今日城市日报 census/export/city-today.html（554 环·551 人）。\n下个里程碑：19:00 年轮批（--batch 3）+ 相遇轮（选 recent_ring 非空居民），ETA 19:40。",
+ "top_text": "当前活：让路窗确定性面——日更面幂等重建 + 事件回放闸 + 对外实况面刷新（本轮 09:58-10:1x）。\n最近实物：census/export/gene-ledger.html（138KB·按基因库 mtime 重建 10:0x）+ index.html / qa/EVENTS-REPLAY-REPORT.md PASS（42535 事件·mismatch=0）/ 今日城市日报 census/export/city-today.html（554 环·551 人）。\n下个里程碑：19:00 年轮批（--batch 3）+ 相遇轮（选 recent_ring 非空居民），ETA 19:40。"
 }
