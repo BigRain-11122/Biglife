@@ -32,6 +32,8 @@ STALE_MIN = 180
 PAGED_PREFIX = "city-growth-p"
 RING_PAT = re.compile(r"^- (\d{4}-\d{2}-\d{2}) ")
 NOTE_PAT = re.compile(r"R(\d{3,5})")
+# 无时间戳但确实是状态行的特征（T-20261113-01：R2734 行以 %s 开头、无日期，被解析层静默丢弃）
+ORPHAN_PAT = re.compile(r"^(?!\d{4}-\d{2}-\d{2} )\S.*(?:round=R\d+|当前活=|最近实物=|lane=)")
 
 
 def esc(s: object) -> str:
@@ -46,18 +48,33 @@ def read_text(path: str) -> str:
         return ""
 
 
-def heartbeats() -> list[tuple[datetime, str]]:
+def parse_heartbeat_text(text: str) -> tuple[list[tuple[datetime, str]], int]:
+    """解析心跳文本 → (有效行, 无时间戳状态行条数)。
+
+    无时间戳的状态行会被渲染层丢弃，这里显式计数，让「丢了一条」在页面上看得见
+    （T-20261113-01：R2734 行格式串漏参、无日期，静默消失）。
+    """
     out = []
-    for line in read_text(HEARTBEAT).splitlines():
-        m = re.match(r"^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) (.*)$", line.strip())
+    orphans = 0
+    for line in text.splitlines():
+        s = line.strip().lstrip("\ufeff").strip()
+        if not s:
+            continue
+        m = re.match(r"^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) (.*)$", s)
         if not m:
+            if ORPHAN_PAT.match(s):
+                orphans += 1
             continue
         try:
             ts = datetime.strptime(m.group(1), "%Y-%m-%d %H:%M:%S")
         except ValueError:
             continue
         out.append((ts, m.group(2)))
-    return out
+    return out, orphans
+
+
+def heartbeats() -> tuple[list[tuple[datetime, str]], int]:
+    return parse_heartbeat_text(read_text(HEARTBEAT))
 
 
 def commits(n: int) -> list[tuple[str, str, str]]:
@@ -250,7 +267,7 @@ def age_text(delta: timedelta) -> str:
 
 def main() -> int:
     now = datetime.now()
-    hb = heartbeats()
+    hb, hb_orphans = heartbeats()
     if hb:
         last_ts, last_line = hb[-1]
         hb_age = age_text(now - last_ts)
@@ -353,11 +370,12 @@ footer{{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(
 <div class="kpi{' bad' if hb_stale else ''}"><b>{esc(hb_age)}</b><span>最近一次轮次心跳</span></div>
 <div class="kpi"><b>{esc(cm[0][1] if cm else '未取到')}</b><span>最近提交时间</span></div>
 <div class="kpi{' bad' if stale_pages else ''}"><b>{len(stale_pages)}</b><span>超过 {STALE_MIN} 分钟未刷新的页</span></div>
+<div class="kpi{' bad' if hb_orphans else ''}"><b>{hb_orphans}</b><span>无时间戳状态行（被丢弃，需修）</span></div>
 <div class="kpi"><b>{vol['citizens']}</b><span>居民（轻量册）</span></div>
 <div class="kpi{' bad' if rq['items'] else ''}"><b>{len(rq['items'])}</b><span>年轮待修队列（cap {rq['cap'] or '未取到'}）</span></div>
 </div>
 
-<h2>最近轮次心跳<em>state/heartbeat.txt 尾 {HEARTBEAT_SHOW} 条 · 最后一条：{esc(last_line)}</em></h2>
+<h2>最近轮次心跳<em>state/heartbeat.txt 尾 {HEARTBEAT_SHOW} 条 · 最后一条：{esc(last_line)} · 无时间戳状态行 <b>{hb_orphans}</b> 条（有时间戳才会进本表）</em></h2>
 <table><thead><tr><th>时间</th><th>记录</th></tr></thead><tbody>
 {hb_rows or '<tr><td colspan="2">未取到心跳</td></tr>'}
 </tbody></table>
@@ -412,15 +430,43 @@ footer{{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(
     with open(OUT, "w", encoding="utf-8", newline="\n") as f:
         f.write(page)
     print(
-        "city-ops.html written: pages=%d commits=%d hb=%d citizens=%d rings=%d events=%d stale=%d"
+        "city-ops.html written: pages=%d commits=%d hb=%d orphans=%d citizens=%d rings=%d events=%d stale=%d"
         " persona=%d habit_genes=%d ring_queue=%d"
         % (
-            len(pg), len(cm), len(hb), vol["citizens"], vol["rings"], vol["events"],
+            len(pg), len(cm), len(hb), hb_orphans, vol["citizens"], vol["rings"], vol["events"],
             len(stale_pages), pd["active"], pd["habits"], len(rq["items"]),
         )
     )
     return 0
 
 
+SELFTEST_CASES = [
+    # (输入文本, 期望有效行数, 期望无时间戳状态行数)
+    ("2026-11-13 10:19:56 os-loop: round done exit=0\n", 1, 0),
+    ("%s | round=R2734 | lane=qc | 当前活=X\n", 0, 1),
+    ("hello world\n", 0, 0),
+    ("2026-11-13 10:29:28 os-loop: round done exit=0\n%s | round=R1 | lane=qc\n", 1, 1),
+    ("2026-13-45 99:99:99 broken ts round=R9\n", 0, 0),
+    ("\ufeff2026-11-13 03:15:13 round=R2675 | lane=product\n", 1, 0),
+]
+
+
+def selftest() -> int:
+    fails = 0
+    for text, want_rows, want_orphans in SELFTEST_CASES:
+        rows, orphans = parse_heartbeat_text(text)
+        ok = (len(rows) == want_rows and orphans == want_orphans)
+        if not ok:
+            fails += 1
+            print("FAIL rows=%d(want %d) orphans=%d(want %d) :: %r"
+                  % (len(rows), want_rows, orphans, want_orphans, text[:60]))
+    print("selftest: %d probes, %d fail" % (len(SELFTEST_CASES), fails))
+    return 1 if fails else 0
+
+
 if __name__ == "__main__":
+    import sys
+
+    if "--selftest" in sys.argv:
+        raise SystemExit(selftest())
     raise SystemExit(main())
