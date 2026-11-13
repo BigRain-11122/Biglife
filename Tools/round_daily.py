@@ -162,6 +162,12 @@ DEPENDS = {
 # 冷却=同日新环最迟 1 小时内进 CEO 面，同时把日更面写入量压到可接受水位。
 DEPENDS_FLOOR_MIN = 60
 
+# v0.16 (2026-11-13): 小面不设冷却。DEPENDS_FLOOR_MIN 是给 2.9MB 环依赖大面防 churn
+# 用的（今天重建过就别再写），但 gene_ledger/lexicon 是百 KB 级台账面，且它们的源
+# 恰恰会被「补数据」类动作改写（gene_adopt 写既有卡正文）——按 60 分钟冷却会让人
+# 刚补的经历行在台账上最多压一小时看不见。这两面逐次重建成本 <1s，冷却归零。
+DEPENDS_FLOOR_OVERRIDE = {"gene_ledger": 0, "lexicon": 0}
+
 TIMEOUT_SEC = 240
 
 
@@ -296,6 +302,38 @@ def _script_changed(script: str, known_sha: dict | None) -> str | None:
     return None
 
 
+_MTIME_CACHE: dict[str, float | None] = {}
+
+
+def _newest_mtime(path: str) -> float | None:
+    """源的最新 mtime：文件取自身，目录取子树内最新文件。
+
+    v0.16 (2026-11-13): 此前对目录直接 os.path.getmtime()，而目录 mtime 只在
+    增删条目时变、不改写内容——实证 gene_adopt 改写 5 张既有居民卡的「经历」行后，
+    gene_ledger 仍被判 fresh 零重建，台账与正文脱钩（T-20261112-02 同族第九例）。
+    目录源（census/registry 含一万余卡）按子树遍历，进程内缓存避免 8 个环依赖面重复扫。
+    """
+    if path in _MTIME_CACHE:
+        return _MTIME_CACHE[path]
+    newest = None
+    if os.path.isfile(path):
+        try:
+            newest = os.path.getmtime(path)
+        except OSError:
+            newest = None
+    elif os.path.isdir(path):
+        for root, _dirs, files in os.walk(path):
+            for fn in files:
+                try:
+                    m = os.path.getmtime(os.path.join(root, fn))
+                except OSError:
+                    continue
+                if newest is None or m > newest:
+                    newest = m
+    _MTIME_CACHE[path] = newest
+    return newest
+
+
 def _dep_mtime_stale(key: str, out_paths: list[str]) -> str | None:
     """依赖源比产物新即 stale（同日内的源变更，日期粒度看不见）。"""
     srcs = DEPENDS.get(key)
@@ -304,9 +342,9 @@ def _dep_mtime_stale(key: str, out_paths: list[str]) -> str | None:
     newest, newest_rel = None, None
     for rel in srcs:
         p = os.path.join(ROOT, rel)
-        if not os.path.exists(p):
+        m = _newest_mtime(p)
+        if m is None:
             continue
-        m = os.path.getmtime(p)
         if newest is None or m > newest:
             newest, newest_rel = m, rel
     if newest is None:
@@ -314,7 +352,8 @@ def _dep_mtime_stale(key: str, out_paths: list[str]) -> str | None:
     oldest_out = min(os.path.getmtime(p) for p in out_paths)
     if newest > oldest_out:
         # 冷却下限：刚重建过的面不因下一批年轮立刻再刷（防 5 分钟级大面 churn）
-        if (time.time() - oldest_out) < DEPENDS_FLOOR_MIN * 60:
+        floor_min = DEPENDS_FLOOR_OVERRIDE.get(key, DEPENDS_FLOOR_MIN)
+        if (time.time() - oldest_out) < floor_min * 60:
             return None
         return "dep-mtime:%s" % newest_rel
     return None
