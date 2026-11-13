@@ -40,6 +40,7 @@
 - [ ] **T-20261113-01**（R2736 立·对外实况面缺陷）心跳状态行首出现字面量 `%s` 占位符未被替换：`state/heartbeat.txt` 中 R2734 行实文为 `%s | round=R2734 | lane=qc | ...`，格式化串漏参导致 CEO 可见状态行开头带垃圾字符（违反产品优先律 §5「对外实况面必含三行」的可读性）。定位结论=该拼装不在本仓 `Tools/*.py`（`rg -F "lane=" -g "*.py"` 全仓零命中），属外部启动器/循环壳的状态行模板，故不在本仓盲改；处置=转集团 FLEET-OPS/OSLoop 壳属主修（证据指针=本条+heartbeat 2026-11-13 10:19:56 前一行）。
 - [ ] **T-20260924-08**（集团接口批·P-61/P-64·2026-09-24 R102 立单并同轮首落）轮内维护 `docs/status-export.json` 新鲜度（export_ts ≤24h 新鲜度闸·规范=R-20260924-silicon-watch §六批2）：OS 循环每轮轮末刷新 export_ts+depts/outs/results 按当轮实据派生（F3 律禁写死·计数以 census export+audit 实测为准）；实质状态变更（水位达标/新产出/QC 结果）即更。回执=F-20260924-BL04（48h SLA 内已落）。
   - status: open（常设维护单·R102 首落 docs/status-export.json·下轮起轮末例行）
+  - [2026-11-13 16:31 @BigLife-OSLoop R2793] 常设义务本轮兑现证据：payload 走 `state/export-payload-R2793.json`（声明式写入规避 CLI CJK 坑族）→ `--dry-run` 报 `dept=True qc=True results=False top=True` → 真跑 `OK total=554 reg=552 anc=2` → 再跑两次 sha256 恒定 `6b9809bf161c9dd0`（幂等=已做段全 no-op）；`results` 段按幂等律未重复追加（尾行计数已是最新机器直数，符合「已含本轮计数即跳过」设计，非遗漏）。
   - [2026-11-12 06:1x @BigLife-OSLoop R2540] **对外实况面「多线同文」缺陷治愈**：status-export 六条部门线原为同一段文案（历史一次刷写遗留），CEO 面板读不出各线在干什么。修法=`Tools/update_status_export.py` 新增 `depts_map` 段（depts[1:] 按线名整段替换·幂等=文本已同不重写·未知名 fail-fast `DEPTS_MAP_NAME_GUARD`），自检电池 6/6 PASS，随后按真实实测写入六线各自「当前活/最近实物/下个里程碑」——核验 `UNIQUE_DEPT_TEXTS 6 of 6`，ts=2026-11-12 06:19。
   - [2026-11-12 06:2x @BigLife-OSLoop R2540] 本轮计量：tokens: local=10 api=0 api_reason=-（年轮批 10 试落环 9 张·本地 Ollama qwen3:4b-instruct；池 audit 零 LLM=已全达标自停；相遇轮今日 3/3 封顶零调用；QC 05:45 已巡零调用）
   - 【实录已归档】1 行批实录（2026-09）已逐字移至 tasks/archive/TASKS-2026-09.md——T-20260926-05 拆月归档（原文保全·检索走 rg 全文）
@@ -1491,6 +1492,6 @@ tokens: local=10 api=0 api_reason=-
 - 让路窗（周五工作日 09:00-19:00·D-20261020-02）生效：`evolve_citizen --batch 3` 直接返回 yield-window，年轮/相遇/反思顺延 19:00 后。
 - **确定性面实跑**：`round_daily --run`=stale=2 ran=3 verdict=PASS（重建 city-social-graph.html／city-dashboard.html／index.html）；`qc_census`=cards=10114 problems=0 dup_rings=37/37；`pool_audit`=72 轴桶+12 像素桶全达标 SELF_TERMINATE 零 LLM（determinism 192+25 双验 mismatch=0）；`events_refresh --gate`=derive OK cards=10111 events=42535 replay 10111 mismatch=0 schema_errors=0 PASS，chronicle fresh last=2026-11-13 gap=0d。
 - **假绿核查（无缺陷，结论入档）**：①索引覆盖面=`index.html` 23 条顶级链接 vs `census/export` 34 个 city 页，差集 11 全部是 `city-growth-p01..p11` 分页，经查由 `city-growth.html` 内部 TOC 直链（每页 1000 席＋最深年轮名），**顶层索引不重复收分页＝设计如此，非漏面**；②最小面 `city-growth.html` 5,071B / mtime 11-12 17:44 属结构面 1 日窗内（22.7h）fresh，正文为分页 TOC＋搜索卡，无空面。
-- 对外实况面：`docs/status-export.json` export_ts=2026-11-13 16:18 新鲜（os-loop 轮内刷新），六线 depts 在位。
-- 实况三行：当前活＝让路窗内确定性面体检（索引/分页覆盖核查）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-social-graph.html（2026-11-13 16:24，社交图重建）｜下个里程碑＝19:00 让路窗解→年轮 `--batch 3` 落环 + 提案线首批实批（T-20261113-02 验收）。
+- 对外实况面：`docs/status-export.json` 按当轮实据刷新（T-20260924-08 常设义务）——export_ts **16:31**（此前 16:18 早于本轮），dept0 滚动窗换 R2793 条、QC 线与行为面镜像线整段替换为当轮读数、对外三行（`top_text`）更新；`--dry-run` 与真跑各一次后 sha256 复跑不变（**字节级幂等实证** 6b9809bf…），账平 total=554 reg=552 anc=2。
+- 实况三行：当前活＝让路窗内确定性面体检（索引/分页覆盖核查 + 三可见面重建）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-social-graph.html（2026-11-13 16:24，社交图重建）｜下个里程碑＝19:00 让路窗解→年轮 `--batch 3` 落环 + 提案线首批实批（T-20261113-02 验收）。
 - 计分：可见面实物 2 分（3 个面重建）｜文件改动 1 分｜tokens: local=0 api=0 api_reason=workday-yield-window
