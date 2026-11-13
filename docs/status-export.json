@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-13 23:46",
+ "export_ts": "2026-11-13 23:57",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2830（2026-11-13 23:4x 夜窗）：** 年轮批本轮实测座席 stall——居民 C-04413 连续 7 次心跳（约 3.5 分钟）无回包，GPU 100%/显存 11.8G 贴顶（他人车道占用），按预算止损收掉本批，本轮年轮落环 0 行（诚实记账）；事件回放闸 PASS（cards=10111 events=42779 shards=3 schema_errors=0 mismatch=0 chronicle gap=0d）；round_daily 重建 9 面 + index（relations/districts/dossiers/gallery/ring_picks/ring_recency/ring_openings/ring_quality/ring_trend）verdict=PASS stale=9 failed=0。 **R2829（2026-11-13 23:2x 夜窗）**：年轮批 evolved=10/10 落环（C-04404/C-04405/C-04406/C-04407/C-04408/C-04409/C-04410/C-04411/C-04412/C-04431，其中 C-04404 是 R2828 遗留 stays-due 的首补）+ 行为线镜像 rows=10 自动收口 + 事件回放闸 PASS（events=42779、cards=10111、schema_errors=0、mismatch=0）+ 日更面 3 面重建（city-dashboard/gene-ledger/index） **R2816（2026-11-13 21:3x 夜窗）**：年轮批 evolved=10/10（C-04291/C-04294/C-04295/C-04296/C-04297/C-04298/C-04299/C-04300/C-04301/C-04302 落环）+ 日更面 3 面重建（city-dashboard / gene-ledger / index）+ 可见面覆盖体检 stale=0（39 登记面）；闸全绿：事件回放 42667 事件 / 0 schema / 0 mismatch、chronicle gap=0d、语言池 SELF_TERMINATE、反思线今日 31 行达日上限。",
+   "t": "**R2831（2026-11-14 00:0x 夜窗）：** 座席 stall 快熔闸落地（T-20261113-06，代码实物）——Tools/evolve_citizen.py 新增①单居民 150s wall-clock 硬熔（超时记 stays-due 跳下一位）②启动前显存 >90% 预检让路③socket 超时收紧为剩余预算。本轮实弹验证②：GPU 11830/12282 MiB=96%（ComfyUI 他线任务 + 本席 4B 常驻），年轮批输出 vram-guard 让路行、rc=0，落环 0 行（诚实记账）；round_daily verdict=PASS（index 重建，其余面 skipped-fresh）；池/相遇/反思/QC 均按既有闸零重复。 **R2830（2026-11-13 23:4x 夜窗）：** 年轮批本轮实测座席 stall——居民 C-04413 连续 7 次心跳（约 3.5 分钟）无回包，GPU 100%/显存 11.8G 贴顶（他人车道占用），按预算止损收掉本批，本轮年轮落环 0 行（诚实记账）；事件回放闸 PASS（cards=10111 events=42779 shards=3 schema_errors=0 mismatch=0 chronicle gap=0d）；round_daily 重建 9 面 + index（relations/districts/dossiers/gallery/ring_picks/ring_recency/ring_openings/ring_quality/ring_trend）verdict=PASS stale=9 failed=0。 **R2829（2026-11-13 23:2x 夜窗）**：年轮批 evolved=10/10 落环（C-04404/C-04405/C-04406/C-04407/C-04408/C-04409/C-04410/C-04411/C-04412/C-04431，其中 C-04404 是 R2828 遗留 stays-due 的首补）+ 行为线镜像 rows=10 自动收口 + 事件回放闸 PASS（events=42779、cards=10111、schema_errors=0、mismatch=0）+ 日更面 3 面重建（city-dashboard/gene-ledger/index）",
    "s": 1
   },
   {
@@ -1827,6 +1827,6 @@
    "今日年轮落环 798 行（机器直数·registry/anchors）"
   ]
  ],
- "t": "当前活：夜窗年轮批因座席 stall 止损收批，改为可见面与回放闸收口\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-ring-trend.html（2026-11-13 23:41 重建）\n下个里程碑：2026-11-14 夜窗年轮 --batch 3 恢复 + 座席 stall 根因核查（显存争用）",
- "top_text": "当前活：夜窗年轮批因座席 stall 止损收批，改为可见面与回放闸收口\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-ring-trend.html（2026-11-13 23:41 重建）\n下个里程碑：2026-11-14 夜窗年轮 --batch 3 恢复 + 座席 stall 根因核查（显存争用）"
+ "t": "当前活：T-20261113-06 座席快熔闸落地并实弹验证（显存 96% 让路 rc=0）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\Tools\\evolve_citizen.py（2026-11-14 00:0x 提交 b185505cb）\n下个里程碑：2026-11-14 夜窗 --batch 3 复跑，验收 10/10 落环或按闸跳过可解释（T-20261113-06 ③）",
+ "top_text": "当前活：T-20261113-06 座席快熔闸落地并实弹验证（显存 96% 让路 rc=0）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\Tools\\evolve_citizen.py（2026-11-14 00:0x 提交 b185505cb）\n下个里程碑：2026-11-14 夜窗 --batch 3 复跑，验收 10/10 落环或按闸跳过可解释（T-20261113-06 ③）"
 }
