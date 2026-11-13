@@ -1,19 +1,22 @@
 # -*- coding: utf-8 -*-
-"""build_city_proposals.py v1.0 — 城市议会提案面（proposals 首个可浏览页·确定性零 LLM）
+"""build_city_proposals.py v1.1 — 城市议会提案面（proposals 首个可浏览页·确定性零 LLM）
 
 契约：
   输入 = cognition/proposals.jsonl（提案台账·只读）+ census/export/citizens-light.jsonl（只读姓名/城区/职业）
   输出 = census/export/city-proposals.html（单页·总目录 build_export_index.py 自动收录）
   口径 = 只做加总与罗列，不改写任何提案文本、不发明议员事实。
-  早期行 = 2026-11-12 机读串门禁（MACHINE_TOKEN_ALT 并入 EVENT_CODE_RE）之前落的行：
-           按现行判据实测带机读串者不展示原文（存量不回改·只标注），判据从
-           evolve_citizen 直接 import ＝单源。
+  机读串 = 判据从 evolve_citizen 直接 import＝单源。命中者走 v1.1 **片段级脱敏**
+           （只把专名/事件码换成〔专名〕〔城市事件〕，建议正文照常展示）；
+           脱敏后复检仍有残留才回退整条遮蔽。台账 jsonl 一律不动（存量不回改）。
+           v1.0 曾整条遮蔽，导致 9/9 提案 CEO 零可读（2026-11-13 R2794 治愈）。
   确定性 = 无随机；排序按 (created_at desc, proposal_id)；生成时间只写页脚。
+  回归 = python -X utf8 qa/test_proposal_redact.py
   用法 = python -X utf8 Tools/build_city_proposals.py
 """
 import html
 import json
 import os
+import re
 from datetime import date, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -94,6 +97,60 @@ def machine_hits(text):
     return n
 
 
+REDACT_EVENT = "〔城市事件〕"
+REDACT_CN = "〔术语〕"
+REDACT_LATIN = "〔专名〕"
+
+
+def redact_machine(text):
+    """片段级脱敏（v1.1）：只把命中的机读串片段就地替换成可读占位，保留建议正文。
+
+    背景＝整条遮蔽后 CEO 读到零条实意（9/9 全遮蔽），而实测命中只是局部专名/事件码
+    （BigMoney CODELY / B2396 / G08），正文有价值部分本可保留。台账 jsonl 不动
+    （存量不回改），只改渲染层，不曝光机读串的原始目的仍达成。
+    返回 (redacted, n)。调用方必须用 machine_hits() 复检 ==0 才可采用；复检不为 0
+    （正则跨片段等）则保守回退整条遮蔽。
+    """
+    try:
+        import evolve_citizen as ev
+    except Exception:
+        return text, 0
+    t = text or ""
+    n = 0
+    t, k = ev.EVENT_CODE_RE.subn(REDACT_EVENT, t)
+    n += k
+    t, k = ev.CHINESE_TECH_RE.subn(REDACT_CN, t)
+    n += k
+
+    def _latin(m):
+        nonlocal n
+        w = m.group()
+        if w.lower() in ev.RING_LATIN_WHITELIST:
+            return w
+        n += 1
+        return REDACT_LATIN
+
+    t = ev.TECH_WORD_RE.sub(_latin, t)
+    return _squash_placeholders(t), n
+
+
+_PH = "〔(?:专名|城市事件|术语)〕"
+_PH_SEQ = re.compile("(%s)(?:[\\s_\\-/、·:：]|->|→)*(%s)" % (_PH, _PH))
+
+
+def _squash_placeholders(t):
+    """把「占位符+连接符+占位符」的连续串压成一个占位符——原文里常是
+    「专名_专名 G08 -> G12」这类整段机读引用，逐处占位后读起来是噪声。"""
+    for _ in range(8):
+        m = _PH_SEQ.search(t)
+        if not m:
+            break
+        seg = m.group(0)
+        keep = next((p for p in ("〔城市事件〕", "〔专名〕", "〔术语〕") if p in seg), "〔专名〕")
+        t = t[:m.start()] + keep + t[m.end():]
+    return t
+
+
 def main():
     rows = load_jsonl(PROPOSALS)
     people = load_people()
@@ -141,10 +198,12 @@ def main():
             "当日晚间批次起自动恢复出提案。账见 <code>tasks/TASKS.md</code> T-20261113-02。</div>")
 
     parts.append("<h2>提案名册</h2>")
+    readable = 0
     if not rows:
         parts.append("<p class=\"dim\">尚无提案记录。</p>")
     else:
         parts.append("<table><thead><tr><th>时间</th><th>议员</th><th>提案</th><th>咬合人设</th></tr></thead><tbody>")
+        readable = 0
         for r in rows:
             cid = r.get("citizen_id", "")
             p = people.get(cid, {})
@@ -156,10 +215,18 @@ def main():
             ] if x)
             n = dirty.get(r.get("proposal_id"), 0)
             if n:
-                body = ("<span class=\"muted\">原文触现行门禁词（早期落账）——"
-                        "按存量不回改口径此处只标注、不展示原文；原行见台账 jsonl。</span>")
+                red, rn = redact_machine(r.get("text", ""))
+                if rn and machine_hits(red) == 0:
+                    body = (f"{html.escape(red)} "
+                            "<span class=\"muted\">（原句含机读串，已就地隐去 "
+                            f"{rn} 处）</span>")
+                    readable += 1
+                else:
+                    body = ("<span class=\"muted\">原文触现行门禁词（早期落账）——"
+                            "按存量不回改口径此处只标注、不展示原文；原行见台账 jsonl。</span>")
             else:
                 body = html.escape(r.get("text", ""))
+                readable += 1
             hit = "<span class=\"tag\">是</span>" if r.get("face_hit") else "<span class=\"dim\">否</span>"
             parts.append("<tr>"
                          f"<td class=\"id\">{html.escape(str(r.get('created_at', '')))}</td>"
@@ -167,7 +234,10 @@ def main():
         parts.append("</tbody></table>")
 
     parts.append("<h2>口径</h2><ul class=\"dim\">")
-    parts.append(f"<li>展示行 {len(clean)} 条（过现行机读串判据）；标注行 {len(early)} 条（早期落账，原文不回改）。</li>")
+    parts.append(f"<li>可读行 {readable} / {len(rows)} 条：命中门禁词的提案采用<strong>片段级脱敏</strong>——"
+                 "只隐去机读串本身（专名/事件码→〔专名〕〔城市事件〕），建议正文照常展示；"
+                 "脱敏后复检仍有残留者才整条遮蔽。</li>")
+    parts.append(f"<li>台账不动：命中行 {len(early)} 条为早期落账，按「存量不回改」口径 <code>cognition/proposals.jsonl</code> 原文保留。</li>")
     parts.append("<li>「咬合人设」＝提案文本与本人卡面人设域有 4 字以上重合（契约 §一 face_hit 标记）。</li>")
     parts.append("<li>本页只读罗列，不改写提案文本、不补写未发生的提案。</li>")
     parts.append("</ul>")
