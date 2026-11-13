@@ -1316,3 +1316,14 @@ tokens: local=10 api=0 api_reason=-
   计分：能跑/能看实物=2 分（当日日报页重渲，CEO 可直接打开）｜文件改动=1 分。
   waiting: yield-window ETA 2026-11-13 19:00
   tokens: local=0 api=0 api_reason=yield-window
+
+
+- [R2743] 2026-11-13 11:4x @BigLife-OSLoop 让路窗确定性产品轮：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（watermark 尾 D-20261112-16，集团无 11-13 本司新行；唯一差集 d-20261023-23 系已注记 noise）；orders 物理件区无涉本司新件；TASKS open 全在观测窗（T-20261113-02 待 19:00 实批、T-20261112-01/02/03/04 待连续 3 生产日窗口）。
+  **年轮/相遇/提案=0**：工作日让路窗（09:00-19:00，D-20261020-02）内 LLM 面结构性延后，19:00 恢复，不重扫。
+  **产品增量一（居民多点真实过往）**：gene_adopt 实发 5 席（C-09404 分红头一笔/ C-10037 接手木匠铺缠墨斗线/ C-10088 照相馆半边身相/ C-10101 大风夜帮收衣服/ C-10090 捡兔子灯等失主），写成「经历」行尾巴，unused 492→487（亲和度门已近枯竭：492 条里仅 5 条能满足 3 稀有 gram + 职业域交集）。
+  **产品增量二（真缺陷修复·T-20261112-02 同族第九例）**：round_daily 的 DEPENDS 判据对目录源用 os.path.getmtime()，而目录 mtime 只反映增删、不反映既有卡正文改写 ⇒ gene_adopt 改 5 张卡后 gene_ledger/relations/districts/dossiers/gallery/ring_picks/ring_quality/ring_trend 八面仍判 fresh 零重建，台账与正文脱钩。修法：_newest_mtime 对目录遍历取子树最新文件（进程内缓存，一万余卡只扫一次）+ gene_ledger/lexicon 免 60 分钟冷却（百 KB 台账面逐次重建 <1s，补数据不该被压一小时不可见）。实证：修前 --check stale=0（漏判），修后 stale=8 现形，--run 34s 全重建 failed=0 verdict=PASS。
+  **闸面**：事件回放闸 PASS（cards=10111 events=42535 replayed=10111 schema_errors=0 mismatch=0 · 改卡后即跑）；gene-ledger.html 重建 11:43:30（FFFD=0，页头自报户卡 10091 张）；index.html 导航重排。
+  **三行实况**：当前活=让路窗内确定性产线（年轮/相遇/提案 19:00 恢复）｜最近实物=C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\gene-ledger.html（2026-11-13 11:43）+ census\\export\\city-relations.html 等 8 面｜下个里程碑=19:00 让路窗解→年轮批落环 + 提案线首批自动产出（T-20261113-02 验收，窗 ≤48h）
+  计分：能跑/能看实物=2 分（8 面刷新 + 5 席经历行）+ 文件改动=1 分 · commit 2cbd77dbb 已推送
+  waiting: yield-window ETA 2026-11-13 19:00
+  tokens: local=0 api=0 api_reason=yield-window
