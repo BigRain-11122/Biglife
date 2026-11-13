@@ -46,6 +46,9 @@ from ring_simile_audit import (  # noqa: E402
 from ring_open_family import (  # noqa: E402
     FAMILY_MIN_DENOM,
     FAMILY_QUOTA,
+    check_verdict,
+    epoch_mix_state,
+    epochs_of,
     family_of,
     over_quota,
     second_attrs_of,
@@ -126,6 +129,9 @@ def family_daily(bodies: dict[str, list[str]]) -> list[dict]:
             "over": over_quota(total, dict(fam)),
             "over_fams": over_fams,
             "judged": total >= FAMILY_MIN_DENOM,
+            # 纪元口径（与 --check 同源）：立族当天/守卫上线前的读数跨两版族表，
+            # 占比不可与 25% 线对账，展示「跨口径」而非 OVER（R2790）。
+            "mix": epoch_mix_state(epochs_of(date)),
         })
     return out
 
@@ -191,7 +197,12 @@ def build_page(days: list[dict], stats: dict, fams: list[dict]) -> str:
         if not f["over"]:
             return "OK"
         # 表内只列 HAND_DEICTIC，超线族可能是另两族，必须点名防误读为「本列超线」
-        return "OVER（%s）" % "、".join("%s %.1f%%" % x for x in f["over_fams"])
+        _names = "、".join("%s %.1f%%" % x for x in f["over_fams"])
+        if f.get("mix") != "single":
+            # 混口径日（立族当天重扫/守卫上线前）：越线来自新表对旧环的重分类，
+            # 不等于当日生产越线 → 明标不可比（R2790，与 --check 三态同源）
+            return "跨口径（%s）" % _names
+        return "OVER（%s）" % _names
 
     fam_table = "".join(
         "<tr><td>%s</td><td>%d</td><td>%d</td><td>%.1f%%</td><td>%.1f%%</td><td>%s</td></tr>"
@@ -279,7 +290,8 @@ def main() -> int:
         return 1
     fams = family_daily(bodies)
     judged = [f for f in fams if f["judged"]] or fams
-    now = judged[-1] if judged else {"date": day, "hand_rate": 0.0, "rings": 0, "over": []}
+    now = judged[-1] if judged else {"date": day, "hand_rate": 0.0, "rings": 0,
+                                     "over": [], "mix": "single"}
 
     last7 = days[-7:]
     recent_def = sum(d["defect"] for d in last7)
@@ -295,7 +307,8 @@ def main() -> int:
         "hand_now": now["hand_rate"],
         "hand_day": now["date"],
         "hand_rings": now["rings"],
-        "hand_verdict": "OVER" if now["over"] else "OK",
+        "hand_verdict": ("跨口径" if now.get("mix") != "single"
+                         else ("OVER" if now["over"] else "OK")),
         "hand_over": "、".join("%s %.1f%%" % x for x in now.get("over_fams") or []),
         "quota": 100.0 * FAMILY_QUOTA,
         "min_denom": FAMILY_MIN_DENOM,

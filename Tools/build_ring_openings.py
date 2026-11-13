@@ -249,6 +249,10 @@ def main():
              (last["unclassified"][1] if last else 0.0),
              model["ban"]))
     print("wrote %s" % os.path.relpath(OUT_HTML, ROOT))
+    # 立族后必跑本脚本重建 → 顺手登记当前族表版本。R2790：R2789 15:38 立族
+    # v1.4 后漏跑 note_epoch，当日纪元只剩 12:09 一条，混口径提示因此不触发。
+    # note_epoch 自身落盘失败吞异常，不阻塞重建。
+    print("epoch logged: %s (n=%d)" % (rof.TABLE_EPOCH, len(rof.note_epoch())))
     return 0
 
 

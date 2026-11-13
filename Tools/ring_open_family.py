@@ -400,6 +400,38 @@ def epochs_of(day):
     return [r.get("epoch") for r in (data.get(day) or []) if r.get("epoch")]
 
 
+def epoch_mix_state(day_epochs, current_epoch=None):
+    """某日纪元面与当前族表的口径关系（纯函数·只读·供 --check 与自测）。
+
+    'none'         当日无登记（守卫上线前，或立族后漏跑 note_epoch）
+    'multi'        当日登记 ≥2 个版本（确定跨口径：读数混有立族前出生的环）
+    'curr-missing' 当日有登记但当前族表版本不在其中（旧表出生＋新表立族/漏记）
+    'single'       当日只用一版且正合当前表（同口径，可直接与配额线对账）
+
+    为何要与 'multi' 分开：只按「登记数 > 1」判会漏掉「立族后忘记登记」这一类——
+    当日登记仍是一条旧版本，占比却已混入新表重分类，正是 R2789 立族后的实况。
+    """
+    eps = [e for e in (day_epochs or []) if e]
+    if not eps:
+        return "none"
+    if len(eps) > 1:
+        return "multi"
+    cur = current_epoch or TABLE_EPOCH
+    return "single" if cur in eps else "curr-missing"
+
+
+def check_verdict(mix_state, over):
+    """--check 三态判定（纯函数·供 --check 与自测）。
+
+    混口径日（multi／curr-missing／none）的占比跨两版族表，报 OVER 会把
+    「历史环被新表重分类」误植成「本轮生产越线」→ 一律 CROSS-EPOCH（不可比、不阻断）。
+    只有同口径（single）才允许判 OVER／PASS。
+    """
+    if mix_state != "single":
+        return "CROSS-EPOCH"
+    return "OVER" if over else "PASS"
+
+
 def _production(registry=None):
     root = registry or REGISTRY
     pat = re.compile(r"- (\d{4}-\d{2}-\d{2}) 「([^」]{8,})」")
@@ -523,6 +555,35 @@ def _selftest():
         print("%-24s got=%-12s want=%-12s %s" % (label, got, want, "OK" if ok else "FAIL"))
         if not ok:
             bad += 1
+    # R2790 纪元口径四态探针（纯函数·定值·不碰真件）：
+    # 只按「登记数>1」判的老写法会漏掉「立族后漏记」——当日仅一条旧版本，
+    # 读数却已混入新表重分类（R2789 15:38 v1.4 立族实况）。
+    _ep_probes = [
+        ("neg-epoch-none", [], "2026-11-13T15:38", "none"),
+        ("pos-epoch-multi", ["2026-11-13T12:09", "2026-11-13T15:38"], "2026-11-13T15:38", "multi"),
+        ("pos-epoch-curr-missing", ["2026-11-13T12:09"], "2026-11-13T15:38", "curr-missing"),
+        ("neg-epoch-single", ["2026-11-13T15:38"], "2026-11-13T15:38", "single"),
+    ]
+    for label, eps, cur, want in _ep_probes:
+        got = epoch_mix_state(eps, cur)
+        ok = got == want
+        print("%-24s got=%-14s want=%-14s %s" % (label, got, want, "OK" if ok else "FAIL"))
+        if not ok:
+            bad += 1
+    # 三态判定探针：混口径一律 CROSS-EPOCH（不阻断），同口径才按越线判 OVER/PASS。
+    _vd_probes = [
+        ("pos-verdict-over", "single", ["HAND_DEICTIC"], "OVER"),
+        ("neg-verdict-pass", "single", [], "PASS"),
+        ("pos-verdict-cross-multi", "multi", ["HAND_DEICTIC"], "CROSS-EPOCH"),
+        ("pos-verdict-cross-missing", "curr-missing", ["HAND_DEICTIC"], "CROSS-EPOCH"),
+        ("neg-verdict-cross-none", "none", ["HAND_DEICTIC"], "CROSS-EPOCH"),
+    ]
+    for label, mix, over, want in _vd_probes:
+        got = check_verdict(mix, over)
+        ok = got == want
+        print("%-24s got=%-14s want=%-14s %s" % (label, got, want, "OK" if ok else "FAIL"))
+        if not ok:
+            bad += 1
     days = production_days(3)
     if days:
         d = days[-1]
@@ -589,6 +650,12 @@ def main(argv=None):
         total, fam = scan_day(args.check)
         over = over_quota(total, fam)
         _ep = epochs_of(args.check)
+        _mix = epoch_mix_state(_ep)
+        # 混口径日（立族当天的环跨越两版族表）→ 占比不可与 25% 线对账：
+        # 报 OVER 会把「历史环被新表重分类」误植成「本轮生产越线」（R2789 实况）。
+        # 故三态：PASS／OVER／CROSS-EPOCH；CROSS-EPOCH 不阻断（rc=0）但明标不可比。
+        _comparable = _mix == "single"
+        _verdict = check_verdict(_mix, over)
         detail = {f: (fam.get(f, 0), round(fam.get(f, 0) / total * 100, 1) if total else 0.0)
                   for f in FAMILIES}
         _uc_n, _uc_pct = unclassified(total, fam)
@@ -597,21 +664,29 @@ def main(argv=None):
                               "over": over, "quota": FAMILY_QUOTA,
                               "unclassified": {"n": _uc_n, "pct": round(_uc_pct, 1)},
                               "table_epoch": TABLE_EPOCH, "epochs": _ep,
-                              "verdict": "OVER" if over else "PASS"},
+                              "epoch_mix": _mix, "quota_comparable": _comparable,
+                              "verdict": _verdict},
                              ensure_ascii=False, indent=1))
         else:
             print("date=%s rings=%d quota=%.0f%%" % (args.check, total, FAMILY_QUOTA * 100))
             for f, (c, pct) in detail.items():
-                print("  %-18s %5d  %5.1f%%%s" % (f, c, pct, "  <- OVER" if f in over else ""))
+                _mark = ""
+                if f in over:
+                    _mark = "  <- OVER" if _comparable else "  <- 越线(跨口径·不可比)"
+                print("  %-18s %5d  %5.1f%%%s" % (f, c, pct, _mark))
             print("  %-18s %5d  %5.1f%%  (盲区：未被任何族识别)" % ("unclassified", _uc_n, _uc_pct))
-            if len(_ep) > 1:
+            if _mix == "multi":
                 print("  口径：族表当日变更 %d 次 %s → 占比跨口径，"
                       "勿与配额线直接对账（本日读数混有立族前出生的环）"
                       % (len(_ep), ",".join(_ep)))
-            elif not _ep:
+            elif _mix == "curr-missing":
+                print("  口径：当前族表 %s 未在本日生产期登记（当日登记 %s）→ "
+                      "读数含立族前出生的环（或立族后漏跑 note_epoch），"
+                      "勿与配额线直接对账" % (TABLE_EPOCH, ",".join(_ep)))
+            elif _mix == "none":
                 print("  口径：本日无族表版本登记（守卫 v1.2 之前的日子）→ 与当前族表同口径不可假设")
-            print("verdict: %s" % ("OVER" if over else "PASS"))
-        return 0 if not over else 2
+            print("verdict: %s" % _verdict)
+        return 2 if (_comparable and over) else 0
 
     if args.scan:
         days = production_days(args.days)
