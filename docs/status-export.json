@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-14 06:13",
+ "export_ts": "2026-11-14 07:19",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2879（晨窗年轮批）**：年轮 10 环落环（C-04768/04770/04776/04789/04791/04769/04771/04772/04773/04774）+ 行为线镜像 rows=10 ring=10114 + 事件回放闸 PASS（cards=10111 events=43151 replay=10111 mismatch=0）+ 可见面 4 面重建 PASS **R2878（2026-11-14 06:0x）**：基因近重闸存量对修复——ha 池「柜台最显眼」两句相似度 76.6 超阈致 QC 常驻 2 FAIL 并堵住 ha 追加，改写后者为「供在收银机旁的玻璃罩里，说是招财」后 nearcheck --qc 转 17 PASS / 0 FAIL（池峰值 69.565 < 70）；同轮年轮 10 席落环（C-04758/04759/04762/04763/04788/04760/04764/04765/04766/04767，[锚] 注脚齐备）、行为线镜像 ring=10114、事件回放闸 mismatch=0、日更面 3 面重建。 **R2874（11-14 05:18-05:3x）：年轮线批产 10/10 落环 + 三可见面重建 + 事件回放闸 PASS**｜本地 qwen3:4b-instruct 直产，10 席全部过闸落环（C-04708/04709/04711/04722/04749/04710/04712/04713/04715/04716）；`round_daily --run` stale=2 ran=3 verdict=PASS failed=0（city-dashboard/gene-ledger/index 重建）；`events_refresh --gate` derive cards=10111/events=43091、replay replayed=10111 schema_errors=0 mismatch=0 PASS；`pool_audit` 72 轴桶+12 像素桶+greet 28+faq 7+负例 6/6 全达标 SELF_TERMINATE（hard_fails=0，determinism 192+25 对 mismatch=0）；决策水位差集 NEW=0（覆盖至 D-20261112-16）；HQ 反馈闸 day=2026-11-14 已报（lines=2）零写入。",
+   "t": "**R2886（2026-11-14 07:13-07:2x）**：晨窗年轮批 10 席落环（C-04836/04840/04843/04847/04856/04839/04841/04844/04845/04846，43 秒零 stall）+ 4 可见面重建 + 事件回放闸 mismatch=0 PASS；池/相遇/反思/QC 按闸律跳过。 **R2879（晨窗年轮批）**：年轮 10 环落环（C-04768/04770/04776/04789/04791/04769/04771/04772/04773/04774）+ 行为线镜像 rows=10 ring=10114 + 事件回放闸 PASS（cards=10111 events=43151 replay=10111 mismatch=0）+ 可见面 4 面重建 PASS **R2878（2026-11-14 06:0x）**：基因近重闸存量对修复——ha 池「柜台最显眼」两句相似度 76.6 超阈致 QC 常驻 2 FAIL 并堵住 ha 追加，改写后者为「供在收银机旁的玻璃罩里，说是招财」后 nearcheck --qc 转 17 PASS / 0 FAIL（池峰值 69.565 < 70）；同轮年轮 10 席落环（C-04758/04759/04762/04763/04788/04760/04764/04765/04766/04767，[锚] 注脚齐备）、行为线镜像 ring=10114、事件回放闸 mismatch=0、日更面 3 面重建。",
    "s": 1
   },
   {
@@ -1877,8 +1877,12 @@
   [
    "372",
    "环 372 零差"
+  ],
+  [
+   "442",
+   "R2886 收口：本轮年轮落环 10 行，今日累计 442 行（tokens: local=10 api=0）。"
   ]
  ],
- "t": "当前活：晨窗年轮批 10 席落环 + 回放闸/日更面双绿收口\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-11-14 06:09 重建）\n下个里程碑：19:00 后反思线 --batch 5（验 reflections.jsonl 尾部 date=当日）+ 11-15 全日 HAND/PROP 开头族闸复核",
- "top_text": "当前活：晨窗年轮批 10 席落环 + 回放闸/日更面双绿收口\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-11-14 06:09 重建）\n下个里程碑：19:00 后反思线 --batch 5（验 reflections.jsonl 尾部 date=当日）+ 11-15 全日 HAND/PROP 开头族闸复核"
+ "t": "当前活：晨窗年轮批 10 席落环 + 日更面/回放闸双绿收口\n最近实物：C:\\\\Users\\\\sjs20\\\\Desktop\\\\FluxGroup\\\\life\\\\BigLife\\\\census\\\\export\\\\city-dashboard.html（2026-11-14 07:15 重建）\n下个里程碑：19:00 后反思线 --batch 5（验 reflections.jsonl 尾部 date=当日）+ 11-15 全日 HAND/PROP 开头族闸复核",
+ "top_text": "当前活：晨窗年轮批 10 席落环 + 日更面/回放闸双绿收口\n最近实物：C:\\\\Users\\\\sjs20\\\\Desktop\\\\FluxGroup\\\\life\\\\BigLife\\\\census\\\\export\\\\city-dashboard.html（2026-11-14 07:15 重建）\n下个里程碑：19:00 后反思线 --batch 5（验 reflections.jsonl 尾部 date=当日）+ 11-15 全日 HAND/PROP 开头族闸复核"
 }
