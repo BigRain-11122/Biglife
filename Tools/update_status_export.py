@@ -123,6 +123,13 @@ def apply_refresh(payload, dry_run=False, heartbeat=False):
     qc_text = payload.get("qc_text")
     if qc_text and not qc_text.strip().startswith(qc_marker):
         raise SystemExit("QC_TEXT_FORMAT_GUARD expect startswith %r" % qc_marker)
+    # 出生地拦截：对外正文里出现裸格式化占位符（%s/%d 之类）= 上一个循环壳的漏参病，
+    # 引述它也会被 CEO 读成「界面坏了」——一律拒写，改用中文说法（R2795 判例）。
+    bare = re.compile(r"%[sdifr]\b")
+    for field in ("dept_text", "qc_text", "top_text", "results_note"):
+        val = payload.get(field)
+        if isinstance(val, str) and bare.search(val):
+            raise SystemExit("TEXT_PLACEHOLDER_GUARD %s contains bare %%s-like token" % field)
 
     raw = io.open(SE_PATH, encoding="utf-8").read()
     had_nl = raw.endswith("\n")

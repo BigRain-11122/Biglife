@@ -55,3 +55,19 @@ selftest: 6 probes, 0 fail
 
 - 本守卫**不让坏行变得合法**，只让坏行不再无声消失：坏行数 >0 时看板标红，逼下一轮去修数据或修壳。
 - 根治仍在写方（外部启动器模板补时间戳）。本仓能做的是把它变成可核对项——已做到。
+
+## 五、同批自伤事件与出生地闸（16:5x 追加）
+
+**现象**：本轮把缺陷写进 `docs/status-export.json` 的 dept 文案时，为了说明问题**引述**了那个字面量占位符，于是 CEO 面又多出一条带 `%s` 的句子——自己把刚修的病重新引回界面（自查时 `has_pct_s: True` 抓到）。
+
+**处置**：
+1. 就地改写成中文说法（「格式化串残渣行」），JSON 解析自证通过，`replaced=1 pct_s_left=False R2795=True`。
+2. **出生地拦截**：`Tools/update_status_export.py` 新增 `TEXT_PLACEHOLDER_GUARD`——`dept_text / qc_text / top_text / results_note` 任一含裸 `%s/%d/%i/%f/%r` 直接拒写（措辞要求改中文），避免「引述缺陷」把缺陷搬回对外面。
+
+**验证**：
+- 自检电池 `QC_BATTERY 6/6 PASS`。
+- 负控：payload 的 `top_text` 塞入裸占位符 → 真被拒（`TEXT_PLACEHOLDER_GUARD ... contains bare %s-like token`）。
+- 收尾复核：`docs/status-export.json` `pct_s=False` 且保留 `R2795`；`city-ops.html` `pct_s=False`、`orphans=0`。
+
+**教训**：对外面的"引述"与"残渣"在读者眼里没有区别——描述缺陷时要换词，不要复刻病征。
+
