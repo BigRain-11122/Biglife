@@ -103,7 +103,17 @@ def main():
     rows = load()
     total = len(rows)
     sp = collections.Counter((r.get("species") or "?") for r in rows)
-    dist = collections.Counter((r.get("district") or "(未落户)") for r in rows)
+    # 口径（2026-11-13）：创始家庭/荣誉市民（anchor 且无城区）是城主席，不是街区居民——
+    # 不计入街区数，单列「荣誉席」桶；非荣誉席却无城区才是真缺口，保留「(未落户)」让它可见。
+    hon = [r for r in rows if r.get("anchor") and not (r.get("district") or "").strip()]
+    dist = collections.Counter(
+        (r.get("district") or "").strip()
+        for r in rows
+        if (r.get("district") or "").strip()
+    )
+    unhomed = total - sum(dist.values()) - len(hon)
+    if unhomed:
+        dist["(未落户)"] = unhomed
     prof = collections.Counter((r.get("profession") or "(未记)") for r in rows)
     rings = [r for r in rows if r.get("recent_ring")]
     by_date = collections.Counter((r.get("recent_ring_date") or "-") for r in rings)
@@ -226,6 +236,7 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
   <div class="kpi"><b>%(rings)d</b><span>已写年轮</span></div>
   <div class="kpi"><b>%(cov).0f%%</b><span>年轮覆盖率</span></div>
   <div class="kpi"><b>%(nd)d</b><span>街区</span></div>
+  <div class="kpi"><b>%(hon)d</b><span>荣誉席·创始家庭</span></div>
   <div class="kpi"><b>%(np)d</b><span>职业</span></div>
   <div class="kpi"><b>%(today)d</b><span>今日新增年轮</span></div>
 </div>
@@ -263,12 +274,17 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
         "rings": len(rings),
         "cov": cov,
         "nd": len(dist),
+        "hon": len(hon),
         "np": len(prof),
         "today": ring_days.get(today.isoformat(), 0),
         "daybars": day_bars,
         "gap": ('<p class="gap">%s</p>' % html.escape(gap_line)) if gap_line else "",
         "sp": bar([(SPECIES_CN.get(k, k), v) for k, v in sp.most_common()], total),
-        "dist": bar([(DISTRICT_CN.get(k, k), v) for k, v in dist.most_common()], total),
+        "dist": bar(
+            [(DISTRICT_CN.get(k, k), v) for k, v in dist.most_common()]
+            + ([("荣誉席（创始家庭·非街区）", len(hon))] if hon else []),
+            total,
+        ),
         "prof": bar(prof.most_common(), total, limit=12),
         "feed": len(feed),
         "cards": "\n".join(cards),
