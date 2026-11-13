@@ -1578,3 +1578,4 @@ ound_daily --check 39 面全 fresh stale=0 PASS；pool_audit SELF_TERMINATE（72
   - **违规记录（诚实）**：反思线规程写「每晚至多 1 次」，而 R2805（19:42）与本轮（19:52）各跑一次 → 今日实际 2 次。本轮在未查当日既跑记录的情况下开跑，属规程执行疏漏；与 R2805 已提出的「reflect_citizen 应加当日已有行 yield 日闸」同一根因，支持该日闸落地（待立单）。
   - 实况三行：当前活=解窗后年轮批+反思批+闸面复核｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/reflections.jsonl（2026-11-13 19:52，尾部当日 5 条）；census/QC-REPORT.md（19:57）｜下个里程碑=2026-11-14 19:00 年轮批 + T-20261113-05 反思线连续 3 日验收（11-14 判定）
   - 计分：居民年轮 10 席（内容本体）=2 分｜tokens: local=15 api=0 api_reason=-
+- [R2807] 2026-11-13 19:5x-20:0x @BigLife-OSLoop 夜窗产品轮：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（watermark 尾 D-20261112-16）；年轮批 evolved=9/10（C-04208/04223/04231/04251/04210/04211/04212/04213/04215·与前轮同集幂等零盘差）、事件回放闸 PASS（cards=10111 events=42586 schema=0 mismatch=0）、日更面 rebuilt=3（city-dashboard/gene-ledger/index）、反思线夜窗新增 5 条、池体检 SELF_TERMINATE 按律跳过；定向 commit。tokens: local=15 api=0 api_reason=-
