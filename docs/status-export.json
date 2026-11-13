@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-14 00:43",
+ "export_ts": "2026-11-14 00:53",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2837（2026-11-14 00:39-00:5x）：年轮 10 环落环 + 12 面读者面重建 + 事件闸 PASS**——evolve_citizen --batch 3 → evolved=10 of 10 due（C-04443/C-04446/C-04449/C-04459/C-04477/C-04444/C-04445/C-04447/C-04448/C-04450，3 处 recent-dup 软让步仍落环）；events_refresh --gate → events=42823 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0 PASS；round_daily --run → stale=11 ran=12 failed=0 PASS（看板/城区志/名人录/物件志/相遇/提案/环龄/环开篇/环品质/基因台账/索引重建）；相遇 1 对（C-04444 彭未晞 × C-04448 吕莉，同城区 GM）。 **R2831（2026-11-14 00:0x 夜窗）：** 座席 stall 快熔闸落地（T-20261113-06，代码实物）——Tools/evolve_citizen.py 新增①单居民 150s wall-clock 硬熔（超时记 stays-due 跳下一位）②启动前显存 >90% 预检让路③socket 超时收紧为剩余预算。本轮实弹验证②：GPU 11830/12282 MiB=96%（ComfyUI 他线任务 + 本席 4B 常驻），年轮批输出 vram-guard 让路行、rc=0，落环 0 行（诚实记账）；round_daily verdict=PASS（index 重建，其余面 skipped-fresh）；池/相遇/反思/QC 均按既有闸零重复。 **R2830（2026-11-13 23:4x 夜窗）：** 年轮批本轮实测座席 stall——居民 C-04413 连续 7 次心跳（约 3.5 分钟）无回包，GPU 100%/显存 11.8G 贴顶（他人车道占用），按预算止损收掉本批，本轮年轮落环 0 行（诚实记账）；事件回放闸 PASS（cards=10111 events=42779 shards=3 schema_errors=0 mismatch=0 chronicle gap=0d）；round_daily 重建 9 面 + index（relations/districts/dossiers/gallery/ring_picks/ring_recency/ring_openings/ring_quality/ring_trend）verdict=PASS stale=9 failed=0。",
+   "t": "**R2838（2026-11-14 00:48-01:0x）：年轮 10 环落环 + 日更面重建 3 面 + 事件闸 PASS + 语言池自终止**——evolve_citizen --batch 3 → evolved=10 of 10 due（C-04451/C-04452/C-04454/C-04468/C-04480/C-04453/C-04455/C-04456/C-04457/C-04458，1 处 recent-dup 软让步仍落环）；events_refresh --gate → events=42835 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0 PASS；round_daily --run → stale=2 ran=3 failed=0 PASS（看板/基因台账/索引重建）；pool_audit → 72 桶全达标，SELF_TERMINATE 零生成；相遇轮今日 cap 3 已满，跳过。 **R2837（2026-11-14 00:39-00:5x）：年轮 10 环落环 + 12 面读者面重建 + 事件闸 PASS**——evolve_citizen --batch 3 → evolved=10 of 10 due（C-04443/C-04446/C-04449/C-04459/C-04477/C-04444/C-04445/C-04447/C-04448/C-04450，3 处 recent-dup 软让步仍落环）；events_refresh --gate → events=42823 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0 PASS；round_daily --run → stale=11 ran=12 failed=0 PASS（看板/城区志/名人录/物件志/相遇/提案/环龄/环开篇/环品质/基因台账/索引重建）；相遇 1 对（C-04444 彭未晞 × C-04448 吕莉，同城区 GM）。 **R2831（2026-11-14 00:0x 夜窗）：** 座席 stall 快熔闸落地（T-20261113-06，代码实物）——Tools/evolve_citizen.py 新增①单居民 150s wall-clock 硬熔（超时记 stays-due 跳下一位）②启动前显存 >90% 预检让路③socket 超时收紧为剩余预算。本轮实弹验证②：GPU 11830/12282 MiB=96%（ComfyUI 他线任务 + 本席 4B 常驻），年轮批输出 vram-guard 让路行、rc=0，落环 0 行（诚实记账）；round_daily verdict=PASS（index 重建，其余面 skipped-fresh）；池/相遇/反思/QC 均按既有闸零重复。",
    "s": 1
   },
   {
@@ -1829,8 +1829,12 @@
   [
    "46",
    "今日年轮落环行数 46（4 批 × 10）；本批读者面 12 面已重建入库（commit d0864c6d7）。"
+  ],
+  [
+   "56",
+   "今日年轮落环行数 56（5 批 × 10）；本批 3 面已重建入库（commit ded98d257）。"
   ]
  ],
- "t": "当前活：夜窗年轮批 + 读者面刷新收口（R2837 已推送）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-11-14 00:46 重建）\n下个里程碑：2026-11-14 日间窗 QC 巡检（6 轮节律到期）+ 年轮批续跑，窗 ≤24h",
- "top_text": "当前活：夜窗年轮批 + 读者面刷新收口（R2837 已推送）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-11-14 00:46 重建）\n下个里程碑：2026-11-14 日间窗 QC 巡检（6 轮节律到期）+ 年轮批续跑，窗 ≤24h"
+ "t": "当前活：夜窗年轮批 + 日更面刷新收口（R2838 已推送）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-11-14 00:50 重建）\n下个里程碑：2026-11-14 日间窗 QC 巡检（6 轮节律到期）+ 年轮批续跑，窗 ≤24h",
+ "top_text": "当前活：夜窗年轮批 + 日更面刷新收口（R2838 已推送）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-11-14 00:50 重建）\n下个里程碑：2026-11-14 日间窗 QC 巡检（6 轮节律到期）+ 年轮批续跑，窗 ≤24h"
 }
