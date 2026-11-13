@@ -1377,3 +1377,14 @@ tokens: local=10 api=0 api_reason=-
   **对外实况三行**：当前活＝让路窗内确定性面与 CEO 概括口径校正（年轮/相遇/提案 19:00 恢复）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-dashboard.html（2026-11-13 13:2x，街区 6+荣誉席 3 口径）｜下个里程碑＝19:00 让路窗解→年轮批落环 + 提案线首批自动产出（ETA 今晚，窗 ≤8h）。
   计分：能看实物=2 分（看板 KPI/分布口径改正，可直接打开）｜文件改动=1 分｜commit de6fb4219 已推。
   tokens: local=0 api=0 api_reason=workday-yield-window
+
+- [R2777] 2026-11-13 13:2x-13:5x @BigLife-OSLoop 让路窗轮（周五工作日·D-20261020-02 年轮/相遇/提案顺延 19:00）：轮首 pull=Already up to date、树净；决策水位 v2 复算 consumed=234（was_stale=True·无本司新派工）；orders 物理件区无涉本司新件。
+  **产品增量（源头修·代码面）**：`Tools/ring_open_family.py` 新增 `unclassified(total, fam)`，把「未被任何族识别」的环数与占比接到 `--check / --scan / --by-source` 三处输出（JSON 加 `unclassified{n,pct}`），`--selftest` 加三条探针。**为什么**：12:09 前 `^手里` 87 条与「那台/这把」器物起句全落 `family_of=None`，配额闸看不见 → 手部族真占比 40.0% 被读成 25.0%；PROP_DEICTIC 立族与 ^手里 补盲是对症，但下一种新句式出现时仍会隐身，故把盲区做成每轮读数，不靠人眼再发现一次。
+  **实数据实证**：`--check 2026-11-13` 552 环 → HAND 221(40.0%) OVER / PROP 171(31.0%) OVER / **unclassified 159(28.8%)**；`--by-source` batch 548 环 unclass=155(28.3%)、meet 4 环 unclass=4；闸判定与退出码不变（仍 rc=2 OVER，零行为漂移）。
+  **盲区抽样归因**：`账本翻到第三页…` 10 条（R2760 已立 prompt-example-echo 出生站拒稿，余量为修前存量不回改）、其余为散句（檐口水线/笔尖/袖口风灌），无第二个系统性族潜伏。
+  **诚实边界**：①今日 40%/31% 双族越线属既有存量（12:09 已登记），不回溯改年轮，19:00 起由已武装的禁集实测收口；②盲区读数只提高可观测性，不声称提升品质。
+  **伪缺陷核实（防误报）**：盲区样本中两条疑似 GBK 乱码经全库字节扫描（`encode('gbk').decode('utf-8')` round-trip + U+FFFD）实证 **mojibake_rings=0** → 属 PowerShell 管道 cp936 显示假象（R2550/R2572 同判例），数据面干净、零文件改动。
+  闸面：py_compile rc=0／`--selftest` PASS(0 fail，含新 3 探针)／round_daily `--check` stale=0 PASS／pool_audit PASS SELF_TERMINATE（72/72+12/12+greet28+faq7+neg6）／QC 13:29 cards=10114 evolved=10114 problems=0／HQ 日闸 ALREADY_REPORTED(day=2026-11-13 lines=1) 零写入。
+  **对外实况三行**：当前活＝年轮开口族盲区读数上线（让路窗内确定性面）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\Tools\ring_open_family.py（unclassified 三处接线）+ C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-trend.html（今日 552 环·缺陷率 9.4% 历史最好·双族越线标红）｜下个里程碑＝19:00 年轮批 3 席 + 提案线首批（`--propose` 已 default=True），实测 HAND/PROP 是否被禁集压回 ≤25%（ETA 2026-11-13 19:20）。
+  计分：能跑实物=2 分（族盲区读数已进三处输出并可复跑）｜文件改动=1 分｜零 LLM。
+  tokens: local=0 api=0 api_reason=workday-yield-window

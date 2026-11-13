@@ -293,6 +293,22 @@ def over_quota(total, fam, quota=FAMILY_QUOTA, min_denom=FAMILY_MIN_DENOM):
     return sorted(f for f, c in (fam or {}).items() if c / float(total) > quota)
 
 
+def unclassified(total, fam):
+    """未归族环数与占比 → (n, pct)。只读观测，不参与任何闸判定。
+
+    判例 R2760/R2762（2026-11-13）：PROP_DEICTIC 立族前，「那台老收音机…」
+    「这把旧扳手…」起句 87 条全部落进 family_of=None，配额闸看不见它们——
+    当日手部族真占比 40.0% 被读成 25%。补族表是对症，但下一种新句式出现时
+    同样会隐身，故把盲区份额做成每轮可读的读数（族表覆盖率的回归看守），
+    而非等人眼再发现一次。
+    """
+    if not total or total <= 0:
+        return 0, 0.0
+    known = sum((fam or {}).values())
+    n = max(0, int(total) - int(known))
+    return n, n / float(total) * 100
+
+
 def ban_set_from_openings(openings, quota=FAMILY_QUOTA, min_denom=FAMILY_MIN_DENOM):
     """由 {opening12: count} 台账算出应禁族集合（evolve_citizen 批内直接消费）。
 
@@ -400,6 +416,19 @@ def _selftest():
                  ",".join(sorted(want)) or "None", "OK" if ok else "FAIL"))
         if not ok:
             bad += 1
+    # R2762 盲区读数探针：未归族 = total - 已归族之和；只读，不进 any 闸判定。
+    _uc_probes = [
+        ("pos-unclass-none", 100, {"HAND_DEICTIC": 40}, (60, 60.0)),
+        ("pos-unclass-partial", 552, {"HAND_DEICTIC": 221, "PROP_DEICTIC": 171}, (160, 29.0)),
+        ("neg-unclass-empty", 0, {}, (0, 0.0)),
+    ]
+    for label, tot, fam, want in _uc_probes:
+        _n, _p = unclassified(tot, fam)
+        got = (_n, round(_p, 1))
+        ok = got == want
+        print("%-24s got=%-18s want=%-18s %s" % (label, got, want, "OK" if ok else "FAIL"))
+        if not ok:
+            bad += 1
     # T-20261112-01 归因面探针：meet 行识别正例／日更行不误判；
     # 且按来源拆分之和必须与 scan_day 同口径守恒。
     src_probes = [
@@ -465,7 +494,9 @@ def main(argv=None):
             for f in FAMILIES:
                 c = d["families"].get(f, 0)
                 cells.append("%s=%d(%.1f%%)" % (f, c, c / t * 100 if t else 0.0))
-            print("  %-6s rings=%4d  %s" % (src, t, "  ".join(cells)))
+            _su, _sup = unclassified(t, d["families"])
+            print("  %-6s rings=%4d  %s  unclass=%d(%.1f%%)"
+                  % (src, t, "  ".join(cells), _su, _sup))
         sum_src = sum(d["total"] for d in per.values())
         print("  sum(by source)=%d vs scan_day=%d %s"
               % (sum_src, total, "OK" if sum_src == total else "MISMATCH"))
@@ -478,15 +509,18 @@ def main(argv=None):
         over = over_quota(total, fam)
         detail = {f: (fam.get(f, 0), round(fam.get(f, 0) / total * 100, 1) if total else 0.0)
                   for f in FAMILIES}
+        _uc_n, _uc_pct = unclassified(total, fam)
         if args.json:
             print(json.dumps({"date": args.check, "total": total, "families": detail,
                               "over": over, "quota": FAMILY_QUOTA,
+                              "unclassified": {"n": _uc_n, "pct": round(_uc_pct, 1)},
                               "verdict": "OVER" if over else "PASS"},
                              ensure_ascii=False, indent=1))
         else:
             print("date=%s rings=%d quota=%.0f%%" % (args.check, total, FAMILY_QUOTA * 100))
             for f, (c, pct) in detail.items():
                 print("  %-18s %5d  %5.1f%%%s" % (f, c, pct, "  <- OVER" if f in over else ""))
+            print("  %-18s %5d  %5.1f%%  (盲区：未被任何族识别)" % ("unclassified", _uc_n, _uc_pct))
             print("verdict: %s" % ("OVER" if over else "PASS"))
         return 0 if not over else 2
 
@@ -496,7 +530,10 @@ def main(argv=None):
         names = list(FAMILIES)
         if args.json:
             print(json.dumps([{"date": d, "total": t, "families": f,
-                               "over": over_quota(t, f)} for d, t, f in rows],
+                               "over": over_quota(t, f),
+                               "unclassified": {"n": unclassified(t, f)[0],
+                                                "pct": round(unclassified(t, f)[1], 1)}}
+                              for d, t, f in rows],
                              ensure_ascii=False, indent=1))
             return 0
         print("date        rings  " + "  ".join("%-18s" % n for n in names))
@@ -506,7 +543,9 @@ def main(argv=None):
                 c = f.get(n, 0)
                 cells.append("%-18s" % ("%d(%.1f%%)" % (c, c / t * 100 if t else 0.0)))
             flag = "  OVER:" + ",".join(over_quota(t, f)) if over_quota(t, f) else ""
-            print("%s  %5d  %s%s" % (d, t, "  ".join(cells), flag))
+            _un, _up = unclassified(t, f)
+            print("%s  %5d  %s%s  unclass=%d(%.1f%%)"
+                  % (d, t, "  ".join(cells), flag, _un, _up))
         return 0
 
     if args.second:
