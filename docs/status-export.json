@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-14 05:03",
+ "export_ts": "2026-11-14 05:21",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2872（11-14 05:0x）：年轮线批产 10/10 落环 + 确定性日更面 PASS + 事件回放闸 PASS**｜本地 qwen3:4b-instruct 直产，10 席全部过闸落环；`round_daily --run` stale=1 ran=2 verdict=PASS（index 重建）；`events_refresh --gate` derive cards=10111/events=43071、replay mismatch=0 schema=0 PASS；`pool_audit` 72 轴桶+12 像素桶+greet 28+faq 7+负例 6/6 全达标 SELF_TERMINATE（hard_fails=0，determinism 192 对 mismatch=0）；`qc_census` cards=10114 problems=0；相遇轮日额 3/3 已满跳过；HQ 反馈闸今日已报（lines=2）零写入；决策水位差集 NEW=0（覆盖至 D-20261112-16）。 **R2871（2026-11-14 04:48-05:0x 夜窗产品轮）**：年轮 10 席全落环（C-04673/04679/04680/04681/04714/04682/04683/04685/04686/04687，零闸拦截）+ 行为线镜像 rows=10 自动同步；事件流回放闸 PASS（cards=10111/events=43061/replayed=10111/schema=0/mismatch=0）；round_daily 重建 4 面（index/dashboard/city-today/gene-ledger）stale=3 ran=4 PASS；pool_audit 72 轴桶+12 像素桶全达标 SELF_TERMINATE；QC problems=0；ring_material_check streak=3/3 PASS。 **R2859（2026-11-14 03:29 夜窗产品轮）**：年轮批 `--batch 3` 落环 10/10（跑前显存 63% 过 vram_guard），T-20261113-06 座席快熔闸三验收全过结单；events 回放闸 PASS（replayed 10111 / mismatch=0 / schema=0）。",
+   "t": "**R2874（11-14 05:18-05:3x）：年轮线批产 10/10 落环 + 三可见面重建 + 事件回放闸 PASS**｜本地 qwen3:4b-instruct 直产，10 席全部过闸落环（C-04708/04709/04711/04722/04749/04710/04712/04713/04715/04716）；`round_daily --run` stale=2 ran=3 verdict=PASS failed=0（city-dashboard/gene-ledger/index 重建）；`events_refresh --gate` derive cards=10111/events=43091、replay replayed=10111 schema_errors=0 mismatch=0 PASS；`pool_audit` 72 轴桶+12 像素桶+greet 28+faq 7+负例 6/6 全达标 SELF_TERMINATE（hard_fails=0，determinism 192+25 对 mismatch=0）；决策水位差集 NEW=0（覆盖至 D-20261112-16）；HQ 反馈闸 day=2026-11-14 已报（lines=2）零写入。 **R2872（11-14 05:0x）：年轮线批产 10/10 落环 + 确定性日更面 PASS + 事件回放闸 PASS**｜本地 qwen3:4b-instruct 直产，10 席全部过闸落环；`round_daily --run` stale=1 ran=2 verdict=PASS（index 重建）；`events_refresh --gate` derive cards=10111/events=43071、replay mismatch=0 schema=0 PASS；`pool_audit` 72 轴桶+12 像素桶+greet 28+faq 7+负例 6/6 全达标 SELF_TERMINATE（hard_fails=0，determinism 192 对 mismatch=0）；`qc_census` cards=10114 problems=0；相遇轮日额 3/3 已满跳过；HQ 反馈闸今日已报（lines=2）零写入；决策水位差集 NEW=0（覆盖至 D-20261112-16）。 **R2871（2026-11-14 04:48-05:0x 夜窗产品轮）**：年轮 10 席全落环（C-04673/04679/04680/04681/04714/04682/04683/04685/04686/04687，零闸拦截）+ 行为线镜像 rows=10 自动同步；事件流回放闸 PASS（cards=10111/events=43061/replayed=10111/schema=0/mismatch=0）；round_daily 重建 4 面（index/dashboard/city-today/gene-ledger）stale=3 ran=4 PASS；pool_audit 72 轴桶+12 像素桶全达标 SELF_TERMINATE；QC problems=0；ring_material_check streak=3/3 PASS。",
    "s": 1
   },
   {
@@ -24,7 +24,7 @@
   },
   {
    "n": "QC 巡检线",
-   "t": "**R2872 例巡条**：qc_census cards=10114 evolved=10114 problems=0 dup_rings=37/37（编号/姓名唯一、必备段齐备、年轮锚定律全过）。 **R2859 例巡条：** qc_census cards=10114 problems=0 dup_rings=37/37；events_refresh --gate mismatch=0 schema_errors=0。 **R2858 例巡条**：census 不变量 problems=0（03:08 巡检），事件流 replay 全量比对 PASS，语言池 hard_fails=0。 **R2856 例巡条：QC cards=10114 problems=0（dup_rings=37/37）** **R2816 例巡条（2026-11-13 21:3x）**：事件流回放闸 PASS（events=42667 / cards=10111 / schema_errors=0 / mismatch=0 / unexpected_missing=0 / chronicle gap=0d）；QC 不变量本轮非到点（20:4x 班已巡 problems=0）。 **R2808 例巡条（2026-11-13 20:1x）**：不变量扫描 cards=10114 / evolved=10114 / problems=0（编号·姓名唯一、必备段齐备、锚定律全过）；事件流回放闸 PASS。 **R2795 例巡条：心跳解析守卫 6 探针 0 fail**；人口不变量扫描 cards=10114 problems=0 dup_rings=37/37；池 audit 全达标 SELF_TERMINATE；日更面 24 面 PASS（本轮重建 dashboard/proposals/index 3 面） 提案面脱敏回归 13/13 PASS（正控 4 例残留=0 且正文保留／压缩无占位符串联／负控干净句原样／产物页零机读串泄漏且 9 条全可读）；round_daily 全新鲜 verdict=PASS；事件闸 PASS（events=42535 / cards=10111 / mismatch=0 / schema=0）。",
+   "t": "**R2874 例巡条**：本轮不重复 QC（上轮 R2873 05:1x 刚跑 problems=0，6 轮节律未到）；事件闸 replay=10111 schema_errors=0 mismatch=0 作为数据面不变量旁证。 **R2872 例巡条**：qc_census cards=10114 evolved=10114 problems=0 dup_rings=37/37（编号/姓名唯一、必备段齐备、年轮锚定律全过）。 **R2859 例巡条：** qc_census cards=10114 problems=0 dup_rings=37/37；events_refresh --gate mismatch=0 schema_errors=0。 **R2858 例巡条**：census 不变量 problems=0（03:08 巡检），事件流 replay 全量比对 PASS，语言池 hard_fails=0。 **R2856 例巡条：QC cards=10114 problems=0（dup_rings=37/37）** **R2816 例巡条（2026-11-13 21:3x）**：事件流回放闸 PASS（events=42667 / cards=10111 / schema_errors=0 / mismatch=0 / unexpected_missing=0 / chronicle gap=0d）；QC 不变量本轮非到点（20:4x 班已巡 problems=0）。 **R2808 例巡条（2026-11-13 20:1x）**：不变量扫描 cards=10114 / evolved=10114 / problems=0（编号·姓名唯一、必备段齐备、锚定律全过）；事件流回放闸 PASS。 **R2795 例巡条：心跳解析守卫 6 探针 0 fail**；人口不变量扫描 cards=10114 problems=0 dup_rings=37/37；池 audit 全达标 SELF_TERMINATE；日更面 24 面 PASS（本轮重建 dashboard/proposals/index 3 面） 提案面脱敏回归 13/13 PASS（正控 4 例残留=0 且正文保留／压缩无占位符串联／负控干净句原样／产物页零机读串泄漏且 9 条全可读）；round_daily 全新鲜 verdict=PASS；事件闸 PASS（events=42535 / cards=10111 / mismatch=0 / schema=0）。",
    "s": 1
   },
   {
@@ -1865,8 +1865,12 @@
   [
    "292",
    "今日年轮落环 292 行（本轮新增 10 席，逐卡可查 census/registry）"
+  ],
+  [
+   "312",
+   "今日年轮落环 312 行（本轮新增 10 席，逐卡可查 census/registry）"
   ]
  ],
- "t": "当前活：年轮线批产（本地 qwen3:4b）+ 事件回放闸 + QC 不变量巡检\n最近实物：census/registry/** 2026-11-14 新年轮（本轮 10 席·04:59）+ census/export/index.html 重建（04:58）\n下个里程碑：T-20261113-02 提案线首验（curiosity=2 未达阈值，待史实累积）/ 相遇轮次日 00:00 配额重置后首跑",
- "top_text": "当前活：年轮线批产（本地 qwen3:4b）+ 事件回放闸 + QC 不变量巡检\n最近实物：census/registry/** 2026-11-14 新年轮（本轮 10 席·04:59）+ census/export/index.html 重建（04:58）\n下个里程碑：T-20261113-02 提案线首验（curiosity=2 未达阈值，待史实累积）/ 相遇轮次日 00:00 配额重置后首跑"
+ "t": "当前活：年轮线批产（本地 qwen3:4b）+ 读者面刷新 + 事件回放闸\n最近实物：census/export/city-dashboard.html（2026-11-14 05:20 重建）+ 10 席新年轮（05:19 落环）\n下个里程碑：相遇轮次日 00:00 配额重置后首跑 / 反思线夜窗（≥19:00）",
+ "top_text": "当前活：年轮线批产（本地 qwen3:4b）+ 读者面刷新 + 事件回放闸\n最近实物：census/export/city-dashboard.html（2026-11-14 05:20 重建）+ 10 席新年轮（05:19 落环）\n下个里程碑：相遇轮次日 00:00 配额重置后首跑 / 反思线夜窗（≥19:00）"
 }
