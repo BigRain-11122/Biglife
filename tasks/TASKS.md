@@ -1644,3 +1644,17 @@ ound_daily --check 39 面全 fresh stale=0 PASS；pool_audit SELF_TERMINATE（72
 - **HQ 反馈闸**：ALREADY_REPORTED（day=2026-11-13 lines=2），零写入。
 - **判读坑留档（本轮自查纠错·重要）**：年轮批落环后我用「工作树 vs HEAD 逐卡 diff」判增量，得 0 差异并一度误记「同日幂等空转」——实因为 evolve/sync 脚本**自带 auto-commit**，HEAD 在跑完时已前移（3eb47bf90/6faae23e4）。正解口径：增量证据=`git log` 新增 commit + 卡面该日年轮行，**禁**以「status 净/工作树 diff=0」判定脚本产出为零。此坑若被下一轮沿用会误删真实产出计量，故入档。
 - 计分：居民年轮 10 帧（内容本体）+ 日更 5 面重建（能看实物）+ 事件闸 PASS 报告 = 2 分。tokens: local≈10（年轮批 10 席 qwen3:4b-instruct；池/反思/相遇零调用）api=0 api_reason=-
+
+## R2821 · 2026-11-13 22:19-22:2x @BigLife-OSLoop（夜窗·年轮批 10 席 + 日更面重建）
+
+- 轮首：git pull --ff-only = Already up to date，树净（porcelain 0 行）；决策水位差集 NEW=0（尾 D-20261112-16，集团 decisions 无 11-13 新行）；orders 物理件区无涉本司新件。
+- **年轮线（本轮主产出）**：evolve_citizen.py --batch 3 → evolved=10 of 10 due，脚本自动落环 commit **0fbe22477**（22:20）与行为线收口 **ac7cee074**（22:21，镜像 rows=10 ring=10114）：C-04339/04342/04344/04349/04350/04340/04345/04346/04347/04348 各 +1 帧 2026-11-13 年轮（1 条按 soft-concession『recent-dup-phrase』放行；HAND_DEICTIC 家族配额 25% 当日禁用）。
+- **事件回放闸**：PASS —— cards=10111 events=42715 shards=3，replayed=10111，schema_errors=0，mismatch=0；coverage derived=10111 reserved=3 exported=10114 unexpected_missing=0；chronicle gap=0d（qa/EVENTS-REPLAY-REPORT.md 入库）。
+- **确定性日更**：verdict=PASS（stale=2 ran=3 failed=0）。重建面 3：city-dashboard.html（内容过期·src 22:21）、gene-ledger.html（census/registry 依赖 mtime = 本轮 10 张年轮卡）、index.html；其余 17 面 skipped-fresh 幂等零动作。
+- **语言池**：PASS SELF_TERMINATE（轴桶 72/72、像素桶 12/12、greet 28/28、faq 7/7、neg 6/6，hard_fails=0，determinism 192+25 对 mismatch=0，under_target=NONE）→ 语言线按自终止律零动作、零 LLM。
+- **反思线**：daily-cap 拦截（当日已 31 条，2026-11-13 时间戳在案），零重复写入 —— T-20261113-05 验收（连续 3 生产日尾部 date=当日）第 1 日成立。
+- **相遇轮**：meet-cap 3/3 已满，跳过（脚本自报 3 meets already logged today）；候补首位 C-00147 钱南汐 × C-00044 赫兹 留待明日窗。
+- **QC 巡检**：census/QC-REPORT.md mtime 21:46（约 35 分钟前巡），本轮按 6 轮节奏不重复。
+- **HQ 反馈闸**：ALREADY_REPORTED（day=2026-11-13 lines=2），零写入。
+- 实况三行：当前活＝夜窗年轮批与日更面收口（10 席落环 + 3 面重建）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-dashboard.html（2026-11-13 22:21，含今日 10 条新年轮）｜下个里程碑＝2026-11-14 夜窗年轮 --batch 3 + 反思线第 2 日验收 + 相遇轮恢复（钱南汐 × 赫兹）。
+- 计分：居民年轮 10 帧（内容本体·脚本落环 commit 在案）+ 日更 3 面重建（能看实物）+ 事件闸 PASS 报告 = 2 分。tokens: local=10 api=0 api_reason=-（年轮批 10 席 qwen3:4b-instruct；池/反思/相遇/QC 零调用）
