@@ -68,6 +68,12 @@ REGISTRY = [
     # 14-29 天、14.4% 超 30 天，而当日只落 551 环（覆盖一轮 17.4 天）——产能真相
     # 只能人肉读导出才发现。faces 档：叙龄是日粒度量，不必逐轮重写。
     ("ring_recency", "faces", "build_ring_recency.py",    ["city-ring-recency.html"]),
+    # v0.20 (2026-11-13 R2784): 年轮开头族仪表新立 —— T-20261112-04 验收线（开口族
+    # >25% 拒稿）此前只有 CLI 读数，R2781/R2783 两轮归因全在终端，CEO 在页面上看不到
+    # 「今天哪些族越线、越多少、哪些句式在重复」。trend 页管缺陷率走势、quality 页管
+    # 质量分布，均不给族归属明细。本页把「当日越线族」与「全期禁集」两个分母并列，
+    # 使「闸开着却仍越线」这一新病症可见（当日 40%/31% vs 全期 25.0% 的同一数据两面）。
+    ("ring_openings", "faces", "build_ring_openings.py",  ["city-ring-openings.html"]),
     # v0.3 (2026-11-12 R2573): 补登记三个「有生成器、有页面、无任何轮次引用」的沉默断供面。
     # 病根同 T-20261112-02：city-lexicon.html 停更 15.7 天无人发现；
     # city-ring-quality / city-ring-trend 只靠偶发手工跑活着，断供只是时间问题。
@@ -176,6 +182,9 @@ DEPENDS = {
     # 两者任一更新都会改变分档，故双源登记。
     "ring_recency": ["census/export/citizens-light.jsonl", "state/evolve-cursor.json",
                      "census/registry"],
+    # v0.20 (2026-11-13 R2784): 开头族仪表全量扫 registry 年轮行，源=registry 目录 +
+    # 环落地主信号 evolve-cursor（与其余环依赖面同口径）。
+    "ring_openings": ["state/evolve-cursor.json", "census/registry"],
     # v0.17 (2026-11-13 R2760): 看板的三行实况取自 docs/status-export.json，
     # 主数据取自 citizens-light.jsonl，但登记表只比「构建脚本 vs 产物」mtime。
     # 实证：R2760 刷新 top_text 后 --run 仍判 dashboard fresh、ran=0，CEO 面继续
