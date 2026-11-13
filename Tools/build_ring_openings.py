@@ -108,9 +108,16 @@ def build(rows, today=None):
                 fam[f] += 1
         over = rof.over_quota(total, dict(fam))
         unc_n, unc_pct = rof.unclassified(total, dict(fam))
+        # R2796: 口径纪元。族表是代码常量，立族一次就把当日在册环重判一遍，
+        # 于是「当日越线」可能只是追溯重分类（11-13 用当日生效表回算=25.0%，
+        # 用现表=40.0%·R2786 定谳）。跨口径日不给 OVER/PASS，改 CROSS-EPOCH。
+        epochs = rof.epochs_of(d)
+        mix = rof.epoch_mix_state(epochs)
         daily.append({
             "day": d, "total": total, "fam": dict(fam),
             "over": over, "unclassified": (unc_n, unc_pct),
+            "epochs": epochs, "mix": mix,
+            "verdict": rof.check_verdict(mix, over),
         })
 
     ban = rof.ban_set_from_openings(dict(openings))
@@ -150,10 +157,14 @@ def render(model):
         fam_names.update(r["fam"].keys())
     fam_names = sorted(fam_names)
 
+    last_verdict = last.get("verdict", "CROSS-EPOCH")
+    cross_days = sum(1 for r in daily if r.get("verdict") == "CROSS-EPOCH")
     kpis = [
         ("近 %d 生产日总环" % len(daily), "%d" % model["total_window"], ""),
         ("最近一日 %s" % (last.get("day", "-")), "%d" % last["total"], ""),
-        ("当日越线族", "%d" % len(last["over"]), "bad" if last["over"] else "good"),
+        ("当日判定", last_verdict,
+         "bad" if last_verdict == "OVER" else ("warn" if last_verdict == "CROSS-EPOCH" else "good")),
+        ("窗口内跨口径日", "%d" % cross_days, "warn" if cross_days else ""),
         ("全期应禁族", "%d" % len(model["ban"]), "bad" if model["ban"] else "good"),
         ("当日未归族", "%.1f%%" % unc_pct, "warn" if unc_pct > 15 else ""),
     ]
@@ -162,7 +173,7 @@ def render(model):
         '<div class="kpi %s"><b>%s</b><span>%s</span></div>' % (cls, html.escape(v), html.escape(k))
         for k, v, cls in kpis)
 
-    head = ["日期", "总环"] + fam_names + ["未归族", "判定"]
+    head = ["日期", "总环"] + fam_names + ["未归族", "口径", "判定"]
     thead = "".join("<th>%s</th>" % html.escape(h) for h in head)
 
     trs = []
@@ -181,10 +192,25 @@ def render(model):
                        % (cls, barcls, w, c, p))
         n, pc = r["unclassified"]
         tds.append('<td class="%s">%d · %.1f%%</td>' % ("over" if pc > 40 else "", n, pc))
-        if r["over"]:
+        _mix = r.get("mix", "none")
+        _eps = r.get("epochs") or []
+        if _mix == "single":
+            tds.append('<td class="blank" title="%s">单一口径</td>' % html.escape("、".join(_eps)))
+        elif _mix == "multi":
+            tds.append('<td class="over" title="%s">跨口径 · %d 版</td>'
+                       % (html.escape("、".join(_eps)), len(_eps)))
+        elif _mix == "curr-missing":
+            tds.append('<td class="over" title="%s">跨口径 · 旧表出生</td>' % html.escape("、".join(_eps)))
+        else:
+            tds.append('<td class="blank">无纪元登记</td>')
+        if r.get("verdict") == "single" or r.get("verdict") == "PASS":
+            tds.append('<td><span class="pill ok">在配额内</span></td>')
+        elif r.get("verdict") == "OVER":
             tds.append('<td><span class="pill ban">越线 %s</span></td>' % html.escape("、".join(r["over"])))
         else:
-            tds.append('<td><span class="pill ok">在配额内</span></td>')
+            _shown = ("（现表重分类读数：%s）" % "、".join(r["over"])) if r["over"] else "（现表读数在配额内）"
+            tds.append('<td><span class="pill">跨口径·不可比</span> <span class="blank">%s</span></td>'
+                       % html.escape(_shown))
         trs.append("<tr>%s</tr>" % "".join(tds))
 
     top_rows = []
@@ -220,15 +246,18 @@ def render(model):
 <tr><td>当日（最近一日）</td><td>%d 环</td><td>%s</td></tr>
 <tr><td>全期（%d 个生产日）</td><td>%d 环</td><td>%s</td></tr>
 </tbody></table>
-<div class="note">两者不等是<b>分母差异</b>造成的，不是判定矛盾：当日密集使用会把当日占比推过 25%%，而放进 %d 天全期后占比被摊薄。
-所以「当日越线」与「全期禁集为空」可以同时成立——这正是 11-12～11-13 两轮归因读到的现象，
-也是「闸开着却仍越线」这一新病症的可视佐证。当前禁集按全期台账生成，落环时按此集合避让。</div>
+<div class="note">两者不等有两层原因，必须分开读：<b>①分母差异</b>——当日密集使用会把当日占比推过 25%%，放进 %d 天全期后占比被摊薄；
+<b>②口径纪元</b>——族表是代码常量，立族一次就把当日已在册的环按新表重判一遍（11-13 立族后现表读数 HAND 40.0%%，用当日生效表回算为 25.0%%，R2786 定谳）。
+所以逐日表新增「口径」列：跨口径日一律不给 OVER/PASS，只标「不可比」——它既不能当作「闸开着却仍越线」的证据，也不能当作闸有效的证据。
+当前禁集按全期台账生成，落环时按此集合避让。</div>
 </section>
 
 <section>
 <h2>逐日族构成</h2>
 <table><thead><tr>%s</tr></thead><tbody>%s</tbody></table>
-<div class="note">条形长度为占比视觉刻度。判定列按当日 total 与 quota 现算（total&lt;8 不判，返回「在配额内」）。</div>
+<div class="note">条形长度为占比视觉刻度。判定列按当日 total 与 quota 现算（total&lt;8 不判，返回「在配额内」）。
+<b>口径列</b>：单一口径＝该日全程只用现役族表，读数可比；跨口径＝该日环分散在多个族表版本出生（或立族后漏登记），
+占比被新表追溯重分类，只标「不可比」不判越线（承 R2786 判例·模块级 check_verdict）。</div>
 </section>
 
 <section>
@@ -251,6 +280,7 @@ def render(model):
 <b>只读</b>：本页不改任何年轮、不改闸判定、不回写台账。<br>
 <b>未归族</b>：不属任何已知骨架族的开头占比——新句式出现时会隐身，故单独列出做族表覆盖率的看守读数。<br>
 <b>判定</b>：族占比 &gt; 25%% 即越线（当日环数 ≥ 8 才判）。越线只表示该句式开头密集，不等于语义违法。<br>
+<b>口径</b>：族表版本随立族变更（epoch 见 state/ring-family-epochs.json）；跨口径日的占比掺了两版族表的重判结果，故判为「不可比」，既不阻断也不放行。<br>
 <b>已知边界</b>：族覆盖表由人工登记，新族需先立族再统计；未立族前的历史环不回改（承 R2760 判例）。
 </div>
 </section>

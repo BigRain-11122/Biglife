@@ -55,6 +55,16 @@
 
 ## 已结
 
+## R2796 · 2026-11-13 16:5x-17:1x @BigLife-OSLoop（开口面把「追溯重分类」误报成「闸被绕过」·口径纪元可见化）
+- 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团无 D-20261113-* 行）；orders 物理件区无涉本司新件；HQ 日闸 `ALREADY_REPORTED`（day=2026-11-13 lines=1）零写入。
+- 让路窗（周五工作日 09:00-19:00·D-20261020-02）：年轮批/相遇/提案实批顺延 19:00 后；本轮走确定性面。
+- **产品增量（可见面·2 分）**：`census/export/city-ring-openings.html` 的判定列此前把 11-13 直接标成「越线 HAND_DEICTIC 40.0%、PROP_DEICTIC 31.0%」，并在页面注明「这是『闸开着却仍越线』这一新病症的可视佐证」——该因果已被 R2786 定谳推翻（族表 12:09/15:38 两次立族，当日生效表回算 138/552=25.0%）。现改为按模块既有纪元机制渲染：新增「口径」列（单一口径／跨口径·N 版／跨口径·旧表出生／无纪元登记），跨口径日一律标「跨口径·不可比」并附「现表重分类读数」，不再进 OVER/PASS；KPI 增「当日判定」「窗口内跨口径日」，替换原「当日越线族」。
+- **页面自证降级为可辨读数**：当日行现渲染 `跨口径 · 2 版`（title 列两个 epoch 时间戳）+ `跨口径·不可比（现表重分类读数：HAND_DEICTIC、PROP_DEICTIC）`；错误断言「新病症」已从页面清零。
+- **回归常驻**：新增 `qa/test_ring_openings_epoch.py`（零 LLM·tmp 内存造数·不写仓）11 探针 PASS——none/multi/curr-missing 三态一律 CROSS-EPOCH、single 态仍判 OVER、render 幂等、含「单一口径/跨口径/口径列」、不含「新病症」、同口径日仍出「越线 HAND_DEICTIC」。
+- 体检：`round_daily --run` stale=1 ran=2 verdict=PASS（ring_openings 重建 + index 补导航条）；`events_refresh --gate` events=42535 cards=10111 mismatch=0 schema=0 PASS；`pool_audit`/QC 本轮未跑（池自终止、QC 16:5x 已巡 problems=0）。
+- 实况三行：当前活＝让路窗内开口族口径诚实化（跨口径日不再误报越线）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-openings.html（2026-11-13 17:0x，含口径列与纪元 reading）｜下个里程碑＝19:00 让路窗解→年轮 --batch 3 落环 + 提案线首批实批（T-20261113-02 验收）。
+- 本轮计量：tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline（让路窗 D-20261020-02：年轮/相遇/提案顺延 19:00 后，本轮零 LLM 调用）。
+
 ## R2794 · 2026-11-13 16:3x-17:0x @BigLife-OSLoop（提案面片段级脱敏·零可读面治愈）
 - 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团无 D-20261113-* 行）；orders 物理件区无涉本司新件；HQ 日闸 `ALREADY_REPORTED`（day=2026-11-13 lines=1）零写入。
 - 让路窗（周五工作日 09:00-19:00·D-20261020-02）：年轮批/相遇/提案实批顺延 19:00 后；本轮走确定性面。
