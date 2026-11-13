@@ -29,6 +29,7 @@ EXP = os.path.join(ROOT, "census", "export")
 OUT_HTML = os.path.join(EXP, "city-ring-openings.html")
 DAYS = 14
 TOP_N = 20
+UNC_TOP = 12  # 当日未归族实文样本条数（盲区可读面·R2792）
 
 sys.path.insert(0, os.path.join(ROOT, "Tools"))
 import ring_open_family as rof  # noqa: E402
@@ -114,6 +115,15 @@ def build(rows, today=None):
 
     ban = rof.ban_set_from_openings(dict(openings))
     total_all = sum(len(v) for v in by_day.values())
+    # R2792: 当日未归族实文样本——盲区里到底写了什么，让读者/CEO 直接判「要不要立新族」
+    unc_samples = []
+    unc_day = days[-1] if days else "-"
+    if days:
+        c = collections.Counter()
+        for b in by_day[days[-1]]:
+            if rof.family_of(b) is None:
+                c[rof.norm(b)] += 1
+        unc_samples = c.most_common(UNC_TOP)
     return {
         "today": today,
         "daily": daily,
@@ -122,6 +132,8 @@ def build(rows, today=None):
         "total_all": total_all,
         "total_window": sum(r["total"] for r in daily),
         "days": len(by_day),
+        "unc_samples": unc_samples,
+        "unc_day": unc_day,
     }
 
 
@@ -188,6 +200,11 @@ def render(model):
     bans = "、".join(html.escape(b) for b in model["ban"]) or "无"
     day_over = "、".join(html.escape(b) for b in last["over"]) or "无"
 
+    unc_rows = []
+    for body, c in model.get("unc_samples", []):
+        unc_rows.append("<tr><td>%s</td><td>%d</td></tr>" % (html.escape(body[:40]), c))
+    unc_html = "".join(unc_rows) or '<tr><td colspan="2" class="blank">当日无未归族开头</td></tr>'
+
     return """<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -221,6 +238,14 @@ def render(model):
 </section>
 
 <section>
+<h2>%s 未归族实文 Top %d</h2>
+<table><thead><tr><th>开头（前 40 字）</th><th>环数</th></tr></thead><tbody>%s</tbody></table>
+<div class="note">这是盲区里真实写出的句子：不属任何已登记骨架族，因此既不被闸拦截、也不进族构成统计。
+逐日读这一栏可判断「要不要立新族」——只有同一形状成规模复现（新生吸引子）才立族；
+零散多形状混在一起属于正常语言多样性，硬立族会把闸改成误杀源（承 T-20261112-04 判据）。</div>
+</section>
+
+<section>
 <h2>口径与边界</h2>
 <div class="note">
 <b>只读</b>：本页不改任何年轮、不改闸判定、不回写台账。<br>
@@ -232,7 +257,8 @@ def render(model):
 </div></body></html>
 """ % (CSS, model["today"], kpi_html,
        last["total"], day_over, model["days"], model["total_all"], bans,
-       model["days"], thead, "".join(trs), TOP_N, top_html)
+       model["days"], thead, "".join(trs), TOP_N, top_html,
+       html.escape(model.get("unc_day", "-")), UNC_TOP, unc_html)
 
 
 def main():

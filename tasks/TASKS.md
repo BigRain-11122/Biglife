@@ -50,6 +50,16 @@
 
 ## 已结
 
+## R2792 · 2026-11-13 16:0x @BigLife-OSLoop（开口页补「未归族实文」面板·盲区可读面）
+- 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团无 D-20261113-* 行）；orders 物理件区无涉本司新件；HQ 日闸 `ALREADY_REPORTED`（day=2026-11-13 lines=1）零写入。
+- 让路窗（周五工作日 09:00-19:00·D-20261020-02）：年轮批/相遇/反思顺延 19:00 后；本轮走确定性面。
+- **产品增量（可见面·2 分）**：`census/export/city-ring-openings.html` 新增「当日未归族实文 Top 12」面板——此前页面只给一个 20.5% 的百分比数字，读者无法判断盲区是「一种新句式在扩散」还是「零散多样」；现在直接列出当日未归族年轮的开头实文与条数（`Tools/build_ring_openings.py` 新增 `UNC_TOP=12` + `unc_samples`/`unc_day` 两字段，只读、不回写年轮、不改闸判定）。
+- **立族判据实证**：今日 552 环未归类 113（20.5%），按前缀聚类头名仅 3 条（「袖口被风灌得鼓起来」），其后 2/2/2/1…——**无新生吸引子**，故按 T-20261112-04 严格律不立新族（零散多形状=正常语言多样性，硬立族会把闸改成误杀源）。今日已立两族（BOOK 5.6%／RAIN 2.7%，R2787/R2789）后的剩余盲区确认为噪声面。
+- 体检：`round_daily --run` stale=0 ran=0 verdict=PASS；`events_refresh --gate` events=42535/cards=10111/mismatch=0/schema=0 PASS；`pool_audit` 192 对确定性 mismatch=0 PASS；`ring_lint --today-only` rings=552 coded=0 PASS；页面复核 11,365B、新面板 12 行实文渲染正常。
+- 实况三行：当前活＝年轮开口盲区可读化（让路窗内确定性面）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-openings.html（2026-11-13 16:12，含未归族实文面板）｜下个里程碑＝19:00 让路窗解→年轮 `--batch 3` 落环 + 提案线首批实批。
+- 计分：能看实物=2 分（页面新面板＋可复查聚类）｜文件改动=1 分｜零 LLM。
+- tokens: local=0 api=0 api_reason=workday-yield-window
+
 ## R2789 · 2026-11-13 15:3x @BigLife-OSLoop（雨天布景族出生日截获·族表 v1.4）
 - 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，`Select-String D-20261113` 零命中）；orders 物理件区无涉本司新件；HQ 日闸=`ALREADY_REPORTED`（day=2026-11-13 lines=1）零写入。
 - 让路窗（周五工作日 09:00-19:00·D-20261020-02 实读 `FLAG: pausedLite 2026-11-13T09:00:01`）：年轮/相遇顺延 19:00；`round_daily --run` 29 面全 fresh stale=0 PASS；`pool_audit` 72 桶全达标 SELF_TERMINATE；`ring_lint --today-only` 552 环 coded=0 PASS。
