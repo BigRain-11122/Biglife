@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-13 18:33",
+ "export_ts": "2026-11-13 20:16",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2795（16:5x·让路窗内确定性面）：心跳丢失可见化守卫上线**——修 T-20261113-01：心跳里 2 条状态行（格式化串残渣行无时间戳、首行带 BOM）一直被渲染层静默丢弃，CEO 面表现为「少了两轮」且无人报错。修法=把丢失变成看得见：`build_city_ops.py` 抽出 `parse_heartbeat_text()`，无时间戳状态行显式计数并上 KPI（标红），BOM 行剥掉后正常入表；数据侧回填两条（R2734 行补 10:20:00 并标注回填来源，邻行夹逼）。 **R2794（2026-11-13 16:3x-17:0x @BigLife-OSLoop·让路窗确定性产品轮）**：议会提案面从「9/9 整条遮蔽」修成可读——此前 `build_city_proposals.py` v1.0 对命中机读串的提案整段替换成「不展示原文」，CEO 打开页面看到零条实意；实测命中只是局部专名/事件码（BigMoney CODELY / CrazyCampus_G08 / B2396 / S2.5），建议正文完全可读。改为 v1.1 片段级脱敏（只隐命中片段→〔专名〕〔城市事件〕〔术语〕，连续占位串压成一个，正文照常展示），脱敏后复检残留非 0 才回退整条遮蔽。台账 jsonl 一行未动（存量不回改）。回归 `qa/test_proposal_redact.py` 13/13 PASS。 **R2793（2026-11-13 16:2x-16:4x @BigLife-OSLoop·让路窗确定性轮）**：索引/分页覆盖核查确认无漏面——index 23 条顶级链接 vs 导出区 34 个 city 页，差集 11 项全为 city-growth-p01..p11 分页且由成长面内部 TOC 直链（每页 1000 席＋最深年轮名），属设计如此非缺口；最小面 city-growth.html 5,071B / mtime 11-12 17:44 在结构面 1 日窗内（22.7h）fresh。三个可见面重建（city-social-graph / city-dashboard / index）；事件回放闸 events=42535 / mismatch=0 / schema=0 / chronicle gap=0d。",
+   "t": "**R2808（2026-11-13 20:0x 夜窗）**：年轮批 evolved=7/10（C-04216/C-04218/C-04219/C-04220/C-04221/C-04226/C-04235 落环）+ 反思线 5 条（今日累计 25 行·连续日验收第 1 日）+ 日更面 5 面重建（city-today / city-dashboard / gene_ledger / lexicon / index）；闸全绿：事件回放 42593 事件 / 0 schema / 0 mismatch、QC cards=10114 evolved=10114 problems=0、语言池 SELF_TERMINATE。 **R2795（16:5x·让路窗内确定性面）：心跳丢失可见化守卫上线**——修 T-20261113-01：心跳里 2 条状态行（格式化串残渣行无时间戳、首行带 BOM）一直被渲染层静默丢弃，CEO 面表现为「少了两轮」且无人报错。修法=把丢失变成看得见：`build_city_ops.py` 抽出 `parse_heartbeat_text()`，无时间戳状态行显式计数并上 KPI（标红），BOM 行剥掉后正常入表；数据侧回填两条（R2734 行补 10:20:00 并标注回填来源，邻行夹逼）。 **R2794（2026-11-13 16:3x-17:0x @BigLife-OSLoop·让路窗确定性产品轮）**：议会提案面从「9/9 整条遮蔽」修成可读——此前 `build_city_proposals.py` v1.0 对命中机读串的提案整段替换成「不展示原文」，CEO 打开页面看到零条实意；实测命中只是局部专名/事件码（BigMoney CODELY / CrazyCampus_G08 / B2396 / S2.5），建议正文完全可读。改为 v1.1 片段级脱敏（只隐命中片段→〔专名〕〔城市事件〕〔术语〕，连续占位串压成一个，正文照常展示），脱敏后复检残留非 0 才回退整条遮蔽。台账 jsonl 一行未动（存量不回改）。回归 `qa/test_proposal_redact.py` 13/13 PASS。",
    "s": 1
   },
   {
@@ -24,7 +24,7 @@
   },
   {
    "n": "QC 巡检线",
-   "t": "**R2795 例巡条：心跳解析守卫 6 探针 0 fail**；人口不变量扫描 cards=10114 problems=0 dup_rings=37/37；池 audit 全达标 SELF_TERMINATE；日更面 24 面 PASS（本轮重建 dashboard/proposals/index 3 面） 提案面脱敏回归 13/13 PASS（正控 4 例残留=0 且正文保留／压缩无占位符串联／负控干净句原样／产物页零机读串泄漏且 9 条全可读）；round_daily 全新鲜 verdict=PASS；事件闸 PASS（events=42535 / cards=10111 / mismatch=0 / schema=0）。",
+   "t": "**R2808 例巡条（2026-11-13 20:1x）**：不变量扫描 cards=10114 / evolved=10114 / problems=0（编号·姓名唯一、必备段齐备、锚定律全过）；事件流回放闸 PASS。 **R2795 例巡条：心跳解析守卫 6 探针 0 fail**；人口不变量扫描 cards=10114 problems=0 dup_rings=37/37；池 audit 全达标 SELF_TERMINATE；日更面 24 面 PASS（本轮重建 dashboard/proposals/index 3 面） 提案面脱敏回归 13/13 PASS（正控 4 例残留=0 且正文保留／压缩无占位符串联／负控干净句原样／产物页零机读串泄漏且 9 条全可读）；round_daily 全新鲜 verdict=PASS；事件闸 PASS（events=42535 / cards=10111 / mismatch=0 / schema=0）。",
    "s": 1
   },
   {
@@ -1813,8 +1813,12 @@
   [
    "554",
    "本轮（2026-11-13 09:58-10:1x）今日年轮落环 554 行 / 551 人（事件流直数）；日更面重建 2 面 + 事件回放闸 PASS；全程零云端调用、零 LLM 调用（让路窗）。"
+  ],
+  [
+   "612",
+   "今日年轮落环 612 行（机器直数·registry/anchors）"
   ]
  ],
- "t": "当前活：让路窗内确定性面——心跳丢失可见化守卫落地（T-20261113-01 结案）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\HEARTBEAT-ORPHAN-GUARD-20261113.md（2026-11-13 16:5x）+ census/export/city-ops.html 重建（orphans 2→0）\n下个里程碑：19:00 让路窗结束→年轮批恢复（今晚首轮）",
- "top_text": "当前活：让路窗内确定性面——心跳丢失可见化守卫落地（T-20261113-01 结案）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\HEARTBEAT-ORPHAN-GUARD-20261113.md（2026-11-13 16:5x）+ census/export/city-ops.html 重建（orphans 2→0）\n下个里程碑：19:00 让路窗结束→年轮批恢复（今晚首轮）"
+ "t": "当前活：夜窗年轮线 + 反思线双线在跑（20:0x 批 evolved=7/10）\n最近实物：census/registry/GM/C-04216.md 等 7 席年轮（2026-11-13 20:10 落环）+ census/export/city-dashboard.html（20:11 重建）\n下个里程碑：2026-11-14 19:00 年轮批下一轮 + 反思线连续 3 生产日验收（11-15 判定）",
+ "top_text": "当前活：夜窗年轮线 + 反思线双线在跑（20:0x 批 evolved=7/10）\n最近实物：census/registry/GM/C-04216.md 等 7 席年轮（2026-11-13 20:10 落环）+ census/export/city-dashboard.html（20:11 重建）\n下个里程碑：2026-11-14 19:00 年轮批下一轮 + 反思线连续 3 生产日验收（11-15 判定）"
 }
