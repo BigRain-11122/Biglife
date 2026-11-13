@@ -51,6 +51,16 @@
 
 ## 已结
 
+## R2794 · 2026-11-13 16:3x-17:0x @BigLife-OSLoop（提案面片段级脱敏·零可读面治愈）
+- 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团无 D-20261113-* 行）；orders 物理件区无涉本司新件；HQ 日闸 `ALREADY_REPORTED`（day=2026-11-13 lines=1）零写入。
+- 让路窗（周五工作日 09:00-19:00·D-20261020-02）：年轮批/相遇/提案实批顺延 19:00 后；本轮走确定性面。
+- **产品增量（可见面·2 分）**：`census/export/city-proposals.html` 从「9/9 条整条遮蔽」修成「9/9 条全可读」——v1.0 对命中机读串的提案整段替换成「不展示原文」，CEO 打开看到零条实意；实测命中只是局部专名/事件码，建议正文完全可读。v1.1 片段级脱敏：只隐命中片段→〔专名〕〔城市事件〕〔术语〕，连续占位串压成一个，脱敏后复检残留非 0 才回退整条遮蔽。台账 jsonl 一行未动。
+- **门禁目的实测达成**：页面 BigMoney/CODELY/CrazyCampus/Token/B2396/G08/GAME/STAGE/S2.5/决策委员会/集团 各 0 次泄漏。
+- **回归常驻**：`qa/test_proposal_redact.py` 13/13 PASS（正控 4 例残留=0 且正文保留／压缩无串联／负控干净句原样／产物页零泄漏且 9 条全可读），此后一条命令可复验。
+- 体检：`round_daily --run` stale=1 ran=2 verdict=PASS；`events_refresh --gate` events=42535/cards=10111/mismatch=0/schema=0 PASS；`pool_audit` 192 对确定性 mismatch=0 SELF_TERMINATE。
+- 实况三行：当前活＝让路窗内提案面可读性修复｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-proposals.html（2026-11-13 16:5x，9 条全可读）｜下个里程碑＝19:00 让路窗解→年轮 --batch 3 落环 + 提案线首批实批（T-20261113-02 验收）。
+- 本轮计量：tokens: local=0 api=0 api_reason=workday-yield-window deterministic-pipeline（让路窗 D-20261020-02：年轮/相遇/提案顺延 19:00 后，本轮零 LLM 调用）。commit 64cffdf38 已推 origin/main。
+
 ## R2792 · 2026-11-13 16:0x @BigLife-OSLoop（开口页补「未归族实文」面板·盲区可读面）
 - 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团无 D-20261113-* 行）；orders 物理件区无涉本司新件；HQ 日闸 `ALREADY_REPORTED`（day=2026-11-13 lines=1）零写入。
 - 让路窗（周五工作日 09:00-19:00·D-20261020-02）：年轮批/相遇/反思顺延 19:00 后；本轮走确定性面。
