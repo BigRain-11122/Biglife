@@ -135,6 +135,13 @@ INPUTS = [
     # 报告按 faces 档保持 ≤1 日新鲜 —— 下一批漏登记面在烂掉之前就会出现在报告首屏。
     ("face_coverage", "faces", "face_coverage.py",        ["qa/FACE-COVERAGE-REPORT.md"],
      ["--write"]),
+    # v0.17 (2026-11-13 R2771): 「有生成器、有产物、无轮次引用」第十例 ——
+    # meet_asymmetry_scan.py 的 qa/MEET-SYMMETRY-REPORT.md 停在 11-12 11:08（1.1 天），
+    # 而相遇轮每日最多落 3 对：写面闸（T-20261027-01）只保「写时对称」，
+    # 卡面被后续改写/重排后的单边缺失只能靠这个扫描发现，它断了就没人看。
+    # 用 daily 档（非 faces）——相遇是日更产品，同日新增的不对称当日就该现形；
+    # 扫描只走有相遇行的百来位居民，秒级、零 LLM，逐日重建成本可忽略。
+    ("meet_symmetry", "daily", "meet_asymmetry_scan.py",  ["qa/MEET-SYMMETRY-REPORT.md"]),
 ]
 
 # v0.11 (2026-11-12 · T-20261112-09 收单): faces 档 stale 判据补「依赖源 mtime」面。
