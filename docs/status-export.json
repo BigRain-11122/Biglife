@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-14 03:18",
+ "export_ts": "2026-11-14 03:26",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2858（2026-11-14 03:1x，夜窗）**：年轮批 10/10 due 落环（今日日上限已达）；事件闸 PASS cards=10111/events=42964 schema=0 mismatch=0；日更面 stale=3 ran=4 重建 dashboard/gene-ledger/lexicon/index；语言池 72 轴桶+12 像素桶全达标 SELF_TERMINATE；反思线今日 5 条日上限已满（11-13/11-14 连续两日有写入，11-12 缺口·待 11-15 满 3 日验收）；聚光灯 11 月首批抽验 C-04589/C-04582 已跑。 **R2856（2026-11-14 02:5x 夜窗）**：年轮批 10/10 全落环（C-04560/04561/04562/04569/04600/04564/04565/04566/04568/04570，52 秒零 stall）；事件回放闸 PASS（cards=10111 events=42944 replayed=10111 schema_errors=0 mismatch=0）；确定性日更面 stale=10 ran=11 failed=0 PASS；QC problems=0。 **R2851（2026-11-14 02:2x 夜窗产品轮）**：年轮批 9/10 席落环（1 席语言闸 stays-due）→ 行为线镜像 rows=9 → 事件回放闸 PASS（events=42914 / mismatch=0 / schema_errors=0）→ 可见面 3 面重建；相遇轮今日 3/3 已满按闸跳过。",
+   "t": "**R2860（2026-11-14 03:2x）**：年轮批 10 席落环（C-04590/04591/04598/04602/04628/04592/04593/04594/04595/04597）·事件回放闸 PASS（events=42974 / cards=10111 / mismatch=0 / schema=0）·日更面重建 3 面（gene-ledger / ring-trend / index） **R2858（2026-11-14 03:1x，夜窗）**：年轮批 10/10 due 落环（今日日上限已达）；事件闸 PASS cards=10111/events=42964 schema=0 mismatch=0；日更面 stale=3 ran=4 重建 dashboard/gene-ledger/lexicon/index；语言池 72 轴桶+12 像素桶全达标 SELF_TERMINATE；反思线今日 5 条日上限已满（11-13/11-14 连续两日有写入，11-12 缺口·待 11-15 满 3 日验收）；聚光灯 11 月首批抽验 C-04589/C-04582 已跑。 **R2856（2026-11-14 02:5x 夜窗）**：年轮批 10/10 全落环（C-04560/04561/04562/04569/04600/04564/04565/04566/04568/04570，52 秒零 stall）；事件回放闸 PASS（cards=10111 events=42944 replayed=10111 schema_errors=0 mismatch=0）；确定性日更面 stale=10 ran=11 failed=0 PASS；QC problems=0。",
    "s": 1
   },
   {
@@ -1849,8 +1849,12 @@
   [
    "185",
    "本轮年轮落环 185 行（今日累计），事件回放 mismatch=0，日更面 4 个可见面重建完成。"
+  ],
+  [
+   "195",
+   "R2860（2026-11-14 03:2x）：今日年轮落环 195 行；本轮 10 席新增；事件闸 replay mismatch=0"
   ]
  ],
- "t": "当前活：年轮线/日更面/反思线三线轮转，本轮产出 4 个可见面重建\n最近实物：census/export/city-dashboard.html + gene-ledger.html + city-lexicon.html + index.html（2026-11-14 03:16 重建）\n下个里程碑：11-15 夜窗反思线第 3 连续生产日验收（T-20261113-05 收口）",
- "top_text": "当前活：年轮线/日更面/反思线三线轮转，本轮产出 4 个可见面重建\n最近实物：census/export/city-dashboard.html + gene-ledger.html + city-lexicon.html + index.html（2026-11-14 03:16 重建）\n下个里程碑：11-15 夜窗反思线第 3 连续生产日验收（T-20261113-05 收口）"
+ "t": "当前活：年轮进化批（本地 qwen3:4b-instruct）连续落环 + 事件回放闸复核\n最近实物：census/export/city-ring-trend.html / gene-ledger.html / index.html（2026-11-14 03:2x 重建）\n下个里程碑：2026-11-15 前完成第 3 个连续生产日反思线验收（T-20261113-05）",
+ "top_text": "当前活：年轮进化批（本地 qwen3:4b-instruct）连续落环 + 事件回放闸复核\n最近实物：census/export/city-ring-trend.html / gene-ledger.html / index.html（2026-11-14 03:2x 重建）\n下个里程碑：2026-11-15 前完成第 3 个连续生产日反思线验收（T-20261113-05）"
 }
