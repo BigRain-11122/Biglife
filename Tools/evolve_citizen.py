@@ -605,7 +605,8 @@ Usage:
   python -X utf8 evolve_citizen.py --force C-00010     # ignore cooldown
   python -X utf8 evolve_citizen.py --meet C-00010 C-00025   # two-citizen encounter
   python -X utf8 evolve_citizen.py --reflect            # V2-B: <=1 reflection per round
-  python -X utf8 evolve_citizen.py --batch 3 --propose # +V3 councilor proposals (<=3/day)
+  python -X utf8 evolve_citizen.py --batch 3            # +V3 councilor proposals (<=3/day, on by default)
+  python -X utf8 evolve_citizen.py --batch 3 --no-propose # skip the proposal line for this run
   --via BigLife-OSLoop  # committer-identity tail on every commit (cph4/versioning.md 4.1)
 """
 import argparse, datetime, glob, json, os, re, socket, subprocess, sys, threading, urllib.error, urllib.request
@@ -3187,9 +3188,13 @@ def main():
     ap.add_argument("--meet", nargs=2, default=None)
     ap.add_argument("--reflect", action="store_true",
                     help="V2-B reflection layer: at most 1 due citizen per round")
-    ap.add_argument("--propose", action="store_true",
+    ap.add_argument("--propose", dest="propose", action="store_true", default=True,
                     help="V3 city councilors (T-20260926-19): <=3 curiosity=2 citizens "
-                         "with a fresh ring THIS batch each append one gated proposal")
+                         "with a fresh ring THIS batch each append one gated proposal "
+                         "(default ON since 2026-11-13: loop invocations never carried the "
+                         "flag, so the line idled 19.6 days - caught by face_coverage)")
+    ap.add_argument("--no-propose", dest="propose", action="store_false",
+                    help="explicitly skip councilor proposals this run")
     ap.add_argument("--via", default=None, help="committer-identity tail, e.g. BigLife-OSLoop")
     args = ap.parse_args()
     via = (" [via %s]" % args.via) if args.via else ""
