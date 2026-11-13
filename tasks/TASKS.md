@@ -1369,3 +1369,11 @@ tokens: local=10 api=0 api_reason=-
   **对外实况三行**：当前活=让路窗内看板口径修复（年轮/相遇/提案 19:00 恢复）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-dashboard.html（2026-11-13 13:14，真实逐日圈数+14 天断供标注）｜下个里程碑=19:00 让路窗解→年轮批落环 + T-20261113-02 提案线首批自动产出（窗 ≤8h）。
   计分：能看实物=2 分（看板曲线与 KPI 改真实值 + 断供显式化）｜文件改动=1 分｜commit 待推。
   tokens: local=0 api=0 api_reason=workday-yield-window
+
+- [R2774] 2026-11-13 13:1x-13:3x @BigLife-OSLoop 让路窗产品轮：轮首 pull=Already up to date·树净；决策水位差集 NEW=0（集团无 D-20261113-* 行，尾仍 D-20261112-16）；orders 物理件区无涉本司新件；年轮/相遇/反思三条 LLM 面按 D-20261020-02 让路窗（09:00-19:00）结构性推迟，脚本原样返回 yield-window。
+  **产品增量（实物·CEO 可见）**：**看板街区口径缺陷修复**——`city-dashboard.html` 原报「街区 7」，实读 `citizens-light.jsonl` 城区分布＝GM2817/QT2516/MD2013/NS1228/OR1018/RV519 六城区 + 3 位空城区（C-00001 大圣 / C-00002 Qiqi / C-00003 Rain，均 anchor=true 创始家庭·城主席），空桶被 `len(dist)` 当成第 7 个街区。修法：`Tools/build_city_dashboard.py` 拆出 `hon`（anchor 且无城区）单列「荣誉席·创始家庭」KPI 与分布行，街区数只数真实城区＝6；**非荣誉席却空城区**仍落 `(未落户)` 桶照常计入 ⇒ 真缺口不会被这次修复掩盖。实证：py_compile rc=0；重建后 KPI=10114/10114/100%/6 街区/3 荣誉席/209 职业/554 今日；分布行 6 城区+荣誉席 3 在位；`round_daily --run` 后 `--check` verdict=PASS stale=0（生成器变更被闸正确识别为 stale 再重建）。同类扫描：全仓仅本文件有此口径（`build_daily_issue.py` 城区数只来自年轮行，荣誉席无年轮故不受影响）。
+  **闸面**：日更面 27 面体检 fresh（改后 dashboard 判定 stale → 重建已收口）；pool_audit PASS SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0）→ 语言线跳过；QC 12:58 刚跑 problems=0（6 轮节律未到）；相遇轮今日 3/3 达 cap；HQ 日闸 ALREADY_REPORTED → 零写入；基因线 10:16 b54 刚补不重复；events 回放闸零落环未跑（13:04 上轮 PASS）。
+  **留档（未动）**：T-20261113-01 心跳第 76 行字面 `%s`（R2734 一次性垃圾行，后续行全部干净）＝外部启动器模板属主，按单维持转 FLEET-OPS，不在本仓盲改；evidence 行保留不删（诚实律）。
+  **对外实况三行**：当前活＝让路窗内确定性面与 CEO 概括口径校正（年轮/相遇/提案 19:00 恢复）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-dashboard.html（2026-11-13 13:2x，街区 6+荣誉席 3 口径）｜下个里程碑＝19:00 让路窗解→年轮批落环 + 提案线首批自动产出（ETA 今晚，窗 ≤8h）。
+  计分：能看实物=2 分（看板 KPI/分布口径改正，可直接打开）｜文件改动=1 分｜commit de6fb4219 已推。
+  tokens: local=0 api=0 api_reason=workday-yield-window
