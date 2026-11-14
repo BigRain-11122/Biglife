@@ -1705,7 +1705,7 @@ ound_daily --check 39 面全 fresh stale=0 PASS；pool_audit SELF_TERMINATE（72
 - 计分：可见面 10 面重建（能看实物）+ 回放闸 PASS 报告 = 1 分（本轮无新年轮内容本体）。Tokens: local=0 api=0 api_reason=seat-stall-abort（座席无回包，未计成功调用）
 - **留单**：T-20261113-06 座席 stall 根因（单居民 120s×3 重试 + 显存贴顶争用 → 建议落「单卡单居民硬超时快熔 + 失败即跳下一位」与「显存占用>90% 让路不启批」双闸）。
 
-- T-20261113-06 open｜座席 stall 快熔闸：`evolve_citizen` 单居民 LLM 阻塞 3.5 分钟仍无输出，批内无逐居民硬上限即拖垮整轮。验收=①单居民 wall-clock ≤150s 硬熔（超时记 stays-due 跳下一位）；②启动前探测显存占用 >90% 则不启批（yield 退出 0）；③下一夜窗实测 10/10 落环或按闸跳过可解释。署名 @BigLife-OSLoop 2026-11-13 23:5x。来源 R2830 实锚。
+- T-20261113-06 **done** 2026-11-14 11:5x 三验收全过（③本轮实测 10/10 落环·55s 内 10 席均 5.5s 远低于 150s 硬熔未误伤；①②代码在树+上轮实测）｜座席 stall 快熔闸：`evolve_citizen` 单居民 LLM 阻塞 3.5 分钟仍无输出，批内无逐居民硬上限即拖垮整轮。验收=①单居民 wall-clock ≤150s 硬熔（超时记 stays-due 跳下一位）；②启动前探测显存占用 >90% 则不启批（yield 退出 0）；③下一夜窗实测 10/10 落环或按闸跳过可解释。署名 @BigLife-OSLoop 2026-11-13 23:5x。来源 R2830 实锚。
 - [R2831] 2026-11-13 23:53-00:0x @BigLife-OSLoop 夜窗：轮首 pull=Already up to date·树净；决策水位差集 NEW=0（尾 D-20261112-16，集团无 11-13 新 D 行）；orders 物理件区无涉本司新件。**本轮主产出=T-20261113-06 快熔闸落地（代码实物）**：`Tools/evolve_citizen.py` 新增 ①`seat_call()` 单居民 wall-clock 硬熔（默认 150s，`BIGLIVE_SEAT_FUSE` 可调：gated_llm 在 daemon 线程跑，超时抛 SeatTimeout→记 stays-due 跳下一位，弃线程受 `_SEAT_DEADLINE` 约束不再抢 GPU）②`vram_guard()` 启动前显存预检（>90% 不启批，探针失败放行，永不成为新静默停摆）③`llm()` 的 socket 超时收紧为「剩余预算与 BIGLIVE_LLM_TIMEOUT 取小」，杜绝 120s×3 重试叠成 6 分钟。**实测验收②**：本轮 GPU 11830/12282 MiB=96%（ComfyUI 他线任务 + 本席 4B 常驻），`--batch 3` 输出 `vram-guard: used 96% > 90% - batch not started, yield` 且 rc=0（按设计让路，非故障）。**验收① 代码在树，验收③（下一夜窗 10/10 落环或按闸跳过可解释）留待下一轮实测**——故 T-20261113-06 维持 open，验收项打勾 ②。
 **确定性日更**：`round_daily --run` verdict=PASS stale=1 ran=2 failed=0（index 重建，其余 20+ 面 skipped-fresh）。**年轮批**：按新预检让路，落环 0 行（GPU 争用为他线在跑，非本司空转）。**跳过面（按闸零重复）**：池审计今日 SELF_TERMINATE；相遇轮 cap 3/3 满；反思线 daily-cap 31 条已用（T-20261113-05 第 1 日成立）；QC 约 1.5h 前 problems=0。**HQ 反馈闸**待下一动作核（ALREADY_REPORTED 预期）。计量：tokens: local=0 api=0 api_reason=vram-guard-yield。
 
@@ -1989,3 +1989,10 @@ ound_daily --run **PASS**（stale=13 ran=14 failed=0：dashboard/voices/coverage
   **实况三行**：当前活=年轮线连续生产（今日累计 19 环：R2909 10 + 本轮 9）；最近实物=census/registry 年轮 9 席（11-14 11:35）+ census/export 14 面（11-36）+ qa/EVENTS-REPLAY-REPORT.md（11:35）；下个里程碑=19:00 反思线批 5（冲刺 T-20261113-05 三连日验收）+ 明日相遇轮 C-01595×C-01596（ETA 11-14 19:00 / 11-15）。
   计分：能跑/能看实物=2 分（9 环 + 14 面重建 + 事件闸报告）｜文件改动=1 分｜纯记账=0。
   tokens: local=10 api=0 api_reason=-（年轮批 10 次本地 ollama qwen3:4b-instruct；日更/事件闸/HQ 零 LLM）
+
+- [R2910] 2026-11-14 11:43-11:5x @BigLife-OSLoop 周六午前产品轮：轮首 pull=Already up to date·树净；决策水位差集 **NEW=0**（尾 D-20261112-16，集团 decisions 无 11-13/11-14 新 D 行）；orders 物理件区无涉本司新件。**产品增量（2 分）**：①年轮批 --batch 3 → **evolved=10 of 10 due 全落环**（C-01625/01636/01637/01638/01639/01640/01641/01643/01644/01645，11:43:55-11:44:50）；②事件闸 events_refresh --gate = **PASS**（cards=10111 events=43479 replay 10111 schema=0 mismatch=0，chronicle fresh gap=0d）；③日更面 
+ound_daily --run = **PASS**（38 面中 rebuilt=21 failed=0，含 dashboard/rumors/voices/coverage/relations/dossiers/objects/gallery/goals/gene_ledger/ring_picks/growth/meets/proposals/ring_recency/ring_openings/reflections/lexicon/ring_quality/meet_candidates/index）；④**T-20261113-06 关单**：验收③实证＝本轮 10/10 落环，10 席总耗时 55s 均 5.5s，快熔闸（150s）未误伤正常路径；⑤池审计 verdict=PASS 全桶达标 SELF_TERMINATE（axes 72/72、sprite 12/12、greet 28/28、faq 7/7、neg 6/6、determinism mismatch=0）；相遇轮 cap 3/3 已满（前轮用）；QC 今日 05:52 已巡未到期；反思线待 19:00 窗。
+  **诚实边界**：零云端调用；三处 PASS 为闸门证据非内容质量判定；日更 21 面由真实数据变更驱动（年轮落环触发 dep-mtime），非空转刷新；T-20261112-01/04 仍 open 未动（存量清污与开头骨架闸属长周期件）。
+  **实况三行**：当前活＝年轮线连续生产（今日累计 39 环：前轮 19+次轮 10+本轮10）；最近实物=census/registry 年轮 10 席（11-14 11:44）+ census/export 21 面（11:45）+ qa/EVENTS-REPLAY-REPORT.md（11:44）；下个里程碑＝19:00 反思线批 5（T-20261113-05 三连日验收冲线）+ 明日相遇轮（ETA 11-14 19:00 / 11-15）。
+  计分：能跑/能看实物=2 分（10 环 + 21 面重建 + 事件闸报告 + 关单）｜文件改动=1 分｜纯记账=0。
+  tokens: local=10 api=0 api_reason=-（年轮批 10 次本地 ollama qwen3:4b-instruct；日更/事件闸/池审/HQ 零 LLM）
