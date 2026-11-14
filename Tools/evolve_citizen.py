@@ -3022,6 +3022,11 @@ def add_ring(path, cid, line, anchor_note):
     text = re.sub(r"\*\*进化\*\* .*", f"**进化** v1.{count} · 出生 2026-09-23 · 年轮 {count} 圈 · 锚定律见 docs/CODEX.md §九", text, count=1)
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(text)
+    # T-20261114-02: the write face must report success explicitly. Falling off
+    # the end returned None, and the batch caller reads `if not add_ring(...)`
+    # as a refusal - so every landed ring was counted as skipped (R2963:
+    # written=0 skipped=9 while 9 cards really grew a ring).
+    return True
 
 def _ringed_today(path):
     """v0.63 (R2205): card-content face of the same-day idempotency gate.

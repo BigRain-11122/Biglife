@@ -2157,3 +2157,11 @@ ing_material_check=streak=3/3 PASS（11-12 motif8/8+rumor7/7、11-13 8/8+3/3、1
 - 影响：批末统计低报写入量；若按 written==0 判「零产出」会误判空转，与产品优先律计分冲突。
 - 验收：造一席 soft-concession 落地样本，断言 \written\ 递增且卡面 diff 非空；回归跑 \--audit-due\ due 不漏。
 - 优先级：P2（不影响内容正确性，只影响报数与判分）
+
+## T-20261114-02 年轮批报数口径（closed·2026-11-14 16:5x R2964 @BigLife-OSLoop 结单·根因更正）
+- **真根因（更正 R2963 的推测）**：不是 soft-concession 路径特殊，而是 `add_ring()` 成功写卡后**没有 `return True`**（Python 隐式返回 None）。批调用方 R2962 改成的权威判据 `if not add_ring(...)` 把 `None` 一律读成拒写 → 每次真实落环都走 skip 分支，`_ringed_today()` 立刻读到刚写进去的环所以打印 "skip already-served"，`written` 不增、`skipped` +1。R2963 的 `written=0 skipped=9` 与 9 处真写入正是此形态。
+- 修法：`add_ring()` 写盘成功后显式 `return True`（Tools/evolve_citizen.py）；相遇路径（L3565）不消费返回值，行为不变。
+- 验收（本轮实物）：新增 `Tools/selftest_add_ring.py`（零 GPU/零网络/临时目录）四例全绿——A 成功落环返回 True 且卡面今日环 1 条、进化 v1.2；B 同日二次返回 False 且字节不变；C 事件码行拒绝零写；D latin 机器词行拒绝零写。`--audit-due` 复跑 due=10 leaked=0 PASS。
+- 计分：报数口径缺陷修复 + 自测件=可跑可验实物（2 分）。
+
+- [R2964 2026-11-14 16:38-16:5x @BigLife-OSLoop 周六傍晚轮] 轮首 pull=Already up to date·树净；决策水位差集 NEW=0（decisions 64 个 D-ID 全消费，尾 D-20261112-16）；orders 物理件区无涉本司新件；QC 05:52 已跑、相遇今日 CAP 已满、反思线待 19:00 后，三者不重复。**主产出（P2 缺陷根因修复·2 分）**：见上方 **T-20261114-02**——`add_ring()` 缺 `return True` 致真实落环被计成 skipped（R2963 的 9 席真写入写进 skipped），已修 + 新增 `Tools/selftest_add_ring.py` 四例全绿（rc=0）。**产品增量**：日更面 round_daily **PASS**（stale=1 ran=2 failed=0，重建 index）；事件回放闸 **PASS**（cards=10111 events=43566 replayed=10111 schema=0 mismatch=0·coverage unexpected_missing=0·chronicle gap=0d）；`--audit-due` due=10 leaked=0 PASS。**跳过面（按闸律）**：显存 11884/12282MiB（musubi-tuner 仍持卡，vram-guard 报 degraded：free 402MiB），年轮批整批 ~19min 超 15min 轮预算，留单下轮跑（修后 written 应与卡面 diff 数一致——即验收第 2 轮）；pool_audit 上轮全桶达标；HQ 日报闸 ALREADY_REPORTED(day=2026-11-14 lines=3) 零写入。**实况三行**：当前活＝年轮报数口径根因修复+自测件上线 ｜ 最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\Tools\selftest_add_ring.py`（2026-11-14 16:5x·自测全绿）＋`census\export\index.html`（16:5x 重建）｜ 下个里程碑＝年轮批 written 与卡面 diff 对齐验收（窗 ≤48h）。tokens: local=0 api=0 api_reason=-
