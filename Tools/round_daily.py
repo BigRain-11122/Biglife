@@ -164,6 +164,15 @@ INPUTS = [
     # 用 daily 档（非 faces）——相遇是日更产品，同日新增的不对称当日就该现形；
     # 扫描只走有相遇行的百来位居民，秒级、零 LLM，逐日重建成本可忽略。
     ("meet_symmetry", "daily", "meet_asymmetry_scan.py",  ["qa/MEET-SYMMETRY-REPORT.md"]),
+    # v0.23 (2026-11-14 R2899): 「有生成器、有产物、无轮次引用」第十一例 ——
+    # cognition/city-chronicle.jsonl 的唯一写入口是 city_chronicle.py --feed，
+    # 而该命令不在任何轮次规程里：本轮实测台账停在 11-13、--qc 仍报 fresh
+    # （CHRONICLE_MAX_GAP_DAYS=1 容差吃掉「今天还没写」），页面 build_chronicle.py
+    # 却照常重建 ⇒ 页面 mtime 天天新、年谱内容冻在上一天（v0.5/v0.6 同构）。
+    # 实测 --feed 零 LLM、同日双跑 appended=0（幂等），data 档每日至多一次；
+    # 源断供时如实 stale，不会假装新鲜。
+    ("chronicle_feed", "data", "city_chronicle.py",       ["cognition/city-chronicle.jsonl"],
+     ["--feed"]),
 ]
 
 # v0.11 (2026-11-12 · T-20261112-09 收单): faces 档 stale 判据补「依赖源 mtime」面。
