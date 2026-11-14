@@ -24,6 +24,7 @@ TASKS = os.path.join(ROOT, "tasks", "TASKS.md")
 REGISTRY = os.path.join(ROOT, "census", "registry")
 EVENTS = os.path.join(ROOT, "events")
 CITIZENS = os.path.join(EXP, "citizens-light.jsonl")
+GATE_LEDGER = os.path.join(ROOT, "state", "vram-gate.jsonl")
 
 HEARTBEAT_SHOW = 10
 COMMIT_SHOW = 12
@@ -265,6 +266,73 @@ def age_text(delta: timedelta) -> str:
     return f"{mins // 1440} 天 {mins % 1440 // 60} 小时前"
 
 
+def read_gate_rows(path: str | None = None) -> list[dict]:
+    """state/vram-gate.jsonl 实读（evolve_citizen.vram_guard 每次探针追加一行）。
+
+    取不到/坏行一律跳过：闸台账是观测面，缺了不该让整页失败。
+    """
+    import json
+
+    rows: list[dict] = []
+    try:
+        with open(path or GATE_LEDGER, encoding="utf-8", errors="replace") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    obj = json.loads(line)
+                except ValueError:
+                    continue
+                if isinstance(obj, dict) and obj.get("state") in ("ok", "yield"):
+                    rows.append(obj)
+    except OSError:
+        return []
+    return rows
+
+
+def gate_summary(rows: list[dict], now: datetime | None = None, window_hours: int = 24) -> dict:
+    """纯函数：窗口内探针/让路计数 + 最近一次探针与最近一次让路（供 selftest 直喂）。"""
+    now = now or datetime.now()
+    since = now - timedelta(hours=window_hours)
+
+    def ts_of(row):
+        try:
+            return datetime.strptime(str(row.get("ts") or ""), "%Y-%m-%dT%H:%M:%S")
+        except ValueError:
+            return None
+
+    seen = []
+    for row in rows:
+        ts = ts_of(row)
+        if ts is None:
+            continue
+        seen.append((ts, row))
+    seen.sort(key=lambda x: x[0])
+
+    probes = yields = 0
+    last_yield = None
+    for ts, row in seen:
+        if ts < since:
+            continue
+        probes += 1
+        if row.get("state") == "yield":
+            yields += 1
+            last_yield = (ts, row)
+
+    last = seen[-1] if seen else None
+    return {
+        "probes": probes,
+        "yields": yields,
+        "share": (yields / probes) if probes else 0.0,
+        "window_hours": window_hours,
+        "last_ts": last[0] if last else None,
+        "last_state": (last[1].get("state") if last else ""),
+        "last_rows": [r for _, r in seen[-8:]],
+        "last_yield": last_yield,
+    }
+
+
 def main() -> int:
     now = datetime.now()
     hb, hb_orphans = heartbeats()
@@ -280,6 +348,7 @@ def main() -> int:
     vol = volumes()
     pd = persona_depth()
     rq = ring_quality()
+    gate = gate_summary(read_gate_rows(), now)
     nt = notes(NOTE_SHOW)
 
     stale_pages = [p for p in pg if (now - p[2]) > timedelta(minutes=STALE_MIN)]
@@ -330,6 +399,40 @@ def main() -> int:
         for it in rq["items"][:8]
     ) or '<tr><td colspan="4">未取到待修队列</td></tr>'
 
+    def _gate_label(row):
+        return "让路（批未启动）" if row.get("state") == "yield" else "放行"
+
+    def _gate_mem(row):
+        try:
+            return "%d%% · %d/%d MiB" % (
+                int(round(float(row.get("frac") or 0) * 100)),
+                int(row.get("used_mib") or 0),
+                int(row.get("total_mib") or 0),
+            )
+        except (TypeError, ValueError):
+            return "未取到"
+
+    def _gate_holders(row):
+        offs = [o for o in (row.get("offenders") or []) if isinstance(o, dict)]
+        if not offs:
+            return "未取到" if row.get("state") == "yield" else "—"
+        parts = []
+        for o in offs[:4]:
+            mib = o.get("mib")
+            parts.append("%s %dMiB" % (esc(o.get("name") or "?"), mib) if mib
+                         else esc(o.get("name") or "?"))
+        return " · ".join(parts)
+
+    gate_rows = "\n".join(
+        '<tr><td class="t">%s</td><td>%s</td><td class="n">%s</td><td>%s</td></tr>'
+        % (esc(datetime.strptime(str(r.get("ts")), "%Y-%m-%dT%H:%M:%S").strftime("%m-%d %H:%M"))
+           if str(r.get("ts") or "").count("-") == 2 else "未取到",
+           esc(_gate_label(r)), esc(_gate_mem(r)), _gate_holders(r))
+        for r in reversed(gate["last_rows"])
+    ) or '<tr><td colspan="4">未取到排产闸台账（尚无 vram_guard 探针）</td></tr>'
+    gate_last = ("%s（%s）" % (gate["last_state"] == "yield" and "让路" or "放行",
+                              age_text(now - gate["last_ts"]))) if gate["last_ts"] else "未取到"
+
     page = f"""<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -373,6 +476,7 @@ footer{{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(
 <div class="kpi{' bad' if hb_orphans else ''}"><b>{hb_orphans}</b><span>无时间戳状态行（被丢弃，需修）</span></div>
 <div class="kpi"><b>{vol['citizens']}</b><span>居民（轻量册）</span></div>
 <div class="kpi{' bad' if rq['items'] else ''}"><b>{len(rq['items'])}</b><span>年轮待修队列（cap {rq['cap'] or '未取到'}）</span></div>
+<div class="kpi{' bad' if gate['yields'] else ''}"><b>{gate['yields']}/{gate['probes']}</b><span>近 {gate['window_hours']}h 排产闸让路次数（探针数分母）</span></div>
 </div>
 
 <h2>最近轮次心跳<em>state/heartbeat.txt 尾 {HEARTBEAT_SHOW} 条 · 最后一条：{esc(last_line)} · 无时间戳状态行 <b>{hb_orphans}</b> 条（有时间戳才会进本表）</em></h2>
@@ -417,6 +521,12 @@ footer{{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(
 </tbody></table>
 <div class="note">全量复读/过短/模板三段判负由 Tools/ring_simile_audit.py 产出；修复走 19:00 后让路窗的 evolve 批（LLM 复写），本页只呈现队列，不改写任何年轮文本。</div>
 
+<h2>排产闸（显存）<em>state/vram-gate.jsonl 实读 · 阈值 {esc('%.0f%%' % (float(gate['last_rows'][-1].get('limit') or 0.9) * 100)) if gate['last_rows'] else '90%'} · 最近一次 {esc(gate_last)} · 近 {gate['window_hours']}h 让路 {gate['yields']}/{gate['probes']} 次</em></h2>
+<table><thead><tr><th>探针时间</th><th>结果</th><th>显存占用</th><th>GPU 会话（WDDM 不报单进程显存·非诊断依据）</th></tr></thead><tbody>
+{gate_rows}
+</tbody></table>
+<div class="note">「让路」＝GPU 被别的活占着，本轮年轮/相遇/反思批不启动（脚本自退，不是故障、也不计入零产出事故）；「放行」＝探针通过、批可开工。占用者取自 nvidia-smi compute-apps（Windows WDDM 不报单进程显存，故多数只见进程名）。</div>
+
 <h2>最近轮记<em>tasks/TASKS.md 内的轮号行</em></h2>
 <ul>
 {note_rows}
@@ -431,10 +541,11 @@ footer{{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(
         f.write(page)
     print(
         "city-ops.html written: pages=%d commits=%d hb=%d orphans=%d citizens=%d rings=%d events=%d stale=%d"
-        " persona=%d habit_genes=%d ring_queue=%d"
+        " persona=%d habit_genes=%d ring_queue=%d gate=%d/%d"
         % (
             len(pg), len(cm), len(hb), hb_orphans, vol["citizens"], vol["rings"], vol["events"],
             len(stale_pages), pd["active"], pd["habits"], len(rq["items"]),
+            gate["yields"], gate["probes"],
         )
     )
     return 0
@@ -451,6 +562,37 @@ SELFTEST_CASES = [
 ]
 
 
+GATE_CASES = [
+    # (台账行, 期望窗口内探针数, 期望窗口内让路数)
+    ([], 0, 0),
+    ([{"ts": "2026-11-14T14:23:49", "state": "yield", "frac": 0.97}], 1, 1),
+    ([{"ts": "2026-11-14T10:00:00", "state": "ok", "frac": 0.4},
+      {"ts": "2026-11-14T13:00:00", "state": "yield", "frac": 0.97},
+      {"ts": "2026-11-14T14:00:00", "state": "ok", "frac": 0.5}], 3, 1),
+    # 窗口外（>24h）不计入，但「最近一次」仍要有值
+    ([{"ts": "2026-11-01T09:00:00", "state": "yield", "frac": 0.99}], 0, 0),
+    # 坏时间戳整行跳过，不当成探针
+    ([{"ts": "not-a-ts", "state": "yield", "frac": 0.99}], 0, 0),
+]
+
+
+def gate_selftest() -> int:
+    now = datetime.strptime("2026-11-14T15:00:00", "%Y-%m-%dT%H:%M:%S")
+    fails = 0
+    for rows, want_probes, want_yields in GATE_CASES:
+        got = gate_summary(rows, now)
+        if (got["probes"], got["yields"]) != (want_probes, want_yields):
+            fails += 1
+            print("GATE FAIL probes=%d(want %d) yields=%d(want %d) :: %r"
+                  % (got["probes"], want_probes, got["yields"], want_yields, rows[:1]))
+    # 最近一次让路必须是窗口内那一条（窗口外的不许冒充）
+    got = gate_summary(GATE_CASES[2][0], now)
+    if not got["last_yield"] or got["last_yield"][0] != datetime(2026, 11, 14, 13, 0):
+        fails += 1
+        print("GATE FAIL last_yield dedup")
+    return fails
+
+
 def selftest() -> int:
     fails = 0
     for text, want_rows, want_orphans in SELFTEST_CASES:
@@ -460,7 +602,8 @@ def selftest() -> int:
             fails += 1
             print("FAIL rows=%d(want %d) orphans=%d(want %d) :: %r"
                   % (len(rows), want_rows, orphans, want_orphans, text[:60]))
-    print("selftest: %d probes, %d fail" % (len(SELFTEST_CASES), fails))
+    fails += gate_selftest()
+    print("selftest: %d probes, %d fail" % (len(SELFTEST_CASES) + len(GATE_CASES) + 1, fails))
     return 1 if fails else 0
 
 

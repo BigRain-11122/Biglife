@@ -243,7 +243,10 @@ DEPENDS = {
     "coverage": ["census/export/citizens-light.jsonl",
                  "census/export/coverage-backlog.jsonl"],
     "ops": ["census/export/citizen-persona.jsonl",
-            "census/export/citizens-light.jsonl", "state/ring-quality-queue.json"],
+            "census/export/citizens-light.jsonl", "state/ring-quality-queue.json",
+            # v0.26 (2026-11-14 R2934): 排产闸面板读显存闸台账；不加此依赖则闸
+            # 每次让路都改变 CEO 面内容，而页面仍判 fresh（dep-mtime 同族第六面）。
+            "state/vram-gate.jsonl"],
     "map": ["census/export/citizen-anchors.jsonl",
             "census/export/citizen-behavior.jsonl", "census/export/citizens-light.jsonl"],
     "growth": ["census/export/citizens-light.jsonl"],

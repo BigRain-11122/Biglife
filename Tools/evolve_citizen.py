@@ -916,12 +916,86 @@ class SeatTimeout(Exception):
 _SEAT_DEADLINE = None  # time.monotonic() deadline of the seat call in flight
 
 
+GATE_LEDGER = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                           "state", "vram-gate.jsonl")
+GATE_LEDGER_MAX_BYTES = 400_000
+GATE_LEDGER_KEEP_LINES = 400
+
+
+def gate_offenders():
+    """Which processes hold the GPU - only read on a blocking probe (cost-free otherwise).
+
+    Windows WDDM reports used_memory as [N/A], so memory is kept as null when the
+    driver won't say rather than faking a 0 MiB (R2934: "ShellHost 0MiB" was a lie).
+    Names are deduped (one browser spawns several webview children).
+    """
+    try:
+        r = subprocess.run(
+            ["nvidia-smi", "--query-compute-apps=pid,process_name,used_memory",
+             "--format=csv,noheader,nounits"],
+            capture_output=True, timeout=10)
+        out, seen = [], set()
+        for row in (r.stdout or b"").decode("utf-8", "replace").strip().splitlines():
+            parts = [p.strip() for p in row.split(",")]
+            if len(parts) < 3 or not parts[0]:
+                continue
+            name = os.path.basename(parts[1].strip()) or "?"
+            if name in seen:
+                continue
+            seen.add(name)
+            try:
+                mib = int(float(parts[2]))
+            except ValueError:
+                mib = None  # [N/A] on WDDM - honest unknown, not zero
+            out.append({"pid": parts[0], "name": name, "mib": mib})
+        known = [o for o in out if o["mib"]]
+        if known:
+            out.sort(key=lambda x: (-(x["mib"] or 0), x["name"].lower()))
+        return out[:8]
+    except Exception:  # noqa: BLE001 - attribution is a nice-to-have, never blocks
+        return []
+
+
+def record_gate_probe(state, used=0.0, total=0.0, frac=0.0, limit=0.90):
+    """Append one probe line to state/vram-gate.jsonl (append-only, trimmed).
+
+    Why: a yield used to exist only as one console line inside a wrapper's captured
+    stdout, so no CEO-facing page could answer "why is the city not growing now".
+    Best-effort by construction - a ledger write must never become a new stop.
+    """
+    try:
+        row = {
+            "ts": datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
+            "state": state,
+            "used_mib": int(used),
+            "total_mib": int(total),
+            "frac": round(float(frac), 4),
+            "limit": limit,
+            "pid": os.getpid(),
+        }
+        if state == "yield":
+            row["offenders"] = gate_offenders()
+        os.makedirs(os.path.dirname(GATE_LEDGER), exist_ok=True)
+        if os.path.exists(GATE_LEDGER) and os.path.getsize(GATE_LEDGER) > GATE_LEDGER_MAX_BYTES:
+            with open(GATE_LEDGER, encoding="utf-8", errors="replace") as f:
+                lines = f.read().splitlines()[-GATE_LEDGER_KEEP_LINES:]
+            with open(GATE_LEDGER, "w", encoding="utf-8", newline="\n") as f:
+                f.write("\n".join(lines) + "\n")
+        with open(GATE_LEDGER, "a", encoding="utf-8", newline="\n") as f:
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    except Exception:  # noqa: BLE001 - observability must never block the lane
+        pass
+
+
 def vram_guard(limit=0.90):
     """T-20261113-06 ②: refuse to start an LLM batch on an already-busy GPU.
 
     Probe failure passes (no nvidia-smi on some fleet machines / no GPU) - the
     guard must never become a new silent stop for the lane. Returns the used
     fraction when it blocks, None when the lane may start.
+
+    Every successful probe is also written to state/vram-gate.jsonl so the ops
+    page can show the gate's own history (R2934: "yield" was console-only).
     """
     try:
         r = subprocess.run(
@@ -939,7 +1013,9 @@ def vram_guard(limit=0.90):
             print("vram-guard: used %.0f%% > %.0f%% (%.0f/%.0f MiB) - batch not "
                   "started, yield (T-20261113-06)" % (
                       frac * 100, limit * 100, used, total), flush=True)
+            record_gate_probe("yield", used, total, frac, limit)
             return frac
+        record_gate_probe("ok", used, total, frac, limit)
     except Exception:  # noqa: BLE001 - probe failure must never block the lane
         return None
     return None

@@ -2080,3 +2080,13 @@ ound_daily --run = **PASS**（38 面中 rebuilt=21 failed=0，含 dashboard/rumo
 - **判例（复用）**：PowerShell 内联 python -c 含中文引号易被吃成语法错 → 校验改「生成器自带断言 + Select-String/-match 计数」双面取证，勿依赖单条内联表达式。
 - 三行：当前活=GPU 让路下的确定性可见面修复 ｜ 最近实物=census\export\city-lexicon.html（第六节 1501 句口头禅 + 64 方言词·2026-11-14 14:2x） ｜ 下个里程碑=GPU 空出后年轮批回补 due 队列 + 19:00 后反思批 5
   - tokens: local=0 api=0 api_reason=(vram-guard 97% 让路；本轮为确定性生成器改造与闸接线，零 LLM 调用)
+
+## R2934 · 2026-11-14 14:3x @BigLife-OSLoop（周六午后·排产闸可见化轮）
+- 轮首三步：pull --ff-only=Already up to date、树净；决策水位差集 **NEW=0**（decisions.md 尾仍 D-20261112-16）；orders 无新涉本司件（11-14 00:30 挂起裁决反驳已由 R2931 13:31 落 HQ-FEEDBACK，今日 hq_feedback --check=ALREADY_REPORTED 不重写）。
+- **产品增量（2 分·可看实物）**：显存让路从「只在轮日志里的一行控制台文本」升级为**可查询台账 + CEO 可见面板**。`evolve_citizen.vram_guard` 每次探针追加 `state/vram-gate.jsonl`（ok/yield＋读数＋阈值＋GPU 会话名单；写失败静默、绝不阻塞产线）；`build_city_ops.py` 新增「排产闸（显存）」节 + KPI「近 24h 让路 x/y 次」，附最近 8 次探针表。此前 CEO 打开实况页只看得到「最近心跳」与「年轮待修 400」，看不到「今天为什么没长年轮」。
+- **诚实修正（同批自曝自修）**：初版把 WDDM 的 `[N/A]` 解析成 0 MiB，页面会印出「ShellHost.exe 0MiB」这种假归因——改为 `mib=None` 只列进程名，表头改「GPU 会话（WDDM 不报单进程显存·非诊断依据）」，注记写明原因。宁可少一个数字，不给一个错数字。
+- **闸配套（防复发）**：`round_daily.DEPENDS["ops"]` 补 `state/vram-gate.jsonl`——不加则闸每次让路都改变页面内容，而 `--run` 仍判 fresh（dep-mtime 同族第六面，前五：gene_ledger R2743／dashboard R2760／环面 v0.12／chronicle R2791／gene R2933）。
+- **验证证据**：`build_city_ops --selftest` **12 探针 0 fail**（新增 6：空台账／单让路／混合 3 探针计数／窗口外不计／坏时间戳跳过／最近让路不冒充）；真实探针实跑 yield=0.966（11865/12282 MiB）；页面内容断言 **6/6 PASS**（小节在／让路行在／读数在／阈值 90%／WDDM 注记／KPI 在）；`round_daily --run` **verdict PASS**（stale=1、ran=2：ops + index）。
+- **让路记录**：本轮 vram-guard used=97% → 年轮批 batch=3 未启动（脚本自退，非故障）；`reflections.jsonl` 今日 5 条 date=2026-11-14（他轮产出，非本轮）；相遇/反思按窗未跑；语言池 `pool_audit` **SELF_TERMINATE**（72/72 轴桶、12/12 像素灵、greet/faq/neg 全达标、hard_fails=0）。
+- 三行：当前活=产线闸可观测化（让路原因进 CEO 面） ｜ 最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ops.html（2026-11-14 14:3x·新增排产闸节） ｜ 下个里程碑=GPU 空出后年轮批回补 due 队列 + 19:00 后反思批 5
+  - tokens: local=0 api=0 api_reason=(vram-guard 97% 让路；本轮为确定性可观测性改造与页面重建，零 LLM 调用)
