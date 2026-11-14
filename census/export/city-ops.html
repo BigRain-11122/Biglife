@@ -32,11 +32,11 @@ li{font-size:13px;color:#b9b6ae;margin:4px 0}
 footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(--line)}
 </style></head><body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 产物目录</a></div>
 <header><h1>城市产线实况</h1>
-<div class="sub">本页由 Tools/build_city_ops.py 确定性生成（零 LLM）· 生成于 2026-11-14 16:11 · 数据全部取自本仓盘上与 git</div></header>
+<div class="sub">本页由 Tools/build_city_ops.py 确定性生成（零 LLM）· 生成于 2026-11-14 16:33 · 数据全部取自本仓盘上与 git</div></header>
 <main>
 <div class="kpis">
-<div class="kpi"><b>16 分钟前</b><span>最近一次轮次心跳</span></div>
-<div class="kpi"><b>11-14 15:54</b><span>最近提交时间</span></div>
+<div class="kpi"><b>11 分钟前</b><span>最近一次轮次心跳</span></div>
+<div class="kpi"><b>11-14 16:19</b><span>最近提交时间</span></div>
 <div class="kpi bad"><b>3</b><span>超过 180 分钟未刷新的页</span></div>
 <div class="kpi"><b>0</b><span>无时间戳状态行（被丢弃，需修）</span></div>
 <div class="kpi"><b>10114</b><span>居民（轻量册）</span></div>
@@ -46,6 +46,7 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 
 <h2>最近轮次心跳<em>state/heartbeat.txt 尾 10 条 · 最后一条：os-loop: round done exit=0 · 无时间戳状态行 <b>0</b> 条（有时间戳才会进本表）</em></h2>
 <table><thead><tr><th>时间</th><th>记录</th></tr></thead><tbody>
+<tr><td class="t">11-14 16:21:56</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-14 15:55:18</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-14 15:53:02</td><td>os-loop: skip (round in flight)</td></tr>
 <tr><td class="t">11-14 15:26:34</td><td>os-loop: round done exit=0</td></tr>
@@ -55,11 +56,11 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td class="t">11-14 14:43:16</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-14 14:33:05</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-14 14:18:25</td><td>os-loop: round done exit=0</td></tr>
-<tr><td class="t">11-14 14:08:42</td><td>os-loop: round done exit=0</td></tr>
 </tbody></table>
 
 <h2>最近产物提交<em>git log 尾 12 条</em></h2>
 <table><thead><tr><th>时间</th><th>commit</th><th>说明</th></tr></thead><tbody>
+<tr><td class="t">11-14 16:19</td><td class="h">42ed368ec</td><td>产品轮 2026-11-14 16:2x: 日更面 index/ops 重建 + 年轮线 GPU 拮抗阻断立单（T-20261114-05·150s 熔断空烧实证）[via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-14 15:54</td><td class="h">29b37a3e0</td><td>产品轮 2026-11-14 午后: 年轮 due 幻影成功修复落账 + 16 席新环后日更面/事件面重建（events 43557 replay PASS）[via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-14 15:49</td><td class="h">ee27c527e</td><td>行为线 2026-11-14: 镜像 rows=16 ring=10114</td></tr>
 <tr><td class="t">11-14 15:47</td><td class="h">e6efe3ec2</td><td>fix(evolve): T-20261114-01 落环返回值即权威——add_ring 拒写不再计 evolved，批末报 written/skipped；本轮 16 席年轮真写入 [via BigLife-OSLoop]</td></tr>
@@ -71,22 +72,22 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td class="t">11-14 15:20</td><td class="h">f4b1d3247</td><td>年轮环(既有居民迭代·零新注册) 2026-11-14: C-01683, C-01688, C-01704, C-01712, C-01689, C-01691, C-01692, C-01693, C-01694, C-01695 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-14 15:11</td><td class="h">538d748e3</td><td>R2947 让路窗确定性轮：日更 3 面重建 + 事件流回放闸 PASS + 实况面刷新 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-14 15:05</td><td class="h">9fc33bcbc</td><td>基因批 b56：补 8 条基因并刷新 4 个可见面 [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-14 14:55</td><td class="h">f195314da</td><td>任务板补记基因文件编码纪律（UTF-8无BOM+LF+indent=2，防假diff）[via BigLife-OSLoop]</td></tr>
 </tbody></table>
 
 <h2>页面新鲜度<em>census/export 下的单页 · 按更新时间倒序</em></h2>
 <table><thead><tr><th>页面</th><th>体积</th><th>更新</th><th>状态</th></tr></thead><tbody>
+<tr><td><a href="city-dashboard.html">city-dashboard.html</a></td><td class="n">62 KB</td><td class="t">11-14 16:33</td><td>新</td></tr>
+<tr><td><a href="city-today.html">city-today.html</a></td><td class="n">406 KB</td><td class="t">11-14 16:33</td><td>新</td></tr>
+<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">18 KB</td><td class="t">11-14 16:12</td><td>新</td></tr>
 <tr><td><a href="meet-candidates.html">meet-candidates.html</a></td><td class="n">28 KB</td><td class="t">11-14 15:53</td><td>新</td></tr>
 <tr><td><a href="gene-ledger.html">gene-ledger.html</a></td><td class="n">141 KB</td><td class="t">11-14 15:53</td><td>新</td></tr>
 <tr><td><a href="city-voices.html">city-voices.html</a></td><td class="n">15 KB</td><td class="t">11-14 15:53</td><td>新</td></tr>
 <tr><td><a href="city-rumors.html">city-rumors.html</a></td><td class="n">14 KB</td><td class="t">11-14 15:53</td><td>新</td></tr>
 <tr><td><a href="city-reflections.html">city-reflections.html</a></td><td class="n">15 KB</td><td class="t">11-14 15:53</td><td>新</td></tr>
 <tr><td><a href="city-objects.html">city-objects.html</a></td><td class="n">95 KB</td><td class="t">11-14 15:53</td><td>新</td></tr>
-<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">17 KB</td><td class="t">11-14 15:53</td><td>新</td></tr>
 <tr><td><a href="city-meets.html">city-meets.html</a></td><td class="n">35 KB</td><td class="t">11-14 15:53</td><td>新</td></tr>
 <tr><td><a href="city-growth.html">city-growth.html</a></td><td class="n">5 KB</td><td class="t">11-14 15:53</td><td>新</td></tr>
 <tr><td><a href="city-goals.html">city-goals.html</a></td><td class="n">17 KB</td><td class="t">11-14 15:53</td><td>新</td></tr>
-<tr><td><a href="city-dashboard.html">city-dashboard.html</a></td><td class="n">62 KB</td><td class="t">11-14 15:53</td><td>新</td></tr>
 <tr><td><a href="city-coverage.html">city-coverage.html</a></td><td class="n">5 KB</td><td class="t">11-14 15:53</td><td>新</td></tr>
 <tr><td><a href="resident-gallery.html">resident-gallery.html</a></td><td class="n">2965 KB</td><td class="t">11-14 15:36</td><td>新</td></tr>
 <tr><td><a href="city-ring-recency.html">city-ring-recency.html</a></td><td class="n">13 KB</td><td class="t">11-14 15:36</td><td>新</td></tr>
@@ -97,7 +98,6 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td><a href="city-districts.html">city-districts.html</a></td><td class="n">51 KB</td><td class="t">11-14 15:36</td><td>新</td></tr>
 <tr><td><a href="city-ring-trend.html">city-ring-trend.html</a></td><td class="n">24 KB</td><td class="t">11-14 15:36</td><td>新</td></tr>
 <tr><td><a href="city-ring-quality.html">city-ring-quality.html</a></td><td class="n">15 KB</td><td class="t">11-14 15:36</td><td>新</td></tr>
-<tr><td><a href="city-today.html">city-today.html</a></td><td class="n">385 KB</td><td class="t">11-14 15:09</td><td>新</td></tr>
 <tr><td><a href="city-map.html">city-map.html</a></td><td class="n">864 KB</td><td class="t">11-14 15:09</td><td>新</td></tr>
 <tr><td><a href="city-lexicon.html">city-lexicon.html</a></td><td class="n">188 KB</td><td class="t">11-14 15:03</td><td>新</td></tr>
 <tr><td><a href="city-chronicle.html">city-chronicle.html</a></td><td class="n">112 KB</td><td class="t">11-14 09:44</td><td>陈旧</td></tr>
@@ -110,9 +110,9 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <table><thead><tr><th>面</th><th>数值</th></tr></thead><tbody>
 <tr><td>居民（citizens-light）</td><td class="n">10114</td></tr>
 <tr><td>居民卡文件</td><td class="n">10091</td></tr>
-<tr><td>年轮条目</td><td class="n">18083</td></tr>
+<tr><td>年轮条目</td><td class="n">18092</td></tr>
 <tr><td>已有年轮的居民</td><td class="n">10091</td></tr>
-<tr><td>城市事件（events/*.jsonl）</td><td class="n">43557</td></tr>
+<tr><td>城市事件（events/*.jsonl）</td><td class="n">43566</td></tr>
 </tbody></table>
 
 <h2>人格深化面<em>census/export/citizen-persona.jsonl 实读 · 确定性派生</em></h2>
@@ -140,7 +140,7 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 </tbody></table>
 <div class="note">全量复读/过短/模板三段判负由 Tools/ring_simile_audit.py 产出；修复走 19:00 后让路窗的 evolve 批（LLM 复写），本页只呈现队列，不改写任何年轮文本。</div>
 
-<h2>排产闸（显存）<em>state/vram-gate.jsonl 实读 · 阈值 90% · 最近一次 让路（57 分钟前） · 近 24h 让路 5/5 次</em></h2>
+<h2>排产闸（显存）<em>state/vram-gate.jsonl 实读 · 阈值 90% · 最近一次 让路（1 小时 18 分前） · 近 24h 让路 5/5 次</em></h2>
 <table><thead><tr><th>探针时间</th><th>结果</th><th>显存占用</th><th>GPU 会话（WDDM 不报单进程显存·非诊断依据）</th></tr></thead><tbody>
 <tr><td class="t">11-14 15:14</td><td>让路（批未启动）</td><td class="n">97% · 11869/12282 MiB</td><td>ShellHost.exe · CrossDeviceResume.exe · explorer.exe · StartMenuExperienceHost.exe</td></tr>
 <tr><td class="t">11-14 15:01</td><td>让路（批未启动）</td><td class="n">97% · 11875/12282 MiB</td><td>ShellHost.exe · CrossDeviceResume.exe · explorer.exe · StartMenuExperienceHost.exe</td></tr>
