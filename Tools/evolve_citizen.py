@@ -609,7 +609,7 @@ Usage:
   python -X utf8 evolve_citizen.py --batch 3 --no-propose # skip the proposal line for this run
   --via BigLife-OSLoop  # committer-identity tail on every commit (cph4/versioning.md 4.1)
 """
-import argparse, atexit, datetime, glob, json, os, re, socket, subprocess, sys, threading, time, urllib.error, urllib.request
+import argparse, atexit, datetime, glob, hashlib, json, os, re, socket, subprocess, sys, threading, time, urllib.error, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
@@ -3927,8 +3927,12 @@ def main():
                 continue
             print("ollama down; batch paused at", n, flush=True)
             break
-        except Exception:
-            print("ollama down; batch paused at", n, flush=True)
+        except Exception as exc:  # noqa: BLE001
+            # R3047: a code bug used to be reported as "ollama down" here and the
+            # batch looked like infra downtime for a whole round (the hashlib
+            # NameError hid this way). Keep the pause, print the real cause.
+            print("batch paused at %s (unexpected %s: %s)" % (
+                n, type(exc).__name__, exc), flush=True)
             break
         if line is None:
             print("gate: skip", cid, "(stays due)", flush=True)

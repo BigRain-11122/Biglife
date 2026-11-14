@@ -2530,3 +2530,10 @@ ound_daily --run=stale=25 ran=26 failed=0 verdict=PASS（growth 11 分页/voices
 
 - [2026-11-15 07:19-07:35 @BigLife-OSLoop R3046] **母题塌缩根治（本轮主产出）**：年轮批 9/10 落环（C-02570/02575/02578/02579/02572/02581/02582/02583/02584；C-02577 被 recent-family-opening+recent-dup-phrase 闸拦·留 due）→ 事件流回放闸 PASS（cards=10111 events=44208 mismatch=0 schema=0）→ 日更面 24 面重建 0 失败。**品质缺陷实证**：今日全城 339 条年轮中「门板」103 次（30%）、「锅盖」38 次（11%），同街区邻居写同一批物件。溯源两处并已修：①city_life_events 每日仅产 8 条母题（DISTRICTS 权重合计）却摊给 1000+ 条年轮→扩容 8→20 条 + 句式族同步 8→20（族数≥条数的既有约束）；②evolve_citizen 的 out[:4]+固定顺序让全员共享同一组→改按 cid 的 md5 稳定偏移轮转，本 zone 保底 1 条且 local 亦轮转（否则 95% gaming 居民共享同一条）。**诚实边界**：风 268/339（79%）经核实=真实天气 wind 8.7m/s 的正确锚定，非缺陷，天气通路未动。验证=当日 337 张真实卡对明日 20 条池确定性抽样：20/20 全用（旧 4/8）、最高集中 26.7%/最低 15.1%、每卡仍 4 条（prompt 不增长）。commit 0f85234fe。
   **本轮计量**：tokens: local=11 api=0 api_reason=-（年轮批 10 次调用 9 成功 + 二次验证批 1 次遇 Ollama down 静默跳过）
+
+
+- [2026-11-15 07:33-07:4x @BigLife-OSLoop R3047] **年轮线 P0 复明（本轮主产出）**：轮首 pull=Already up to date·树净；决策水位差集 NEW=0（尾 D-20261115-05）；orders 无涉本司物理件。
+  **缺陷**：年轮批连续两跑皆在 0 席处 ollama down; batch paused at 0，而 11434 pi/tags=200、直连 /v1/chat/completions 正常。绕开静默分类后取到真因：uild_prompt L2970/2973 用 hashlib.md5 做母题库确定性轮转，但模块级导入行（L612）漏 hashlib（L2619 只有函数内局部导入）→ **NameError 100% 拦死年轮线**。病根=R3046「母题库 8->20 + 按 cid 轮转」提交 0f85234fe 只验证了采样分布，没跑一次真实批（且当轮把这次失败记成「Ollama down 静默跳过」=误判为基础设施）。修复=模块级 import hashlib（1 词）；连带改静默分类：批级 except Exception 不再冒充 ollama down，改为打印真实异常类型与消息，避免同类代码缺陷再被记成宕机。
+  **验证**：修复后同批 written=9 skipped=0（C-02586/02589/02590/02606/02585/02591/02593/02594/02595；3 席 soft-concession 落环，C-02577 被 recent-dup 闸拦留 due）；脚本自提交 edbd4c860（9 卡）+ 行为镜像 6af21a332；事件闸 PASS（derive cards=10111 events=44217，replay 10111 mismatch=0 schema=0，coverage unexpected_missing=0，chronicle gap=0d）；日更面 stale=3 ran=4 failed=0 verdict=PASS（仅 index 重建，余 20 面当日新鲜）；对外实况三行刷新 rings_today=350（实测 - 2026-11-15 行 350/居民 348）。
+  **跳过面（诚实不重烧）**：语言池未跑到（预算）/相遇轮未到日窗内主动轮/反思线待 19:00/QC 周期未到/基因轮未到期。
+  tokens: local=1 api=0 api_reason=-
