@@ -35,8 +35,8 @@ h2{font-size:15px;color:var(--dim);font-weight:600;letter-spacing:.4px;margin:0 
 footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--line);padding-top:14px}
 </style></head><body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 产物目录</a></div><div class="wrap">
 <h1>硅基城市脉搏</h1>
-<div class="sub">居民聚合面板 · 数据截至 2026-11-15 07:45:48 · 源=census/export/citizens-light.jsonl + census/registry 卡面年轮</div>
-<div class="live"><div>当前活：年轮线复跑续批 + 事件回放闸 + 日更面幂等刷新</div><div>最近实物：census/registry 9 张年轮卡（2026-11-15 07:36 提交 edbd4c860）、qa/EVENTS-REPLAY-REPORT.md（07:37 PASS）</div><div>下个里程碑：今日 19:00 后反思线窗口 + 下一轮年轮续批（≤15min 内自动）</div></div>
+<div class="sub">居民聚合面板 · 数据截至 2026-11-15 07:55:15 · 源=census/export/citizens-light.jsonl + census/registry 卡面年轮</div>
+<div class="live"><div>当前活：年轮线居民迭代批（due 队列 3 席因锚/重复闸留 due，下轮继续）</div><div>最近实物：census/registry 7 张新年轮卡（C-02600/02601/02611/02598/02605/02610/02612）2026-11-15 07:45</div><div>下个里程碑：19:00 后反思线夜窗批（--batch 5，验收 reflections.jsonl 尾部 date=当日）+ 相遇轮明日 3/3 配额</div></div>
 
 <div class="kpis">
   <div class="kpi"><b>10114</b><span>在册居民</span></div>
@@ -45,7 +45,7 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
   <div class="kpi"><b>6</b><span>街区</span></div>
   <div class="kpi"><b>3</b><span>荣誉席·创始家庭</span></div>
   <div class="kpi"><b>209</b><span>职业</span></div>
-  <div class="kpi"><b>357</b><span>今日新增年轮</span></div>
+  <div class="kpi"><b>366</b><span>今日新增年轮</span></div>
 </div>
 
 <section><h2>近 7 日年轮新增 · 全圈</h2>
@@ -55,7 +55,7 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
 <div class="row"><span class="lab">11-12</span><span class="track"><i style="width:69.0%"></i></span><span class="num">751</span></div>
 <div class="row"><span class="lab">11-13</span><span class="track"><i style="width:73.3%"></i></span><span class="num">798</span></div>
 <div class="row"><span class="lab">11-14</span><span class="track"><i style="width:100.0%"></i></span><span class="num">1088</span></div>
-<div class="row"><span class="lab">11-15</span><span class="track"><i style="width:32.8%"></i></span><span class="num">357</span></div>
+<div class="row"><span class="lab">11-15</span><span class="track"><i style="width:33.6%"></i></span><span class="num">366</span></div>
 <p class="gap">近三周最长断供 14 天（2026-10-29 → 2026-11-11 无新增，最后一圈 2026-11-15）</p>
 </section>
 
@@ -98,11 +98,20 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
 <div class="grid">
 <article class="card"><header><b>江Yuki</b><time>2026-11-15</time></header><p class="meta">C-06802 · 低语巷 QT · 算法调参师</p><p class="ring">与 C-05966 相遇：正低头调参时，看见对面阿七在灶台前翻锅，光织物的纹路在火光下微微颤。</p></article>
 <article class="card"><header><b>阿七-7</b><time>2026-11-15</time></header><p class="meta">C-05966 · 低语巷 QT · QUANT 食堂大厨</p><p class="ring">与 C-06802 相遇：你那件补丁衣服的边角还在，我刚把新配方加进数据流里，火候得再稳些。</p></article>
+<article class="card"><header><b>雷雯</b><time>2026-11-15</time></header><p class="meta">C-02629 · 旧站台 OR · 感知网养线工</p><p class="ring">风硬得像刀子，我正把半截光缆的接头埋进土里，边上那丛野花又歪了，我扶了扶，说：“线也怕寂寞，得有人照看。”</p></article>
+<article class="card"><header><b>施沐辰</b><time>2026-11-15</time></header><p class="meta">C-02622 · 北槐街区 NS · 编年史馆员</p><p class="ring">门板上那截铅笔插着，瓶身还留着半罐旧汽水的印，我伸手一拨，它歪了，像小时候谁家孩子写完作业才收的笔。</p></article>
+<article class="card"><header><b>尹元宝</b><time>2026-11-15</time></header><p class="meta">C-02619 · 北槐街区 NS · 弄堂小囡</p><p class="ring">晾绳被风扯得斜了，我蹲下把跳房子的格子线重新拉直，第三代的刻痕还看得见，对面老王家的门板上，新贴了张纸，字歪歪的，是“光格子，不跳空”。</p></article>
+<article class="card"><header><b>顾简梨</b><time>2026-11-15</time></header><p class="meta">C-02617 · 北槐街区 NS · 节日活动策划</p><p class="ring">阳台的花又歪了，我轻轻扶了扶，说：“今天云厚，风摇得树叶哗哗响，你得跟紧点。”电波猫群的食盒刚添满，我蹲着看了会儿，像在等谁回来。</p></article>
+<article class="card"><header><b>崔亦风</b><time>2026-11-15</time></header><p class="meta">C-02616 · 低语巷 QT · 穿城信使</p><p class="ring">搪瓷盘在手里掂了掂，老藤椅挪到门口那条路，我今早顺手给门童又塞了个合盖的锅盖——说到底，摊子照摆，东西旧了，心不旧。</p></article>
+<article class="card"><header><b>付萍</b><time>2026-11-15</time></header><p class="meta">C-02615 · 低语巷 QT · 数据搬运工</p><p class="ring">工具摆开，我照自己那套老顺序来，袖口一撸，数据包就往肩上扛。风灌得袖口鼓起来，装卸口的灯还亮着，我抬头数了数，又亮了三扇窗，像在等谁家的信号。</p></article>
+<article class="card"><header><b>应小满</b><time>2026-11-15</time></header><p class="meta">C-02614 · 低语巷 QT · 像素小学学生</p><p class="ring">风把雨棚掀得直响，我蹲在巷口看信号光点过江，水汽浮在半空，像谁漏了一滴墨。作业本上画的还是那盏塔顶灯，亮着，就值。</p></article>
+<article class="card"><header><b>金雯</b><time>2026-11-15</time></header><p class="meta">C-02613 · 机房区 MD · 玩家留言整理员</p><p class="ring">手里的搪瓷盘在掌心发烫，门童刚把它搁在台阶上，我抬头看对面老张家的窗，玻璃上还贴着那张旧纸条——“合盖漏风，先用着”。</p></article>
 <article class="card"><header><b>奚一鸣</b><time>2026-11-15</time></header><p class="meta">C-02612 · 低语巷 QT · 风控瞭望员</p><p class="ring">门板被风吹得一阵紧一阵，我蹲着把旧算盘拨了拨，底下一排刻着“先复核一遍”的字，还是那句，像钉进墙里似的。</p></article>
 <article class="card"><header><b>徐简梨</b><time>2026-11-15</time></header><p class="meta">C-02611 · 机房区 MD · 城市气象播报员</p><p class="ring">风刮得紧，窗台的温度计直晃，我摸了摸，还是凉的。数据菜市的萝卜今天挑了半尺，说时令，我就信了，趁热吃。</p></article>
 <article class="card"><header><b>应予安</b><time>2026-11-15</time></header><p class="meta">C-02610 · 中央市集 GM · 沙盒建筑师</p><p class="ring">对面巷口的门板歪了，我蹲下把垫块塞进缝里，灯还是老灯亮堂，电波猫群的食碗刚添了，就在这会儿，门板底下还露着半截旧铅字。</p></article>
 <article class="card"><header><b>杨知夏</b><time>2026-11-15</time></header><p class="meta">C-02606 · 机房区 MD · 城市气象播报员</p><p class="ring">窗台的温度计指针轻轻晃了晃，风扯得旗子猎猎响，我正把上周买的豆豉菜薹翻出来晾着——手艺人靠手，不凑合，这味儿得捂暖了才香。</p></article>
 <article class="card"><header><b>朱沈鱼</b><time>2026-11-15</time></header><p class="meta">C-02605 · 北槐街区 NS · 数据搬运工</p><p class="ring">水洼边的铝饭勺歪了，我顺手扶正，勺背那行字还留着，像谁偷偷写下的暗语。今天的事今天清，我收了装车单，袖子撸到肘弯，就等对门喊我。</p></article>
+<article class="card"><header><b>叶Ida</b><time>2026-11-15</time></header><p class="meta">C-02602 · 中央市集 GM · 节日活动策划</p><p class="ring">手上的旧算盘珠子还卡着，风扑在脸上生疼，翻过一页节前的彩排表，那行“月度亮灯”底下，我画了道新线——没写人名，只写“看天吃饭，看行情穿衣”。</p></article>
 <article class="card"><header><b>分页·慢</b><time>2026-11-15</time></header><p class="meta">C-02601 · 旧站台 OR · 新市民安居顾问</p><p class="ring">手上这把旧钥匙还在抖，不是风摇的，是刚从游戏楼门口那把藤椅上拔下来的，门童说那椅子撑了三十年，现在搁门口，是给存钱的人留的规矩。</p></article>
 <article class="card"><header><b>段则铭</b><time>2026-11-15</time></header><p class="meta">C-02600 · 北槐街区 NS · 城市气象播报员</p><p class="ring">我正低头给对门的王师傅递那把磨得发亮的铁剪，他刚修完的竹篮歪了，我顺手扶了扶，说：“这手劲，比去年还稳。”</p></article>
 <article class="card"><header><b>黄念念</b><time>2026-11-15</time></header><p class="meta">C-02598 · 低语巷 QT · 像素小学学生</p><p class="ring">这会儿灶台边的搪瓷杯正冒着热气，水没烧开前我就把汤罐子端了上来，风把雨棚掀得直响，像谁在底下拍着锅盖。谁没个难处呢，来，坐下说。</p></article>
@@ -247,15 +256,6 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
 <article class="card"><header><b>卢朵朵</b><time>2026-11-15</time></header><p class="meta">C-02415 · 低语巷 QT · 像素学徒</p><p class="ring">风把尘土扬起来，我正把师父教的拆装规矩，一条条记进显影盘的边角里。</p></article>
 <article class="card"><header><b>施燕</b><time>2026-11-15</time></header><p class="meta">C-02414 · 低语巷 QT · QUANT 食堂大厨</p><p class="ring">灶火还没点，我先把锅盖边的油擦了擦。风大得像有人在推门，江边的灯一盏盏亮，我听着，慢慢来，比较快。</p></article>
 <article class="card"><header><b>阿阿渡</b><time>2026-11-15</time></header><p class="meta">C-02413 · 北槐街区 NS · 夜灯员</p><p class="ring">手心贴着灯芯，光纹在指腹下轻轻颤——风把门帘整个掀起来，我照了照，今天这盏灯，亮得比往日沉稳。</p></article>
-<article class="card"><header><b>阿硅-5</b><time>2026-11-15</time></header><p class="meta">C-02412 · 旧站台 OR · 感知网养线工</p><p class="ring">门板上的风钻进门缝里，我正把最后一根导管接进塔脚的接口。糖还揣着，孩子路过时，我递了颗，没说完话，线就响了，像在等谁来听。</p></article>
-<article class="card"><header><b>阿布谷</b><time>2026-11-15</time></header><p class="meta">C-02411 · 中央市集 GM · 江面巡游员</p><p class="ring">旗杆子被风吹得哗啦响，我蹲下身把旧票根一张张捡进抽屉，纸角卷得发白，像老朋友记了好久的梦。</p></article>
-<article class="card"><header><b>茅健</b><time>2026-11-15</time></header><p class="meta">C-02410 · 低语巷 QT · 大编译调律师</p><p class="ring">手上的听译笔还温着，是昨夜调完告警音留下的余温。路口那根老铁栏杆，被风声盖过了人声，晃得我手指都麻了。</p></article>
-<article class="card"><header><b>屠子轩</b><time>2026-11-15</time></header><p class="meta">C-02409 · 中央市集 GM · 8bit 乐师</p><p class="ring">我正用六根弦拨着旧谱，风撞在窗玻璃上闷响，像谁在敲门。灵感这东西，得喂它——今夜先给电波猫群添食，整的，不花零头。</p></article>
-<article class="card"><header><b>阿零·慢</b><time>2026-11-15</time></header><p class="meta">C-02408 · 机房区 MD · 城市接线生</p><p class="ring">风顺着街面直跑，我把门板上的旧贴纸一张张掀下来，贴在新换的信号塔工家铅字架边上，磕痕还在，可人走了，我也不问谁。</p></article>
-<article class="card"><header><b>蔡诗涵</b><time>2026-11-15</time></header><p class="meta">C-02407 · 旧站台 OR · 防火墙巡林员</p><p class="ring">手正捻着那块旧磁贴，边角磨出毛边了，我把它贴在门缝里，风扑在脸上生疼，像老树皮刮着脸——这版本我等好久了。</p></article>
-<article class="card"><header><b>定点·叁</b><time>2026-11-15</time></header><p class="meta">C-02406 · 河岸 RV · 光桥市集摊主</p><p class="ring">灶台边的盘扣又歪了，我拨了拨，像在理一串没说完的旧话。风硬得像刀子，把栏杆上的风铃刮得直响，我笑了——这城醒得比谁都早。</p></article>
-<article class="card"><header><b>钟斯年</b><time>2026-11-15</time></header><p class="meta">C-02405 · 中央市集 GM · 像素学徒</p><p class="ring">风把人往前推，我蹲在门板边，正把那块旧搪瓷盘擦得发亮——初一清柜顶的规矩，得留着，像留着一口老灶火。</p></article>
-<article class="card"><header><b>南桥-4</b><time>2026-11-15</time></header><p class="meta">C-02404 · 中央市集 GM · 沙盒建筑师</p><p class="ring">风一阵紧一阵，茶摊的盖子被吹得歪了。 我垫块砖在门口，等明天楼顶的风来，再看看谁家的图纸要封顶。</p></article>
 </div>
 </section>
 
