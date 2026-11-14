@@ -63,6 +63,16 @@
 
 ## 已结
 
+## R2999 · 2026-11-15 01:0x-01:2x @BigLife-OSLoop（反思线挂死根治·模型白名单+进度可见化）
+
+- **缺陷根因（实测定位）**：`Tools/reflect_citizen.py` 的 `detect_model()` 取「体积最大的 qwen」→ 本机解析成 `qwen3.5:27b`（17.5GB，VRAM 装不下 → CPU 卸载），每次生成耗满 120s 超时 ×3 重试 ×N 人，且全程零输出 → 对外表现为「exit=0 无输出零写入」。对照：年轮线 `evolve_citizen.seat()` 早已用白名单（`qwen3:4b-instruct`/`qwen2.5:7b`）规避同一坑（T-20261024-02）。分阶段计时证明预处理全 <1s（import 0.07s / pick_ids 0.00s / load_rings 0.02s / existing 0.00s），卡点确在取模而非数据侧。
+- **修法**：① `MODEL_WHITELIST=("qwen3:4b-instruct","qwen2.5:7b")` 优先，无白名单席则取**最小** qwen（原为最大）——要的是「装得进 VRAM 的小席」而非「最强大脑」；② 模型名进程内缓存，避免每人 2s 重探测；③ `BIGLIFE_REFLECT_TIMEOUT`（默认 90s）替代写死 120s；④ 批前打印 `seat/candidates/timeout`、逐席即时 flush、批末打印 `written/skipped/total`——静默批从此可与挂死区分。
+- **验证**：`--qc` PASS（6 gate cases + containment + prompt determinism）；`--batch 3` = seat=`qwen3:4b-instruct`、**56.4s 写完 3 席**（C-00022 何雨欣 / C-00029 咪喱 / C-00030 熊简梨），`census/reflections.jsonl` 100 行、`date=2026-11-15` 计 3 行。
+- **同批实跑**：年轮 `--batch 3`=2 席确认（C-02195/C-02198；今日环文已由前轮写入，本轮同批重抽净新增 0，判据见 R2997）；C-02207 三次心跳后 Ollama 瞬时掉线按契约停批（0 席燃烧）。相遇轮 `--meet C-00033 C-00034`=**warm probe 60s 无应答静默跳过**（GPU 9193/12282 MiB·free 3089·T-20261114-05 守卫）。池 `pool_audit`=SELF_TERMINATE（全桶达标）。`events_refresh --gate`=PASS（events=43898 cards=10111 mismatch=0 schema=0）。`round_daily --run`=stale=13 ran=14 failed=0 verdict=PASS。
+- **结单**：T-20261115-01 → done；T-20261113-05 → closed（11-13/14/15 三生产日连续有产出）。
+- 实况三行：当前活＝反思线复活并回归常态轮次｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\reflections.jsonl`（2026-11-15 01:1x，尾部 3 行 date=2026-11-15）+ `C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\Tools\reflect_citizen.py`（模型白名单修复）｜下个里程碑＝明日 19:00 后反思批按新 seat 稳定出 1+ 行（连续 3 日验收已满，转常态监控）
+- tokens: local=8 api=0 api_reason=-（反思 3 次生成 + 年轮 2 席含重试约 5 次，全本地 qwen3:4b-instruct）
+
 ## R2797 · 2026-11-13 17:2x-17:5x @BigLife-OSLoop（让路窗内容轮·口头禅基因补稀薄轴 8 条）
 - 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261112-16，集团 decisions 无 D-20261113-* 行）；orders 物理件区涉本司仅仓名大小写/分支保护四条历史项（CEO 保留面·零催办）；HQ 日闸 `ALREADY_REPORTED`（day=2026-11-13 lines=1）零写入。
 - 让路窗（周五工作日 09:00-19:00·D-20261020-02）：`evolve_citizen --batch 3` 原样返回 `yield-window`，年轮/相遇/提案实批顺延 19:00 后。
@@ -720,7 +730,7 @@ tokens: local=10 api=0 api_reason=-
   - 验收：**不适用数值线**，待委员会口径；本单只保「缺陷不被遗忘」，勿在产物轮内自行改闸。
   - **[R2930 新增实测锚·不改闸]** 2026-11-14 13:5x @BigLife-OSLoop：当日读数 **HAND 185/741＝25.0%，恰好压线**——「份额型+严格 `>`」的锯齿形态在生产中复现：压线不触发→下一席 HAND 放行→越线触发→非 HAND 落环拉低→解禁→再放行，占比被钉在 25% 线上。11-13 终值 27.8%（超线 2.8pp）属同机制残余偏移＋闸上线前存量席位。修法仍候委员会口径，本单未动阈值与判据。证据=`qa/RING-OPEN-FAMILY-20261114.md` §副产物
 - [ ] **T-20261113-05 反思线从未接入规程（P1·静默断供）**（2026-11-13 18:5x @BigLife-OSLoop R2799 立）
-  - status: in-progress（本轮落修法①：`Tools/iteration_prompt.txt` 新增步 1C「19:00 后至多 1 次 `reflect_citizen.py --batch 5`」+ 病根注记；待「连续 3 生产日 reflections.jsonl 尾部 date=当日」验收）｜**R2883 验收进度 2/3**：`census/reflections.jsonl` 97 行（原 61 行），日期分布含 **2026-11-13=31 行、2026-11-14=5 行**（连续两生产日），缺 2026-11-12 → 未满三连，不结单；mtime=11-14 00:13 证明 1C 步已在夜窗自然触发（此前 17.6 天零产出已止）。
+  - status: **closed 2026-11-15 01:1x R2999**（R2999 验收 3/3 达成：reflections.jsonl 连续 3 生产日有产出——11-13=31 行 / 11-14=5 行 / 11-15=3 行，尾部 date=2026-11-15；连带修掉本次挂死根因 T-20261115-01）。原修法①（本轮落：`Tools/iteration_prompt.txt` 新增步 1C「19:00 后至多 1 次 `reflect_citizen.py --batch 5`」+ 病根注记；待「连续 3 生产日 reflections.jsonl 尾部 date=当日」验收）｜**R2883 验收进度 2/3**：`census/reflections.jsonl` 97 行（原 61 行），日期分布含 **2026-11-13=31 行、2026-11-14=5 行**（连续两生产日），缺 2026-11-12 → 未满三连，不结单；mtime=11-14 00:13 证明 1C 步已在夜窗自然触发（此前 17.6 天零产出已止）。
   - 事实：`census/reflections.jsonl` **61 行 / 10114 人（0.60%）·末行 2026-10-27·停更 17.6 天**；`Tools/iteration_prompt.txt` 步骤 1/1B/2..8 **零处提及 reflect**——历轮轮记却统一按「反思随年轮/相遇让路窗顺延」记账，把「无步骤」误当「已接线」。候选池实测可供（`pick_ids(8)` 即刻返回 8 席），故非无料可产，纯接线缺失。
   - 算术缺口：低频律 30 天/人 → 覆盖 10114 人需 ≈337 条/日；步 1C 批 5/日只能维持 ≈1.5% 月覆盖 → **本单只治「有产出不停更」，覆盖达标属产能口径，须委员会定，勿自行加大批量挤占 CEO 车道**。
   - 验收：连续 3 个生产日 `census/reflections.jsonl` 尾部 date=当日 且 `reflect_citizen.py --qc` PASS；单轮 LLM 调用 ≤5。
@@ -2344,7 +2354,8 @@ ound_daily --run **PASS**（stale=12 ran=13 failed=0：rumors/dashboard/voices/c
   实况三行：当前活＝日更面+事件闸全绿、年轮线净新增待恢复｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ops.html`（00:37 重建 64 行变更）+ `C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md`（00:39 PASS 43887）｜下个里程碑＝反思线当日破零（疑阻塞，窗 ≤24h）
 - tokens: local=9 api=0 api_reason=-（本地 ollama qwen3:4b-instruct 九席年轮候选·零云端调用）
 
-## T-20261115-01 反思线挂死无输出（open·2026-11-15 00:5x R2998 @BigLife-OSLoop 立）
+## T-20261115-01 反思线挂死无输出（**done 2026-11-15 01:1x R2999**·2026-11-15 00:5x R2998 @BigLife-OSLoop 立）
+- status: **done**（2026-11-15 01:1x R2999 @BigLife-OSLoop）根因＝取模取了本机装不下的 `qwen3.5:27b`（17.5GB → CPU 卸载，每次生成耗满 120s 超时）；修法=白名单小席+进程内缓存+`BIGLIFE_REFLECT_TIMEOUT`（90s）+批前/逐席/批末可见输出；实测 `--batch 3` 56.4s 写完 3 席（date=2026-11-15）。
 - 现象：`Tools/reflect_citizen.py --batch 5` 后台执行 exit=0 但输出为空、零写入（reflections.jsonl 尾部停在 2026-11-14）；`--batch 3` 前台同样 5 分钟零输出被外层取消。年轮批同窗口（同一 ollama qwen3:4b）150s 暖探针后可正常出 9 席 → 不是模型服务整体不可用。
 - 影响：按轮规程 1C，反思线要求「连续 3 生产日 reflections.jsonl 尾部 date=当日」；今日已缺，若明日再缺即触发 T-20261113-05 复发。
 - 排查方向（下轮）：①该脚本是否有独立暖探针/超时（evolve_citizen 有 `llm_warm_probe()`，reflect 是否复用）；②是否读全量 rings 字段导致预处理卡住（无进度输出＝坏味道）；③候选集 30 天冷却过滤后是否为空（空则应显式打印 0 candidates 而非静默）。

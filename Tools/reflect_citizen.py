@@ -30,6 +30,13 @@ OLLAMA = os.environ.get("OLLAMA_URL", "http://localhost:11434")
 MODEL = os.environ.get("BIGLIFE_MODEL", "")
 MAXLEN = 40
 COOLDOWN_DAYS = 30
+# T-20261115-01: the leg hung with zero output because detect_model() picked the
+# LARGEST qwen on the box (qwen3.5:27b, 17.5GB -> CPU offload), so every call ate
+# the 120s timeout x3 attempts x N citizens while printing nothing. Evolution
+# leg solved this with a whitelist (T-20261024-02); mirror it here and make the
+# timeout env-tunable so a slow seat fails fast instead of bleeding a whole round.
+MODEL_WHITELIST = ("qwen3:4b-instruct", "qwen2.5:7b")
+TIMEOUT = int(os.environ.get("BIGLIFE_REFLECT_TIMEOUT", "90"))
 GATE_CELESTIAL = re.compile(r"\u6708\u4eae|\u6708\u8272|\u6708\u5149|\u6708\u5706|\u661f\u7a7a|\u7e41\u661f|\u661f\u5149")
 GATE_AUTHORITY = re.compile(r"\u96c6\u56e2\u4efb\u52a1|\u66ff\u96c6\u56e2|\u6267\u884c\u96c6\u56e2")
 
@@ -102,21 +109,43 @@ def build_prompt(row, rings):
             f"\u4ece\u8fd9\u4e9b\u8bb0\u5fc6\u91cc\u603b\u7ed3\u51fa\u4e00\u53e5\u5c5e\u4e8e\u4f60\u81ea\u5df1\u7684\u3001\u6bd4\u5355\u6761\u8bb0\u5fc6\u66f4\u9ad8\u4e00\u5c42\u7684\u4eba\u751f\u611f\u609f\uff08\u4e0d\u8d85\u8fc7 {MAXLEN} \u5b57\uff0c"
             f"\u53ea\u80fd\u57fa\u4e8e\u4e0a\u9762\u7684\u8bb0\u5fc6\uff0c\u7981\u63d0\u4efb\u4f55\u8bb0\u5fc6\u4e2d\u6ca1\u6709\u7684\u4e8b\u5b9e\uff0c\u53ea\u8f93\u51fa\u611f\u609f\u672c\u8eab\uff09\u3002")
 
+_MODEL_CACHE = None
+
 def detect_model():
+    """Whitelisted small seat first (policy parity with evolve_citizen seat()).
+
+    T-20261115-01: previous version returned max(size) = qwen3.5:27b. On this box
+    that model does not fit in VRAM, so generation ran at CPU speed and every
+    batch produced nothing but timeouts. A reflection is a <=40-char synthesis
+    of the citizen's own rings; a 4B instruct seat is sufficient and keeps the
+    leg inside one round's budget.
+    """
+    global _MODEL_CACHE
     if MODEL:
         return MODEL
+    if _MODEL_CACHE:
+        return _MODEL_CACHE
     try:
         with urllib.request.urlopen(OLLAMA.rstrip("/") + "/api/tags",
                                     timeout=15) as r:
             models = json.loads(r.read().decode("utf-8")).get("models", [])
-        qwens = [m for m in models if (m.get("name") or "").startswith("qwen")]
-        if qwens:
-            return max(qwens, key=lambda m: m.get("size", 0)).get("name")
+        names = [m.get("name") or "" for m in models]
+        for want in MODEL_WHITELIST:
+            if want in names:
+                _MODEL_CACHE = want
+                return want
+        # no whitelisted seat: prefer SMALLEST qwen (fits VRAM) over largest
+        sized = sorted((m for m in models if (m.get("name") or "").startswith("qwen")),
+                       key=lambda m: m.get("size", 0))
+        if sized:
+            _MODEL_CACHE = sized[0].get("name")
+            return _MODEL_CACHE
         if models:
-            return models[0].get("name")
+            _MODEL_CACHE = models[0].get("name")
+            return _MODEL_CACHE
     except Exception:
         pass
-    return "qwen3.8:27b"  # last resort: current in-service lane name
+    return "qwen3:4b-instruct"  # last resort: the in-service small lane
 
 def llm(prompt):
     req = urllib.request.Request(
@@ -129,7 +158,7 @@ def llm(prompt):
                          "think": False,
                          "options": {"temperature": 0.7, "num_predict": 80}}).encode("utf-8"),
         headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=120) as resp:
+    with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
         return json.loads(resp.read().decode("utf-8")).get("response", "")
 
 def reflect(cid, force=False, today=None):
@@ -256,13 +285,23 @@ def main():
             return
     else:
         ids = [x.strip() for x in raw.split(",") if x.strip()]
+    # T-20261115-01: a silent batch is indistinguishable from a hung one, so the
+    # seat and the candidate list are printed up front, and every line is flushed
+    # as it happens (piped/background runs previously buffered everything).
+    print("reflect: seat=%s candidates=%d (%s) timeout=%ds"
+          % (detect_model(), len(ids), ",".join(ids) or "-", TIMEOUT), flush=True)
+    wrote = skipped = 0
     for cid in ids:
         rec, hits = reflect(cid, force=a.force)
         if rec.get("error"):
-            print("%s SKIP: %s" % (cid, rec["error"]))
+            skipped += 1
+            print("%s SKIP: %s" % (cid, rec["error"]), flush=True)
         else:
+            wrote += 1
             print("%s %s: %s%s" % (cid, rec["name"], rec["insight"],
-                                   (" [gates: %s]" % ",".join(hits)) if hits else ""))
+                                   (" [gates: %s]" % ",".join(hits)) if hits else ""),
+                  flush=True)
+    print("done: written=%d skipped=%d total=%d" % (wrote, skipped, len(ids)), flush=True)
 
 if __name__ == "__main__":
     main()
