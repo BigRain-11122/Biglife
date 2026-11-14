@@ -2272,3 +2272,4 @@ ound_daily --run **PASS**锛坰tale=12 ran=13 failed=0锛歳umors/dashboard/voices/c
   - 供给面澄清（更正 00:24 HQ 行暗示）：`gaming/FluxVerse/world/world-events-20261114.jsonl` 缺席属**日终 23:56 才落盘**的正常节律（11-10~11-13 四份均 23:56 时间戳实证），非事件供给断供；今日年轮按昨日真实事件+真实天气/时刻喂料，无降级。
   - 对外实况三行（status-export.json t 字段 22:36 版）：当前活=年轮线夜窗批次推进（本地 qwen3:4b-instruct，零云端）／最近实物=census/registry 10 张新增年轮 + qa/EVENTS-REPLAY-REPORT.md（22:45 PASS）／下个里程碑=下一轮年轮批 10 席 + 事件闸复验（≤次日 00:30）。
   - tokens: local=10 api=0 api_reason=-（年轮批十席候选用本地 ollama qwen3:4b-instruct；其余面全确定性零 LLM）
+  - 收尾勘误（同轮重跑实证）：`update_status_export.py` 不接受裸 `--heartbeat`（必带 `--payload <file>`，缺则 SystemExit 打用法=我的调用错误，非工具故障；`--qc` 自检 **7/7 PASS** 已证工具健康）。已按正确契约落 `state/export-payload-R2989.json` 并 `--heartbeat` 应用：export_ts=2026-11-14 22:51、dept0 追加 R2989 窗条、results 尾行 ['1020', …]（{N} 已由机器直数代入、零残留）、top_text 三行齐、心跳行落盘 → 对外实况面由 22:36 版续鲜至 22:51 版（commit 见本轮 status-export.json 提交）。
