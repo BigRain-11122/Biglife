@@ -36,6 +36,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXP = os.path.join(ROOT, "census", "export")
 STATE_OUT = os.path.join(ROOT, "state", "round-daily.json")
 SCRIPT_HASHES = os.path.join(ROOT, "state", "round-daily-script-hashes.json")
+DEP_SNAPSHOT = os.path.join(ROOT, "state", "round-daily-deps.json")
 
 # key, tier, script, outputs
 REGISTRY = [
@@ -452,6 +453,62 @@ def _newest_mtime(path: str) -> float | None:
     return newest
 
 
+_DEP_SNAP: dict | None = None
+_DEP_FP_CACHE: dict[str, str | None] = {}
+
+
+def _load_dep_snapshot() -> dict:
+    global _DEP_SNAP
+    if _DEP_SNAP is None:
+        try:
+            with io.open(DEP_SNAPSHOT, encoding="utf-8") as f:
+                _DEP_SNAP = json.load(f)
+        except (OSError, ValueError):
+            _DEP_SNAP = {}
+    return _DEP_SNAP
+
+
+def _dep_fingerprint(key: str) -> str | None:
+    """依赖源的内容指纹：文件取 sha256，目录取 (相对路径, 字节数) 清单哈希。
+
+    v0.26 (2026-11-14 R2921): dep-mtime 判据会被「同内容重写」刷假——行为线每轮
+    重写 state/evolve-cursor.json（内容不变、mtime 前进），七个环依赖大面因此每轮
+    被选中重建，relations 单面 240s 超时（2.85M 行），日更面清零而产物零变化。
+    修法=指纹一致即视作已对齐，mtime 只做粗筛（与 _script_sha 同思路）。
+    """
+    if key in _DEP_FP_CACHE:
+        return _DEP_FP_CACHE[key]
+    srcs = DEPENDS.get(key) or []
+    h = hashlib.sha256()
+    seen = False
+    for rel in srcs:
+        p = os.path.join(ROOT, rel)
+        if os.path.isfile(p):
+            try:
+                with open(p, "rb") as f:
+                    for chunk in iter(lambda: f.read(1 << 20), b""):
+                        h.update(chunk)
+                seen = True
+            except OSError:
+                continue
+        elif os.path.isdir(p):
+            rows = []
+            for root, _dirs, files in os.walk(p):
+                for fn in files:
+                    fp = os.path.join(root, fn)
+                    try:
+                        rows.append((os.path.relpath(fp, p),
+                                     os.path.getsize(fp)))
+                    except OSError:
+                        continue
+            rows.sort()
+            for name, size in rows:
+                h.update(("%s\t%d\n" % (name, size)).encode("utf-8"))
+            seen = True
+    _DEP_FP_CACHE[key] = h.hexdigest() if seen else None
+    return _DEP_FP_CACHE[key]
+
+
 def _dep_mtime_stale(key: str, out_paths: list[str]) -> str | None:
     """依赖源比产物新即 stale（同日内的源变更，日期粒度看不见）。"""
     srcs = DEPENDS.get(key)
@@ -472,6 +529,10 @@ def _dep_mtime_stale(key: str, out_paths: list[str]) -> str | None:
         # 冷却下限：刚重建过的面不因下一批年轮立刻再刷（防 5 分钟级大面 churn）
         floor_min = DEPENDS_FLOOR_OVERRIDE.get(key, DEPENDS_FLOOR_MIN)
         if (time.time() - oldest_out) < floor_min * 60:
+            return None
+        # v0.26: mtime 前进但内容未变（同内容重写）= 假信号，不重建
+        fp = _dep_fingerprint(key)
+        if fp is not None and _load_dep_snapshot().get(key) == fp:
             return None
         return "dep-mtime:%s" % newest_rel
     return None
@@ -591,6 +652,23 @@ def main() -> int:
         except OSError:
             pass
         known_sha = nxt  # 收尾复检必须用同一口径，否则会把自己刚重建的面误报 STALE
+        # v0.26: 依赖源内容快照——只有「确认新鲜」或「重建成功」的面才登记，
+        # 失败面保留旧指纹，下轮仍会因 dep-mtime 再次选中（不把失败伪装成已对齐）。
+        global _DEP_SNAP
+        snap = dict(_load_dep_snapshot())
+        for r in results:
+            if r["action"] in ("skipped-fresh", "skipped-nochange", "rebuilt"):
+                if DEPENDS.get(r["key"]):
+                    fp = _dep_fingerprint(r["key"])
+                    if fp:
+                        snap[r["key"]] = fp
+        try:
+            with open(DEP_SNAPSHOT, "w", encoding="utf-8", newline="\n") as f:
+                json.dump(snap, f, ensure_ascii=False, indent=1, sort_keys=True)
+                f.write("\n")
+        except OSError:
+            pass
+        _DEP_SNAP = snap
     os.makedirs(os.path.dirname(STATE_OUT), exist_ok=True)
     with open(STATE_OUT, "w", encoding="utf-8", newline="\n") as f:
         json.dump(payload, f, ensure_ascii=False, indent=1)
