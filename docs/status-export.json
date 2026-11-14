@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-15 04:28",
+ "export_ts": "2026-11-15 05:48",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3017（2026-11-15 04:2x）：年轮批 10/10 落环 + 日更 13 面重建 + 事件闸 PASS(44063 events, mismatch=0) + QC clean(10114 cards, problems=0)** **R3007（2026-11-15 02:4x 夜窗产品轮）**：年轮 10 环落环（本地 qwen3:4b-instruct·净新增经闸放行）+ 26 个可见面日更重建（stale=25 ran=26 failed=0）+ 事件回放闸 PASS（events=43965 / cards=10111 / mismatch=0 / schema_errors=0）；池审计 SELF_TERMINATE（全桶达标零 LLM）；ZH 反馈面 ALREADY_REPORTED 零写入。 **R3004（2026-11-15 02:12-02:2x）**：周日深夜产品轮——年轮批 due=10 落环 9 席（C-02249 被 time-morning+recent-dup-phrase 双违例闸拦，留 due 下轮复烧）；相遇轮 C-00018×C-00019 OK（GM 城区·双卡互引）；24 个可见面重建；事件流回放闸 PASS（events=43938 / schema_errors=0 / mismatch=0）；QC 巡检 cards=10114 evolved=10114 problems=0。",
+   "t": "**R3025（2026-11-15 05:4x 周日凌晨产品轮）：年轮批 10/10 落环（C-02487/02490/02501/02503/02511/02491/02494/02495/02496/02497，6 席 soft-concession 放行）+ 日更面 13 面重建 + 事件闸 PASS(44149 events, mismatch=0) + 语言池 SELF_TERMINATE(全桶达标)** **R3017（2026-11-15 04:2x）：年轮批 10/10 落环 + 日更 13 面重建 + 事件闸 PASS(44063 events, mismatch=0) + QC clean(10114 cards, problems=0)** **R3007（2026-11-15 02:4x 夜窗产品轮）**：年轮 10 环落环（本地 qwen3:4b-instruct·净新增经闸放行）+ 26 个可见面日更重建（stale=25 ran=26 failed=0）+ 事件回放闸 PASS（events=43965 / cards=10111 / mismatch=0 / schema_errors=0）；池审计 SELF_TERMINATE（全桶达标零 LLM）；ZH 反馈面 ALREADY_REPORTED 零写入。",
    "s": 1
   },
   {
@@ -1977,8 +1977,12 @@
   [
    "196",
    "本轮年轮落环 196 席（C-02387/02388/02389/02390/02439/02391/02392/02394/02395/02396，5 席 soft-concession）；事件闸 replay 10111 mismatch=0 schema=0"
+  ],
+  [
+   "282",
+   "本轮年轮落环 10 席（C-02487/02490/02501/02503/02511/02491/02494/02495/02496/02497，6 席 soft-concession 放行，开口 6 字实测 10/10 全异）；事件闸 replay 10111 mismatch=0 schema=0；今日累计落环 282 席"
   ]
  ],
- "t": "当前活：年轮线批产 + 日更面重建 + 事件回放闸全绿\n最近实物：census/export/city-dashboard.html（2026-11-15 04:2x 重建，13 面同批）\n下个里程碑：下一轮年轮批（≤15min 内自动）",
- "top_text": "当前活：年轮线批产 + 日更面重建 + 事件回放闸全绿\n最近实物：census/export/city-dashboard.html（2026-11-15 04:2x 重建，13 面同批）\n下个里程碑：下一轮年轮批（≤15min 内自动）"
+ "t": "当前活：年轮线批产 + 日更面重建 + 事件回放闸全绿（无卡点）\n最近实物：census/export/city-dashboard.html 等 13 面（2026-11-15 05:45 重建）\n下个里程碑：今日 19:00 后反思线窗口 + 下一轮年轮续批（≤15min 内自动）",
+ "top_text": "当前活：年轮线批产 + 日更面重建 + 事件回放闸全绿（无卡点）\n最近实物：census/export/city-dashboard.html 等 13 面（2026-11-15 05:45 重建）\n下个里程碑：今日 19:00 后反思线窗口 + 下一轮年轮续批（≤15min 内自动）"
 }
