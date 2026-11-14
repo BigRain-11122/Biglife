@@ -2014,3 +2014,9 @@ ound_daily --run = **PASS**（38 面中 rebuilt=21 failed=0，含 dashboard/rumo
 - 实况三行：当前活＝年轮线连续生产（今日累计 19 环）；最近实物＝census/export/ 14 面（12:13）+ qa/EVENTS-REPLAY-REPORT.md；下个里程碑＝19:00 夜窗反思批 5 席（T-20261113-05 三日验收第 3 日）+ 11-15 相遇轮。
 - 计分：能跑/能看实物=2 分（10 环 + 14 面重建 + 事件闸报告）｜文件改动=1 分｜纯记账=0。
 - tokens: local=10 api=0 api_reason=-（年轮批 10 次本地 ollama qwen3:4b-instruct；日更/事件闸/池审/HQ 零 LLM）
+
+- [2026-11-14 12:23 @BigLife-OSLoop R2914] 本轮计量：tokens: local=10 api=0 api_reason=-（年轮批 10/10 落环 C-01674/01675/01677/01684/01676/01678/01679/01680/01681/01682，双卡俱带 [锚]；日更/事件闸/池审/HQ 零 LLM）
+- **产品增量（可见面·2 分）**：①年轮 10 环落环（commit 4d7ebe600 + 行为线镜像 rows=10 ring=10114 自动提交 7d763b666）；② round_daily --run stale=16 ran=17 failed=0 verdict=PASS——dashboard/voices/coverage/ops/objects/map/goals/gene_ledger/growth/meets/reflections/ring_trend/social_graph/meet_candidates/census_index/index 全量重建；③ events_refresh --gate PASS（cards=10111 events=43518 replayed=10111 schema_errors=0 mismatch=0，chronicle gap=0d），qa/EVENTS-REPLAY-REPORT.md 入库（commit R2914）。
+- 跳过面：pool_audit=SELF_TERMINATE（今日 12:06 已判全桶 at_target）；QC 今日 05:52 已巡；相遇轮今日 cap 3/3 已满；反思线待 19:00 夜窗（实测 reflections.jsonl 11-13=31 条、11-14=5 条，T-20261113-05 三日验收已完成 2/3，第 3 日=11-15）。
+- 实况三行：当前活＝年轮线连续生产（今日累计 29 环）；最近实物＝census/export/ 17 面重建（12:20）+ qa/EVENTS-REPLAY-REPORT.md（12:20）；下个里程碑＝19:00 夜窗反思批 5 席（T-20261113-05 三日验收）+ 11-15 相遇轮。
+- 计分：能跑/能看实物=2 分（10 环 + 17 面 + 事件闸）｜文件改动=1 分｜纯记账=0。
