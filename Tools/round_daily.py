@@ -560,7 +560,13 @@ def main() -> int:
     # 索引卡片写着 10-27，而闸每次都说 PASS）。改为跑完后再判一次真实余量，
     # 余量为零才 PASS；否则 STALE + rc=2（同 ring_material_check 的未达码约定）。
     remaining = []
+    # v0.8 (2026-11-14 T-20261114-01 补): 幂等构建器在「内容与输入已一致」时逐字节相同、
+    # 不重写文件，mtime 停留在旧值——此时 mtime 代理会永久红灯（census_index 每轮都报
+    # dep-mtime 而实为已对齐）。判据改：本轮已成功重建（rc=0）的面即视为与当前输入对齐。
+    just_rebuilt = set(r["key"] for r in results if r["action"] == "rebuilt")
     for e in entries:
+        if e[0] in just_rebuilt:
+            continue
         still, why = _is_stale(e, today, _out_paths(e), known_sha)
         if still:
             remaining.append("%s(%s)" % (e[0], why))
