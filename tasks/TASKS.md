@@ -2150,3 +2150,10 @@ ing_material_check=streak=3/3 PASS（11-12 motif8/8+rumor7/7、11-13 8/8+3/3、1
 - tokens: local=20 api=0 api_reason=(本地 ollama qwen3:4b-instruct 两批共约 20 席候选·零云端调用)
 
 - [ ] **T-20261114-05**（R2900 立·GPU 拮抗阻断年轮线）年轮 LLM 面在显存占满时每席必烧满 150s 熔断跳过（`seat-fuse skip ... stays due`），整批 due 全跳＝零产出。本轮实证：`nvidia-smi` 显存 11886/12282MiB（`musubi-tuner krea2_train_network` 自 12:46 起持有），`:8090` 连接拒绝 rc=7 → 回落 ollama；qwen3:4b-instruct 与 qwen3.5:2b 两档均 150s 不返回（非模型大小问题＝加载期等显存）。修法候选：①`seat-fuse` 前置显存闸（free_vram < 模型 size+1GB 时整批直接 return gpu-starved，零 150s×N 空烧，并往外实况面写一行）；②机队侧把年轮批排到训练窗之外。本单不改代码，留判据给下轮或机队席。
+- [R2963 2026-11-14 16:23-16:40 @BigLife-OSLoop 周六下午产品轮] 轮首 pull=Already up to date·树净；决策水位差集 NEW=0（尾 D-20261112-16，decisions 64 个 D-ID 全消费，无 11-13/11-14 新行）；orders 物理件区无涉本司新件；QC 05:52 已跑、相遇今日 CAP 已满、反思线待 19:00 后，三者本轮不重复。**产品增量（2 分）**：①年轮批 10 席 due → 9 席落盘新环（C-01729/01730/01731/01732/01733/01734/01735/01736/01769，卡面 diff 实证 v1.2→v1.3·年轮 2→3 圈·锚注脚齐·commit b99dd22b9），1 席 C-01728 seat-fuse 超时留 due；②事件流回放闸 PASS（cards=10111 events=43566 replayed=10111 schema=0 mismatch=0·chronicle gap=0d）；③日更面 stale=7 → 重建 8 面 PASS（dashboard/ops/objects/gene_ledger/meets/meet_candidates/index·failed=0），HTML 实物随轮上云。**新发现（报数口径）**：批末报 \written=0 skipped=9\ 与盘面 9 处真写入矛盾——soft-concession 分支「ring lands」让环落地，但 add_ring 返回值判 already-served → 计入 skipped 而非 written（R2962 修法②残留盲区，已立 T-20261114-02）。**诚实边界**：零云端调用；PASS 为闸门证据非内容质量判定；年轮 0 计 evolved 与 9 席落盘口径不一致已留档待接。tokens: local=1 api=0 api_reason=-
+## T-20261114-02 年轮批报数口径：soft-concession 落盘未计入 written（open·2026-11-14 16:4x R2963 @BigLife-OSLoop 立）
+- 现象：R2963 批末报 \OK evolved=0 of 10 due (written=0 skipped=9)\，但同批 git status 显示 9 席卡面真实新增 11-14 年轮（v1.2→v1.3·年轮圈数递增），已 commit b99dd22b9。
+- 根因推测：门判定 \gate: soft-concession ['recent-dup-phrase'] (ring lands)\ 允许环落地并写入卡面，随后 \dd_ring()\ 返回值判为 already-served → 走 skipped 分支，\written\ 与 \evolved\ 均不计数（R2962 修法②把「返回值即权威」当唯一判据，未覆盖软让步落地路径）。
+- 影响：批末统计低报写入量；若按 written==0 判「零产出」会误判空转，与产品优先律计分冲突。
+- 验收：造一席 soft-concession 落地样本，断言 \written\ 递增且卡面 diff 非空；回归跑 \--audit-due\ due 不漏。
+- 优先级：P2（不影响内容正确性，只影响报数与判分）
