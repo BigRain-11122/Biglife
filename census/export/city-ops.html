@@ -32,20 +32,21 @@ li{font-size:13px;color:#b9b6ae;margin:4px 0}
 footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(--line)}
 </style></head><body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 产物目录</a></div>
 <header><h1>城市产线实况</h1>
-<div class="sub">本页由 Tools/build_city_ops.py 确定性生成（零 LLM）· 生成于 2026-11-14 14:29 · 数据全部取自本仓盘上与 git</div></header>
+<div class="sub">本页由 Tools/build_city_ops.py 确定性生成（零 LLM）· 生成于 2026-11-14 14:39 · 数据全部取自本仓盘上与 git</div></header>
 <main>
 <div class="kpis">
-<div class="kpi"><b>11 分钟前</b><span>最近一次轮次心跳</span></div>
-<div class="kpi"><b>11-14 14:17</b><span>最近提交时间</span></div>
+<div class="kpi"><b>6 分钟前</b><span>最近一次轮次心跳</span></div>
+<div class="kpi"><b>11-14 14:32</b><span>最近提交时间</span></div>
 <div class="kpi bad"><b>3</b><span>超过 180 分钟未刷新的页</span></div>
 <div class="kpi"><b>0</b><span>无时间戳状态行（被丢弃，需修）</span></div>
 <div class="kpi"><b>10114</b><span>居民（轻量册）</span></div>
 <div class="kpi bad"><b>400</b><span>年轮待修队列（cap 400）</span></div>
-<div class="kpi bad"><b>1/1</b><span>近 24h 排产闸让路次数（探针数分母）</span></div>
+<div class="kpi bad"><b>2/2</b><span>近 24h 排产闸让路次数（探针数分母）</span></div>
 </div>
 
 <h2>最近轮次心跳<em>state/heartbeat.txt 尾 10 条 · 最后一条：os-loop: round done exit=0 · 无时间戳状态行 <b>0</b> 条（有时间戳才会进本表）</em></h2>
 <table><thead><tr><th>时间</th><th>记录</th></tr></thead><tbody>
+<tr><td class="t">11-14 14:33:05</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-14 14:18:25</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-14 14:08:42</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-14 14:02:23</td><td>os-loop: round done exit=0</td></tr>
@@ -55,11 +56,11 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td class="t">11-14 13:26:26</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-14 13:08:36</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-14 12:44:00</td><td>os-loop: round done exit=0</td></tr>
-<tr><td class="t">11-14 12:24:53</td><td>os-loop: round done exit=0</td></tr>
 </tbody></table>
 
 <h2>最近产物提交<em>git log 尾 12 条</em></h2>
 <table><thead><tr><th>时间</th><th>commit</th><th>说明</th></tr></thead><tbody>
+<tr><td class="t">11-14 14:32</td><td class="h">fe2cf1d05</td><td>R2934 排产闸可见化：显存让路进台账 + 产线实况页面板</td></tr>
 <tr><td class="t">11-14 14:17</td><td class="h">4f81ec88c</td><td>feat(lexicon): 基因口头禅与方言上可见面 + 日更闸补 genes/language.json 依赖 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-14 14:08</td><td class="h">b72a35989</td><td>R2932 轮实录：QC 全 PASS + 日更面 fresh + GPU 让路记录 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-14 14:07</td><td class="h">28a2921e1</td><td>QC 巡检：万人户籍不变量全 PASS（10114 卡/0 异常，14:06）[via BigLife-OSLoop]</td></tr>
@@ -71,12 +72,11 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td class="t">11-14 13:31</td><td class="h">4e725b601</td><td>R2926 周六午后确定性面：city-today 行为面按 13:28 真实数据重算（晴·节日声景/槽位全变）+ index 重建；QC 巡检 cards=10114 problems=0；年轮批 vram-guard 让路（LoRA 训练占 11.9/12.2GB）[via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-14 13:25</td><td class="h">88bd638b3</td><td>R2922 周六午后确定性面批：事件闸 PASS（43522 events/0 mismatch）+ round_daily 重建 lexicon/ring_trend/index 共 12 面；年轮批 vram-guard 让路零落环 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-14 13:05</td><td class="h">54df289ad</td><td>fix(round_daily): v0.26 依赖源内容指纹闸，止「同内容重写推高 mtime」的假 stale 循环</td></tr>
-<tr><td class="t">11-14 12:42</td><td class="h">b945d5418</td><td>R2920 fixup: restore escaped backticks in the round metric line</td></tr>
 </tbody></table>
 
 <h2>页面新鲜度<em>census/export 下的单页 · 按更新时间倒序</em></h2>
 <table><thead><tr><th>页面</th><th>体积</th><th>更新</th><th>状态</th></tr></thead><tbody>
-<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">16 KB</td><td class="t">11-14 14:29</td><td>新</td></tr>
+<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">17 KB</td><td class="t">11-14 14:31</td><td>新</td></tr>
 <tr><td><a href="city-lexicon.html">city-lexicon.html</a></td><td class="n">188 KB</td><td class="t">11-14 14:16</td><td>新</td></tr>
 <tr><td><a href="gene-ledger.html">gene-ledger.html</a></td><td class="n">140 KB</td><td class="t">11-14 13:59</td><td>新</td></tr>
 <tr><td><a href="city-objects.html">city-objects.html</a></td><td class="n">95 KB</td><td class="t">11-14 13:59</td><td>新</td></tr>
@@ -140,8 +140,9 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 </tbody></table>
 <div class="note">全量复读/过短/模板三段判负由 Tools/ring_simile_audit.py 产出；修复走 19:00 后让路窗的 evolve 批（LLM 复写），本页只呈现队列，不改写任何年轮文本。</div>
 
-<h2>排产闸（显存）<em>state/vram-gate.jsonl 实读 · 阈值 90% · 最近一次 让路（0 分钟前） · 近 24h 让路 1/1 次</em></h2>
+<h2>排产闸（显存）<em>state/vram-gate.jsonl 实读 · 阈值 90% · 最近一次 让路（0 分钟前） · 近 24h 让路 2/2 次</em></h2>
 <table><thead><tr><th>探针时间</th><th>结果</th><th>显存占用</th><th>GPU 会话（WDDM 不报单进程显存·非诊断依据）</th></tr></thead><tbody>
+<tr><td class="t">11-14 14:39</td><td>让路（批未启动）</td><td class="n">97% · 11868/12282 MiB</td><td>ShellHost.exe · CrossDeviceResume.exe · explorer.exe · StartMenuExperienceHost.exe</td></tr>
 <tr><td class="t">11-14 14:28</td><td>让路（批未启动）</td><td class="n">97% · 11865/12282 MiB</td><td>ShellHost.exe · CrossDeviceResume.exe · explorer.exe · StartMenuExperienceHost.exe</td></tr>
 </tbody></table>
 <div class="note">「让路」＝GPU 被别的活占着，本轮年轮/相遇/反思批不启动（脚本自退，不是故障、也不计入零产出事故）；「放行」＝探针通过、批可开工。占用者取自 nvidia-smi compute-apps（Windows WDDM 不报单进程显存，故多数只见进程名）。</div>
