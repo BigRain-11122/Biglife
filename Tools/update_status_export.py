@@ -43,7 +43,9 @@ QC_NAME = "QC 巡检线"
 WINDOW = 3
 HDR_RE = re.compile(r"\*\*R\d{3,5}（")
 # 「落环 N 行/席」类手打数字识别（用于 {N} 占位符强制闸，见 apply_refresh）
-RING_CLAIM_RE = re.compile(r"落环(?:行数|席数)?\s*[:：]?\s*(\d+)\s*(?:行|席)")
+RING_CLAIM_RE = re.compile(
+    r"落环(?:行数|席数)?\s*[:：]?\s*(\d+)\s*(?:行|席)"
+    r"|(\d+)\s*(?:行|席)[^。；\n]{0,16}落环")
 
 
 def today_str():
@@ -141,7 +143,7 @@ def apply_refresh(payload, dry_run=False, heartbeat=False):
         if m_ring:
             raise SystemExit(
                 "RING_COUNT_PLACEHOLDER_GUARD results_note hard-codes ring count %r; use {N} (machine direct count)"
-                % m_ring.group(1))
+                % (m_ring.group(1) or m_ring.group(2)))
 
     raw = io.open(SE_PATH, encoding="utf-8").read()
     had_nl = raw.endswith("\n")
