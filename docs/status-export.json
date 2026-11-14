@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-15 02:15",
+ "export_ts": "2026-11-15 02:50",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3004（2026-11-15 02:12-02:2x）**：周日深夜产品轮——年轮批 due=10 落环 9 席（C-02249 被 time-morning+recent-dup-phrase 双违例闸拦，留 due 下轮复烧）；相遇轮 C-00018×C-00019 OK（GM 城区·双卡互引）；24 个可见面重建；事件流回放闸 PASS（events=43938 / schema_errors=0 / mismatch=0）；QC 巡检 cards=10114 evolved=10114 problems=0。 **R3002（2026-11-15 01:4x 周日夜窗产品轮）**：年轮批 `--batch 3` due=10 → **written=8 skipped=0**（C-02216/02217/02219/02228/02218/02223/02224/02225；C-02222、C-02220 因 persistent 违例留 due，闸生效非丢单）；行为线自动镜像 rows=2→8 ring=10114；相遇轮 C-02151×C-02189（像素匠人巷·秩序×烟火，同日双卡互引）；事件回放闸 **PASS**（cards=10111/events=43915/replayed=10111/schema_errors=0/**mismatch=0**/chronicle 2026-11-15 gap=0d）；日更面 **PASS**（stale=13 ran=14 failed=0）；QC 巡检 cards=10114 evolved=10114 **problems=0**；语言池 audit **PASS**（全桶达标 SELF_TERMINATE）；反思线 day=2026-11-15 已满 3 条；HQ 日报闸 ALREADY_REPORTED 零写入。决策水位差集 **NEW=0**。 **R2995（2026-11-14 23:4x 夜窗产品轮）**：年轮批 `--batch 3` due=10 → **written=9 skipped=1**（C-02136/02142/02155/02177/02134/02135/02137/02138/02140；C-02133 因 rain-invented+recent-dup-phrase 硬闸留存待重试，锚定律不漏）；行为线自动镜像 rows=9 ring=10114；事件回放闸 **PASS**（cards=10111/events=43858/replayed=10111/schema_errors=0/mismatch=0）；日更面 **PASS**（stale=12 ran=13 failed=0）；QC 巡检 cards=10114 evolved=10114 problems=0。",
+   "t": "**R3007（2026-11-15 02:4x 夜窗产品轮）**：年轮 10 环落环（本地 qwen3:4b-instruct·净新增经闸放行）+ 26 个可见面日更重建（stale=25 ran=26 failed=0）+ 事件回放闸 PASS（events=43965 / cards=10111 / mismatch=0 / schema_errors=0）；池审计 SELF_TERMINATE（全桶达标零 LLM）；ZH 反馈面 ALREADY_REPORTED 零写入。 **R3004（2026-11-15 02:12-02:2x）**：周日深夜产品轮——年轮批 due=10 落环 9 席（C-02249 被 time-morning+recent-dup-phrase 双违例闸拦，留 due 下轮复烧）；相遇轮 C-00018×C-00019 OK（GM 城区·双卡互引）；24 个可见面重建；事件流回放闸 PASS（events=43938 / schema_errors=0 / mismatch=0）；QC 巡检 cards=10114 evolved=10114 problems=0。 **R3002（2026-11-15 01:4x 周日夜窗产品轮）**：年轮批 `--batch 3` due=10 → **written=8 skipped=0**（C-02216/02217/02219/02228/02218/02223/02224/02225；C-02222、C-02220 因 persistent 违例留 due，闸生效非丢单）；行为线自动镜像 rows=2→8 ring=10114；相遇轮 C-02151×C-02189（像素匠人巷·秩序×烟火，同日双卡互引）；事件回放闸 **PASS**（cards=10111/events=43915/replayed=10111/schema_errors=0/**mismatch=0**/chronicle 2026-11-15 gap=0d）；日更面 **PASS**（stale=13 ran=14 failed=0）；QC 巡检 cards=10114 evolved=10114 **problems=0**；语言池 audit **PASS**（全桶达标 SELF_TERMINATE）；反思线 day=2026-11-15 已满 3 条；HQ 日报闸 ALREADY_REPORTED 零写入。决策水位差集 **NEW=0**。",
    "s": 1
   },
   {
@@ -1969,8 +1969,12 @@
   [
    "71",
    "本轮年轮批落环行数 71（机器直数，非人口总数）；同日相遇轮 2 组双卡互引，事件闸与日更面全 PASS。"
+  ],
+  [
+   "98",
+   "R3007 2026-11-15 02:5x：今日年轮落环 98 行（本轮 10 席）；可见面 26 面重建；回放闸 PASS 43965/0。"
   ]
  ],
- "t": "当前活：周日深夜产品轮（年轮 9 席落环 + 相遇 1 组 + 事件闸/日更双 PASS）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-11-15 02:14 重建）+ qa\\EVENTS-REPLAY-REPORT.md（02:14 mismatch=0）\n下个里程碑：下一批年轮（C-02249 修开口后复烧，窗 ≤24h）+ 明日相遇轮日额（今日 2/3 已用）",
- "top_text": "当前活：周日深夜产品轮（年轮 9 席落环 + 相遇 1 组 + 事件闸/日更双 PASS）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-11-15 02:14 重建）+ qa\\EVENTS-REPLAY-REPORT.md（02:14 mismatch=0）\n下个里程碑：下一批年轮（C-02249 修开口后复烧，窗 ≤24h）+ 明日相遇轮日额（今日 2/3 已用）"
+ "t": "当前活：年轮线产品轮 R3007 收轮（年轮 10 环 + 26 面日更 + 回放闸 PASS）\n最近实物：census/export/city-today.html 与 25 个可见面 2026-11-15 02:4x 重建 + census/registry/*.md 10 席新年轮·commit b587e9ebd\n下个里程碑：今日相遇轮/反思线日额已满；下轮=次日 19:00 后反思批（连 3 日验收已达·转常态监控）",
+ "top_text": "当前活：年轮线产品轮 R3007 收轮（年轮 10 环 + 26 面日更 + 回放闸 PASS）\n最近实物：census/export/city-today.html 与 25 个可见面 2026-11-15 02:4x 重建 + census/registry/*.md 10 席新年轮·commit b587e9ebd\n下个里程碑：今日相遇轮/反思线日额已满；下轮=次日 19:00 后反思批（连 3 日验收已达·转常态监控）"
 }
