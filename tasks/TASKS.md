@@ -2316,3 +2316,10 @@ ound_daily --run **PASS**（stale=12 ran=13 failed=0：rumors/dashboard/voices/c
 - **跳过面（按日额律·零 LLM）**：反思线今日 5/5 满额（`daily-cap` 自报，11-13 31 条 + 11-14 5 条 = 连续 2/3 生产日，T-20261113-05 尚差一日验收）；语言池 `pool_audit` **PASS SELF_TERMINATE**（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·双抽 192+25 对 mismatch=0）；相遇轮今日 cap 满；HQ 日报闸 `--check`=ALREADY_REPORTED(day=2026-11-14 lines=3) 零写入。
 - **观察（未动闸）**：C-02133 的 `rain-invented` 判为真·雨景指涉——该居民当日真实天气无雨，属锚定律正常拦截，非闸误杀，留待下一轮以真实天气喂料重试。
 - tokens: local=9 api=0 api_reason=-
+
+## 轮 R2996 · 2026-11-14 23:53 夜轮
+- 轮首三步：pull --ff-only=Already up to date、树净；决策水位差 NEW=0（D-20261114-01/02/03 前轮已消费）；orders 无涉本司新物理件。主控 11-14 00:30 裁决已核实：PROD-BIGLIFE-POP 属机队 v3 工位挂起项（revive=接任一命令），与本公司 OS 循环并行不冲突，本仓照常产。
+- 产品增量（9 席新立年轮 + 面重建 + 事件闸 = 可见实物，计 2 分）：①年轮批 --batch 3 due=10 → written=9（C-02133/02145/02156/02188/02144/02149/02152/02157/02158，脚本自提交 c4ecdde11；C-02151 因 recent-family-opening+recent-dup-phrase 持续违例留存待重试＝闸生效非丢单）；②行为线自动镜像 rows=9 ring=10114（commit c789f64ba）；③日更面 round_daily --run PASS stale=1 ran=2 failed=0（dashboard 因 dep-mtime 重建 + index 重建，其余 skipped-fresh）；④事件流回放闸 events_refresh --gate PASS：derive cards=10111 events=43867 shards=3；replay replayed=10111 schema_errors=0 mismatch=0；coverage exported=10114 unexpected_missing=0；chronicle last=2026-11-14 gap=0d。
+- 轮末提交：5b54ecb71（3 files：city-dashboard.html / index.html / qa/EVENTS-REPLAY-REPORT.md）。
+- 跳过面（按日额律）：反思线 daily-cap（今日 11-14 已 5 条，尾部 date=2026-11-14 → T-20261113-05 验收第 2/3 生产日）；语言池 pool_audit PASS SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·双抽 mismatch=0）；相遇轮今日已 2 幕（city-meets.html 2026-11-14 段）达上限；HQ 日报闸 --check=ALREADY_REPORTED(day=2026-11-14 lines=3) 零写入。QC 巡检今日 05:52 已跑（非本轮）。
+- tokens: local=9 api=0 api_reason=-
