@@ -2367,3 +2367,9 @@ ound_daily --run **PASS**（stale=12 ran=13 failed=0：rumors/dashboard/voices/c
   **非本司线观察（只记不动）**：01:34 本机又起 \Tools/face_source_collect.py collect\（真人脸抓取链），与 11-13「真人脸只走书面授权或原创气质图鉴、无 RIGHTS.json/consent 一律不训」判例同族，属 BigStream 面待其自纠，本司未触碰其进程。
   **实况三行**：当前活＝年轮批 9 席落环＋事件闸/日更双闸 PASS ｜ 最近实物＝C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-today.html（2026-11-15 01:4x 重建）+ qa\\EVENTS-REPLAY-REPORT.md（01:40 mismatch=0）｜ 下个里程碑＝19:00 后反思线（reflections.jsonl 尾部 date=2026-11-15）+ 下一批年轮（C-02216 修文风后复烧，窗 ≤24h）。
 - tokens: local=11 api=0 api_reason=(年轮批 10 席 seat 调用 + 1 次探针；全程本地 qwen3:4b-instruct，零云端)
+
+## T-20261115-01 慢性闸卡座诊断留档（open·2026-11-15 01:5x R3001 @BigLife-OSLoop 立·非缺陷结论）
+- **现象**：R3001 年轮批 10 席 due，9 席落环，**C-02216 被 `gate: persistent violations [mist-import]` 拦下留 due**（3 次重写均触线，非首次即拦）。
+- **已核（本轮实查，勿重复挖）**：①闸规则正身 `Tools/evolve_citizen.py` L1701 `if ct is not None and "雾" in line and "雾" not in ct` —— 判据=**雾属无锚词汇**（事件流/实况从无雾况数据），卡面自带雾方可写（C-00666 江雾人设=合法例）；②**尾部硬约束已接线**：`fog_blk` L3000-3002 在 L3026 拼入年轮 prompt（对无雾人设强制「严禁出现雾字/雾状比喻」）；③故本例=**模型三次无视显式字级禁令**，闸拦得对，属设计行为**非误杀**，禁改判据（改=放无锚事实入城）。
+- **潜在改进（待裁·非当轮改）**：对「有尾部字级禁令仍复犯」的座，可试**负例回灌重写**（把违规句原文塞进第二次 prompt 作「上次这样写被退回」），比再加一句禁令更强；改前须跑 `Tools/selftest_add_ring.py` + 单座灰度，且不得动 mist-import 判据本身。
+- **规模**：R3001 当日仅此 1 席（前例 C-02008/C-09269 属同族低频尾）；不构成流水量问题，座保持 due 下轮自动复烧。
