@@ -609,7 +609,7 @@ Usage:
   python -X utf8 evolve_citizen.py --batch 3 --no-propose # skip the proposal line for this run
   --via BigLife-OSLoop  # committer-identity tail on every commit (cph4/versioning.md 4.1)
 """
-import argparse, datetime, glob, json, os, re, socket, subprocess, sys, threading, time, urllib.error, urllib.request
+import argparse, atexit, datetime, glob, json, os, re, socket, subprocess, sys, threading, time, urllib.error, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
@@ -661,6 +661,73 @@ LLM_URL = os.environ.get("BIGLIFE_LLM_URL", "http://127.0.0.1:8090/v1/chat/compl
 # when it answers as an OpenAI lane, else fall back to the local Ollama seat with
 # a model that is actually installed (never assume the 35B brain is present).
 _SEAT = None
+
+# T-20261115-02 (2026-11-15): 跨实例批面互斥。round.lock 只约束 OS 轮，交互会话
+# 与 OS 轮在同窗启动时，两边 scan 都早于对方写入 → 双双选中同批居民，后到者的
+# 产出全被 add_ring 的同日幂等闸拒掉（数据无损，但白烧 9-10 次 LLM 调用）。
+# O_CREAT|O_EXCL 在 Windows/POSIX 上都是原子创建，故以版本身做互斥体；锁龄超过
+# stale_s 且持有者 PID 已不在即判陈旧回收，防被杀批次把产线锁死。获取失败=报
+# busy 退 0（不阻塞其它入口，也不产生任何 LLM 调用）。
+EVOLVE_LOCK = os.path.join(CO, ".codely-cli", "tmp", "evolve.lock")
+LOCK_STALE_S = float(os.environ.get("BIGLIFE_LOCK_STALE_SEC", "1800"))
+
+
+class BatchLockBusy(Exception):
+    """Another process holds the LLM batch face on this machine."""
+
+
+def _pid_alive(pid):
+    if pid <= 0:
+        return False
+    try:
+        os.kill(pid, 0)  # 0 号信号只做存活探测，不投递
+        return True
+    except PermissionError:
+        return True
+    except OSError:
+        return False
+
+
+def _lock_is_stale(path, stale_s):
+    try:
+        with open(path, encoding="utf-8") as f:
+            head = f.readline().split()
+        pid = int(head[0]) if head else 0
+        age = time.time() - os.path.getmtime(path)
+    except Exception:  # noqa: BLE001 - 读不出就当非陈旧：宁可让路，不误清活锁
+        return False
+    if pid == os.getpid():
+        return True  # 本进程上一轮遗留的同 PID 锁：直接回收
+    return age > stale_s and not _pid_alive(pid)
+
+
+def acquire_batch_lock(path=None):
+    p = path or EVOLVE_LOCK
+    os.makedirs(os.path.dirname(p), exist_ok=True)
+    payload = ("%d %s\n" % (os.getpid(),
+                            datetime.datetime.now().isoformat())).encode("utf-8")
+    for attempt in (0, 1):
+        try:
+            fd = os.open(p, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            with os.fdopen(fd, "wb") as f:
+                f.write(payload)
+            return p
+        except FileExistsError:
+            if attempt or not _lock_is_stale(p, LOCK_STALE_S):
+                raise BatchLockBusy(p) from None
+            try:
+                os.remove(p)
+            except FileNotFoundError:
+                pass
+    raise BatchLockBusy(p)
+
+
+def release_batch_lock(p):
+    try:
+        os.remove(p)
+    except FileNotFoundError:
+        pass
+
 
 def _openai_seat_ok(url):
     try:
@@ -3543,6 +3610,18 @@ def main():
     # top of someone else's job - yield the round instead (exit 0, not an error).
     if vram_guard():
         return
+
+    # T-20261115-02: one LLM batch per machine. Taken before the warm probe so a
+    # losing instance burns zero GPU time, and released via atexit so every exit
+    # path (including meet/batch early returns) drops it.
+    if (args.batch or args.meet or args.reflect) and not args.audit_due:
+        try:
+            _lockp = acquire_batch_lock()
+        except BatchLockBusy as exc:
+            print("busy: another instance holds the batch (T-20261115-02) - %s; "
+                  "zero LLM burned, retry after it ends" % exc, flush=True)
+            return
+        atexit.register(release_batch_lock, _lockp)
 
     # T-20261114-05: WDDM reports per-process VRAM as [N/A], so a job that owns
     # the card reads as "degraded" above and every seat then burns its full 150s
