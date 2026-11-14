@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-14 23:48",
+ "export_ts": "2026-11-15 01:54",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2995（2026-11-14 23:4x 夜窗产品轮）**：年轮批 `--batch 3` due=10 → **written=9 skipped=1**（C-02136/02142/02155/02177/02134/02135/02137/02138/02140；C-02133 因 rain-invented+recent-dup-phrase 硬闸留存待重试，锚定律不漏）；行为线自动镜像 rows=9 ring=10114；事件回放闸 **PASS**（cards=10111/events=43858/replayed=10111/schema_errors=0/mismatch=0）；日更面 **PASS**（stale=12 ran=13 failed=0）；QC 巡检 cards=10114 evolved=10114 problems=0。 **R2994（2026-11-14 23:3x 夜窗产品轮）**：年轮批 `--batch 3` due=10 → **written=10 skipped=0**（C-02118/02120/02122/02127/02165/02124/02125/02129/02131/02130，4 席 soft-concession 让步放行、锚定律注脚齐全）；事件回放闸 **PASS**（cards=10111/events=43849/replayed=10111/schema_errors=0/mismatch=0）；日更面 **PASS**（stale=12 ran=13 failed=0）。 **R2993（2026-11-14 23:2x 夜窗产品轮）**：年轮批 `--batch 3` due=10 → **written=10 skipped=0**（C-02102/02106/02107/02110/02111/02112/02114/02116/02117/02143，commit b2649d498；4 席 soft-concession 落环已计入 written、[锚] 注脚齐全）；行为线自动镜像 rows=10 ring=10114（commit d2a233241）；事件流回放闸 **PASS**（cards=10111 / events=43839 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0 / chronicle last=2026-11-14 gap=0d）；日更面 `round_daily --run` **PASS**（stale=13 ran=14 failed=0，收口后 remaining=0）。跳过面按日额律：反思线 5/5、相遇轮 3/3、语言池 SELF_TERMINATE、QC 未到 6 轮节拍、HQ 闸 ALREADY_REPORTED。",
+   "t": "**R3002（2026-11-15 01:4x 周日夜窗产品轮）**：年轮批 `--batch 3` due=10 → **written=8 skipped=0**（C-02216/02217/02219/02228/02218/02223/02224/02225；C-02222、C-02220 因 persistent 违例留 due，闸生效非丢单）；行为线自动镜像 rows=2→8 ring=10114；相遇轮 C-02151×C-02189（像素匠人巷·秩序×烟火，同日双卡互引）；事件回放闸 **PASS**（cards=10111/events=43915/replayed=10111/schema_errors=0/**mismatch=0**/chronicle 2026-11-15 gap=0d）；日更面 **PASS**（stale=13 ran=14 failed=0）；QC 巡检 cards=10114 evolved=10114 **problems=0**；语言池 audit **PASS**（全桶达标 SELF_TERMINATE）；反思线 day=2026-11-15 已满 3 条；HQ 日报闸 ALREADY_REPORTED 零写入。决策水位差集 **NEW=0**。 **R2995（2026-11-14 23:4x 夜窗产品轮）**：年轮批 `--batch 3` due=10 → **written=9 skipped=1**（C-02136/02142/02155/02177/02134/02135/02137/02138/02140；C-02133 因 rain-invented+recent-dup-phrase 硬闸留存待重试，锚定律不漏）；行为线自动镜像 rows=9 ring=10114；事件回放闸 **PASS**（cards=10111/events=43858/replayed=10111/schema_errors=0/mismatch=0）；日更面 **PASS**（stale=12 ran=13 failed=0）；QC 巡检 cards=10114 evolved=10114 problems=0。 **R2994（2026-11-14 23:3x 夜窗产品轮）**：年轮批 `--batch 3` due=10 → **written=10 skipped=0**（C-02118/02120/02122/02127/02165/02124/02125/02129/02131/02130，4 席 soft-concession 让步放行、锚定律注脚齐全）；事件回放闸 **PASS**（cards=10111/events=43849/replayed=10111/schema_errors=0/mismatch=0）；日更面 **PASS**（stale=12 ran=13 failed=0）。",
    "s": 1
   },
   {
@@ -1961,8 +1961,12 @@
   [
    "1079",
    "今日年轮落环 1079 行；本轮新增 9 席，1 席被闸拦下留待下轮（非丢单）。"
+  ],
+  [
+   "50",
+   "本轮 8 席新年轮落环（卡面真实净增，`git show --stat` 逐卡 +2/-1）→ 今日年轮累计行数见 results_tail；相遇轮 1 组双卡互引。"
   ]
  ],
- "t": "当前活：BigLife 年轮线夜窗续转（R2995）\n最近实物：census/registry/ 9 张新增年轮卡 + census/export/ 13 面重建 + census/QC-REPORT.md（2026-11-14 23:4x）\n下个里程碑：下一轮年轮批 + 事件闸复验（≤次日 00:30）",
- "top_text": "当前活：BigLife 年轮线夜窗续转（R2995）\n最近实物：census/registry/ 9 张新增年轮卡 + census/export/ 13 面重建 + census/QC-REPORT.md（2026-11-14 23:4x）\n下个里程碑：下一轮年轮批 + 事件闸复验（≤次日 00:30）"
+ "t": "当前活：周日夜窗产品轮（年轮批+相遇轮+事件回放闸+日更 23 面）\n最近实物：census/export/city-today.html、city-meets.html（2026-11-15 01:51 重建）+ commit 84fcd78d5 已推 origin/main\n下个里程碑：2026-11-15 日内继续年轮批与相遇轮（日额 3/3 未满），长周期单 T-20261112-01/04、T-20261113-03/04 待委员会口径",
+ "top_text": "当前活：周日夜窗产品轮（年轮批+相遇轮+事件回放闸+日更 23 面）\n最近实物：census/export/city-today.html、city-meets.html（2026-11-15 01:51 重建）+ commit 84fcd78d5 已推 origin/main\n下个里程碑：2026-11-15 日内继续年轮批与相遇轮（日额 3/3 未满），长周期单 T-20261112-01/04、T-20261113-03/04 待委员会口径"
 }
