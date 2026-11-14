@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-14 19:28",
+ "export_ts": "2026-11-14 19:42",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2974（2026-11-14 19:1x-19:3x 夜窗产品轮）**：年轮批 evolved=9/10 落环（C-01822/C-01823/C-01824/C-01827/C-01834/C-01828/C-01829/C-01830/C-01831；C-01826 三项闸 persistent 拒收留 due，锚定律优先于凑数）；行为线自动镜像 rows=9 ring=10114；事件回放闸 PASS（events=43652 / card=10111 / replayed=10111 / mismatch=0 / schema=0 / chronicle gap=0d）；日更 13 面重建 stale=12 verdict=PASS；QC cards=10114 evolved=10114 problems=0 dup_rings=37/37；相遇 3/3 已满、反思日额 5/5 达成、语言池自终止（三线按律不重复烧）。 **R2947（11-14 15:1x）周六午后让路窗轮**：年轮 LLM 三线按 vram-guard（used 11866/12282 MiB=96.6%>90%）让路不启批（T-20261113-06 设计）；确定性面出活——日更面重建 3 面（city-today/map/index，stale=2 ran=3 failed=0 verdict=PASS）+ 事件流回放闸 PASS（events=43522 / cards=10111 / replayed=10111 / mismatch=0 / schema=0）+ 状态导出面刷新。 **R2909（2026-11-14 11:2x）**：周六全速轮——年轮批 10 席落环（C-01614/01615/01618/01622/01662/01617/01619/01620/01621/01623，本地 qwen3:4b-instruct），行为线镜像随环同步；事件闸 PASS（cards=10111／events=43460／mismatch=0／schema=0／chronicle 最新 11-14 gap=0d）；日更面 14 面重建（stale=13，含 city-voices/coverage/ops/growth/meets/reflections/gene-ledger/census_index 等），今日落环居民 678 人。",
+   "t": "**R2975（2026-11-14 19:3x 夜窗产品轮）**：年轮批 10/10 落环（C-01826/01832/01833/01836/01852/01835/01837/01839/01840/01841，6 席 soft-concession〔recent-dup-opening/recent-dup-phrase〕让步放行、[锚] 注脚保全原文）；行为线自动镜像 rows=10；事件闸 PASS（cards=10111／events=43662／replayed=10111／mismatch=0／schema=0／chronicle 2026-11-14 gap=0d）；24 面可见面重建 verdict=PASS（stale=24 ran=25 failed=0）；QC problems=0 dup_rings=37/37；池 72 轴桶＋12 像素桶全达标 SELF_TERMINATE；相遇轮今日 cap 3/3、反思线今日 5 条已满（静默跳过）。 **R2974（2026-11-14 19:1x-19:3x 夜窗产品轮）**：年轮批 evolved=9/10 落环（C-01822/C-01823/C-01824/C-01827/C-01834/C-01828/C-01829/C-01830/C-01831；C-01826 三项闸 persistent 拒收留 due，锚定律优先于凑数）；行为线自动镜像 rows=9 ring=10114；事件回放闸 PASS（events=43652 / card=10111 / replayed=10111 / mismatch=0 / schema=0 / chronicle gap=0d）；日更 13 面重建 stale=12 verdict=PASS；QC cards=10114 evolved=10114 problems=0 dup_rings=37/37；相遇 3/3 已满、反思日额 5/5 达成、语言池自终止（三线按律不重复烧）。 **R2947（11-14 15:1x）周六午后让路窗轮**：年轮 LLM 三线按 vram-guard（used 11866/12282 MiB=96.6%>90%）让路不启批（T-20261113-06 设计）；确定性面出活——日更面重建 3 面（city-today/map/index，stale=2 ran=3 failed=0 verdict=PASS）+ 事件流回放闸 PASS（events=43522 / cards=10111 / replayed=10111 / mismatch=0 / schema=0）+ 状态导出面刷新。",
    "s": 1
   },
   {
@@ -24,7 +24,7 @@
   },
   {
    "n": "QC 巡检线",
-   "t": "**R2974 例巡条（19:26）**：cards=10114 / evolved=10114 / problems=0 / dup_rings=37/37（编号姓名唯一、必备段齐备、年轮锚定律全绿） **R2879 例巡条**：本轮不跑 QC（上轮 05:52 刚过 problems=0，6 轮节律未到） **R2878 例巡条：gene_nearcheck --qc 17 PASS / 0 FAIL**（修 ha 池存量近重对；ha max 76.596→69.565，阈 70）；事件回放闸 cards=10111 / events=43141 / mismatch=0 / schema_errors=0 PASS。 **R2874 例巡条**：本轮不重复 QC（上轮 R2873 05:1x 刚跑 problems=0，6 轮节律未到）；事件闸 replay=10111 schema_errors=0 mismatch=0 作为数据面不变量旁证。 **R2872 例巡条**：qc_census cards=10114 evolved=10114 problems=0 dup_rings=37/37（编号/姓名唯一、必备段齐备、年轮锚定律全过）。 **R2859 例巡条：** qc_census cards=10114 problems=0 dup_rings=37/37；events_refresh --gate mismatch=0 schema_errors=0。 **R2858 例巡条**：census 不变量 problems=0（03:08 巡检），事件流 replay 全量比对 PASS，语言池 hard_fails=0。 **R2856 例巡条：QC cards=10114 problems=0（dup_rings=37/37）** **R2816 例巡条（2026-11-13 21:3x）**：事件流回放闸 PASS（events=42667 / cards=10111 / schema_errors=0 / mismatch=0 / unexpected_missing=0 / chronicle gap=0d）；QC 不变量本轮非到点（20:4x 班已巡 problems=0）。 **R2808 例巡条（2026-11-13 20:1x）**：不变量扫描 cards=10114 / evolved=10114 / problems=0（编号·姓名唯一、必备段齐备、锚定律全过）；事件流回放闸 PASS。 **R2795 例巡条：心跳解析守卫 6 探针 0 fail**；人口不变量扫描 cards=10114 problems=0 dup_rings=37/37；池 audit 全达标 SELF_TERMINATE；日更面 24 面 PASS（本轮重建 dashboard/proposals/index 3 面） 提案面脱敏回归 13/13 PASS（正控 4 例残留=0 且正文保留／压缩无占位符串联／负控干净句原样／产物页零机读串泄漏且 9 条全可读）；round_daily 全新鲜 verdict=PASS；事件闸 PASS（events=42535 / cards=10111 / mismatch=0 / schema=0）。",
+   "t": "**R2975 例巡条（2026-11-14 19:3x）**：qc_census cards=10114 evolved=10114 problems=0 dup_rings=37/37——编号/姓名唯一、必备段齐备、年轮锚定律三面全过。 **R2974 例巡条（19:26）**：cards=10114 / evolved=10114 / problems=0 / dup_rings=37/37（编号姓名唯一、必备段齐备、年轮锚定律全绿） **R2879 例巡条**：本轮不跑 QC（上轮 05:52 刚过 problems=0，6 轮节律未到） **R2878 例巡条：gene_nearcheck --qc 17 PASS / 0 FAIL**（修 ha 池存量近重对；ha max 76.596→69.565，阈 70）；事件回放闸 cards=10111 / events=43141 / mismatch=0 / schema_errors=0 PASS。 **R2874 例巡条**：本轮不重复 QC（上轮 R2873 05:1x 刚跑 problems=0，6 轮节律未到）；事件闸 replay=10111 schema_errors=0 mismatch=0 作为数据面不变量旁证。 **R2872 例巡条**：qc_census cards=10114 evolved=10114 problems=0 dup_rings=37/37（编号/姓名唯一、必备段齐备、年轮锚定律全过）。 **R2859 例巡条：** qc_census cards=10114 problems=0 dup_rings=37/37；events_refresh --gate mismatch=0 schema_errors=0。 **R2858 例巡条**：census 不变量 problems=0（03:08 巡检），事件流 replay 全量比对 PASS，语言池 hard_fails=0。 **R2856 例巡条：QC cards=10114 problems=0（dup_rings=37/37）** **R2816 例巡条（2026-11-13 21:3x）**：事件流回放闸 PASS（events=42667 / cards=10111 / schema_errors=0 / mismatch=0 / unexpected_missing=0 / chronicle gap=0d）；QC 不变量本轮非到点（20:4x 班已巡 problems=0）。 **R2808 例巡条（2026-11-13 20:1x）**：不变量扫描 cards=10114 / evolved=10114 / problems=0（编号·姓名唯一、必备段齐备、锚定律全过）；事件流回放闸 PASS。 **R2795 例巡条：心跳解析守卫 6 探针 0 fail**；人口不变量扫描 cards=10114 problems=0 dup_rings=37/37；池 audit 全达标 SELF_TERMINATE；日更面 24 面 PASS（本轮重建 dashboard/proposals/index 3 面） 提案面脱敏回归 13/13 PASS（正控 4 例残留=0 且正文保留／压缩无占位符串联／负控干净句原样／产物页零机读串泄漏且 9 条全可读）；round_daily 全新鲜 verdict=PASS；事件闸 PASS（events=42535 / cards=10111 / mismatch=0 / schema=0）。",
    "s": 1
   },
   {
@@ -1909,8 +1909,12 @@
   [
    "873",
    "今日年轮落环 873 行（本轮 R2974 新增 9 行，1 席三闸拒收留 due）"
+  ],
+  [
+   "883",
+   "今日年轮落环 883 行（本轮机直数口径，非人口总数）"
   ]
  ],
- "t": "当前活：年轮批 9 席落环 + 13 面日更重建（夜窗产品轮）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-today.html（2026-11-14 19:24 重建）\n下个里程碑：下轮年轮批续烧（C-01826 留 due 复投）+ 事件闸复验",
- "top_text": "当前活：年轮批 9 席落环 + 13 面日更重建（夜窗产品轮）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-today.html（2026-11-14 19:24 重建）\n下个里程碑：下轮年轮批续烧（C-01826 留 due 复投）+ 事件闸复验"
+ "t": "当前活：夜窗产品轮——年轮批 10 席落环 + 24 面可见面重建\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-11-14 19:37 重建）\n下个里程碑：19:00 夜窗内反思线续跑（今日已满 5 条）+ 明日年轮批续烧",
+ "top_text": "当前活：夜窗产品轮——年轮批 10 席落环 + 24 面可见面重建\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-11-14 19:37 重建）\n下个里程碑：19:00 夜窗内反思线续跑（今日已满 5 条）+ 明日年轮批续烧"
 }
