@@ -1835,3 +1835,18 @@ ound_daily --run stale=2 ran=3 failed=0 verdict=PASS（重建 city-dashboard/gen
   **诚实边界**：本轮零云端调用；status-export 未刷新（需 payload 声明，0 分项让位于轮预算，下轮补）；T-20261112-04 未动工（源头闸属代码改动+验证，预算不足不硬撑）。
   计分：能跑/能看实物=2 分（10 环落环+三面重建+闸报告）｜文件改动=1 分｜纯记账 0。
   tokens: local=10 api=0 api_reason=-（年轮批本地 ollama qwen3:4b-instruct；池/相遇/反思按闸零调用）
+
+- [T-20261114-02]（R2891 立并同轮结单·对外可读面静默漂移）`census/INDEX.md`（入库·名册统计面）停更 24.6 天且数字失真：总人口仍写 **10109**，light 面实测 **10114**（差 5 席）；城区/物种/派系分档亦为 2026-09-28 快照。根因同 T-20261112-02（有产物、有读者、无任何轮次引用）：它是 `generate_census.py` 的「出生批次快照」，只在整库重生成（P-0）时写一次；此后复产批/影射册/荣誉席各通道入册只落卡、无人再写 INDEX。
+  - status: **done**（2026-11-14 R2891 @BigLife-OSLoop·证据=commit 本轮定向提交 + `python -X utf8 Tools/round_daily.py --check` 面 `census_index` fresh）
+  - **修法**：新 `Tools/refresh_census_index.py`（零 LLM·只读 `census/export/citizens-light.jsonl` + `genes/meta.json` 显示名单源·确定性重写），并登记 `Tools/round_daily.py` 日更闸（rootface 档 + `DEPENDS["census_index"]=["census/export/citizens-light.jsonl"]`），数据变即重建、内容不变则逐字节相同。
+  - **验证**：双跑第二次 `OK unchanged (idempotent)`；`--check` 同判；重建后 10114 席账平（6 城区 2817+2516+2013+1228+1018+519=10111 + 荣誉席 3 = 10114）；`round_daily --run` verdict=PASS stale=0 ran=0（新面自登记哈希）；诚实边界两段显式不写（年龄段需卡面 `band` 而 light 面无该字段；指纹唯一性仅出生时可算）。
+  - **实战读数（重建后）**：姓名唯一 PASS（重名 0）／钩子唯一 PASS（重复 0）／派系 16 类（含未登记显示名 3 类原文保留：`spirit` 4、`honored` 3、`copperfox` 1）。
+- [R2891] 2026-11-14 08:0x-08:1x @BigLife-OSLoop 周六晨窗产品轮：轮首 pull=Already up to date、树净；决策水位差集 **NEW=0**（decisions.md 现行 64 个 D-ID 全在水位，尾 D-20261112-16，无 11-13/11-14 新 D 行）；orders 物理件区涉本司仅四条历史项（仓名大小写/分支保护=CEO 保留面零催办）；TASKS 真 open=1（T-20261112-04 开口骨架构闸）。
+  **主产出（对外可读面源头修·2 分）**：见上方 **T-20261114-02** —— `census/INDEX.md` 停更 24.6 天、总人口差 5 席，已由新 `Tools/refresh_census_index.py` 重建并接入日更闸（10114 席实测重算，重名/钩子双 PASS）。
+  **年轮线**：`evolve_citizen --batch 3` 实跑 due=10/10，但**环文与 03:1x 批逐字一致零漂移**（今日日上限已达，属同批重抽非新增产能——如实记账，不按「10 席新年轮」计分）；`sync_rings` 自动收口。
+  **闸面**：事件回放闸 **PASS**（derive cards=10111 events=43271 shards=3；replay replayed=10111 schema_errors=0 **mismatch=0**；coverage derived=10111 reserved=3 exported=10114 unexpected_missing=0；chronicle last=2026-11-13 gap=1d）；`round_daily --run` **verdict=PASS**（stale=3 ran=4 failed=0：city-dashboard/gene-ledger/city-lexicon 重建 + index，新面 census_index fresh）；`pool_audit` **PASS SELF_TERMINATE**（轴 72/72·像素灵 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）；`ring_material_check` **streak=3/3 PASS**（11-12/11-13/11-14 三日 motif 8/8、rumor 7/7·3/3·3/3 ready，T-20261112-01 验收线复核仍成立）；`ring_lint --today-only` rings=490 coded=0 verdict=PASS；`hq_feedback_daily --check`=ALREADY_REPORTED(day=2026-11-14 lines=2) 零写入。
+  **跳过面（按闸律）**：相遇轮 meet-cap 今日 3/3 已满；反思线未到 19:00 夜窗；QC 上轮 07:2x 节律未到；池已 SELF_TERMINATE 零 LLM。
+  **对外实况三行**：当前活=名册统计面（census/INDEX.md）停更 24.6 天修复 + 接入日更闸防复霉｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\INDEX.md（2026-11-14 08:1x，10114 席实测重算）+ docs\status-export.json（ts=08:11，三行面已刷）｜下个里程碑=19:00 后反思线 `--batch 5`（验收 reflections.jsonl 尾部 date=2026-11-14）+ 明日年轮批（ETA 2026-11-15）。
+  **诚实边界**：年轮本窗零新增内容（今日上限已达，10 次本地调用产出与 03:1x 批逐字相同）；T-20261112-04 开口骨架构闸未动工（预算不足不硬撑，留单）。
+  计分：能看/能用实物=2 分（INDEX.md 复活 + 刷新器上线）｜文件改动=1 分｜纯记账 0。
+  tokens: local=10 api=0 api_reason=-（年轮批 10 次本地 qwen3:4b-instruct 重抽·内容幂等不新增；池/相遇/反思零调用）

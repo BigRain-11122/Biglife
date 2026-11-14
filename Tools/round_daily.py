@@ -95,6 +95,12 @@ REGISTRY = [
     #      断了等于让居民反复配同一批人。
     ("social_graph", "rootface", "build_social_graph.py",   ["census/city-social-graph.html"]),
     ("meet_candidates", "daily", "meet_candidates.py",      ["meet-candidates.jsonl", "meet-candidates.html"]),
+    # v0.22 (2026-11-14 R2864): 名册统计面接线 —— census/INDEX.md 是 generate_census.py
+    # 的「出生批次快照」，只在整库重生成时写一次；此后复产批/影射册/荣誉席各通道入册，
+    # 卡片照落盘、INDEX 无人再写：实测停更 24.6 天，总人口仍写 10109（light 面实为 10114，
+    # 差 5 席）。与 T-20261112-02 同病根（有产物、有读者、无任何轮次引用）。rootface 档，
+    # 确定性零 LLM，数据变即重建、内容不变则逐字节相同（幂等）。T-20261114-01 接线。
+    ("census_index", "rootface", "refresh_census_index.py", ["census/INDEX.md"]),
     # 索引必须最后跑：它登记的是本轮重建后的文件清单
     ("index",      "index", "build_export_index.py",      ["index.html"]),
 ]
@@ -187,6 +193,9 @@ DEPENDS = {
     # 两者任一更新都会改变分档，故双源登记。
     "ring_recency": ["census/export/citizens-light.jsonl", "state/evolve-cursor.json",
                      "census/registry"],
+    # v0.22 (2026-11-14 R2864): 名册统计的唯一数据源就是 light 面 —— 新居民入册
+    # （复产批/影射册/荣誉席）即改写行数，INDEX.md 必须跟着变。
+    "census_index": ["census/export/citizens-light.jsonl"],
     # v0.20 (2026-11-13 R2784): 开头族仪表全量扫 registry 年轮行，源=registry 目录 +
     # 环落地主信号 evolve-cursor（与其余环依赖面同口径）。
     "ring_openings": ["state/evolve-cursor.json", "census/registry"],

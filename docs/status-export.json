@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-14 07:59",
+ "export_ts": "2026-11-14 08:11",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2890（2026-11-14 07:53-08:08 周六晨窗）：年轮 10 环落环（C-01403 等，53 秒零 stall）+ 事件回放闸 PASS（cards=10111/events=43261/mismatch=0/schema=0）+ 日更面 rebuilt 3（gene-ledger/dashboard/index）** **R2887（2026-11-14 07:23-07:25）**：年轮批 10 席落环（C-04848/04852/04855/04857/01381/04850/04851/04853/01382/01383，软让路 gate 1 次落环）+ 行为线镜像自动收口 + 事件回放闸 PASS（cards=10111 events=43231 replay=10111 mismatch=0 schema_errors=0）+ 日更面 stale=10 ran=11 failed=0 PASS；语言池 SELF_TERMINATE 全达标跳过。 **R2886（2026-11-14 07:13-07:2x）**：晨窗年轮批 10 席落环（C-04836/04840/04843/04847/04856/04839/04841/04844/04845/04846，43 秒零 stall）+ 4 可见面重建 + 事件回放闸 mismatch=0 PASS；池/相遇/反思/QC 按闸律跳过。",
+   "t": "**R2891（名册统计面复活·2026-11-14 08:1x）**——`census/INDEX.md` 实测停更 24.6 天、总人口仍写 10109（light 面实为 10114，差 5 席）已治愈——根因同 T-20261112-02（有产物、有读者、无任何轮次引用）：它是 generate_census.py 的「出生批次快照」，只在整库重生成时写一次，此后复产批/影射册/荣誉席各通道入册都不再刷新。修法=新 `Tools/refresh_census_index.py`（零 LLM·从 light 面实测重算·内容不变则逐字节相同）并登记 `round_daily` 日更闸（rootface 档 + DEPENDS=citizens-light.jsonl），数据变即重建。 **R2890（2026-11-14 07:53-08:08 周六晨窗）：年轮 10 环落环（C-01403 等，53 秒零 stall）+ 事件回放闸 PASS（cards=10111/events=43261/mismatch=0/schema=0）+ 日更面 rebuilt 3（gene-ledger/dashboard/index）** **R2887（2026-11-14 07:23-07:25）**：年轮批 10 席落环（C-04848/04852/04855/04857/01381/04850/04851/04853/01382/01383，软让路 gate 1 次落环）+ 行为线镜像自动收口 + 事件回放闸 PASS（cards=10111 events=43231 replay=10111 mismatch=0 schema_errors=0）+ 日更面 stale=10 ran=11 failed=0 PASS；语言池 SELF_TERMINATE 全达标跳过。",
    "s": 1
   },
   {
@@ -1885,8 +1885,12 @@
   [
    "482",
    "**R2890** 本轮年轮落环 10 行（C-01403 等），今日累计 482 行；事件回放闸 mismatch=0/schema_errors=0；池 SELF_TERMINATE／相遇 cap 满／HQ 日闸已报 → 零空烧。"
+  ],
+  [
+   "492",
+   "本轮名册统计面重算 10114 席（492 为今日年轮落环行数，非人口总数）"
   ]
  ],
- "t": "当前活：周六晨窗年轮产品轮（年轮 10 环 + 闸全 PASS）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-11-14 07:55 重建）+ qa\\EVENTS-REPLAY-REPORT.md（07:54，mismatch=0）\n下个里程碑：19:00 后夜窗反思线 --batch 5（验 reflections.jsonl 尾部 date=2026-11-14）+ T-20261112-04 开口骨架构闸源头修（≤48h）",
- "top_text": "当前活：周六晨窗年轮产品轮（年轮 10 环 + 闸全 PASS）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（2026-11-14 07:55 重建）+ qa\\EVENTS-REPLAY-REPORT.md（07:54，mismatch=0）\n下个里程碑：19:00 后夜窗反思线 --batch 5（验 reflections.jsonl 尾部 date=2026-11-14）+ T-20261112-04 开口骨架构闸源头修（≤48h）"
+ "t": "当前活：名册统计面（census/INDEX.md）停更 24.6 天修复 + 接入日更闸防复霉\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\INDEX.md（2026-11-14 08:1x，10114 席实测重算）\n下个里程碑：19:00 反思线夜窗实批 + 明日年轮批（ETA 2026-11-15）",
+ "top_text": "当前活：名册统计面（census/INDEX.md）停更 24.6 天修复 + 接入日更闸防复霉\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\INDEX.md（2026-11-14 08:1x，10114 席实测重算）\n下个里程碑：19:00 反思线夜窗实批 + 明日年轮批（ETA 2026-11-15）"
 }
