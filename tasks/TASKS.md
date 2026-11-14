@@ -2406,3 +2406,12 @@ ound_daily --run **重建 13 面**（goals/gene_ledger/growth/meets/reflections/
 - **任务板**：T-20261112-04（P1 派生数据陈旧/页面新鲜）**结单**（证据见上）；T-20261113-03 已 done、T-20261113-04 属立法候审**未动**（禁产物轮内改闸）、T-20261113-05 已 closed。
 - **实况三行**：当前活=夜窗年轮批与确定性日更面（无卡点）；最近实物=census/export/city-goals.html + city-meets.html + gene-ledger.html 等 13 面（2026-11-15 02:2x 重建）；下个里程碑=下一个夜窗轮年轮续批（3 席留 due 优先）ETA ≤6h。
 - tokens: local=7 api=0 api_reason=-（年轮 7 次生成全本地 qwen；其余全确定性零 LLM）
+## R3006 · 2026-11-15 02:33-02:4x @BigLife-OSLoop（周日夜窗产品轮·年轮 10 席 + 13 面重建 + QC 全绿）
+- 轮首：git pull --ff-only=Already up to date、树净；决策水位差集 NEW=0（尾 D-20261114-01/02/03 已消费；集团 decisions 11-15 无新编号）；orders 物理件区无涉本司新件。
+- 产品增量（CEO 可见面）：①年轮线 --batch 3 due=10 → written=10（C-02250/02259/02261/02263/02264/02266/02267/02268/02269/02275；其中 C-02250/C-02259/C-02261 为上一轮硬拒留 due 席，本轮换采样后过闸落环，未降闸求绿）；②round_daily --run 重建 13 面（dashboard content-stale + voices/coverage/ops/objects/goals/gene_ledger/growth/meets/reflections/meet_candidates/index，stale=12 ran=13 failed=0 verdict=PASS）。
+- 验闸：events_refresh --gate PASS（derive cards=10111 events=43955 shards=3；replay replayed=10111 schema_errors=0 mismatch=0；coverage derived=10111 reserved=3 exported=10114 unexpected_missing=0；chronicle gap=0d）。
+- QC：qc_census cards=10114 evolved=10114 problems=0 dup_rings=37/37。
+- 自终止面（不空烧）：pool_audit PASS→SELF_TERMINATE（轴 72/72·精灵 12/12·greet 28·faq 7·neg 8；determinism 192+25 对 mismatch=0）语言线跳过；相遇轮今日 cap 3 已满跳过；反思线今日已 3 条（daily-cap）跳过。
+- 实况三行：当前活=夜窗年轮批与确定性日更面（无卡点）；最近实物=census/export/city-dashboard.html + city-voices.html + gene-ledger.html 等 13 面（2026-11-15 02:3x 重建）；下个里程碑=下一夜窗轮年轮续批 ETA ≤6h。
+- tokens: local=10 api=0 api_reason=-（年轮 10 次生成全本地 qwen3:4b-instruct；其余全确定性零 LLM）
+
