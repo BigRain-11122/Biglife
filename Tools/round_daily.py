@@ -224,6 +224,13 @@ DEPENDS = {
     "proposals": ["cognition/proposals.jsonl"],
     # 城市生活页吃两张 append-only 台账（惊奇曲线 + 互聊），同为补跑型源。
     "life": ["cognition/surprise-log.jsonl", "cognition/interchat-ledger.jsonl"],
+    # v0.24 (2026-11-14 R2906): 目标页 = 「页面新鲜、数据旧」的未登记依赖又一例。
+    # 实证：census/export/citizen-goals.jsonl 由 citizen_goals 数据面每日 --regen
+    # （11-14 00:07 版），而 city-goals.html 停在 11-13 15:09——页面比它读的数据旧
+    # 9.7h，round_daily 反判 fresh（DEPENDS 无 goals 键 ⇒ faces 档只按 age>1.0 判，
+    # 19.7h 未越线；数据日更而页面在 24h 内永远「看起来新」）。
+    # 源按 build_city_goals.py 契约取两处：goals 派生面 + 姓名/城区/职业轻量导出。
+    "goals": ["census/export/citizen-goals.jsonl", "census/export/citizens-light.jsonl"],
 }
 
 # 环依赖面的重建下限间隔（分钟）。年轮批约每轮落地一次，若按 mtime 逐次重建，
@@ -241,7 +248,10 @@ DEPENDS_FLOOR_OVERRIDE = {"gene_ledger": 0, "lexicon": 0, "dashboard": 0,
                           # v0.21: 台账消费者三面同为百 KB 级、重建 <1s，且源由
                           # 补跑型动作改写（chronicle --feed / proposal 批）——
                           # 冷却会让补进去的内容压一小时看不见。
-                          "chronicle": 0, "proposals": 0, "life": 0}
+                          "chronicle": 0, "proposals": 0, "life": 0,
+                          # v0.24: 目标页 76KB、重建 <1s，且其源每日 00:0x 由数据面
+                          # 重生——冷却会让当天的目标变更压一小时看不见。
+                          "goals": 0}
 
 TIMEOUT_SEC = 240
 
