@@ -3608,6 +3608,7 @@ def main():
             reflect_step(cursor, via)
         return
     n = 0
+    skipped = 0  # T-20261114-01: refused / no-op writes must never count as evolved
     done = []  # v0.4: title must list actually-evolved IDs, not the planned due slice
     paths = []
     pool_genes = load_pool_genes()   # T-20260925-01: soft opening-diversity guidance
@@ -3811,7 +3812,25 @@ def main():
                 if _ti[_op] >= TODAY_OPEN_HARD:
                     sig["today_ban_openings"].add(_op)
         note_pool_use(line, face, pool_genes, pool_used)  # T-20260925-01: count cross-card quotes
-        add_ring(p, cid, line, anchor_note)
+        # T-20261114-01: add_ring() is the authority on whether a ring landed.
+        # Ignoring its return value turned a refused write (same-day idempotency,
+        # event code, latin/chinese tech vocabulary) into a phantom success:
+        # the cursor advanced and `evolved` counted the seat while the card
+        # bytes stayed identical, so batch volume was silently lost.
+        if not add_ring(p, cid, line, anchor_note):
+            if _ringed_today(p):
+                # The card already carries today's ring (cursor lag or a second
+                # writer beat us here). Self-heal the cursor so the seat stops
+                # cycling; this is not a fresh ring.
+                cursor[cid] = {"v": 1, "last": today(),
+                               "next": (datetime.date.today() + datetime.timedelta(days=COOLDOWN_DAYS)).isoformat(),
+                               "n": cursor.get(cid, {}).get("n", 0) + 1}
+                save_cursor(cursor)
+                print("skip already-served", cid, flush=True)
+            else:
+                print("skip refused-line", cid, "(stays due)", flush=True)
+            skipped += 1
+            continue
         paths.append(p)
         done.append(cid)
         cursor[cid] = {"v": 1, "last": today(),
@@ -3827,7 +3846,7 @@ def main():
         sync_light(args.via)
     else:
         save_cursor(cursor)
-    print("OK evolved=%d of %d due" % (n, len(due)))
+    print("OK evolved=%d of %d due (written=%d skipped=%d)" % (n, len(due), len(done), skipped))
     if args.propose:
         # T-20260926-19 分步②b: 提案与年轮同批生成 (ring_ref 同源强绑定·判据③)
         propose_step(cursor, via, done, sig)
