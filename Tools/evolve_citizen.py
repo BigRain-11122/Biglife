@@ -863,7 +863,7 @@ def load_life_motifs(now):
                 if not t or not re.search(r"[\u4e00-\u9fff]", t):
                     continue
                 out.append((str(e.get("zone") or ""), t))
-        return out[:4]
+        return out[:12]
     except Exception:
         return []
 
@@ -2951,12 +2951,35 @@ def build_prompt(cid, text, sig):
     _lm = sig.get("life_motifs") or []
     if _lm:
         _zone = citizen_zone(text)
-        _lm = sorted(_lm, key=lambda zt: (bool(_zone) and zt[0] != _zone,))
+        # T-20261115-01 (R3046): per-citizen deterministic slice. Every resident
+        # used to receive the same leading 4 motifs (out[:4] + fixed order), so a
+        # single day collapsed onto one or two props - 2026-11-15 census measured
+        # 风 268/339 (79%) and 门板 103/339 (30%) across 339 rings, while the
+        # motif file actually held 8 entries (all of them zone=gaming, i.e. the
+        # first four were cross-zone noise for most residents). Keep one local
+        # motif as the relevance anchor, then rotate the remainder by a stable
+        # per-cid offset so neighbours see different subsets while each card
+        # stays byte-idempotent across re-runs of the same day.
+        _local = [t for z, t in _lm if _zone and z == _zone]
+        _other = [t for z, t in _lm if not (_zone and z == _zone)]
+        _pick = []
+        if _local:
+            # local half rotates too: 95% of the census sits in one zone, so always
+            # taking _local[:1] would just move the collapse from 4 shared motifs to
+            # 1 shared motif.
+            _lo = int(hashlib.md5((cid + "|local").encode("utf-8")).hexdigest()[:8], 16) % len(_local)
+            _pick = [_local[_lo]]
+        if _other:
+            _off = int(hashlib.md5(cid.encode("utf-8")).hexdigest()[:8], 16) % len(_other)
+            _rot = _other[_off:] + _other[:_off]
+            _pick += _rot[:max(0, 4 - len(_pick))]
+        elif len(_local) > 1:
+            _pick += [t for i, t in enumerate(_local) if t not in _pick][:3]
         life_blk = ("街区日常母题（素材库·不是今日新闻：这些是这条街长期就有的生活底子，"
                     "只能当作你身边本来的日常写进句子，严禁写成今天新发生的事、"
                     "严禁当作城里传开的新消息转述、严禁添加清单外的具体物名与人名，"
                     "也严禁给它们安上任何天气或时段说法——那归下面的实况天气与真实时刻管）：\n"
-                    + "\n".join("- " + t for _, t in _lm) + "\n")
+                    + "\n".join("- " + t for t in _pick) + "\n")
     else:
         life_blk = ""
     # T-20260926-11 (L5 城市年谱·消费点 A): optional 本周城市大事 block. Empty
