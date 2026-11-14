@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-14 22:00",
+ "export_ts": "2026-11-14 22:10",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2984（21:5x 年轮批+确定性日更）**：年轮 10/10 落环（C-01957/01961/01962/01964/01969/01958/01968/01970/01972/01974，1 席 soft-concession 让步放行·[锚] 注脚保全，提交 a54cf4681＝10 卡 +20/-10 真实净增）；事件回放闸 PASS（cards=10111 events=43749 schema=0 mismatch=0 coverage 缺口 0）；日更面 stale=24 ran=25 failed=0 verdict=PASS；池审计今日 SELF_TERMINATE、相遇 3/3、反思 5/5 已满，均不重复；T-20261114-01（due 选择器幻影成功）验收 2/2 结单。 **R2983（21:3x 年轮批+确定性日更）**：年轮 10/10 落环（C-01942/01943/01951/01956/01960/01948/01950/01952/01953/01955，6 席 soft-concession 让步放行·[锚] 注脚保全）；事件回放闸 PASS（cards=10111 events=43739 schema=0 mismatch=0）；日更面 stale=13 ran=14 failed=0 verdict=PASS；池审计 SELF_TERMINATE 零 LLM；反思线今日 5 条已满（连续第 2 日达标）。工具修正：`update_status_export.py` 新增「落环数字必须走 {N}」出生地拦截（R2982 flag 落地·自检 7/7 PASS）。 **R2982（2026-11-14 21:2x 夜窗）**：年轮批 10/10 落环（written=10 skipped=0，6 席 soft-concession 让步放行）；事件闸 PASS（43729 events／10111 cards，mismatch=0 schema_errors=0，chronicle gap=0d）；日更面 stale=1 rebuilt=2 verdict=PASS（ops+index 重建）；池审计 72 轴桶＋12 像素桶全达标 SELF_TERMINATE（零 LLM）；反思线今日 5 条已满且尾行 date=2026-11-14（T-20261113-05 验收达标）；决策水位差集 NEW=0、orders 涉本司零新物理件。",
+   "t": "**R2985（22:0x 年轮批+确定性日更）**：年轮 10/10 落环（C-01976/01979/01982/01984/01999/01983/01985/01986/01991/01993，4 席 soft-concession 让步放行·[锚] 注脚保全，提交 5f04c81ba＝10 卡真实净增）+ 行为线镜像自动收口（rows=10 ring=10114，提交 26698ce17）；事件回放闸 PASS（cards=10111 events=43759 shards=3 schema_errors=0 mismatch=0 coverage 缺口 0 chronicle gap=0d）；日更面 stale=12 ran=13 failed=0 verdict=PASS（dashboard/voices/coverage/ops/objects/goals/gene_ledger/growth/meets/reflections/meet_candidates/index 重建）；池审计全桶达标 SELF_TERMINATE（轴 72/72·像素 12/12·greet 28/28·faq 7/7·负向 6/6·hard_fails=0）；相遇轮 cap 3/3 已满、反思线 5/5 已满（连续第 3 个生产日达标）、QC 未到 6 轮节拍、HQ 闸 ALREADY_REPORTED。 **R2984（21:5x 年轮批+确定性日更）**：年轮 10/10 落环（C-01957/01961/01962/01964/01969/01958/01968/01970/01972/01974，1 席 soft-concession 让步放行·[锚] 注脚保全，提交 a54cf4681＝10 卡 +20/-10 真实净增）；事件回放闸 PASS（cards=10111 events=43749 schema=0 mismatch=0 coverage 缺口 0）；日更面 stale=24 ran=25 failed=0 verdict=PASS；池审计今日 SELF_TERMINATE、相遇 3/3、反思 5/5 已满，均不重复；T-20261114-01（due 选择器幻影成功）验收 2/2 结单。 **R2983（21:3x 年轮批+确定性日更）**：年轮 10/10 落环（C-01942/01943/01951/01956/01960/01948/01950/01952/01953/01955，6 席 soft-concession 让步放行·[锚] 注脚保全）；事件回放闸 PASS（cards=10111 events=43739 schema=0 mismatch=0）；日更面 stale=13 ran=14 failed=0 verdict=PASS；池审计 SELF_TERMINATE 零 LLM；反思线今日 5 条已满（连续第 2 日达标）。工具修正：`update_status_export.py` 新增「落环数字必须走 {N}」出生地拦截（R2982 flag 落地·自检 7/7 PASS）。",
    "s": 1
   },
   {
@@ -1925,8 +1925,12 @@
   [
    "970",
    "今日年轮落环 970 行（行级机器直数 census/registry+census/anchors；本轮 10 席；人口 10114 恒定）。"
+  ],
+  [
+   "980",
+   "R2985 夜窗：今日年轮落环 980 行（[锚] 行级直数·registry 递归计数）·事件闸 replay=10111 cards mismatch=0 schema_errors=0·13 面日更 PASS·池审计 SELF_TERMINATE"
   ]
  ],
- "t": "当前活：年轮线 R2984 批产 10 席落环 + 确定性日更面 25 面重建（事件闸 PASS）\n最近实物：census/registry 今日新年轮 10 席（2026-11-14 21:56 落环）、census/export/city-dashboard.html（21:5x 重建）\n下个里程碑：2026-11-15 反思线连续第 3 生产日验收（窗 ≤24h）+ 年轮批续跑",
- "top_text": "当前活：年轮线 R2984 批产 10 席落环 + 确定性日更面 25 面重建（事件闸 PASS）\n最近实物：census/registry 今日新年轮 10 席（2026-11-14 21:56 落环）、census/export/city-dashboard.html（21:5x 重建）\n下个里程碑：2026-11-15 反思线连续第 3 生产日验收（窗 ≤24h）+ 年轮批续跑"
+ "t": "当前活：夜窗年轮批 10 席落环 + 13 面日更重建 + 事件回放闸 PASS\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（22:06 重建）；C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\registry（10 张 2026-11-14 新年轮卡·22:05）\n下个里程碑：11-15 反思线连续第 3 生产日验收（窗 ≤24h）+ 相遇轮新日额首批",
+ "top_text": "当前活：夜窗年轮批 10 席落环 + 13 面日更重建 + 事件回放闸 PASS\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（22:06 重建）；C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\registry（10 张 2026-11-14 新年轮卡·22:05）\n下个里程碑：11-15 反思线连续第 3 生产日验收（窗 ≤24h）+ 相遇轮新日额首批"
 }
