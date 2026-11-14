@@ -2210,3 +2210,23 @@
 {"date": "2026-11-14", "event_token": "de82552b0d", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08闭环，城主早安。", "ts_utc": "2026-11-13T23:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-14", "event_token": "fef92c8900", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，夜岗续。", "ts_utc": "2026-11-13T23:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-14", "event_token": "db89044a74", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08循环，城主早安。", "ts_utc": "2026-11-14T01:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-14", "event_token": "4260cd23ce", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08闭环，夜岗续。", "ts_utc": "2026-11-14T03:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-14", "event_token": "f64849012a", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-14 00:30（主控·CEO「真正负起主控角色，全面反思审查并闭环」） **主控全面审计 + 六处机制缺陷闭环 + 五条零产出线挂起**：①**取证实况**：职责 36 项 35 OK（执行体...", "ts_utc": "2026-11-14T04:51:02Z", "type": "CEO_ORDER"}, "weight": 8}
+{"date": "2026-11-14", "event_token": "4db22b5858", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，夜安。", "ts_utc": "2026-11-14T07:31:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-14", "event_token": "f05e36c85a", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08循环，城主安好。", "ts_utc": "2026-11-14T07:46:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-14", "event_token": "f5517bc311", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T08:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-14", "event_token": "ff0fde491f", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T08:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-14", "event_token": "5a2c66684b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主安。", "ts_utc": "2026-11-14T10:16:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-14", "event_token": "3dac264126", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-14T10:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-14", "event_token": "fd23700ba0", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T10:56:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-14", "event_token": "11a790df7f", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T11:01:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-14", "event_token": "011d108d7a", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-14T11:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-14", "event_token": "06373a0c0a", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T11:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-14", "event_token": "82f126cac4", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环，城主安。", "ts_utc": "2026-11-14T11:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-14", "event_token": "be2234ab12", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-14T12:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-15", "event_token": "428c7d9fff", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T16:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
+{"date": "2026-11-15", "event_token": "8e066fc64b", "mood_trace": "", "source_ref": {"summary": "2026-11-14T23:56:19+08:00 job(biggame-pack-scan-2026-11-14): artifact [via bm-a]", "ts_utc": "2026-11-14T16:01:02Z", "type": "COMMIT"}, "weight": 4}
+{"date": "2026-11-15", "event_token": "9176b1c6ab", "mood_trace": "", "source_ref": {"summary": "G08 : S2.5 -> B2396", "ts_utc": "2026-11-14T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
+{"date": "2026-11-15", "event_token": "c243e16d73", "mood_trace": "", "source_ref": {"summary": "G20 : B2615 -> B2618", "ts_utc": "2026-11-14T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
+{"date": "2026-11-15", "event_token": "4997cc2cd2", "mood_trace": "", "source_ref": {"summary": "PushEvent BigMoney", "ts_utc": "2026-11-14T16:06:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
+{"date": "2026-11-15", "event_token": "cf63444228", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T16:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}

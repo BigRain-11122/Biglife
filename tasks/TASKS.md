@@ -2323,3 +2323,17 @@ ound_daily --run **PASS**（stale=12 ran=13 failed=0：rumors/dashboard/voices/c
 - 轮末提交：5b54ecb71（3 files：city-dashboard.html / index.html / qa/EVENTS-REPLAY-REPORT.md）。
 - 跳过面（按日额律）：反思线 daily-cap（今日 11-14 已 5 条，尾部 date=2026-11-14 → T-20261113-05 验收第 2/3 生产日）；语言池 pool_audit PASS SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·双抽 mismatch=0）；相遇轮今日已 2 幕（city-meets.html 2026-11-14 段）达上限；HQ 日报闸 --check=ALREADY_REPORTED(day=2026-11-14 lines=3) 零写入。QC 巡检今日 05:52 已跑（非本轮）。
 - tokens: local=9 api=0 api_reason=-
+
+
+## T-20261114-03 年轮批同日重复写入（closed·2026-11-15 R2997 @BigLife-OSLoop 结单·判据更正）
+- **真根因（更正 R2977 的前提）**：不是「同日重复写入」，是**核验判据错**——年轮批脚本 commit_files() 自带 commit，census/registry 的净增落在批提交里，批跑完工作树当然是干净的。R2977 用 git diff HEAD -- census/registry 判净增，等于把每一批真写入都读成零净增（T-20261114-02 同族病的第二面：报数口径之外还有判据口径）。
+- **反证（实物）**：git show --stat c5a3b0619 ＝ R2977 点名的那 10 席，10 files changed, 20 insertions(+), 10 deletions(-)；今日批 git show --stat ad02401ad 同样 10 files（C-02151/02159/02161/02183/02191/02162/02164/02166/02167/02169，批末报 written=10 与卡面 diff 一致）。
+- **修法**：新增 Tools/ring_batch_audit.py（零 LLM/零网络/可复跑）——按批提交核验「提交消息列出的居民数 == census/registry 改动文件数」，且每张卡的当日年轮行在位。
+- **验收实物（本轮闸证据）**：--date 2026-11-15 → PASS(10/10)；--date 2026-11-14 --commit c5a3b0619 → PASS(10/10)；负控 --commit c5a3b0619 --date 2026-11-13 → FAIL(10 条 no-ring-line, rc=1)。
+- **此后律**：凡判「年轮批零产出/虚高」一律先跑本工具，**禁用工作树 diff 判净增**。
+- 优先级：P2（无代码缺陷，纯判据修复）
+
+- [R2997 2026-11-15 00:04-00:3x @BigLife-OSLoop 周日夜窗产品轮] 轮首 git pull --ff-only origin main=**Already up to date**、树净；决策水位差集 **NEW=0**（watermark 尾含 D-20261114-01/02/03，均已消费；11-13/11-14 决策编号实测仅此三）；orders 物理件区无涉本司新件。**产品增量（10 席新年轮 + 相遇 1 对 + 24 面重建 + 1 件新闸·2 分）**：①年轮批 --batch 3 due=10 → **written=10 skipped=0**（C-02151/02159/02161/02183/02191/02162/02164/02166/02167/02169，commit **ad02401ad**，git show --stat 10 files +20/-10 ＝真净增），软让步 3 处照 confess 落环；②提案 2 条（**4fc9e5855**）；③相遇轮 C-06802 江Yuki × C-05966 阿七-7（同 QT 城区·修机器的人 × 翻勺的人，**d6fa2de5f**）；④round_daily **PASS**（stale=24 ran=25 failed=0，voices/coverage/ops/objects/goals/gene_ledger/growth/meets/proposals/reflections 等重建）；⑤events gate **PASS**（cards=10111 events=43877 replay=10111 schema=0 mismatch=0·coverage unexpected_missing=0）；⑥QC **clean**（cards=10114 evolved=10114 problems=0 dup_rings=37/37）；pool_audit **全桶达标 SELF_TERMINATE**（72/72 轴桶·负控 6/6·determinism mismatch=0）；反思线昨日 11-14 已跑、今日 19:00 窗未到，按闸跳过。
+- **主产出（P2 判据修复·新闸上线）**：T-20261114-03 结单——R2977 的「同日重复写入零净增」前提被反证推翻（年轮脚本自带 commit，工作树 diff 判净增恒为空）；新增 Tools/ring_batch_audit.py 按批提交核验，正例 2/2 PASS、负控 rc=1。详见上方结单段。
+- 对外实况三行：当前活＝年轮批 10 席落环 + 判据闸上线（T-20261114-03 结单） ｜ 最近实物＝C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\Tools\\ring_batch_audit.py（2026-11-15 00:3x·正例 2/2 PASS/负控 rc=1）+ census\\export\\city-dashboard.html（00:07 重建） ｜ 下个里程碑＝今日 19:00 后反思线（reflections.jsonl 尾部 date=2026-11-15）+ 下一批年轮净增复核（≤24h）
+- tokens: local=10 api=0 api_reason=-

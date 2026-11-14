@@ -154,3 +154,13 @@
 {"date":"2026-11-14","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261114-C-04419:seed=C-04419:at=2026-11-14 16:02:hop=2","participants":["C-08750","C-06436"],"text":"手里的导管还沾着昨夜的露，我正用棉布擦着接口，指尖一碰，那根老线就轻轻颤了下——像谁在夜里悄悄摸了摸我的门板。"}
 {"date":"2026-11-14","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261114-C-04419:seed=C-04419:at=2026-11-14 16:02:hop=3","participants":["C-06436","C-05879"],"text":"手里的导管还沾着昨夜的露，我正用棉布擦着接口，指尖一碰，那根老线就轻轻颤了下——像谁在夜里悄悄摸了摸我的门板。"}
 {"date":"2026-11-14","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261114-C-04419:seed=C-04419:at=2026-11-14 16:02:hop=4","participants":["C-05879","C-07072"],"text":"听说手里的导管还沾着昨夜的露，我正用棉布擦着接口，指尖一碰，那根老线就轻轻颤了下——像谁在夜里悄悄摸了摸我的门板。"}
+{"date":"2026-11-14","kind":"meet_ring","source_ref":"census/registry/GM/C-04444.md:L27","participants":["C-04444","C-04448"],"text":"正在调试的参数板上，数字在跳，像心跳。"}
+{"date":"2026-11-14","kind":"meet_ring","source_ref":"census/registry/GM/C-04448.md:L27","participants":["C-04448","C-04444"],"text":"你缝的发光布条，昨晚就歪了，我看得见。"}
+{"date":"2026-11-14","kind":"meet_ring","source_ref":"census/registry/OR/C-00044.md:L32","participants":["C-00044","C-04421"],"text":"“这灯歪得正好，照人影也照心，你瞧这光，像不像咱老城的呼吸？”"}
+{"date":"2026-11-14","kind":"meet_ring","source_ref":"census/registry/OR/C-04421.md:L27","participants":["C-04421","C-00044"],"text":"摊子上新摆了三盏夜灯，歪歪地立在路口转角，映着对面人影晃动。"}
+{"date":"2026-11-14","kind":"meet_ring","source_ref":"census/anchors/C-00012.md:L34","participants":["C-00012","C-00013"],"text":"手里那把旧铁尺在手心发烫，我正量着墙角那道歪了半寸的缝。"}
+{"date":"2026-11-14","kind":"meet_ring","source_ref":"census/anchors/C-00013.md:L32","participants":["C-00013","C-00012"],"text":"你记着老街口那棵歪脖梧桐的年轮吗，我翻到第三页，底下写了个“2018”。"}
+{"date":"2026-11-15","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261115-C-02151:seed=C-02151:at=2026-11-15 17:44:hop=1","participants":["C-02151","C-07250"],"text":"我正把昨夜收的旧零件一一封进出诊箱，扳手头磕在边角上，发出“哐”一声，像谁在门后轻轻咳了口。"}
+{"date":"2026-11-15","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261115-C-02151:seed=C-02151:at=2026-11-15 17:44:hop=2","participants":["C-07250","C-03698"],"text":"听说我正把昨夜收的旧零件一一封进出诊箱，扳手头磕在边角上，发出“哐”一声，像谁在门后轻轻咳了口。"}
+{"date":"2026-11-15","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261115-C-02151:seed=C-02151:at=2026-11-15 17:44:hop=3","participants":["C-03698","C-04709"],"text":"听说我正把昨夜收的旧零件一一封进出诊箱，扳手头磕在边角上，发出“哐”一声，像谁在门后轻轻咳了口。"}
+{"date":"2026-11-15","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261115-C-02151:seed=C-02151:at=2026-11-15 17:44:hop=4","participants":["C-04709","C-05823"],"text":"听说我正把昨夜收的旧零件一一封进出诊箱，扳手头磕在边角上，发出“哐”一声，像谁在门后轻轻咳了口。"}
