@@ -987,12 +987,47 @@ def record_gate_probe(state, used=0.0, total=0.0, frac=0.0, limit=0.90):
         pass
 
 
+def compute_used_mib():
+    """Sum of *compute* VRAM MiB, or None when the driver reports no numbers.
+
+    R2961 判例: `--query-gpu=memory.used` counts desktop/WDDM graphics surfaces, so
+    Edge + Feishu + Explorer read as "97% busy" (11869/12282 MiB) with zero compute
+    processes on the card, and the gate yielded on every probe since it landed -
+    the city's only supply line stops because a browser is open. The 让路律 only
+    ever meant "don't stomp a fleet compute job", which is exactly this query.
+    Graphics processes report [N/A] per-process on WDDM, so they contribute nothing
+    here; they are judged separately in vram_guard().
+    """
+    try:
+        r = subprocess.run(
+            ["nvidia-smi", "--query-compute-apps=pid,process_name,used_memory",
+             "--format=csv,noheader,nounits"],
+            capture_output=True, timeout=10)
+        total = 0.0
+        for row in (r.stdout or b"").decode("utf-8", "replace").strip().splitlines():
+            parts = [p.strip() for p in row.split(",")]
+            if len(parts) < 3:
+                continue
+            try:
+                total += float(parts[2])
+            except ValueError:
+                continue  # [N/A] = graphics process, not compute demand
+        return total
+    except Exception:  # noqa: BLE001 - probe failure must never block the lane
+        return None
+
+
 def vram_guard(limit=0.90):
     """T-20261113-06 ②: refuse to start an LLM batch on an already-busy GPU.
 
     Probe failure passes (no nvidia-smi on some fleet machines / no GPU) - the
     guard must never become a new silent stop for the lane. Returns the used
     fraction when it blocks, None when the lane may start.
+
+    Two-tier judgement (R2961): compute occupancy above `limit` is a real fleet job
+    and yields; a card held by desktop graphics only runs *degraded* (WDDM pages
+    surfaces out for a CUDA context, Ollama offloads what it must) instead of
+    stopping the lane outright - a slow ring beats no ring.
 
     Every successful probe is also written to state/vram-gate.jsonl so the ops
     page can show the gate's own history (R2934: "yield" was console-only).
@@ -1009,12 +1044,20 @@ def vram_guard(limit=0.90):
         if total <= 0:
             return None
         frac = used / total
+        cused = compute_used_mib()
+        cfrac = frac if cused is None else cused / total
+        if cfrac > limit:
+            print("vram-guard: compute used %.0f%% > %.0f%% (%.0f/%.0f MiB) - batch "
+                  "not started, yield (T-20261113-06)" % (
+                      cfrac * 100, limit * 100, cused, total), flush=True)
+            record_gate_probe("yield", cused or used, total, cfrac, limit)
+            return cfrac
         if frac > limit:
-            print("vram-guard: used %.0f%% > %.0f%% (%.0f/%.0f MiB) - batch not "
-                  "started, yield (T-20261113-06)" % (
-                      frac * 100, limit * 100, used, total), flush=True)
-            record_gate_probe("yield", used, total, frac, limit)
-            return frac
+            print("vram-guard: desktop holds %0.f%% (compute %.0f%%, free %.0f MiB) - "
+                  "starting degraded, not yielding (R2961)" % (
+                      frac * 100, cfrac * 100, total - used), flush=True)
+            record_gate_probe("degraded", used, total, frac, limit)
+            return None
         record_gate_probe("ok", used, total, frac, limit)
     except Exception:  # noqa: BLE001 - probe failure must never block the lane
         return None

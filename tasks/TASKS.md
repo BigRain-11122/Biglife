@@ -2126,3 +2126,20 @@ ing_material_check=streak=3/3 PASS（11-12 motif8/8+rumor7/7、11-13 8/8+3/3、1
 - **让路面（非故障）**：年轮 --batch 3 未启批——vram-guard used 11866/12282 MiB=96.6%>90%（llama-server 他线驻留、GPU util 91%），按 T-20261113-06 设计让路，19:00 后解；语言池今日已 SELF_TERMINATE、QC 周期未到（14:1x 刚跑 problems=0）、反思线夜窗。
 - 实况三行：当前活＝让路窗内确定性面出活（日更重建＋事件闸＋实况面刷新）｜最近实物=C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-today.html（2026-11-14 15:09 重建）＋ qa\\EVENTS-REPLAY-REPORT.md（15:1x PASS）｜下个里程碑＝19:00 让路窗解→年轮 --batch 3 落环＋反思线第三生产日验收。
 - tokens: local=0 api=0 api_reason=(vram-guard 96.6% 让路；本轮零 LLM 调用，纯确定性面)
+
+## R2961 · 2026-11-14 15:1x @BigLife-OSLoop（根因轮·显存闸假让路修复）
+- 轮首三步：pull --ff-only=Already up to date、树净；决策水位差集 **NEW=0**（唯一差集 d-20261023-23 为已标注噪声行 `.disabled-20261023-2358`）；orders 物理件区无涉本司新件。
+- **根因定位（承 CEO「从源头梳理和解决」）**：`vram_guard` 用 `--query-gpu=memory.used` 判忙，把 **WDDM 桌面图形显存**算成算力占用——`state/vram-gate.jsonl` 全库 5 行探针（14:28~15:14）**5/5 全 yield**，占用方候选恒为 ShellHost/explorer/msedgewebview2/Feishu，`nvidia-smi --query-compute-apps` 实读 **compute=0 MiB**。真断点：`census/registry` 最近年轮写入 **12:30:19**，此后 3 小时零环。
+- **修复（Tools/evolve_citizen.py）**：新增 `compute_used_mib()`（只累加 compute 进程数值 MiB，WDDM 的 [N/A] 不计），`vram_guard` 改两级判定——compute 占用 >90% 仍 yield（护他线算力作业＝让路律本义）；仅桌面占用超线则打 `degraded` 放行并留台账，不再整体停线（慢环优于无环）。单测实证：`compute_used_mib=0.0`，闸返回 `None`，日志 `desktop holds 97% (compute 0%, free 416 MiB) - starting degraded`。
+- **修复后实跑**：`evolve_citizen --batch 3` 启批成功（seat 自动回落本机 ollama `qwen3:4b-instruct`，:8090 非 LLM 车道），10 位候选全程序走通、4 次 gate soft-concession，`OK evolved=10 of 10 due`。
+- **诚实边界（重要）**：10 位候选 **真实落环 0 条**——逐张 `git hash-object --no-filters` 比对，10 个卡片与 HEAD **字节全同**；`state/evolve-cursor.json` 显示这 10 人 `last=2026-11-14 / next=2026-11-21`（**今日已服务、未到期**）却被选为 due。即：批报告成功但零写入＝**幻影成功**，选择器未校验 cursor 的 `next`。今日真实产量（11-14 环卡片数）**748**，全部产生于 12:30 前。已立单 T-20261114-01（P1）。
+- **产品增量**：① 日更面 stale=2 → 重建 3 面（city-dashboard.html / city-ops.html / index.html，verdict PASS）；② 事件流回放闸 `events_refresh --gate` = **PASS**（derived=10111 reserved=3 exported=10114 unexpected_missing=0；cards=10111 events=43532 replayed=10111 schema_errors=0 mismatch=0；chronicle fresh gap=0d）；③ 显存闸根因修复（解除 3 小时 LLM 产线硬堵）。
+- 对外实况三行：当前活＝显存闸假让路根因修复 + 年轮 due 选择器缺陷取证 ｜ 最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ops.html`（2026-11-14 15:2x 重建·含排产闸台账）＋ `qa\EVENTS-REPLAY-REPORT.md`（15:2x PASS）｜ 下个里程碑＝T-20261114-01 due 选择器修好后年轮批回补（窗 ≤48h·目标 ≥100 新环）
+- tokens: local=10 api=0 api_reason=(本地 ollama qwen3:4b-instruct seat 跑 10 位候选·零云端调用)
+
+- [ ] **T-20261114-01 年轮 due 选择器「幻影成功」缺陷（P1·零写入报成功）**（2026-11-14 15:2x @BigLife-OSLoop R2961 立）
+  - 现象：`evolve_citizen --batch 3` 输出 `evolving C-0xxxx (n/10)` + `gate: ... (ring lands)` + `OK evolved=10 of 10 due`，实际 10 张卡片与 HEAD 字节全同（`git hash-object --no-filters` 逐一比对 SAME×10），零新环。
+  - 判据证据：`state/evolve-cursor.json` 中 C-01683/C-01688/C-01704 等 `{"last":"2026-11-14","next":"2026-11-21"}`＝今日已服务且未到期，选择器仍判 due → 说明 due 集合未按 cursor `next` 过滤（或另有旁路）。
+  - 危害：批容量被已服务居民反复吃掉，真实产量被锁在 `当天已服务集合` 内；且 `evolved=N` 计数与落盘脱钩，使「环数」类报告失真（HQ 侧「零产物」判定与此类幻影报告叠加会互相掩盖）。
+  - 修法候选：① due = `cursor[id].next <= today` ∪ `id ∉ cursor`；② 落盘后校验 blob 变化，未变化则计 `skipped-already-served` 并从 `evolved` 扣减；③ 批末打印 `written=N/skipped=M`，与卡片字节比对结果一致才报成功。
+  - 验收：连续 2 轮批末 `written>0` 且新增卡片字节 DIFF；`evolved` 计数 == DIFF 数。
