@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-14 22:28",
+ "export_ts": "2026-11-14 22:38",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R2987（2026-11-14 22:2x 夜窗）**：年轮批 due=10 → written=10（C-02013/02014/02018/02019/02035/02015/02017/02020/02022/02023，脚本自提交 2df3d80b0 卡面 +20/-10 真实净增）；行为线自动镜像 rows=10；14 面日更重建 PASS；事件回放闸 replay 10111/10111 mismatch=0。 **R2985（22:0x 年轮批+确定性日更）**：年轮 10/10 落环（C-01976/01979/01982/01984/01999/01983/01985/01986/01991/01993，4 席 soft-concession 让步放行·[锚] 注脚保全，提交 5f04c81ba＝10 卡真实净增）+ 行为线镜像自动收口（rows=10 ring=10114，提交 26698ce17）；事件回放闸 PASS（cards=10111 events=43759 shards=3 schema_errors=0 mismatch=0 coverage 缺口 0 chronicle gap=0d）；日更面 stale=12 ran=13 failed=0 verdict=PASS（dashboard/voices/coverage/ops/objects/goals/gene_ledger/growth/meets/reflections/meet_candidates/index 重建）；池审计全桶达标 SELF_TERMINATE（轴 72/72·像素 12/12·greet 28/28·faq 7/7·负向 6/6·hard_fails=0）；相遇轮 cap 3/3 已满、反思线 5/5 已满（连续第 3 个生产日达标）、QC 未到 6 轮节拍、HQ 闸 ALREADY_REPORTED。 **R2984（21:5x 年轮批+确定性日更）**：年轮 10/10 落环（C-01957/01961/01962/01964/01969/01958/01968/01970/01972/01974，1 席 soft-concession 让步放行·[锚] 注脚保全，提交 a54cf4681＝10 卡 +20/-10 真实净增）；事件回放闸 PASS（cards=10111 events=43749 schema=0 mismatch=0 coverage 缺口 0）；日更面 stale=24 ran=25 failed=0 verdict=PASS；池审计今日 SELF_TERMINATE、相遇 3/3、反思 5/5 已满，均不重复；T-20261114-01（due 选择器幻影成功）验收 2/2 结单。",
+   "t": "**R2988（11-14 22:3x 夜窗产品轮）** 年轮批 10 席落环——C-02024/C-02027/C-02029/C-02032/C-02037/C-02026/C-02030/C-02031/C-02039/C-02040（3 席 soft-concession〔recent-dup-phrase〕让步放行，锚定律优先）；行为线镜像 rows=10；事件流回放闸 PASS（cards=10111 / events=43789 / replayed=10111 / schema_errors=0 / mismatch=0）；确定性日更面重建 stale=12 ran=13 failed=0。今日累计落环 1007 位居民。 **R2987（2026-11-14 22:2x 夜窗）**：年轮批 due=10 → written=10（C-02013/02014/02018/02019/02035/02015/02017/02020/02022/02023，脚本自提交 2df3d80b0 卡面 +20/-10 真实净增）；行为线自动镜像 rows=10；14 面日更重建 PASS；事件回放闸 replay 10111/10111 mismatch=0。 **R2985（22:0x 年轮批+确定性日更）**：年轮 10/10 落环（C-01976/01979/01982/01984/01999/01983/01985/01986/01991/01993，4 席 soft-concession 让步放行·[锚] 注脚保全，提交 5f04c81ba＝10 卡真实净增）+ 行为线镜像自动收口（rows=10 ring=10114，提交 26698ce17）；事件回放闸 PASS（cards=10111 events=43759 shards=3 schema_errors=0 mismatch=0 coverage 缺口 0 chronicle gap=0d）；日更面 stale=12 ran=13 failed=0 verdict=PASS（dashboard/voices/coverage/ops/objects/goals/gene_ledger/growth/meets/reflections/meet_candidates/index 重建）；池审计全桶达标 SELF_TERMINATE（轴 72/72·像素 12/12·greet 28/28·faq 7/7·负向 6/6·hard_fails=0）；相遇轮 cap 3/3 已满、反思线 5/5 已满（连续第 3 个生产日达标）、QC 未到 6 轮节拍、HQ 闸 ALREADY_REPORTED。",
    "s": 1
   },
   {
@@ -1933,8 +1933,12 @@
   [
    "1000",
    "今日累计年轮落环 1000 行（本轮 +10 席），另附 14 面重建与事件闸 PASS（qa/EVENTS-REPLAY-REPORT.md）。"
+  ],
+  [
+   "1010",
+   "**R2988**：本次年轮批 written=10 skipped=0，卡面净增 10 files +20/-10 与报数一致；今日年轮落环行数 1010。"
   ]
  ],
- "t": "当前活：年轮批落环＋14 面日更＋事件回放闸\n最近实物：life/BigLife/qa/EVENTS-REPLAY-REPORT.md（2026-11-14 22:29 PASS）／census/export/city-dashboard.html（22:28 重建）\n下个里程碑：明日首轮年轮批与面刷新（窗 ≤24h）",
- "top_text": "当前活：年轮批落环＋14 面日更＋事件回放闸\n最近实物：life/BigLife/qa/EVENTS-REPLAY-REPORT.md（2026-11-14 22:29 PASS）／census/export/city-dashboard.html（22:28 重建）\n下个里程碑：明日首轮年轮批与面刷新（窗 ≤24h）"
+ "t": "当前活：年轮线夜窗批次推进（本地 qwen3:4b-instruct，零云端）\n最近实物：census/registry 10 张居民卡新增年轮 + qa/EVENTS-REPLAY-REPORT.md（2026-11-14 22:36）\n下个里程碑：下一轮年轮批 10 席 + 事件闸复验（≤ 明日 00:30）",
+ "top_text": "当前活：年轮线夜窗批次推进（本地 qwen3:4b-instruct，零云端）\n最近实物：census/registry 10 张居民卡新增年轮 + qa/EVENTS-REPLAY-REPORT.md（2026-11-14 22:36）\n下个里程碑：下一轮年轮批 10 席 + 事件闸复验（≤ 明日 00:30）"
 }
