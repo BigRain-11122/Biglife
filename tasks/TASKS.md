@@ -2119,3 +2119,10 @@ ing_material_check=streak=3/3 PASS（11-12 motif8/8+rumor7/7、11-13 8/8+3/3、1
   **诚实边界**：居民年轮本体增量 **0**（VRAM 让路）；本轮产品增量＝基因库 8 条 + 4 个可见面重建 + QC／事件闸双 PASS 证据；T-04 贴线爬行未动工（预算不足不硬撑）。
   **对外实况三行**：当前活＝基因库补种后的可见面刷新与素材面加固 ｜ 最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\gene-ledger.html`（2026-11-14 15:0x·已含 1507 口头禅／877 物件／673 转折点）＋`genes\lives.json` ｜ 下个里程碑＝GPU 空出后年轮批回补 due 队列 ＋ 19:00 后反思批 5（T-20261113-05 第 13 日）
   - tokens: local=0 api=0 api_reason=(vram-guard 97% 让路；本轮零 LLM 调用，基因补种与面重建均为确定性写入)
+
+## R2947 · 2026-11-14 15:0x @BigLife-OSLoop（周六午后·让路窗确定性轮）
+- 轮首三步：pull --ff-only=Already up to date、树净；决策水位差集 **NEW=0**（尾 D-20261112-16，11-13/11-14 无新 D 行）；orders 物理件区涉本司四条历史项（仓名大小写/分支保护=CEO 保留面，零催办）。
+- **产品增量（2 分·可看实物）**：① round_daily --check 报 stale=2 → --run 重建 3 面（city-today 202419B / city-map 725136B / index 6815B，15:09；占位残渣扫描 NaN/None/%s/{N} 全零命中）；② 事件流回放闸 events_refresh --gate = **PASS**（derived=10111 reserved=3 exported=10114 unexpected_missing=0 / cards=10111 events=43522 replayed=10111 schema_errors=0 mismatch=0 / chronicle fresh gap=0d）；③ 状态导出面刷新 export_ts 11:27→15:11（T-20260924-08 轮内维护），对外实况三行同步至本窗。
+- **让路面（非故障）**：年轮 --batch 3 未启批——vram-guard used 11866/12282 MiB=96.6%>90%（llama-server 他线驻留、GPU util 91%），按 T-20261113-06 设计让路，19:00 后解；语言池今日已 SELF_TERMINATE、QC 周期未到（14:1x 刚跑 problems=0）、反思线夜窗。
+- 实况三行：当前活＝让路窗内确定性面出活（日更重建＋事件闸＋实况面刷新）｜最近实物=C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-today.html（2026-11-14 15:09 重建）＋ qa\\EVENTS-REPLAY-REPORT.md（15:1x PASS）｜下个里程碑＝19:00 让路窗解→年轮 --batch 3 落环＋反思线第三生产日验收。
+- tokens: local=0 api=0 api_reason=(vram-guard 96.6% 让路；本轮零 LLM 调用，纯确定性面)
