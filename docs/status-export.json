@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-15 05:48",
+ "export_ts": "2026-11-15 07:13",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3025（2026-11-15 05:4x 周日凌晨产品轮）：年轮批 10/10 落环（C-02487/02490/02501/02503/02511/02491/02494/02495/02496/02497，6 席 soft-concession 放行）+ 日更面 13 面重建 + 事件闸 PASS(44149 events, mismatch=0) + 语言池 SELF_TERMINATE(全桶达标)** **R3017（2026-11-15 04:2x）：年轮批 10/10 落环 + 日更 13 面重建 + 事件闸 PASS(44063 events, mismatch=0) + QC clean(10114 cards, problems=0)** **R3007（2026-11-15 02:4x 夜窗产品轮）**：年轮 10 环落环（本地 qwen3:4b-instruct·净新增经闸放行）+ 26 个可见面日更重建（stale=25 ran=26 failed=0）+ 事件回放闸 PASS（events=43965 / cards=10111 / mismatch=0 / schema_errors=0）；池审计 SELF_TERMINATE（全桶达标零 LLM）；ZH 反馈面 ALREADY_REPORTED 零写入。",
+   "t": "**R3045（2026-11-15 07:08-07:2x）**：年轮线滚动——10 席落环（C-02555/02557/02558/02563/02565/02566/02567/02568/02569/02576，MD/NS/RV/QT/GM 五城区，全部 UTF-8+[锚] 注脚齐），行为线镜像 rows=10 ring=10114；事件回放闸 PASS（derive cards=10111/events=44199，replay replayed=10111 mismatch=0 schema_errors=0，coverage unexpected_missing=0，chronicle last=2026-11-15 gap=0d）；日更面 13 面重建 verdict=PASS（stale=12 ran=13 failed=0）；语言池审计 SELF_TERMINATE 全桶达标（轴 72/72·像素 12/12·greet 28/28·faq 7/7·负例 6/6，determinism 192 对 mismatch=0）；相遇轮今日 3/3 已满按自终止律跳过；反思线待 19:00 夜窗。 **R3025（2026-11-15 05:4x 周日凌晨产品轮）：年轮批 10/10 落环（C-02487/02490/02501/02503/02511/02491/02494/02495/02496/02497，6 席 soft-concession 放行）+ 日更面 13 面重建 + 事件闸 PASS(44149 events, mismatch=0) + 语言池 SELF_TERMINATE(全桶达标)** **R3017（2026-11-15 04:2x）：年轮批 10/10 落环 + 日更 13 面重建 + 事件闸 PASS(44063 events, mismatch=0) + QC clean(10114 cards, problems=0)**",
    "s": 1
   },
   {
@@ -1981,8 +1981,12 @@
   [
    "282",
    "本轮年轮落环 10 席（C-02487/02490/02501/02503/02511/02491/02494/02495/02496/02497，6 席 soft-concession 放行，开口 6 字实测 10/10 全异）；事件闸 replay 10111 mismatch=0 schema=0；今日累计落环 282 席"
+  ],
+  [
+   "332",
+   "R3045 年轮线：ring 332·10 席落环 + 回放闸 PASS + 13 面重建"
   ]
  ],
- "t": "当前活：年轮线批产 + 日更面重建 + 事件回放闸全绿（无卡点）\n最近实物：census/export/city-dashboard.html 等 13 面（2026-11-15 05:45 重建）\n下个里程碑：今日 19:00 后反思线窗口 + 下一轮年轮续批（≤15min 内自动）",
- "top_text": "当前活：年轮线批产 + 日更面重建 + 事件回放闸全绿（无卡点）\n最近实物：census/export/city-dashboard.html 等 13 面（2026-11-15 05:45 重建）\n下个里程碑：今日 19:00 后反思线窗口 + 下一轮年轮续批（≤15min 内自动）"
+ "t": "当前活：年轮线滚动（每 5min 一轮；本轮 10 席落环，ring=10114）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\registry（10 席今日年轮卡，2026-11-15 07:09，commit d6d2335e3）、census/export/city-dashboard.html（07:10 重建）\n下个里程碑：19:00 反思线夜窗（batch 5）+ 相遇轮 11-16 额度重置后首批",
+ "top_text": "当前活：年轮线滚动（每 5min 一轮；本轮 10 席落环，ring=10114）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\registry（10 席今日年轮卡，2026-11-15 07:09，commit d6d2335e3）、census/export/city-dashboard.html（07:10 重建）\n下个里程碑：19:00 反思线夜窗（batch 5）+ 相遇轮 11-16 额度重置后首批"
 }
