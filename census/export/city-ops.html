@@ -32,20 +32,21 @@ li{font-size:13px;color:#b9b6ae;margin:4px 0}
 footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(--line)}
 </style></head><body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 产物目录</a></div>
 <header><h1>城市产线实况</h1>
-<div class="sub">本页由 Tools/build_city_ops.py 确定性生成（零 LLM）· 生成于 2026-11-15 02:12 · 数据全部取自本仓盘上与 git</div></header>
+<div class="sub">本页由 Tools/build_city_ops.py 确定性生成（零 LLM）· 生成于 2026-11-15 02:26 · 数据全部取自本仓盘上与 git</div></header>
 <main>
 <div class="kpis">
-<div class="kpi"><b>9 分钟前</b><span>最近一次轮次心跳</span></div>
-<div class="kpi"><b>11-15 02:12</b><span>最近提交时间</span></div>
+<div class="kpi"><b>6 分钟前</b><span>最近一次轮次心跳</span></div>
+<div class="kpi"><b>11-15 02:25</b><span>最近提交时间</span></div>
 <div class="kpi bad"><b>2</b><span>超过 180 分钟未刷新的页</span></div>
 <div class="kpi"><b>0</b><span>无时间戳状态行（被丢弃，需修）</span></div>
 <div class="kpi"><b>10114</b><span>居民（轻量册）</span></div>
 <div class="kpi bad"><b>400</b><span>年轮待修队列（cap 400）</span></div>
-<div class="kpi bad"><b>5/78</b><span>近 24h 排产闸让路次数（探针数分母）</span></div>
+<div class="kpi bad"><b>5/80</b><span>近 24h 排产闸让路次数（探针数分母）</span></div>
 </div>
 
 <h2>最近轮次心跳<em>state/heartbeat.txt 尾 10 条 · 最后一条：os-loop: round done exit=0 · 无时间戳状态行 <b>0</b> 条（有时间戳才会进本表）</em></h2>
 <table><thead><tr><th>时间</th><th>记录</th></tr></thead><tbody>
+<tr><td class="t">11-15 02:19:30</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-15 02:03:14</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-15 01:57:53</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-15 01:44:53</td><td>os-loop: round done exit=0</td></tr>
@@ -55,11 +56,15 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td class="t">11-15 00:31:33</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-15 00:17:37</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-15 00:17:14</td><td>os-loop: R2997 done exit=0 rings=10 surfaces=24 replay=PASS qc=clean t03=closed</td></tr>
-<tr><td class="t">11-15 00:00:36</td><td>os-loop: round done exit=0</td></tr>
 </tbody></table>
 
 <h2>最近产物提交<em>git log 尾 12 条</em></h2>
 <table><thead><tr><th>时间</th><th>commit</th><th>说明</th></tr></thead><tbody>
+<tr><td class="t">11-15 02:25</td><td class="h">8b9699a98</td><td>行为线 2026-11-15: 镜像 rows=7 ring=10114 [via BigLife-OSLoop]</td></tr>
+<tr><td class="t">11-15 02:25</td><td class="h">4848b4abc</td><td>年轮环(既有居民迭代·零新注册) 2026-11-15: C-02249, C-02252, C-02255, C-02260, C-02254, C-02256, C-02262 [via BigLife-OSLoop]</td></tr>
+<tr><td class="t">11-15 02:18</td><td class="h">152d9c9e2</td><td>TASKS: 11 月聚光灯抽验首 2 例 PASS（C-02239 逐句同源/C-02249 零编造）+ C-00018 空答观察 [via BigLife-OSLoop]</td></tr>
+<tr><td class="t">11-15 02:15</td><td class="h">7435fc986</td><td>轮记 R3004: 年轮 9 席 + 相遇 C-00018xC-00019 + 事件闸 43938/0 + 实况面 total=71 [via BigLife-OSLoop]</td></tr>
+<tr><td class="t">11-15 02:13</td><td class="h">34c899b21</td><td>面重建 2026-11-15 夜轮: 24 面落地 + 事件闸 PASS(43938 events/0 mismatch) + QC 10114 卡 0 问题 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-15 02:12</td><td class="h">db7cb75f4</td><td>行为线 2026-11-15: 镜像 rows=2 ring=10114 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-15 02:12</td><td class="h">bae711908</td><td>相遇 2026-11-15: C-00018 C-00019 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-15 02:10</td><td class="h">1f8e0be2d</td><td>行为线 2026-11-15: 镜像 rows=9 ring=10114 [via BigLife-OSLoop]</td></tr>
@@ -67,27 +72,22 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td class="t">11-15 02:02</td><td class="h">5d9b3f407</td><td>日更面重建 2026-11-15: stale=12 ran=13 PASS + 年轮批 10 席 + 事件流回放 mismatch=0 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-15 02:00</td><td class="h">f2851a508</td><td>行为线 2026-11-15: 镜像 rows=10 ring=10114 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-15 01:59</td><td class="h">efa903363</td><td>年轮环(既有居民迭代·零新注册) 2026-11-15: C-02220, C-02222, C-02229, C-02230, C-02235, C-02227, C-02231, C-02232, C-02233, C-02238 [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-15 01:57</td><td class="h">9ac30b9d1</td><td>fix(status-export): 占位符闸补数字前置句式(N 席…落环)漏网+外校直数重写 R3002 尾行 [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-15 01:54</td><td class="h">b1bc356bc</td><td>chore(TASKS): R3002 轮记入板（年轮 8 席/相遇 1 组/双闸 PASS/tokens local=12）+ 状态导出续鲜 [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-15 01:53</td><td class="h">84fcd78d5</td><td>round R3002: 日更 23 面重建(meets/today/dashboard/growth p01-p11 等)+相遇候选刷新+事件闸报告入库 [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-15 01:52</td><td class="h">4e04a5a06</td><td>行为线 2026-11-15: 镜像 rows=2 ring=10114 [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-15 01:52</td><td class="h">e7fe14f81</td><td>相遇 2026-11-15: C-02151 C-02189 [via BigLife-OSLoop]</td></tr>
 </tbody></table>
 
 <h2>页面新鲜度<em>census/export 下的单页 · 按更新时间倒序</em></h2>
 <table><thead><tr><th>页面</th><th>体积</th><th>更新</th><th>状态</th></tr></thead><tbody>
-<tr><td><a href="city-coverage.html">city-coverage.html</a></td><td class="n">5 KB</td><td class="t">11-15 02:12</td><td>新</td></tr>
-<tr><td><a href="city-voices.html">city-voices.html</a></td><td class="n">14 KB</td><td class="t">11-15 02:12</td><td>新</td></tr>
-<tr><td><a href="city-dashboard.html">city-dashboard.html</a></td><td class="n">61 KB</td><td class="t">11-15 02:12</td><td>新</td></tr>
-<tr><td><a href="city-rumors.html">city-rumors.html</a></td><td class="n">14 KB</td><td class="t">11-15 02:12</td><td>新</td></tr>
-<tr><td><a href="meet-candidates.html">meet-candidates.html</a></td><td class="n">28 KB</td><td class="t">11-15 02:11</td><td>新</td></tr>
+<tr><td><a href="city-coverage.html">city-coverage.html</a></td><td class="n">5 KB</td><td class="t">11-15 02:26</td><td>新</td></tr>
+<tr><td><a href="city-voices.html">city-voices.html</a></td><td class="n">14 KB</td><td class="t">11-15 02:26</td><td>新</td></tr>
+<tr><td><a href="city-dashboard.html">city-dashboard.html</a></td><td class="n">61 KB</td><td class="t">11-15 02:26</td><td>新</td></tr>
+<tr><td><a href="city-rumors.html">city-rumors.html</a></td><td class="n">14 KB</td><td class="t">11-15 02:26</td><td>新</td></tr>
+<tr><td><a href="meet-candidates.html">meet-candidates.html</a></td><td class="n">28 KB</td><td class="t">11-15 02:12</td><td>新</td></tr>
+<tr><td><a href="city-reflections.html">city-reflections.html</a></td><td class="n">15 KB</td><td class="t">11-15 02:12</td><td>新</td></tr>
+<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">21 KB</td><td class="t">11-15 02:12</td><td>新</td></tr>
+<tr><td><a href="city-growth.html">city-growth.html</a></td><td class="n">5 KB</td><td class="t">11-15 02:12</td><td>新</td></tr>
+<tr><td><a href="city-goals.html">city-goals.html</a></td><td class="n">17 KB</td><td class="t">11-15 02:12</td><td>新</td></tr>
 <tr><td><a href="gene-ledger.html">gene-ledger.html</a></td><td class="n">141 KB</td><td class="t">11-15 02:11</td><td>新</td></tr>
-<tr><td><a href="city-reflections.html">city-reflections.html</a></td><td class="n">15 KB</td><td class="t">11-15 02:11</td><td>新</td></tr>
 <tr><td><a href="city-objects.html">city-objects.html</a></td><td class="n">96 KB</td><td class="t">11-15 02:11</td><td>新</td></tr>
-<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">21 KB</td><td class="t">11-15 02:11</td><td>新</td></tr>
 <tr><td><a href="city-meets.html">city-meets.html</a></td><td class="n">37 KB</td><td class="t">11-15 02:11</td><td>新</td></tr>
-<tr><td><a href="city-growth.html">city-growth.html</a></td><td class="n">5 KB</td><td class="t">11-15 02:11</td><td>新</td></tr>
-<tr><td><a href="city-goals.html">city-goals.html</a></td><td class="n">17 KB</td><td class="t">11-15 02:11</td><td>新</td></tr>
 <tr><td><a href="city-today.html">city-today.html</a></td><td class="n">32 KB</td><td class="t">11-15 01:51</td><td>新</td></tr>
 <tr><td><a href="resident-gallery.html">resident-gallery.html</a></td><td class="n">2987 KB</td><td class="t">11-15 01:40</td><td>新</td></tr>
 <tr><td><a href="city-ring-recency.html">city-ring-recency.html</a></td><td class="n">12 KB</td><td class="t">11-15 01:40</td><td>新</td></tr>
@@ -103,16 +103,16 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td><a href="city-life.html">city-life.html</a></td><td class="n">21 KB</td><td class="t">11-15 00:07</td><td>新</td></tr>
 <tr><td><a href="city-lexicon.html">city-lexicon.html</a></td><td class="n">188 KB</td><td class="t">11-14 15:03</td><td>陈旧</td></tr>
 <tr><td><a href="city-chronicle.html">city-chronicle.html</a></td><td class="n">112 KB</td><td class="t">11-14 09:44</td><td>陈旧</td></tr>
-<tr><td><a href="city-growth-p01.html">city-growth-p*.html（11 页）</a></td><td class="n">8476 KB</td><td class="t">11-15 02:11</td><td>新</td></tr>
+<tr><td><a href="city-growth-p01.html">city-growth-p*.html（11 页）</a></td><td class="n">8476 KB</td><td class="t">11-15 02:12</td><td>新</td></tr>
 </tbody></table>
 
 <h2>库体量<em>居民卡与事件流实读</em></h2>
 <table><thead><tr><th>面</th><th>数值</th></tr></thead><tbody>
 <tr><td>居民（citizens-light）</td><td class="n">10114</td></tr>
 <tr><td>居民卡文件</td><td class="n">10091</td></tr>
-<tr><td>年轮条目</td><td class="n">18462</td></tr>
+<tr><td>年轮条目</td><td class="n">18469</td></tr>
 <tr><td>已有年轮的居民</td><td class="n">10091</td></tr>
-<tr><td>城市事件（events/*.jsonl）</td><td class="n">43938</td></tr>
+<tr><td>城市事件（events/*.jsonl）</td><td class="n">43945</td></tr>
 </tbody></table>
 
 <h2>人格深化面<em>census/export/citizen-persona.jsonl 实读 · 确定性派生</em></h2>
@@ -140,26 +140,26 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 </tbody></table>
 <div class="note">全量复读/过短/模板三段判负由 Tools/ring_simile_audit.py 产出；修复走 19:00 后让路窗的 evolve 批（LLM 复写），本页只呈现队列，不改写任何年轮文本。</div>
 
-<h2>排产闸（显存）<em>state/vram-gate.jsonl 实读 · 阈值 90% · 最近一次 放行（0 分钟前） · 近 24h 让路 5/78 次 · 显存饥饿 3 次</em></h2>
+<h2>排产闸（显存）<em>state/vram-gate.jsonl 实读 · 阈值 90% · 最近一次 放行（2 分钟前） · 近 24h 让路 5/80 次 · 显存饥饿 3 次</em></h2>
 <table><thead><tr><th>探针时间</th><th>结果</th><th>显存占用</th><th>GPU 会话（WDDM 不报单进程显存·非诊断依据）</th></tr></thead><tbody>
+<tr><td class="t">11-15 02:23</td><td>放行</td><td class="n">63% · 7698/12282 MiB</td><td>—</td></tr>
+<tr><td class="t">11-15 02:16</td><td>放行</td><td class="n">63% · 7701/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-15 02:11</td><td>放行</td><td class="n">63% · 7698/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-15 02:08</td><td>放行</td><td class="n">63% · 7699/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-15 01:58</td><td>放行</td><td class="n">63% · 7699/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-15 01:52</td><td>放行</td><td class="n">63% · 7694/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-15 01:49</td><td>放行</td><td class="n">70% · 8551/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-15 01:29</td><td>放行</td><td class="n">96% · 11808/12282 MiB</td><td>—</td></tr>
-<tr><td class="t">11-15 01:20</td><td>放行</td><td class="n">94% · 11601/12282 MiB</td><td>ShellHost.exe · CrossDeviceResume.exe · explorer.exe · StartMenuExperienceHost.exe</td></tr>
-<tr><td class="t">11-15 01:20</td><td>放行</td><td class="n">94% · 11605/12282 MiB</td><td>—</td></tr>
 </tbody></table>
 <div class="note">「让路」＝GPU 被别的活占着，本轮年轮/相遇/反思批不启动（脚本自退，不是故障、也不计入零产出事故）；「显存饥饿」＝暖探针（1 token）无应答，整批零座席空烧退出（T-20261114-05）；「降级放行」＝桌面图形占卡但探针通过，批照跑；「放行」＝探针通过、批可开工。占用者取自 nvidia-smi compute-apps（Windows WDDM 不报单进程显存，故多数只见进程名）。</div>
 
 <h2>最近轮记<em>tasks/TASKS.md 内的轮号行</em></h2>
 <ul>
+<li>[R3004 2026-11-15 02:09-02:16 @BigLife-OSLoop 周日深夜产品轮] 轮首 git pull --ff-only origin main=**Already up to date**、树净；决策水位差集 **NEW=0**（水位尾 D-20261114-01/02/03 三行齐备，集团 decisions.md 11-15 无新编号，最后一批=第 61 批 11-14 18:00）；orders 物理件区无涉本司新件（L73/L83/L89 均为已办或纯观感项）；TASKS 真 open 维持 T-20261112-01/04、T-20261113-03/04（长周期/待委员会口径，禁产物轮自改闸）；另有 T-20261113-06（座席快熔闸）验收①②已过、③阻塞，不动。**产品增量（9 席新年轮 + 1 组相遇 + 24 面重建）=2 分**：①年轮批 `--batch 3` due=10 → **written=9 skipped=0**（C-02239/02240/02241/02243/02244/02245/02247/02248/02253）；C-02249 **persistent 违例 `time-morning`+`recent-dup-phrase`** 被闸拦留 due（开口写「今早我照样开了窗」而实况为凌晨 02:09＝时间轴锚错，闸正确拦截，非丢单）。②相遇轮 `--meet C-00018 C-00019` **OK**（GM 城区·双卡互引，commit bae711908）。③行为线自动镜像 rows=9→2 ring=10114（1f8e0be2d / db7cb75f4）。④事件流回放闸两跑全 **PASS**：derive cards=10111 events=43936→43938 shards=3；replay replayed=10111 schema_errors=0 **mismatch=0**；coverage derived=10111 reserved=3 exported=10114 unexpected_missing=0；chronicle last=2026-11-15 gap=0d（qa/EVENTS-REPLAY-REPORT.md 入库）。⑤日更面 `round_daily --run` 两跑 **PASS**：首跑 stale=12 ran=13 failed=0（dashboard/voices/coverage/ops/objects/goals/gene_ledger/growth/meets/reflections/meet_candidates/index 真重建）、相遇后二跑 stale=9 ran=10 failed=0。⑥QC 巡检 **cards=10114 evolved=10114 problems=0** dup_rings=37/37。⑦对外实况面 `update_status_export --payload state/export-payload-R3004.json --heartbeat` **OK total=71 reg=69 anc=2**（results 尾行用 {N} 由机器直数代填，承 R3002 占位符闸判例，零手打数字）。定向 commit 两笔：**34c899b21**（27 files：面重建+QC 报告+事件回放报告+流言）+ 本笔 TASKS/status-export，已 push origin/main（5d9b3f407..34c899b21→本轮末笔）。</li>
 <li>[R3003 2026-11-15 01:58-02:12 @BigLife-OSLoop 周日深夜产品轮] 轮首 git pull --ff-only origin main=**Already up to date**、树净；决策水位差集 **NEW=0**（水位尾 D-20261114-01/02/03，集团 decisions.md 11-15 无新编号）；orders 物理件区无涉本司新件；TASKS 板 open=仅 T-20261112-01/04、T-20261113-03/04（长周期/待委员会口径，不动）。**产品增量（10 席新年轮 + 13 面重建）=2 分**：①年轮批 `--batch 3` due=10 → **written=10 skipped=0**（C-02220/02222/02229/02230/02235/02227/02231/02232/02233/02238）；3 席走 soft-concession（recent-dup-opening/phrase 计入门内），但**开口去重实测 10/10 全异**（窗台温度计/屋檐铜线/灶台水壶/搪瓷盘/塑料布/锅盖水汽…），非机械复读。②事件流回放闸 **PASS**：derive cards=10111 events=43927 shards=3；replay replayed=10111 schema_errors=0 **mismatch=0**；coverage unexpected_missing=0；chronicle last=2026-11-15 gap=0d（qa/EVENTS-REPLAY-REPORT.md 入库）。③日更面 `round_daily --run` **PASS**：stale=12 ran=13 failed=0（dashboard/voices/coverage/ops/objects/goals/gene_ledger/growth/meets/reflections/rumors/meet_candidates/index 真重建，非时间戳抖动）。**跳过的面（按闸律·诚实）**：语言池 audit **PASS 全桶达标 SELF_TERMINATE**（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism mismatch=0）；反思线 19:00 后才有窗（现 02:0x，且 day=2026-11-15 已满 3 条日额）；相遇轮今日 CAP 已满（R3002 已 1 组）；QC 上轮 01:5x 刚跑 cards=10114 evolved=10114 problems=0，未到 6 轮节奏；HQ 日报闸 ALREADY_REPORTED(day=2026-11-15 lines=1) 零写入。</li>
 <li>[R3002 2026-11-15 01:48-01:56 @BigLife-OSLoop 周日夜窗产品轮] 轮首 git pull --ff-only origin main=**Already up to date**、树净；决策水位差集 **NEW=0**（水位尾 D-20261114-01/02/03，集团 decisions.md 11-15 无新编号）；orders 物理件区无涉本司新件；TASKS 真 open=仅 T-20261112-01/04、T-20261113-03/04（长周期/待委员会口径，禁产物轮自改闸，不动）。</li>
 <li>[R3001 2026-11-15 01:29-01:45 @BigLife-OSLoop 周日夜窗产品轮] 轮首 git pull --ff-only origin main=**Already up to date**、树净；决策水位差集 **NEW=0**（水位尾 D-20261114-03，集团 decisions.md 末次写 11-14 18:04）；orders 物理件区无涉本司新件；TASKS 真 open=仅 T-20261112-01/04、T-20261113-03/04（长周期/待委员会口径，禁产物轮自改闸，不动），T-20261114-02/03 已前轮结单。</li>
 <li>[R3000 2026-11-15 01:19-01:35 @BigLife-OSLoop 周日夜窗产品轮] 轮首 git pull --ff-only origin main=**Already up to date**、树净；决策水位差集 **NEW=0**（集团 decisions 68 个 D-ID 全消费，尾 D-20261114-03）；orders 物理件区无涉本司新件（11-14 主控审计对 BIGLIFE 的零产物挂起已由 D-20261114-01 撤销，R2986 消费）。**产品增量（1-2 分·可见实物）**：①日更面 round_daily --check 先报 stale=2（city-today content-stale 因 01:18 年轮落地后源变更、ops dep-mtime:state/vram-gate.jsonl）→ --run rebuilt=3 failed=0 PASS；**city-today.html 实质扩容**（today 年轮面 GAME 4→12 席 / QUANT 2→10 / 北岸湾 2→4 / MEDIA 1→2 / 江面与光桥 1→2 / 外环感知网 0→1，非时间戳空转）＋city-ops.html／index.html 同步刷新。②QC 巡检 qc_census.py cards=10114 evolved=10114 problems=0 dup_rings=37/37 **PASS**（距上次 11-14 05:52 已 19.5h，按 6 轮节奏到期），census/QC-REPORT.md 随轮入库。**跳过面（按闸律·诚实）**：年轮批 --batch 3 被 **vram-guard** 判 degraded（desktop 持 94%、compute 0%、free 677MiB）后 **llm-starved** 暖探针 60s 无应答（gpu 11601/12282MiB）→ batch skipped、**0 席燃烧**，属让路态非故障；反思线/相遇轮同受本地 LLM 不可用阻塞（本轮不重复烧探针）；pool 巴士达标未复跑；HQ 日报闸 ALREADY_REPORTED(day=2026-11-15 lines=1) 零写入。**实况三行**：当前活＝日更面 3 面重建＋QC 全清 ｜ 最近实物＝C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-today.html（2026-11-15 01:2x·今日年轮 12+10+4+2+2+1 席）＋census\\QC-REPORT.md（01:20 PASS）｜ 下个里程碑＝GPU 空闲窗续跑年轮批（written 与新环对齐验收·窗 ≤24h）。</li>
-<li>[R2998 2026-11-15 00:34-00:5x @BigLife-OSLoop 周日夜窗产品轮] 轮首 `git pull --ff-only origin main`=**Already up to date**、树净；决策水位差集 **NEW=0**（尾 D-20261114-03；集团 docs/decisions.md 无 11-15 新 D 行，D-20261114-01 已把 BIGLIFE 从零产物挂起恢复 ACTIVE）；orders 物理件区无涉本司新件。**产品增量（按计分）**：①日更面 `round_daily --run` **PASS**（stale=1 ran=2 failed=0：rebuilt=ops〔dep-mtime:state/vram-gate.jsonl〕+index），HTML 实物随轮在盘；②事件流回放闸 **PASS**（cards=10111 events=43887 replayed=10111 schema_errors=0 mismatch=0 coverage unexpected_missing=0 chronicle gap=0d）；③年轮批 evolved=9 of 10 due（written=9）但**卡面净 diff=0**——9 位居民（C-02180/02185/02206/02210/02186/02189/02190/02192/02194）的 2026-11-15 年轮已由 00:00/00:17 前序轮落卡，本批为同日同槽重写（承 T-20261114-02 written 口径待办），**如实记净新增 0 环**。**探针面**：首跑 60s 暖探针 starving（GPU 2906/12282MiB·free 9376）→ `BIGLIVE_WARM_PROBE_SEC=150` 重试即通、9 席全落，=暖探针闸按设计工作，单轮零修补。**反思线未产出（真缺陷，开单 T-20261115-01）**：`reflect_citizen --batch 5` 后台 0 输出 exit=0、`--batch 3` 前台 5 分钟零输出被取消 → `census/reflections.jsonl` 尾部仍为 **2026-11-14**，当日缺 1 天（连续 3 生产日验收线待明日复核）。**跳过面（按闸律）**：QC（00:17 轮刚 clean）、语言池（SELF_TERMINATE）、相遇（今日 CAP 已满）、HQ 日报闸（ALREADY_REPORTED day=2026-11-15 lines=1）。</li>
 </ul>
 <div class="note">本页只汇总盘上既有事实，不写推断值；取不到的字段一律写「未取到」。</div>
 </main>
