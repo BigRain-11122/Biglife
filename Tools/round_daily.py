@@ -185,9 +185,9 @@ INPUTS = [
 DEPENDS = {
     # build_gene_ledger.py 只读这两处：基因正本 + 户卡正文目录
     "gene_ledger": ["genes/lives.json", "census/registry"],
-    # city_lexicon.py 读三个 cognition 池面
+    # city_lexicon.py 读三个 cognition 池面 + 基因口头禅正本（v0.2 R2933 第六节）
     "lexicon": ["cognition/pools.json", "cognition/greetings.json",
-                "cognition/pools-negative.json"],
+                "cognition/pools-negative.json", "genes/language.json"],
     # 环依赖面（v0.12 2026-11-12）：年轮批落进户卡后，这些面同日不再刷新。
     # 源信号取 evolve-cursor（每批年轮必写）+ registry 目录（新注册卡）。
     # 目录 mtime 只反映增删不反映内容改写，故 cursor 才是环落地的主信号。

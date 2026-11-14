@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
-"""城市语言志：把语言线（六轴句/像素灵/问候/问答/负面脸）汇总成一张只读单页。
+"""城市语言志：把语言线（六轴句/像素灵/问候/问答/负面脸/基因口头禅）汇总成一张只读单页。
 
 确定性零 LLM：只读 cognition/pools.json、cognition/greetings.json、
-cognition/pools-negative.json 三份正本，不改任何数据，输出
+cognition/pools-negative.json、genes/language.json 四份正本，不改任何数据，输出
 census/export/city-lexicon.html。门闸口径与 Tools/pool_audit.py 一致。
+
+v0.2 (2026-11-14 R2933)：补「六、基因口头禅与方言」。病根=genes/language.json
+1501 句口头禅 + 11 类方言词是本司最大语言资产，但此前只有池面（pools.json）
+有入口，基因正本增补对 CEO 可见面完全不可见（R2931 补的 31 句无面承载）。
 """
 from __future__ import annotations
 
@@ -38,6 +42,23 @@ def esc(s: str) -> str:
 def load(name: str):
     with open(COG / name, encoding="utf-8") as f:
         return json.load(f)
+
+
+def load_genes(name: str):
+    with open(ROOT / "genes" / name, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def gene_card(title: str, samples: list[str], visible: int = 12) -> str:
+    """口头禅卡：首屏 visible 句，其余折叠。折叠内容仍在 textContent 内，检索仍命中。"""
+    head = "".join(f"<q>{esc(s)}</q>" for s in samples[:visible])
+    rest = samples[visible:]
+    part = ""
+    if rest:
+        tail = "".join(f"<q>{esc(s)}</q>" for s in rest)
+        part = f"<details><summary>展开全部 {len(samples)} 句</summary>{tail}</details>"
+    return (f'<div class="card gene"><h4>{esc(title)}'
+            f'<em>{len(samples)} 句</em></h4>{head}{part}</div>')
 
 
 def ctx_label(k: str) -> str:
@@ -76,6 +97,17 @@ def main() -> int:
     pools = load("pools.json")
     greetings = load("greetings.json")
     negative = load("pools-negative.json")
+    lang = load_genes("language.json")
+
+    catchphrases = lang.get("catchphrases", [])
+    dialects = lang.get("dialects", [])
+    cp_by_axis: dict[str, list[str]] = {}
+    for item in catchphrases:
+        txt = (item.get("text") or "").strip()
+        if txt:
+            cp_by_axis.setdefault(item.get("axis") or "未分轴", []).append(txt)
+    n_cp = sum(len(v) for v in cp_by_axis.values())
+    n_dialect_words = sum(len(d.get("words", [])) for d in dialects)
 
     axes = pools["axes"]
     sprite = pools["sprite"]
@@ -157,7 +189,25 @@ def main() -> int:
                        "".join(body), f"负面 {n_neg}")
     navs.append(nav); secs.append(sec)
 
-    total = n_axes + n_sprite + n_greet + n_greet_sprite + n_faq_pairs * 2 + n_neg + len(recovering)
+    # 六、基因口头禅与方言（v0.2 R2933）：genes/language.json 正本的可见入口
+    body = []
+    for axis, lines in sorted(cp_by_axis.items(), key=lambda kv: -len(kv[1])):
+        body.append(f'<h3 class="axis">{esc(axis)}<span class="meta">'
+                    f'{len(lines)} 句</span></h3>')
+        body.append('<div class="grid">' + gene_card(f"{axis}口头禅", lines) + "</div>")
+    body.append(f'<h3 class="axis">方言词表<span class="meta">'
+                f'{len(dialects)} 类 · {n_dialect_words} 词</span></h3>')
+    body.append('<div class="grid">' + "".join(
+        gene_card(f'{d.get("name", "?")}·{d.get("note", "")}', list(d.get("words", [])), visible=999)
+        for d in dialects
+    ) + "</div>")
+    nav, sec = section("gene", "六、基因口头禅与方言",
+                       f"{len(cp_by_axis)} 轴 · {n_cp} 句 + 方言 {len(dialects)} 类 {n_dialect_words} 词",
+                       "".join(body), f"基因口头禅 {n_cp}")
+    navs.append(nav); secs.append(sec)
+
+    total = (n_axes + n_sprite + n_greet + n_greet_sprite + n_faq_pairs * 2
+             + n_neg + len(recovering) + n_cp + n_dialect_words)
     verdict = gate_verdict()
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
 
@@ -199,6 +249,9 @@ align-items:baseline;color:#cfcabf;font-weight:600}}
 .card q::before,.card q::after{{content:""}}
 .card.sp{{border-left:3px solid #5a7f9a}}
 .card.neg{{border-left:3px solid #8a5a5a}}
+.card.gene{{border-left:3px solid #7a8a5a}}
+.card details summary{{cursor:pointer;font:11px/1.6 ui-monospace,monospace;color:#6a7078;padding:4px 0}}
+.card details[open] summary{{color:var(--acc)}}
 .qabox{{border:1px solid var(--line);border-radius:5px;padding:6px 12px;background:#14181e}}
 .qa{{display:grid;grid-template-columns:1fr 1.4fr;gap:14px;padding:6px 0;
 border-bottom:1px dotted #1e242c;font-size:13.5px}}
@@ -212,20 +265,22 @@ nav{{position:static;max-height:none;border-right:0;border-bottom:1px solid var(
 display:flex;flex-wrap:wrap;gap:4px}}nav a{{padding:2px 6px}}.qa{{grid-template-columns:1fr}}}}
 </style></head><body>
 <header><h1>城市语言志</h1>
-<div class="sub">语言线正本汇总 · 六轴句 / 像素灵 / 问候 / 问答 / 负面脸 —— 确定性只读汇总，零 LLM · 生成 {now}</div></header>
+<div class="sub">语言线正本汇总 · 六轴句 / 像素灵 / 问候 / 问答 / 负面脸 / 基因口头禅 —— 确定性只读汇总，零 LLM · 生成 {now}</div></header>
 <div class="kpi">
 <div><b>{n_axes}</b>六轴句（{len(axes)} 轴 × 12 情境）</div>
 <div><b>{n_sprite}</b>像素灵句（{len(sprite)} 情境）</div>
 <div><b>{n_greet + n_greet_sprite}</b>问候句</div>
 <div><b>{n_faq_pairs}</b>问答对</div>
 <div><b>{n_neg}</b>负面脸句</div>
+<div><b>{n_cp}</b>基因口头禅（{len(cp_by_axis)} 轴）</div>
+<div><b>{n_dialect_words}</b>方言词（{len(dialects)} 类）</div>
 <div class="ok"><b>{esc(verdict)}</b>门闸（Tools/pool_audit.py 实跑 verdict）</div>
 </div>
 <div class="search"><input id="q" placeholder="按词检索：豆浆 / 台风 / 重逢 / 收摊…" autocomplete="off"></div>
 <div class="wrap"><nav>{"".join(navs)}</nav><main>{"".join(secs)}</main></div>
 <footer>本页由 Tools/city_lexicon.py 确定性生成，零 LLM；数据正本 cognition/pools.json ·
-cognition/greetings.json · cognition/pools-negative.json（共 {total} 条语料）。改语料请改正本后重跑，
-本页不含任何生成态文本。</footer>
+cognition/greetings.json · cognition/pools-negative.json · genes/language.json（共 {total} 条语料）。
+改语料请改正本后重跑，本页不含任何生成态文本。</footer>
 <script>
 (function(){{
  var q=document.getElementById('q'),cards=[].slice.call(document.querySelectorAll('.card,.qa'));
@@ -246,7 +301,8 @@ cognition/greetings.json · cognition/pools-negative.json（共 {total} 条语�
     OUT.write_text(page, encoding="utf-8")
     print(f"city-lexicon: {OUT.relative_to(ROOT)}  {len(page.encode('utf-8'))/1024:.1f} KB")
     print(f"corpus: axes={n_axes} sprite={n_sprite} greet={n_greet + n_greet_sprite} "
-          f"faq_pairs={n_faq_pairs} neg={n_neg} recovering={len(recovering)} total={total} "
+          f"faq_pairs={n_faq_pairs} neg={n_neg} recovering={len(recovering)} "
+          f"gene_cp={n_cp} dialect_words={n_dialect_words} total={total} "
           f"gate={verdict}")
     return 0
 

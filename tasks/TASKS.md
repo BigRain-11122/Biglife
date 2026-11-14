@@ -2070,3 +2070,13 @@ ound_daily --run = **PASS**（38 面中 rebuilt=21 failed=0，含 dashboard/rumo
 - **判例（新·工具面）**：PS 5.1 `Get-Content` 读**无 BOM UTF-8 中文文件**默认按系统 ANSI(GBK) 解码 → 显示「鎶ュ憡 鈥斺€」类假乱码；正法=`read_file` 工具或 `Get-Content -Encoding UTF8`。配套：`encoding_guard.py --check` 报 PASS（严格 UTF-8/无 BOM/U+FFFD=0）才是真实体检结论，勿以控制台观感判文件损坏。
 - 三行：当前活=GPU 让路下的零 LLM 确定性面 + QC 巡检 ｜ 最近实物=census\QC-REPORT.md（2026-11-14 14:06·commit 28a2921e1） ｜ 下个里程碑=GPU 空出后年轮批回补 due 队列 + 19:00 后反思批 5
   - tokens: local=0 api=0 api_reason=(vram-guard 97% 让路；本轮为 QC 扫描/确定性面复核，零 LLM 调用)
+
+## R2933 · 2026-11-14 14:2x @BigLife-OSLoop（周六午后·可见性缺口修复轮）
+- 轮首三步：pull --ff-only=Already up to date、树净；决策水位差集 **NEW=0**（decisions.md 尾仍 D-20261112-16）；orders 物理件区无新涉本司件（11-14 00:30 挂起裁决反驳已由 R2931 于 13:31 落 HQ-FEEDBACK）。
+- **产品增量（2 分·可看可用实物）**：修复 R2931 自曝的可见性缺口——`genes/language.json` 的 **1501 句口头禅 + 11 类 64 个方言词**此前在 CEO 可见面零入口（lexicon 只读 cognition/pools.json）。`Tools/city_lexicon.py` 升 v0.2，新增「六、基因口头禅与方言」：21 轴分卡（>12 句的 6 个大轴折叠为 details 可展开，检索仍命中全量）+ 方言词表带 note 卡；KPI 加「基因口头禅/方言词」两项；语料总数 1935→**3571**。
+- **闸配套（防复发）**：`Tools/round_daily.py` DEPENDS["lexicon"] 补 `genes/language.json` —— 此前补基因后该面不判 stale，CEO 面会静默停在写入前口径（与 T-20261112-09 同族病根）。
+- **验证证据**：`city_lexicon.py` 实跑 city-lexicon.html 187.5KB、corpus gene_cp=1501 dialect_words=64 total=3571 gate=PASS；页面断言 section6=True / details=7 / 方言词表在 / 抽样句「放鞋柜」命中 / card gene=32。`round_daily --run` verdict PASS（stale=1 lexicon 因新依赖重建 + index 重建，ran=2 failed=0）。`events_refresh --gate` PASS（replay 43522/10111、mismatch=0、schema_errors=0、chronicle gap=0d）。
+- **让路记录**：vram-guard used=11858/12282MiB（97%）→ 年轮批 batch=3 未启动（脚本自退）；反思线未到 19:00；语言池 `pool_audit` 全桶达标 SELF_TERMINATE（72/72 轴桶、12/12 像素灵、greet/faq/neg 全 at_target，hard_fails=0）。
+- **判例（复用）**：PowerShell 内联 python -c 含中文引号易被吃成语法错 → 校验改「生成器自带断言 + Select-String/-match 计数」双面取证，勿依赖单条内联表达式。
+- 三行：当前活=GPU 让路下的确定性可见面修复 ｜ 最近实物=census\export\city-lexicon.html（第六节 1501 句口头禅 + 64 方言词·2026-11-14 14:2x） ｜ 下个里程碑=GPU 空出后年轮批回补 due 队列 + 19:00 后反思批 5
+  - tokens: local=0 api=0 api_reason=(vram-guard 97% 让路；本轮为确定性生成器改造与闸接线，零 LLM 调用)
