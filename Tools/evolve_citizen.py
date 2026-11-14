@@ -973,7 +973,7 @@ def record_gate_probe(state, used=0.0, total=0.0, frac=0.0, limit=0.90):
             "limit": limit,
             "pid": os.getpid(),
         }
-        if state == "yield":
+        if state in ("yield", "starved"):
             row["offenders"] = gate_offenders()
         os.makedirs(os.path.dirname(GATE_LEDGER), exist_ok=True)
         if os.path.exists(GATE_LEDGER) and os.path.getsize(GATE_LEDGER) > GATE_LEDGER_MAX_BYTES:
@@ -1062,6 +1062,54 @@ def vram_guard(limit=0.90):
     except Exception:  # noqa: BLE001 - probe failure must never block the lane
         return None
     return None
+
+
+def gpu_used_total():
+    """(used, total) MiB from the driver, or (None, None) when it will not say."""
+    try:
+        r = subprocess.run(
+            ["nvidia-smi", "--query-gpu=memory.used,memory.total",
+             "--format=csv,noheader,nounits"],
+            capture_output=True, timeout=15)
+        rows = (r.stdout or b"").decode("utf-8", "replace").strip().splitlines()
+        if not rows:
+            return None, None
+        used, total = [float(x) for x in rows[0].split(",")[:2]]
+        return used, total
+    except Exception:  # noqa: BLE001 - observability only
+        return None, None
+
+
+def llm_warm_probe(budget=None):
+    """T-20261114-05: one 1-token generation before a batch decides whether to start.
+
+    Why VRAM arithmetic cannot answer this (R2965/T-20261114-05 实锚): on Windows
+    WDDM every GPU process reports used_memory=[N/A], so a training job that has
+    paged the whole card reads as *zero compute* here - `vram_guard` then starts
+    the batch "degraded" and each seat burns its full 150s fuse on model loading,
+    yielding zero rings for ~25 min. The same 402 MiB free was enough on other
+    rounds (10 rings landed), so a free-VRAM floor would have blocked real work.
+
+    The seat itself is the only honest probe: if a 1-token call answers, the batch
+    can run; if it cannot answer within `budget`, no seat in this batch will.
+    Costs seconds when healthy and also warms the model for the seats.
+    """
+    budget = int(budget or os.environ.get("BIGLIVE_WARM_PROBE_SEC", "60"))
+    try:
+        url, model = seat()
+        body = json.dumps({
+            "model": model,
+            "messages": [{"role": "user", "content": "ping"}],
+            "max_tokens": 1,
+            "stream": False,
+        }).encode("utf-8")
+        req = urllib.request.Request(url, data=body,
+                                     headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=budget) as r:
+            r.read(64)
+        return True
+    except Exception:  # noqa: BLE001 - a failed probe is the signal, never a crash
+        return False
 
 
 def seat_call(prompt, sig, fuse=None, max_regens=3):
@@ -3494,6 +3542,24 @@ def main():
     # T-20261113-06 ②: an LLM lane start on a >90% GPU piles a stalled seat on
     # top of someone else's job - yield the round instead (exit 0, not an error).
     if vram_guard():
+        return
+
+    # T-20261114-05: WDDM reports per-process VRAM as [N/A], so a job that owns
+    # the card reads as "degraded" above and every seat then burns its full 150s
+    # fuse on model loading. The seat is the only honest probe: one 1-token call
+    # says whether this batch can answer at all (and warms the model if it can).
+    if (args.batch or args.meet or args.reflect) and not args.audit_due \
+            and not llm_warm_probe():
+        used, total = gpu_used_total()
+        free = int(total - used) if (used is not None and total) else -1
+        print("llm-starved: warm probe no answer in %ss (gpu %s/%s MiB, free %s) - "
+              "batch skipped, 0 seats burned (T-20261114-05)" % (
+                  os.environ.get("BIGLIVE_WARM_PROBE_SEC", "60"),
+                  int(used) if used is not None else "?",
+                  int(total) if total else "?",
+                  free if free >= 0 else "?"), flush=True)
+        frac = (used / total) if (used is not None and total) else 0.0
+        record_gate_probe("starved", used or 0.0, total or 0.0, frac, 0.90)
         return
 
     if args.meet:

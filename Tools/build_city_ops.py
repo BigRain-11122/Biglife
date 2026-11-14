@@ -284,7 +284,7 @@ def read_gate_rows(path: str | None = None) -> list[dict]:
                     obj = json.loads(line)
                 except ValueError:
                     continue
-                if isinstance(obj, dict) and obj.get("state") in ("ok", "yield"):
+                if isinstance(obj, dict) and obj.get("state") in ("ok", "yield", "degraded", "starved"):
                     rows.append(obj)
     except OSError:
         return []
@@ -310,7 +310,7 @@ def gate_summary(rows: list[dict], now: datetime | None = None, window_hours: in
         seen.append((ts, row))
     seen.sort(key=lambda x: x[0])
 
-    probes = yields = 0
+    probes = yields = starved = 0
     last_yield = None
     for ts, row in seen:
         if ts < since:
@@ -319,12 +319,15 @@ def gate_summary(rows: list[dict], now: datetime | None = None, window_hours: in
         if row.get("state") == "yield":
             yields += 1
             last_yield = (ts, row)
+        elif row.get("state") == "starved":
+            starved += 1
 
     last = seen[-1] if seen else None
     return {
         "probes": probes,
         "yields": yields,
-        "share": (yields / probes) if probes else 0.0,
+        "starved": starved,
+        "share": ((yields + starved) / probes) if probes else 0.0,
         "window_hours": window_hours,
         "last_ts": last[0] if last else None,
         "last_state": (last[1].get("state") if last else ""),
@@ -430,7 +433,8 @@ def main() -> int:
            esc(_gate_label(r)), esc(_gate_mem(r)), _gate_holders(r))
         for r in reversed(gate["last_rows"])
     ) or '<tr><td colspan="4">未取到排产闸台账（尚无 vram_guard 探针）</td></tr>'
-    gate_last = ("%s（%s）" % (gate["last_state"] == "yield" and "让路" or "放行",
+    gate_last = ("%s（%s）" % ({"yield": "让路", "starved": "显存饥饿",
+                               "degraded": "降级放行"}.get(gate["last_state"], "放行"),
                               age_text(now - gate["last_ts"]))) if gate["last_ts"] else "未取到"
 
     page = f"""<!DOCTYPE html>
@@ -521,11 +525,11 @@ footer{{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(
 </tbody></table>
 <div class="note">全量复读/过短/模板三段判负由 Tools/ring_simile_audit.py 产出；修复走 19:00 后让路窗的 evolve 批（LLM 复写），本页只呈现队列，不改写任何年轮文本。</div>
 
-<h2>排产闸（显存）<em>state/vram-gate.jsonl 实读 · 阈值 {esc('%.0f%%' % (float(gate['last_rows'][-1].get('limit') or 0.9) * 100)) if gate['last_rows'] else '90%'} · 最近一次 {esc(gate_last)} · 近 {gate['window_hours']}h 让路 {gate['yields']}/{gate['probes']} 次</em></h2>
+<h2>排产闸（显存）<em>state/vram-gate.jsonl 实读 · 阈值 {esc('%.0f%%' % (float(gate['last_rows'][-1].get('limit') or 0.9) * 100)) if gate['last_rows'] else '90%'} · 最近一次 {esc(gate_last)} · 近 {gate['window_hours']}h 让路 {gate['yields']}/{gate['probes']} 次 · 显存饥饿 {gate['starved']} 次</em></h2>
 <table><thead><tr><th>探针时间</th><th>结果</th><th>显存占用</th><th>GPU 会话（WDDM 不报单进程显存·非诊断依据）</th></tr></thead><tbody>
 {gate_rows}
 </tbody></table>
-<div class="note">「让路」＝GPU 被别的活占着，本轮年轮/相遇/反思批不启动（脚本自退，不是故障、也不计入零产出事故）；「放行」＝探针通过、批可开工。占用者取自 nvidia-smi compute-apps（Windows WDDM 不报单进程显存，故多数只见进程名）。</div>
+<div class="note">「让路」＝GPU 被别的活占着，本轮年轮/相遇/反思批不启动（脚本自退，不是故障、也不计入零产出事故）；「显存饥饿」＝暖探针（1 token）无应答，整批零座席空烧退出（T-20261114-05）；「降级放行」＝桌面图形占卡但探针通过，批照跑；「放行」＝探针通过、批可开工。占用者取自 nvidia-smi compute-apps（Windows WDDM 不报单进程显存，故多数只见进程名）。</div>
 
 <h2>最近轮记<em>tasks/TASKS.md 内的轮号行</em></h2>
 <ul>
