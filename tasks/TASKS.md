@@ -2061,3 +2061,12 @@ ound_daily --run = **PASS**（38 面中 rebuilt=21 failed=0，含 dashboard/rumo
 - **诚实边界**：本轮零云端调用、零年轮产出（GPU 让路）；口头禅增量不进 lexicon 面（该面依赖 cognition/pools.json 而非 language.json），可见性靠居民后续抽用。
 - 三行：当前活=GPU 让路下的基因轮/确定性面 ｜ 最近实物=genes/language.json(+31 句) + census\export\gene-ledger.html（2026-11-14 14:01·commit c44d5ee47） ｜ 下个里程碑=GPU 空出后年轮批回补 due 队列 + 19:00 后反思批 5
   - tokens: local=0 api=0 api_reason=(vram-guard 97% 让路；本轮全为静态内容生产与确定性重建)
+
+## R2932 · 2026-11-14 14:1x @BigLife-OSLoop（周六午后·QC 巡检轮）
+- 轮首三步：pull --ff-only=Already up to date、树净；决策水位差集 **NEW=0**（decisions.md 13:55 更新但尾号仍 D-20261112-16，无 11-13/11-14 新决策）；orders.md 13:55 更新亦无涉本司新命令行（11-14 00:30 主控挂起裁决已由 R2931 于 13:31 回 HQ-FEEDBACK 反驳，本轮不重复）。
+- **产品增量（1 分·可看实物）**：QC 巡检 `qc_census.py` PASS——卡片 10114 / 已进化 10114 / **异常数 0**；升华门拒入册 0；逐字重复环 37 处（观测面·已由落环侧 dedup 闸封新面）；`census/QC-REPORT.md` 更新为 14:06 版（commit 28a2921e1，已推送）。
+- **确定性日更面**：`round_daily.py --run` 全 38 面 fresh、stale=0 ran=0 failed=0 **verdict PASS**（前轮 14:02 刚重建，幂等零动作）。
+- **让路记录**：vram-guard 实测 used=11909/12282MiB（97%）> 90% 阈值 → 年轮批 batch=3 **未启动**（脚本自退，非故障）。占用者=nvidia-smi 列 musubi_tuner `krea2_train_network.py`（PID 54864，BigStream 人物一致性 LoRA 训练，正当高优先级重活）+ 桌面 Photoshop/千问/飞书。反思线未到 19:00 窗口，按规程不跑。
+- **判例（新·工具面）**：PS 5.1 `Get-Content` 读**无 BOM UTF-8 中文文件**默认按系统 ANSI(GBK) 解码 → 显示「鎶ュ憡 鈥斺€」类假乱码；正法=`read_file` 工具或 `Get-Content -Encoding UTF8`。配套：`encoding_guard.py --check` 报 PASS（严格 UTF-8/无 BOM/U+FFFD=0）才是真实体检结论，勿以控制台观感判文件损坏。
+- 三行：当前活=GPU 让路下的零 LLM 确定性面 + QC 巡检 ｜ 最近实物=census\QC-REPORT.md（2026-11-14 14:06·commit 28a2921e1） ｜ 下个里程碑=GPU 空出后年轮批回补 due 队列 + 19:00 后反思批 5
+  - tokens: local=0 api=0 api_reason=(vram-guard 97% 让路；本轮为 QC 扫描/确定性面复核，零 LLM 调用)
