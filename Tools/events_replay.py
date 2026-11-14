@@ -9,7 +9,7 @@ Vitals checked: ring_count, last_ring_date, relations, household_id.
 Exit code 0 only when both are zero; report written to
 qa/EVENTS-REPLAY-REPORT.md (evidence face) and state/events-replay.json.
 """
-import io, json, pathlib, sys
+import datetime, io, json, pathlib, sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from events_derive import parse_card, card_paths  # noqa: E402
@@ -87,6 +87,7 @@ def main():
         "",
         "- 生成器：Tools/events_derive.py → events/YYYY-MM.jsonl（可重建数据面）",
         "- 回放器：Tools/events_replay.py（本次运行）",
+        f"- 生成时间：{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
         f"- 事件总数：{n}｜居民卡：{cards}｜回放居民：{len(state)}",
         f"- schema 错误：{len(schema_errors)}｜回放-卡片不一致：{len(mism)}",
         f"- 判定：{'PASS' if ok else 'FAIL'}",

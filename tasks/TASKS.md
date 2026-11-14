@@ -2480,3 +2480,4 @@ ound_daily --run=stale=25 ran=26 failed=0 verdict=PASS（growth 11 分页/voices
   跳过面（按闸律·诚实）：语言池 audit 上轮 PASS 全桶达标 SELF_TERMINATE；相遇轮 meet-cap 3/3 已满；反思线未到 19:00 夜窗；HQ 日报闸 ALREADY_REPORTED(day=2026-11-15 lines=1) 零写入。
   实况三行：当前活＝周日凌晨产品轮（年轮+日更面+事件闸+QC）｜最近实物＝C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/EVENTS-REPLAY-REPORT.md（05:2x mismatch=0）+ census/export/city-ops.html（重建）｜下个里程碑＝下一批 due 居民年轮 ETA <=1h；今日 19:00 后反思线窗口。
 - tokens: local=10 api=0 api_reason=-（年轮 10 席全本地 qwen3:4b-instruct 零云端）
+- [R3023b 2026-11-15 05:29 @BigLife-OSLoop 闸补强] 缺陷出生地拦截：qa/EVENTS-REPLAY-REPORT.md 正文原无生成时间戳 → 该证据面停更不可自证（同 T-20261112-02 十二面静默停更 15 天的判读病根）。修法=Tools/events_replay.py 报告头加 - 生成时间：<now> 行（一行改动，零行为变化）；重跑 events_refresh --gate 复核 PASS（events=44129 cards=10111 replayed=10111 schema=0 mismatch=0），落盘实测 utf8=ok 501B 含「2026-11-15 05:29:04」。
