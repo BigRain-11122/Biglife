@@ -42,6 +42,8 @@ DEPT0_NAME = "年轮进化线"
 QC_NAME = "QC 巡检线"
 WINDOW = 3
 HDR_RE = re.compile(r"\*\*R\d{3,5}（")
+# 「落环 N 行/席」类手打数字识别（用于 {N} 占位符强制闸，见 apply_refresh）
+RING_CLAIM_RE = re.compile(r"落环(?:行数|席数)?\s*[:：]?\s*(\d+)\s*(?:行|席)")
 
 
 def today_str():
@@ -130,6 +132,16 @@ def apply_refresh(payload, dry_run=False, heartbeat=False):
         val = payload.get(field)
         if isinstance(val, str) and bare.search(val):
             raise SystemExit("TEXT_PLACEHOLDER_GUARD %s contains bare %%s-like token" % field)
+
+    # 出生地拦截：落环数字一律走 {N} 由机器直数代入，禁手打（R2982 立 flag → 本轮落地）。
+    # 手打数字会与机器直数分叉（历史 482/492/562/681/743/873/883/950 与 950 行内手写 918 串号判例）。
+    note_val = payload.get("results_note") or ""
+    if "{N}" not in note_val:
+        m_ring = RING_CLAIM_RE.search(note_val)
+        if m_ring:
+            raise SystemExit(
+                "RING_COUNT_PLACEHOLDER_GUARD results_note hard-codes ring count %r; use {N} (machine direct count)"
+                % m_ring.group(1))
 
     raw = io.open(SE_PATH, encoding="utf-8").read()
     had_nl = raw.endswith("\n")
@@ -238,6 +250,16 @@ def qc_battery():
     """自检电池：合成数据，零触碰真件。"""
     ok = 0
 
+    # 0) 落环数字硬编码拦截（{N} 占位符强制闸·R2983）
+    def _ring_guard(note):
+        if "{N}" in note:
+            return True
+        return not RING_CLAIM_RE.search(note)
+    assert not _ring_guard("今日年轮落环 918 行（本轮 10 席）"), "hand-typed ring count must be rejected"
+    assert _ring_guard("今日年轮落环 {N} 行"), "{N} placeholder passes"
+    assert _ring_guard("今日无新增环行，全部 skipped-fresh"), "plain prose passes"
+    ok += 1
+
     # 1) dept 切段：3 条合成 → 3 段
     t = "**R1001（aaa）**：x **R1002（bbb）**：y **R1003（ccc）**：z"
     es = split_dept_entries(t)
@@ -304,8 +326,8 @@ def qc_battery():
         SE_PATH, HB_PATH = real_se, real_hb
         machine_total = orig_mt
 
-    print("QC_BATTERY %d/6 PASS" % ok)
-    assert ok == 6
+    print("QC_BATTERY %d/7 PASS" % ok)
+    assert ok == 7
 
 
 def main():
