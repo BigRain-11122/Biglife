@@ -124,6 +124,12 @@ def main():
         with open(OUT, encoding="utf-8") as f:
             old = f.read()
     if old == text:
+        if not check:
+            # v0.25 (2026-11-14 R2908): 幂等重建不写文件 ⇒ mtime 停在旧值，而
+            # round_daily 的 dep-mtime 判据（源 light 面每轮由行为线重写）会每轮
+            # 判 stale —— 假红噪音。touch 表示「产物已核验至此刻、内容与源一致」，
+            # 判据收口且不产生 git 改动（内容未变）。--check 只读不 touch。
+            os.utime(OUT, None)
         print("OK unchanged (idempotent) out=%s" % os.path.relpath(OUT, CO))
         return 0
     if check:

@@ -231,6 +231,32 @@ DEPENDS = {
     # 19.7h 未越线；数据日更而页面在 24h 内永远「看起来新」）。
     # 源按 build_city_goals.py 契约取两处：goals 派生面 + 姓名/城区/职业轻量导出。
     "goals": ["census/export/citizen-goals.jsonl", "census/export/citizens-light.jsonl"],
+    # v0.25 (2026-11-14 R2908): faces/daily 档「读源未登记」全量收口（T-20261112-04 同族
+    # 第 11-20 面，R2905 诚实边界留下的普查活）。病根同 goals：tier 判据只问产物自身
+    # 年龄，不问喂它的源改没改。本轮实测十面全部陈旧于其源——coverage/objects -21.4h、
+    # social_graph -18.8h、growth -17.3h、ops -17.5h、meets -10.2h、reflections -9.5h、
+    # meet_candidates -1.7h，而 --run 逐面判 fresh，CEO 面停在上一批环/行为线之前的口径。
+    # 源三分：①citizens-light.jsonl=行为线每轮重写；②*每日 --regen 派生面（persona/
+    # anchors/behavior/relations）；③append-only 台账（reflections/coverage-backlog）。
+    "voices": ["census/export/citizens-light.jsonl"],
+    "coverage": ["census/export/citizens-light.jsonl",
+                 "census/export/coverage-backlog.jsonl"],
+    "ops": ["census/export/citizen-persona.jsonl",
+            "census/export/citizens-light.jsonl", "state/ring-quality-queue.json"],
+    "map": ["census/export/citizen-anchors.jsonl",
+            "census/export/citizen-behavior.jsonl", "census/export/citizens-light.jsonl"],
+    "growth": ["census/export/citizens-light.jsonl"],
+    "reflections": ["census/reflections.jsonl", "census/export/citizens-light.jsonl"],
+    # objects/meets 扫 registry 年轮行：目录 mtime 只反映增删，故并补 cursor 主信号
+    # （与 v0.12 环依赖面同口径）。
+    "objects": ["genes/lives.json", "state/evolve-cursor.json", "census/registry"],
+    "meets": ["state/evolve-cursor.json", "census/registry"],
+    "social_graph": ["census/export/citizen-relations.jsonl",
+                     "census/export/citizens-light.jsonl"],
+    "meet_candidates": ["census/export/citizens-light.jsonl", "census/registry"],
+    # rumors 页与其同日台账由同一脚本产出（rumors-YYYY-MM-DD.jsonl 是产物非源），
+    # 真源只有 light 面与 RUMOR-CHAIN 契约。
+    "rumors": ["census/export/citizens-light.jsonl", "cognition/RUMOR-CHAIN.md"],
 }
 
 # 环依赖面的重建下限间隔（分钟）。年轮批约每轮落地一次，若按 mtime 逐次重建，
@@ -251,7 +277,14 @@ DEPENDS_FLOOR_OVERRIDE = {"gene_ledger": 0, "lexicon": 0, "dashboard": 0,
                           "chronicle": 0, "proposals": 0, "life": 0,
                           # v0.24: 目标页 76KB、重建 <1s，且其源每日 00:0x 由数据面
                           # 重生——冷却会让当天的目标变更压一小时看不见。
-                          "goals": 0}
+                          "goals": 0,
+                          # v0.25 (R2908): 新登记十面里除 map(864KB)/social_graph(1.6MB)
+                          # 外均 ≤95KB、重建 <1s，且源为每轮重写的行为线——保留 60min
+                          # 冷却等于让 CEO 每轮看的行为线落后一小时。大面两面不归零
+                          # （每轮 2.4MB churn 违反 REPO-SLIM 律，60min 冷却照旧）。
+                          "voices": 0, "coverage": 0, "ops": 0, "growth": 0,
+                          "reflections": 0, "objects": 0, "meets": 0,
+                          "meet_candidates": 0, "rumors": 0}
 
 TIMEOUT_SEC = 240
 

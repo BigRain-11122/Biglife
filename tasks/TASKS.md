@@ -1963,3 +1963,13 @@ ound_daily --run **verdict=PASS**（stale=2 ran=3 failed=0：gene-ledger 依赖 
   **诚实边界**：本轮零云端调用；两批 PASS 为闸门证据非内容质量判定；相遇轮为 cap 拒绝而非内容失败；T-20261113-03/04（开头族闸与份额配额）仍 open 未动。
   计分：能跑/能看实物=2 分（10 环 + 6 面重建 + 事件闸 + QC 报告）｜文件改动=1 分｜纯记账=0。
   tokens: local=10 api=0 api_reason=-（年轮批 10 次本地 ollama qwen3:4b-instruct；日更/池/QC/事件闸/HQ 零 LLM）
+
+- [R2908] 2026-11-14 11:08-11:3x @BigLife-OSLoop 周六上午产品轮：轮首 `git pull --ff-only origin main`=**Already up to date**、树净；决策水位差集 **NEW=0**（尾 D-20261112-16，11-13/11-14 无新 D 行）；orders 物理件区无涉本司新件；HQ 日报闸 ALREADY_REPORTED(day=2026-11-14) 零写入。
+  **主增量（源头拦截·2 分）=「faces 档读源未登记」十面全量收口（T-20261112-04 同族第 11-20 面·R2905 诚实边界留下的普查活）**：实测十面全部陈旧于其源——coverage/objects **-21.4h**、social_graph -18.8h、ops -17.5h、growth -17.3h、meets -10.2h、reflections -9.5h、meet_candidates -1.7h、voices/map -1.0h，而 `--check` 逐面判 fresh。修法=`Tools/round_daily.py` v0.25 补 `DEPENDS` 十面源（源三分：行为线每轮重写的 light 面／每日 --regen 派生面／append-only 台账；objects·meets 扫 registry 年轮行故并补 evolve-cursor 主信号）＋ `DEPENDS_FLOOR_OVERRIDE` 八面冷却归零（map 864KB/social_graph 1.6MB 保留 60min 防 churn）＋ `refresh_census_index.py` 幂等分支补 `os.utime` 消假红。
+  **双负控（判据灵敏度，非假绿）**：①`touch state/evolve-cursor.json` → objects/meets 精确报 `dep-mtime:state/evolve-cursor.json`；②city-voices.html 回拨 -2d → 报 `outdated:2d`（日期判据未被破坏）；③幂等面 INDEX.md 重建后 stale 1→0（不再假红）。证据=`qa/DEP-CENSUS-20261114.md`。
+  **产品面（可见）**：年轮批 `evolve_citizen --batch 3` → **evolved=10/10 全落环**（C-01603/01604/01608/01611/01605/01606/01607/01609/01612/01613·qwen3:4b-instruct·2 席 gate soft-concession 放行）；事件闸 `events_refresh --gate` **PASS**（cards=10111 events=43450 shards=3／replay replayed=10111 schema_errors=0 **mismatch=0**／coverage unexpected_missing=0／chronicle gap=0d）；日更面 `round_daily --run` 两轮 stale=12→3 ran=13→4 failed=0 **PASS**，`--check` 终态 **stale=0 PASS**。
+  **跳过面（按闸律·自终止）**：语言池 `pool_audit` SELF_TERMINATE（今日已达标）；相遇轮 `meet-cap: 3 meets already logged today (cap 3)` 日上限已满（明日 reset 首发 C-01595×C-01596 二八分拣车母题留档）；反思线 19:00 前窗零调用；QC 今日 11:02 版未到期；spotlight 11 月配额已满。
+  **对外实况三行**：当前活=周六十面依赖边收口（双负控实证）+ 年轮 10 环落环｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-coverage.html（11:2x 重建，源滞后从 21.4h 归零）+ C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\DEP-CENSUS-20261114.md（11:3x 普查+负控）+ C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\registry\MC\C-01603.md（11:09 新年轮）｜下个里程碑=明日相遇轮首发 C-01595×C-01596＋11-15 19:00 后反思线补第三日结 T-20261113-05。
+  **诚实边界**：本轮零云端调用；PASS 为闸门证据非内容质量判定；十面重建由真实数据变更驱动（git diff 非空），非空转刷新；T-20261112-04 其余腿（ring 骨架/提案线）仍在窗外；T-20261113-03/04（开头族闸与份额配额）仍 open 未动。
+  计分：能跑/能看实物=2 分（10 环 + 13 面重建 + 十面依赖边收口含三负控 + 事件闸报告）｜文件改动=1 分｜纯记账=0。
+  tokens: local=10 api=0 api_reason=-（年轮批 10 次本地 ollama qwen3:4b-instruct；日更/事件闸/依赖普查/负控/HQ 零 LLM）
