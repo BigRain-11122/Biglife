@@ -2294,3 +2294,10 @@ ound_daily --run **PASS**（stale=12 ran=13 failed=0：rumors/dashboard/voices/c
 - **常设单兑现**：T-20260924-08 → docs/status-export.json export_ts 刷新至 2026-11-14 23:20 并注入本轮 R2992 记录（≤24h 新鲜度闸满足）。
 - **观察（未动闸）**：tasks/TASKS.md 在 893,961 字节处存在非 UTF-8 字节（0xd6，GBK 残片），严格 UTF-8 读取会抛错、工具须 errors=replace 容错；属历史混编遗留，修复需全量重编码（900KB 风险件），本轮不动，记一行待周轮评估。
 - tokens: local=10 api=0 api_reason=-
+
+## R2993 · 2026-11-14 23:23-23:3x @BigLife-OSLoop（周六夜窗产品轮·日更面收口）
+- 轮首三步：`git pull --ff-only origin main`=**Already up to date**、树净；决策水位差集 **NEW=1 且为噪声行**（`d-20261023-23`，watermark 已在该行上方标注 `.disabled-20261023-2358` 文件名误匹配、非决策行）→ 本轮零新决策消费；orders 物理件区无涉本司新件（11-14 主控 CLAUDE 令/工位收口令属机队面，非本司产线）。
+- **产品增量（10 席新年轮 + 14 面重建·2 分）**：①年轮批 `--batch 3` due=10 → **written=10 skipped=0**（C-02102/02106/02107/02110/02111/02112/02114/02116/02117/02143，脚本自提交 **b2649d498** = 10 卡 +20/-10 真实净增；4 席 soft-concession〔recent-dup-phrase〕让步落环，均计入 written＝T-20261114-02 口径持续有效）；②行为线自动镜像 rows=10 ring=10114（commit **d2a233241**）；③事件流回放闸 `events_refresh --gate` **PASS**：derive cards=10111 events=43839 shards=3／replay replayed=10111 schema_errors=0 **mismatch=0**／coverage unexpected_missing=0／chronicle last=2026-11-14 gap=0d，qa/EVENTS-REPLAY-REPORT.md 入库；④日更面 `round_daily --run` **PASS**（stale=13 ran=14 failed=0，收口后 remaining=0；`--check` 原报 3 面过期 today/dashboard/ops 已全清）；⑤对外实况面 `update_status_export --payload state/export-payload-R2993.json --heartbeat` **OK total=1060 reg=1058 anc=2 dept/qc/results/top/hb 全 True**（含产品优先律 §5 三行：当前活/最近实物/下个里程碑）。
+- **跳过面（按日额律·零 LLM）**：反思线今日 5/5 满额（连续 2/3 生产日）；相遇轮 3/3 已满（C-00044×C-01429 配对分 122 留明日首位）；语言池 `pool_audit` **PASS 全桶达标 SELF_TERMINATE**（零生成）；QC 巡检今日 22:5x 已跑（未到 6 轮节拍）；HQ 日报闸 `hq_feedback_daily --check`=ALREADY_REPORTED(day=2026-11-14) 零写入。
+- **诚实边界**：本轮全部内容由本地 qwen3:4b-instruct 产出，零云端调用；vram 闸走软让步路径（4 席 soft-concession 属措辞相近而非机制故障）；未动任何闸阈值（T-20261112-04「贴线爬行」子项仍留单待正负双跑）。
+- tokens: local=10 api=0 api_reason=-
