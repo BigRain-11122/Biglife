@@ -2986,3 +2986,12 @@ ound_daily --run=**stale=3 ran=4 failed=0 verdict=PASS**（index/index 族重建
 - 跳过面（诚实不重烧）：相遇轮 meet-cap 3/3 已满（自停）；反思线未到 19:00 夜窗；QC 巡检今日 07:50 已跑（qa/QC-REPORT.md）；pool_audit verdict=PASS under_target NONE=SELF_TERMINATE；hq_feedback ALREADY_REPORTED(day=2026-11-15 lines=1)。
 - 实况三行：当前活＝年轮主线在产（本地 qwen3:4b-instruct·18:09 批 7/10）｜最近实物＝7 席新年轮（8cfb44fc8·18:10）+ 13 面日更（census/export/*.html·18:11）+ qa/EVENTS-REPLAY-REPORT.md（PASS·44787 事件·18:12）｜下个里程碑＝19:00 后反思线夜窗（T-20261113-05 验收：reflect 尾部 date=当日）。
 - tokens: local=10 api=0 api_reason=-（年轮批 10 到期席本地 qwen3:4b-instruct，3 席 persistent 撞闸留 due；日更/事件闸/池审计/世代/决策审核全确定性零 LLM）
+
+## R3112 · 2026-11-15 18:19-18:33 @BigLife-OSLoop（年轮 8 环 + 日更 22 面 + 事件闸 PASS）
+- 轮首三步：pull=Already up to date、树净；决策水位差集仅 d-20261023-23（已登记噪声=文件名巧合，非决策行，零新决策）；orders 涉本司行均为历史项（仓名观感/分支保护五仓一键），无新物理件。
+- 产品增量（2 分）：①年轮批 evolved=8/10 written=8（C-03194/C-03202/C-03205/C-03211/C-03206/C-03207/C-03208/C-03209 → a9adbe09e）+ 行为线镜像 rows=8 ring=10114（bc7f4680e）；②round_daily --run stale=12 ran=13 failed=0 verdict=PASS，日更 22 面重建入库（d4caa2aab）；③events_refresh --gate PASS（cards=10111 events=44795 replayed=10111 schema_errors=0 mismatch=0·coverage unexpected_missing=0·chronicle gap=0d）。
+- 世代池 --check rc=0（gen2 habits=138 cutoff C-10120 pending_sync=none，本批零新基因免 sync）。
+- 拒稿代理数据（喂 T-20261115-04）：C-03117 连续第 7 次被拒（persistent: recent-family-opening + recent-dup-phrase，硬门双撞已成稳态样本）；C-03200 persistent opening-family-quota + recent-dup-phrase（新 seed 仍撞族配额线）。
+- 跳过面（诚实不重烧）：相遇轮 meet-cap 3/3 已满（自停）；反思线未到 19:00 夜窗；QC 巡检今日 07:50 已跑；pool_audit verdict=PASS under_target NONE=SELF_TERMINATE（pool 18/12+greet17+faq3+neg8 全达标·determinism mismatch=0）；hq_feedback --check=ALREADY_REPORTED。
+- 实况三行：当前活＝年轮主线在产（本地 qwen3:4b-instruct·18:19 批 8/10）｜最近实物＝8 席新年轮（a9adbe09e·18:21）+ 22 面日更（census/export/*.html·18:22）+ qa/EVENTS-REPLAY-REPORT.md（PASS·44795 事件）｜下个里程碑＝19:00 后反思线首批 5 席 + 次轮年轮续批（ETA 2026-11-15 19:10）。
+- tokens: local=10 api=0 api_reason=-（年轮批 10 到期席本地 qwen3:4b-instruct，2 席 persistent 撞闸留 due；日更/事件闸/池审计/世代/决策审核全确定性零 LLM）
