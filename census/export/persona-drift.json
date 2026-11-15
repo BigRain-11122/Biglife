@@ -1,43 +1,43 @@
 {
   "citizens": 10114,
-  "pool_len": 137,
+  "pool_len": 138,
   "probe": "（待测基因·persona_drift probe）",
   "salts": {
     "hb": {
       "mod_len": {
-        "moved": 10023,
-        "share": 0.991003,
-        "head_share": 0.006427
+        "moved": 10063,
+        "share": 0.994957,
+        "head_share": 0.006822
       },
       "default_bucket": {
-        "moved": 30,
-        "share": 0.002966,
-        "head_share": 0.469448
+        "moved": 49,
+        "share": 0.004845,
+        "head_share": 0.466482
       },
       "gen_freeze": {
         "moved": 0,
         "share": 0.0,
         "head_share": 0.006427
       },
-      "theory_one_over_n": 0.007246
+      "theory_one_over_n": 0.007194
     },
     "hb2": {
       "mod_len": {
-        "moved": 10062,
-        "share": 0.994859,
-        "head_share": 0.004845
+        "moved": 10047,
+        "share": 0.993376,
+        "head_share": 0.007317
       },
       "default_bucket": {
-        "moved": 26,
-        "share": 0.002571,
-        "head_share": 0.470042
+        "moved": 32,
+        "share": 0.003164,
+        "head_share": 0.467471
       },
       "gen_freeze": {
         "moved": 0,
         "share": 0.0,
         "head_share": 0.004845
       },
-      "theory_one_over_n": 0.007246
+      "theory_one_over_n": 0.007194
     }
   }
 }

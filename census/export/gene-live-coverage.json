@@ -1,9 +1,11 @@
 {
  "card_face_used": 28,
- "expected_per_bucket": 99.452,
- "habit_pool": 124,
+ "expected_per_bucket": 98.656,
+ "habit_pool": 125,
  "live_used": 124,
- "live_zero": [],
+ "live_zero": [
+  "每月朔日必把墙上的年历撤下重贴，卷起的塞进木匣"
+ ],
  "persona_rows": 10114,
  "registry_frozen": true,
  "top1_count": 120,
