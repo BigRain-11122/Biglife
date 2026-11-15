@@ -1,0 +1,17 @@
+{
+  "citizens": 10114,
+  "pool_len": 137,
+  "probe": "（待测基因·persona_drift probe）",
+  "salts": {
+    "hb": {
+      "moved": 10023,
+      "share": 0.991003,
+      "theory_one_over_n": 0.007246
+    },
+    "hb2": {
+      "moved": 10062,
+      "share": 0.994859,
+      "theory_one_over_n": 0.007246
+    }
+  }
+}
