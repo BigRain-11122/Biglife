@@ -23,3 +23,16 @@
 ## 未做与原因
 - 年轮批 `evolve_citizen.py --batch 3` 本轮跳过：本地 LLM 冷探针 60s 无应答（gpu 11236/12282 MiB，free 1046），按 T-20261114-05 记 llm-starved，0 席被烧。
 - 相遇轮：需 LLM，同上跳过（今日 3/3 配额亦已满）。
+
+
+## gen 4 增补（07:4x 轮·追加式，未改动任何既有卡）
+| 池 | 增前 | 增后 | 新增条目 |
+|---|---|---|---|
+| lives.habits | 131 | 134 | 零钱码摞压硬币／阴天擦走廊灯泡／进家门前巷口站一会儿 |
+| lives.hook_objects | 895 | 898 | 磨釉白瓷碟／铁丝缠柄蒲扇／旧报纸裁方块便签 |
+| lives.turning_points | 685 | 687 | 替隔壁看店找错三回钱／半年零钱换二手收音机 |
+
+## 证据（gen 4）
+- python Tools/persona_generations.py --sync → sync: opened gen 4 (cutoff C-10120, changed=habits)
+- python Tools/persona_generations.py --check → gen 4 habits=147，pending_sync=none
+- 去重：8 条逐条 in-array 比对，0 重复（脚本内 DUP 分支未触发）
