@@ -2615,3 +2615,11 @@ ound_daily --run=stale=25 ran=26 failed=0 verdict=PASS（growth 11 分页/voices
   **产品增量**=①年轮线 `--batch 3` 实发 **10/10 全落环**（C-02725/02727/02728/02768/02770/02726/02729/02730/02731/02732，written=10 skipped=0）→ 脚本自提交 44fe665a9 + 行为线镜像 4243fdd94（rows=10）；②事件回放闸 **PASS**（cards=10111 / events=44326 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0 / chronicle gap=0d）→ qa/EVENTS-REPLAY-REPORT.md；③确定性日更面 **PASS**（stale=25 ran=26 failed=0：dashboard/voices/coverage/ops/relations/districts/dossiers/objects/map/gallery/goals/gene_ledger/ring_picks/growth/meets/reflections/ring_quality/ring_trend/social_graph/meet_candidates/census_index/index 重建）→ 25 面入库；④语言池 pool_audit=**SELF_TERMINATE**（greet 476 行/28 桶 at_target、faq 21 对/7 桶、neg 40 行 at_target、hard_fails=0、determinism mismatch=0）→ 不空烧。
   **跳过项与理由（诚实不重烧）**：相遇轮（脚本报 meet-cap=3 meets already logged today，今日上限已满）；反思线（19:00 后夜窗未到）；QC 巡检（08:41 QC-REPORT 已跑 problems=0，未到 6 轮窗）；HQ 日清闸 ALREADY_REPORTED 零写入；status-export.json 09:02 生成属 24h 新鲜度闸内。任务板 open=T-20261115-01（基因分配集中度 P1）——本轮已定位分配函数本体 `Tools/persona_enrich.py: pick(cid,salt,seq)=seq[h32(cid,salt)%len(seq)]`（md5 均匀取模、双库并集 habits 15+124=139），与「used=28/124」口径不符指向「usage 统计只覆盖户卡首槽位」而非取模偏斜，属下一轮可验证的最小假设；全量反推需扫 10114 户卡，预算不足未做完，留单未认领。
   tokens: local=10 api=0 api_reason=-
+
+- [R3060] 2026-11-15 10:0x-10:2x @BigLife-OSLoop 续轮（接 R3059 留单）：**T-20261115-01 基因分配集中度 P1 结案**。
+  **取证四断言**（全零 LLM·可复现命令见证据档）：①卡面命中的 habits 索引=**0..27 连续切片**（哈希取模不可能产出连续前段）；②10091 张卡带「习惯」字段的为 **0 张**，15 处「习惯」全是年轮口语，28 条习惯真实落点是 `**行为**` 段、合计命中 18962 次（每条约 635–725 卡）=写卡当年池子只有 28 条的快照；③分配函数=`persona_enrich.pick(cid,salt,seq)=seq[md5(cid#salt)%len(seq)]`，均匀取模、无前段特判、双库并集装池；④活面实测 **113/124 在用**（含 v2 池 126/139）、均值 97.1、实抽 53–184、头名占比 **1.53%** → 判**无结构性偏斜**。
+  **定论**：28/124 是 **2026-09-30 REGISTRY-FROZEN 后卡面快照与今日登记数的口径错配**，对分配健康度零信息量；今日 9-gram 首位复读的「初一清柜顶」族来自早期 28 条池的历史分配（每条承载 360+ 人），非当前分配器产出。
+  **修法（不改卡/不改 genes/不改阈值）**：`Tools/build_gene_ledger.py` 新增**活面承载**统计——HTML 习惯节追加「活面在用 113/124（分配 12035 次 · 均值 97.1 · 头名占比 1.53%）」+ 落盘 `census/export/gene-live-coverage.json`（`live_used/live_zero/top1_share/expected_per_bucket/persona_rows/registry_frozen`）供 QC 取用；双跑 HTML MD5 一致（84FD664B…）。
+  **新立**：T-20261115-02（P2·池长变更重排全城习惯=内容连续性待决，三选待裁，禁默改）。
+  commit 26ec5c1fd 已 push（d6c3164aa..26ec5c1fd）。
+  tokens: local=0 api=0 api_reason=本轮零 LLM 取证
