@@ -2623,3 +2623,11 @@ ound_daily --run=stale=25 ran=26 failed=0 verdict=PASS（growth 11 分页/voices
   **新立**：T-20261115-02（P2·池长变更重排全城习惯=内容连续性待决，三选待裁，禁默改）。
   commit 26ec5c1fd 已 push（d6c3164aa..26ec5c1fd）。
   tokens: local=0 api=0 api_reason=本轮零 LLM 取证
+
+* [R3061] 2026-11-15 09:53-10:0x @BigLife-OSLoop 周日上午产品轮：轮首 pull=Already up to date·树净；决策水位差集 NEW=0（已覆盖至 D-20261115-05·62 批全消费；D-20261115-01 明确本司提案线按上游断供计、不计产出缺口）；orders 物理件区无涉本司新件；任务板 T-20261115-01 已由 R3059/R3060 结案、无 open 单。
+  **产品增量（能看实物）**：①年轮批 due=10 → written=9（C-02733/02736/02743/02771/02777/02734/02735/02737/02739；C-02736/02743/02771/02777 走 recent-dup-phrase 软让位放行，C-02735 双族软放行；C-02738 被硬闸 recent-family-opening+recent-dup-phrase 拦、留 due）→ 脚本自提交 198e12872 + 行为镜像 c9b84185b（rows=9 ring=10114）；②round_daily 14 面重建 PASS（stale=13 failed=0）；③事件回放闸 PASS（coverage derived=10111 exported=10114 missing=0；replay events=44335 cards=10111 schema_errors=0 mismatch=0；chronicle gap=0d）；④QC problems=0（cards=10114 evolved=10114 dup_rings 37/37）；⑤语言池 audit PASS SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）。
+  **新观察（诚实留档·未立件）**：C-02738 被拦时闸打出的候选行呈 GBK 乱码形态（「妗岃閭ｇ偣闆剁…」= UTF-8 字节被按 GBK 解读的典型形态）；实读响应解码为严格 utf-8（evolve_citizen L1242），且全库扫描 census 今日年轮行 mojibake 命中=0 → 定谳为模型偶发乱码输出、闸拦在写盘前，非链路编码缺陷；复现≥3 次再立件。
+  **计数口径**：rings_recount 实跑＝机器直数 468 行/466 居民（多环居民 2）、裸行首谓词虚增 0；心跳快照 449 → 差 +19 判 OK（时刻差）。R3042/R3043 未结项按此口径维持「可解释非丢写」，不重复立案。
+  **跳过面（按闸律·诚实）**：相遇轮 meet-cap 3/3 今日已满；反思线未到 19:00 夜窗；spotlight 11 月配额已满；HQ 日清闸 ALREADY_REPORTED 零写入。
+  commit e6fe722d5 已 push（6ee63a1cb..e6fe722d5，ahead/behind=0/0）；心跳补写 rings_today=468。
+  tokens: local=10 api=0 api_reason=-
