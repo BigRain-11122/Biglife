@@ -3973,7 +3973,30 @@ def main():
                 n, type(exc).__name__, exc), flush=True)
             break
         if line is None:
-            print("gate: skip", cid, "(stays due)", flush=True)
+            # T-20261115-05 (R3115): a hard-refused seat never touched its cursor,
+            # so an overdue card stayed at the HEAD of the due list (due = next <=
+            # today) and got re-picked every round with near-identical context -
+            # same day means same weather/events/pool face, so the 4B reproduced
+            # the same opening verbatim. Live anchor: C-03117 burned 14 refusals
+            # today on one opening12 ("这会儿手边最碍事的就是这", byte-identical
+            # across 4 rounds) with next stuck at 2026-10-23 (23 days overdue);
+            # C-03228 same shape. Defer a refused seat to tomorrow so today's
+            # remaining batches spend their LLM calls on fresh seats; the seat is
+            # retried next day with new context, so nothing is starved forever.
+            # Scheduler-only fix: no gate threshold/window/family is touched
+            # (T-20261115-04 still forbids that before the 2-day sample).
+            _cur = dict(cursor.get(cid) or {})
+            if str(_cur.get("next") or "") <= today():
+                _cur["next"] = (datetime.date.today()
+                                + datetime.timedelta(days=1)).isoformat()
+                _cur.setdefault("v", 1)
+                _cur.setdefault("n", 0)
+                _cur.setdefault("last", "")
+                cursor[cid] = _cur
+                save_cursor(cursor)
+                print("gate: skip", cid, "(deferred +1d)", flush=True)
+            else:
+                print("gate: skip", cid, "(stays due)", flush=True)
             continue
         line = fit_ring_line(line)  # v0.55 gap #74: trim before the dup gate
         if len(line) < 8:
