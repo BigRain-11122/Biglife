@@ -3229,3 +3229,9 @@ ound_daily.py --run = **stale=2 ran=3 failed=0 verdict=PASS**（dashboard/ops/in
 - 计分：可看实物=2（16 面重建可打开 + 2 张新居民年轮卡）＋文件改动=1 → **2 分**。
 - tokens: local=2 api=0 api_reason=-（年轮批 3 席尝试→2 环落卡均本地 Ollama；第 3 席会话超时中断未计；日更面/回放闸/世代池/日清闸全确定性零 LLM）
 
+- [2026-11-16 02:28-02:4x @BigLife-OSLoop R3160 产品轮] 轮首 git pull --ff-only=Already up to date、树净；决策水位差集 NEW=0（水位尾 D-20261116-04，第 65 批全消费且 D-20261116-01~04 均非本司动作项）；集团 orders 物理件区无涉本司新件（小钢炮开机/算力大脑装机/CEO 账号与商户号，零催办）。
+  **产品增量（本轮主产出=CEO 可见面）**：①年轮批 evolved=9/10 written=9（C-03581/03582/03583/03585/03586 等 9 席落环，C-03579 触 recent-family-opening+recent-dup-phrase persistent 顺延 +1d，3 席走 soft-concession 落环）；②日更面两轮共重建 16 面（首轮 ops+index；年轮后 reflections/social_graph/meet_candidates/census_index/index + 12 卷 growth 分卷 + voices/meets/objects/rumors/gene-ledger/coverage/goals/dashboard）；③events_refresh --gate=PASS（cards=10111 events=45172 mismatch=0 schema_errors=0）；④qc_census problems=0（cards=10114）；⑤提交 41a39d51e 已推 origin（27 文件，+166/-165）。
+  **僵尸锁清理（本轮实质发现）**：轮首 evolve.lock 由 02:13:51 持有导致批被拒；按「验零持锁进程即可清」判例，Get-CimInstance Win32_Process 对 python.exe/evolve_citizen 与任意进程名匹配 evolve 均零命中（仅另一 codely 会话 shell 自身），遂清锁重跑成功——非抢跑，锁内无活进程。建议后续 evolve_citizen 加 born-time 兜底（>20min 自动视为陈旧），本轮未改代码（预算内不改他线）。
+  **跳过面（按闸律·诚实不重烧）**：相遇轮今日已用（00:1x 一对）；反思线 19:00 夜窗已 cap；语言线 pool=SELF_TERMINATE（全桶达标）；世代池 --check rc=0（gen2 cutoff C-10120 pending_sync=none）；hq_feedback_daily --check=ALREADY_REPORTED(day=2026-11-16 lines=1) 零写入。
+  tokens: local=10 api=0 api_reason=-（年轮 10 席本地 qwen3:4b-instruct；日更/闸/QC/世代检查全确定性零 LLM）
+  **下轮预置**：T-20261115-04 候选 B（拒稿分布窗，需 ≥2026-11-17 定闸）维持 open；本轮 3 席 soft-concession 全部命中 recent-dup-phrase，为分布窗再添 3 样本（累计今日 dup-phrase 命中数需在 11-17 定闸时一并统计）。
