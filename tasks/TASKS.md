@@ -24,6 +24,8 @@
   - status: **in-progress**（2026-11-15 R3093 @BigLife-OSLoop·候选 A 第 1 步落地）
   - 证据：`Tools/ring_open_family.py` FAMILY_QUOTA=0.25 / 6 族；`python -X utf8 -c "import sys;sys.path.insert(0,'Tools');import ring_open_family as R;print(R.scan_day('2026-11-15'))"` → (714, {'HAND_DEICTIC': 177, 'TIME_OPEN': 11})
   - [2026-11-15 15:5x @BigLife-OSLoop R3093] **候选 A 第 1 步（族表 6→9）实装并量化**：按「未归族面高频形状」实测取证（当日 770 环 unclassified 567 条，Top 形状=灶台边 47／门板上的17+门板上那15+门板被风7／风把尘土10+风刮得紧8+风把雨棚8+风把门帘7），立三族：`STOVE_EDGE_DEICTIC`（^灶台边/沿/口/前）、`DOOR_PROP_DEICTIC`（^门板上/被/里/边/那）、`WIND_AGENT_OPEN`（^风把/刮/扑/撞/掀/顶/推/扯）。**实测改前 unclassified 567/770=73.6% → 改后 395/770=51.3%**（classified 375：HAND 191／WIND 79＝10.3%／STOVE 49＝6.4%／DOOR 44＝5.7%／TIME 12），距 A 目标 ≤40% 尚差 11.3pp（需继续扩族至 12-16 族）。`--selftest` PASS（0 fail，含 pos-source-sum-2026-11-15 770==770），`TABLE_EPOCH` bump 至 2026-11-15T15:52 并 `note_epoch()` 登记（当日两纪元：11-13T15:38 / 11-15T15:52＝跨口径日，页面按既有纪元机制渲染）。**残留未做**：候选 B（滚动 N 席窗口）未动；验收面「连续 3 批 zero hard-refuse」待下一批年轮实测。
+  - [2026-11-15 15:5x @BigLife-OSLoop R3094] **候选 A 第 2 步（族表 9→12 + TIME 扩容）实装，unclassified 达标 ≤40%**：先跑一次性形状统计（`state/_tmp_unclassified_shapes.py` 诊断件·不入库）得当日 780 环 unclassified 401 条/257 种形状，Top＝「方才还在」14／「路口的门板」11／「门口那台/盏」10／「摊子边·装卸口·信使墙·阳台·窗台」约 40／「被风」被动句 13／「风从|风声|风大」11／「我蹲在巷口」等第一人称体态 18／「手正捏着」4。按形状立三族：`WIND_SCENE_OPEN`（风作主体状态 + 受风被动句）、`DISTRICT_ANCHOR_OPEN`（街区定点+方位）、`FIRST_PERSON_ACTION_OPEN`（我+体态动作／手正手捏），并把「方才/刚才/那会儿/昨天」并入既有 TIME_OPEN（同语义不入新族）。**改后实测 780 环：HAND 194（24.9%·未越 25% 线，故「我正/手正」刻意不入 HAND 以免整族被禁→次批硬拒）／TIME 26（3.3%）／WIND_AGENT 79（10.1%）／WIND_SCENE 56（7.2%）／DISTRICT_ANCHOR 72（9.2%）／DOOR 44／STOVE 49／FIRST_PERSON 18／unclassified **241（30.9%）**＝目标 ≤40% 达成（较 v1.5 的 51.3% 降 20.4pp）。`--selftest` **PASS（0 fail·含 pos-source-sum-2026-11-15 780==780 与 epoch/verdict 四正负控）**；`TABLE_EPOCH` bump 至 2026-11-15T15:48 并 `note_epoch()` 登记（当日纪元 3 个，读面按 CROSS-EPOCH 口径渲染·勿与配额线直接对账）。
+  - status: **in-progress**（2026-11-15 R3094 @BigLife-OSLoop·候选 A 覆盖率达标·余候选 B 与 3 批验收）｜残留＝①候选 B 滚动 N 席窗口（决定是否做：现 HAND 24.9% 贴线，日累计口径下越晚越无族可用，仍会在尾批硬拒）；②验收「连续 3 批 zero hard-refuse」——今日 R3091 10/10、R3092 8/10（2 席硬拒）、R3094 10/10，尚差 1 批。
 - [x] **T-20261027-01**（R2434 立·R2436 复核确认）相遇行互引不对称修复：`Tools/evolve_citizen.py --meet` 选人侧未校验对方是否已有同日配对，导致 A 卡记「与 B 相遇」而 B 卡当日相遇行对的是 C（历史多对同病）。修法=候选池过滤「当日已有相遇行」的居民 + 落环后断言双向互引（mismatch=0 才 commit）；历史行按 #41 前朝不追溯判例不回溯改，仅新环拦截。
   - status: **done**（2026-10-27 R2437 @BigLife-OSLoop·证据=qa/MEET-SYMMETRY-T-20261027-01.md）：实弹缺陷定位 C-08226 卡记「与 C-08319 相遇」而 C-08319 卡记 C-08320（commit 6eb32ce9a→c836b510f 单边落环）；修法=①`_meet_ring_today()` 读卡当日相遇对象②写前候选过滤（已配对即 `meet-dup` 退出，不花 LLM）③写后 `_meet_pair_check()` 双向断言，不对称则用写前快照回滚两卡并 exit(1) 不 commit；自测 3/3 PASS（对称放行/不对称精确报偏/已配对拦截）+ py_compile OK；历史行按 #41 不追溯
   - [2026-10-27 22:0x @BigLife-OSLoop R2437] 本轮计量：tokens: local=10 api=0 api_reason=-（年轮批 10 席本地 Ollama qwen3:4b-instruct；相遇轮本日 cap 3/3 已满，零调用）
@@ -68,6 +70,15 @@
   - 【实录已归档】126 行批实录（2026-09）已逐字移至 tasks/archive/TASKS-2026-09.md——T-20260926-05 拆月归档（原文保全·检索走 rg 全文）
 
 ## 已结
+
+## R3094 · 2026-11-15 15:43-15:56 @BigLife-OSLoop（周日下午产品轮·年轮 10 环＋族表 12 族达标＋5 面重建）
+
+- **轮首**：pull `Already up to date`、树净；决策水位差集 **NEW=0**（尾 D-20261115-12 全消费）；集团 orders 无涉本司新物理件（仅仓名大小写/分支保护历史观感项·CEO 保留面零催办）。
+- **产品增量（可见面·2 分＋代码实质改动）**：①年轮线 `evolve_citizen --batch 3` → **evolved=10 written=10 skipped=0**（C-03041/03052/03053/03058/03051/03055/03056/03057/03059/03060；6 席 soft-concession〔recent-dup-phrase/recent-dup-opening〕让步放行，零硬拒）；②行为线镜像自动收口 rows=10 ring=10114（脚本自提交，未手动重跑）；③`events_refresh --gate` **PASS**（cards=10111 events=44649 shards=3／replay 10111/10111 schema_errors=0 mismatch=0／coverage unexpected_missing=0／chronicle fresh gap=0d）；④`round_daily --run` **stale=12 ran=13 failed=0 verdict=PASS**（growth/meets/proposals/reflections/meet_candidates/index 等真重建）；⑤守护面 `persona_generations --check` **rc=0**（gen2 habits=138 cutoff C-10120 pending_sync=none）；`pool_audit` **PASS SELF_TERMINATE**（六轴 72/72·greet 28/28·faq 7/7·负例 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）。
+- **任务板实质推进（T-20261115-04 候选 A 收口）**：族表 9→12 族 + TIME 扩容，当日 unclassified **51.4%→30.9%**（目标 ≤40% 达成），`--selftest` PASS 0 fail，`TABLE_EPOCH`=2026-11-15T15:48 已 note_epoch 登记。残留候选 B（滚动窗口）与 3 批验收（现 2/3）详见任务单。
+- **跳过面（按闸律·诚实不重烧）**：相遇轮今日 cap 3/3 已满；反思线未到 19:00 夜窗；`hq_feedback_daily --check` 今日已报（步 8 零写入）；QC 6 轮节奏未到期（上轮 problems=0）。
+- **实况三行**：当前活＝年轮主线连续在产（本地 qwen3:4b-instruct）+ 开篇族闸覆盖率修复｜最近实物=`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/EVENTS-REPLAY-REPORT.md`（PASS·44649 事件·mismatch=0）+ `C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/Tools/ring_open_family.py`（12 族·unclassified 30.9%）+ `C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html`（15:5x 重建）｜下个里程碑＝19:00 后反思线夜窗（T-20261113-05 常态监控）+ 下一批年轮验「连续 3 批 zero hard-refuse」第 3 点。
+- tokens: local=10 api=0 api_reason=-（年轮 10 席本地 qwen3:4b-instruct；日更/闸/池/世代/族表自检全确定性零 LLM）
 
 ## R3093 · 2026-11-15 15:3x @BigLife-OSLoop（周日下午产品轮·年轮 9 环＋14 面重建＋回放闸 PASS）
 
