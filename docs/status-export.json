@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-15 15:38",
+ "export_ts": "2026-11-15 15:50",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3093（2026-11-15 15:3x·周日下午产品轮）：年轮 9 环 + 14 面重建 + 事件闸 PASS。** 年轮批 due=10 落环 9（C-03038/03044/03045/03046/03070/03047/03048/03049/03050，3 席 soft-concession〔recent-dup-phrase〕让步放行、[锚] 注脚保全；C-03041 persistent violations〔recent-family-opening+recent-dup-phrase〕留 due 不硬推）；事件流回放闸 PASS（events=44639 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0 / chronicle gap=0d）；日更面 stale=13 ran=14 failed=0 verdict=PASS（重建 ring_trend／meet_candidates／index 等）；qc_census cards=10114 evolved=10114 problems=0 dup_rings=37/37；pool_audit 轴桶 72/72＋像素桶 12/12＋greet 28/28＋faq 7/7＋负例 6/6 全达标 SELF_TERMINATE 零 LLM（determinism 192 对 mismatch=0）；世代池 gen2 覆盖当前池长 pending_sync=none；相遇轮今日 cap 3/3 已满零调用；HQ 反馈闸 ALREADY_REPORTED 零写入；决策水位差集 NEW=0（覆盖至 D-20261115-12）。 **R3092（年轮线）**：10 席落环（C-03012/03013/03014/03015/03016/03017/03018/03019/03025/03029），行为线镜像自动收口 rows=10 ring=10114 **R3091（2026-11-15 14:54-15:0x·周日下午产品轮）：年轮 10 环 + 12 面重建 + 事件闸 PASS。** 本轮年轮批 due=10 全部落环（C-03003/03005/03010/03023/03006/03007/03008/03009/03011/03004，其中 4 席 soft-concession〔recent-dup-phrase〕让步放行、[锚] 注脚保全）；事件流回放闸 PASS（events=44602 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0 / chronicle gap=0d）；日更面 stale=12 ran=13 failed=0（重建 city-dashboard/voices/coverage/ops/objects/goals/gene_ledger/growth/meets/reflections/meet_candidates/index）；世代池 rc=0（gen2 habits=138 pending_sync=none）；语言池 SELF_TERMINATE 全桶达标；相遇轮今日 cap 3/3 已满。决策水位差集 NEW=0（覆盖至 D-20261115-12）。",
+   "t": "**R3094（2026-11-15 15:43-15:56 周日下午产品轮）**：年轮线 due=10 → 落环 10 席（C-03041/03052/03053/03058/03051/03055/03056/03057/03059/03060，6 席 soft-concession 放行·零硬拒）；事件流回放闸 PASS（events=44649·replay 10111/10111·mismatch=0·schema_errors=0）；12 个可见面重建（成长十卷/相遇/反思/候选/索引等）；开篇族闸扩至 12 族，当日 unclassified 51.4%→30.9%（selftest 0 fail）；世代池 rc=0、语言池 SELF_TERMINATE。 **R3093（2026-11-15 15:3x·周日下午产品轮）：年轮 9 环 + 14 面重建 + 事件闸 PASS。** 年轮批 due=10 落环 9（C-03038/03044/03045/03046/03070/03047/03048/03049/03050，3 席 soft-concession〔recent-dup-phrase〕让步放行、[锚] 注脚保全；C-03041 persistent violations〔recent-family-opening+recent-dup-phrase〕留 due 不硬推）；事件流回放闸 PASS（events=44639 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0 / chronicle gap=0d）；日更面 stale=13 ran=14 failed=0 verdict=PASS（重建 ring_trend／meet_candidates／index 等）；qc_census cards=10114 evolved=10114 problems=0 dup_rings=37/37；pool_audit 轴桶 72/72＋像素桶 12/12＋greet 28/28＋faq 7/7＋负例 6/6 全达标 SELF_TERMINATE 零 LLM（determinism 192 对 mismatch=0）；世代池 gen2 覆盖当前池长 pending_sync=none；相遇轮今日 cap 3/3 已满零调用；HQ 反馈闸 ALREADY_REPORTED 零写入；决策水位差集 NEW=0（覆盖至 D-20261115-12）。 **R3092（年轮线）**：10 席落环（C-03012/03013/03014/03015/03016/03017/03018/03019/03025/03029），行为线镜像自动收口 rows=10 ring=10114",
    "s": 1
   },
   {
@@ -2053,8 +2053,12 @@
   [
    "772",
    "本轮年轮落环 9 环，今日累计落环行数 772（今日口径·含本轮，全域直数）"
+  ],
+  [
+   "782",
+   "今日年轮落环 782 行（本轮 --batch 3：10 席全落、零硬拒，验收点 2/3）"
   ]
  ],
- "t": "当前活：年轮主线连续在产（本地 qwen3:4b-instruct，本轮 9 环落环）\n最近实物：qa/EVENTS-REPLAY-REPORT.md（15:35 PASS·44639 事件·mismatch=0）+ census/export/city-dashboard.html（15:35 重建）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）",
- "top_text": "当前活：年轮主线连续在产（本地 qwen3:4b-instruct，本轮 9 环落环）\n最近实物：qa/EVENTS-REPLAY-REPORT.md（15:35 PASS·44639 事件·mismatch=0）+ census/export/city-dashboard.html（15:35 重建）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）"
+ "t": "当前活：年轮主线连续在产（本地 qwen3:4b-instruct）+ 开篇族闸覆盖率修复（unclassified 30.9%）\n最近实物：qa/EVENTS-REPLAY-REPORT.md（PASS·44649 事件·mismatch=0）+ Tools/ring_open_family.py（12 族·selftest PASS）+ census/export/city-dashboard.html（15:5x 重建）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 常态监控）+ 下一批年轮验「连续 3 批 zero hard-refuse」第 3 点",
+ "top_text": "当前活：年轮主线连续在产（本地 qwen3:4b-instruct）+ 开篇族闸覆盖率修复（unclassified 30.9%）\n最近实物：qa/EVENTS-REPLAY-REPORT.md（PASS·44649 事件·mismatch=0）+ Tools/ring_open_family.py（12 族·selftest PASS）+ census/export/city-dashboard.html（15:5x 重建）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 常态监控）+ 下一批年轮验「连续 3 批 zero hard-refuse」第 3 点"
 }
