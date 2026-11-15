@@ -10,6 +10,12 @@
 - 覆盖率 = 在册 / 登记
 - 未落册 = 登记了但没有任何户卡写到 —— 下一批 intake 的内容选题池
 - origins 为模板族（含 {year}/{region} 占位），不计覆盖，只报条目数
+
+口径边界（2026-11-15 立·T-20261115-01 证据 qa/GENE-ASSIGN-CONCENTRATION-20261115.md）：
+- 户卡正文自 2026-09-30 REGISTRY-FROZEN 后不再重写，卡面承载是**冻结快照**（写卡当年
+  habits 池仅 28 条），新登记基因永远不会出现在卡面——卡面覆盖率不代表分配层健康度。
+- 故 habits 另报「活面承载」= census/export/citizen-persona.jsonl 的实际分配分布
+  （每居民 1 条 + 1/3 概率第 2 条），并落 census/export/gene-live-coverage.json 供 QC 取用。
 """
 from __future__ import annotations
 
@@ -26,6 +32,8 @@ GENES = ROOT / "genes" / "lives.json"
 META = ROOT / "genes" / "meta.json"
 REGISTRY = ROOT / "census" / "registry"
 OUT = ROOT / "census" / "export" / "gene-ledger.html"
+PERSONA = ROOT / "census" / "export" / "citizen-persona.jsonl"
+LIVE_OUT = ROOT / "census" / "export" / "gene-live-coverage.json"
 
 LINE_CLEAN = re.compile(r"[#*_>`]|^-+\s*", re.M)
 
@@ -78,6 +86,32 @@ def load_cards():
             cards += 1
             texts.append((code, (dpath / fn).read_text(encoding="utf-8", errors="ignore")))
     return texts, cards
+
+
+def live_habit_counts() -> tuple[Counter, int]:
+    """活面承载：persona 导出里每条习惯实际被分配到多少居民。
+
+    卡面冻结后卡面口径失真，分配层健康度只能看这一面（确定性只读）。
+    """
+    counts: Counter[str] = Counter()
+    rows = 0
+    try:
+        with open(PERSONA, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    rec = json.loads(line)
+                except ValueError:
+                    continue
+                rows += 1
+                for h in rec.get("habits") or []:
+                    if isinstance(h, str) and h:
+                        counts[h] += 1
+    except OSError:
+        return Counter(), 0
+    return counts, rows
 
 
 def extract_line(text: str, gene: str) -> str:
@@ -134,6 +168,20 @@ def main() -> int:
     total_mentions = sum(sum(r["counts"].values()) for r in report)
     total_unused = total_reg - total_used
 
+    # 活面承载（仅 habits）：卡面自 REGISTRY-FROZEN 后是快照，分配层只能看 persona 面
+    live, live_rows = live_habit_counts()
+    habit_items = next((r["items"] for r in report if r["key"] == "habits"), [])
+    live_draws = sum(live[h] for h in habit_items)
+    live_used = [h for h in habit_items if live.get(h)]
+    live_top1 = max((live[h] for h in live_used), default=0)
+    live_expect = (live_draws / len(habit_items)) if habit_items else 0.0
+    live_note = ""
+    if live_rows and habit_items:
+        live_note = (
+            f' · 活面在用 {len(live_used)}/{len(habit_items)}（分配 {live_draws} 次 · 均值 {live_expect:.1f}'
+            f' · 头名占比 {(live_top1 * 100.0 / live_draws if live_draws else 0.0):.2f}%）'
+        )
+
     # 一、覆盖率总览
     def cov_bar(used: int, reg: int) -> str:
         pct = (used * 100.0 / reg) if reg else 0.0
@@ -165,8 +213,9 @@ def main() -> int:
             )
             continue
         chips = "".join(f'<span class="chip">{esc(g)}</span>' for g in r["unused"])
+        extra = live_note if r["key"] == "habits" else ""
         gap_sections.append(
-            f'<h3 class="axis">{esc(r["name"])}<span class="meta">缺 {len(r["unused"])} 条 / 共登记 {len(r["items"])}</span></h3>'
+            f'<h3 class="axis">{esc(r["name"])}<span class="meta">缺 {len(r["unused"])} 条 / 共登记 {len(r["items"])}{extra}</span></h3>'
             f'<div class="qabox">{chips}</div>'
         )
 
@@ -305,6 +354,36 @@ display:flex;flex-wrap:wrap;gap:4px}}nav a{{padding:2px 6px}}
     print(f"cards={cards} registered={total_reg} used={total_used} unused={total_unused} mentions={total_mentions}")
     for r in report:
         print(f"  {r['key']}: {len(r['used'])}/{len(r['items'])}  unused={len(r['unused'])}")
+
+    # 活面承载落盘：QC 不变量取这里，不取卡面（卡面冻结，见文件头口径边界）
+    if live_rows and habit_items:
+        LIVE_OUT.parent.mkdir(parents=True, exist_ok=True)
+        LIVE_OUT.write_text(
+            json.dumps(
+                {
+                    "card_face_used": len(next(r for r in report if r["key"] == "habits")["used"]),
+                    "habit_pool": len(habit_items),
+                    "live_zero": [h for h in habit_items if not live.get(h)],
+                    "live_used": len(live_used),
+                    "persona_rows": live_rows,
+                    "registry_frozen": True,
+                    "top1_count": live_top1,
+                    "top1_share": round(live_top1 * 100.0 / live_draws, 4) if live_draws else 0.0,
+                    "total_draws": live_draws,
+                    "expected_per_bucket": round(live_expect, 3),
+                },
+                ensure_ascii=False,
+                indent=1,
+                sort_keys=True,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        print(
+            f"  habits-live: used={len(live_used)}/{len(habit_items)} rows={live_rows} "
+            f"draws={live_draws} expected={live_expect:.1f} top1={live_top1} "
+            f"share={live_top1 * 100.0 / live_draws if live_draws else 0.0:.2f}% -> {LIVE_OUT.relative_to(ROOT)}"
+        )
     return 0
 
 

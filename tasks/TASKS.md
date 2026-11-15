@@ -2577,10 +2577,18 @@ ound_daily --run=stale=25 ran=26 failed=0 verdict=PASS（growth 11 分页/voices
   **实况三行**：当前活=周日上午年轮批 + 复读面溯源（基因池深度化）｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/genes/lives.json（habits 124 条，09:0x）+ C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/gene-ledger.html｜下个里程碑=19:00 夜窗年轮批 + 反思线 batch 5（ETA 2026-11-15 19:10）。
   tokens: local=10 api=0 api_reason=-
 
-- [ ] **T-20261115-01 基因分配集中度（P1·复读结构性根因）**（2026-11-15 09:1x @BigLife-OSLoop R3054 立）
+- [x] **T-20261115-01 基因分配集中度（P1·复读结构性根因）**（2026-11-15 09:1x @BigLife-OSLoop R3054 立·10:1x R3060 结）
   - 事实：`build_gene_ledger` 实读 `genes/lives.json` habits **used=28 / pool=124**（unused=96）；今日 411 环 9-gram 首位复读源=「初一清柜顶的规矩」族，溯源到单条 habit「初一必清一次柜顶」被 141 名居民共享。万人规模下每种子承载数百人，同日子集必然撞句 → recent-dup-phrase 软让位 4/10 是分配层的函数，不是模型单点。
   - 待查：①居民取基因的分配函数（哈希取模？序号取模？随机带种子？）——用全量 census 反推各需池 used/unused 分布，若为取模需给出偏斜原因；②为何仅 28/124 在用（是分配器只取前 N 条，还是 registry 回填只写了部分）；③集中度指标（每池 top-1 基因承载人数 / 均值）应进 QC 不变量。
   - 验收：给出「为何 28/124」的可复现最小解释 + 一条不改变既有卡的分配侧修法（或证否偏斜并说明口径）；禁改阈值换绿。证据=`qa/GENE-ASSIGN-CONCENTRATION-20261115.md`。
+  - **结案（R3060）**：①分配函数=`persona_enrich.pick(cid,salt,seq)=seq[md5(cid#salt)%len(seq)]`，均匀取模无前段特判；②卡面命中索引**恰为 0..27 连续切片**、28 条总命中 18962 次/10091 卡、命中落点在 `**行为**` 段 → 28 是 **2026-09-30 REGISTRY-FROZEN 时写卡快照的池长度**，不是分配器行为；10091 张卡里带「习惯」字段的为 **0 张**（15 处「习惯」全是年轮口语）；③活面实测 **113/124 在用**（含 v2 池 126/139）、头名占比 1.53%/1.36%、均值 97.1、实抽 53–184 → 判**无结构性偏斜**，卡面 28/124 属口径错配。修法已落：`build_gene_ledger.py` 新增活面承载统计 + `census/export/gene-live-coverage.json`（双跑 MD5 一致），不改卡/不改 genes/不改阈值。零桶 11 条=末尾 113..123 新并入未重跑 persona 面（滞后非缺陷）。
+
+- [ ] **T-20261115-02 池长变更会重排全城习惯（P2·内容连续性·待决）**（2026-11-15 10:1x @BigLife-OSLoop R3060 立）
+  - 事实：`persona_enrich.pick()` 以 `len(seq)` 取模，任何基因增量登记都会让**全部 10114 名居民的既有习惯整体重排**（不是新增者局部生效）。
+  - 影响：本念「居民习惯稳定」属人设连续性预期，重排会让老卡与新面人设不一致；同理把 11 条零桶补上需付出全城重排代价。
+  - 待决：三选——(a) 维持现状（新人设以 persona 面为准，卡面冻结接受不一致）；(b) 分配键改「稳定序号池」（如 `md5 % 1e6` 再映射到累计表，新基因只影响新居民）；(c) 一次性重排 + 全量重建卡面（需 CEO 解冻 registry）。
+  - 验收：给出选择与理由，或明确「维持现状」并写进 CODEX 口径。禁默改。
+
 
 - [R3055] 2026-11-15 08:58-09:1x @BigLife-OSLoop 周日上午产品轮：轮首 `git pull --ff-only origin main`=**Already up to date**、树净；决策水位差集 **NEW=0**（水位尾已含 D-20261115-05；D-20261114-01 撤销 BIGLIFE 挂起恢复 ACTIVE、D-20261114-02 与 D-20261115-01 的 FluxVerse 生活事件断供/台词失真均为上游件，明确不计本司产出缺口）；集团 orders 物理件区无涉本司新件。
   **产品增量**=①年轮线 `--batch 3` 实发 **8/10 席落环**（C-02687/02688/02696/02703/02691/02692/02694/02695；C-02698 命中 tech-word、C-02693 命中 time-night 硬门留 due）→ 脚本自提交 dfe982ac8 + 行为线镜像 8258f268e（rows=8）；②事件回放闸 **PASS**（events=44288 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0）→ qa/EVENTS-REPLAY-REPORT.md；③确定性日更面 **PASS**（stale=12 ran=13 failed=0：dashboard/voices/coverage/ops/objects/goals/gene_ledger/growth/meets/reflections/meet_candidates/index 重建）；④语言池 pool_audit=**SELF_TERMINATE**（轴 72/72、精灵 12/12、greet/faq/neg 全 at_target、hard_fails=0、determinism mismatch=0）→ 不空烧；⑤对外实况面刷新 total=421 行（registry 419 + anchors 2）、export_ts=09:02、心跳行已落。
