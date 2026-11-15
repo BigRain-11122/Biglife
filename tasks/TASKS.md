@@ -3055,3 +3055,9 @@ ound_daily\ 的 ring_quality 面新鲜度**只看 page mtime**（当日已重建
 - [2026-11-15 20:4x @BigLife-OSLoop R3125] 本轮计量：tokens: local=10 api=0 api_reason=-（年轮批 10 席全落 本地 Ollama qwen3:4b-instruct；批审计/日更/回放闸/世代池/池审计全确定性零 LLM；相遇与反思日额均已满零调用）。
 
 - R3130（2026-11-15 20:5x OS轮·产品轮）：年轮 9 环落卡（590b2aa4d）+ 行为线镜像（43b708c6f）+ 日更面 13 重建 0 失败 + 事件闸 PASS(44934/10111/mismatch0)；语言池 SELF_TERMINATE；反思线日限 3 已满跳过；相遇轮日限 3 已满跳过；tokens: local=13 api=0 api_reason=-
+
+- R3131（2026-11-15 21:0x OS轮·产品轮）：轮首 pull=up-to-date、树净；决策水位差集 NEW=0（已至 D-20261115-16）。**年轮两批实跑**：批一 10/10 全落环（C-03365~C-03374）+ 行为线镜像 10 行；批二 9/10（C-03375~C-03384，C-03379 deferred +1d，门=
+ecent-family-opening 跨日语料族塌陷闸，与今日族配额无关）+ 镜像 9 行。日更面 14 重建/0 失败（verdict PASS）；事件回放闸两跑均 PASS（44934→44953 events／10111 cards／mismatch 0／schema 0）；世代池 --check rc=0（gen2 cutoff C-10120 已覆盖）；语言池 pool_audit 全桶达标 SELF_TERMINATE；反思线日限已用（今日 3 条）跳过；相遇轮日限已用（3 次）跳过；日清闸 ALREADY_REPORTED 零写入。
+- R3131 附记（候选 B 复核·诚实律）：本轮一度按 T-04 任务标题「候選 B 待做」实装滚动 80 席窗口口径并做三例负控（A 老 HAND 多+近 TIME → 窗口只禁 TIME，符合语义），但**回读任务板发现 R3096 已用当日 798 环零 LLM 回放证伪候选 B（日累计 hard-refuse=2 环 vs 窗口 80 = 67 环，多拒 65）并判「关闭·不再重启」**——按既有实证立即 git checkout 回退全部代码改动（evolve_citizen.py 已复原、py_compile rc=0），未入库。批二在此改动生效期间跑出，其 gate 结果与主线一致（当日与窗口两口径 ban 集均空），环面零污染。
+- 实况三行：当前活＝年轮主线在产（本地 qwen3:4b-instruct·21:03 批 10/10 + 21:11 批 9/10 落环）｜最近实物＝19 席新年轮（census/registry，21:11）+ 14 面日更重建（census/export/*.html，21:05）+ qa/EVENTS-REPLAY-REPORT.md（44953 events/PASS）｜下个里程碑＝下一轮年轮续批 + 事件闸复验（窗 ≤48h：2026-11-17 前）
+- [2026-11-15 21:3x @BigLife-OSLoop R3131] 本轮计量：tokens: local=19 api=0 api_reason=-（年轮两批 19 席全落本地 Ollama qwen3:4b-instruct；日更/回放闸/世代池/池审计/反思闸/日清闸全确定性零 LLM）
