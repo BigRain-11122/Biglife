@@ -39,3 +39,15 @@
 | `qc_census.py` | cards=10114 / evolved=10114 / problems=0 / dup_rings=37/37 -> PASS |
 
 结论：本日 QC 全项 PASS，无新增异常，不立修复单；年轮/事件/日更/世代/池六线全绿，反思与相遇按日限自停。
+## 2026-11-16 02:5x @BigLife-OSLoop (R3158)
+
+| 项 | 实测 |
+|---|---|
+| `evolve_citizen.py --batch 3` | llm-starved：warm probe 60s 无应答（gpu 11752/12282 MiB，free 530）→ batch skipped，0 席位燃烧（T-20261114-05 让路闸生效） |
+| `round_daily.py --run` | stale=1 ran=2 failed=0 -> PASS（重建 ops / index） |
+| `persona_generations.py --check` | rc=0，gen 2 / cutoff C-10120 / habits=138 / pending_sync=none |
+| `pool_audit.py` | verdict=PASS，under_target: NONE - SELF_TERMINATE（轴 72/72·像素 12/12·greet 28/28·faq 7/7·负例 6/6；determinism mismatch=0） |
+| `qc_census.py` | cards=10114 / evolved=10114 / problems=0 / dup_rings=37/37 -> PASS（与基线同值，无新增异常） |
+| `reflect_citizen.py` | 不在夜窗（02:53 < 19:00）→ 未启 |
+
+结论：日更/世代/池/QC 四线 PASS；年轮线因桌面占用显存让路零损耗跳过，非故障；不立修复单。
