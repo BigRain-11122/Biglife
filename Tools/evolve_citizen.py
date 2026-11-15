@@ -2019,6 +2019,29 @@ def ring_violations(line, sig):
                 v.append("today-dup-opening")
     return v
 
+def _note_refusal(sig, v, line):
+    """T-20261115-04: hard-refuse 出口结构化作帐（state，不入库）。
+
+    具名裁决：先攒 2 个生产日的 gate 分布，再决定动哪一处闸——日累计族闸
+    全天只拒 2 环（R3096 实读 798 环），解释不了批内多席被拒，故禁在无分布
+    数据前改任何阈值或窗口。开口口径与 ring_open_family.norm 一致（去空白取 12 字）。
+    """
+    try:
+        rec = {
+            "ts": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "cid": (sig or {}).get("cid", ""),
+            "gate": sorted(set(v or [])),
+            "family": (_ring_family_of(line) if (_ring_family_of and line) else None),
+            "opening12": re.sub(r"\s+", "", line or "")[:12],
+        }
+        os.makedirs(STATE_DIR, exist_ok=True)
+        with open(os.path.join(STATE_DIR, "ring-refusals.jsonl"), "a",
+                  encoding="utf-8") as fh:
+            fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    except Exception:  # noqa: BLE001 - 作帐失败绝不阻断产线
+        pass
+
+
 def gated_llm(prompt, sig, max_regens=3):
     """Generate with the honesty gate: regenerate on violations (<= max_regens),
     then give up -> None (caller skips; citizen stays due for the next round).
@@ -2129,6 +2152,7 @@ def gated_llm(prompt, sig, max_regens=3):
     if v and set(v) <= SOFT_ONLY_VIOLATIONS and line:
         print("gate: soft-concession", v, "(ring lands)", flush=True)
         return line
+    _note_refusal(sig, v, line)  # T-20261115-04 作帐（2 生产日后据分布定闸）
     print("gate: persistent violations", v)
     print("gate: last violating line:", line[:120])
     return None
