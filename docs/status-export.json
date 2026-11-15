@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-15 18:43",
+ "export_ts": "2026-11-15 21:02",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3114（2026-11-15 18:4x 产品轮）**：年轮线到期 10 席落环 8 席（C-03220/03221/03222/03223/03225/03226/03227/03234，批提交 64ea75636，ring_batch_audit PASS written=8 全部落卡净增）；行为线自动镜像 rows=8 ring=10114（ddf256a97）。C-03117（连续第 9 次 recent-family-opening+recent-dup-phrase 双撞）、C-03224（recent-family-opening+recent-dup-phrase）按锚定律留 due 未硬放，为 T-20261115-04 族闸诊断持续供样。歧义面全绿：事件流回放闸 PASS（cards=10111 events=44812 shards=3／schema_errors=0 mismatch=0／coverage exported=10114 unexpected_missing=0／chronicle gap=0d），日更面 stale=13 ran=14 failed=0 PASS，QC cards=10114 evolved=10114 problems=0 dup_rings=37/37，语言池 SELF_TERMINATE，世代池 --check rc=0（gen2 habits=138，旧居民快照零漂移）。 **R3097（2026-11-15 16:18-16:35）**：年轮 10 席落环（C-03078/03079/03082/03092/03115/03081/03083/03084/03085/03086，3 席 soft-concession 放行）+ 日更 23 面重建 + 事件闸 PASS（44677 事件·mismatch=0） **R3096（2026-11-15 16:04-16:3x 周日下午产品轮）**：年轮线 due=10 → 落环 10 席（C-03067/03069/03074/03080/03114/03072/03073/03075/03076/03077，3 席 soft-concession 放行·零硬拒）；事件流回放闸 PASS（events=44667·replay 10111/10111·mismatch=0·schema_errors=0）；13 个可见面重建；QC 巡检全绿（cards=10114·problems=0·dup_rings=37/37）；T-20261115-04 候选 B「滚动 80 席窗口」经当日 798 环逐位置回放实测证伪（日累计拒 2 环 vs 窗口拒 67 环），判为有害实现禁落码并换靶为「拒稿原因结构化作帐」。",
+   "t": "**R3130（2026-11-15 20:5x 产品轮）**：年轮线到期 10 席落环 9 席（C-03355/03358/03360/03364/03357/03359/03361/03362/03363，批提交 590b2aa4d）；行为线镜像 rows=9 ring=10114（43b708c6f）；日更面 13 重建 0 失败（round_daily verdict=PASS）；事件闸 cards=10111/events=44934/replayed=10111 mismatch=0 schema_errors=0 PASS",
    "s": 1
   },
   {
