@@ -2881,3 +2881,15 @@ ound_daily --run=**stale=3 ran=4 failed=0 verdict=PASS**（index/index 族重建
   **实况三行**：当前活=年轮主线连续在产（本地 Ollama qwen3:4b-instruct）｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/EVENTS-REPLAY-REPORT.md（PASS·44667 事件·mismatch=0）+ C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（16:0x 重建）｜下个里程碑=19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）+ T-04 拒稿原因作帐（下一产品轮）
   **下轮预置（具名·已换靶）**：T-20261115-04 改靶为「拒稿原因结构化作帐」——在 evolve_citizen 的 hard-refuse 出口写一行 `{ts,cid,gate,family,opening12}` 到 state/ring-refusals.jsonl（state 不入库），跑满 2 个生产日后统计 gate 分布，**再**据分布决定改哪一处；候选 B（滚动 80 窗口）已由本轮实测排除，不再重启。
   tokens: local=10 api=0 api_reason=-（年轮 10 席落环本地 qwen3:4b-instruct；日更/事件闸/QC/池/世代/族闸回放全确定性零 LLM）
+
+## R3097 · 2026-11-15 16:18-16:35 @BigLife-OSLoop（周日下午产品轮·年轮 10 环 + 日更 23 面 + 事件闸 PASS + 世代/池/相遇三闸核验）
+- 轮首三步：`git pull --ff-only` = Already up to date；decisions 差集 = 0（唯一差集 `d-20261023-23` 为小写伪匹配，非决策行）；orders 物理件区无涉本司新项。
+- 年轮线：`evolve_citizen.py --batch 3` → due=10 written=10（C-03078/03079/03082/03092/03115/03081/03083/03084/03085/03086，3 席 soft-concession 放行），本地 qwen3:4b-instruct，commit b9eb29e4f；行为线随环同步（rows=10）commit d294c43e4。
+- 事件闸：`events_refresh.py --gate` → cards=10111 / events=44677 / replayed=10111 / schema_errors=0 / mismatch=0 → PASS，chronicle gap=0d（qa/EVENTS-REPLAY-REPORT.md）。
+- 日更面：`round_daily.py --run` → stale=23 rebuilt / fresh 4 跳过 / failed=0 → PASS；`persona_generations.py --check` rc=0（gen2 覆盖 max_cid=C-10120，pending_sync=none）。
+- 池审计：`pool_audit.py` → 72/72 轴桶 + 12/12 像素灵 + greet 28 + faq 7 全达标，determinism 192 对零失配 → SELF_TERMINATE（本轮不补池）。
+- 相遇轮：今日 cap 3/3 已满，实调一次被脚本自挡（零 LLM 消耗），顺延下个生产日。
+- QC：上一轮 R3096 16:11 problems=0（未到 6 轮周期，本轮不重扫）。
+- 步 8 决策上报：`hq_feedback_daily.py --check` = ALREADY_REPORTED(day=2026-11-15 lines=1) → 零写入。
+- 实况三行：当前活=年轮主线连续在产（本地 qwen3:4b-instruct）｜最近实物=qa/EVENTS-REPLAY-REPORT.md（PASS·44677 事件·mismatch=0）+ census/export/city-dashboard.html（16:20 重建）｜下个里程碑=19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）+ T-20261115-04 拒稿原因结构化作帐（下一产品轮）。
+- tokens: local=10 api=0 api_reason=-（年轮 10 席本地 LLM；日更/事件闸/世代/池/QC 全确定性零 LLM）
