@@ -13,11 +13,18 @@ import argparse, json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-from persona_enrich import load_genes, pick  # noqa: E402
+from persona_enrich import load_genes, pick, h32  # noqa: E402
 
 SALTS = ("hb", "hb2")
+BUCKET_CAP = 256
 LIGHT = os.path.join(CO, "census", "export", "citizens-light.jsonl")
 PROBE = "（待测基因·persona_drift probe）"
+
+
+def default_bucket(cid, salt, seq, cap=BUCKET_CAP):
+    """R3067 alternate scheme: h%256 slot, out-of-range falls back to seq[0]."""
+    h = h32(cid, salt) % cap
+    return seq[h] if h < len(seq) else (seq[0] if seq else "")
 
 
 def load_ids(path, limit=0):
@@ -45,13 +52,22 @@ def main():
     grown = pool + [PROBE]
 
     report = {"citizens": len(ids), "pool_len": len(pool), "probe": PROBE, "salts": {}}
+    schemes = (
+        ("mod_len", lambda c, s, q: pick(c, s, q)),
+        ("default_bucket", lambda c, s, q: default_bucket(c, s, q)),
+    )
     for salt in SALTS:
-        moved = sum(1 for cid in ids if pick(cid, salt, pool) != pick(cid, salt, grown))
-        report["salts"][salt] = {
-            "moved": moved,
-            "share": round(moved / len(ids), 6) if ids else 0.0,
-            "theory_one_over_n": round(1.0 / len(grown), 6),
-        }
+        entry = {}
+        for name, fn in schemes:
+            moved = sum(1 for cid in ids if fn(cid, salt, pool) != fn(cid, salt, grown))
+            head = sum(1 for cid in ids if fn(cid, salt, pool) == pool[0])
+            entry[name] = {
+                "moved": moved,
+                "share": round(moved / len(ids), 6) if ids else 0.0,
+                "head_share": round(head / len(ids), 6) if ids else 0.0,
+            }
+        entry["theory_one_over_n"] = round(1.0 / len(grown), 6)
+        report["salts"][salt] = entry
 
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
     with open(args.out, "w", encoding="utf-8", newline="\n") as f:
@@ -59,8 +75,11 @@ def main():
         f.write("\n")
 
     for salt, r in report["salts"].items():
-        print(f"{salt}: moved={r['moved']}/{report['citizens']} share={r['share']:.2%} "
-              f"theory={r['theory_one_over_n']:.2%}")
+        for name in ("mod_len", "default_bucket"):
+            s = r[name]
+            print(f"{salt}/{name}: moved={s['moved']}/{report['citizens']} "
+                  f"share={s['share']:.2%} head_share={s['head_share']:.2%}")
+        print(f"{salt}: theory(1/N)={r['theory_one_over_n']:.2%}")
     print(f"pool_len={report['pool_len']} -> wrote {os.path.relpath(args.out, CO)}")
     return 0
 

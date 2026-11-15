@@ -4,13 +4,29 @@
   "probe": "（待测基因·persona_drift probe）",
   "salts": {
     "hb": {
-      "moved": 10023,
-      "share": 0.991003,
+      "mod_len": {
+        "moved": 10023,
+        "share": 0.991003,
+        "head_share": 0.006427
+      },
+      "default_bucket": {
+        "moved": 30,
+        "share": 0.002966,
+        "head_share": 0.469448
+      },
       "theory_one_over_n": 0.007246
     },
     "hb2": {
-      "moved": 10062,
-      "share": 0.994859,
+      "mod_len": {
+        "moved": 10062,
+        "share": 0.994859,
+        "head_share": 0.004845
+      },
+      "default_bucket": {
+        "moved": 26,
+        "share": 0.002571,
+        "head_share": 0.470042
+      },
       "theory_one_over_n": 0.007246
     }
   }
