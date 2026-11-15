@@ -1,13 +1,13 @@
 {
   "repo": "git@github.com:BigRain-11122/FluxGroup.git",
   "path": "docs/decisions.md",
-  "commit_sha": "d2680dacdaabb267978de776f1e5e73a37d000ff",
-  "blob_bytes": 101011,
-  "sha256": "52482bb75550ea0d7e558eda6c729750b2433d714883d1cdbf69d361be1ebc67",
+  "commit_sha": "fd53c7184069c3276f5919369d4f7a6110102b64",
+  "blob_bytes": 117828,
+  "sha256": "17573d8719572f029c589936a5c5e7ef1a180e7b262973e91e5bb19c152d9c8e",
   "fetch_commands": {
-    "fetch": "git -C \"C:\\Users\\sjs20\\Desktop\\FluxGroup\" show d2680dacdaabb267978de776f1e5e73a37d000ff:docs/decisions.md",
+    "fetch": "git -C \"C:\\Users\\sjs20\\Desktop\\FluxGroup\" show fd53c7184069c3276f5919369d4f7a6110102b64:docs/decisions.md",
     "fetch_origin_main": "git -C \"C:\\Users\\sjs20\\Desktop\\FluxGroup\" show origin/main:docs/decisions.md",
-    "verify_sha256": "python -X utf8 -c \"import hashlib,subprocess,sys;b=subprocess.run(['git','-C',r'C:\\Users\\sjs20\\Desktop\\FluxGroup','show','d2680dacdaabb267978de776f1e5e73a37d000ff:docs/decisions.md'],capture_output=True).stdout;print(len(b), hashlib.sha256(b).hexdigest())\"",
+    "verify_sha256": "python -X utf8 -c \"import hashlib,subprocess,sys;b=subprocess.run(['git','-C',r'C:\\Users\\sjs20\\Desktop\\FluxGroup','show','fd53c7184069c3276f5919369d4f7a6110102b64:docs/decisions.md'],capture_output=True).stdout;print(len(b), hashlib.sha256(b).hexdigest())\"",
     "note": "verify_sha256 必须整条跑（禁经 PowerShell 文本管道，字节会被转码）"
   },
   "consumed": [
@@ -244,8 +244,16 @@
     "D-20261112-15",
     "D-20261112-16",
     "#noise d-20261023-23 = .disabled-20261023-2358 filename match",
-    "not a decision row"
+    "not a decision row",
+    "D-20261114-01",
+    "D-20261114-02",
+    "D-20261114-03",
+    "D-20261115-01",
+    "D-20261115-02",
+    "D-20261115-03",
+    "D-20261115-04",
+    "D-20261115-05"
   ],
-  "updated_at": "2026-11-13T13:29:44+08:00",
+  "updated_at": "2026-11-15T10:04:14+08:00",
   "last_stale_reason": "source-mismatch:commit_sha"
 }
