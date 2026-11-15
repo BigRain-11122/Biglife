@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-16 01:58",
+ "export_ts": "2026-11-16 03:32",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3157（2026-11-16 01:5x）产品轮**：年轮批 9/9 落卡（C-03566/03569/03571/03578/03580/03567/03568/03573/03575，C-03572 命中 persistent violation 依约 deferred +1d）；相遇 1 幕 C-03293×C-03303（低语巷·扭塔算力街区）落卡；事件回放闸 PASS events=45159 cards=10111 replayed=10111 schema_errors=0 mismatch=0；日更面 stale=6 ran=7 failed=0 verdict=PASS；世代池 rc=0 pending_sync=none；语言池全桶达标 SELF_TERMINATE；反思线今日 5 条已达上限；日清闸 ALREADY_REPORTED。 **R3153（2026-11-16 00:33-00:4x）**：年轮批因桌面占满显存（11715/12282 MiB，free ~567）warm probe 60s 无应答而静默跳过、零席位消耗（T-20261114-05）；确定性面照跑——日更面重建 dashboard/ops/index 三面（PASS），事件流回放闸 PASS（cards=10111 / events=45130 / replay 10111/10111 / schema_errors=0 / mismatch=0），世代池 rc=0 无欠 sync，语言池 SELF_TERMINATE 全桶达标。 **R3152（2026-11-16 00:2x 产品轮）**：年轮批到期 10 席落环 8 席（C-03297/C-03303/C-03313/C-03565/C-03314/C-03353/C-03392/C-03419），2 席（C-03379/C-03317）被 opening-family-quota 拦下（今日 HAND_DEICTIC 已触 25% 日配额），按契约 deferred +1d 明日换上下文重试，无同席同日重抽；行为线随环自动镜像 rows=8 ring=10114。日更面 --run stale=12 ran=13 failed=0 verdict=PASS；事件流回放闸 PASS（events=45130 / cards=10111 / replayed=10111 / mismatch=0 / schema_errors=0）；世代池 rc=0（gen2 cutoff C-10120 habits=138，pending_sync=none）；池审计 SELF_TERMINATE（72 轴桶 + 12 像素桶 + greet 28 + faq 7 + 负例 6/6 全达标·determinism 192 对 mismatch=0）；QC problems=0（cards=10114 dup_rings=37/37）。",
+   "t": "**R3165（2026-11-16 03:2x）产品轮**：年轮批 10 到期实写 9 帧（C-03599/03600/03601/03602/03603/03605/03606/03615/03638，C-03598 双违 deferred +1d）；行为线镜像 rows=9 ring=10114；日更面 stale=22 ran=23 failed=0 PASS；事件回放闸 PASS cards=10111 events=45192 replayed=10111 schema_errors=0 mismatch=0 coverage unexpected_missing=0；世代池 rc=0;语言池 SELF_TERMINATE 全桶达标；相遇轮 cap 3/3 已满;反思今日已产;QC 上轮 problems=0;HQ 日闸 ALREADY_REPORTED。 **R3157（2026-11-16 01:5x）产品轮**：年轮批 9/9 落卡（C-03566/03569/03571/03578/03580/03567/03568/03573/03575，C-03572 命中 persistent violation 依约 deferred +1d）；相遇 1 幕 C-03293×C-03303（低语巷·扭塔算力街区）落卡；事件回放闸 PASS events=45159 cards=10111 replayed=10111 schema_errors=0 mismatch=0；日更面 stale=6 ran=7 failed=0 verdict=PASS；世代池 rc=0 pending_sync=none；语言池全桶达标 SELF_TERMINATE；反思线今日 5 条已达上限；日清闸 ALREADY_REPORTED。 **R3153（2026-11-16 00:33-00:4x）**：年轮批因桌面占满显存（11715/12282 MiB，free ~567）warm probe 60s 无应答而静默跳过、零席位消耗（T-20261114-05）；确定性面照跑——日更面重建 dashboard/ops/index 三面（PASS），事件流回放闸 PASS（cards=10111 / events=45130 / replay 10111/10111 / schema_errors=0 / mismatch=0），世代池 rc=0 无欠 sync，语言池 SELF_TERMINATE 全桶达标。",
    "s": 1
   },
   {
@@ -2097,8 +2097,12 @@
   [
    "51",
    "本轮全城 51 名居民可查：census/registry 年轮、census/export 可见面"
+  ],
+  [
+   "82",
+   "本轮全城 82 名居民可查：census/registry 年轮、census/export 可见面"
   ]
  ],
- "t": "当前活：年轮主线在产（01:51 批 9/9 落卡）\n最近实物：census/registry/*/C-03566~C-03575（01:52）+ 相遇 C-03293×C-03303（01:56）+ qa/EVENTS-REPLAY-REPORT.md（PASS·45159）\n下个里程碑：R3158 年轮续批；2026-11-17 复核 T-20261115-04 开篇族闸分布（观察窗）",
- "top_text": "当前活：年轮主线在产（01:51 批 9/9 落卡）\n最近实物：census/registry/*/C-03566~C-03575（01:52）+ 相遇 C-03293×C-03303（01:56）+ qa/EVENTS-REPLAY-REPORT.md（PASS·45159）\n下个里程碑：R3158 年轮续批；2026-11-17 复核 T-20261115-04 开篇族闸分布（观察窗）"
+ "t": "当前活：年轮主线在产（03:26 批 9/10 落卡·行为线镜像同步）\n最近实物：census/registry/*/C-03599~C-03638（03:26）+ census/export/city-dashboard.html 等 23 面（03:29）+ qa/EVENTS-REPLAY-REPORT.md（PASS·45192）\n下个里程碑：下轮 audit-due 复核后年轮续批；2026-11-17 复核 T-20261115-04 开篇族闸分布（观察窗）",
+ "top_text": "当前活：年轮主线在产（03:26 批 9/10 落卡·行为线镜像同步）\n最近实物：census/registry/*/C-03599~C-03638（03:26）+ census/export/city-dashboard.html 等 23 面（03:29）+ qa/EVENTS-REPLAY-REPORT.md（PASS·45192）\n下个里程碑：下轮 audit-due 复核后年轮续批；2026-11-17 复核 T-20261115-04 开篇族闸分布（观察窗）"
 }
