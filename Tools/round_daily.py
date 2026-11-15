@@ -541,6 +541,34 @@ def _dep_mtime_stale(key: str, out_paths: list[str]) -> str | None:
     return None
 
 
+QUEUE_MIN = 100
+
+
+def _queue_starved(key: str) -> str | None:
+    """重写队列枯竭即 stale（R3117）。
+
+    病根：ring_quality 面的新鲜度只看 page mtime，队列被「年轮推进即退出」规则
+    抽空到 1 条时页面仍是 fresh → 每轮 3 席重写配额无活可做，存量塌陷（sim=866）
+    永远修不到。判据=队列深度 < QUEUE_MIN 即重建（ring_simile_audit 重填 400）。
+    """
+    if key != "ring_quality":
+        return None
+    path = os.path.join(ROOT, "state", "ring-quality-queue.json")
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, ValueError):
+        return "queue-missing"
+    if isinstance(data, dict):
+        items = data.get("items") or []
+    else:
+        items = data
+    depth = len(items)
+    if depth < QUEUE_MIN:
+        return "queue-starved:%d<%d" % (depth, QUEUE_MIN)
+    return None
+
+
 def _is_stale(entry, now_date: datetime.date, out_paths: list[str],
               known_sha: dict | None = None) -> tuple[bool, str]:
     _key, tier, _script, _names = entry[:4]
@@ -557,14 +585,16 @@ def _is_stale(entry, now_date: datetime.date, out_paths: list[str],
         if not stale:
             drift = (_content_stale(out_paths) or _self_ts_stale(out_paths)
                      or _script_changed(_script, known_sha)
-                     or _dep_mtime_stale(_key, out_paths))
+                     or _dep_mtime_stale(_key, out_paths)
+                     or _queue_starved(_key))
             if drift:
                 return True, drift
         return stale, ("outdated:%sd" % int(age) if stale else "fresh")
     stale = age > 1.0
     if not stale:
         faked = (_self_ts_stale(out_paths) or _script_changed(_script, known_sha)
-                 or _dep_mtime_stale(_key, out_paths))
+                 or _dep_mtime_stale(_key, out_paths)
+                 or _queue_starved(_key))
         if faked:
             return True, faked
     return stale, ("outdated:%sd" % int(age) if stale else "fresh")

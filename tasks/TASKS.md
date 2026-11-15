@@ -3017,3 +3017,12 @@ ound_daily --run=**stale=3 ran=4 failed=0 verdict=PASS**（index/index 族重建
 eflect_citizen --batch 5 = daily-cap 3 already written today → 零写入；相遇轮 --meet C-00029 C-00030 = meet-cap 3 already logged → 零调用（两闸均为脚本内置断言，非人工判断）。
 - HQ 反馈闸：hq_feedback_daily --check = day=2026-11-15 lines=1 ALREADY_REPORTED → 零写入。
 - 本轮计量：tokens: local=10 api=0 api_reason=-（年轮批 10 次 LLM 调用：8 落环 + 2 硬拒；反思/相遇被日闸挡住零调用）。
+
+## R3117 · 2026-11-15 19:09-19:2x @BigLife-OSLoop（年轮 9 环 + 14 面 + 事件闸 PASS + 重写通道枯竭修复）
+- 轮首三步：pull=Already up to date、树净；决策水位差集 NEW=0（水位含 D-20261115-16）；orders 涉本司=历史项零新物理件。
+- 产品增量（2 分）：①年轮批 --batch 3 → evolved=9 of 10 due（C-03255/03256/03261/03263/03257/03259/03260/03262/03264 → 06d485402；ring_batch_audit PASS citizens=9 changed=9）；C-03258 硬拒（recent-family-opening+recent-dup-phrase）按 R3115 调度规则 deferred +1d。②行为线自动镜像 rows=9 ring=10114（cc2bedc54）。③round_daily --run stale=13 ran=14 failed=0 PASS。④事件回放闸 PASS：cards=10111 events=44845 replayed=10111 schema_errors=0 mismatch=0，coverage unexpected_missing=0，chronicle gap=0d。⑤世代 --check rc=0（habits=138 pending_sync=none）。
+- **质量面真缺陷修复（本轮主产出·R3117 立）**：重写队列 \state/ring-quality-queue.json\ 实测已抽空至 **1 条**（上限 400），而 \ing_simile_audit\ 当日复算仍报 **sim=866 处相邻复读 / 828 人 / tmpl=1202 环**——即「存量塌陷 866 处还在，重写通道已无活可做」。根因=队列靠「年轮日期推进即退出」规则自然清空（不是修好），而 \ound_daily\ 的 ring_quality 面新鲜度**只看 page mtime**（当日已重建=fresh）→ 队列枯竭完全不可见，每轮 3 席重写配额空转。修法=\Tools/round_daily.py\ 新增 \_queue_starved()\ 判据（队列 items 深度 < QUEUE_MIN=100 即判 stale，触发 ring_simile_audit 重填 400），并入 daily 与 rootface 两档 drift 链。**正负控实测**：满 400 → None（零误报）／截断 6 条 → \queue-starved:6<100\／他键 → None（判据不外溢）／py_compile rc=0。实弹：重跑审计 → queue=400 重填、report+page 重建（rings=19369 citizens=10091 sim=866 short=689 tmpl=1202，耗时 3s 零 LLM）。
+- 跳过面（诚实不重烧）：反思线 daily-cap 3 已满（今日三席）；相遇轮 meet-cap 3/3 已满；pool_audit 全桶达标 SELF_TERMINATE（determinism 192 对 mismatch=0）；QC 巡检今日已跑 problems=0；hq_feedback --check=ALREADY_REPORTED；基因轮今日 17:38 已增补 8 条。
+- 待办接续：T-20261115-04 候选 B 维持 open——拒稿分布窗需 2 生产日（≥2026-11-17）才定闸，本轮零阈值改动（遵原裁决）。
+- 实况三行：当前活＝年轮主线在产（本地 qwen3:4b-instruct·19:09 批 9/10）｜最近实物＝9 席新年轮（06d485402·19:10）+ 14 面日更（census/export/*.html·19:12）+ 重写队列重填 400（qa/RING-SIMILE-REPORT.md·19:15）｜下个里程碑＝次轮年轮续批 + 队列枯竭闸首轮实弹复核（ETA 2026-11-15 19:40）。
+- tokens: local=10 api=0 api_reason=-（年轮批 10 死死尝试→9 落环本地 qwen3:4b-instruct；审计/日更/事件闸/世代/池/HQ闸全确定性零 LLM）
