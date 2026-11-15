@@ -3235,3 +3235,9 @@ ound_daily.py --run = **stale=2 ran=3 failed=0 verdict=PASS**（dashboard/ops/in
   **跳过面（按闸律·诚实不重烧）**：相遇轮今日已用（00:1x 一对）；反思线 19:00 夜窗已 cap；语言线 pool=SELF_TERMINATE（全桶达标）；世代池 --check rc=0（gen2 cutoff C-10120 pending_sync=none）；hq_feedback_daily --check=ALREADY_REPORTED(day=2026-11-16 lines=1) 零写入。
   tokens: local=10 api=0 api_reason=-（年轮 10 席本地 qwen3:4b-instruct；日更/闸/QC/世代检查全确定性零 LLM）
   **下轮预置**：T-20261115-04 候选 B（拒稿分布窗，需 ≥2026-11-17 定闸）维持 open；本轮 3 席 soft-concession 全部命中 recent-dup-phrase，为分布窗再添 3 样本（累计今日 dup-phrase 命中数需在 11-17 定闸时一并统计）。
+- [2026-11-16 02:45-02:48 @BigLife-OSLoop R3161 产品轮] 轮首 git pull --ff-only=Already up to date、树净；决策水位差集 NEW=0（集团 decisions 87 个 D 号全在册）；orders 物理件区涉本司仅仓名大小写/分支保护等纯观感与已办件，零催办。
+  **本轮实质=让路窗（GPU 被桌面占用 96%%·free 540 MiB）**：evolve --batch 3 实跑→vram-guard 走 degraded 不 yield(R2961)，随后 warm probe 60s 无应答 → llm-starved 静默跳过、0 席消耗（按律不修不报障，不抢显存）。--audit-due 复核 due=10 leaked=0 PASS（无当日泄漏环）。
+  **产品增量（可看实物）**：①round_daily --run = stale=1 ran=2 rebuilt=2 failed=0 PASS —— city-ops.html（依赖 state/vram-gate.jsonl 变化面重建）+ census/export/index.html 索引面重建，24 面其余跳过-fresh；②QC 巡检 cards=10114 evolved=10114 problems=0 dup_rings=37/37 PASS（QC-REPORT.md 入库）；③事件流回放闸 derive OK events=45172 cards=10111，replay 10111 全量 mismatch=0 schema_errors=0 PASS；④ring_lint rings=10084 coded=766 infra=84 verdict=PASS；ascii_mangle_scan files=21162 hit=0 CLEAN。
+  **跳过面（按闸律）**：相遇轮今日已用；反思线 02:45 daily-cap 5 已写；语言线 pool_audit=SELF_TERMINATE（18/12+greet 17+faq 3+neg 8 全达标·determinism 192 对 mismatch=0）；世代池 --check rc=0（gen2 cutoff C-10120 pending_sync=none）；基因轮 b59 于 02:07 刚增补（同窗不重复喂）；hq_feedback_daily --check=ALREADY_REPORTED 零写入。
+  tokens: local=0 api=0 api_reason=-（本轮 0 次本地 LLM 调用：显存被桌面占满 warm probe 失败·其余全确定性）
+  **下轮预置**：①若显存仍被占，年轮批继续让路（due=10 不增长即无积压风险，audit-due 每轮复核）；②T-20261115-04 候选 B 分布窗维持 open，11-17 定闸时统计 dup-phrase 样本。
