@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-15 15:50",
+ "export_ts": "2026-11-15 16:12",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3094（2026-11-15 15:43-15:56 周日下午产品轮）**：年轮线 due=10 → 落环 10 席（C-03041/03052/03053/03058/03051/03055/03056/03057/03059/03060，6 席 soft-concession 放行·零硬拒）；事件流回放闸 PASS（events=44649·replay 10111/10111·mismatch=0·schema_errors=0）；12 个可见面重建（成长十卷/相遇/反思/候选/索引等）；开篇族闸扩至 12 族，当日 unclassified 51.4%→30.9%（selftest 0 fail）；世代池 rc=0、语言池 SELF_TERMINATE。 **R3093（2026-11-15 15:3x·周日下午产品轮）：年轮 9 环 + 14 面重建 + 事件闸 PASS。** 年轮批 due=10 落环 9（C-03038/03044/03045/03046/03070/03047/03048/03049/03050，3 席 soft-concession〔recent-dup-phrase〕让步放行、[锚] 注脚保全；C-03041 persistent violations〔recent-family-opening+recent-dup-phrase〕留 due 不硬推）；事件流回放闸 PASS（events=44639 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0 / chronicle gap=0d）；日更面 stale=13 ran=14 failed=0 verdict=PASS（重建 ring_trend／meet_candidates／index 等）；qc_census cards=10114 evolved=10114 problems=0 dup_rings=37/37；pool_audit 轴桶 72/72＋像素桶 12/12＋greet 28/28＋faq 7/7＋负例 6/6 全达标 SELF_TERMINATE 零 LLM（determinism 192 对 mismatch=0）；世代池 gen2 覆盖当前池长 pending_sync=none；相遇轮今日 cap 3/3 已满零调用；HQ 反馈闸 ALREADY_REPORTED 零写入；决策水位差集 NEW=0（覆盖至 D-20261115-12）。 **R3092（年轮线）**：10 席落环（C-03012/03013/03014/03015/03016/03017/03018/03019/03025/03029），行为线镜像自动收口 rows=10 ring=10114",
+   "t": "**R3096（2026-11-15 16:04-16:3x 周日下午产品轮）**：年轮线 due=10 → 落环 10 席（C-03067/03069/03074/03080/03114/03072/03073/03075/03076/03077，3 席 soft-concession 放行·零硬拒）；事件流回放闸 PASS（events=44667·replay 10111/10111·mismatch=0·schema_errors=0）；13 个可见面重建；QC 巡检全绿（cards=10114·problems=0·dup_rings=37/37）；T-20261115-04 候选 B「滚动 80 席窗口」经当日 798 环逐位置回放实测证伪（日累计拒 2 环 vs 窗口拒 67 环），判为有害实现禁落码并换靶为「拒稿原因结构化作帐」。 **R3094（2026-11-15 15:43-15:56 周日下午产品轮）**：年轮线 due=10 → 落环 10 席（C-03041/03052/03053/03058/03051/03055/03056/03057/03059/03060，6 席 soft-concession 放行·零硬拒）；事件流回放闸 PASS（events=44649·replay 10111/10111·mismatch=0·schema_errors=0）；12 个可见面重建（成长十卷/相遇/反思/候选/索引等）；开篇族闸扩至 12 族，当日 unclassified 51.4%→30.9%（selftest 0 fail）；世代池 rc=0、语言池 SELF_TERMINATE。 **R3093（2026-11-15 15:3x·周日下午产品轮）：年轮 9 环 + 14 面重建 + 事件闸 PASS。** 年轮批 due=10 落环 9（C-03038/03044/03045/03046/03070/03047/03048/03049/03050，3 席 soft-concession〔recent-dup-phrase〕让步放行、[锚] 注脚保全；C-03041 persistent violations〔recent-family-opening+recent-dup-phrase〕留 due 不硬推）；事件流回放闸 PASS（events=44639 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0 / chronicle gap=0d）；日更面 stale=13 ran=14 failed=0 verdict=PASS（重建 ring_trend／meet_candidates／index 等）；qc_census cards=10114 evolved=10114 problems=0 dup_rings=37/37；pool_audit 轴桶 72/72＋像素桶 12/12＋greet 28/28＋faq 7/7＋负例 6/6 全达标 SELF_TERMINATE 零 LLM（determinism 192 对 mismatch=0）；世代池 gen2 覆盖当前池长 pending_sync=none；相遇轮今日 cap 3/3 已满零调用；HQ 反馈闸 ALREADY_REPORTED 零写入；决策水位差集 NEW=0（覆盖至 D-20261115-12）。",
    "s": 1
   },
   {
@@ -2057,8 +2057,12 @@
   [
    "782",
    "今日年轮落环 782 行（本轮 --batch 3：10 席全落、零硬拒，验收点 2/3）"
+  ],
+  [
+   "800",
+   "今日年轮落环 800 行（本轮 --batch 3：10 席全落、零硬拒，验收点 4/5 批）"
   ]
  ],
- "t": "当前活：年轮主线连续在产（本地 qwen3:4b-instruct）+ 开篇族闸覆盖率修复（unclassified 30.9%）\n最近实物：qa/EVENTS-REPLAY-REPORT.md（PASS·44649 事件·mismatch=0）+ Tools/ring_open_family.py（12 族·selftest PASS）+ census/export/city-dashboard.html（15:5x 重建）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 常态监控）+ 下一批年轮验「连续 3 批 zero hard-refuse」第 3 点",
- "top_text": "当前活：年轮主线连续在产（本地 qwen3:4b-instruct）+ 开篇族闸覆盖率修复（unclassified 30.9%）\n最近实物：qa/EVENTS-REPLAY-REPORT.md（PASS·44649 事件·mismatch=0）+ Tools/ring_open_family.py（12 族·selftest PASS）+ census/export/city-dashboard.html（15:5x 重建）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 常态监控）+ 下一批年轮验「连续 3 批 zero hard-refuse」第 3 点"
+ "t": "当前活：年轮主线连续在产（本地 qwen3:4b-instruct）+ 年轮开篇族闸拒稿源定靶（禁再动阈值/窗口）\n最近实物：qa/EVENTS-REPLAY-REPORT.md（PASS·44667 事件·mismatch=0）+ census/QC-REPORT.md（problems=0）+ census/export/city-dashboard.html（16:0x 重建）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）+ T-20261115-04 拒稿原因作帐（下一产品轮）",
+ "top_text": "当前活：年轮主线连续在产（本地 qwen3:4b-instruct）+ 年轮开篇族闸拒稿源定靶（禁再动阈值/窗口）\n最近实物：qa/EVENTS-REPLAY-REPORT.md（PASS·44667 事件·mismatch=0）+ census/QC-REPORT.md（problems=0）+ census/export/city-dashboard.html（16:0x 重建）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）+ T-20261115-04 拒稿原因作帐（下一产品轮）"
 }
