@@ -32,20 +32,21 @@ li{font-size:13px;color:#b9b6ae;margin:4px 0}
 footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(--line)}
 </style></head><body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 产物目录</a></div>
 <header><h1>城市产线实况</h1>
-<div class="sub">本页由 Tools/build_city_ops.py 确定性生成（零 LLM）· 生成于 2026-11-16 00:35 · 数据全部取自本仓盘上与 git</div></header>
+<div class="sub">本页由 Tools/build_city_ops.py 确定性生成（零 LLM）· 生成于 2026-11-16 00:56 · 数据全部取自本仓盘上与 git</div></header>
 <main>
 <div class="kpis">
-<div class="kpi"><b>7 分钟前</b><span>最近一次轮次心跳</span></div>
-<div class="kpi"><b>11-16 00:26</b><span>最近提交时间</span></div>
+<div class="kpi"><b>12 分钟前</b><span>最近一次轮次心跳</span></div>
+<div class="kpi"><b>11-16 00:41</b><span>最近提交时间</span></div>
 <div class="kpi bad"><b>3</b><span>超过 180 分钟未刷新的页</span></div>
 <div class="kpi"><b>0</b><span>无时间戳状态行（被丢弃，需修）</span></div>
 <div class="kpi"><b>10114</b><span>居民（轻量册）</span></div>
 <div class="kpi bad"><b>400</b><span>年轮待修队列（cap 400）</span></div>
-<div class="kpi"><b>0/205</b><span>近 24h 排产闸让路次数（探针数分母）</span></div>
+<div class="kpi"><b>0/207</b><span>近 24h 排产闸让路次数（探针数分母）</span></div>
 </div>
 
 <h2>最近轮次心跳<em>state/heartbeat.txt 尾 10 条 · 最后一条：os-loop: round done exit=0 · 无时间戳状态行 <b>0</b> 条（有时间戳才会进本表）</em></h2>
 <table><thead><tr><th>时间</th><th>记录</th></tr></thead><tbody>
+<tr><td class="t">11-16 00:44:02</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-16 00:28:08</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-16 00:17:23</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-16 00:04:58</td><td>os-loop: round done exit=0</td></tr>
@@ -55,11 +56,12 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td class="t">11-15 23:26:31</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-15 23:16:29</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-15 23:15:01</td><td>os-loop: R3145 rings=8 faces=13 events=PASS refusals-fix=confirmed hq=already [interactive]</td></tr>
-<tr><td class="t">11-15 23:03:20</td><td>os-loop: round done exit=0</td></tr>
 </tbody></table>
 
 <h2>最近产物提交<em>git log 尾 12 条</em></h2>
 <table><thead><tr><th>时间</th><th>commit</th><th>说明</th></tr></thead><tbody>
+<tr><td class="t">11-16 00:41</td><td class="h">07c1f0ace</td><td>chore(loop): R3153 任务板实录 + 对外实况三行（年轮 GPU 让路/事件闸 PASS）[via BigLife-OSLoop]</td></tr>
+<tr><td class="t">11-16 00:39</td><td class="h">3b3000ea0</td><td>chore(loop): R3153 日更面重建（dashboard/ops/index）+ 事件闸 PASS；年轮批因桌面占满 VRAM 跳过 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-16 00:26</td><td class="h">0aefebf5e</td><td>实况三行续鲜 R3152（今日落环 20 行 / commit b89fb5bf0 / 下里程碑 11-17 族闸裁决） [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-16 00:24</td><td class="h">b89fb5bf0</td><td>round: 2026-11-16 年轮8环+13面重建+事件闸PASS+QC problems=0+池SELF_TERMINATE [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-16 00:20</td><td class="h">94720c143</td><td>行为线 2026-11-16: 镜像 rows=8 ring=10114 [via BigLife-OSLoop]</td></tr>
@@ -70,18 +72,16 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td class="t">11-16 00:13</td><td class="h">00277c0bc</td><td>相遇 2026-11-16: C-03228 C-03272 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-16 00:10</td><td class="h">16956b3da</td><td>行为线 2026-11-16: 镜像 rows=10 ring=10114 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-16 00:10</td><td class="h">62552de89</td><td>年轮环(既有居民迭代·零新注册) 2026-11-16: C-03117, C-03228, C-03249, C-03258, C-03284, C-03250, C-03272, C-03286, C-03287, C-03293 [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-16 00:04</td><td class="h">c11933a25</td><td>hq: 2026-11-16 日清一行（R3150 状态 + D-20261115-01 窗口候读） [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-16 00:03</td><td class="h">96462ccf7</td><td>round: R3150 年轮 9 环 + 事件闸 PASS(45110/mismatch=0) + 35 面重建 [via BigLife-OSLoop]</td></tr>
 </tbody></table>
 
 <h2>页面新鲜度<em>census/export 下的单页 · 按更新时间倒序</em></h2>
 <table><thead><tr><th>页面</th><th>体积</th><th>更新</th><th>状态</th></tr></thead><tbody>
-<tr><td><a href="city-dashboard.html">city-dashboard.html</a></td><td class="n">62 KB</td><td class="t">11-16 00:35</td><td>新</td></tr>
+<tr><td><a href="city-dashboard.html">city-dashboard.html</a></td><td class="n">62 KB</td><td class="t">11-16 00:56</td><td>新</td></tr>
+<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">22 KB</td><td class="t">11-16 00:36</td><td>新</td></tr>
 <tr><td><a href="meet-candidates.html">meet-candidates.html</a></td><td class="n">28 KB</td><td class="t">11-16 00:22</td><td>新</td></tr>
 <tr><td><a href="city-voices.html">city-voices.html</a></td><td class="n">15 KB</td><td class="t">11-16 00:22</td><td>新</td></tr>
 <tr><td><a href="gene-ledger.html">gene-ledger.html</a></td><td class="n">143 KB</td><td class="t">11-16 00:22</td><td>新</td></tr>
 <tr><td><a href="city-rumors.html">city-rumors.html</a></td><td class="n">6 KB</td><td class="t">11-16 00:22</td><td>新</td></tr>
-<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">22 KB</td><td class="t">11-16 00:22</td><td>新</td></tr>
 <tr><td><a href="city-reflections.html">city-reflections.html</a></td><td class="n">15 KB</td><td class="t">11-16 00:22</td><td>新</td></tr>
 <tr><td><a href="city-objects.html">city-objects.html</a></td><td class="n">96 KB</td><td class="t">11-16 00:22</td><td>新</td></tr>
 <tr><td><a href="city-meets.html">city-meets.html</a></td><td class="n">37 KB</td><td class="t">11-16 00:22</td><td>新</td></tr>
@@ -110,7 +110,7 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <table><thead><tr><th>面</th><th>数值</th></tr></thead><tbody>
 <tr><td>居民（citizens-light）</td><td class="n">10114</td></tr>
 <tr><td>居民卡文件</td><td class="n">10091</td></tr>
-<tr><td>年轮条目</td><td class="n">19654</td></tr>
+<tr><td>年轮条目</td><td class="n">19655</td></tr>
 <tr><td>已有年轮的居民</td><td class="n">10091</td></tr>
 <tr><td>城市事件（events/*.jsonl）</td><td class="n">45130</td></tr>
 </tbody></table>
@@ -140,16 +140,16 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 </tbody></table>
 <div class="note">全量复读/过短/模板三段判负由 Tools/ring_simile_audit.py 产出；修复走 19:00 后让路窗的 evolve 批（LLM 复写），本页只呈现队列，不改写任何年轮文本。</div>
 
-<h2>排产闸（显存）<em>state/vram-gate.jsonl 实读 · 阈值 90% · 最近一次 显存饥饿（0 分钟前） · 近 24h 让路 0/205 次 · 显存饥饿 3 次</em></h2>
+<h2>排产闸（显存）<em>state/vram-gate.jsonl 实读 · 阈值 90% · 最近一次 降级放行（0 分钟前） · 近 24h 让路 0/207 次 · 显存饥饿 3 次</em></h2>
 <table><thead><tr><th>探针时间</th><th>结果</th><th>显存占用</th><th>GPU 会话（WDDM 不报单进程显存·非诊断依据）</th></tr></thead><tbody>
+<tr><td class="t">11-16 00:56</td><td>放行</td><td class="n">93% · 11403/12282 MiB</td><td>—</td></tr>
+<tr><td class="t">11-16 00:55</td><td>放行</td><td class="n">95% · 11635/12282 MiB</td><td>—</td></tr>
+<tr><td class="t">11-16 00:49</td><td>放行</td><td class="n">93% · 11401/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-16 00:35</td><td>放行</td><td class="n">95% · 11678/12282 MiB</td><td>ShellHost.exe · CrossDeviceResume.exe · explorer.exe · StartMenuExperienceHost.exe</td></tr>
 <tr><td class="t">11-16 00:33</td><td>放行</td><td class="n">95% · 11671/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-16 00:18</td><td>放行</td><td class="n">63% · 7701/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-16 00:13</td><td>放行</td><td class="n">63% · 7717/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-16 00:09</td><td>放行</td><td class="n">63% · 7714/12282 MiB</td><td>—</td></tr>
-<tr><td class="t">11-15 23:58</td><td>放行</td><td class="n">63% · 7713/12282 MiB</td><td>—</td></tr>
-<tr><td class="t">11-15 23:48</td><td>放行</td><td class="n">63% · 7708/12282 MiB</td><td>—</td></tr>
-<tr><td class="t">11-15 23:41</td><td>放行</td><td class="n">63% · 7704/12282 MiB</td><td>—</td></tr>
 </tbody></table>
 <div class="note">「让路」＝GPU 被别的活占着，本轮年轮/相遇/反思批不启动（脚本自退，不是故障、也不计入零产出事故）；「显存饥饿」＝暖探针（1 token）无应答，整批零座席空烧退出（T-20261114-05）；「降级放行」＝桌面图形占卡但探针通过，批照跑；「放行」＝探针通过、批可开工。占用者取自 nvidia-smi compute-apps（Windows WDDM 不报单进程显存，故多数只见进程名）。</div>
 
