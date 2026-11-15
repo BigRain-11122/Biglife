@@ -77,6 +77,39 @@ def machine_total(today=None):
     return reg + anc, reg, anc
 
 
+def count_rings_face(today):
+    """[锚] 卡面独立直数：扫 census/**/*.md 全树，同一谓词（日期前缀+[锚]−反思层）。
+
+    与 count_rings 的差别只在扫描根与遍历方式（全树 vs registry/anchors 两子树），
+    谓词逐字符相同。两数相等=心跳数字可用于跨面比对；不等=谓词漂移必须先查。
+    """
+    n = 0
+    for base, _, files in os.walk(os.path.join(ROOT, "census")):
+        for fn in files:
+            if not fn.endswith(".md"):
+                continue
+            p = os.path.join(base, fn)
+            try:
+                with io.open(p, encoding="utf-8", errors="replace") as f:
+                    for line in f:
+                        if line.startswith("- " + today) and "[锚]" in line and "V2-B 反思层" not in line:
+                            n += 1
+            except OSError:
+                pass
+    return n
+
+
+def verify_rings(today=None):
+    """心跳口径自检（R3042/R3043 收口）：机器直数 vs 卡面独立直数。"""
+    today = today or today_str()
+    total, reg, anc = machine_total(today)
+    face = count_rings_face(today)
+    verdict = "PASS" if total == face else "MISMATCH"
+    print("VERIFY-RINGS date=%s machine=%d (reg=%d anc=%d) face=%d verdict=%s"
+          % (today, total, reg, anc, face, verdict))
+    return 0 if verdict == "PASS" else 1
+
+
 def split_dept_entries(t):
     """dept0.t 按 **R####（ 头标切段，返回条目列表。"""
     pos = [m.start() for m in HDR_RE.finditer(t)]
@@ -337,6 +370,8 @@ def main():
     if "--qc" in args:
         qc_battery()
         return
+    if "--verify-rings" in args:
+        raise SystemExit(verify_rings())
     payload_path = None
     dry = "--dry-run" in args
     hb = "--heartbeat" in args
