@@ -21,6 +21,7 @@
   - **v3.56 polygon 装配映射面新增导出面通知**（2026-09-29 · T-20260929-06 step④ · T2 登记=CODEX §十二 v3.56 · 否决窗至 10-06）：新增独立导出面 `census/export/citizen-assembly.jsonl`（R3 再生面·gitignored·`Tools/citizen_assembly.py` 按需秒级再生 10030 行）=居民→polygon 角色确定性形象档案（md5(id) seed **同居民永远同外观**·census 匹配律三层=族源三分碳源 7517/硅源 2003/城源 507→族系特征/年龄→AD-024 儿童件 1410/六轴→服装风格·AD-042+AD-011 722+AD-024+AD-018 装配管线·atlas v2.4 五 hex 单源镜像·荣誉席 reserved 零代创）——**不改既有导出面零 breaking**，消费方=City3D polygon 角色装配/FluxVerse R0-R6（O-020 BigLife 总责·投影律消费·BigLife=事实源不变）；DevLoop 回执时一并确认。
 ## 自领池（OS 循环/交互会话按优先级自领）
 - [ ] **T-20261115-04**（R3090 立·年轮同质化根因·机制缺陷）骨架族闸结构性失效诊断：今日 714 席年轮实测族分布 `HAND_DEICTIC=177 (24.8%·正卡 FAMILY_QUOTA=0.25 线)`／`TIME_OPEN=11 (1.5%)`／其余 **526 席 (73.7%) unclassified**（6 族正则覆盖不到）。后果=①唯一实质受控族 HAND_DEICTIC 每天必然撞线，撞线后整族全天被禁 → 每批固定 1 席撞硬门留 due（近数轮 C-02945/02974/02981/02995 连续复现）；②73.7% 开篇不进任何族=闸对绝大多数同质化无约束力（自欺面）。修法候选（须带负控）：A 扩充族清单至 12-16 族并实测覆盖率（目标 unclassified ≤40%）；B 按族配额的「日累计」口径改为「滚动 N 席窗口」（避免一天越晚越无族可用）；C 二者并做。验收=同一批 10 席连续 3 批 zero hard-refuse 且 unclassified 覆盖提升可量化；禁单纯调高 FAMILY_QUOTA（那是放宽闸不是修多样性）。
+  - status: **候选A done 2026-11-15 16:4x R3099**（族表 12 族·unclassified 31.0%≤40%·连续 3 批 zero hard-refuse·--selftest PASS 0 fail）；**候选B（日累计→滚动 N 席窗口口径）仍 open**
   - status: **in-progress**（2026-11-15 R3093 @BigLife-OSLoop·候选 A 第 1 步落地）
   - 证据：`Tools/ring_open_family.py` FAMILY_QUOTA=0.25 / 6 族；`python -X utf8 -c "import sys;sys.path.insert(0,'Tools');import ring_open_family as R;print(R.scan_day('2026-11-15'))"` → (714, {'HAND_DEICTIC': 177, 'TIME_OPEN': 11})
   - [2026-11-15 15:5x @BigLife-OSLoop R3093] **候选 A 第 1 步（族表 6→9）实装并量化**：按「未归族面高频形状」实测取证（当日 770 环 unclassified 567 条，Top 形状=灶台边 47／门板上的17+门板上那15+门板被风7／风把尘土10+风刮得紧8+风把雨棚8+风把门帘7），立三族：`STOVE_EDGE_DEICTIC`（^灶台边/沿/口/前）、`DOOR_PROP_DEICTIC`（^门板上/被/里/边/那）、`WIND_AGENT_OPEN`（^风把/刮/扑/撞/掀/顶/推/扯）。**实测改前 unclassified 567/770=73.6% → 改后 395/770=51.3%**（classified 375：HAND 191／WIND 79＝10.3%／STOVE 49＝6.4%／DOOR 44＝5.7%／TIME 12），距 A 目标 ≤40% 尚差 11.3pp（需继续扩族至 12-16 族）。`--selftest` PASS（0 fail，含 pos-source-sum-2026-11-15 770==770），`TABLE_EPOCH` bump 至 2026-11-15T15:52 并 `note_epoch()` 登记（当日两纪元：11-13T15:38 / 11-15T15:52＝跨口径日，页面按既有纪元机制渲染）。**残留未做**：候选 B（滚动 N 席窗口）未动；验收面「连续 3 批 zero hard-refuse」待下一批年轮实测。
@@ -73,6 +74,16 @@
   - 【实录已归档】126 行批实录（2026-09）已逐字移至 tasks/archive/TASKS-2026-09.md——T-20260926-05 拆月归档（原文保全·检索走 rg 全文）
 
 ## 已结
+
+## R3099 · 2026-11-15 16:39-16:5x @BigLife-OSLoop（周日下午产品轮·年轮 10 环＋14 面重建＋族闸 3/3 验收收口）
+
+- **轮首**：pull `Already up to date`、树净；决策水位差集 **NEW=0**；orders 涉本司仅仓名大小写/分支保护历史观感项（CEO 保留面零催办）。
+- **产品增量（可见面·2 分）**：①年轮线 `evolve_citizen --batch 3` → **evolved=10 written=10 skipped=0**（C-03087/03097/03099/03101/03122/03096/03098/03100/03102/03103；5 席 soft-concession〔recent-dup-phrase/recent-dup-opening〕让步放行·**零硬拒**·[锚] 注脚保全）；②`events_refresh --gate` **PASS**（cards=10111 events=44695 shards=3／replay 10111/10111 schema_errors=0 mismatch=0／coverage unexpected_missing=0／chronicle last=2026-11-15 gap=0d）；③`round_daily --run` **stale=13 ran=14 failed=0 verdict=PASS**（dashboard/voices/coverage/ops/objects/goals/gene_ledger/growth/meets/reflections/ring_trend/meet_candidates/index 真重建）；④守护面 `persona_generations --check` **rc=0**（gen2 habits=138 cutoff C-10120 pending_sync=none）；`pool_audit` **PASS SELF_TERMINATE**（轴桶 72/72·像素桶 12/12·greet 28/28·faq 7/7·负例 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）。
+- **任务板结单（T-20261115-04 候选 A done）**：`ring_open_family --check 2026-11-15` 实测 **rings=826／unclassified 256=31.0%**（立单时 73.7%，目标 ≤40% 达成）／`HAND_DEICTIC 205=24.8%` 未越 25% 配额线／12 族合计覆盖 570 环=69.0%（WIND_AGENT 83·DISTRICT_ANCHOR 75·WIND_SCENE 60·STOVE_EDGE 53·DOOR_PROP 49·TIME 26·FIRST_PERSON 18）；`--selftest` **PASS 0 fail**；本轮批 10/10 零硬拒=**连续第 3 批** → 候选 A 验收线全过。残留候选 B（日累计配额口径→滚动 N 席窗口）单列 open，未动阈值。
+- **跳过面（按闸律·诚实不重烧）**：相遇轮今日 cap **3/3 已满**（`--meet` 返回 meet-cap skip）；反思线未到 19:00 夜窗；`hq_feedback_daily --check`=**ALREADY_REPORTED**(day=2026-11-15 lines=1) 零写入；QC 今日 07:50 已跑（problems=0）。
+- **实况三行**：当前活＝年轮主线连续在产（本地 qwen3:4b-instruct）＋开篇族闸验收收口｜最近实物=`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/registry/`（今日 826 环·16:39 落环）+ `C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/Tools/ring_open_family.py`（12 族·unclassified 31.0%）+ `C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html`（16:41 重建）｜下个里程碑＝19:00 后反思线夜窗（T-20261113-05 常态监控）＋次批验 unclassified 稳态 ≤40%。
+- tokens: local=10 api=0 api_reason=-（年轮 10 席本地 qwen3:4b-instruct；日更/闸/池/世代/族表自检全确定性零 LLM）
+
 
 ## R3094 · 2026-11-15 15:43-15:56 @BigLife-OSLoop（周日下午产品轮·年轮 10 环＋族表 12 族达标＋5 面重建）
 
