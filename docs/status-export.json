@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-16 00:26",
+ "export_ts": "2026-11-16 00:40",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3152（2026-11-16 00:2x 产品轮）**：年轮批到期 10 席落环 8 席（C-03297/C-03303/C-03313/C-03565/C-03314/C-03353/C-03392/C-03419），2 席（C-03379/C-03317）被 opening-family-quota 拦下（今日 HAND_DEICTIC 已触 25% 日配额），按契约 deferred +1d 明日换上下文重试，无同席同日重抽；行为线随环自动镜像 rows=8 ring=10114。日更面 --run stale=12 ran=13 failed=0 verdict=PASS；事件流回放闸 PASS（events=45130 / cards=10111 / replayed=10111 / mismatch=0 / schema_errors=0）；世代池 rc=0（gen2 cutoff C-10120 habits=138，pending_sync=none）；池审计 SELF_TERMINATE（72 轴桶 + 12 像素桶 + greet 28 + faq 7 + 负例 6/6 全达标·determinism 192 对 mismatch=0）；QC problems=0（cards=10114 dup_rings=37/37）。 **R3151（2026-11-16 00:1x 产品轮）**：年轮批到期 10 席全落环（C-03117/C-03228/C-03249/C-03258/C-03284/C-03250/C-03272/C-03286/C-03287/C-03293，6 席 soft-concession〔recent-dup-phrase〕按既有降级规则放行，零硬拒）；相遇轮落 1 对（白顶水 × 席志明·低语巷回测田，双卡互引，rank=1 score=122）；反思线新增 5 条（C-00023/24/25/60/61，当日 date=2026-11-16 已达标）；事件流回放闸 PASS（derive cards=10111 events=45120／replay 10111/10111 schema_errors=0 mismatch=0／coverage unexpected_missing=0）；35 面按依赖重建（stale=14 ran=15 failed=0）；世代池 gen2 覆盖 C-10120 pending_sync=none；语言池 72+12+28+7 桶全达标 SELF_TERMINATE；QC cards=10114 evolved=10114 problems=0。老板物理件区无涉本司新件。 **R3146（2026-11-15 23:2x）**：年轮批 9/10 落环（C-03507..C-03515，1 席台风词伪造被 gate 延迟）；事件闸 PASS（45073 事件/mismatch=0）；日更 14 面重建；世代池 rc=0；反思/相遇/语言池按 cap 与达标自停。",
+   "t": "**R3153（2026-11-16 00:33-00:4x）**：年轮批因桌面占满显存（11715/12282 MiB，free ~567）warm probe 60s 无应答而静默跳过、零席位消耗（T-20261114-05）；确定性面照跑——日更面重建 dashboard/ops/index 三面（PASS），事件流回放闸 PASS（cards=10111 / events=45130 / replay 10111/10111 / schema_errors=0 / mismatch=0），世代池 rc=0 无欠 sync，语言池 SELF_TERMINATE 全桶达标。 **R3152（2026-11-16 00:2x 产品轮）**：年轮批到期 10 席落环 8 席（C-03297/C-03303/C-03313/C-03565/C-03314/C-03353/C-03392/C-03419），2 席（C-03379/C-03317）被 opening-family-quota 拦下（今日 HAND_DEICTIC 已触 25% 日配额），按契约 deferred +1d 明日换上下文重试，无同席同日重抽；行为线随环自动镜像 rows=8 ring=10114。日更面 --run stale=12 ran=13 failed=0 verdict=PASS；事件流回放闸 PASS（events=45130 / cards=10111 / replayed=10111 / mismatch=0 / schema_errors=0）；世代池 rc=0（gen2 cutoff C-10120 habits=138，pending_sync=none）；池审计 SELF_TERMINATE（72 轴桶 + 12 像素桶 + greet 28 + faq 7 + 负例 6/6 全达标·determinism 192 对 mismatch=0）；QC problems=0（cards=10114 dup_rings=37/37）。 **R3151（2026-11-16 00:1x 产品轮）**：年轮批到期 10 席全落环（C-03117/C-03228/C-03249/C-03258/C-03284/C-03250/C-03272/C-03286/C-03287/C-03293，6 席 soft-concession〔recent-dup-phrase〕按既有降级规则放行，零硬拒）；相遇轮落 1 对（白顶水 × 席志明·低语巷回测田，双卡互引，rank=1 score=122）；反思线新增 5 条（C-00023/24/25/60/61，当日 date=2026-11-16 已达标）；事件流回放闸 PASS（derive cards=10111 events=45120／replay 10111/10111 schema_errors=0 mismatch=0／coverage unexpected_missing=0）；35 面按依赖重建（stale=14 ran=15 failed=0）；世代池 gen2 覆盖 C-10120 pending_sync=none；语言池 72+12+28+7 桶全达标 SELF_TERMINATE；QC cards=10114 evolved=10114 problems=0。老板物理件区无涉本司新件。",
    "s": 1
   },
   {
@@ -2095,6 +2095,6 @@
    "2026-11-16 今日年轮/相遇落环行共 20 行（纯年轮 18 行，本轮新增 8 行；相遇 2 行=1 对）；13 个可见面按依赖 mtime 重建"
   ]
  ],
- "t": "当前活：R3152 年轮 8 席已落环并推送，确定性七面（日更/事件闸/世代/池/QC/相遇/反思日额）全绿\n最近实物：census/export/city-dashboard.html 等 13 面于 2026-11-16 00:20 重建 + qa/EVENTS-REPLAY-REPORT.md，commit b89fb5bf0\n下个里程碑：2026-11-17 夜窗执行 T-20261115-04 开篇族闸裁决（窗口期禁动阈值），并保持每日 ≥10 环年轮",
- "top_text": "当前活：R3152 年轮 8 席已落环并推送，确定性七面（日更/事件闸/世代/池/QC/相遇/反思日额）全绿\n最近实物：census/export/city-dashboard.html 等 13 面于 2026-11-16 00:20 重建 + qa/EVENTS-REPLAY-REPORT.md，commit b89fb5bf0\n下个里程碑：2026-11-17 夜窗执行 T-20261115-04 开篇族闸裁决（窗口期禁动阈值），并保持每日 ≥10 环年轮"
+ "t": "当前活：年轮进化主线（本轮受桌面占 VRAM 让路阻塞，GPU 释放即恢复落环）\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（00:36 重建） + qa/EVENTS-REPLAY-REPORT.md（PASS·45130 事件·mismatch=0）\n下个里程碑：GPU 释放后首轮年轮落环（今日内目标 ≥8 篇，承接 R3152 基线）",
+ "top_text": "当前活：年轮进化主线（本轮受桌面占 VRAM 让路阻塞，GPU 释放即恢复落环）\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（00:36 重建） + qa/EVENTS-REPLAY-REPORT.md（PASS·45130 事件·mismatch=0）\n下个里程碑：GPU 释放后首轮年轮落环（今日内目标 ≥8 篇，承接 R3152 基线）"
 }
