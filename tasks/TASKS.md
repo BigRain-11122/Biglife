@@ -2646,3 +2646,4 @@ ound_daily --run=stale=25 ran=26 failed=0 verdict=PASS（growth 11 分页/voices
   **跳过面（按闸律·诚实）**：相遇轮 meet-cap 3/3 今日已满；池审计 PASS SELF_TERMINATE 零 LLM（72 轴桶+12 像素桶 at_target、hard_fails=0、determinism 192+25 双抽 mismatch=0）；反思线未到 19:00 夜窗（今日 reflections.jsonl 尾行 date=2026-11-15 已见，T-20261113-05 验收连续第 1 日）；spotlight 11 月配额 2/2 已满；QC 07:50 在本周期内不重跑；HQ 日清闸 ALREADY_REPORTED 零写入。
   commit 17b5b96f3（年轮 10 环·脚本自动）+ 9d8af7998（日更面 24 件）已 push（58ba30fce..9d8af7998）；心跳补三行实况。
   tokens: local=10 api=0 api_reason=-
+  **取证方法勘误（同轮）**：轮末核 blobs 时用 git hash-object --no-filters 与 HEAD 比对得 MATCH=False，属方法误判（--no-filters 取 CRLF 原文 vs 仓库 LF blob）；改用 git hash-object --path=<f> -- <f>（走 check-in 过滤）得 cd543cf9 与 HEAD 全等，git status 亦净。另：本轮 git add <24 路径>; git status | Select-Object -First 5 报 exit 255 = PowerShell 提前关闭原生管道（broken pipe），非 add 失败——24/24 文件实证在 commit 9d8af7998 内。两条记此，下轮核内容一致律一律用过滤式 hash 或 git status/diff，禁用 --no-filters 判文本差异。
