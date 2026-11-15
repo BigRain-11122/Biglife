@@ -2699,3 +2699,12 @@ ound_daily --run=stale=25 ran=26 failed=0 verdict=PASS（growth 11 分页/voices
   **跳过面（按闸律诚实不重烧）**：相遇轮 meet-cap 3/3 今日已满（实测拒 C-02817×C-00022 同城对）；语言池今日 11:0x 已 SELF_TERMINATE；反思线未到 19:00 夜窗（今日 reflections 3 条已见、T-20261113-05 三连日验收已于 R2999 结案）；QC 上次 11:21 未到 6 轮窗；spotlight 11 月配额 2/2 已满；HQ 日清闸 ALREADY_REPORTED(day=2026-11-15) 零写入。
   **实况三行**：当前活=R3073 收尾｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（11:26 重建，含今日 10 席新年轮）｜下个里程碑=19:00 后反思线夜窗批 5 席＋次日相遇轮 3 场（ETA 今日 19:00-22:00）。
   tokens: local=10 api=0 api_reason=-
+
+- [R3074 2026-11-15 11:33-11:4x @BigLife-OSLoop 产业轮·基因批 b58] 轮首 pull=Already up to date·树净；决策水位差集 NEW=0（尾 D-20261115-05）；orders 物理件区无涉本司新件；TASKS 无 open 单。
+  **产品增量（能看实物）**：①年轮线 due=10 → written=8（C-02829/02831/02836/02839/02833/02834/02835/02837；C-02859 命中 opening-family-quota+recent-dup-phrase、C-02830 命中 rain-invented+recent-dup-phrase 守门留 due），脚本自提交 a605fa340 + 行为线镜像 719e3c2ab(rows=8, ring=10114)；②事件回放闸 PASS（cards=10111 events=44430 replayed=10111 schema_errors=0 mismatch=0 coverage unexpected_missing=0 chronicle gap=0d）；③日更面 PASS（stale=13 ran=14 failed=0，后经基因面变化再刷 stale=1 ran=2）。
+  **本批主产出=基因批 b58（+8 条·手工/合力主题）**：口头禅 3（活儿赶不得，账糊涂不得／教会了徒弟不算亏…／受人一升还人一斗）＋钩子物件 2（黄铜角尺／白铁皮水壶）＋转折点 2（第一回让后生独自上手／那年桥修到一半停了工）＋习惯 1（朔日换年历）。候选 8 条经 gene_nearcheck 四轮改写后 8/8 CLEAN（零近重，无红线触发），Tools/_append_genes_b58.py 幂等登记；池水位 cp=1513 / obj=885 / tp=677 / habit=125。
+  **口径关键实证（CODEX §十四 习惯分配稳定性）**：habits 池 137→138 属 persona_enrich 冻结面——旧式取模实测会重排 **99.50%（hb）/99.34%（hb2）** 居民；本次走世代池冻结，persona_generations.py --sync 开 **gen 2（cutoff C-10120，changed=habits）**，persona_drift.py 实测既有 10114 居民 **hb/hb2 漂移均 0.00%**（census/export/persona-drift.json）→ 冻结机制首次经真实基因增补验证成立，「先登记后使用」可增量生长而不动老居民。persona_enrich --qc PASS（rows=10114 bad=0 blocked=3）。
+  **跳过面（按闸律诚实不重烧）**：语言池 pool_audit PASS/SELF_TERMINATE（72/72 轴·12/12 像素桶·hard_fails=0·determinism 192+25 对 mismatch=0）；相遇轮今日 cap 3/3 已满；反思线未到 19:00 夜窗；QC 未到 6 轮窗；spotlight 11 月配额 2/2 已满；HQ 日清闸 ALREADY_REPORTED（day=2026-11-15）零写入。
+  **实况三行**：当前活=R3074 收尾｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/persona-drift.json（gen_freeze 0.00%）+ census/export/gene-ledger.html（11:4x）｜下个里程碑=19:00 后反思线夜窗首批 5 席 + 日更面夜间刷新（ETA 2026-11-15 19:10）。
+  commit 864eb5c45（基因 b58 + 世代池 gen2 + 20 面重建）已 push（66480c40a..864eb5c45）。
+  tokens: local=10 api=0 api_reason=-
