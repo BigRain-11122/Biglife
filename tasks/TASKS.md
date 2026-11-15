@@ -3188,3 +3188,17 @@ ound_daily.py --run = **stale=2 ran=3 failed=0 verdict=PASS**（dashboard/ops/in
   **实况三行**：当前活=夜窗年轮主线 + 相遇轮补投（上一对超时中断）｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/registry/GM/C-03541.md 等 10 张居民卡（2026-11-16 01:09）+ 26 个网页面重建（01:15）｜下个里程碑=下一轮年轮批 ≥9 环并补一场相遇（目标 2026-11-16 内）。
   **计分**：可看实物=2（10 张新年轮卡 + 26 面重建）＋ 文件改动=1 → **2 分**。
 - tokens: local=10 api=0 api_reason=-（evolve 批 10 席 + 相遇 1 次探测；日更/事件闸/世代/池审计/QC 全确定性零 LLM）
+
+- [R3156 2026-11-16 01:2x-01:3x @BigLife-OSLoop 夜轮] 轮首：pull=Already up to date、树净；决策水位差集 NEW=0（watermark 尾 D-20261116-04）；orders 物理件区无涉本司新件。
+- 年轮线：首跑撞陈死锁 `.codely-cli/tmp/evolve.lock`（mtime 01:14:04 / age 14.9min，全量 python 进程核定零 evolve_citizen 属主）→ 清锁重跑；本轮仍 **0 席**——vram-guard 报 desktop holds 92%（free 959MiB），seat 选 qwen3:4b-instruct 后 warm probe 60s 无应答，按 T-20261114-05 静默跳过（让路窗，不修不报障，0 算力白烧）。
+- 日更面：`round_daily --run` **stale=1 ran=2 failed=0 verdict=PASS**（重建 `census/export/city-ops.html`（dep-mtime:state/vram-gate.jsonl 触发）、`census/export/index.html`），余 38 面 fresh 零动作。
+- 世代池：`persona_generations --check` **rc=0**（gen2 cutoff C-10120 habits=138，pending_sync=none）。
+- 事件回放闸：`events_refresh --gate` **PASS**（derive cards=10111 events=45150 shards=3；replay replayed=10111 **mismatch=0 schema_errors=0**；coverage derived=10111 reserved=3 exported=10114 unexpected_missing=0；chronicle last=2026-11-15 gap=1d）。
+- 语言线：`pool_audit` **PASS SELF_TERMINATE**（72/72 轴桶、sprite 12/12、greet 28/28、faq 7/7、负例 6/6；hard_fails=0；determinism 192+25 对 mismatch=0）→ 自停，零 LLM。
+- QC：`qc_census` cards=10114 evolved=10114 **problems=0** dup_rings=37/37，`census/QC-REPORT.md` 刷新。
+- 开口族闸：`ring_lint --today-only` rings=40 coded=0 pre=0 post=0 **PASS**，`qa/RING-LINT-REPORT.md` 入库。
+- 日闸：`hq_feedback_daily --check`=ALREADY_REPORTED(day=2026-11-16 lines=1) → 本步零写入；`docs/status-export.json` ts=2026-11-16 00:40 新鲜（<24h），T-20260924-08 免刷。
+- 待单观察：T-20261115-04 候选A done/候选B 判负，观察窗至 2026-11-17（本日不动）；T-20261113-05 反思线已入轮次规程 1C，今日 reflections 尾部 date 已=2026-11-16（前轮产出）。
+- 实况三行：当前活＝让路窗内确定性面维护 + 年轮线等 GPU（桌面占 92%，free 959MiB）｜最近实物=`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-ops.html`（2026-11-16 01:3x 重建）＋`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/QC-REPORT.md`（problems=0）｜下个里程碑＝GPU 释放后 `evolve_citizen --batch 3` 复开年轮供料（窗口 24h 内，或 19:00 让路窗解）。
+- 计分：可看实物=2（2 个可见面重建 + QC/开口族两份报告）｜文件改动=1 → 记 **2 分**（本轮无新环，年轮供料为外部资源所阻）。
+- tokens: local=0 api=0 api_reason=gpu-desktop-hold(92% desktop / free 959MiB, warm probe 60s timeout)
