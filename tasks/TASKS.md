@@ -3220,3 +3220,12 @@ ound_daily.py --run = **stale=2 ran=3 failed=0 verdict=PASS**（dashboard/ops/in
 - 计分：可看实物=2（基因台账/词典面可打开可读）＋文件改动=1 → **2 分**。
 - tokens: local=0 api=0 api_reason=gpu-desktop-hold(96% desktop / free 444MiB, warm probe 60s timeout)
 
+## 轮次实录 R3159 2026-11-16 02:2x（OS 轮值·年轮线）
+- 轮首三步：git pull --ff-only origin main = Already up to date、树净；决策水位差集 NEW=0（watermark 尾 D-20261116-04，11-16 四条已全覆盖且非本司动作项）；orders 物理件区无涉本司新件（仅仓名大小写观感件+Branch protection 物理件，均 CEO 保留面）。
+- **产品增量（2 分）**：①年轮批 --batch 3 → 落环 2 位 real 卡：C-03576（QT）/C-03577（NS），年轮行 date=2026-11-16，均带 [锚] 注脚（城市实况·FluxVerse 事件流+真实时间天气+街区日常母题素材库）；第 3 席在会话 5 分钟静默预算处被中断（脚本 stdout 全缓冲无进度行），按「超预算留单」未硬撑，下轮续批补位。②日更面 round_daily --run：stale=16 ran=17 failed=0 verdict=PASS（dashboard/districts/meets/objects/ops/relations/ring-openings/ring-picks/ring-quality/ring-recency/ring-trend/today/gene-ledger/gallery/index 真重建，dep 触发=state/evolve-cursor.json + census/registry，与年轮落环因果一致）。③事件流回放闸 events_refresh --gate：derive cards=10111 events=45163 shards=3；replay replayed=10111/10111 schema_errors=0 mismatch=0 → PASS；coverage derived=10111 reserved=3 exported=10114 unexpected_missing=0（qa/EVENTS-REPLAY-REPORT.md 入库）。④世代池 persona_generations --check rc=0（gen2 cutoff C-10120 habits=138 pending_sync=none → 老居民快照零漂移）。⑤日清闸 hq_feedback_daily --check = ALREADY_REPORTED(day=2026-11-16 lines=1) → 零写入。
+- 提交：commit 5e975e690（19 files changed, +99/-97）定向 add（census/export + 2 registry + qa 两报告），已推 origin（8508439bf..5e975e690）。
+- 实况三行：当前活=年轮主线续批（due 队列仍有 1 席待补，下轮接续）｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-ring-trend.html ＋ census/registry/QT/C-03576.md、census/registry/NS/C-03577.md（02:14 落环，02:22 面重建）｜下个里程碑=R3160 年轮批补第 3 席 + 相遇轮（今日 cap 未满可跑，窗 ≤24h）。
+- 跳过项（诚实）：相遇轮本轮未跑（预算用于年轮+闸+面重建）；反思线未跑（今日 reflections 尾部 date=2026-11-16 已达标，按「每晚至多 1 次」零调用）；语言池 pool_audit 未跑（R3157 判全桶 at_target SELF_TERMINATE，24h 内不重复）；QC 上次 02:0x 已扫 problems=0，按 ~6 轮频次本轮不重复。
+- 计分：可看实物=2（16 面重建可打开 + 2 张新居民年轮卡）＋文件改动=1 → **2 分**。
+- tokens: local=2 api=0 api_reason=-（年轮批 3 席尝试→2 环落卡均本地 Ollama；第 3 席会话超时中断未计；日更面/回放闸/世代池/日清闸全确定性零 LLM）
+
