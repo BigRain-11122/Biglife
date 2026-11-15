@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-15 07:50",
+ "export_ts": "2026-11-15 09:02",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3048（2026-11-15 07:44-08:0x 周日晨产品轮）**：年轮批 due=10 -> written=7（C-02600/02601/02611/02598/02605/02610/02612；C-02577/02602/02613 三席被锚-重复闸拦留 due 诚实不硬写）；事件流回放闸 PASS（cards=10111 events=44224 replayed=10111 schema_errors=0 mismatch=0）；日更面 stale=12 ran=13 failed=0 PASS（dashboard/voices/coverage/ops/objects/goals/gene_ledger/growth/meets/reflections/meet_candidates/index 重建）；QC PASS（problems=0 dup_rings=37/37 与基线同值）。新增只读对账工具 Tools/rings_recount.py，以 350+7=357 恒等式结掉 R3042/R3043/R3044 计数口径三度复现单。 **R3047（2026-11-15 07:36-07:5x 周日产品轮）：年轮线 P0 复明——上一提交引入 hashlib NameError 致年轮 100% 中断，已修并复跑 9/10 落环（C-02586/02589/02590/02606/02585/02591/02593/02594/02595）+ 事件闸 PASS(44217 events, mismatch=0) + 日更面全新鲜仅 index 重建** **R3045（2026-11-15 07:08-07:2x）**：年轮线滚动——10 席落环（C-02555/02557/02558/02563/02565/02566/02567/02568/02569/02576，MD/NS/RV/QT/GM 五城区，全部 UTF-8+[锚] 注脚齐），行为线镜像 rows=10 ring=10114；事件回放闸 PASS（derive cards=10111/events=44199，replay replayed=10111 mismatch=0 schema_errors=0，coverage unexpected_missing=0，chronicle last=2026-11-15 gap=0d）；日更面 13 面重建 verdict=PASS（stale=12 ran=13 failed=0）；语言池审计 SELF_TERMINATE 全桶达标（轴 72/72·像素 12/12·greet 28/28·faq 7/7·负例 6/6，determinism 192 对 mismatch=0）；相遇轮今日 3/3 已满按自终止律跳过；反思线待 19:00 夜窗。",
+   "t": "**R3055（2026-11-15 08:58-09:1x）：** 年轮批实发 8/10 席落环（C-02687/02688/02691/02692/02694/02695 等；C-02698 tech-word、C-02693 time-night 被闸留 due）＋事件回放闸 PASS（events=44288 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0）＋确定性日更面 13 面重建 PASS（stale=12 ran=13 failed=0）＋语言池 SELF_TERMINATE 全桶达标（不空烧） **R3048（2026-11-15 07:44-08:0x 周日晨产品轮）**：年轮批 due=10 -> written=7（C-02600/02601/02611/02598/02605/02610/02612；C-02577/02602/02613 三席被锚-重复闸拦留 due 诚实不硬写）；事件流回放闸 PASS（cards=10111 events=44224 replayed=10111 schema_errors=0 mismatch=0）；日更面 stale=12 ran=13 failed=0 PASS（dashboard/voices/coverage/ops/objects/goals/gene_ledger/growth/meets/reflections/meet_candidates/index 重建）；QC PASS（problems=0 dup_rings=37/37 与基线同值）。新增只读对账工具 Tools/rings_recount.py，以 350+7=357 恒等式结掉 R3042/R3043/R3044 计数口径三度复现单。 **R3047（2026-11-15 07:36-07:5x 周日产品轮）：年轮线 P0 复明——上一提交引入 hashlib NameError 致年轮 100% 中断，已修并复跑 9/10 落环（C-02586/02589/02590/02606/02585/02591/02593/02594/02595）+ 事件闸 PASS(44217 events, mismatch=0) + 日更面全新鲜仅 index 重建**",
    "s": 1
   },
   {
@@ -1993,8 +1993,12 @@
   [
    "357",
    "今日年轮落环 357 行（对账工具 rings_recount.py 直数：357 行 / 355 居民 / 多环居民 2 / 心跳 350 + 本轮 7 = 357 恒等）"
+  ],
+  [
+   "421",
+   "今日年轮落环 421 行（行级机器直数 registry 419 + anchors 2；人口 10114 恒定）；本轮新增 8 席。"
   ]
  ],
- "t": "当前活：年轮线居民迭代批（due 队列 3 席因锚/重复闸留 due，下轮继续）\n最近实物：census/registry 7 张新年轮卡（C-02600/02601/02611/02598/02605/02610/02612）2026-11-15 07:45\n下个里程碑：19:00 后反思线夜窗批（--batch 5，验收 reflections.jsonl 尾部 date=当日）+ 相遇轮明日 3/3 配额",
- "top_text": "当前活：年轮线居民迭代批（due 队列 3 席因锚/重复闸留 due，下轮继续）\n最近实物：census/registry 7 张新年轮卡（C-02600/02601/02611/02598/02605/02610/02612）2026-11-15 07:45\n下个里程碑：19:00 后反思线夜窗批（--batch 5，验收 reflections.jsonl 尾部 date=当日）+ 相遇轮明日 3/3 配额"
+ "t": "当前活：年轮线居民迭代批（due 队列 2 席 tech-word/time-night 留 due，下轮继续）\n最近实物：census/registry 新年轮卡 8 张（2026-11-15 08:59-09:00 写入）\n下个里程碑：19:00 后反思线夜窗批（--batch 5，验收 reflections.jsonl 尾部 date=当日）+ 相遇轮 19:00 后恢复额度",
+ "top_text": "当前活：年轮线居民迭代批（due 队列 2 席 tech-word/time-night 留 due，下轮继续）\n最近实物：census/registry 新年轮卡 8 张（2026-11-15 08:59-09:00 写入）\n下个里程碑：19:00 后反思线夜窗批（--batch 5，验收 reflections.jsonl 尾部 date=当日）+ 相遇轮 19:00 后恢复额度"
 }
