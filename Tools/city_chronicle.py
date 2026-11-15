@@ -72,6 +72,10 @@ C_ID_RE = re.compile(r"C-\d{5}")                              # 判据⑤: 居�
 ORDER_STUB_RE = re.compile(r"^order\s+(O-\d{8}-\d{4})")        # v1.1b: CEO_ORDER ID 存根形态 (独立真实令行)
 QUOTE_RE = re.compile(r"「([^」]{6,})」")                        # v1.1b: 同令双载体内容键 (uorder↔ledger 镜像)
 GAME_RE = re.compile(r"^(G\d+)")                               # v1.1c: GAME_STAGE 游戏号
+# 闸④ (R3170): FluxVerse residents.ps1 向 RESIDENT_SAY 注入 vram_free_mb/vram_total_mb,
+# 台词退化为机队显存报告 (D-20261115-01 定谳, 上游台词面由城市线修)。城市谱只收城市
+# 事件, 机队资源报告结构性不入谱 — 仅作用于 RESIDENT_SAY 面, 其它类型如实录事件不筛。
+FLEET_RES_RE = re.compile(r"显存|VRAM|vram|GDDR|G\d{2}-G\d{2}")
 
 
 def weight_for(e):
@@ -153,6 +157,9 @@ def derive_rows():
         # 7b 经 digest 抄编号入年轮 (C-01875 他卡 ID 编造判例防线), 结构性不入谱。
         if DEV_ID_RE.search(summary) or C_ID_RE.search(summary):
             continue
+        # 闸④ (R3170): 机队资源报告非城市事件 — RESIDENT_SAY 面结构性不入谱。
+        if str(e.get("type")) == "RESIDENT_SAY" and FLEET_RES_RE.search(summary):
+            continue
         events.append((dt, e, w))
 
     daily = {}                # (date, token-md5) -> row (单谱行制)
@@ -214,6 +221,10 @@ def city_digest(now=None, top=DIGEST_TOP, window=DIGEST_WINDOW_DAYS, path=CHRON)
     for r in load_rows(path):
         s = r.get("source_ref") or {}
         if DEV_ID_RE.search(str(s.get("summary")) or ""):
+            continue
+        # 闸④ 读时同滤: 存量机队资源行 (D-20261115-01 上游污染期产物, --feed 只增
+        # 不改故仍在谱) 不得进入年轮 digest 喂入面。
+        if str(s.get("type")) == "RESIDENT_SAY" and FLEET_RES_RE.search(str(s.get("summary")) or ""):
             continue
         try:
             days = (now.date() - datetime.date.fromisoformat(r["date"])).days
