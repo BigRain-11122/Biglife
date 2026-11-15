@@ -3331,3 +3331,4 @@ ound_daily.py --run = **stale=2 ran=3 failed=0 verdict=PASS**（dashboard/ops/in
   **T-20261115-04 验收样本**：本批 10/10 零 hard-refuse，为「连续 3 批 zero hard-refuse」样本窗（≤2026-11-17）内第 2 批有效样本。
   **CEO 可见三行**：当前活=年轮/日更/事件闸三链闭环（06:0x）；最近实物=census 10 环新年轮（2026-11-16·25d5bee7c）+ census/export 13 面重建；下个里程碑=明日相遇轮一席 + 11-17 T-20261115-04 候选 B 定档。
   tokens: local=10 api=0 api_reason=-
+  **工具面留档**：本轮 commit message 经 PowerShell 内联传参被 GBK 转码损坏（873445f51 显示为乱码），文件内容本身无损（python 写 UTF-8）。规程：中文 commit message 一律先写 UTF-8 文件再 \git commit -F <file>\，禁 \-m\ 内联中文（PS5.1 控制台代码页 936 转换）。历史已推送不改写（REPO-SLIM 历史禁改写律）。
