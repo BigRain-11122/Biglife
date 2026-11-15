@@ -24,6 +24,7 @@ LIGHT = os.path.join(CO, "census", "export", "citizens-light.jsonl")
 GENES = os.path.join(CO, "genes", "persona-v2.json")
 LIVES = os.path.join(CO, "genes", "lives.json")
 OUT = os.path.join(CO, "census", "export", "citizen-persona.jsonl")
+GENERATIONS = os.path.join(CO, "genes", "persona-pool-generations.json")
 HONORED = {"C-00001", "C-00002", "C-00003"}
 
 def h32(cid, salt):
@@ -31,6 +32,45 @@ def h32(cid, salt):
 
 def pick(cid, salt, seq):
     return seq[h32(cid, salt) % len(seq)]
+
+def _cid_num(cid):
+    try:
+        return int(str(cid).split("-")[-1])
+    except (TypeError, ValueError):
+        return 0
+
+_GENS = None
+
+def generations():
+    """世代池快照 [(cutoff_cid, pools)]（升序）。缺档=空表→退回现池，行为不变。"""
+    global _GENS
+    if _GENS is None:
+        try:
+            with open(GENERATIONS, encoding="utf-8") as f:
+                raw = json.load(f).get("generations") or []
+        except (OSError, ValueError):
+            raw = []
+        out = []
+        for g in raw:
+            try:
+                out.append((int(g.get("cutoff_cid")), g.get("pools") or {}))
+            except (TypeError, ValueError):
+                continue
+        out.sort(key=lambda t: t[0])
+        _GENS = out
+    return _GENS
+
+def pool_for(cid, key, current):
+    """CODEX §十四 习惯分配稳定性口径：老居民读出生世代的冻结快照，新居民读现池。"""
+    gens = generations()
+    if not gens:
+        return current
+    n = _cid_num(cid)
+    for cutoff, pools in gens:
+        if n <= cutoff:
+            frozen = pools.get(key)
+            return frozen if frozen is not None else current
+    return current
 
 def load_genes():
     with open(GENES, encoding="utf-8") as f:
@@ -99,7 +139,7 @@ def seed_line(cid, sig, creed, addr, tic, closer, genes):
     base = sig or ("「%s」" % creed[:20] if creed else "")
     if not base:
         return ""
-    w = pick(cid, "sw", genes["seed_wrappers"])
+    w = pick(cid, "sw", pool_for(cid, "seed_wrappers", genes["seed_wrappers"]))
     s = (w.replace("{catch}", base).replace("{addr}", addr)
           .replace("{tic}", tic).replace("{closer}", closer))
     return re.sub(r"[，。]{2,}", "。", s).strip()
@@ -117,19 +157,20 @@ def derive(row, genes):
     lline = grab(card, "语言")
     traits = parse_traits(pline) or []
     texpr = trait_expr(cid, traits, genes)
-    habit = pick(cid, "hb", genes["habits"]) if genes["habits"] else ""
+    hab_pool = pool_for(cid, "habits", genes["habits"])
+    habit = pick(cid, "hb", hab_pool) if hab_pool else ""
     habits = [habit]
-    if h32(cid, "hb2") % 3 == 0 and len(genes["habits"]) > 1:
-        h2 = pick(cid, "hb2", genes["habits"])
+    if h32(cid, "hb2") % 3 == 0 and len(hab_pool) > 1:
+        h2 = pick(cid, "hb2", hab_pool)
         if h2 != habit:
             habits.append(h2)
-    like = pick(cid, "lk", genes["likes"]) if genes["likes"] else ""
-    dislike = pick(cid, "dk", genes["dislikes"]) if genes["dislikes"] else ""
+    like = pick(cid, "lk", pool_for(cid, "likes", genes["likes"])) if genes["likes"] else ""
+    dislike = pick(cid, "dk", pool_for(cid, "dislikes", genes["dislikes"])) if genes["dislikes"] else ""
     dialect, sig = parse_lang(lline, row.get("species") or "carbon")
     mpart = pick(cid, "mp", genes["modal_particles"].get(dialect) or genes["modal_particles"]["_fallback"])
-    addr = pick(cid, "ad", genes["address_terms"]) if genes["address_terms"] else ""
-    tic = pick(cid, "tc", genes["sentence_tics"]["openers"]) if genes.get("sentence_tics") else ""
-    closer = pick(cid, "cl", genes["sentence_tics"]["closers"]) if genes.get("sentence_tics") else ""
+    addr = pick(cid, "ad", pool_for(cid, "address_terms", genes["address_terms"])) if genes["address_terms"] else ""
+    tic = pick(cid, "tc", pool_for(cid, "tics_openers", genes["sentence_tics"]["openers"])) if genes.get("sentence_tics") else ""
+    closer = pick(cid, "cl", pool_for(cid, "tics_closers", genes["sentence_tics"]["closers"])) if genes.get("sentence_tics") else ""
     creed = grab(card, "信条").strip("「」。 ")
     seed = seed_line(cid, sig, creed, addr, tic, closer, genes)
     return {

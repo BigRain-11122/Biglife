@@ -13,7 +13,7 @@ import argparse, json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-from persona_enrich import load_genes, pick, h32  # noqa: E402
+from persona_enrich import load_genes, pick, h32, pool_for  # noqa: E402
 
 SALTS = ("hb", "hb2")
 BUCKET_CAP = 256
@@ -55,6 +55,8 @@ def main():
     schemes = (
         ("mod_len", lambda c, s, q: pick(c, s, q)),
         ("default_bucket", lambda c, s, q: default_bucket(c, s, q)),
+        # 生产实路（T-20261115-03）：老居民读出生世代快照 → 池增长不再重排习惯
+        ("gen_freeze", lambda c, s, q: pick(c, s, pool_for(c, "habits", q))),
     )
     for salt in SALTS:
         entry = {}
@@ -75,7 +77,7 @@ def main():
         f.write("\n")
 
     for salt, r in report["salts"].items():
-        for name in ("mod_len", "default_bucket"):
+        for name in ("mod_len", "default_bucket", "gen_freeze"):
             s = r[name]
             print(f"{salt}/{name}: moved={s['moved']}/{report['citizens']} "
                   f"share={s['share']:.2%} head_share={s['head_share']:.2%}")

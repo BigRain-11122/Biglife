@@ -14,6 +14,11 @@
         "share": 0.002966,
         "head_share": 0.469448
       },
+      "gen_freeze": {
+        "moved": 0,
+        "share": 0.0,
+        "head_share": 0.006427
+      },
       "theory_one_over_n": 0.007246
     },
     "hb2": {
@@ -26,6 +31,11 @@
         "moved": 26,
         "share": 0.002571,
         "head_share": 0.470042
+      },
+      "gen_freeze": {
+        "moved": 0,
+        "share": 0.0,
+        "head_share": 0.004845
       },
       "theory_one_over_n": 0.007246
     }
