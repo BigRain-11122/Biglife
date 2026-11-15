@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-15 13:31",
+ "export_ts": "2026-11-15 13:49",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3084（2026-11-15 13:2x-13:3x·周日全功率窗）**：年轮线 due=10 落环 **9 环**（C-02931/02936/02937/02941/02932/02934/02935/02938/02940），C-02930 撞 persistent 门（recent-family-opening+recent-dup-phrase）留 due 不凑数；行为线镜像随环同步；事件回放闸 **PASS**（events=44528 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0）；确定性日更面重建 **14 面**（看板/声音/覆盖率/运维/物件志/目标/基因台账/成长/相遇/反思/环趋势/相遇候选/索引）failed=0；QC 不变量扫描 cards=10114 problems=0 dup_rings=37/37；语言池 72 桶全达标 SELF_TERMINATE（硬失败 0·确定性 192+25 对 mismatch=0·零 LLM）；HQ 日闸 ALREADY_REPORTED 零写入；决策水位差集 NEW=0。 **R3083（2026-11-15 13:1x·周日全功率窗）**：年轮线落环 **10 环**（C-02919/02921/02925/02929/02933/02922/02923/02926/02927/02928·GM/MD/NS/QT/RV 五城区），行为线镜像同步 rows=10 ring=10114；事件回放闸 **PASS**（events=44519 / cards=10111 / replay mismatch=0 / schema_errors=0）；确定性日更面重建 **14 面**（今日/看板/流言/声音/覆盖率/运维/目标/基因台账/成长 11 页/相遇候选/反思/索引）failed=0；语言池 72 桶全达标 SELF_TERMINATE（零 LLM）；相遇轮日额 3/3 已满、案例巡检本日 13:05 已跑 problems=0。 **R3081（2026-11-15 12:43-12:5x 周日午间产品轮）**：日更面 2 面重建（city-ops/index）＋事件回放闸 PASS（44500 事件·mismatch=0）；年轮批 due=10 与 HEAD 同批字节一致（同日重复批·零净增，已留证）。",
+   "t": "**R3085（2026-11-15 13:39-13:56·周日全功率窗）**：年轮线 due=10 → evolved=9（C-02949/02952/02943/02946/02947/02948/02942/02944/02930，GM/MD/QT 三城区）；C-02945 撞 persistent 违规（recent-family-opening+recent-dup-phrase）留 due 不凑数。日更 13 面重建（stale=12 / ran=13 / failed=0 / verdict=PASS）；事件闸 PASS（cards=10111 / events=44537 / replay mismatch=0 / schema_errors=0 / coverage unexpected_missing=0）。pool_audit=PASS SELF_TERMINATE（全桶达标不重烧）；相遇轮今日 cap 3/3 已满。集团仓本地分叉（behind 167 + 他线脏改）未改动，改从 origin/main 只读取证；决策水位 D-20261115-12，差集 NEW=0（D-20261114-01 已撤销 BIGLIFE 挂起，本线 ACTIVE 无待办）。 **R3084（2026-11-15 13:2x-13:3x·周日全功率窗）**：年轮线 due=10 落环 **9 环**（C-02931/02936/02937/02941/02932/02934/02935/02938/02940），C-02930 撞 persistent 门（recent-family-opening+recent-dup-phrase）留 due 不凑数；行为线镜像随环同步；事件回放闸 **PASS**（events=44528 / cards=10111 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0）；确定性日更面重建 **14 面**（看板/声音/覆盖率/运维/物件志/目标/基因台账/成长/相遇/反思/环趋势/相遇候选/索引）failed=0；QC 不变量扫描 cards=10114 problems=0 dup_rings=37/37；语言池 72 桶全达标 SELF_TERMINATE（硬失败 0·确定性 192+25 对 mismatch=0·零 LLM）；HQ 日闸 ALREADY_REPORTED 零写入；决策水位差集 NEW=0。 **R3083（2026-11-15 13:1x·周日全功率窗）**：年轮线落环 **10 环**（C-02919/02921/02925/02929/02933/02922/02923/02926/02927/02928·GM/MD/NS/QT/RV 五城区），行为线镜像同步 rows=10 ring=10114；事件回放闸 **PASS**（events=44519 / cards=10111 / replay mismatch=0 / schema_errors=0）；确定性日更面重建 **14 面**（今日/看板/流言/声音/覆盖率/运维/目标/基因台账/成长 11 页/相遇候选/反思/索引）failed=0；语言池 72 桶全达标 SELF_TERMINATE（零 LLM）；相遇轮日额 3/3 已满、案例巡检本日 13:05 已跑 problems=0。",
    "s": 1
   },
   {
@@ -2017,8 +2017,12 @@
   [
    "661",
    "本日年轮落环 661 行（本轮 13:2x 批 9 环·本地 Ollama），无新居民注册（既有居民迭代）。"
+  ],
+  [
+   "670",
+   "R3085：今日年轮落环 **668** 行（本批 evolved=9/written=9），事件流 44537 条 replay 全量比对零失配。"
   ]
  ],
- "t": "当前活：年轮线落环 9 环 + 确定性日更面 14 面重建（周日全功率窗，非让路窗）\n最近实物：census/registry/{GM,MD,NS,QT,RV}/ 9 张居民卡年轮更新 @ 2026-11-15 13:29；qa/EVENTS-REPLAY-REPORT.md 44528 事件回放 @ 2026-11-15 13:29\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）+ 相遇轮日额明日复位 @ 2026-11-15 19:0x",
- "top_text": "当前活：年轮线落环 9 环 + 确定性日更面 14 面重建（周日全功率窗，非让路窗）\n最近实物：census/registry/{GM,MD,NS,QT,RV}/ 9 张居民卡年轮更新 @ 2026-11-15 13:29；qa/EVENTS-REPLAY-REPORT.md 44528 事件回放 @ 2026-11-15 13:29\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）+ 相遇轮日额明日复位 @ 2026-11-15 19:0x"
+ "t": "当前活：R3085 收尾（年轮主线 + 日更面持续出实物）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（13:45 重建·含 9 环新年轮）/ C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\EVENTS-REPLAY-REPORT.md（PASS·44537 事件·mismatch=0）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）+ 明日相遇轮 @ 2026-11-16",
+ "top_text": "当前活：R3085 收尾（年轮主线 + 日更面持续出实物）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-dashboard.html（13:45 重建·含 9 环新年轮）/ C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\EVENTS-REPLAY-REPORT.md（PASS·44537 事件·mismatch=0）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）+ 明日相遇轮 @ 2026-11-16"
 }
