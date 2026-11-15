@@ -1,5 +1,5 @@
 {
- "export_ts": "2026-11-15 15:08",
+ "export_ts": "2026-11-15 15:29",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
@@ -2045,8 +2045,12 @@
   [
    "745",
    "环 44612 零差"
+  ],
+  [
+   "763",
+   "今日年轮落环 763 行（本轮 --batch 3：8 席落环、2 席撞质量闸留 due 不凑数）"
   ]
  ],
- "t": "当前活：年轮线连续在产 + 日更面幂等重建\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/EVENTS-REPLAY-REPORT.md（15:0x PASS·44612 事件·mismatch=0）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）",
- "top_text": "当前活：年轮线连续在产 + 日更面幂等重建\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/EVENTS-REPLAY-REPORT.md（15:0x PASS·44612 事件·mismatch=0）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）"
+ "t": "当前活：年轮主线连续在产（本地 qwen3:4b-instruct）\n最近实物：qa/EVENTS-REPLAY-REPORT.md（PASS·44630 事件·mismatch=0）+ census/export/city-dashboard.html（15:25 重建）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）",
+ "top_text": "当前活：年轮主线连续在产（本地 qwen3:4b-instruct）\n最近实物：qa/EVENTS-REPLAY-REPORT.md（PASS·44630 事件·mismatch=0）+ census/export/city-dashboard.html（15:25 重建）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）"
 }
