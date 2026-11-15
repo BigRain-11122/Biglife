@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-15 14:43",
+ "export_ts": "2026-11-15 14:59",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3090（2026-11-15 14:39-14:5x·周日下午产品轮）：年轮 9 环 + 13 面重建 + 事件闸 PASS + 骨架族根因诊断。** 本轮年轮批 due=10 落 9（C-02981/02987/02988/02993/03020/02989/02990/02992/02994），C-02995 撞 opening-family-quota 硬门留 due 不凑数；事件流回放闸 PASS（events=44583 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0 / chronicle gap=0d）；日更面 stale=12 ran=13 failed=0；世代池 rc=0（gen2 habits=138 pending_sync=none）；语言池 SELF_TERMINATE 全桶达标。**新立 T-20261115-04**：实测今日 714 席年轮族分布 HAND_DEICTIC 177(24.8%)／TIME_OPEN 11(1.5%)／unclassified 526(73.7%)——6 族×25% 日累计配额使唯一受控族每天必撞线，而 73.7% 开篇不进任何族，闸对多数同质化无约束力。 **R3089（2026-11-15 14:28-14:35 @BigLife-OSLoop 周日下午产品轮）**：年轮批落环 9 席（C-02974/02979/02984/02991/02980/02982/02983/02985/02986；C-02981 硬门 opening-family-quota 留 due 下轮重试）+ 日更面重建 13 面 verdict=PASS + 事件回放闸 PASS（cards=10111/events=44574/replayed=10111/mismatch=0/schema_errors=0/coverage unexpected_missing=0）+ QC 例巡 problems=0；机制接线=世代池 sync 守卫入规程 1B 与基因轮步 6（T-20261115-02 决策 b 收口·T-20261115-03 实装面）。 **R3088（11-15 14:18-14:3x 年轮+日更轮）：年轮 9 环落环（due=10 written=9，C-02974 撞 opening-family-quota 留 due 不凑数）→ 行为线镜像 rows=9 自动收口 → 日更 13 面重建（stale=12 ran=13 failed=0 PASS）→ 事件闸 PASS（44565 事件·replay 10111/10111·mismatch=0·schema_errors=0）→ 池审计 SELF_TERMINATE（72/72 全桶达标）→ 反思线今日已落（尾行 date=2026-11-15，100 行）**",
+   "t": "**R3091（2026-11-15 14:54-15:0x·周日下午产品轮）：年轮 10 环 + 12 面重建 + 事件闸 PASS。** 本轮年轮批 due=10 全部落环（C-03003/03005/03010/03023/03006/03007/03008/03009/03011/03004，其中 4 席 soft-concession〔recent-dup-phrase〕让步放行、[锚] 注脚保全）；事件流回放闸 PASS（events=44602 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0 / chronicle gap=0d）；日更面 stale=12 ran=13 failed=0（重建 city-dashboard/voices/coverage/ops/objects/goals/gene_ledger/growth/meets/reflections/meet_candidates/index）；世代池 rc=0（gen2 habits=138 pending_sync=none）；语言池 SELF_TERMINATE 全桶达标；相遇轮今日 cap 3/3 已满。决策水位差集 NEW=0（覆盖至 D-20261115-12）。 **R3090（2026-11-15 14:39-14:5x·周日下午产品轮）：年轮 9 环 + 13 面重建 + 事件闸 PASS + 骨架族根因诊断。** 本轮年轮批 due=10 落 9（C-02981/02987/02988/02993/03020/02989/02990/02992/02994），C-02995 撞 opening-family-quota 硬门留 due 不凑数；事件流回放闸 PASS（events=44583 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0 / chronicle gap=0d）；日更面 stale=12 ran=13 failed=0；世代池 rc=0（gen2 habits=138 pending_sync=none）；语言池 SELF_TERMINATE 全桶达标。**新立 T-20261115-04**：实测今日 714 席年轮族分布 HAND_DEICTIC 177(24.8%)／TIME_OPEN 11(1.5%)／unclassified 526(73.7%)——6 族×25% 日累计配额使唯一受控族每天必撞线，而 73.7% 开篇不进任何族，闸对多数同质化无约束力。 **R3089（2026-11-15 14:28-14:35 @BigLife-OSLoop 周日下午产品轮）**：年轮批落环 9 席（C-02974/02979/02984/02991/02980/02982/02983/02985/02986；C-02981 硬门 opening-family-quota 留 due 下轮重试）+ 日更面重建 13 面 verdict=PASS + 事件回放闸 PASS（cards=10111/events=44574/replayed=10111/mismatch=0/schema_errors=0/coverage unexpected_missing=0）+ QC 例巡 problems=0；机制接线=世代池 sync 守卫入规程 1B 与基因轮步 6（T-20261115-02 决策 b 收口·T-20261115-03 实装面）。",
    "s": 1
   },
   {
@@ -2037,8 +2037,12 @@
   [
    "716",
    "本轮年轮落环 716 席（due=10/written=9，1 席撞门留 due）；今日事件流 44583 条、回放 mismatch=0；13 个可见面本轮重建、failed=0。"
+  ],
+  [
+   "735",
+   "今日年轮落环 735 席（本轮批 due=10/written=10）；今日事件流 44602 条、回放 mismatch=0；12 个可见面本轮重建、failed=0。"
   ]
  ],
- "t": "当前活：年轮主线连续在产 + 骨架族闸结构性缺陷诊断（T-20261115-04）\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（14:40 重建·含 9 环新年轮）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）+ 明日相遇轮 @ 2026-11-16 00:0x",
- "top_text": "当前活：年轮主线连续在产 + 骨架族闸结构性缺陷诊断（T-20261115-04）\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（14:40 重建·含 9 环新年轮）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）+ 明日相遇轮 @ 2026-11-16 00:0x"
+ "t": "当前活：年轮主线连续在产（本轮 10 席落环）+ 确定性日更面 12 面重建\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（15:0x 重建·含 10 环新年轮）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）+ 明日相遇轮 @ 2026-11-16 00:0x",
+ "top_text": "当前活：年轮主线连续在产（本轮 10 席落环）+ 确定性日更面 12 面重建\n最近实物：C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（15:0x 重建·含 10 环新年轮）\n下个里程碑：19:00 后反思线夜窗（T-20261113-05 连续 3 生产日验收）+ 明日相遇轮 @ 2026-11-16 00:0x"
 }
