@@ -2569,3 +2569,15 @@ ound_daily --run=stale=25 ran=26 failed=0 verdict=PASS（growth 11 分页/voices
   **跳过面（诚实不重烧）**：相遇轮 meet-cap 3/3 今日已满；反思线未到 19:00 夜窗（现 08:5x）；spotlight 11 月配额已满（02:2x 两例）；HQ-FEEDBACK `ALREADY_REPORTED`（今日已 1 行）零写入；决策水位已覆盖至 D-20261115-05（62 批），无新差集；orders 物理件区无涉本司新件；TASKS 无新增 open 单（存量 T-20261112-04/05 观测窗进行中）。
   **实况三行**：当前活=周日上午年轮批+日更面重建（本机算力全开日·让路窗不适用）；最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-dashboard.html（08:4x）+ 9 张居民环卡（C-02670 等）；下个里程碑=19:00 夜窗年轮批 + 反思线 batch 5（ETA 2026-11-15 19:10）。
   tokens: local=10 api=0 api_reason=-
+
+- [2026-11-15 08:48-09:1x @BigLife-OSLoop R3054 周日上午产品轮] **年轮 10 环全落 + 事件闸/日更面 PASS + 基因轮补 10 习惯（复读面溯源）**
+  **产品增量（能看实物）**：①年轮批 due=10 → written=10（C-02667/02681/02689/02690/02702/02680/02682/02684/02685/02686），其中 4 席走 recent-dup-phrase 软让位（C-02689 双族：recent-dup-opening+recent-dup-phrase）；②`genes/lives.json` habits **114 → 124**（新增 10 条，逐条避开今日饱和意象 柜顶/风/门帘/塑料布/雨棚，且不用「必/一律」公式起句以避开开头族聚集），校验=HEAD 逐键比对（仅 habits 变、原 114 条前缀完整、零 U+FFFD）；③`census/export/gene-ledger.html` 重生成 + `round_daily --run` stale=12 ran=13 → 再 stale=1 ran=2，failed=0 PASS；④`events_refresh --gate` PASS（cards=10111 events=44280 shards=3；replay 10111；schema_errors=0；mismatch=0；chronicle gap=0d）。
+  **本轮新发现（内容质量·复读面溯源）**：今日 411 条年轮做 9-gram 统计，最大复读源不是天气而是仪式句——「初一清柜顶的规矩」族（17/12/12/6/5 四条同族 gram）源自 `genes/lives.json:926`「初一必清一次柜顶」，该单条生活基因被 **141 名居民**共享；紧随其后才是天气族（「风把塑料布吹得啪啦响」8 /「风撞在门板上咚一声」7 /「风大得像有人在推门」7，v0.64 提示池已自愈但仍为新池句外溢）。**更深一层**：`build_gene_ledger` 实读 habits **used=28 / pool=124（闲置 96 条）**——万人摊薄下每种子实际承载 ≈361 人，复读是分配集中度的函数，不是模型单点问题。已立 T-20261115-01。
+  **跳过面（诚实不重烧）**：相遇轮 meet-cap 3/3 今日已满；反思线未到 19:00 夜窗（现 08:5x，本日已有产出 100 行·尾部 date=2026-11-15）；pool_audit 沿上轮 SELF_TERMINATE；QC 上轮 R3053 已 clean（间隔不足 6 轮）；spotlight 11 月配额已满；决策水位已覆盖 D-20261115-01..05（62 批）无新差集。
+  **实况三行**：当前活=周日上午年轮批 + 复读面溯源（基因池深度化）｜最近实物=C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/genes/lives.json（habits 124 条，09:0x）+ C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/gene-ledger.html｜下个里程碑=19:00 夜窗年轮批 + 反思线 batch 5（ETA 2026-11-15 19:10）。
+  tokens: local=10 api=0 api_reason=-
+
+- [ ] **T-20261115-01 基因分配集中度（P1·复读结构性根因）**（2026-11-15 09:1x @BigLife-OSLoop R3054 立）
+  - 事实：`build_gene_ledger` 实读 `genes/lives.json` habits **used=28 / pool=124**（unused=96）；今日 411 环 9-gram 首位复读源=「初一清柜顶的规矩」族，溯源到单条 habit「初一必清一次柜顶」被 141 名居民共享。万人规模下每种子承载数百人，同日子集必然撞句 → recent-dup-phrase 软让位 4/10 是分配层的函数，不是模型单点。
+  - 待查：①居民取基因的分配函数（哈希取模？序号取模？随机带种子？）——用全量 census 反推各需池 used/unused 分布，若为取模需给出偏斜原因；②为何仅 28/124 在用（是分配器只取前 N 条，还是 registry 回填只写了部分）；③集中度指标（每池 top-1 基因承载人数 / 均值）应进 QC 不变量。
+  - 验收：给出「为何 28/124」的可复现最小解释 + 一条不改变既有卡的分配侧修法（或证否偏斜并说明口径）；禁改阈值换绿。证据=`qa/GENE-ASSIGN-CONCENTRATION-20261115.md`。
