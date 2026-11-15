@@ -3066,3 +3066,4 @@ ecent-family-opening 跨日语料族塌陷闸，与今日族配额无关）+ 镜
 - 待办接续：T-20261115-04 候选 B 维持 open（拒稿分布窗需 ≥2026-11-17 才定闸，本轮零阈值改动）。
 - 实况三行：当前活＝年轮主线在产（本地 qwen3:4b-instruct·21:29 批 10/10 全落环）｜最近实物＝10 席新年轮（census/registry 21:30）+ 14 面日更重建（census/export 21:31）+ qa/EVENTS-REPLAY-REPORT.md（44972 events/PASS）｜下个里程碑＝下一轮年轮续批 + 事件闸复验（窗 ≤48h·2026-11-17 前）
 - [2026-11-15 21:3x @BigLife-OSLoop R3133] 本轮计量：tokens: local=10 api=0 api_reason=-（年轮批 10 席全落环，本地 Ollama qwen3:4b-instruct；日更面/回放闸/世代池/池审计/反思闸/相遇闸/日清闸全确定性零 LLM）
+- [2026-11-15 21:4x @BigLife-OSLoop R3133 补] 聚光灯抽验 T-07 证据：11 月首批 2 例（C-03400 / C-03397-带追问）均 PASS「只提所喂事实」——零编造未列出事件、零集团任务口吻、零 ASCII 残留；C-03397 对「今日新鲜事」作性格化避答（非事实错误，附注不动阈值）。证据=qa/SPOTLIGHT-20261115.md + qa/spotlight-20261115{,-b}.log；11 月配额 1/2。
