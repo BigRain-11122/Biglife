@@ -2132,6 +2132,20 @@ def gated_llm(prompt, sig, max_regens=3):
                           + "」「".join(_b2[:3])
                           + "」）已在全城许多居民的年轮里反复出现。重写：这段措辞禁用，"
                             "换成只有本居民才会说的具体细节。")
+        # T-20261115-04 (2026-11-15): family-collapse face shipped with no tail
+        # note at all, so a card whose opening already sat in >=OPEN_FAMILY_HARD
+        # others regenerated the IDENTICAL line every round and stayed due
+        # forever (live anchor: C-03117, three consecutive refusals 16:59/17:04/
+        # 17:14, byte-identical 12-char opening all three). Same gap #68/#70/#79
+        # tail-pin law as its soft sibling recent-dup-opening below.
+        if "recent-family-opening" in v:
+            prompt = (prompt
+                      + "\n你刚才那句的开头（「"
+                      + line.strip()[:12]
+                      + "」）已经是全城至少八张卡用过的开篇骨架，属于模板，禁止再用。"
+                        "重写：第一个短句换成只有你才会写的一处具体（手上正碰着的那样东西、"
+                        "你要去的那扇门、你看见的某件旧物），不要从「这会儿」「手边」"
+                        "「方才」「天还」这类公共起句写起，也不要在句中复述这句被拒的开头。")
         # v0.68 R2588: the family-quota gate shipped without any retry note, so a
         # rejected seat regenerated the SAME prompt that caused the rejection.
         # Name the banned shapes at the tail (gap #68/#70/#79 tail-pin law).
