@@ -164,3 +164,13 @@
 {"date":"2026-11-15","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261115-C-02151:seed=C-02151:at=2026-11-15 17:44:hop=2","participants":["C-07250","C-03698"],"text":"听说我正把昨夜收的旧零件一一封进出诊箱，扳手头磕在边角上，发出“哐”一声，像谁在门后轻轻咳了口。"}
 {"date":"2026-11-15","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261115-C-02151:seed=C-02151:at=2026-11-15 17:44:hop=3","participants":["C-03698","C-04709"],"text":"听说我正把昨夜收的旧零件一一封进出诊箱，扳手头磕在边角上，发出“哐”一声，像谁在门后轻轻咳了口。"}
 {"date":"2026-11-15","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261115-C-02151:seed=C-02151:at=2026-11-15 17:44:hop=4","participants":["C-04709","C-05823"],"text":"听说我正把昨夜收的旧零件一一封进出诊箱，扳手头磕在边角上，发出“哐”一声，像谁在门后轻轻咳了口。"}
+{"date":"2026-11-15","kind":"meet_ring","source_ref":"census/registry/GM/C-02151.md:L28","participants":["C-02151","C-02189"],"text":"正在拧紧引擎皮管接头，旁边那块旧门板的螺丝松了，一拧就滑出半寸。"}
+{"date":"2026-11-15","kind":"meet_ring","source_ref":"census/registry/GM/C-02189.md:L28","participants":["C-02189","C-02151"],"text":"门板的螺丝滑了，我昨晚用钳子夹着那块铁皮试过，今天又见它晃，得改用弹簧垫。"}
+{"date":"2026-11-15","kind":"meet_ring","source_ref":"census/registry/QT/C-05966.md:L26","participants":["C-05966","C-06802"],"text":"你那件补丁衣服的边角还在，我刚把新配方加进数据流里，火候得再稳些。"}
+{"date":"2026-11-15","kind":"meet_ring","source_ref":"census/registry/QT/C-06802.md:L26","participants":["C-06802","C-05966"],"text":"正低头调参时，看见对面阿七在灶台前翻锅，光织物的纹路在火光下微微颤。"}
+{"date":"2026-11-15","kind":"meet_ring","source_ref":"census/anchors/C-00018.md:L36","participants":["C-00018","C-00019"],"text":"正在给对面老王家的门板补一片瓦，投影歪了半寸。"}
+{"date":"2026-11-15","kind":"meet_ring","source_ref":"census/anchors/C-00019.md:L35","participants":["C-00019","C-00018"],"text":"那门板上的锈斑，我认得，是去年你修引擎时留下的。"}
+{"date":"2026-11-16","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261116-C-03249:seed=C-03249:at=2026-11-16 08:06:hop=1","participants":["C-03249","C-06285"],"text":"手里的白手套正蹭着门板边一道细缝，那地方常年积着灰，像被人忘了擦。"}
+{"date":"2026-11-16","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261116-C-03249:seed=C-03249:at=2026-11-16 08:06:hop=2","participants":["C-06285","C-02805"],"text":"手里的白手套正蹭着门板边一道细缝，那地方常年积着灰，像被人忘了擦。"}
+{"date":"2026-11-16","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261116-C-03249:seed=C-03249:at=2026-11-16 08:06:hop=3","participants":["C-02805","C-07774"],"text":"听说手里的白手套正蹭着门板边一道细缝，那地方常年积着灰，像被人忘了擦。"}
+{"date":"2026-11-16","kind":"rumor_hop","source_ref":"rumor_chain:v1.0:event_id=RUMOR-20261116-C-03249:seed=C-03249:at=2026-11-16 08:06:hop=4","participants":["C-07774","C-07091"],"text":"好像听说手里的白手套正蹭着门板边一道细缝，那地方常年积着灰，像被人忘了擦。"}
