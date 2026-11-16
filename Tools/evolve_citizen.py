@@ -2143,6 +2143,11 @@ def load_refusal_bans(env_path=None):
     否则禁牌在两臂之间到期会把「补丁效果」量成「禁牌到期」（R3208 同类环境量污染）。
     默认路径零改变——env 未设时逐字回落到 recent_refusal_bans()。
     """
+    # R3254: A/B 负控台的 A 臂运行面开关——文本补丁的基线会随文件演进漂移
+    # （R3253 实弹 rc=2 根因），故关闸改为运行时开关，两臂只差一个 env。
+    if str(os.environ.get("BIGLIFE_QUOTA_GATE", "")).strip().lower() in (
+            "off", "0", "no", "false"):
+        return {}
     env_path = (env_path if env_path is not None
                 else os.environ.get("BIGLIFE_REFUSAL_BANS_FROZEN"))
     if env_path and os.path.exists(env_path):

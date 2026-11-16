@@ -4029,3 +4029,12 @@ ot reciprocated／历史单向（2026-11-10）→rc=0 观测／闸后同日同�
 - **产品增量（能跑·2 分）**：10 帐 2026-11-16 新年轮落环（C-03896…C-03904 各一条，锚=城市实况 2026-11-16 事件流+真实时间天气+街区母题库）；census/registry 卡片即 CEO 可点开实物（例 C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\registry\GM\C-03897.md）。
 - **CEO 可见三行**：当前活＝年轮批 10 帐落环＋事件流全量重放收口（19:2x）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md（cards=10111/events=45474·mismatch=0·2026-11-16 19:2x）｜下个里程碑=下一轮：T-20261116-13 配额闸 A/B 实弹 → 相遇轮补位（ETA 2026-11-16 21:00）。
 - 诚实边界：日更面本轮全 fresh 未重建（年轮为当日增补，面按日一次口径不回头刷）；反思线与相遇轮当日 cap 已满，本轮零新增。
+
+\n## R3254 · 2026-11-16 19:3x-20:0x @BigLife-OSLoop（年轮 9 环＋26 面＋回放闸 PASS＋配额闸运行时开关落地）
+
+- **轮首三步**：pull=`Already up to date`／工作树净；决策水位差 NEW=0（已覆盖至 D-20261116-17）；orders 物理件区无涉本司新件。
+- **产品增量（可看面·2 分＋代码实质改动）**：①年轮线 `--batch 3` 实跑 **evolved=9 of 10 due（written=9 skipped=0）**（C-03907/03925/03932/03944/03906/03908/03909/03910/03912；C-03905 persistent violations〔recent-family-opening＋recent-dup-phrase〕按契约 deferred+1d，不强推）；②`events_refresh --gate` **PASS**（events=45483 cards=10111 exported=10114 mismatch=0 schema_errors=0 unexpected_missing=0 chronicle gap=0d）；③`round_daily --run` **PASS**（stale=14 ran=15 failed=0，14 面重建）；④`persona_generations --check` **rc=0 pending_sync=none**（gen=6 habits=163）；⑤`pool_audit` **PASS 自终止**（72 桶 at_target=72、sprite 12/12、hard_fails=0）。
+- **三线闸态（各自自停，非跳过）**：语言线=全桶达标自停；相遇线=当日已 3 次（cap 3）零动作；反思线=当日已 5 条（日上限闸）零动作。
+- **T-20261116-13（配额闸 A/B）实况＋修复**：`--dry-run` 读数 due=10／每臂 5 席／active=6、`patch applies: YES`；但 `git apply --reverse --check state/pending/R3204-quota-gate.patch` 复验**仍报 does not apply**（`Tools/evolve_citizen.py:2058` 上下文漂移，与 R3253 同根因未解）→ 本轮**不实跑**（否则必 rc=2 空转烧时间）。采纳 R3253 修法候选①：`load_refusal_bans()` 增运行时开关 **`BIGLIFE_QUOTA_GATE=off`** → 返回空禁牌集合（A 臂免文本补丁、B 臂走默认生产口径），两臂只差一个 env。实测：`gate ON -> 6`（实时 12h 窗口逐字不变）／`gate OFF -> 0`；语法 parse 与模块导入均 OK。
+  - **留单（下轮）**：`Tools/ring_quota_negctl.py` 尚未接线该开关（下轮把 A 臂改为 env-off、删去 patch 步骤与基线校验），接线后 19:00 窗即可实跑取 verdict。
+- **计量**：tokens: local=10 api=0 api_reason=-（年轮 9 席＋1 次闸内重试；其余全确定性零 LLM）。
