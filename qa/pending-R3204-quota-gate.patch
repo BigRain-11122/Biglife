@@ -1,0 +1,113 @@
+diff --git a/Tools/evolve_citizen.py b/Tools/evolve_citizen.py
+index 6eafa1b..fa08c8c 100644
+--- a/Tools/evolve_citizen.py
++++ b/Tools/evolve_citizen.py
+@@ -2017,6 +2017,22 @@ def ring_violations(line, sig):
+         if len(op) >= 8 and op in tob:
+             if op not in re.sub(r"\s+", "", sig.get("card_text") or ""):
+                 v.append("today-dup-opening")
++    # T-20261115-04 换靶线（2026-11-16 R3206）：12h 全城开口配额。
++    # 同一开口12字被任一席位硬拒过，就整城摘牌 12h；命中即换人（不再烧 regen），
++    # own-catchphrase 照旧豁免（承 T-20260925-01 人设声口）。
++    rbo = sig.get("refusal_bans")
++    if isinstance(rbo, dict) and rbo:
++        # 作帐面取 opening12 未剥引号、生成面各闸剥引号，且历史键长度不齐（8-12 字），
++        # 故按「前缀命中」比对：任一 >=8 字的禁牌键是本句开头即算命中。
++        _raw = re.sub(r"\s+", "", line or "")[:12]
++        _raw_l = _raw.lstrip("「」\"“”")
++        _card = re.sub(r"\s+", "", sig.get("card_text") or "")
++        for _k in rbo:
++            _nk = re.sub(r"\s+", "", _k or "").strip("「」\"“”")
++            if len(_nk) >= 8 and (_raw.startswith(_nk) or _raw_l.startswith(_nk)):
++                if _nk not in _card:
++                    v.append("citywide-refusal-ban")
++                break
+     return v
+ 
+ def _note_refusal(sig, v, line):
+@@ -2042,6 +2058,57 @@ def _note_refusal(sig, v, line):
+         pass
+ 
+ 
++# T-20261115-04 换靶线（2026-11-16 R3206）：12h 全城开口配额。
++# 分布实测（R3200·n=80 两个生产日）：recent-dup-phrase 84%、recent-family-opening
++# 66%、opening-family-quota 仅 20%，且单一开口12「这会儿手边最碍事的就是这」占
++# 全部拒稿 30%（24 次）。同人重试已被 R3115 证伪（B 复写同句），故本闸只做一件事：
++# 一个开口12被任一席位硬拒过，就在 12h 内从全城生成面摘掉——命中按既有
++# deferred+1d 契约换人，不再让同人重试（省下 3 次 regen）。只认重复类闸；
++# anchor/引号类拒稿与开口重复无关，不设禁。
++REFUSAL_BAN_HOURS = 12
++REFUSAL_BAN_GATES = frozenset({
++    "recent-dup-opening", "recent-dup-phrase", "recent-family-opening",
++    "opening-family-quota", "today-dup-opening",
++    "batch-dup-opening", "batch-dup-phrase",
++})
++
++
++def recent_refusal_bans(hours=REFUSAL_BAN_HOURS, path=None):
++    """opening12 -> 最近一次被拒时刻；只收重复类闸且窗口内的记录。"""
++    path = path or os.path.join(STATE_DIR, "ring-refusals.jsonl")
++    out = {}
++    try:
++        now = datetime.datetime.now()
++        with open(path, "r", encoding="utf-8") as fh:
++            for ln in fh:
++                ln = ln.strip()
++                if not ln:
++                    continue
++                try:
++                    rec = json.loads(ln)
++                except Exception:  # noqa: BLE001
++                    continue
++                if not (set(rec.get("gate") or []) & REFUSAL_BAN_GATES):
++                    continue
++                op = (rec.get("opening12") or "").strip()
++                if len(op) < 8:
++                    continue
++                try:
++                    ts = datetime.datetime.strptime(rec.get("ts", ""),
++                                                    "%Y-%m-%d %H:%M:%S")
++                except Exception:  # noqa: BLE001
++                    continue
++                if (now - ts) > datetime.timedelta(hours=hours):
++                    continue
++                if op not in out or ts > out[op]:
++                    out[op] = ts
++    except FileNotFoundError:
++        return {}
++    except Exception:  # noqa: BLE001 - 作帐读失败绝不阻断产线
++        return {}
++    return out
++
++
+ def gated_llm(prompt, sig, max_regens=3):
+     """Generate with the honesty gate: regenerate on violations (<= max_regens),
+     then give up -> None (caller skips; citizen stays due for the next round).
+@@ -2071,6 +2138,11 @@ def gated_llm(prompt, sig, max_regens=3):
+         v = ring_violations(line, sig)
+         if not v:
+             return line
++        # T-20261115-04 换靶线：全城开口配额命中即换人（同人重试已被 R3115 证伪），
++        # 不烧 regen、不换提示词——直接按硬拒契约交回批次循环 deferred+1d。
++        if "citywide-refusal-ban" in v:
++            print("gate: citywide-ban hit", (sig or {}).get("cid", ""), flush=True)
++            break
+         if "event-code" in v:
+             prompt = (prompt
+                       + "\n你刚才那句里写了内部编号（字母加数字的组合码，如 G08、S2.5、B2396）。"
+@@ -3900,6 +3972,15 @@ def main():
+         print("today-dup openings banned: %d (top=%s)" % (
+             len(sig["today_ban_openings"]),
+             max(_tcount.items(), key=lambda kv: kv[1])[0]), flush=True)
++    # T-20261115-04 换靶线（2026-11-16 R3206）：12h 全城开口配额，读数直接取
++    # state/ring-refusals.jsonl（作帐面即数据源，零新增状态文件）。
++    sig["refusal_bans"] = recent_refusal_bans()
++    if sig["refusal_bans"]:
++        _top_op, _top_ts = max(sig["refusal_bans"].items(),
++                               key=lambda kv: kv[1])
++        print("citywide refusal-bans (12h): %d (latest=%s @%s)" % (
++            len(sig["refusal_bans"]), _top_op,
++            _top_ts.strftime("%H:%M:%S")), flush=True)
+     for cid in due:
+         # T-20261019-01: per-seat stdout keepalive, flush=True beats pipe block-buffering
+         # T-20261020-01: seat start carries a timestamp so a stalled seat is
