@@ -3507,19 +3507,99 @@ def _meet_ring_today(path):
     return None
 
 
-def _meet_pair_check(ids):
+def _meet_pair_check(ids, finder=None):
     """T-20261027-01: bidirectional assertion for a two-citizen meet.
 
     Returns a list of '<id>-><partner>(want <other>)' strings for every side
     that does not name its counterpart. Empty list = the pair is symmetric.
+    `finder` is injectable so the selftest can drive temp fixtures without
+    touching the census tree.
     """
+    find = finder or find_card
     bad = []
     for cid in ids:
         other = ids[1] if cid == ids[0] else ids[0]
-        partner = _meet_ring_today(find_card(cid))
+        partner = _meet_ring_today(find(cid))
         if partner != other:
             bad.append("%s->%s(want %s)" % (cid, partner, other))
     return bad
+
+
+def selftest_meet():
+    """T-20261116-16: standing regression for the meet write-path guards.
+
+    The birthpoint interception has three faces and, until now, none of them
+    had an executable negative control: (a) the same-day pre-check that refuses
+    a citizen who already met somebody today, (b) the post-write bidirectional
+    assertion, (c) the byte-level rollback that runs when (b) fires. A silent
+    regression in any face re-opens the historical asymmetry defect (C-08226 ->
+    C-08319 2026-10-27: A named B while B named C-08320).
+
+    Zero LLM, zero writes outside a temp dir, temp dir removed on exit.
+    """
+    import shutil
+    import tempfile
+    d = tempfile.mkdtemp(prefix="biglife-meet-selftest-")
+    fails = []
+
+    def card(cid, body):
+        p = os.path.join(d, cid + ".md")
+        with open(p, "w", encoding="utf-8", newline="\n") as f:
+            f.write("# %s\n\n**年轮**\n%s\n" % (cid, body))
+        return p
+
+    def meet_line(partner, text, day=None):
+        return "- %s 「与 %s 相遇：%s」 [锚] selftest" % (day or today(), partner, text)
+
+    try:
+        # A: healthy pair, both sides name each other -> no complaint.
+        pa = card("C-00001", meet_line("C-00002", "风把门帘掀起来了"))
+        pb = card("C-00002", meet_line("C-00001", "门帘落回来时我听见了"))
+        finder = {"C-00001": pa, "C-00002": pb}
+        got = _meet_pair_check(["C-00001", "C-00002"], finder.get)
+        if got:
+            fails.append("A healthy pair flagged: %s" % got)
+        # B: half write (A landed, B never did) -> must be caught by id.
+        pb_half = card("C-00002", "- %s 「路灯还亮着」 [锚] selftest" % today())
+        finder_half = {"C-00001": pa, "C-00002": pb_half}
+        got = _meet_pair_check(["C-00001", "C-00002"], finder_half.get)
+        if not any(g.startswith("C-00002->None") for g in got):
+            fails.append("B half write not flagged: %s" % got)
+        # C: B named a third party -> asymmetric, must be caught.
+        pc = card("C-00002", meet_line("C-00003", "巷口的灯管闪了一下"))
+        got = _meet_pair_check(["C-00001", "C-00002"],
+                               {"C-00001": pa, "C-00002": pc}.get)
+        if not any(g.startswith("C-00002->C-00003") for g in got):
+            fails.append("C wrong partner not flagged: %s" % got)
+        # D: same-day pre-check must see the partner (caller refuses pre-LLM).
+        if _meet_ring_today(pa) != "C-00002":
+            fails.append("D same-day pre-check blind: %r" % _meet_ring_today(pa))
+        # E: yesterday's ring must not block today's candidate.
+        yday = (datetime.date.today() - datetime.timedelta(days=1)).isoformat()
+        pe = card("C-00001", meet_line("C-00002", "昨夜风大", day=yday))
+        if _meet_ring_today(pe) is not None:
+            fails.append("E stale ring counted as today: %r" % _meet_ring_today(pe))
+        # F: rollback restores the pre-write bytes exactly (the main() path).
+        with open(pa, encoding="utf-8") as f:
+            before = f.read()
+        with open(pa, "a", encoding="utf-8", newline="\n") as f:
+            f.write("- %s 「与 C-00009 相遇：半截话」 [锚] selftest\n" % today())
+        with open(pa, "w", encoding="utf-8", newline="\n") as f:
+            f.write(before)
+        with open(pa, encoding="utf-8") as f:
+            if f.read() != before:
+                fails.append("F rollback did not restore bytes")
+    finally:
+        shutil.rmtree(d, ignore_errors=True)
+
+    if fails:
+        for line in fails:
+            print("FAIL meet-selftest:", line)
+        print("meet-selftest: FAIL %d case(s)" % len(fails))
+        return 1
+    print("meet-selftest: PASS 6/6 (healthy / half-write / wrong-partner / "
+          "same-day-precheck / stale-ring / rollback-bytes)")
+    return 0
 
 
 QUALITY_QUEUE = os.path.join(CO, "state", "ring-quality-queue.json")
@@ -3913,8 +3993,14 @@ def main():
                     help="T-20261114-01 regression gate: read-only, prints the due set "
                          "and fails (exit 1) if any of them already carries a year ring "
                          "dated today - zero LLM, safe in the CEO yield window")
+    ap.add_argument("--selftest-meet", dest="selftest_meet", action="store_true",
+                    help="T-20261116-16 regression gate: zero-LLM negative controls for the "
+                         "meet write path (same-day pre-check / bidirectional assertion / "
+                         "rollback), fixtures in a temp dir, exit 1 on any failure")
     ap.add_argument("--via", default=None, help="committer-identity tail, e.g. BigLife-OSLoop")
     args = ap.parse_args()
+    if args.selftest_meet:
+        sys.exit(selftest_meet())
     via = (" [via %s]" % args.via) if args.via else ""
     cursor = load_cursor()
     sig = real_signals()
