@@ -18,6 +18,7 @@ city-ops / city-relations / city-chronicle / resident-gallery 等 18 个面
   python -X utf8 Tools/round_daily.py --run              # 重建陈旧面
   python -X utf8 Tools/round_daily.py --run --all        # 全部重建（含当日已新）
   python -X utf8 Tools/round_daily.py --run --only rumors,today
+  python -X utf8 Tools/round_daily.py --values           # 值域断言：非空壳/带当日/有记录
 """
 from __future__ import annotations
 
@@ -677,6 +678,54 @@ def _run_one(script: str, extra=None) -> tuple[int, str]:
     return proc.returncode, msg
 
 
+# v0.27 (2026-11-16 R3235): 值域断言 --values —— 补上「新鲜即 PASS」的另一半。
+# 病根（集团 D-20261116-13 同族判决）：「结构自洽即 PASS」是假绿——上面的
+# _is_stale 只问「输出是否比输入旧」，不问「输出里到底有没有东西」。
+# 一个 0 行的空壳页只要 mtime 是今天，本轮依旧 verdict: PASS。
+# 判据三条（全为值域/内容面，不看 mtime）：
+#   A1 非空壳：体积 ≥ 512B（空骨架/报错页在此被拦）
+#   A2 带当日：census/export 下的面必须含今日日期串；静态人卡册（DATELESS）豁免
+#   A3 有记录：至少一处记录级标记（li/tr/article/card/section/img），或体积 ≥50KB
+#      ——后者覆盖「数据在 <script> 里、DOM 由 JS 渲染」的三面（地图 SVG/陈列墙/人卡册），
+#      空壳页体积必然远小于此值，故体积本身即内容证据。
+# 只读不改盘，默认路径（--check/--run）行为零变化。
+DATELESS = {"dossiers"}  # 逐人档案册：内容按居民而非常按日，无日戳属设计
+_RECORD_MARKS = ("<li", "<tr", "<article", "<section", "<img",
+                 "<td", 'class="card', 'class="item', 'class="toc')
+_RECORD_BYTES = 50000
+
+
+def _value_audit() -> tuple[list, list]:
+    today = datetime.date.today().isoformat()
+    bad, seen = [], []
+    for e in REGISTRY:
+        key = e[0]
+        rels = [n for n in e[3] if n.endswith(".html")]
+        if not rels:
+            continue
+        for rel, p in zip(rels, [q for q in _out_paths(e) if q.endswith(".html")]):
+            seen.append(rel)
+            if not os.path.exists(p):
+                bad.append("%s(missing)" % rel)
+                continue
+            size = os.path.getsize(p)
+            if size < 512:
+                bad.append("%s(hollow:%dB)" % (rel, size))
+                continue
+            try:
+                with io.open(p, encoding="utf-8", errors="replace") as f:
+                    text = f.read()
+            except OSError:
+                bad.append("%s(unreadable)" % rel)
+                continue
+            if today not in text and key not in DATELESS:
+                bad.append("%s(no-today)" % rel)
+                continue
+            if not any(m in text for m in _RECORD_MARKS) and size < _RECORD_BYTES:
+                bad.append("%s(no-records:%dB)" % (rel, size))
+    return bad, seen
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true", help="只体检（默认行为）")
@@ -684,7 +733,21 @@ def main() -> int:
     ap.add_argument("--all", action="store_true", help="重建全部（含已新鲜）")
     ap.add_argument("--only", default=None, help="只处理这些 key（逗号分隔）")
     ap.add_argument("--json", action="store_true", help="输出机器可读 JSON")
+    ap.add_argument("--values", action="store_true",
+                    help="值域断言（非空壳/带当日/有记录），只读不改盘")
     args = ap.parse_args()
+
+    if args.values:
+        bad, seen = _value_audit()
+        print("== round_daily (values) ==")
+        print("faces=%d exempt=%s" % (len(seen), ",".join(sorted(DATELESS))))
+        if bad:
+            for b in bad:
+                print("  VALUE-FAIL %s" % b)
+            print("verdict: VALUES-FAIL n=%d/%d" % (len(bad), len(seen)))
+            return 2
+        print("verdict: VALUES-PASS n=%d" % len(seen))
+        return 0
 
     only = set(x.strip() for x in args.only.split(",") if x.strip()) if args.only else None
     today = datetime.date.today()

@@ -3797,3 +3797,15 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - **下轮预置**：①19:00 后年轮批 3 → 必跑 sync_rings + events_refresh --gate；②R3208 的 TTL 临界缺口（末次被拒 07:34+12h=19:34 到期 vs 生成窗 19:00 开）在 19:00 首批实测是否出现「禁—复现—再禁」震荡，有材料再做 sticky A/B 负控；③T-20261115-04 观察窗 11-17 到期直接按读数结案；④FluxVerse D-20261115-01 承诺 11-16 18:00，逾期由夜轮判 chronic，本司不计缺口。
 - 计分：能看实物 2 分（3 页面可直接打开且新增导航）；文件改动 1 分（5 文件）；零 LLM。
 tokens: local=0 api=0 api_reason=workday-yield-window
+## R3235 2026-11-16 16:1x-16:3x @BigLife-OSLoop 让路窗内·round_daily 值域断言接线（`--values`）
+- 轮首：pull=Already up to date；工作树净；决策水位差 NEW=0（覆盖至 D-20261116-15）；orders 物理件区无涉本司新件；任务板无 open 单。
+- 让路窗（D-20261020-02）：`evolve_citizen --batch 3` 实跑返回 `yield-window: workday 09:00-19:00`⇒ 年轮/相遇/反思三线结构性顺延（本轮零落环、零阈值改动）。
+- **产品增量（能用实物·2 分）**：`Tools/round_daily.py` 新增只读模式 `--values`——补上「新鲜即 PASS」的另一半，对齐集团 D-20261116-13「结构自洽即 PASS＝假绿，--check 必须含值域断言」。三条内容面断言：A1 体积 ≥512B（拦空壳/报错页）、A2 census/export 面须含今日日期串（静态人卡册 dossiers 豁免）、A3 至少一处记录级标记或体积 ≥50KB（覆盖 JS 渲染的地图/陈列墙/人卡册）。
+- 实跑读数：`--values` → faces=30 exempt=dossiers **verdict: VALUES-PASS n=30** rc=0；首跑 5 面报 `no-records`（rumors/map/gallery/growth/index），逐面 DOM 探针实读后确认是「标记名未覆盖（article / class="card" / class="toc"）+ JS 渲染无 DOM」两类假阳性，非页面缺陷，定标后转绿，**未放宽到「非空即过」**。
+- 负控（gate-rigor）：把 city-rumors.html 副本替换成 66B 空壳页（日戳正确）→ 判定 `_neg_rumors.html(hollow:66B)` 拦下；原件未动，临时件已清（state/ 不入库）。
+- 默认路径零变化复核：`--run` → stale=0 ran=0 failed=0 **verdict: PASS**（30 面全 fresh）；`--check` 同绿——OS 轮调用方无需改动。
+- 同轮确定性面读数（各 1 次，未重复全量重扫）：`round_daily --run` 全 fresh；`persona_generations --check` rc=0 pending_sync=none（gen1-6·habits=163·max_cid=C-10120，R3231 刚开的 gen6 已覆盖）；`pool_audit` 全桶达标 SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·双抽 192+25 对 mismatch=0）；`hq_feedback_daily --check` = ALREADY_REPORTED（本步零写入）。QC/events 两闸 R3232/R3234 于 15:2x-16:0x 刚复核（problems=0 / mismatch=0），非到点不重跑。
+- **诚实边界**：本闸证明「面不空、带当日、有记录结构」，不证明数据正确（族分布算错仍会过）；数值正确性仍由 qc_census / events_refresh --gate / ring_open_family --check 三闸承担。三面 JS 渲染页走体积代理，属弱证据。
+- CEO 可见三行：当前活=让路窗内确定性闸加固（round_daily 值域断言接线，16:3x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\ROUND-DAILY-VALUES-20261116.md`（16:3x，含负控实证）、`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\Tools\round_daily.py`（v0.27）｜下个里程碑=19:00 让路窗解 → 年轮批 3 落环 → events_refresh --gate（ETA 2026-11-16 19:20，窗 ≤8h）。
+- 下轮预置：①19:00 后年轮批 3 → 必跟 sync_rings + events_refresh --gate，与 R3230/R3231 基线逐项对比；②`--values` 纳入每轮确定性巡检（一条命令、零 LLM）；③T-20261115-04 观察窗 11-17 到期直接按读数结案；④R3208 的 TTL 临界缺口（禁牌 19:34 到期 vs 生成窗 19:00 开）在首批实测是否出现「禁→复现→再禁」震荡。
+- 计量：tokens: local=0 api=0 api_reason=workday-yield-window
