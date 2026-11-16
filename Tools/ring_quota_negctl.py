@@ -74,6 +74,25 @@ def patch_applied():
         return False
 
 
+def patch_steps(started_applied):
+    """返回 (A 臂目标态, B 臂目标态, 收尾态)——纯函数，可回归。
+
+    A 臂必须「补丁未生效」、B 臂必须「生效」，与补丁来自工作树还是已入 HEAD 无关。
+    R3246 实锤：R3204 补丁 14:23 已 commit（efc562b9f），旧逻辑只在「补丁待打」前提下
+    才撤/打，于是 A 臂带着补丁跑完、B 臂前 `git apply` 直接失败，19:00 窗口白烧。
+    """
+    return (False, True, bool(started_applied))
+
+
+def _set_patch(desired):
+    """把工作树补丁态设成 desired（True=生效）·幂等·返回 (rc, msg)。"""
+    if patch_applied() == bool(desired):
+        return 0, "already %s" % ("applied" if desired else "reverted")
+    args = ["apply", PATCH] if desired else ["apply", "-R", PATCH]
+    rc, out, err = _git(args)
+    return rc, (out + err).strip()
+
+
 def ban_snapshot():
     """当前生效的开口禁牌集合（两臂须在同一禁牌状态下量，否则读数被混淆）。
 
@@ -223,6 +242,11 @@ def judge(a, b, before, after, batch, snap_a=None, snap_b=None):
         lines.append("ok   复读面 wasted=%d max_repeats=%d 未升高"
                      % (after["wasted_calls"], after["max_repeats"]))
 
+    if ok and not (b.get("ban_hits") or 0):
+        lines.append("note 无判别力：B 臂闸零命中（当时生效禁牌 %s 条）——该批没有任何"
+                     "「闸真的拦过一次」的证据，不能判 PASS"
+                     % (snap_b.get("n") if snap_b else "?"))
+        return "INCONCLUSIVE", lines
     if ok and carry:
         lines.append("note PASS 在携带效应对 B 不利的前提下取得（保守方向·可信度更高）")
     elif not ok and carry:
@@ -231,7 +255,7 @@ def judge(a, b, before, after, batch, snap_a=None, snap_b=None):
     return ("PASS" if ok else "FAIL"), lines
 
 
-def write_report(day, batch, a, b, verdict, lines, applied_now, snap_a=None, snap_b=None):
+def write_report(day, batch, a, b, verdict, lines, restore_state, snap_a=None, snap_b=None):
     os.makedirs(QA, exist_ok=True)
     path = os.path.join(QA, "RING-QUOTA-NEGCTL-%s.md" % day.replace("-", ""))
     def _fmt(s):
@@ -258,8 +282,9 @@ def write_report(day, batch, a, b, verdict, lines, applied_now, snap_a=None, sna
     ] + lines + [
         "```",
         "",
-        "**verdict: %s**　补丁现状=%s"
-        % (verdict, "已留在工作树（待轮末 commit）" if applied_now else "已 git apply -R 还原"),
+        "**verdict: %s**　补丁终态=%s"
+        % (verdict, "生效（= 起跑前状态·工作树无残留改动）"
+           if restore_state else "未生效（工作树已还原到起跑前）"),
         "",
         "## 回退口（三条硬线）",
         "",
@@ -278,7 +303,7 @@ def main():
     ap.add_argument("--batch", type=int, default=8, help="每臂席位数（默认 8）")
     ap.add_argument("--dry-run", action="store_true", help="只体检：补丁可打性 + 当日基线")
     ap.add_argument("--selftest", action="store_true",
-                    help="三道闸回归电池（席位预算/禁牌混淆/报告落地·零 LLM·零盘污）")
+                    help="四道闸回归电池（席位预算/禁牌混淆/补丁态编排/报告落地·零 LLM·零盘污）")
     args = ap.parse_args()
 
     if args.selftest:
@@ -291,12 +316,16 @@ def main():
         print("patch missing:", PATCH)
         return 2
 
-    applied = patch_applied()
-    if applied:
-        ok, msg = True, "(补丁已在工作树)"
+    started_applied = patch_applied()
+    a_state, b_state, restore_state = patch_steps(started_applied)
+    if started_applied:
+        ok, msg = True, "(补丁已在工作树/HEAD)"
     else:
         ok, msg = patch_applies()
     print("patch applies: %s %s" % ("YES" if ok else "NO", msg))
+    print("patch plan: 起跑=%s A 臂=%s B 臂=%s 收尾=%s"
+          % tuple("applied" if s else "reverted"
+                  for s in (started_applied, a_state, b_state, restore_state)))
     print("baseline %s: rows=%d distinct=%d wasted=%d max_repeats=%d"
           % (day, base["rows"], base["distinct_cid"],
              base["wasted_calls"], base["max_repeats"]))
@@ -332,19 +361,23 @@ def main():
         print("abort: 两臂席位预算不足——跑出来的 written 差会被误读成「修法伤产线」")
         return 2
     snap_a = ban_snapshot()
-    a = arm(batch, "A")
-    if a.get("yield"):
-        print("yield-window: 产线让路期，A 臂未跑（0 LLM/0 改动）")
-        return 3
-
-    before = refusal_metrics(day)
-    applied_now = False
+    verdict = "FAIL"
+    lines = []
     try:
-        rc, out, err = _git(["apply", PATCH])
+        rc, msg = _set_patch(a_state)
         if rc != 0:
-            print("git apply failed:", (out + err).strip())
+            print("patch set (A 臂=%s) failed:" % ("applied" if a_state else "reverted"), msg)
             return 2
-        applied_now = True
+        a = arm(batch, "A")
+        if a.get("yield"):
+            print("yield-window: 产线让路期，A 臂未跑（0 LLM/0 改动）")
+            return 3
+
+        before = refusal_metrics(day)
+        rc, msg = _set_patch(b_state)
+        if rc != 0:
+            print("patch set (B 臂=%s) failed:" % ("applied" if b_state else "reverted"), msg)
+            return 2
         print("arm B (patch ON) ...", flush=True)
         snap_b = ban_snapshot()
         b = arm(batch, "B")
@@ -354,26 +387,24 @@ def main():
         after = refusal_metrics(day)
         verdict, lines = judge(a, b, before, after, batch, snap_a, snap_b)
     finally:
-        if applied_now and verdict_is_fail(locals()):
-            rc, out, err = _git(["apply", "-R", PATCH])
-            print("revert:", "done" if rc == 0 else ("FAILED " + (out + err).strip()))
-            applied_now = False
+        rc, msg = _set_patch(restore_state)
+        if rc != 0:
+            print("RESTORE FAILED: 工作树补丁态未回到",
+                  "applied" if restore_state else "reverted", "|", msg)
+        else:
+            print("restore: 工作树补丁态 =",
+                  "applied" if restore_state else "reverted", "(= 起跑前状态)")
 
     for ln in lines:
         print(ln)
-    path = write_report(day, batch, a, b, verdict, lines, applied_now, snap_a, snap_b)
+    path = write_report(day, batch, a, b, verdict, lines, restore_state, snap_a, snap_b)
     print("report:", os.path.relpath(path, ROOT))
-    print("verdict:", verdict, "| patch in tree:", "yes" if applied_now else "no")
+    print("verdict:", verdict, "| patch in tree:", "yes" if restore_state else "no")
     return 0 if verdict == "PASS" else 1
 
 
-def verdict_is_fail(scope):
-    """finally 里判是否要撤补丁（verdict 尚未算出=按失败撤，宁撤不留）。"""
-    return scope.get("verdict", "FAIL") != "PASS"
-
-
 def _selftest():
-    """三道闸的回归电池（零 LLM·零盘污）：席位预算、禁牌混淆、报告落地。"""
+    """四道闸的回归电池（零 LLM·零盘污）：席位预算、禁牌混淆、补丁态编排、报告落地。"""
     global QA
     fails = []
 
@@ -403,8 +434,23 @@ def _selftest():
         judge(a, b, base, base, 8, same, carry)[0] == "PASS")
     chk("judge 快照不可用 -> 不误拦",
         judge(a, b, base, base, 8, None, None)[0] == "PASS")
+    b0 = dict(b, ban_hits=0)
+    chk("judge B 臂零命中 -> INCONCLUSIVE",
+        judge(a, b0, base, base, 8, same, same)[0] == "INCONCLUSIVE")
+    chk("judge 零命中不得判 PASS（假绿闸）",
+        judge(a, b0, base, base, 8, same, same)[0] != "PASS")
 
-    # 3) 报告落地（写临时目录，绝不触碰真 qa/）
+    # 3) 补丁态编排（R3246：补丁已入 HEAD 时 A 臂仍须「未生效」，收尾回起跑态）
+    chk("patch_steps 起跑=applied -> A off/B on/收尾 on",
+        patch_steps(True) == (False, True, True))
+    chk("patch_steps 起跑=reverted -> A off/B on/收尾 off",
+        patch_steps(False) == (False, True, False))
+    chk("patch_steps A 臂恒为 off",
+        patch_steps(True)[0] is False and patch_steps(False)[0] is False)
+    chk("patch_steps B 臂恒为 on",
+        patch_steps(True)[1] is True and patch_steps(False)[1] is True)
+
+    # 4) 报告落地（写临时目录，绝不触碰真 qa/）
     old_qa = QA
     tmp = tempfile.mkdtemp(prefix="negctl-selftest-")
     try:
