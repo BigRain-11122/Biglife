@@ -3982,4 +3982,11 @@ ing_quota_negctl 实弹 A/B（每臂 5 席）→ 再跑年轮批 3 + sync_rings 
 - D-20261116-16 代码级核实完成（写入 T-20261116-14 证据行）：evolve_citizen L3855-3866 空事件下走 no-event 自给锚、不写 FluxVerse 溯源 → 依赖解除无功能缺口；回执行仍按 11-17 首轮闸写。
 - 产品增量：可见面 2 件刷新（`census/export/index.html`、`census/export/city-ops.html`）+ 事件回放闸报告 `qa/EVENTS-REPLAY-REPORT.md`（45,444 事件 mismatch=0）。
 - 下轮硬序不变：**先 T-20261116-13 配额闸 A/B（≥19:00）→ 再年轮批 3 席 → sync_rings → events_refresh --gate**。
-- tokens: local=0 api=0 api_reason=yield-window（工作日让路窗至 19:00；脚本内 LLM 腿均未触发）
+- tokens: local=0 api=0 api_reason=yield-window（工作日让路窗至 19:00；脚本内 LLM 腿均未触发）- [R3251] 2026-11-16 18:2x-18:4x @BigLife-OSLoop 「上游依赖解除回执」轮（让路窗内·零 LLM）：轮首 `git pull --ff-only`=Already up to date、工作树净；决策水位差集 NEW=0（已消费至 D-20261116-17；实读 D-20261116-16 涉本司＝上游依赖解除＋11-17 12:00 回执行死线，D-20261116-17 属交付工位 D-09/D-17 分叉补强、不涉本司）；orders 物理件区无本司新件；TASKS 无 open 单。
+  **本轮到点件处置（D-20261116-16④）**：提前 ~17h 出「依赖解除回执」一行入 HQ-FEEDBACK.md（写前门 `--check`=ALREADY_REPORTED，按「当日新出现真实待办」用 `--force` 追一行）——正式确认不再候 FluxVerse 生活事件，R2810 自给锚（真实北京时间/天气）转常态；上游供给类申告自本条起不再由本司承担成本。
+  **闸面实测（逐项读数）**：round_daily `--run` → 28 面全鲜 stale=0 ran=0 failed=0 verdict=PASS；events_refresh `--gate` → derive cards=10111 events=45444 shards=3／replay replayed=10111 schema_errors=0 **mismatch=0 PASS**／coverage unexpected_missing=0／chronicle fresh gap=0d（耗时 261s）；persona_generations `--check` → **rc=0** gen1-6 habits=163 max_cid=C-10120 pending_sync=none；pool_audit → axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·双抽 192+25 对 mismatch=0 → **PASS SELF_TERMINATE**（语言线按自终止律零写，不做 pool_gen）。
+  **让路窗实测**：`evolve_citizen --batch 3` 实跑返回 `yield-window: workday 09:00-19:00 CEO lane-priority`（D-20261020-02），年轮/相遇/反思三线顺延 19:00 后，不修不报障。
+  **产品增量**：`qa/EVENTS-REPLAY-REPORT.md`（18:30 刷新·45,444 事件零 mismatch 回放基线）＋ `HQ-FEEDBACK.md` 依赖解除回执行（18:36）。**诚实边界**：本轮无新居民年轮（让路窗结构性），品质线仍由 19:00 后年轮批与 T-20261115-04 观察窗承载，不以闸绿冒充内容好。
+  **CEO 可见三行**：当前活＝让路窗内确定性面/世代池/语言池/事件闸四闸复验＋D-20261116-16④ 回执落盘｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md`（11-16 18:30·45,444 事件 mismatch=0）＋`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\HQ-FEEDBACK.md`（18:36 回执行）｜下个里程碑＝19:00 让路窗结束起年轮批 3 席 → sync_rings → 事件闸对基线（ETA 2026-11-16 19:15）。
+  - 下轮硬序：**年轮批 3 → sync_rings → events_refresh --gate**；T-20261115-04 观察窗续记（11-17 结案）。
+  - tokens: local=0 api=0 api_reason=yield-window（工作日让路窗至 19:00；脚本内 LLM 腿均未触发）
