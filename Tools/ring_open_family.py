@@ -49,7 +49,7 @@ FAMILY_MIN_DENOM = 8      # 当日 <8 环不判（小样本噪声）
 # 病根：族表是代码常量、没有生效时间，改一次正则就等于把过去的日子重判一遍，
 # 读数和当日决策各看各的口径。此处只加"读得出来"的守卫（不改阈值、不改闸）：
 # 每次族表（FAMILIES 结构或其正则集合）变更必须 bump TABLE_EPOCH，批起登记。
-TABLE_EPOCH = "2026-11-15T15:48"   # 族表最后一次变更（=WIND_SCENE/DISTRICT_ANCHOR/FIRST_PERSON_ACTION 三族 + TIME 扩容·v1.6）
+TABLE_EPOCH = "2026-11-16T15:50"   # 族表最后一次变更（=TIME 补夜色时点「夜深/深夜」·v1.7）
 EPOCH_LOG = os.path.join(ROOT, "state", "ring-family-epochs.json")
 
 # 族定义：锚定开头位置（^），只认句式骨架不认词义。
@@ -74,7 +74,11 @@ FAMILIES = collections.OrderedDict([
          # v1.6 2026-11-15 R3094 补时点回望形状：当日 unclassified 第一高频
          # 「方才还在X，这会儿…」14 条（3.5% of unclassified），与既有 TIME 族
          # 同语义（时点状语不承接前文），故并入本族而非新开族。
-         r"^方才", r"^刚才", r"^那会儿", r"^昨天"],
+         r"^方才", r"^刚才", r"^那会儿", r"^昨天",
+         # v1.7 2026-11-16 R3144 补夜色时点形状：当日 unclassified 实测
+         # 「夜深，我蹲在…」「夜深了，我蹲在…」4 条，与 TIME 族同语义
+         # （纯时点状语起句、不承接前文），并入本族而非新开族。
+         r"^夜深", r"^夜很深", r"^深夜"],
     )),
     ("WEATHER_ABSTRACT", (
         "抽象天气开场（雨还在下／檐下／风里）——10-24 峰值 1011 已压住，"
@@ -565,6 +569,9 @@ def _selftest():
         ("neg-hand-not-at-opening", "灯芯爆了一下，手在灯罩上停了停。", None),
         ("pos-hand-skeleton", "手在楼梯扶手上摩挲，木头被磨得发亮。", "HAND_DEICTIC"),
         ("pos-time-skeleton", "今早的天还没亮透，江面就起了雾。", "TIME_OPEN"),
+        # v1.7 2026-11-16 R3144 夜色时点补全两探针：开头正例 / 句中不误伤。
+        ("pos-time-night", "夜深了，我蹲在M3老巷口数车牌。", "TIME_OPEN"),
+        ("neg-time-night-midsentence", "我记得夜深那会儿巷口没人，风从袖口钻进来。", None),
         # R2760（2026-11-13）：^手里 盲区补全——实测「手里/手中的」起句 87 条，
         # 旧族只认 手上/手边/手头/手心，与 R2608 的「手边」漏判同型。
         ("pos-hand-in-palm", "手里的铁夹还带着余温，我把它放回工具箱。", "HAND_DEICTIC"),
