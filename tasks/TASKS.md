@@ -3754,3 +3754,10 @@ ound_daily --run stale=12 ran=13 failed=0 verdict=PASS；pool_audit PASS SELF_TE
   **CEO 可见三行**：当前活=让路窗确定性面核验＋基因面 +8 习惯并开 gen6（15:2x）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\gene-ledger.html（15:2x，163 条习惯入册）与 census\export\city-today.html（15:1x）、qa\GENE-ADD-20261116.md（15:2x）｜下个里程碑=19:00 让路窗解→年轮批 3 落环并复测新习惯是否引出新吸引子（窗 ≤48h）。
   **下轮预置**：①19:00 后年轮批 3 → events_refresh --gate → opening_capacity --window 12 与 R3230 基线逐项对比；②T-20261115-04 观察窗 11-17 到期直接结案；③反思线（19:00 后至多 1 次）接续。
   tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
+- [R3232] 2026-11-16 15:2x @BigLife-OSLoop 工作日让路窗轮：轮首 pull=Already up to date、工作树净；决策水位差集 NEW=0（覆盖至 D-20261116-15，集团 decisions 无新 D 行）；orders 物理件区无涉本司新件（仅五仓 Branch protection 一键为 CEO 保留面）；TASKS 无 open 单。
+  **跳过面（按闸律诚实不重烧）**：evolve_citizen --batch 3 实跑返 `yield-window: workday 09:00-19:00`（相遇／反思同源 D-20261020-02）→ 本轮零落环；pool_audit 全桶达标 SELF_TERMINATE（under_target: NONE）；基因面 R3231 刚增 8 习惯并开 gen6（habits=163），距本轮仅 20 分钟且新习惯尚未经年轮实弹验证，按「低频＋先验证后增补」不叠烧。
+  **产品增量（能用实物·文件改动）**：qc_census 实跑 cards=10114 / evolved=10114 / problems=0 / dup_rings=37/37 → `census/QC-REPORT.md` 刷新；events 闸 cards=10111 events=45444 shards=3 replay replayed=10111 schema_errors=0 mismatch=0 → `qa/EVENTS-REPLAY-REPORT.md` 刷新（chronicle gap=0d）；round_daily --run 第 1 次 stale=0 ran=0 failed=0 verdict=PASS（27 面 fresh）；persona_generations --check rc=0（gen6 habits=163 pending_sync=none）。
+  **新增核查（零未登记缺口·阴性结论入库）**：把日更登记表与盘面 HTML 做集合比对，发现 city-growth-p01~p11 与 city-social-graph.html 共 12 页不命中字面文件名；源读 `Tools/round_daily.py` L60/L102 确认为 growth／social_graph 组级登记（p01-p11 由同一 builder 产出）→ 判为假阳性，登记面完整，10-27 类静默停更防线无缺口。
+  **CEO 可见三行**：当前活=让路窗确定性面核验＋QC/事件双闸复验（15:2x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\QC-REPORT.md` 与 `C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md`（15:2x 刷新）｜下个里程碑=19:00 让路窗后年轮批 3 → events_refresh --gate → 热骨架配额 A/B 实弹（≤24h）
+  **下轮预置**：①19:00 后年轮批 3 → 落环后必跑 events_refresh --gate，并与 R3230/R3231 基线对比逐项读数；②T-20261115-04 观察窗 11-17 到期直接结案；③反思线 19:00 后至多 1 次（reflections.jsonl 尾部 date 须为当日为验收）。
+  tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
