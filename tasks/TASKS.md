@@ -3664,3 +3664,11 @@ ound_daily --run stale=12 ran=13 failed=0 verdict=PASS；pool_audit PASS SELF_TE
   **CEO 可见三行**：当前活＝拒稿回灌闸落地（14:1x 收口）；最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\OPENING-REFUSAL-MEMO-2026-11-16.md`（缺陷读数+修法+验收线）与 `C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\test_opening_refusal_memo.py`（5/5 OK）；下个里程碑＝19:00 窗年轮批 3 + 反思批 5 + 本闸实测读数（≤24h）。
   **下轮预置**：①19:00 窗先跑年轮批，落环后立刻读 `ring-refusals` 当日新增与 `opening_capacity --window 12`，把 skeleton 占比与 waste_ratio 记进轮记（本闸唯一判据）；②若 19:00 仍见热骨架重合 >0，回看 `today_refused_openings` 是否被某条 sig 构造路径绕过；③风族自造吸引子（`风把…` 三日连续头部、约 25%）仍属提示词侧，留 19:00 窗与 `today_ban_families` 合并设计（给替代落点，勿只禁不给）。
   tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
+
+- [R3221] 2026-11-16 13:4x @BigLife-OSLoop 让路窗轮「日更面+QC 复核」：轮首 `git pull --ff-only`=Already up to date、工作树净；决策水位差集 NEW=0（水位已含 D-20261116-15，逐条实读均他司件）；orders 物理件区无本司新件；TASKS 无新 open 单。三 LLM 线按律顺延（`evolve_citizen --batch 3` 实跑返回 yield-window·D-20261020-02）。
+  **产品增量（能看实物·2 分）**：`round_daily --run` stale=1 ran=2 failed=0 **PASS**（ops=dep-mtime:state/vram-gate.jsonl、index 重建），余面 fresh；`qc_census` cards=10114 evolved=10114 problems=0 dup_rings=37/37 dup_new=0；`events_refresh --gate` **PASS**（cards=10111 events=45444 replayed=10111 schema_errors=0 mismatch=0 chronicle gap=0d coverage unexpected_missing=0）。
+  **其余确定性面全绿**：`persona_generations --check` rc=0（gen5·habits=155·pending_sync=none）；`pool_audit` **PASS SELF_TERMINATE**（轴 72/72·像素 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）；`hq_feedback_daily --check`=**ALREADY_REPORTED**（零写入）。
+  **顺延（诚实不假称）**：年轮批 3／反思批 5／相遇轮实跑均未启（让路窗 workday 09:00-19:00）；本轮 **0 LLM 调用**。
+  **CEO 可见三行**：当前活=让路窗内日更面与 QC 复核（13:4x 收口）；最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ops.html` 与 `census\export\index.html`（2026-11-16 13:4x 重建）+ `census\QC-REPORT.md`（problems=0）；下个里程碑=19:00 让路窗结束后年轮批 3 + 反思批 5 + 回灌闸实测读数（≤24h）。
+  **下轮预置**：①19:00 后先跑年轮批 3，落环后立即读 ring-refusals 当日新增与 `opening_capacity --window 12`，把 skeleton 占比与 waste_ratio 记进轮记；②若热骨架重复 >0，回查 `today_refused_openings` 构造路径是否被某条 sig 绕过；③T-20261115-04 观察窗 11-17 到期按 `ring_refusal_attribution` waste% 曲线结案。
+  tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
