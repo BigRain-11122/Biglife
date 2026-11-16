@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-11-16 21:14:25",
- "total": 87,
- "today": 32,
+ "generated_at": "2026-11-16 23:31:44",
+ "total": 93,
+ "today": 38,
  "days": [
   "2026-11-15",
   "2026-11-16"
@@ -17,7 +17,11 @@
   ],
   [
    "opening-family-quota",
-   6
+   8
+  ],
+  [
+   "rain-invented+recent-dup-phrase",
+   3
   ],
   [
    "rain-invented+recent-dup-opening+recent-dup-phrase",
@@ -28,7 +32,7 @@
    2
   ],
   [
-   "rain-invented+recent-dup-phrase",
+   "mist-import+recent-dup-phrase",
    2
   ],
   [
@@ -64,22 +68,26 @@
    1
   ],
   [
-   "mist-import+recent-dup-phrase",
-   1
-  ],
-  [
    "opening-family-quota+rain-invented",
    1
   ],
   [
    "rain-invented+recent-dup-opening",
    1
+  ],
+  [
+   "moon-invented+recent-dup-phrase",
+   1
+  ],
+  [
+   "recent-dup-phrase+sky-mismatch",
+   1
   ]
  ],
  "gates": [
   [
    "recent-dup-phrase",
-   73
+   77
   ],
   [
    "recent-family-opening",
@@ -87,11 +95,11 @@
   ],
   [
    "opening-family-quota",
-   20
+   22
   ],
   [
    "rain-invented",
-   8
+   9
   ],
   [
    "recent-dup-opening",
@@ -99,7 +107,11 @@
   ],
   [
    "sky-mismatch",
-   1
+   2
+  ],
+  [
+   "mist-import",
+   2
   ],
   [
    "batch-dup-opening",
@@ -118,7 +130,7 @@
    1
   ],
   [
-   "mist-import",
+   "moon-invented",
    1
   ]
  ],
@@ -133,15 +145,15 @@
   ],
   [
    "HAND_DEICTIC",
-   20
+   22
   ],
   [
    "(none)",
-   11
+   13
   ],
   [
    "DISTRICT_ANCHOR_OPEN",
-   3
+   4
   ],
   [
    "DOOR_PROP_DEICTIC",
@@ -153,7 +165,7 @@
   ],
   [
    "FIRST_PERSON_ACTION_OPEN",
-   1
+   2
   ]
  ],
  "repeated_openings": [
@@ -184,7 +196,7 @@
  ],
  "by_day": {
   "2026-11-15": 55,
-  "2026-11-16": 32
+  "2026-11-16": 38
  },
  "retry_livelock": {
   "2026-11-15": {
@@ -200,8 +212,8 @@
    "wasted_calls": 20
   },
   "2026-11-16": {
-   "rows": 32,
-   "distinct_citizens": 32,
+   "rows": 38,
+   "distinct_citizens": 38,
    "repeated_citizens": 0,
    "max_repeats": 1,
    "stuck_same_opening": [],
@@ -222,8 +234,8 @@
    ]
   },
   "2026-11-16": {
-   "rows": 32,
-   "distinct_openings": 23,
+   "rows": 38,
+   "distinct_openings": 29,
    "repeated_openings": 4,
    "extra_occurrences": 9,
    "top": [
@@ -237,27 +249,14 @@
  "rolling_windows": [
   {
    "window_hours": 24,
-   "as_of": "2026-11-16 21:14:25",
-   "rows": 45,
+   "as_of": "2026-11-16 23:31:44",
+   "rows": 40,
    "openings": 30,
    "multi_openings": 5,
    "cross_cid_openings": 5,
-   "wasted_calls": 15,
-   "waste_ratio": 0.3333,
+   "wasted_calls": 10,
+   "waste_ratio": 0.25,
    "top": [
-    {
-     "opening12": "桌角那点零碎又该理一理了",
-     "calls": 6,
-     "cids": 6,
-     "cid_head": [
-      "C-03419",
-      "C-03426",
-      "C-03469",
-      "C-03525",
-      "C-03533",
-      "C-03579"
-     ]
-    },
     {
      "opening12": "风把塑料布吹得啪啦响，我",
      "calls": 5,
@@ -272,10 +271,9 @@
     },
     {
      "opening12": "这会儿手边最碍事的就是这",
-     "calls": 4,
-     "cids": 4,
+     "calls": 3,
+     "cids": 3,
      "cid_head": [
-      "C-03449",
       "C-03598",
       "C-03732",
       "C-03788"
@@ -292,6 +290,15 @@
      ]
     },
     {
+     "opening12": "桌角那点零碎又该理一理了",
+     "calls": 2,
+     "cids": 2,
+     "cid_head": [
+      "C-03533",
+      "C-03579"
+     ]
+    },
+    {
      "opening12": "风撞在窗玻璃上闷响，我正",
      "calls": 2,
      "cids": 2,
@@ -304,9 +311,9 @@
   },
   {
    "window_hours": 12,
-   "as_of": "2026-11-16 21:14:25",
-   "rows": 7,
-   "openings": 7,
+   "as_of": "2026-11-16 23:31:44",
+   "rows": 13,
+   "openings": 13,
    "multi_openings": 0,
    "cross_cid_openings": 0,
    "wasted_calls": 0,
@@ -364,12 +371,12 @@
   },
   {
    "day": "2026-11-16",
-   "rows": 32,
-   "openings": 23,
+   "rows": 38,
+   "openings": 29,
    "multi_openings": 4,
    "cross_cid_openings": 4,
    "wasted_calls": 9,
-   "waste_ratio": 0.2812,
+   "waste_ratio": 0.2368,
    "top": [
     {
      "opening12": "风把塑料布吹得啪啦响，我",
@@ -447,6 +454,42 @@
    "opening12": "我正扫着老合成器的背板，",
    "last_refused": "2026-11-16 21:11",
    "expires": "2026-11-17 09:11",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "手正把旧作业本翻到第一页",
+   "last_refused": "2026-11-16 21:16",
+   "expires": "2026-11-17 09:16",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正低头看老胶片上的裂纹",
+   "last_refused": "2026-11-16 21:19",
+   "expires": "2026-11-17 09:19",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正低头扫着琴弦上的灰尘",
+   "last_refused": "2026-11-16 22:07",
+   "expires": "2026-11-17 10:07",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "锅盖沿上结了层薄雾，风撞",
+   "last_refused": "2026-11-16 22:08",
+   "expires": "2026-11-17 10:08",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "路口的铁栏杆上，锈迹蹭着",
+   "last_refused": "2026-11-16 23:29",
+   "expires": "2026-11-17 11:29",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "秤杆在手里磨了三十年，今",
+   "last_refused": "2026-11-16 23:30",
+   "expires": "2026-11-17 11:30",
    "ban_hours": 12
   }
  ]
