@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16 10:50:04",
+ "generated_at": "2026-11-16 11:27:48",
  "total": 80,
  "today": 25,
  "days": [
@@ -202,6 +202,32 @@
    "max_repeats": 1,
    "stuck_same_opening": [],
    "wasted_calls": 0
+  }
+ },
+ "cross_resident_spread": {
+  "2026-11-15": {
+   "rows": 55,
+   "distinct_openings": 23,
+   "repeated_openings": 4,
+   "extra_occurrences": 32,
+   "top": [
+    "这会儿手边最碍事的就是这|6 人",
+    "桌角那点零碎又该理一理了|5 人",
+    "风把塑料布吹得啪啦响，我|4 人",
+    "风把晾绳吹得斜出去，我正|2 人"
+   ]
+  },
+  "2026-11-16": {
+   "rows": 25,
+   "distinct_openings": 17,
+   "repeated_openings": 4,
+   "extra_occurrences": 8,
+   "top": [
+    "风把塑料布吹得啪啦响，我|4 人",
+    "这会儿手边最碍事的就是这|3 人",
+    "风把雨棚掀得直响，我正把|3 人",
+    "风撞在窗玻璃上闷响，我正|2 人"
+   ]
   }
  }
 }

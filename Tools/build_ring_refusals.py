@@ -8,7 +8,9 @@ append-only）产出 census/export/city-ring-refusals.html + city-ring-refusals.
   2) 闸组合分布：哪些闸同时在拒（回答「真实拒稿源是族配额还是精确去重」）
   3) 开口族分布 + 同一开口重复次数榜（精确去重面实锤）
   4) 逐日 / 逐小时产出（看得见闸是白天紧还是夜里紧）
-  5) 最近 20 条拒稿原文（人读面）
+  5) 跨席传染面（R3204）：同日同一开口12 被**不同居民**重复撞上的次数——
+     单席重试已被 R3115 顺延修复收口，剩下的病是 4B 把同一句开头传染给多个席位
+  6) 最近 20 条拒稿原文（人读面）
 
 为什么单开这一面：拒稿台账自 2026-11-15 接线后只有 jsonl，没有任何可见面；
 T-20261115-04「年轮同质化」的换靶步（族配额 vs 精确去重谁是真实拒稿源）
@@ -129,6 +131,35 @@ def main():
             "wasted_calls": sum(v - 1 for v in rep.values()),
         }
 
+    # R3204 (2026-11-16): 跨席传染面。R3201 的「零重复」成立口径是同 cid 零二次
+    # 拒稿（调度层）；但 11-16 实读 25 条拒稿只对应 17 个 opening12——同一句开头被
+    # **不同居民**各撞一次，属吸引子跨席传染，与重试熔断无关。本面把它单列，供
+    # 19:00 后 opening12 全城配额（state/pending/R3204-quota-gate.patch）做改造前后
+    # 同口径对比。只读统计，不改任何闸阈值/窗口/族表（T-20261115-04 约束）。
+    per_day_op_cids = {}
+    for r in rows:
+        _d = day_of(r.get("ts"))
+        _op = (r.get("opening12") or "").strip()
+        if not _d or not _op:
+            continue
+        per_day_op_cids.setdefault(_d, {}).setdefault(_op, set()).add(
+            r.get("cid") or "")
+    spread = {}
+    for _d, _m in per_day_op_cids.items():
+        _cnt = collections.Counter()
+        for _r in rows:
+            if day_of(_r.get("ts")) == _d and (_r.get("opening12") or "").strip():
+                _cnt[(_r.get("opening12") or "").strip()] += 1
+        _rep = {op: s for op, s in _m.items() if len(s) > 1}
+        _head = sorted(_rep.items(), key=lambda kv: (-len(kv[1]), -_cnt[kv[0]]))[:6]
+        spread[_d] = {
+            "rows": sum(_cnt.values()),
+            "distinct_openings": len(_cnt),
+            "repeated_openings": len(_rep),
+            "extra_occurrences": sum(v - 1 for v in _cnt.values() if v > 1),
+            "top": ["%s|%d 人" % (op, len(s)) for op, s in _head],
+        }
+
     parts = []
     a = parts.append
     a("<!doctype html><html lang=zh-CN><meta charset=utf-8>")
@@ -238,6 +269,33 @@ def main():
                      livelock[_last]["repeated_citizens"],
                      livelock[_last]["max_repeats"]))
 
+        # 跨席传染面（R3204·吸引子跨居民传播）
+        a("<h2>跨席传染面（同一开口被不同居民各撞一次）</h2>")
+        a('<div class="sub">口径：同日同一开口前 12 字出现在 2 位以上居民的拒稿里'
+          '＝吸引子已跨席传染。与上表「重试熔断面」互补——那是同一人被反复烧，'
+          '这是同一句被多人各撞一次。</div>')
+        a("<table><tr><th>日期</th><th>拒稿</th><th>不同开口</th><th>重复开口</th>"
+          "<th>多烧条数</th><th>占比</th><th>头部</th></tr>")
+        for _d in sorted(spread)[-14:]:
+            _v = spread[_d]
+            _pct = (100.0 * _v["extra_occurrences"] / _v["rows"]) if _v["rows"] else 0
+            a("<tr><td>%s</td><td>%d</td><td>%d</td><td>%d</td><td class=warm>%d</td>"
+              "<td>%.0f%%</td><td class=mono>%s</td></tr>"
+              % (_d, _v["rows"], _v["distinct_openings"], _v["repeated_openings"],
+                 _v["extra_occurrences"], _pct, html.escape("；".join(_v["top"]))))
+        a("</table>")
+        if spread:
+            _d = sorted(spread)[-1]
+            _v = spread[_d]
+            if _v["repeated_openings"] == 0:
+                a('<div class="empty">最近一日 %s：%d 条拒稿分属 %d 个开口，零跨席重复。'
+                  '</div>' % (_d, _v["rows"], _v["distinct_openings"]))
+            else:
+                a('<div class="empty">最近一日 %s：%d 条拒稿只对应 %d 个开口，'
+                  '%d 个开口被 ≥2 位居民各撞一次（多烧 %d 条）。</div>'
+                  % (_d, _v["rows"], _v["distinct_openings"],
+                     _v["repeated_openings"], _v["extra_occurrences"]))
+
         # 最近
         a("<h2>最近 %d 条拒稿原文</h2>" % RECENT)
         a("<table><tr><th>时间</th><th>居民</th><th>闸</th><th>族</th><th>开口</th></tr>")
@@ -282,6 +340,7 @@ def main():
         "repeated_openings": [(k, v) for k, v in opening.most_common(20) if v > 1],
         "by_day": dict(sorted(by_day.items())),
         "retry_livelock": livelock,
+        "cross_resident_spread": spread,
     }
     with open(OUT_JSON, "w", encoding="utf-8") as f:
         json.dump(summary, f, ensure_ascii=False, indent=1)
