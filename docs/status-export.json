@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-16 17:09",
+ "export_ts": "2026-11-16 19:05",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3241（2026-11-16 17:0x 工作日让路窗轮）**：让路窗（D-20261020-02）内年轮/相遇/反思 yield 零落环；产品增量=①拒绝面页新增「当前生效开口禁牌与解禁时刻」栏（12 条·17:10→20:45）+ json active_bans；②负控台 ring_quota_negctl.py 加禁牌态混淆闸（两臂禁牌集不一致判 CONFOUNDED，防 19:00 A/B 量到「解禁」）。闸：round_daily PASS（stale=1 ran=2）/values n=30 PASS/events gate PASS（events=45444·replay 10111·mismatch=0）/pool SELF_TERMINATE/persona gen6 rc=0/今日反思达标（尾行 11-16）。commit 868201ac4·1e667f7db 已推。 **R3232（2026-11-16 15:2x 工作日让路窗轮）**：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（覆盖至 D-20261116-15）；orders 物理件区无涉本司新件；TASKS 无 open 单。年轮/相遇/反思三线按 D-20261020-02 让路窗（09:00-19:00）yield，不落环不改闸。确定性面全绿——round_daily stale=0 ran=0 failed=0 PASS（27 面 fresh）；persona_generations rc=0（gen6 habits=163 pending_sync=none）；events 闸 cards=10111 events=45444 replay replayed=10111 schema=0 mismatch=0 PASS；pool_audit verdict=PASS under_target NONE-SELF_TERMINATE；qc_census cards=10114 evolved=10114 problems=0 dup_rings=37/37。**新增核查**：日更登记表 vs 盘面 HTML 比对，city-growth-p01~p11 与 city-social-graph.html 共 12 页未命中字面名，经源读确认为 growth/social_graph 组级登记覆盖=假阳性，零未登记缺口（防 10-27 类静默停更复发的守卫完整）。 **R3223（2026-11-16 14:2x·让路窗确定性轮）**：撤换全城最热骨架——`OPENING_SKELETONS` 24→26，移除「这会儿手边最碍事的就是这些，」（两日拒稿账 24 条/9 人、写法逐字仅 1 种），换 3 条同风格律新骨架，期望负载 13.75→12.69 席/骨架；拒稿闸回归测试改为运行期反查热骨架，机制判据不变（5/5 OK）。守 R3215 次序（先换骨架→再配额 A/B），族表/阈值/窗口零改动。",
+   "t": "**R3252（2026-11-16 19:0x 夜窗产品轮）**：让路窗解（19:00 后首跑）→ 年轮批 10/10 落环（C-03879/03880/03888/03903/03917/03881/03882/03883/03884/03885），其中 4 张走 soft-concession（recent-dup-phrase 让步行），零硬拒；`events_refresh --gate` PASS（cards=10111 events=45454 shards=3·replay 10111/10111·mismatch=0·schema_errors=0·chronicle last=2026-11-16 gap=0d）；`round_daily --run` stale=0 ran=0 全新鲜；`pool_audit` 全桶达标 SELF_TERMINATE 零 LLM；`persona_generations --check` rc=0（gen6·habits=163·pending_sync=none）；反思线今日 5 条已满、相遇轮 cap 3/3 已满，两线零额外调用。 **R3241（2026-11-16 17:0x 工作日让路窗轮）**：让路窗（D-20261020-02）内年轮/相遇/反思 yield 零落环；产品增量=①拒绝面页新增「当前生效开口禁牌与解禁时刻」栏（12 条·17:10→20:45）+ json active_bans；②负控台 ring_quota_negctl.py 加禁牌态混淆闸（两臂禁牌集不一致判 CONFOUNDED，防 19:00 A/B 量到「解禁」）。闸：round_daily PASS（stale=1 ran=2）/values n=30 PASS/events gate PASS（events=45444·replay 10111·mismatch=0）/pool SELF_TERMINATE/persona gen6 rc=0/今日反思达标（尾行 11-16）。commit 868201ac4·1e667f7db 已推。 **R3232（2026-11-16 15:2x 工作日让路窗轮）**：轮首 pull=Already up to date、树净；决策水位差集 NEW=0（覆盖至 D-20261116-15）；orders 物理件区无涉本司新件；TASKS 无 open 单。年轮/相遇/反思三线按 D-20261020-02 让路窗（09:00-19:00）yield，不落环不改闸。确定性面全绿——round_daily stale=0 ran=0 failed=0 PASS（27 面 fresh）；persona_generations rc=0（gen6 habits=163 pending_sync=none）；events 闸 cards=10111 events=45444 replay replayed=10111 schema=0 mismatch=0 PASS；pool_audit verdict=PASS under_target NONE-SELF_TERMINATE；qc_census cards=10114 evolved=10114 problems=0 dup_rings=37/37。**新增核查**：日更登记表 vs 盘面 HTML 比对，city-growth-p01~p11 与 city-social-graph.html 共 12 页未命中字面名，经源读确认为 growth/social_graph 组级登记覆盖=假阳性，零未登记缺口（防 10-27 类静默停更复发的守卫完整）。",
    "s": 1
   },
   {
@@ -2109,8 +2109,12 @@
   [
    "334",
    "本轮问答面事实闸修法落地并验收（负控 3/3 + 回归 1/1）；今日年轮落环行数 334（卡面机器计数，非人口总数）。"
+  ],
+  [
+   "344",
+   "今日全城累计 344 行新年轮落环（[锚] 行级机器直数），事件闸 45454 事件/replay mismatch=0，日更 24 面全新鲜。"
   ]
  ],
- "t": "当前活：19:00 实弹前的环境读数收口（禁牌到期栏上页 + 负控台混淆闸）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-ring-refusals.html（禁牌到期栏 12 条 17:10→20:45，2026-11-16 17:0x）\n下个里程碑：19:00 让路窗解 → 年轮批 3 + 事件闸 → ring_quota_negctl 实弹 A/B（干净窗口 20:45 后，ETA 2026-11-16 21:00）",
- "top_text": "当前活：19:00 实弹前的环境读数收口（禁牌到期栏上页 + 负控台混淆闸）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\export\\city-ring-refusals.html（禁牌到期栏 12 条 17:10→20:45，2026-11-16 17:0x）\n下个里程碑：19:00 让路窗解 → 年轮批 3 + 事件闸 → ring_quota_negctl 实弹 A/B（干净窗口 20:45 后，ETA 2026-11-16 21:00）"
+ "t": "当前活：夜窗年轮线在产（本地 qwen3:4b-instruct）＋事件流重放闸每轮守\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\registry\\（今日 344 行新年轮落环，2026-11-16 19:01）｜C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\EVENTS-REPLAY-REPORT.md（PASS·45454 事件·mismatch=0）\n下个里程碑：下一批年轮 10 环（夜窗 ETA 2026-11-16 21:30）＋次日 00:00 后首轮决策水位消费",
+ "top_text": "当前活：夜窗年轮线在产（本地 qwen3:4b-instruct）＋事件流重放闸每轮守\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\registry\\（今日 344 行新年轮落环，2026-11-16 19:01）｜C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\EVENTS-REPLAY-REPORT.md（PASS·45454 事件·mismatch=0）\n下个里程碑：下一批年轮 10 环（夜窗 ETA 2026-11-16 21:30）＋次日 00:00 后首轮决策水位消费"
 }
