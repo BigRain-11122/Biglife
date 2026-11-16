@@ -4087,6 +4087,7 @@ def main():
         return
     n = 0
     skipped = 0  # T-20261114-01: refused / no-op writes must never count as evolved
+    same = 0     # T-20261116-18: byte-identical re-render, must never count as growth
     done = []  # v0.4: title must list actually-evolved IDs, not the planned due slice
     paths = []
     pool_genes = load_pool_genes()   # T-20260925-01: soft opening-diversity guidance
@@ -4201,14 +4202,15 @@ def main():
             continue
         # R1772: 同日年轮幂等闸（cursor 在 state/ 不入库，批次被杀即丢水位→重跑重复落环）。
         # 卡面已有今日年轮 = 视为已进化，补写水位后跳过，省一次 LLM 调用。
-        if not args.force and re.search(r"(?:^|\n)- %s [^\n]*" % re.escape(today()), text):
-            if not any("相遇：" in l for l in re.findall(r"(?:^|\n)- %s ([^\n]*)" % re.escape(today()), text)):
-                cursor[cid] = {"v": 1, "last": today(),
-                               "next": (datetime.date.today() + datetime.timedelta(days=COOLDOWN_DAYS)).isoformat(),
-                               "n": cursor.get(cid, {}).get("n", 0) + 1}
-                save_cursor(cursor)  # T-20261025-01: 水位即时落盘
-                print("skip: ring already today", cid, flush=True)
-                continue
+        # T-20261116-18: 用 _ringed_today() 作唯一判据，不再就地复制一份正则——
+        # 两处口径漂移正是「卡面有今日环却仍进 LLM」的出生地。
+        if not args.force and _ringed_today(p):
+            cursor[cid] = {"v": 1, "last": today(),
+                           "next": (datetime.date.today() + datetime.timedelta(days=COOLDOWN_DAYS)).isoformat(),
+                           "n": cursor.get(cid, {}).get("n", 0) + 1}
+            save_cursor(cursor)  # T-20261025-01: 水位即时落盘
+            print("skip: ring already today", cid, flush=True)
+            continue
         # T-20260925-01: ownership = persona face only (**年轮** history may
         # quote pool genes from past cycles and must not fake ownership)
         face = text.split("**年轮**", 1)[0]
@@ -4335,6 +4337,15 @@ def main():
                 if _ti[_op] >= TODAY_OPEN_HARD:
                     sig["today_ban_openings"].add(_op)
         note_pool_use(line, face, pool_genes, pool_used)  # T-20260925-01: count cross-card quotes
+        # T-20261116-18 (R3282): 计数口径修复。add_ring() 返回 True 只证明
+        # 「进入了写路径」，同日二次渲染可能一个字节都没变（11-16 23:54 批：
+        # written=8 而 8 张卡与 HEAD 逐字节 MATCH）。写前后各取一次内容哈希，
+        # 把「真净新增」与「同内容重渲染」分开，轮记才不会虚报产品增量。
+        try:
+            with open(p, "rb") as _bf:
+                _ring_before = hashlib.sha256(_bf.read()).hexdigest()
+        except OSError:
+            _ring_before = None
         # T-20261114-01: add_ring() is the authority on whether a ring landed.
         # Ignoring its return value turned a refused write (same-day idempotency,
         # event code, latin/chinese tech vocabulary) into a phantom success:
@@ -4354,6 +4365,21 @@ def main():
                 print("skip refused-line", cid, "(stays due)", flush=True)
             skipped += 1
             continue
+        # T-20261116-18: 写后比对。字节一致=同内容重渲染，不算成长，也不留
+        # 假 paths（否则 commit_files 会拿空 diff 假装一批产出）。
+        try:
+            with open(p, "rb") as _af:
+                _ring_after = hashlib.sha256(_af.read()).hexdigest()
+        except OSError:
+            _ring_after = None
+        if _ring_before is not None and _ring_after == _ring_before:
+            cursor[cid] = {"v": 1, "last": today(),
+                           "next": (datetime.date.today() + datetime.timedelta(days=COOLDOWN_DAYS)).isoformat(),
+                           "n": cursor.get(cid, {}).get("n", 0) + 1}
+            save_cursor(cursor)
+            same += 1
+            print("skip unchanged (no byte growth)", cid, flush=True)
+            continue
         paths.append(p)
         done.append(cid)
         cursor[cid] = {"v": 1, "last": today(),
@@ -4369,7 +4395,8 @@ def main():
         sync_light(args.via)
     else:
         save_cursor(cursor)
-    print("OK evolved=%d of %d due (written=%d skipped=%d)" % (n, len(due), len(done), skipped))
+    print("OK evolved=%d of %d due (written=%d written_new=%d written_same=%d skipped=%d)" % (
+        n, len(due), len(done), n, same, skipped))
     if args.propose:
         # T-20260926-19 分步②b: 提案与年轮同批生成 (ring_ref 同源强绑定·判据③)
         propose_step(cursor, via, done, sig)
