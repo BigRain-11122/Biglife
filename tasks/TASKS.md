@@ -3484,3 +3484,10 @@ ound_daily --run stale=12 ran=13 failed=0 verdict=PASS；pool_audit PASS SELF_TE
   **CEO 可见三行**：当前活=等待态（让路窗，无新活）；最近实物=census/export/city-dashboard.html + census/QC-REPORT.md + qa/EVENTS-REPLAY-REPORT.md（2026-11-16 09:4x·R3196）；下个里程碑=19:00 让路窗结束后年轮批 --batch 3 + 反思线 5 席 + 11-17 T-20261115-04 观察窗读数结案。
   **下轮预置**：①19:00 后首轮跑 `evolve_citizen --batch 3`（due 池 + ring-quality-queue recent=77 优先）与 `reflect_citizen --batch 5`；②refresh 类脚本（round_daily/QC/events）同窗 30 分钟内不重复跑，避免时间戳 churn；③T-20261115-04 观察窗 11-17 到期直接读数结案。
   tokens: local=0 api=0 api_reason=-（让路窗 + 确定性面零 LLM）
+
+- [R3199] 2026-11-16 09:5x @BigLife-OSLoop 让路窗内产品增量轮：**城市志存量资源词污染结案（多轮挂单收口）**。轮首 pull=Already up to date、工作树净；决策水位差集 NEW=0（覆盖至 D-20261116-08，第 66 批 4 行均非本司）、orders 无本司物理件。
+  **产品增量（看得到实物·2 分）**：city_chronicle.py --rebuild 清存量——谱 2264→1836 行，RESIDENT_SAY 资源词行 429→**0**，预演 would_drop=429/would_add=1 与实际净减 428 完全对上（无非预期损失）；双跑 md5 一致（确定性判据①）；--qc **PASS 0 fails**（六判据 + 体量门 max 日 243 / last3 median 9 / 458083 B）；city_digest() 资源词=False；可见面 census/export/city-chronicle.html 资源词命中 **0**（68754 B，dep-mtime 自动重建）。
+  **跳过与原因（诚实律）**：年轮批命中 yield-window（workday 09:00-19:00 CEO lane-priority / D-20261020-02）→ 零环顺延 19:00；反思线同窗顺延；语言池 pool_audit=**SELF_TERMINATE**（轴 72/72·像素 12/12·greet 28/28·faq 7/7·负例 6/6，hard_fails=0）；世代池 --check **rc=0**（gen1~gen4，gen4 habits=147 pending_sync=none）；HQ 反馈闸 ALREADY_REPORTED（day=2026-11-16 lines=1）零写入。
+  **CEO 可见三行**：当前活=城市志资源词存量清理并验证收口（09:5x）；最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-chronicle.html（重建 2026-11-16 09:5x，资源词 0）+ 证据 qa/CHRONICLE-FLEET-RES-REBUILD-20261116.md；下个里程碑=19:00 让路窗结束后年轮批 --batch 3 续产 + 反思线 5 席补跑 + 11-17 T-20261115-04 分布窗读数结案。
+  **下轮预置**：①19:00 后首轮跑 evolve_citizen --batch 3（due 满 + ring-quality-queue recent=77 优先）+ reflect_citizen --batch 5；②T-20261115-04 观察窗 11-17 到期直接读数结案；③存续 open 单清零后转基因轮（增补后必跑 persona_generations --sync）。
+  tokens: local=0 api=0 api_reason=-（让路窗 + 全轮确定性零 LLM）

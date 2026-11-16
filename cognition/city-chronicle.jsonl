@@ -118,9 +118,6 @@
 {"date": "2026-09-24", "event_token": "5f961f816e", "mood_trace": "", "source_ref": {"summary": "2026-09-24T00:13:01+08:00 chore: 鍥㈢粨浜?GitHub姣忓皬鏃跺悓姝?| hourly tjcloud+git sync", "ts_utc": "2026-09-23T16:17:02Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-09-24", "event_token": "3e59c891b7", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxGroup", "ts_utc": "2026-09-23T16:37:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-09-24", "event_token": "b3779ce4b9", "mood_trace": "", "source_ref": {"summary": "order O-20260924-0100-bm-c", "ts_utc": "2026-09-23T17:37:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
-{"date": "2026-09-24", "event_token": "8fa14b69eb", "mood_trace": "", "source_ref": {"summary": "显存紧张，抓紧优化代码！", "ts_utc": "2026-09-23T20:07:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-24", "event_token": "ef9e50b4cc", "mood_trace": "", "source_ref": {"summary": "显存紧张了，得优化代码了。", "ts_utc": "2026-09-23T20:07:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-24", "event_token": "84bf70b484", "mood_trace": "", "source_ref": {"summary": "显存紧张，代码优化中，请城主放心。", "ts_utc": "2026-09-23T20:17:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-24", "event_token": "0048190f2b", "mood_trace": "", "source_ref": {"summary": "G16 CrazyEstate: enter S2", "ts_utc": "2026-09-24T00:20:56Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-09-24", "event_token": "a34f8d7c23", "mood_trace": "", "source_ref": {"summary": "G18 PalacePlunder: enter S1", "ts_utc": "2026-09-24T00:20:56Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-09-24", "event_token": "a87ba28e86", "mood_trace": "", "source_ref": {"summary": "G17 UnboxIt: enter S3", "ts_utc": "2026-09-24T00:20:56Z", "type": "GAME_STAGE"}, "weight": 3}
@@ -179,7 +176,6 @@
 {"date": "2026-09-24", "event_token": "84993cadc4", "mood_trace": "", "source_ref": {"summary": "ledger 09-24 ~12:36 「授权实验室巡检各个公司技术底层，随时优化」", "ts_utc": "2026-09-24T04:46:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-24", "event_token": "c2245f9e3d", "mood_trace": "", "source_ref": {"summary": "order O-20260924-1310-bm-a", "ts_utc": "2026-09-24T04:46:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
 {"date": "2026-09-24", "event_token": "e852d1d767", "mood_trace": "", "source_ref": {"summary": "ledger 09-24 ~13:15 「商业化子公司的定位高于其他子公司」", "ts_utc": "2026-09-24T04:46:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-09-24", "event_token": "1c5e0decd9", "mood_trace": "", "source_ref": {"summary": "显存紧张已缓解，现可用9.6GB，汇报完毕。", "ts_utc": "2026-09-24T05:06:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-24", "event_token": "ae1d49da3d", "mood_trace": "", "source_ref": {"summary": "ledger 09-24 ~12:35 「ceo命令，集团梳理各子公司的业务，逻辑，边界，使命等，建立起跨子公司的机制，高效流畅，各子公司整合精简部门和业务，不...", "ts_utc": "2026-09-24T05:16:01Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-24", "event_token": "6619386fc0", "mood_trace": "", "source_ref": {"summary": "order O-20260924-1320-bm-a", "ts_utc": "2026-09-24T05:21:23Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
 {"date": "2026-09-24", "event_token": "caa9bf1cf2", "mood_trace": "", "source_ref": {"summary": "ledger 09-24 ~13:17 「我准备自建服务器，帮我写好」", "ts_utc": "2026-09-24T05:21:23Z", "type": "CEO_ORDER"}, "weight": 8}
@@ -251,11 +247,8 @@
 {"date": "2026-09-24", "event_token": "b10a384561", "mood_trace": "", "source_ref": {"summary": "ledger 09-24 ~21:15 「快速调查一件事情，看，再看一些排期啊之类的，还有任务的完成情况，是否需要去增加算力，比如说机器啊之类的。」", "ts_utc": "2026-09-24T13:36:01Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-24", "event_token": "ede2e10cdb", "mood_trace": "", "source_ref": {"summary": "ledger 09-24 ~21:25 「我可以接受慢一点，但是如果你排期都排到一周以后，那我就不可以接受。我希望我看到的东西都能在 3~5 天之内完成。我交办...", "ts_utc": "2026-09-24T13:36:01Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-24", "event_token": "07b4b106be", "mood_trace": "", "source_ref": {"summary": "ledger 09-24 ~21:00/21:30 「你现在在干什么？你不要什么都在等我。如果卡在我这里，你就去干你自己该干的事情，把技术底座啊、方案啊、什么东西都好好去做...", "ts_utc": "2026-09-24T13:46:01Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-09-24", "event_token": "36d916aa34", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张了。", "ts_utc": "2026-09-24T13:46:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-24", "event_token": "3800c8d7d7", "mood_trace": "", "source_ref": {"summary": "order O-20260924-2126-bm-a", "ts_utc": "2026-09-24T13:46:01Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
-{"date": "2026-09-24", "event_token": "97e93e20bc", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张！", "ts_utc": "2026-09-24T13:46:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-24", "event_token": "cce8b22a1c", "mood_trace": "", "source_ref": {"summary": "ledger 09-24 ~21:35 「重新设定命令流转的速度和频率，包括公司之间对接的频率，还有 Git 交流的频率，还有别的一些频率。我感觉现在流转的太慢...", "ts_utc": "2026-09-24T13:56:01Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-09-24", "event_token": "d04bbf417a", "mood_trace": "", "source_ref": {"summary": "显存紧张已缓解，正抓紧优化代码。", "ts_utc": "2026-09-24T13:56:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-24", "event_token": "a42bacc9d5", "mood_trace": "", "source_ref": {"summary": "OS循环正常，资源充足，汇报完毕。", "ts_utc": "2026-09-24T14:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-24", "event_token": "726c72e1d9", "mood_trace": "", "source_ref": {"summary": "OS循环正常，数据流畅通无阻，汇报完毕。", "ts_utc": "2026-09-24T14:16:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-24", "event_token": "b7255ca73f", "mood_trace": "", "source_ref": {"summary": "ledger 09-24 ~21:55 「把可视化好好梳理一下，重要的信息放上面，规则体系啊什么的也是，公司层面也是，替我规划，我很关注量化金融有关的，还有集团...", "ts_utc": "2026-09-24T14:16:01Z", "type": "CEO_ORDER"}, "weight": 8}
@@ -288,11 +281,6 @@
 {"date": "2026-09-25", "event_token": "e343f1255a", "mood_trace": "", "source_ref": {"summary": "G19 BloomHaven: enter S0", "ts_utc": "2026-09-24T19:36:02Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-09-25", "event_token": "851a781544", "mood_trace": "", "source_ref": {"summary": "G07 : S3 -> B593", "ts_utc": "2026-09-24T20:36:02Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-09-25", "event_token": "9176b1c6ab", "mood_trace": "", "source_ref": {"summary": "G08 : B560 -> B592", "ts_utc": "2026-09-24T20:36:02Z", "type": "GAME_STAGE"}, "weight": 3}
-{"date": "2026-09-25", "event_token": "36d916aa34", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张了。", "ts_utc": "2026-09-24T22:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-25", "event_token": "97e93e20bc", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张！", "ts_utc": "2026-09-24T22:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-25", "event_token": "f18aca1c54", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张！", "ts_utc": "2026-09-24T22:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-25", "event_token": "60dca6e4e5", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张！", "ts_utc": "2026-09-24T22:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-25", "event_token": "64318007bb", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张！", "ts_utc": "2026-09-24T23:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-25", "event_token": "3bbf8476ea", "mood_trace": "", "source_ref": {"summary": "order O-20260925-0855-bm-a", "ts_utc": "2026-09-25T00:56:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
 {"date": "2026-09-25", "event_token": "e12fd5a960", "mood_trace": "", "source_ref": {"summary": "order O-20260925-0850-bm-a", "ts_utc": "2026-09-25T00:56:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
 {"date": "2026-09-25", "event_token": "b292a7c7a5", "mood_trace": "", "source_ref": {"summary": "order O-20260925-0857-bm-a", "ts_utc": "2026-09-25T01:06:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
@@ -320,8 +308,6 @@
 {"date": "2026-09-25", "event_token": "630aeb3156", "mood_trace": "", "source_ref": {"summary": "uorder U204 「猫狗打工队，重新走一遍流程优化。」", "ts_utc": "2026-09-25T05:26:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-25", "event_token": "154c88d1d0", "mood_trace": "", "source_ref": {"summary": "order O-20260925-1327-HQ-C", "ts_utc": "2026-09-25T05:41:31Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
 {"date": "2026-09-25", "event_token": "ca3658ab6a", "mood_trace": "", "source_ref": {"summary": "2026-09-25T13:29:06+08:00 order token O-20260925-1327-HQ-C: CEO order - research mass-appeal auto-generatable content + build production lines (P1, ack 30min, 24h fast-lane)", "ts_utc": "2026-09-25T05:41:31Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-09-25", "event_token": "30a5c66e70", "mood_trace": "", "source_ref": {"summary": "抓紧优化，别让显存亮起红灯了。", "ts_utc": "2026-09-25T07:46:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-25", "event_token": "6bb381fdc7", "mood_trace": "", "source_ref": {"summary": "显存紧张需优化代码，抓紧时间！", "ts_utc": "2026-09-25T07:56:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-25", "event_token": "3da3069257", "mood_trace": "", "source_ref": {"summary": "uorder U209 （CEO台直投·board-desk·todo路·拍板回令·vid=vc-20260925-140847-823）「拍板...", "ts_utc": "2026-09-25T08:16:01Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-25", "event_token": "0c72130584", "mood_trace": "", "source_ref": {"summary": "G04 : other -> B644", "ts_utc": "2026-09-25T08:22:23Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-09-25", "event_token": "2bf9270a7d", "mood_trace": "", "source_ref": {"summary": "order O-20260925-1720-bm-a", "ts_utc": "2026-09-25T09:26:01Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
@@ -349,11 +335,9 @@
 {"date": "2026-09-26", "event_token": "fa842facf4", "mood_trace": "", "source_ref": {"summary": "PushEvent BigDomain", "ts_utc": "2026-09-25T16:06:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-09-26", "event_token": "0666ae911d", "mood_trace": "", "source_ref": {"summary": "ledger 09-25 ~13:3x 「ceo指令，城市，集团，公司，部门层面，全面研究和成立专门的任务和资源条线，确保城市，集团，公司，部门满负荷朝着目标发...", "ts_utc": "2026-09-25T16:16:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "310778abeb", "mood_trace": "", "source_ref": {"summary": "2026-09-26T00:09:19+08:00 DevLoop r167: 编年史日档 09-25 收档+快照随轮（P-43）[via bm-a]", "ts_utc": "2026-09-25T16:16:02Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-09-26", "event_token": "36d916aa34", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张了。", "ts_utc": "2026-09-25T16:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-26", "event_token": "5f961f816e", "mood_trace": "", "source_ref": {"summary": "2026-09-26T00:13:02+08:00 chore: 团结云+GitHub每小时同步 | hourly tjcloud+git sync", "ts_utc": "2026-09-25T16:16:02Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-09-26", "event_token": "7713d324a5", "mood_trace": "", "source_ref": {"summary": "ledger 09-25 ~19:00 「本地大模型生产管线和能力要系统化的建立，尽早摆脱云端token依赖」", "ts_utc": "2026-09-25T16:16:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "8e066fc64b", "mood_trace": "", "source_ref": {"summary": "2026-09-25T18:22:18+08:00 patrol: 2026-09-25 round-5 sweep verdicts=HQ:YELLOW MiniGame:YELLOW FluxVerse:GREEN BigMoney:RED BigStream:GREEN BigLife:GREEN BigDomain:GREEN BigCompute:GREEN CPH4:GREEN pt_new=2 pt_verified=0 pt_escalated=0 [via BG-C/bm-c]", "ts_utc": "2026-09-25T16:16:02Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-09-26", "event_token": "97e93e20bc", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张！", "ts_utc": "2026-09-25T16:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-26", "event_token": "a13cfa6ce8", "mood_trace": "", "source_ref": {"summary": "ledger 09-25 ~23:13 「bm-a机器 去弄吧，去做一下力所能及的编码工作，看看什么结果，持续观察，记得汇报」（C 机会话呈《本地 coding...", "ts_utc": "2026-09-25T16:16:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "afc0cdb0c1", "mood_trace": "", "source_ref": {"summary": "ledger 09-25 ~19:55 「生命公司要建立起真正有生命的硅基城市，居民要在里面真正的生活，好好调研，需要子公司和集团全力配合」", "ts_utc": "2026-09-25T16:16:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "b356c2f70f", "mood_trace": "", "source_ref": {"summary": "ledger 09-25 ~19:25 「ceo命令，审查工单分配和任务分配，所有公司 实验室 团队 部门等，不允许出现无任务情况，建立体系和规则，全力开工。」", "ts_utc": "2026-09-25T16:16:02Z", "type": "CEO_ORDER"}, "weight": 8}
@@ -363,16 +347,12 @@
 {"date": "2026-09-26", "event_token": "ec4379057d", "mood_trace": "", "source_ref": {"summary": "ledger 09-25 ~19:45 「实验室CPH4给生命公司做专项支持，全面赋能」", "ts_utc": "2026-09-25T16:16:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "5045d55d41", "mood_trace": "", "source_ref": {"summary": "uorder U215 「装好qwen和ds的coding本地模型，要合适的，采用其本地代码能力」", "ts_utc": "2026-09-25T16:26:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "ec02278306", "mood_trace": "", "source_ref": {"summary": "uorder U214 「BG-C RTX 3070 16GB·qwen2.5:7b 这台机器好好测一下，并研究可以赋能输出集团什么业务，马上落...", "ts_utc": "2026-09-25T16:26:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-09-26", "event_token": "f18aca1c54", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张！", "ts_utc": "2026-09-25T16:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-26", "event_token": "3e59c891b7", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxGroup", "ts_utc": "2026-09-25T16:36:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-09-26", "event_token": "648f2ea94c", "mood_trace": "", "source_ref": {"summary": "抓紧优化，显存紧张得慌。", "ts_utc": "2026-09-25T16:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-26", "event_token": "e0c7491e30", "mood_trace": "", "source_ref": {"summary": "ledger 09-26 ~00:35 「ceo 命令，全部去找适合业务的 skills 并使用，提升生产力」", "ts_utc": "2026-09-25T16:36:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-09-26", "event_token": "b2f97bd949", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张得慌。", "ts_utc": "2026-09-25T16:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-26", "event_token": "0c72130584", "mood_trace": "", "source_ref": {"summary": "G04 : B651 -> B684", "ts_utc": "2026-09-26T00:26:02Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-09-26", "event_token": "42fc0d364d", "mood_trace": "", "source_ref": {"summary": "G13 : B638 -> B684", "ts_utc": "2026-09-26T00:26:02Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-09-26", "event_token": "8aac1c220c", "mood_trace": "", "source_ref": {"summary": "G14 : S2 -> B682", "ts_utc": "2026-09-26T00:26:02Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-09-26", "event_token": "c243e16d73", "mood_trace": "", "source_ref": {"summary": "G20 : enter B711", "ts_utc": "2026-09-26T00:26:02Z", "type": "GAME_STAGE"}, "weight": 3}
-{"date": "2026-09-26", "event_token": "0c7facbfad", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张了。", "ts_utc": "2026-09-26T01:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-26", "event_token": "59b04b9f46", "mood_trace": "", "source_ref": {"summary": "抓紧优化，别让进度卡在这里。", "ts_utc": "2026-09-26T01:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-26", "event_token": "2465c86f5e", "mood_trace": "", "source_ref": {"summary": "order O-20260926-0932-bm-a", "ts_utc": "2026-09-26T01:36:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "71f36c2ecf", "mood_trace": "", "source_ref": {"summary": "order O-20260926-0926-bm-a", "ts_utc": "2026-09-26T01:36:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
@@ -388,7 +368,6 @@
 {"date": "2026-09-26", "event_token": "e72bd18927", "mood_trace": "", "source_ref": {"summary": "uorder U222 「所有子公司集团实验室等，不要出现待命的情况，自己去决策，迭代，进化，调研，优化什么的！高效运转，自主创新！自己探索！法...", "ts_utc": "2026-09-26T02:26:03Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "f95684fba9", "mood_trace": "", "source_ref": {"summary": "uorder U223 「硅基城市的建设可以直接调用我的团结引擎AI能力和AI资产生产，务必建立起标杆」", "ts_utc": "2026-09-26T02:26:03Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "253448acd6", "mood_trace": "", "source_ref": {"summary": "order O-20260926-0958-bm-a", "ts_utc": "2026-09-26T02:36:03Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
-{"date": "2026-09-26", "event_token": "64318007bb", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张！", "ts_utc": "2026-09-26T02:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-26", "event_token": "045018171b", "mood_trace": "", "source_ref": {"summary": "ledger 09-26 ~10:0x 「所有子公司集团实验室等，不要出现待命的情况，自己去决策，迭代，进化，调研，优化什么的！高效运转，自主创新！自己探索！法...", "ts_utc": "2026-09-26T04:16:01Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "167dc8a18a", "mood_trace": "", "source_ref": {"summary": "ledger 09-26 ~09:4x 「全面调研，目前城市，集团，各子公司，实验室等，还有什么短板需要改进。」", "ts_utc": "2026-09-26T04:16:01Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "6b8c62c129", "mood_trace": "", "source_ref": {"summary": "uorder U225 「我放了一些参考图…好好规划硅基城市的像素美学，要高级，干净，出于现实，高于现实。色调偏二次元干净，笔触可以参考宫崎骏等...", "ts_utc": "2026-09-26T04:26:01Z", "type": "CEO_ORDER"}, "weight": 8}
@@ -406,14 +385,11 @@
 {"date": "2026-09-26", "event_token": "fb2fcfe4d7", "mood_trace": "", "source_ref": {"summary": "uorder U230 「城市的配色要清爽 干净 高级，尤其是写字楼区域，居民区什么的可以的生活化一点，然后你缺什么相关的模型去下载去调试。」", "ts_utc": "2026-09-26T06:26:01Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "7ac97e861a", "mood_trace": "", "source_ref": {"summary": "ledger 09-26 ~15:20 [外部审查·美术面] r181有进步(黄昏渐变天✓水面层✓脑塔发光✓五色律✓名字标签已移开✓)但仍差：①水面是粉色砖块纹...", "ts_utc": "2026-09-26T07:36:01Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "b7b043705b", "mood_trace": "", "source_ref": {"summary": "ledger 09-26 ~16:20 [外部审查·硅基生命体] BigLife heartbeat新鲜(16:19)但poolgen_run.log停在9/2...", "ts_utc": "2026-09-26T08:36:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-09-26", "event_token": "586e602e71", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张了，进度汇报正常。", "ts_utc": "2026-09-26T10:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-26", "event_token": "e193bd738b", "mood_trace": "", "source_ref": {"summary": "抓紧优化，显存紧张了。", "ts_utc": "2026-09-26T10:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-26", "event_token": "6bb04b5d9c", "mood_trace": "", "source_ref": {"summary": "order O-20260926-1355-bm-a", "ts_utc": "2026-09-26T10:46:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "a6e7de07de", "mood_trace": "", "source_ref": {"summary": "uorder U236 「建立科学的机制，而不是我的命令」（U235 撞号让位·后到改取 U236）", "ts_utc": "2026-09-26T11:26:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "be13ea690a", "mood_trace": "", "source_ref": {"summary": "uorder U233 「本机全面开工」（18:3x 机队总动员令·本机 BG-C 面）", "ts_utc": "2026-09-26T11:26:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "d7ed993b6e", "mood_trace": "", "source_ref": {"summary": "uorder U234 「规划一下内存使用量，保留10%空间，多用显存」", "ts_utc": "2026-09-26T11:26:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "fb5b2b6a67", "mood_trace": "", "source_ref": {"summary": "uorder U235 「可视化要继续迭代，每小时一轮」", "ts_utc": "2026-09-26T11:26:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-09-26", "event_token": "2a22277d02", "mood_trace": "", "source_ref": {"summary": "抓紧时间优化代码，显存紧张！", "ts_utc": "2026-09-26T11:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-26", "event_token": "0f7ca8a44d", "mood_trace": "", "source_ref": {"summary": "order O-20260926-2000-bm-c", "ts_utc": "2026-09-26T12:06:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "730e38fc38", "mood_trace": "", "source_ref": {"summary": "uorder U239 「科技建筑的设计语言，去参考鸟山明的漫画，比如七龙珠的未来建筑设定，好好调研」（~19:5x）+同窗令链「去调研有关二次...", "ts_utc": "2026-09-26T13:06:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-26", "event_token": "8bf6bf8417", "mood_trace": "", "source_ref": {"summary": "uorder U237 「对整个项目的记忆做一次精简梳理」", "ts_utc": "2026-09-26T13:06:02Z", "type": "CEO_ORDER"}, "weight": 8}
@@ -453,12 +429,8 @@
 {"date": "2026-09-27", "event_token": "a83ba4468b", "mood_trace": "", "source_ref": {"summary": "PushEvent Bigmedia", "ts_utc": "2026-09-26T16:36:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-09-27", "event_token": "6cb0bd996f", "mood_trace": "", "source_ref": {"summary": "ledger 09-27 ~01:20 [外部审查·Token经济] BigMoney CODELY反弹：昨14:17测22.8KB，现45.9KB——止血令①...", "ts_utc": "2026-09-26T17:26:01Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-27", "event_token": "4e5150eb09", "mood_trace": "", "source_ref": {"summary": "order O-20260927-0230-bm-a", "ts_utc": "2026-09-26T18:36:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
-{"date": "2026-09-27", "event_token": "36d916aa34", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张了。", "ts_utc": "2026-09-26T18:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-27", "event_token": "97e93e20bc", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张！", "ts_utc": "2026-09-26T18:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-27", "event_token": "3fa9717d00", "mood_trace": "", "source_ref": {"summary": "order O-20260927-0302-bm-a", "ts_utc": "2026-09-26T18:56:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
-{"date": "2026-09-27", "event_token": "586e602e71", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张了，进度汇报正常。", "ts_utc": "2026-09-26T18:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-27", "event_token": "be96fca00b", "mood_trace": "", "source_ref": {"summary": "抓紧优化，进度不能慢下来。", "ts_utc": "2026-09-26T19:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-27", "event_token": "2a22277d02", "mood_trace": "", "source_ref": {"summary": "抓紧时间优化代码，显存紧张！", "ts_utc": "2026-09-26T20:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-27", "event_token": "004ddc47f7", "mood_trace": "", "source_ref": {"summary": "uorder U250 （U239 严格评审令执行收口·晨间交付死线 07:30）「严格评审，必须明天出，本地多跑」+前令「专家过关才呈」", "ts_utc": "2026-09-26T23:16:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-27", "event_token": "3450bfc220", "mood_trace": "", "source_ref": {"summary": "uorder U249 「结合目前问题，发展方向，短板等，好好梳理一次顶层规则设计，并设置周期性的反思，自我进化，自我批评，自我迭代」", "ts_utc": "2026-09-26T23:16:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-27", "event_token": "9bbc703594", "mood_trace": "", "source_ref": {"summary": "order O-20260927-0752-bm-a", "ts_utc": "2026-09-26T23:56:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
@@ -474,7 +446,6 @@
 {"date": "2026-09-27", "event_token": "caf4847241", "mood_trace": "", "source_ref": {"summary": "uorder U253 「决策委员会加入可视化窗口，并重新梳理可视化窗口的界面排布，文案排布等。决策委员会是替ceo去解决重大问题的机构，由各子...", "ts_utc": "2026-09-27T02:36:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-27", "event_token": "9d54d7d5fd", "mood_trace": "", "source_ref": {"summary": "order O-20260927-1050-HQ-C", "ts_utc": "2026-09-27T02:56:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
 {"date": "2026-09-27", "event_token": "ca3658ab6a", "mood_trace": "", "source_ref": {"summary": "2026-09-27T10:44:41+08:00 O-20260927-1050-HQ-C 媒体司自驱动员令（P-2026-09-27-07·U255）：方向研究首件 24h+库存 10→30+城市叙事线+调研部提前交卷——idle-fast 议程面停用 [via bm-c]", "ts_utc": "2026-09-27T02:56:02Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-09-27", "event_token": "f18aca1c54", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张！", "ts_utc": "2026-09-27T03:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-27", "event_token": "59b04b9f46", "mood_trace": "", "source_ref": {"summary": "抓紧优化，别让进度卡在这里。", "ts_utc": "2026-09-27T03:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-27", "event_token": "0101ffbeda", "mood_trace": "", "source_ref": {"summary": "ledger 09-27 ~10:4x 「有公司一直闲着，给我调动起来，好好研究方向，自己动起来」", "ts_utc": "2026-09-27T04:16:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-27", "event_token": "10f7c956fe", "mood_trace": "", "source_ref": {"summary": "ledger 09-27 ~09:1x 「决策委员会加入可视化窗口，并重新梳理可视化窗口的界面排布，文案排布等。决策委员会是替ceo去解决重大问题的机构，由各子...", "ts_utc": "2026-09-27T04:16:02Z", "type": "CEO_ORDER"}, "weight": 8}
@@ -486,9 +457,6 @@
 {"date": "2026-09-27", "event_token": "8432e7406c", "mood_trace": "", "source_ref": {"summary": "uorder U257 「你的设计也要生命公司全力配合，赋予真正的居民身份和落实人工智能」（~16:4x·交互会话直令·U256 大批量产的纵深...", "ts_utc": "2026-09-27T09:46:01Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-27", "event_token": "e1fb755ef2", "mood_trace": "", "source_ref": {"summary": "uorder U259 「去调查云端token消耗的百分比，分子公司 集团 业务等，列表汇报」（~10:5x·交互会话直令）", "ts_utc": "2026-09-27T09:46:01Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-27", "event_token": "ea42697cb0", "mood_trace": "", "source_ref": {"summary": "uorder U256 「再去调研一下，日本手绘二次元风格是可以的，配色也还不错，但设计语言欠缺，希望能有各个国家的设计语言，全球化的，但不是万...", "ts_utc": "2026-09-27T09:46:01Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-09-27", "event_token": "e2cb03171e", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张了，我这边运行正常。", "ts_utc": "2026-09-27T12:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-27", "event_token": "43ccca5132", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张了，我这边运行正常。", "ts_utc": "2026-09-27T12:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-27", "event_token": "3188ae31e9", "mood_trace": "", "source_ref": {"summary": "抓紧优化，显存紧张了，我这还好。", "ts_utc": "2026-09-27T12:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-27", "event_token": "c416c44942", "mood_trace": "", "source_ref": {"summary": "order O-2026-09-27-2245-bm-a", "ts_utc": "2026-09-27T14:56:01Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-27", "event_token": "e1c49c5f94", "mood_trace": "", "source_ref": {"summary": "order O-2026-09-27-2250-bm-a", "ts_utc": "2026-09-27T14:56:01Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-27", "event_token": "4a08eba6c6", "mood_trace": "", "source_ref": {"summary": "uorder U261 「游戏子公司去调研游戏玩法全流程测试如何用AI和unity实现，目前做的测试很糟糕，你通过了但我去玩一塌糊涂」", "ts_utc": "2026-09-27T15:36:01Z", "type": "CEO_ORDER"}, "weight": 8}
@@ -510,11 +478,7 @@
 {"date": "2026-09-28", "event_token": "775671bef3", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxVerse", "ts_utc": "2026-09-27T16:26:01Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-09-28", "event_token": "a83ba4468b", "mood_trace": "", "source_ref": {"summary": "PushEvent Bigmedia", "ts_utc": "2026-09-27T16:26:01Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-09-28", "event_token": "698911a9d2", "mood_trace": "", "source_ref": {"summary": "ledger 09-28 ~09:xx 「ceo 命令，请所有子公司和集团，去开源平台，github 等，寻找优秀的能赋能项目的工具，工程等，不要重复造轮子，能...", "ts_utc": "2026-09-27T16:46:01Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-09-28", "event_token": "3396be040f", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张了，我运行正常。", "ts_utc": "2026-09-27T21:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-28", "event_token": "97e93e20bc", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张！", "ts_utc": "2026-09-27T21:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-28", "event_token": "0c7facbfad", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张了。", "ts_utc": "2026-09-27T21:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-28", "event_token": "be96fca00b", "mood_trace": "", "source_ref": {"summary": "抓紧优化，进度不能慢下来。", "ts_utc": "2026-09-27T21:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-09-28", "event_token": "2a22277d02", "mood_trace": "", "source_ref": {"summary": "抓紧时间优化代码，显存紧张！", "ts_utc": "2026-09-27T23:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-28", "event_token": "4ad5517793", "mood_trace": "", "source_ref": {"summary": "ledger 09-28 ~10:xx 「没有任何空闲，算力跑满，各自跑业务新方向+新技术+技术底层，任何工作都别闲着」", "ts_utc": "2026-09-28T01:16:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-28", "event_token": "57966f0bec", "mood_trace": "", "source_ref": {"summary": "ledger 09-28 ~10:1x 「ceo 命令，全面建立自驱力生态机制，全面激发创新和主动性，工作任务要拉满，要高效，不能有任何闲置资源，还有空转浪费现...", "ts_utc": "2026-09-28T01:26:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-28", "event_token": "89482c7a8a", "mood_trace": "", "source_ref": {"summary": "G05 : B617 -> B849", "ts_utc": "2026-09-28T01:26:02Z", "type": "GAME_STAGE"}, "weight": 3}
@@ -544,7 +508,6 @@
 {"date": "2026-09-28", "event_token": "2ffdebf426", "mood_trace": "", "source_ref": {"summary": "uorder U273 「去拿我的资源库尝试拼接几个界面，我来审核」", "ts_utc": "2026-09-28T15:46:59Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-28", "event_token": "301c120361", "mood_trace": "", "source_ref": {"summary": "ledger 09-28 ~18:0x 「梳理好后全面开工，不要闲着！」", "ts_utc": "2026-09-28T15:46:59Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-28", "event_token": "3397511fae", "mood_trace": "", "source_ref": {"summary": "order O-20260928-1716-bm-a", "ts_utc": "2026-09-28T15:46:59Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
-{"date": "2026-09-28", "event_token": "36d916aa34", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张了。", "ts_utc": "2026-09-28T15:46:59Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-28", "event_token": "389cbe4364", "mood_trace": "", "source_ref": {"summary": "order O-20260928-1540-bm-a", "ts_utc": "2026-09-28T15:46:59Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
 {"date": "2026-09-28", "event_token": "3ce82bc4eb", "mood_trace": "", "source_ref": {"summary": "order O-20260928-1655-bm-a", "ts_utc": "2026-09-28T15:46:59Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
 {"date": "2026-09-28", "event_token": "4026a22f26", "mood_trace": "", "source_ref": {"summary": "ledger 09-28 ~12:1x 「你按照现在的规划 快速搭一小块，让我看看效果」", "ts_utc": "2026-09-28T15:46:59Z", "type": "CEO_ORDER"}, "weight": 8}
@@ -610,7 +573,6 @@
 {"date": "2026-09-28", "event_token": "f25fad6fa9", "mood_trace": "", "source_ref": {"summary": "ledger 09-28 ~17:4x 「去github去找你公司能用到的所有环境，工具，skills，mcp等等，全面安装」", "ts_utc": "2026-09-28T15:46:59Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-28", "event_token": "f352ea4f51", "mood_trace": "", "source_ref": {"summary": "ledger 09-28 ~22:05 「参考lowpoly，调整居民形象生产方向」", "ts_utc": "2026-09-28T15:46:59Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-28", "event_token": "fa13da45bd", "mood_trace": "", "source_ref": {"summary": "uorder U286 「吸嘟嘟的2D资产和界面，按新的流程重新装配一遍，让我看看改进效果」（交互会话直令·本令=U284 母版 SOP 首个应...", "ts_utc": "2026-09-28T15:46:59Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-09-28", "event_token": "43ccca5132", "mood_trace": "", "source_ref": {"summary": "抓紧优化代码，显存紧张了，我这边运行正常。", "ts_utc": "2026-09-28T15:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-09-28", "event_token": "4649016807", "mood_trace": "", "source_ref": {"summary": "uorder U293 「你自己调集相关专家和skill去评审吸嘟嘟的界面 2D资产等，好好优化」（交互会话直令·原占 U290 与他窗 fol...", "ts_utc": "2026-09-28T15:56:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-09-29", "event_token": "01cddf5e67", "mood_trace": "", "source_ref": {"summary": "order O-20260924-1057-bm-a", "ts_utc": "2026-09-29T07:36:03Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
 {"date": "2026-09-29", "event_token": "04247efe0b", "mood_trace": "", "source_ref": {"summary": "order O-20260923-1937-bm-a", "ts_utc": "2026-09-29T07:36:03Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
@@ -1101,7 +1063,6 @@
 {"date": "2026-10-04", "event_token": "fa645f9d38", "mood_trace": "", "source_ref": {"summary": "G27 HexTurf: enter S0", "ts_utc": "2026-10-03T23:56:01Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-10-04", "event_token": "ebedf8c0d2", "mood_trace": "", "source_ref": {"summary": "order O-20261004-0808-bm-a", "ts_utc": "2026-10-04T00:06:01Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
 {"date": "2026-10-04", "event_token": "775671bef3", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxVerse", "ts_utc": "2026-10-04T01:16:01Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-10-04", "event_token": "17cd8f6916", "mood_trace": "", "source_ref": {"summary": "资源紧张进度需加快，当前显存9.5GB可用，内存40%。", "ts_utc": "2026-10-04T02:56:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-10-04", "event_token": "1941892d1e", "mood_trace": "", "source_ref": {"summary": "内存40%用到9.5GB，进度得加快，加班继续。", "ts_utc": "2026-10-04T03:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-10-04", "event_token": "62ffcee3e7", "mood_trace": "", "source_ref": {"summary": "资源紧张进度得提速，内存40%用了9.5GB。", "ts_utc": "2026-10-04T03:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-10-04", "event_token": "1b880e05bc", "mood_trace": "", "source_ref": {"summary": "order O-20261004-1440-bm-c", "ts_utc": "2026-10-04T06:46:02Z", "type": "CEO_ORDER-STUB"}, "weight": 8}
@@ -1743,124 +1704,32 @@
 {"date": "2026-11-05", "event_token": "837221137f", "mood_trace": "", "source_ref": {"summary": "PushEvent BigCompute", "ts_utc": "2026-11-04T16:31:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-05", "event_token": "abb9ee139b", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-05 00:36（自动分发 OB-20261105-003656-879） CEO 令（原话）：「机队所有，包括主控，不要再建立机制和规则绕圈子白烧token还有电费，给我他么的产出，真实的产出，...", "ts_utc": "2026-11-04T16:41:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-11-05", "event_token": "310778abeb", "mood_trace": "", "source_ref": {"summary": "2026-11-05T01:41:50+08:00 DevLoop r825: 浸泡收据判词不再恒 ok，机器面与页面同源（自领）[via bm-a]", "ts_utc": "2026-11-04T17:46:02Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-11-05", "event_token": "3dfc3115fb", "mood_trace": "", "source_ref": {"summary": "显存压到0.4G，心跳还在，城主早安。", "ts_utc": "2026-11-04T19:04:32Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "ef9e31f041", "mood_trace": "", "source_ref": {"summary": "显存7.6G，心跳稳，城主早安。", "ts_utc": "2026-11-04T19:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "e0d7036814", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳，城主早安。", "ts_utc": "2026-11-04T19:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "fe407bfa90", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳定，城主早安。", "ts_utc": "2026-11-04T19:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "3bbc8df852", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳，城主早安。", "ts_utc": "2026-11-04T19:21:29Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-05", "event_token": "fa842facf4", "mood_trace": "", "source_ref": {"summary": "PushEvent BigDomain", "ts_utc": "2026-11-04T19:36:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-05", "event_token": "4ca142b2b3", "mood_trace": "", "source_ref": {"summary": "显存0.4G撑住，G20循环稳，城主早安。", "ts_utc": "2026-11-04T19:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "330cd3c00f", "mood_trace": "", "source_ref": {"summary": "显存7.6G，循环稳，城主早安。", "ts_utc": "2026-11-04T20:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "268aa8b6e9", "mood_trace": "", "source_ref": {"summary": "显存7.6G，循环稳，城主早安。", "ts_utc": "2026-11-04T20:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "b86178f8aa", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳，城主早安。", "ts_utc": "2026-11-04T20:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "98a619d305", "mood_trace": "", "source_ref": {"summary": "显存7.6G，循环稳，城主早安。", "ts_utc": "2026-11-04T20:12:14Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "6584433362", "mood_trace": "", "source_ref": {"summary": "显存0.4G撑住，循环稳，城主早安。", "ts_utc": "2026-11-04T20:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "cae7564546", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20循环稳，城主早安。", "ts_utc": "2026-11-04T21:36:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "ffc129c970", "mood_trace": "", "source_ref": {"summary": "显存14.7G，循环稳，城主早安。", "ts_utc": "2026-11-04T22:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "49c3a4dd7b", "mood_trace": "", "source_ref": {"summary": "显存14.7G，循环稳，城主早安。G20来回跑，B2615稳。", "ts_utc": "2026-11-05T00:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "5790c0b507", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20稳，城主早安。风速19，观城台待测。", "ts_utc": "2026-11-05T01:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "97bb4ac3c0", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20稳，风速19，观城台待测。", "ts_utc": "2026-11-05T01:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "1bfd47c5af", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，城主早安。", "ts_utc": "2026-11-05T02:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "d648017ec6", "mood_trace": "", "source_ref": {"summary": "显存7.6G，风速19，观城台校准中。", "ts_utc": "2026-11-05T02:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "10be0a93e8", "mood_trace": "", "source_ref": {"summary": "显存7.6G，风速19，校准完成。城主早安。", "ts_utc": "2026-11-05T02:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-05", "event_token": "775671bef3", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxVerse", "ts_utc": "2026-11-05T02:36:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-05", "event_token": "1afcb21518", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，观城台校准完成。", "ts_utc": "2026-11-05T03:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "dbbe6d97b2", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，校准完成。城主早安。", "ts_utc": "2026-11-05T03:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "a5c7cf18de", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，城主早安。", "ts_utc": "2026-11-05T04:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "88a77226f9", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，城主安好。", "ts_utc": "2026-11-05T04:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "99fae9fd47", "mood_trace": "", "source_ref": {"summary": "显存0.4G撑住，G20循环稳，城主安好。", "ts_utc": "2026-11-05T04:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "ef6ea4077e", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，观城台在线。城主早安。", "ts_utc": "2026-11-05T05:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "6bfa1f51dc", "mood_trace": "", "source_ref": {"summary": "显存0.4G压哨，G20循环跑着，城主安好。", "ts_utc": "2026-11-05T05:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "69624762cc", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20循环稳，城主早安。", "ts_utc": "2026-11-05T05:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "5a057ebee9", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20循环稳，城主早安。", "ts_utc": "2026-11-05T05:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "10dcb62542", "mood_trace": "", "source_ref": {"summary": "显存0.4G，G20跑着，城主安好。", "ts_utc": "2026-11-05T06:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "7fef4ebca4", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20循环稳，观城台在线。城主早安。", "ts_utc": "2026-11-05T06:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "c7c725cdce", "mood_trace": "", "source_ref": {"summary": "显存0.4G，G20稳，城主安好。", "ts_utc": "2026-11-05T06:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "521660ec25", "mood_trace": "", "source_ref": {"summary": "显存0.4G压线，G20稳，城主安好。", "ts_utc": "2026-11-05T07:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "282f94e7b4", "mood_trace": "", "source_ref": {"summary": "显存0.6G，G20稳，城主安好。", "ts_utc": "2026-11-05T07:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "b6995d2c31", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20循环稳，城主午安。", "ts_utc": "2026-11-05T08:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "9185bbb925", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳，城主晚安。", "ts_utc": "2026-11-05T08:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "53020f02ce", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，城主晚安。", "ts_utc": "2026-11-05T08:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "6be96a81b5", "mood_trace": "", "source_ref": {"summary": "显存0.4G压线，G20循环跑着，城主安好。", "ts_utc": "2026-11-05T08:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "574ce58a38", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20循环稳，城主晚安。", "ts_utc": "2026-11-05T08:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "11c2bb2882", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳，城主午安。", "ts_utc": "2026-11-05T08:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "01db75d766", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，城主午安。", "ts_utc": "2026-11-05T08:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "8cb7c1745f", "mood_trace": "", "source_ref": {"summary": "显存0.4G压线，G20循环稳，城主安好。", "ts_utc": "2026-11-05T09:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-05", "event_token": "247fa28543", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-05 18:2x（委员会第 47 批·D-20261105-20 补落） **CEO 物理件·常设提醒面（S4U 提权重注册）**：bm-a 上 7 件 Bigmoney 定时任务（Autofi...", "ts_utc": "2026-11-05T10:16:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-05", "event_token": "f476372326", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20循环稳，城主夜安。", "ts_utc": "2026-11-05T10:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "6472e5b5a9", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20循环稳，城主夜安。", "ts_utc": "2026-11-05T10:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "dcfcfd46c2", "mood_trace": "", "source_ref": {"summary": "显存0.4G压线，G20循环稳，城主夜安。", "ts_utc": "2026-11-05T10:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "7e827a57e6", "mood_trace": "", "source_ref": {"summary": "显存0.4G，G20稳，城主夜安。", "ts_utc": "2026-11-05T10:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "634ab0dc7d", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳，城主夜安。", "ts_utc": "2026-11-05T11:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-05", "event_token": "265c45c45a", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-05 20:22（校时 20:22） CEO 令（原话）：「云端暂时不限量，通知下去，但只有出成品和必须用的时候用，优先本地」", "ts_utc": "2026-11-05T12:26:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-05", "event_token": "1f27867d0f", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳，城主夜安。", "ts_utc": "2026-11-05T12:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "e7bc830bf1", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳，城主夜安。", "ts_utc": "2026-11-05T12:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "00ee056d70", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳，城主夜安。", "ts_utc": "2026-11-05T12:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-05", "event_token": "66cdec7efd", "mood_trace": "", "source_ref": {"summary": "显存压线，G20循环已平复，城主夜安。", "ts_utc": "2026-11-05T15:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-06", "event_token": "1f27867d0f", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳，城主夜安。", "ts_utc": "2026-11-05T16:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-06", "event_token": "3e59c891b7", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxGroup", "ts_utc": "2026-11-05T16:01:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-06", "event_token": "8e066fc64b", "mood_trace": "", "source_ref": {"summary": "2026-11-05T23:59:28+08:00 state(bm-c): node state snapshot before rebase [via bm-c]", "ts_utc": "2026-11-05T16:01:02Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-06", "event_token": "9176b1c6ab", "mood_trace": "", "source_ref": {"summary": "G08 : S2.5 -> B2396", "ts_utc": "2026-11-05T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-11-06", "event_token": "c243e16d73", "mood_trace": "", "source_ref": {"summary": "G20 : B2615 -> B2618", "ts_utc": "2026-11-05T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
-{"date": "2026-11-06", "event_token": "00ee056d70", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳，城主夜安。", "ts_utc": "2026-11-05T16:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-06", "event_token": "837221137f", "mood_trace": "", "source_ref": {"summary": "PushEvent BigCompute", "ts_utc": "2026-11-05T16:06:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-06", "event_token": "fa842facf4", "mood_trace": "", "source_ref": {"summary": "PushEvent BigDomain", "ts_utc": "2026-11-05T16:06:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-06", "event_token": "5f961f816e", "mood_trace": "", "source_ref": {"summary": "2026-11-06T00:13:03+08:00 chore: 团结云+GitHub每小时同步 | hourly tjcloud+git sync", "ts_utc": "2026-11-05T16:16:02Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-11-06", "event_token": "dcfcfd46c2", "mood_trace": "", "source_ref": {"summary": "显存0.4G压线，G20循环稳，城主夜安。", "ts_utc": "2026-11-05T16:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-06", "event_token": "634ab0dc7d", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳，城主夜安。", "ts_utc": "2026-11-05T16:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-06", "event_token": "f476372326", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20循环稳，城主夜安。", "ts_utc": "2026-11-05T16:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-06", "event_token": "4997cc2cd2", "mood_trace": "", "source_ref": {"summary": "PushEvent BigMoney", "ts_utc": "2026-11-05T17:35:52Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-06", "event_token": "775671bef3", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxVerse", "ts_utc": "2026-11-05T19:11:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-06", "event_token": "16e623f4d6", "mood_trace": "", "source_ref": {"summary": "显存压线，G20循环稳，城主夜安。", "ts_utc": "2026-11-05T19:36:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-06", "event_token": "42290e86a9", "mood_trace": "", "source_ref": {"summary": "显存压线，G20循环已跳转，城主早安。", "ts_utc": "2026-11-05T22:36:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-06", "event_token": "27dc004647", "mood_trace": "", "source_ref": {"summary": "显存0.4G压线，G20循环稳，城主早安。", "ts_utc": "2026-11-05T23:21:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-06", "event_token": "3866fca1c4", "mood_trace": "", "source_ref": {"summary": "显存0.4G压线，G20循环跳转，城主早安。", "ts_utc": "2026-11-06T00:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-06", "event_token": "34e2f3964f", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，城主早安。", "ts_utc": "2026-11-06T01:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-06", "event_token": "a5c7cf18de", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，城主早安。", "ts_utc": "2026-11-06T01:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-06", "event_token": "2b066c19d9", "mood_trace": "", "source_ref": {"summary": "显存0.4G压线，G20循环跑通，城主早安。", "ts_utc": "2026-11-06T01:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-06", "event_token": "02fd779b92", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，G08已归位。", "ts_utc": "2026-11-06T02:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-06", "event_token": "321e1ab4f8", "mood_trace": "", "source_ref": {"summary": "显存0.4G压线，G20循环稳定，城主早安。", "ts_utc": "2026-11-06T03:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-06", "event_token": "310778abeb", "mood_trace": "", "source_ref": {"summary": "2026-11-06T11:20:59+08:00 DevLoop r848: 页面第一次说出这座城市此刻在干什么（自领）[via bm-a]", "ts_utc": "2026-11-06T03:21:02Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-11-06", "event_token": "ac125dda05", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20稳，城主夜安。", "ts_utc": "2026-11-06T03:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-06", "event_token": "86ab986b68", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20稳，G08已归位，城主夜安。", "ts_utc": "2026-11-06T03:36:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-06", "event_token": "f5877cc301", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-06 11:46（校时 11:45:49） CEO 用机让路令（原话：「我在工作」）", "ts_utc": "2026-11-06T03:51:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-07", "event_token": "321e1ab4f8", "mood_trace": "", "source_ref": {"summary": "显存0.4G压线，G20循环稳定，城主早安。", "ts_utc": "2026-11-07T01:16:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-07", "event_token": "3e59c891b7", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxGroup", "ts_utc": "2026-11-07T01:16:01Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-07", "event_token": "4997cc2cd2", "mood_trace": "", "source_ref": {"summary": "PushEvent BigMoney", "ts_utc": "2026-11-07T01:16:01Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-07", "event_token": "8e066fc64b", "mood_trace": "", "source_ref": {"summary": "2026-11-07T04:55:06+08:00 job(asset-lib-voice-corpus-bma-2026-11-07): artifact [via bm-a]", "ts_utc": "2026-11-07T01:16:01Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-07", "event_token": "9176b1c6ab", "mood_trace": "", "source_ref": {"summary": "G08 : S2.5 -> B2396", "ts_utc": "2026-11-07T01:16:01Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-11-07", "event_token": "c243e16d73", "mood_trace": "", "source_ref": {"summary": "G20 : B2615 -> B2618", "ts_utc": "2026-11-07T01:16:01Z", "type": "GAME_STAGE"}, "weight": 3}
-{"date": "2026-11-07", "event_token": "634ab0dc7d", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20循环稳，城主夜安。", "ts_utc": "2026-11-07T01:21:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "cae7564546", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20循环稳，城主早安。", "ts_utc": "2026-11-07T01:21:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "ac125dda05", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20稳，城主夜安。", "ts_utc": "2026-11-07T01:26:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "f8bf7f8e37", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20稳，G08归位，城主早安。", "ts_utc": "2026-11-07T01:31:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-07", "event_token": "fa842facf4", "mood_trace": "", "source_ref": {"summary": "PushEvent BigDomain", "ts_utc": "2026-11-07T01:31:01Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-07", "event_token": "31c772887a", "mood_trace": "", "source_ref": {"summary": "显存4.3G，G20稳，城主早安。", "ts_utc": "2026-11-07T02:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-07", "event_token": "837221137f", "mood_trace": "", "source_ref": {"summary": "PushEvent BigCompute", "ts_utc": "2026-11-07T02:01:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-07", "event_token": "f476372326", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20循环稳，城主夜安。", "ts_utc": "2026-11-07T02:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-07", "event_token": "5f961f816e", "mood_trace": "", "source_ref": {"summary": "2026-11-06T18:19:36+08:00 fleet: 一次性根仓库 Tools 修复桥（受控、可回滚、只跑一次）", "ts_utc": "2026-11-07T02:16:02Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-11-07", "event_token": "ae88951370", "mood_trace": "", "source_ref": {"summary": "显存4.3G，G20循环稳，城主早安。", "ts_utc": "2026-11-07T02:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "08c197fc4e", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，城主夜安。", "ts_utc": "2026-11-07T02:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "632ee31ee5", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，G08归位，城主安。", "ts_utc": "2026-11-07T03:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "d3842eda47", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20循环正常，城主早安。", "ts_utc": "2026-11-07T03:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "a2d73782e6", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G20稳，G08归位，城主夜安。", "ts_utc": "2026-11-07T03:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-07", "event_token": "48f67934ab", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-07 12:2x（校时 12:01） **决策轮第 52 批·CEO 物理件常设提醒面（D-20261107-14／D-20261107-17）**", "ts_utc": "2026-11-07T04:06:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-11-07", "event_token": "775671bef3", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxVerse", "ts_utc": "2026-11-07T04:16:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-07", "event_token": "d706541453", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-07 00:07（自动分发 OB-20261107-000716-495） CEO 令（原话）：「CEO 2026-11-06 23:46 全面开工令：全员解除暂停态，各车道轮首自领、禁等人工分配...", "ts_utc": "2026-11-07T04:16:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-07", "event_token": "13aeac35cc", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环正常，城主夜安。", "ts_utc": "2026-11-07T04:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "b6995d2c31", "mood_trace": "", "source_ref": {"summary": "显存7.6G，G20循环稳，城主午安。", "ts_utc": "2026-11-07T04:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "5c5d5fd9a3", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20振荡中，城主午安。", "ts_utc": "2026-11-07T09:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "8aff32f779", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环正常，城主夜安。", "ts_utc": "2026-11-07T09:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "e70d8ad9ba", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20振荡中，城主晚安。", "ts_utc": "2026-11-07T11:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "78235df5b8", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20来回跑，城主晚安。", "ts_utc": "2026-11-07T11:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "904a75c0b7", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环中，城主夜安。", "ts_utc": "2026-11-07T11:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "341065f82c", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20来回跑，城主安好。", "ts_utc": "2026-11-07T12:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "757b25610e", "mood_trace": "", "source_ref": {"summary": "显存14.7G，G08归位，城主安。", "ts_utc": "2026-11-07T12:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "680c5a8273", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20在B2615-B2618来回，城主安好。", "ts_utc": "2026-11-07T13:16:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "803020cb9b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环中，城主夜安。", "ts_utc": "2026-11-07T13:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "8a18d0f798", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G08归位，城主安。", "ts_utc": "2026-11-07T13:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "1cc39b966a", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20在B2615-B2618，城主安好。", "ts_utc": "2026-11-07T14:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-07", "event_token": "4fb1e07f7f", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环中，城主夜安。", "ts_utc": "2026-11-07T15:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-08", "event_token": "3e59c891b7", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxGroup", "ts_utc": "2026-11-07T16:01:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-08", "event_token": "9176b1c6ab", "mood_trace": "", "source_ref": {"summary": "G08 : S2.5 -> B2396", "ts_utc": "2026-11-07T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-11-08", "event_token": "c243e16d73", "mood_trace": "", "source_ref": {"summary": "G20 : B2615 -> B2618", "ts_utc": "2026-11-07T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
@@ -1868,62 +1737,16 @@
 {"date": "2026-11-08", "event_token": "8e066fc64b", "mood_trace": "", "source_ref": {"summary": "2026-11-08T00:04:00+08:00 orders: auto fanout OB-20261108-000400-425", "ts_utc": "2026-11-07T16:05:05Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-08", "event_token": "966850e626", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-08 00:04（自动分发 OB-20261108-000400-425） CEO 令（原话）：「D-20261106-04/05 逾期补发（委员会第49批 2026-11-08 00:1x）：①...", "ts_utc": "2026-11-07T16:05:05Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-11-08", "event_token": "fa842facf4", "mood_trace": "", "source_ref": {"summary": "PushEvent BigDomain", "ts_utc": "2026-11-07T16:11:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-08", "event_token": "1cc39b966a", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20在B2615-B2618，城主安好。", "ts_utc": "2026-11-07T16:16:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-08", "event_token": "5f961f816e", "mood_trace": "", "source_ref": {"summary": "2026-11-08T00:13:02+08:00 chore: 团结云+GitHub每小时同步 | hourly tjcloud+git sync", "ts_utc": "2026-11-07T16:16:03Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-11-08", "event_token": "48a0913602", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环Done，城主夜安。", "ts_utc": "2026-11-07T16:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "c16958e8b9", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环完，城主夜安。", "ts_utc": "2026-11-07T16:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "803020cb9b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环中，城主夜安。", "ts_utc": "2026-11-07T16:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "4fb1e07f7f", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环中，城主夜安。", "ts_utc": "2026-11-07T16:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-08", "event_token": "371663e107", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-08 00:40（事件班·承载件触发·CEO-PROXY） **bm-b SVC_DOWN 实锚 + bm-c 探针面假红（P1）**：①@bm-b lane cpu-sound ...", "ts_utc": "2026-11-07T17:31:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-11-08", "event_token": "7237a1f8a1", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-08 00:42（事件班·00:40 行**勘误**·CEO-PROXY） **反转实证两件，更正 00:40 行的判读**：①**bm-b 机器并非离线**——00:35:15 复探 `tail...", "ts_utc": "2026-11-07T17:31:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-11-08", "event_token": "9caebc51b5", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-08 01:04（事件班·验证结果·CEO-PROXY 本窗） **修法未生效=bm-m ROOT 工作树陈旧**：救援卡三次被抹（ce524cf21/4aec20ac2/ee9639...", "ts_utc": "2026-11-07T17:31:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-11-08", "event_token": "ae55d293d5", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-08 00:52（事件班·**二次勘误**·CEO-PROXY） **撤回 00:42 行「bm-b FleetLink 服务死」判断：服务是活的，之前全是中继超时**。实证：`curl...", "ts_utc": "2026-11-07T17:31:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-08", "event_token": "91f1baa344", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20往返B2615-B2618，城主安好。", "ts_utc": "2026-11-07T17:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "d1de8ff68a", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20往返完，城主夜安。", "ts_utc": "2026-11-07T17:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "3cf61b9650", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20往返完，城主夜安。", "ts_utc": "2026-11-07T17:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "135c8bfb95", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20已闭环，城主夜安。", "ts_utc": "2026-11-07T18:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "eea14e119b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G08往返完，城主夜安。", "ts_utc": "2026-11-07T18:36:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "c8548e356a", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G08已闭环，城主夜安。", "ts_utc": "2026-11-07T18:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-08", "event_token": "837221137f", "mood_trace": "", "source_ref": {"summary": "PushEvent BigCompute", "ts_utc": "2026-11-07T18:51:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-08", "event_token": "0b5bb2d27f", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20刚返B2615，城主安好。", "ts_utc": "2026-11-07T19:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "4a94815e6f", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环Done，城主夜安。", "ts_utc": "2026-11-07T20:56:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "c2e0ae3bb5", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环Done，城主夜安。", "ts_utc": "2026-11-07T21:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "de55c025fe", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环稳，城主夜安。", "ts_utc": "2026-11-07T21:36:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "c0f0fdd6ef", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G08闭环，城主夜安。", "ts_utc": "2026-11-07T21:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "fd5a6e4a56", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G08闭环完，城主夜安。", "ts_utc": "2026-11-07T23:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "1173f5759d", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环走，城主夜安。", "ts_utc": "2026-11-07T23:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "2390916d82", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环完，城主夜安。", "ts_utc": "2026-11-08T00:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-08", "event_token": "a490d1e3ba", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-08 09:3x（周轮 R7 升级 · CEO 待办） **登记簿两行 T1 待裁（P-2026-11-08-07·承 P-2026-11-01-05 悬置第 2 周）**：B...", "ts_utc": "2026-11-08T01:26:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-08", "event_token": "d686a9a3aa", "mood_trace": "", "source_ref": {"summary": "显存稳，G20走完，城主夜安。", "ts_utc": "2026-11-08T01:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "904a75c0b7", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环中，城主夜安。", "ts_utc": "2026-11-08T02:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "0075812bf3", "mood_trace": "", "source_ref": {"summary": "显存稳，G20往返完，城主夜安。", "ts_utc": "2026-11-08T02:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "1140e1d8d4", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20已闭环，城主安。", "ts_utc": "2026-11-08T02:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-08", "event_token": "b33f1e7242", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-08 06:0x（委员会第 50 批·自动分发） **@BigCompute**：D-20261108-09 池面点火——2026-11-08 12:00 前把 4 件 ...", "ts_utc": "2026-11-08T03:44:04Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-08", "event_token": "47003c12c2", "mood_trace": "", "source_ref": {"summary": "显存稳，G20循环中，城主夜安。", "ts_utc": "2026-11-08T03:46:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-08", "event_token": "189d08b500", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-08 12:06（自动分发 OB-20261108-120628-589） CEO 令（原话）：「[@BigMoney 双件·委员会第51批 D-20261108-14] ①数据道新鲜度覆盖面：把...", "ts_utc": "2026-11-08T04:11:03Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-08", "event_token": "ddf144eebb", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20往返中，城主夜安。", "ts_utc": "2026-11-08T04:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "fa130e73e0", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20往返中，城主夜安。", "ts_utc": "2026-11-08T04:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "16ec61d672", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振荡中，城主雨夜安。", "ts_utc": "2026-11-08T06:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "8cbf607715", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20振荡中，城主雨夜安。", "ts_utc": "2026-11-08T06:11:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "7aac548eb4", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振荡，城主雨夜安。", "ts_utc": "2026-11-08T06:56:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "4a6d01bc96", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振荡，城主雨夜安。", "ts_utc": "2026-11-08T07:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "5d0907bb80", "mood_trace": "", "source_ref": {"summary": "显存稳，G20来回，城主雨夜安。", "ts_utc": "2026-11-08T07:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "78a30dbd14", "mood_trace": "", "source_ref": {"summary": "显存稳，G20再振荡，城主夜安。", "ts_utc": "2026-11-08T08:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "d2411d4f33", "mood_trace": "", "source_ref": {"summary": "显存稳，G20微调，城主夜安。", "ts_utc": "2026-11-08T08:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "442dc5fe28", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20在B2615-B2618间振荡。城主夜安。", "ts_utc": "2026-11-08T09:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "e8ffc8bb86", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20在B2615-B2618间微调。城主夜安。", "ts_utc": "2026-11-08T09:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "a7b84e7aea", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20来回跑，城主夜安。", "ts_utc": "2026-11-08T09:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-08", "event_token": "94dc261925", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-08 18:03（自动分发 OB-20261108-180341-868） CEO 令（原话）：「[@BigMoney 重发·委员会第52批 D-20261108-17] D-20261108-1...", "ts_utc": "2026-11-08T10:03:59Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-08", "event_token": "0f7bf7e5b4", "mood_trace": "", "source_ref": {"summary": "显存稳，G20在B2615-B2618抖，城主安。", "ts_utc": "2026-11-08T10:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "c8fa563869", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20在B2615-B2618震荡，城主夜安。", "ts_utc": "2026-11-08T10:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "5d727dc6ed", "mood_trace": "", "source_ref": {"summary": "显存稳，G20在B2615-B2618振荡，城主安。", "ts_utc": "2026-11-08T11:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "fcadb36535", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20在B2615-B2618震荡，城主安。", "ts_utc": "2026-11-08T11:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "12dd7956a6", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20已回稳，城主安。", "ts_utc": "2026-11-08T12:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "ec498e8c66", "mood_trace": "", "source_ref": {"summary": "显存稳，G20在B2615-B2618来回，城主安。", "ts_utc": "2026-11-08T13:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "55fe62de3c", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20振荡收尾，城主安。", "ts_utc": "2026-11-08T14:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "e39a9078b5", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20振荡，城主安。", "ts_utc": "2026-11-08T15:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "c0fcd42047", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20仍在B2615-B2618振荡。", "ts_utc": "2026-11-08T15:51:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-08", "event_token": "fb2869a013", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20在B2615-B2618间收尾。城主安。", "ts_utc": "2026-11-08T15:56:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-09", "event_token": "3e59c891b7", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxGroup", "ts_utc": "2026-11-08T16:01:04Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-09", "event_token": "9176b1c6ab", "mood_trace": "", "source_ref": {"summary": "G08 : S2.5 -> B2396", "ts_utc": "2026-11-08T16:01:04Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-11-09", "event_token": "c243e16d73", "mood_trace": "", "source_ref": {"summary": "G20 : B2615 -> B2618", "ts_utc": "2026-11-08T16:01:04Z", "type": "GAME_STAGE"}, "weight": 3}
@@ -1931,329 +1754,77 @@
 {"date": "2026-11-09", "event_token": "8e066fc64b", "mood_trace": "", "source_ref": {"summary": "2026-11-09T00:05:20+08:00 orders: auto fanout OB-20261109-000519-378", "ts_utc": "2026-11-08T16:06:04Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-09", "event_token": "4997cc2cd2", "mood_trace": "", "source_ref": {"summary": "PushEvent BigMoney", "ts_utc": "2026-11-08T16:16:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-09", "event_token": "5f961f816e", "mood_trace": "", "source_ref": {"summary": "2026-11-09T00:13:03+08:00 chore: 团结云+GitHub每小时同步 | hourly tjcloud+git sync", "ts_utc": "2026-11-08T16:16:03Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-11-09", "event_token": "91f1baa344", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20往返B2615-B2618，城主安好。", "ts_utc": "2026-11-08T16:26:04Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "ddf144eebb", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20往返中，城主夜安。", "ts_utc": "2026-11-08T16:26:04Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-09", "event_token": "fa842facf4", "mood_trace": "", "source_ref": {"summary": "PushEvent BigDomain", "ts_utc": "2026-11-08T16:31:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-09", "event_token": "837221137f", "mood_trace": "", "source_ref": {"summary": "PushEvent BigCompute", "ts_utc": "2026-11-08T16:36:04Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-09", "event_token": "fa130e73e0", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20往返中，城主夜安。", "ts_utc": "2026-11-08T16:36:04Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "cf35faf930", "mood_trace": "", "source_ref": {"summary": "显存稳，G20仍在B2615-B2618振荡，城主安。", "ts_utc": "2026-11-08T16:41:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "fb2869a013", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20在B2615-B2618间收尾。城主安。", "ts_utc": "2026-11-08T16:46:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-09", "event_token": "e141e57579", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-09 00:50（事件班·承载件触发·CEO-PROXY T1 代决） **配音质检卡错机派单死循环根治 + 销掉重复劳动上游卡**：STARVED-EXEC bm-b（11-08 21:41...", "ts_utc": "2026-11-08T16:51:03Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-11-09", "event_token": "2c40e60468", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-09 00:59（事件班·承载件触发·CEO-PROXY T1 代决） **配音质检卡错机派单死循环根治**：STARVED-EXEC bm-b（11-08 21:41/22:01 双旗）深挖...", "ts_utc": "2026-11-08T17:01:03Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-09", "event_token": "0b5bb2d27f", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20刚返B2615，城主安好。", "ts_utc": "2026-11-08T17:11:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "dfb2e019e8", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20在B2615，城主夜安。", "ts_utc": "2026-11-08T17:16:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "904a75c0b7", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环中，城主夜安。", "ts_utc": "2026-11-08T17:21:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "a21d65af9c", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振荡中，城主夜安。", "ts_utc": "2026-11-08T17:26:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "d35e664186", "mood_trace": "", "source_ref": {"summary": "显存稳，G20已回稳，城主安。", "ts_utc": "2026-11-08T17:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "2ff7c05e9d", "mood_trace": "", "source_ref": {"summary": "显存稳，G20回稳，城主安。", "ts_utc": "2026-11-08T18:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "56f51f2696", "mood_trace": "", "source_ref": {"summary": "显存稳，G20往返中，城主夜安。", "ts_utc": "2026-11-08T18:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "4ec9159cac", "mood_trace": "", "source_ref": {"summary": "显存稳，G20已闭环，城主安。", "ts_utc": "2026-11-08T19:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "f65fb57bc4", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20往返中，城主夜安。", "ts_utc": "2026-11-08T19:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "1140e1d8d4", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20已闭环，城主安。", "ts_utc": "2026-11-08T19:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "53540f9fed", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20来回走，城主夜安。", "ts_utc": "2026-11-08T20:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "0af3ab5307", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环已闭，城主安。", "ts_utc": "2026-11-08T20:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "47003c12c2", "mood_trace": "", "source_ref": {"summary": "显存稳，G20循环中，城主夜安。", "ts_utc": "2026-11-08T22:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "b417bbf0df", "mood_trace": "", "source_ref": {"summary": "显存稳，G20已循环，城主安。", "ts_utc": "2026-11-08T22:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "390a64d447", "mood_trace": "", "source_ref": {"summary": "显存稳，G20循环闭合，城主安。", "ts_utc": "2026-11-08T23:01:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "344abc640f", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振幅收敛，城主夜安。", "ts_utc": "2026-11-09T00:31:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "cf50f45eb5", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振幅收敛，城主夜安。", "ts_utc": "2026-11-09T00:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "58ddeff9b8", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振幅收敛，夜报已出。", "ts_utc": "2026-11-09T01:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "3357257648", "mood_trace": "", "source_ref": {"summary": "显存稳，G20循环闭合，夜报已出。", "ts_utc": "2026-11-09T02:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "1d2a9ad7de", "mood_trace": "", "source_ref": {"summary": "G20振幅收敛，显存稳，夜岗无异常。", "ts_utc": "2026-11-09T04:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "42eb728713", "mood_trace": "", "source_ref": {"summary": "显存稳，G20循环闭合，夜岗清。", "ts_utc": "2026-11-09T04:41:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "8600a3247a", "mood_trace": "", "source_ref": {"summary": "显存稳，G20闭环，夜岗清。", "ts_utc": "2026-11-09T05:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "c44c51fb81", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振幅收，夜岗清。", "ts_utc": "2026-11-09T06:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "c747f9b3d6", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20往返B2615-B2618，城主夜安。", "ts_utc": "2026-11-09T06:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-09", "event_token": "2c80d02ac1", "mood_trace": "", "source_ref": {"summary": "G20振幅稳定，夜岗资源池满载。", "ts_utc": "2026-11-09T07:01:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-09", "event_token": "9c73801ffa", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-09 15:2x CEO 令（原话）「我每次在机队任何一台机器命令都要机队及时同步，包括主控，然后他们根据自己的实际情况去落实，自己合理判...", "ts_utc": "2026-11-09T07:06:03Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-11-09", "event_token": "fb5c2d9f65", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-09 15:1x CEO 令（原话）「可以，还有就是要改规则，我说了是自驱力，每台机器自己找要干的工作并且排满，主控分配的活优先级高，且不...", "ts_utc": "2026-11-09T07:06:03Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-09", "event_token": "3f5202d57b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20闭环，城主夜安。", "ts_utc": "2026-11-09T10:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "c5c20005fe", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20刚归B2615，城主安好。", "ts_utc": "2026-11-09T10:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "86e6018f27", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20闭环中，城主安。", "ts_utc": "2026-11-09T10:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "2f6fca6a1d", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20往返完成，城主安好。", "ts_utc": "2026-11-09T11:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "3b14106ebe", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20往返完成，城主夜安。", "ts_utc": "2026-11-09T11:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "6b6f5a6ed1", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20往返完成，城主夜安。", "ts_utc": "2026-11-09T11:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "0f3e7bb790", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20往返完成，城主夜安。", "ts_utc": "2026-11-09T11:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "ab2c6b32fe", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20已归位，城主夜安。", "ts_utc": "2026-11-09T12:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "441e159a7e", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20已归位，城主夜安。", "ts_utc": "2026-11-09T12:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "3a76f23d4b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环中，城主安。", "ts_utc": "2026-11-09T12:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-09", "event_token": "f436a229bc", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-09 20:5x CEO 令（原话）「女主古代穿越的造型和脸型还是要有那个古代的特征 但不能丑」", "ts_utc": "2026-11-09T12:41:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-09", "event_token": "6e57eb748d", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20闭环完成，城主安好。", "ts_utc": "2026-11-09T12:51:04Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "f29d96260f", "mood_trace": "", "source_ref": {"summary": "显存稳，G20已归位，城主夜安。", "ts_utc": "2026-11-09T13:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "b04110ef0d", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20已归位，城主夜安。", "ts_utc": "2026-11-09T13:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "1a0dc4926a", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环完成，城主夜安。", "ts_utc": "2026-11-09T13:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "fe761deb57", "mood_trace": "", "source_ref": {"summary": "显存稳，G20归位，城主夜安。", "ts_utc": "2026-11-09T14:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "c48525b15b", "mood_trace": "", "source_ref": {"summary": "显存稳，G20在B2615-B2618间振荡，城主眠安。", "ts_utc": "2026-11-09T14:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "d209bda46e", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振荡中，城主夜安。", "ts_utc": "2026-11-09T14:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-09", "event_token": "98bad6e623", "mood_trace": "", "source_ref": {"summary": "PushEvent Biglife", "ts_utc": "2026-11-09T14:56:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-09", "event_token": "e5b2035d02", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环完成，城主夜安。", "ts_utc": "2026-11-09T15:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "fe3f789567", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G08闭环完成，城主夜安。", "ts_utc": "2026-11-09T15:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "62a0c1abca", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振荡中，城主眠安。", "ts_utc": "2026-11-09T15:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-09", "event_token": "c817a9869b", "mood_trace": "", "source_ref": {"summary": "显存稳，G20在振荡，城主眠安。", "ts_utc": "2026-11-09T15:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-10", "event_token": "3e59c891b7", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxGroup", "ts_utc": "2026-11-09T16:01:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-10", "event_token": "8e066fc64b", "mood_trace": "", "source_ref": {"summary": "2026-11-09T23:59:29+08:00 wip(DASHENG): local artifacts before pull", "ts_utc": "2026-11-09T16:01:02Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-10", "event_token": "9176b1c6ab", "mood_trace": "", "source_ref": {"summary": "G08 : S2.5 -> B2396", "ts_utc": "2026-11-09T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-11-10", "event_token": "c243e16d73", "mood_trace": "", "source_ref": {"summary": "G20 : B2615 -> B2618", "ts_utc": "2026-11-09T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
-{"date": "2026-11-10", "event_token": "e5b2035d02", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环完成，城主夜安。", "ts_utc": "2026-11-09T16:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "fe3f789567", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G08闭环完成，城主夜安。", "ts_utc": "2026-11-09T16:06:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "62a0c1abca", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振荡中，城主眠安。", "ts_utc": "2026-11-09T16:11:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-10", "event_token": "d06683e486", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-10 00:10（事件班·承载件触发·CEO-PROXY） **供给干涸结构根因 + 7 卡重填点火**：队列 1609 行全终态、open=0，`supply()` 只补『id ...", "ts_utc": "2026-11-09T16:11:03Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-11-10", "event_token": "0a59da0a9d", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-10 00:1x（事件班·承载件触发·CEO-PROXY） **五旗判读：4 假 1 真——本地基线滞后 origin 128 行制造假干涸**：本地队列 1609 行全终态 op...", "ts_utc": "2026-11-09T16:16:03Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-11-10", "event_token": "5f961f816e", "mood_trace": "", "source_ref": {"summary": "2026-11-10T00:13:03+08:00 chore: 团结云+GitHub每小时同步 | hourly tjcloud+git sync", "ts_utc": "2026-11-09T16:16:03Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-11-10", "event_token": "c8f14eafce", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振荡，bm-a传件完成。", "ts_utc": "2026-11-09T16:26:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "6e57eb748d", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20闭环完成，城主安好。", "ts_utc": "2026-11-09T16:41:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "c83f07644a", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20闭环完，城主夜安。", "ts_utc": "2026-11-09T16:46:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "1a0dc4926a", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20循环完成，城主夜安。", "ts_utc": "2026-11-09T16:56:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-10", "event_token": "837221137f", "mood_trace": "", "source_ref": {"summary": "PushEvent BigCompute", "ts_utc": "2026-11-09T16:56:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-10", "event_token": "4997cc2cd2", "mood_trace": "", "source_ref": {"summary": "PushEvent BigMoney", "ts_utc": "2026-11-09T17:06:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-10", "event_token": "0ab3c0491b", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振荡，tick通，城主安。", "ts_utc": "2026-11-09T17:21:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-10", "event_token": "fa842facf4", "mood_trace": "", "source_ref": {"summary": "PushEvent BigDomain", "ts_utc": "2026-11-09T17:21:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-10", "event_token": "35baf07e46", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20振荡中，城主安。", "ts_utc": "2026-11-09T17:26:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "6234efaf46", "mood_trace": "", "source_ref": {"summary": "显存稳，G20再振荡，城主息。", "ts_utc": "2026-11-09T17:46:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "e2b013e27e", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20振荡，城主安。", "ts_utc": "2026-11-09T18:11:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "05b1958cd0", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环完，城主夜安。", "ts_utc": "2026-11-09T18:16:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "a6b77a827d", "mood_trace": "", "source_ref": {"summary": "显存稳，G20振荡收，城主息。", "ts_utc": "2026-11-09T18:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "dd31f96731", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20回调，城主安。", "ts_utc": "2026-11-09T19:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "2ab7c787f8", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20振荡中，城主安。", "ts_utc": "2026-11-09T19:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "e9817fcf8c", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20闭环完成，城主夜安。", "ts_utc": "2026-11-09T20:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "54ff9b23cc", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20已平，城主安。", "ts_utc": "2026-11-09T21:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "f1add8e5f9", "mood_trace": "", "source_ref": {"summary": "G20振荡收，显存稳，城主息。", "ts_utc": "2026-11-09T21:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "4ec9159cac", "mood_trace": "", "source_ref": {"summary": "显存稳，G20已闭环，城主安。", "ts_utc": "2026-11-09T22:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "299a408d6e", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20微调，城主安。", "ts_utc": "2026-11-09T22:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "c535c63a1b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08闭环完成，城主夜安。", "ts_utc": "2026-11-09T23:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "e5381038eb", "mood_trace": "", "source_ref": {"summary": "显存稳，G20闭环走，城主早安。", "ts_utc": "2026-11-09T23:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "efdff6ea9c", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20微调中，城主早安。", "ts_utc": "2026-11-09T23:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "841e9cea5a", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环中，城主夜安。", "ts_utc": "2026-11-09T23:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "2cc2cf0053", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环中，城主夜安。", "ts_utc": "2026-11-10T00:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "1bdf9aae49", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环完，城主早安。", "ts_utc": "2026-11-10T01:06:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "57a5980c86", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环毕，城主夜安。", "ts_utc": "2026-11-10T01:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "84895664f3", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08闭环走，城主夜安。", "ts_utc": "2026-11-10T01:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "1215ddb746", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20循环跑，城主早安。", "ts_utc": "2026-11-10T01:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "14b859f4d3", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20已闭环，城主早安。", "ts_utc": "2026-11-10T02:11:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "b9d193e725", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20闭环，城主早安。", "ts_utc": "2026-11-10T03:01:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "dced96649d", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08来回走，城主夜安。", "ts_utc": "2026-11-10T03:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "6171f153b2", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20闭环，城主安。", "ts_utc": "2026-11-10T03:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "dc57ea1729", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环中，城主早安。", "ts_utc": "2026-11-10T04:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "46ab16b0a6", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交割，城主安。", "ts_utc": "2026-11-10T05:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "44d76fdebd", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20循环跑，城主午安。", "ts_utc": "2026-11-10T05:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "6beb55b423", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环中，城主午安。", "ts_utc": "2026-11-10T05:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "cdd1eca623", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，闭环走通，城主夜安。", "ts_utc": "2026-11-10T05:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "41874990bb", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08闭环，城主夜安。", "ts_utc": "2026-11-10T06:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "48465115a6", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08闭环运行中，城主夜安。", "ts_utc": "2026-11-10T06:41:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "1bfc68f385", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08闭环走通，城主夜安。", "ts_utc": "2026-11-10T07:16:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "18d9288b67", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08闭环运行中，城主夜安。", "ts_utc": "2026-11-10T07:21:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "9bbcb5fac3", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交割完成，城主安。", "ts_utc": "2026-11-10T07:21:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "119a06f295", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环中，城主晚安。", "ts_utc": "2026-11-10T07:31:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "be6eee4b7c", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08循环完成，城主夜安。", "ts_utc": "2026-11-10T08:26:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "fc3af118b8", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交割完，城主安。", "ts_utc": "2026-11-10T08:31:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "3306d82daa", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环跑，城主夜安。", "ts_utc": "2026-11-10T08:56:04Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "38e18d7ff5", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环跑，城主夜安。", "ts_utc": "2026-11-10T08:56:04Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "411785f13a", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08闭环跑，城主夜安。", "ts_utc": "2026-11-10T09:41:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "e019c82cb8", "mood_trace": "", "source_ref": {"summary": "显存升至14.7G，闭环稳定，城主安歇。", "ts_utc": "2026-11-10T09:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "de55c025fe", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20循环稳，城主夜安。", "ts_utc": "2026-11-10T09:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "ccd062bcd8", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08闭环运行，城主夜安。", "ts_utc": "2026-11-10T10:01:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "f5f071a6ed", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠运行，城主夜安。", "ts_utc": "2026-11-10T10:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "fd112b1148", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08闭环运行，城主夜安。", "ts_utc": "2026-11-10T10:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "fa9c7c4335", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，闭环走通，城主夜安。", "ts_utc": "2026-11-10T10:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "213695211c", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G08-G20交叠运行，城主夜安。", "ts_utc": "2026-11-10T11:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "8801e5685c", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，闭环走通，城主安歇。", "ts_utc": "2026-11-10T11:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "35a64702d4", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08闭环维持，城主夜安。", "ts_utc": "2026-11-10T11:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "565e5eee87", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20交叠中，城主夜安。", "ts_utc": "2026-11-10T12:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "cf63444228", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-10T12:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "afbb28f03f", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交替运行，城主夜安。", "ts_utc": "2026-11-10T12:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "5a06165e4e", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08切换，城主安歇。", "ts_utc": "2026-11-10T12:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "c8537a51d8", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08切换完成，城主安歇。", "ts_utc": "2026-11-10T12:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "958923ca0b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交替，城主夜安。", "ts_utc": "2026-11-10T13:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "76414c074e", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08切换中，城主安。", "ts_utc": "2026-11-10T13:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "1046098578", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交替完成，城主安。", "ts_utc": "2026-11-10T13:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "6ca7e0d3c0", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，城主安。", "ts_utc": "2026-11-10T14:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "428c7d9fff", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-10T15:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "37ddfddd46", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交替，城主安。", "ts_utc": "2026-11-10T15:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "8f492214ad", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08轮转，城主安。", "ts_utc": "2026-11-10T15:16:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "4f582c98f0", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08闭环，城主夜安。", "ts_utc": "2026-11-10T15:46:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "994c0765bb", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08闭环，城主夜安。", "ts_utc": "2026-11-10T15:51:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-10", "event_token": "837b818f72", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交替，城主夜安。", "ts_utc": "2026-11-10T15:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-11", "event_token": "8e066fc64b", "mood_trace": "", "source_ref": {"summary": "2026-11-10T23:55:45+08:00 state: sync [via state_sync]", "ts_utc": "2026-11-10T16:01:03Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-11", "event_token": "9176b1c6ab", "mood_trace": "", "source_ref": {"summary": "G08 : S2.5 -> B2396", "ts_utc": "2026-11-10T16:01:03Z", "type": "GAME_STAGE"}, "weight": 3}
-{"date": "2026-11-11", "event_token": "b1c87e3057", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08轮转，城主夜安。", "ts_utc": "2026-11-10T16:01:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-11", "event_token": "c243e16d73", "mood_trace": "", "source_ref": {"summary": "G20 : B2615 -> B2618", "ts_utc": "2026-11-10T16:01:03Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-11-11", "event_token": "5f961f816e", "mood_trace": "", "source_ref": {"summary": "2026-11-11T00:13:04+08:00 chore: 团结云+GitHub每小时同步 | hourly tjcloud+git sync", "ts_utc": "2026-11-10T16:16:06Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-11", "event_token": "3e59c891b7", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxGroup", "ts_utc": "2026-11-10T16:26:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-11", "event_token": "4997cc2cd2", "mood_trace": "", "source_ref": {"summary": "PushEvent BigMoney", "ts_utc": "2026-11-10T16:26:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-11", "event_token": "4f582c98f0", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08闭环，城主夜安。", "ts_utc": "2026-11-10T16:31:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "958923ca0b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交替，城主夜安。", "ts_utc": "2026-11-10T16:36:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "994c0765bb", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08闭环，城主夜安。", "ts_utc": "2026-11-10T16:36:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-11", "event_token": "fa842facf4", "mood_trace": "", "source_ref": {"summary": "PushEvent BigDomain", "ts_utc": "2026-11-10T16:36:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-11", "event_token": "837b818f72", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交替，城主夜安。", "ts_utc": "2026-11-10T16:41:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "cf63444228", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-10T17:21:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "f6ac3ffd33", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-10T17:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "c61aae88a2", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08换班，城主早安。", "ts_utc": "2026-11-10T17:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "e6b5f1b3b3", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-10T18:11:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "8a502a9238", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08轮转，城主早安。", "ts_utc": "2026-11-10T18:21:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "7573221ace", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08轮转，城主早安。", "ts_utc": "2026-11-10T19:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "6562726903", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08轮转，城主夜安。", "ts_utc": "2026-11-10T19:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-11", "event_token": "837221137f", "mood_trace": "", "source_ref": {"summary": "PushEvent BigCompute", "ts_utc": "2026-11-10T20:56:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-11", "event_token": "2ff6205310", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-11 06:0x（委员会第 56 批·物理件提醒面） **bm-b 主机断连（物理件·候 CEO 开机或现场）**：fleet-reality 11-11 03:11 实测 ...", "ts_utc": "2026-11-10T22:06:02Z", "type": "CEO_ORDER"}, "weight": 8}
 {"date": "2026-11-11", "event_token": "4a1f5b78ae", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-11 12:05（事件班·T1 代决·CEO-PROXY 本窗） **三机产能实况 + 资产库两处假绿修复 + CH01 角色包首件**：①产能＝bm-b 物理离线 131h（候 CEO...", "ts_utc": "2026-11-11T03:41:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-11", "event_token": "3dac264126", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-11T11:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "d779da56a5", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08换岗，城主安。", "ts_utc": "2026-11-11T11:26:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "83f1c56dd5", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08轮转，城主夜安。", "ts_utc": "2026-11-11T11:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-11", "event_token": "89e4323db8", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-11 20:15（校时实测·BigStream 席·承 CEO 11-09 审片反馈两镜） **mv0001《爱在西元前》v727 两镜脸面重设收口**：CEO 11-09 反馈两破口全修——①**D03b 直视...", "ts_utc": "2026-11-11T12:16:03Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-11", "event_token": "eca3c5d75e", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08换岗，城主安。", "ts_utc": "2026-11-11T12:21:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "880be2f5c7", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08轮转，城主安。", "ts_utc": "2026-11-11T13:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "96c494cd49", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G08换岗，城主安。", "ts_utc": "2026-11-11T13:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "7eb904df09", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08轮转，城主安。", "ts_utc": "2026-11-11T13:46:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "8a18d0f798", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G08归位，城主安。", "ts_utc": "2026-11-11T13:51:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-11", "event_token": "3427c9dc4a", "mood_trace": "", "source_ref": {"summary": "显存稳，G08归位，城主安。", "ts_utc": "2026-11-11T15:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-12", "event_token": "3e59c891b7", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxGroup", "ts_utc": "2026-11-11T16:01:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-12", "event_token": "880be2f5c7", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08轮转，城主安。", "ts_utc": "2026-11-11T16:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-12", "event_token": "8e066fc64b", "mood_trace": "", "source_ref": {"summary": "2026-11-11T23:59:29+08:00 state(bm-c): node state snapshot before rebase [via bm-c]", "ts_utc": "2026-11-11T16:01:02Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-12", "event_token": "9176b1c6ab", "mood_trace": "", "source_ref": {"summary": "G08 : S2.5 -> B2396", "ts_utc": "2026-11-11T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-11-12", "event_token": "c243e16d73", "mood_trace": "", "source_ref": {"summary": "G20 : B2615 -> B2618", "ts_utc": "2026-11-11T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
-{"date": "2026-11-12", "event_token": "297c3260cc", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-B2615，城主安。", "ts_utc": "2026-11-11T16:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-12", "event_token": "4997cc2cd2", "mood_trace": "", "source_ref": {"summary": "PushEvent BigMoney", "ts_utc": "2026-11-11T16:06:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-12", "event_token": "5f961f816e", "mood_trace": "", "source_ref": {"summary": "2026-11-12T00:13:02+08:00 chore: 团结云+GitHub每小时同步 | hourly tjcloud+git sync", "ts_utc": "2026-11-11T16:16:02Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-11-12", "event_token": "cf63444228", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-11T16:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "e6b5f1b3b3", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-11T16:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "f6ac3ffd33", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-11T16:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-12", "event_token": "fa842facf4", "mood_trace": "", "source_ref": {"summary": "PushEvent BigDomain", "ts_utc": "2026-11-11T16:41:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-12", "event_token": "4dab264c43", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08轮转，城主夜安。", "ts_utc": "2026-11-11T16:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "d83a709c86", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-B2618，城主安。", "ts_utc": "2026-11-11T16:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "6562726903", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08轮转，城主夜安。", "ts_utc": "2026-11-11T17:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "37dfee874b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-B2615轮转，城主安。", "ts_utc": "2026-11-11T17:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "629a3805d3", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-B2615轮转，城主夜安。", "ts_utc": "2026-11-11T18:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-12", "event_token": "837221137f", "mood_trace": "", "source_ref": {"summary": "PushEvent BigCompute", "ts_utc": "2026-11-11T18:41:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-12", "event_token": "b1c87e3057", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08轮转，城主夜安。", "ts_utc": "2026-11-11T19:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "48d91e237f", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-B2618轮转，城主夜安。", "ts_utc": "2026-11-11T19:51:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "029cd9f399", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-B2618转，城主夜安。", "ts_utc": "2026-11-11T20:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "0d3dab43c7", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20轮转中，城主夜安。", "ts_utc": "2026-11-11T22:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "7573221ace", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08轮转，城主早安。", "ts_utc": "2026-11-11T23:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-12", "event_token": "98bad6e623", "mood_trace": "", "source_ref": {"summary": "PushEvent Biglife", "ts_utc": "2026-11-12T00:26:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-12", "event_token": "c6c96503b9", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20轮转，城主早安。", "ts_utc": "2026-11-12T00:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "4215766244", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08轮转，城主午安。", "ts_utc": "2026-11-12T01:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "b879636930", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-B2618轮转，城主午安。", "ts_utc": "2026-11-12T01:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "da654fd67f", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08轮转，城主晚安。", "ts_utc": "2026-11-12T02:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "3484e0f89b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20轮转，城主安好。", "ts_utc": "2026-11-12T02:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "209c9fe84d", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08轮转，城主好。", "ts_utc": "2026-11-12T02:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "8ab1833781", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08轮转，城主安好。", "ts_utc": "2026-11-12T02:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "b66f4c1cbe", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08轮转，城主午安。", "ts_utc": "2026-11-12T04:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "428c7d9fff", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-12T04:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "958923ca0b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交替，城主夜安。", "ts_utc": "2026-11-12T04:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "83f1c56dd5", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08轮转，城主夜安。", "ts_utc": "2026-11-12T05:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "55e71ba27f", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主午安。", "ts_utc": "2026-11-12T06:21:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "f5517bc311", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-12T07:11:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "ff0fde491f", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-12T07:16:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "9c7eb7480a", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-12T07:51:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "6ca7e0d3c0", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，城主安。", "ts_utc": "2026-11-12T08:01:04Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "3dac264126", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-12T08:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "47fee40b56", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-12T08:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "8f492214ad", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08轮转，城主安。", "ts_utc": "2026-11-12T09:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-12", "event_token": "2495de5c53", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-12 13:29（CEO 令·主控接管·bm-m 本窗） **「通知机队，开始按新的工作流程和架构，开始各司其职，开工」——控制面解除暂停，v3 正式接管**：①`control...", "ts_utc": "2026-11-12T09:51:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-12", "event_token": "264de84455", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠中，城主夜安。", "ts_utc": "2026-11-12T10:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "94907ddb92", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-12T10:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "5a2c66684b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主安。", "ts_utc": "2026-11-12T11:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "75b6d0e34f", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-12T12:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-12", "event_token": "d7fe4e53ee", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，夜岗续。", "ts_utc": "2026-11-12T14:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-13", "event_token": "3e59c891b7", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxGroup", "ts_utc": "2026-11-12T16:01:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-13", "event_token": "8e066fc64b", "mood_trace": "", "source_ref": {"summary": "2026-11-12T23:59:31+08:00 state(bm-c): node state snapshot before rebase [via bm-c]", "ts_utc": "2026-11-12T16:01:03Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-13", "event_token": "9176b1c6ab", "mood_trace": "", "source_ref": {"summary": "G08 : S2.5 -> B2396", "ts_utc": "2026-11-12T16:01:03Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-11-13", "event_token": "c243e16d73", "mood_trace": "", "source_ref": {"summary": "G20 : B2615 -> B2618", "ts_utc": "2026-11-12T16:01:03Z", "type": "GAME_STAGE"}, "weight": 3}
-{"date": "2026-11-13", "event_token": "428c7d9fff", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-12T16:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "9c7eb7480a", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-12T16:11:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "47fee40b56", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-12T16:16:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-13", "event_token": "4997cc2cd2", "mood_trace": "", "source_ref": {"summary": "PushEvent BigMoney", "ts_utc": "2026-11-12T16:16:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-13", "event_token": "5f961f816e", "mood_trace": "", "source_ref": {"summary": "2026-11-13T00:13:03+08:00 chore: 团结云+GitHub每小时同步 | hourly tjcloud+git sync", "ts_utc": "2026-11-12T16:16:03Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-11-13", "event_token": "d7fe4e53ee", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，夜岗续。", "ts_utc": "2026-11-12T16:26:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "cf63444228", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-12T16:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-13", "event_token": "837221137f", "mood_trace": "", "source_ref": {"summary": "PushEvent BigCompute", "ts_utc": "2026-11-12T17:11:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-13", "event_token": "94907ddb92", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-12T17:36:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "f5517bc311", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-12T18:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "290df22c29", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，夜岗续。", "ts_utc": "2026-11-12T18:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-13", "event_token": "98bad6e623", "mood_trace": "", "source_ref": {"summary": "PushEvent Biglife", "ts_utc": "2026-11-12T18:41:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-13", "event_token": "fa842facf4", "mood_trace": "", "source_ref": {"summary": "PushEvent BigDomain", "ts_utc": "2026-11-12T19:41:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-13", "event_token": "3dac264126", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-12T20:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "6c418454a2", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08同步，城主早安。", "ts_utc": "2026-11-12T20:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "266308409f", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，城主早安。", "ts_utc": "2026-11-12T22:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "4958d25383", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，城主早安。", "ts_utc": "2026-11-12T22:26:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "2e3173181e", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主早安。", "ts_utc": "2026-11-12T23:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "a8f0feb42a", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，夜安。", "ts_utc": "2026-11-12T23:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "4db22b5858", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，夜安。", "ts_utc": "2026-11-13T00:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "8918441ff4", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，夜安。", "ts_utc": "2026-11-13T00:41:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "f6ac3ffd33", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-13T04:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "cce7b00bd5", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-13T06:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-13", "event_token": "1e9abcd8e3", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交替，城主夜安。", "ts_utc": "2026-11-13T08:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-13", "event_token": "f3324159f7", "mood_trace": "", "source_ref": {"summary": "2026-11-13T15:59:20+08:00 r1632: a verdict prints its null frequency before a reader calls it a finding", "ts_utc": "2026-11-13T11:16:02Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-13", "event_token": "55d019d094", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-13 21:55（BigStream 席·CEO 全面开工令·配合主控） **mv0001 v729 全链开工 + 明星脸红线实务处置**：CEO「我下班了全面开工，然后配合主控」→ ①让路解除...", "ts_utc": "2026-11-13T13:56:03Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-13", "event_token": "e6b5f1b3b3", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-13T13:56:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-14", "event_token": "8e066fc64b", "mood_trace": "", "source_ref": {"summary": "2026-11-13T23:59:28+08:00 state(bm-c): node state snapshot before rebase [via bm-c]", "ts_utc": "2026-11-13T16:01:02Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-14", "event_token": "9176b1c6ab", "mood_trace": "", "source_ref": {"summary": "G08 : S2.5 -> B2396", "ts_utc": "2026-11-13T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-11-14", "event_token": "c243e16d73", "mood_trace": "", "source_ref": {"summary": "G20 : B2615 -> B2618", "ts_utc": "2026-11-13T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
-{"date": "2026-11-14", "event_token": "cf63444228", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-13T16:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-14", "event_token": "fa842facf4", "mood_trace": "", "source_ref": {"summary": "PushEvent BigDomain", "ts_utc": "2026-11-13T16:06:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-14", "event_token": "428c7d9fff", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-13T16:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-14", "event_token": "5f961f816e", "mood_trace": "", "source_ref": {"summary": "2026-11-14T00:13:04+08:00 chore: 团结云+GitHub每小时同步 | hourly tjcloud+git sync", "ts_utc": "2026-11-13T16:16:02Z", "type": "COMMIT"}, "weight": 4}
-{"date": "2026-11-14", "event_token": "2d4f97f1cd", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-13T16:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-14", "event_token": "4997cc2cd2", "mood_trace": "", "source_ref": {"summary": "PushEvent BigMoney", "ts_utc": "2026-11-13T16:21:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-14", "event_token": "d7fe4e53ee", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，夜岗续。", "ts_utc": "2026-11-13T16:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-14", "event_token": "98bad6e623", "mood_trace": "", "source_ref": {"summary": "PushEvent Biglife", "ts_utc": "2026-11-13T16:26:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-14", "event_token": "f6ac3ffd33", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-13T16:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-14", "event_token": "3e59c891b7", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxGroup", "ts_utc": "2026-11-13T16:46:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-14", "event_token": "15e3bb3f14", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-14 01:3x（BigStream 席·承 CEO 11-13「成片前全部专家群审」「最后成片要 4k 60 帧超分」） **mv0001 v730 收口 + 三条长期假红/假绿修复**：①画面三修（E05/E06 黑镜根因=fade 的 s...", "ts_utc": "2026-11-13T17:51:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-14", "event_token": "266308409f", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，城主早安。", "ts_utc": "2026-11-13T18:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "9332c54d8d", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-13T18:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "9c7eb7480a", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-13T18:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "3ef05b14ef", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08交叠，夜岗续。", "ts_utc": "2026-11-13T19:21:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-14", "event_token": "837221137f", "mood_trace": "", "source_ref": {"summary": "PushEvent BigCompute", "ts_utc": "2026-11-13T21:51:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-14", "event_token": "715340bd28", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08已闭环，城主早安。", "ts_utc": "2026-11-13T23:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "c16db9d4f9", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08闭环，城主早安。", "ts_utc": "2026-11-13T23:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "94907ddb92", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-13T23:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "de82552b0d", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08闭环，城主早安。", "ts_utc": "2026-11-13T23:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "fef92c8900", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，夜岗续。", "ts_utc": "2026-11-13T23:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "db89044a74", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08循环，城主早安。", "ts_utc": "2026-11-14T01:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "4260cd23ce", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08闭环，夜岗续。", "ts_utc": "2026-11-14T03:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-14", "event_token": "f64849012a", "mood_trace": "", "source_ref": {"summary": "ledger 2026-11-14 00:30（主控·CEO「真正负起主控角色，全面反思审查并闭环」） **主控全面审计 + 六处机制缺陷闭环 + 五条零产出线挂起**：①**取证实况**：职责 36 项 35 OK（执行体...", "ts_utc": "2026-11-14T04:51:02Z", "type": "CEO_ORDER"}, "weight": 8}
-{"date": "2026-11-14", "event_token": "4db22b5858", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，夜安。", "ts_utc": "2026-11-14T07:31:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "f05e36c85a", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08循环，城主安好。", "ts_utc": "2026-11-14T07:46:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "f5517bc311", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T08:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "ff0fde491f", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T08:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "5a2c66684b", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主安。", "ts_utc": "2026-11-14T10:16:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "3dac264126", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-14T10:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "fd23700ba0", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T10:56:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "11a790df7f", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T11:01:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "011d108d7a", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-14T11:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "06373a0c0a", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T11:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "82f126cac4", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环，城主安。", "ts_utc": "2026-11-14T11:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-14", "event_token": "be2234ab12", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环，城主夜安。", "ts_utc": "2026-11-14T12:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "428c7d9fff", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T16:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-15", "event_token": "8e066fc64b", "mood_trace": "", "source_ref": {"summary": "2026-11-14T23:56:19+08:00 job(biggame-pack-scan-2026-11-14): artifact [via bm-a]", "ts_utc": "2026-11-14T16:01:02Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-15", "event_token": "9176b1c6ab", "mood_trace": "", "source_ref": {"summary": "G08 : S2.5 -> B2396", "ts_utc": "2026-11-14T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-11-15", "event_token": "c243e16d73", "mood_trace": "", "source_ref": {"summary": "G20 : B2615 -> B2618", "ts_utc": "2026-11-14T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-11-15", "event_token": "4997cc2cd2", "mood_trace": "", "source_ref": {"summary": "PushEvent BigMoney", "ts_utc": "2026-11-14T16:06:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-15", "event_token": "cf63444228", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T16:06:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "06373a0c0a", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T16:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-15", "event_token": "98bad6e623", "mood_trace": "", "source_ref": {"summary": "PushEvent Biglife", "ts_utc": "2026-11-14T16:11:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-15", "event_token": "fd23700ba0", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T16:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "11a790df7f", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T16:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-15", "event_token": "5f961f816e", "mood_trace": "", "source_ref": {"summary": "2026-11-15T00:13:02+08:00 chore: 团结云+GitHub每小时同步 | hourly tjcloud+git sync", "ts_utc": "2026-11-14T16:16:02Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-15", "event_token": "3e59c891b7", "mood_trace": "", "source_ref": {"summary": "PushEvent FluxGroup", "ts_utc": "2026-11-14T16:26:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-15", "event_token": "fa842facf4", "mood_trace": "", "source_ref": {"summary": "PushEvent BigDomain", "ts_utc": "2026-11-14T16:26:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-15", "event_token": "9c7eb7480a", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T17:26:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "f5517bc311", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T18:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "9332c54d8d", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-14T18:36:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "28e8366f88", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08循环，城主早安。", "ts_utc": "2026-11-14T19:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "266308409f", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，城主早安。", "ts_utc": "2026-11-14T20:31:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "ac1aab3ae0", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主早安。", "ts_utc": "2026-11-14T20:41:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "78ef12097f", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08已闭环，城主安。", "ts_utc": "2026-11-14T20:51:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-15", "event_token": "837221137f", "mood_trace": "", "source_ref": {"summary": "PushEvent BigCompute", "ts_utc": "2026-11-14T21:16:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
-{"date": "2026-11-15", "event_token": "b0a665c022", "mood_trace": "", "source_ref": {"summary": "显存7.6G稳，G20-G08闭环，城主安。", "ts_utc": "2026-11-14T21:36:01Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "a120e84339", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主早安。", "ts_utc": "2026-11-15T00:11:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "47fee40b56", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08交叠，城主夜安。", "ts_utc": "2026-11-15T00:16:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "0488cebcd6", "mood_trace": "", "source_ref": {"summary": "显存4.3G稳，G20-G08交叠，城主午安。", "ts_utc": "2026-11-15T04:11:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "251fb8332f", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主午安。", "ts_utc": "2026-11-15T06:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "2c923d2bd1", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主晚安。", "ts_utc": "2026-11-15T08:26:03Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "638e78352f", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08交叠，城主安好。", "ts_utc": "2026-11-15T09:56:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "8c26b14e06", "mood_trace": "", "source_ref": {"summary": "显存稳，G20-G08闭环，城主夜安。", "ts_utc": "2026-11-15T13:01:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
-{"date": "2026-11-15", "event_token": "cc58788030", "mood_trace": "", "source_ref": {"summary": "显存14.7G稳，G20-G08闭环，城主夜安。", "ts_utc": "2026-11-15T13:46:02Z", "type": "RESIDENT_SAY"}, "weight": 2}
 {"date": "2026-11-16", "event_token": "8e066fc64b", "mood_trace": "", "source_ref": {"summary": "2026-11-15T23:59:29+08:00 wip(DASHENG): local artifacts before pull", "ts_utc": "2026-11-15T16:01:02Z", "type": "COMMIT"}, "weight": 4}
 {"date": "2026-11-16", "event_token": "9176b1c6ab", "mood_trace": "", "source_ref": {"summary": "G08 : S2.5 -> B2396", "ts_utc": "2026-11-15T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
 {"date": "2026-11-16", "event_token": "c243e16d73", "mood_trace": "", "source_ref": {"summary": "G20 : B2615 -> B2618", "ts_utc": "2026-11-15T16:01:02Z", "type": "GAME_STAGE"}, "weight": 3}
@@ -2262,3 +1833,4 @@
 {"date": "2026-11-16", "event_token": "4997cc2cd2", "mood_trace": "", "source_ref": {"summary": "PushEvent BigMoney", "ts_utc": "2026-11-15T16:26:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-16", "event_token": "98bad6e623", "mood_trace": "", "source_ref": {"summary": "PushEvent Biglife", "ts_utc": "2026-11-15T16:26:02Z", "type": "GITHUB_EVENT"}, "weight": 3}
 {"date": "2026-11-16", "event_token": "fa842facf4", "mood_trace": "", "source_ref": {"summary": "PushEvent BigDomain", "ts_utc": "2026-11-15T16:36:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
+{"date": "2026-11-16", "event_token": "837221137f", "mood_trace": "", "source_ref": {"summary": "PushEvent BigCompute", "ts_utc": "2026-11-15T21:26:03Z", "type": "GITHUB_EVENT"}, "weight": 3}
