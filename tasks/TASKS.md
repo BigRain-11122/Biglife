@@ -61,6 +61,15 @@
   - **写法**：`python -X utf8 Tools/hq_feedback_daily.py --check` 先查（报 ALREADY_REPORTED 且当日无新阻塞项 → 该日已有一行则次日首轮再写；若当日尚无行则 `--text '<正文>'` 由闸代写）。正文要点=收令确认／依赖解除后自给锚现状（年轮+事件闸按真实天气时刻）／不再提交 FluxVerse 供给类申告。
   - **今日状态**：11-16 已有 1 行日清（`--check` = ALREADY_REPORTED lines=1），故本条按设计顺延至 **11-17 首轮**执行，仍在 12:00 窗内。
   - **代码级核实（2026-11-16 18:2x R3250 完成·回执正文所需事实已备）**：`Tools/evolve_citizen.py` L3855-3866 实读——`anchor_event()` 返回空片段时走 `anchor_mode="no-event"`，锚串写「本日事件流零生活行 · 实况锚 <now> <weather>（<weekday>）」，**不写「FluxVerse 事件流」**（R2810 假溯源闸）；即空上游下年轮照常落环且锚可审，依赖解除无功能缺口。佐证=本轮 `events_refresh --gate` PASS（events=45444 cards=10111 mismatch=0 schema=0 chronicle gap=0d）。回执行 11-17 首轮仍按闸写，不提前占用当日行。
+- [ ] **T-20261117-01**（R3311 立·机制件·跨仓资源面）本机 19 个 \git fsmonitor--daemon\ 常驻导致本仓 \git status\ 系统性假净。
+  - status: **open**（2026-11-17 05:5x R3311 立；本仓前置修复已做，daemon 实体未清）
+  - **现象（两连复现）**：默认 \git status --porcelain\ 报空；\git -c core.fsmonitor=false status --porcelain\ 报 30 项 M（census/export 24 面 + QC/QA 报告 + TASKS.md）。\core.fsmonitor\ 三层 config 均未显式设置（\--show-origin --get-all\ rc=1），故 daemon 经 IPC 注入陈旧缓存。
+  - **本仓修法（已生效）**：\git config core.fsmonitor false\（写 \.git/config\，不入库）；复测默认 status 恢复 30 项真实读数。
+  - **待办**：①核查 19 个 daemon 归属与启动源（跨仓共用，**禁本轮擅动他仓**）；②集团层确认统一处置（全局 \core.fsmonitor=false\ 或清 daemon）；③对假净史仓把 \git -c core.fsmonitor=false status\ 写入轮首/收尾校验模板。
+  - **验收**：任一仓默认 \git status\ 与 \-c core.fsmonitor=false status\ 输出一致，连续 3 轮。
+  - **影响面（已造成误判）**：R3308/R3310 轮记「census/registry 零改动」判断被此污染（另有年轮脚本自带 commit 因素）；D-20261115-10「以提交 --stat 为准」是既有 workaround。
+  - 证据：R3311 轮记 + \.git/config\ 内 \smonitor = false\。
+
 - [ ] **T-20261116-13**（R3242 立·实弹执行单·今晚首件）19:00 让路窗解后跑配额闸 A/B 实弹，决定 `state/pending/R3204-quota-gate.patch` 留或撤。
   - status: **open·blocked-on-precondition**（2026-11-16 17:1x R3242 立 → 2026-11-16 21:2x R3260 改判：两轮读数均 INCONCLUSIVE，补丁保持 pending）
   - **重跑前置（R3255 硬门·内联防重犯）**：重跑必须**同时**满足 ①冻结禁牌确有命中窗口（`--dry-run` 的 `ban state` 显示 active>0 且 B 臂预计有闸命中面，或注明本轮必有命中来源）②每臂席位 ≥8（`due budget` 行 due≥16）。**两条不成立即不跑**——否则第三次 INCONCLUSIVE，白烧每臂 4-5 席（11-16 20:5x R3259 首跑 INCONCLUSIVE／21:1x R3260 误重跑第二次 INCONCLUSIVE，均为 B 臂零命中）。
