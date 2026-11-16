@@ -75,6 +75,11 @@ REGISTRY = [
     # 质量分布，均不给族归属明细。本页把「当日越线族」与「全期禁集」两个分母并列，
     # 使「闸开着却仍越线」这一新病症可见（当日 40%/31% vs 全期 25.0% 的同一数据两面）。
     ("ring_openings", "faces", "build_ring_openings.py",  ["city-ring-openings.html"]),
+    # v0.23 (2026-11-16 R3200): 拒稿归因面新立 —— state/ring-refusals.jsonl 自 2026-11-15
+    # 接线后只有 jsonl、零可见面；T-20261115-04「同质化换靶」要判「族配额 vs 精确去重
+    # 谁是真实拒稿源」，此前只能人肉翻台账。本面并列闸组合/单闸命中/开口重复榜三面
+    # （首日实测 recent-dup-phrase 67/80=84%、opening-family-quota 仅 16/80=20%）。
+    ("ring_refusals", "faces", "build_ring_refusals.py",  ["city-ring-refusals.html"]),
     # v0.21 (2026-11-14 R2843): 反思录面新立 —— 中层记忆合成（reflect_citizen.py，
     # ≤40 字一条/30 天冷却）自 2026-09-25 上线起就是「盘上有数据、零可见面」：
     # 停 17.6 天与恢复产出都只有人肉读 jsonl 才知道（T-20261113-05 同病根）。
@@ -209,6 +214,9 @@ DEPENDS = {
     # v0.20 (2026-11-13 R2784): 开头族仪表全量扫 registry 年轮行，源=registry 目录 +
     # 环落地主信号 evolve-cursor（与其余环依赖面同口径）。
     "ring_openings": ["state/evolve-cursor.json", "census/registry"],
+    # v0.23 (2026-11-16 R3200): 拒稿归因面唯一数据源=拒稿台账（append-only），
+    # 每次年轮批被拒即追加，与环落地信号无关，故只登记台账本身。
+    "ring_refusals": ["state/ring-refusals.jsonl"],
     # v0.17 (2026-11-13 R2760): 看板的三行实况取自 docs/status-export.json，
     # 主数据取自 citizens-light.jsonl，但登记表只比「构建脚本 vs 产物」mtime。
     # 实证：R2760 刷新 top_text 后 --run 仍判 dashboard fresh、ran=0，CEO 面继续
