@@ -423,6 +423,50 @@ def ban_set_from_openings(openings, quota=FAMILY_QUOTA, min_denom=FAMILY_MIN_DEN
     return set(over_quota(total, dict(fam), quota=quota, min_denom=min_denom))
 
 
+def unclassified_shapes(day, top=20, width=4, registry=None):
+    """某日未归族年轮的形状榜 → (总环, 未归族数, [(形状, 条数, 样本)])。
+
+    T-20261115-04 修法 A 的可复现读数：族表 12 族后 unclassified 已从 73.7% 降到
+    约 30%，但「还剩什么形状」此前只在临时脚本里读过，立不立新族全凭人眼。
+    本函数把长尾固定成一条 CLI 读数（--shapes），判据留给调用方：
+    形状榜最大项仅个位数即长尾已散，继续立族属过拟合（R3094 之后 2026-11-16 实测
+    99 条 / 60 余种形状，最大 5 条）；单一形状重新爬高才是立族信号。
+    只读、零 LLM、确定性（同 registry 双跑逐字节一致）。
+    """
+    pat = _ring_pat(day)
+    shapes = collections.Counter()
+    examples = {}
+    total = unc = meet_skipped = 0
+    for dirpath, _, files in os.walk(registry or REGISTRY):
+        for fn in files:
+            if not fn.endswith(".md"):
+                continue
+            try:
+                with open(os.path.join(dirpath, fn), encoding="utf-8") as f:
+                    s = f.read()
+            except (IOError, OSError):
+                continue
+            for m in pat.finditer(s):
+                body = m.group(1)
+                if len(re.sub(r"\s+", "", body)) < 8:
+                    continue
+                # 相遇行行首是「与 C-xxxxx 相遇：」，不是骨架位——计入形状榜会把
+                # 每天固定的 meet 前缀当成"未归族形状"（2026-11-16 实测 4 条）。
+                if source_of(body) == "meet":
+                    meet_skipped += 1
+                    continue
+                total += 1
+                if family_of(body):
+                    continue
+                unc += 1
+                op = norm(body)
+                key = op[:width]
+                shapes[key] += 1
+                examples.setdefault(key, op)
+    return total, unc, meet_skipped, [(k, c, examples[k])
+                                      for k, c in shapes.most_common(top)]
+
+
 def note_epoch(day=None, epoch=None, ts=None):
     """批起登记「当日生产用的是哪版族表」→ state/ring-family-epochs.json。
 
@@ -674,7 +718,29 @@ def main(argv=None):
     ap.add_argument("--by-source", metavar="DATE",
                     help="按来源（batch 日更／meet 相遇）拆分某日开口族占比")
     ap.add_argument("--selftest", action="store_true", help="负控/正控探针")
+    ap.add_argument("--shapes", action="store_true",
+                    help="打印某日未归族年轮的形状榜（立族前先看长尾有无单一高频形状）")
+    ap.add_argument("--top", type=int, default=20, help="--shapes 输出前 N 个形状")
+    ap.add_argument("--width", type=int, default=4, help="--shapes 形状前缀宽度（字）")
     args = ap.parse_args(argv)
+
+    if args.shapes:
+        day = args.day or datetime.date.today().isoformat()
+        total, unc, meety, rows = unclassified_shapes(day, top=args.top, width=args.width)
+        pct = (unc / float(total) * 100) if total else 0.0
+        if args.json:
+            print(json.dumps({"date": day, "rings": total, "unclassified": unc,
+                              "unclassified_pct": round(pct, 1),
+                              "meet_skipped": meety,
+                              "shapes": [{"shape": k, "n": c, "sample": s}
+                                         for k, c, s in rows]},
+                             ensure_ascii=False, indent=1))
+            return 0
+        print("date=%s rings=%d unclassified=%d(%.1f%%) shapes=%d meet_skipped=%d"
+              % (day, total, unc, pct, len(rows), meety))
+        for k, c, s in rows:
+            print("  %3d  %-6s  %s" % (c, k, s))
+        return 0
 
     if args.selftest:
         return _selftest()
