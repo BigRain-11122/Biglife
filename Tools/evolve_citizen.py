@@ -4118,11 +4118,24 @@ def main():
         while len(lines) < 2:
             lines.append("（那天的桥上风大，谁也没多说什么。）")
         paths = []
-        for cid, line in zip(ids, lines):
-            p = find_card(cid)
-            other = ids[1] if cid == ids[0] else ids[0]
-            add_ring(p, cid, f"与 {other} 相遇：{line}", anchor_note)
-            paths.append(p)
+        # T-20261116-16 出生地拦截补口：add_ring 抛异常时循环中断，异常会绕过
+        # 下方 _meet_pair_check 的双向断言 → 已写的 A 卡留单向且不回滚。写入段
+        # 整体兜异常，任一半失败即复原 originals 并不 commit（与不对称分支同收口）。
+        try:
+            for cid, line in zip(ids, lines):
+                p = find_card(cid)
+                other = ids[1] if cid == ids[0] else ids[0]
+                add_ring(p, cid, f"与 {other} 相遇：{line}", anchor_note)
+                paths.append(p)
+        except Exception as _exc:
+            for p, text in originals.items():
+                try:
+                    with open(p, "w", encoding="utf-8", newline="\n") as f:
+                        f.write(text)
+                except Exception:
+                    pass
+            print("meet-write-error: %r - rolled back, no commit" % (_exc,))
+            sys.exit(1)
         # T-20261027-01: bidirectional assertion. add_ring() can still refuse a
         # half (race with another writer), which used to leave A's card naming B
         # while B's card named a third party. Verify both sides, else roll back.
