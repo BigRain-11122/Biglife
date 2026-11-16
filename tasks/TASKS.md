@@ -3990,3 +3990,13 @@ ing_quota_negctl 实弹 A/B（每臂 5 席）→ 再跑年轮批 3 + sync_rings 
   **CEO 可见三行**：当前活＝让路窗内确定性面/世代池/语言池/事件闸四闸复验＋D-20261116-16④ 回执落盘｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md`（11-16 18:30·45,444 事件 mismatch=0）＋`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\HQ-FEEDBACK.md`（18:36 回执行）｜下个里程碑＝19:00 让路窗结束起年轮批 3 席 → sync_rings → 事件闸对基线（ETA 2026-11-16 19:15）。
   - 下轮硬序：**年轮批 3 → sync_rings → events_refresh --gate**；T-20261115-04 观察窗续记（11-17 结案）。
   - tokens: local=0 api=0 api_reason=yield-window（工作日让路窗至 19:00；脚本内 LLM 腿均未触发）
+
+## R3252（2026-11-16 18:38-18:5x @BigLife-OSLoop·让路窗基因追加轮）
+- 轮首：`git pull --ff-only`=Already up to date、工作树净；决策水位差集 NEW=0（已消费至 D-20261116-17；D-20261116-16 涉本司＝上游依赖解除，其 11-17 12:00 回执行已由 R3251 提前落盘）；orders 物理件区无本司新件；TASKS 无 open 单。
+- 让路窗实测：`evolve_citizen --batch 3` 返回 `yield-window: workday 09:00-19:00`（D-20261020-02），年轮/相遇/反思顺延 19:00 后，不修不报障。
+- 确定性面：`round_daily --run` 首次 stale=0 ran=0 PASS（43 面全鲜）→ 改盘后复跑 stale=3 ran=4 PASS；`persona_generations --check` rc=0（gen 6·habits=163·pending_sync=none）。
+- 步 3 QC 巡检（距 02:56 已 15.7h，超 6 轮节拍）：`qc_census` **cards=10114 evolved=10114 problems=0 dup_rings=37/37 dup_new=0** → `census/QC-REPORT.md` 刷新。
+- 步 6 基因轮（本轮主产出·零 LLM）：hook_objects 899→902、turning_points 694→696、catchphrases 1520→1522（六轴内）→ `persona_generations --sync` = no change（gen 6，口径原因见 qa 回执）→ 入 `qa/GENE-ADD-20261116.md` R3252 节。
+- **CEO 可见三行**：当前活＝让路窗内基因追加＋QC 全量巡验（18:4x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-objects.html`（11-16 18:5x·物件 902 条）＋`census\export\city-lexicon.html`（口头禅 1522 条）＋`census\QC-REPORT.md`（10114 卡 problems=0）｜下个里程碑＝19:00 窗解 → 先 T-20261116-13 配额闸 A/B（每臂 5 席）→ 再年轮批 3 席 + sync_rings + events_refresh --gate（窗 19:00-20:45，ETA 2026-11-16 21:00）。
+- 下轮硬序：①≥19:00 先 T-20261116-13 实弹（`--selftest` 已 PASS、`--dry-run` 每臂 5 席已确认）→ ②年轮批 3 + sync_rings → ③events_refresh --gate 对基线 45,444/10,111 → ④落环后重跑 `build_ring_openings.py` + `build_export_index.py` 检 max 是否推过 OBSERVE 线 8。
+- tokens: local=0 api=0 api_reason=yield-window（工作日让路窗至 19:00；脚本内 LLM 腿均未触发）
