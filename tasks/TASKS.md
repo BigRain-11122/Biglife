@@ -3821,3 +3821,17 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - **CEO 可见三行**：当前活=让路窗内值域闸加固（页面可达性入闸）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\ROUND-DAILY-BACKNAV-20261116.md`（2026-11-16 16:2x·含正例/无效负控/有效负控三段读数）与 `C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\Tools\round_daily.py`（v0.29）｜下个里程碑=19:00 让路窗解 → 年轮批 3 落环 → 必跑 sync_rings + `events_refresh --gate`，并复测 R3208 记录的 TTL 临界（禁牌 19:34 到期 vs 生成窗 19:00 开）是否出现「禁→复现→再禁」震荡（ETA 2026-11-16 19:30，窗 ≤8h）。
 - 下轮预置：①19:00 后年轮批 3 → `events_refresh --gate` → `opening_capacity --window 12` 与 R3230 基线逐项对比；②`--values` 纳入每轮确定性巡检（一条命令、零 LLM）；③T-20261115-04 观察窗 11-17 到期直接按读数结案；④R3235 的 `--values` 与 A4 合并后需在 19:00 首批落环上复核是否误拦（新面若真无入口应被拦，勿放宽）。
 - 计量：tokens: local=0 api=0 api_reason=workday-yield-window
+
+## R3237 2026-11-16 16:2x-16:4x @BigLife-OSLoop 让路窗内·开口族长尾读数接线（unclassified 假警报防线）
+- 轮首：`git pull --ff-only`=Already up to date；启动时工作树净；决策水位差 NEW=0（已覆盖至 D-20261116-15）；orders 物理件区无涉本司新件；TASKS 无 open 单；`hq_feedback_daily --check`=ALREADY_REPORTED（本步零写入）。
+- 让路窗（D-20261020-02，工作日 09:00-19:00）：`evolve_citizen --batch 3` 实跑返回 `yield-window` → 年轮/相遇/反思三线结构性顺延至 19:00；本轮零落环、零阈值改动、零骨架池改动。
+- **产品增量（能用实物·2 分）**：`Tools/ring_open_family.py` v1.8 新增 `long_tail()` 与三档判据 **DIVERSE / OBSERVE / TEMPLATE**（阈值 8 / 10），`--check` 文本与 `--json` 均固定输出 `long-tail: shapes=N max=M width=4 -> 判定`。
+- 病根＝前几轮反复问「风族是否 >25%」，但缺一个机械判据回答「unclassified 占比高到底是不是模板抄写」：占比高既可能是同一句在刷（须立族或改提示词），也可能是长尾多样性（此时立族＝过拟合，纯浪费算力与库容）。此前无数字可判，只能人眼读 `--shapes` 列表。
+- 实读取证（当日）：①2026-11-16 rings=334、未归族 95=28.4%，shapes=70 **max=5 → DIVERSE**（长尾已散，不立族）；②2026-11-15 shapes=280 **max=11 → TEMPLATE**（两位数，确实存在被抄的前缀）→ 同一指标昨日/今日给出相反判定＝**自带负控**，不是恒绿闸。
+- 族分布全表同时回答上轮预置②：HAND_DEICTIC 24.6%（贴 25% 限位线下）、WIND_AGENT_OPEN 5.1% + WIND_SCENE_OPEN 7.8% = **12.9% ≪ 25%** → 风族限位已起效，无需改写 WIND_BIG_HINTS 整句。
+- 闸门自检：`--selftest` 新增 5 条长尾边界探针（max=1/5→DIVERSE、9→OBSERVE、10/12→TEMPLATE）全 OK，`selftest: PASS (0 fail)`，rc=0。
+- 同轮确定性面（各 1 次，未重复全量重扫）：`round_daily --run` → stale=0 ran=0 failed=0 **PASS**（30 面全 fresh）；`persona_generations --check` rc=0 pending_sync=none（gen1-6·habits=163·max_cid=C-10120）；`pool_audit` → **PASS SELF_TERMINATE**（axes 72/72·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·双抽 mismatch=0）；`qc_census` → cards=10114 **problems=0** dup_rings=37/37 dup_new=0；`round_daily --values` → **VALUES-PASS n=30**。
+- 诚实边界：三档线不是本轮重新标定，沿用 `unclassified_shapes` 文档既有口径（width=4、两位数才算抄写信号），本轮只把读数固定成 CLI 输出并补负控；DIVERSE ≠ 年轮文本质量合格，只说明未归族那部分不是同一模板在刷。
+- **CEO 可见三行**：当前活＝让路窗内开口族盲区判据接线（16:4x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\Tools\ring_open_family.py`（v1.8，实读 `long-tail: shapes=70 max=5 -> DIVERSE`）｜下个里程碑=19:00 让路窗解 → 年轮批 3 落环 → `events_refresh --gate` → `opening_capacity --window 12` 对 R3230 基线（ETA 2026-11-16 19:30，窗 ≤3h）。
+- 下轮预置：①19:00 后年轮批 3 + sync_rings + `events_refresh --gate`；②次日 `--check` 复读 long-tail，升到 OBSERVE(≥8) 再挖具体前缀；③R3208 TTL 临界（禁牌 19:34 到期 vs 生成窗 19:00 开）实测是否出现「禁→复现→再禁」震荡。
+- 计量：tokens: local=0 api=0 api_reason=workday-yield-window

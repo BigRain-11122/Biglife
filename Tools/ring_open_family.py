@@ -471,6 +471,33 @@ def unclassified_shapes(day, top=20, width=4, registry=None):
                                       for k, c in shapes.most_common(top)]
 
 
+def long_tail(day, width=4, registry=None):
+    """未归族年轮的长尾散度 → (形状种数, 最大形状条数)。只读、零 LLM。
+
+    R3237 判据：unclassified 占比高本身不构成「要立族」的理由——
+    2026-11-16 实测 95 条未归族 / 70 种 4 字前缀、最大 5 条 = 长尾已散；
+    只有同一形状重新爬到两位数才是模板抄写信号（须立族或改提示词）。
+    阈值承 unclassified_shapes 文档标定（「最大项仅个位数即长尾已散」），
+    未重新标定前不改线，避免把多样性误判成污染。
+    """
+    _total, _unc, _meet, rows = unclassified_shapes(day, top=10 ** 6,
+                                                    width=width, registry=registry)
+    return len(rows), (rows[0][1] if rows else 0)
+
+
+LONG_TAIL_OBSERVE = 8   # >=8 逼近两位数=抬头；实测 5 属「个位数已散」，不设在此
+LONG_TAIL_TEMPLATE = 10  # >=10 判模板抄写信号
+
+
+def long_tail_verdict(max_shape):
+    """长尾三档：DIVERSE(已散) / OBSERVE(抬头) / TEMPLATE(抄写信号)。"""
+    if max_shape >= LONG_TAIL_TEMPLATE:
+        return "TEMPLATE"
+    if max_shape >= LONG_TAIL_OBSERVE:
+        return "OBSERVE"
+    return "DIVERSE"
+
+
 def note_epoch(day=None, epoch=None, ts=None):
     """批起登记「当日生产用的是哪版族表」→ state/ring-family-epochs.json。
 
@@ -696,6 +723,21 @@ def _selftest():
         print("%-24s got=%-14s want=%-14s %s" % (label, got, want, "OK" if ok else "FAIL"))
         if not ok:
             bad += 1
+    # 长尾三档探针（R3237）：边界值正负控——实测 2026-11-16 最大项=5 属已散，
+    # 故 5 必须判 DIVERSE；两位数才是抄写信号，9 只做观察。
+    _lt_probes = [
+        ("pos-longtail-diverse", 1, "DIVERSE"),
+        ("neg-longtail-max5-diverse", 5, "DIVERSE"),
+        ("pos-longtail-observe", 9, "OBSERVE"),
+        ("pos-longtail-template", 12, "TEMPLATE"),
+        ("pos-longtail-template-edge", 10, "TEMPLATE"),
+    ]
+    for label, mx, want in _lt_probes:
+        got = long_tail_verdict(mx)
+        ok = got == want
+        print("%-24s got=%-14s want=%-14s %s" % (label, got, want, "OK" if ok else "FAIL"))
+        if not ok:
+            bad += 1
     days = production_days(3)
     if days:
         d = days[-1]
@@ -862,10 +904,17 @@ def main(argv=None):
         detail = {f: (fam.get(f, 0), round(fam.get(f, 0) / total * 100, 1) if total else 0.0)
                   for f in FAMILIES}
         _uc_n, _uc_pct = unclassified(total, fam)
+        # v1.8 2026-11-16 R3237：unclassified 占比单看数字会误导——27% 既可能是
+        # 「模板句在抄」（单一形状爬高，须立族或改提示词），也可能是「长尾已散」
+        # （每种形状仅 1-2 条，此时立族=过拟合）。故在 --check 里固定输出一条
+        # 长尾读数（形状种数 + 最大项条数），判据：最大项 >=3 才是抄写信号。
+        _lt_shapes, _lt_max = long_tail(args.check, width=args.width)
         if args.json:
             print(json.dumps({"date": args.check, "total": total, "families": detail,
                               "over": over, "quota": FAMILY_QUOTA,
-                              "unclassified": {"n": _uc_n, "pct": round(_uc_pct, 1)},
+                              "unclassified": {"n": _uc_n, "pct": round(_uc_pct, 1),
+                                               "shapes": _lt_shapes, "max_shape": _lt_max,
+                                               "long_tail": long_tail_verdict(_lt_max)},
                               "table_epoch": TABLE_EPOCH, "epochs": _ep,
                               "epoch_mix": _mix, "quota_comparable": _comparable,
                               "verdict": _verdict},
@@ -878,6 +927,10 @@ def main(argv=None):
                     _mark = "  <- OVER" if _comparable else "  <- 越线(跨口径·不可比)"
                 print("  %-18s %5d  %5.1f%%%s" % (f, c, pct, _mark))
             print("  %-18s %5d  %5.1f%%  (盲区：未被任何族识别)" % ("unclassified", _uc_n, _uc_pct))
+            print("  long-tail: shapes=%d max=%d width=%d -> %s"
+                  "  (DIVERSE=长尾已散勿立族; OBSERVE=抬头; TEMPLATE>=%d 才是抄写信号)"
+                  % (_lt_shapes, _lt_max, args.width, long_tail_verdict(_lt_max),
+                     LONG_TAIL_TEMPLATE))
             if _mix == "multi":
                 print("  口径：族表当日变更 %d 次 %s → 占比跨口径，"
                       "勿与配额线直接对账（本日读数混有立族前出生的环）"
