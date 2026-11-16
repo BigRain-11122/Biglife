@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-11-17 01:16:31",
- "total": 105,
- "today": 9,
+ "generated_at": "2026-11-17 02:31:48",
+ "total": 110,
+ "today": 14,
  "days": [
   "2026-11-15",
   "2026-11-16",
@@ -10,11 +10,11 @@
  "gate_combos": [
   [
    "recent-dup-phrase+recent-family-opening",
-   53
+   55
   ],
   [
    "opening-family-quota+recent-dup-phrase",
-   15
+   16
   ],
   [
    "opening-family-quota",
@@ -25,11 +25,11 @@
    4
   ],
   [
-   "rain-invented+recent-dup-phrase",
-   3
+   "mist-import+recent-dup-phrase",
+   4
   ],
   [
-   "mist-import+recent-dup-phrase",
+   "rain-invented+recent-dup-phrase",
    3
   ],
   [
@@ -91,20 +91,24 @@
   [
    "batch-dup-phrase",
    1
+  ],
+  [
+   "citywide-refusal-ban+recent-dup-phrase+recent-family-opening",
+   1
   ]
  ],
  "gates": [
   [
    "recent-dup-phrase",
-   83
+   88
   ],
   [
    "recent-family-opening",
-   58
+   61
   ],
   [
    "opening-family-quota",
-   28
+   29
   ],
   [
    "rain-invented",
@@ -116,7 +120,7 @@
   ],
   [
    "mist-import",
-   3
+   4
   ],
   [
    "sky-mismatch",
@@ -145,20 +149,24 @@
   [
    "batch-dup-phrase",
    1
+  ],
+  [
+   "citywide-refusal-ban",
+   1
   ]
  ],
  "families": [
   [
    "HAND_DEICTIC",
-   28
+   30
+  ],
+  [
+   "WIND_AGENT_OPEN",
+   26
   ],
   [
    "TIME_OPEN",
    25
-  ],
-  [
-   "WIND_AGENT_OPEN",
-   24
   ],
   [
    "(none)",
@@ -179,6 +187,10 @@
   [
    "FIRST_PERSON_ACTION_OPEN",
    2
+  ],
+  [
+   "STOVE_EDGE_DEICTIC",
+   1
   ]
  ],
  "repeated_openings": [
@@ -188,7 +200,7 @@
   ],
   [
    "风把塑料布吹得啪啦响，我",
-   11
+   12
   ],
   [
    "桌角那点零碎又该理一理了",
@@ -203,6 +215,10 @@
    4
   ],
   [
+   "风把门帘整个掀起来，我正",
+   2
+  ],
+  [
    "风撞在窗玻璃上闷响，我正",
    2
   ]
@@ -210,7 +226,7 @@
  "by_day": {
   "2026-11-15": 55,
   "2026-11-16": 41,
-  "2026-11-17": 9
+  "2026-11-17": 14
  },
  "retry_livelock": {
   "2026-11-15": {
@@ -234,8 +250,8 @@
    "wasted_calls": 0
   },
   "2026-11-17": {
-   "rows": 9,
-   "distinct_citizens": 9,
+   "rows": 14,
+   "distinct_citizens": 14,
    "repeated_citizens": 0,
    "max_repeats": 1,
    "stuck_same_opening": [],
@@ -268,8 +284,8 @@
    ]
   },
   "2026-11-17": {
-   "rows": 9,
-   "distinct_openings": 9,
+   "rows": 14,
+   "distinct_openings": 14,
    "repeated_openings": 0,
    "extra_occurrences": 0,
    "top": []
@@ -278,19 +294,20 @@
  "rolling_windows": [
   {
    "window_hours": 24,
-   "as_of": "2026-11-17 01:16:30",
-   "rows": 47,
-   "openings": 38,
+   "as_of": "2026-11-17 02:31:48",
+   "rows": 50,
+   "openings": 40,
    "multi_openings": 4,
    "cross_cid_openings": 4,
-   "wasted_calls": 9,
-   "waste_ratio": 0.1915,
+   "wasted_calls": 10,
+   "waste_ratio": 0.2,
    "top": [
     {
      "opening12": "风把塑料布吹得啪啦响，我",
-     "calls": 4,
-     "cids": 4,
+     "calls": 5,
+     "cids": 5,
      "cid_head": [
+      "C-00760",
       "C-03595",
       "C-03695",
       "C-03790",
@@ -331,14 +348,24 @@
   },
   {
    "window_hours": 12,
-   "as_of": "2026-11-17 01:16:30",
-   "rows": 25,
-   "openings": 25,
-   "multi_openings": 0,
-   "cross_cid_openings": 0,
-   "wasted_calls": 0,
-   "waste_ratio": 0.0,
-   "top": []
+   "as_of": "2026-11-17 02:31:48",
+   "rows": 30,
+   "openings": 29,
+   "multi_openings": 1,
+   "cross_cid_openings": 1,
+   "wasted_calls": 1,
+   "waste_ratio": 0.0333,
+   "top": [
+    {
+     "opening12": "风把塑料布吹得啪啦响，我",
+     "calls": 2,
+     "cids": 2,
+     "cid_head": [
+      "C-00760",
+      "C-03937"
+     ]
+    }
+   ]
   }
  ],
  "daily_trend": [
@@ -434,8 +461,8 @@
   },
   {
    "day": "2026-11-17",
-   "rows": 9,
-   "openings": 9,
+   "rows": 14,
+   "openings": 14,
    "multi_openings": 0,
    "cross_cid_openings": 0,
    "wasted_calls": 0,
@@ -454,12 +481,6 @@
    "opening12": "我正对着江边那块旧门板描",
    "last_refused": "2026-11-16 19:45",
    "expires": "2026-11-17 07:45",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "风把塑料布吹得啪啦响，我",
-   "last_refused": "2026-11-16 19:55",
-   "expires": "2026-11-17 07:55",
    "ban_hours": 12
   },
   {
@@ -592,6 +613,36 @@
    "opening12": "门板被风撞得咚一声，我正",
    "last_refused": "2026-11-17 01:15",
    "expires": "2026-11-17 13:15",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "风把塑料布吹得啪啦响，我",
+   "last_refused": "2026-11-17 01:34",
+   "expires": "2026-11-17 13:34",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "风把门帘整个掀起来，我正",
+   "last_refused": "2026-11-17 01:35",
+   "expires": "2026-11-17 13:35",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "灶台边的铜壶煨着，水汽往",
+   "last_refused": "2026-11-17 01:55",
+   "expires": "2026-11-17 13:55",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "手边这几样我都过了一遍，",
+   "last_refused": "2026-11-17 02:05",
+   "expires": "2026-11-17 14:05",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正蹲在路口那块旧门板边",
+   "last_refused": "2026-11-17 02:30",
+   "expires": "2026-11-17 14:30",
    "ban_hours": 12
   }
  ]
