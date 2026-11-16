@@ -140,6 +140,17 @@ class FamilyHintCoverage(unittest.TestCase):
                if machine_codes_in(t)}
         self.assertIn("WIND_AGENT_OPEN", bad)
 
+    # 第二句吸引子面（R3228：与开头族同型的双表同步坑）-------------------
+    def test_second_attrs_have_label(self):
+        """SECOND_ATTRS 增族而 SECOND_LABELS 未跟 → 同样漏机器码进提示词。"""
+        missing = [f for f in rof.SECOND_ATTRS if f not in rof.SECOND_LABELS]
+        self.assertEqual(missing, [], "第二句吸引子族缺 label：%s" % missing)
+
+    def test_second_labels_are_human_readable(self):
+        bad = {f: machine_codes_in(t) for f, t in rof.SECOND_LABELS.items()
+               if machine_codes_in(t)}
+        self.assertEqual(bad, {}, "第二句 label 出现机器码形态：%s" % bad)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

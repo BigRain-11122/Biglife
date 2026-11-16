@@ -26,15 +26,26 @@ WIND_SCENE_OPEN／DISTRICT_ANCHOR_OPEN／FIRST_PERSON_ACTION_OPEN。
    当日禁的是风族时该句与 hint 正面矛盾（R2588 同型自相矛盾）。改为族感知：
    `HAND_DEICTIC` 在场 → **逐字保留原句（零漂移）**；其余族 → 中性表述
    「但第一个短句不要落进上面点名的任何一种起句形状。」
-3. 上闸：新增 `qa/test_family_hint_coverage.py`（7 项正负控）。族表每增一族、
+3. 上闸：新增 `qa/test_family_hint_coverage.py`（9 项正负控）。族表每增一族、
    hint 未同步 → 测试即红，逼同批登记，永不再靠人手记性。
+4. 同型空档一并收口：第二句吸引子面 `ring_open_family.SECOND_ATTRS` 与
+   `SECOND_LABELS` 也是两表人工同步（渲染点 `second_label` 走
+   `.get(name, name)`），同样在闸内加 `SECOND_ATTRS ⊆ SECOND_LABELS` 与
+   "label 无机器码形态"两项（R3228）。
+
+### 全仓 `.get(x, x)` 扫描结论（为何不扩大修面）
+
+本轮扫 `Tools/*.py` 同类同键兜底共 **30 处**，其中 28 处是 `SPECIES_CN`／
+`DISTRICT_CN`／`STATE_CN`／`NEED_CN`／`flag_zh`／`labels` 这类**显示面中文映射表**
+（兜底给 code 属正确行为，且这些串不进 LLM 提示词）。真正"值进提示词"的面只有
+`FAMILY_OPEN_HINTS` 与 `SECOND_LABELS` 两处，均已在闸内。属修病灶不修同形。
 
 ## 证据（本轮实跑）
 
 | 项 | 结果 |
 |---|---|
 | `py_compile Tools/evolve_citizen.py` | rc=0 |
-| `qa/test_family_hint_coverage.py` | **Ran 7 tests … OK**（正控：12 族全覆盖／无孤儿 hint／hint 无机器码形态／非空／不照抄示例句；负控：虚构族名被判缺失且渲染出机器码／hint 写成族名原文必红） |
+| `qa/test_family_hint_coverage.py` | **Ran 9 tests … OK**（正控：12 族全覆盖／无孤儿 hint／hint 无机器码形态／非空／不照抄示例句／`SECOND_ATTRS ⊆ SECOND_LABELS`／second label 无机器码；负控 2：虚构族名被判缺失且渲染出机器码／hint 写成族名原文必红） |
 | 渲染冒烟（`build_prompt` 实测 8 族） | 逐族 `machine_code_in_prompt=False`、`hint_rendered=True`；`FAIL=[]`、rc=0 |
 | 零漂移校验 | HAND 在场：`hand_legacy_sentence_kept=True`（原句逐字保留）；风族在场：中性句命中 |
 | 回归 `test_opening_refusal_memo` | Ran 5 tests OK |
