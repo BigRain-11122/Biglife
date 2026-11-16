@@ -19,6 +19,9 @@ REQUIRED = ["**物种**", "**性格**", "**信条**", "**思想**", "**语言**"
 # 该闸的逐字面比对本人全部历史（非窗口），故「晚于本日仍落逐字重复」= 闸漏。
 DEDUP_GATE_DATE = "2026-10-11"
 
+# T-20261116-15 相遇面闸启用日：互引缺失/同日同对象重复，历史算观测、新落行算异常。
+MEET_GATE_DATE = "2026-11-16"
+
 # T-20260926-17: one schema definition (Tools/schemas/), reused here.
 SCHEMA_FACES = [
     ("citizens-light", "citizens-light.schema.json"),
@@ -77,6 +80,7 @@ def main():
     dup_pairs = 0
     dup_new_pairs = 0
     dup_new_rows = []
+    meets = []
     for p in sorted(files):
         fn = os.path.basename(p)[:-3]
         with open(p, encoding="utf-8") as f:
@@ -108,6 +112,12 @@ def main():
             # R1997 判据收窄：只扫 **年轮** 段。V2-B 反思层同日条目（提炼自
             # 当日年轮·天生同日）与相遇行均不属「同日年轮」，不参与本闸。
             _byc = re.search(r"\*\*年轮\*\*\n((?:- .*\n?)+)", text)
+            # T-20261116-15 相遇面采集：年轮段内「与 C-xxxxx 相遇」行记 (本人, 日期, 对象)。
+            if _byc:
+                for _d, _body in re.findall(r"(?:^|\n)- (\d{4}-\d{2}-\d{2}) ([^\n]*)", _byc.group(1)):
+                    _mm = re.search(r"与 (C-\d+) 相遇", _body)
+                    if _mm:
+                        meets.append((fn, _d, _mm.group(1)))
             _bydate = {}
             for _d, _body in re.findall(r"(?:^|\n)- (\d{4}-\d{2}-\d{2}) ([^\n]*)", _byc.group(1) if _byc else ""):
                 if "相遇：" in _body:
@@ -150,6 +160,22 @@ def main():
     if dup_new_pairs:
         problems.append(f"dup-history gate leak: {dup_new_pairs} post-{DEDUP_GATE_DATE} verbatim rings "
                         + " | ".join(dup_new_rows[:5]))
+    # 相遇面不变量（T-20261116-15 立·此前相遇行被同日年轮闸显式跳过=无人看）：
+    # ①互引——A 卡某日写「与 B 相遇」，B 卡同日须有「与 A 相遇」（否则关系页/卡片交叉引用悬空）；
+    # ②同日同对象唯一——同卡同日同一对象只可出现一次（相遇轮重跑/批次重放会重复落行）。
+    # 历史违律不回溯改卡（承逐字重复环判例）；只把严格晚于闸启用日的新落行计为异常。
+    _mcnt = {}
+    for _m in meets:
+        _mcnt[_m] = _mcnt.get(_m, 0) + 1
+    _mset = set(meets)
+    meet_dup = sum(c - 1 for c in _mcnt.values() if c > 1)
+    meet_one = sorted((a, d, b) for (a, d, b) in _mset if (b, d, a) not in _mset)
+    meet_one_new = [x for x in meet_one if x[1] > MEET_GATE_DATE]
+    meet_dup_new = sorted(k for k, c in _mcnt.items() if c > 1 and k[1] > MEET_GATE_DATE)
+    for _a, _d, _b in meet_one_new[:10]:
+        problems.append(f"{_a}: meet with {_b} on {_d} not reciprocated")
+    for _a, _d, _b in meet_dup_new[:10]:
+        problems.append(f"{_a}: duplicate meet line with {_b} on {_d} x{_mcnt[(_a, _d, _b)]}")
     gate_p = os.path.join(os.path.dirname(CENSUS), "state", "sublimate-gate.jsonl")
     gate_n = 0
     if os.path.isfile(gate_p):  # 升华门违律计数入 QC-REPORT（T-20260926-18 步①②机制面）
@@ -162,7 +188,9 @@ def main():
               f"- 异常数：{len(problems)}", "",
               f"- 升华门拒入册计数：{gate_n}（生成门/生灵门/灵族门 fail-fast·T-20260926-18 步①②③）",
               f"- 逐字重复环：{dup_pairs} 处 / {dup_citizens} 位居民（本人历史环内同句·观测面·历史环不回溯修复·落环侧 v0.45 dedup 闸封新面·T-20261011-01）",
-              f"- 闸后新增重复环：{dup_new_pairs} 处（严格晚于 {DEDUP_GATE_DATE} 的本人逐字重复·0=逐字去重闸有效；>0 即闸漏并计异常）", ""]
+              f"- 闸后新增重复环：{dup_new_pairs} 处（严格晚于 {DEDUP_GATE_DATE} 的本人逐字重复·0=逐字去重闸有效；>0 即闸漏并计异常）", "",
+              f"- 相遇面：{len(meets)} 行 / {len(_mset)} 对（单向缺回引 {len(meet_one)} 处·同日同对象重复 {meet_dup} 处·历史观测面不回溯改卡）",
+              f"- 相遇闸后新增违律：{len(meet_one_new) + len(meet_dup_new)} 处（严格晚于 {MEET_GATE_DATE}：单向 {len(meet_one_new)}·重复 {len(meet_dup_new)}·0=相遇面互引/去重有效）", ""]
     schema_rows = schema_bad = 0
     if schema_mode:
         schema_rows, schema_bad, per = schema_scan(problems)
@@ -178,7 +206,8 @@ def main():
     with open(os.path.join(CENSUS, "QC-REPORT.md"), "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(report))
     tail = f" schema_rows={schema_rows} schema_bad={schema_bad}" if schema_mode else ""
-    print(f"QC done cards={len(ids)} evolved={evolved} problems={len(problems)} dup_rings={dup_pairs}/{dup_citizens} dup_new={dup_new_pairs}{tail}")
+    print(f"QC done cards={len(ids)} evolved={evolved} problems={len(problems)} dup_rings={dup_pairs}/{dup_citizens} dup_new={dup_new_pairs}"
+          f" meet={len(meets)} one_sided={len(meet_one)} meet_dup={meet_dup} meet_new_bad={len(meet_one_new) + len(meet_dup_new)}{tail}")
     if problems:
         print("QC FAILED")
         raise SystemExit(1)

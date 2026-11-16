@@ -35,6 +35,11 @@
   - **验收**：`qa/RING-QUOTA-NEGCTL-20261116.md` 自动落盘且含「禁牌态」与「每臂席位」两行；轮记写清 verdict＋实际席位数；若 PASS，补丁进 commit 并在补丁文件头注「实弹 PASS <日期>」。
   - **回退口不变**：落环数 B<A／命中率 >30%／wasted 或 max_repeats 高于 A 前读数，任一破即撤。
   - **诚实边界**：当日上限每臂 5 席（due=10 决定），结论按 5 席写、不冒充 8 席强度；R3208 的吸引子 sticky 升级（7 天）**不在本单**，须另立负控。
+- [ ] **T-20261116-16**（R3252 立·相遇面出生地拦截·中优先）在 Tools/evolve_citizen.py 的相遇写入路径加自校验：两卡同日互引必须都落成功（先写 A 再写 B 中途失败即留单向，实证 C-08226→C-08319 2026-10-27），否则回滚或补写；同日同对象重复（C-00010/C-00011 2026-10-11 各重复一行）写前查重。
+  - status: **open**（2026-11-16 19:0x R3252 @BigLife-OSLoop 立·来源=qa/MEET-INVARIANT-20261116.md）
+  - 出生地=写侧；检测侧已由 T-20261116-15 接进 qc_census.py（闸后新增违律计 problems）。
+  - 验收：构造「第二卡写失败」场景下单向不得留存；qc_census.py 的 meet_new_bad=0 持续 3 生产日；负控进 evolve_citizen --selftest 或独立一次性夹具。
+
   - [2026-11-16 17:4x @BigLife-OSLoop R3246] **跑前堵坑（工装缺陷已修·协议已更新，本单本身仍未执行）**：①**补丁其实早已落库**——`state/pending/R3204-quota-gate.patch` 于 14:23 commit `efc562b9f` 入 HEAD（`git apply --check` 报 does not apply 是「已打过」不是「坏了」）；旧工装却仍假设「补丁待打」，会 **A 臂带着闸跑完 → B 臂前 `git apply` 失败 → return 2**，即烧掉 5 席却不产 verdict，窗口作废。修法=新增纯函数 `patch_steps()`（A 臂恒 off／B 臂恒 on／收尾回起跑态）+ 幂等 `_set_patch()`，已入 HEAD 时 A 臂前自动 `git apply -R`、B 臂前自动重打、`finally` 恒还原；`--selftest` 由 13 检扩到 **19 检全 PASS**，补丁翻转实弹负控（revert→幂等→reapply→树回原样）通过。②**假绿闸补上**：B 臂零命中旧逻辑会判 PASS（命中率 0%≤30% + 落环相等），修法=零命中→`INCONCLUSIVE`（rc=1，不得当通过用）——所以 **19:00 之后等全部禁牌到期（20:45 后）再跑会必得 INCONCLUSIVE**，并非可用窗口。③**窗口变紧**：`--dry-run` 实测 active=10、soonest_expiry=**19:14**、latest 20:45 ⇒ 两臂必须在 19:14 前跑完（每臂 5 席约 3-4 分钟，19:00 起跑可行、勿拖延），跨 19:14 判 CONFOUNDED 读数作废。④`rc=2` 的语义收窄为「补丁态设置失败／席位不足」，**不再包含「补丁不可打」**（补丁已入库，无需手打；`state/pending` 那份仅作反向撤退依据，禁手动 `git apply`）。证据=`qa/RING-QUOTA-NEGCTL-FLIP-FIX-20261116.md`。
   - [2026-11-16 17:4x @BigLife-OSLoop R3247] **19:14 悬崖已拆（改为构造保证·不再靠抢时间）**：旧设计要两臂都挤在禁牌最早到期点（今日 19:14）之前跑完，跨点即 CONFOUNDED——等于把实验有效性押在「14 分钟内能否跑完」。改法=`ring_quota_negctl` 起跑时把当前 active 禁牌写成 JSON 快照，经 env `BIGLIFE_REFUSAL_BANS_FROZEN` 传给**两臂共用**（`evolve_citizen.load_refusal_bans()` 读快照，env 未设时逐字回落实时窗口＝生产行为不变）。判据加硬校验：两臂来源必须同为 `frozen` 且条数相等，否则判 CONFOUNDED。**因此 19:00 之后随时可跑，不必抢 19:14**；`--no-freeze` 仅用于复核冻结面本身，正常实弹别加。负控=`--selftest` **23 检 PASS（0 fail）**＋冻结实弹（frozen n=10 与实时逐键相同、env 未设回落亦相同）＋`evolve --audit-due` rc=0 零回归。诚实边界：冻结态比生产更严（已解禁开口仍算禁），报告按「冻结 N 条」写、勿当生产口径；实弹仍未跑，留/撤仍待裁决。
   - [2026-11-16 18:1x @BigLife-OSLoop R3249] **跑前自检复验（零 LLM·零盘污·本轮让路窗内唯一可做步）**：①`--selftest` **PASS（0 fail）**，含 R3247 冻结面全检；②`--dry-run` 读数=`patch applies: YES`／`baseline 2026-11-16: rows=25 distinct=25 wasted=0 max_repeats=1`／`ban state: active=10 soonest_expiry=2026-11-16 19:14 latest=20:45`／**`due budget: due=10 → 每臂 5 席`（请求 8，未报预算不足）**／默认冻结禁牌快照故两臂同集合、不受 19:14 到期点约束。③**结论=19:00 窗可直接开跑，无需顺延**；顺序仍为「先本单、再年轮批 3」。④本轮未跑 LLM、未改工作树（dry-run 自述 `未跑 LLM、未改工作树`）。
@@ -4000,3 +4005,20 @@ ing_quota_negctl 实弹 A/B（每臂 5 席）→ 再跑年轮批 3 + sync_rings 
 - **CEO 可见三行**：当前活＝让路窗内基因追加＋QC 全量巡验（18:4x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-objects.html`（11-16 18:5x·物件 902 条）＋`census\export\city-lexicon.html`（口头禅 1522 条）＋`census\QC-REPORT.md`（10114 卡 problems=0）｜下个里程碑＝19:00 窗解 → 先 T-20261116-13 配额闸 A/B（每臂 5 席）→ 再年轮批 3 席 + sync_rings + events_refresh --gate（窗 19:00-20:45，ETA 2026-11-16 21:00）。
 - 下轮硬序：①≥19:00 先 T-20261116-13 实弹（`--selftest` 已 PASS、`--dry-run` 每臂 5 席已确认）→ ②年轮批 3 + sync_rings → ③events_refresh --gate 对基线 45,444/10,111 → ④落环后重跑 `build_ring_openings.py` + `build_export_index.py` 检 max 是否推过 OBSERVE 线 8。
 - tokens: local=0 api=0 api_reason=yield-window（工作日让路窗至 19:00；脚本内 LLM 腿均未触发）
+
+
+## R3252 2026-11-16 18:5x-19:0x @BigLife-OSLoop 让路窗末轮·相遇面两条不变量接进 QC（此前相遇行被同日闸显式豁免=无人看）
+- 轮首：git pull --ff-only=Already up to date、工作树净；决策水位差 NEW=0（272 键·唯一差集 D-20261023-235 已在水位注为 .disabled 文件名噪声）；orders 物理件区无涉本司新件；TASKS open 单=T-20261116-13（前置 ≥19:00 未到）。
+- 让路窗（D-20261020-02 工作日 09:00-19:00）：evolve_citizen --batch 3 实跑返回 yield-window → 年轮/相遇/反思三线顺延 19:00 后，本轮零落环。
+- 机器面实读：
+ound_daily --run **PASS**（stale=0 ran=0 failed=0，44 面全 fresh）／
+ound_daily --values **VALUES-PASS n=30**／persona_generations --check **rc=0**（gen1-6·habits=163·pending_sync=none·max_cid=C-10120）／pool_audit **PASS SELF_TERMINATE**（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·双抽 192+25 对 mismatch=0）。
+- **产品增量（能跑·2 分）**：Tools/qc_census.py 新增相遇面两不变量——①互引（A 卡某日「与 B 相遇」⇒ B 卡同日须有回引）②同日同对象唯一（同卡同日同一对象只可一行）；历史违律按逐字重复环判例算观测、只有严格晚于 MEET_GATE_DATE=2026-11-16 的新落行计 problems；报告加两行、stdout 加 meet=/one_sided=/meet_dup=/meet_new_bad= 四字段。病根=R1772 同日年轮闸为避误报显式 continue 掉含「相遇：」的行，此后相遇面再无守卫。
+- **首跑实读（全库 10114 卡）**：meet=163 one_sided=1 meet_dup=2 meet_new_bad=0 problems=0——单向 1 处=C-08226 2026-10-27 写「与 C-08319 相遇」而 C-08319 当日写的是 C-08320（相遇轮单边落卡实证）；重复 2 处=C-00010/C-00011 2026-10-11 双方各两行（批次重放实证）；闸后违律 0。
+- 负控四例（临时目录夹具·跑完 rmtree·零盘污）：闸后单向→rc=1 具名 
+ot reciprocated／历史单向（2026-11-10）→rc=0 观测／闸后同日同对象重复→rc=1 具名 duplicate meet line／健康互引→rc=0 problems=0。py_compile rc=0。证据=qa/MEET-INVARIANT-20261116.md。
+- 派生来料：值域/占位扫描（30 面 VALUES-PASS）、跨面卡数一致性抽查（10114/10111 与 C-10036 类身份证字号区分，无 10036 卡数残留）。
+- 诚实边界：只建检测面未动写侧——单向落卡出生地在 evolve_citizen 相遇写入路径（先写 A 后写 B，中途失败留单向）→ 立 **T-20261116-16** 出生地拦截单；历史 1 单向 + 2 重复不修（不伪造对方台词、不删历史行）；检测口径依赖「与 C-xxxxx 相遇」行文格式，格式漂移时 meet=0 会显形。
+- **CEO 可见三行**：当前活＝让路窗末轮把相遇面不变量接进 QC（19:0x）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\MEET-INVARIANT-20261116.md（含 163 行相遇面首跑读数与四例负控）＋census\QC-REPORT.md（新增相遇面两行）｜下个里程碑=19:00 窗解 → **先** T-20261116-13 配额闸 A/B（每臂 5 席）→ **再** 年轮批 3 + sync_rings + events_refresh --gate（ETA 2026-11-16 21:00）。
+- 下轮硬序不变：①T-20261116-13 A/B 实弹（--selftest → --dry-run → 正式）②年轮批 3 + sync_rings ③events_refresh --gate ④build_ring_openings + build_export_index ⑤T-20261116-14「11-17 12:00 前」回执行（明日首轮）。
+- tokens: local=0 api=0 api_reason=yield-window（工作日让路窗；脚本内 LLM 腿均未触发）
