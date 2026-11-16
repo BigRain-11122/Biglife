@@ -179,6 +179,26 @@ def live_block(limit_slots: int = 6, samples: int = 3) -> str:
     )
 
 
+def batch_note(today: str) -> str:
+    """当日年轮波次状态注。
+
+    让路窗（D-20261020-02 工作日 09:00-19:00 停批）内，当日读数必然远低于前一日，
+    页面若不注明会被读成产量断崖。只在「今天」这一面显示，历史日期不加注。
+    """
+    if today != datetime.date.today().isoformat():
+        return ""
+    now = datetime.datetime.now()
+    hm = now.strftime("%H:%M")
+    if now.weekday() < 5 and 9 <= now.hour < 19:
+        return (
+            '<p class="bnote">当日年轮波次 19:00 后开跑（工作日 09:00-19:00 让路窗），'
+            "以上为截至 %s 的读数，非全日终值。</p>" % hm
+        )
+    return (
+        '<p class="bnote">当日年轮波次已开跑（夜窗/周末），读数为截至 %s 的累计。</p>' % hm
+    )
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None, help="目标日期，默认今天")
@@ -247,6 +267,7 @@ def main() -> int:
     )
 
     ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+    bnote = batch_note(today)
     now_html = live_block()
     page = f"""<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
@@ -262,6 +283,7 @@ h1{{margin:0 0 6px;font-size:22px;letter-spacing:.06em;font-weight:600}}
 .kpi{{display:flex;gap:22px;flex-wrap:wrap;padding:14px 20px;border-bottom:1px solid var(--line)}}
 .kpi div{{font-size:12.5px;color:var(--dim)}}
 .kpi b{{display:block;font-size:20px;color:var(--fg);font-weight:600}}
+.bnote{{margin:0;padding:8px 20px 12px;color:#a8967a;font-size:12.5px;border-bottom:1px solid var(--line)}}
 .bars{{padding:12px 20px 16px;border-bottom:1px solid var(--line)}}
 .bar{{display:grid;grid-template-columns:64px 1fr 46px;gap:10px;align-items:center;
 padding:3px 0;color:inherit;text-decoration:none;font:12.5px/1.6 ui-monospace,monospace}}
@@ -301,6 +323,7 @@ footer{{padding:18px 24px;color:#6a7078;font-size:12px;border-top:1px solid var(
 <header><h1>城市今日日报 · {esc(today)}</h1>
 <div class="sub">当天全量年轮（不抽样）· 数据源 census/registry 只读 · 生成 {esc(ts)}</div></header>
 <div class="kpi">{kpi}</div>
+{bnote}
 <div class="bars">{''.join(bars)}</div>
 {now_html}
 <div class="search"><input id="q" placeholder="检索姓名 / 编号 / 职业 / 引文…" autocomplete="off"></div>

@@ -3937,3 +3937,19 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - **CEO 可见三行**：当前活＝堵「零漂移证据面陈旧两日」的供给缺口（17:2x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\persona-drift.json`（pool_len 138→163·gen_freeze moved=0·2026-11-16 17:2x）与 `qa\PERSONA-DRIFT-WIRING-20261116.md`｜下个里程碑=19:00 让路窗解除 → 年轮批 3 + 事件闸 + `ring_quota_negctl` 实弹 A/B（窗口 19:00-20:45·ETA 2026-11-16 21:00）。
 - 下轮预置：①19:00 后年轮批 3 + `sync_rings` + `events_refresh --gate`；②同窗 `ring_quota_negctl.py` 实弹（先 `--selftest` 再 `--dry-run` 再正式跑）；③落环后重跑 `build_ring_openings.py` + `build_export_index.py`；④T-20261115-04 观察窗 11-17 到期结案。
 - 计量：tokens: local=0 api=0 api_reason=workday-yield-window
+
+
+## R3245 2026-11-16 17:5x @BigLife-OSLoop 让路窗内·今日日报断崖无归因（334 对 1243「少 909 条」）→ 波次状态注接线
+- 轮首：git pull --ff-only=Already up to date、工作树净；决策水位差 NEW=0（已覆盖至 D-20261116-15，无 68 批）；orders 物理件区无涉本司新件；TASKS 无 open 单；hq_feedback_daily --check=ALREADY_REPORTED（今日 00:04 已有日清行，本步零写入）。
+- 让路窗（D-20261020-02 工作日 09:00-19:00）：年轮 --batch 3 返回 yield-window、相遇/反思同窗 deferred，按闸顺延 19:00 后。
+- 机器面实测（全确定性·零 LLM）：
+ound_daily --run **PASS**（stale=3 ran=4 failed=0：today 内容陈旧、ops 依赖 vram-gate、map 依赖 behavior 导出、index 重建）；
+ound_daily --values **VALUES-PASS n=30**；events_refresh --gate **PASS**（cards=10111+3 reserved=10114·events=45444·replay 10111·schema_errors=0 mismatch=0·chronicle gap=0d）；persona_generations --check rc=0（gen1-6·habits=163·pending_sync=none）；pool_audit **PASS SELF_TERMINATE**（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·mismatch=0）；qc_census **PASS**（cards=10114 problems=0 dup_new=0）。
+- **产品增量（能看实物·2 分）**：census/export/city-today.html KPI 区新增「当日波次状态注」——让路窗内页面原本只显示「334 今日年轮 / 少 909 条较昨日」的断崖，读者无法区分「产量崩了」与「今天还没跑」。修法：Tools/build_daily_issue.py 新增 atch_note()，今天面在让路窗内输出「波次 19:00 后开跑，以上为截至 HH:MM 的读数，非全日终值」，非让路窗输出「已开跑，读数为截至 HH:MM 的累计」；历史日期（--date 补生成）返回空不加注。零 LLM、幂等。
+- 负控：atch_note('2026-11-15') 返回 ''（历史面不加注）；今日面实读含注且时间戳随生成时刻走（17:52）。
+- 诚实边界：本注只解释「读数时点语义」，不改任何 KPI 数值，也不证明年轮生产健康——产量真相仍由 19:00 后实跑批决定；今日 334 条是让路窗半日读数。
+- **CEO 可见三行**：当前活＝日报断崖归因注接线（17:5x）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-today.html（含「波次 19:00 后开跑」注·2026-11-16 17:52）与 census\export\city-ops.html／city-map.html（本轮重建）｜下个里程碑=19:00 让路窗解 → 年轮批 3 落环 → events_refresh --gate → 
+ing_quota_negctl 实弹（窗口 19:00-20:45·ETA 2026-11-16 21:00）。
+- 下轮预置：①19:00 后年轮批 3 + sync_rings + events_refresh --gate；②同窗 
+ing_quota_negctl.py 实弹（先 --selftest 再 --dry-run 再正式）；③落环后重跑 uild_ring_openings.py + uild_export_index.py 看 max 是否推过 OBSERVE 线 8；④T-20261115-04 观察窗 11-17 到期按读数结案；⑤观察本注在 19:00 后是否自动切「已开跑」文案（次日首轮核）。
+- 计量：tokens: local=0 api=0 api_reason=workday-yield-window
