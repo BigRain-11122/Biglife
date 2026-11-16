@@ -4113,7 +4113,8 @@ ot reciprocated／历史单向（2026-11-10）→rc=0 观测／闸后同日同�
   - **轮首**：\git pull --ff-only\=Already up to date／工作树净／决策水位差 NEW=0（已覆盖至 D-20261116-17；D-20261116-16 上游依赖解除回执已于 18:31 落 HQ-FEEDBACK.md，T-20261116-14 已结）。
   - 计量：tokens: local=10 api=0 api_reason=-（年轮 10 席各 1 次本地 LLM；相遇/反思因日额满 0 席；其余全确定性）
 - [2026-11-16 23:3x @BigLife-OSLoop R3264] **本轮不跑（前置②不成立）**：年轮批先跑已吃满当日 due（8 席落环），每臂不足 8 席；维持 pending，顺延次日 19:00 窗且顺序不变（先本单再年轮批）。R3264 实录：轮首 pull=Already up to date／树净／决策水位 NEW=0（已至 D-20261116-17）／orders 无涉本司新件／D-20261116-16 已读（BigLife 上游依赖解除，自给锚常态）。产品面：年轮 **8**（written=8／gate 挡 2 席 C-04129 rain-invented、C-04116 sky-mismatch 顺延 +1d）／events gate **PASS**（45669 events cards=10111 mismatch=0 schema=0 gap=0d）／round_daily **PASS**（stale=14 ran=15 failed=0）／gen rc=0 gen=7 habits=169 pending_sync=none／pool **SELF_TERMINATE**（hard_fails=0，192 pairs 双跑 mismatch=0）／reflect 日配额满（今日 5 条已写，零写入）／hq ALREADY_REPORTED 零写入。tokens: local=8 api=0 api_reason=-
-- [ ] **T-20261116-17**（D-20261116-16 转办·11-17 12:00 前）本司侧回执一行：BigLife 上游依赖正式解除（FluxVerse 线 PARKED 无新时点；R2810 自给锚〔真实天气/时刻〕转常态，不再候事件流）→ 写入集团 docs/decisions.md 第 68 批 D-16 行意见回执（D-20260930-19 投递层统一单）。src=decisions.md L261。
+- [x] **T-20261116-17**（D-20261116-16 转办·11-17 12:00 前）本司侧回执一行：BigLife 上游依赖正式解除（FluxVerse 线 PARKED 无新时点；R2810 自给锚〔真实天气/时刻〕转常态，不再候事件流）→ 写入集团 docs/decisions.md 第 68 批 D-16 行意见回执（D-20260930-19 投递层统一单）。src=decisions.md L261。
+  - status: **closed 2026-11-17 00:2x @BigLife-OSLoop R3272（零写入结单·双向证据）**：①回执本体已在投递层 `HQ-FEEDBACK.md` L329（2026-11-16 18:31 行，含 round_daily 28 面 PASS 等实测指针）；②集团已据此核销——`D-20261117-04` 状态 **executed**，其决策行原文直接引用该行（「BigLife 上游依赖解除回执到点核销（提前 17.5h）」）。按命令查重律（governance §4）与 HQ-FEEDBACK 每日一行机械闸，不再向 decisions.md 追加重复回执行；FluxVerse 线维持 PARKED，revive_condition 不变。
 
 - [2026-11-16 23:41-23:5x @BigLife-OSLoop R3269] 本轮实录（GPU 释放·年轮腿正常）
   - **轮首三步**：`git pull --ff-only`=Already up to date／工作树净／决策水位差 NEW=0（已覆盖至 D-20261116-17；D-20261116-16 涉本司＝上游依赖解除，回执已由 R3251 18:31 落盘，T-20261116-14 结）／orders 物理件区无涉本司新件／T-20261116-13 维持 blocked-on-precondition（前置内联单头，不重跑）。
@@ -4145,3 +4146,12 @@ ot reciprocated／历史单向（2026-11-10）→rc=0 观测／闸后同日同�
   - **CEO 可见三行**：当前活＝凌晨年轮批 10 席落环＋确定性面收口（00:0x）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-today.html、...\census\registry\QT\C-03317.md（2026-11-17 年轮）、...\events\life\2026-11-17.jsonl｜下个里程碑＝今晚 19:00 窗反思线续跑（验收 reflections 尾部 date=2026-11-17）＋T-20261116-18 计数口径修复
   - **诚实边界**：T-20261116-18（written 计「进入写路径」）仍 **open** 未修；本轮 written=10 经 HEAD 逐卡核验为真净新增
   - 计量：tokens: local=12 api=0 api_reason=-
+
+- [2026-11-17 00:14-00:2x @BigLife-OSLoop R3272] 本轮实录（凌晨轮·决策水位追平 11-17 新批）
+  - **轮首三步**：`git pull --ff-only`=Already up to date／树净／**决策水位差 NEW=5**（D-20261117-01..05，已读完并按规则处置）／orders 物理件区无涉本司新件
+  - **决策处置（只审不越权）**：仅 **D-20261117-04** 涉本司＝D-20261116-16④ 上游依赖解除回执核销（**executed**·提前 17.5h·引 HQ-FEEDBACK L329）→ T-20261116-17 零写入结单（见上）；D-01 身份闸标定双档／D-02 显存窗口纪律／D-03 llm_client 网关自证身份＝MV 产线与 Tools 面（非本司），D-05＝D-17 证据面 no-op。水位已回写至 D-20261117-05。
+  - **产品增量（能跑·2 分）**：年轮 `--batch 3` 实跑 **evolved=9 of 10 due（written=9 skipped=0）**——C-03646/C-03689/C-03781/C-03788/C-04140/C-03660/C-03682/C-03732/C-03771 各落一条 **2026-11-17 年轮**（4 席 soft-concession〔recent-dup-phrase〕让行落环；C-03725 撞 `mist-import`+`recent-dup-phrase` 持久违反 deferred+1d）。**git 实核** commit `5d58ca2a5`＝9 files changed/18 insertions ⇒ 真净新增（非 T-20261116-18 同日后重复渲染）；行为线镜像 `8daafe52f`（rows=9 ring=10114）自动收口。
+  - **确定性面（全绿）**：`events_refresh --gate` **PASS**（derived=10111 reserved=3 exported=10114 unexpected_missing=0／events=45705 shards=3／replay replayed=10111 **mismatch=0** schema_errors=0／chronicle fresh gap=0d）／`round_daily --run` **PASS**（stale=22 ran=23 failed=0，含 reflections/social_graph/meet_candidates/census_index 依赖 mtime 重建）／`persona_generations --check` **rc=0**（gen1-7·habits=169·pending_sync=none·max_cid=C-10120）。
+  - **CEO 可见三行**：当前活＝凌晨年轮批 9 席落环＋23 面日更重建＋事件流全量重放收口（11-17 00:1x-00:2x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\registry\GM\C-03771.md`、`...\census\registry\QT\C-03689.md`（2026-11-17 年轮）与 `C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md`（45,705 事件 mismatch=0）｜下个里程碑＝今晚 19:00 窗反思线续跑（验收 reflections 尾部 date=2026-11-17）+ T-20261116-18 written 计数口径修复（窗 ≤48h）。
+  - **诚实边界**：T-20261116-18（`written` 计「进入写路径」）仍 **open**；本轮 written=9 已用 commit stat 逐卡核验为真净新增。相遇轮/反思线本轮未跑（日额与 19:00 窗约束）。
+  - 计量：tokens: local=10 api=0 api_reason=-（年轮 10 席各 1 次本地 Ollama，1 席闸后 deferred；其余全确定性零 LLM）
