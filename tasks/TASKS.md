@@ -3721,3 +3721,8 @@ ound_daily --run stale=12 ran=13 failed=0 verdict=PASS；pool_audit PASS SELF_TE
   **能力边界（诚实）**：本闸只保证"模型收到的是人话"，不保证它会因此换族；族占比是否真降须待 19:00 后首批落环实测，不达标则下一步查骨架池里风族条目数与曝光顺序（族级配平）。
   **下轮预置**：①19:00 后年轮批 3 → `events_refresh --gate` → `opening_capacity --window 12` 读 `WIND_AGENT_OPEN` 占比与 citywide 行数；②若风族仍 >25%，查 `OPENING_SKELETONS` 是否含风族形状（26 条里如含"风"字骨架即为源头）；③让路窗内可继续零 LLM 修补：检查其余 `.get(x, x)` 面是否还有同类"缺失即漏机器码"。
   tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）+ 本轮为确定性代码修补与正负控
+
+- [R3228] 2026-11-16 15:2x @BigLife-OSLoop 让路窗轮（零 LLM·延续 R3227）「覆盖闸扩到第二句吸引子面 + 全仓同型兜底扫描」：①同型空档收口——`ring_open_family.SECOND_ATTRS` 与 `SECOND_LABELS` 同属双表人工同步坑（渲染点 `second_label` 走 `.get(name, name)`），在 R3227 的闸内加 2 项：`SECOND_ATTRS ⊆ SECOND_LABELS`、label 无机器码形态 → 闸 7→**9 tests OK**；②全仓 `.get(x, x)` 扫描（`Tools/*.py`）共 **30 处**，逐条归类后 28 处属 `SPECIES_CN`／`DISTRICT_CN`／`STATE_CN`／`NEED_CN`／`flag_zh`／`labels` 等**显示面中文映射表**（兜底给 code 是正确行为，且这些串不进 LLM 提示词），真正「值进提示词」的面只有 `FAMILY_OPEN_HINTS` 与 `SECOND_LABELS` 两处、均已在闸内——属修病灶不修同形，不扩大改动面。
+  **CEO 可见三行**：当前活=开口闸提示词机器码面清零并上闸（15:2x）；最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\FAMILY-HINT-2026-11-16.md`（含 9 项正负控与扫描结论）；下个里程碑=19:00 窗落环后 `opening_capacity --window 12` 复测 `WIND_AGENT_OPEN` 占比（44%→≤25%）。
+  **下轮预置**：①19:00 后年轮批 3 → events gate → 读 `WIND_AGENT_OPEN` 占比与 citywide 行数；②若风族仍 >25%，查 `OPENING_SKELETONS` 26 条里是否含风族形状（含"风"字即为源头，做族级配平）；③反思线/相遇轮在年轮后接续。
+  tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
