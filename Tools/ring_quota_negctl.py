@@ -217,14 +217,21 @@ def arm(batch, label, env=None):
     }
 
 
-def judge(a, b, before, after, batch, snap_a=None, snap_b=None):
-    """三条硬线。返回 (verdict, 明细行列表)。"""
+def judge(a, b, before, after, batch, snap_a=None, snap_b=None, frozen=False):
+    """三条硬线。返回 (verdict, 明细行列表)。
+
+    frozen=True 时两臂按构造看到同一禁牌快照 → 「到期/携带」两类混淆不适用，
+    不得再用墙钟禁牌集比对（否则会把有效读数判成 CONFOUNDED）。
+    """
     lines = []
     ok = True
 
     # 混淆面先行：两臂之间「禁牌到期」→ 两臂时间环境不同，任何比对都无效
     carry = []
-    if snap_a and snap_b:
+    if frozen:
+        lines.append("ok   两臂禁牌集合按快照冻结共用（n=%s·墙钟到期混淆不适用）"
+                     % (a.get("ban_n") if a.get("ban_n", -1) >= 0 else "?"))
+    elif snap_a and snap_b:
         expired = sorted(set(snap_a["keys"]) - set(snap_b["keys"]))
         carry = sorted(set(snap_b["keys"]) - set(snap_a["keys"]))
         if expired:
@@ -424,16 +431,23 @@ def main():
             print("yield-window: B 臂未跑 -> 还原补丁")
             return 3
         after = refusal_metrics(day)
-        if freeze_path and not (a.get("ban_src") == b.get("ban_src") == "frozen"):
+        _src_a, _src_b = a.get("ban_src"), b.get("ban_src")
+        _known = _src_a not in (None, "?") and _src_b not in (None, "?")
+        if freeze_path and _known and not (_src_a == _src_b == "frozen"):
             verdict = "CONFOUNDED"
             lines = ["CONFOUNDED 冻结面未生效（A 源=%s/B 源=%s）→ 两臂禁牌环境不同，"
-                     "读数不可用于裁决补丁" % (a.get("ban_src"), b.get("ban_src"))]
-        elif freeze_path and a.get("ban_n") != b.get("ban_n"):
+                     "读数不可用于裁决补丁" % (_src_a, _src_b)]
+        elif freeze_path and _known and a.get("ban_n") != b.get("ban_n"):
             verdict = "CONFOUNDED"
             lines = ["CONFOUNDED 冻结条数不一致（A=%s/B=%s）→ 快照未真正共用"
                      % (a.get("ban_n"), b.get("ban_n"))]
         else:
-            verdict, lines = judge(a, b, before, after, batch, snap_a, snap_b)
+            verdict, lines = judge(a, b, before, after, batch, snap_a, snap_b,
+                                   frozen=bool(freeze_path))
+            if freeze_path and not _known:
+                lines.append("note 来源标签未取到（A=%s/B=%s）→ 冻结按构造生效，"
+                             "但本轮无法从 stdout 自证；下次请查该行是否被吞"
+                             % (_src_a, _src_b))
     finally:
         if freeze_path:
             try:
@@ -499,6 +513,11 @@ def _selftest():
         judge(a, b0, base, base, 8, same, same)[0] == "INCONCLUSIVE")
     chk("judge 零命中不得判 PASS（假绿闸）",
         judge(a, b0, base, base, 8, same, same)[0] != "PASS")
+    # 冻结面：墙钟禁牌集在两臂之间到期（expired）在冻结下**不应**判 CONFOUNDED
+    chk("judge 冻结下不按墙钟到期判混淆",
+        judge(a, b, base, base, 8, same, expired, frozen=True)[0] == "PASS")
+    chk("judge 非冻结下到期仍判 CONFOUNDED",
+        judge(a, b, base, base, 8, same, expired, frozen=False)[0] == "CONFOUNDED")
 
     # 3) 补丁态编排（R3246：补丁已入 HEAD 时 A 臂仍须「未生效」，收尾回起跑态）
     chk("patch_steps 起跑=applied -> A off/B on/收尾 on",

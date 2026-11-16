@@ -3912,6 +3912,7 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - 承 R3246：补偿丁编排修好后仍留一个「实验有效性押在抢时间上」的缺口——旧设计要求两臂都跑在禁牌最早到期点（今日 19:14）之前，跨点即 CONFOUNDED。`--dry-run` 实测 active=10／soonest=19:14／latest=20:45，即两臂只有 14 分钟，任一处重试就整窗作废。
 - **产品增量（能跑·2 分）**：把变量消掉而不是预测耗时——`evolve_citizen` 新增 `parse_frozen_bans()` + `load_refusal_bans()`（env `BIGLIFE_REFUSAL_BANS_FROZEN` 指向快照则用快照，**未设时逐字回落实时窗口**），调用点打 `refusal-bans source: frozen|live-12h n=N` 可证伪标记；`ring_quota_negctl` 新增 `freeze_bans_file()`／`--no-freeze`／`_run(env=)`，两臂共用同一快照、`finally` 删临时件；判据加硬校验（两臂来源须同为 `frozen` 且条数相等，否则 CONFOUNDED），报告新增「禁牌快照」行。
 - 负控（全零 LLM）：`--selftest` **PASS（0 fail·23 检）**（新增 parse 正常/坏值/快照可读/走快照无损 4 检）；冻结实弹 frozen n=10 且与 `recent_refusal_bans()` 逐键相同、env 未设回落结果亦相同（默认路径零污染）；`evolve --audit-due`→`due=10 leaked=0 PASS` rc=0；两文件 `py_compile` rc=0。证据=`qa/RING-QUOTA-NEGCTL-FLIP-FIX-20261116.md` §6-§9。
+  - [2026-11-16 17:4x @BigLife-OSLoop R3247b] **自查补丁（冻结与判据自相矛盾·已修）**：首版冻结只改了喂给两臂的集合，`judge()` 的墙钟比对原样保留 → 冻结下任何禁牌在两臂间到期，都会把**有效读数**判成 CONFOUNDED（冻结白做）。修法=`judge(..., frozen=True)` 跳过到期/携带判定并改记「两臂按快照共用」；来源校验降级为「仅两臂标签均已知时才比对」，标签缺失只记 note（防 stdout 吞行把好数据判废）。负控 2 检（现 **25 检 PASS**）：同输入 frozen=True→PASS／frozen=False→CONFOUNDED。
 - 效果：19:00 之后**随时可跑**（不再抢 19:14），且 B 臂零命中概率下降（冻结集合里 12h 内被拒开口仍被拦），同时缓解 R3246 立的 INCONCLUSIVE 陷阱。
 - 诚实边界：冻结态＝实验臂配置，比生产实时窗口更严（已解禁开口仍算禁）→ 报告须按「冻结 N 条」写，勿当生产口径；`refusal-bans source:` 行只在真正进年轮批时打印，让路窗内未能实跑该行本身（已验证的是其取数函数两侧与回落路径）。实弹仍未跑，配额闸留/撤仍未裁决。
 - 计量：tokens: local=0 api=0 api_reason=workday-yield-window
