@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16 17:05:12",
+ "generated_at": "2026-11-16 17:11:06",
  "total": 80,
  "today": 25,
  "days": [
@@ -233,7 +233,7 @@
  "rolling_windows": [
   {
    "window_hours": 24,
-   "as_of": "2026-11-16 17:05:12",
+   "as_of": "2026-11-16 17:11:05",
    "rows": 78,
    "openings": 36,
    "multi_openings": 6,
@@ -313,13 +313,13 @@
   },
   {
    "window_hours": 12,
-   "as_of": "2026-11-16 17:05:12",
-   "rows": 16,
-   "openings": 12,
+   "as_of": "2026-11-16 17:11:05",
+   "rows": 15,
+   "openings": 11,
    "multi_openings": 4,
    "cross_cid_openings": 4,
    "wasted_calls": 4,
-   "waste_ratio": 0.25,
+   "waste_ratio": 0.2667,
    "top": [
     {
      "opening12": "这会儿手边最碍事的就是这",
@@ -452,12 +452,6 @@
   }
  ],
  "active_bans": [
-  {
-   "opening12": "我把手头的灯串又捋了一遍",
-   "last_refused": "2026-11-16 05:10",
-   "expires": "2026-11-16 17:10",
-   "ban_hours": 12
-  },
   {
    "opening12": "风撞在门板上咚一声，我正",
    "last_refused": "2026-11-16 05:30",
