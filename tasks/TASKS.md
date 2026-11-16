@@ -25,6 +25,7 @@
   - **依据**：集团 `docs/decisions.md` D-20261116-16（2026-11-16 18:0x 第 68 批）——FluxVerse 线转 PARKED，BigLife 上游依赖正式解除，R2810 自给锚（真实天气/时刻）转常态；要求 @BigLife 回执一行，时点 **11-17 12:00**，逾期=夜轮记 chronic 并不再收 FluxVerse 供给类申告。
   - **写法**：`python -X utf8 Tools/hq_feedback_daily.py --check` 先查（报 ALREADY_REPORTED 且当日无新阻塞项 → 该日已有一行则次日首轮再写；若当日尚无行则 `--text '<正文>'` 由闸代写）。正文要点=收令确认／依赖解除后自给锚现状（年轮+事件闸按真实天气时刻）／不再提交 FluxVerse 供给类申告。
   - **今日状态**：11-16 已有 1 行日清（`--check` = ALREADY_REPORTED lines=1），故本条按设计顺延至 **11-17 首轮**执行，仍在 12:00 窗内。
+  - **代码级核实（2026-11-16 18:2x R3250 完成·回执正文所需事实已备）**：`Tools/evolve_citizen.py` L3855-3866 实读——`anchor_event()` 返回空片段时走 `anchor_mode="no-event"`，锚串写「本日事件流零生活行 · 实况锚 <now> <weather>（<weekday>）」，**不写「FluxVerse 事件流」**（R2810 假溯源闸）；即空上游下年轮照常落环且锚可审，依赖解除无功能缺口。佐证=本轮 `events_refresh --gate` PASS（events=45444 cards=10111 mismatch=0 schema=0 chronicle gap=0d）。回执行 11-17 首轮仍按闸写，不提前占用当日行。
 - [ ] **T-20261116-13**（R3242 立·实弹执行单·今晚首件）19:00 让路窗解后跑配额闸 A/B 实弹，决定 `state/pending/R3204-quota-gate.patch` 留或撤。
   - status: **open**（2026-11-16 17:1x R3242 @BigLife-OSLoop 立·前置条件=本地时间 ≥19:00）
   - **命令**：`python -X utf8 Tools/ring_quota_negctl.py`（每臂席位由 due 自动收敛；勿加 `--batch` 强行抬高）
@@ -3973,3 +3974,12 @@ ing_quota_negctl --selftest **PASS 0 fail**；--dry-run 实测 patch applies=YES
 ing_quota_negctl 实弹 A/B（每臂 5 席）→ 再跑年轮批 3 + sync_rings + events_refresh --gate**（窗口 19:00-20:45，ETA 2026-11-16 21:00）。
 - 下轮预置：①19:00 后按序执行 T-20261116-13（**先本单后年轮批**）；②落环后重跑 uild_ring_openings.py + uild_export_index.py 检 max 是否推过 OBSERVE 线 8；③**11-17 首轮**写 T-20261116-14 依赖解除回执一行（12:00 窗内）。
 - 计量：tokens: local=0 api=0 api_reason=workday-yield-window
+
+## R3250（2026-11-16 18:1x-18:3x @BigLife-OSLoop·让路窗轮）
+- 轮首：git pull --ff-only=Already up to date（origin/main 已同步）；决策水位差集读毕 → 回写至 D-20261116-17（新读 D-20261116-16 涉本司=上游依赖解除／D-20261116-17=交付工位分叉补强，非本司件）。
+- 让路窗：工作日至 19:00，LLM 三线（年轮/相遇/反思）按律顺延；本轮只做零 LLM 确定性面。
+- 实跑：`round_daily --run` stale=1 ran=2 failed=0 **PASS**（index 面重建）／`persona_generations --check` rc=0（gen=6 habits=163 pending_sync=none）／`events_refresh --gate` **PASS**（events=45444 cards=10111 replayed=10111 mismatch=0 schema=0 chronicle gap=0d）。
+- D-20261116-16 代码级核实完成（写入 T-20261116-14 证据行）：evolve_citizen L3855-3866 空事件下走 no-event 自给锚、不写 FluxVerse 溯源 → 依赖解除无功能缺口；回执行仍按 11-17 首轮闸写。
+- 产品增量：可见面 2 件刷新（`census/export/index.html`、`census/export/city-ops.html`）+ 事件回放闸报告 `qa/EVENTS-REPLAY-REPORT.md`（45,444 事件 mismatch=0）。
+- 下轮硬序不变：**先 T-20261116-13 配额闸 A/B（≥19:00）→ 再年轮批 3 席 → sync_rings → events_refresh --gate**。
+- tokens: local=0 api=0 api_reason=yield-window（工作日让路窗至 19:00；脚本内 LLM 腿均未触发）
