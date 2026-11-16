@@ -2111,6 +2111,6 @@
    "本轮问答面事实闸修法落地并验收（负控 3/3 + 回归 1/1）；今日年轮落环行数 334（卡面机器计数，非人口总数）。"
   ]
  ],
- "t": "当前活：工作日让路窗确定性面核验＋QC/事件双闸复验（15:2x）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\QC-REPORT.md 与 C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\EVENTS-REPLAY-REPORT.md（15:2x 刷新，problems=0 / mismatch=0）\n下个里程碑：19:00 让路窗结束后年轮批 3 → events_refresh --gate → 热骨架配额 A/B 实弹（≤24h）",
- "top_text": "当前活：工作日让路窗确定性面核验＋QC/事件双闸复验（15:2x）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\census\\QC-REPORT.md 与 C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\EVENTS-REPLAY-REPORT.md（15:2x 刷新，problems=0 / mismatch=0）\n下个里程碑：19:00 让路窗结束后年轮批 3 → events_refresh --gate → 热骨架配额 A/B 实弹（≤24h）"
+ "t": "当前活：让路窗内 12h 全城开口禁牌接线负控＋吸引子 TTL 缺口登记（15:5x）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\RING-REFUSAL-BAN-WIRING-20261116.md（16:0x·ban=13 条含 24 次吸引子·TTL 19:34 到期）\n下个里程碑：19:00 开窗首年轮批 → 禁牌实弹读数（A/B 负控，≤48h）",
+ "top_text": "当前活：让路窗内 12h 全城开口禁牌接线负控＋吸引子 TTL 缺口登记（15:5x）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\RING-REFUSAL-BAN-WIRING-20261116.md（16:0x·ban=13 条含 24 次吸引子·TTL 19:34 到期）\n下个里程碑：19:00 开窗首年轮批 → 禁牌实弹读数（A/B 负控，≤48h）"
 }
