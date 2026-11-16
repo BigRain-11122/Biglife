@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-16 07:09",
+ "export_ts": "2026-11-16 09:09",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3178（2026-11-16 07:0x）产品轮**：年轮批 10 到期实写 10 帧（C-03760/03763/03764/03766/03806/03761/03762/03765/03767/03768，均带 [锚] 城市实况注脚，5 帧走 soft-concession〔recent-dup-phrase〕落环，hard-refuse=0）；行为线镜像随环同步；日更面 stale=12 ran=13 failed=0 verdict=PASS；事件回放闸 PASS（cards=10111 / events=45344 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0 / chronicle last=2026-11-16 gap=0d）；世代池 --check rc=0（gen3 / max_cid=C-10120 / pending_sync=none）；决策水位差集 NEW=0（唯一 d-20261023-23 为已归类噪声）；orders 涉本司零新物理件。**拒稿账复核（T-20261115-04 观察窗第 2 生产日）**：今日 ring-refusals 累计 15 条、对应 15 个互不相同 cid（每人各 1 次，零同日二次拒稿）→ R3115 调度修法持续成立；gate 组合主靶 recent-dup-phrase+recent-family-opening=10 条（占 67%），opening-family-quota=2、rain-invented 混族=2、recent-dup-opening+time-morning=1，符合「内容面闸按设计工作」判读，11-17 定档材料已足。 **R3165（2026-11-16 03:2x）产品轮**：年轮批 10 到期实写 9 帧（C-03599/03600/03601/03602/03603/03605/03606/03615/03638，C-03598 双违 deferred +1d）；行为线镜像 rows=9 ring=10114；日更面 stale=22 ran=23 failed=0 PASS；事件回放闸 PASS cards=10111 events=45192 replayed=10111 schema_errors=0 mismatch=0 coverage unexpected_missing=0；世代池 rc=0;语言池 SELF_TERMINATE 全桶达标；相遇轮 cap 3/3 已满;反思今日已产;QC 上轮 problems=0;HQ 日闸 ALREADY_REPORTED。 **R3157（2026-11-16 01:5x）产品轮**：年轮批 9/9 落卡（C-03566/03569/03571/03578/03580/03567/03568/03573/03575，C-03572 命中 persistent violation 依约 deferred +1d）；相遇 1 幕 C-03293×C-03303（低语巷·扭塔算力街区）落卡；事件回放闸 PASS events=45159 cards=10111 replayed=10111 schema_errors=0 mismatch=0；日更面 stale=6 ran=7 failed=0 verdict=PASS；世代池 rc=0 pending_sync=none；语言池全桶达标 SELF_TERMINATE；反思线今日 5 条已达上限；日清闸 ALREADY_REPORTED。",
+   "t": "**R3191（09:03-09:2x）**：问答面事实闸实装——`spotlight.py` ask 提示词加三条硬约束（禁发明未喂实体／天气时段沿原文禁改写／无事实走「今日不想说话」）；负控 C-10115 同问法复测 3/3 PASS（FAIL→PASS），例 2 C-10118 回归不退化。T-20261116-11 结案，证据 `qa/SPOTLIGHT-20261116.md`。年轮批本轮命中让路窗（workday 09:00-19:00）零环，事件闸 PASS 45444 events，日更面 28 面全新鲜。 **R3178（2026-11-16 07:0x）产品轮**：年轮批 10 到期实写 10 帧（C-03760/03763/03764/03766/03806/03761/03762/03765/03767/03768，均带 [锚] 城市实况注脚，5 帧走 soft-concession〔recent-dup-phrase〕落环，hard-refuse=0）；行为线镜像随环同步；日更面 stale=12 ran=13 failed=0 verdict=PASS；事件回放闸 PASS（cards=10111 / events=45344 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0 / chronicle last=2026-11-16 gap=0d）；世代池 --check rc=0（gen3 / max_cid=C-10120 / pending_sync=none）；决策水位差集 NEW=0（唯一 d-20261023-23 为已归类噪声）；orders 涉本司零新物理件。**拒稿账复核（T-20261115-04 观察窗第 2 生产日）**：今日 ring-refusals 累计 15 条、对应 15 个互不相同 cid（每人各 1 次，零同日二次拒稿）→ R3115 调度修法持续成立；gate 组合主靶 recent-dup-phrase+recent-family-opening=10 条（占 67%），opening-family-quota=2、rain-invented 混族=2、recent-dup-opening+time-morning=1，符合「内容面闸按设计工作」判读，11-17 定档材料已足。 **R3165（2026-11-16 03:2x）产品轮**：年轮批 10 到期实写 9 帧（C-03599/03600/03601/03602/03603/03605/03606/03615/03638，C-03598 双违 deferred +1d）；行为线镜像 rows=9 ring=10114；日更面 stale=22 ran=23 failed=0 PASS；事件回放闸 PASS cards=10111 events=45192 replayed=10111 schema_errors=0 mismatch=0 coverage unexpected_missing=0；世代池 rc=0;语言池 SELF_TERMINATE 全桶达标；相遇轮 cap 3/3 已满;反思今日已产;QC 上轮 problems=0;HQ 日闸 ALREADY_REPORTED。",
    "s": 1
   },
   {
@@ -2105,8 +2105,12 @@
   [
    "234",
    "R3178：今日全城累计 234 行新年轮落环（[锚] 行级机器直数），13 个可见面按依赖 mtime 重建，事件闸 45344/mismatch=0。"
+  ],
+  [
+   "334",
+   "本轮问答面事实闸修法落地并验收（负控 3/3 + 回归 1/1）；今日年轮落环行数 334（卡面机器计数，非人口总数）。"
   ]
  ],
- "t": "当前活：年轮主线在产（07:05 批 10/10 落环·5 帧 soft-concession）\n最近实物：census/registry/*/C-03760~C-03806（07:05）+ census/export/ 13 面重建（07:06）+ qa/EVENTS-REPLAY-REPORT.md（PASS·45344）\n下个里程碑：下轮 audit-due 复核后年轮续批；2026-11-17 复核 T-20261115-04 开篇族闸分布定档",
- "top_text": "当前活：年轮主线在产（07:05 批 10/10 落环·5 帧 soft-concession）\n最近实物：census/registry/*/C-03760~C-03806（07:05）+ census/export/ 13 面重建（07:06）+ qa/EVENTS-REPLAY-REPORT.md（PASS·45344）\n下个里程碑：下轮 audit-due 复核后年轮续批；2026-11-17 复核 T-20261115-04 开篇族闸分布定档"
+ "t": "当前活：问答面事实闸实装并验收（09:1x 结案 T-20261116-11）\n最近实物：qa/SPOTLIGHT-20261116.md（修法实装+负控 3/3 表）与 Tools/spotlight.py（三条硬约束）\n下个里程碑：19:00 后反思线补跑 + 年轮批续产（让路窗结束即恢复）",
+ "top_text": "当前活：问答面事实闸实装并验收（09:1x 结案 T-20261116-11）\n最近实物：qa/SPOTLIGHT-20261116.md（修法实装+负控 3/3 表）与 Tools/spotlight.py（三条硬约束）\n下个里程碑：19:00 后反思线补跑 + 年轮批续产（让路窗结束即恢复）"
 }
