@@ -23,7 +23,7 @@ sys.path.insert(0, os.path.join(ROOT, "Tools"))
 
 import evolve_citizen as ec  # noqa: E402  (需先插 Tools 进 sys.path)
 
-HOT = "这会儿手边最碍事的就是这些，"      # 11-15/11-16 实测热骨架（24 条拒稿/9 人）
+HOT = ""                                  # R3223：运行期按样本反查（不再钉死某一字符串）
 CID_HOT = None                            # 旧算法拿 HOT 的那个 cid，运行期反查
 CIDS = ["C-%05d" % (i * 37 % 10120) for i in range(60)]
 
@@ -37,6 +37,23 @@ def _legacy_pick(cid, pool=None):
 def _seed_of(block):
     m = re.search(r"「(.+?)」", block or "")
     return m.group(1) if m else ""
+
+
+def _resolve_hot():
+    """按样本反查最常发放的骨架当 HOT（R3223：换骨架不再连带测试失效）。"""
+    global HOT, CID_HOT
+    counts = {}
+    for cid in CIDS:
+        s = _legacy_pick(cid)
+        counts[s] = counts.get(s, 0) + 1
+    HOT = max(counts, key=counts.get)
+    for cid in CIDS:
+        if _legacy_pick(cid) == HOT:
+            CID_HOT = cid
+            break
+
+
+_resolve_hot()
 
 
 class _MemoCase(unittest.TestCase):
