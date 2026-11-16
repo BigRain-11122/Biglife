@@ -4087,3 +4087,4 @@ ot reciprocated／历史单向（2026-11-10）→rc=0 观测／闸后同日同�
   - **CEO 可见三行**：当前活＝年轮线 10 席落环＋23 面日更重建＋事件流全量重放收口（22:2x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-growth.html`（含 C-04078/04080/04081/04082/04083/04084/04085/04086/04088/04111 新年轮）与 `C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md`（45,641 事件 mismatch=0）｜下个里程碑=下一轮：T-20261116-16 相遇单向落卡出生地拦截（写侧修）＋年轮批续跑。
   - 诚实边界：T-20261116-13（配额闸 A/B）维持 blocked＝verdict INCONCLUSIVE（冻结禁牌快照使 B 臂闸命中恒 0，两臂不可分），本单不再重跑；反思线当日配额用尽无新洞察。
   - tokens: local=10 api=0 api_reason=-
+  - **工具面判例（R3264 补）：** `evolve_citizen.py` **无 `--dry-run`** 参数（支持面仅 `--batch/--force/--meet/--reflect/--propose/--no-propose/--audit-due/--via`）；本轮误以 `--dry-run --batch 3` 探测到期席数→argparse rc=2（用法错误，非产物故障）。干跑/到期体检正法=`--audit-due`；确证：10 席 2026-11-16 年轮逐卡复验 VERIFIED 10/10（含 [锚] 注脚，长度 114-145 字）。
