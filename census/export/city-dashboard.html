@@ -36,7 +36,7 @@ footer{margin-top:36px;color:#57606a;font-size:11px;border-top:1px solid var(--l
 </style></head><body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 产物目录</a></div><div class="wrap">
 <h1>硅基城市脉搏</h1>
 <div class="sub">居民聚合面板 · 数据截至 2026-11-16 08:55:28 · 源=census/export/citizens-light.jsonl + census/registry 卡面年轮</div>
-<div class="live"><div>当前活：让路窗内基线读数轮——年轮硬拒 2 生产日基线交付 + 日更 3 面重建 + QC 巡检（零 LLM）</div><div>最近实物：qa/RING-REFUSAL-GATE-20261116.md（11:4x·n=80 基线＋负控回退口建议）＋ census/export/city-ring-refusals.html/json（11:35:43 重建含跨席传染面）＋ census/QC-REPORT.md</div><div>下个里程碑：19:00 让路窗结束 → 年轮批 --batch 3（改造前基线）→ 配额闸补丁实弹负控（回退口四条）→ 反思线补跑；11-17 T-20261115-04 验收窗读数结案</div></div>
+<div class="live"><div>当前活：让路窗内把 19:00 配额闸负控做成一条命令（A/B 两臂 + 三条硬回退口自动判 PASS/FAIL）</div><div>最近实物：Tools/ring_quota_negctl.py（新·--dry-run 可跑·patch applies=YES）＋ census/export/city-ring-refusals.html（12:24·29 面 fresh）＋ census/QC-REPORT.md</div><div>下个里程碑：19:00 后 `python -X utf8 Tools/ring_quota_negctl.py` 出裁决并同批产出新年轮（≤48h）</div></div>
 
 <div class="kpis">
   <div class="kpi"><b>10114</b><span>在册居民</span></div>

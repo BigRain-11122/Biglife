@@ -296,7 +296,18 @@ DEPENDS_FLOOR_OVERRIDE = {"gene_ledger": 0, "lexicon": 0, "dashboard": 0,
                           # （每轮 2.4MB churn 违反 REPO-SLIM 律，60min 冷却照旧）。
                           "voices": 0, "coverage": 0, "ops": 0, "growth": 0,
                           "reflections": 0, "objects": 0, "meets": 0,
-                          "meet_candidates": 0, "rumors": 0}
+                          "meet_candidates": 0, "rumors": 0,
+                          # v0.27 (2026-11-16 R3212): 叙龄面 13KB、重建 <1s，且页头
+                          # 含「今日 N 环」这种当日量——见 DEPENDS_FP_SKIP 同条。
+                          "ring_recency": 0}
+
+# v0.27 (2026-11-16 R3212): 指纹压制对「渲染量随日期滚动」的面失效。
+# 实证：city-ring-recency.html 07:56 构建（今日 273），源 citizens-light.jsonl
+# 08:55 被行为线同内容重写（字节不变→指纹一致），--run 判 fresh；至 12:48 面仍
+# 停在 273，而重建成 330（+21%）。根因=该页「今日 N 环 / 叙龄分档」由构建时刻
+# 的日期算出，源内容不变时跨日/跨小时也会变，指纹永远看不见这类漂移（与
+# D-20261116-13「结构自洽即 PASS 假绿」同族）。故这类面禁走指纹压制。
+DEPENDS_FP_SKIP = {"ring_recency", "ring_trend", "meet_symmetry", "ring_quality"}
 
 TIMEOUT_SEC = 240
 
@@ -542,6 +553,9 @@ def _dep_mtime_stale(key: str, out_paths: list[str]) -> str | None:
         if (time.time() - oldest_out) < floor_min * 60:
             return None
         # v0.26: mtime 前进但内容未变（同内容重写）= 假信号，不重建
+        # v0.27: 但渲染量随日期滚动的面（今日计数/当日分档）例外——源不变也会变
+        if key in DEPENDS_FP_SKIP:
+            return "dep-mtime:%s" % newest_rel
         fp = _dep_fingerprint(key)
         if fp is not None and _load_dep_snapshot().get(key) == fp:
             return None
