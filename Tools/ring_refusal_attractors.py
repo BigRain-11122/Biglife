@@ -18,6 +18,11 @@
   python -X utf8 Tools/ring_refusal_attractors.py --window 12
   python -X utf8 Tools/ring_refusal_attractors.py --json          # 供闸前后比对
   python -X utf8 Tools/ring_refusal_attractors.py --as-of "2026-11-16 12:10"  # 复算历史时刻
+  python -X utf8 Tools/ring_refusal_attractors.py --trend         # 按自然日曲线（结案判据）
+
+--trend 口径：按自然日切分行，每日调**同一个 measure()**（窗口取该日 23:59:59，
+行已按日预筛，故等价于「当日整日」），不另写一套聚合逻辑——避免曲线与单点读数
+两套算法漂移。用途=T-20261115-04 观察窗（11-17 到期）结案时看 waste% 走向。
 """
 import argparse
 import collections
@@ -77,9 +82,54 @@ def measure(rows, hours, as_of):
     }
 
 
+def day_series(rows):
+    """按自然日切分，每日复用 measure() 出同一口径读数（不另立算法）。"""
+    days = sorted({r.get("ts", "")[:10] for r in rows if r.get("ts")})
+    out = []
+    for d in days:
+        try:
+            day_end = datetime.datetime.strptime(d + " 23:59:59", FMT)
+        except ValueError:
+            continue
+        day_rows = [r for r in rows if r.get("ts", "").startswith(d)]
+        m = measure(day_rows, 24.0, day_end)
+        out.append({
+            "day": d,
+            "rows": m["rows"],
+            "openings": m["openings"],
+            "multi_openings": m["multi_openings"],
+            "cross_cid_openings": m["cross_cid_openings"],
+            "wasted_calls": m["wasted_calls"],
+            "waste_ratio": m["waste_ratio"],
+            "top": m["top"][:3],
+        })
+    return out
+
+
+def render_trend(series):
+    out = ["== ring-refusal attractors · daily trend =="]
+    if not series:
+        out.append("账本为空（无日切片）")
+        return "\n".join(out)
+    out.append("day         rows openings multi cross wasted waste%")
+    for s in series:
+        out.append("%-11s %4d %8d %5d %5d %6d %5.1f%%"
+                   % (s["day"], s["rows"], s["openings"], s["multi_openings"],
+                      s["cross_cid_openings"], s["wasted_calls"],
+                      s["waste_ratio"] * 100))
+    best = min(series, key=lambda s: s["waste_ratio"])
+    worst = max(series, key=lambda s: s["waste_ratio"])
+    out.append("最差 %s waste%%=%.1f%% ／ 最好 %s waste%%=%.1f%%（口径=measure() 按日复算）"
+               % (worst["day"], worst["waste_ratio"] * 100,
+                  best["day"], best["waste_ratio"] * 100))
+    return "\n".join(out)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--window", type=float, default=24.0, help="回看小时数（默认 24）")
+    ap.add_argument("--trend", action="store_true",
+                    help="按自然日输出 waste%% 曲线（复用 measure() 同一口径·结案判据用）")
     ap.add_argument("--as-of", default="", help='以该时刻为准 "YYYY-MM-DD HH:MM:SS"（复算用）')
     ap.add_argument("--json", action="store_true", help="只输出 JSON（前后比对用）")
     ap.add_argument("--out", default="",
@@ -98,6 +148,25 @@ def main():
             return 2
 
     rows = load(a.ledger)
+
+    if a.trend:
+        series = day_series(rows)
+        if a.out:
+            payload = json.dumps({"ledger": a.ledger, "total_rows": len(rows),
+                                  "days": series}, ensure_ascii=False, indent=2)
+            d = os.path.dirname(a.out)
+            if d and not os.path.isdir(d):
+                os.makedirs(d)
+            with open(a.out, "w", encoding="utf-8", newline="\n") as f:
+                f.write(payload + "\n")
+            print("written: %s (utf-8, %d bytes)" % (a.out, len(payload.encode("utf-8"))))
+        elif a.json:
+            print(json.dumps({"ledger": a.ledger, "total_rows": len(rows),
+                              "days": series}, ensure_ascii=False, indent=2))
+        else:
+            print(render_trend(series))
+        return 0
+
     m = measure(rows, a.window, as_of)
 
     if a.out:

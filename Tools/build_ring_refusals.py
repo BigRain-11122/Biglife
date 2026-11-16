@@ -39,8 +39,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 try:
     from ring_refusal_attractors import measure as attract_measure
+    from ring_refusal_attractors import day_series as attract_day_series
 except Exception:  # 工具被改名/删除时本面仍要能出（只是少一节）
     attract_measure = None
+    attract_day_series = None
 
 EXP = os.path.join(ROOT, "census", "export")
 SRC = os.path.join(ROOT, "state", "ring-refusals.jsonl")
@@ -367,6 +369,43 @@ def main():
             a('<div class="empty">吸引子工具不可用（Tools/ring_refusal_attractors.py）'
               '——本节跳过，其余各节不受影响。</div>')
 
+        # 按日曲线（R3213·T-20261115-04 观察窗 11-17 结案判据说）
+        # 为什么要有这一节：结案要回答的是「waste% 在观察窗内是否在下降」，
+        # 而单点窗口读数只能回答「此刻怎样」。此前要出曲线得人工逐日改 --as-of，
+        # 结论无法复现——同 D-20261116-12「读数只活在命令行」判例。
+        daily = []
+        if attract_day_series is not None:
+            try:
+                daily = attract_day_series(rows)
+            except Exception:
+                daily = []
+        a("<h2>按日 waste% 曲线（观察窗结案判据）</h2>")
+        a('<div class="sub">口径＝同一 <span class=mono>measure()</span> 按自然日复算'
+          '（行先按日预筛，窗口取该日 23:59:59），与 <span class=mono>--trend</span> '
+          'CLI 输出逐值一致。判读：曲线下行＝吸引子隔离见效；上行或持平＝换靶未中。</div>')
+        if daily:
+            _dmax = max((d["wasted_calls"] for d in daily), default=1) or 1
+            a("<table><tr><th>日期</th><th>拒稿</th><th>不同开口</th><th>重复开口</th>"
+              "<th>跨席开口</th><th>多烧条数</th><th>多烧占比</th><th></th></tr>")
+            for _d in daily:
+                a("<tr><td class=mono>%s</td><td>%d</td><td>%d</td><td>%d</td>"
+                  "<td>%d</td><td class=warm>%d</td><td>%s%.0f%%</td><td>%s</td></tr>"
+                  % (_d["day"], _d["rows"], _d["openings"], _d["multi_openings"],
+                     _d["cross_cid_openings"], _d["wasted_calls"],
+                     "class=hot " if _d["waste_ratio"] >= 0.3 else "",
+                     100.0 * _d["waste_ratio"],
+                     bars(_d["wasted_calls"], _dmax)))
+            a("</table>")
+            _lo = min(daily, key=lambda d: d["waste_ratio"])
+            _hi = max(daily, key=lambda d: d["waste_ratio"])
+            a('<div class="empty">区间：最差 %s %.0f%% → 最好 %s %.0f%%。'
+              '观察窗 11-17 结案以本表末两日为「是否下行」的唯一判据。</div>'
+              % (_hi["day"], 100.0 * _hi["waste_ratio"],
+                 _lo["day"], 100.0 * _lo["waste_ratio"]))
+        else:
+            a('<div class="empty">按日曲线不可用（吸引子工具的 day_series 未接入）'
+              '——其余各节不受影响。</div>')
+
         # 最近
         a("<h2>最近 %d 条拒稿原文</h2>" % RECENT)
         a("<table><tr><th>时间</th><th>居民</th><th>闸</th><th>族</th><th>开口</th></tr>")
@@ -413,6 +452,7 @@ def main():
         "retry_livelock": livelock,
         "cross_resident_spread": spread,
         "rolling_windows": rolling,
+        "daily_trend": daily,
     }
     with open(OUT_JSON, "w", encoding="utf-8") as f:
         json.dump(summary, f, ensure_ascii=False, indent=1)

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16 12:24:05",
+ "generated_at": "2026-11-16 13:05:54",
  "total": 80,
  "today": 25,
  "days": [
@@ -233,7 +233,7 @@
  "rolling_windows": [
   {
    "window_hours": 24,
-   "as_of": "2026-11-16 12:24:05",
+   "as_of": "2026-11-16 13:05:54",
    "rows": 80,
    "openings": 36,
    "multi_openings": 6,
@@ -313,13 +313,112 @@
   },
   {
    "window_hours": 12,
-   "as_of": "2026-11-16 12:24:05",
-   "rows": 23,
+   "as_of": "2026-11-16 13:05:54",
+   "rows": 22,
    "openings": 15,
    "multi_openings": 4,
    "cross_cid_openings": 4,
+   "wasted_calls": 7,
+   "waste_ratio": 0.3182,
+   "top": [
+    {
+     "opening12": "这会儿手边最碍事的就是这",
+     "calls": 3,
+     "cids": 3,
+     "cid_head": [
+      "C-03598",
+      "C-03732",
+      "C-03788"
+     ]
+    },
+    {
+     "opening12": "风把塑料布吹得啪啦响，我",
+     "calls": 3,
+     "cids": 3,
+     "cid_head": [
+      "C-03595",
+      "C-03695",
+      "C-03790"
+     ]
+    },
+    {
+     "opening12": "风把雨棚掀得直响，我正把",
+     "calls": 3,
+     "cids": 3,
+     "cid_head": [
+      "C-03642",
+      "C-03689",
+      "C-03781"
+     ]
+    },
+    {
+     "opening12": "风撞在窗玻璃上闷响，我正",
+     "calls": 2,
+     "cids": 2,
+     "cid_head": [
+      "C-03725",
+      "C-03802"
+     ]
+    }
+   ]
+  }
+ ],
+ "daily_trend": [
+  {
+   "day": "2026-11-15",
+   "rows": 55,
+   "openings": 23,
+   "multi_openings": 4,
+   "cross_cid_openings": 4,
+   "wasted_calls": 32,
+   "waste_ratio": 0.5818,
+   "top": [
+    {
+     "opening12": "这会儿手边最碍事的就是这",
+     "calls": 21,
+     "cids": 6,
+     "cid_head": [
+      "C-03117",
+      "C-03228",
+      "C-03258",
+      "C-03314",
+      "C-03353",
+      "C-03449"
+     ]
+    },
+    {
+     "opening12": "风把塑料布吹得啪啦响，我",
+     "calls": 6,
+     "cids": 4,
+     "cid_head": [
+      "C-03193",
+      "C-03224",
+      "C-03317",
+      "C-03379"
+     ]
+    },
+    {
+     "opening12": "桌角那点零碎又该理一理了",
+     "calls": 5,
+     "cids": 5,
+     "cid_head": [
+      "C-03419",
+      "C-03426",
+      "C-03469",
+      "C-03525",
+      "C-03533"
+     ]
+    }
+   ]
+  },
+  {
+   "day": "2026-11-16",
+   "rows": 25,
+   "openings": 17,
+   "multi_openings": 4,
+   "cross_cid_openings": 4,
    "wasted_calls": 8,
-   "waste_ratio": 0.3478,
+   "waste_ratio": 0.32,
    "top": [
     {
      "opening12": "风把塑料布吹得啪啦响，我",
@@ -350,15 +449,6 @@
       "C-03642",
       "C-03689",
       "C-03781"
-     ]
-    },
-    {
-     "opening12": "风撞在窗玻璃上闷响，我正",
-     "calls": 2,
-     "cids": 2,
-     "cid_head": [
-      "C-03725",
-      "C-03802"
      ]
     }
    ]

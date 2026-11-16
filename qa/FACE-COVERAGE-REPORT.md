@@ -1,9 +1,9 @@
-# 面覆盖自动发现报告（2026-11-15 13:03:03）
+# 面覆盖自动发现报告（2026-11-16 13:04:19）
 
 > 零 LLM 只读扫描。判据=「Tools 里有生成器字面量、盘上有产物、但 round_daily 登记表里没有它」。登记表是唯一权威，本报告只做差集。
 
-- 已登记面：42
-- 扫描候选产物名：149
+- 已登记面：43
+- 扫描候选产物名：152
 - 未登记且超 1 天：**0**
 - 未登记但新鲜：2
 - append-only 台账供料缺口：1
@@ -20,7 +20,7 @@
 
 | 静默 | 台账 | 最后追加 | 生成器 |
 |---|---|---|---|
-| 0.5 天 | `proposals.jsonl` | 2026-11-15 00:38 | build_city_proposals.py, evolve_citizen.py, political_redline.py |
+| 0.5 天 | `proposals.jsonl` | 2026-11-16 01:52 | build_city_proposals.py, evolve_citizen.py, political_redline.py |
 
 ## 盘上无产物候选（已归因）
 

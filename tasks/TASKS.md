@@ -3625,3 +3625,12 @@ ound_daily --run stale=12 ran=13 failed=0 verdict=PASS；pool_audit PASS SELF_TE
   **CEO 可见三行**：当前活=19:00 夜窗负控前置就绪（13:0x 收口）；最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\QUOTA-NEGCTL-PREFLIGHT-20261116.md`（2026-11-16 13:02·含闸前基线 25/25/0/1）；下个里程碑=19:00 让路窗结束后 `ring_quota_negctl.py` 实弹 A/B 出裁决 + 年轮批 3 + 反思批 5（≤48h）。
   **下轮预置**：①19:00 后首件=跑 `ring_quota_negctl.py`（非 dry-run；基线直接用本件 25/25/0/1，勿现取）；②其后年轮批 3＋反思批 5；③T-20261115-04 观察窗 11-17 到期按 `ring_refusal_attribution --json` waste% 曲线结案。
   tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
+
+- [R3214] 2026-11-16 13:1x-13:3x @BigLife-OSLoop 让路窗内「结案判据工具补缺」轮（R3213 续）：轮首状态=R3213 已推 db1855bd5、工作树净。
+  **产品增量（能复核实物·2 分）**：观察窗结案要的「waste% 曲线」此前**不存在**——`ring_refusal_attractors.py` 只有单窗口 `--window/--as-of`，出曲线得人工逐日改 `--as-of`，结论不可复现（同 D-20261116-12「读数只活在命令行」判例）。本轮加 `--trend`：按自然日切分，**每日复用同一个 `measure()`**（不另写聚合逻辑，防两套算法漂移）。
+  **实测读数（首次出曲线·11-15→11-16 下行）**：`2026-11-15 rows=55 openings=23 multi=4 cross=4 wasted=32 waste%=58.2%` → `2026-11-16 rows=25 openings=17 multi=4 cross=4 wasted=8 waste%=32.0%`。多烧占比 **58.2%→32.0%（-26.2pp）**，吸引子隔离已有下行迹象；但两日 `multi` 均为 4、头部开口仍是「这会儿手边最碍事的就是这」「风把塑料布吹得啪啦响，我」，说明**跨席复用没断，只是频次降了**——11-17 结案须按此如实记，不可报「已解决」。
+  **三向验证（口径一致·非自证）**：①`--trend` 文本 rc=0；②`--trend --json` rc=0、`days=2`、`sum(rows)=80=total_rows`（无行丢失），逐值等于 ③`ring_refusal_attribution --day 2026-11-16` 的 `rows=25`；④账本 80 行经 UTF-8 直读校验**全为正常中文、0 条乱码**（先前 PowerShell 管道里的乱码为渲染假象，非数据损坏，已排除误报）。
+  **可见面收口**：`Tools/build_ring_refusals.py` 新增「按日 waste% 曲线」节 + JSON `daily_trend` 段（同样 import 工具函数，禁本面另算）；`city-ring-refusals.html` 重建后实测节存在、`</html>` 闭合、JSON `daily_trend` 2 行与 CLI 逐值一致；`round_daily --run` stale=1 ran=2 failed=0 PASS。
+  **CEO 可见三行**：当前活=观察窗结案判据补齐（13:3x 收口）；最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-refusals.html`（2026-11-16 13:3x 重建·新增「按日 waste% 曲线」节：11-15 58% → 11-16 32%）；下个里程碑=11-17 观察窗到期按该表末两日判「是否下行」结案，19:00 后跑 `ring_quota_negctl.py` 实弹 A/B（≤48h）。
+  **下轮预置**：①19:00 后首件仍=`ring_quota_negctl.py`（基线用 25/25/0/1）；②11-17 结案**直接用本面表格**，勿再手敲 `--as-of`；③若 11-17 waste% 未继续下行，则判「配额闸未中靶」，按 R3204 四步改用短语级去重，不许改判据凑绿灯。
+  tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
