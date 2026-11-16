@@ -703,6 +703,52 @@ def _selftest():
     return 0 if bad == 0 else 1
 
 
+# v1.3 (2026-11-16 R3198, T-20261113-03): 「闸已开仍越线」可复现面。
+def paths_report(day=None, quota=FAMILY_QUOTA, min_denom=FAMILY_MIN_DENOM):
+    """返回「越线环还能落环」的全部路径读数（只读·零 LLM·确定性）。
+
+    回答 T-20261113-03：「当日读数越了 25% 线，闸是不是被绕过了？」三条路径
+    都用闸自己的函数算，不另立口径：
+
+      strict-gt    `over_quota` 用严格 `>`，恰好压在配额线上的取值不触发禁族，
+                   于是下一条同族环仍能落环——真正「越线仍落环」的只有这一条。
+      overshoot    落环后批内台账立刻滚动（evolve_citizen L4014-4023），超线族
+                   当批即入禁族集，故每族每日越线环上界 = 1 条，
+                   日终占比上界 = quota + 1/total（千环级 ≈ 25.1%），爬不到四成。
+      meet-dilute  相遇行行首是「与 C-xxxxx 相遇：」不是骨架位，family_of=None，
+                   既不入族计数又计入分母（每日 0-3 条，向低估方向稀释配额）。
+
+    历史日若族表当日变更过（--check 的 CROSS-EPOCH），占比本身跨口径不可比，
+    本函数只报登记版本数，不重复判定。
+    """
+    q = float(quota)
+    total = 1000
+    hits = int(round(q * total))                 # 250/1000 = 25.00%
+    ban_at_line = set(over_quota(total, {"HAND_DEICTIC": hits},
+                                 quota=q, min_denom=min_denom))
+    t, f, landed = total, hits, 0
+    while f / float(t) <= q:                     # 贴线放行到第一次真越线
+        landed += 1
+        f += 1
+        t += 1
+    d = day or datetime.date.today().isoformat()
+    per = scan_day_by_source(d)
+    return {
+        "day": d,
+        "quota": q,
+        "table_epoch": TABLE_EPOCH,
+        "strict_gt": {"total": total, "hits": hits,
+                      "pct": round(hits / float(total) * 100, 2),
+                      "ban_set": sorted(ban_at_line)},
+        "overshoot": {"landed_over": landed, "total": t, "hits": f,
+                      "pct": round(f / float(t) * 100, 2)},
+        "meet_dilute": {"meet_rings": per.get("meet", {}).get("total", 0),
+                        "family_of_meet": family_of("与 C-00000 相遇：示例句")},
+        "epochs": epochs_of(d),
+        "epoch_mix": epoch_mix_state(epochs_of(d)),
+    }
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description="年轮开头骨架族配额闸（确定性·零 LLM）")
     ap.add_argument("--scan", action="store_true", help="按生产日打印各族占比表")
@@ -720,9 +766,32 @@ def main(argv=None):
     ap.add_argument("--selftest", action="store_true", help="负控/正控探针")
     ap.add_argument("--shapes", action="store_true",
                     help="打印某日未归族年轮的形状榜（立族前先看长尾有无单一高频形状）")
+    ap.add_argument("--paths", action="store_true",
+                    help="族闸可越线路径读数（T-20261113-03 复现面·只读）")
     ap.add_argument("--top", type=int, default=20, help="--shapes 输出前 N 个形状")
     ap.add_argument("--width", type=int, default=4, help="--shapes 形状前缀宽度（字）")
     args = ap.parse_args(argv)
+
+    if args.paths:
+        rep = paths_report(args.day or None)
+        s, o, m = rep["strict_gt"], rep["overshoot"], rep["meet_dilute"]
+        ok = (not s["ban_set"]) and o["landed_over"] == 1
+        if args.json:
+            rep["selfcheck"] = "PASS" if ok else "FAIL"
+            print(json.dumps(rep, ensure_ascii=False, indent=1))
+            return 0 if ok else 1
+        print("date=%s quota=%.0f%% table_epoch=%s"
+              % (rep["day"], rep["quota"] * 100, rep["table_epoch"]))
+        print("  1) 线上取值 %d/%d=%.2f%%  ban_set=%s  (严格 > 不触发)"
+              % (s["hits"], s["total"], s["pct"], s["ban_set"] or "empty"))
+        print("  2) 贴线后放行 %d 条 → %d/%d=%.2f%%  (批内台账即禁·上界=1 条/族/日)"
+              % (o["landed_over"], o["hits"], o["total"], o["pct"]))
+        print("  3) 相遇环 %d 条 family_of=%s  (行首非骨架位→只入分母不入族计数)"
+              % (m["meet_rings"], m["family_of_meet"]))
+        print("  4) 族表当日登记 %d 版 %s  混口径=%s"
+              % (len(rep["epochs"]), ",".join(rep["epochs"]) or "-", rep["epoch_mix"]))
+        print("selfcheck: %s" % ("PASS" if ok else "FAIL"))
+        return 0 if ok else 1
 
     if args.shapes:
         day = args.day or datetime.date.today().isoformat()
