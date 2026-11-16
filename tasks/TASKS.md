@@ -3871,3 +3871,11 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - 诚实边界：本节只搬运禁牌读数，不改任何阈值/窗口；「干净窗口」是实弹前置条件说明，不等于补丁有效——补丁留撤仍待 19:00 实弹。
 - **CEO 可见三行**：当前活＝把 19:00 实弹的环境读数搬到页面（17:0x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-refusals.html`（新增禁牌到期栏·12 条·17:10→20:45）｜下个里程碑=19:00 让路窗解 → 年轮批 3 + 事件闸 → `ring_quota_negctl.py` 实弹 A/B（干净窗口 17:10 前或 20:45 后 · ETA 2026-11-16 21:00）。
 - 计量：tokens: local=0 api=0 api_reason=workday-yield-window
+
+## R3241 2026-11-16 17:0x @BigLife-OSLoop 常设维护单 T-20260924-08 兑现：对外状态面续鲜 + 两处失真修正
+- 起于：查任务板 open 卡时核实常设维护义务。`export_ts=2026-11-16 15:22` 未超 24h 闸，但内容有两处失真：①`outs[0]` 户籍库仍写「10036 卡」（实则 10114，QC 16:41 实巡）；②`depts[0]` 年轮线窗口停在 R3232，未反映 R3239/R3240 两件新产出。
+- **产品增量（能看·2 分·CEO 面板直接读到）**：`docs/status-export.json` 刷新——`export_ts=2026-11-16 17:09`；年轮线滚动窗前插 R3241 条（保持 3 条窗）；QC 线前插 R3241 例巡条；`top_text` 三行重写（当前活/最近实物/下个里程碑）；`depts_map` 更新基因库（gen6 habits=163）、语言线（SELF_TERMINATE）、行为面（今日 334 行/330 居民）、城脑（反思尾行 11-16）；`outs[0]` 卡数 10036→**10114**（并去掉已无法与实库对齐的历史分批加总，改指 `census/INDEX.md` 与 git 台账）。
+- 机制用法：走既有 `Tools/update_status_export.py --payload state/export-payload-R3241.json`（声明式落盘，规避 CLI CJK 引号坑）；`--dry-run` 先验 `total=334 reg=334 anc=0 dept=True qc=True top=True`，`expect_total=334` 账平通过后真跑 `OK`。
+- 核验：`dept0 entries=3`（窗口律）·`**R3241（` 在首 ·QC 标记在位 ·`top_text` 三行前缀齐 ·`depts_map` 四线各自成文 ·`outs[0]=10114 卡` 与 QC 实巡同数 ·全文裸 `%s` 类占位符扫描 = 0（TEXT_PLACEHOLDER_GUARD 口径）。
+- 诚实边界：`results` 段本轮 `results=False`（尾行今日计数已是最新机器直数，按幂等律跳过，非遗漏）；`outs[0]` 为手工维护字段，仓内无工具派生（本次已改为指向可核验来源，防再漂）。
+- 计量：tokens: local=0 api=0 api_reason=workday-yield-window
