@@ -4358,3 +4358,10 @@ ound_daily --run **stale=13 ran=14 failed=0 PASS**（重建 goals/gene_ledger/gr
   - **诚实边界**：T-20261116-13（配额闸 A/B 实弹）**本轮未跑**——本轮年轮批先吃满 due，与「先本单再年轮批」顺序硬性冲突；**下一轮起改为首件跑 ing_quota_negctl.py\ 再跑年轮**，若 due 不足 8 席按 5 席诚实写、禁抬 \--batch\。T-20261116-16 观察窗 D2/3（D3=11-18 读结案），本轮不宣称全过。T-20261116-18 \written\ 口径本轮读数 written_new=10/written_same=0 与 HEAD stat 一致。
   - commit=\889c9c82d\（30 files, +437/-136）push ok（02d5a0c14..889c9c82d）。
   - 计量：**tokens: local=10 api=0 api_reason=-**（10 席年轮各 1 次本地 LLM；基因/日更/事件闸/QC/池审计全确定性）。
+
+- [2026-11-17 05:18-05:26 @BigLife-OSLoop R3309] 本轮实录：轮首 pull=Already up to date／工作树净／决策水位差 NEW=0（watermark 已至 D-20261117-05）／orders 物理件区无涉本司新件。
+  - **产品面（实物·2 分）**：①年轮 `--batch 3` 实跑 **evolved=8 of 10 due（written=8 written_new=8 skipped=0，闸拦 2 席 deferred +1d）**——C-00999/01000/01008/01025/01003/01004/01005/01006 各落 2026-11-17 一圈（C-01002 opening-family-quota、C-01001 citywide-refusal-ban）；②`events_refresh --gate` **PASS**（events=45997 cards=10111 shards=3 mismatch=0 schema_errors=0 chronicle gap=0d）；③`round_daily --run` **PASS**（stale=13 ran=14 failed=0）；④`persona_generations --check` **rc=0**（gen8 habits=170 max_cid=C-10120 pending_sync=none）。
+  - **质检面**：`pool_audit` **PASS / SELF_TERMINATE**（under_target NONE；determinism 192 对 mismatch=0，greet 25 对 0）。
+  - **重叠实证（如实）**：本轮与另一 OSLoop 实例重叠——05:20 提交 `a8ef7bdc2` 已先收录同批 8 席年轮（R3308 轮记亦记「轮次重叠实证」）；本轮仅收口剩余 25 面 → commit `f49d5ff63` push ok（9f72c761c..f49d5ff63）。round.lock 单实例约束在本机多窗场景失效，留观察，不擅自改锁机制。
+  - **缺陷留档**：本窗 `git commit -m` 经 PowerShell 传参出现 UTF-8 乱码，`f49d5ff63` 标题不可读；后续提交改走文件式消息（`-F`）。不 force-push 修正（避免与他窗竞争 main）。
+  - 计量：**tokens: local=10 api=0 api_reason=-**（8 席年轮 + 2 席被闸样本各 1 次本地 LLM；日更/事件闸/池审计/世代检查全确定性）。
