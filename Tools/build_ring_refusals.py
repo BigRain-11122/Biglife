@@ -10,7 +10,9 @@ append-only）产出 census/export/city-ring-refusals.html + city-ring-refusals.
   4) 逐日 / 逐小时产出（看得见闸是白天紧还是夜里紧）
   5) 跨席传染面（R3204）：同日同一开口12 被**不同居民**重复撞上的次数——
      单席重试已被 R3115 顺延修复收口，剩下的病是 4B 把同一句开头传染给多个席位
-  6) 最近 20 条拒稿原文（人读面）
+  6) 滚动窗吸引子基线（R3208）：24h/12h 的 rows/openings/multi/waste_ratio/top10,
+     口径直接复用 Tools/ring_refusal_attractors.measure（同一函数，勿在本面另算）
+  7) 最近 20 条拒稿原文（人读面）
 
 为什么单开这一面：拒稿台账自 2026-11-15 接线后只有 jsonl，没有任何可见面；
 T-20261115-04「年轮同质化」的换靶步（族配额 vs 精确去重谁是真实拒稿源）
@@ -28,8 +30,18 @@ import datetime
 import html
 import json
 import os
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# R3208: 滚动窗口径只允许有一处实现——直接复用吸引子工具的函数，
+# 免得本面与 19:00 负控 CLI 读数各算一套、比对时口径对不上。
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+try:
+    from ring_refusal_attractors import measure as attract_measure
+except Exception:  # 工具被改名/删除时本面仍要能出（只是少一节）
+    attract_measure = None
+
 EXP = os.path.join(ROOT, "census", "export")
 SRC = os.path.join(ROOT, "state", "ring-refusals.jsonl")
 OUT_HTML = os.path.join(EXP, "city-ring-refusals.html")
@@ -162,8 +174,9 @@ def main():
 
     parts = []
     a = parts.append
-    a("<!doctype html><html lang=zh-CN><meta charset=utf-8>")
-    a("<title>年轮拒稿归因</title><style>%s</style>" % CSS)
+    a("<!doctype html><html lang=zh-CN><head><meta charset=utf-8>")
+    a("<meta name=viewport content='width=device-width,initial-scale=1'>")
+    a("<title>年轮拒稿归因</title><style>%s</style></head><body>" % CSS)
     a("<h1>年轮拒稿归因</h1>")
     a('<div class="sub">数据源 state/ring-refusals.jsonl（append-only·只记被拒席）·'
       '生成 %s·零 LLM 确定性面</div>' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
@@ -296,6 +309,64 @@ def main():
                   % (_d, _v["rows"], _v["distinct_openings"],
                      _v["repeated_openings"], _v["extra_occurrences"]))
 
+        # 滚动窗基线（R3208·R3207 工具的可见面收口）
+        # 为什么要有这一节：19:00 配额闸负控要拿「闸前 12h 基线」与「闸后 12h 复测」
+        # 同口径对比，而该读数此前只活在 CLI 输出里——CEO 与夜轮都看不见，
+        # 每次复算都得有人跑命令（同 D-20261116-12「读数只活在命令行」判例）。
+        rolling = []
+        if attract_measure is not None:
+            _now = datetime.datetime.now()
+            for _h in (24, 12):
+                try:
+                    rolling.append(attract_measure(rows, _h, _now))
+                except Exception:
+                    continue
+        a("<h2>滚动窗吸引子基线（19:00 配额闸负控的同口径读数）</h2>")
+        a('<div class="sub">口径＝Tools/ring_refusal_attractors.measure（同一函数，'
+          '与 CLI <span class=mono>--json</span> 读数逐值一致）。判读：'
+          '<b>multi_openings</b>＝窗口内出现 ≥2 次的开口数，'
+          '<b>cross_cid</b>＝其中被不同居民各撞过的开口数，'
+          '<b>waste</b>＝多烧的 LLM 调用条数占窗口拒稿总数的比例。</div>')
+        if rolling:
+            a("<table><tr><th>窗口</th><th>拒稿</th><th>不同开口</th><th>重复开口</th>"
+              "<th>跨席开口</th><th>多烧条数</th><th>多烧占比</th><th></th></tr>")
+            _rmax = max((r["wasted_calls"] for r in rolling), default=1) or 1
+            for _m in rolling:
+                a("<tr><td class=mono>%gh</td><td>%d</td><td>%d</td><td>%d</td>"
+                  "<td>%d</td><td class=warm>%d</td><td>%s%.0f%%</td><td>%s</td></tr>"
+                  % (_m["window_hours"], _m["rows"], _m["openings"],
+                     _m["multi_openings"], _m["cross_cid_openings"],
+                     _m["wasted_calls"],
+                     "class=hot " if _m["waste_ratio"] >= 0.3 else "",
+                     100.0 * _m["waste_ratio"],
+                     bars(_m["wasted_calls"], _rmax)))
+            a("</table>")
+            _m24 = next((r for r in rolling if r["window_hours"] == 24.0), rolling[0])
+            a("<h2>滚动窗 24h 头部吸引子（各窗口 top10 见 json）</h2>")
+            if _m24["top"]:
+                a("<table><tr><th>开口前 12 字</th><th>被拒次数</th><th>涉及居民</th>"
+                  "<th>居民头</th><th></th></tr>")
+                for _t in _m24["top"]:
+                    a("<tr><td>%s</td><td class=hot>%d</td><td>%d</td><td class=mono>%s</td>"
+                      "<td>%s</td></tr>"
+                      % (html.escape(_t["opening12"]),
+                         _t["calls"], _t["cids"],
+                         html.escape("/".join(_t["cid_head"])),
+                         bars(_t["calls"], _m24["top"][0]["calls"])))
+                a("</table>")
+            else:
+                a('<div class="empty">24h 窗口内无重复开口——吸引子面当前为空。</div>')
+            _w12 = next((r for r in rolling if r["window_hours"] == 12.0), None)
+            if _w12 is not None:
+                a('<div class="empty">负控用读数（12h）：rows=%d waste=%d 条=%.0f%%，'
+                  'multi=%d，cross_cid=%d。闸后再跑同一窗口即为可比复测。</div>'
+                  % (_w12["rows"], _w12["wasted_calls"],
+                     100.0 * _w12["waste_ratio"], _w12["multi_openings"],
+                     _w12["cross_cid_openings"]))
+        else:
+            a('<div class="empty">吸引子工具不可用（Tools/ring_refusal_attractors.py）'
+              '——本节跳过，其余各节不受影响。</div>')
+
         # 最近
         a("<h2>最近 %d 条拒稿原文</h2>" % RECENT)
         a("<table><tr><th>时间</th><th>居民</th><th>闸</th><th>族</th><th>开口</th></tr>")
@@ -304,7 +375,7 @@ def main():
               "<td>%s</td><td>%s</td></tr>")
         a("</table>")
 
-    a("</html>")
+    a("</body></html>")
 
     # 最近行单独重写（避免格式化串串味）
     if rows:
@@ -341,6 +412,7 @@ def main():
         "by_day": dict(sorted(by_day.items())),
         "retry_livelock": livelock,
         "cross_resident_spread": spread,
+        "rolling_windows": rolling,
     }
     with open(OUT_JSON, "w", encoding="utf-8") as f:
         json.dump(summary, f, ensure_ascii=False, indent=1)
