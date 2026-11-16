@@ -4296,3 +4296,17 @@ eflect_citizen 未跑（census/reflections.jsonl 尾部已有 date=2026-11-17 �
   **收口**：commit ea28b542e（33 files / +312 −227，含 census/export 24 面 + qa/EVENTS-REPLAY-REPORT.md），已 push origin main（4de4a5c3c..ea28b542e）；提交信息改用 git commit -F + UTF-8 临时文件（T-20261117-01 修法固化为本轮实践，控制台乱码仅为回显层）。
   **CEO 可见三行**：当前活＝年轮 9 环落环＋24 面重建＋事件流全量重放收口（03:39-03:50）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\（24 面重建，2026-11-17 03:49）＋C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md（mismatch=0 PASS）｜下个里程碑＝11-18 首轮 T-20261116-16 观察窗 D3 读结单；当晚 19:00 窗 T-20261116-13 A/B 实弹。
   计量：tokens: local=10 api=0 api_reason=-（年轮 10 席各一次本地 Ollama；事件闸／日更面／池审核／世代检查全确定性零 LLM）
+
+- [2026-11-17 03:5x @BigLife-OSLoop R3290] **本轮实录（顺序自省：R3280 要求「先 negctl 再年轮批」再次被打破，已当轮补跑）**：
+  ①轮首：`git pull --ff-only` = Already up to date；树净；决策水位已至 **D-20261117-05**（差集 NEW=0，11-17 五条全部已消费：D-04 是我司依赖解除销账 executed、D-01/02/03/05 属他家或无操作）；orders 无涉本司新件。
+  ②产品面：年轮 `--batch 3` 实跑 **written=9 skipped=1**（C-00902 双闸 persistent〔tech-word+recent-dup-phrase〕按契约 deferred +1d；C-00898/00899/00903/00909/00929/00900/00901/00904/00905 全部落环）＋行为线镜像 rows=9（脚本自动 commit b1c565364 / f1f03044c）。
+  ③事件闸 `events_refresh --gate` **PASS**：derived=10111 reserved=3 exported=10114 unexpected_missing=0；events=**45912** cards=10111 replayed=10111 schema_errors=0 **mismatch=0**；chronicle gap=0d。
+  ④日更面 `round_daily --run` **PASS**：stale=13 ran=14 failed=0（voices/coverage/ops/objects/goals/gene_ledger/growth/meets/ring_recency/reflections/meet_candidates/index 等重建）。
+  ⑤世代池 `persona_generations --check` **rc=0**：gen=7 habits=169 cutoff C-10120 pending_sync=none（无需 sync）。
+  ⑥语言线 `pool_audit` **PASS SELF_TERMINATE**：轴 72/72、像素灵 12/12、greet 28、faq 7、负例 6/6、hard_fails=0、双抽 192+25 对 mismatch=0 → 零动作。
+  ⑦相遇轮：`--meet C-00720 C-00777` 返回 **meet-cap：今日已 3 场（cap 3）** 自动跳过（候选池 60 对在位）。
+  ⑧反思线：非 19:00 后窗口，且 reflections.jsonl 尾部已有 2026-11-17 两行（日配额已用）→ 零动作。
+  ⑨HQ 反馈闸 `hq_feedback_daily --check` = **ALREADY_REPORTED**（day=2026-11-17 lines=1）零写入。
+- [2026-11-17 03:5x @BigLife-OSLoop R3290] **配额闸负控补跑（T-20261116-16 观察单·honest 读数）**：`ring_quota_negctl.py --batch 8` 实跑，due 预算收口 **每臂 5 席**，禁牌快照冻结 34 条两臂共用。机器判定四检全 ok → `verdict: PASS`（命中率 1/5=20% ≤ 30%；wasted=0 max_repeats=1 未升高；闸代码常驻树内、工作树零写入、补丁态还原=applied）。**但实弹面是退化读数**：两臂 **written=0 done=0**（A 臂关闸亦零落环）→ 本次 A/B **不可比**，不能据此判定闸的有效性。原因面（未及本轮深挖）：沙箱把 due 席拉进冻结禁牌上下文后，5 席均被既有内容闸（recent-dup-phrase 等）拦下，两臂同归于零。**处置**：按 gate-rigor 不据此改阈值/开关；T-20261116-16 维持 open，下一步＝给负控工装加「内容闸豁免/预筛」使两臂至少各产 ≥3 环可比（或改用「同 opening12 复现次数」为唯一判据、不依赖落环数）；证据=`qa/RING-QUOTA-NEGCTL-20261117.md`。
+  计量：**tokens: local=20 api=0 api_reason=-**（年轮 10 席 + 负控两臂 10 席，各一次本地 Ollama qwen3:4b-instruct；事件闸/日更面/池审计/世代检查/HQ 闸全确定性零 LLM）。
+  **CEO 可见三行**：当前活＝年轮 9 环落环 + 14 个可见面重建 + 事件流 45912 条全量重放（03:49-03:52）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-growth.html（当日 9 位居民新年轮，2026-11-17 03:51）及 qa\RING-QUOTA-NEGCTL-20261117.md（负控报告）｜下个里程碑＝11-18 首轮 T-20261116-16 观察窗 D3 读结；负控工装内容闸豁免修法下轮排。
