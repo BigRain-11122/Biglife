@@ -24,7 +24,7 @@
   - status: **open**（2026-11-16 17:1x R3242 @BigLife-OSLoop 立·前置条件=本地时间 ≥19:00）
   - **命令**：`python -X utf8 Tools/ring_quota_negctl.py`（每臂席位由 due 自动收敛；勿加 `--batch` 强行抬高）
   - **顺序硬性**：**先跑本单，再跑年轮批**。先跑常规年轮批 3 席会把 due 从 10 吃到 7，A/B 收敛成每臂 3 席（样本更小）；反过来拿满每臂 5 席。
-  - **跑前自检**：`--dry-run` 应打印 `due budget:` 与 `ban state:` 两行。若 `due budget` 报「席位预算不足」→ 不跑，记一行顺延次日并保持补丁待决；若两臂之间判 `CONFOUNDED` → 读数作废，重跑（勿据此留撤）。
+  - **跑前自检**：先 `python -X utf8 Tools/ring_quota_negctl.py --selftest`（零 LLM·零盘污，13 检项应全 ok），再 `--dry-run` 应打印 `due budget:` 与 `ban state:` 两行。若 `due budget` 报「席位预算不足」→ 不跑，记一行顺延次日并保持补丁待决；若两臂之间判 `CONFOUNDED` → 读数作废，重跑（勿据此留撤）。
   - **判据**：`rc=0`=PASS（补丁随轮 commit 留存）；`rc=1`=FAIL（脚本已自动 `git apply -R`，记 FAIL 结壳并写清哪条硬线破）；`rc=2`=环境不足/补丁不可打（不裁决，留 pending）；`rc=3`=让路窗未解（≥19:00 不应出现，出现即查机器时间）。
   - **验收**：`qa/RING-QUOTA-NEGCTL-20261116.md` 自动落盘且含「禁牌态」与「每臂席位」两行；轮记写清 verdict＋实际席位数；若 PASS，补丁进 commit 并在补丁文件头注「实弹 PASS <日期>」。
   - **回退口不变**：落环数 B<A／命中率 >30%／wasted 或 max_repeats 高于 A 前读数，任一破即撤。
@@ -3895,4 +3895,13 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - **产品增量（能跑·2 分）**：`Tools/ring_quota_negctl.py` 新增 `plan_batch()` 纯函数 + `due_count()`（零 LLM 读 `--audit-due`）——每臂席位收敛为 `min(请求, due//2)`，`due//2<2` 直接拒跑；两臂/判据/报告统一用收敛值，dry-run 增 `due budget:` 一行。负控五例（10→5／16→8／4→2／3→拒跑／不可读→沿用+风险注）全 PASS，`py_compile` rc=0，端到端 dry-run 实测「due=10 → 每臂 5 席」。证据=`qa/RING-QUOTA-NEGCTL-BUDGET-20261116.md`
 - **由此确定 19:00 执行顺序（会改变样本量）**：**先跑 A/B，再跑年轮批**——先跑常规批 3 席则 due 10→7、A/B 只剩每臂 3 席；反过来拿满每臂 5 席。当日上限＝每臂 5 席（due 决定，非参数选择）。
 - 诚实边界：本闸只消除「席位不足」这一类假 FAIL，written/命中率/wasted 三条硬线未改；小样本（每臂 5）统计强度有限，报告按实际席位数写、不冒充 8 席结论；实弹仍待 19:00（让路窗）。
+- 计量：tokens: local=0 api=0 api_reason=workday-yield-window
+
+## R3243 2026-11-16 17:2x @BigLife-OSLoop 让路窗内·负控台三道闸做成常驻回归电池（`--selftest`）
+- 动机：今晚实弹的唯一交付物是自动生成的 `qa/RING-QUOTA-NEGCTL-20261116.md`。此前三道闸（席位预算／禁牌混淆／报告落地）的验证都靠我手写一次性临时脚本，跑完即删——报告若写坏、或判据回归，没人能低成本复检。同仓 `round_daily --values`、`ring_open_family --selftest` 的既有做法：闸要自带电池。
+- **产品增量（能跑·2 分）**：`Tools/ring_quota_negctl.py` 新增 `--selftest`，13 检项零 LLM、零盘污：①席位预算五例（10→5/16→8/4→2/3→拒跑/不可读→沿用）；②禁牌混淆四例（同态→PASS/到期→CONFOUNDED/携带→PASS/快照缺失→不误拦）；③报告落地四例（临时目录内生成，断言含「禁牌态」行、「每臂席位：N」、「verdict:」、回退口段）。
+- 隔离证明：电池把模块常量 `QA` 指向 `tempfile.mkdtemp()`，跑完 `shutil.rmtree`；实跑后 `git status` 仅工具一件改动，`qa/` 下无任何 `RING-QUOTA-NEGCTL*` 产物残留——即电池不会替今晚的实弹出假报告。
+- 实跑读数：`selftest: PASS (0 fail)` rc=0；`py_compile` rc=0。
+- 接线：T-20261116-13 执行单的「跑前自检」改为先 `--selftest`（13 检全 ok）再 `--dry-run`（`due budget:` + `ban state:` 两行），19:00 执行时一条命令即可确认闸未回归。
+- 诚实边界：电池只验判据与报告生成路径，**不验真实 LLM 两臂行为**（让路窗内禁跑）；「report 已关闭」一项只做冒烟（查回退口段在位），非结构校验。
 - 计量：tokens: local=0 api=0 api_reason=workday-yield-window

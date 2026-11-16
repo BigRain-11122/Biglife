@@ -27,11 +27,14 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import io
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
+import tempfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PATCH = os.path.join(ROOT, "state", "pending", "R3204-quota-gate.patch")
@@ -274,7 +277,12 @@ def main():
     ap = argparse.ArgumentParser(description="12h 全城开口配额闸实弹负控")
     ap.add_argument("--batch", type=int, default=8, help="每臂席位数（默认 8）")
     ap.add_argument("--dry-run", action="store_true", help="只体检：补丁可打性 + 当日基线")
+    ap.add_argument("--selftest", action="store_true",
+                    help="三道闸回归电池（席位预算/禁牌混淆/报告落地·零 LLM·零盘污）")
     args = ap.parse_args()
+
+    if args.selftest:
+        return _selftest()
 
     day = datetime.date.today().strftime("%Y-%m-%d")
     base = refusal_metrics(day)
@@ -362,6 +370,58 @@ def main():
 def verdict_is_fail(scope):
     """finally 里判是否要撤补丁（verdict 尚未算出=按失败撤，宁撤不留）。"""
     return scope.get("verdict", "FAIL") != "PASS"
+
+
+def _selftest():
+    """三道闸的回归电池（零 LLM·零盘污）：席位预算、禁牌混淆、报告落地。"""
+    global QA
+    fails = []
+
+    def chk(name, cond):
+        print(("ok   " if cond else "FAIL ") + name)
+        if not cond:
+            fails.append(name)
+
+    # 1) 席位预算（due 按尝试消耗 → 每臂不得超 due//2）
+    chk("plan due=10 want=8 -> 5", plan_batch(10, 8)[0] == 5)
+    chk("plan due=16 want=8 -> 8", plan_batch(16, 8)[0] == 8)
+    chk("plan due=4  want=8 -> 2", plan_batch(4, 8)[0] == 2)
+    chk("plan due=3  want=8 -> None", plan_batch(3, 8)[0] is None)
+    chk("plan due=None -> 沿用请求", plan_batch(None, 8)[0] == 8)
+
+    # 2) 禁牌混淆闸
+    a = {"label": "A", "written": 8, "done": 8, "ban_hits": 0, "summary": "s"}
+    b = {"label": "B", "written": 8, "done": 8, "ban_hits": 1, "summary": "s"}
+    base = {"rows": 0, "distinct_cid": 0, "wasted_calls": 0, "max_repeats": 1}
+    same = {"n": 2, "keys": ["a", "b"], "exp_min": "2026-11-16 19:34"}
+    expired = {"n": 1, "keys": ["a"], "exp_min": "2026-11-16 20:45"}
+    carry = {"n": 3, "keys": ["a", "b", "c"], "exp_min": "2026-11-16 19:34"}
+    chk("judge 同态 -> PASS", judge(a, b, base, base, 8, same, same)[0] == "PASS")
+    chk("judge 禁牌到期 -> CONFOUNDED",
+        judge(a, b, base, base, 8, same, expired)[0] == "CONFOUNDED")
+    chk("judge 携带效应 -> PASS",
+        judge(a, b, base, base, 8, same, carry)[0] == "PASS")
+    chk("judge 快照不可用 -> 不误拦",
+        judge(a, b, base, base, 8, None, None)[0] == "PASS")
+
+    # 3) 报告落地（写临时目录，绝不触碰真 qa/）
+    old_qa = QA
+    tmp = tempfile.mkdtemp(prefix="negctl-selftest-")
+    try:
+        QA = tmp
+        p = write_report("2026-11-16", 5, a, b, "PASS", ["ok 假线"], True, same, same)
+        body = io.open(p, encoding="utf-8").read()
+        chk("report 含禁牌态行", "禁牌态" in body)
+        chk("report 含每臂席位 5", "每臂席位：5" in body)
+        chk("report 含 verdict", "verdict: PASS" in body)
+        chk("report 已关闭", body.rstrip().endswith("|---|---|---|")
+            or "回退口" in body)
+    finally:
+        QA = old_qa
+        shutil.rmtree(tmp, ignore_errors=True)
+
+    print("selftest: %s (%d fail)" % ("PASS" if not fails else "FAIL", len(fails)))
+    return 0 if not fails else 1
 
 
 if __name__ == "__main__":
