@@ -42,6 +42,7 @@
   - status: **open**（2026-11-16 19:0x R3252 @BigLife-OSLoop 立·来源=qa/MEET-INVARIANT-20261116.md）
   - 出生地=写侧；检测侧已由 T-20261116-15 接进 qc_census.py（闸后新增违律计 problems）。
   - 验收：构造「第二卡写失败」场景下单向不得留存；qc_census.py 的 meet_new_bad=0 持续 3 生产日；负控进 evolve_citizen --selftest 或独立一次性夹具。
+  - [2026-11-17 01:3x @BigLife-OSLoop R3277] **独立复核（不依赖 R3256 结论）**：函数级直调实测 `_meet_ring_today(find_card('C-04930'))`→`C-00783`（识别当日已相遇）／`_meet_pair_check(['C-00783','C-04930'])`→`[]`（对称不误杀）／`_meet_pair_check(['C-00783','C-00725'])`→`['C-00783->C-04930(want C-00725)', 'C-00725->None(want C-00783)']`（双向都报）。qc_census 今日读数 `cards=10114 meet=169 one_sided=1 meet_dup=2 meet_new_bad=0` ⇒ 观察窗 **D2/3 达成**（D1=11-16／D2=11-17／D3=11-18 读结案）。**更正**：本单缺的不是写侧缺口（L4007 查重／L4040-4049 快照回滚均在树），只剩观察窗第 3 日；11-18 轮若仍 `meet_new_bad=0` 即可结单。
 
   - [2026-11-16 20:2x @BigLife-OSLoop R3256] **负控子项 done（实读推翻本条部分前提）**：写侧拦截**早已在树**——`evolve_citizen` L4004-4012 写前查重 `_meet_ring_today`（命中即 return·发生在 prompt 构造与 `gated_llm` 之前·不烧 LLM）、L4001-4003 写前快照 `originals`、L4040-4049 写后 `_meet_pair_check` 不对称即按快照整文件回滚 + `sys.exit(1)`（零 commit）。故本单真实缺口只是**缺证明拦截会响的负控**：新增 `Tools/meet_negctl.py`（零 LLM·零网络·临时目录造卡 + 临时替换 `find_card` 后 finally 还原·未触碰仓内 cards）7 检全 PASS rc=0——C3 复现缺陷形态「A 指名 B／B 不指名 A」被 `_meet_pair_check` 判 1 条不对称（=回滚触发条件）、C4 反向证「双向齐全返回 [] 不误杀」、C7 静态证查重位在 LLM 调用之前。证据=`qa/MEET-NEGCTL-20261116.md`。**剩余子项**：`qc_census` `meet_new_bad=0` 连续 3 生产日观察窗（起算 11-16·到期 11-18 读结案），本轮不宣称全过。
 
