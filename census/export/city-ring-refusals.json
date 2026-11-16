@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16 10:36:30",
+ "generated_at": "2026-11-16 10:50:04",
  "total": 80,
  "today": 25,
  "days": [
@@ -181,5 +181,27 @@
  "by_day": {
   "2026-11-15": 55,
   "2026-11-16": 25
+ },
+ "retry_livelock": {
+  "2026-11-15": {
+   "rows": 55,
+   "distinct_citizens": 35,
+   "repeated_citizens": 5,
+   "max_repeats": 15,
+   "stuck_same_opening": [
+    "C-03117|这会儿手边最碍事的就是这 x15",
+    "C-03158|风把晾绳吹得斜出去，我正 x3",
+    "C-03193|风把塑料布吹得啪啦响，我 x3"
+   ],
+   "wasted_calls": 20
+  },
+  "2026-11-16": {
+   "rows": 25,
+   "distinct_citizens": 25,
+   "repeated_citizens": 0,
+   "max_repeats": 1,
+   "stuck_same_opening": [],
+   "wasted_calls": 0
+  }
  }
 }

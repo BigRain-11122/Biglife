@@ -97,6 +97,38 @@ def main():
     by_day = collections.Counter(day_of(r.get("ts")) for r in rows)
     by_hour = collections.Counter((r.get("ts") or "")[11:13] for r in rows)
 
+    # R3201 (2026-11-16): T-20261115-05 / R3115 的回归守卫面。
+    # R3200 用「11-15+11-16 两日 n=80」得出「精确去重占 84% 才是主因」——但 11-15
+    # 的 55 条里有 15 条来自同一居民 C-03117 同一句（16:59→18:54 每 ~10 分钟一次），
+    # 那是顺延修复上线**之前**的重写循环，不是全局分布问题；11-16 实读 25 条分属
+    # 25 位居民、零重复＝修复已生效。故此处按日分解重试结构：同一日同一 cid 被拒
+    # >1 次＝重试未被熔断；同日同 cid 同 opening12 >=3 次＝修复前的 livelock（每轮
+    # 白烧一次 LLM 调用）。只读统计，不改任何闸阈值/窗口/族表（T-20261115-04 约束）。
+    per_day_cid = {}
+    per_day_cidop = {}
+    for r in rows:
+        d = day_of(r.get("ts"))
+        if not d:
+            continue
+        per_day_cid.setdefault(d, collections.Counter())[r.get("cid") or ""] += 1
+        per_day_cidop.setdefault(d, collections.Counter())[
+            (r.get("cid") or "", (r.get("opening12") or "").strip())] += 1
+    livelock = {}
+    for d in sorted(per_day_cid):
+        cnt = per_day_cid[d]
+        rep = {k: v for k, v in cnt.items() if v > 1}
+        stuck = {k: v for k, v in per_day_cidop.get(d, {}).items() if v >= 3}
+        livelock[d] = {
+            "rows": sum(cnt.values()),
+            "distinct_citizens": len(cnt),
+            "repeated_citizens": len(rep),
+            "max_repeats": max(rep.values()) if rep else 1,
+            "stuck_same_opening": ["%s|%s x%d" % (k[0], k[1], v)
+                                   for k, v in sorted(stuck.items(),
+                                                      key=lambda x: -x[1])],
+            "wasted_calls": sum(v - 1 for v in rep.values()),
+        }
+
     parts = []
     a = parts.append
     a("<!doctype html><html lang=zh-CN><meta charset=utf-8>")
@@ -173,6 +205,39 @@ def main():
                   % (k, by_hour[k], bars(by_hour[k], max(by_hour.values()) if by_hour else 1)))
         a("</table>")
 
+        # 重试熔断面（R3115 回归守卫）
+        a("<h2>重试熔断面（R3115 拒稿顺延 +1d 是否生效）</h2>")
+        a('<div class="sub">判据：同一日同一居民被拒 &gt;1 次＝重试未被熔断；'
+          '同日同居民同开口 ≥3 次＝修复前的重写循环（每轮白烧一次 LLM 调用）。</div>')
+        a("<table><tr><th>日期</th><th>拒稿</th><th>涉及居民</th><th>重复居民</th>"
+          "<th>最大重试</th><th>白烧调用</th><th>判定</th></tr>")
+        for _d in sorted(livelock)[-14:]:
+            _v = livelock[_d]
+            if _v["repeated_citizens"] == 0:
+                _tag = "PASS·已熔断"
+            elif _v["max_repeats"] >= 3:
+                _tag = "FAIL·重写循环"
+            else:
+                _tag = "WARN·有重试"
+            a("<tr><td>%s</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td>"
+              "<td>%d</td><td>%s</td></tr>"
+              % (_d, _v["rows"], _v["distinct_citizens"], _v["repeated_citizens"],
+                 _v["max_repeats"], _v["wasted_calls"], _tag))
+        a("</table>")
+        if livelock:
+            _last = sorted(livelock)[-1]
+            if livelock[_last]["repeated_citizens"] == 0:
+                a('<div class="empty">最近一日 %s：%d 条拒稿分属 %d 位居民，零重复——'
+                  'R3115 顺延修复生效。</div>'
+                  % (_last, livelock[_last]["rows"],
+                     livelock[_last]["distinct_citizens"]))
+            else:
+                a('<div class="empty">最近一日 %s：%d 条拒稿中 %d 位居民被拒 >1 次'
+                  '（最大 %d 次）——检查顺延是否被绕过。</div>'
+                  % (_last, livelock[_last]["rows"],
+                     livelock[_last]["repeated_citizens"],
+                     livelock[_last]["max_repeats"]))
+
         # 最近
         a("<h2>最近 %d 条拒稿原文</h2>" % RECENT)
         a("<table><tr><th>时间</th><th>居民</th><th>闸</th><th>族</th><th>开口</th></tr>")
@@ -216,6 +281,7 @@ def main():
         "families": family.most_common(),
         "repeated_openings": [(k, v) for k, v in opening.most_common(20) if v > 1],
         "by_day": dict(sorted(by_day.items())),
+        "retry_livelock": livelock,
     }
     with open(OUT_JSON, "w", encoding="utf-8") as f:
         json.dump(summary, f, ensure_ascii=False, indent=1)
