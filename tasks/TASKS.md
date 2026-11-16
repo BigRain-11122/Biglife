@@ -1,5 +1,13 @@
 # BigLife 任务板（自领制·认领置 in-progress 署名+时间）
 
+## R3307 · 2026-11-17 04:57-05:2x @BigLife-OSLoop（产品轮·年轮 10/10＋相遇自检七例常驻）
+
+- 轮首：pull `Already up to date`／树净；决策水位涉本司仅 D-20261117-04（executed·提前 17.5h 核销），无新派工；orders 物理件区无涉本司新件。
+- **产品增量**：①年轮批 `evolve_citizen --batch 3` → **evolved=10 of 10 due（written=10 written_new=10 written_same=0 skipped=0）**，10 席各落新环（C-00976/00977/00979/00980/00982/00983/00984/00987/00988/01007），2 席走 `soft-concession recent-dup-phrase` 软让步落环；②`events_refresh --gate` **PASS**（events=45981 cards=10111 shards=3，replay 10111/10111 schema_errors=0 mismatch=0，coverage unexpected_missing=0，chronicle gap=0d）；③`round_daily --check` **stale=0 ran=0 failed=0 verdict=PASS**（28 面全鲜，无需重建）；④`persona_generations --check` **rc=0**（gen 8 · habits=170 · pending_sync=none）；⑤`pool_audit` **PASS SELF_TERMINATE**（72 轴桶+12 像素桶+greet 28+faq 7+负例 6/6，determinism 192+25 对 mismatch=0）；⑥相遇轮 `--meet C-00720 C-00777`（推荐榜首位「低语巷·回测田」双 fresh 年轮）→ `meet-cap: 3 meets already logged today` 自停；⑦`qc_census` **problems=0**（cards=10114 evolved=10114 dup_rings=37/37 dup_new=0 meet=169 one_sided=1 meet_dup=2 **meet_new_bad=0**）；⑧反思线当日配额已用（reflections 尾 date=2026-11-17），零动作。
+- **工程增量（T-20261116-16 遗留收口）**：第七例负控常驻化——写入段抽成 `_meet_write_all()`（异常即按 `originals` 复原并重抛，`main()` 改调它），`selftest_meet()` 增例 G（桩 `add_ring` 第二次抛异常 → 断言异常上抛＋双卡字节复原）。`py_compile` rc=0；`--selftest-meet` **PASS 7/7**；**负控**（换入「不还原」桩）→ `FAIL 1 case(s): G rollback left a partial write` rc=1，证明非恒绿。证据=`qa/MEET-SELFTEST-7TH-20261117.md`。观察窗 D2/3 维持（11-18 读 D3 结案）。
+- **实况三行**：当前活＝凌晨产品轮（年轮 10/10＋确定性面全绿＋相遇守卫七例常驻）｜最近实物＝`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/MEET-SELFTEST-7TH-20261117.md`（05:1x）＋`census/export/city-dashboard.html`（04:51 重建）｜下个里程碑＝11-18 读 T-20261116-16 观察窗 D3 结案；T-20261116-13 待 arm 输出落盘工装修复后于夜窗重跑。
+- tokens: local=10 api=0 api_reason=-（10 席年轮各 1 次本地 LLM；自检/QC/闸全确定性零 LLM）
+
 ## R3305 · 2026-11-17 04:33-04:5x @BigLife-OSLoop（凌晨产品轮·年轮批＋19 面重建＋配额闸第三次负控空转）
 
 - 轮首：pull `Already up to date`／树净；决策水位涉本司仅 D-20261117-04（上游依赖解除已核销 executed），无新派工；orders 物理件区无涉本司新件。
@@ -51,6 +59,7 @@
 - [ ] **T-20261116-16**（R3252 立·相遇面出生地拦截·中优先）在 Tools/evolve_citizen.py 的相遇写入路径加自校验：两卡同日互引必须都落成功（先写 A 再写 B 中途失败即留单向，实证 C-08226→C-08319 2026-10-27），否则回滚或补写；同日同对象重复（C-00010/C-00011 2026-10-11 各重复一行）写前查重。
   - status: **open**（2026-11-16 19:0x R3252 @BigLife-OSLoop 立·来源=qa/MEET-INVARIANT-20261116.md）
   - [2026-11-17 05:0x @BigLife-OSLoop R3306] **补上 R3291 六例之外的第七例：写入段异常绕过断言**（本单结单条件仍=11-18 读 D3，状态不动）。核对树内代码发现 R3291 的 `selftest_meet()` 六例全部走「`add_ring` 静默拒绝/写入偏差」路径，**无一例覆盖 `add_ring` 抛异常**：原写入循环 `for cid,line in zip(ids,lines): add_ring(...)` 无兜底，任一半抛异常则循环中断、异常上冒、下方 `_meet_pair_check(ids)` 根本不执行 → A 卡已写、B 未写、**单向落卡且不回滚**，恰是本单要消灭的形态（旧注释只考虑了「拒绝返回」与「写后不对称」两种，漏了「抛异常中断」）。修法=写入段整体 `try/except`，任一半失败即复原 `originals`＋`sys.exit(1)`＋不 commit，与既有 `meet-asymmetry` 分支同构收口。**负控 PASS 0 fail**（静态 3：分支存在且在不对称分支之前／回滚四要素齐备 `originals` 遍历·`newline="\n"`·`f.write`·`sys.exit(1)`／错误分支内无 `commit_files`；动态 3：A 成功+B 抛异常 → rc=1 且双卡字节级复原；临时夹具 rmtree 零盘污），`py_compile` rc=0。证据=`qa/MEET-ROLLBACK-NEGCTL-20261117.md`。真库 `qc_census` 实测 `meet=169 one_sided=1 meet_dup=2 meet_new_bad=0`＝闸后新增 0 维持（存量 3 处为 10-27 闸上线前历史，按既定裁决不修仅观测）。**建议下一轮把本例并入 `selftest_meet()` 常驻**（本轮预算已尽，未做，如实记）。
+  - [2026-11-17 05:1x @BigLife-OSLoop R3307] **R3306 遗留（并入常驻自检）已完成**：写入段抽成 `_meet_write_all()`，`main()` 与 `selftest_meet()` 共用同一路径；例 G（mid-write-exception）实跑 **PASS 7/7**，负控（换入不还原桩）**FAIL rc=1**，`py_compile` rc=0。证据=`qa/MEET-SELFTEST-7TH-20261117.md`。结单条件仍为 11-18 读 D3（`meet_new_bad=0` 第三日），状态不动。
   - 出生地=写侧；检测侧已由 T-20261116-15 接进 qc_census.py（闸后新增违律计 problems）。
   - 验收：构造「第二卡写失败」场景下单向不得留存；qc_census.py 的 meet_new_bad=0 持续 3 生产日；负控进 evolve_citizen --selftest 或独立一次性夹具。
   - [2026-11-17 01:3x @BigLife-OSLoop R3277] **独立复核（不依赖 R3256 结论）**：函数级直调实测 `_meet_ring_today(find_card('C-04930'))`→`C-00783`（识别当日已相遇）／`_meet_pair_check(['C-00783','C-04930'])`→`[]`（对称不误杀）／`_meet_pair_check(['C-00783','C-00725'])`→`['C-00783->C-04930(want C-00725)', 'C-00725->None(want C-00783)']`（双向都报）。qc_census 今日读数 `cards=10114 meet=169 one_sided=1 meet_dup=2 meet_new_bad=0` ⇒ 观察窗 **D2/3 达成**（D1=11-16／D2=11-17／D3=11-18 读结案）。**更正**：本单缺的不是写侧缺口（L4007 查重／L4040-4049 快照回滚均在树），只剩观察窗第 3 日；11-18 轮若仍 `meet_new_bad=0` 即可结单。

@@ -3525,6 +3525,34 @@ def _meet_pair_check(ids, finder=None):
     return bad
 
 
+def _meet_write_all(ids, lines, originals, anchor_note, finder=None):
+    """Write both meet rings; on any exception restore originals and re-raise.
+
+    T-20261116-16 (7th case): an exception thrown while writing the second card
+    used to escape the loop and bypass the bidirectional assertion below it,
+    leaving a one-sided ring on the first card. Folding the loop in here makes
+    this rollback the single write path, so selftest_meet() drives the real
+    code instead of a copy of it.
+    """
+    finder = finder or find_card
+    paths = []
+    try:
+        for cid, line in zip(ids, lines):
+            p = finder(cid)
+            other = ids[1] if cid == ids[0] else ids[0]
+            add_ring(p, cid, f"与 {other} 相遇：{line}", anchor_note)
+            paths.append(p)
+    except Exception:
+        for p, text in originals.items():
+            try:
+                with open(p, "w", encoding="utf-8", newline="\n") as f:
+                    f.write(text)
+            except Exception:
+                pass
+        raise
+    return paths
+
+
 def selftest_meet():
     """T-20261116-16: standing regression for the meet write-path guards.
 
@@ -3589,6 +3617,41 @@ def selftest_meet():
         with open(pa, encoding="utf-8") as f:
             if f.read() != before:
                 fails.append("F rollback did not restore bytes")
+        # G: an exception mid-write (second card) must restore both cards.
+        pg1 = card("C-00011", "- %s 「门槛上的灰被踩乱了」 [锚] selftest" % today())
+        pg2 = card("C-00012", "- %s 「我替他把扫帚靠在墙边」 [锚] selftest" % today())
+        g_originals = {}
+        for _p in (pg1, pg2):
+            with open(_p, encoding="utf-8") as f:
+                g_originals[_p] = f.read()
+        real_add_ring = globals()["add_ring"]
+        calls = {"n": 0}
+
+        def _boom_ring(path, cid, line, anchor_note):
+            calls["n"] += 1
+            if calls["n"] == 2:
+                raise RuntimeError("selftest: second write fails")
+            real_add_ring(path, cid, line, anchor_note)
+
+        try:
+            globals()["add_ring"] = _boom_ring
+            raised = False
+            try:
+                _meet_write_all(["C-00011", "C-00012"],
+                                ["门槛上的灰被踩乱了", "我替他把扫帚靠在墙边"],
+                                g_originals, "selftest",
+                                finder={"C-00011": pg1, "C-00012": pg2}.get)
+            except Exception:
+                raised = True
+            if not raised:
+                fails.append("G mid-write exception not propagated")
+            for _p, _want in g_originals.items():
+                with open(_p, encoding="utf-8") as f:
+                    if f.read() != _want:
+                        fails.append("G rollback left a partial write: %s"
+                                     % os.path.basename(_p))
+        finally:
+            globals()["add_ring"] = real_add_ring
     finally:
         shutil.rmtree(d, ignore_errors=True)
 
@@ -3597,8 +3660,9 @@ def selftest_meet():
             print("FAIL meet-selftest:", line)
         print("meet-selftest: FAIL %d case(s)" % len(fails))
         return 1
-    print("meet-selftest: PASS 6/6 (healthy / half-write / wrong-partner / "
-          "same-day-precheck / stale-ring / rollback-bytes)")
+    print("meet-selftest: PASS 7/7 (healthy / half-write / wrong-partner / "
+          "same-day-precheck / stale-ring / rollback-bytes / "
+          "mid-write-exception)")
     return 0
 
 
@@ -4117,23 +4181,13 @@ def main():
         lines = [l.strip() for l in resp.splitlines() if l.strip()][:2]
         while len(lines) < 2:
             lines.append("（那天的桥上风大，谁也没多说什么。）")
-        paths = []
         # T-20261116-16 出生地拦截补口：add_ring 抛异常时循环中断，异常会绕过
         # 下方 _meet_pair_check 的双向断言 → 已写的 A 卡留单向且不回滚。写入段
-        # 整体兜异常，任一半失败即复原 originals 并不 commit（与不对称分支同收口）。
+        # 收进 _meet_write_all（任一半失败即复原 originals 并抛出，不 commit），
+        # 该守卫同时由 selftest_meet() 的第七例常驻负控直接调用。
         try:
-            for cid, line in zip(ids, lines):
-                p = find_card(cid)
-                other = ids[1] if cid == ids[0] else ids[0]
-                add_ring(p, cid, f"与 {other} 相遇：{line}", anchor_note)
-                paths.append(p)
+            paths = _meet_write_all(ids, lines, originals, anchor_note)
         except Exception as _exc:
-            for p, text in originals.items():
-                try:
-                    with open(p, "w", encoding="utf-8", newline="\n") as f:
-                        f.write(text)
-                except Exception:
-                    pass
             print("meet-write-error: %r - rolled back, no commit" % (_exc,))
             sys.exit(1)
         # T-20261027-01: bidirectional assertion. add_ring() can still refuse a
