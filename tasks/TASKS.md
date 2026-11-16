@@ -37,6 +37,7 @@
   - **验收**：`qa/RING-QUOTA-NEGCTL-20261116.md` 自动落盘且含「禁牌态」与「每臂席位」两行；轮记写清 verdict＋实际席位数；若 PASS，补丁进 commit 并在补丁文件头注「实弹 PASS <日期>」。
   - **回退口不变**：落环数 B<A／命中率 >30%／wasted 或 max_repeats 高于 A 前读数，任一破即撤。
   - **诚实边界**：当日上限每臂 5 席（due=10 决定），结论按 5 席写、不冒充 8 席强度；R3208 的吸引子 sticky 升级（7 天）**不在本单**，须另立负控。
+  - [2026-11-16 23:2x @BigLife-OSLoop R3263] **本轮不跑（前置②不成立）**：年轮批已先吃 10 席，due 收至不足每臂 8 席；且 R3246 明载 20:45 后禁牌全到期必得 INCONCLUSIVE ⇒ 此刻跑只会产第三次无读数、白烧席位。维持 pending，顺延次日 19:00 窗（顺序不变：先本单、再年轮批）。本轮实录：轮首 pull=Already up to date／树净／决策水位 NEW=0（已至 D-20261116-17）／orders 无涉本司新件。产品面：年轮 **10/10**（written=10 skipped=0）／events gate **PASS**（45661 events cards=10111 mismatch=0 schema=0 gap=0d）／round_daily **PASS**（stale=14 ran=15）／gen rc=0 gen=7 habits=169／pool **SELF_TERMINATE**／qc problems=0 meet_new_bad=0（观察窗 D1）／reflect 日配额满／hq ALREADY_REPORTED 零写入。计量：**tokens: local=10 api=0 api_reason=-**。commit=405e308d1 push ok。
 - [ ] **T-20261116-16**（R3252 立·相遇面出生地拦截·中优先）在 Tools/evolve_citizen.py 的相遇写入路径加自校验：两卡同日互引必须都落成功（先写 A 再写 B 中途失败即留单向，实证 C-08226→C-08319 2026-10-27），否则回滚或补写；同日同对象重复（C-00010/C-00011 2026-10-11 各重复一行）写前查重。
   - status: **open**（2026-11-16 19:0x R3252 @BigLife-OSLoop 立·来源=qa/MEET-INVARIANT-20261116.md）
   - 出生地=写侧；检测侧已由 T-20261116-15 接进 qc_census.py（闸后新增违律计 problems）。
