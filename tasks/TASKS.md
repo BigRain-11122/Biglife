@@ -3860,3 +3860,14 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - **CEO 可见三行**：当前活＝19:00 实弹前把负控台的环境混淆堵住（16:5x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-QUOTA-NEGCTL-GUARD-20261116.md`（2026-11-16 16:5x，含五例负控与当日禁牌到期分布）｜下个里程碑=19:00 让路窗解 → 年轮批 3 落环 + `events_refresh --gate` → `ring_quota_negctl.py` 实弹 A/B（窗口 19:00-20:45，ETA 2026-11-16 21:00）。
 - 下轮预置：①19:00 后年轮批 3 + `sync_rings` + `events_refresh --gate`；②同窗跑 `ring_quota_negctl.py`（默认每臂 8 席）并按混淆闸读数决定补丁留撤；③落环后重跑 `build_ring_openings.py` + `build_export_index.py` 看 max 是否推过 OBSERVE 线 8；④T-20261115-04 观察窗 11-17 到期按读数结案。
 - 计量：tokens: local=0 api=0 api_reason=workday-yield-window
+
+## R3240 2026-11-16 17:0x @BigLife-OSLoop 让路窗内·禁牌到期表上拒绝面页（19:00 实弹的环境读数从终端搬到页面）
+- 起于：R3239 把禁牌态混淆闸加进负控台后，发现「当前哪些开口被禁、何时解禁」这组读数仍只活在 `ring_quota_negctl --dry-run` 的终端输出里——页面读者（含 CEO）无从判断某次 A/B 的窗口是否干净。同 D-20261116-12「读数只活在命令行」判例。
+- **产品增量（能看·2 分）**：`census/export/city-ring-refusals.html` 新增「当前生效开口禁牌与解禁时刻」栏——每条禁牌一行（开口前 12 字 / 最近被拒 / 解禁时刻 / 剩余），并给出干净实弹窗口（两臂全在最早解禁前跑完，或全在最晚解禁后跑）。`city-ring-refusals.json` 同步新增 `active_bans` 数组（同源同序·按解禁时刻升序）。
+- 单源律：口径直接调 `evolve_citizen.recent_refusal_bans()` 与 `REFUSAL_BAN_HOURS`，不复制窗口常数、不另算一套；负控注入仅开 `path=` 口，生产路径不变。
+- **实读（与 CLI 逐值一致）**：页面横幅 `共 12 条生效禁牌（窗口 12h）：最早 2026-11-16 17:10 解禁，最晚 2026-11-16 20:45 解禁`＝`ring_quota_negctl --dry-run` 的 `active=12 soonest=17:10 latest=20:45`，两面同值。
+- 负控三例：1h 前被拒→1 条且解禁时刻精确 =+12h；13h 前被拒→`[]`（已过期不入表）；台账文件缺失→`[]`（不抛异常）。另跑幂等：连跑两次 HTML 去时间戳后 md5 全等；JSON 唯一差异是吸引子工具的 `as_of` 秒级时间戳（既有字段，非本次引入）。
+- 闸：`round_daily --run` PASS（stale=1 ran=2 failed=0）；`round_daily --values` → **VALUES-PASS n=30**（新栏未破值域闸）。
+- 诚实边界：本节只搬运禁牌读数，不改任何阈值/窗口；「干净窗口」是实弹前置条件说明，不等于补丁有效——补丁留撤仍待 19:00 实弹。
+- **CEO 可见三行**：当前活＝把 19:00 实弹的环境读数搬到页面（17:0x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-refusals.html`（新增禁牌到期栏·12 条·17:10→20:45）｜下个里程碑=19:00 让路窗解 → 年轮批 3 + 事件闸 → `ring_quota_negctl.py` 实弹 A/B（干净窗口 17:10 前或 20:45 后 · ETA 2026-11-16 21:00）。
+- 计量：tokens: local=0 api=0 api_reason=workday-yield-window

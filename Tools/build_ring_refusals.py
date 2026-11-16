@@ -96,6 +96,30 @@ def bars(count, total, width=120):
     return '<span class="bar" style="width:%dpx"></span>' % w
 
 
+def current_bans(path=None):
+    """当前生效禁牌与解禁时刻（复用生成面同一函数与窗口常数，不另立口径）。
+
+    path 仅供负控注入临时台账；生产调用一律走默认（state/ring-refusals.jsonl）。
+    """
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import evolve_citizen as ev
+        hours = getattr(ev, "REFUSAL_BAN_HOURS", 12)
+        bans = ev.recent_refusal_bans(path=path) if path else ev.recent_refusal_bans()
+    except Exception:  # noqa: BLE001
+        return None
+    out = []
+    for op, ts in bans.items():
+        out.append({
+            "opening12": op,
+            "last_refused": ts.strftime("%Y-%m-%d %H:%M"),
+            "expires": (ts + datetime.timedelta(hours=hours)).strftime("%Y-%m-%d %H:%M"),
+            "ban_hours": hours,
+        })
+    out.sort(key=lambda x: x["expires"])
+    return out
+
+
 def main():
     rows = load()
     today = datetime.date.today().isoformat()
@@ -369,6 +393,44 @@ def main():
             a('<div class="empty">吸引子工具不可用（Tools/ring_refusal_attractors.py）'
               '——本节跳过，其余各节不受影响。</div>')
 
+        # 当前生效禁牌与解禁表（R3239·19:00 A/B 必须先看的环境读数）
+        # 为什么要有这一节：两臂若跨过某条禁牌的解禁时刻，量到的是「解禁」而不是补丁效果
+        #（R3208 实锤当日 12 条禁牌散在 17:10-20:45 陆续到期）。此前这组读数只活在
+        # ring_quota_negctl --dry-run 的终端输出里，页面读者无从判断某次实弹窗口是否干净。
+        ban_info = current_bans()
+        a("<h2>当前生效开口禁牌与解禁时刻</h2>")
+        a('<div class="sub">口径＝<span class=mono>evolve_citizen.recent_refusal_bans()</span>'
+          '（与生成面同一函数、同一窗口常数），即「此刻仍被禁用的开口」及其解禁时刻。'
+          '判读：A/B 实弹两臂必须连跑且不跨解禁点，否则两臂环境不同，读数判 '
+          '<span class=hot>CONFOUNDED</span>、不可用于裁决补丁留撤。</div>')
+        if ban_info:
+            _now2 = datetime.datetime.now()
+            a("<table><tr><th>开口前 12 字</th><th>最近被拒</th><th>解禁时刻</th>"
+              "<th>剩余</th></tr>")
+            for _b in ban_info:
+                try:
+                    _exp = datetime.datetime.strptime(_b["expires"], "%Y-%m-%d %H:%M")
+                    _secs = int((_exp - _now2).total_seconds())
+                    _left = ("%dh%02dm" % (_secs // 3600, (_secs % 3600) // 60)
+                             if _secs > 0 else "已到期")
+                except Exception:
+                    _left = "-"
+                a("<tr><td>%s</td><td class=mono>%s</td><td class=mono>%s</td>"
+                  "<td class=warm>%s</td></tr>"
+                  % (html.escape(_b["opening12"]), _b["last_refused"],
+                     _b["expires"], _left))
+            a("</table>")
+            a('<div class="empty">共 %d 条生效禁牌（窗口 %dh）：最早 %s 解禁，最晚 %s 解禁。'
+              '干净实弹窗口＝两臂全在 %s 之前跑完，或全在 %s 之后跑。</div>'
+              % (len(ban_info), ban_info[0]["ban_hours"], ban_info[0]["expires"],
+                 ban_info[-1]["expires"], ban_info[0]["expires"],
+                 ban_info[-1]["expires"]))
+        elif ban_info is not None:
+            a('<div class="empty">此刻无生效禁牌——实弹窗口不受禁牌到期干扰。</div>')
+        else:
+            a('<div class="empty">禁牌读数不可用（evolve_citizen 未接入）'
+              '——本节跳过，其余各节不受影响。</div>')
+
         # 按日曲线（R3213·T-20261115-04 观察窗 11-17 结案判据说）
         # 为什么要有这一节：结案要回答的是「waste% 在观察窗内是否在下降」，
         # 而单点窗口读数只能回答「此刻怎样」。此前要出曲线得人工逐日改 --as-of，
@@ -453,6 +515,7 @@ def main():
         "cross_resident_spread": spread,
         "rolling_windows": rolling,
         "daily_trend": daily,
+        "active_bans": ban_info or [],
     }
     with open(OUT_JSON, "w", encoding="utf-8") as f:
         json.dump(summary, f, ensure_ascii=False, indent=1)

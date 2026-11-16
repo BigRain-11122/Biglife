@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16 13:05:54",
+ "generated_at": "2026-11-16 17:05:12",
  "total": 80,
  "today": 25,
  "days": [
@@ -233,17 +233,17 @@
  "rolling_windows": [
   {
    "window_hours": 24,
-   "as_of": "2026-11-16 13:05:54",
-   "rows": 80,
+   "as_of": "2026-11-16 17:05:12",
+   "rows": 78,
    "openings": 36,
    "multi_openings": 6,
    "cross_cid_openings": 6,
-   "wasted_calls": 44,
-   "waste_ratio": 0.55,
+   "wasted_calls": 42,
+   "waste_ratio": 0.5385,
    "top": [
     {
      "opening12": "这会儿手边最碍事的就是这",
-     "calls": 24,
+     "calls": 22,
      "cids": 9,
      "cid_head": [
       "C-03117",
@@ -313,40 +313,37 @@
   },
   {
    "window_hours": 12,
-   "as_of": "2026-11-16 13:05:54",
-   "rows": 22,
-   "openings": 15,
+   "as_of": "2026-11-16 17:05:12",
+   "rows": 16,
+   "openings": 12,
    "multi_openings": 4,
    "cross_cid_openings": 4,
-   "wasted_calls": 7,
-   "waste_ratio": 0.3182,
+   "wasted_calls": 4,
+   "waste_ratio": 0.25,
    "top": [
     {
      "opening12": "这会儿手边最碍事的就是这",
-     "calls": 3,
-     "cids": 3,
+     "calls": 2,
+     "cids": 2,
      "cid_head": [
-      "C-03598",
       "C-03732",
       "C-03788"
      ]
     },
     {
      "opening12": "风把塑料布吹得啪啦响，我",
-     "calls": 3,
-     "cids": 3,
+     "calls": 2,
+     "cids": 2,
      "cid_head": [
-      "C-03595",
       "C-03695",
       "C-03790"
      ]
     },
     {
      "opening12": "风把雨棚掀得直响，我正把",
-     "calls": 3,
-     "cids": 3,
+     "calls": 2,
+     "cids": 2,
      "cid_head": [
-      "C-03642",
       "C-03689",
       "C-03781"
      ]
@@ -452,6 +449,80 @@
      ]
     }
    ]
+  }
+ ],
+ "active_bans": [
+  {
+   "opening12": "我把手头的灯串又捋了一遍",
+   "last_refused": "2026-11-16 05:10",
+   "expires": "2026-11-16 17:10",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "风撞在门板上咚一声，我正",
+   "last_refused": "2026-11-16 05:30",
+   "expires": "2026-11-16 17:30",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "手刚从搪瓷缸里抽出，绳子",
+   "last_refused": "2026-11-16 07:14",
+   "expires": "2026-11-16 19:14",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "风声盖过了人声，我正把旧",
+   "last_refused": "2026-11-16 07:15",
+   "expires": "2026-11-16 19:15",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "风把雨棚掀得直响，我正把",
+   "last_refused": "2026-11-16 07:25",
+   "expires": "2026-11-16 19:25",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "风把塑料布吹得啪啦响，我",
+   "last_refused": "2026-11-16 07:34",
+   "expires": "2026-11-16 19:34",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "这会儿手边最碍事的就是这",
+   "last_refused": "2026-11-16 07:34",
+   "expires": "2026-11-16 19:34",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "风撞在窗玻璃上闷响，我正",
+   "last_refused": "2026-11-16 07:44",
+   "expires": "2026-11-16 19:44",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "手正捻着铝饭盒盖的扣，钥",
+   "last_refused": "2026-11-16 07:54",
+   "expires": "2026-11-16 19:54",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正蹲在数据菜市门口，把",
+   "last_refused": "2026-11-16 08:14",
+   "expires": "2026-11-16 20:14",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正对着对面老王家的门板",
+   "last_refused": "2026-11-16 08:34",
+   "expires": "2026-11-16 20:34",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正把旧算盘扣按在渡轮船",
+   "last_refused": "2026-11-16 08:45",
+   "expires": "2026-11-16 20:45",
+   "ban_hours": 12
   }
  ]
 }
