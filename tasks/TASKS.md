@@ -3695,3 +3695,12 @@ ound_daily --run stale=12 ran=13 failed=0 verdict=PASS；pool_audit PASS SELF_TE
   **让路窗实况**：evolve_citizen --batch 3 返回 yield-window（workday 09:00-19:00 CEO lane-priority·D-20261020-02）→ 年轮/相遇/反思三条 LLM 线延后至 19:00 后，本轮零 LLM 调用。
   **下轮预置**：19:00 后依次=年轮批 3 → events_refresh --gate（mismatch/schema 须 0）→ 反思线 reflect_citizen --batch 5（验收=连续 3 生产日 date=当日）→ 相遇轮（cap 3/3）。
   tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
+
+- [R3225] 2026-11-16 14:1x-14:2x @BigLife-OSLoop 让路窗内「全城开口 12h 配额闸」落地轮：轮首 pull=Already up to date、树净；决策水位差 NEW=0（已含 D-20261116-15，grep 16 号后无新号）；orders 物理件区涉本司 0 项；TASKS 无新 open 单。三 LLM 线按律顺延（evolve_citizen --batch 3 实跑返回 yield-window）。
+  **产品增量（能跑能用实物·2 分）**：`state/pending/R3204-quota-gate.patch` 当轮落地，`Tools/evolve_citizen.py` +81 行——新增 `recent_refusal_bans(hours=12)`（拒稿账「重复类闸」记过的开口 12 字进禁牌集·TTL 12h 自解禁·禁牌面自身不入集防自我延长）+ `ring_violations` 新判据 `citywide-refusal-ban`（前缀命中即拒·own-catchphrase 本卡声口豁免）；接线 `L4091 sig["refusal_bans"]=recent_refusal_bans()` 已实测非死码。
+  **靶面实读（为何做）**：`opening_capacity --window 12`：waste=7/21（33.3%）、invented 归因 95%、top3 invented 各 rows=3/cids=3 —— 单卡去重拦不住跨卡复读，需全城级短 TTL 禁牌。
+  **验证**：`qa/test_citywide_refusal_ban.py` 12 项正负控全 PASS（含 anchor 不误伤／14h TTL／引号键命中／sig 缺字段零漂移／作帐缺失不抛错）；`py_compile` rc=0；回归 `test_opening_refusal_memo` 5 tests OK、`test_round_daily_dep_fp_skip` 7 tests OK；入口仍 yield-window 自闸。
+  **确定性面全绿**：`round_daily --run` stale=0 ran=0 failed=0 PASS（20 面全 fresh）；`persona_generations --check` rc=0（gen5·habits=155·pending_sync=none）；`pool_audit` PASS SELF_TERMINATE（轴 72/72·像素 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0）；`events_refresh --gate` PASS（cards=10111 events=45444 replayed=10111 mismatch=0 schema_errors=0 chronicle gap=0d）；`hq_feedback_daily --check`=ALREADY_REPORTED（零写入）。
+  **CEO 可见三行**：当前活=全城开口配额闸落地并过正负控（14:2x）；最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\Tools\evolve_citizen.py`（+81 行）与 `C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\CITYWIDE-BAN-2026-11-16.md`；下个里程碑=19:00 窗年轮批 3 落环后用 `opening_capacity --window 12` 复测 waste%（目标 <33.3%，≤24h）。
+  **下轮预置**：①19:00 后依次=年轮批 3 → events gate → 复测 opening_capacity 的 waste%/invented 占比，判本闸是否真起效（不达标则回看禁牌键长度 8-12 字前缀比对的误吸面）；②year-ring 落环后读 ring-refusals 当日新增 `citywide-refusal-ban` 行数（应 >0，否则闸未触发需查接线）；③反思线 reflect_citizen --batch 5 与相遇轮在年轮后接续。
+  tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）+ 本轮为确定性补丁落地与测试
