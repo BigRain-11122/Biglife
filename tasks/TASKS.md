@@ -3615,3 +3615,13 @@ ound_daily --run stale=12 ran=13 failed=0 verdict=PASS；pool_audit PASS SELF_TE
   **CEO 可见三行**：当前活=让路窗内收口「日更面假绿」（13:0x 收口）；最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-recency.html`（12:5x 重建·今日 330 环·30 天以上 305 人）；下个里程碑=19:00 让路窗结束后 `evolve_citizen --batch 3`＋`reflect_citizen --batch 5`，并跑 `ring_quota_negctl.py` 出 A/B 裁决（≤48h）。
   **下轮预置**：①19:00 后首件=年轮批 3；②`ring_quota_negctl.py` A/B（rc=0 补丁随轮 commit／rc=1 已还原记 FAIL）；③T-20261115-04 观察窗 11-17 到期按 `ring_refusal_attribution --json` waste% 曲线结案。
   tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
+
+- [R3213] 2026-11-16 12:5x-13:0x @BigLife-OSLoop 让路窗内「夜窗负控就绪体检」轮：轮首 `git pull --ff-only`=Already up to date、工作树净；决策水位差集 NEW=0（水位已含 D-20261116-15）；orders 物理件区无本司新件；TASKS 无新 open 单。
+  **产品增量（能复核实物·2 分）**：`qa/QUOTA-NEGCTL-PREFLIGHT-20261116.md`——把 19:00 夜窗 `ring_quota_negctl.py` 的**步 0（闸前基线）**提前固化，夜窗不必现取、不必手敲。体检实跑 `--dry-run` **rc=0**、`patch applies: YES`、`未跑 LLM 未改工作树`（脚本可编译·argparse 含 `--batch/--dry-run`）。
+  **当日基线读数（本件固化·夜窗对照锚）**：`rows=25 distinct=25 wasted=0 max_repeats=1`。解读＝今日 25 次拒稿来自 25 个不同居民，单居民重试循环 livelock 已归零、无浪费调用；与 R3209/R3211 两次独立读数一致（11-16 单日 25 行/25 人），非孤立样本。
+  **与换靶判据的关系**：`wasted=0` 证「同人重复」腿已干净，剩余病灶正是 `recent-dup-phrase`（跨席撞同一短语·参与 84%）——即配额闸要打的那一面，佐证负控打补丁而非改重试逻辑是正确靶心。
+  **其余确定性面全绿**：`round_daily --run` stale=0 ran=0 failed=0 PASS（29 面全新鲜）；`persona_generations --check` rc=0（gen5／cutoff C-10120／habits=155／pending_sync=none）；`qc_census` cards=10114 evolved=10114 problems=0 **dup_new=0**（dup_rings=37/37 属 T-20261011-01 观测面）；`pool_audit` PASS **SELF_TERMINATE**（轴 72/72·像素 12/12·greet 28/28·faq 7/7·负例 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）。
+  **顺延（诚实不假装）**：年轮批 3／反思批 5／相遇轮均未跑（让路窗 workday 09:00-19:00·D-20261020-02），本轮 **0 LLM 调用**；基因轮今日 11:13 已跑 gen5，按低频律＋T-20261115-04 观察窗保护（11-17 到期）不重跑。
+  **CEO 可见三行**：当前活=19:00 夜窗负控前置就绪（13:0x 收口）；最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\QUOTA-NEGCTL-PREFLIGHT-20261116.md`（2026-11-16 13:02·含闸前基线 25/25/0/1）；下个里程碑=19:00 让路窗结束后 `ring_quota_negctl.py` 实弹 A/B 出裁决 + 年轮批 3 + 反思批 5（≤48h）。
+  **下轮预置**：①19:00 后首件=跑 `ring_quota_negctl.py`（非 dry-run；基线直接用本件 25/25/0/1，勿现取）；②其后年轮批 3＋反思批 5；③T-20261115-04 观察窗 11-17 到期按 `ring_refusal_attribution --json` waste% 曲线结案。
+  tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
