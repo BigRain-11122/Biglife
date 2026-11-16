@@ -82,6 +82,10 @@ def main():
     ap.add_argument("--window", type=float, default=24.0, help="回看小时数（默认 24）")
     ap.add_argument("--as-of", default="", help='以该时刻为准 "YYYY-MM-DD HH:MM:SS"（复算用）')
     ap.add_argument("--json", action="store_true", help="只输出 JSON（前后比对用）")
+    ap.add_argument("--out", default="",
+                    help="把 JSON 写入该文件（UTF-8 无 BOM）。"
+                         "注：PowerShell 5.1 的 '>' 重定向默认写 UTF-16，"
+                         "落基线/复测读数一律用本参数，勿用重定向。")
     ap.add_argument("--ledger", default=LEDGER)
     a = ap.parse_args()
 
@@ -95,6 +99,16 @@ def main():
 
     rows = load(a.ledger)
     m = measure(rows, a.window, as_of)
+
+    if a.out:
+        payload = json.dumps(m, ensure_ascii=False, indent=2)
+        d = os.path.dirname(a.out)
+        if d and not os.path.isdir(d):
+            os.makedirs(d)
+        with open(a.out, "w", encoding="utf-8", newline="\n") as f:
+            f.write(payload + "\n")
+        print("written: %s (utf-8, %d bytes)" % (a.out, len(payload.encode("utf-8"))))
+        return 0
 
     if a.json:
         print(json.dumps(m, ensure_ascii=False, indent=2))
