@@ -3905,3 +3905,14 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - 接线：T-20261116-13 执行单的「跑前自检」改为先 `--selftest`（13 检全 ok）再 `--dry-run`（`due budget:` + `ban state:` 两行），19:00 执行时一条命令即可确认闸未回归。
 - 诚实边界：电池只验判据与报告生成路径，**不验真实 LLM 两臂行为**（让路窗内禁跑）；「report 已关闭」一项只做冒烟（查回退口段在位），非结构校验。
 - 计量：tokens: local=0 api=0 api_reason=workday-yield-window
+
+## R3244 2026-11-16 17:2x @BigLife-OSLoop 让路窗内·世代漂移证据面静默陈旧两日（gen3-6 四开无证据）→ 接入日更闸
+- 轮首：`git pull --ff-only`=Already up to date、工作树净；决策水位差 NEW=0（已覆盖至 D-20261116-15）；orders 物理件区无涉本司新件；TASKS 无 open 单；`hq_feedback_daily --check`=ALREADY_REPORTED（今日 00:04 已有日清行，本步零写入）。
+- 让路窗（D-20261020-02 工作日 09:00-19:00）：年轮 `--batch 3`、相遇、反思三线按闸 yield（反思今日配额已用：reflections 尾行 date=2026-11-16）。
+- 机器面实测：`round_daily --run` **PASS**（stale=1 ran=2 failed=0：ops 因 vram-gate 依赖重建、index 重建）；`events_refresh --gate` **PASS**（cards=10111+3 reserved=10114·events=45444·replay 10111·schema_errors=0 mismatch=0·chronicle gap=0d）；`persona_generations --check` rc=0（gen1-6·pending_sync=none）；`pool_audit` **PASS SELF_TERMINATE**（72/72·12/12·28/28·7/7·neg 6/6·determinism mismatch=0）；`ring_batch_audit` **PASS**（written=10 全落卡净增）。
+- **产品增量（能用实物·2 分）**：挖出并堵死「世代漂移证据面」静默陈旧——`census/export/persona-drift.json` 停在 11-15 11:39 / pool_len=138（gen2），而 genes 今日连开 gen3-6（habits 137→163）。修法：`Tools/round_daily.py` FACE 登记表纳 `persona_drift` + DEPENDS 双源（`genes/persona-pool-generations.json`、`census/registry`），证据面手工刷新至 **pool_len=163 / gen_freeze moved=0 / 10114**（老居民零漂移成立，对照 mod_len 99.50%）。0.80s 零 LLM。
+- 负控：产物 mtime 改回 11-15 → `outdated:1d` 判陈旧；`--only persona_drift --run` → rebuilt → `stale=0 PASS`；`--values` = **VALUES-PASS n=30** 零回归。证据 `qa/PERSONA-DRIFT-WIRING-20261116.md`。
+- 诚实边界：只补上「证据面接入 + 当日读数」，不补历史上 gen3-5 增补当时的缺失证据；依赖指纹分支的合成触发被冷却正确抑制，未做破坏性触发（不基因改本）。
+- **CEO 可见三行**：当前活＝堵「零漂移证据面陈旧两日」的供给缺口（17:2x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\persona-drift.json`（pool_len 138→163·gen_freeze moved=0·2026-11-16 17:2x）与 `qa\PERSONA-DRIFT-WIRING-20261116.md`｜下个里程碑=19:00 让路窗解除 → 年轮批 3 + 事件闸 + `ring_quota_negctl` 实弹 A/B（窗口 19:00-20:45·ETA 2026-11-16 21:00）。
+- 下轮预置：①19:00 后年轮批 3 + `sync_rings` + `events_refresh --gate`；②同窗 `ring_quota_negctl.py` 实弹（先 `--selftest` 再 `--dry-run` 再正式跑）；③落环后重跑 `build_ring_openings.py` + `build_export_index.py`；④T-20261115-04 观察窗 11-17 到期结案。
+- 计量：tokens: local=0 api=0 api_reason=workday-yield-window

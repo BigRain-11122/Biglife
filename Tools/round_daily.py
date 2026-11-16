@@ -57,6 +57,11 @@ REGISTRY = [
     ("gallery",    "faces", "build_resident_gallery.py",  ["resident-gallery.html"]),
     ("goals",      "faces", "build_city_goals.py",        ["city-goals.html"]),
     ("gene_ledger", "faces", "build_gene_ledger.py",      ["gene-ledger.html"]),
+    # v0.30 (2026-11-16 R3244): 世代漂移证据面接线 —— genes 今日连开 gen3-6，
+    # 而 census/export/persona-drift.json 停在 11-15 11:39 / pool_len=138（gen2），
+    # T-20261115-02 决策 b「老居民按旧快照取模零漂移」的唯一证据面静默陈旧。
+    # 与 T-20261112-02 同病根（有生成器、有产物、无任何轮次引用）；脚本 0.8s 零 LLM。
+    ("persona_drift", "faces", "persona_drift.py",        ["persona-drift.json"]),
     ("ring_picks", "faces", "build_ring_picks.py",        ["city-ring-picks.html"]),
     ("growth",     "faces", "build_growth_gallery.py",    ["city-growth.html"]),
     ("meets",      "faces", "build_city_meets.py",        ["city-meets.html"]),
@@ -191,6 +196,9 @@ INPUTS = [
 DEPENDS = {
     # build_gene_ledger.py 只读这两处：基因正本 + 户卡正文目录
     "gene_ledger": ["genes/lives.json", "census/registry"],
+    # v0.30 (2026-11-16 R3244): 漂移证据源=世代池快照（每次 sync 改写）+ 户籍目录
+    # （新人入册改分母）。只登记这两处，避免无基因变更的日子白跑。
+    "persona_drift": ["genes/persona-pool-generations.json", "census/registry"],
     # city_lexicon.py 读三个 cognition 池面 + 基因口头禅正本（v0.2 R2933 第六节）
     "lexicon": ["cognition/pools.json", "cognition/greetings.json",
                 "cognition/pools-negative.json", "genes/language.json"],
