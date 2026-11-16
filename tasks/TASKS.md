@@ -3809,3 +3809,15 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - CEO 可见三行：当前活=让路窗内确定性闸加固（round_daily 值域断言接线，16:3x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\ROUND-DAILY-VALUES-20261116.md`（16:3x，含负控实证）、`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\Tools\round_daily.py`（v0.27）｜下个里程碑=19:00 让路窗解 → 年轮批 3 落环 → events_refresh --gate（ETA 2026-11-16 19:20，窗 ≤8h）。
 - 下轮预置：①19:00 后年轮批 3 → 必跟 sync_rings + events_refresh --gate，与 R3230/R3231 基线逐项对比；②`--values` 纳入每轮确定性巡检（一条命令、零 LLM）；③T-20261115-04 观察窗 11-17 到期直接按读数结案；④R3208 的 TTL 临界缺口（禁牌 19:34 到期 vs 生成窗 19:00 开）在首批实测是否出现「禁→复现→再禁」震荡。
 - 计量：tokens: local=0 api=0 api_reason=workday-yield-window
+
+## R3236 2026-11-16 16:1x-16:3x @BigLife-OSLoop 让路窗内·值域闸 A4「可返回」接线
+- 轮首：`git pull --ff-only`=Already up to date；工作树干净（启动时零未跟踪）；决策水位差 NEW=0（已覆盖至 D-20261116-15，第 67 批无 @BigLife 派工行）；orders 物理件区无涉本司新件（两行均为已完成/已建仓）；TASKS 无 open 单；`hq_feedback_daily --check`=`day=2026-11-16 lines=1 ALREADY_REPORTED`（本步零写入）。
+- 让路窗（D-20261020-02，工作日 09:00-19:00）：`evolve_citizen --batch 3` 实跑返回 `yield-window: workday 09:00-19:00` → 年轮/相遇/反思三线结构性顺延至 19:00 后；本轮零落环、零阈值改动、零骨架池改动。
+- **产品增量（能用实物·2 分）**：`Tools/round_daily.py` v0.29 值域闸新增 **A4「可返回」断言**——除 index 外登记面若正文不含 `index.html` 引用即 `VALUE-FAIL <rel>(no-backnav)`。病根=16:03 发现 2 个面由索引链入却无返回入口（CEO 打开走不回来），当时靠人眼补导航，闸不守则新面照犯。补上后「孤儿页」在生成轮即被拦，不再依赖巡检。
+- 取证（读数为准）：①正例 `--values` → `faces=30 exempt=dossiers` / **VALUES-PASS n=30** rc=0；②负控 1 **无效并如实记录**——把 `index.html` 替换为 `x-index.html` 仍含子串故仍 PASS，该负控不计证据；③负控 2 有效——`city-rumors.html` 内引用替换为 `zzz-nolink.html` → **VALUE-FAIL n=1/30** rc=2；④备份还原后 VALUES-PASS n=30 且 `git status --porcelain census/` 空＝逐字节还原。
+- 同轮确定性面读数（各 1 次，未重复全量重扫）：`round_daily --run` → stale=0 ran=0 failed=0 **PASS**（30 面全 fresh）；`persona_generations --check` rc=0 pending_sync=none（gen1-6·habits=163·max_cid=C-10120）；`pool_audit` 全桶达标 SELF_TERMINATE（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·双抽 192+25 对 mismatch=0）；QC/events 双闸 R3232/R3234 于 15:2x-16:0x 刚复核（problems=0 / mismatch=0），非到点不重跑。
+- 附带核验（负性结论）：index 对 export 面覆盖——40 个 html 中 11 个 growth 页不在索引字面命中，源读 `round_daily.py` 确认为 `growth` 组级登记（p01-p11 同 builder 产出）＝假阳性；全 39 个非索引页均有 `index.html` 引用（16:03 缺口已由 R3234/R3235 补齐）。故本轮未做无意义重建。
+- **诚实边界**：A4 为弱式断言（只查文本出现 `index.html`，不校验是可见导航还是注释/CSS 串），强式留待真实漏检材料；射程＝REGISTRY 登记的 30 面，export 下另 9 个非登记面不在闸内；本闸只防孤儿页复现，不证明内容正确。
+- **CEO 可见三行**：当前活=让路窗内值域闸加固（页面可达性入闸）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\ROUND-DAILY-BACKNAV-20261116.md`（2026-11-16 16:2x·含正例/无效负控/有效负控三段读数）与 `C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\Tools\round_daily.py`（v0.29）｜下个里程碑=19:00 让路窗解 → 年轮批 3 落环 → 必跑 sync_rings + `events_refresh --gate`，并复测 R3208 记录的 TTL 临界（禁牌 19:34 到期 vs 生成窗 19:00 开）是否出现「禁→复现→再禁」震荡（ETA 2026-11-16 19:30，窗 ≤8h）。
+- 下轮预置：①19:00 后年轮批 3 → `events_refresh --gate` → `opening_capacity --window 12` 与 R3230 基线逐项对比；②`--values` 纳入每轮确定性巡检（一条命令、零 LLM）；③T-20261115-04 观察窗 11-17 到期直接按读数结案；④R3235 的 `--values` 与 A4 合并后需在 19:00 首批落环上复核是否误拦（新面若真无入口应被拦，勿放宽）。
+- 计量：tokens: local=0 api=0 api_reason=workday-yield-window

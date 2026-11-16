@@ -688,6 +688,9 @@ def _run_one(script: str, extra=None) -> tuple[int, str]:
 #   A3 有记录：至少一处记录级标记（li/tr/article/card/section/img），或体积 ≥50KB
 #      ——后者覆盖「数据在 <script> 里、DOM 由 JS 渲染」的三面（地图 SVG/陈列墙/人卡册），
 #      空壳页体积必然远小于此值，故体积本身即内容证据。
+#   A4 可返回（v0.29 2026-11-16 R3236）：除 index 外的面必须含 index.html 引用。
+#      病根=2026-11-16 16:03 发现 2 个面由别面链入却无返回索引入口，CEO 打开后走不回来；
+#      靠人眼巡检才补上，闸不守则下次新面照犯。
 # 只读不改盘，默认路径（--check/--run）行为零变化。
 DATELESS = {"dossiers"}  # 逐人档案册：内容按居民而非常按日，无日戳属设计
 _RECORD_MARKS = ("<li", "<tr", "<article", "<section", "<img",
@@ -723,6 +726,9 @@ def _value_audit() -> tuple[list, list]:
                 continue
             if not any(m in text for m in _RECORD_MARKS) and size < _RECORD_BYTES:
                 bad.append("%s(no-records:%dB)" % (rel, size))
+                continue
+            if rel != "index.html" and "index.html" not in text:
+                bad.append("%s(no-backnav)" % rel)
     return bad, seen
 
 
