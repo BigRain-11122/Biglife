@@ -15,6 +15,10 @@ CENSUS = os.path.join(CO, "census")
 
 REQUIRED = ["**物种**", "**性格**", "**信条**", "**思想**", "**语言**", "**服装**", "**经历**", "**行为**", "**关系**", "**钩子**", "**进化**", "**溯源**"]
 
+# v0.45 dup-history 闸启用日（T-20261011-01 / evolve_citizen gap #66）。
+# 该闸的逐字面比对本人全部历史（非窗口），故「晚于本日仍落逐字重复」= 闸漏。
+DEDUP_GATE_DATE = "2026-10-11"
+
 # T-20260926-17: one schema definition (Tools/schemas/), reused here.
 SCHEMA_FACES = [
     ("citizens-light", "citizens-light.schema.json"),
@@ -71,6 +75,8 @@ def main():
     evolved = 0
     dup_citizens = 0
     dup_pairs = 0
+    dup_new_pairs = 0
+    dup_new_rows = []
     for p in sorted(files):
         fn = os.path.basename(p)[:-3]
         with open(p, encoding="utf-8") as f:
@@ -124,11 +130,26 @@ def main():
             m66 = re.search(r"\*\*年轮\*\*\n((?:- .*\n?)+)", text)
             if m66:
                 seen66 = {}
+                first66 = {}
                 for _d, rt in re.findall(r"- (\d{4}-\d{2}-\d{2}) 「(.*?)」", m66.group(1)):
-                    seen66[rt.strip()] = seen66.get(rt.strip(), 0) + 1
+                    # 与 evolve v0.45 dup-history 逐字面同法归一（空白折叠+去引号+[:90]）
+                    _k = re.sub(r"\s+", " ", rt).strip().strip('「」"“”')[:90]
+                    if len(_k) < 8:
+                        continue
+                    seen66[_k] = seen66.get(_k, 0) + 1
+                    if _k not in first66 or _d < first66[_k]:
+                        first66[_k] = _d
+                    elif _d > first66[_k] and _d > DEDUP_GATE_DATE:
+                        # 闸后（严格晚于闸启用日）仍落逐字重复 = 闸漏，非历史遗留
+                        dup_new_pairs += 1
+                        if len(dup_new_rows) < 10:
+                            dup_new_rows.append(f"{fn} {first66[_k]}->{_d} {_k[:28]}")
                 if any(c > 1 for c in seen66.values()):
                     dup_citizens += 1
                     dup_pairs += sum(c - 1 for c in seen66.values() if c > 1)
+    if dup_new_pairs:
+        problems.append(f"dup-history gate leak: {dup_new_pairs} post-{DEDUP_GATE_DATE} verbatim rings "
+                        + " | ".join(dup_new_rows[:5]))
     gate_p = os.path.join(os.path.dirname(CENSUS), "state", "sublimate-gate.jsonl")
     gate_n = 0
     if os.path.isfile(gate_p):  # 升华门违律计数入 QC-REPORT（T-20260926-18 步①②机制面）
@@ -140,7 +161,8 @@ def main():
               f"- 已进化（有年轮）：{evolved}",
               f"- 异常数：{len(problems)}", "",
               f"- 升华门拒入册计数：{gate_n}（生成门/生灵门/灵族门 fail-fast·T-20260926-18 步①②③）",
-              f"- 逐字重复环：{dup_pairs} 处 / {dup_citizens} 位居民（本人历史环内同句·观测面·历史环不回溯修复·落环侧 v0.45 dedup 闸封新面·T-20261011-01）", ""]
+              f"- 逐字重复环：{dup_pairs} 处 / {dup_citizens} 位居民（本人历史环内同句·观测面·历史环不回溯修复·落环侧 v0.45 dedup 闸封新面·T-20261011-01）",
+              f"- 闸后新增重复环：{dup_new_pairs} 处（严格晚于 {DEDUP_GATE_DATE} 的本人逐字重复·0=逐字去重闸有效；>0 即闸漏并计异常）", ""]
     schema_rows = schema_bad = 0
     if schema_mode:
         schema_rows, schema_bad, per = schema_scan(problems)
@@ -156,7 +178,7 @@ def main():
     with open(os.path.join(CENSUS, "QC-REPORT.md"), "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(report))
     tail = f" schema_rows={schema_rows} schema_bad={schema_bad}" if schema_mode else ""
-    print(f"QC done cards={len(ids)} evolved={evolved} problems={len(problems)} dup_rings={dup_pairs}/{dup_citizens}{tail}")
+    print(f"QC done cards={len(ids)} evolved={evolved} problems={len(problems)} dup_rings={dup_pairs}/{dup_citizens} dup_new={dup_new_pairs}{tail}")
     if problems:
         print("QC FAILED")
         raise SystemExit(1)
