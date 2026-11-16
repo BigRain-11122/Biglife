@@ -20,6 +20,15 @@
   - **v3.55 behavior 导出面空间锚点字段通知**（2026-09-29 · T-20260929-06 分步③ · T2 登记=CODEX §十二 v3.55 · 否决窗至 10-06）：`citizen-behavior.jsonl`（R3 再生面·gitignored·`Tools/behavior.py --auto` 跨桶/跨天气自动再生）每行新增 `anchor` 字段=**三锚点+时间窗**（`{home:{x,z,win:[20,9]}, work:{x,z,win:[9,18],site}, social:{x,z,win:[18,20],site}}`·win=24h 制 [start,end) 静态生活空间包络·荣誉席 3 席 anchor=null）——与 v3.54 `citizen-anchors.jsonl` 同 md5 seed 同锚点（单源律·双面逐行全等 QC 机检）·**既有 state/slot/visible/quirk/ctx 字段零 breaking**（纯追加字段·按需取用）·社交锚点=新增第三锚点（x 向 0.44-0.56 中央社交带·与住宅/工位带结构性 disjoint）·个体化时间窗留 v2；消费方=FluxVerse 城市重构 R0-R6 居民流（O-019 ④三锚点生活空间直承）；DevLoop 回执时一并确认。
   - **v3.56 polygon 装配映射面新增导出面通知**（2026-09-29 · T-20260929-06 step④ · T2 登记=CODEX §十二 v3.56 · 否决窗至 10-06）：新增独立导出面 `census/export/citizen-assembly.jsonl`（R3 再生面·gitignored·`Tools/citizen_assembly.py` 按需秒级再生 10030 行）=居民→polygon 角色确定性形象档案（md5(id) seed **同居民永远同外观**·census 匹配律三层=族源三分碳源 7517/硅源 2003/城源 507→族系特征/年龄→AD-024 儿童件 1410/六轴→服装风格·AD-042+AD-011 722+AD-024+AD-018 装配管线·atlas v2.4 五 hex 单源镜像·荣誉席 reserved 零代创）——**不改既有导出面零 breaking**，消费方=City3D polygon 角色装配/FluxVerse R0-R6（O-020 BigLife 总责·投影律消费·BigLife=事实源不变）；DevLoop 回执时一并确认。
 ## 自领池（OS 循环/交互会话按优先级自领）
+- [ ] **T-20261116-13**（R3242 立·实弹执行单·今晚首件）19:00 让路窗解后跑配额闸 A/B 实弹，决定 `state/pending/R3204-quota-gate.patch` 留或撤。
+  - status: **open**（2026-11-16 17:1x R3242 @BigLife-OSLoop 立·前置条件=本地时间 ≥19:00）
+  - **命令**：`python -X utf8 Tools/ring_quota_negctl.py`（每臂席位由 due 自动收敛；勿加 `--batch` 强行抬高）
+  - **顺序硬性**：**先跑本单，再跑年轮批**。先跑常规年轮批 3 席会把 due 从 10 吃到 7，A/B 收敛成每臂 3 席（样本更小）；反过来拿满每臂 5 席。
+  - **跑前自检**：`--dry-run` 应打印 `due budget:` 与 `ban state:` 两行。若 `due budget` 报「席位预算不足」→ 不跑，记一行顺延次日并保持补丁待决；若两臂之间判 `CONFOUNDED` → 读数作废，重跑（勿据此留撤）。
+  - **判据**：`rc=0`=PASS（补丁随轮 commit 留存）；`rc=1`=FAIL（脚本已自动 `git apply -R`，记 FAIL 结壳并写清哪条硬线破）；`rc=2`=环境不足/补丁不可打（不裁决，留 pending）；`rc=3`=让路窗未解（≥19:00 不应出现，出现即查机器时间）。
+  - **验收**：`qa/RING-QUOTA-NEGCTL-20261116.md` 自动落盘且含「禁牌态」与「每臂席位」两行；轮记写清 verdict＋实际席位数；若 PASS，补丁进 commit 并在补丁文件头注「实弹 PASS <日期>」。
+  - **回退口不变**：落环数 B<A／命中率 >30%／wasted 或 max_repeats 高于 A 前读数，任一破即撤。
+  - **诚实边界**：当日上限每臂 5 席（due=10 决定），结论按 5 席写、不冒充 8 席强度；R3208 的吸引子 sticky 升级（7 天）**不在本单**，须另立负控。
 - [x] **T-20261116-11**（R3190 立·聚光灯抽验步 7 发现·问答面事实越界）`spotlight.py --ask` 会发明卡外环境实体并改写天气：C-10115 陆阿翠被问「有没有见过别的邻居」答出「隔壁的猫在晒太阳」（全卡无猫/无宠物/无邻人）且把年轮原文「风刮得紧」改成「风都懒得吹了」（反锚）。同批 C-10118 逐字复用签名句律=合格，故缺陷在问法适应面而非全谱系。修法（须带负控）：ask 提示词加三条硬约束——①未喂的邻人/动物/店家一律不发明；②天气与时段取年轮原文不得改写；③无事实可用时走卡内「今日不想说话」退路。验收=以本报告例 1 同问法复测由 FAIL 转 PASS 且例 2 不回退（`qa/SPOTLIGHT-20261116.md` 为基线）。
   - status: **done 2026-11-16 09:1x @BigLife-OSLoop**——`Tools/spotlight.py` 提示词加「硬约束·违者视为废稿」三条（禁发明未喂实体／天气时段沿原文禁改写／无事实走「今日不想说话」）；负控复测 C-10115 同问法 **3/3 PASS**（FAIL→PASS 达成，零猫零天气改写），例 2 C-10118 回归 PASS 不退化（「风」有卡内出处：行为「风大就不裁纸」+11-12 年轮「风硬得像刀子」）；证据 `qa/SPOTLIGHT-20261116.md` 修法实装节。
 - [ ] **T-20261115-04**（R3090 立·年轮同质化根因·机制缺陷）骨架族闸结构性失效诊断：今日 714 席年轮实测族分布 `HAND_DEICTIC=177 (24.8%·正卡 FAMILY_QUOTA=0.25 线)`／`TIME_OPEN=11 (1.5%)`／其余 **526 席 (73.7%) unclassified**（6 族正则覆盖不到）。后果=①唯一实质受控族 HAND_DEICTIC 每天必然撞线，撞线后整族全天被禁 → 每批固定 1 席撞硬门留 due（近数轮 C-02945/02974/02981/02995 连续复现）；②73.7% 开篇不进任何族=闸对绝大多数同质化无约束力（自欺面）。修法候选（须带负控）：A 扩充族清单至 12-16 族并实测覆盖率（目标 unclassified ≤40%）；B 按族配额的「日累计」口径改为「滚动 N 席窗口」（避免一天越晚越无族可用）；C 二者并做。验收=同一批 10 席连续 3 批 zero hard-refuse 且 unclassified 覆盖提升可量化；禁单纯调高 FAMILY_QUOTA（那是放宽闸不是修多样性）。
@@ -3878,4 +3887,12 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - 机制用法：走既有 `Tools/update_status_export.py --payload state/export-payload-R3241.json`（声明式落盘，规避 CLI CJK 引号坑）；`--dry-run` 先验 `total=334 reg=334 anc=0 dept=True qc=True top=True`，`expect_total=334` 账平通过后真跑 `OK`。
 - 核验：`dept0 entries=3`（窗口律）·`**R3241（` 在首 ·QC 标记在位 ·`top_text` 三行前缀齐 ·`depts_map` 四线各自成文 ·`outs[0]=10114 卡` 与 QC 实巡同数 ·全文裸 `%s` 类占位符扫描 = 0（TEXT_PLACEHOLDER_GUARD 口径）。
 - 诚实边界：`results` 段本轮 `results=False`（尾行今日计数已是最新机器直数，按幂等律跳过，非遗漏）；`outs[0]` 为手工维护字段，仓内无工具派生（本次已改为指向可核验来源，防再漂）。
+- 计量：tokens: local=0 api=0 api_reason=workday-yield-window
+
+## R3242 2026-11-16 17:1x @BigLife-OSLoop 让路窗内·挖出会让今晚 19:00 出假 FAIL 的席位预算缺口并堵住
+- 起因：实弹已连续五轮挂在「下轮首件」，本轮做前置体检——`evolve_citizen --audit-due` 实读 **due=10**，而负控台默认每臂 8 席＝需 16 席。
+- **根因（代码实证）**：`evolve_citizen.py` L4217 起 hard-refuse 分支把该席 `next` 推 +1d（R3115 修法），故 due 按**尝试**消耗而非写成功消耗。A 臂吃掉 8 席后 B 臂只剩 2 席 → B written 必小于 A → 触发硬线 1「修法伤产线」→ **自动 `git apply -R` 还原补丁**。即今晚按原参数跑，会得到一个纯由席位供给造成的假 FAIL，并据此错撤一个可能有效的补丁（与 R3208 禁牌 TTL 同族：环境量污染结论，污染源从时间换成席位）。
+- **产品增量（能跑·2 分）**：`Tools/ring_quota_negctl.py` 新增 `plan_batch()` 纯函数 + `due_count()`（零 LLM 读 `--audit-due`）——每臂席位收敛为 `min(请求, due//2)`，`due//2<2` 直接拒跑；两臂/判据/报告统一用收敛值，dry-run 增 `due budget:` 一行。负控五例（10→5／16→8／4→2／3→拒跑／不可读→沿用+风险注）全 PASS，`py_compile` rc=0，端到端 dry-run 实测「due=10 → 每臂 5 席」。证据=`qa/RING-QUOTA-NEGCTL-BUDGET-20261116.md`
+- **由此确定 19:00 执行顺序（会改变样本量）**：**先跑 A/B，再跑年轮批**——先跑常规批 3 席则 due 10→7、A/B 只剩每臂 3 席；反过来拿满每臂 5 席。当日上限＝每臂 5 席（due 决定，非参数选择）。
+- 诚实边界：本闸只消除「席位不足」这一类假 FAIL，written/命中率/wasted 三条硬线未改；小样本（每臂 5）统计强度有限，报告按实际席位数写、不冒充 8 席结论；实弹仍待 19:00（让路窗）。
 - 计量：tokens: local=0 api=0 api_reason=workday-yield-window

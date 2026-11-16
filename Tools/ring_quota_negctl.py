@@ -40,6 +40,7 @@ REFUSALS = os.path.join(ROOT, "state", "ring-refusals.jsonl")
 QA = os.path.join(ROOT, "qa")
 
 SUMMARY_RE = re.compile(r"OK evolved=(\d+) of (\d+) due \(written=(\d+) skipped=(\d+)\)")
+DUE_RE = re.compile(r"audit-due: due=(\d+)")
 BAN_RE = re.compile(r"gate: citywide-ban hit (\S+)")
 YIELD_RE = re.compile(r"yield-window")
 
@@ -120,6 +121,33 @@ def refusal_metrics(day):
         "wasted_calls": rows - len(cids),
         "max_repeats": max(cids.values()) if cids else 0,
     }
+
+
+def plan_batch(due, want):
+    """两臂各取多少席。返回 (effective|None, 说明)。
+
+    为什么要有这一步：拒稿席也被推 +1d（R3115 的调度修法），即 due 按「尝试」消耗，
+    不是按「写成功」消耗。A 臂 attempt N 之后 B 臂只剩 due-N 席，故 N > floor(due/2)
+    时 B 臂必然少写——judge 的硬线 1（B written < A written）会把「席位不够」误判成
+    「修法伤产线」并自动还原补丁。2026-11-16 实读 due=10、默认每臂 8，正属这一情形。
+    """
+    if due is None:
+        return want, "due 不可读（沿用请求值 %d，风险自担）" % want
+    eff = min(want, due // 2)
+    if eff < 2:
+        return None, ("席位预算不足：due=%d → 每臂最多 %d 席（需 ≥2）"
+                      % (due, due // 2))
+    if eff < want:
+        return eff, ("席位预算收敛：due=%d → 每臂 %d 席（请求 %d；B 臂不会因缺席少写）"
+                     % (due, eff, want))
+    return eff, "席位充足：due=%d → 每臂 %d 席" % (due, eff)
+
+
+def due_count():
+    """今日到期席位供给（零 LLM：--audit-due 只读 cursor）。不可读返回 None。"""
+    rc, out, err = _run([sys.executable, "-X", "utf8", EVOLVE, "--audit-due"])
+    m = DUE_RE.search(out or "")
+    return int(m.group(1)) if m else None
 
 
 def arm(batch, label):
@@ -276,6 +304,12 @@ def main():
         if snap0 and snap0["n"]:
             print("dry-run 提示：两臂须连跑且不跨 %s（禁牌到期点）；跨了判 CONFOUNDED"
                   % snap0["exp_min"])
+        due = due_count()
+        batch, why = plan_batch(due, args.batch)
+        print("due budget: %s" % why)
+        if batch is None:
+            print("dry-run: 席位预算不足 → 实弹会产出假 FAIL（B 臂缺席少写），先别跑")
+            return 2
         print("dry-run: 未跑 LLM、未改工作树")
         return 0 if ok else 2
     if not ok:
@@ -283,8 +317,14 @@ def main():
         return 2
 
     print("arm A (patch OFF) ...", flush=True)
+    due = due_count()
+    batch, why = plan_batch(due, args.batch)
+    print("due budget: %s" % why, flush=True)
+    if batch is None:
+        print("abort: 两臂席位预算不足——跑出来的 written 差会被误读成「修法伤产线」")
+        return 2
     snap_a = ban_snapshot()
-    a = arm(args.batch, "A")
+    a = arm(batch, "A")
     if a.get("yield"):
         print("yield-window: 产线让路期，A 臂未跑（0 LLM/0 改动）")
         return 3
@@ -299,12 +339,12 @@ def main():
         applied_now = True
         print("arm B (patch ON) ...", flush=True)
         snap_b = ban_snapshot()
-        b = arm(args.batch, "B")
+        b = arm(batch, "B")
         if b.get("yield"):
             print("yield-window: B 臂未跑 -> 还原补丁")
             return 3
         after = refusal_metrics(day)
-        verdict, lines = judge(a, b, before, after, args.batch, snap_a, snap_b)
+        verdict, lines = judge(a, b, before, after, batch, snap_a, snap_b)
     finally:
         if applied_now and verdict_is_fail(locals()):
             rc, out, err = _git(["apply", "-R", PATCH])
@@ -313,7 +353,7 @@ def main():
 
     for ln in lines:
         print(ln)
-    path = write_report(day, args.batch, a, b, verdict, lines, applied_now, snap_a, snap_b)
+    path = write_report(day, batch, a, b, verdict, lines, applied_now, snap_a, snap_b)
     print("report:", os.path.relpath(path, ROOT))
     print("verdict:", verdict, "| patch in tree:", "yes" if applied_now else "no")
     return 0 if verdict == "PASS" else 1
