@@ -131,6 +131,10 @@ def build(rows, today=None):
             if rof.family_of(b) is None:
                 c[rof.norm(b)] += 1
         unc_samples = c.most_common(UNC_TOP)
+    # R3233: 长尾盲区判据上页面。ring_open_family v1.8 的 long_tail 此前只有
+    # CLI 文本/--json 两个出口，CEO 在页面上看不到「未归族到底是正常多样
+    # 性还是一句模板被抄」——那是「要不要立新族」的唯一可判据读数。
+    lt_shapes, lt_max = rof.long_tail(unc_day, width=4) if days else (0, 0)
     return {
         "today": today,
         "daily": daily,
@@ -141,6 +145,8 @@ def build(rows, today=None):
         "days": len(by_day),
         "unc_samples": unc_samples,
         "unc_day": unc_day,
+        "long_tail": (lt_shapes, lt_max),
+        "lt_verdict": rof.long_tail_verdict(lt_max),
     }
 
 
@@ -159,6 +165,8 @@ def render(model):
 
     last_verdict = last.get("verdict", "CROSS-EPOCH")
     cross_days = sum(1 for r in daily if r.get("verdict") == "CROSS-EPOCH")
+    lt_shapes, lt_max = model.get("long_tail", (0, 0))
+    lt_verdict = model.get("lt_verdict", "DIVERSE")
     kpis = [
         ("近 %d 生产日总环" % len(daily), "%d" % model["total_window"], ""),
         ("最近一日 %s" % (last.get("day", "-")), "%d" % last["total"], ""),
@@ -167,6 +175,8 @@ def render(model):
         ("窗口内跨口径日", "%d" % cross_days, "warn" if cross_days else ""),
         ("全期应禁族", "%d" % len(model["ban"]), "bad" if model["ban"] else "good"),
         ("当日未归族", "%.1f%%" % unc_pct, "warn" if unc_pct > 15 else ""),
+        ("当日长尾", lt_verdict,
+         "bad" if lt_verdict == "TEMPLATE" else ("warn" if lt_verdict == "OBSERVE" else "good")),
     ]
 
     kpi_html = "".join(
@@ -230,6 +240,7 @@ def render(model):
     for body, c in model.get("unc_samples", []):
         unc_rows.append("<tr><td>%s</td><td>%d</td></tr>" % (html.escape(body[:40]), c))
     unc_html = "".join(unc_rows) or '<tr><td colspan="2" class="blank">当日无未归族开头</td></tr>'
+    lt_pill = "ban" if lt_verdict == "TEMPLATE" else ("ok" if lt_verdict == "DIVERSE" else "warn")
 
     return """<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
@@ -275,6 +286,18 @@ def render(model):
 </section>
 
 <section>
+<h2>未归族长尾形状分布（%s）</h2>
+<table><thead><tr><th>指标</th><th>读数</th><th>说明</th></tr></thead><tbody>
+<tr><td>不重复形状数（前 4 字）</td><td>%d</td><td class="blank">越多＝盲区语言越散</td></tr>
+<tr><td>单形状最高复现</td><td>%d 环</td><td class="blank">越少＝越难判定「新吸引子」</td></tr>
+<tr><td>判据</td><td><span class="pill %s">%s</span></td><td class="blank">DIVERSE &lt; 8 ≤ OBSERVE &lt; 10 ≤ TEMPLATE</td></tr>
+</tbody></table>
+<div class="note">这一栏回答「未归族占比高是不是病」：<b>DIVERSE</b>＝形状散、最大复现 &lt; 8 环，属正常语言多样性，勿立族；
+<b>OBSERVE</b>＝已有形状摸到 8-9 环，抬头观察；<b>TEMPLATE</b>＝单形状 ≥ 10 环，是抄写信号，必须立族并进禁集。
+判据只用「未归族」子集，不与配额线直接对账（未归族本来就不在配额分母里）。</div>
+</section>
+
+<section>
 <h2>口径与边界</h2>
 <div class="note">
 <b>只读</b>：本页不改任何年轮、不改闸判定、不回写台账。<br>
@@ -288,7 +311,9 @@ def render(model):
 """ % (CSS, model["today"], kpi_html,
        last["total"], day_over, model["days"], model["total_all"], bans,
        model["days"], thead, "".join(trs), TOP_N, top_html,
-       html.escape(model.get("unc_day", "-")), UNC_TOP, unc_html)
+       html.escape(model.get("unc_day", "-")), UNC_TOP, unc_html,
+       html.escape(model.get("unc_day", "-")), lt_shapes, lt_max,
+       lt_pill, lt_verdict)
 
 
 def main():

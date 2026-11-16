@@ -3835,3 +3835,16 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - **CEO 可见三行**：当前活＝让路窗内开口族盲区判据接线（16:4x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\Tools\ring_open_family.py`（v1.8，实读 `long-tail: shapes=70 max=5 -> DIVERSE`）｜下个里程碑=19:00 让路窗解 → 年轮批 3 落环 → `events_refresh --gate` → `opening_capacity --window 12` 对 R3230 基线（ETA 2026-11-16 19:30，窗 ≤3h）。
 - 下轮预置：①19:00 后年轮批 3 + sync_rings + `events_refresh --gate`；②次日 `--check` 复读 long-tail，升到 OBSERVE(≥8) 再挖具体前缀；③R3208 TTL 临界（禁牌 19:34 到期 vs 生成窗 19:00 开）实测是否出现「禁→复现→再禁」震荡。
 - 计量：tokens: local=0 api=0 api_reason=workday-yield-window
+
+## R3238 2026-11-16 17:0x-17:2x @BigLife-OSLoop 让路窗内·长尾判据上 CEO 页面（CLI 读数→可见面）
+- 轮首：`git pull --ff-only`=Already up to date；启动时工作树净；决策水位差 NEW=0（已覆盖至 D-20261116-15，origin 实读最新 D-20261116-08）；orders 物理件区无涉本司新件；TASKS 无 open 单；`hq_feedback_daily --check`=ALREADY_REPORTED（本步零写入）。
+- 让路窗（D-20261020-02，工作日 09:00-19:00）：`evolve_citizen --batch 3` 实跑返回 `yield-window: workday 09:00-19:00 CEO lane-priority` → 年轮/相遇/反思三线结构性顺延至 19:00；本轮零落环、零阈值改动、零骨架池改动。
+- **产品增量（能看实物·2 分）**：`census/export/city-ring-openings.html` 新增 KPI 卡「当日长尾」与整段「未归族长尾形状分布」栏（不重复形状数 / 单形状最高复现 / 三档判据），判据阈值与说明同页写明。病根＝R3237 把 long-tail 做进 `ring_open_family` 的 CLI 文本与 `--json` 两个出口，但 CEO 看的页面里没有——上一轮的判据只有跑命令行的人才看得到，页面读者仍只能读 28.4% 的未归族占比而无从判断「是不是模板在刷」。
+- 接线方式（不改判据、不改族表、不回写台账）：`build_ring_openings.build()` 增 `long_tail/lt_verdict` 两键，直接调 `rof.long_tail(day,width=4)` 与 `rof.long_tail_verdict()`；`render()` 增第 7 张 KPI 与末段栏；三档 pill 配色 DIVERSE=ok / OBSERVE=warn / TEMPLATE=ban。
+- 实读读数（当日 2026-11-16）：rings=334、未归族 95=28.4%、**shapes=70 max=5 → DIVERSE**（页面显示同值）；全期 rings=19937、days=28、应禁族=0、当日越线族=0。页面与 CLI 同日同值＝两面口径一致（页面不为好看改口径）。
+- 幂等与可达：连跑两次 `build_ring_openings.py` 内容一致（唯一差异是索引层注入的 `bl-nav:index` 导航被覆盖，属该脚本文档已登记的行为），随后 `build_export_index.py` 补回 `nav_patched=1`，页面末态含返回总目录入口。
+- 同轮确定性面（各 1 次，未重复全量重扫）：`round_daily --run` → stale=0 ran=0 failed=0 **PASS**（30 面全 fresh）；`persona_generations --check` rc=0 pending_sync=none（gen1-6·habits=163·max_cid=C-10120）；`pool_audit` → **PASS SELF_TERMINATE**（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·双抽 192+25 对 mismatch=0）；`qc_census` → cards=10114 **problems=0** dup_rings=37/37 dup_new=0；改面后复跑 `round_daily --values` → **VALUES-PASS n=30** rc=0（新栏未破值域闸）。
+- 诚实边界：本栏只搬运既有判据读数，不新增阈值、不证明年轮文本质量；DIVERSE 只说明「未归族那 28.4% 不是同一句在刷」，不等于那部分写得好。未归族本身仍不进配额分母，故本栏与越线判定不互相抵消。
+- **CEO 可见三行**：当前活＝让路窗内长尾判据上页面（17:2x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-openings.html`（2026-11-16 17:1x，含「未归族长尾形状分布」栏：70 形状 / 最高 5 环 / DIVERSE）｜下个里程碑=19:00 让路窗解 → 年轮批 3 落环 → `events_refresh --gate` → `opening_capacity --window 12` 对 R3230 基线（ETA 2026-11-16 19:30，窗 ≤3h）。
+- 下轮预置：①19:00 后年轮批 3 + `sync_rings` + `events_refresh --gate`；②落环后重跑 `build_ring_openings.py` + `build_export_index.py`，看新环是否把 max 推过 8（OBSERVE 线）；③T-20261115-04 观察窗 11-17 到期按读数结案；④R3208 TTL 临界（禁牌 19:34 到期 vs 生成窗 19:00 开）观察是否震荡。
+- 计量：tokens: local=0 api=0 api_reason=workday-yield-window
