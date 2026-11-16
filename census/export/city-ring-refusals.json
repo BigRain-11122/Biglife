@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16 12:16:57",
+ "generated_at": "2026-11-16 12:24:05",
  "total": 80,
  "today": 25,
  "days": [
@@ -233,7 +233,7 @@
  "rolling_windows": [
   {
    "window_hours": 24,
-   "as_of": "2026-11-16 12:16:57",
+   "as_of": "2026-11-16 12:24:05",
    "rows": 80,
    "openings": 36,
    "multi_openings": 6,
@@ -313,13 +313,13 @@
   },
   {
    "window_hours": 12,
-   "as_of": "2026-11-16 12:16:57",
-   "rows": 25,
-   "openings": 17,
+   "as_of": "2026-11-16 12:24:05",
+   "rows": 23,
+   "openings": 15,
    "multi_openings": 4,
    "cross_cid_openings": 4,
    "wasted_calls": 8,
-   "waste_ratio": 0.32,
+   "waste_ratio": 0.3478,
    "top": [
     {
      "opening12": "风把塑料布吹得啪啦响，我",
