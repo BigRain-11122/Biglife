@@ -121,4 +121,20 @@ R3242 的席位预算闸只治「席位不足」，而同一族的第二个污�
 `judge 冻结下不按墙钟到期判混淆`（same vs expired，frozen=True → **PASS**）、
 `judge 非冻结下到期仍判 CONFOUNDED`（同输入 frozen=False → **CONFOUNDED**）。
 
+## 11. 端到端走真 main 路径（桩 LLM 臂·零盘污·E2E PASS）
+
+`--dry-run` 在「建冻结快照」之前就 return，故该段（快照生成→env 传给两臂→来源校验→
+报告写入→finally 删快照）从未被执行过；这正是 19:00 最可能炸的地方。用桩件跑真 `main()`：
+
+- 桩：`arm()` 返回固定读数（written=5／ban_hits=1／ban_src=frozen／ban_n=读快照文件行数），
+  `_set_patch()` 返回成功不落盘，`QA` 指向 `tempfile.mkdtemp()`，`sys.argv` 无开关。
+- 读数：`rc=0`；**A/B 两臂收到同一快照路径且非空**（同路径=True）；快照条数 **10/10**；
+  **快照已清理=False 的否定式**＝文件确实被 finally 删除；报告落到临时目录且含「禁牌快照」行；
+  报告末行 `**verdict: PASS**　补丁终态=生效（= 起跑前状态·工作树无残留改动）`；
+  明细含 `ok 两臂禁牌集合按快照冻结共用（n=10·墙钟到期混淆不适用）`。
+- **E2E_CHECK PASS**；跑后 `git status` 净（未触碰真 qa/、未动机补丁态）。
+- 仍存的缺口（如实）：`arm()` 被桩替换，故「真子进程收到 env 后是否按 frozen 打印」这一步
+  仍属未验；但 `load_refusal_bans()` 两侧取值与回落已单测，且 E2E 证实 env 键与路径正确到达。
+
+
 
