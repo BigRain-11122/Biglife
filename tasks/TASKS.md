@@ -3712,3 +3712,12 @@ ound_daily --run stale=12 ran=13 failed=0 verdict=PASS；pool_audit PASS SELF_TE
   **CEO 可见三行**：当前活=让路窗确定性面复核 + 拒稿族分布量化（14:4x）；最近实物=`census/QC-REPORT.md`（14:30 巡检·cards=10114 problems=0）与 `qa/EVENTS-REPLAY-REPORT.md`（replay 45444/10111 mismatch=0）；下个里程碑=19:00 窗年轮批 3 落环 + 风族配平（族占比 44%→≤25%），窗 ≤48h。
   **下轮预置**：①19:00 后先跑年轮批 3 → `events_refresh --gate` → 读 `ring-refusals` 当日新增（验 citywide 行 >0）与 `opening_capacity --window 12`；②按本轮族分布结论查风族条目数与曝光顺序，做**族级配平**（非再加串级禁牌）；③连续第二个 19:00 窗仍未落环则回查让路窗 resume 是否生效（AutoYield 19:00 resumeLite）。
   tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）+ 本轮为确定性复核与账本实算
+
+- [R3227] 2026-11-16 14:5x-15:1x @BigLife-OSLoop 让路窗轮（零 LLM·确定性修补）「族表↔人话 hint 覆盖闸：补 7 族 + 上永不复发测试」：接 R3226 的诊断结论继续做，未跨让路窗（全程无 LLM 调用）。
+  **病根（R2789 同型复发）**：`ring_open_family.FAMILIES` 已 12 族（v1.5/v1.6 扩表），而 `evolve_citizen.FAMILY_OPEN_HINTS` 只登记 5 族；渲染点 `FAMILY_OPEN_HINTS.get(f, f)` 于是把 `WIND_AGENT_OPEN` 这类英文族名当"人话"拼进 4B 提示词。当日拒稿账最大单一族正是 `WIND_AGENT_OPEN`（11/25=44%）——落在空档里，模型收到机器码 → 不知被禁什么 → 重入同族（gap #68 复现条件）。
+  **修法三件**：①补登记 7 族人话 hint（BOOK_LEDGER_DEICTIC／STOVE_EDGE_DEICTIC／DOOR_PROP_DEICTIC／WIND_AGENT_OPEN／WIND_SCENE_OPEN／DISTRICT_ANCHOR_OPEN／FIRST_PERSON_ACTION_OPEN），只给"以「X」起句"词组形状不给整句（R2760：hint 不得自成 canned 句）；②`family_blk` 尾部原恒写「不要从手字起、不要用我正起句」，禁风族时与 hint 正面矛盾（R2588 同型），改族感知——HAND 在场逐字保留原句（零漂移），其余族用中性句「不要落进上面点名的任何一种起句形状」；③上闸 `qa/test_family_hint_coverage.py`（族表增族而 hint 未跟即红，永不再靠人手记性）。
+  **验证（本轮实跑）**：`py_compile` rc=0；新测试 **Ran 7 tests OK**（正控 5：12 族全覆盖／无孤儿 hint／无机器码形态／非空／不照抄 `PROMPT_EXAMPLE_ECHO`；负控 2：虚构族名被判缺失且渲染出机器码／hint 写成族名原文必红）；`build_prompt` 实渲染冒烟 8 族逐项 `machine_code_in_prompt=False / hint_rendered=True`、`FAIL=[]` rc=0；零漂移 `hand_legacy_sentence_kept=True`；回归 `test_opening_refusal_memo` 5 OK、`test_citywide_refusal_ban` 12 项 PASS、`test_round_daily_dep_fp_skip` 7 OK。证据=`qa/FAMILY-HINT-2026-11-16.md`。
+  **CEO 可见三行**：当前活=族表↔人话 hint 覆盖闸落地（15:1x）；最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\FAMILY-HINT-2026-11-16.md` 与 `qa\test_family_hint_coverage.py`；下个里程碑=19:00 窗落环后用 `opening_capacity --window 12` 复测 `WIND_AGENT_OPEN` 占比（44%→≤25%），窗 ≤48h。
+  **能力边界（诚实）**：本闸只保证"模型收到的是人话"，不保证它会因此换族；族占比是否真降须待 19:00 后首批落环实测，不达标则下一步查骨架池里风族条目数与曝光顺序（族级配平）。
+  **下轮预置**：①19:00 后年轮批 3 → `events_refresh --gate` → `opening_capacity --window 12` 读 `WIND_AGENT_OPEN` 占比与 citywide 行数；②若风族仍 >25%，查 `OPENING_SKELETONS` 是否含风族形状（26 条里如含"风"字骨架即为源头）；③让路窗内可继续零 LLM 修补：检查其余 `.get(x, x)` 面是否还有同类"缺失即漏机器码"。
+  tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）+ 本轮为确定性代码修补与正负控
