@@ -20,6 +20,11 @@
   - **v3.55 behavior 导出面空间锚点字段通知**（2026-09-29 · T-20260929-06 分步③ · T2 登记=CODEX §十二 v3.55 · 否决窗至 10-06）：`citizen-behavior.jsonl`（R3 再生面·gitignored·`Tools/behavior.py --auto` 跨桶/跨天气自动再生）每行新增 `anchor` 字段=**三锚点+时间窗**（`{home:{x,z,win:[20,9]}, work:{x,z,win:[9,18],site}, social:{x,z,win:[18,20],site}}`·win=24h 制 [start,end) 静态生活空间包络·荣誉席 3 席 anchor=null）——与 v3.54 `citizen-anchors.jsonl` 同 md5 seed 同锚点（单源律·双面逐行全等 QC 机检）·**既有 state/slot/visible/quirk/ctx 字段零 breaking**（纯追加字段·按需取用）·社交锚点=新增第三锚点（x 向 0.44-0.56 中央社交带·与住宅/工位带结构性 disjoint）·个体化时间窗留 v2；消费方=FluxVerse 城市重构 R0-R6 居民流（O-019 ④三锚点生活空间直承）；DevLoop 回执时一并确认。
   - **v3.56 polygon 装配映射面新增导出面通知**（2026-09-29 · T-20260929-06 step④ · T2 登记=CODEX §十二 v3.56 · 否决窗至 10-06）：新增独立导出面 `census/export/citizen-assembly.jsonl`（R3 再生面·gitignored·`Tools/citizen_assembly.py` 按需秒级再生 10030 行）=居民→polygon 角色确定性形象档案（md5(id) seed **同居民永远同外观**·census 匹配律三层=族源三分碳源 7517/硅源 2003/城源 507→族系特征/年龄→AD-024 儿童件 1410/六轴→服装风格·AD-042+AD-011 722+AD-024+AD-018 装配管线·atlas v2.4 五 hex 单源镜像·荣誉席 reserved 零代创）——**不改既有导出面零 breaking**，消费方=City3D polygon 角色装配/FluxVerse R0-R6（O-020 BigLife 总责·投影律消费·BigLife=事实源不变）；DevLoop 回执时一并确认。
 ## 自领池（OS 循环/交互会话按优先级自领）
+- [ ] **T-20261116-14**（R3249 立·集团点名件·硬时点）**11-17 12:00 前**在根 `HQ-FEEDBACK.md` 写「D-20261116-16 上游依赖解除」回执一行。
+  - status: **open**（2026-11-16 18:1x R3249 @BigLife-OSLoop 立）
+  - **依据**：集团 `docs/decisions.md` D-20261116-16（2026-11-16 18:0x 第 68 批）——FluxVerse 线转 PARKED，BigLife 上游依赖正式解除，R2810 自给锚（真实天气/时刻）转常态；要求 @BigLife 回执一行，时点 **11-17 12:00**，逾期=夜轮记 chronic 并不再收 FluxVerse 供给类申告。
+  - **写法**：`python -X utf8 Tools/hq_feedback_daily.py --check` 先查（报 ALREADY_REPORTED 且当日无新阻塞项 → 该日已有一行则次日首轮再写；若当日尚无行则 `--text '<正文>'` 由闸代写）。正文要点=收令确认／依赖解除后自给锚现状（年轮+事件闸按真实天气时刻）／不再提交 FluxVerse 供给类申告。
+  - **今日状态**：11-16 已有 1 行日清（`--check` = ALREADY_REPORTED lines=1），故本条按设计顺延至 **11-17 首轮**执行，仍在 12:00 窗内。
 - [ ] **T-20261116-13**（R3242 立·实弹执行单·今晚首件）19:00 让路窗解后跑配额闸 A/B 实弹，决定 `state/pending/R3204-quota-gate.patch` 留或撤。
   - status: **open**（2026-11-16 17:1x R3242 @BigLife-OSLoop 立·前置条件=本地时间 ≥19:00）
   - **命令**：`python -X utf8 Tools/ring_quota_negctl.py`（每臂席位由 due 自动收敛；勿加 `--batch` 强行抬高）
