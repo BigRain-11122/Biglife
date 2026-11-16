@@ -9,6 +9,7 @@ round_daily --run 判 fresh；到 12:48 面仍停在 273，重建后为 330（+2
 本测试直接验判定函数，不碰真盘：正控=普通面在指纹一致时仍判 fresh；
 负控=FP_SKIP 面在指纹一致时仍判 stale。
 """
+import datetime
 import os
 import sys
 import tempfile
@@ -70,6 +71,55 @@ class DepFingerprintSkipTest(unittest.TestCase):
     def test_ring_recency_is_registered_in_skip_set(self):
         self.assertIn("ring_recency", rd.DEPENDS_FP_SKIP)
         self.assertEqual(rd.DEPENDS_FLOOR_OVERRIDE.get("ring_recency"), 0)
+
+
+class DayRolloverTest(unittest.TestCase):
+    """R3213 回归：日滚动面跨日未重建必须判 stale。
+
+    病根（同族·跨日形态）：faces 档原判据只有 age>1d，源在日界不动时
+    `_dep_mtime_stale` 返回 None，于是「今日 N / 近 N 日」类面可以整整 24h
+    继续写昨天的数。正控=日滚动面构建日=昨天 → stale 且 reason=date-rollover；
+    负控=非日滚动面同样构建日=昨天 → 本闸不冤判（返回 None）。
+    """
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.base = self.tmp.name
+        self.out = os.path.join(self.base, "out.html")
+        with open(self.out, "w", encoding="utf-8") as f:
+            f.write("<html></html>")
+        # 昨天中午：age≈0.5d，不足以触发 age>1d 判据
+        y = datetime.date.today() - datetime.timedelta(days=1)
+        ts = datetime.datetime.combine(y, datetime.time(12, 0)).timestamp()
+        os.utime(self.out, (ts, ts))
+        rd.DAY_SCROLL.add("_t_rolling")
+        rd.DAY_SCROLL.discard("_t_plain2")
+
+    def tearDown(self):
+        rd.DAY_SCROLL.discard("_t_rolling")
+        self.tmp.cleanup()
+
+    def test_rolling_face_stale_after_day_rollover(self):
+        why = rd._date_rollover_stale("_t_rolling", [self.out], datetime.date.today())
+        self.assertIsNotNone(why)
+        self.assertTrue(why.startswith("date-rollover:"))
+
+    def test_plain_face_not_flagged_by_rollover(self):
+        self.assertIsNone(
+            rd._date_rollover_stale("_t_plain2", [self.out], datetime.date.today()))
+
+    def test_rolling_face_fresh_when_rebuilt_today(self):
+        now = time.time()
+        os.utime(self.out, (now, now))
+        self.assertIsNone(
+            rd._date_rollover_stale("_t_rolling", [self.out], datetime.date.today()))
+
+    def test_registry_membership_evidence(self):
+        for key in ("dashboard", "proposals", "reflections", "ring_refusals",
+                    "ring_openings", "ops"):
+            self.assertIn(key, rd.DAY_SCROLL)
+        # 反例：growth 的「今日」只出现在 docstring，不应被误纳（防 churn）
+        self.assertNotIn("growth", rd.DAY_SCROLL)
 
 
 if __name__ == "__main__":

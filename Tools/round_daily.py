@@ -309,6 +309,43 @@ DEPENDS_FLOOR_OVERRIDE = {"gene_ledger": 0, "lexicon": 0, "dashboard": 0,
 # D-20261116-13「结构自洽即 PASS 假绿」同族）。故这类面禁走指纹压制。
 DEPENDS_FP_SKIP = {"ring_recency", "ring_trend", "meet_symmetry", "ring_quality"}
 
+# v0.28 (2026-11-16 R3213): 跨日失效闸——「今日 N / 近 N 日 / 相对时距」类面在日界
+# 翻转时源可能一动不动：faces 档原判据只有 age>1d，于是跨日后最多 24h 里 CEO 面
+# 继续写着昨天的「今日」。DEPENDS_FP_SKIP 治的是「源 mtime 前进但内容未变」的
+# 小时内漂移，管不到跨日（源 mtime 根本不前进，_dep_mtime_stale 直接返回 None）。
+# 判据=产物构建日 != 今日 → stale。daily/input/data 档已按构建日判新，故此处只
+# 覆盖 faces 档；下列面均由代码实读确认按构建时刻的 date.today() 算当日量/窗口。
+DAY_SCROLL = {
+    "dashboard",      # build_city_dashboard: 近 7 日窗口 + 今日新增年轮 KPI + 空窗段
+    "proposals",      # build_city_proposals: today_rows → 「今日新增」
+    "reflections",    # build_city_reflections: 今日新增 + 近 14 日逐日 + 近 7 日日均
+    "ring_refusals",  # build_ring_refusals: 「今日」KPI + 逐日逐时
+    "ring_recency",   # build_ring_recency: 今日落环 / 叙龄天数分档
+    "ring_quality",   # ring_simile_audit: cut = today - N 天窗口
+    "ring_trend",     # ring_quality_trend: 近 N 日窗口（now 缺省=day）
+    "ring_openings",  # build_ring_openings: 窗口相对 today 计算
+    "ops",            # build_city_ops: 「分钟前 / 小时前」相对时距
+}
+
+
+def _date_rollover_stale(key: str, out_paths: list[str],
+                         now_date: datetime.date) -> str | None:
+    """跨日未重建即 stale（v0.28）。只在 DAY_SCROLL 面生效。"""
+    if key not in DAY_SCROLL:
+        return None
+    dates = []
+    for p in out_paths:
+        if not os.path.exists(p):
+            continue
+        dates.append(datetime.date.fromtimestamp(os.path.getmtime(p)))
+    if not dates:
+        return None
+    built = max(dates)
+    if built == now_date:
+        return None
+    return "date-rollover:%s->%s" % (built.isoformat(), now_date.isoformat())
+
+
 TIMEOUT_SEC = 240
 
 
@@ -616,6 +653,7 @@ def _is_stale(entry, now_date: datetime.date, out_paths: list[str],
     if not stale:
         faked = (_self_ts_stale(out_paths) or _script_changed(_script, known_sha)
                  or _dep_mtime_stale(_key, out_paths)
+                 or _date_rollover_stale(_key, out_paths, now_date)
                  or _queue_starved(_key))
         if faked:
             return True, faked

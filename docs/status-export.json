@@ -1,10 +1,10 @@
 {
- "export_ts": "2026-11-16 12:46",
+ "export_ts": "2026-11-16 13:29",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
    "n": "年轮进化线",
-   "t": "**R3205（11-16 11:4x·让路窗内基线读数轮）**：年轮硬拒满 2 生产日基线交付（n=80）：`recent-dup-phrase` 67/80=83.8%、族闸仅 20%（原靶证伪）；同人重试面 11-16 已归零（0 人重复/max=1/wasted_calls=0）＝R3115 调度修法实证生效；跨席开口复用仍在（25 条→17 开口，4 开口被 ≥2 人撞、多烧 8 条）。为 19:00 配额闸实弹负控补一条硬回退口：`wasted_calls/max_repeats` 不得从 0/1 升高。日更 3 面重建、QC problems=0。 **R3204（11-16 11:4x·让路窗内确定性面轮）**：日更 20 面体检 → 重建 3 面（city-map 依赖 mtime 触发／city-ring-refusals 脚本变更触发／index），stale=3 ran=4 failed=0 verdict=PASS；世代池 gen5 覆盖 rc=0；语言池 72/72 桶全达标 SELF_TERMINATE；QC 巡检 cards=10114 evolved=10114 problems=0。硬拒归因面满 2 生产日（n=80）读数完成：`recent-dup-phrase` 67/80=83.8% 为主因、族闸仅 20%（原靶证伪）；11-16 活锁归零（0 重复/max=1/wasted=0）＝R3115 调度修法实证生效。 **R3196（2026-11-16 09:40）**：工作日让路窗（D-20261020-02）内年轮/相遇/反思三条 LLM 线按律顺延至 19:00；确定性面全绿——日更面 stale=3 ran=4 verdict=PASS（city-today/dashboard/map/index 重建）、事件流回放闸 events=45444 / cards=10111 / replayed=10111 / mismatch=0 / schema_errors=0 / chronicle gap=0d、QC 不变量 problems=0 dup_rings=37/37、语言池 SELF_TERMINATE（72/72 轴桶 + 12/12 像素桶）。",
+   "t": "**R3213（2026-11-16 13:2x·让路窗确定性轮）**：跨日失效闸落地——`Tools/round_daily.py` 新增 DAY_SCROLL 九面（dashboard/proposals/reflections/ring_refusals/ring_recency/ring_quality/ring_trend/ring_openings/ops：均按构建时刻 date.today() 算当日量/窗口）与 `_date_rollover_stale()`：faces 档原判据只有 age>1d，源在日界不动时 `_dep_mtime_stale` 直接返回 None，于是「今日 N / 近 N 日」类面跨日后最多 24h 仍写昨天的数（与 R3212 指纹压制同族·跨日形态）。回归 `qa/test_round_daily_dep_fp_skip.py` 7/7 OK（正控跨日 stale、负控非日滚动面不冤判、当日重建即 fresh）；当日实跑 round_daily --run stale=0 ran=0 PASS（当天全新鲜，无误判）。 **R3205（11-16 11:4x·让路窗内基线读数轮）**：年轮硬拒满 2 生产日基线交付（n=80）：`recent-dup-phrase` 67/80=83.8%、族闸仅 20%（原靶证伪）；同人重试面 11-16 已归零（0 人重复/max=1/wasted_calls=0）＝R3115 调度修法实证生效；跨席开口复用仍在（25 条→17 开口，4 开口被 ≥2 人撞、多烧 8 条）。为 19:00 配额闸实弹负控补一条硬回退口：`wasted_calls/max_repeats` 不得从 0/1 升高。日更 3 面重建、QC problems=0。 **R3204（11-16 11:4x·让路窗内确定性面轮）**：日更 20 面体检 → 重建 3 面（city-map 依赖 mtime 触发／city-ring-refusals 脚本变更触发／index），stale=3 ran=4 failed=0 verdict=PASS；世代池 gen5 覆盖 rc=0；语言池 72/72 桶全达标 SELF_TERMINATE；QC 巡检 cards=10114 evolved=10114 problems=0。硬拒归因面满 2 生产日（n=80）读数完成：`recent-dup-phrase` 67/80=83.8% 为主因、族闸仅 20%（原靶证伪）；11-16 活锁归零（0 重复/max=1/wasted=0）＝R3115 调度修法实证生效。",
    "s": 1
   },
   {
@@ -2111,6 +2111,6 @@
    "本轮问答面事实闸修法落地并验收（负控 3/3 + 回归 1/1）；今日年轮落环行数 334（卡面机器计数，非人口总数）。"
   ]
  ],
- "t": "当前活：让路窗内基线读数轮——年轮硬拒 2 生产日基线交付 + 日更 3 面重建 + QC 巡检（零 LLM）\n最近实物：qa/RING-REFUSAL-GATE-20261116.md（11:4x·n=80 基线＋负控回退口建议）＋ census/export/city-ring-refusals.html/json（11:35:43 重建含跨席传染面）＋ census/QC-REPORT.md\n下个里程碑：19:00 让路窗结束 → 年轮批 --batch 3（改造前基线）→ 配额闸补丁实弹负控（回退口四条）→ 反思线补跑；11-17 T-20261115-04 验收窗读数结案",
- "top_text": "当前活：让路窗内把 19:00 配额闸负控做成一条命令（A/B 两臂 + 三条硬回退口自动判 PASS/FAIL）\n最近实物：Tools/ring_quota_negctl.py（新·--dry-run 可跑·patch applies=YES）＋ census/export/city-ring-refusals.html（12:24·29 面 fresh）＋ census/QC-REPORT.md\n下个里程碑：19:00 后 `python -X utf8 Tools/ring_quota_negctl.py` 出裁决并同批产出新年轮（≤48h）"
+ "t": "当前活：跨日失效闸落地——round_daily 新增 DAY_SCROLL 九面跨日即判 stale，堵住「今日 N」面跨日后最多 24h 仍写昨天数的口子（回归 7/7、当日 stale=0 无误判）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\Tools\\round_daily.py（13:3x·DAY_SCROLL + _date_rollover_stale）+ C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\test_round_daily_dep_fp_skip.py（7/7 OK）\n下个里程碑：19:00 让路窗结束 → 年轮批 --batch 3 + 反思批 5 + ring_quota_negctl 负控裁决（≤48h）",
+ "top_text": "当前活：跨日失效闸落地——round_daily 新增 DAY_SCROLL 九面跨日即判 stale，堵住「今日 N」面跨日后最多 24h 仍写昨天数的口子（回归 7/7、当日 stale=0 无误判）\n最近实物：C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\Tools\\round_daily.py（13:3x·DAY_SCROLL + _date_rollover_stale）+ C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\test_round_daily_dep_fp_skip.py（7/7 OK）\n下个里程碑：19:00 让路窗结束 → 年轮批 --batch 3 + 反思批 5 + ring_quota_negctl 负控裁决（≤48h）"
 }
