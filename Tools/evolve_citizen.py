@@ -2125,6 +2125,35 @@ def recent_refusal_bans(hours=REFUSAL_BAN_HOURS, path=None):
     return out
 
 
+def parse_frozen_bans(raw):
+    """冻结快照 {opening12: ISO 时刻} -> {opening12: datetime}（纯函数·可回归）。"""
+    out = {}
+    for k, v in (raw or {}).items():
+        try:
+            out[str(k)] = datetime.datetime.fromisoformat(str(v))
+        except Exception:  # noqa: BLE001 - 坏行跳过，不阻断
+            continue
+    return out
+
+
+def load_refusal_bans(env_path=None):
+    """本批生效开口禁牌：默认 12h 窗口现算；给了冻结快照则用快照。
+
+    冻结面只服务 A/B 负控台（ring_quota_negctl）：两臂必须看到同一禁牌集合，
+    否则禁牌在两臂之间到期会把「补丁效果」量成「禁牌到期」（R3208 同类环境量污染）。
+    默认路径零改变——env 未设时逐字回落到 recent_refusal_bans()。
+    """
+    env_path = (env_path if env_path is not None
+                else os.environ.get("BIGLIFE_REFUSAL_BANS_FROZEN"))
+    if env_path and os.path.exists(env_path):
+        try:
+            with open(env_path, "r", encoding="utf-8") as fh:
+                return parse_frozen_bans(json.load(fh))
+        except Exception as exc:  # noqa: BLE001
+            print("frozen refusal-bans unreadable (%s) -> live window" % exc, flush=True)
+    return recent_refusal_bans()
+
+
 def gated_llm(prompt, sig, max_regens=3):
     """Generate with the honesty gate: regenerate on violations (<= max_regens),
     then give up -> None (caller skips; citizen stays due for the next round).
@@ -4134,7 +4163,10 @@ def main():
             max(_tcount.items(), key=lambda kv: kv[1])[0]), flush=True)
     # T-20261115-04 换靶线（2026-11-16 R3206）：12h 全城开口配额，读数直接取
     # state/ring-refusals.jsonl（作帐面即数据源，零新增状态文件）。
-    sig["refusal_bans"] = recent_refusal_bans()
+    sig["refusal_bans"] = load_refusal_bans()
+    print("refusal-bans source: %s n=%d" % (
+        "frozen" if os.environ.get("BIGLIFE_REFUSAL_BANS_FROZEN") else "live-12h",
+        len(sig["refusal_bans"])), flush=True)
     if sig["refusal_bans"]:
         _top_op, _top_ts = max(sig["refusal_bans"].items(),
                                key=lambda kv: kv[1])

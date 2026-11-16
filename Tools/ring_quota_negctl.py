@@ -45,12 +45,13 @@ QA = os.path.join(ROOT, "qa")
 SUMMARY_RE = re.compile(r"OK evolved=(\d+) of (\d+) due \(written=(\d+) skipped=(\d+)\)")
 DUE_RE = re.compile(r"audit-due: due=(\d+)")
 BAN_RE = re.compile(r"gate: citywide-ban hit (\S+)")
+BANSRC_RE = re.compile(r"refusal-bans source: (\S+) n=(\d+)")
 YIELD_RE = re.compile(r"yield-window")
 
 
-def _run(args, timeout=None):
+def _run(args, timeout=None, env=None):
     """跑子进程并按 UTF-8 收口（Windows 控制台默认 GBK，中文读数会乱码）。"""
-    p = subprocess.run(args, cwd=ROOT, capture_output=True, timeout=timeout)
+    p = subprocess.run(args, cwd=ROOT, capture_output=True, timeout=timeout, env=env)
     out = (p.stdout or b"").decode("utf-8", "replace")
     err = (p.stderr or b"").decode("utf-8", "replace")
     return p.returncode, out, err
@@ -116,6 +117,26 @@ def ban_snapshot():
         return None
 
 
+def freeze_bans_file(dest=None):
+    """把当前生效禁牌写成冻结快照（两臂共用），返回 (path, n) 或 (None, 0)。
+
+    冻结后两臂看到逐字相同的禁牌集合——禁牌在 A→B 之间到期不再污染读数，
+    「必须在 soonest_expiry 前跑完」的时间压力随之解除（R3208 同类环境量污染）。
+    """
+    try:
+        sys.path.insert(0, os.path.join(ROOT, "Tools"))
+        import evolve_citizen as ev
+        bans = ev.recent_refusal_bans()
+    except Exception:  # noqa: BLE001 - 快照建不出就退回实时窗口
+        return None, 0
+    if dest is None:
+        fd, dest = tempfile.mkstemp(prefix="negctl-bans-", suffix=".json")
+        os.close(fd)
+    with open(dest, "w", encoding="utf-8") as fh:
+        json.dump({k: v.isoformat() for k, v in bans.items()}, fh, ensure_ascii=False)
+    return dest, len(bans)
+
+
 def refusal_metrics(day):
     """当日拒稿面三数：rows / distinct_cid / wasted_calls / max_repeats。"""
     rows = 0
@@ -172,15 +193,16 @@ def due_count():
     return int(m.group(1)) if m else None
 
 
-def arm(batch, label):
+def arm(batch, label, env=None):
     """跑一臂年轮批，返回 stdout 解析出的可判读数。"""
     rc, out, err = _run([sys.executable, "-X", "utf8", EVOLVE,
-                         "--batch", str(batch), "--via", "BigLife-OSLoop"])
+                         "--batch", str(batch), "--via", "BigLife-OSLoop"], env=env)
     if YIELD_RE.search(out):
         return {"label": label, "yield": True, "rc": rc, "out": out}
     m = SUMMARY_RE.search(out)
     written = int(m.group(3)) if m else 0
     done = int(m.group(1)) if m else 0
+    src = BANSRC_RE.search(out)
     return {
         "label": label,
         "yield": False,
@@ -188,6 +210,8 @@ def arm(batch, label):
         "written": written,
         "done": done,
         "ban_hits": len(BAN_RE.findall(out)),
+        "ban_src": src.group(1) if src else "?",
+        "ban_n": int(src.group(2)) if src else -1,
         "summary": m.group(0) if m else "(no summary line)",
         "err_tail": err.strip()[-400:],
     }
@@ -255,7 +279,8 @@ def judge(a, b, before, after, batch, snap_a=None, snap_b=None):
     return ("PASS" if ok else "FAIL"), lines
 
 
-def write_report(day, batch, a, b, verdict, lines, restore_state, snap_a=None, snap_b=None):
+def write_report(day, batch, a, b, verdict, lines, restore_state, snap_a=None, snap_b=None,
+                 freeze_state="-"):
     os.makedirs(QA, exist_ok=True)
     path = os.path.join(QA, "RING-QUOTA-NEGCTL-%s.md" % day.replace("-", ""))
     def _fmt(s):
@@ -268,6 +293,7 @@ def write_report(day, batch, a, b, verdict, lines, restore_state, snap_a=None, s
         "- 每臂席位：%d" % batch,
         "- 禁牌态：A 臂 %s ／ B 臂 %s（两臂不一致即判 CONFOUNDED，读数不用于留撤）"
         % (_fmt(snap_a), _fmt(snap_b)),
+        "- 禁牌快照：%s" % freeze_state,
         "",
         "## 两臂读数",
         "",
@@ -302,6 +328,8 @@ def main():
     ap = argparse.ArgumentParser(description="12h 全城开口配额闸实弹负控")
     ap.add_argument("--batch", type=int, default=8, help="每臂席位数（默认 8）")
     ap.add_argument("--dry-run", action="store_true", help="只体检：补丁可打性 + 当日基线")
+    ap.add_argument("--no-freeze", action="store_true",
+                    help="两臂各自取实时禁牌窗口（默认冻结同一快照；仅用于复核冻结面本身）")
     ap.add_argument("--selftest", action="store_true",
                     help="四道闸回归电池（席位预算/禁牌混淆/补丁态编排/报告落地·零 LLM·零盘污）")
     args = ap.parse_args()
@@ -338,9 +366,12 @@ def main():
               % (snap0["n"], snap0["exp_min"], snap0["exp_max"]))
 
     if args.dry_run:
-        if snap0 and snap0["n"]:
-            print("dry-run 提示：两臂须连跑且不跨 %s（禁牌到期点）；跨了判 CONFOUNDED"
+        if args.no_freeze and snap0 and snap0["n"]:
+            print("dry-run 提示：未冻结 → 两臂须连跑且不跨 %s（禁牌到期点）；跨了判 CONFOUNDED"
                   % snap0["exp_min"])
+        elif not args.no_freeze:
+            print("dry-run 提示：默认冻结禁牌快照 → 两臂同一集合，不受 %s 到期点约束"
+                  % (snap0["exp_min"] if snap0 and snap0["n"] else "-"))
         due = due_count()
         batch, why = plan_batch(due, args.batch)
         print("due budget: %s" % why)
@@ -360,6 +391,14 @@ def main():
     if batch is None:
         print("abort: 两臂席位预算不足——跑出来的 written 差会被误读成「修法伤产线」")
         return 2
+    freeze_path, freeze_n = (None, 0)
+    if not args.no_freeze:
+        freeze_path, freeze_n = freeze_bans_file()
+        print("freeze: %d 条禁牌冻结传入两臂%s" % (
+            freeze_n,
+            "" if freeze_path else "（快照建不出→退回实时窗口·有到期混淆风险）"), flush=True)
+    arm_env = (dict(os.environ, BIGLIFE_REFUSAL_BANS_FROZEN=freeze_path)
+               if freeze_path else None)
     snap_a = ban_snapshot()
     verdict = "FAIL"
     lines = []
@@ -368,7 +407,7 @@ def main():
         if rc != 0:
             print("patch set (A 臂=%s) failed:" % ("applied" if a_state else "reverted"), msg)
             return 2
-        a = arm(batch, "A")
+        a = arm(batch, "A", env=arm_env)
         if a.get("yield"):
             print("yield-window: 产线让路期，A 臂未跑（0 LLM/0 改动）")
             return 3
@@ -380,13 +419,27 @@ def main():
             return 2
         print("arm B (patch ON) ...", flush=True)
         snap_b = ban_snapshot()
-        b = arm(batch, "B")
+        b = arm(batch, "B", env=arm_env)
         if b.get("yield"):
             print("yield-window: B 臂未跑 -> 还原补丁")
             return 3
         after = refusal_metrics(day)
-        verdict, lines = judge(a, b, before, after, batch, snap_a, snap_b)
+        if freeze_path and not (a.get("ban_src") == b.get("ban_src") == "frozen"):
+            verdict = "CONFOUNDED"
+            lines = ["CONFOUNDED 冻结面未生效（A 源=%s/B 源=%s）→ 两臂禁牌环境不同，"
+                     "读数不可用于裁决补丁" % (a.get("ban_src"), b.get("ban_src"))]
+        elif freeze_path and a.get("ban_n") != b.get("ban_n"):
+            verdict = "CONFOUNDED"
+            lines = ["CONFOUNDED 冻结条数不一致（A=%s/B=%s）→ 快照未真正共用"
+                     % (a.get("ban_n"), b.get("ban_n"))]
+        else:
+            verdict, lines = judge(a, b, before, after, batch, snap_a, snap_b)
     finally:
+        if freeze_path:
+            try:
+                os.unlink(freeze_path)
+            except OSError:
+                pass
         rc, msg = _set_patch(restore_state)
         if rc != 0:
             print("RESTORE FAILED: 工作树补丁态未回到",
@@ -397,7 +450,14 @@ def main():
 
     for ln in lines:
         print(ln)
-    path = write_report(day, batch, a, b, verdict, lines, restore_state, snap_a, snap_b)
+    if args.no_freeze:
+        freeze_state = "关（--no-freeze·两臂各自取实时窗口）"
+    elif freeze_path:
+        freeze_state = "冻结 %d 条（两臂共用同一集合·不受到期点约束）" % freeze_n
+    else:
+        freeze_state = "冻结失败→退回实时窗口（有禁牌到期混淆风险）"
+    path = write_report(day, batch, a, b, verdict, lines, restore_state,
+                        snap_a, snap_b, freeze_state=freeze_state)
     print("report:", os.path.relpath(path, ROOT))
     print("verdict:", verdict, "| patch in tree:", "yes" if restore_state else "no")
     return 0 if verdict == "PASS" else 1
@@ -450,7 +510,27 @@ def _selftest():
     chk("patch_steps B 臂恒为 on",
         patch_steps(True)[1] is True and patch_steps(False)[1] is True)
 
-    # 4) 报告落地（写临时目录，绝不触碰真 qa/）
+    # 4) 禁牌冻结面（R3247：两臂必须同一集合——禁牌在两臂之间到期会污染读数）
+    sys.path.insert(0, os.path.join(ROOT, "Tools"))
+    import evolve_citizen as _ev
+    fz = _ev.parse_frozen_bans({"opening-abcdef": "2026-11-16T07:34:00"})
+    chk("parse_frozen_bans 正常解析", isinstance(fz.get("opening-abcdef"), datetime.datetime))
+    chk("parse_frozen_bans 坏值跳过", len(_ev.parse_frozen_bans({"bad": "x"})) == 0)
+    p_fz, n_fz = freeze_bans_file()
+    try:
+        chk("freeze_bans_file 产出可读快照",
+            bool(p_fz) and os.path.exists(p_fz)
+            and isinstance(json.load(open(p_fz, encoding="utf-8")), dict))
+        got = _ev.load_refusal_bans(env_path=p_fz) if p_fz else {}
+        chk("load_refusal_bans 走快照且无损", len(got) == n_fz == len(_ev.recent_refusal_bans()))
+    finally:
+        if p_fz:
+            try:
+                os.unlink(p_fz)
+            except OSError:
+                pass
+
+    # 5) 报告落地（写临时目录，绝不触碰真 qa/）
     old_qa = QA
     tmp = tempfile.mkdtemp(prefix="negctl-selftest-")
     try:

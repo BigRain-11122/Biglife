@@ -61,3 +61,48 @@ python -X utf8 Tools/ring_quota_negctl.py        # 先跑本单，再跑常规�
 - 每臂席位由 due 自动收敛（当前 due=10 → 每臂 5），勿加 `--batch` 抬高。
 - verdict 语义：`PASS`=补齐可用；`FAIL`=三硬线任一破（工具自动还原补丁态）；`INCONCLUSIVE`=
   零命中、本批无判别力，需在有生效禁牌且样本够时重跑，**不得当通过用**。
+
+---
+
+# 追加（R3247·同日 17:4x）：两臂禁牌快照冻结——把「19:14 悬崖」从时间压力改成构造保证
+
+## 6. 为什么还要改
+
+R3242 的席位预算闸只治「席位不足」，而同一族的第二个污染源没治：**禁牌在 A→B 之间到期**。
+实读 `--dry-run`：active=10、soonest_expiry **19:14**、latest 20:45。旧设计要求两臂都跑在
+19:14 之前，否则判 CONFOUNDED——即把「实验有效性」押在「两臂能否在 14 分钟内跑完」这个
+不确定量上（每臂 5 席，任一处重试就会跨点，跨点=整窗作废）。
+
+正确解法不是预测耗时，而是**消除变量**：让两臂看到逐字相同的禁牌集合。
+
+## 7. 改法（默认开启·默认路径零改变）
+
+- `Tools/evolve_citizen.py` 新增纯函数 `parse_frozen_bans(raw)` 与取面函数
+  `load_refusal_bans(env_path=None)`：env `BIGLIFE_REFUSAL_BANS_FROZEN` 指向快照则用快照，
+  **未设时逐字回落到 `recent_refusal_bans()`**（生产行为不变）。
+- 调用点打印可证伪来源标记：`refusal-bans source: frozen|live-12h n=N`。
+- `Tools/ring_quota_negctl.py`：新增 `freeze_bans_file()`（起跑时把 active 禁牌写成 JSON
+  快照）、`--no-freeze`（仅用于复核冻结面本身）、`_run(..., env=)`／`arm(..., env=)` 传环境；
+  两臂共用同一快照，`finally` 删临时文件。
+- 判据加硬校验：两臂来源必须同为 `frozen` 且 `n` 相等，否则判 CONFOUNDED（防「以为冻了其实没冻」）。
+  报告新增一行「禁牌快照：冻结 N 条（两臂共用同一集合·不受到期点约束）」。
+
+## 8. 负控（全零 LLM·23 检 PASS）
+
+| 面 | 读数 |
+|---|---|
+| `--selftest` | **PASS（0 fail·23 检）**，新增 4 检：`parse_frozen_bans` 正常解析／坏值跳过／快照文件可读／`load_refusal_bans` 走快照且无损 |
+| 冻结实弹 | `frozen n=10`；`load_refusal_bans(env_path=快照)` 与 `recent_refusal_bans()` **逐键相同**；env 未设回落结果**亦相同**（默认路径未受污染） |
+| 生产面零回归 | `evolve_citizen --audit-due` → `due=10 leaked=0 PASS`（rc=0）；`py_compile` 两文件 rc=0 |
+| 起点修复未回退 | `patch_steps`／`_set_patch` 四检仍 PASS |
+
+## 9. 效果与诚实边界
+
+- 效果：19:00 实弹**不再受 19:14 到期点约束**，B 臂零命中的概率也下降（冻结集合里 12h 内被拒的
+  开口仍被拦），即同时缓解第 3 节的 INCONCLUSIVE 陷阱。
+- 边界一：冻结态是「实验臂配置」，比生产实时窗口**更严**（本已解禁的开口仍算禁）——报告里
+  写明「冻结 N 条」，不得当作生产口径读数。
+- 边界二：`refusal-bans source:` 这行只在真正进入年轮批时打印，让路窗内无法实跑验证其输出；
+  已验证的是其取数函数两侧（冻结／实时）与回落路径，标签行属 3 行常量拼接（compile 已过）。
+- 边界三：本轮仍未跑实弹，配额闸留/撤**仍未裁决**。
+

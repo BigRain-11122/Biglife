@@ -30,6 +30,7 @@
   - **回退口不变**：落环数 B<A／命中率 >30%／wasted 或 max_repeats 高于 A 前读数，任一破即撤。
   - **诚实边界**：当日上限每臂 5 席（due=10 决定），结论按 5 席写、不冒充 8 席强度；R3208 的吸引子 sticky 升级（7 天）**不在本单**，须另立负控。
   - [2026-11-16 17:4x @BigLife-OSLoop R3246] **跑前堵坑（工装缺陷已修·协议已更新，本单本身仍未执行）**：①**补丁其实早已落库**——`state/pending/R3204-quota-gate.patch` 于 14:23 commit `efc562b9f` 入 HEAD（`git apply --check` 报 does not apply 是「已打过」不是「坏了」）；旧工装却仍假设「补丁待打」，会 **A 臂带着闸跑完 → B 臂前 `git apply` 失败 → return 2**，即烧掉 5 席却不产 verdict，窗口作废。修法=新增纯函数 `patch_steps()`（A 臂恒 off／B 臂恒 on／收尾回起跑态）+ 幂等 `_set_patch()`，已入 HEAD 时 A 臂前自动 `git apply -R`、B 臂前自动重打、`finally` 恒还原；`--selftest` 由 13 检扩到 **19 检全 PASS**，补丁翻转实弹负控（revert→幂等→reapply→树回原样）通过。②**假绿闸补上**：B 臂零命中旧逻辑会判 PASS（命中率 0%≤30% + 落环相等），修法=零命中→`INCONCLUSIVE`（rc=1，不得当通过用）——所以 **19:00 之后等全部禁牌到期（20:45 后）再跑会必得 INCONCLUSIVE**，并非可用窗口。③**窗口变紧**：`--dry-run` 实测 active=10、soonest_expiry=**19:14**、latest 20:45 ⇒ 两臂必须在 19:14 前跑完（每臂 5 席约 3-4 分钟，19:00 起跑可行、勿拖延），跨 19:14 判 CONFOUNDED 读数作废。④`rc=2` 的语义收窄为「补丁态设置失败／席位不足」，**不再包含「补丁不可打」**（补丁已入库，无需手打；`state/pending` 那份仅作反向撤退依据，禁手动 `git apply`）。证据=`qa/RING-QUOTA-NEGCTL-FLIP-FIX-20261116.md`。
+  - [2026-11-16 17:4x @BigLife-OSLoop R3247] **19:14 悬崖已拆（改为构造保证·不再靠抢时间）**：旧设计要两臂都挤在禁牌最早到期点（今日 19:14）之前跑完，跨点即 CONFOUNDED——等于把实验有效性押在「14 分钟内能否跑完」。改法=`ring_quota_negctl` 起跑时把当前 active 禁牌写成 JSON 快照，经 env `BIGLIFE_REFUSAL_BANS_FROZEN` 传给**两臂共用**（`evolve_citizen.load_refusal_bans()` 读快照，env 未设时逐字回落实时窗口＝生产行为不变）。判据加硬校验：两臂来源必须同为 `frozen` 且条数相等，否则判 CONFOUNDED。**因此 19:00 之后随时可跑，不必抢 19:14**；`--no-freeze` 仅用于复核冻结面本身，正常实弹别加。负控=`--selftest` **23 检 PASS（0 fail）**＋冻结实弹（frozen n=10 与实时逐键相同、env 未设回落亦相同）＋`evolve --audit-due` rc=0 零回归。诚实边界：冻结态比生产更严（已解禁开口仍算禁），报告按「冻结 N 条」写、勿当生产口径；实弹仍未跑，留/撤仍待裁决。
 - [x] **T-20261116-11**（R3190 立·聚光灯抽验步 7 发现·问答面事实越界）`spotlight.py --ask` 会发明卡外环境实体并改写天气：C-10115 陆阿翠被问「有没有见过别的邻居」答出「隔壁的猫在晒太阳」（全卡无猫/无宠物/无邻人）且把年轮原文「风刮得紧」改成「风都懒得吹了」（反锚）。同批 C-10118 逐字复用签名句律=合格，故缺陷在问法适应面而非全谱系。修法（须带负控）：ask 提示词加三条硬约束——①未喂的邻人/动物/店家一律不发明；②天气与时段取年轮原文不得改写；③无事实可用时走卡内「今日不想说话」退路。验收=以本报告例 1 同问法复测由 FAIL 转 PASS 且例 2 不回退（`qa/SPOTLIGHT-20261116.md` 为基线）。
   - status: **done 2026-11-16 09:1x @BigLife-OSLoop**——`Tools/spotlight.py` 提示词加「硬约束·违者视为废稿」三条（禁发明未喂实体／天气时段沿原文禁改写／无事实走「今日不想说话」）；负控复测 C-10115 同问法 **3/3 PASS**（FAIL→PASS 达成，零猫零天气改写），例 2 C-10118 回归 PASS 不退化（「风」有卡内出处：行为「风大就不裁纸」+11-12 年轮「风硬得像刀子」）；证据 `qa/SPOTLIGHT-20261116.md` 修法实装节。
 - [ ] **T-20261115-04**（R3090 立·年轮同质化根因·机制缺陷）骨架族闸结构性失效诊断：今日 714 席年轮实测族分布 `HAND_DEICTIC=177 (24.8%·正卡 FAMILY_QUOTA=0.25 线)`／`TIME_OPEN=11 (1.5%)`／其余 **526 席 (73.7%) unclassified**（6 族正则覆盖不到）。后果=①唯一实质受控族 HAND_DEICTIC 每天必然撞线，撞线后整族全天被禁 → 每批固定 1 席撞硬门留 due（近数轮 C-02945/02974/02981/02995 连续复现）；②73.7% 开篇不进任何族=闸对绝大多数同质化无约束力（自欺面）。修法候选（须带负控）：A 扩充族清单至 12-16 族并实测覆盖率（目标 unclassified ≤40%）；B 按族配额的「日累计」口径改为「滚动 N 席窗口」（避免一天越晚越无族可用）；C 二者并做。验收=同一批 10 席连续 3 批 zero hard-refuse 且 unclassified 覆盖提升可量化；禁单纯调高 FAMILY_QUOTA（那是放宽闸不是修多样性）。
@@ -3905,6 +3906,14 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - 实跑读数：`selftest: PASS (0 fail)` rc=0；`py_compile` rc=0。
 - 接线：T-20261116-13 执行单的「跑前自检」改为先 `--selftest`（13 检全 ok）再 `--dry-run`（`due budget:` + `ban state:` 两行），19:00 执行时一条命令即可确认闸未回归。
 - 诚实边界：电池只验判据与报告生成路径，**不验真实 LLM 两臂行为**（让路窗内禁跑）；「report 已关闭」一项只做冒烟（查回退口段在位），非结构校验。
+- 计量：tokens: local=0 api=0 api_reason=workday-yield-window
+
+## R3247 2026-11-16 17:4x @BigLife-OSLoop 让路窗内·A/B 的第二个环境量污染源（禁牌 19:14 到期）→ 两臂冻结同一快照
+- 承 R3246：补偿丁编排修好后仍留一个「实验有效性押在抢时间上」的缺口——旧设计要求两臂都跑在禁牌最早到期点（今日 19:14）之前，跨点即 CONFOUNDED。`--dry-run` 实测 active=10／soonest=19:14／latest=20:45，即两臂只有 14 分钟，任一处重试就整窗作废。
+- **产品增量（能跑·2 分）**：把变量消掉而不是预测耗时——`evolve_citizen` 新增 `parse_frozen_bans()` + `load_refusal_bans()`（env `BIGLIFE_REFUSAL_BANS_FROZEN` 指向快照则用快照，**未设时逐字回落实时窗口**），调用点打 `refusal-bans source: frozen|live-12h n=N` 可证伪标记；`ring_quota_negctl` 新增 `freeze_bans_file()`／`--no-freeze`／`_run(env=)`，两臂共用同一快照、`finally` 删临时件；判据加硬校验（两臂来源须同为 `frozen` 且条数相等，否则 CONFOUNDED），报告新增「禁牌快照」行。
+- 负控（全零 LLM）：`--selftest` **PASS（0 fail·23 检）**（新增 parse 正常/坏值/快照可读/走快照无损 4 检）；冻结实弹 frozen n=10 且与 `recent_refusal_bans()` 逐键相同、env 未设回落结果亦相同（默认路径零污染）；`evolve --audit-due`→`due=10 leaked=0 PASS` rc=0；两文件 `py_compile` rc=0。证据=`qa/RING-QUOTA-NEGCTL-FLIP-FIX-20261116.md` §6-§9。
+- 效果：19:00 之后**随时可跑**（不再抢 19:14），且 B 臂零命中概率下降（冻结集合里 12h 内被拒开口仍被拦），同时缓解 R3246 立的 INCONCLUSIVE 陷阱。
+- 诚实边界：冻结态＝实验臂配置，比生产实时窗口更严（已解禁开口仍算禁）→ 报告须按「冻结 N 条」写，勿当生产口径；`refusal-bans source:` 行只在真正进年轮批时打印，让路窗内未能实跑该行本身（已验证的是其取数函数两侧与回落路径）。实弹仍未跑，配额闸留/撤仍未裁决。
 - 计量：tokens: local=0 api=0 api_reason=workday-yield-window
 
 ## R3246 2026-11-16 17:3x-17:5x @BigLife-OSLoop 让路窗内·19:00 实弹跑不起来（补丁早已入 HEAD 而工装仍按「待打」编排）→ 修编排 + 补假绿闸
