@@ -2065,7 +2065,7 @@ def gated_llm(prompt, sig, max_regens=3):
     # (C-06556 skipped this round). Rebuild from the base prompt every attempt
     # and pin exactly ONE note for the CURRENT violation.
     base_prompt = prompt
-    for _ in range(1 + max_regens):
+    for _att in range(1 + max_regens):
         prompt = base_prompt
         line = llm(prompt)
         v = ring_violations(line, sig)
@@ -2139,17 +2139,21 @@ def gated_llm(prompt, sig, max_regens=3):
         # 17:14, byte-identical 12-char opening all three). Same gap #68/#70/#79
         # tail-pin law as its soft sibling recent-dup-opening below.
         if "recent-family-opening" in v:
+            _alt = retry_skeleton(sig, _att, banned=line.strip()[:12])
             prompt = (prompt
                       + "\n你刚才那句的开头（「"
                       + line.strip()[:12]
                       + "」）已经是全城至少八张卡用过的开篇骨架，属于模板，禁止再用。"
                         "重写：第一个短句换成只有你才会写的一处具体（手上正碰着的那样东西、"
                         "你要去的那扇门、你看见的某件旧物），不要从「这会儿」「手边」"
-                        "「方才」「天还」这类公共起句写起，也不要在句中复述这句被拒的开头。")
+                        "「方才」「天还」这类公共起句写起，也不要在句中复述这句被拒的开头。"
+                      + (("\n如果实在想不出，就用这个骨架起句：「" + _alt
+                          + "」——同样要把词全换成你自己的。") if _alt else ""))
         # v0.68 R2588: the family-quota gate shipped without any retry note, so a
         # rejected seat regenerated the SAME prompt that caused the rejection.
         # Name the banned shapes at the tail (gap #68/#70/#79 tail-pin law).
         if "opening-family-quota" in v:
+            _alt2 = retry_skeleton(sig, _att, banned=line.strip()[:12])
             prompt = (prompt
                       + "\n你刚才那句的开头（「"
                       + line.strip()[:12]
@@ -2157,7 +2161,9 @@ def gated_llm(prompt, sig, max_regens=3):
                         "第一个短句不要从「手上/手在/手心/手掌/手肘/手背/我正」起，"
                         "也不要从「这会儿/今早/天还黑着/檐下/雨还在下/风里」起；"
                         "改从一件具体的物、一个去处、或你正看着的另一样东西写起。"
-                        "身体和手的细节可以写，但只许放在第二个短句或句中。")
+                        "身体和手的细节可以写，但只许放在第二个短句或句中。"
+                      + (("\n如果实在想不出，就用这个骨架起句：「" + _alt2
+                          + "」——同样要把词全换成你自己的。") if _alt2 else ""))
     # v0.58 gap #79c: template dedup is BEST-EFFORT, honesty is not. A seat
     # that only keeps tripping recent-dup-* must land anyway - the first live
     # batch lost 5/10 seats that way (4B cannot stop writing 「夜里冷，喝口热的
@@ -2937,6 +2943,88 @@ def _body_phrase(sig, hand_first=False):
     return "手上、身上" if hand_first else "身上、手上"
 
 
+def today_refused_openings(day=None):
+    """今天的 hard-refuse 开口集合（R3220：拒稿回灌骨架选择）。
+
+    state/ring-refusals.jsonl 由 _note_refusal 逐条落盘，此前只作帐、无人消费，
+    于是「已被闸拒过的开头」第二天批里还会照发（实测热骨架 24 条拒稿/9 人）。
+    返回 {opening12: ...} 集合，口径与闸一致（去空白取前 12 字）。
+    文件缺失 / 无今日行 = 空集 -> 骨架选择与改动前逐字相同（零漂移律）。
+    """
+    day = day or today()
+    keys = set()
+    p = os.path.join(STATE_DIR, "ring-refusals.jsonl")
+    if not os.path.exists(p):
+        return keys
+    try:
+        with open(p, encoding="utf-8") as _fh:
+            for ln in _fh:
+                ln = ln.strip()
+                if not ln:
+                    continue
+                try:
+                    rec = json.loads(ln)
+                except ValueError:
+                    continue
+                if not str(rec.get("ts") or "").startswith(str(day)):
+                    continue
+                k = re.sub(r"\s+", "", rec.get("opening12") or "")[:12]
+                if len(k) >= 4:
+                    keys.add(k)
+    except (IOError, OSError):
+        return set()
+    return keys
+
+
+def _opening_is_dead(skel, dead):
+    """骨架自身开口是否落在排除集（12 字精确 + 8 字前缀容忍模型抄走样）。"""
+    k = re.sub(r"\s+", "", skel or "")[:12]
+    if not k:
+        return False
+    if k in dead:
+        return True
+    if len(k) >= 8:
+        head = k[:8]
+        for d in dead:
+            if len(d) >= 8 and d[:8] == head:
+                return True
+    return False
+
+
+def retry_skeleton(sig, attempt, banned=""):
+    """拒稿重试时的替用骨架（R3220·仅重试路径调用 -> 零漂移）。
+
+    gap #68/#70/#79 的同病：尾注只说「不许用这个开头」，4B 于是退回同一吸引子
+    （C-03117 四连拒、12 字开口逐字相同）。给一条**具体可用的替用骨架**，
+    把禁令变成可执行指令；排除今日已采纳/已拒/全城用滥/当日禁族。
+    池子被排空 = 返回空串（调用方不追加该句，提示词退回纯禁令形态）。
+    """
+    dead = set()
+    if isinstance(sig, dict):
+        for key in ("today_open_ids", "today_refused_openings"):
+            v = sig.get(key)
+            if isinstance(v, dict):
+                dead |= set(v)
+            elif isinstance(v, (set, list, tuple)):
+                dead |= set(v)
+        _rb = sig.get("recent_banned_openings")
+        if isinstance(_rb, (set, list, tuple)):
+            dead |= set(_rb)
+    _b = re.sub(r"\s+", "", banned or "")[:12]
+    if _b:
+        dead.add(_b)
+    _ban = (sig or {}).get("today_ban_families") or set()
+    pool = [s for s in OPENING_SKELETONS
+            if not _opening_is_dead(s, dead)
+            and not (_ban and _ring_family_of is not None
+                     and _ring_family_of(s) in _ban)]
+    if not pool:
+        return ""
+    cid = (sig or {}).get("cid") or ""
+    n = sum((i + 1) * ord(ch) for i, ch in enumerate(cid)) + 7 * (attempt or 0)
+    return pool[n % len(pool)]
+
+
 def opening_seed_block(cid, sig=None):
     """Per-citizen opening skeleton (deterministic, stable per id).
 
@@ -2950,10 +3038,24 @@ def opening_seed_block(cid, sig=None):
     cid = cid or ""
     n = sum((i + 1) * ord(ch) for i, ch in enumerate(cid))
     skels = OPENING_SKELETONS
-    used = sig.get("today_open_ids") if sig else None
-    if isinstance(used, dict) and used:
-        fresh = [s for s in skels
-                 if re.sub(r"\s+", "", s)[:12] not in used]
+    # R3220 (2026-11-16): 拒稿回灌闸。v0.65 只拿「今日已采纳」的开口做排除，而
+    # hard-refuse 的开头写进 state/ring-refusals.jsonl 后再没人读过——同一骨架
+    # 于是在一天里被逐字抄到拒也照发不误（11-15/11-16 实测：24 条拒稿 / 9 人 /
+    # 只用 1 种开口逐字同句，占全窗 80 条拒稿的 30%）。把已拒开口与全城近期
+    # 用滥开口并进排除集：一个今天已经被拒过的开头，不再发给下一位居民。
+    dead = set()
+    if isinstance(sig, dict):
+        _u = sig.get("today_open_ids")
+        if isinstance(_u, dict) and _u:
+            dead |= set(_u)
+        _r = sig.get("today_refused_openings")
+        if isinstance(_r, (set, list, tuple)) and _r:
+            dead |= set(_r)
+        _rb = sig.get("recent_banned_openings")
+        if isinstance(_rb, (list, tuple, set)) and _rb:
+            dead |= set(_rb)
+    if dead:
+        fresh = [s for s in skels if not _opening_is_dead(s, dead)]
         if fresh:
             skels = fresh
     # v0.68 R2588: never hand out a skeleton whose own family is banned today.
@@ -3842,6 +3944,12 @@ def main():
     # cannot see today's repeats). Ledger lands in state/ for observability.
     _tcount, _tgrams = today_ring_openings(with_grams=True)
     sig["today_open_ids"] = _tcount
+    # R3220: 今日已被闸拒的开口（来自 state/ring-refusals.jsonl），供骨架选择排除。
+    # 只在有今日拒稿行时非空 -> 无拒稿的日子提示词逐字不变。
+    sig["today_refused_openings"] = today_refused_openings()
+    if sig["today_refused_openings"]:
+        print("today-refused openings excluded from skeletons: %d"
+              % len(sig["today_refused_openings"]), flush=True)
     # v0.65 T-20261112-08: family quota, computed once from today's own opening
     # ledger (no second disk walk). 11-12 实测 HAND_DEICTIC 200/467=42.8%, so the
     # first seat of the 19:00 batch already gets the family refused instead of the
