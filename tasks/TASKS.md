@@ -3848,3 +3848,15 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - **CEO 可见三行**：当前活＝让路窗内长尾判据上页面（17:2x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-openings.html`（2026-11-16 17:1x，含「未归族长尾形状分布」栏：70 形状 / 最高 5 环 / DIVERSE）｜下个里程碑=19:00 让路窗解 → 年轮批 3 落环 → `events_refresh --gate` → `opening_capacity --window 12` 对 R3230 基线（ETA 2026-11-16 19:30，窗 ≤3h）。
 - 下轮预置：①19:00 后年轮批 3 + `sync_rings` + `events_refresh --gate`；②落环后重跑 `build_ring_openings.py` + `build_export_index.py`，看新环是否把 max 推过 8（OBSERVE 线）；③T-20261115-04 观察窗 11-17 到期按读数结案；④R3208 TTL 临界（禁牌 19:34 到期 vs 生成窗 19:00 开）观察是否震荡。
 - 计量：tokens: local=0 api=0 api_reason=workday-yield-window
+
+## R3239 2026-11-16 16:5x-17:0x @BigLife-OSLoop 让路窗内·配额闸负控台加混淆闸（防 19:00 A/B 被禁牌到期污染）
+- 轮首：`git pull --ff-only`=Already up to date；启动工作树见 2 个上一轮尾件（`census/export/index.html`、`qa/EVENTS-REPLAY-REPORT.md`，本轮同批提交）；决策水位差 NEW=0（已覆盖至 D-20261116-15）；orders 物理件区无涉本司新件；TASKS 无新增 open 单；`hq_feedback_daily --check`=ALREADY_REPORTED（本步零写入）。
+- 让路窗（D-20261020-02 工作日 09:00-19:00）：`evolve_citizen --batch 3` 返回 `yield-window` → 年轮/相遇/反思三线顺延 19:00；本轮零落环、零阈值改动、零族表改动。反思线今日配额已用（`census/reflections.jsonl` 尾行 date=2026-11-16·105 行）。
+- **产品增量（能跑·2 分）**：`Tools/ring_quota_negctl.py` 增「禁牌态混淆闸」——两臂起跑各取一次现行禁牌集合，`expired`（A→B 之间到期）→ 判 **CONFOUNDED** 不出留撤结论；`added`（A 臂自身拒稿带入）→ 只记携带效应注（偏差对 B 不利，故 PASS 可信 / FAIL 需重跑）；`--dry-run` 增禁牌数与最早/最晚到期点读数。病根＝R3208 已实测到吸引子 12h 禁牌会在生成窗内到期，而负控台只比三条硬线不记环境，19:00 实弹会量到「禁牌到期」而非补丁效果。
+- 负控五例（一次性件已删）：同态→PASS／到期→CONFOUNDED／携带→PASS+注／携带+落环低→FAIL+重跑注／快照不可用→不误拦。`py_compile` rc=0。证据=`qa/RING-QUOTA-NEGCTL-GUARD-20261116.md`
+- **当日实读改写了 R3208 的时点判断**：不是「一条禁牌 19:34 到期」，而是 `active=12 soonest=17:10 latest=20:45`——12 条禁牌在 17:10-20:45 陆续到期。故 19:00 实弹正确窗口＝**两臂连跑且全落在 19:00-20:45 内**（A 臂新增禁牌按携带效应记账），或等 20:45 全解禁后再跑。
+- 同轮确定性面（各 1 次）：`round_daily --run` → **PASS**（stale=1 ran=2 failed=0；`ring_openings` 因 `build_ring_openings.py` 脚本变更重建、`index` 重建，30 面其余 fresh）；`events_refresh --gate` → **PASS**（cards=10111 derived+3 reserved=10114·events=45444·replay 10111·schema_errors=0 mismatch=0·chronicle gap=0d）；`persona_generations --check` rc=0 pending_sync=none（gen1-6·habits=163）；`pool_audit` → **PASS SELF_TERMINATE**（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0）；`qc_census` 上轮 16:41 已 PASS（cards=10114 problems=0）未重复跑。
+- 诚实边界：混淆闸未在真实 LLM 臂上跑过（让路窗禁跑），实弹有效性待 19:00 首跑验证；只解决「时间环境不同」，不解决「A 臂影响 B 臂」；不动配额闸阈值、不改 T-20261115-04 观察窗（11-17 到期结案）。
+- **CEO 可见三行**：当前活＝19:00 实弹前把负控台的环境混淆堵住（16:5x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-QUOTA-NEGCTL-GUARD-20261116.md`（2026-11-16 16:5x，含五例负控与当日禁牌到期分布）｜下个里程碑=19:00 让路窗解 → 年轮批 3 落环 + `events_refresh --gate` → `ring_quota_negctl.py` 实弹 A/B（窗口 19:00-20:45，ETA 2026-11-16 21:00）。
+- 下轮预置：①19:00 后年轮批 3 + `sync_rings` + `events_refresh --gate`；②同窗跑 `ring_quota_negctl.py`（默认每臂 8 席）并按混淆闸读数决定补丁留撤；③落环后重跑 `build_ring_openings.py` + `build_export_index.py` 看 max 是否推过 OBSERVE 线 8；④T-20261115-04 观察窗 11-17 到期按读数结案。
+- 计量：tokens: local=0 api=0 api_reason=workday-yield-window

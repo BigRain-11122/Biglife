@@ -12,6 +12,10 @@ FAIL 自动 git apply -R 还原，判据与读数写进 qa/。
   3) 复读面：当日 wasted_calls 或 max_repeats 高于 A 臂读数 → 把 R3115 修好的
      调度缺陷重新引入（同人被拉回队头）
 
+混淆闸（R3239 加·R3208 实锤）：两臂起跑时各取一次「当前生效开口禁牌集合」，若不同
+（典型=吸引子 12h 禁牌在两臂之间到期，如 07:34 被拒 → 19:34 解禁，而生成窗 19:00 开）
+直接判 CONFOUNDED 且不出留撤结论——否则量到的是禁牌到期，不是补丁效果。
+
 用后即视：本脚本不改任何闸阈值/族表，只决定那份补丁留或撤。
 
 用法：
@@ -66,6 +70,29 @@ def patch_applied():
         return False
 
 
+def ban_snapshot():
+    """当前生效的开口禁牌集合（两臂须在同一禁牌状态下量，否则读数被混淆）。
+
+    R3208 实锤：吸引子末次被拒 07:34 + REFUSAL_BAN_HOURS=12 → 19:34 解禁，而生成窗
+    19:00 就开。若 A 臂 19:0x 跑、B 臂 19:4x 跑，比的就不是补丁而是「禁牌到期」，
+    故此处取两臂各自起跑时的禁牌集合并要求在判据里比对。
+    """
+    try:
+        sys.path.insert(0, os.path.join(ROOT, "Tools"))
+        import evolve_citizen as ev  # 只读：复用现行禁牌窗口实现，不复制阈值
+        hours = getattr(ev, "REFUSAL_BAN_HOURS", 12)
+        bans = ev.recent_refusal_bans()
+        if bans:
+            exp_min = (min(bans.values()) + datetime.timedelta(hours=hours)).strftime("%Y-%m-%d %H:%M")
+            exp_max = (max(bans.values()) + datetime.timedelta(hours=hours)).strftime("%Y-%m-%d %H:%M")
+        else:
+            exp_min = exp_max = "-"
+        return {"n": len(bans), "keys": sorted(bans.keys()),
+                "exp_min": exp_min, "exp_max": exp_max}
+    except Exception:  # noqa: BLE001
+        return None
+
+
 def refusal_metrics(day):
     """当日拒稿面三数：rows / distinct_cid / wasted_calls / max_repeats。"""
     rows = 0
@@ -116,10 +143,27 @@ def arm(batch, label):
     }
 
 
-def judge(a, b, before, after, batch):
+def judge(a, b, before, after, batch, snap_a=None, snap_b=None):
     """三条硬线。返回 (verdict, 明细行列表)。"""
     lines = []
     ok = True
+
+    # 混淆面先行：两臂之间「禁牌到期」→ 两臂时间环境不同，任何比对都无效
+    carry = []
+    if snap_a and snap_b:
+        expired = sorted(set(snap_a["keys"]) - set(snap_b["keys"]))
+        carry = sorted(set(snap_b["keys"]) - set(snap_a["keys"]))
+        if expired:
+            lines.append("CONFOUNDED 禁牌在 A→B 之间到期 %d 条（A=%d→B=%d·例=%r）"
+                         % (len(expired), snap_a["n"], snap_b["n"], expired[:1]))
+            lines.append("　→ 读数不可用于裁决补丁留撤；重跑两臂使其落在同一禁牌窗口内（或全在解禁后）")
+            return "CONFOUNDED", lines
+        if carry:
+            # 携带效应：A 臂被拒的开口会进禁牌表，B 臂因此更受限 = 偏差方向对 B 不利
+            lines.append("note 携带效应：A 臂新增 %d 条禁牌带入 B 臂（对 B 不利）" % len(carry))
+        else:
+            lines.append("ok   禁牌集合两臂一致（n=%d·最早到期 %s）"
+                         % (snap_a["n"], snap_a["exp_min"]))
 
     if b["written"] < a["written"]:
         ok = False
@@ -148,18 +192,27 @@ def judge(a, b, before, after, batch):
         lines.append("ok   复读面 wasted=%d max_repeats=%d 未升高"
                      % (after["wasted_calls"], after["max_repeats"]))
 
+    if ok and carry:
+        lines.append("note PASS 在携带效应对 B 不利的前提下取得（保守方向·可信度更高）")
+    elif not ok and carry:
+        lines.append("note 本次 FAIL 可能由携带效应放大（B 臂多带 %d 条禁牌）→ 需同一环境重跑确认"
+                     % len(carry))
     return ("PASS" if ok else "FAIL"), lines
 
 
-def write_report(day, batch, a, b, verdict, lines, applied_now):
+def write_report(day, batch, a, b, verdict, lines, applied_now, snap_a=None, snap_b=None):
     os.makedirs(QA, exist_ok=True)
     path = os.path.join(QA, "RING-QUOTA-NEGCTL-%s.md" % day.replace("-", ""))
+    def _fmt(s):
+        return "(unavailable)" if not s else "active=%d·最早到期 %s" % (s["n"], s["exp_min"])
     body = [
         "# 12h 全城开口配额闸·实弹负控（%s）" % day,
         "",
         "- 执行：`Tools/ring_quota_negctl.py`（R3204 协议可执行化·T-20261115-04 换靶线）",
         "- 补丁：`state/pending/R3204-quota-gate.patch`（A 臂=未打，B 臂=已打）",
         "- 每臂席位：%d" % batch,
+        "- 禁牌态：A 臂 %s ／ B 臂 %s（两臂不一致即判 CONFOUNDED，读数不用于留撤）"
+        % (_fmt(snap_a), _fmt(snap_b)),
         "",
         "## 两臂读数",
         "",
@@ -212,7 +265,17 @@ def main():
           % (day, base["rows"], base["distinct_cid"],
              base["wasted_calls"], base["max_repeats"]))
 
+    snap0 = ban_snapshot()
+    if snap0 is None:
+        print("ban state: (unavailable·混淆闸本次不生效)")
+    else:
+        print("ban state: active=%d soonest_expiry=%s latest_expiry=%s"
+              % (snap0["n"], snap0["exp_min"], snap0["exp_max"]))
+
     if args.dry_run:
+        if snap0 and snap0["n"]:
+            print("dry-run 提示：两臂须连跑且不跨 %s（禁牌到期点）；跨了判 CONFOUNDED"
+                  % snap0["exp_min"])
         print("dry-run: 未跑 LLM、未改工作树")
         return 0 if ok else 2
     if not ok:
@@ -220,6 +283,7 @@ def main():
         return 2
 
     print("arm A (patch OFF) ...", flush=True)
+    snap_a = ban_snapshot()
     a = arm(args.batch, "A")
     if a.get("yield"):
         print("yield-window: 产线让路期，A 臂未跑（0 LLM/0 改动）")
@@ -234,12 +298,13 @@ def main():
             return 2
         applied_now = True
         print("arm B (patch ON) ...", flush=True)
+        snap_b = ban_snapshot()
         b = arm(args.batch, "B")
         if b.get("yield"):
             print("yield-window: B 臂未跑 -> 还原补丁")
             return 3
         after = refusal_metrics(day)
-        verdict, lines = judge(a, b, before, after, args.batch)
+        verdict, lines = judge(a, b, before, after, args.batch, snap_a, snap_b)
     finally:
         if applied_now and verdict_is_fail(locals()):
             rc, out, err = _git(["apply", "-R", PATCH])
@@ -248,7 +313,7 @@ def main():
 
     for ln in lines:
         print(ln)
-    path = write_report(day, args.batch, a, b, verdict, lines, applied_now)
+    path = write_report(day, args.batch, a, b, verdict, lines, applied_now, snap_a, snap_b)
     print("report:", os.path.relpath(path, ROOT))
     print("verdict:", verdict, "| patch in tree:", "yes" if applied_now else "no")
     return 0 if verdict == "PASS" else 1
