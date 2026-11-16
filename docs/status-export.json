@@ -1,5 +1,5 @@
 {
- "export_ts": "2026-11-16 11:43",
+ "export_ts": "2026-11-16 12:46",
  "do": "数字生命生产：万人户籍库+城市认知层（居民年轮进化/台词池/聚光灯城脑）",
  "depts": [
   {
@@ -2112,5 +2112,5 @@
   ]
  ],
  "t": "当前活：让路窗内基线读数轮——年轮硬拒 2 生产日基线交付 + 日更 3 面重建 + QC 巡检（零 LLM）\n最近实物：qa/RING-REFUSAL-GATE-20261116.md（11:4x·n=80 基线＋负控回退口建议）＋ census/export/city-ring-refusals.html/json（11:35:43 重建含跨席传染面）＋ census/QC-REPORT.md\n下个里程碑：19:00 让路窗结束 → 年轮批 --batch 3（改造前基线）→ 配额闸补丁实弹负控（回退口四条）→ 反思线补跑；11-17 T-20261115-04 验收窗读数结案",
- "top_text": "当前活：让路窗内基线读数轮——年轮硬拒 2 生产日基线交付 + 日更 3 面重建 + QC 巡检（零 LLM）\n最近实物：qa/RING-REFUSAL-GATE-20261116.md（11:4x·n=80 基线＋负控回退口建议）＋ census/export/city-ring-refusals.html/json（11:35:43 重建含跨席传染面）＋ census/QC-REPORT.md\n下个里程碑：19:00 让路窗结束 → 年轮批 --batch 3（改造前基线）→ 配额闸补丁实弹负控（回退口四条）→ 反思线补跑；11-17 T-20261115-04 验收窗读数结案"
+ "top_text": "当前活：让路窗内把 19:00 配额闸负控做成一条命令（A/B 两臂 + 三条硬回退口自动判 PASS/FAIL）\n最近实物：Tools/ring_quota_negctl.py（新·--dry-run 可跑·patch applies=YES）＋ census/export/city-ring-refusals.html（12:24·29 面 fresh）＋ census/QC-REPORT.md\n下个里程碑：19:00 后 `python -X utf8 Tools/ring_quota_negctl.py` 出裁决并同批产出新年轮（≤48h）"
 }
