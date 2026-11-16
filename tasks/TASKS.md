@@ -4225,3 +4225,15 @@ ot reciprocated／历史单向（2026-11-10）→rc=0 观测／闸后同日同�
   - **上报面**：`hq_feedback_daily --check` = day=2026-11-17 lines=1 **ALREADY_REPORTED** 零写入。
   - **CEO 可见三行**：当前活＝年轮 10 环落环＋13 面重建＋事件流全量重放收口（01:44-01:52）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\registry\GM\C-00759.md`（2026-11-17 年轮·带 [锚]）与 `C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md`（45,791 事件 mismatch=0）｜下个里程碑＝11-18 首轮 T-20261116-16 观察窗 D3 读数结单（ETA 11-18 首轮）。
   - 计量：tokens: local=10 api=0 api_reason=-（年轮 10 席各一次本地 Ollama qwen3:4b-instruct；其余全确定性零 LLM）
+
+- [2026-11-17 02:0x @BigLife-OSLoop R3281] 本轮实录（凌晨轮·年轮 9 环）：
+  - **轮首**：`git pull --ff-only` = Already up to date／轮首树净／决策水位差集 **NEW=0**（已覆盖至 D-20261117-05，D-20261117-04 为我方上游依赖解除回执 executed）／orders 无涉本司新件。
+  - **产品面**：`evolve_citizen --batch 3` **written=9 of 10 due**（C-00769/C-00771/C-00773/C-00780/C-00797/C-00774/C-00775/C-00776/C-00777；C-00772 撞硬门 `{mist-import,recent-dup-phrase}` 顺延 +1d）→ 批提交 `a2d91da66` + 行为镜像 `5c38f572a`（rows=9 ring=10114）。
+  - **确定性面**：`events_refresh --gate` **PASS**（derived=10111 reserved=3 exported=10114 unexpected_missing=0；events=45800 replayed=10111 mismatch=0 schema_errors=0 chronicle gap=0d）；`round_daily --run` **PASS**（stale=13 ran=14 failed=0）；`persona_generations --check` **rc=0**（gen1-7 habits=169 pending_sync=none）。
+  - **巡检面**：`qc_census` **problems=0**（cards=10114 evolved=10114 dup_rings=37/37 dup_new=0 meet=169 one_sided=1 meet_dup=2 meet_new_bad=0 → T-20261116-16 观察窗 **D2/3** 达成，D3=11-18）。
+  - **三线自停（各带闸证据）**：`pool_audit` **PASS SELF_TERMINATE**（axis 18/12、greet 28、faq 7、neg 6/6 全 at_target，hard_fails=0，双抽 192+25 对 mismatch=0）；`reflect_citizen --batch 5` = 当日 5 条已写（daily-cap 拦截，尾部 date=2026-11-17）；相遇轮 `--meet C-00720 C-00777` = `meet-cap: 3 meets already logged today`。
+  - **上报面**：`hq_feedback_daily --check` = day=2026-11-17 lines=1 **ALREADY_REPORTED** 零写入。
+  - **T-20261115-04 独立复核（不引用 R3279 结论自证）**：`state/ring-refusals.jsonl` 全量 108 条按 180s 间隙聚批 = 74 批；今日（11-17）拒稿 **12 条 / 7 个批**，`census/registry` 今日日期戳 228 处 / 110 卡 ≈114 环 → 拒稿率 **≈10.5%**，**无任何零拒批**，故验收「连续 3 批 zero hard-refuse」确为**未达成**；与 R3279 结案（closed·部分达成）一致，无需改判。附注：该验收口径不可从拒稿台账单独丈量（零拒批不留行），下轮若复用须以「落环总数」作分母。
+  - **CEO 可见三行**：当前活＝年轮 9 环落环＋13 面重建＋事件流全量重放收口（01:54-02:02）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\registry\GM\C-00769.md`（2026-11-17 年轮·带 [锚]）与 `C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md`（45,800 事件 mismatch=0）｜下个里程碑＝11-18 首轮 T-20261116-16 观察窗 D3 读数结单 + 当晚 19:00 窗 T-20261116-13 A/B 实弹（须先于年轮批）。
+  - **诚实边界**：T-20261116-18 `written` 口径仍 open；T-20261116-13 维持 blocked（每臂 <8 席且须 19:00 窗）；本批 1 席 deferred 即硬门仍活跃的直接证据。
+  - 计量：tokens: local=9 api=0 api_reason=-（年轮 9 席各一次本地 Ollama；其余全确定性零 LLM）
