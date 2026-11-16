@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-11-17 02:31:48",
- "total": 110,
- "today": 14,
+ "generated_at": "2026-11-17 03:41:39",
+ "total": 115,
+ "today": 19,
  "days": [
   "2026-11-15",
   "2026-11-16",
@@ -10,22 +10,22 @@
  "gate_combos": [
   [
    "recent-dup-phrase+recent-family-opening",
-   55
+   56
   ],
   [
    "opening-family-quota+recent-dup-phrase",
-   16
+   17
   ],
   [
    "opening-family-quota",
    11
   ],
   [
-   "recent-family-opening",
-   4
+   "mist-import+recent-dup-phrase",
+   5
   ],
   [
-   "mist-import+recent-dup-phrase",
+   "recent-family-opening",
    4
   ],
   [
@@ -95,20 +95,28 @@
   [
    "citywide-refusal-ban+recent-dup-phrase+recent-family-opening",
    1
+  ],
+  [
+   "event-code+recent-dup-phrase+recent-family-opening",
+   1
+  ],
+  [
+   "citywide-refusal-ban+recent-dup-phrase+recent-family-opening+tech-word",
+   1
   ]
  ],
  "gates": [
   [
    "recent-dup-phrase",
-   88
+   93
   ],
   [
    "recent-family-opening",
-   61
+   64
   ],
   [
    "opening-family-quota",
-   29
+   30
   ],
   [
    "rain-invented",
@@ -120,7 +128,7 @@
   ],
   [
    "mist-import",
-   4
+   5
   ],
   [
    "sky-mismatch",
@@ -128,6 +136,10 @@
   ],
   [
    "time-morning",
+   2
+  ],
+  [
+   "citywide-refusal-ban",
    2
   ],
   [
@@ -151,26 +163,30 @@
    1
   ],
   [
-   "citywide-refusal-ban",
+   "event-code",
+   1
+  ],
+  [
+   "tech-word",
    1
   ]
  ],
  "families": [
   [
    "HAND_DEICTIC",
-   30
+   31
   ],
   [
    "WIND_AGENT_OPEN",
-   26
+   28
   ],
   [
    "TIME_OPEN",
-   25
+   26
   ],
   [
    "(none)",
-   14
+   15
   ],
   [
    "DOOR_PROP_DEICTIC",
@@ -204,7 +220,7 @@
   ],
   [
    "桌角那点零碎又该理一理了",
-   6
+   7
   ],
   [
    "风把晾绳吹得斜出去，我正",
@@ -216,6 +232,10 @@
   ],
   [
    "风把门帘整个掀起来，我正",
+   3
+  ],
+  [
+   "风撞在门板上咚一声，我正",
    2
   ],
   [
@@ -226,7 +246,7 @@
  "by_day": {
   "2026-11-15": 55,
   "2026-11-16": 41,
-  "2026-11-17": 14
+  "2026-11-17": 19
  },
  "retry_livelock": {
   "2026-11-15": {
@@ -250,8 +270,8 @@
    "wasted_calls": 0
   },
   "2026-11-17": {
-   "rows": 14,
-   "distinct_citizens": 14,
+   "rows": 19,
+   "distinct_citizens": 19,
    "repeated_citizens": 0,
    "max_repeats": 1,
    "stuck_same_opening": [],
@@ -284,31 +304,32 @@
    ]
   },
   "2026-11-17": {
-   "rows": 14,
-   "distinct_openings": 14,
-   "repeated_openings": 0,
-   "extra_occurrences": 0,
-   "top": []
+   "rows": 19,
+   "distinct_openings": 18,
+   "repeated_openings": 1,
+   "extra_occurrences": 1,
+   "top": [
+    "风把门帘整个掀起来，我正|2 人"
+   ]
   }
  },
  "rolling_windows": [
   {
    "window_hours": 24,
-   "as_of": "2026-11-17 02:31:48",
-   "rows": 50,
-   "openings": 40,
-   "multi_openings": 4,
-   "cross_cid_openings": 4,
+   "as_of": "2026-11-17 03:41:38",
+   "rows": 53,
+   "openings": 43,
+   "multi_openings": 6,
+   "cross_cid_openings": 6,
    "wasted_calls": 10,
-   "waste_ratio": 0.2,
+   "waste_ratio": 0.1887,
    "top": [
     {
      "opening12": "风把塑料布吹得啪啦响，我",
-     "calls": 5,
-     "cids": 5,
+     "calls": 4,
+     "cids": 4,
      "cid_head": [
       "C-00760",
-      "C-03595",
       "C-03695",
       "C-03790",
       "C-03937"
@@ -327,12 +348,20 @@
     },
     {
      "opening12": "这会儿手边最碍事的就是这",
-     "calls": 3,
-     "cids": 3,
+     "calls": 2,
+     "cids": 2,
      "cid_head": [
-      "C-03598",
       "C-03732",
       "C-03788"
+     ]
+    },
+    {
+     "opening12": "风把门帘整个掀起来，我正",
+     "calls": 2,
+     "cids": 2,
+     "cid_head": [
+      "C-00770",
+      "C-00896"
      ]
     },
     {
@@ -343,18 +372,27 @@
       "C-03725",
       "C-03802"
      ]
+    },
+    {
+     "opening12": "风撞在门板上咚一声，我正",
+     "calls": 2,
+     "cids": 2,
+     "cid_head": [
+      "C-00883",
+      "C-03682"
+     ]
     }
    ]
   },
   {
    "window_hours": 12,
-   "as_of": "2026-11-17 02:31:48",
-   "rows": 30,
-   "openings": 29,
-   "multi_openings": 1,
-   "cross_cid_openings": 1,
-   "wasted_calls": 1,
-   "waste_ratio": 0.0333,
+   "as_of": "2026-11-17 03:41:38",
+   "rows": 35,
+   "openings": 33,
+   "multi_openings": 2,
+   "cross_cid_openings": 2,
+   "wasted_calls": 2,
+   "waste_ratio": 0.0571,
    "top": [
     {
      "opening12": "风把塑料布吹得啪啦响，我",
@@ -363,6 +401,15 @@
      "cid_head": [
       "C-00760",
       "C-03937"
+     ]
+    },
+    {
+     "opening12": "风把门帘整个掀起来，我正",
+     "calls": 2,
+     "cids": 2,
+     "cid_head": [
+      "C-00770",
+      "C-00896"
      ]
     }
    ]
@@ -461,13 +508,23 @@
   },
   {
    "day": "2026-11-17",
-   "rows": 14,
-   "openings": 14,
-   "multi_openings": 0,
-   "cross_cid_openings": 0,
-   "wasted_calls": 0,
-   "waste_ratio": 0.0,
-   "top": []
+   "rows": 19,
+   "openings": 18,
+   "multi_openings": 1,
+   "cross_cid_openings": 1,
+   "wasted_calls": 1,
+   "waste_ratio": 0.0526,
+   "top": [
+    {
+     "opening12": "风把门帘整个掀起来，我正",
+     "calls": 2,
+     "cids": 2,
+     "cid_head": [
+      "C-00770",
+      "C-00896"
+     ]
+    }
+   ]
   }
  ],
  "active_bans": [
@@ -622,12 +679,6 @@
    "ban_hours": 12
   },
   {
-   "opening12": "风把门帘整个掀起来，我正",
-   "last_refused": "2026-11-17 01:35",
-   "expires": "2026-11-17 13:35",
-   "ban_hours": 12
-  },
-  {
    "opening12": "灶台边的铜壶煨着，水汽往",
    "last_refused": "2026-11-17 01:55",
    "expires": "2026-11-17 13:55",
@@ -643,6 +694,36 @@
    "opening12": "我正蹲在路口那块旧门板边",
    "last_refused": "2026-11-17 02:30",
    "expires": "2026-11-17 14:30",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "桌角那点零碎又该理一理了",
+   "last_refused": "2026-11-17 02:59",
+   "expires": "2026-11-17 14:59",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正对着光桥那盏老灯调校",
+   "last_refused": "2026-11-17 03:09",
+   "expires": "2026-11-17 15:09",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "夜深了，我正对着窗台那块",
+   "last_refused": "2026-11-17 03:29",
+   "expires": "2026-11-17 15:29",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "风撞在门板上咚一声，我正",
+   "last_refused": "2026-11-17 03:30",
+   "expires": "2026-11-17 15:30",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "风把门帘整个掀起来，我正",
+   "last_refused": "2026-11-17 03:40",
+   "expires": "2026-11-17 15:40",
    "ban_hours": 12
   }
  ]
