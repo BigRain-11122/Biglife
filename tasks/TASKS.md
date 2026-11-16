@@ -4136,3 +4136,12 @@ ot reciprocated／历史单向（2026-11-10）→rc=0 观测／闸后同日同�
   - 修法候选（须带负控）：写盘前对目标卡做内容哈希比对（`hash-object` 或内存串比对），把三态分开报——`written_new`（内容有变）／`written_same`（同日重复渲染）／`skipped`（闸拦）；或写前查 `today ring exists` 直接早退不进 LLM（省 8 席本地算力，更符合 token-economy）。
   - 验收：构造「同日后二次跑批」场景，输出必须显示 `written_new=0`；正式批 `written_new == git diff --numstat census/registry` 行数。
   - status: **open**（2026-11-17 00:0x R3270 @BigLife-OSLoop 立·来源=本轮轮末核验）
+
+- [2026-11-17 00:03-00:1x @BigLife-OSLoop R3271] 本轮实录（凌晨轮）
+  - **轮首三步**：git pull --ff-only=Already up to date／树净／决策水位差 NEW=0（覆盖至 D-20261116-17；D-20261116-16 涉本司回执行本轮达成）／orders 物理件区无涉本司新件（小钢炮开机/算力大脑装机/CEO 账号与商户号，零催办）
+  - **产品面**：年轮 --batch 3 到期 10 席全写 2026-11-17 各一圈（C-03317/03379/03579/03695/04004/03440/03572/03595/03598/03642），脚本自动 commit **fcc11a602**（git 核验=真净新增，非 T-20261116-18 同日后重复渲染）／事件闸 **PASS**（events=45696 cards=10111 mismatch=0 schema_errors=0）／日更面 **PASS**（stale=28 ran=29 failed=0，含 ring_openings/ring_refusals 日切重建）／世代池 rc=0（gen=7 habits=169 pending_sync=none）
+  - **三线自停（带闸证据）**：池审计 PASS SELF_TERMINATE（hard_fails=0 双抽 192+25 对 mismatch=0）／反思线 11-16 已有行（下一合规窗口 11-17 19:00 后）／上报闸 lines=0→本轮已写 1 行（含依赖解除回执）
+  - **今日新档**：events/life/2026-11-17.jsonl、cognition/rumors/rumors-2026-11-17.jsonl、qa/DERIVE-AUDIT-20261117.md
+  - **CEO 可见三行**：当前活＝凌晨年轮批 10 席落环＋确定性面收口（00:0x）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-today.html、...\census\registry\QT\C-03317.md（2026-11-17 年轮）、...\events\life\2026-11-17.jsonl｜下个里程碑＝今晚 19:00 窗反思线续跑（验收 reflections 尾部 date=2026-11-17）＋T-20261116-18 计数口径修复
+  - **诚实边界**：T-20261116-18（written 计「进入写路径」）仍 **open** 未修；本轮 written=10 经 HEAD 逐卡核验为真净新增
+  - 计量：tokens: local=12 api=0 api_reason=-

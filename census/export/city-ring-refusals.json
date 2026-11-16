@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-11-16 23:31:44",
- "total": 93,
- "today": 38,
+ "generated_at": "2026-11-17 00:07:45",
+ "total": 96,
+ "today": 0,
  "days": [
   "2026-11-15",
   "2026-11-16"
@@ -13,7 +13,7 @@
   ],
   [
    "opening-family-quota+recent-dup-phrase",
-   12
+   15
   ],
   [
    "opening-family-quota",
@@ -87,7 +87,7 @@
  "gates": [
   [
    "recent-dup-phrase",
-   77
+   80
   ],
   [
    "recent-family-opening",
@@ -95,7 +95,7 @@
   ],
   [
    "opening-family-quota",
-   22
+   25
   ],
   [
    "rain-invented",
@@ -136,16 +136,16 @@
  ],
  "families": [
   [
+   "HAND_DEICTIC",
+   25
+  ],
+  [
    "TIME_OPEN",
    24
   ],
   [
    "WIND_AGENT_OPEN",
    23
-  ],
-  [
-   "HAND_DEICTIC",
-   22
   ],
   [
    "(none)",
@@ -196,7 +196,7 @@
  ],
  "by_day": {
   "2026-11-15": 55,
-  "2026-11-16": 38
+  "2026-11-16": 41
  },
  "retry_livelock": {
   "2026-11-15": {
@@ -212,8 +212,8 @@
    "wasted_calls": 20
   },
   "2026-11-16": {
-   "rows": 38,
-   "distinct_citizens": 38,
+   "rows": 41,
+   "distinct_citizens": 41,
    "repeated_citizens": 0,
    "max_repeats": 1,
    "stuck_same_opening": [],
@@ -234,8 +234,8 @@
    ]
   },
   "2026-11-16": {
-   "rows": 38,
-   "distinct_openings": 29,
+   "rows": 41,
+   "distinct_openings": 32,
    "repeated_openings": 4,
    "extra_occurrences": 9,
    "top": [
@@ -249,13 +249,13 @@
  "rolling_windows": [
   {
    "window_hours": 24,
-   "as_of": "2026-11-16 23:31:44",
-   "rows": 40,
-   "openings": 30,
-   "multi_openings": 5,
-   "cross_cid_openings": 5,
-   "wasted_calls": 10,
-   "waste_ratio": 0.25,
+   "as_of": "2026-11-17 00:07:44",
+   "rows": 41,
+   "openings": 32,
+   "multi_openings": 4,
+   "cross_cid_openings": 4,
+   "wasted_calls": 9,
+   "waste_ratio": 0.2195,
    "top": [
     {
      "opening12": "风把塑料布吹得啪啦响，我",
@@ -290,15 +290,6 @@
      ]
     },
     {
-     "opening12": "桌角那点零碎又该理一理了",
-     "calls": 2,
-     "cids": 2,
-     "cid_head": [
-      "C-03533",
-      "C-03579"
-     ]
-    },
-    {
      "opening12": "风撞在窗玻璃上闷响，我正",
      "calls": 2,
      "cids": 2,
@@ -311,9 +302,9 @@
   },
   {
    "window_hours": 12,
-   "as_of": "2026-11-16 23:31:44",
-   "rows": 13,
-   "openings": 13,
+   "as_of": "2026-11-17 00:07:44",
+   "rows": 16,
+   "openings": 16,
    "multi_openings": 0,
    "cross_cid_openings": 0,
    "wasted_calls": 0,
@@ -371,12 +362,12 @@
   },
   {
    "day": "2026-11-16",
-   "rows": 38,
-   "openings": 29,
+   "rows": 41,
+   "openings": 32,
    "multi_openings": 4,
    "cross_cid_openings": 4,
    "wasted_calls": 9,
-   "waste_ratio": 0.2368,
+   "waste_ratio": 0.2195,
    "top": [
     {
      "opening12": "风把塑料布吹得啪啦响，我",
@@ -490,6 +481,24 @@
    "opening12": "秤杆在手里磨了三十年，今",
    "last_refused": "2026-11-16 23:30",
    "expires": "2026-11-17 11:30",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正对着塔顶的云看，风刮",
+   "last_refused": "2026-11-16 23:44",
+   "expires": "2026-11-17 11:44",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正把脑环广场的留言墙从",
+   "last_refused": "2026-11-16 23:54",
+   "expires": "2026-11-17 11:54",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正把扳手一排排排进工具",
+   "last_refused": "2026-11-16 23:55",
+   "expires": "2026-11-17 11:55",
    "ban_hours": 12
   }
  ]

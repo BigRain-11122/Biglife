@@ -50,3 +50,4 @@
 {"date": "2026-11-14", "day_max": 1, "events": [{"surprise": 1, "token": "RESIDENT_SAY|BG-A|minigame|显存4.3G稳，G20-G08交叠，城主夜"}, {"surprise": 0, "token": "COMMIT|fluxgroup|fluxgroup"}, {"surprise": 0, "token": "GAME_STAGE|G08"}, {"surprise": 0, "token": "GAME_STAGE|G20"}, {"surprise": 0, "token": "GITHUB_EVENT|github|BigDomain|PushEvent BigDomai"}]}
 {"date": "2026-11-15", "day_max": 1, "events": [{"surprise": 1, "token": "RESIDENT_SAY|BG-B|minigame|显存7.6G稳，G20-G08交叠，城主夜"}, {"surprise": 0, "token": "COMMIT|fluxgroup|fluxgroup"}, {"surprise": 0, "token": "GAME_STAGE|G08"}, {"surprise": 0, "token": "GAME_STAGE|G20"}]}
 {"date": "2026-11-16", "day_max": 0, "events": []}
+{"date": "2026-11-17", "day_max": 0, "events": [{"surprise": 0, "token": "COMMIT|fluxgroup|fluxgroup"}, {"surprise": 0, "token": "GAME_STAGE|G08"}, {"surprise": 0, "token": "GAME_STAGE|G20"}, {"surprise": 0, "token": "RESIDENT_SAY|BG-B|minigame|显存7.6G稳，G20-G08交叠，城主夜"}]}
