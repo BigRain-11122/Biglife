@@ -3784,3 +3784,16 @@ tokens: local=0 api=0 api_reason=workday-yield-window
 - 实况三行：当前活＝让路窗内确定性取证（禁牌接线负控 + TTL 缺口登记）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-REFUSAL-BAN-WIRING-20261116.md（2026-11-16 16:0x·含 24 次吸引子与 19:34 到期时点）｜下个里程碑=19:00 开窗首年轮批 → 禁牌实弹读数（≤48h）。
 - 计分：能看实物 2 分（可复跑三条命令）；文件改动 1 分；零 LLM。
 tokens: local=0 api=0 api_reason=workday-yield-window
+
+## R3234 2026-11-16 15:5x-16:1x @BigLife-OSLoop 让路窗轮·去重扫描纪律 + 吸引子词源定性
+- 轮首：`git pull --ff-only`=Already up to date、启动时树净；决策水位差集 NEW=0（已覆盖至 D-20261116-15，内容寻杀非行数）；orders 物理件区无涉本司新件（五仓 Branch protection 一键属 CEO 保留面·零催办）。
+- **让路窗（D-20261020-02）**：`evolve_citizen --batch 3` 实跑返 `yield-window: workday 09:00-19:00`→年轮/相遇/反思三线结构性延后，本轮零落环、零阈值改动。
+- **去重扫描纪律（本轮主动收窄）**：R3232(15:2x)/R3144(15:39)/R3208(15:4x) 已在同一让路窗内跑过确定性面与禁牌取证，按产品优先律 #2「禁每轮重扫同一等待对象」，本轮不重跑 qc/pool 全套，只做各 1 次闸确认（读数见下）。
+- **本轮唯一新增动作＝吸引子词源定性（给 R3208 悬案补证据面）**：全仓 `rg` 取证「这会儿手边最碍事的就是这」「手边」——`genes/lives.json`、`cognition/pools.json`、`cognition/greetings.json` 命中均为**无关联句**（修伞匠手边伞未歇／问云满天过只顾手边人／鱼饵），**零命中该吸引子**；实际命中全部落在 `census/registry/NS/*.md` 与 `census/anchors/*.md` 的**居民已落年轮正文**（如 C-00508）＋`tasks/archive` 历史轮记。⇒ **定性：吸引子出自模型生成侧而非供给池污染**，与 R3223「撤骨架 ≠ 止血」互补成立；本轮据此**不动骨架池、不动阈值**（无负控不落码，守 gate-rigor）。
+- **确定性面实测读数**：①`round_daily --run` → stale=1 ran=2 failed=0 **verdict=PASS**（27 面 skipped-fresh、index 重建）；②`persona_generations --check` → rc=0 pending_sync=none（gen1-6·habits=163·max_cid=C-10120）；③`pool_audit` → 轴 72/72＋像素 12/12＋greet 28/28＋faq 7/7＋负例 6/6 · hard_fails=0 · 双抽 192+25 对 mismatch=0 → **PASS SELF_TERMINATE**（语言线自终止律成立，不跑 pool_gen）；④`events_refresh --gate` → derive OK cards=10111 events=45444 shards=3／replay replayed=10111 schema_errors=0 **mismatch=0 PASS**／coverage unexpected_missing=0／chronicle fresh gap=0d；⑤`qc_census` → cards=10114 evolved=10114 **problems=0** dup_rings=37/37 dup_new=0；⑥反思线验收面 → `census/reflections.jsonl` 105 行·尾行 `date=2026-11-16`＝**当日已达验收**（无需重跑）；⑦步 7 聚光灯 → `qa/SPOTLIGHT-20261116.md` 09:06 已抽、11-15 亦 2 例，**月度 ≥2 已达标**；⑧`hq_feedback_daily --check` → `day=2026-11-16 lines=1 ALREADY_REPORTED`＝本步零写入（防日清 spam）。
+- **产品增量（能看实物·2 分）**：`round_daily` 索引重建连带补齐 3 个页面的 `bl-nav:index` 导航入口——`census/export/city-ring-openings.html`、`census/export/city-dashboard.html`、`census/export/index.html`（此前这 2 页无返回索引链接，CEO 打开后无法回导航）；同时 `census/QC-REPORT.md` 与 `qa/EVENTS-REPLAY-REPORT.md` 当日刷新入库。diff=6 增 6 删，零噪音。
+- **诚实边界**：本轮零 LLM、零年轮落环，新增产品仅为导航可达性＋报告时鲜；年轮文本质量与吸引子是否真降，须待 19:00 后首批实弹读数，本记不作「已解决」宣称。
+- **CEO 可见三行**：当前活＝让路窗内闸面复核＋吸引子词源定性（16:0x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-openings.html`（16:0x·已带返回索引导航）、`census\QC-REPORT.md`（16:0x）、`qa\EVENTS-REPLAY-REPORT.md`（16:0x）｜下个里程碑=19:00 让路窗解 → 年轮批 3 落环 → events_refresh --gate → opening_capacity --window 12 对 R3230 基线逐项对比（ETA 2026-11-16 19:20，窗 ≤48h）。
+- **下轮预置**：①19:00 后年轮批 3 → 必跑 sync_rings + events_refresh --gate；②R3208 的 TTL 临界缺口（末次被拒 07:34+12h=19:34 到期 vs 生成窗 19:00 开）在 19:00 首批实测是否出现「禁—复现—再禁」震荡，有材料再做 sticky A/B 负控；③T-20261115-04 观察窗 11-17 到期直接按读数结案；④FluxVerse D-20261115-01 承诺 11-16 18:00，逾期由夜轮判 chronic，本司不计缺口。
+- 计分：能看实物 2 分（3 页面可直接打开且新增导航）；文件改动 1 分（5 文件）；零 LLM。
+tokens: local=0 api=0 api_reason=workday-yield-window
