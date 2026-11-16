@@ -4363,5 +4363,5 @@ ound_daily --run **stale=13 ran=14 failed=0 PASS**（重建 goals/gene_ledger/gr
   - **产品面（实物·2 分）**：①年轮 `--batch 3` 实跑 **evolved=8 of 10 due（written=8 written_new=8 skipped=0，闸拦 2 席 deferred +1d）**——C-00999/01000/01008/01025/01003/01004/01005/01006 各落 2026-11-17 一圈（C-01002 opening-family-quota、C-01001 citywide-refusal-ban）；②`events_refresh --gate` **PASS**（events=45997 cards=10111 shards=3 mismatch=0 schema_errors=0 chronicle gap=0d）；③`round_daily --run` **PASS**（stale=13 ran=14 failed=0）；④`persona_generations --check` **rc=0**（gen8 habits=170 max_cid=C-10120 pending_sync=none）。
   - **质检面**：`pool_audit` **PASS / SELF_TERMINATE**（under_target NONE；determinism 192 对 mismatch=0，greet 25 对 0）。
   - **重叠实证（如实）**：本轮与另一 OSLoop 实例重叠——05:20 提交 `a8ef7bdc2` 已先收录同批 8 席年轮（R3308 轮记亦记「轮次重叠实证」）；本轮仅收口剩余 25 面 → commit `f49d5ff63` push ok（9f72c761c..f49d5ff63）。round.lock 单实例约束在本机多窗场景失效，留观察，不擅自改锁机制。
-  - **缺陷留档**：本窗 `git commit -m` 经 PowerShell 传参出现 UTF-8 乱码，`f49d5ff63` 标题不可读；后续提交改走文件式消息（`-F`）。不 force-push 修正（避免与他窗竞争 main）。
+  - **编码核验（自我更正）**：本窗两条提交标题在 PowerShell 控制台显示为乱码，经 `git log --pretty=%s` 按 UTF-8 解码复核，`f49d5ff63` / `cfa81257d` 存库均为正确中文，属控制台 GBK 渲染假象、非真缺陷；后续提交仍走 `-F` 文件式消息以杜绝歧义。
   - 计量：**tokens: local=10 api=0 api_reason=-**（8 席年轮 + 2 席被闸样本各 1 次本地 LLM；日更/事件闸/池审计/世代检查全确定性）。
