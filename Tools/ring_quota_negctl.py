@@ -47,6 +47,8 @@ DUE_RE = re.compile(r"audit-due: due=(\d+)")
 BAN_RE = re.compile(r"gate: citywide-ban hit (\S+)")
 BANSRC_RE = re.compile(r"refusal-bans source: (\S+) n=(\d+)")
 YIELD_RE = re.compile(r"yield-window")
+GATEOFF_RE = re.compile(r"quota-gate: off \(env BIGLIFE_QUOTA_GATE\)")
+GATE_ENV = "BIGLIFE_QUOTA_GATE"
 
 
 def _run(args, timeout=None, env=None):
@@ -209,6 +211,7 @@ def arm(batch, label, env=None):
         "rc": rc,
         "written": written,
         "done": done,
+        "gate_off": bool(GATEOFF_RE.search(out or "")),
         "ban_hits": len(BAN_RE.findall(out)),
         "ban_src": src.group(1) if src else "?",
         "ban_n": int(src.group(2)) if src else -1,
@@ -246,6 +249,14 @@ def judge(a, b, before, after, batch, snap_a=None, snap_b=None, frozen=False):
             lines.append("ok   禁牌集合两臂一致（n=%d·最早到期 %s）"
                          % (snap_a["n"], snap_a["exp_min"]))
 
+    # R3255: 零命中先判——闸没拦过一次时，落环差/复读面读数与闸无关，
+    # 旧顺序会把别的闸造成的 1 席差判成 FAIL（本轮实测 9<10 即此假 FAIL）。
+    if not (b.get("ban_hits") or 0):
+        lines.append("note 无判别力：B 臂闸零命中（当时冻结禁牌 %s 条）——该批没有任何"
+                     "「闸真的拦过一次」的证据，落环差与复读面读数不能用于留撤"
+                     % (snap_b.get("n") if snap_b else "?"))
+        return "INCONCLUSIVE", lines
+
     if b["written"] < a["written"]:
         ok = False
         lines.append("FAIL 落环数 %d < 基线 %d（修法伤产线）" % (b["written"], a["written"]))
@@ -274,9 +285,7 @@ def judge(a, b, before, after, batch, snap_a=None, snap_b=None, frozen=False):
                      % (after["wasted_calls"], after["max_repeats"]))
 
     if ok and not (b.get("ban_hits") or 0):
-        lines.append("note 无判别力：B 臂闸零命中（当时生效禁牌 %s 条）——该批没有任何"
-                     "「闸真的拦过一次」的证据，不能判 PASS"
-                     % (snap_b.get("n") if snap_b else "?"))
+        lines.append("note 兜底：零命中不得判 PASS")
         return "INCONCLUSIVE", lines
     if ok and carry:
         lines.append("note PASS 在携带效应对 B 不利的前提下取得（保守方向·可信度更高）")
@@ -296,18 +305,19 @@ def write_report(day, batch, a, b, verdict, lines, restore_state, snap_a=None, s
         "# 12h 全城开口配额闸·实弹负控（%s）" % day,
         "",
         "- 执行：`Tools/ring_quota_negctl.py`（R3204 协议可执行化·T-20261115-04 换靶线）",
-        "- 补丁：`state/pending/R3204-quota-gate.patch`（A 臂=未打，B 臂=已打）",
+        "- 开关：运行时 env `BIGLIFE_QUOTA_GATE`（R3255）——A 臂=off，B 臂=on；"
+        "闸代码常驻树内，工作树零写入（文本反向补丁基线漂移已废弃）",
         "- 每臂席位：%d" % batch,
-        "- 禁牌态：A 臂 %s ／ B 臂 %s（两臂不一致即判 CONFOUNDED，读数不用于留撤）"
+        "- 禁牌态：A 臂 %s ／ B 臂 %s（A 臂关闸时恒为 0 条，非偏差）"
         % (_fmt(snap_a), _fmt(snap_b)),
         "- 禁牌快照：%s" % freeze_state,
         "",
         "## 两臂读数",
         "",
-        "| 臂 | 补丁 | written | done | citywide-ban 命中 | 摘要行 |",
+        "| 臂 | 闸 | written | done | citywide-ban 命中 | 摘要行 |",
         "|---|---|---|---|---|---|",
-        "| A | 否 | %s | %s | - | `%s` |" % (a.get("written"), a.get("done"), a.get("summary")),
-        "| B | 是 | %s | %s | %s | `%s` |" % (b.get("written"), b.get("done"), b.get("ban_hits"), b.get("summary")),
+        "| A | off | %s | %s | - | `%s` |" % (a.get("written"), a.get("done"), a.get("summary")),
+        "| B | on | %s | %s | %s | `%s` |" % (b.get("written"), b.get("done"), b.get("ban_hits"), b.get("summary")),
         "",
         "## 判定",
         "",
@@ -315,8 +325,8 @@ def write_report(day, batch, a, b, verdict, lines, restore_state, snap_a=None, s
     ] + lines + [
         "```",
         "",
-        "**verdict: %s**　补丁终态=%s"
-        % (verdict, "生效（= 起跑前状态·工作树无残留改动）"
+        "**verdict: %s**　闸代码终态=%s"
+        % (verdict, "常驻生效（= 起跑前状态·工作树无残留改动）"
            if restore_state else "未生效（工作树已还原到起跑前）"),
         "",
         "## 回退口（三条硬线）",
@@ -353,14 +363,16 @@ def main():
 
     started_applied = patch_applied()
     a_state, b_state, restore_state = patch_steps(started_applied)
-    if started_applied:
-        ok, msg = True, "(补丁已在工作树/HEAD)"
-    else:
-        ok, msg = patch_applies()
-    print("patch applies: %s %s" % ("YES" if ok else "NO", msg))
-    print("patch plan: 起跑=%s A 臂=%s B 臂=%s 收尾=%s"
-          % tuple("applied" if s else "reverted"
-                  for s in (started_applied, a_state, b_state, restore_state)))
+    # R3255: 补丁常驻，A/B 只差一个 env（BIGLIFE_QUOTA_GATE）——文本反向补丁的基线会随
+    # evolve_citizen.py 演进漂移（R3253 rc=2 根因），故 _set_patch 不再参与翻面。
+    ok = bool(started_applied)
+    msg = "(运行时开关：闸代码须已在树内生效)"
+    print("gate code in tree: %s %s" % ("YES" if ok else "NO", msg))
+    print("gate plan: 补丁常驻=%s A 臂=off(env) B 臂=on(env) 收尾=不变"
+          % ("applied" if started_applied else "reverted"))
+    if not ok:
+        print("gate code missing in tree -> abort（先让 R3204 闸代码入 HEAD）")
+        return 2
     print("baseline %s: rows=%d distinct=%d wasted=%d max_repeats=%d"
           % (day, base["rows"], base["distinct_cid"],
              base["wasted_calls"], base["max_repeats"]))
@@ -405,42 +417,46 @@ def main():
             freeze_n,
             "" if freeze_path else "（快照建不出→退回实时窗口·有到期混淆风险）"), flush=True)
     arm_env = (dict(os.environ, BIGLIFE_REFUSAL_BANS_FROZEN=freeze_path)
-               if freeze_path else None)
+               if freeze_path else dict(os.environ))
+    # 两臂都必须压住策略批下限（batch-policy 默认会把 --batch 5 抬到 10）
+    arm_env = dict(arm_env, BIGLIFE_BATCH_POLICY="off")
     snap_a = ban_snapshot()
     verdict = "FAIL"
     lines = []
     try:
-        rc, msg = _set_patch(a_state)
-        if rc != 0:
-            print("patch set (A 臂=%s) failed:" % ("applied" if a_state else "reverted"), msg)
-            return 2
-        a = arm(batch, "A", env=arm_env)
+        a_env = dict(arm_env or os.environ, **{GATE_ENV: "off"})
+        a = arm(batch, "A", env=a_env)
         if a.get("yield"):
             print("yield-window: 产线让路期，A 臂未跑（0 LLM/0 改动）")
             return 3
 
         before = refusal_metrics(day)
-        rc, msg = _set_patch(b_state)
-        if rc != 0:
-            print("patch set (B 臂=%s) failed:" % ("applied" if b_state else "reverted"), msg)
-            return 2
-        print("arm B (patch ON) ...", flush=True)
+        print("arm B (gate on) ...", flush=True)
         snap_b = ban_snapshot()
-        b = arm(batch, "B", env=arm_env)
+        b_env = dict(arm_env or os.environ, **{GATE_ENV: "on"})
+        b = arm(batch, "B", env=b_env)
         if b.get("yield"):
             print("yield-window: B 臂未跑 -> 还原补丁")
             return 3
         after = refusal_metrics(day)
         _src_a, _src_b = a.get("ban_src"), b.get("ban_src")
         _known = _src_a not in (None, "?") and _src_b not in (None, "?")
-        if freeze_path and _known and not (_src_a == _src_b == "frozen"):
+        if a.get("gate_off") is not True:
+            verdict = "CONFOUNDED"
+            lines = ["CONFOUNDED A 臂未自证关闸（stdout 无 quota-gate: off 标记）"
+                     "→ 两臂可能同闸，读数不能用于裁决"]
+        elif freeze_path and _known and not (_src_a == _src_b == "frozen"):
             verdict = "CONFOUNDED"
             lines = ["CONFOUNDED 冻结面未生效（A 源=%s/B 源=%s）→ 两臂禁牌环境不同，"
-                     "读数不可用于裁决补丁" % (_src_a, _src_b)]
-        elif freeze_path and _known and a.get("ban_n") != b.get("ban_n"):
+                     "读数不可用于裁决" % (_src_a, _src_b)]
+        elif freeze_path and _known and a.get("ban_n") != 0:
             verdict = "CONFOUNDED"
-            lines = ["CONFOUNDED 冻结条数不一致（A=%s/B=%s）→ 快照未真正共用"
-                     % (a.get("ban_n"), b.get("ban_n"))]
+            lines = ["CONFOUNDED A 臂声明关闸但禁牌非空（A=%s）→ 开关未真正生效"
+                     % a.get("ban_n")]
+        elif freeze_path and _known and freeze_n and b.get("ban_n") != freeze_n:
+            verdict = "CONFOUNDED"
+            lines = ["CONFOUNDED B 臂禁牌与冻结快照不一致（B=%s/快照=%s）→ 快照未共用"
+                     % (b.get("ban_n"), freeze_n)]
         else:
             verdict, lines = judge(a, b, before, after, batch, snap_a, snap_b,
                                    frozen=bool(freeze_path))
@@ -454,13 +470,8 @@ def main():
                 os.unlink(freeze_path)
             except OSError:
                 pass
-        rc, msg = _set_patch(restore_state)
-        if rc != 0:
-            print("RESTORE FAILED: 工作树补丁态未回到",
-                  "applied" if restore_state else "reverted", "|", msg)
-        else:
-            print("restore: 工作树补丁态 =",
-                  "applied" if restore_state else "reverted", "(= 起跑前状态)")
+        print("restore: 补丁态未变 =",
+              "applied" if restore_state else "reverted", "(A/B 只差 env，工作树零写入)")
 
     for ln in lines:
         print(ln)
@@ -473,7 +484,7 @@ def main():
     path = write_report(day, batch, a, b, verdict, lines, restore_state,
                         snap_a, snap_b, freeze_state=freeze_state)
     print("report:", os.path.relpath(path, ROOT))
-    print("verdict:", verdict, "| patch in tree:", "yes" if restore_state else "no")
+    print("verdict:", verdict, "| gate in tree:", "yes" if restore_state else "no")
     return 0 if verdict == "PASS" else 1
 
 
@@ -513,6 +524,10 @@ def _selftest():
         judge(a, b0, base, base, 8, same, same)[0] == "INCONCLUSIVE")
     chk("judge 零命中不得判 PASS（假绿闸）",
         judge(a, b0, base, base, 8, same, same)[0] != "PASS")
+    # R3255：零命中 + 落环差 → 无判别力，不能判 FAIL（本轮 9<10 假 FAIL 判例）
+    b1 = dict(b, written=4, ban_hits=0)
+    chk("judge 零命中且落环差 -> INCONCLUSIVE",
+        judge(a, b1, base, base, 8, same, same)[0] == "INCONCLUSIVE")
     # 冻结面：墙钟禁牌集在两臂之间到期（expired）在冻结下**不应**判 CONFOUNDED
     chk("judge 冻结下不按墙钟到期判混淆",
         judge(a, b, base, base, 8, same, expired, frozen=True)[0] == "PASS")
@@ -529,9 +544,21 @@ def _selftest():
     chk("patch_steps B 臂恒为 on",
         patch_steps(True)[1] is True and patch_steps(False)[1] is True)
 
+    # 3b) 运行时开关编排（R3255：A/B 只差 env，工作树零写入）
+    chk("GATEOFF_RE 命中关闸自证行",
+        bool(GATEOFF_RE.search("quota-gate: off (env BIGLIFE_QUOTA_GATE)")))
+    chk("GATEOFF_RE 不误命中开闸面",
+        GATEOFF_RE.search("refusal-bans source: frozen n=6") is None)
+
     # 4) 禁牌冻结面（R3247：两臂必须同一集合——禁牌在两臂之间到期会污染读数）
     sys.path.insert(0, os.path.join(ROOT, "Tools"))
     import evolve_citizen as _ev
+    os.environ[GATE_ENV] = "off"
+    try:
+        chk("env=off 时 load_refusal_bans 恒空（A 臂运行面）",
+            _ev.load_refusal_bans(env_path=os.path.join(ROOT, "state", "nonexistent.json")) == {})
+    finally:
+        os.environ.pop(GATE_ENV, None)
     fz = _ev.parse_frozen_bans({"opening-abcdef": "2026-11-16T07:34:00"})
     chk("parse_frozen_bans 正常解析", isinstance(fz.get("opening-abcdef"), datetime.datetime))
     chk("parse_frozen_bans 坏值跳过", len(_ev.parse_frozen_bans({"bad": "x"})) == 0)

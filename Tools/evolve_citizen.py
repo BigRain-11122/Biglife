@@ -2147,6 +2147,8 @@ def load_refusal_bans(env_path=None):
     # （R3253 实弹 rc=2 根因），故关闸改为运行时开关，两臂只差一个 env。
     if str(os.environ.get("BIGLIFE_QUOTA_GATE", "")).strip().lower() in (
             "off", "0", "no", "false"):
+        # R3255: 关闸必须自证（负控台 A 臂靠这行确认「真的没闸」，防静默失效假绿）
+        print("quota-gate: off (env BIGLIFE_QUOTA_GATE)", flush=True)
         return {}
     env_path = (env_path if env_path is not None
                 else os.environ.get("BIGLIFE_REFUSAL_BANS_FROZEN"))
@@ -4053,6 +4055,11 @@ def main():
     if args.batch is None and not args.reflect:
         args.batch = 3  # bare invocation keeps the legacy default
     pol = load_batch_policy()
+    if str(os.environ.get("BIGLIFE_BATCH_POLICY", "")).strip().lower() in (
+            "off", "0", "no", "false"):
+        # R3255: A/B 负控台必须压住策略批下限，否则「每臂 5 席」被抬成 10 席，
+        # 两臂 due 消耗不可控（本轮实测 A 臂吃满 10 席 → 读数不可比）。
+        pol = 0
     if pol and args.batch:
         # 2026-09-24 本地算力极限使用令（token-economy §3.3）：策略面批下限承令，
         # effective = max(CLI --batch, Tools/batch-policy.json)；--force/--reflect 面不受影响
