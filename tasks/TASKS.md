@@ -3744,3 +3744,13 @@ ound_daily --run stale=12 ran=13 failed=0 verdict=PASS；pool_audit PASS SELF_TE
   **CEO 可见三行**：当前活=让路窗确定性面全绿核验＋开口容量基线落盘（15:2x）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\OPENING-CAPACITY-2026-11-16.md 与 qa\EVENTS-REPLAY-REPORT.md（15:0x，events=45444/mismatch=0）、census\QC-REPORT.md（15:0x，problems=0）｜下个里程碑=19:00 让路窗解→年轮批 3 落环，复测 WIND_AGENT_OPEN 占比（今日 44%）与 waste%（今日 35%）判 R3229 限位是否起效。
   **下轮预置**：①19:00 后年轮批 3 → events_refresh --gate → 复跑 opening_capacity --window 12 与 R3230 基线逐项对比（waste%、invented top3 是否仍含「这会儿手边…」）；②若风族仍 >25%，按 R3229 预置②查 WIND_BIG_HINTS 整句被抄面；③反思线（19:00 后至多 1 次）与相遇轮（日额）接续；④T-20261115-04 观察窗到期日 11-17，届时按读数直接结案。
   tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
+
+- [R3231] 2026-11-16 15:08-15:2x @BigLife-OSLoop 让路窗内确定性轮＋基因面增补（零 LLM）：轮首 pull=Already up to date、树净；决策水位差 NEW=0（水位已含 D-20261116-15，第 67 批无 @BigLife 派工行）；orders 物理件区无涉本司新件（小钢炮开机／算力大脑装机／CEO 账号商户号维持零催办）。
+  **三条 LLM 线按 D-20261020-02 让路窗延后**：evolve_citizen --batch 3 实测返回 `yield-window: workday 09:00-19:00`（相遇轮同源亦延后），故本轮不做落环、不改任何闸阈值。
+  **确定性面实跑读数**：①round_daily --run 第 1 次 = stale=2 ran=3 failed=0 verdict=PASS（重建 city-map／city-today／index，依赖 mtime 触发）；②persona_generations --check 首读 rc=0 pending_sync=none（gen5 habits=155）；③pool_audit = 72 桶+12 像素灵+28 greet+7 faq 全 at_target、hard_fails=0、SELF_TERMINATE、192+25 对确定性 mismatch=0；④qc_census = cards=10114 / evolved=10114 / **problems=0** / dup_new=0。
+  **本轮产品增量＝基因面 +8 习惯 → 开 gen6 世代**：`genes/lives.json` habits 142→150（dedup skipped=0），`persona_generations --sync` 开 **gen6（habits 155→163，grew_from_gen=5）**，`--check` 复查 pending_sync=none rc=0；老居民按旧世代快照取模零漂移，新习惯只对 gen6 后新建居民可见（T-20261115-02 决策 b）。随后 round_daily 第 2 次跑 = verdict=PASS，重建 `gene-ledger.html`／`gene-live-coverage.json`／`city-objects.html`／`index.html`（CEO 可直接打开看新增习惯入册）。
+  新增 8 条：自行车后座旧毛巾／零钱按面值排整齐塞铁盒／拖鞋进门掉头摆成对／整点抬头看慢三分钟的钟／泡茶头遍水倒掉擦杯沿两圈／阳台晾三只不成对袜子等凑齐／打电话前心里排一遍接通先问吃饱没／用完电池攒铁皮罐等一起回收。取向＝可指认实体物件＋一句执拗解释，与 R3194 那批物件集不重叠，且避开 4B 吸引子起句族（这会儿/手边/方才/天还）。
+  **诚实边界**：新习惯未经年轮批实弹验证（让路窗内无 LLM），下一批落环后须观测是否引入新单句吸引子；若出现按 T-20261115-04 隔离法处理，不回滚基因。
+  **CEO 可见三行**：当前活=让路窗确定性面核验＋基因面 +8 习惯并开 gen6（15:2x）｜最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\gene-ledger.html（15:2x，163 条习惯入册）与 census\export\city-today.html（15:1x）、qa\GENE-ADD-20261116.md（15:2x）｜下个里程碑=19:00 让路窗解→年轮批 3 落环并复测新习惯是否引出新吸引子（窗 ≤48h）。
+  **下轮预置**：①19:00 后年轮批 3 → events_refresh --gate → opening_capacity --window 12 与 R3230 基线逐项对比；②T-20261115-04 观察窗 11-17 到期直接结案；③反思线（19:00 后至多 1 次）接续。
+  tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
