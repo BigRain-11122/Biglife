@@ -4121,3 +4121,18 @@ ot reciprocated／历史单向（2026-11-10）→rc=0 观测／闸后同日同�
   - **三线自停（各带闸证据·非跳过）**：反思线 `reflect_citizen --batch 5`＝`daily-cap: 5 already written today`；语言线 `pool_audit`＝**PASS SELF_TERMINATE**（轴桶 72/72·像素 12/12·greet 28/28·faq 7/7·负例 6/6·hard_fails=0·双抽 192+25 对 mismatch=0）；日清闸 `hq_feedback_daily --check`＝`day=2026-11-16 lines=2 ALREADY_REPORTED` 零写入。
   - **CEO 可见三行**：当前活＝年轮批 9 席落环＋14 面日更重建＋事件流全量重放收口（23:4x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-growth.html`、`...\census\export\city-ring-recency.html`（11-16 23:4x 重建·含本轮 9 席新年轮）与 `C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md`（45,678 事件 mismatch=0）｜下个里程碑＝11-17 首轮写 T-20261116-17 依赖解除回执（死线 11-17 12:00）＋夜窗反思线续跑（验收 reflections 尾部 date=2026-11-17）。
   - 计量：tokens: local=10 api=0 api_reason=-（年轮 10 次到期生成含 1 席闸后 deferred；日更面/回放闸/世代池/池审计/日清闸全确定性零 LLM）
+
+- [2026-11-16 23:53-00:0x @BigLife-OSLoop R3270] 本轮实录（夜窗·GPU 空闲）
+  - **轮首三步**：`git pull --ff-only`=Already up to date／工作树净／决策水位差 NEW=0（已覆盖至 D-20261116-17；D-20261116-16 涉本司＝上游依赖解除，回执已于 18:31 落 HQ-FEEDBACK.md，T-20261116-17 待 11-17 首轮按闸执行）／orders 物理件区无涉本司新件
+  - **产品面实测（含一条诚实推翻）**：年轮 `--batch 3` 实跑 **evolved=8 of 10 due（written=8 skipped=0）**，C-04128/04130/04131/04133/04134/04135/04137/04138 各写 2026-11-16 年轮；C-04140/C-04136 撞族硬门 deferred +1d。**但工作树核验推翻「净新增 8 条」**：`git hash-object --no-filters` 与 `git rev-parse HEAD:<path>` 逐字节比对 C-04128.md = **MATCH**，`git status census/registry` 零行 ⇒ 这 8 席年轮内容早已由 23:4x 轮 R3269 落库并 commit，本轮为同日后二次跑批的重复渲染，**净新增年轮内容 = 0**。缺陷已立 T-20261116-18（`written` 计「进入写路径」而非「内容有变」，读面易虚报产品增量）
+  - **确定性面（全绿）**：`round_daily --run` **PASS**（stale=13 ran=14 failed=0，14 面重建）／`events_refresh --gate` **PASS**（events=45686 cards=10111 replayed=10111 mismatch=0 schema_errors=0 chronicle gap=0d）／`persona_generations --check` rc=0（gen=7 habits=169 pending_sync=none）／`qc_census` **problems=0**（cards=10114 evolved=10114 dup_new=0 meet_new_bad=0 ⇒ T-20261116-16 观察窗 D2/3）
+  - **三线自停（各带闸证据·非跳过）**：反思线 `reflect_citizen --batch 5`＝`daily-cap: 5 already written today (2026-11-16)`；相遇线 `--meet C-03117 C-03597`＝`meet-cap: 3 meets already logged today (cap 3)`（候选取自当日 rank1：同街区·六轴互补 怀旧×秩序·carbon×sprite）；语言线 `pool_audit`＝**PASS SELF_TERMINATE**（轴桶 72/72·像素 12/12·greet 28/28·faq 7/7·负例 6/6·hard_fails=0·双抽 192+25 对 mismatch=0）
+  - **上报面**：`hq_feedback_daily --check`=day=2026-11-16 lines=2 **ALREADY_REPORTED**，零写入（机械闸生效）
+  - **CEO 可见三行**：当前活＝夜窗确定性面重建＋事件流全量重放收口＋QC/池审计全绿（11-16 23:5x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-growth.html`、`...\census\export\city-ring-recency.html`、`...\qa\EVENTS-REPLAY-REPORT.md`（11-16 23:56-23:57 重建）｜下个里程碑=11-17 12:00 前 T-20261116-17 依赖解除回执一行 + 11-17 19:00 窗 T-20261116-13 A/B 实弹（顺序：先本单后年轮批）
+  - **诚实边界**：本轮零新增年轮内容（同日后重复渲染）；产品增量为既有面刷新与闸报告，按 Executive Protocol 计 1 分（实际文件改动），不计 2 分
+  - 计量：tokens: local=10 api=0 api_reason=-（年轮 10 席各 1 次本地 LLM，2 席生成后撞闸 deferred；遇 遇/反思因日额满 0 席；其余全确定性）
+
+- [ ] **T-20261116-18**（R3270 立·计数口径缺陷·中优先）`evolve_citizen` 报 `written=N` 时该 N 计的是「进入写路径的席位数」，同日二次跑批即使零内容变化也照样报 written（实证 11-16 23:54 批 written=8 而 8 张卡与 HEAD 逐字节 MATCH）。后果=轮记/journal 按 written 写「净新增 N 条年轮」会虚报产品增量，正是执行协议计分面最容易自我欺骗的一格。
+  - 修法候选（须带负控）：写盘前对目标卡做内容哈希比对（`hash-object` 或内存串比对），把三态分开报——`written_new`（内容有变）／`written_same`（同日重复渲染）／`skipped`（闸拦）；或写前查 `today ring exists` 直接早退不进 LLM（省 8 席本地算力，更符合 token-economy）。
+  - 验收：构造「同日后二次跑批」场景，输出必须显示 `written_new=0`；正式批 `written_new == git diff --numstat census/registry` 行数。
+  - status: **open**（2026-11-17 00:0x R3270 @BigLife-OSLoop 立·来源=本轮轮末核验）
