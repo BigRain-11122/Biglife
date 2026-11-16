@@ -1446,8 +1446,24 @@ def ring_violations(line, sig):
             v.append("wind-under")
         if wind <= 3 and re.search(r"风[^小]?不小|风挺大|风好大", line):
             v.append("wind-over")
-    elif re.search(r"风[^大]?不大|风[^大]?轻轻的|风[^小]?不小|风挺大|风好大|微风|和风|(?<![天今])清风|风轻", line):
-        v.append("wind-nodata")
+    else:
+        # R3229 (2026-11-16): 提示词-闸自相矛盾收口（gap #68 同型，方向相反）。
+        # weather_recap 在无风力读数时早已写死「实况无风速数据：完全不提风。」
+        # （L2637 起），但闸只认量级词，于是「风把塑料布吹得啪啦响」「风撞在窗玻璃
+        # 上闷响」这类施事/布景句一路放行——当日拒稿账实测 WIND_AGENT_OPEN 11/25=44%
+        # 为最大单一族，opening_capacity 的 9 条重复开口全是风形（浪费 35%）。
+        # 闸与提示词必须同口径：无读数时风只许不写。物件名/街区名/器具先掩掉
+        # （风控=街区词、台风=人设史、风扇风筝风铃风衣风箱风车风镜风油精鼓风机
+        # 抽风机风湿风干=器物），再认余下的风断言形状；风声/风里/风凉 仍放行
+        # （风声=消息、风里=旧年轮习惯语、风凉=风凉话，语义歧义，宁漏不误伤）。
+        _wind_face = re.sub(
+            r"风控|台风|风扇|风筝|风铃|风衣|风箱|风车|风镜|风油精|风机|风湿|风干|风门",
+            "", line)
+        if re.search(r"风[^大]?不大|风[^大]?轻轻的|风[^小]?不小|风挺大|风好大|微风|和风|(?<![天今])清风|风轻", _wind_face):
+            v.append("wind-nodata")
+        elif re.search(r"风(?:把|掀|撞|扯|刮|灌|扑|卷|钻|顶|推|扫|裹|吹)", _wind_face) or \
+                re.search(r"风从.{0,3}(?:窗|门|巷|缝|檐|屋|过道|楼梯|阳台)", _wind_face):
+            v.append("wind-nodata")
     # gap #76 (2026-10-25 R2044): species/trade proper nouns carry 雨 - 像素灵
     # 雨声蛙 (198 census hits) and 雨天合唱团 (67) name a creature and a choir, not
     # rain. C-06611 stayed due two rounds writing its own name under a dry feed.
@@ -2666,11 +2682,18 @@ def weather_recap(wx, seed=None, banned=None):
         rule = ("天空面只许该实况天气的如实直读（含相应防护动作）或完全不提天气；"
                 "严禁一切天气正面评估、晴系措辞与外出适配语。")
     m = re.search(r"wind\s*([\d.]+)\s*m/s", wx, re.I)
+    # R3229 (2026-11-16): 风句限位。实测今日真实实况=cloud 18.1°C wind 9.8m/s（大风天），
+    # 尾部速记把风句放在离输出位最近处，模型直接拿它当开头：当日 25 条拒稿里
+    # WIND_AGENT_OPEN 11 条（44%）为最大单一族，opening_capacity 的 9 条重复开口
+    # 全是风形（waste 35%）。修法不是撤风句（大风天写风合法），而是限位：
+    # 风只许落在第二句或句中，开头句仍按分配到的骨架从手上营生写起。
+    _wind_seat = "风句只许放在第二个短句或句中，严禁用风句开头（开头句按上面分配给你的骨架写）。"
     if m:
         wind = ("风只许按实况量级措辞，且必须与同批他人换一种说法：" +
                 ("「风轻轻的/风不大」。" if float(m.group(1)) <= 3
                  else "「风不小/风挺大」（严禁任何弱化变体与弱化名词，含成语「云淡风轻」——"
-                       "风大时该成语=「风轻」弱化断言，即使你历史年轮原句里有也严禁照搬）。"))
+                       "风大时该成语=「风轻」弱化断言，即使你历史年轮原句里有也严禁照搬）。")
+                + _wind_seat)
     else:
         wind = "实况无风速数据：完全不提风。"
     # per-citizen assigned wording (gap #72 / #77): each pool must be >= batch

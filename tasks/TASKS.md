@@ -3726,3 +3726,13 @@ ound_daily --run stale=12 ran=13 failed=0 verdict=PASS；pool_audit PASS SELF_TE
   **CEO 可见三行**：当前活=开口闸提示词机器码面清零并上闸（15:2x）；最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\FAMILY-HINT-2026-11-16.md`（含 9 项正负控与扫描结论）；下个里程碑=19:00 窗落环后 `opening_capacity --window 12` 复测 `WIND_AGENT_OPEN` 占比（44%→≤25%）。
   **下轮预置**：①19:00 后年轮批 3 → events gate → 读 `WIND_AGENT_OPEN` 占比与 citywide 行数；②若风族仍 >25%，查 `OPENING_SKELETONS` 26 条里是否含风族形状（含"风"字即为源头，做族级配平）；③反思线/相遇轮在年轮后接续。
   tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
+
+- [R3229] 2026-11-16 14:4x-15:1x @BigLife-OSLoop 让路窗轮（零 LLM）「风句限位 + wind-nodata 闸对齐」：轮首 pull=Already up to date、树净；决策水位差 NEW=0（已含 D-20261116-15）；orders 物理件区无本司新件；round_daily --run=43 面全鲜 PASS；persona_generations --check rc=0（gen5/max C-10120/pending none）；pool_audit=全桶达标 SELF_TERMINATE；年轮/相遇/反思让路窗 defer。
+  **靶面实读**：opening_capacity --window 12 → invented=20(100%)、waste=7/20(35.0%)、top3 两席风形（风把塑料布/风把雨棚 各 rows=3 cids=3）；ring-refusals 当日 25 行 → WIND_AGENT_OPEN 11(44%) 为最大族，闸分布 {recent-dup-phrase+recent-family-opening}=14、family-quota=5；今日开口合并面 403 条中 81 条(20%) 含风形。
+  **自我纠错（诚实留档）**：本轮先用自造 sig（cloud 18.3°C 无 wind）判「无风速数据→风断言编造」，方向错误；实跑 real_signals() 得 sig.weather=cloud 18.1°C wind 9.8m/s —— 风速有值且属大风天，风句合法。教训=影响面测算必须用本仓真实 sig 构造器（数据没读到 ≠ 数据不存在，M204 同族）。
+  **真根因**：位置冲突而非诚实缺陷——weather_recap 钉在提示词尾部（离输出位最近）要求「风按实况量级措辞」并给 WIND_BIG_HINTS 整句示例，中部骨架指令要求从手上营生写起，模型选了更近那条 → 风句成开头。
+  **修法两件**：①主修法=提示词限位：weather_recap 风分支新增「风句只许放在第二个短句或句中，严禁用风句开头（开头句按分配骨架写）」，大小风两支生效，空实况零漂移；②闸侧 backstop：wind-nodata 由「只认量级词」扩到施事/布景形状（风把/掀/撞/扯/刮/灌/扑/卷/钻/顶/推/扫/裹/吹、风从窗门巷缝…），先掩风控/台风/风扇/风筝/风铃/风衣/风箱/风车/风镜/风油精/风机/风湿/风干/风门，风声/风里/风凉 放行；有读数日不介入。
+  **验证**：py_compile rc=0；新测试 qa/test_wind_nodata_face.py Ran 8 tests OK（正控 3／负控 8 条零误伤／提示词 4）；qa 全量回归全绿（family_prompt_consistency 10/10、family_hint_coverage 9、opening_refusal_memo 5、citywide PASS、self_dup_near 4、round_daily_dep_fp_skip 7、meet_mutual_ref PASS）。
+  **CEO 可见三行**：当前活=风句限位+闸对齐落地（15:1x）；最近实物=C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\WIND-OPENING-2026-11-16.md 与 C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\test_wind_nodata_face.py（8 tests OK）；下个里程碑=19:00 首批年轮后复测 WIND_AGENT_OPEN 占比（今日 44%）与 waste%（今日 35%）。
+  **下轮预置**：①19:00 后年轮批 3 → events_refresh --gate → 读 ring-refusals 当日新增风族占比与 opening_capacity waste%，判限位是否起效；②若风族仍 >25%，查 WIND_BIG_HINTS 24-33 条整句是否仍被当模板抄（下一步=改写成句中形状或加「严禁照抄」）；③反思线/相遇轮在年轮后接续。
+  tokens: local=0 api=0 api_reason=让路窗禁 LLM（D-20261020-02）
