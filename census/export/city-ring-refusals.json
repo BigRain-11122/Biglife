@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-11-17 05:56:37",
- "total": 135,
- "today": 39,
+ "generated_at": "2026-11-17 07:16:43",
+ "total": 141,
+ "today": 45,
  "days": [
   "2026-11-15",
   "2026-11-16",
@@ -14,11 +14,11 @@
   ],
   [
    "opening-family-quota+recent-dup-phrase",
-   22
+   25
   ],
   [
    "opening-family-quota",
-   12
+   13
   ],
   [
    "mist-import+recent-dup-phrase",
@@ -127,12 +127,20 @@
   [
    "citywide-refusal-ban+opening-family-quota",
    1
+  ],
+  [
+   "recent-dup-opening+recent-dup-phrase+time-night",
+   1
+  ],
+  [
+   "mist-import",
+   1
   ]
  ],
  "gates": [
   [
    "recent-dup-phrase",
-   110
+   114
   ],
   [
    "recent-family-opening",
@@ -140,7 +148,7 @@
   ],
   [
    "opening-family-quota",
-   37
+   41
   ],
   [
    "rain-invented",
@@ -148,19 +156,19 @@
   ],
   [
    "recent-dup-opening",
-   7
+   8
   ],
   [
    "time-morning",
    6
   ],
   [
-   "citywide-refusal-ban",
+   "mist-import",
    6
   ],
   [
-   "mist-import",
-   5
+   "citywide-refusal-ban",
+   6
   ],
   [
    "event-code",
@@ -197,12 +205,16 @@
   [
    "batch-dup-phrase",
    1
+  ],
+  [
+   "time-night",
+   1
   ]
  ],
  "families": [
   [
    "HAND_DEICTIC",
-   40
+   45
   ],
   [
    "WIND_AGENT_OPEN",
@@ -214,7 +226,7 @@
   ],
   [
    "(none)",
-   20
+   21
   ],
   [
    "DOOR_PROP_DEICTIC",
@@ -282,7 +294,7 @@
  "by_day": {
   "2026-11-15": 55,
   "2026-11-16": 41,
-  "2026-11-17": 39
+  "2026-11-17": 45
  },
  "retry_livelock": {
   "2026-11-15": {
@@ -306,8 +318,8 @@
    "wasted_calls": 0
   },
   "2026-11-17": {
-   "rows": 39,
-   "distinct_citizens": 39,
+   "rows": 45,
+   "distinct_citizens": 45,
    "repeated_citizens": 0,
    "max_repeats": 1,
    "stuck_same_opening": [],
@@ -340,8 +352,8 @@
    ]
   },
   "2026-11-17": {
-   "rows": 39,
-   "distinct_openings": 35,
+   "rows": 45,
+   "distinct_openings": 41,
    "repeated_openings": 4,
    "extra_occurrences": 4,
    "top": [
@@ -355,13 +367,13 @@
  "rolling_windows": [
   {
    "window_hours": 24,
-   "as_of": "2026-11-17 05:56:36",
-   "rows": 67,
-   "openings": 57,
-   "multi_openings": 8,
-   "cross_cid_openings": 8,
-   "wasted_calls": 10,
-   "waste_ratio": 0.1493,
+   "as_of": "2026-11-17 07:16:43",
+   "rows": 69,
+   "openings": 61,
+   "multi_openings": 6,
+   "cross_cid_openings": 6,
+   "wasted_calls": 8,
+   "waste_ratio": 0.1159,
    "top": [
     {
      "opening12": "风把塑料布吹得啪啦响，我",
@@ -402,30 +414,12 @@
      ]
     },
     {
-     "opening12": "这会儿手边最碍事的就是这",
-     "calls": 2,
-     "cids": 2,
-     "cid_head": [
-      "C-03732",
-      "C-03788"
-     ]
-    },
-    {
      "opening12": "风把门帘整个掀起来，我正",
      "calls": 2,
      "cids": 2,
      "cid_head": [
       "C-00770",
       "C-00896"
-     ]
-    },
-    {
-     "opening12": "风撞在窗玻璃上闷响，我正",
-     "calls": 2,
-     "cids": 2,
-     "cid_head": [
-      "C-03725",
-      "C-03802"
      ]
     },
     {
@@ -441,13 +435,13 @@
   },
   {
    "window_hours": 12,
-   "as_of": "2026-11-17 05:56:36",
-   "rows": 55,
-   "openings": 49,
+   "as_of": "2026-11-17 07:16:43",
+   "rows": 61,
+   "openings": 55,
    "multi_openings": 6,
    "cross_cid_openings": 6,
    "wasted_calls": 6,
-   "waste_ratio": 0.1091,
+   "waste_ratio": 0.0984,
    "top": [
     {
      "opening12": "东西刚拿到手，还带着点余",
@@ -599,12 +593,12 @@
   },
   {
    "day": "2026-11-17",
-   "rows": 39,
-   "openings": 35,
+   "rows": 45,
+   "openings": 41,
    "multi_openings": 4,
    "cross_cid_openings": 4,
    "wasted_calls": 4,
-   "waste_ratio": 0.1026,
+   "waste_ratio": 0.0889,
    "top": [
     {
      "opening12": "我正蹲在路口那块旧门板边",
@@ -923,6 +917,36 @@
    "opening12": "灶台边的旧茶壶歪了，我把",
    "last_refused": "2026-11-17 05:54",
    "expires": "2026-11-17 17:54",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正把那小包机油塞进机器",
+   "last_refused": "2026-11-17 06:04",
+   "expires": "2026-11-17 18:04",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "门禁亮绿灯，心里才亮堂。",
+   "last_refused": "2026-11-17 06:05",
+   "expires": "2026-11-17 18:05",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正对着老码头那盏玻璃罩",
+   "last_refused": "2026-11-17 06:14",
+   "expires": "2026-11-17 18:14",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正把旧笔头在门板上蹭了",
+   "last_refused": "2026-11-17 06:15",
+   "expires": "2026-11-17 18:15",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正修着白玉兰塔的风筝尾",
+   "last_refused": "2026-11-17 06:29",
+   "expires": "2026-11-17 18:29",
    "ban_hours": 12
   }
  ]
