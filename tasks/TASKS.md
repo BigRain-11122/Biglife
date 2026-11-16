@@ -4467,4 +4467,4 @@ ound_daily --run **stale=13 ran=14 failed=0 PASS**（重建 goals/gene_ledger/gr
   **CEO 可见三行**：当前活＝年轮／日更／事件闸／池审计四链闭环收口（07:32）；最近实物＝`census/registry` 8 张 2026-11-17 年轮卡（`fa243bc2a` 07:25）＋22 个可见面重建（`adb978dde` 07:31）＋`qa/EVENTS-REPLAY-REPORT.md`（46,095 事件 PASS）；下个里程碑＝11-17 19:00 后反思线 `reflect_citizen --batch 5`＋下一轮年轮续，11-18 相遇不变量 D3 结单。
   **open 单状态**：T-20261117-01 fsmonitor（本仓已修·集团层统一处置·他仓禁动）；T-20261116-13 配额闸 A/B blocked-on-tooling（前置三项未做，如实留单）；T-20261116-16 相遇不变量待 11-18 读 D3 结单。
   **并发说明**：07:24-07:25 本窗与 OS 环 R3321 交叠，环已代提交本窗 8 张年轮卡与行为线镜像；本窗补齐日更面提交，无重复产出、无重复扣分。
-  计量：**tokens: local=8 api=0 api_reason=-**（8 张年轮各 1 次本地 LLM；日更／事件闸／池／世代检查全确定性零 LLM）。
+  计量：**tokens: local=8 api=0 api_reason=-**（8 张年轮各 1 次本地 LLM；日更／事件闸／池／世代检查全确定性零 LLM）。  **更正（R3322 复核·撤前两轮观察）**：`census/registry/*.md` 年轮卡**确在版本面**——复核实测 `git ls-files census/registry`=10091 张、`git ls-tree -r HEAD census/registry/OR/C-01115.md` 命中、`git check-ignore` rc=1（无忽略）、`git show --name-only fa243bc2a` 恰为 8 张 11-17 年轮卡。R3320/R3321 记的「年轮卡未被 git 跟踪」系当时管道退出码（255）误读，作废；后续轮按正常定向 add 提交年轮卡即可，勿再据旧观察跳过。
