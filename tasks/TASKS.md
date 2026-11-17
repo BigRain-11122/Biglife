@@ -4694,3 +4694,11 @@ ound_daily --run = **stale=1 ran=2 failed=0 PASS**（ops 面受 state/vram-gate.
 - open 单状态：T-20261116-13 blocked-on-window（工装 ready，待 ≥19:00 实弹）；T-20261116-16 待 11-18 读 D3；T-20261117-01 CLOSED（虚警）；T-20260923-01 FluxVerse PARKED。本轮不新开单（泄漏闸已就地闭环）。
 
 - tokens: local=0 api=0 api_reason=-（让路窗内 LLM 三腿全 yield；本轮日更/世代/池/QC/泄漏勘察与闸补全全确定性零 LLM）
+### R3342 补记（存回溯修复·同轮内订正）
+
+- **订正**：本节先写的「存量不回溯」判断有误——实读发现本司有存量清污先例：Tools/repair_dup_rings.py（R1772，注释原文「本工具做存量清污」）。「历史违规不回溯」只适用相遇不变量（qc_census 明文），不适用年轮残句。遂补齐存回溯修复。
+- **新工具**：Tools/repair_ring_ids.py（dry-run 默认 · --apply 落盘 · --archives 连成长档案；行格式断言 `^- 日期 「` 不得破）。
+- **实测（HEAD 原文分类）**：年轮正文泄漏 **44 行 / 43 卡**；溯源簿记行 112 行按律**不动**（机器记账非居民口吻）。
+- **落盘**：卡 44/45 行改写；年轮条数 20705→20705（count_diffs=0）；年轮残留 **0**；档案 34 档/68 处（month_lines + rings[].quote/text）；档案 JSON bad=0 残留 0；build_growth_gallery pages=11 cards=10111；city-growth-p01..p11 单号残留 **0**；qc_census **problems=0**。
+- **改写质量**：45 行逐条人眼核（state/repair-v6.md），修掉 v1~v5 六轮发现的 5 类残句（把的／是，／那张通告这单／中英夹缝空格／截断残尾），终检 suspicious=0。
+- **未动**：city-ops / city-ring-* 面上的轮次号与决策号是页面本体（工具面），非居民口吻，不清。
