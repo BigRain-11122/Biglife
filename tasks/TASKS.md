@@ -5091,3 +5091,13 @@ ound_daily --run 29 面 stale=0 PASS；persona_generations --check rc=0 gen=8 pe
 - **CEO 可见三行**：当前活｜年轮技术黑话存量清污落盘+事件流全量重建（17:0x）｜最近实物｜`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-DETOX-20261117.md`（1059 条对照·17:02）＋`qa\RING-LINT-REPORT.md`（coded=1 infra=0 PASS）｜下个里程碑｜19:00 夜窗年轮批（due=10）+ 相遇轮 + 反思批 5。
 - **open 单**：T-20261116-13 配额闸 A/B → blocked-on-window（待 ≥19:00）；T-20261116-16 相遇不变窗 → 待 11-18 读 D3；T-20261117-02 巡检面缺口 → **本轮已闭环**（ring_detox 落盘，检测→修复路径打通）；T-20260923-01 FluxVerse PARKED。
 - tokens: local=0 api=0 api_reason=yield-window(09-19) 确定性管线零 LLM
+- [2026-11-17 17:05 @BigLife-OSLoop R3369] 轮记：日更面重建轮 + ring-lint 台账回归修复
+- **轮首**：pull=Already up to date；决策水位已至 D-20261117-15（差集 0，无新行）；orders 无涉本司新行。
+- **产品增量（实物·CEO 可直接打开）**：`round_daily --run` → **15 面重建 PASS**（stale=14 ran=15 failed=0）——city-dashboard / city-voices / city-coverage / city-ops / city-objects / city-goals / gene-ledger / city-growth p01-p12 / city-meets / city-ring-recency / city-ring-quality / city-reflections / meet-candidates / index.html 全部按 16:4x 最新 registry/state 重出。
+- **质量修复（本轮主产出）**：发现 `qa/ring-lint.jsonl` 被清空、`RING-LINT-REPORT.md` 被按单日口径覆盖（11117→526、coded 1→0）——用 `ring_lint --since 2026-10-20` 全窗重跑复原：rings=11124 coded=1 pre=1 post=0 infra=0 **PASS**，jsonl 复原 560B（与 HEAD 一致）。属数据回归闭环，非 revert。
+- **守卫面**：`persona_generations --check` rc=0（gen 8·habits=170·pending_sync=none）；`pool_audit` PASS SELF_TERMINATE（72 轴 1296 行 + 12 像素桶 144 + greet 28 + faq 7 + 负例 6/6，determinism 192+25 对 mismatch=0）；`events_refresh --gate` 今日 16:38 已 PASS。
+- **让路面**：`evolve_citizen --batch 3` = yield-window（工作日 09:00-19:00·D-20261020-02）；年轮/相遇/反思三腿顺延 19:00 夜窗（due=10）。`hq_feedback_daily --check`=ALREADY_REPORTED（当日已一行）。
+- **CEO 可见三行**：当前活=让路窗确定性日更面重建 + 台账回归修复（17:0x）｜最近实物=`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-dashboard.html`（17:0x 重出）+ `qa\RING-LINT-REPORT.md`（rings=11124 PASS）｜下个里程碑=19:00 夜窗年轮批（due=10）+ 相遇轮 + 反思批 5。
+- **open 单**：T-20261116-13 配额闸 A/B → blocked-on-window（待 ≥19:00）；T-20261116-16 相遇不变量 → 待 11-18 读 D3；T-20260923-01 FluxVerse PARKED。
+- commit d3bbad79b 已推 origin/main（25 文件）。
+- tokens: local=0 api=0 api_reason=yield-window(09-19) 确定性脚本零 LLM
