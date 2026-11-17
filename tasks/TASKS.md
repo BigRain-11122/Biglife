@@ -4631,3 +4631,21 @@ eflect_citizen 均返 yield-window（D-20261020-02），年轮/相遇/反思三�
 - **实况三行**：当前活＝年轮覆盖积压归因实测（09:4x-09:5x，三查否证）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-RECENCY-COVERAGE-20261117.md`（09:5x）｜下个里程碑＝11-17 19:00 后年轮批 `--batch 3`＋反思批 `--batch 5`＋配额闸 A/B 实弹；11-18 相遇不变量 D3 结单。
 
   计量：**tokens: local=0 api=0 api_reason=-(让路窗内三条 LLM 腿全 yield；本轮日更/世代/池审计/覆盖归因全确定性零 LLM)**
+
+## R3335 · 2026-11-17 09:5x-10:0x @BigLife-OSLoop（产品轮·今日面 KPI 相遇混算修正）
+
+- 轮首：`git pull --ff-only`=Already up to date／树净；决策水位差 NEW=0（watermark 至 D-20261117-11）；`docs/orders.md` 物理件区无涉本司新件。
+- 确定性面（全绿）：`round_daily --run` → **stale=0 ran=0 failed=0 PASS**（38 面全鲜）；`persona_generations --check` → **rc=0**（gen8／habits=170／cutoff C-10120／pending_sync=none）；`pool_audit` → **PASS SELF_TERMINATE**（轴 72/72·像素 12/12·greet 28/28·faq 7/7·负例 6/6·双抽 mismatch=0）；`qc_census` → **problems=0**（dup_rings=37/37 dup_new=0 meet=169 one_sided=1 meet_dup=2 meet_new_bad=0）；`events_refresh --gate` → **replay 46181 环／10111 卡 mismatch=0 schema_errors=0 PASS**；`hq_feedback_daily --check` → `ALREADY_REPORTED` 零写入。
+- 让路窗（诚实）：年轮 `--batch`／相遇 `--meet`／反思 `--reflect` 三腿均返 `yield-window`（工作日 09:00-19:00·D-20261020-02），本轮零 LLM，新年轮顺延夜窗。
+
+- **产品增量（能看实物·2 分）**：`census/export/city-today.html` KPI 从「相遇混算」改自分项。实测今日 **495 环行 = 489 单写年轮 + 6 相遇行**（5 席双行：C-03579／C-03646／C-00783／C-03317／C-04123 各有一条「与 C-xxxxx 相遇：」行 + 一条单写年轮；1 席仅相遇行：C-04930）。旧页面把 495 全报成「今日年轮」，**虚高 6 条**，且与自己下一格「今日开口的居民 490」自相矛盾（开口人数与环数不该差）。
+  **修法**：`Tools/build_daily_issue.py` 新增 `MEET_RE = ^与\s*C-\d+\s*相遇[:：]` 分类器；KPI 拆为「今日年轮 489／今日相遇 6／今日开口的居民 490」，昨日与「较昨日」一并改用年轮本体口径（570／少 81 条），逐城区长卷仍全量保留相遇行（读者不丢内容）。
+  **证据（实读）**：重建输出 `WROTE ... rings=495 people=490 districts=6 prev=570 cards=10114`；页面 KPI 实读 `489|今日年轮|6|今日相遇|490|今日开口的居民|6|城区|570|昨日年轮|少 81 条|10114|居民卡总数`。恒等式自检：489+1(仅相遇席)=490 开口，489+6=495 环行，双向闭合。
+
+- 观察项（不立案、不改）：页面含「截至 HH:MM」波次注，**同一分钟内重跑逐字节一致、跨分钟不同**；`round_daily` 日频重建已把 churn 限定为每日一次，属既有设计非缺陷。
+- open 单状态：T-20261116-13 配额闸 A/B → blocked-on-window（三前置 DONE，待 ≥19:00 夜窗实弹）；T-20261116-16 相遇不变量 → 待 11-18 读 D3；T-20261117-01 CLOSED（虚警）。本轮**不新开单**。
+- 并发记录（诚实）：本轮开工时 09:46 的并行轮已占用编号 **R3334**（commit `ca4bcd9ea`，同 commit 内也改过 `city-today.html`）——本轮按序改记 **R3335**，且只对本轮 4 件产出做定向 add，未碰其提交内容。
+
+- **实况三行**：当前活＝今日面 KPI 相遇混算修正（09:5x-10:0x，已重建验证）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-today.html`（10:0x，KPI 489/6/490）｜下个里程碑＝11-17 19:00 后年轮批 `--batch 3`＋反思批 `--batch 5`＋配额闸 A/B 实弹；11-18 相遇不变量 D3 结单。
+
+  计量：**tokens: local=0 api=0 api_reason=-（让路窗内三条 LLM 腿全 yield；本轮日更/世代/池审计/QC/事件闸/KPI 修正全确定性零 LLM）**

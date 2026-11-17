@@ -43,6 +43,8 @@ CARD_RE = re.compile(r"^# (C-\d+) · (.+)$", re.M)
 DIST_RE = re.compile(r"城区\*\*\s*([^｜|\n]+)")
 JOB_RE = re.compile(r"\*\*职业\*\*\s*([^｜|\n]+)")
 RING_RE = re.compile(r"^- (\d{4}-\d{2}-\d{2}) 「(.+)」\s*\[锚\]", re.M)
+# 相遇行正文以「与 C-xxxxx 相遇：」开头——同属 [锚] 环行但语义是联结而非本年轮
+MEET_RE = re.compile(r"^与\s*C-\d+\s*相遇[:：]")
 
 
 def esc(s: str) -> str:
@@ -208,7 +210,12 @@ def main() -> int:
 
     by_day, cards = load(today)
     rows = by_day.get(today, [])
-    n_prev = len(by_day.get(prev, []))
+    # 相遇行与年轮行同格式落在卡上（相遇轮：双方各写一句年轮式互动）。
+    # 「今日年轮」只数年轮本体、相遇单列，否则当天联结的居民会被算成两环。
+    n_ring = len([r for r in rows if not MEET_RE.match(r[4])])
+    n_meet = len(rows) - n_ring
+    prev_rows = by_day.get(prev, [])
+    n_prev = len([r for r in prev_rows if not MEET_RE.match(r[4])])
 
     people = sorted({r[0] for r in rows})
     dists: dict[str, list[tuple]] = {}
@@ -216,12 +223,13 @@ def main() -> int:
         dists.setdefault(r[2], []).append(r)
     order = sorted(dists, key=lambda d: (-len(dists[d]), d))
 
-    delta = len(rows) - n_prev
+    delta = n_ring - n_prev
     delta_txt = "持平" if delta == 0 else ("多 %d 条" % delta if delta > 0 else "少 %d 条" % -delta)
 
     # KPI
     kpi = (
-        f"<div><b>{len(rows)}</b>今日年轮</div>"
+        f"<div><b>{n_ring}</b>今日年轮</div>"
+        f"<div><b>{n_meet}</b>今日相遇</div>"
         f"<div><b>{len(people)}</b>今日开口的居民</div>"
         f"<div><b>{len(dists)}</b>城区</div>"
         f"<div><b>{n_prev}</b>昨日年轮</div>"
