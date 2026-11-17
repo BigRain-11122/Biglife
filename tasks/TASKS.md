@@ -4790,3 +4790,14 @@ ound_daily --run = 28 面 skipped-fresh / stale=0 / ran=0 / failed=0 PASS；pers
 - **诚实边界**：内容线（年轮/相遇/反思）仍在让路窗内零产出；本轮增量＝确定性可见面修复（数据驱动、零 LLM），非新年轮。
 - **账目勘正（二段式·含自我撤回）**：①初判——本仓提交 63597c420 的 commit 消息在 PowerShell 控制台显示为乱码，曾据此提交 7bc82ca71 写「GBK 转码入库」；②复核——用 `git cat-file commit <sha>` 取原始 bytes 按 UTF-8 解码，**63597c420 与 7bc82ca71 两条消息均为正确 UTF-8 中文**（`R3350 让路窗可见面补更：ops 面依赖 vram-gate mtime 滞后触发重建 city-ops/index`），控制台乱码纯属 PS 将 UTF-8 字节按 GBK 显示的假象；故 7bc82ca71 的「乱码」结论**自我撤回**，本条为最终结论。判例：commit 消息编码核查禁用控制台肉眼，一律 `git cat-file` + UTF-8 解码（姊妹条款=哈希比对须 `--no-filters`）。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)
+
+## R3351 · 2026-11-17 11:56-12:0x @BigLife-OSLoop（让路窗·稳健康轮）
+- **轮首三步**：`git pull --ff-only` = Already up to date、工作树净；决策水位差 **NEW=0**（watermark 已含 D-20261117-11，11-16/11-17 全量 D-ID 差集为空）；orders 物理件区无涉本司新件。
+- **产品增量**：**零新增实物**（诚实记账）。`round_daily.py --run` 首跑 **stale=0 ran=0 failed=0 verdict=PASS**（20+ 面当日内已由前轮 R3350 补更，当日面 `/census/export/` 全鲜）；`--check` 复检同判 PASS。
+- **守卫面**：`persona_generations.py --check` **rc=0**（gen 8 / habits=170 / cutoff C-10120 / pending_sync=none）；`pool_audit.py` = **全部达标 SELF_TERMINATE**（axes 72/72、sprite 12/12、greet 28/28、faq 7/7、neg 6/6、determinism mismatch=0）；`qc_census` 上次 11:27（30 分钟内）不重复跑。
+- **验收取证（T-20261113-05 反思线验收线）**：`census/reflections.jsonl` 尾部按日聚合 = 11-17:5 / 11-16:5 / 11-15:3 / 11-14:5 → **连续 3 生产日尾部 date=当日 成立**，总行 110（覆盖仍 1.1%，属低频设计非故障）。
+- **跳过面（按律不重烧）**：步 1 年轮／步 4 相遇／步 1C 反思 = **yield-window**（工作日 09:00-19:00·D-20261020-02）→ 顺延 19:00 夜窗；步 6 基因今日 11:10 已由 R3345 落 b62；步 7 月度聚光灯 11 月 2 例已达标；步 8 `hq_feedback_daily` 今日 00:10 已有行。
+- **open 单状态**：T-20261116-13 配额闸 A/B → blocked-on-window（工装 ready，待 ≥19:00 due≥16 实弹）；T-20261116-16 相遇不变量 → 待 11-18 读 D3；T-20260923-01 FluxVerse PARKED。本轮**不新开单**。
+- **实况三行**：当前活＝让路窗稳健康轮（12:00 收轮）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\index.html`（2026-11-17 11:49:34，R3350 建）｜下个里程碑＝11-17 19:00 夜窗年轮批 `--batch 3`（到期靶单 due=10）+ T-20261116-13 配额闸实弹。
+- **诚实边界**：内容线（年轮/相遇/反思）让路窗内零产出；本轮无新年轮、无新池内容，仅验证面取证。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)
