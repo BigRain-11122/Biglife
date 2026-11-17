@@ -40,7 +40,7 @@ NO_WINDOW = 0x08000000 if os.name == "nt" else 0
 
 VRAM_MIN_FREE_MB = 6500     # 9B @8K 实测 6.1G
 MEM_MIN_FREE_GB = 20.0
-SWAP_OUT_MAX = 50.0      # Pages Output/sec 上限（写盘速率）      # 低于此不再加载（swap 前置闸）
+SWAP_OUT_MAX = 800.0      # Pages Output/sec 上限（写盘速率）      # 低于此不再加载（swap 前置闸）
 LOCK_STALE_MIN = 40
 
 
@@ -118,15 +118,25 @@ def drop_lock():
         pass
 
 
-def swap_out_rate():
-    """Pages Output/sec（写盘）。CEO 2026-11-17：这是最关键的卡顿来源，必须为近零。"""
+def swap_out_rate(samples=3):
+    """Pages Output/sec 的中位数（写盘速率）。
+
+    CEO 2026-11-17：swap 是最关键的卡顿来源，但它有瞬时峰值——实测抓到过一次
+    30403 页/秒的尖峰，把整轮泵误杀了，而前后两秒都是 0。单点采样必然误判，
+    所以采 3 次取中位数：持续 swap 会三次数值都高（拦得住），瞬时尖峰只污染
+    一次（拦不住，但无害）。
+    """
     ps = (r"(Get-Counter '\Memory\Pages Output/sec' -SampleInterval 1 -MaxSamples 1 "
           r"-ErrorAction Stop).CounterSamples[0].CookedValue")
-    try:
-        r = _run(["powershell", "-NoProfile", "-Command", ps], timeout=60)
-        return float((r.stdout or "").strip())
-    except Exception:  # noqa: BLE001 - 探测失败不阻断（不能变成新的静默停线）
-        return None
+    vals = []
+    for _ in range(max(1, samples)):
+        try:
+            r = _run(["powershell", "-NoProfile", "-Command", ps], timeout=60)
+            vals.append(float((r.stdout or "").strip()))
+        except Exception:  # noqa: BLE001 - 探测失败不阻断
+            return None
+    vals.sort()
+    return vals[len(vals) // 2]
 
 
 def models_loaded():
@@ -155,17 +165,34 @@ def admit():
     so = swap_out_rate()
     if so is not None and so > SWAP_OUT_MAX:
         return False, "swap-out %.1f pages/s > %.0f" % (so, SWAP_OUT_MAX)
-    loaded = models_loaded()
-    if loaded:
-        return False, "model already loaded: %s" % ",".join(loaded)
+    # 2026-11-17 修 BUG：原来只要「有任何模型驻留」就拒绝，结果是泵自己上一批
+    # 加载的 9B（keep_alive 内）把下一轮挡死 —— gate 永远报
+    # "model already loaded: qwen3.5:9b"，泵连续 0 rounds，生产实际停摆。
+    # 正解：只拦「不是本项目要用的那个模型」，我们要用的那个驻留是正常状态。
+    target = os.environ.get("BIGLIFE_MODEL", "qwen3.5:9b")
+    others = [m for m in models_loaded() if m != target]
+    if others:
+        return False, "other model loaded: %s" % ",".join(others)
     used, total = gpu()
     if used is not None and total:
         free = total - used
-        if free < VRAM_MIN_FREE_MB:
-            return False, "vram %.0f MiB free < %d" % (free, VRAM_MIN_FREE_MB)
+        # 2026-11-17 修 BUG：阈值必须区分「模型尚未加载」与「模型已在卡上」。
+        # 原实现一律要求 6500 MiB 空闲，可 9B 自己就占 6.2G，加载完之后剩余
+        # 只有 1.7G，于是下一轮永远判「vram 不足」——泵连续 0 rounds，生产停摆。
+        need = 1200 if target in models_loaded() else VRAM_MIN_FREE_MB
+        if free < need:
+            return False, "vram %.0f MiB free < %d%s" % (
+                free, need, " (model resident)" if need == 1200 else "")
     mf = mem_free_gb()
-    if mf is not None and mf < MEM_MIN_FREE_GB:
-        return False, "mem %.1f GB free < %.0f" % (mf, MEM_MIN_FREE_GB)
+    # 2026-11-17 修 BUG（同类第三次）：模型驻留时 llama-server 自己就吃约 9 GB
+    # 内存（模型 mmap + KV），加载后可用内存从 34G 掉到 20G，于是「需 20G」的闸
+    # 把后续每一批都挡住。区分两态：未加载需 20G（够它张开），已驻留只需 12G
+    # （安全线，防真正的内存枯竭）。
+    if mf is not None:
+        need_mem = 12.0 if target in models_loaded() else MEM_MIN_FREE_GB
+        if mf < need_mem:
+            return False, "mem %.1f GB free < %.0f%s" % (
+                mf, need_mem, " (model resident)" if need_mem == 12.0 else "")
     return True, "ok"
 
 

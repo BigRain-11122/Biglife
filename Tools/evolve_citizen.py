@@ -761,7 +761,8 @@ def seat():
                 url, model = OLLAMA + "/v1/chat/completions", m
         _SEAT = (url, model)
     return _SEAT
-COOLDOWN_DAYS = 7
+COOLDOWN_DAYS = 2   # 2026-11-17 CEO「排满不间断」: 7->2, due 供给 1442->5055/天
+                    # 取舍: 1 天会让同一人每天重写(素材不足=自我重复风险), 2 天是供给与新鲜度的平衡点
 REFLECT_MIN_RINGS = 3   # V2-B: a reflection needs a life to look back on
 POOL_CAP = 2            # T-20260925-01: soft per-batch cap for cross-card pool-gene quotes
 PROPOSALS = os.path.join(CO, "cognition", "proposals.jsonl")
