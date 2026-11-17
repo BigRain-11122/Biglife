@@ -4788,4 +4788,5 @@ ound_daily --run = 28 面 skipped-fresh / stale=0 / ran=0 / failed=0 PASS；pers
 - **open 单状态**：T-20261116-13 配额闸 A/B → blocked-on-window（三前置 DONE，待 ≥19:00 夜窗 due≥16 实弹）；T-20261116-16 相遇不变量 → 待 11-18 读 D3 meet_new_bad=0 结单；T-20261117-01 CLOSED（虚警·集团层统一处置）；T-20260923-01 FluxVerse PARKED 无动作。本轮**不新开单**。
 - **实况三行**：当前活＝让路窗可见面补更（11:48-11:5x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ops.html`（2026-11-17 11:49:34）｜下个里程碑＝11-17 19:00 夜窗年轮批 `--batch 3` 续跑 + T-20261116-13 配额闸实弹。
 - **诚实边界**：内容线（年轮/相遇/反思）仍在让路窗内零产出；本轮增量＝确定性可见面修复（数据驱动、零 LLM），非新年轮。
+- **账目勘正**：本仓提交 63597c420 的 commit 消息因 PowerShell 内联传参被 GBK 转码，中文入库成乱码（实义见本段）；历史已推送且 branch protection 禁 force push → 不改写，谨此勘正。修正法=中文 commit 消息一律走 `git commit -F <UTF-8 文件>`（本条即用该方法验证，见 commit 63597c420 之后一条）。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)
