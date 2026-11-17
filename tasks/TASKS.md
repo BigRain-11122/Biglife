@@ -4801,3 +4801,13 @@ ound_daily --run = 28 面 skipped-fresh / stale=0 / ran=0 / failed=0 PASS；pers
 - **实况三行**：当前活＝让路窗稳健康轮（12:00 收轮）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\index.html`（2026-11-17 11:49:34，R3350 建）｜下个里程碑＝11-17 19:00 夜窗年轮批 `--batch 3`（到期靶单 due=10）+ T-20261116-13 配额闸实弹。
 - **诚实边界**：内容线（年轮/相遇/反思）让路窗内零产出；本轮无新年轮、无新池内容，仅验证面取证。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)
+
+## R3352 · 2026-11-17 12:0x-12:3x @BigLife-OSLoop（让路窗·机制件轮）
+- **轮首三步**：`git pull --ff-only` = Already up to date；工作树净（并经新闸 `git_guard.py` 双读数校验一致）；决策水位差 **NEW=0**（watermark 已含 D-20261117-11）；orders 物理件区（mtime 11:59）无涉本司新件。
+- **产品增量（本轮实物）**：新增 `Tools/git_guard.py`＝轮首假净闸（T-20261117-01 第③项交付）——同时读默认与 `-c core.fsmonitor=false` 两条 `status --porcelain`，hidden 即判 FALSE-CLEAN RISK(rc=1)，一致 PASS(rc=0)。`--selftest` **PASS 4/4**、实检 rc=0、`py_compile` rc=0；回执 `qa/GIT-GUARD-20261117.md`；提交 6746f3e5d 已推 origin/main。
+- **守卫面复核**：`evolve_citizen --selftest-meet` 实跑 **PASS 7/7**（T-20261116-16 常驻负控仍绿，结单条件维持 11-18 读 D3）；`round_daily.py --run` **28 面全鲜 stale=0 ran=0 failed=0 verdict=PASS**；`persona_generations --check` rc=0 gen=8 pending_sync=none；`pool_audit` **SELF_TERMINATE**（72 桶全达标·determinism mismatch=0）；`hq_feedback_daily --check` = ALREADY_REPORTED（今日 1 行·零写入）。
+- **跳过面（按律不重烧）**：步 1 年轮／步 4 相遇／步 1C 反思 = yield-window（工作日 09:00-19:00）顺延 19:00 夜窗；步 3 QC 今日 11:27 已跑（<6 轮间隔）；步 6 基因今日 11:10 已由 R3345 落 b62；步 8 已报。
+- **open 单状态**：T-20261117-01 第③项**已交付**（①daemon 归属／②集团统一处置按立单约束未动他仓；余验收=跨仓连续 3 轮读数一致，本仓侧自本轮起逐轮可取证）；T-20261116-13 待 ≥19:00 且 due≥16；T-20261116-16 待 11-18 D3；T-20260923-01 FluxVerse PARKED。本轮不新开单。
+- **实况三行**：当前活＝轮首假净闸落地并推送（12:3x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\Tools\git_guard.py`（2026-11-17 12:2x）＋`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\GIT-GUARD-20261117.md`｜下个里程碑＝11-17 19:00 夜窗先跑配额闸 A/B 实弹（T-20261116-13·due≥16 才跑）再跑年轮批 `--batch 3`。
+- **诚实边界**：内容线（年轮/相遇/反思）让路窗内零产出；本轮实物是机制件（防假净误判），非居民内容；假净负控走合成读数（本仓 core.fsmonitor 已关，真盘不可自然复现）。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)
