@@ -4676,3 +4676,21 @@ eflect_citizen 均返 yield-window（D-20261020-02），年轮/相遇/反思三�
 - **open 单状态**：T-20261112-01 口② 11-17 抽样完成（零区越线、余量降 12 条）→ 维持 open（长线月余量单调律）；T-20261112-04 维持 open（立族判据已实证无新生吸引子）；T-20261116-13 blocked-on-tooling；T-20261117-01 集团层待统一（本仓已修）。
 - **实况三行**：当前活＝存量年轮机器串城区口径核验（零区越线，免重生成）；最近实物＝`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/RING-TOKEN-DISTRICT-20261117.md`（09:58）+ `census/export/index.html`（09:54 重建）；下个里程碑＝19:00 让路窗解后年轮批 `--batch 3` + 反思线 `--batch 5`（窗 ≤48h）。
 - tokens: local=0 api=0 api_reason=-（本窗全确定性脚本：日更面/世代池/池审计/城区审计，零 LLM 调用）。
+
+## R3342 · 2026-11-17 10:1x-10:3x @BigLife-OSLoop（产品轮·年轮单号泄漏闸补全）
+
+- 轮首：git pull --ff-only=Already up to date／树净；决策水位差集 **NEW=0**（唯一疑似新行 d-20261023-23 经逐字比对是文件名 ...-2358 的子串误匹配，非真决策行）；orders 物理件区无涉本司新件。
+- 确定性面（全绿）：
+ound_daily --run = **stale=1 ran=2 failed=0 PASS**（ops 面受 state/vram-gate.jsonl 依赖触发重建 + index）；persona_generations --check **rc=0**（gen8·habits=170）；pool_audit **PASS SELF_TERMINATE**；qc_census **problems=0**（cards=10114 · meet_new_bad=0）。
+- 让路窗（诚实）：evolve_citizen --batch 3 → **yield-window**（workday 09:00-19:00 · D-20261020-02）自停，未强跑。基因轮 09:22 已做过（commit 23c76b40b · +5 基因），本轮不重复。
+
+- **产品增量（能跑能查·缺陷出生地拦截）**：年轮里一直在漏治理单号——**115 卡 / 117 处**（T-20261010-03 84、T-20260927-04 20、T-20260926-18 7、PR-20261027-16b 3、O-20261015-2312/D-20261024-07/R1746 各 1），按日期 09-27/09-28/10-19 集中，**最近 11-12 仍在落环**。
+  **根因**：EVENT_CODE_RE 只认「字母+数字」(G08/S2.5) 与「字母-字母」(BG-A)，[ODT]-\d{8}-…／PR-\d{8}-\d+／R\d{4,} 三族两头都不落，校验全绿但闸不存在（与 11-12 D-02「安全闸静默变死码」同族病）。
+  **修法（两侧）**：Tools/evolve_citizen.py 的 MACHINE_TOKEN_ALT 增三式（出生站硬拒 + feed 洗净同挂）。
+  **验伤**：10091 卡人设段（职业/性格/信条/行为/关系/钩子/语言，排除年轮）三族命中 **全 0**（单号只在溯源簿记行）⇒ 硬拒不会误伤。**回归**：同一 20705 条年轮行，旧闸 965 → 新闸 1007（**+42 全是真泄漏**）；负样本 与 C-04992 相遇／H-QT2232／散文 4 条全放行，正样本 6 条全拦下。
+  **存量口径**：117 处历史残留本轮**不回溯改卡**（承既有「历史违规不回溯」口径），只堵出生地，避免明天继续长新的。
+
+- **实况三行**：当前活＝年轮单号泄漏闸补全（10:1x-10:3x，正负样本双验）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-ID-LEAK-20261117.md（10:2x）+ Tools/evolve_citizen.py（闸补全）｜下个里程碑＝11-17 19:00 后年轮批 --batch 3＋反思批＋T-20261116-13 配额闸 A/B 夜窗实弹。
+- open 单状态：T-20261116-13 blocked-on-window（工装 ready，待 ≥19:00 实弹）；T-20261116-16 待 11-18 读 D3；T-20261117-01 CLOSED（虚警）；T-20260923-01 FluxVerse PARKED。本轮不新开单（泄漏闸已就地闭环）。
+
+- tokens: local=0 api=0 api_reason=-（让路窗内 LLM 三腿全 yield；本轮日更/世代/池/QC/泄漏勘察与闸补全全确定性零 LLM）
