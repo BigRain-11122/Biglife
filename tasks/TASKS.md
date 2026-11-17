@@ -15,7 +15,7 @@
 - **产品增量（缺陷修复·可验证）**：`ring_lint` 首跑 **FAIL（coded=766 pre=764 post=2）**——定位根因=11-17 10:39 commit `0ba95f27f`「单号残句清污」只清治理单号（O-/R 号）未清内部码（G08/S2.5/B2396），正文被改→指纹失配→两条老环被判「修后回归」。逐条语义化改写（内部码→19xx 世界人话，日期与 [锚] 注脚不动）：C-06054 秦斯年「把G08那条线补上」→「把脑环广场东头那条线补上」；C-06804 董星野「把G08的S2.5转成B2396」→「把光桥东段的一班渡轮改签到了老码头」。复跑 → **PASS（coded=764 pre=764 post=0｜infra=84 pre=84 post=0）**。
 - **质检面（零 LLM）**：`round_daily --check/--run` 全新鲜（stale=0 ran=0 failed=0 PASS，40+ 面当日已鲜）；`pool_audit` 行政 72/72·像素 12/12·greet 28/28·faq 7/7·neg 6/6·determinism mismatch=0 → **SELF_TERMINATE**；`persona_generations --check` **rc=0**（gen8·habits=170·cutoff C-10120·pending_sync=none）。
 - **让路面**：`evolve_citizen --batch 3` = `yield-window`（工作日 09:00-19:00 CEO lane-priority·D-20261020-02），年轮/相遇/反思三腿顺延 19:00 夜窗。
-- **立单**：**T-20261117-02**（open）`repair_ring_ids.py` 判据面缺口——清理面（O/D/T/PR/R 单号）⊂ 巡检面（`ring_lint` 内部码+机队词），清污后仍可 FAIL；需补「检测+待清清单」模式，禁自动机械替换内部码（易生病句）。
+- **结单**：**T-20261117-02**（16:0x done·同一轮内做掉）`repair_ring_ids.py` 判据面缺口——原工装只清「清理面」（O/D/T/PR/R 单号），巡检面（`ring_lint` 内部码 `[GBSPT]####`+机队词）无检测口，清完单号仍可被 lint 判 FAIL。**本轮补 `--detect` 模式**：只检测不替换（内部码嵌句中，机械替换必生病句），产 `qa/RING-ID-PENDING-<日期>.md` 待清清单；判据与判代**逐字同源** `ring_lint`（CODE_RE/INFRA_RE 同源 + 指纹基线优先 + mtime 切点次之 + 巡检窗 floor 2026-10-20），rc 语义=有新产才 1（`--fail-on-stock` 可连存量一起拦）。**实跑对账**：hits=1081 环次（内部码/机队词），**new=0·stock=1081**，与 `ring_lint` `coded=764 pre=764 post=0 / infra=84 infra_pre=84 post=0 verdict=PASS` 无矛盾；**负控 PASS**（临时卡植入 `G08`+`显存` → 两类各命中且判新产）；默认 dry-run 与 `--apply` 行为未改（DRY-RUN cards=0 lines=0）。
 - **CEO 可见三行**：当前活＝让路窗内年轮清污回归修复（15:3x 收轮）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-LINT-REPORT.md`（15:2x 重写·post=0 PASS）＋`census\registry\NS\C-06054.md`／`census\registry\RV\C-06804.md`（内部码清零）｜下个里程碑＝19:00 夜窗年轮批 `--batch 3`＋配额闸 A/B 实弹＋相遇轮（窗 ≤8h）。
 - **诚实边界**：本轮内容线（年轮/相遇/反思）让路窗内零新卡；实物=2 张老卡文本清污＋巡检 PASS 报告，另立 1 张工具面缺陷单。
 - tokens: local=0 api=0 api_reason=yield-window 内容线全停＋纯确定性脚本零 LLM
@@ -5065,3 +5065,9 @@ ound_daily --run 29 面 stale=0 PASS；persona_generations --check rc=0 gen=8 pe
 - **诚实边界**：本轮零内容增量（年轮/相遇/反思被让路窗硬闸拦，程序不可绕；池已自终止）；产出为核查证据与一条「补基因无效」的结构性结论，未新开单、未改闸代码、未回填历史观测面。
 - **open 单**：T-20261116-13 配额闸 A/B → blocked-on-window（待 ≥19:00 且 due≥16，现 due=10）；T-20261116-16 相遇不变量 → 待 11-18 读 D3；T-20260923-01 FluxVerse PARKED。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)+no-llm
+- **R336x 本轮实录（16:0x 收轮·@BigLife-OSLoop）**：轮首 `git pull --ff-only`=Already up to date；决策水位已至 D-20261117-15（差集 0，无新行）；orders 无涉本司新物理件。
+- **产品增量（实物）**：`Tools/repair_ring_ids.py` 新增 `--detect` 巡检面检测（T-20261117-02 结单）＋产出 `qa/RING-ID-PENDING-20261117.md`（1081 环次待清清单，new=0/stock=1081，按卡按日按类型可按表逐条重写）。这是本轮 CEO 可直接打开看的新实物。
+- **守卫面**：`round_daily --run` verdict=PASS（stale=0 ran=0 failed=0，40 面全新鲜）；`persona_generations --check` rc=0（gen 8 · habits=170 · cutoff C-10120 · pending_sync=none）；`pool_audit` PASS SELF_TERMINATE（72 轴桶+12 像素桶+greet 28+faq 7+负例 6/6，determinism 192+25 对 mismatch=0）；`events_refresh --gate` PASS（cards=10111 events=46181 shards=3，replay 10111/10111 schema_errors=0 mismatch=0，coverage unexpected_missing=0，chronicle gap=0d）；`ring_lint` PASS（coded=764 pre=764 post=0 / infra=84 pre=84 post=0）。
+- **让路面**：`evolve_citizen --batch 3` = yield-window（工作日 09:00-19:00 CEO lane-priority·D-20261020-02），年轮/相遇/反思三腿顺延 19:00 夜窗；`hq_feedback_daily --check` 今日配额已由前轮用满，本步零写入。
+- **CEO 可见三行**：当前活＝年轮巡检面检测工装落地＋夜窗年轮批待发（16:0x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-ID-PENDING-20261117.md`（16:01 生成·1081 环次·new=0）｜下个里程碑＝19:00 夜窗 `evolve_citizen --batch 3`＋配额闸 A/B 实弹（due≥16 条件满足才跑）＋相遇轮（窗 ≤3h）。
+- tokens: local=0 api=0 api_reason=yield-window 内容线全停＋本轮全确定性脚本零 LLM
