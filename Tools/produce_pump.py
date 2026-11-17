@@ -37,6 +37,8 @@ import resident_loop as rl  # noqa: E402 - 复用资源门与日志（单一判�
 
 WRITTEN_RE = re.compile(r"written=(\d+)")
 DUE_RE = re.compile(r"evolved=(\d+) of (\d+) due")
+SKIP_RE = re.compile(r"gate: skip (C-\d+)")
+SOFT_RE = re.compile(r"soft-concession")
 
 
 def run_batch(batch):
@@ -59,14 +61,22 @@ def run_batch(batch):
     el = time.time() - t0
 
     written, due = 0, None
+    skipped, soft = 0, 0
     m = WRITTEN_RE.search(out)
     if m:
         written = int(m.group(1))
     m = DUE_RE.search(out)
     if m:
         due = int(m.group(2))
+    # 质量面计量（2026-11-17 CEO「保持好质量」）：拒写与软让步分开记。
+    # 批席放大（10->15）会让同批反模板约束更紧，写入率可能下降——
+    # 只有把 pass_rate 记进回执，才分得清「提速」和「提了速但净产出没涨」。
+    skipped = len(SKIP_RE.findall(out))
+    soft = len(SOFT_RE.findall(out))
+    pass_rate = round(written / due, 3) if due else None
     tail = "\n".join(out.strip().splitlines()[-6:])
-    return {"rc": rc, "written": written, "due": due,
+    return {"rc": rc, "written": written, "due": due, "skipped": skipped,
+            "soft": soft, "pass_rate": pass_rate,
             "seconds": round(el, 1), "tail": tail}
 
 
