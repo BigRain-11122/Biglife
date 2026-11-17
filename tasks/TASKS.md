@@ -1,5 +1,14 @@
 # BigLife 任务板（自领制·认领置 in-progress 署名+时间）
 
+## R3363 · 2026-11-17 15:29-15:5x @BigLife-OSLoop（让路窗·确定性日更面重建轮）
+
+- 轮首：`git pull --ff-only origin main` = Already up to date、工作树净；决策水位差 **NEW=0**（watermark 至 D-20261117-15）；`docs/orders.md` 当日 **0 令行**；`cph4/fleet/HQ-SELF-REPORT-20261117.md` 未列本司（D-20261117-12 子司自证清单无 BigLife 项）；D-20261117-04④ 上游依赖解除已于 11-17 00:0x 核销，本司归常规日清面。
+- **产品增量**：`round_daily --run` 实测 **stale=15 ran=16 failed=0 verdict=PASS**（重建 7 个导出面 html：districts/meets/objects/relations/gene-ledger/index/resident-gallery；依赖 `census/registry` mtime 变化触发，属真实内容刷新）；`qa/EVENTS-REPLAY-REPORT.md` 刷新。入库 8 件（commit 7d1fa69b0，标签 R3363——首写误用 R3362 已 amend 修正，未推送前本地重写）。
+- **质检面（零 LLM）**：`events_refresh --gate` **PASS**（derive OK cards=10111 events=46181；replay replayed=10111 schema_errors=0 mismatch=0；chronicle gap=0d）／`pool_audit` **SELF_TERMINATE**（axes 72/72、sprite 12/12、greet 28/28、faq 7/7、neg 6/6、determinism 192 对 mismatch=0）／`persona_generations --check` **rc=0**（gen 8·habits=170·cutoff C-10120·pending_sync=none）／`qc_census` **problems=0**（cards=10114 dup_rings 37/37 dup_new=0 meet=169 one_sided=1 meet_dup=2 **meet_new_bad=0**，T-20261116-16 观察窗 D2 维持，D3=11-18 结单）／`evolve_citizen --selftest-meet` 复跑 **PASS 7/7**。
+- **让路面**：`evolve_citizen --batch 3` = `yield-window`（工作日 09:00-19:00 CEO lane-priority·D-20261020-02），年轮/相遇/反思三腿顺延 19:00 夜窗；19:00 前不重试。
+- **未竟（如实）**：`update_status_export.py` 实跑后 `docs/status-export.json` mtime 仍为 **11-16 19:06**（脚本幂等 no-op，dept0/results/QC 三段本轮标记已含→skip），距 24h 闸尚余 3.4h；留夜窗首轮复跑，不当轮硬改。
+- 计量：**tokens: local=0 api=0 api_reason=-**（本轮零 LLM 调用：年轮让路窗 + 语言池已达标自停）。
+
 ## R3362 · 2026-11-17 15:13-15:3x @BigLife-OSLoop（让路窗·年轮内部码回归修复轮）
 
 - 轮首：`git pull --ff-only origin main` = Already up to date、工作树净；决策水位差 **NEW=0**（watermark 至 D-20261117-15，115 个 D-ID 全命中）；`docs/orders.md` 无涉本司新物理件（250 行全文仅 2 处历史提及，均为建仓回执）。
