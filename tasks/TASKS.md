@@ -4847,3 +4847,13 @@ ound_daily --run = 28 面 skipped-fresh / stale=0 / ran=0 / failed=0 PASS；pers
 - **实况三行**：当前活＝让路窗 QC 巡检轮（12:18-12:3x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\QC-REPORT.md`（2026-11-17 12:20:50·10114 卡全不变量 PASS）｜下个里程碑＝11-17 19:00 夜窗年轮批 `--batch 3`（靶 due=10）+ T-20261116-13 配额闸 A/B 实弹。
 - **诚实边界**：内容线（年轮/相遇/反思）仍在让路窗内零新增；本轮产物=QC 巡检实物（不变量全绿）+ 事件闸/日更面/世代池/语言池四闸读数刷新，非居民内容增量。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)
+
+## R3354 · 2026-11-17 12:48-12:5x @BigLife-OSLoop（让路窗·冷却自停守卫轮）
+- **轮首三步**：`git pull --ff-only origin main`=Already up to date、工作树净；决策水位差 **NEW=0**（watermark 已至 D-20261117-15；D-12 七件到点判据涉本司仅「活跃 PASS 登记」，D-04 依赖解除已 executed，均无本司待动）；orders 尾部无涉本司新令。
+- **确定性面复核（幂等）**：`round_daily.py --run` = **28 面全鲜 stale=0 ran=0 failed=0 verdict=PASS**；`persona_generations.py --check` **rc=0**（gen 8·max_cid=C-10120·pending_sync=none）；`pool_audit.py` = **全桶达标 SELF_TERMINATE**（72/72 轴桶、12/12 像素灵、greet 28、faq 7、neg 6/6、determinism mismatch=0）；`hq_feedback_daily.py --check` = **ALREADY_REPORTED**（今日 00:10 已有行）。
+- **让路闸实证**：`evolve_citizen.py --batch 3` 返回 **yield-window**（工作日 09:00-19:00·D-20261020-02）→ 年轮/相遇/反思三线顺延 19:00 夜窗。
+- **上轮距**：距 R3353（12:18-12:3x·QC 巡检）仅约 12 分钟，QC/事件闸/日更面均在 1.4h 内验证过 → 按冷却律不重扫（禁每轮重扫同一对象）。
+- **实况三行**：当前活＝让路窗冷却守卫（面全绿·零动作）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\QC-REPORT.md`（2026-11-17 12:20:50·10114 卡不变量全 PASS）｜下个里程碑＝11-17 19:00 夜窗年轮批（due=10 待清）+ T-20261116-13 配额闸 A/B 实弹。
+- **诚实边界**：本轮零产品增量（保护态豁免面：可见面全鲜 + 内容线让路窗 + 距上轮 12min）；只提交本行轮记，无内容级产物。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)+cooldown
+- **当轮缺陷修复（判例纠偏）**：首版 commit 消息经 PowerShell here-string 内联传入，入库为 U+E1xx 私有区**真乱码**（非渲染假象）；改用工具直写 UTF-8 消息文件 + `git commit --amend -F` + `--force-with-lease` 修正，校验 PRIVATE_USE=False。**修正 11:53 判例(180b260b9)**：`commit -F 文件通道` 只在「文件本身由非 shell 通道写入」时有效——PowerShell 内联字符串在进内存前即被 GBK 解码，写出的文件已是坏字节。
