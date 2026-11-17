@@ -4894,3 +4894,15 @@ ound_daily --run = 28 面 skipped-fresh / stale=0 / ran=0 / failed=0 PASS；pers
 - **实况三行**：当前活＝让路窗+冷却守卫（13:18-13:2x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\QC-REPORT.md`（2026-11-17 13:10:02·10114 卡不变量全 PASS）｜下个里程碑＝11-17 19:00 夜窗年轮批清 due=10 队列。
 - **诚实边界**：本轮零产品增量（工作日让路窗 + 冷却），内容三线全让路；仅为守卫取证轮。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)+cooldown
+
+## R3358 · 2026-11-17 13:23-13:3x @BigLife-OSLoop（让路窗·日更面刷新轮）
+- **轮首三步**：`git pull --ff-only origin main` = Already up to date、工作树干净；决策水位差 **NEW=0**（watermark 已至 D-20261117-15；12:00 批 D-12~D-15 涉本司仅「活跃 PASS 登记」，D-14 明记「不新增跨仓死线」，D-15 分支 8/8 判非复仇，均无本司待办）；orders 物理件区无涉本司新件。
+- **产品增量（本轮实物·C 产物）**：`round_daily.py --run` = **stale=1 ran=2 failed=0 verdict=PASS**——`ops` 因依赖面 `state/vram-gate.jsonl` mtime 变动重建、`index` 随子面重建刷新（其余 28 面新鲜跳过）；落盘 `census/export/city-ops.html` 与 `census/export/index.html`，已定向 commit `de3c72342` 并 push origin/main（rc=0）。
+- **QC 巡检落盘**：`qc_census.py` → cards=**10114**、evolved=**10114**、**problems=0**；dup_rings=37/37（历史观测面不回填）、dup_new=**0**、meet=169、one_sided=1、meet_dup=2、meet_new_bad=**0**；`census/QC-REPORT.md` 随本轮入库。one_sided/meet_dup 属 T-20261116-16 观察窗内历史面（D3=11-18 读 `meet_new_bad=0` 结单）。
+- **守卫面复核**：`persona_generations.py --check` **rc=0**（gen 8 / habits=170 / cutoff C-10120 / pending_sync=none）；`pool_audit.py` = **SELF_TERMINATE**（axes 72/72、sprite 12/12、greet 28/28、faq 7/7、neg 6/6、hard_fails=0、determinism mismatch=0）；`hq_feedback_daily.py --check` = **ALREADY_REPORTED**（today lines=1）→ 零写入。
+- **让路闸实证**：`evolve_citizen.py --batch 3` = **yield-window**（工作日 09:00-19:00·D-20261020-02）→ 年轮/相遇/反思三 LLM 线顺延 19:00 夜窗，不硬绕。
+- **跳过面（按例不重热）**：步 1 年轮／步 1C 反思／步 4 相遇 = yield-window；步 2 池已 SELF_TERMINATE；步 6 基因今日 11:10 已由 R3345 落 3 条（6h 内不重复增补）；步 7 月度聚光灯 11 月 2 例已达标；步 8 ALREADY_REPORTED。
+- **open 单状态**：T-20261116-13 配额闸 A/B → blocked-on-window（工装 ready，待 ≥19:00 且 due≥16 实弹）；T-20261116-16 相遇不变量 → 待 11-18 读 D3；T-20260923-01 FluxVerse PARKED。本轮**不新开单**。
+- **实况三行**：当前活＝让路窗日更面刷新轮（13:23-13:3x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ops.html`（2026-11-17 13:2x 重建，同步 QC-REPORT.md）｜下个里程碑＝11-17 19:00 夜窗年轮批清 due=10 队列 + T-20261116-13 配额闸 A/B 实弹。
+- **诚实边界**：内容线（年轮/相遇/反思）让路窗内零新增；本轮实物＝确定性可见面 2 面重建 + 10114 卡不变量全绿取证。QC 距上轮（13:10）仅 13 分钟属超频重跑（规程为每 6 轮 1 次），如实记不掩饰。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)
