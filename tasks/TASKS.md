@@ -4757,3 +4757,14 @@ ound_daily --run = 28 面 skipped-fresh / stale=0 / ran=0 / failed=0 PASS；pers
 - **实况三行**：当前活＝让路窗复核轮（11:2x）｜最近实物＝C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/QC-REPORT.md（10114 卡 problems=0·2026-11-17 11:25）｜下个里程碑＝11-17 19:00 夜窗年轮批 --batch 3＋反思批 --batch 5。
 - **诚实边界**：本轮与 R3346 同窗同态（相隔 20 分钟），内容线全被让路闸与「今日已达标」状态挡住，增量≈0；非停摆，属窗口使然，不重复记账。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)
+
+## R3348 · 2026-11-17 11:34-11:5x @BigLife-OSLoop（日更面刷新轮·3 面重建 PASS）
+
+- **轮首**：`git pull --ff-only` = Already up to date、工作树净；决策水位已覆盖至 D-20261117-11（差集 **NEW=0**）；`docs/orders.md` 无涉本司新件。
+- **产品增量（本轮实物）**：`round_daily.py --run` = **stale=2 ran=3 failed=0 verdict=PASS** —— `city-today.html` 重建（content-stale：行为导出面刷新到 11:33 → 今日年轮 **489**／今日相遇 **6**／开口居民 **490**／昨日 570，读数截至 11:34 非终值）、`city-map.html` 重建（dep-mtime=`census/export/citizen-behavior.jsonl`·864KB）、`index.html` 重建；其余 35 面 skipped-fresh。相较 R3347（stale=0 ran=0）本轮有实物刷新。
+- **事件回放闸**：`events_refresh.py --gate` **PASS** —— events=46181 cards=10111 replayed=10111、schema_errors=0、mismatch=0、coverage unexpected_missing=0、chronicle fresh gap=0d；`qa/EVENTS-REPLAY-REPORT.md` 入库。
+- **守卫面**：`persona_generations.py --check` **rc=0**（gen 8 / habits=170 / cutoff C-10120 / pending_sync=none）；`pool_audit.py` = **SELF_TERMINATE**（72 桶 1296 行 + sprite 12 桶 144 行 + greet 28 桶 476 行 + faq 42 行 + neg 6/6·hard_fails=0·determinism mismatch=0）。
+- **跳过面（按律不重烧）**：步 1 年轮／步 4 相遇／步 1C 反思 = **yield-window**（工作日 09:00-19:00·D-20261020-02）→ 顺延 19:00 夜窗；步 2 池已达标（自终止律）；步 6 基因今日已落；步 8 `hq_feedback_daily --check` = **ALREADY_REPORTED** → 零写入；open 单 T-20261116-13 blocked-on-window（待 ≥19:00 due≥16 实弹）／T-20261116-16 待 11-18 读 D3／T-20261117-01 fsmonitor 集团层待统一。
+- **实况三行**：当前活＝让路窗日更面刷新轮（11:34）｜最近实物＝C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-today.html（489 今日年轮·2026-11-17 11:34）｜下个里程碑＝11-17 19:00 夜窗年轮批 `--batch 3`（含 T-20261116-13 配额闸 due≥16 实弹）。
+- **诚实边界**：内容线（年轮/相遇/反思）仍在让路窗内，本轮增量=可见面刷新与闸门读数，非新年轮产出；非停摆，属窗口使然。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)
