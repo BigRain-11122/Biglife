@@ -96,6 +96,27 @@ def refresh_index():
         return False
 
 
+def warm_probe(budget=90):
+    """一轮开始前用 1 token 确认模型能应答。
+
+    2026-11-17：模型加载失败时（显存不足/服务未就绪），整轮 9 分钟会白白耗在
+    每批 150 秒的 fuse 超时上。先花 90 秒确认能答，答不了就直接收手，
+    把窗口让给下一轮——比闷头烧掉 9 分钟便宜得多。
+    """
+    import urllib.request
+    model = os.environ.get("BIGLIFE_MODEL", "qwen3.5:9b")
+    try:
+        body = json.dumps({"model": model, "prompt": "ping", "stream": False,
+                           "think": False, "options": {"num_predict": 1}}).encode("utf-8")
+        req = urllib.request.Request("http://127.0.0.1:11434/api/generate", data=body,
+                                     headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=budget) as r:
+            r.read(64)
+        return True
+    except Exception:  # noqa: BLE001 - 探测失败就是信号，不是崩溃
+        return False
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--minutes", type=float, default=9.0, help="本轮时间预算")
@@ -114,6 +135,11 @@ def main():
         ok, why = rl.admit()
         print("dry-run admit: %s (%s)" % (ok, why), flush=True)
         return 0 if ok else 1
+
+    if not warm_probe():
+        rl.log("pump stop: warm-probe failed (model cannot answer) - yield window")
+        print("PUMP warm-probe-failed", flush=True)
+        return 1
 
     while len(rounds) < args.max_batches:
         if time.time() >= deadline:
