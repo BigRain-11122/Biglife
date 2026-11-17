@@ -18,6 +18,9 @@ SRC = os.path.join(ROOT, "census", "export", "citizens-light.jsonl")
 OUT = os.path.join(ROOT, "census", "export", "city-dashboard.html")
 FEED_LIMIT = 160
 RING_LINE = re.compile(r"^- (\d{4}-\d{2}-\d{2}) ")
+# 相遇行与年轮行同格式落在卡上（相遇轮双方各写一句年轮式互动）。本面「今日新增年轮」
+# 只数年轮本体，相遇单列——否则当天联结的居民会被算成两环（与 build_daily_issue 同口径）。
+MEET_LINE = re.compile(r"^- \d{4}-\d{2}-\d{2}\s*「\s*与\s*C-\d+\s*相遇[:：]")
 
 SPECIES_CN = {
     "carbon": "碳基",
@@ -91,6 +94,8 @@ def ring_day_counts():
         try:
             with open(p, encoding="utf-8", errors="replace") as f:
                 for line in f:
+                    if MEET_LINE.match(line):
+                        continue
                     m = RING_LINE.match(line)
                     if m:
                         days[m.group(1)] += 1

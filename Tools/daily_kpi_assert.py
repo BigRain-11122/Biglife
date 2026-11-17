@@ -8,8 +8,14 @@
 于是 city-today.html 显示「489 今日年轮」而 registry 实算 495 时，两闸全绿。
 与 2026-10-27 的「12 面静默停更」同族病根：闸问的是「有没有生」，不问「生得对不对」。
 
+勘误（2026-11-17 14:3x 实证）：上段的 489/495 归因说反了。卡面 495 行 = 489 纯年轮
++ 6 相遇行（相遇轮双方各写一句年轮式互动，行格式与年轮相同）。build_daily_issue 排除
+相遇行得 489（正确口径）；build_city_dashboard 的逐日曲线只按 `^- YYYY-MM-DD ` 计数，
+把 6 条相遇计成年轮得 495（错）。两闸全绿的原因是断言件只验 city-today，而错的是看板。
+故本工具同时断言两面的「今日年轮」口径，任一面漂移即 FAIL。
+
 本工具把 KPI 摊成机器判据：直接 import build_daily_issue 复用 load/card_paths
-（口径单一，不重复实现相遇行/三源卡的判定），把页面四个 KPI 与实算逐个比对。
+（口径单一，不重复实现相遇行/三源卡的判定），把页面 KPI 与实算逐个比对。
 
 用法：
   python -X utf8 Tools/daily_kpi_assert.py             # 只断言
@@ -34,6 +40,7 @@ sys.path.insert(0, HERE)
 import build_daily_issue as bdi  # noqa: E402  口径唯一来源
 
 PAGE = os.path.join(ROOT, "census", "export", "city-today.html")
+DASH = os.path.join(ROOT, "census", "export", "city-dashboard.html")
 
 
 def grab(text: str, label: str):
@@ -74,10 +81,29 @@ def check(day: str, page: str = PAGE) -> tuple[int, list]:
         if not ok:
             bad.append((label, got, exp))
     if bad:
-        print("verdict: FAIL n=%d  (正法: python -X utf8 Tools/build_daily_issue.py)" % len(bad))
         return 1, bad
-    print("verdict: PASS")
     return 0, []
+
+
+def check_dashboard(day: str) -> tuple[int, list]:
+    """看板「今日新增年轮」必须与 city-today 同口径（排除相遇行）。
+
+    2026-11-17 实测：逐日曲线曾把 6 条相遇行计成年轮（495 vs 真值 489），
+    而断言件只验 city-today，属「被测件之外的错」。此断言把看板纳入射程。
+    """
+    if not os.path.exists(DASH):
+        print("FAIL: page missing -> %s" % DASH)
+        return 2, []
+    with open(DASH, encoding="utf-8", errors="replace") as fh:
+        text = fh.read()
+    exp = data_kpis(day)["今日年轮"]
+    m = re.search(r"<b>([^<]*)</b>\s*<span>\s*今日新增年轮", text)
+    got = m.group(1) if m else None
+    ok = got is not None and str(got).strip() == str(exp)
+    print("看板今日年轮 page=%s data=%s %s" % (got, exp, "OK" if ok else "MISMATCH"))
+    if ok:
+        return 0, []
+    return 1, [("今日新增年轮(看板)", got, exp)]
 
 
 def rebuild() -> int:
@@ -93,10 +119,25 @@ def main() -> int:
     ap.add_argument("--page", default=PAGE, help="目标面（负控/自测用）")
     ap.add_argument("--rebuild", action="store_true", help="不一致则重建再复验")
     args = ap.parse_args()
-    rc, _bad = check(args.date, args.page)
-    if rc == 1 and args.rebuild and os.path.abspath(args.page) == os.path.abspath(PAGE):
+    same_page = os.path.abspath(args.page) == os.path.abspath(PAGE)
+    rc, bad = check(args.date, args.page)
+    if same_page:
+        drc, dbad = check_dashboard(args.date)
+        rc = drc if rc == 0 else rc
+        bad = bad + dbad
+    if rc == 1 and args.rebuild and same_page:
         if rebuild() == 0:
-            rc, _bad = check(args.date, args.page)
+            rc, bad = check(args.date, args.page)
+            drc, dbad = check_dashboard(args.date)
+            rc = drc if rc == 0 else rc
+            bad = bad + dbad
+    if rc == 1:
+        print("verdict: FAIL n=%d  (正法: python -X utf8 Tools/build_daily_issue.py "
+              "+ build_city_dashboard.py)" % len(bad))
+    elif rc == 2:
+        print("verdict: MISSING")
+    else:
+        print("verdict: PASS")
     return rc
 
 
