@@ -4712,3 +4712,14 @@ ound_daily --run = **stale=1 ran=2 failed=0 PASS**（ops 面受 state/vram-gate.
 - **诚实边界**：本轮为让路窗维护轮，无新增内容产出（年轮批被闸挡住）；两处文件改动＝证据件时间戳刷新（census/QC-REPORT.md、qa/EVENTS-REPLAY-REPORT.md），判据值未变，按记账计 0 分。
 - **open 单状态**：T-20261116-13 配额闸 A/B → blocked-on-window（待 ≥19:00 夜窗实弹）；T-20261116-16 相遇不变量 → 待 11-18 读 D3；T-20261117-01 CLOSED（虚警）；T-20260923-01 FluxVerse PARKED。本轮不新开单。
 - **实况三行**：当前活＝让路窗维护＋三闸复核（10:4x）｜最近实物＝`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/EVENTS-REPLAY-REPORT.md`（46,181 事件 PASS，2026-11-17 10:46）与 `census/QC-REPORT.md`（10114 卡 problems=0，10:45）｜下个里程碑＝11-17 19:00 夜窗年轮批 `--batch 3` ＋反思批 `--batch 5`。
+
+## R3344 · 2026-11-17 10:53-11:0x @BigLife-OSLoop（让路窗维护轮·句块表确定性收口）
+
+- **轮首**：pull=Already up to date、工作树净；决策水位差 NEW=0（水位至 D-20261117-11；涉本司两行 D-20261117-04 executed / D-20261117-08 no-op，无新派工）；orders 物理件区无涉本司新件。
+- **闸门实况**：evolve/meet/reflect 三线返回 yield-window（工作日 09:00-19:00 让路，D-20261020-02）→ 顺延 19:00 夜窗，不手绕；`hq_feedback_daily --check` = ALREADY_REPORTED（今日 00:10 已有行）→ 零写入；任务板 open=0。
+- **本轮实物**：`round_daily --run` 重建 3 面（ring_quality / index / ring_trend），复检 `--check` = **stale=0 PASS**；可见面刷新 18 件（city-growth-p01..p11 + city-ring-quality + city-ring-trend + index 等）。
+- **确定性修复（本轮唯一代码增量）**：`Tools/ring_simile_audit.py` L250 句块表排序 `key=-len(v)` 只按频次，并列行序受 set 迭代顺序（字符串哈希随机化）影响 → 每进程输出行序不同，`city-ring-quality.html` 与 `qa/RING-SIMILE-REPORT.md` 每轮产生无意义 diff。改为 `key=(-len(v), k)` 加次级字典序键；**验证＝两跑 SHA256 同值 `FD898FCA…B772`（DETERMINISTIC=PASS）**，判据值未变（rings=20705 citizens=10091 sim=866 short=689 tmpl=1212 queue=400）。
+- **复核产出**：`persona_generations --check` rc0（gen 8 覆盖 C-10120，pending_sync=none）；`pool_audit` = SELF_TERMINATE（72/72 桶、hard_fails=0、determinism mismatch=0）；`qc_census` = problems=0（cards=10114、dup_new=0、meet_new_bad=0）；`events_refresh --gate` = 46,181 事件 replay mismatch=0 / schema_errors=0 PASS，chronicle gap=0d。
+- **诚实边界**：内容增量（年轮/相遇/反思）全被让路窗挡住，本轮无新居民文字；得分实况＝能看实物 2 分（3 面重建可看）＋文件改动 1 分（确定性修复）。
+- **实况三行**：当前活＝让路窗维护＋句块表确定性修复（11:0x）｜最近实物＝`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-ring-quality.html`（确定性重建，2026-11-17 10:5x）与 `census/export/city-ring-trend.html`（29 日缺陷率走势）｜下个里程碑＝11-17 19:00 夜窗年轮批 `--batch 3` ＋反思批 `--batch 5`（T-20261116-13 配额闸 A/B 同窗实弹）。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)

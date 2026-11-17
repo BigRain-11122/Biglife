@@ -247,7 +247,7 @@ def main() -> int:
         }
 
     tmpl = [{"text": k, "citizens": len(v)}
-            for k, v in sorted(gram_citizens.items(), key=lambda kv: -len(kv[1]))
+            for k, v in sorted(gram_citizens.items(), key=lambda kv: (-len(kv[1]), kv[0]))
             if len(v) >= TMPL_CITIZENS][:20]
     tmpl_set = {t["text"] for t in tmpl}
     tmpl_rows = 0
