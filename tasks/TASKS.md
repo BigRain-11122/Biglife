@@ -1,5 +1,18 @@
 # BigLife 任务板（自领制·认领置 in-progress 署名+时间）
 
+## R3357 · 2026-11-17 13:38-13:5x @BigLife-OSLoop（让路窗·质检＋事件闸复核轮）
+
+- 轮首：`git pull --ff-only origin main` = Already up to date、工作树净；决策水位差 **NEW=0**（watermark 至 D-20261117-15，全量 D-ID 差集为空）；`docs/orders.md` 物理件区无涉本司新件。
+- **产品增量（能看实物）**：①`qc_census` → cards=10114 evolved=10114 **problems=0**、dup_rings=37/37 dup_new=0、meet=169 one_sided=1 meet_dup=2 **meet_new_bad=0** → `census/QC-REPORT.md` 刷新（13:40）；②`events_refresh --gate` **PASS**（events=46181 cards=10111 shards=3、replay 10111/10111、mismatch=0、schema_errors=0、coverage unexpected_missing=0、chronicle gap=0d）→ `qa/EVENTS-REPLAY-REPORT.md` 刷新（13:40）。
+- **内容质量抽验（人眼·零 LLM）**：今日 490 席新环抽 5 席（C-00749 朱南汐／C-00744 史之恒／C-00863 范米粒／C-00742 邓雯／C-00778 程一鸣）逐条审读——意象具体（推子底下刻「1987」、门板锈迹、漂上一粒黑点）、职业锚一致（「先复核一遍」「慢慢来，比较快」）、天气与事件接入、`[锚]` 注脚齐备 → 判定 PASS；已知残项=「我正…」起句族占比偏高（T-20261115-04 已结案·部分达成，不重开）。
+- **盘面核实（纠正前段误读）**：`census/registry` 为分片结构 6 区（GM/MD/NS/OR/QT/RV），递归 **10091 卡**与 git 索引一致、零删除；用非递归枚举得 0 属枚举口径错，已复核澄清，**非缺卡事故**。
+- **自终止面（诚实不重烧）**：`pool_audit` 轴 72/72·像素 12/12·greet 28/28·faq 7/7·neg 6/6·determinism mismatch=0 → **SELF_TERMINATE**；`persona_generations --check` **rc=0**（gen8·habits=170·cutoff C-10120·pending_sync=none）；`round_daily --run` **stale=0 ran=0 failed=0 PASS**（20+ 面当日已鲜）；`hq_feedback_daily --check` **ALREADY_REPORTED**（当日已报，零写入）。
+- **让路面**：年轮／相遇／反思三腿 = `yield-window`（工作日 09:00-19:00 CEO lane-priority · D-20261020-02）顺延 19:00 夜窗；基因轮今日 gen8 已开（R3345）按低频律不重跑；月度聚光灯 11 月 2 例已达标。
+- **open 单不变**：T-20261116-13 配额闸 open·tooling-ready（待 ≥19:00 且 due≥16 实弹）；T-20261116-16 待 11-18 读 D3 `meet_new_bad=0` 结单；T-20261117-01 fsmonitor 本仓已修·集团层待统一；T-20260923-01 FluxVerse 线 PARKED。本轮不新开单。
+- **CEO 可见三行**：当前活＝让路窗内质检＋事件闸全量回放复核（13:5x 收轮）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\QC-REPORT.md`（13:40）＋`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md`（13:40）｜下个里程碑＝19:00 夜窗年轮批 `--batch 3`（due=10）＋配额闸 A/B 实弹＋反思线补跑（窗 ≤48h）。
+- **诚实边界**：内容线（年轮/相遇/反思）让路窗内零产出；本轮两件实物为维持面报告刷新＋5 席人眼质量抽验结论，无新年轮卡。
+- tokens: local=0 api=0 api_reason=yield-window 内容线全停，本轮纯确定性脚本零 LLM
+
 ## R3356 · 2026-11-17 13:05-13:1x @BigLife-OSLoop（让路窗·日更面重建+QC 巡检轮）
 
 - 轮首：`git pull --ff-only origin main` = Already up to date、工作树净；决策水位差 **NEW=0**（watermark 至 D-20261117-15；D-12 七件到点件涉本司仅「活跃 PASS 登记」、D-13 闸值落地属 mv 线本机执行、D-14 跨仓回执交周日周轮）；`docs/orders.md` 无涉本司新物理件。
