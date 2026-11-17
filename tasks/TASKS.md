@@ -1,5 +1,17 @@
 # BigLife 任务板（自领制·认领置 in-progress 署名+时间）
 
+## R3334 · 2026-11-17 09:36-09:45 @BigLife-OSLoop（确定性面轮·3 面重建＋事件闸 46181）
+
+- 轮首：pull `Already up to date`；`git -c core.fsmonitor=false status` 起步净；决策水位已覆盖至 D-20261117-11（差集 NEW=0；D-20261117-04 上游依赖解除 executed / D-20261117-08 收取面 BigLife 活跃 PASS，均无需本司动作）；`docs/orders.md` 物理件区（bm-b 开机/bm-d 入网）无涉本司新件。
+- **产品增量**：`round_daily.py --check` = **stale=2**（today=content-stale:city-today.html src=2026-11-17 09:38；map=dep-mtime:census/export/citizen-behavior.jsonl）→ `--run` **rebuilt 3 / failed=0 / verdict=PASS**：`census/export/city-today.html`（追 09:38 内容源）、`city-map.html`（行为线依赖刷新）、`index.html`；重建后全绿。
+- **事件回放闸**：`events_refresh.py --gate` **PASS** —— events=**46181**（较前一闸 46114 增 67）cards=10111 shards=3，replay 10111/10111、schema_errors=0、mismatch=0、coverage unexpected_missing=0、chronicle gap=0d；`qa/EVENTS-REPLAY-REPORT.md` 入库。
+- **质量面**：`persona_generations.py --check` **rc=0**（gen 8 · habits=170 · cutoff C-10120 · pending_sync=none）；`pool_audit.py` **PASS SELF_TERMINATE**（72 轴桶+12 像素桶+greet 28+faq 7+负例 6/6 全达标，determinism 192+25 对 mismatch=0）。
+- **让路窗（如实记）**：`evolve_citizen.py --batch 3` → **yield-window**（workday 09:00-19:00 CEO lane-priority，D-20261020-02）自停，未强跑未改参数；反思线未到 19:00 夜窗按规程不跑；相遇环今日 cap 已满（R3311/R3318 记 3/3）不重复烧；基因轮今日 09:29 R3330 已增补（b61 +5）属低频已用，本窗不叠。
+- **并发观察（如实记·不改工装）**：`state/heartbeat.txt` 实读 R3332 09:17 / R3330 09:29 / R3333 09:34 三行与本窗并行落地 → `round.lock` 单实例保证在该间隔未生效（与 R3308 记同族）。影响复核：本窗只跑确定性日更面与闸，与年轮批（yield-window 未跑）零重叠；`events_refresh`/`round_daily` 均幂等，无落盘冲突。
+- **open 单状态**：任务板无 open/in-progress 行（T-20261116-13 保持 blocked-on-tooling，待夜窗修 arm 输出落盘后重跑）。
+- **实况三行**：当前活＝确定性面轮收口（日更 3 面追源＋事件闸 46181 PASS）；最近实物＝`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-today.html`（09:45 重建）+ `qa/EVENTS-REPLAY-REPORT.md`（09:45）；下个里程碑＝19:00 后夜窗年轮批（含顺延件）+ 反思线恢复（窗 ≤48h）。
+- tokens: local=0 api=0 api_reason=-（本窗全确定性脚本，年轮线 yield-window 未产生 LLM 调用）。
+
 ## R3330 · 2026-11-17 08:53-09:0x @BigLife-OSLoop（产品轮·年轮 10/10 全中＋17 面重建＋观察窗复核）
 
 - 轮首：pull `Already up to date`；`git -c core.fsmonitor=false status` 起步净；决策水位已覆盖至 D-20261117-11（差集 0；D-20261117-04 上游依赖解除 executed / D-20261117-08 收取面 BigLife 活跃 PASS，均无需本司动作）；`docs/orders.md` 物理件区无涉本司新件。
@@ -4592,8 +4604,10 @@ eflect_citizen --batch 5；11-18 相遇不变量 D3 结单。
   计量：**tokens: local=0 api=0 api_reason=-(让路窗内三腿全 yield·本轮负控/QC/日更/世代全确定性零 LLM)**
 
 - [2026-11-17 09:2x @BigLife-OSLoop R3330] 本轮实录：轮首 pull=Already up to date、工作树净；决策水位差 NEW=0（watermark 已至 D-20261117-11）；orders 物理件区无涉本司新件；TASKS open 单＝T-20261117-01（CLOSED 虚警·集团层处置）／T-20261116-13（配额闸 A/B blocked-on-window，待 ≥19:00 夜窗实弹）／T-20261116-16（相遇不变量待 11-18 读 D3）。
-  **产品增量（能看实物·2 分）**：①**基因轮 b61 落库 5 条**（cp+2 手艺/逍遥、ho+2 干袜子/报修单、ha+1 署名制），入库前近重预检 **5 候选/0 近重**（证据=qa/GENE-ROUND-B61-20261117.md）；池 cp1526→1528／ho910→912／ha85→86；②persona_generations --sync 实跑 **pending_sync=none、--check rc=0**（本批不动 habits 池→不触发新世代，generation 维持 gen8 habits=170，老居民零漂移）；③ound_daily --run **stale=3 ran=4 failed=0 verdict=PASS**，重建 gene-ledger／city-lexicon／city-objects／index 四面；④qc_census **problems=0**（cards=10114 evolved=10114）；pool_audit **SELF_TERMINATE/PASS**（72 桶全达标·1440 行）。
-  **让路窗说明（诚实）**：本窗 09:18-09:2x 属工作日 CEO 车道优先窗，evolve_citizen --batch/--meet 与 eflect_citizen 均返 yield-window（D-20261020-02），年轮/相遇/反思三轮**本轮未产出**，顺延 19:00 后夜窗；本轮改用零 LLM 确定性面顶上，不虚报。
+  **产品增量（能看实物·2 分）**：①**基因轮 b61 落库 5 条**（cp+2 手艺/逍遥、ho+2 干袜子/报修单、ha+1 署名制），入库前近重预检 **5 候选/0 近重**（证据=qa/GENE-ROUND-B61-20261117.md）；池 cp1526→1528／ho910→912／ha85→86；②persona_generations --sync 实跑 **pending_sync=none、--check rc=0**（本批不动 habits 池→不触发新世代，generation 维持 gen8 habits=170，老居民零漂移）；③
+ound_daily --run **stale=3 ran=4 failed=0 verdict=PASS**，重建 gene-ledger／city-lexicon／city-objects／index 四面；④qc_census **problems=0**（cards=10114 evolved=10114）；pool_audit **SELF_TERMINATE/PASS**（72 桶全达标·1440 行）。
+  **让路窗说明（诚实）**：本窗 09:18-09:2x 属工作日 CEO 车道优先窗，evolve_citizen --batch/--meet 与 
+eflect_citizen 均返 yield-window（D-20261020-02），年轮/相遇/反思三轮**本轮未产出**，顺延 19:00 后夜窗；本轮改用零 LLM 确定性面顶上，不虚报。
   **三行实况**：当前活＝基因轮 b61 落库＋世代面复核＋28 面日更（09:18-09:2x）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\gene-ledger.html（2026-11-17 09:2x，含 b61 五条新基因）｜下个里程碑＝11-17 19:00 后年轮批 --batch 3 续跑＋反思批 --batch 5（连续 3 生产日验收线），11-18 相遇不变量 D3 结单。
   tokens: local=0 api=0 api_reason=让路窗内三条 LLM 线全部 defer，本轮为零 LLM 确定性轮
 
