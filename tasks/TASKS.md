@@ -4959,3 +4959,11 @@ ound_daily --run 29 面 stale=0 PASS；persona_generations --check rc=0 gen=8 pe
 - **实况三行**：当前活＝让路窗守卫补强（KPI 数字一致性断言落地，14:0x）｜最近实物＝C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\Tools\\daily_kpi_assert.py（2026-11-17 14:0x）＋qa\\KPI-ASSERT-20261117.md｜下个里程碑＝11-17 19:00 夜窗年轮批清 due=10 + T-20261116-13 配额闸 A/B 实弹。
 - **诚实边界**：内容线（年轮/相遇/反思）让路窗内零新增；本轮实物为可跑守卫件（A 类），非居民内容增量。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)+no-llm
+
+- [2026-11-17 14:0x @BigLife-OSLoop] 轮记：让路窗等待态轮（零 LLM·零内容增量）
+- **轮首**：pull=up-to-date、工作树净、决策差集 NEW=0、orders 无涉本司新令；D-20261117-12 七件失守清单不含本司。
+- **本轮证据（零 LLM 闸）**：audit-due due=10 leaked=0 PASS；selftest-meet 7/7 PASS（T-20261116-16 观察窗补充证据）；round_daily 41 面 stale=0 PASS；persona_generations rc=0 gen=8；pool_audit SELF_TERMINATE；events_refresh --gate 46181 事件 mismatch=0 schema=0 PASS；hq_feedback ALREADY_REPORTED 零写入；QC 11:27 已跑。
+- **让路闸**：evolve --batch 3 = yield-window（工作日 09:00-19:00·D-20261020-02）→ 年轮/相遇/反思顺延 19:00。
+- **open 单**：T-20261116-13 blocked-on-window（需 ≥19:00 且 due≥16，现 due=10）；T-20261116-16 待 11-18 读 D3；T-20261117-01 closed。
+- **实况三行**：当前活＝让路窗等待（14:0x）｜最近实物＝qa/KPI-ASSERT-20261117.md（11-17 14:0x）｜下个里程碑＝19:00 夜窗年轮批清 due=10 并补 due 至 ≥16 后跑配额闸 A/B。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)+no-llm
