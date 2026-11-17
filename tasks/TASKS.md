@@ -4967,3 +4967,12 @@ ound_daily --run 29 面 stale=0 PASS；persona_generations --check rc=0 gen=8 pe
 - **open 单**：T-20261116-13 blocked-on-window（需 ≥19:00 且 due≥16，现 due=10）；T-20261116-16 待 11-18 读 D3；T-20261117-01 closed。
 - **实况三行**：当前活＝让路窗等待（14:0x）｜最近实物＝qa/KPI-ASSERT-20261117.md（11-17 14:0x）｜下个里程碑＝19:00 夜窗年轮批清 due=10 并补 due 至 ≥16 后跑配额闸 A/B。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)+no-llm
+
+- [2026-11-17 14:1x @BigLife-OSLoop] 轮记：产线实况页红色告警假阳性修复（A 类工具件·零 LLM）
+- **轮首**：pull=up-to-date；工作树入轮时有 3 件未提交（上一轮 13:2x-14:0x 的 city-ops/index/事件闸报告），本轮一并核验后定向入库；决策水位差 NEW=0（已至 D-20261117-15），orders 无涉本司新令，hq_feedback ALREADY_REPORTED。
+- **本轮闸**：round_daily --run = index 重建 + ops 面重建，判 PASS（28 面全鲜）；persona_generations rc=0（gen=8，无待 sync）；pool_audit SELF_TERMINATE（72 桶达标）；events_refresh --gate 46181 事件 /10111 卡 mismatch=0 schema=0 PASS；evolve/meet/reflect = yield-window（工作日 09:00-19:00）顺延夜窗。
+- **实物（本轮主产出）**：`census/export/city-ops.html` 首屏红 KPI「超过 180 分钟未刷新的页」＝口径错配常亮红灯（13:23 报 4 → 14:04 报 33，而同一批面 10:29 建成、按法定判据全新鲜）。修法=接 round_daily 自报（run 计 failed / check 计 stale / 缺失或超 1 日如实「未取到」），页面阈值改 24h 与 faces 档同源。证据=`qa/OPS-KPI-FALSE-RED-20261117.md`（含 5 例负控：run+failed=1 红 / check+stale=2 红 / 缺失=未取到）。
+- **修复后实读**：`--selftest` 12 probes 0 fail；重建输出 `stale=0`；KPI 渲染 `<b>0</b>` 无 bad 类；负控 5/5 符合预期（闸未被改松）。
+- **open 单**：T-20261116-13 配额闸 A/B → blocked-on-window（待 ≥19:00 且 due≥16，现 due=10）；T-20261116-16 相遇不变量 → 待 11-18 读 D3；T-20260923-01 FluxVerse PARKED。本轮不新开单。
+- **实况三行**：当前活＝CEO 可见面假红灯修复（14:1x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\OPS-KPI-FALSE-RED-20261117.md`（11-17 14:10）＋重建后 `census/export/city-ops.html`｜下个里程碑＝19:00 夜窗年轮批清 due=10（补至 ≥16 后跑 T-20261116-13 配额闸 A/B）。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)+no-llm

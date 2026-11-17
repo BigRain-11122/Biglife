@@ -11,6 +11,7 @@ tasks/TASKS.md（最近轮记），产出 census/export/city-ops.html。
 from __future__ import annotations
 
 import html
+import json
 import os
 import re
 import subprocess
@@ -25,11 +26,19 @@ REGISTRY = os.path.join(ROOT, "census", "registry")
 EVENTS = os.path.join(ROOT, "events")
 CITIZENS = os.path.join(EXP, "citizens-light.jsonl")
 GATE_LEDGER = os.path.join(ROOT, "state", "vram-gate.jsonl")
+ROUND_DAILY = os.path.join(ROOT, "state", "round-daily.json")
 
 HEARTBEAT_SHOW = 10
 COMMIT_SHOW = 12
 NOTE_SHOW = 5
+# 心跳静默阈值：心跳每轮 5-10 分钟一条，3 小时无声=真异常，保留原值。
 STALE_MIN = 180
+# 页面陈旧阈值（v0.2 2026-11-17）：原 KPI「超过 180 分钟未刷新的页」按 mtime 计，
+# 与法定判据不同源——round_daily 对当日面判「建过当日即新鲜」、结构面判「龄 ≤1 日」。
+# 实证 11-17：同一批面 10:29 建成且按法定判据全新鲜，13:23 该 KPI 报 4、14:04 报 33，
+# 午后必然翻红＝告警疲劳、CEO 面失真。故页面口径改 1 日，日更闸未过面数取 round_daily 自报。
+PAGE_STALE_HOURS = 24
+ROUND_DAILY_MAX_AGE_H = 24
 PAGED_PREFIX = "city-growth-p"
 RING_PAT = re.compile(r"^- (\d{4}-\d{2}-\d{2}) ")
 NOTE_PAT = re.compile(r"R(\d{3,5})")
@@ -336,6 +345,31 @@ def gate_summary(rows: list[dict], now: datetime | None = None, window_hours: in
     }
 
 
+def daily_gate(now: datetime) -> tuple[int | None, str]:
+    """日更闸未过面数（取 round_daily 自报，不在此复算第二套判据）。
+
+    缺失或自报超过 1 日 ⇒ (None, 原因)，页面上如实写「未取到」，不假装 0。
+    """
+    try:
+        with open(ROUND_DAILY, encoding="utf-8", errors="replace") as f:
+            data = json.load(f)
+    except (OSError, ValueError):
+        return None, "未取到"
+    ts = str(data.get("ts") or "")
+    try:
+        built = datetime.strptime(ts, "%Y-%m-%d %H:%M:%S")
+    except ValueError:
+        return None, "未取到"
+    if (now - built) > timedelta(hours=ROUND_DAILY_MAX_AGE_H):
+        return None, ts + " 超 1 日"
+    # round-daily.json 的 stale 是「跑之前」的快照：run 模式下这些面已被重建，
+    # 跑后真相只有 failed（失败面下轮会再次选中）。check 模式无重建，stale 即现状。
+    stale = data.get("stale") or []
+    failed = data.get("failed") or []
+    bad = len(failed) + (0 if data.get("mode") == "run" else len(stale))
+    return bad, ts
+
+
 def main() -> int:
     now = datetime.now()
     hb, hb_orphans = heartbeats()
@@ -354,7 +388,8 @@ def main() -> int:
     gate = gate_summary(read_gate_rows(), now)
     nt = notes(NOTE_SHOW)
 
-    stale_pages = [p for p in pg if (now - p[2]) > timedelta(minutes=STALE_MIN)]
+    stale_pages = [p for p in pg if (now - p[2]) > timedelta(hours=PAGE_STALE_HOURS)]
+    dg_n, dg_ts = daily_gate(now)
 
     hb_rows = "\n".join(
         '<tr><td class="t">%s</td><td>%s</td></tr>' % (esc(ts.strftime("%m-%d %H:%M:%S")), esc(txt))
@@ -387,7 +422,7 @@ def main() -> int:
             esc(label),
             kb,
             esc(ts.strftime("%m-%d %H:%M")),
-            "陈旧" if (now - ts) > timedelta(minutes=STALE_MIN) else "新",
+            "陈旧" if (now - ts) > timedelta(hours=PAGE_STALE_HOURS) else "新",
         )
         for label, kb, ts, href in page_rows_items
     ) or '<tr><td colspan="4">未取到导出页</td></tr>'
@@ -476,7 +511,7 @@ footer{{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(
 <div class="kpis">
 <div class="kpi{' bad' if hb_stale else ''}"><b>{esc(hb_age)}</b><span>最近一次轮次心跳</span></div>
 <div class="kpi"><b>{esc(cm[0][1] if cm else '未取到')}</b><span>最近提交时间</span></div>
-<div class="kpi{' bad' if stale_pages else ''}"><b>{len(stale_pages)}</b><span>超过 {STALE_MIN} 分钟未刷新的页</span></div>
+<div class="kpi{' bad' if (dg_n or 0) > 0 or dg_n is None else ''}"><b>{'未取到' if dg_n is None else dg_n}</b><span>日更闸未过面（round_daily {esc(dg_ts)}）</span></div>
 <div class="kpi{' bad' if hb_orphans else ''}"><b>{hb_orphans}</b><span>无时间戳状态行（被丢弃，需修）</span></div>
 <div class="kpi"><b>{vol['citizens']}</b><span>居民（轻量册）</span></div>
 <div class="kpi{' bad' if rq['items'] else ''}"><b>{len(rq['items'])}</b><span>年轮待修队列（cap {rq['cap'] or '未取到'}）</span></div>
