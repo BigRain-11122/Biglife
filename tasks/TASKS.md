@@ -1,5 +1,17 @@
 # BigLife 任务板（自领制·认领置 in-progress 署名+时间）
 
+## R3355 · 2026-11-17 12:52-13:05 @BigLife-OSLoop（冷却轮·让路闸归因实证·紧凑记账）
+
+- 轮首：`git pull --ff-only origin main` = `Already up to date`；`git status --porcelain` = **0 行（净）**；决策水位覆盖至 `D-20261117-15`，与 `decisions.md` 第 71 批逐条比对差集 **NEW=0**；`docs/orders.md` 涉本司行仅仓名/保护分支陈年项，**无新物理件**。
+- **产品增量＝0（如实记）**：步 1 年轮 → `yield-window` 自停；步 4 相遇 → 今日 cap 已满；步 1C 反思 → 未到 19:00 夜窗。
+- **让路闸归因实证（本轮唯一新增事实）**：读集团 `.codely-cli/machine-state.flag` = `pausedLite 2026-11-17T09:00:01+08:00`（mtime 今日 09:00:01）。今日 09:00 AutoYield 已按工作日律置 pauseLite，故 `yield_window_active()`（`Tools/evolve_citizen.py` L4045）的 09:00-19:00 判定**与 CEO 用机实况一致，非陈旧闸**——先前「按钟点不按实况」之疑经此一读排除，本轮不改闸、不改参数。
+- **确定性面全绿**：`round_daily.py --run` **stale=0 ran=0 failed=0 verdict=PASS**（38 面逐面 skipped-fresh，12:4x 轮刚重建 city-ops/index）；`persona_generations.py --check` **rc=0**（gen 8 · habits=170 · cutoff C-10120 · pending_sync=none）；`events_refresh.py --gate` **PASS**（events=**46181** cards=10111 shards=3，replay 10111/10111、schema_errors=0、mismatch=0、coverage unexpected_missing=0、chronicle fresh 11-17 gap=0d）；`pool_audit.py` **PASS SELF_TERMINATE**（72 轴桶+12 像素桶+greet 28+faq 7+负例 6/6，determinism 192+25 对 mismatch=0）；`qc_census` 今日 11:27 已跑（`qa/QC-REPORT.md` mtime 11:27:57），本轮不重复。
+- **轮频观察（只登记事实，不作断言）**：`state/heartbeat.txt` 今日 `round done` = **66 次**；近 6 次间隔 7-8 分钟，其中 **12:45:30 → 12:46:02 仅 32 秒**为唯一异常点；`state/round.lock` 不存在（启动器锁位置在仓外，本轮未核）。交夜窗复核，不判「多实例」。
+- **记账自律**：今日 12:08-12:53 已有 6 条冷却轮记（R3349-R3354），本轮起冷却轮压到本条长度以抑制任务板膨胀（承 10-27 日清 spam 判例精神）。
+- **open 单不变**：T-20261116-13 配额闸 `tooling-ready`（待 ≥19:00 且 due≥16 实弹）；T-20261116-16 相遇不变量待 11-18 读 D3 `meet_new_bad=0` 结单；T-20261117-01 fsmonitor 本仓已修、集团层待统一；T-20260923-01 FluxVerse 线 PARKED。本轮无新增 open 单。
+- **实况三行**：当前活＝冷却轮收口（让路闸归因实证＋五闸全绿复核）；最近实物＝`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/EVENTS-REPLAY-REPORT.md`（13:0x·events 46,181 mismatch=0）＋`census/export/city-ops.html`（12:4x 重建）；下个里程碑＝**19:00 夜窗年轮批（due=10 靶单就绪）＋配额闸 A/B 实弹＋反思线续跑**（窗 ≤6h），11-18 相遇不变量 D3 结单。
+- tokens: local=0 api=0 api_reason=-（全确定性脚本；三条 LLM 内容线均在 CEO 用机让路窗内按令自停）
+
 ## R3351 · 2026-11-17 12:34-12:44 @BigLife-OSLoop（冷却轮·六闸自停＋反思线实况勘正）
 
 - 轮首：`git status --short` 净；`git pull --ff-only origin main` = `Already up to date`（远端无新提交）。决策水位读至 `D-20261117-15`，与 `decisions.md` 尾批逐条比对差集 **NEW=0**（第 71 批 4 行均在册；D-12 五件跨仓件不含本司，D-08 判本司「活跃 PASS 不计违例」）。`docs/orders.md` 检索涉本司行＝仅仓名/保护分支等陈年项，**无新物理件**。
