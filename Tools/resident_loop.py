@@ -39,7 +39,7 @@ PY = sys.executable
 NO_WINDOW = 0x08000000 if os.name == "nt" else 0
 
 VRAM_MIN_FREE_MB = 6500     # 9B @8K 实测 6.1G
-MEM_MIN_FREE_GB = 20.0
+MEM_MIN_FREE_GB = 8.0     # 2026-11-17 夜窗: CEO 下班放开 20->8
 SWAP_OUT_MAX = 800.0      # Pages Output/sec 上限（写盘速率）      # 低于此不再加载（swap 前置闸）
 LOCK_STALE_MIN = 40
 
@@ -189,7 +189,7 @@ def admit():
         # 2026-11-17 修 BUG：阈值必须区分「模型尚未加载」与「模型已在卡上」。
         # 原实现一律要求 6500 MiB 空闲，可 9B 自己就占 6.2G，加载完之后剩余
         # 只有 1.7G，于是下一轮永远判「vram 不足」——泵连续 0 rounds，生产停摆。
-        need = 1200 if target in models_loaded() else VRAM_MIN_FREE_MB
+        need = 900 if target in models_loaded() else VRAM_MIN_FREE_MB
         if free < need:
             return False, "vram %.0f MiB free < %d%s" % (
                 free, need, " (model resident)" if need == 1200 else "")
@@ -199,7 +199,7 @@ def admit():
     # 把后续每一批都挡住。区分两态：未加载需 20G（够它张开），已驻留只需 12G
     # （安全线，防真正的内存枯竭）。
     if mf is not None:
-        need_mem = 12.0 if target in models_loaded() else MEM_MIN_FREE_GB
+        need_mem = 5.0 if target in models_loaded() else MEM_MIN_FREE_GB
         if mf < need_mem:
             return False, "mem %.1f GB free < %.0f%s" % (
                 mf, need_mem, " (model resident)" if need_mem == 12.0 else "")

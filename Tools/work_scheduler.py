@@ -46,7 +46,9 @@ NO_WINDOW = 0x08000000 if os.name == "nt" else 0
 
 REFLECT_MIN_RINGS = 3
 REFLECT_COOLDOWN_DAYS = 30
-# 2026-11-17 实测: 反思候选 4085 人(年轮>=3 且过 30 天冷却)、相遇 60 对、池轮欠深桶。`n# 原 cap(reflect 3/meet 3/pool 1) 只够十几分钟，撑不住「不间断」。按供给抬到: reflect 20(每次 1 人,`n# 约 10 分钟)、meet 3(evolve 脚本内 hard cap, 改大无效)、pool 2。rings 无上限(受 due 供给)。`nDAILY_CAP = {"rings": 10 ** 9, "reflect": 20, "pool": 2, "meet": 3}
+# 2026-11-17 实测供给: 反思 4085 人(年轮>=3 且过 30 天冷却)、相遇 60 对、池轮欠深桶。
+# 夜窗（CEO 下班放开）: reflect 20->60, pool 2->5；meet 受 evolve 脚本内 hard cap 3。
+DAILY_CAP = {"rings": 10 ** 9, "reflect": 60, "pool": 5, "meet": 3}
 
 
 def _run(cmd, timeout=600, cwd=CO):
