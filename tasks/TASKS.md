@@ -5081,3 +5081,13 @@ ound_daily --run 29 面 stale=0 PASS；persona_generations --check rc=0 gen=8 pe
 - **让路面**：evolve --batch/--meet、pool_gen、reflect 均受工作日 09:00-19:00 让路窗（D-20261020-02）拦停，内容三腿顺延 19:00 夜窗（现队伍 due=10）。
 - **CEO 可见三行**：当前活＝日更面重建+年轮巡检缺口归因（16:2x）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-today.html（16:17 重出）+ qa\RING-LINT-REPORT.md（rings=11100 PASS）｜下个里程碑＝19:00 夜窗年轮批（due=10、补 sync_rings）+ 相遇轮 + 建 ring_detox 处理 1081 存量环次。
 - tokens: local=0 api=0 api_reason=yield-window(09-19) 内容线全停＋本轮全确定性脚本零 LLM
+- [2026-11-17 17:05 @BigLife-OSLoop R3368] 轮记：年轮清污落盘轮（存量黑话 848→1·零 LLM）
+- **轮首**：pull=Already up to date；决策水位已至 D-20261117-15（差集=0）；orders 无新涉本司行；物理件区零新增。
+- **产品增量（实物·本轮主产出）**：建 `Tools/ring_detox.py`（有限模式映射表+AUTO 复核·零 LLM·确定性幂等）并**落盘清污 1059 行年轮**——把居民记忆里的技术黑话（G08/B2396/S2.5/GPU/显存/机队/CrazyCampus）城市化为城市日常语（游戏楼/老楼/新版本/机器/机房/营地搬迁）。实测 `ring_lint`：coded 764→**1**、infra 84→**0**、verdict=PASS（唯一残留=census/registry/MD/C-07741.md 90 字截断行，引号未闭不可机械还原，留待人工）。对照表入 `qa/RING-DETOX-20261117.md`（1059 条 OLD/NEW 逐条可查）。这是 CEO 可直接打开验的质量面。
+- **守卫面**：`round_daily --run` 两轮共重建 22 面 PASS（stale=21 ran=22 failed=0，环数据变更触发所有依赖面重出）；`events_refresh --gate` PASS（cards=10111 events=46205 shards=3 replay 10111/10111 mismatch=0 schema_errors=0）；`sync_rings` 同步 763 行（fab9d0a73 自动入库）；`persona_generations --check` rc=0（gen 8·habits=170·pending_sync=none）。
+- **质量闸（本工具自带）**：改写后逐条在内存复核 lint 判据，残余>0 拒绝落盘；落盘前 4 轮抽样审读，修掉 6 类病句（汉字夹缝空格/整串重复/自反替换死循环/老老机器/CrazyCampus 裸词/工位那重复），最终 BAD_SENTENCES=0 才 apply。
+- **让路面**：evolve/meet/reflect/pool_gen 均受工作日 09:00-19:00 让路窗（D-20261020-02）拦截，内容三腿顺延 19:00 夜窗；本轮零 LLM 调用。
+- **诚实边界**：本轮无新年轮内容（让路窗）；产出=存量质量清污 1059 行+新工具+对照表，非新居民/新故事。截断行 1 条未修，如实留档。
+- **CEO 可见三行**：当前活｜年轮技术黑话存量清污落盘+事件流全量重建（17:0x）｜最近实物｜`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-DETOX-20261117.md`（1059 条对照·17:02）＋`qa\RING-LINT-REPORT.md`（coded=1 infra=0 PASS）｜下个里程碑｜19:00 夜窗年轮批（due=10）+ 相遇轮 + 反思批 5。
+- **open 单**：T-20261116-13 配额闸 A/B → blocked-on-window（待 ≥19:00）；T-20261116-16 相遇不变窗 → 待 11-18 读 D3；T-20261117-02 巡检面缺口 → **本轮已闭环**（ring_detox 落盘，检测→修复路径打通）；T-20260923-01 FluxVerse PARKED。
+- tokens: local=0 api=0 api_reason=yield-window(09-19) 确定性管线零 LLM
