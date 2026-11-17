@@ -3766,15 +3766,35 @@ def _pick_spread(cands, zones, batch):
 
 
 def due_citizens(cursor, batch, force=None):
+    # 2026-11-17 提速（CEO「语料要能快速找到」）：id 全集优先读语料索引（<20ms）。
+    # 原实现每批都 os.walk(anchors + registry) 共 10612 个文件，是每批 10-15 秒
+    # 固定开销的大头。索引由 Tools/corpus_index.py 维护（pump 每批前 --build 增量
+    # 刷新约 0.25 秒）。索引缺失或查询失败必须退回步行——那是老的确定性路径，
+    # 宁可慢也不能漏人。
     all_ids = []
-    for sub in ("anchors", "registry"):
-        d = os.path.join(CENSUS, sub)
-        if os.path.isdir(d):
-            for root, _, files in os.walk(d):
-                for fn in files:
-                    if fn.endswith(".md") and fn.startswith("C-"):
-                        all_ids.append(fn[:-3])
-    all_ids.sort()
+    _idx_ids = []
+    try:
+        import sqlite3
+        _db = os.path.join(CO, "state", "corpus.db")
+        if os.path.exists(_db):
+            _con = sqlite3.connect(_db)
+            try:
+                _idx_ids = [r[0] for r in _con.execute("SELECT id FROM citizens")]
+            finally:
+                _con.close()
+    except Exception:  # noqa: BLE001 - 索引坏掉=退回步行，不停线
+        _idx_ids = []
+    if _idx_ids:
+        all_ids = sorted(_idx_ids)
+    else:
+        for sub in ("anchors", "registry"):
+            d = os.path.join(CENSUS, sub)
+            if os.path.isdir(d):
+                for root, _, files in os.walk(d):
+                    for fn in files:
+                        if fn.endswith(".md") and fn.startswith("C-"):
+                            all_ids.append(fn[:-3])
+        all_ids.sort()
     if force:
         return [c for c in all_ids if c in force]
     t = datetime.date.today()

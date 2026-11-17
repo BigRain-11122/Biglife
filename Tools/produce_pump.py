@@ -80,6 +80,22 @@ def run_batch(batch):
             "seconds": round(el, 1), "tail": tail}
 
 
+def refresh_index():
+    """每批前增量刷新语料索引（约 0.25 秒），保证选人面与磁盘一致。
+
+    2026-11-17：due_citizens 改读索引后，每批省下 10-15 秒的全库 walk；
+    代价是索引可能滞后（新档案/新锚定卡）。0.25 秒的增量刷新把这个窗口
+    压到一批之内，比整批 slow-path 便宜 40-60 倍。
+    """
+    try:
+        r = subprocess.run([PY, "-X", "utf8", os.path.join(HERE, "corpus_index.py"), "--build"],
+                           capture_output=True, text=True, timeout=180,
+                           creationflags=NO_WINDOW)
+        return r.returncode == 0
+    except Exception:  # noqa: BLE001 - 索引刷新失败不阻断（due_citizens 会退回步行）
+        return False
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--minutes", type=float, default=9.0, help="本轮时间预算")
@@ -108,6 +124,7 @@ def main():
             gate_reason = "gate:" + why
             rl.log("pump stop: %s" % why)
             break
+        refresh_index()          # 0.25s：让选人面与磁盘同步（省下每批 10-15s 的 walk）
         res = run_batch(args.batch)
         rounds.append(res)
         total_written += res["written"]
