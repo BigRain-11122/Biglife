@@ -44,6 +44,13 @@ Set-Location $Project
 $__train = Get-CimInstance Win32_Process -Filter "Name='python.exe'" -ErrorAction SilentlyContinue |
     Where-Object { $_.CommandLine -match 'train_network' }
 if ($__train) {
+    # 2026-11-17 FIX: the watchdog judges liveness by logs/os-loop/run_*.log mtime,
+    # and this branch exited before that file was created - so training hours read
+    # as "dead" to any monitor. Create the run log here and append each face result.
+    $__logDir = Join-Path $Project 'logs\os-loop'
+    New-Item -ItemType Directory -Force $__logDir | Out-Null
+    $__runLog = Join-Path $__logDir ('run_' + (Get-Date -Format 'yyyyMMdd_HHmmss') + '.log')
+    "yield-llm: training owns GPU - deterministic faces only" | Out-File -FilePath $__runLog -Encoding UTF8
     Write-Output "$(Get-Date -Format 'HH:mm:ss') yield-llm: training owns GPU - deterministic faces only"
     $__py = 'C:\Users\sjs20\AppData\Local\Programs\Python\Python314\python.exe'
     foreach ($__job in @(
@@ -55,10 +62,25 @@ if ($__train) {
         try {
             & $__py @($__job.a) 2>&1 | Out-Null
             Write-Output "$(Get-Date -Format 'HH:mm:ss')   det-face $($__job.n) rc=$LASTEXITCODE"
+            Add-Content -Path $__runLog -Encoding UTF8 -Value (
+                "$(Get-Date -Format 'HH:mm:ss')   det-face $($__job.n) rc=$LASTEXITCODE")
         } catch {
             Write-Output "$(Get-Date -Format 'HH:mm:ss')   det-face $($__job.n) failed"
+            Add-Content -Path $__runLog -Encoding UTF8 -Value (
+                "$(Get-Date -Format 'HH:mm:ss')   det-face $($__job.n) FAILED")
         }
     }
+    # 2026-11-17 FIX: this branch exits BEFORE Beat() is defined, so nothing wrote
+    # a heartbeat during training and the liveness check went silent (observed:
+    # heartbeat.txt frozen at 17:13:49 for 65 min while the loop fired every 10).
+    # Write the heartbeat inline instead of depending on the later-defined function.
+    # NOTE: this file MUST stay pure ASCII (PS 5.1 decodes BOM-less .ps1 as GBK).
+    try {
+        $__hb = Join-Path $Project 'state\heartbeat.txt'
+        New-Item -ItemType Directory -Force (Split-Path -Parent $__hb) | Out-Null
+        Add-Content -Path $__hb -Encoding UTF8 -Value (
+            "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') os-loop: yield-llm training (deterministic faces only)")
+    } catch { Write-Output "heartbeat write failed (non-blocking): $_" }
     exit 0
 }
 
