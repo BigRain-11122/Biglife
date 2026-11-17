@@ -25,7 +25,43 @@ param(
     [int]$RoundSilenceMinutes = 25
 )
 $ErrorActionPreference = 'Continue'
+# 2026-11-17 CEO order: run resident generation in the daytime window too.
+# Default law (D-20261020-02) still yields 09:00-19:00; this env is the explicit
+# opt-out the CEO asked for. Remove these four lines to restore pure yielding.
+$env:BIGLIFE_IGNORE_YIELD_WINDOW = '1'
+$env:BIGLIFE_MODEL = 'qwen3.5:9b'
+$env:BIGLIFE_LLM_URL = 'http://127.0.0.1:11434/v1/chat/completions'
+$env:BIGLIFE_VRAM_LIMIT = '0.85'
 Set-Location $Project
+
+# 2026-11-17 CEO order: no cross-stealing. Layered schedule instead of a hard skip.
+#   training owns the GPU  -> LLM lanes yield, but the zero-GPU faces still run
+#                            (daily rebuild / lint / qc / event-replay gate)
+#   training idle          -> normal round (LLM production allowed)
+# Rationale: 12G card, training ~7.5G + 9B ~6.6G cannot coexist (observed twice:
+# TRAIN EXITCODE -1, no traceback, at step 154/1632). An idle round wasted 10 min;
+# running the deterministic faces keeps the day's visible surfaces fresh for free.
+$__train = Get-CimInstance Win32_Process -Filter "Name='python.exe'" -ErrorAction SilentlyContinue |
+    Where-Object { $_.CommandLine -match 'train_network' }
+if ($__train) {
+    Write-Output "$(Get-Date -Format 'HH:mm:ss') yield-llm: training owns GPU - deterministic faces only"
+    $__py = 'C:\Users\sjs20\AppData\Local\Programs\Python\Python314\python.exe'
+    foreach ($__job in @(
+        @{ n = 'round_daily'; a = @('-X', 'utf8', 'Tools\round_daily.py', '--run') },
+        @{ n = 'ring_lint';   a = @('-X', 'utf8', 'Tools\ring_lint.py', '--today-only') },
+        @{ n = 'qc_census';   a = @('-X', 'utf8', 'Tools\qc_census.py') },
+        @{ n = 'events_gate'; a = @('-X', 'utf8', 'Tools\events_refresh.py', '--gate') }
+    )) {
+        try {
+            & $__py @($__job.a) 2>&1 | Out-Null
+            Write-Output "$(Get-Date -Format 'HH:mm:ss')   det-face $($__job.n) rc=$LASTEXITCODE"
+        } catch {
+            Write-Output "$(Get-Date -Format 'HH:mm:ss')   det-face $($__job.n) failed"
+        }
+    }
+    exit 0
+}
+
 $logDir = Join-Path $Project 'logs\os-loop'
 New-Item -ItemType Directory -Force $logDir | Out-Null
 $stamp = Get-Date -Format 'yyyyMMdd_HHmmss'
@@ -162,6 +198,47 @@ try {
         $behAuto = & python -X utf8 (Join-Path $Project 'Tools\behavior.py') --auto 2>&1
         Log "behavior-auto: $behAuto"
     } catch { Log "behavior-auto failed (non-blocking): $_" }
+    # 2026-11-17 CEO order "fill resident generation across 7x24": pump the window
+    # with deterministic batches BEFORE spending it on an agent round (an agent
+    # usually ran one --batch 3 in ~1 min, leaving ~9 of 10 minutes idle).
+    # Single source of truth for the gate: resident_loop.admit (training /
+    # swap-out / loaded model / vram / mem). Gate closed -> run the zero-GPU
+    # faces and stop; never fall through to an agent round that would fight for
+    # the same VRAM (that fight is what killed training twice today).
+    $__py = 'C:\Users\sjs20\AppData\Local\Programs\Python\Python314\python.exe'
+    $__pump = Join-Path $Project 'Tools\produce_pump.py'
+    $__detFaces = @(
+        @{ n = 'round_daily'; a = @('-X', 'utf8', 'Tools\round_daily.py', '--run') },
+        @{ n = 'ring_lint';   a = @('-X', 'utf8', 'Tools\ring_lint.py', '--today-only') },
+        @{ n = 'qc_census';   a = @('-X', 'utf8', 'Tools\qc_census.py') },
+        @{ n = 'events_gate'; a = @('-X', 'utf8', 'Tools\events_refresh.py', '--gate') }
+    )
+    if (Test-Path $__pump) {
+        $__gateOpen = $false
+        try {
+            & $__py -X utf8 $__pump --dry-run 2>&1 | Out-Null
+            $__gateOpen = ($LASTEXITCODE -eq 0)
+        } catch { $__gateOpen = $false }
+        if ($__gateOpen) {
+            Log 'pump: gate open - filling window with deterministic batches (7x24)'
+            try {
+                & $__py -X utf8 $__pump --minutes 8 --batch 3 2>&1 |
+                    Out-File -FilePath $runLog -Append -Encoding UTF8
+                Log "pump finished rc=$LASTEXITCODE"
+            } catch { Log "pump failed (non-blocking): $_" }
+            Beat 'pump done'
+            exit 0
+        }
+        Log 'pump: gate closed (machine busy) - zero-GPU faces only, agent suppressed'
+        foreach ($__job in $__detFaces) {
+            try {
+                & $__py @($__job.a) 2>&1 | Out-Null
+                Log "  det-face $($__job.n) rc=$LASTEXITCODE"
+            } catch { Log "  det-face $($__job.n) failed" }
+        }
+        Beat 'yield busy'
+        exit 0
+    }
     $codelyPath = (Get-Command codely -ErrorAction SilentlyContinue).Source
     if (-not $codelyPath) { Log 'FATAL: codely not on PATH for this context'; Beat 'error codely missing'; exit 2 }
     $promptFile = Join-Path $Project 'Tools\iteration_prompt.txt'
