@@ -175,6 +175,14 @@ def main():
             rl.log("pump audit batch_audit rc=%d" % ra.returncode)
         except Exception as exc:  # noqa: BLE001 - 审查失败不能停线
             rl.log("pump audit failed: %s" % exc)
+        # 消费接口（CEO「一定用的上」）：把今日年轮导出成下游可读流，约 0.3 秒。
+        # 下游 = Unity 居民气泡 / HTML 看板 / 短视频取材，统一读 today-rings.jsonl。
+        try:
+            er = rl._run([PY, "-X", "utf8", os.path.join(HERE, "export_rings.py")],
+                         timeout=180)
+            rl.log("pump export today-rings rc=%d" % er.returncode)
+        except Exception as exc:  # noqa: BLE001
+            rl.log("pump export failed: %s" % exc)
 
     el = round(time.time() - started, 1)
     payload = {
