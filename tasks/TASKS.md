@@ -1,5 +1,16 @@
 # BigLife 任务板（自领制·认领置 in-progress 署名+时间）
 
+## R3362 · 2026-11-17 15:13-15:3x @BigLife-OSLoop（让路窗·年轮内部码回归修复轮）
+
+- 轮首：`git pull --ff-only origin main` = Already up to date、工作树净；决策水位差 **NEW=0**（watermark 至 D-20261117-15，115 个 D-ID 全命中）；`docs/orders.md` 无涉本司新物理件（250 行全文仅 2 处历史提及，均为建仓回执）。
+- **产品增量（缺陷修复·可验证）**：`ring_lint` 首跑 **FAIL（coded=766 pre=764 post=2）**——定位根因=11-17 10:39 commit `0ba95f27f`「单号残句清污」只清治理单号（O-/R 号）未清内部码（G08/S2.5/B2396），正文被改→指纹失配→两条老环被判「修后回归」。逐条语义化改写（内部码→19xx 世界人话，日期与 [锚] 注脚不动）：C-06054 秦斯年「把G08那条线补上」→「把脑环广场东头那条线补上」；C-06804 董星野「把G08的S2.5转成B2396」→「把光桥东段的一班渡轮改签到了老码头」。复跑 → **PASS（coded=764 pre=764 post=0｜infra=84 pre=84 post=0）**。
+- **质检面（零 LLM）**：`round_daily --check/--run` 全新鲜（stale=0 ran=0 failed=0 PASS，40+ 面当日已鲜）；`pool_audit` 行政 72/72·像素 12/12·greet 28/28·faq 7/7·neg 6/6·determinism mismatch=0 → **SELF_TERMINATE**；`persona_generations --check` **rc=0**（gen8·habits=170·cutoff C-10120·pending_sync=none）。
+- **让路面**：`evolve_citizen --batch 3` = `yield-window`（工作日 09:00-19:00 CEO lane-priority·D-20261020-02），年轮/相遇/反思三腿顺延 19:00 夜窗。
+- **立单**：**T-20261117-02**（open）`repair_ring_ids.py` 判据面缺口——清理面（O/D/T/PR/R 单号）⊂ 巡检面（`ring_lint` 内部码+机队词），清污后仍可 FAIL；需补「检测+待清清单」模式，禁自动机械替换内部码（易生病句）。
+- **CEO 可见三行**：当前活＝让路窗内年轮清污回归修复（15:3x 收轮）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-LINT-REPORT.md`（15:2x 重写·post=0 PASS）＋`census\registry\NS\C-06054.md`／`census\registry\RV\C-06804.md`（内部码清零）｜下个里程碑＝19:00 夜窗年轮批 `--batch 3`＋配额闸 A/B 实弹＋相遇轮（窗 ≤8h）。
+- **诚实边界**：本轮内容线（年轮/相遇/反思）让路窗内零新卡；实物=2 张老卡文本清污＋巡检 PASS 报告，另立 1 张工具面缺陷单。
+- tokens: local=0 api=0 api_reason=yield-window 内容线全停＋纯确定性脚本零 LLM
+
 ## R3358 · 2026-11-17 15:04-15:1x @BigLife-OSLoop（让路窗·日更面重建＋全量回放闸轮）
 
 - 轮首：`git pull --ff-only origin main` = Already up to date、工作树净；决策水位差 **NEW=0**（watermark 覆盖至 D-20261117-15；第 71 批四行涉本司仅「活跃 PASS 登记」，D-12③ 自证清单 `cph4/fleet/HQ-SELF-REPORT-20261117.md` 无本司条目）；`docs/orders.md` 无涉本司新物理件（末日令仍为 11-16 23:05）。
