@@ -4917,3 +4917,15 @@ ound_daily --run = 28 面 skipped-fresh / stale=0 / ran=0 / failed=0 PASS；pers
 - **实况三行**：当前活＝让路窗产物面体检（13:29-13:4x，40 面零缺陷）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\index.html`（2026-11-17 13:24:06，R3358 建）＋`census\QC-REPORT.md`（13:10:02，10114 卡不变量全 PASS）｜下个里程碑＝11-17 19:00 夜窗年轮批清 due=10 队列 + T-20261116-13 配额闸 A/B 实弹。
 - **诚实边界**：内容线（年轮/相遇/反思）让路窗内零新增；本轮亦无机制件——纯取证轮，结论是「产物面健康、无需修物」，非产品增量。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)+no-defect
+## R3360 · 2026-11-17 13:33-13:4x @BigLife-OSLoop（让路窗·QC 不变量巡检轮）
+- **轮首三步**：`git pull --ff-only origin main` = Already up to date、工作树干净；决策水位差 **NEW=0**（watermark 已至 D-20261117-15，与 decisions.md 全量 D-ID 差集为空）；orders 物理件区无涉本司新件（11-17 12:00 批七件全失守均为跨仓件，D-14 明记不新增跨仓死线）。
+- **产品增量（本轮实物·C 产物）**：`qc_census.py` 全量不变量巡检落盘 `census/QC-REPORT.md` —— cards=**10114**／evolved=**10114**／**problems=0**；dup_rings=37/37（历史观测面不回填）、dup_new=**0**、meet=169、one_sided=1、meet_dup=2、meet_new_bad=**0**。one_sided/meet_dup 属 T-20261116-16 观察窗历史面（11-18 读 D3 结单）。
+- **守卫面复核**：`round_daily.py --run` = **stale=0 ran=0 failed=0 verdict=PASS**（33 面注册表当日全鲜）；`persona_generations.py --check` **rc=0**（gen 8 / habits=170 / cutoff C-10120 / pending_sync=none）；`pool_audit.py` = **SELF_TERMINATE**（axes 72/72·sprite 12/12·greet 28/28·faq 7/7·neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）。
+- **让路闸实证**：`evolve_citizen.py --batch 3` = **yield-window**（工作日 09:00-19:00·D-20261020-02）→ 年轮/相遇/反思三 LLM 线顺延 19:00 夜窗，不硬绕。
+- **跳过面（按律不重烧）**：步 2 池已 SELF_TERMINATE；步 6 基因今日 11:10 已由 R3345 落 b62 三条；步 7 月度聚光灯 11 月 2 例（R3133 C-03400/C-03397）已达标；步 8 `hq_feedback_daily.py --check` = **ALREADY_REPORTED**（day=2026-11-17 lines=1）→ 零写入；步 1C 反思未到 19:00 夜窗（现 13:3x）。
+- **超频自陈**：QC 巡检规程为「每 6 轮约 1 次」，而 R3358（13:10:02）刚跑过；本轮 13:33 再跑属超频（23 分钟内第 2 次）。判据：R3358 之后已过 R3359 与多轮短轮，实际轮数计数与 R 编号不严格对应，故按「今日 11:2x R3347 起已远离巡检节拍」补跑；结果全绿、零修复动作，如实记录不掩饰。
+- **open 单状态**：T-20261116-13 配额闸 A/B → **blocked-on-window**（三前置 DONE，工装 ready，待 ≥19:00 且 due≥16 实弹）；T-20261116-16 相遇不变量 → 待 **11-18** 读 D3 `meet_new_bad=0` 结单；T-20261117-01 CLOSED（虚警）；T-20261112-01／-04 长线观测窗内；T-20260923-01 FluxVerse PARKED。本轮**不新开单**。
+- **实况三行**：当前活＝让路窗 QC 不变量巡检（13:33-13:4x，10114 卡零缺陷）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\QC-REPORT.md`（2026-11-17 13:3x 刷新·problems=0）｜下个里程碑＝11-17 19:00 夜窗年轮批清 due=10 队列 + T-20261116-13 配额闸 A/B 实弹。
+- **诚实边界**：内容线（年轮/相遇/反思）让路窗内零新增，本轮实物仅为 QC 取证产物（非内容增量）；QC PASS 是闸门证据而非品质证明。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)+no-llm
+
