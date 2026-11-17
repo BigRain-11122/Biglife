@@ -4747,3 +4747,13 @@ ound_daily --run = 28 面 skipped-fresh / stale=0 / ran=0 / failed=0 PASS；pers
 - tokens: local=0 api=0 api_reason=yield-window(09-19)
 
 - **[坑录·2026-11-17 11:2x] PS5.1 git push 2>&1 | Select-Object 假失败**：git 把推流进度写 stderr，PS 包成 NativeCommandError → 整管道 exit 1，但 d9fc92c76..8265b031d main -> main 已成功。判推送成败一律不消费 shell exit code，改 git fetch origin main --quiet; git rev-parse HEAD origin/main 双值比对 + git rev-list --left-right --count = 0/0（承机队交付核对律：PUSH 断言须实证，反向面同罪）。
+
+## R3347 路 2026-11-17 11:2x @BigLife-OSLoop（同窗同态复核轮·增量近零）
+- **轮首**：pull=Already up to date、工作树净；决策水位至 D-20261117-11（NEW=0）；orders 物理件区无涉本司新件。
+- **闸门实况（本轮实跑）**：evolve = yield-window（工作日 09:00-19:00·D-20261020-02）→ 顺延夜窗；round_daily --run = 38 面 skipped-fresh / stale=0 / ran=0 PASS；persona_generations --check rc=0（gen 8 / habits=170 / cutoff C-10120）；pool_audit = SELF_TERMINATE（全桶达标）；events_refresh --gate = PASS（cards=10111 / events=46181 / replayed=10111 / schema_errors=0 / mismatch=0 / coverage unexpected_missing=0）；qc_census = problems=0（issues 均历史面：one_sided=1、meet_dup=2 早于门限日期）。
+- **今日可见面核验**：events/2026-11.jsonl 含 2026-11-17 事件 495 条（非空壳）；census/export/* 最新 11:09。
+- **本轮实物**：census/QC-REPORT.md（10114 卡 problems=0·11:25 刷新）＋qa/EVENTS-REPLAY-REPORT.md（46,181 事件回放 PASS）。
+- **跳过面（诚实不重烧）**：步 2 池已达标；步 6 基因今日 11:10 已由 R3345 落 b62；步 7 月度聚光灯 11 月 2 例已达标；步 8 hq_feedback_daily --check = ALREADY_REPORTED（今日 00:10 已有行）→ 零写入；open 单 T-20261116-13 blocked-on-window（待 ≥19:00）／T-20261116-16 待 11-18 读 D3。
+- **实况三行**：当前活＝让路窗复核轮（11:2x）｜最近实物＝C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/QC-REPORT.md（10114 卡 problems=0·2026-11-17 11:25）｜下个里程碑＝11-17 19:00 夜窗年轮批 --batch 3＋反思批 --batch 5。
+- **诚实边界**：本轮与 R3346 同窗同态（相隔 20 分钟），内容线全被让路闸与「今日已达标」状态挡住，增量≈0；非停摆，属窗口使然，不重复记账。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)

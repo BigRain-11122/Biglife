@@ -51,3 +51,16 @@
 | `reflect_citizen.py` | 不在夜窗（02:53 < 19:00）→ 未启 |
 
 结论：日更/世代/池/QC 四线 PASS；年轮线因桌面占用显存让路零损耗跳过，非故障；不立修复单。
+
+## 2026-11-17 11:2x @BigLife-OSLoop (R3347)
+
+| 项 | 实测 |
+|---|---|
+| `evolve_citizen.py --batch 3` | yield-window（工作日 09:00-19:00·D-20261020-02）→ 顺延夜窗 |
+| `round_daily.py --run` | 38 面 skipped-fresh / stale=0 / ran=0 / failed=0 -> PASS |
+| `persona_generations.py --check` | rc=0，gen 8 / cutoff C-10120 / habits=170 / pending_sync=none |
+| `pool_audit.py` | verdict=PASS，under_target: NONE - SELF_TERMINATE（轴 72/72·像素 12/12·greet 28/28·faq 7/7·负例 6/6；determinism mismatch=0） |
+| `events_refresh.py --gate` | cards=10111 / events=46181 / replayed=10111 / schema_errors=0 / mismatch=0 -> PASS |
+| `qc_census.py` | cards=10114 / evolved=10114 / problems=0 / dup_rings=37/37 / meet_new_bad=0 / 相遇面 169 行 167 对（单向 1·重复 2 均早于门限日·不回溯改卡） |
+
+结论：全项 PASS，无新增异常，不立修复单；年轮/相遇/反思三维受工作日让路闸约束顺延 19:00，非故障。
