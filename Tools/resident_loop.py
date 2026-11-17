@@ -172,7 +172,17 @@ def admit():
     target = os.environ.get("BIGLIFE_MODEL", "qwen3.5:9b")
     others = [m for m in models_loaded() if m != target]
     if others:
-        return False, "other model loaded: %s" % ",".join(others)
+        # 2026-11-17：不再让整轮空等。非目标模型（实测为 codely 自己的 flash 模型
+        # qwen3.5:2b）占着卡时，主动卸载它把窗口拿回来——生产优先，flash 腿会在
+        # 下次调用时自行重载。卸载失败才判定冲突让路。
+        for m in others:
+            try:
+                _run(["ollama", "stop", m], timeout=90)
+            except Exception:  # noqa: BLE001
+                pass
+        still = [m for m in models_loaded() if m != target]
+        if still:
+            return False, "other model loaded: %s" % ",".join(still)
     used, total = gpu()
     if used is not None and total:
         free = total - used

@@ -129,12 +129,24 @@ def main():
     deadline = started + args.minutes * 60
     rounds = []
     total_written = 0
+    faces_switched = 0
     gate_reason = "budget"
 
     if args.dry_run:
         ok, why = rl.admit()
         print("dry-run admit: %s (%s)" % (ok, why), flush=True)
         return 0 if ok else 1
+
+    # 2026-11-17 单例锁：实测两个泵同时跑（OSLoop 自动触发 + 手动）会互抢
+    # evolve.lock，被抢的一方每批都是 1 秒秒退（wrote=0 due=None），实测吞吐
+    # 从 600 掉到 258 条/小时。泵自己必须单例，否则「不间断」变成「空转」。
+    lk_ok, lk_why = rl.take_lock()
+    if not lk_ok:
+        rl.log("pump skip: %s" % lk_why)
+        print("PUMP skip: %s" % lk_why, flush=True)
+        return 0
+    import atexit
+    atexit.register(rl.drop_lock)   # 任何退出路径都放锁
 
     if not warm_probe():
         rl.log("pump stop: warm-probe failed (model cannot answer) - yield window")
@@ -162,8 +174,29 @@ def main():
         #   rc==0 且 written=0  = 今天剩余的卡全被质量闸 defer（+1d），再跑也是拒，
         #   这才是真正的 no-progress。
         if res["due"] is not None and res["written"] == 0:
-            gate_reason = "no-progress" if res["rc"] == 0 else "batch-failed"
-            break
+            if res["rc"] != 0:
+                gate_reason = "batch-failed"
+                break
+            # 2026-11-17 CEO「没活闲着的时候排单」：年轮 due 空了不收工，
+            # 问排单哨兵下一个内容面（反思/池轮/相遇），把窗口继续填满。
+            rl.log("rings exhausted -> ask scheduler for next face")
+            try:
+                sr = rl._run([PY, "-X", "utf8", os.path.join(HERE, "work_scheduler.py"),
+                              "--run-next"], timeout=1800)
+                rl.log("scheduler rc=%d: %s" % (
+                    sr.returncode, " ".join(((sr.stdout or "") + (sr.stderr or "")).split())[:300]))
+                if sr.returncode != 0:
+                    gate_reason = "no-work-left"
+                    break
+                faces_switched += 1
+                if time.time() >= deadline:
+                    gate_reason = "budget"
+                    break
+                continue
+            except Exception as exc:  # noqa: BLE001
+                rl.log("scheduler failed: %s" % exc)
+                gate_reason = "no-progress"
+                break
         time.sleep(2)
 
     # 自审（与 resident_loop 对齐）：本批真的写了卡，就跑一次净增核验。
@@ -187,7 +220,7 @@ def main():
     el = round(time.time() - started, 1)
     payload = {
         "at": datetime.datetime.now().isoformat(timespec="seconds"),
-        "rounds": len(rounds), "written": total_written,
+        "rounds": len(rounds), "faces_switched": faces_switched, "written": total_written,
         "seconds": el, "stop": gate_reason,
         "detail": rounds,
     }
