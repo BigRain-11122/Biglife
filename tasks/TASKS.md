@@ -1,5 +1,17 @@
 # BigLife 任务板（自领制·认领置 in-progress 署名+时间）
 
+## R3356 · 2026-11-17 13:05-13:1x @BigLife-OSLoop（让路窗·日更面重建+QC 巡检轮）
+
+- 轮首：`git pull --ff-only origin main` = Already up to date、工作树净；决策水位差 **NEW=0**（watermark 至 D-20261117-15；D-12 七件到点件涉本司仅「活跃 PASS 登记」、D-13 闸值落地属 mv 线本机执行、D-14 跨仓回执交周日周轮）；`docs/orders.md` 无涉本司新物理件。
+- **产品增量（CEO 能看实物）**：`round_daily --run` → **stale=3 ran=4 failed=0 verdict=PASS**——重建 `census/export/city-today.html`（content-stale，源 2026-11-17 13:08 推进）、`census/export/city-map.html`（依赖 citizen-behavior.jsonl 推进）、`qa/FACE-COVERAGE-REPORT.md`（outdated 1d）、`census/export/index.html`；其余 27 面 skipped-fresh 零重烧。
+- **质检面**：`qc_census` → cards=10114 evolved=10114 **problems=0**、dup_rings=37/37 dup_new=0、meet=169 one_sided=1 meet_dup=2 **meet_new_bad=0**（T-20261116-16 观察窗内预读持续为 0，11-18 到期结单）；`events_refresh --gate` **PASS**（events=46181 cards=10111 shards=3、replay 10111/10111、mismatch=0、schema_errors=0、unexpected_missing=0、chronicle gap=0d）。
+- **自终止面（诚实不重烧）**：`pool_audit` → 轴 72/72、像素 12/12、greet 28/28、faq 7/7、neg 6/6，hard_fails=0，determinism 192+25 对 mismatch=0/empty_draw=0 → **SELF_TERMINATE**；`persona_generations --check` → rc=0（gen8 · habits=170 · cutoff C-10120 · pending_sync=none）；`hq_feedback_daily --check` → **ALREADY_REPORTED**（当日已报，零写入）。
+- **让路面**：`evolve_citizen --batch 3` = `yield-window`（工作日 09:00-19:00 CEO lane-priority · D-20261020-02），年轮/相遇/反思三腿顺延 19:00 后夜窗；本月聚光灯已有 `qa/SPOTLIGHT-20261115.md`、`qa/SPOTLIGHT-20261116.md` 两例达标，第 7 步跳过。
+- **事故与处置（本窗自抓·记入判例）**：轮记写入时用 Python 单引号串内 `` \` `` 转义，产出反斜杠残留；清理草稿改用 `txt.find('## R3355')` 定位，却被**同窗先前轮（12:52-13:05）在文件顶部插入的同名段**命中，`txt[:i]` 把 `tasks/TASKS.md` 截成 42 字符——当即 `git checkout -- tasks/TASKS.md` 从 HEAD 复原（校验 4872 行 / 1,177,155 字节零丢失）。判例：**按标题锚点做截断/回滚前必须先验锚点行号与段的写者**，且本板存在「顶插＋尾附」双写惯例，`find()` 首个命中不一定是自己的段。How to apply：台账改写一律落临时文件后整段插入或尾部追加，禁用 `find()+切片截断`。
+- **open 单不变**：T-20261116-13 配额闸 open·tooling-ready（待 ≥19:00 且 due≥16 实弹）；T-20261116-16 待 11-18 读 D3 `meet_new_bad=0` 结单；T-20261117-01 fsmonitor 本仓已修·集团层待统一；T-20260923-01 FluxVerse 线 PARKED。本轮无新增 open 单。
+- **CEO 可见三行**：当前活＝让路窗内确定性可见面保活＋QC 不变量巡检；最近实物＝`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-today.html`（13:0x 重建，今日城市面）＋`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/qa/QC-REPORT.md`；下个里程碑＝19:00 夜窗年轮批（--batch 3）＋配额闸 A/B 实弹＋反思线补跑（窗 ≤48h）。
+- tokens: local=0 api=0 api_reason=yield-window＋三条内容线全自终止，本机 LLM 零调用
+
 ## R3355 · 2026-11-17 12:52-13:05 @BigLife-OSLoop（冷却轮·让路闸归因实证·紧凑记账）
 
 - 轮首：`git pull --ff-only origin main` = `Already up to date`；`git status --porcelain` = **0 行（净）**；决策水位覆盖至 `D-20261117-15`，与 `decisions.md` 第 71 批逐条比对差集 **NEW=0**；`docs/orders.md` 涉本司行仅仓名/保护分支陈年项，**无新物理件**。
