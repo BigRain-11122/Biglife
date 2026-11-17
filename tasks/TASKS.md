@@ -4992,3 +4992,13 @@ ound_daily --run 29 面 stale=0 PASS；persona_generations --check rc=0 gen=8 pe
 - **实况三行**：当前活＝CEO 可见面数字一致性修复（14:3x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\DASHBOARD-RING-DOUBLE-COUNT-20261117.md`（11-17 14:33）＋重建后 city-dashboard.html（今日新增年轮 489）｜下个里程碑＝19:00 夜窗年轮批清 due=10（补至 ≥16 后跑 T-20261116-13 配额闸 A/B）。
 - **诚实边界**：让路窗内零内容增量（年轮/相遇/反思顺延夜窗）；本轮实物为可跑守卫件 + 一个 CEO 可见面的错误数字修正。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)+no-llm
+
+- [2026-11-17 14:4x @BigLife-OSLoop] 轮记：让路窗轮——日更面重建 + 四闸全绿复核
+- **轮首**：pull=up-to-date；工作树净；决策差集 NEW=0（水位已至 D-20261117-15）；orders 无 11-17 新令；HQ-SELF-REPORT 不含本司（D-20261117-08 判本司活跃 PASS）。
+- **本轮闸**：round_daily --run 29 面 stale=1 ran=2 failed=0 PASS（index 重建）；persona_generations --check rc=0 gen=8 habits=170 pending_sync=none；events_refresh --gate cards=10111 events=46181 shards=3 replayed=10111 schema_errors=0 mismatch=0 PASS（chronicle gap=0d）；pool_audit 全桶达标=SELF_TERMINATE；evolve/meet/reflect = yield-window（工作日 09:00-19:00·D-20261020-02）；QC 今日 13:40 已跑（异常 0）；hq_feedback --check=ALREADY_REPORTED。
+- **实物（本轮产物）**：census/export/index.html 重建 + city-dashboard.html / city-today.html 刷新 + qa/EVENTS-REPLAY-REPORT.md 入库（14:39）。
+- **验证**：daily_kpi_assert.py PASS——今日年轮 489/489、今日相遇 6/6、今日开口居民 490/490、卡总数 10114/10114、城区 6/6、看板今日年轮 489/489（与今日页同数）。
+- **open 单**：T-20261116-13 配额闸 A/B → blocked-on-window（待 ≥19:00 且 due≥16，现 due=10）；T-20261116-16 相遇不变量 → 待 11-18 读 D3；T-20260923-01 FluxVerse PARKED。本轮不新开单。
+- **实况三行**：当前活＝让路窗守卫面巡检与全闸复核（14:40）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\index.html（11-17 14:39）｜下个里程碑＝19:00 夜窗年轮批清 due=10（补至 ≥16 后跑配额闸 A/B）。
+- **诚实边界**：让路窗内零内容增量（年轮/相遇/反思顺延夜窗）；本轮无新缺陷修复，产出为确定性面重建 + 四闸复核 + KPI 一致性验证。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)+no-llm
