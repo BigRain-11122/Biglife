@@ -148,8 +148,8 @@
   - **待办**：①核查 19 个 daemon 归属与启动源（跨仓共用，**禁本轮擅动他仓**）；②集团层确认统一处置（全局 \core.fsmonitor=false\ 或清 daemon）；③对假净史仓把 \git -c core.fsmonitor=false status\ 写入轮首/收尾校验模板。
   - **验收**：任一仓默认 \git status\ 与 -c core.fsmonitor=false status\ 输出一致，连续 3 轮。
   - **影响面（已造成误判）**：R3308/R3310 轮记「census/registry 零改动」判断被此污染（另有年轮脚本自带 commit 因素）；D-20261115-10「以提交 --stat 为准」是既有 workaround。
-  - 证据：R3311 轮记 + \.git/config\ 内 \
-smonitor = false\。
+  - 证据：R3311 轮记 + `.git/config` 内 `fsmonitor = false`。
+  - [2026-11-17 12:2x @BigLife-OSLoop R3352] **第③项已交付：轮首假净闸 `Tools/git_guard.py`**（零 LLM·本仓内可跑）。做法=同时读默认与 `-c core.fsmonitor=false` 两条 `status --porcelain`，按路径集合比对；「稳定读数有而默认读数无」即列 hidden 并判 FALSE-CLEAN RISK（rc=1），一致则 PASS（rc=0，干净或脏都算诚实）；rename 取目标路径（会被 add 的那侧）；顺带打 `git fsmonitor--daemon status`（该子命令对「未监视」返回 rc=1，故按文本判定不按退出码）。**实跑**：`--selftest` **PASS 4/4**（整树隐藏／两读数一致零误报／rename 目标路径／单文件部分隐藏）；实检默认 1 路径 vs 稳定 1 路径=一致，daemon=not-watching，rc=0；`py_compile` rc=0；19 个 daemon 常驻仍复现（与立单读数一致）。证据=`qa/GIT-GUARD-20261117.md`。**诚实边界**：本仓 `core.fsmonitor=false` 已生效，故真盘上无法自然复现假净，负控走合成读数（用例名已标明）；第①②项（daemon 归属／集团统一处置）按立单约束未动他仓。接线=轮首三步①补跑 `git_guard.py --quiet`（仅分歧时出声），分歧即不得以「树净」为前提收轮。
 
 - [ ] **T-20261116-13**（R3242 立·实弹执行单·今晚首件）19:00 让路窗解后跑配额闸 A/B 实弹，决定 `state/pending/R3204-quota-gate.patch` 留或撤。
   - status: **open·tooling-ready**（2026-11-16 17:1x R3242 立 → 11-16 21:2x R3260 改判 blocked → 2026-11-17 10:1x R3340 **工装三项前置已全部在树并自检 PASS(0 fail)**，blocked 解除；实弹待 due≥16 窗口）
