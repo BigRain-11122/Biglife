@@ -72,7 +72,7 @@ def run_batch(batch):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--minutes", type=float, default=8.0, help="本轮时间预算")
+    ap.add_argument("--minutes", type=float, default=9.0, help="本轮时间预算")
     ap.add_argument("--batch", type=int, default=3)
     ap.add_argument("--max-batches", type=int, default=20)
     ap.add_argument("--dry-run", action="store_true")
