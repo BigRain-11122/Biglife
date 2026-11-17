@@ -41,6 +41,7 @@ PATCH = os.path.join(ROOT, "state", "pending", "R3204-quota-gate.patch")
 EVOLVE = os.path.join(ROOT, "Tools", "evolve_citizen.py")
 REFUSALS = os.path.join(ROOT, "state", "ring-refusals.jsonl")
 QA = os.path.join(ROOT, "qa")
+ARM_LOG_DIR = os.path.join(ROOT, "state", "negctl")
 
 SUMMARY_RE = re.compile(r"OK evolved=(\d+) of (\d+) due \(written=(\d+) skipped=(\d+)\)")
 DUE_RE = re.compile(r"audit-due: due=(\d+)")
@@ -195,28 +196,70 @@ def due_count():
     return int(m.group(1)) if m else None
 
 
-def arm(batch, label, env=None):
-    """跑一臂年轮批，返回 stdout 解析出的可判读数。"""
+def due_consistency(due_before, due_after, attempted):
+    """两臂前后 due 口径比对（T-20261116-13 前置②）。返回 (ok, 说明)。
+
+    拒稿席也推 +1d（R3115 的调度修法），故「尝试」即消耗 due。两臂都跑完却一个
+    due 也没减，说明 `--audit-due` 与 `--batch` 读的不是同一份口径（或席位在推 due
+    之前就被挡掉）——此时 written 比对无从解释，按 TOOLING_ERROR 处理，不裁补丁留撤。
+    """
+    if due_before is None or due_after is None:
+        return False, ("due 不可读（before=%s after=%s）→ 口径无法比对"
+                       % (due_before, due_after))
+    delta = due_before - due_after
+    if delta <= 0:
+        return False, ("due 未消耗（before=%d after=%d 差=%d·尝试 %d 席）→ 口径不一致"
+                       % (due_before, due_after, delta, attempted))
+    return True, ("due 口径一致（before=%d after=%d 消耗 %d·尝试 %d 席）"
+                  % (due_before, due_after, delta, attempted))
+
+
+def _dump_arm(day, label, rc, out, err):
+    """把一臂的原始 stdout/stderr 落盘（T-20261116-13 前置①·arm stdout 落盘）。
+
+    为什么必须落盘：两臂报告曾只剩 `(no summary line)`，逐席拒稿理由全丢，于是
+    「为什么 0 落环」无法复现，只能重复烧席位（R3290 判例）。全量留档后，
+    TOOLING_ERROR 可从日志复现，不必重跑 LLM。
+    """
+    try:
+        os.makedirs(ARM_LOG_DIR, exist_ok=True)
+        path = os.path.join(ARM_LOG_DIR, "arm-%s-%s.log"
+                            % (day.replace("-", ""), label))
+        with open(path, "w", encoding="utf-8", newline="\n") as fh:
+            fh.write("### day=%s arm=%s rc=%s\n### --- stdout ---\n%s\n"
+                     "### --- stderr ---\n%s\n" % (day, label, rc, out, err))
+        return path
+    except OSError:
+        return None
+
+
+def arm(batch, label, env=None, day=None):
+    """跑一臂年轮批，返回 stdout 解析出的可判读数。
+
+    无摘要行时 `written/done` 返回 **None**（不是 0）：把「读不到」写成 0，会让
+    TOOLING_ERROR 冒充真实落环读数（R3290 两臂 written=0 done=0 退化读数判例）。
+    """
     rc, out, err = _run([sys.executable, "-X", "utf8", EVOLVE,
                          "--batch", str(batch), "--via", "BigLife-OSLoop"], env=env)
+    log = _dump_arm(day, label, rc, out, err) if day else None
     if YIELD_RE.search(out):
-        return {"label": label, "yield": True, "rc": rc, "out": out}
+        return {"label": label, "yield": True, "rc": rc, "out": out, "log": log}
     m = SUMMARY_RE.search(out)
-    written = int(m.group(3)) if m else 0
-    done = int(m.group(1)) if m else 0
     src = BANSRC_RE.search(out)
     return {
         "label": label,
         "yield": False,
         "rc": rc,
-        "written": written,
-        "done": done,
+        "written": int(m.group(3)) if m else None,
+        "done": int(m.group(1)) if m else None,
         "gate_off": bool(GATEOFF_RE.search(out or "")),
         "ban_hits": len(BAN_RE.findall(out)),
         "ban_src": src.group(1) if src else "?",
         "ban_n": int(src.group(2)) if src else -1,
         "summary": m.group(0) if m else "(no summary line)",
-        "err_tail": err.strip()[-400:],
+        "out_tail": out.strip()[-1500:],
+        "err_tail": err.strip()[-600:],
+        "log": log,
     }
 
 
@@ -228,6 +271,21 @@ def judge(a, b, before, after, batch, snap_a=None, snap_b=None, frozen=False):
     """
     lines = []
     ok = True
+
+    # ③ TOOLING_ERROR 分型：无摘要行 ≠ written=0。臂读数不可解析时，任何落环比对
+    #    都是在比两个未知数（R3290 两臂 0/0 被当成「退化但可比」的判例）。
+    bad = [x for x in (a, b) if x.get("written") is None]
+    if bad:
+        for x in bad:
+            lines.append("TOOLING_ERROR %s 臂无摘要行（%s·rc=%s）→ 该臂落环数未知，"
+                         "不得当作 0 参与比对"
+                         % (x.get("label"), x.get("summary"), x.get("rc")))
+            tail = (x.get("err_tail") or x.get("out_tail") or "").replace("\n", " ")
+            if tail:
+                lines.append("　%s 臂尾部=%r" % (x.get("label"), tail[:200]))
+        lines.append("　→ 逐席拒稿理由见 state/negctl/arm-<day>-<臂>.log；修工装后重跑，"
+                     "不得据此裁决补丁留撤")
+        return "TOOLING_ERROR", lines
 
     # 混淆面先行：两臂之间「禁牌到期」→ 两臂时间环境不同，任何比对都无效
     carry = []
@@ -296,11 +354,15 @@ def judge(a, b, before, after, batch, snap_a=None, snap_b=None, frozen=False):
 
 
 def write_report(day, batch, a, b, verdict, lines, restore_state, snap_a=None, snap_b=None,
-                 freeze_state="-"):
+                 freeze_state="-", arm_logs=None, due_note=None):
     os.makedirs(QA, exist_ok=True)
     path = os.path.join(QA, "RING-QUOTA-NEGCTL-%s.md" % day.replace("-", ""))
     def _fmt(s):
         return "(unavailable)" if not s else "active=%d·最早到期 %s" % (s["n"], s["exp_min"])
+    def _num(x):
+        return "?" if x is None else x
+    def _rel(p):
+        return os.path.relpath(p, ROOT) if p else "(未落盘)"
     body = [
         "# 12h 全城开口配额闸·实弹负控（%s）" % day,
         "",
@@ -316,8 +378,27 @@ def write_report(day, batch, a, b, verdict, lines, restore_state, snap_a=None, s
         "",
         "| 臂 | 闸 | written | done | citywide-ban 命中 | 摘要行 |",
         "|---|---|---|---|---|---|",
-        "| A | off | %s | %s | - | `%s` |" % (a.get("written"), a.get("done"), a.get("summary")),
-        "| B | on | %s | %s | %s | `%s` |" % (b.get("written"), b.get("done"), b.get("ban_hits"), b.get("summary")),
+        "| A | off | %s | %s | - | `%s` |" % (_num(a.get("written")), _num(a.get("done")), a.get("summary")),
+        "| B | on | %s | %s | %s | `%s`" % (_num(b.get("written")), _num(b.get("done")), b.get("ban_hits"), b.get("summary")),
+        "",
+        "## 口径与原始输出（TOOLING_ERROR 可复现面）",
+        "",
+        "- due 口径：%s" % (due_note or "(未采集)"),
+        "- A 臂原始输出：`%s`" % _rel((arm_logs or {}).get("A")),
+        "- B 臂原始输出：`%s`" % _rel((arm_logs or {}).get("B")),
+    ]
+    # 无摘要行时把尾部原文带进报告——否则「为什么 0 落环」只剩一句猜测
+    for x in (a, b):
+        if x.get("written") is None:
+            body += [
+                "",
+                "### %s 臂诊断尾部" % x.get("label"),
+                "",
+                "```",
+                (x.get("out_tail") or x.get("out") or "(空)")[-1200:],
+                "```",
+            ]
+    body += [
         "",
         "## 判定",
         "",
@@ -423,9 +504,10 @@ def main():
     snap_a = ban_snapshot()
     verdict = "FAIL"
     lines = []
+    due_note = "(未采集)"
     try:
         a_env = dict(arm_env or os.environ, **{GATE_ENV: "off"})
-        a = arm(batch, "A", env=a_env)
+        a = arm(batch, "A", env=a_env, day=day)
         if a.get("yield"):
             print("yield-window: 产线让路期，A 臂未跑（0 LLM/0 改动）")
             return 3
@@ -434,17 +516,30 @@ def main():
         print("arm B (gate on) ...", flush=True)
         snap_b = ban_snapshot()
         b_env = dict(arm_env or os.environ, **{GATE_ENV: "on"})
-        b = arm(batch, "B", env=b_env)
+        b = arm(batch, "B", env=b_env, day=day)
         if b.get("yield"):
             print("yield-window: B 臂未跑 -> 还原补丁")
             return 3
         after = refusal_metrics(day)
+        # 前置②：两臂前后的 due 消耗必须自洽，否则 written 比对无解释力
+        due_after = due_count()
+        due_ok, due_note = due_consistency(due, due_after, batch * 2)
+        print("due check:", due_note, flush=True)
         _src_a, _src_b = a.get("ban_src"), b.get("ban_src")
         _known = _src_a not in (None, "?") and _src_b not in (None, "?")
-        if a.get("gate_off") is not True:
+        if a.get("written") is None or b.get("written") is None:
+            # 前置③先行：臂读数不可解析时，关闸自证/冻结面自证都可能是「读不到」而非
+            # 「没生效」，先判工装缺陷，免得把 TOOLING_ERROR 说成 CONFOUNDED。
+            verdict, lines = judge(a, b, before, after, batch, snap_a, snap_b,
+                                   frozen=bool(freeze_path))
+        elif a.get("gate_off") is not True:
             verdict = "CONFOUNDED"
             lines = ["CONFOUNDED A 臂未自证关闸（stdout 无 quota-gate: off 标记）"
                      "→ 两臂可能同闸，读数不能用于裁决"]
+        elif not due_ok:
+            verdict = "TOOLING_ERROR"
+            lines = ["TOOLING_ERROR " + due_note
+                     + " → 席位消耗与 due 供给不同源，落环差不可归因于闸"]
         elif freeze_path and _known and not (_src_a == _src_b == "frozen"):
             verdict = "CONFOUNDED"
             lines = ["CONFOUNDED 冻结面未生效（A 源=%s/B 源=%s）→ 两臂禁牌环境不同，"
@@ -464,6 +559,7 @@ def main():
                 lines.append("note 来源标签未取到（A=%s/B=%s）→ 冻结按构造生效，"
                              "但本轮无法从 stdout 自证；下次请查该行是否被吞"
                              % (_src_a, _src_b))
+        lines.append(("ok   " if due_ok else "note ") + due_note)
     finally:
         if freeze_path:
             try:
@@ -482,7 +578,9 @@ def main():
     else:
         freeze_state = "冻结失败→退回实时窗口（有禁牌到期混淆风险）"
     path = write_report(day, batch, a, b, verdict, lines, restore_state,
-                        snap_a, snap_b, freeze_state=freeze_state)
+                        snap_a, snap_b, freeze_state=freeze_state,
+                        arm_logs={"A": a.get("log"), "B": b.get("log")},
+                        due_note=due_note)
     print("report:", os.path.relpath(path, ROOT))
     print("verdict:", verdict, "| gate in tree:", "yes" if restore_state else "no")
     return 0 if verdict == "PASS" else 1
@@ -550,6 +648,23 @@ def _selftest():
     chk("GATEOFF_RE 不误命中开闸面",
         GATEOFF_RE.search("refusal-bans source: frozen n=6") is None)
 
+    # 3c) TOOLING_ERROR 分型（T-20261116-13 前置③·无摘要行 ≠ written=0）
+    a_ns = dict(a, written=None, done=None, summary="(no summary line)", rc=0,
+                err_tail="", out_tail="")
+    b_ns = dict(b, written=None, done=None, summary="(no summary line)", rc=0,
+                err_tail="", out_tail="")
+    chk("judge 双臂无摘要行 -> TOOLING_ERROR",
+        judge(a_ns, b_ns, base, base, 8, same, same)[0] == "TOOLING_ERROR")
+    chk("judge TOOLING_ERROR 不得冒充 PASS/FAIL",
+        judge(a_ns, b_ns, base, base, 8, same, same)[0] not in ("PASS", "FAIL"))
+    chk("judge 单臂无摘要行 -> TOOLING_ERROR",
+        judge(a_ns, b, base, base, 8, same, same)[0] == "TOOLING_ERROR")
+
+    # 3d) due 口径比对（T-20261116-13 前置②）
+    chk("due 一致(10->4·尝试 12) -> ok", due_consistency(10, 4, 12)[0] is True)
+    chk("due 未消耗(10->10) -> 不 ok", due_consistency(10, 10, 10)[0] is False)
+    chk("due 不可读(None) -> 不 ok", due_consistency(None, 4, 10)[0] is False)
+
     # 4) 禁牌冻结面（R3247：两臂必须同一集合——禁牌在两臂之间到期会污染读数）
     sys.path.insert(0, os.path.join(ROOT, "Tools"))
     import evolve_citizen as _ev
@@ -588,9 +703,32 @@ def _selftest():
         chk("report 含 verdict", "verdict: PASS" in body)
         chk("report 已关闭", body.rstrip().endswith("|---|---|---|")
             or "回退口" in body)
+        # 前置①②③的证据面必须落在报告里，否则「无判别力」不可复现
+        p2 = write_report("2026-11-16", 5, a, b, "TOOLING_ERROR", ["TOOLING_ERROR x"],
+                          True, same, same, arm_logs={"A": "/tmp/a.log", "B": None},
+                          due_note="due 口径一致（before=10 after=4 消耗 6·尝试 10 席）")
+        body2 = io.open(p2, encoding="utf-8").read()
+        chk("report 含 due 口径行", "due 口径一致" in body2)
+        chk("report 含臂原始输出落盘指针", "臂原始输出" in body2 and "a.log" in body2)
+        chk("未落盘臂标 (未落盘) 不假指路径", "(未落盘)" in body2)
     finally:
         QA = old_qa
         shutil.rmtree(tmp, ignore_errors=True)
+
+    # 6) arm stdout 落盘（T-20261116-13 前置①）
+    global ARM_LOG_DIR
+    old_dir = ARM_LOG_DIR
+    tmp2 = tempfile.mkdtemp(prefix="negctl-armlog-")
+    try:
+        ARM_LOG_DIR = tmp2
+        lp = _dump_arm("2026-11-17", "A", 0, "line1\nline2\n", "warn")
+        txt = io.open(lp, encoding="utf-8").read() if lp else ""
+        chk("_dump_arm 产出日志文件", bool(lp) and os.path.exists(lp))
+        chk("日志含 rc 与 stdout 原文", "rc=0" in txt and "line1" in txt and "warn" in txt)
+        chk("日志名带日期与臂标签", os.path.basename(lp or "").endswith("arm-20261117-A.log"))
+    finally:
+        ARM_LOG_DIR = old_dir
+        shutil.rmtree(tmp2, ignore_errors=True)
 
     print("selftest: %s (%d fail)" % ("PASS" if not fails else "FAIL", len(fails)))
     return 0 if not fails else 1

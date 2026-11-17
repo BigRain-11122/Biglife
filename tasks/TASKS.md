@@ -4546,3 +4546,27 @@ eflect_citizen --batch 5 ＋下一轮年轮续跑，11-18 相遇不变量 D3 结
   **跳过的腿（各带闸证据）**：反思线（19:00 后窗未到）；相遇轮（心跳实读 meet=cap3-skip，当日额满）。
   **CEO 可见三行**：当前活＝年轮 10 席落环＋事件流 46171 条全量重放＋28 面刷新＋QC／池／世代三闸全绿（08:44-09:0x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ring-openings.html`（2026-11-17 08:5x，含当日新环开场）与 10 张 `census\registry\*\C-012xx.md` 年轮卡（commit 64da48cee）｜下个里程碑＝11-17 19:00 后反思线 `reflect_citizen --batch 5` 续跑＋年轮批续，11-18 相遇不变量 D3 结单。
   计量：**tokens: local=10 api=0 api_reason=-**（10 席年轮各 1 次本地 Ollama qwen3:4b-instruct；日更／事件闸／QC／池／世代全确定性零 LLM）。
+
+## R3331 · 2026-11-17 09:0x-09:4x @BigLife-OSLoop（产品轮·配额闸 A/B 工装三前置实装＋T-20261117-01 虚警勘误）
+
+- 轮首：git pull --ff-only=Already up to date／工作树净；决策水位差 NEW=0（watermark 已至 D-20261117-11，与 decisions.md 全量 D-ID 差集为空；D-20261117-04 上游依赖解除已 executed 核销、D-20261117-08 收取面判 BigLife 活跃 PASS）；docs/orders.md 物理件区无涉本司新件；
+ound_daily --run **39 面全鲜 stale=0 ran=0 failed=0 verdict=PASS**；persona_generations --check **rc=0**（gen 8／habits=170／pending_sync=none）；pool_audit **PASS／SELF_TERMINATE**（轴 72/72、像素 12/12、greet 28/28、faq 7/7、负例 6/6、双抽 192+25 对 mismatch=0）；年轮线 yield-window（工作日 09:00-19:00 让路·D-20261020-02）顺延夜窗。
+
+- **主线（修 open 单）**：T-20261116-13「配额闸 A/B 三前置」连续多轮只记不修，本轮一次落地（证据=qa/NEGCTL-TOOLING-20261117.md）：
+  ① **arm stdout 落盘**——新增 _dump_arm()，每臂 stdout/stderr 全文（含 rc 行）写 state/negctl/arm-<YYYYMMDD>-<臂>.log，rm(..., day=...) 实弹路径自动调用。此前两臂报告只剩 (no summary line)，逐席拒稿理由全丢，只能重烧席位复现（R3290 判例）。
+  ② **due 口径比对**——新增 due_consistency(before, after, attempted)：拒稿席也推 +1d（R3115），故「尝试」即消耗 due；两臂跑完而 due 零消耗即判席位供给与 --audit-due 不同源，verdict=TOOLING_ERROR，不据此裁补丁留撤。
+  ③ **TOOLING_ERROR 分型**——rm() 无摘要行时 written/done 返回 **None**（不再伪造成 0，这是「0/0 被当成退化但可比」的根因）；judge() 首段任一臂 written is None → TOOLING_ERROR 并把 rc＋输出尾部带进判据块；main() 判定链顺序改「臂读数不可解析 → 关闸自证 → due 口径 → 冻结面 → 判据」，避免把「读不到」说成 CONFOUNDED。
+  ④ 报告面 qa/RING-QUOTA-NEGCTL-<day>.md 增「口径与原始输出（TOOLING_ERROR 可复现面）」段：due 口径行＋A/B 臂日志指针＋无摘要行时该臂诊断尾部（≤1200 字）。
+
+- **验收**：py_compile rc=0；--selftest **PASS (0 fail)**（新增 7 检：双臂/单臂无摘要→TOOLING_ERROR、TOOLING_ERROR 不得冒充 PASS/FAIL、due 一致/未消耗/不可读三态、报告含 due 口径与臂日志指针、_dump_arm 产出/内容/命名）；--dry-run rc=0（due=10 → 每臂 5 席，请求 8 收敛）；实弹 --batch 8 rc=3 yield-window（0 LLM／工作树零写入）且 state/negctl/arm-20261117-A.log 193B 含原文——前置①在真实路径实证。
+
+- **T-20261117-01 勘误结案（byte 级证据）**：该项称「PowerShell 行内 commit -m 中文被按 GBK 落盘」（引 commit 5b01101b5／99d63e17b）。本轮以 subprocess 取 git log -1 --format=%s 原始字节逐条解码复核：**5b01101b5／99d63e17b／8d5f388be／7f3ce99f6 四条均 UTF-8 解码成功、GBK 解码 UnicodeDecodeError** → 库内是合法 UTF-8，乱码只是**工具输出层按 GBK 解码 UTF-8** 的显示假象（承 R3265 判例）。故该项判**虚警结案**，不需要改提交方式；轮末提交仍走 -F <utf-8 文件>（不损正确性，且免行内转义）。**反向教训**：本工具终端把「正确 UTF-8」显示成乱码、把「GBK 落盘」显示成正常中文，禁以终端显示判断文件/提交编码。
+
+- **顺延（诚实不假报）**：年轮/相遇/反思三腿均在让路窗内（09:00-19:00 → 19:00 后）；语言线池已全达标自停；QC 巡检未到 6 轮间隔（上轮 08:4x problems=0）；hq_feedback_daily --check = ALREADY_REPORTED（今日 1 行）零写入；基因轮无增补。
+
+- **open 单状态**：T-20261116-13 配额闸 A/B → 三前置 **DONE**，剩「实弹窗口」一项（≥19:00 夜窗，每臂 5 席、禁牌冻结 55 条），状态改 locked-on-window；T-20261116-16 相遇不变量待 11-18 读 D3 meet_new_bad=0 结单；T-20261117-01 **CLOSED（虚警·byte 级复核）**；T-20260923-01 FluxVerse 线 PARKED 无动作。
+
+- **实况三行**：当前活＝配额闸 A/B 工装三前置实装并自检收口（09:0x-09:4x）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\NEGCTL-TOOLING-20261117.md（09:3x）＋Tools\ring_quota_negctl.py（三前置在树）｜下个里程碑＝11-17 19:00 后配额闸 A/B 实弹（每臂 5 席）＋反思线 
+eflect_citizen --batch 5；11-18 相遇不变量 D3 结单。
+
+  计量：**tokens: local=0 api=0 api_reason=-(让路窗内年轮腿未触发；工装修复/自检/日更/闸全确定性零 LLM)**
