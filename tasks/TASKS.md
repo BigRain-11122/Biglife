@@ -4882,3 +4882,15 @@ ound_daily --run = 28 面 skipped-fresh / stale=0 / ran=0 / failed=0 PASS；pers
 - **诚实边界**：本轮零产品增量（保护态豁免面：可见面全鲜 + 内容线让路窗 + 距上轮 12min）；只提交本行轮记，无内容级产物。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)+cooldown
 - **当轮缺陷修复（判例纠偏）**：首版 commit 消息经 PowerShell here-string 内联传入，入库为 U+E1xx 私有区**真乱码**（非渲染假象）；改用工具直写 UTF-8 消息文件 + `git commit --amend -F` + `--force-with-lease` 修正，校验 PRIVATE_USE=False。**修正 11:53 判例(180b260b9)**：`commit -F 文件通道` 只在「文件本身由非 shell 通道写入」时有效——PowerShell 内联字符串在进内存前即被 GBK 解码，写出的文件已是坏字节。
+
+## R3357 · 2026-11-17 13:18-13:2x @BigLife-OSLoop（让路窗·冷却守卫轮）
+- **轮首三步**：`git pull --ff-only origin main` = Already up to date、工作树干净；决策水位差 **NEW=0**（watermark 已至 D-20261117-15）；orders 物理件区无涉本司新件。
+- **产品增量**：**零新增实物**（诚实记账·非宣称完成）。
+- **实测四闸**：`round_daily.py --run` = **38 面全鲜 stale=0 ran=0 failed=0 verdict=PASS**；`persona_generations.py --check` **rc=0**（gen 8 / habits=170 / cutoff C-10120 / pending_sync=none）；`pool_audit.py` = **72/72 轴桶 + 12/12 像素桶 at_target / hard_fails=0 / SELF_TERMINATE**（determinism 192+25 对 mismatch=0）；`hq_feedback_daily.py --check` = **ALREADY_REPORTED**（today lines=1）→ 零写入。
+- **让路闸实证**：`evolve_citizen.py --batch 3` = **yield-window**（工作日 09:00-19:00·D-20261020-02）→ 年轮/相遇/反思三 LLM 线顺延 19:00 夜窗，不手绕。
+- **到期盘点**：`evolve_citizen.py --audit-due` = **due=10 leaked=0 PASS**（队列健康，夜窗可清）。
+- **冷却律**：距 R3356（13:05-13:1x）不足 15 分钟，且 QC 巡检 13:10:02、事件闸 13:09:41 刚跑 → 按「禁每轮重扫同一对象」不重跑。
+- **open 单**：T-20261116-13 配额闸 A/B → blocked-on-window（待 ≥19:00）；T-20261116-16 相遇不变量 → 待 11-18 读 D3；T-20260923-01 FluxVerse PARKED。本轮不新开单。
+- **实况三行**：当前活＝让路窗+冷却守卫（13:18-13:2x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\QC-REPORT.md`（2026-11-17 13:10:02·10114 卡不变量全 PASS）｜下个里程碑＝11-17 19:00 夜窗年轮批清 due=10 队列。
+- **诚实边界**：本轮零产品增量（工作日让路窗 + 冷却），内容三线全让路；仅为守卫取证轮。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)+cooldown
