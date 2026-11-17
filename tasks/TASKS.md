@@ -4768,3 +4768,14 @@ ound_daily --run = 28 面 skipped-fresh / stale=0 / ran=0 / failed=0 PASS；pers
 - **实况三行**：当前活＝让路窗日更面刷新轮（11:34）｜最近实物＝C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-today.html（489 今日年轮·2026-11-17 11:34）｜下个里程碑＝11-17 19:00 夜窗年轮批 `--batch 3`（含 T-20261116-13 配额闸 due≥16 实弹）。
 - **诚实边界**：内容线（年轮/相遇/反思）仍在让路窗内，本轮增量=可见面刷新与闸门读数，非新年轮产出；非停摆，属窗口使然。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)
+
+## R3349 · 2026-11-17 11:40-11:5x @BigLife-OSLoop（让路窗验证轮·年轮到期靶单 due=10）
+- **轮首**：`git pull --ff-only origin main` = Already up to date；工作树净（仅本轮产出 2 文件）。决策水位已覆盖至 **D-20261117-11**（差集 NEW=0）；`docs/orders.md` 无涉本司新件；决策面 D-20261117-04（依赖解除回执核销）/D-20261117-08（BigLife 活跃 PASS）均本司侧 executed／no-op，无待办。
+- **产品增量（本轮实物）**：`round_daily.py --run` = **stale=0 ran=0 failed=0 verdict=PASS**（28 面全新鲜；上一轮 R3348 11:34 已刷新 `city-today.html` 今日年轮 489/city-map/index，故本轮无重建）；`qc_census.py` = **problems=0**（cards=10114 evolved=10114、dup_new=0、meet_new_bad=0；`census/QC-REPORT.md` 11:39 入库）；`events_refresh.py --gate` = **PASS**（events=46181 cards=10111 replayed=10111、schema_errors=0、mismatch=0、coverage unexpected_missing=0、chronicle fresh gap=0d；`qa/EVENTS-REPLAY-REPORT.md` 入库）。
+- **年轮到期靶单（新准备件·零 LLM）**：`evolve_citizen.py --audit-due` = **due=10 leaked=0 PASS** —— 为 19:00 夜窗批提供确切靶数（batch 3 需 ≥4 轮消化 10 位）。
+- **守卫面**：`persona_generations.py --check` **rc=0**（gen 8 / habits=170 / cutoff C-10120 / pending_sync=none）；`pool_audit.py` = **SELF_TERMINATE**（轴 72/72·1296 行；sprite 12/12·144 行；greet 28/28·476 行；faq 7/7·42 行；neg 6/6·hard_fails=0·determinism 192+25 对 mismatch=0）。
+- **让路实测**：`evolve_citizen --batch 3` 返回 **yield-window**（工作日 09:00-19:00·D-20261020-02）；`vram-guard` 实测 desktop 占 **94%**／compute 0%／free **787 MiB** → 让路判断正确，不硬绕。
+- **跳过面（按律不重烧）**：步 1 年轮／步 4 相遇／步 1C 反思 = yield-window 顺延 19:00；步 2 池已达标（自终止律）；步 6 基因今日 11:10 已由 R3345 落 b62 三条；步 7 月度聚光灯 11 月 2 例已于 R3133 达标；步 8 `hq_feedback_daily --check` = **ALREADY_REPORTED**（今日 00:10 已有行）→ 零写入；open 单 T-20261116-13 blocked-on-window（待 ≥19:00 due≥16 实弹）／T-20261116-16 待 11-18 读 D3／T-20261117-01 CLOSED。
+- **实况三行**：当前活＝让路窗验证轮（11:40-11:5x）｜最近实物＝`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-today.html`（今日年轮 489·2026-11-17 11:34）｜下个里程碑＝11-17 19:00 夜窗年轮批 `--batch 3`（靶 due=10，约 4 轮清空）+ T-20261116-13 配额闸 due≥16 实弹。
+- **诚实边界**：内容线（年轮/相遇/反思）仍在让路窗内，本轮增量＝闸门读数 + 到期靶单 + QC/EVENTS 报告刷新，非新年轮产出；vram-guard 94% 为让路正当性实证，非停摆。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)
