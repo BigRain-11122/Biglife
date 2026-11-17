@@ -4779,3 +4779,13 @@ ound_daily --run = 28 面 skipped-fresh / stale=0 / ran=0 / failed=0 PASS；pers
 - **实况三行**：当前活＝让路窗验证轮（11:40-11:5x）｜最近实物＝`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-today.html`（今日年轮 489·2026-11-17 11:34）｜下个里程碑＝11-17 19:00 夜窗年轮批 `--batch 3`（靶 due=10，约 4 轮清空）+ T-20261116-13 配额闸 due≥16 实弹。
 - **诚实边界**：内容线（年轮/相遇/反思）仍在让路窗内，本轮增量＝闸门读数 + 到期靶单 + QC/EVENTS 报告刷新，非新年轮产出；vram-guard 94% 为让路正当性实证，非停摆。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)
+
+## R3350 · 2026-11-17 11:48-11:5x @BigLife-OSLoop（让路窗·可见面补更轮）
+- **轮首三步**：`git pull --ff-only` = Already up to date、工作树净；决策水位差 **NEW=0**（watermark 已至 D-20261117-11，decisions.md 全量 D-ID 差集为空）；orders 物理件区无涉本司新件（末令 O-20261109）。
+- **产品增量（本轮实物·2 分）**：`round_daily.py --check` 抓出 **stale=1**——`ops` 面依赖 `state/vram-gate.jsonl` 的 mtime，该文件在 R3349 后被刷新导致可见面滞后；`--run` 实跑 **stale=1 ran=2 failed=0 verdict=PASS**，重建 `census/export/city-ops.html`（18,426 B / 11:49:34）与 `census/export/index.html`（9,338 B / 11:49:34），28 面回全绿。
+- **守卫面**：`persona_generations.py --check` **rc=0**（gen 8 / habits=170 / cutoff C-10120 / pending_sync=none）。
+- **跳过面（按律不重烧）**：步 1 年轮／步 4 相遇／步 1C 反思 = **yield-window**（工作日 09:00-19:00·D-20261020-02）→ 顺延 19:00 夜窗；步 2 池 SELF_TERMINATE（自终止律）；步 6 基因今日 11:10 已由 R3345 落 b62 三条；步 7 月度聚光灯 11 月 2 例已于 R3133 达标；步 8 `hq_feedback_daily --check` = **ALREADY_REPORTED**（day=2026-11-17 lines=1）→ 零写入。
+- **open 单状态**：T-20261116-13 配额闸 A/B → blocked-on-window（三前置 DONE，待 ≥19:00 夜窗 due≥16 实弹）；T-20261116-16 相遇不变量 → 待 11-18 读 D3 meet_new_bad=0 结单；T-20261117-01 CLOSED（虚警·集团层统一处置）；T-20260923-01 FluxVerse PARKED 无动作。本轮**不新开单**。
+- **实况三行**：当前活＝让路窗可见面补更（11:48-11:5x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-ops.html`（2026-11-17 11:49:34）｜下个里程碑＝11-17 19:00 夜窗年轮批 `--batch 3` 续跑 + T-20261116-13 配额闸实弹。
+- **诚实边界**：内容线（年轮/相遇/反思）仍在让路窗内零产出；本轮增量＝确定性可见面修复（数据驱动、零 LLM），非新年轮。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)
