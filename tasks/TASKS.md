@@ -5002,3 +5002,12 @@ ound_daily --run 29 面 stale=0 PASS；persona_generations --check rc=0 gen=8 pe
 - **实况三行**：当前活＝让路窗守卫面巡检与全闸复核（14:40）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\index.html（11-17 14:39）｜下个里程碑＝19:00 夜窗年轮批清 due=10（补至 ≥16 后跑配额闸 A/B）。
 - **诚实边界**：让路窗内零内容增量（年轮/相遇/反思顺延夜窗）；本轮无新缺陷修复，产出为确定性面重建 + 四闸复核 + KPI 一致性验证。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)+no-llm
+
+- [2026-11-17 14:57 @BigLife-OSLoop R3361] 轮记：让路窗等待态轮（零 LLM·六闸复核全绿）
+- **轮首**：pull=up-to-date、工作树净；决策差集 NEW=0（水位已至 D-20261117-15，11-17 决策无遗漏）；orders 无 11-17 涉本司新件（物理件面零催办）。
+- **六闸证据**：evolve --batch 3 → yield-window（工作日 09:00-19:00·D-20261020-02·闸内 now() 走本地时区，已核 `yield_window_active` 无 UTC 偏移风险）；evolve --audit-due → due=10 leaked=0 PASS；events_refresh --gate → cards=10111 events=46181 replayed=10111 schema_errors=0 mismatch=0 PASS，chronicle gap=0d；round_daily --run → 29 面 stale=0 ran=0 failed=0 PASS；persona_generations --check → rc=0 gen=8 habits=170 pending_sync=none；pool_audit → 全桶达标 SELF_TERMINATE（hard_fails=0，双抽 192+25 对 mismatch=0）；qc_census → cards=10114 evolved=10114 problems=0；daily_kpi_assert → PASS（6 项 page/data 全等）。
+- **产品增量复核（非新产）**：按卡内年轮逐日计数实测——今日 495 条、11-16 576、11-15 1241、11-14 1086、11-13 796、11-12 729（10-29..11-11 为停产史洞，恢复后速率健康）；看板 489 与今日页 489 同口径（差 6＝相遇行按 11-17 修复口径单列），无新增口径偏差。
+- **实况三行**：当前活＝让路窗六闸复核（14:5x）｜最近实物＝`C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\qa\\EVENTS-REPLAY-REPORT.md`（事件流 46181/10111 全量重放 PASS，2026-11-17 14:3x）｜下个里程碑＝19:00 夜窗年轮批清 due=10，due≥16 后跑 T-20261116-13 配额闸 A/B。
+- **诚实边界**：本轮零内容增量（年轮/相遇/反思被让路窗硬闸挡住，程序不可绕）；未新开单、未改闸代码、未触历史观测面（one_sided=1、meet_dup=2 维持不回填）。
+- **open 单**：T-20261116-13 blocked-on-window；T-20261116-16 待 11-18 读 D3；T-20260923-01 PARKED。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)
