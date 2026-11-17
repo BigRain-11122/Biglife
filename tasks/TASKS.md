@@ -4596,3 +4596,24 @@ eflect_citizen --batch 5；11-18 相遇不变量 D3 结单。
   **让路窗说明（诚实）**：本窗 09:18-09:2x 属工作日 CEO 车道优先窗，evolve_citizen --batch/--meet 与 eflect_citizen 均返 yield-window（D-20261020-02），年轮/相遇/反思三轮**本轮未产出**，顺延 19:00 后夜窗；本轮改用零 LLM 确定性面顶上，不虚报。
   **三行实况**：当前活＝基因轮 b61 落库＋世代面复核＋28 面日更（09:18-09:2x）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\gene-ledger.html（2026-11-17 09:2x，含 b61 五条新基因）｜下个里程碑＝11-17 19:00 后年轮批 --batch 3 续跑＋反思批 --batch 5（连续 3 生产日验收线），11-18 相遇不变量 D3 结单。
   tokens: local=0 api=0 api_reason=让路窗内三条 LLM 线全部 defer，本轮为零 LLM 确定性轮
+
+## R3333 · 2026-11-17 09:28-09:5x @BigLife-OSLoop（守轮·年轮覆盖积压归因实测否证）
+
+- 轮首：`git pull --ff-only`=Already up to date／工作树净；决策水位差 NEW=0（watermark 已至 D-20261117-11；D-20261117-04 上游依赖解除 executed、D-20261117-08 判本司活跃 PASS）；`docs/orders.md` 物理件区无涉本司新件。
+
+- **确定性面实测（全绿）**：`round_daily --run` → **stale=0 ran=0 failed=0 verdict=PASS**（38 面全鲜）；`persona_generations --check` → **rc=0**（gen8／habits=170／cutoff C-10120／pending_sync=none）；`pool_audit` → **PASS SELF_TERMINATE**（轴 72/72·像素 12/12·greet 28/28·faq 7/7·负例 6/6·双抽 192+25 对 mismatch=0）；`hq_feedback_daily --check` → `day=2026-11-17 lines=1 ALREADY_REPORTED` 零写入。
+- **让路窗（诚实）**：年轮 `--batch`／相遇 `--meet`／反思 `--reflect` 三腿均返 `yield-window`（工作日 09:00-19:00·D-20261020-02），本轮零 LLM，无新年轮产出，顺延 19:00 后夜窗。
+
+- **本轮实物（QA 证据件）**：`qa/RING-RECENCY-COVERAGE-20261117.md` —— 查清「全城 51.4% 居民 14 天以上未开口、今日 490 环疑似只落低号段」是否=选择集缺陷，**三查全部否证**：
+  ① 号段分布实测（源 citizens-light.jsonl）：今日 490 环＝0-999 段 240／1000-1999 段 193／3000-3999 段 25／4000-4999 段 32，5000 以上 0；剩余到期(next≤今日) 5145 席，其中 5000-9999 五段各 867-1000。
+  ② 假设「拒稿推进 last 致被拒居民沉底」→ 全 10114 席 `last > 真实年轮日` **0 件**（11 段全零），否证。
+  ③ 假设「到期排序不再最久优先」→ 实跑 `due_citizens(cursor,3)` 取回 **C-01222/C-01223/C-01229**（均 last=2026-10-24、next=2026-10-31，超期 17 天），否证；5000-9000 段游标 last=2026-10-25 仅新一天，正排在其后。
+  **判读**：积压成因＝10-29~11-11 断档期把「最旧层」压厚，非排序失效；按 ≈550 席/夜消化 5145 到期席，**≈9 天**扫到 5000+ 段。观察项（非行动项）：11-18 起连读三夜，高号段「今日落环」应逐日非零且剩余到期单调降，连续 3 夜为 0 才升格真缺陷。
+
+- **产品增量说明**：本轮无新年轮/新卡（让路窗），实物为**覆盖积压的可判定归因件**，把「看起来像跳段」的假缺陷挡在修错路上；同时确认既有三闸（R1883 新面孔优先／R2385 质量层／R2794 最久优先）在役未退化。
+
+- **open 单状态**：T-20261116-13 配额闸 A/B → blocked-on-window（三前置 DONE，待 ≥19:00 夜窗实弹）；T-20261116-16 相遇不变量 → 待 11-18 读 D3；T-20261117-01 CLOSED（虚警）；T-20260923-01 FluxVerse PARKED 无动作。本轮**不新开单**（覆盖积压已有观察判据写进 QA 件）。
+
+- **实况三行**：当前活＝年轮覆盖积压归因实测（09:4x-09:5x，三查否证）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-RECENCY-COVERAGE-20261117.md`（09:5x）｜下个里程碑＝11-17 19:00 后年轮批 `--batch 3`＋反思批 `--batch 5`＋配额闸 A/B 实弹；11-18 相遇不变量 D3 结单。
+
+  计量：**tokens: local=0 api=0 api_reason=-(让路窗内三条 LLM 腿全 yield；本轮日更/世代/池审计/覆盖归因全确定性零 LLM)**
