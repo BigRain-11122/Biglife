@@ -5071,3 +5071,13 @@ ound_daily --run 29 面 stale=0 PASS；persona_generations --check rc=0 gen=8 pe
 - **让路面**：`evolve_citizen --batch 3` = yield-window（工作日 09:00-19:00 CEO lane-priority·D-20261020-02），年轮/相遇/反思三腿顺延 19:00 夜窗；`hq_feedback_daily --check` 今日配额已由前轮用满，本步零写入。
 - **CEO 可见三行**：当前活＝年轮巡检面检测工装落地＋夜窗年轮批待发（16:0x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\RING-ID-PENDING-20261117.md`（16:01 生成·1081 环次·new=0）｜下个里程碑＝19:00 夜窗 `evolve_citizen --batch 3`＋配额闸 A/B 实弹（due≥16 条件满足才跑）＋相遇轮（窗 ≤3h）。
 - tokens: local=0 api=0 api_reason=yield-window 内容线全停＋本轮全确定性脚本零 LLM
+
+- [2026-11-17 16:2x @BigLife-OSLoop R3367] 轮记：日更面重建轮（10 面重出·零 LLM·让路窗守规）
+- **轮首**：pull=Already up to date；决策水位已至 D-20261117-15（差集 0）；orders 无 11-17 涉本司新令；物理件面零催办。
+- **产品增量（实物）**：round_daily --run → 40 面中 10 面重建、stale=9/ran=10/failed=0/PASS——city-today.html、city-dashboard.html、city-objects.html、city-meets.html、city-ring-recency.html、city-ring-refusals.html(+json)、city-ops.html、gene-ledger.html、meet-candidates、index.html 全部按今日 registry/state 重出，CEO 可直接打开看当日城况。
+- **同期入库（今早会话遗留年轮）**：7 张卡补录 2026-11-17 年轮并升圈（C-01222/23/24/25/26/29/31，含 [锚] 全注脚），ring_lint 复核 PASS（rings=11100 coded=764 pre=764 post=0 infra_post=0）——派生面与源卡同批入库，避免看板指向未入库源。
+- **守卫面**：persona_generations --check rc=0（gen 8）｜池/QC/相遇/反思/基因按让路窗与冷却跳过。
+- **本轮新发现（未开单·留档）**：T-20261117-02 的『巡检面』与『修复面』口径不一致——repair_ring_ids.py 的 IDPAT 只匹配老式订单号（O-/D-/T-/PR-），对巡检面口径（内部码 G08/B2396/S2.5 + 机队词 显存/GPU/VRAM/机队）零命中，实跑 --report 得 cards=0/lines=0；因此 qa/RING-ID-PENDING-20261117.md 的 1081 环次目前无任何可执行修复路径。抽样机队词 130 条语境（显存紧张/显存没报警/显存稳着/GPU显存低了）差异极大，机械替换必生病句，确认只能逐条重写 → 建议下轮建 ring_detox（队列式改写+改写后自动复核），19:00 后跑批。
+- **让路面**：evolve --batch/--meet、pool_gen、reflect 均受工作日 09:00-19:00 让路窗（D-20261020-02）拦停，内容三腿顺延 19:00 夜窗（现队伍 due=10）。
+- **CEO 可见三行**：当前活＝日更面重建+年轮巡检缺口归因（16:2x）｜最近实物＝C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-today.html（16:17 重出）+ qa\RING-LINT-REPORT.md（rings=11100 PASS）｜下个里程碑＝19:00 夜窗年轮批（due=10、补 sync_rings）+ 相遇轮 + 建 ring_detox 处理 1081 存量环次。
+- tokens: local=0 api=0 api_reason=yield-window(09-19) 内容线全停＋本轮全确定性脚本零 LLM

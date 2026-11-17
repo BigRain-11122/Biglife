@@ -1084,8 +1084,14 @@ def compute_used_mib():
         return None
 
 
-def vram_guard(limit=0.90):
+def vram_guard(limit=None):
     """T-20261113-06 ②: refuse to start an LLM batch on an already-busy GPU.
+
+    2026-11-17: threshold now reads BIGLIFE_VRAM_LIMIT (default 0.90 unchanged).
+    Why: vram-gate.jsonl showed the lane shipping at 89-94% occupancy all day, so
+    the desktop never had room and the WeChat client went white-screen. A batch
+    that starts at 94% only trades one art line for another; the env knob lets the
+    machine keep 18% clear for the owner's own apps.
 
     Probe failure passes (no nvidia-smi on some fleet machines / no GPU) - the
     guard must never become a new silent stop for the lane. Returns the used
@@ -1099,6 +1105,11 @@ def vram_guard(limit=0.90):
     Every successful probe is also written to state/vram-gate.jsonl so the ops
     page can show the gate's own history (R2934: "yield" was console-only).
     """
+    if limit is None:
+        try:
+            limit = float(os.environ.get("BIGLIFE_VRAM_LIMIT", "0.90"))
+        except (TypeError, ValueError):
+            limit = 0.90
     try:
         r = subprocess.run(
             ["nvidia-smi", "--query-gpu=memory.used,memory.total",
@@ -4096,8 +4107,12 @@ def main():
 
     # D-20261020-02 日间让路窗排程闸: LLM 批面（batch/meet/reflect）工作日 09:00-19:00 零改道，
     # 周末全窗自领；水线批/池产出排程限非让路窗 19:00-09:00。本地路径（--qc/确定性件）不受影响。
+    # CEO 当面要求日间跑时的显式逃生门（2026-11-17）：令的本意是「CEO 用机时让路」，
+    # 所以 CEO 本人要求立即生产时前提不成立。默认仍让路，只认显式设置。
+    _ignore_yield = str(os.environ.get("BIGLIFE_IGNORE_YIELD_WINDOW", "")).strip().lower() \
+        in ("1", "true", "yes")
     if (args.batch or args.meet or args.reflect) and not args.audit_due \
-            and yield_window_active():
+            and not _ignore_yield and yield_window_active():
         print("yield-window: workday 09:00-19:00 CEO lane-priority - evolve/meet/reflect "
               "deferred to 19:00-09:00/weekend (D-20261020-02)")
         return

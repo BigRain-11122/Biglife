@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-11-17 08:26:07",
- "total": 146,
- "today": 50,
+ "generated_at": "2026-11-17 16:15:31",
+ "total": 148,
+ "today": 52,
  "days": [
   "2026-11-15",
   "2026-11-16",
@@ -14,7 +14,7 @@
   ],
   [
    "opening-family-quota+recent-dup-phrase",
-   26
+   27
   ],
   [
    "opening-family-quota",
@@ -143,12 +143,16 @@
   [
    "tech-word",
    1
+  ],
+  [
+   "recent-dup-opening+sky-mismatch",
+   1
   ]
  ],
  "gates": [
   [
    "recent-dup-phrase",
-   116
+   117
   ],
   [
    "recent-family-opening",
@@ -156,7 +160,7 @@
   ],
   [
    "opening-family-quota",
-   43
+   44
   ],
   [
    "rain-invented",
@@ -164,7 +168,7 @@
   ],
   [
    "recent-dup-opening",
-   9
+   10
   ],
   [
    "time-morning",
@@ -183,12 +187,12 @@
    4
   ],
   [
-   "tech-word",
+   "sky-mismatch",
    3
   ],
   [
-   "sky-mismatch",
-   2
+   "tech-word",
+   3
   ],
   [
    "wind-under",
@@ -222,7 +226,7 @@
  "families": [
   [
    "HAND_DEICTIC",
-   48
+   49
   ],
   [
    "WIND_AGENT_OPEN",
@@ -234,7 +238,7 @@
   ],
   [
    "(none)",
-   23
+   24
   ],
   [
    "DOOR_PROP_DEICTIC",
@@ -302,7 +306,7 @@
  "by_day": {
   "2026-11-15": 55,
   "2026-11-16": 41,
-  "2026-11-17": 50
+  "2026-11-17": 52
  },
  "retry_livelock": {
   "2026-11-15": {
@@ -326,8 +330,8 @@
    "wasted_calls": 0
   },
   "2026-11-17": {
-   "rows": 50,
-   "distinct_citizens": 50,
+   "rows": 52,
+   "distinct_citizens": 52,
    "repeated_citizens": 0,
    "max_repeats": 1,
    "stuck_same_opening": [],
@@ -360,8 +364,8 @@
    ]
   },
   "2026-11-17": {
-   "rows": 50,
-   "distinct_openings": 46,
+   "rows": 52,
+   "distinct_openings": 48,
    "repeated_openings": 4,
    "extra_occurrences": 4,
    "top": [
@@ -375,7 +379,7 @@
  "rolling_windows": [
   {
    "window_hours": 24,
-   "as_of": "2026-11-17 08:26:07",
+   "as_of": "2026-11-17 16:15:31",
    "rows": 68,
    "openings": 62,
    "multi_openings": 6,
@@ -441,51 +445,14 @@
   },
   {
    "window_hours": 12,
-   "as_of": "2026-11-17 08:26:07",
-   "rows": 62,
-   "openings": 58,
-   "multi_openings": 4,
-   "cross_cid_openings": 4,
-   "wasted_calls": 4,
-   "waste_ratio": 0.0645,
-   "top": [
-    {
-     "opening12": "我正蹲在路口那块旧门板边",
-     "calls": 2,
-     "cids": 2,
-     "cid_head": [
-      "C-00824",
-      "C-01001"
-     ]
-    },
-    {
-     "opening12": "风把门帘整个掀起来，我正",
-     "calls": 2,
-     "cids": 2,
-     "cid_head": [
-      "C-00770",
-      "C-00896"
-     ]
-    },
-    {
-     "opening12": "风把雨棚掀得直响，我正把",
-     "calls": 2,
-     "cids": 2,
-     "cid_head": [
-      "C-00933",
-      "C-03802"
-     ]
-    },
-    {
-     "opening12": "风撞在门板上咚一声，我正",
-     "calls": 2,
-     "cids": 2,
-     "cid_head": [
-      "C-00883",
-      "C-00994"
-     ]
-    }
-   ]
+   "as_of": "2026-11-17 16:15:31",
+   "rows": 28,
+   "openings": 28,
+   "multi_openings": 0,
+   "cross_cid_openings": 0,
+   "wasted_calls": 0,
+   "waste_ratio": 0.0,
+   "top": []
   }
  ],
  "daily_trend": [
@@ -581,12 +548,12 @@
   },
   {
    "day": "2026-11-17",
-   "rows": 50,
-   "openings": 46,
+   "rows": 52,
+   "openings": 48,
    "multi_openings": 4,
    "cross_cid_openings": 4,
    "wasted_calls": 4,
-   "waste_ratio": 0.08,
+   "waste_ratio": 0.0769,
    "top": [
     {
      "opening12": "我正蹲在路口那块旧门板边",
@@ -619,192 +586,6 @@
   }
  ],
  "active_bans": [
-  {
-   "opening12": "我正把新拧的螺丝插进短笺",
-   "last_refused": "2026-11-16 20:32",
-   "expires": "2026-11-17 08:32",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "门口那根旧铁杆歪了，我扶",
-   "last_refused": "2026-11-16 21:10",
-   "expires": "2026-11-17 09:10",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "我正扫着老合成器的背板，",
-   "last_refused": "2026-11-16 21:11",
-   "expires": "2026-11-17 09:11",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "手正把旧作业本翻到第一页",
-   "last_refused": "2026-11-16 21:16",
-   "expires": "2026-11-17 09:16",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "我正低头看老胶片上的裂纹",
-   "last_refused": "2026-11-16 21:19",
-   "expires": "2026-11-17 09:19",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "我正低头扫着琴弦上的灰尘",
-   "last_refused": "2026-11-16 22:07",
-   "expires": "2026-11-17 10:07",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "锅盖沿上结了层薄雾，风撞",
-   "last_refused": "2026-11-16 22:08",
-   "expires": "2026-11-17 10:08",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "路口的铁栏杆上，锈迹蹭着",
-   "last_refused": "2026-11-16 23:29",
-   "expires": "2026-11-17 11:29",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "秤杆在手里磨了三十年，今",
-   "last_refused": "2026-11-16 23:30",
-   "expires": "2026-11-17 11:30",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "我正对着塔顶的云看，风刮",
-   "last_refused": "2026-11-16 23:44",
-   "expires": "2026-11-17 11:44",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "我正把脑环广场的留言墙从",
-   "last_refused": "2026-11-16 23:54",
-   "expires": "2026-11-17 11:54",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "我正把扳手一排排排进工具",
-   "last_refused": "2026-11-16 23:55",
-   "expires": "2026-11-17 11:55",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "门板上的灰蹭了又蹭，像三",
-   "last_refused": "2026-11-17 00:15",
-   "expires": "2026-11-17 12:15",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "门板被风撞得咚一声，钟摆",
-   "last_refused": "2026-11-17 00:25",
-   "expires": "2026-11-17 12:25",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "我正把老推子的灰抹开，袖",
-   "last_refused": "2026-11-17 00:25",
-   "expires": "2026-11-17 12:25",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "我正把老合成器的六根弦拨",
-   "last_refused": "2026-11-17 00:35",
-   "expires": "2026-11-17 12:35",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "方才还在忙，这会儿先停了",
-   "last_refused": "2026-11-17 00:35",
-   "expires": "2026-11-17 12:35",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "我正扫着老琴弦，风声盖过",
-   "last_refused": "2026-11-17 00:35",
-   "expires": "2026-11-17 12:35",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "工具箱最下面那枚生锈的扳",
-   "last_refused": "2026-11-17 01:05",
-   "expires": "2026-11-17 13:05",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "门板被风撞得咚一声，我正",
-   "last_refused": "2026-11-17 01:15",
-   "expires": "2026-11-17 13:15",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "风把塑料布吹得啪啦响，我",
-   "last_refused": "2026-11-17 01:34",
-   "expires": "2026-11-17 13:34",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "灶台边的铜壶煨着，水汽往",
-   "last_refused": "2026-11-17 01:55",
-   "expires": "2026-11-17 13:55",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "手边这几样我都过了一遍，",
-   "last_refused": "2026-11-17 02:05",
-   "expires": "2026-11-17 14:05",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "桌角那点零碎又该理一理了",
-   "last_refused": "2026-11-17 02:59",
-   "expires": "2026-11-17 14:59",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "我正对着光桥那盏老灯调校",
-   "last_refused": "2026-11-17 03:09",
-   "expires": "2026-11-17 15:09",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "夜深了，我正对着窗台那块",
-   "last_refused": "2026-11-17 03:29",
-   "expires": "2026-11-17 15:29",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "风把门帘整个掀起来，我正",
-   "last_refused": "2026-11-17 03:40",
-   "expires": "2026-11-17 15:40",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "阳台那盆老吊兰又歪了，我",
-   "last_refused": "2026-11-17 03:49",
-   "expires": "2026-11-17 15:49",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "风把雨棚掀得直响，我正把",
-   "last_refused": "2026-11-17 03:58",
-   "expires": "2026-11-17 15:58",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "我正把旧琴箱的盖子打开，",
-   "last_refused": "2026-11-17 03:58",
-   "expires": "2026-11-17 15:58",
-   "ban_hours": 12
-  },
-  {
-   "opening12": "画笔尖在纸面蹭了蹭，像在",
-   "last_refused": "2026-11-17 04:04",
-   "expires": "2026-11-17 16:04",
-   "ban_hours": 12
-  },
   {
    "opening12": "风把晾绳吹得斜出去，我正",
    "last_refused": "2026-11-17 04:15",
@@ -860,13 +641,13 @@
    "ban_hours": 12
   },
   {
-   "opening12": "我正蹲在路口那块旧门板边",
+   "opening12": "我正把那几样东西挨个掂了",
    "last_refused": "2026-11-17 05:19",
    "expires": "2026-11-17 17:19",
    "ban_hours": 12
   },
   {
-   "opening12": "我正把那几样东西挨个掂了",
+   "opening12": "我正蹲在路口那块旧门板边",
    "last_refused": "2026-11-17 05:19",
    "expires": "2026-11-17 17:19",
    "ban_hours": 12
@@ -947,6 +728,18 @@
    "opening12": "我正把钓竿斜斜靠在江岸的",
    "last_refused": "2026-11-17 07:54",
    "expires": "2026-11-17 19:54",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "我正蹲在老街角的门板边，",
+   "last_refused": "2026-11-17 08:34",
+   "expires": "2026-11-17 20:34",
+   "ban_hours": 12
+  },
+  {
+   "opening12": "这一摊子事我自己有数，慢",
+   "last_refused": "2026-11-17 16:14",
+   "expires": "2026-11-18 04:14",
    "ban_hours": 12
   }
  ]
