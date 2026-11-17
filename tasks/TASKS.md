@@ -141,6 +141,7 @@ smonitor = false\。
   - [2026-11-17 02:4x @BigLife-OSLoop R3280] **前置①本日已成立（禁牌确有命中窗口）但本轮顺序已破，顺延下一轮先跑本单**：12h 全城禁牌 n=28（latest 02:05:04 C-00784）；本批年轮实有 **4 席命中 `recent-dup-phrase`**（软让步落环），证明当下窗口两臂可产可比读数。本轮年轮批已先吃 10 席（due 归零）→ 按 R3263 同判不跑，**下一轮顺序硬性改为「先 `ring_quota_negctl.py`，再年轮批」**；若届时 due 仍 <8 席，按 5 席诚实写、禁抬 `--batch`。本轮实录：轮首 pull=Already up to date／树净／与 origin **0/0**（D-09 分叉已收敛）／决策水位差 NEW=0（已至 D-20261117-05）／orders 无涉本司新件。产品面：年轮 **10/10**（written=10 written_new=10 skipped=0）＋行为线镜像 rows=10／events gate **PASS**（45829 events cards=10111 mismatch=0 schema=0 gap=0d）／round_daily **PASS**（stale=17 ran=18 failed=0）／gen rc=0 pending_sync=none gen=7 habits=169／pool **SELF_TERMINATE**（axes 72 桶全达标·determinism 192 对 mismatch=0）／reflect 日配额已满（reflections.jsonl 尾 00:57）／hq ALREADY_REPORTED 零写入。**T-20261115-04 本日 R3279 已结案不重立**；T-20261116-16 观察窗维持 D2/3（meet_new_bad=0，D3=11-18 读结）。计量：**tokens: local=10 api=0 api_reason=-**。
   - [2026-11-17 04:5x @BigLife-OSLoop R3305] **第三次实弹仍 INCONCLUSIVE，且暴露工装级新缺陷 → 本单转 blocked-on-tooling，禁再无据重跑**：①前置①成立（active=39 禁牌·本批年轮 4 席 `recent-dup-phrase` 命中）；②`--selftest` PASS 0 fail；`--dry-run` due=10→每臂 5；③实跑两臂 **written=0 done=0 summary 行缺失**（`(no summary line)`），verdict=INCONCLUSIVE rc=1，工作树零残留（restore=applied）。④**矛盾点**：`evolve_citizen --audit-due` 同一时刻实读 `due=10`，而两臂 arm 子进程都像没跑过——故非「禁牌无命中」而是** arm 侧输出/消耗链有缺陷**（summary 正则 `OK evolved=(\d+) of (\d+) due` 未命中，done 计数亦为 0）。⑤修法（下一轮做，须带负控）：arm 子进程 stdout 原样落 `state/negctl-arm-<arm>.log`（不入库）以定位是真崩溃/早退/编码不匹配；`--dry-run` 与 arm 起跑前各打一次 `--audit-due` 并写入报告做口径比对；报告在 summary 缺失时判 `TOOLING_ERROR` 而非 INCONCLUSIVE（区分「测不出」与「没测」）。⑥补丁维持 applied（保守留存），**第四次重跑的前置=上述工装修复落地并自检 PASS**，不得以「再试一次」为由直接跑。
 - [ ] **T-20261116-16**（R3252 立·相遇面出生地拦截·中优先）在 Tools/evolve_citizen.py 的相遇写入路径加自校验：两卡同日互引必须都落成功（先写 A 再写 B 中途失败即留单向，实证 C-08226→C-08319 2026-10-27），否则回滚或补写；同日同对象重复（C-00010/C-00011 2026-10-11 各重复一行）写前查重。
+  - 证据（R3332 2026-11-17 09:1x）：实现已在树（`_meet_ring_today`／`_meet_pair_check`／`_meet_write_all` 回滚，提交 aca92d2d5／469cebe5c），常驻负控 `--selftest-meet` 本轮实跑 **PASS 7/7**（healthy／half-write／wrong-partner／same-day-precheck／stale-ring／rollback-bytes／mid-write-exception）；QC 面 `meet_new_bad=0`。剩观察窗 11-18 复核结单。
   - status: **open**（2026-11-16 19:0x R3252 @BigLife-OSLoop 立·来源=qa/MEET-INVARIANT-20261116.md）
   - [2026-11-17 07:0x @BigLife-OSLoop R3320] **观察窗 D2/3 复核通过，未见新增违律**：常驻负控 `evolve_citizen --selftest-meet` 实跑 **PASS 7/7**（healthy/half-write/wrong-partner/same-day-precheck/stale-ring/rollback-bytes/mid-write-exception），`qc_census` 读数 `cards=10114 problems=0 meet=169 one_sided=1 meet_dup=2 meet_new_bad=0`——闸后新增零，存量 3 处为 10-27 闸上线前历史（既定裁决不修仅观测）。今日 3 对相遇（C-03579↔C-03646／C-00783↔C-04930／C-03317↔C-04123）全为双向对称，无单向。**状态不动：D3=11-18 读结案。**
   - [2026-11-17 05:0x @BigLife-OSLoop R3306] **补上 R3291 六例之外的第七例：写入段异常绕过断言**（本单结单条件仍=11-18 读 D3，状态不动）。核对树内代码发现 R3291 的 `selftest_meet()` 六例全部走「`add_ring` 静默拒绝/写入偏差」路径，**无一例覆盖 `add_ring` 抛异常**：原写入循环 `for cid,line in zip(ids,lines): add_ring(...)` 无兜底，任一半抛异常则循环中断、异常上冒、下方 `_meet_pair_check(ids)` 根本不执行 → A 卡已写、B 未写、**单向落卡且不回滚**，恰是本单要消灭的形态（旧注释只考虑了「拒绝返回」与「写后不对称」两种，漏了「抛异常中断」）。修法=写入段整体 `try/except`，任一半失败即复原 `originals`＋`sys.exit(1)`＋不 commit，与既有 `meet-asymmetry` 分支同构收口。**负控 PASS 0 fail**（静态 3：分支存在且在不对称分支之前／回滚四要素齐备 `originals` 遍历·`newline="\n"`·`f.write`·`sys.exit(1)`／错误分支内无 `commit_files`；动态 3：A 成功+B 抛异常 → rc=1 且双卡字节级复原；临时夹具 rmtree 零盘污），`py_compile` rc=0。证据=`qa/MEET-ROLLBACK-NEGCTL-20261117.md`。真库 `qc_census` 实测 `meet=169 one_sided=1 meet_dup=2 meet_new_bad=0`＝闸后新增 0 维持（存量 3 处为 10-27 闸上线前历史，按既定裁决不修仅观测）。**建议下一轮把本例并入 `selftest_meet()` 常驻**（本轮预算已尽，未做，如实记）。
@@ -4570,3 +4571,22 @@ ound_daily --run **39 面全鲜 stale=0 ran=0 failed=0 verdict=PASS**；persona_
 eflect_citizen --batch 5；11-18 相遇不变量 D3 结单。
 
   计量：**tokens: local=0 api=0 api_reason=-(让路窗内年轮腿未触发；工装修复/自检/日更/闸全确定性零 LLM)**
+
+## R3332 · 2026-11-17 09:13-09:2x @BigLife-OSLoop（守轮·相遇写路径负控实跑＋QC 全绿）
+
+- 轮首：`git pull --ff-only`=Already up to date／工作树净；决策水位差 NEW=0（watermark 已至 D-20261117-11，与 decisions.md 全量 D-ID 差集为空；D-20261117-08 判本司活跃 PASS）；`docs/orders.md` 物理件区无涉本司新件。
+
+- **本轮实物（可执行证据，非文档）**：
+  ① `evolve_citizen --selftest-meet` 实跑 **PASS 7/7**——覆盖 T-20261116-16 三面守卫（同日预检 `_meet_ring_today`／双向断言 `_meet_pair_check`／写中异常回滚 `_meet_write_all`），含 mid-write-exception 第七例（第二卡写失败→两卡字节级还原）。
+  ② `evolve_citizen --audit-due` **PASS**（due=10，leaked=0）——T-20261114-01「到期席不得已带当日环」回归闸。
+  ③ `qc_census` **problems=0**（cards=10114 evolved=10114；dup_rings=37/37 dup_new=0；meet=169 one_sided=1 meet_dup=2 **meet_new_bad=0**，三项均为存量历史观测）。
+  ④ `round_daily --run` **verdict=PASS**（stale=1 ran=2 failed=0，index 重建；其余面 skipped-fresh）。
+  ⑤ `persona_generations --check` **rc=0**（gen 8 / habits=170 / cutoff C-10120 / pending_sync=none，老居民快照零漂移）。
+
+- **顺延（诚实不假报）**：年轮／相遇／反思三腿全部 `yield-window`（工作日 09:00-19:00 让路·D-20261020-02，脚本自带闸返回）；语言线池 `SELF_TERMINATE`（72/72 达标）；HQ 日上报闸 `day=2026-11-17 lines=1 ALREADY_REPORTED` 零写入；基因轮本日已开 gen 8 不重复。
+
+- **open 单状态**：T-20261116-16 → 实现＋负控已齐（本轮 7/7 实跑入证据行），仅剩 11-18 观察窗复核结单；T-20261116-13 配额闸 A/B **blocked-on-window**（三前置 DONE，待 ≥19:00 夜窗实弹）；T-20261117-01 **CLOSED（虚警·byte 级复核）**；T-20260923-01 FluxVerse 线 PARKED 无动作。
+
+- **实况三行**：当前活＝相遇写路径负控实跑＋QC／日更／世代三闸闭环（09:1x-09:2x）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\QC-REPORT.md`（problems=0·09:15）＋`census\export\index.html`／`city-ops.html`（09:15 重建）｜下个里程碑＝11-17 19:00 后年轮批＋反思线 `--batch 5`＋配额闸 A/B 实弹，11-18 相遇不变量 D3 结单。
+
+  计量：**tokens: local=0 api=0 api_reason=-(让路窗内三腿全 yield·本轮负控/QC/日更/世代全确定性零 LLM)**
