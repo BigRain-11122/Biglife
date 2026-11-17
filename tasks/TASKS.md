@@ -5044,3 +5044,13 @@ ound_daily --run 29 面 stale=0 PASS；persona_generations --check rc=0 gen=8 pe
 - **诚实边界**：本轮零内容增量（年轮/相遇/反思被让路窗硬闸挡住，程序不可绕）；未新开单、未改闸代码、未触历史观测面（one_sided=1、meet_dup=2 维持不回填）。
 - **open 单**：T-20261116-13 blocked-on-window；T-20261116-16 待 11-18 读 D3；T-20260923-01 PARKED。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)
+
+
+- [2026-11-17 15:45 @BigLife-OSLoop R3364] 轮记：让路窗六闸复核轮（零 LLM·全门 PASS）
+- **轮首**：pull=up-to-date、工作树净（仅 qa 回报时间戳）；决策差集 NEW=0（水位已至 D-20261117-15，11-17 无遗漏）；orders 无 11-17 涉本司新令；物理件面零催办。
+- **六闸证据**：evolve --batch 3 → yield-window（工作日 09:00-19:00·D-20261020-02）；round_daily --run → 29 面 stale=0 ran=0 failed=0 PASS；persona_generations --check → gen=8 habits=170 pending_sync=none；events_refresh --gate → cards=10111 events=46181 replayed=10111 schema_errors=0 mismatch=0 PASS（chronicle gap=0d）；pool_audit → 全桶达标 SELF_TERMINATE（hard_fails=0·双抽 192+25 对 mismatch=0）；qc_census 今日 13:40 已跑（异常 0，本轮免重复）。
+- **质量面复算（本轮实物）**：ring_lint → rings=11093 pre=764 post=0 PASS；ring_simile_audit → city-ring-quality.html 重算（rings=20705 citizens=10091 sim=866 short=689 tmpl=1212 queue=400）；ring_material_check → 11-15/16/17 连续 3 日 motif 20/20、rumor 8/8 PASS。daily_kpi_assert → PASS（今日年轮 489/489·相遇 6/6·开口 490/490·卡总 10114/10114·城区 6/6·看板同口径）。
+- **实况三行**：当前活｜让路窗全门复核与质量面复算（15:4x）｜最近实物｜C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md（46181 事件全量重放 PASS·2026-11-17 15:39）｜下个里程碑｜19:00 夜窗年轮批（补 due=10，随后 sync_rings 收口）+ 相遇轮 + 反思批 5。
+- **诚实边界**：本轮零内容增量（年轮/相遇/反思被让路窗硬闸拦，不可绕）；产出为六闸复核 + 质量面复算 + KPI 一致性证据，无新缺陷、未开新单。
+- **open 单**：T-20261116-13 配置闸 A/B → blocked-on-window（待 19:00 后）；T-20261116-16 相遇不变式 → 待 11-18 读 D3；T-20260923-01 FluxVerse PARKED。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)+no-llm
