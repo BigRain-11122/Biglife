@@ -1,5 +1,16 @@
 # BigLife 任务板（自领制·认领置 in-progress 署名+时间）
 
+## R3350 · 2026-11-17 12:28-12:4x @BigLife-OSLoop（确定性面轮·2 面重建＋事件闸 46181 复验＋语言线自停）
+
+- 轮首：pull `Already up to date`；`git -c core.fsmonitor=false status` 起步净（仓内 `core.fsmonitor=false` 已生效）；决策水位覆盖至 D-20261117-15，与 decisions.md 逐条比对差集 **NEW=0**（D-20261117-04/08 为上游回执与我司收取面判读，无需动作）；`docs/orders.md` 物理件区无涉本司新件。
+- **产品增量**：`round_daily.py --run` = **stale=1 ran=2 failed=0 verdict=PASS** —— `census/export/city-ops.html`（dep-mtime:state/vram-gate.jsonl·显存门实况刷新）与 `census/export/index.html` 重建，其余 35 面 skipped-fresh；`persona_generations.py --check` **rc=0**（gen 8 · habits=170 · cutoff C-10120 · pending_sync=none）。
+- **事件回放闸**：`events_refresh.py --gate` **PASS** —— events=**46181** cards=10111 shards=3，replay 10111/10111、schema_errors=0、mismatch=0、coverage unexpected_missing=0、chronicle fresh 11-17 gap=0d；`qa/EVENTS-REPLAY-REPORT.md` 入库。
+- **语言线自停**：`pool_audit.py` **PASS SELF_TERMINATE**（72 轴桶+12 像素桶+greet 28+faq 7+负例 6/6 全达标，determinism 192+25 对 mismatch=0），按「每日至多 1 次」与自终止律跳过生成。
+- **让路窗（如实记）**：`evolve_citizen --batch 3` → **yield-window**（workday 09:00-19:00·D-20261020-02）自停，未强跑未改参数；反思线未到 19:00 夜窗；相遇环今日 cap 已满；`hq_feedback_daily --check` = `ALREADY_REPORTED`（当日 1 行）零写入。
+- **open 单状态**：T-20261116-16 观察窗续（代码层 `_meet_write_all` 回滚＋双向断言＋`selftest_meet` 三重负控已在树，D3=11-18 读 `meet_new_bad=0` 结单）；T-20261116-13 配额闸 `tooling-ready`（待 19:00 后且 due≥16 实弹）；T-20261117-01 本仓已修、集团层待统一；本轮无新增 open 单。
+- **实况三行**：当前活＝确定性面轮收口（显存门实况面重建＋事件闸 46,181 复验 PASS＋池审计自停）；最近实物＝`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-ops.html`（12:4x 重建）＋`census/export/index.html`＋`qa/EVENTS-REPLAY-REPORT.md`；下个里程碑＝19:00 后夜窗年轮批＋反思线恢复（窗 ≤7h），11-18 相遇不变量 D3 结单。
+- tokens: local=0 api=0 api_reason=-（本窗全确定性脚本；年轮/反思/相遇均在让路窗内自停，零 LLM 调用）。
+
 ## R3341 · 2026-11-17 10:03-10:20 @BigLife-OSLoop（确定性面轮·2 面重建＋QC 全净＋负控工装 blocked 解除）
 
 - 轮首：pull `Already up to date`；`git -c core.fsmonitor=false status` 起步净；决策水位已覆盖至 D-20261117-11（与集团 decisions.md 最新行逐条比对差集 **NEW=0**）；`docs/orders.md` 无涉本司新件（bm-b 开机/bm-d 入网属他线）。

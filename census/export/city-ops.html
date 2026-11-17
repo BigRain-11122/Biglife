@@ -32,50 +32,51 @@ li{font-size:13px;color:#b9b6ae;margin:4px 0}
 footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(--line)}
 </style></head><body><!--bl-nav:index--><div style="position:fixed;left:12px;top:12px;z-index:9999"><a href="index.html" style="display:inline-block;padding:5px 10px;background:rgba(20,24,30,.86);border:1px solid #303740;border-radius:4px;color:#c8a06a;font:12px/1 'Songti SC',Georgia,serif;text-decoration:none">← 产物目录</a></div>
 <header><h1>城市产线实况</h1>
-<div class="sub">本页由 Tools/build_city_ops.py 确定性生成（零 LLM）· 生成于 2026-11-17 11:49 · 数据全部取自本仓盘上与 git</div></header>
+<div class="sub">本页由 Tools/build_city_ops.py 确定性生成（零 LLM）· 生成于 2026-11-17 12:29 · 数据全部取自本仓盘上与 git</div></header>
 <main>
 <div class="kpis">
-<div class="kpi"><b>6 分钟前</b><span>最近一次轮次心跳</span></div>
-<div class="kpi"><b>11-17 11:41</b><span>最近提交时间</span></div>
+<div class="kpi"><b>4 分钟前</b><span>最近一次轮次心跳</span></div>
+<div class="kpi"><b>11-17 12:22</b><span>最近提交时间</span></div>
 <div class="kpi bad"><b>3</b><span>超过 180 分钟未刷新的页</span></div>
 <div class="kpi"><b>0</b><span>无时间戳状态行（被丢弃，需修）</span></div>
 <div class="kpi"><b>10114</b><span>居民（轻量册）</span></div>
 <div class="kpi bad"><b>400</b><span>年轮待修队列（cap 400）</span></div>
-<div class="kpi"><b>0/163</b><span>近 24h 排产闸让路次数（探针数分母）</span></div>
+<div class="kpi"><b>0/164</b><span>近 24h 排产闸让路次数（探针数分母）</span></div>
 </div>
 
 <h2>最近轮次心跳<em>state/heartbeat.txt 尾 10 条 · 最后一条：os-loop: round done exit=0 · 无时间戳状态行 <b>0</b> 条（有时间戳才会进本表）</em></h2>
 <table><thead><tr><th>时间</th><th>记录</th></tr></thead><tbody>
+<tr><td class="t">11-17 12:24:20</td><td>os-loop: round done exit=0</td></tr>
+<tr><td class="t">11-17 12:17:06</td><td>os-loop: round done exit=0</td></tr>
+<tr><td class="t">11-17 12:09:28</td><td>os-loop: round done exit=0</td></tr>
+<tr><td class="t">11-17 11:53:42</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-17 11:43:30</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-17 11:37:02</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-17 11:29:09</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-17 11:18:56</td><td>os-loop: round done exit=0</td></tr>
 <tr><td class="t">11-17 11:17:38</td><td>os-loop: R3346 round done exit=0 (maint: qc refresh, 3 gates green)</td></tr>
 <tr><td class="t">11-17 11:12:13</td><td>os-loop: round done exit=0</td></tr>
-<tr><td class="t">11-17 10:59:59</td><td>os-loop: round done exit=0</td></tr>
-<tr><td class="t">11-17 10:49:07</td><td>os-loop: round done exit=0</td></tr>
-<tr><td class="t">11-17 10:40:29</td><td>os-loop: round done exit=0</td></tr>
-<tr><td class="t">11-17 10:08:53</td><td>os-loop: round done exit=0</td></tr>
 </tbody></table>
 
 <h2>最近产物提交<em>git log 尾 12 条</em></h2>
 <table><thead><tr><th>时间</th><th>commit</th><th>说明</th></tr></thead><tbody>
+<tr><td class="t">11-17 12:22</td><td class="h">126e17692</td><td>R3353 让路窗 QC 巡检轮：10114 卡不变量全 PASS(异常 0·闸后新增违律 0) + 事件闸 46181/10111 mismatch=0 + 38 面全鲜 + gen8/pool 自终止；内容线顺延 19:00 夜窗（due=10 靶单就绪） [via BigLife-OSLoop]</td></tr>
+<tr><td class="t">11-17 12:16</td><td class="h">442f5ef61</td><td>round: 事件流回放闸 PASS(46181/10111·mismatch 0) + 本轮实录(让路窗顺延夜窗) [via BigLife-OSLoop]</td></tr>
+<tr><td class="t">11-17 12:08</td><td class="h">3d64d2a22</td><td>R3352 轮记：假净闸交付（T-20261117-01 ③）+ 守卫面复核全绿 + 计量行`n`n[via BigLife-OSLoop]</td></tr>
+<tr><td class="t">11-17 12:07</td><td class="h">6746f3e5d</td><td>R3352 轮首假净闸落地（T-20261117-01 第③项）：Tools/git_guard.py 双读数比对 + 4 例负控 PASS</td></tr>
+<tr><td class="t">11-17 12:01</td><td class="h">b7b9dbbce</td><td>R3351 让路窗稳健康轮：可见面全鲜/世代 gen8/pool 自终止/反思线连续 3 生产日验收成立；内容线让路窗内零新增实物，如实记账 [via BigLife-OSLoop]</td></tr>
+<tr><td class="t">11-17 11:53</td><td class="h">180b260b9</td><td>R3350 TASKS self-correct: commit msg encoding was valid UTF-8; console GBK rendering was the false alarm (verified via git cat-file) [via BigLife-OSLoop]</td></tr>
+<tr><td class="t">11-17 11:52</td><td class="h">7bc82ca71</td><td>R3350 勘正：上一条提交（63597c420）消息内中文经 PowerShell 内联传参被 GBK 转码入库成乱码，实义=让路窗可见面补更（ops 面依赖 vram-gate mtime 滞后触发重建 city-ops/index）；本提交验证中文消息改走 git commit -F UTF-8 文件通道 [via BigLife-OSLoop]</td></tr>
+<tr><td class="t">11-17 11:51</td><td class="h">63597c420</td><td>R3350 让路窗可见面补更：ops 面依赖 vram-gate mtime 滞后触发重建 city-ops/index [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-17 11:41</td><td class="h">6c5ae08c9</td><td>chore(qc): 11-17 11:4x 让路窗验证轮——28 面全鲜/QC problems=0/事件闸 46181 PASS/年轮到期靶单 due=10 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-17 11:36</td><td class="h">ac427f507</td><td>chore(daily): rebuild today/map/index faces + events replay PASS [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-17 11:28</td><td class="h">d8e9ca2af</td><td>chore(qc): 11-17 11:2x 例巡复核——38 面全鲜/池达标/事件闸 46181 mismatch=0/problems=0 [via BigLife-OSLoop]</td></tr>
 <tr><td class="t">11-17 11:18</td><td class="h">22a8d90ad</td><td>docs(tasks): 记 PS5.1 git push 假失败判据（fetch+rev-parse 双值比对） [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-17 11:17</td><td class="h">8265b031d</td><td>round: R3346 让路窗维护轮实况（三闸全绿 + QC 例巡 + 步6/7/8 零动作） [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-17 11:16</td><td class="h">d9fc92c76</td><td>qc: 居民库不变量例巡 cards=10114 problems=0 meet_new_bad=0 (让路窗维护轮) [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-17 11:10</td><td class="h">06fd58082</td><td>genes(b62): 修车行当 3 条无碰撞基因入库 + 台账四面重建 [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-17 10:58</td><td class="h">06a799f8d</td><td>fix(ring-quality): tie-break phrase table sort for reproducible page output</td></tr>
-<tr><td class="t">11-17 10:48</td><td class="h">c9645d78d</td><td>R3343 让路窗维护轮：三闸复核 PASS + 本轮实录</td></tr>
-<tr><td class="t">11-17 10:39</td><td class="h">0ba95f27f</td><td>fix(ring-cleanup): 单号残句存回溯清污 44行/43卡 + 34档档案（残留归零·条数守恒·QC=0） [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-17 10:28</td><td class="h">c60045cc9</td><td>行为线 2026-11-17: 镜像 rows=43 ring=10114 [via BigLife-OSLoop]</td></tr>
-<tr><td class="t">11-17 10:23</td><td class="h">708ece9a4</td><td>fix(ring-gate): 年轮漏治理单号族补齐硬拒+feed洗净（115卡/117处·新闸多拦42行·人设零占用验伤） [via BigLife-OSLoop]</td></tr>
 </tbody></table>
 
 <h2>页面新鲜度<em>census/export 下的单页 · 按更新时间倒序</em></h2>
 <table><thead><tr><th>页面</th><th>体积</th><th>更新</th><th>状态</th></tr></thead><tbody>
+<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">18 KB</td><td class="t">11-17 11:49</td><td>新</td></tr>
 <tr><td><a href="city-today.html">city-today.html</a></td><td class="n">253 KB</td><td class="t">11-17 11:34</td><td>新</td></tr>
 <tr><td><a href="city-map.html">city-map.html</a></td><td class="n">864 KB</td><td class="t">11-17 11:34</td><td>新</td></tr>
 <tr><td><a href="gene-ledger.html">gene-ledger.html</a></td><td class="n">151 KB</td><td class="t">11-17 11:09</td><td>新</td></tr>
@@ -93,7 +94,6 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td><a href="city-ring-openings.html">city-ring-openings.html</a></td><td class="n">22 KB</td><td class="t">11-17 10:29</td><td>新</td></tr>
 <tr><td><a href="city-relations.html">city-relations.html</a></td><td class="n">24 KB</td><td class="t">11-17 10:29</td><td>新</td></tr>
 <tr><td><a href="city-reflections.html">city-reflections.html</a></td><td class="n">14 KB</td><td class="t">11-17 10:29</td><td>新</td></tr>
-<tr><td><a href="city-ops.html">city-ops.html</a></td><td class="n">18 KB</td><td class="t">11-17 10:29</td><td>新</td></tr>
 <tr><td><a href="city-meets.html">city-meets.html</a></td><td class="n">40 KB</td><td class="t">11-17 10:29</td><td>新</td></tr>
 <tr><td><a href="city-dossiers.html">city-dossiers.html</a></td><td class="n">447 KB</td><td class="t">11-17 10:29</td><td>新</td></tr>
 <tr><td><a href="city-goals.html">city-goals.html</a></td><td class="n">17 KB</td><td class="t">11-17 10:29</td><td>新</td></tr>
@@ -141,8 +141,9 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 </tbody></table>
 <div class="note">全量复读/过短/模板三段判负由 Tools/ring_simile_audit.py 产出；修复走 19:00 后让路窗的 evolve 批（LLM 复写），本页只呈现队列，不改写任何年轮文本。</div>
 
-<h2>排产闸（显存）<em>state/vram-gate.jsonl 实读 · 阈值 90% · 最近一次 降级放行（8 分钟前） · 近 24h 让路 0/163 次 · 显存饥饿 3 次</em></h2>
+<h2>排产闸（显存）<em>state/vram-gate.jsonl 实读 · 阈值 90% · 最近一次 放行（8 分钟前） · 近 24h 让路 0/164 次 · 显存饥饿 3 次</em></h2>
 <table><thead><tr><th>探针时间</th><th>结果</th><th>显存占用</th><th>GPU 会话（WDDM 不报单进程显存·非诊断依据）</th></tr></thead><tbody>
+<tr><td class="t">11-17 12:20</td><td>放行</td><td class="n">89% · 10962/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-17 11:41</td><td>放行</td><td class="n">94% · 11495/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-17 10:06</td><td>放行</td><td class="n">77% · 9404/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-17 09:14</td><td>放行</td><td class="n">76% · 9375/12282 MiB</td><td>—</td></tr>
@@ -150,17 +151,16 @@ footer{padding:18px 22px;color:#6a7078;font-size:12px;border-top:1px solid var(-
 <tr><td class="t">11-17 09:07</td><td>放行</td><td class="n">76% · 9371/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-17 08:54</td><td>放行</td><td class="n">83% · 10249/12282 MiB</td><td>—</td></tr>
 <tr><td class="t">11-17 08:44</td><td>放行</td><td class="n">83% · 10248/12282 MiB</td><td>—</td></tr>
-<tr><td class="t">11-17 08:37</td><td>放行</td><td class="n">83% · 10248/12282 MiB</td><td>—</td></tr>
 </tbody></table>
 <div class="note">「让路」＝GPU 被别的活占着，本轮年轮/相遇/反思批不启动（脚本自退，不是故障、也不计入零产出事故）；「显存饥饿」＝暖探针（1 token）无应答，整批零座席空烧退出（T-20261114-05）；「降级放行」＝桌面图形占卡但探针通过，批照跑；「放行」＝探针通过、批可开工。占用者取自 nvidia-smi compute-apps（Windows WDDM 不报单进程显存，故多数只见进程名）。</div>
 
 <h2>最近轮记<em>tasks/TASKS.md 内的轮号行</em></h2>
 <ul>
+<li>[2026-11-17 12:2x @BigLife-OSLoop R3352] **第③项已交付：轮首假净闸 `Tools/git_guard.py`**（零 LLM·本仓内可跑）。做法=同时读默认与 `-c core.fsmonitor=false` 两条 `status --porcelain`，按路径集合比对；「稳定读数有而默认读数无」即列 hidden 并判 FALSE-CLEAN RISK（rc=1），一致则 PASS（rc=0，干净或脏都算诚实）；rename 取目标路径（会被 add 的那侧）；顺带打 `git fsmonitor--daemon status`（该子命令对「未监视」返回 rc=1，故按文本判定不按退出码）。**实跑**：`--selftest` **PASS 4/4**（整树隐藏／两读数一致零误报／rename 目标路径／单文件部分隐藏）；实检默认 1 路径 vs 稳定 1 路径=一致，daemon=not-watching，rc=0；`py_compile` rc=0；19 个 daemon 常驻仍复现（与立单读数一致）。证据=`qa/GIT-GUARD-20261117.md`。**诚实边界**：本仓 `core.fsmonitor=false` 已生效，故真盘上无法自然复现假净，负控走合成读数（用例名已标明）；第①②项（daemon 归属／集团统一处置）按立单约束未动他仓。接线=轮首三步①补跑 `git_guard.py --quiet`（仅分歧时出声），分歧即不得以「树净」为前提收轮。</li>
 <li>[2026-11-17 10:1x @BigLife-OSLoop R3340] **blocked 解除：三项工装前置确认已全部在树且被自检覆盖，本单转 tooling-ready**。①`_dump_arm()`（L217-233）把每臂原始 stdout/stderr 落 `state/negctl/arm-&lt;day&gt;-&lt;臂&gt;.log`（含 rc 行）；②`due_consistency()`（L~500-530）起跑前后各打一次 `--audit-due`，把消耗差额写报告「due 口径」行并在不一致时优先判 `TOOLING_ERROR` 而非 CONFOUNDED；③`judge()`（L275-288）臂读数无摘要行即判 `TOOLING_ERROR`，自检含具名检项「judge 双臂无摘要行 -&gt; TOOLING_ERROR」「judge TOOLING_ERROR 不得冒充 PASS/FAIL」「judge 单臂无摘要行 -&gt; TOOLING_ERROR」。**实跑证据**：`--selftest` **PASS 0 fail**（26 检，含 _dump_arm 产出日志/日志含 rc 与 stdout 原文/日志名带日期与臂标签）；`--dry-run` 读数=`gate code in tree: YES`／`baseline 2026-11-17: rows=51 distinct=51 wasted=0 max_repeats=1`／`ban state: active=51 soonest=10:07 latest=20:34`／`due budget: due=10 → 每臂 5 席（请求 8）`。④**本轮仍不跑实弹**：前置②（每臂 ≥8 席，due≥16）不成立，按 R3255 硬门「两条不成立即不跑」执行；且此刻为工作日让路窗（09:00-19:00），年轮 LLM 调用被 defer。**实弹窗口=19:00 后且 due≥16 时**，顺序仍为「先本单、再年轮批」。⑤补丁维持 applied，未改任何闸代码；本轮零盘污（dry-run 自述未跑 LLM、未改工作树）。</li>
 <li>[2026-11-17 09:58 @BigLife-OSLoop R3336] T-20261112-01 口② 城区抽样实测：districts=6 dirty=956/10091=9.5%，最高 GM 13.2%（MD 9.6/QT 9.0/OR 7.0/NS 5.9/RV 4.6），**零区 &gt;20% 无需单区重生成**；余量 968→956 单调下降（验收线「月余量单调不增」达标）。证据=`qa/RING-TOKEN-DISTRICT-20261117.md`。</li>
 <li>[2026-11-17 09:2x @BigLife-OSLoop R3330] 本轮实录：轮首 pull=Already up to date、工作树净；决策水位差 NEW=0（watermark 已至 D-20261117-11）；orders 物理件区无涉本司新件；TASKS open 单＝T-20261117-01（CLOSED 虚警·集团层处置）／T-20261116-13（配额闸 A/B blocked-on-window，待 ≥19:00 夜窗实弹）／T-20261116-16（相遇不变量待 11-18 读 D3）。</li>
 <li>[2026-11-17 08:44-09:0x @BigLife-OSLoop R3329] 本轮实录：轮首 pull=Already up to date、工作树净；决策水位差 NEW=0（watermark 已至 D-20261117-11，与 decisions.md 全量 D-ID 差集为空；D-20261117-04 已核销、D-20261116-16④ 上游依赖解除已由 R3251 提前回执）；orders 物理件区无涉本司新件（末令 O-20261109）；TASKS open 单＝T-20261117-01（本仓已修·集团层处置）／T-20261116-13（配额闸 A/B blocked-on-tooling）／T-20261116-16（相遇不变量待 11-18 读 D3）。</li>
-<li>[2026-11-17 08:13-08:2x 交互窗 R3326] 轮首 pull=Already up to date；工作树净；决策水位差 NEW=0（差集为空）；orders 物理件区无本司新件。</li>
 </ul>
 <div class="note">本页只汇总盘上既有事实，不写推断值；取不到的字段一律写「未取到」。</div>
 </main>
