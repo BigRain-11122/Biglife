@@ -760,6 +760,18 @@ def main() -> int:
                 print("  VALUE-FAIL %s" % b)
             print("verdict: VALUES-FAIL n=%d/%d" % (len(bad), len(seen)))
             return 2
+        # v0.30 (2026-11-17 R336x): KPI 数字一致性——mtime 与 A1-A4 都管不到「数字落后」
+        # （页面 13:09 生成、13:2x 又落 6 条年轮，mtime 仍是今日且非空壳）。断言件复用
+        # build_daily_issue 的 load/card_paths 作唯一口径，缺件/异常不阻塞既有守卫。
+        try:
+            import daily_kpi_assert as _kpi
+            krc, kbad = _kpi.check(datetime.date.today().isoformat())
+        except Exception as exc:  # noqa: BLE001
+            print("  KPI-ASSERT skipped (%s)" % exc)
+            krc, kbad = 0, []
+        if krc in (1, 2):
+            print("verdict: VALUES-FAIL kpi-mismatch n=%d" % len(kbad))
+            return 2
         print("verdict: VALUES-PASS n=%d" % len(seen))
         return 0
 

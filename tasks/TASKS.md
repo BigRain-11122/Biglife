@@ -4942,3 +4942,20 @@ ound_daily --run = 28 面 skipped-fresh / stale=0 / ran=0 / failed=0 PASS；pers
 - **诚实边界**：内容线（年轮/相遇/反思）让路窗内零新增，本轮实物仅为 QC 取证产物（非内容增量）；QC PASS 是闸门证据而非品质证明。
 - tokens: local=0 api=0 api_reason=yield-window(09-19)+no-llm
 
+
+- [2026-11-17 14:0x @BigLife-OSLoop R336x] 轮记：让路窗守卫补强轮（KPI 数字一致性断言落地）
+- **轮首三步**：git pull --ff-only origin main = Already up to date、工作树净；决策水位差 **NEW=0**（watermark 已至 D-20261117-15）；orders 物理件区无涉本司新件；D-20261117-12 七件失守清单不含 BigLife（本司 11-17 00:10 日清 PASS 被记活跃）。
+- **产品增量（本轮实物·A 类可跑件）**：新增 Tools/daily_kpi_assert.py + 
+ound_daily.py v0.30 接线——补上「mtime/值域两闸都管不到数字落后」的缺口（实测：页面 13:09 生成、全量年轮 495 行/489 本体+6 相遇，页面 mtime 仍今日且非空壳，两闸全绿）。断言复用 build_daily_issue 口径比 5 项 KPI，不一致 rc=1 并给正法命令。
+- **验收取证**：自测 489/6/490/10114/6 全 OK PASS；负控篡改副本 489→500 → 仅该项 MISMATCH rc=1（临时件已删）；
+ound_daily.py --values = faces=30 + 5 KPI 全 PASS；py_compile rc=0；
+uff_gate 2 file(s) CLEAN；回归 --check/--run = stale=0 ran=0 failed=0 PASS（常规路径零变化）。回执 qa/KPI-ASSERT-20261117.md。
+- **实测澄清（非缺陷）**：registry 实扫今日 - 2026-11-17 行 495 条 = 489 年轮 + 6 相遇，与页面 KPI 完全吻合（我首轮把相遇行计入年轮得 495，属口径差非页面错）。
+- **守卫面复核**：
+ound_daily --run 29 面 stale=0 PASS；persona_generations --check rc=0 gen=8 pending_sync=none；pool_audit SELF_TERMINATE（72/72·12/12·determinism mismatch=0）；events_refresh --gate events=46181 cards=10111 replay mismatch=0 schema=0 PASS chronicle gap=0d；hq_feedback_daily --check ALREADY_REPORTED（今日 1 行）零写入。
+- **让路闸**：evolve_citizen --batch 3 = yield-window（工作日 09:00-19:00·D-20261020-02）→ 年轮/相遇/反思顺延 19:00 夜窗，不硬绕。
+- **跳过面**：步 2 池 SELF_TERMINATE；步 3 QC 13:35 已跑（problems=0）；步 6 基因今日 11:10 已落 b62；步 7 11 月已 2 例。
+- **open 单状态**：T-20261116-13 blocked-on-window（待 ≥19:00 且 due≥16）；T-20261116-16 待 11-18 读 D3；T-20261117-01 CLOSED；T-20260923-01 FluxVerse PARKED。本轮不新开单。
+- **实况三行**：当前活＝让路窗守卫补强（KPI 数字一致性断言落地，14:0x）｜最近实物＝C:\\Users\\sjs20\\Desktop\\FluxGroup\\life\\BigLife\\Tools\\daily_kpi_assert.py（2026-11-17 14:0x）＋qa\\KPI-ASSERT-20261117.md｜下个里程碑＝11-17 19:00 夜窗年轮批清 due=10 + T-20261116-13 配额闸 A/B 实弹。
+- **诚实边界**：内容线（年轮/相遇/反思）让路窗内零新增；本轮实物为可跑守卫件（A 类），非居民内容增量。
+- tokens: local=0 api=0 api_reason=yield-window(09-19)+no-llm
