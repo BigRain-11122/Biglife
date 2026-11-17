@@ -1,5 +1,17 @@
 # BigLife 任务板（自领制·认领置 in-progress 署名+时间）
 
+## R3351 · 2026-11-17 12:34-12:44 @BigLife-OSLoop（冷却轮·六闸自停＋反思线实况勘正）
+
+- 轮首：`git status --short` 净；`git pull --ff-only origin main` = `Already up to date`（远端无新提交）。决策水位读至 `D-20261117-15`，与 `decisions.md` 尾批逐条比对差集 **NEW=0**（第 71 批 4 行均在册；D-12 五件跨仓件不含本司，D-08 判本司「活跃 PASS 不计违例」）。`docs/orders.md` 检索涉本司行＝仅仓名/保护分支等陈年项，**无新物理件**。
+- **产品增量＝0（如实记，非宣称）**：步 1 年轮 → `yield-window`（工作日 09:00-19:00·D-20261020-02）自停；步 4 相遇 → 今日 cap 已满；步 1C 反思 → 未到 19:00 夜窗。今日内容面已在早晨窗与 11:10 基因轮落过（R3330 年轮 10/10、R3345 基因 b62 三条），本轮无新增卡片类实物。
+- **确定性面全新鲜**：`round_daily.py --run` = **stale=0 ran=0 failed=0 verdict=PASS**（29 面登记表逐面 skipped-fresh；上一轮 12:29 刚重建 city-ops/index）；`persona_generations.py --check` **rc=0**（gen 8 · habits=170 · cutoff C-10120 · pending_sync=none）。
+- **语言线自停**：`pool_audit.py` **PASS SELF_TERMINATE**（轴桶 72/72、像素桶 12/12、greet 28、faq 7、负例 6/6；determinism 192+25 对 mismatch=0），按自终止律零生成。
+- **反思线实况勘正（本轮唯一实质发现）**：T-20261113-05 记录「61 行／覆盖 0.6%／末次 2026-10-27 停更 17.6 天」**已过时**——实读 `census/reflections.jsonl` = **110 行**，日分布 `10-27:3｜11-13:31｜11-14:5｜11-15:3｜11-16:5｜11-17:5`，**连续 4 个生产日 tail date=当日**（11-13/14/15/16/17），步 1C 验收线「连续 3 生产日尾部 date=当日」**已满足**；`Tools/reflect_citizen.py` 日额闸（当日已有行整体 yield）＋30d 冷却闸按设计工作。结论＝该腿已康复，后续轮不得再按「停更 17.6 天」复述。
+- **open 单状态**：T-20261116-13 配额闸 → blocked-on-window（工装 ready，待 ≥19:00 且 due≥16 实弹）；T-20261116-16 相遇不变量 → 待 11-18 读 D3 `meet_new_bad=0` 结单；T-20260923-01 FluxVerse 只读面不变。本轮无新增 open 单。
+- **步 7/8 零动作**：月度聚光灯 11 月 2 例已于 R3133 达标；`hq_feedback_daily --check` = `ALREADY_REPORTED`（当日 1 行）→ 零写入。
+- **实况三行**：当前活＝冷却轮收口（六闸全新鲜/自停，反思线康复实证）；最近实物＝`C:/Users/sjs20/Desktop/FluxGroup/life/BigLife/census/export/city-ops.html`（12:29 重建）＋`qa/EVENTS-REPLAY-REPORT.md`（12:29·events 46,181 mismatch=0）；下个里程碑＝19:00 夜窗年轮批＋反思线续跑（窗 ≤6.5h），11-18 相遇不变量 D3 结单。
+- tokens: local=0 api=0 api_reason=-（本窗全确定性脚本；年轮/相遇/反思按让路窗与日额闸自停，零 LLM 调用）。
+
 ## R3350 · 2026-11-17 12:28-12:4x @BigLife-OSLoop（确定性面轮·2 面重建＋事件闸 46181 复验＋语言线自停）
 
 - 轮首：pull `Already up to date`；`git -c core.fsmonitor=false status` 起步净（仓内 `core.fsmonitor=false` 已生效）；决策水位覆盖至 D-20261117-15，与 decisions.md 逐条比对差集 **NEW=0**（D-20261117-04/08 为上游回执与我司收取面判读，无需动作）；`docs/orders.md` 物理件区无涉本司新件。
