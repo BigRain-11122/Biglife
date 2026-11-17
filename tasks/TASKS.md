@@ -1,5 +1,18 @@
 # BigLife 任务板（自领制·认领置 in-progress 署名+时间）
 
+## R3358 · 2026-11-17 15:04-15:1x @BigLife-OSLoop（让路窗·日更面重建＋全量回放闸轮）
+
+- 轮首：`git pull --ff-only origin main` = Already up to date、工作树净；决策水位差 **NEW=0**（watermark 覆盖至 D-20261117-15；第 71 批四行涉本司仅「活跃 PASS 登记」，D-12③ 自证清单 `cph4/fleet/HQ-SELF-REPORT-20261117.md` 无本司条目）；`docs/orders.md` 无涉本司新物理件（末日令仍为 11-16 23:05）。
+- **产品增量（CEO 能看实物）**：`round_daily --run` → **stale=3 ran=4 failed=0 verdict=PASS**——重建 `census/export/city-today.html`（259,361B·content-stale，源 15:03 推进）、`census/export/city-ops.html`（19,750B·依赖 state/vram-gate.jsonl）、`census/export/city-map.html`（884,392B·依赖 citizen-behavior.jsonl）、`census/export/index.html`（9,338B）；四件逐个校验均含当日日期标记，实体完好。
+- **质检面**：`events_refresh --gate` **PASS**（events=46,181 cards=10,111 shards=3、replay 10,111/10,111、mismatch=0、schema_errors=0、unexpected_missing=0、chronicle gap=0d）→ `qa/EVENTS-REPLAY-REPORT.md` 刷新（15:05）。
+- **自终止面（诚实不重烧）**：`pool_audit` → 轴 72/72、像素 12/12、greet 28/28、faq 7/7、neg 6/6，hard_fails=0，determinism 192+25 对 mismatch=0/empty_draw=0 → **SELF_TERMINATE**；`persona_generations --check` **rc=0**（gen8 · habits=170 · cutoff C-10120 · pending_sync=none）；`hq_feedback_daily --check` **ALREADY_REPORTED**（当日 00:10 已报，本步零写入）。
+- **反思线验收（T-20261113-05）**：`census/reflections.jsonl` 总 110 行，按 date 聚合尾部 = 11-13:31／11-14:5／11-15:3／11-16:5／**11-17:5** → 尾日=当日，「连续生产日有产出」口径成立。
+- **让路面**：`evolve_citizen --batch 3` = `yield-window`（工作日 09:00-19:00 CEO lane-priority · D-20261020-02），年轮/相遇/反思三腿顺延 19:00 后夜窗；基因轮今日 gen8 已开（R3345）按低频律不重跑；QC 全量不变量巡检 13:40 已过（距本轮 1.4h，未到 6 轮节拍）；11 月聚光灯 2 例已达标。
+- **open 单不变**：T-20261116-13 配额闸 open·tooling-ready（待 ≥19:00 且 due≥16 实弹）；T-20261116-16 待 11-18 读 D3 `meet_new_bad=0` 结单；T-20261117-01 fsmonitor 本仓已修·集团层待统一；T-20260923-01 FluxVerse 线 PARKED。本轮不新开单。
+- **CEO 可见三行**：当前活＝让路窗内确定性可见面重建＋事件流全量回放复核（15:1x 收轮）｜最近实物＝`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\census\export\city-today.html`（15:04 重建·259KB 今日城市面）＋`C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\qa\EVENTS-REPLAY-REPORT.md`（15:05）｜下个里程碑＝19:00 夜窗年轮批 `--batch 3`（due 队列）＋配额闸 A/B 实弹＋相遇轮（窗 ≤48h）。
+- **诚实边界**：内容线（年轮/相遇/反思）让路窗内零产出；本轮实物为 4 个可见面重建＋回放闸报告刷新，无新年轮卡。
+- tokens: local=0 api=0 api_reason=yield-window 内容线全停＋结构面全新鲜，本轮纯确定性脚本零 LLM
+
 ## R3357 · 2026-11-17 13:38-13:5x @BigLife-OSLoop（让路窗·质检＋事件闸复核轮）
 
 - 轮首：`git pull --ff-only origin main` = Already up to date、工作树净；决策水位差 **NEW=0**（watermark 至 D-20261117-15，全量 D-ID 差集为空）；`docs/orders.md` 物理件区无涉本司新件。
