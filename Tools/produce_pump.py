@@ -49,7 +49,7 @@ def run_batch_parallel(batch, conc):
     env.setdefault("BIGLIFE_IGNORE_YIELD_WINDOW", "1")
     env.setdefault("PYTHONIOENCODING", "utf-8")
     r = subprocess.run([PY, "-X", "utf8", os.path.join(HERE, "due_list.py"),
-                        "--limit", str(batch * 4), "--chunks", str(conc)],
+                        "--limit", str(batch * conc), "--chunks", str(conc)],
                        capture_output=True, text=True, timeout=300,
                        cwd=ROOT, env=env, creationflags=NO_WINDOW)
     segs = [l.strip() for l in (r.stdout or "").splitlines() if l.strip()]

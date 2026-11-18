@@ -245,7 +245,7 @@ try {
         if ($__gateOpen) {
             Log 'pump: gate open - filling window with deterministic batches (7x24)'
             try {
-                & $__py -X utf8 $__pump --minutes 9 --batch 3 2>&1 |
+                & $__py -X utf8 $__pump --minutes 9 --batch 8 2>&1 |
                     Out-File -FilePath $runLog -Append -Encoding UTF8
                 Log "pump finished rc=$LASTEXITCODE"
             } catch { Log "pump failed (non-blocking): $_" }
