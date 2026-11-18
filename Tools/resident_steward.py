@@ -395,6 +395,13 @@ def clear_alert():
 def log_ledger(rows, note=""):
     try:
         os.makedirs(STATE, exist_ok=True)
+        # 台账轮转：每轮 7 行、10 分钟一次 ≈ 1000 行/天，不轮转会无限长。
+        try:
+            if os.path.getsize(LEDGER) > 400_000:
+                os.replace(LEDGER, os.path.join(
+                    STATE, "STEWARD-LEDGER-%s.md" % _now().strftime("%Y%m")))
+        except OSError:
+            pass
         new = not os.path.exists(LEDGER)
         with open(LEDGER, "a", encoding="utf-8") as fh:
             if new:
