@@ -127,6 +127,20 @@ def main():
     if train:
         notes.append("训练运行中（生产让路属预期）")
 
+    # 2026-11-18 居民产线值守席：按既定决策宪章自己判、自己动手（只动数据与
+    # 运维态，绝不改源码）。独立子进程 + 超时 + 吞异常——值守席自身故障
+    # 绝不能影响这里的存活判定；它的判断与动作全部落 state/STEWARD-LEDGER.md。
+    try:
+        _sw = subprocess.run([sys.executable, "-X", "utf8",
+                              os.path.join(HERE, "resident_steward.py"), "--decide"],
+                             timeout=900, capture_output=True, text=True,
+                             encoding="utf-8", errors="replace",
+                             creationflags=0x08000000 if os.name == "nt" else 0)
+        if not a.quiet and _sw.stdout:
+            notes.append("值守席：" + _sw.stdout.strip().splitlines()[-1])
+    except Exception as _exc:  # noqa: BLE001 - 值守席挂了不进告警
+        notes.append("值守席未完成（%s）" % type(_exc).__name__)
+
     stamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     if not problems:
         if not a.quiet:

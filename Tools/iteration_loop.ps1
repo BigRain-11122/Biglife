@@ -236,6 +236,26 @@ try {
         @{ n = 'qc_census';   a = @('-X', 'utf8', 'Tools\qc_census.py') },
         @{ n = 'events_gate'; a = @('-X', 'utf8', 'Tools\events_refresh.py', '--gate') }
     )
+    # 2026-11-18 Steward seat: decide-and-act per the standing charter.
+    # Scope is data/ops only (persona repair, orphan lock, batch policy, task
+    # restart); it never edits source code. Heavy scans self-throttle to 1/hour
+    # inside the script, so calling it every cycle is cheap. Non-blocking.
+    $__steward = Join-Path $Project 'Tools\resident_steward.py'
+    if (Test-Path $__steward) {
+        try {
+            & $__py -X utf8 $__steward --decide 2>&1 |
+                Out-File -FilePath $runLog -Append -Encoding UTF8
+            Log "steward rc=$LASTEXITCODE"
+        } catch { Log "steward failed (non-blocking): $_" }
+    }
+    # Batch size comes from batch-policy.json so the steward's decisions actually
+    # land (before this, the pump was pinned to 8 and the policy was decorative).
+    $__batch = 8
+    try {
+        $__pol = Get-Content (Join-Path $Project 'Tools\batch-policy.json') -Raw -ErrorAction Stop |
+            ConvertFrom-Json
+        if ($__pol.batch) { $__batch = [int]$__pol.batch }
+    } catch { }
     if (Test-Path $__pump) {
         $__gateOpen = $false
         try {
@@ -245,7 +265,7 @@ try {
         if ($__gateOpen) {
             Log 'pump: gate open - filling window with deterministic batches (7x24)'
             try {
-                & $__py -X utf8 $__pump --minutes 9 --batch 8 2>&1 |
+                & $__py -X utf8 $__pump --minutes 9 --batch $__batch 2>&1 |
                     Out-File -FilePath $runLog -Append -Encoding UTF8
                 Log "pump finished rc=$LASTEXITCODE"
             } catch { Log "pump failed (non-blocking): $_" }

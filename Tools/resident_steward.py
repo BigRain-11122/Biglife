@@ -1,0 +1,470 @@
+# -*- coding: utf-8 -*-
+"""居民产线值守席（Steward）：按既定决策宪章自己判、自己动手、全程留台账。
+
+为什么要有它
+------------
+2026-11-18 这一天暴露的问题全是「有人看见才修」：
+  - 男穿旗袍 150 份 / <40 岁戴老花镜 318 份，靠 CEO 抽看才发现；
+  - 口头禅复读 58%，提示词里写着「开场句优先取口头禅」；
+  - 孤儿 index.lock 让 16 分钟年轮写了没进库，日志却写 commit ok；
+  - 813 人日记停摆 25-32 天，游标还显示 next=明天。
+本席的职责就是把「我已经想清楚的判据」变成每 10 分钟执行一次的确定性动作，
+不再等下一次有人抽看。
+
+决策宪章（硬边界，违反即视为缺陷）
+----------------------------------
+1. 只动数据与运维态，**绝不改源码**（.py/.ps1/.json 规则表以外的代码）。
+   源码缺陷 → 写 STEWARD-ALERT.md 交主控，产线不停。
+2. 修人设前必须先有全谱审计数字（避免只修一类再来一轮）。
+3. 真实天气顶上去的指标（如大风天的「风」覆盖率）**改阈值不改文案**。
+4. 结论一律以子进程返回码为判据，不看「有没有抛异常」。
+5. 不删除任何居民数据；写回一律先落回滚档。
+6. 不 push git、不改闸门阈值、不启用 CEO 手动禁用的任务、不碰其他公司仓库。
+7. 每一次判断与动作都写进 state/STEWARD-LEDGER.md（证据→决定→动作→结果）。
+
+用法
+----
+  python -X utf8 Tools/resident_steward.py --status     # 只看证据与结论，不动作
+  python -X utf8 Tools/resident_steward.py --decide     # 按宪章执行（默认）
+  python -X utf8 Tools/resident_steward.py --decide --dry-run
+"""
+from __future__ import annotations
+
+import argparse
+import datetime
+import json
+import os
+import re
+import subprocess
+import sys
+import time
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+CO = os.path.dirname(HERE)
+ROOT = os.path.dirname(os.path.dirname(CO))
+STATE = os.path.join(CO, "state")
+LEDGER = os.path.join(STATE, "STEWARD-LEDGER.md")
+ALERT = os.path.join(STATE, "STEWARD-ALERT.md")
+ST = os.path.join(STATE, "steward-state.json")
+POLICY = os.path.join(HERE, "batch-policy.json")
+LOOPLOG = os.path.join(STATE, "resident-loop.log")
+TIMEOUT = 240
+
+# 预授权边界（超出即只报不做）
+BATCH_MIN, BATCH_MAX = 4, 10
+THROUGHPUT_FLOOR = 400.0     # 条/小时
+THROUGHPUT_CEIL = 1100.0     # 超过它就不再加批
+PASS_FLOOR = 0.80            # 批成功率下限
+SCORE_FLOOR = 45.0
+STALE_DAYS = 15
+TIC_CEIL = 0.35              # 近 7 天口头禅复读上限
+AUDIT_EVERY = 3600           # 人设/停更全扫间隔（秒）
+SCORE_EVERY = 1800
+
+
+def _now():
+    return datetime.datetime.now()
+
+
+def _ts():
+    return _now().strftime("%Y-%m-%d %H:%M:%S")
+
+
+def _run(cmd, timeout=TIMEOUT):
+    try:
+        return subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8",
+                              errors="replace", timeout=timeout, cwd=CO)
+    except Exception as exc:  # noqa: BLE001
+        class R:
+            returncode = -1
+            stdout = ""
+            stderr = str(exc)
+        return R()
+
+
+def load_state():
+    try:
+        with open(ST, encoding="utf-8") as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return {}
+
+
+def save_state(st):
+    try:
+        os.makedirs(STATE, exist_ok=True)
+        tmp = ST + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as fh:
+            json.dump(st, fh, ensure_ascii=False, indent=1)
+        os.replace(tmp, ST)
+    except OSError:
+        pass
+
+
+# ---------------------------------------------------------------- 证据面
+def ev_git_lock():
+    """孤儿 index.lock：锁存在但无本仓 git 进程持有时才算孤儿。"""
+    lk = os.path.join(CO, ".git", "index.lock")
+    if not os.path.exists(lk):
+        return {"lock": False}
+    age = time.time() - os.path.getmtime(lk)
+    holders = 0
+    try:
+        ps = _run(["powershell", "-NoProfile", "-Command",
+                   "(Get-CimInstance Win32_Process -Filter \"name='git.exe'\" | "
+                   "Where-Object { $_.CommandLine -like '*BigLife*' }).Count"], timeout=60)
+        holders = int((ps.stdout or "0").strip() or 0)
+    except (ValueError, TypeError):
+        holders = 0
+    return {"lock": True, "age": int(age), "holders": holders}
+
+
+def ev_throughput():
+    """从运行日志尾算最近一小时产能与成功率。"""
+    try:
+        with open(LOOPLOG, encoding="utf-8", errors="replace") as fh:
+            lines = fh.readlines()[-400:]
+    except OSError:
+        return {}
+    pat = re.compile(r"^\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\] pump batch (\d+): "
+                     r"wrote=(\d+) due=(\S+) rc=(-?\d+)")
+    cut = _now() - datetime.timedelta(hours=1)
+    wrote = due = 0
+    last_pump = None
+    zero = 0
+    for ln in lines:
+        m = pat.search(ln)
+        if not m:
+            continue
+        try:
+            t = datetime.datetime.strptime(m.group(1), "%Y-%m-%d %H:%M:%S")
+        except ValueError:
+            continue
+        last_pump = t if last_pump is None or t > last_pump else last_pump
+        if t >= cut:
+            w = int(m.group(3))
+            wrote += w
+            try:
+                due += int(m.group(4))
+            except ValueError:
+                pass          # due=None = 当批没有可跑席位（供给空）
+            zero = zero + 1 if w == 0 else 0
+    if last_pump is None:
+        return {"last_pump_min": None}
+    return {"wrote": wrote, "due": due,
+            "pass": (wrote / due) if due else 0.0,
+            "zero_batches": zero,
+            "last_pump_min": int((_now() - last_pump).total_seconds() // 60)}
+
+
+def ev_policy():
+    try:
+        with open(POLICY, encoding="utf-8") as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return {}
+
+
+def ev_persona(st, force=False):
+    """人设矛盾 + 口头禅复读（全库扫，约 8 秒；按 AUDIT_EVERY 节流）。"""
+    last = st.get("last_audit_ts", 0)
+    if not force and time.time() - last < AUDIT_EVERY and st.get("audit"):
+        return st["audit"]
+    r = _run([sys.executable, "-X", "utf8", os.path.join(HERE, "fix_persona_consistency.py"),
+              "--audit", "--json"], timeout=600)
+    if r.returncode != 0:
+        return {"error": (r.stderr or "")[:120]}
+    try:
+        return json.loads((r.stdout or "").strip())
+    except ValueError:
+        return {"error": "audit json unparsable"}
+
+
+def ev_stale(st, force=False):
+    """停更 ≥15 天人数（全库扫，节流同审计）。"""
+    last = st.get("last_audit_ts", 0)
+    if not force and time.time() - last < AUDIT_EVERY and "stale" in st:
+        return st["stale"]
+    r = _run([sys.executable, "-X", "utf8", os.path.join(HERE, "diag_stale.py"),
+              "--days", str(STALE_DAYS), "--top", "0"], timeout=600)
+    m = re.search(r"(\d+)\s*人", r.stdout or "")
+    return {"stale": int(m.group(1)) if m else None}
+
+
+def ev_score(st, force=False):
+    last = st.get("last_score_ts", 0)
+    if not force and time.time() - last < SCORE_EVERY and "score" in st:
+        return st["score"]
+    r = _run([sys.executable, "-X", "utf8", os.path.join(HERE, "ring_score.py"),
+              "--last", "30", "--json"], timeout=300)
+    if r.returncode != 0:
+        return {"error": (r.stderr or "")[:120]}
+    try:
+        return json.loads((r.stdout or "").strip())
+    except ValueError:
+        return {"error": "score json unparsable"}
+
+
+def ev_ollama():
+    import urllib.request
+    try:
+        with urllib.request.urlopen("http://127.0.0.1:11434/api/tags", timeout=3) as rs:
+            return {"up": rs.status == 200}
+    except Exception:  # noqa: BLE001
+        return {"up": False}
+
+
+# ---------------------------------------------------------------- 决策面
+def decide(ev, policy):
+    """返回 [(rule, verdict, action, detail)]。action=None 表示只判不动。"""
+    out = []
+
+    # R1 孤儿锁（最危险：会静默吃掉所有提交）
+    lk = ev.get("git_lock") or {}
+    if lk.get("lock"):
+        if lk.get("holders", 0) == 0 and lk.get("age", 0) > 600:
+            out.append(("R1 孤儿git锁", "需清", "rm_lock",
+                        "锁龄 %ds 且无本仓 git 进程" % lk.get("age", 0)))
+        else:
+            out.append(("R1 孤儿git锁", "在途", None,
+                        "锁龄 %ds，持锁进程 %s 个" % (lk.get("age", 0), lk.get("holders", 0))))
+    else:
+        out.append(("R1 孤儿git锁", "健康", None, "无锁"))
+
+    # R2 人设硬矛盾（数据层，宪章允许直接修）
+    pa = ev.get("persona") or {}
+    if pa.get("error"):
+        out.append(("R2 人设矛盾", "读不到", None, pa["error"]))
+    else:
+        n = int(pa.get("cloth_contradictions") or 0)
+        if n > 0:
+            out.append(("R2 人设矛盾", "需修", "fix_persona", "%d 份硬矛盾" % n))
+        else:
+            out.append(("R2 人设矛盾", "健康", None, "0 份"))
+
+    # R3 口头禅复读（回归即说明提示词诱因回潮；源码不改，报警给主控）
+    if not pa.get("error"):
+        ratio = float(pa.get("tic_recent_ratio") or 0)
+        if ratio > TIC_CEIL:
+            out.append(("R3 口头禅复读", "回潮", "alert",
+                        "近 7 天 %.0f%% > %.0f%%（提示词诱因可能回来了）"
+                        % (ratio * 100, TIC_CEIL * 100)))
+        else:
+            out.append(("R3 口头禅复读", "健康", None, "近 7 天 %.1f%%" % (ratio * 100)))
+
+    # R4 停更（自愈已在 due_citizens；这里只判趋势，异常才报）
+    sl = ev.get("stale") or {}
+    if sl.get("stale") is not None:
+        prev = (ev.get("stale_prev") or {}).get("stale")
+        cur = sl["stale"]
+        if cur == 0:
+            out.append(("R4 停更", "健康", None, "0 人"))
+        elif prev is not None and cur >= prev and prev > 0:
+            out.append(("R4 停更", "不降", "alert",
+                        "%d 人（上轮 %d，未下降——自愈可能没生效）" % (cur, prev)))
+        else:
+            out.append(("R4 停更", "在收", None, "%d 人（上轮 %s）" % (cur, prev)))
+
+    # R5 产能与配比
+    tp = ev.get("throughput") or {}
+    if tp.get("last_pump_min") is not None and tp["last_pump_min"] > 25:
+        out.append(("R5 泵停摆", "疑似停", "start_task",
+                    "最近一批在 %d 分钟前" % tp["last_pump_min"]))
+    batch = int((policy.get("batch") or 8))
+    zero_batches = int(tp.get("zero_batches") or 0)
+    if zero_batches >= 5 and tp.get("wrote", 0) == 0:
+        # 2026-11-18 傍晚实锚：due 池被拒稿顺延掏空时，泵会连续 wrote=0 空转。
+        # 这是供给面问题，不是配比问题——加批只会更空，必须报出来。
+        out.append(("R5 供给", "池空", "alert",
+                    "近一轮 %d 批全部 wrote=0（due 池被掏空，查顺延/自愈）" % zero_batches))
+    elif tp.get("due") and zero_batches == 0:
+        # 只有「最近没有空批」时才调配比：有空批说明是供给问题，加批会更空。
+        if tp["pass"] < PASS_FLOOR and batch > BATCH_MIN:
+            out.append(("R5 配比", "降批", "set_batch",
+                        "成功率 %.0f%% < %.0f%%，批 %d→%d"
+                        % (tp["pass"] * 100, PASS_FLOOR * 100, batch, max(BATCH_MIN, batch - 2))))
+        elif tp["pass"] >= 0.95 and tp["wrote"] < THROUGHPUT_FLOOR and batch < BATCH_MAX:
+            out.append(("R5 配比", "加批", "set_batch",
+                        "成功率 %.0f%% 而产能 %d/h 偏低，批 %d→%d"
+                        % (tp["pass"] * 100, tp["wrote"], batch, min(BATCH_MAX, batch + 2))))
+        else:
+            out.append(("R5 配比", "合适", None,
+                        "批 %d，成功率 %.0f%%，产能 %d/h"
+                        % (batch, tp["pass"] * 100, tp["wrote"])))
+    elif tp.get("due"):
+        out.append(("R5 配比", "观望", None,
+                    "有空批 %d 次，先看供给恢复（批 %d 不动）" % (zero_batches, batch)))
+
+    # R6 质量分
+    sc = ev.get("score") or {}
+    if sc.get("error"):
+        out.append(("R6 质量分", "读不到", None, sc["error"]))
+    elif float(sc.get("avg_total") or 0) < SCORE_FLOOR:
+        out.append(("R6 质量分", "偏低", "alert",
+                    "近 30 条均分 %.1f < %.0f" % (sc.get("avg_total", 0), SCORE_FLOOR)))
+    else:
+        out.append(("R6 质量分", "达标", None,
+                    "近 30 条 %.1f（动词 %.1f）"
+                    % (sc.get("avg_total", 0), sc.get("verb_avg", 0))))
+
+    # R7 依赖
+    if not (ev.get("ollama") or {}).get("up"):
+        out.append(("R7 ollama", "不可达", "alert", "11434 无响应（产线会空转）"))
+    else:
+        out.append(("R7 ollama", "健康", None, "11434 在线"))
+    return out
+
+
+# ---------------------------------------------------------------- 执行面
+def act(kind, detail, dry=False):
+    """按宪章执行。返回 (ok, 结果说明)。"""
+    if kind is None:
+        return True, "仅判不动"
+    if dry:
+        return True, "dry-run 未执行"
+
+    if kind == "rm_lock":
+        lk = os.path.join(CO, ".git", "index.lock")
+        try:
+            os.remove(lk)
+            return True, "已删孤儿锁，下一批提交可恢复"
+        except OSError as exc:
+            return False, "删锁失败：%s" % exc
+
+    if kind == "fix_persona":
+        r = _run([sys.executable, "-X", "utf8",
+                  os.path.join(HERE, "fix_persona_consistency.py"), "--apply"], timeout=900)
+        m = re.search(r"扫描 (\d+) 份，需修 (\d+) 份", r.stdout or "")
+        if r.returncode == 0 and m:
+            return True, "已修 %s 份（回滚档 state/persona-fix-backup.json）" % m.group(2)
+        return False, "修复失败 rc=%s %s" % (r.returncode, (r.stderr or "")[:80])
+
+    if kind == "set_batch":
+        m = re.search(r"批 \d+→(\d+)", detail)
+        if not m:
+            return False, "解析新批大小失败"
+        newb = int(m.group(1))
+        if not (BATCH_MIN <= newb <= BATCH_MAX):
+            return False, "超出预授权边界 %d..%d" % (BATCH_MIN, BATCH_MAX)
+        try:
+            pol = ev_policy()
+            old = pol.get("batch")
+            pol["batch"] = newb
+            with open(POLICY, "w", encoding="utf-8") as fh:
+                json.dump(pol, fh, ensure_ascii=False, indent=1)
+            return True, "batch %s→%d（下批生效）" % (old, newb)
+        except (OSError, ValueError) as exc:
+            return False, "写策略失败：%s" % exc
+
+    if kind == "start_task":
+        r = _run(["powershell", "-NoProfile", "-Command",
+                  "Start-ScheduledTask -TaskName 'BigLife-OSLoop'"], timeout=120)
+        if r.returncode == 0:
+            return True, "已启动 BigLife-OSLoop"
+        return False, "启动失败 %s" % (r.stderr or "")[:80]
+
+    if kind == "alert":
+        return True, "已记入 STEWARD-ALERT.md"
+
+    return False, "未知动作 %s" % kind
+
+
+def write_alert(lines):
+    try:
+        os.makedirs(STATE, exist_ok=True)
+        with open(ALERT, "w", encoding="utf-8") as fh:
+            fh.write("# STEWARD-ALERT · %s\n\n主控需介入（值守席不做源码改动）：\n\n" % _ts())
+            for ln in lines:
+                fh.write("- %s\n" % ln)
+    except OSError:
+        pass
+
+
+def clear_alert():
+    try:
+        if os.path.exists(ALERT):
+            os.remove(ALERT)
+    except OSError:
+        pass
+
+
+def log_ledger(rows, note=""):
+    try:
+        os.makedirs(STATE, exist_ok=True)
+        new = not os.path.exists(LEDGER)
+        with open(LEDGER, "a", encoding="utf-8") as fh:
+            if new:
+                fh.write("# 值守席台账（证据 → 决定 → 动作 → 结果）\n\n"
+                         "| 时间 | 规则 | 判定 | 动作 | 结果 |\n|---|---|---|---|---|\n")
+            for rule, verdict, kind, detail, res in rows:
+                fh.write("| %s | %s | %s | %s | %s |\n"
+                         % (_ts(), rule, verdict, kind or "-", res or detail))
+            if note:
+                fh.write("| %s | 汇总 | - | - | %s |\n" % (_ts(), note))
+    except OSError:
+        pass
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--decide", action="store_true")
+    ap.add_argument("--status", action="store_true")
+    ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--force-audit", action="store_true")
+    a = ap.parse_args()
+    live = a.decide and not a.status
+    st = load_state()
+
+    policy = ev_policy()
+    ev = {
+        "git_lock": ev_git_lock(),
+        "throughput": ev_throughput(),
+        "policy": policy,
+        "persona": ev_persona(st, force=a.force_audit),
+        "stale": ev_stale(st, force=a.force_audit),
+        "stale_prev": {"stale": st.get("stale_prev_value")},
+        "score": ev_score(st, force=a.force_audit),
+        "ollama": ev_ollama(),
+    }
+    rows = decide(ev, policy)
+
+    if not live:
+        print("=== 值守席判读 %s ===" % _ts())
+        for rule, verdict, kind, detail in rows:
+            print("  %-14s %-6s %s" % (rule, verdict, detail))
+        return 0
+
+    alerts = []
+    out_rows = []
+    for rule, verdict, kind, detail in rows:
+        ok, res = act(kind, detail, dry=a.dry_run)
+        if kind == "alert":
+            alerts.append("%s：%s" % (rule, detail))
+        out_rows.append((rule, verdict, kind, detail, res if kind else ""))
+        if kind and not ok:
+            print("! %s %s -> %s" % (rule, kind, res), flush=True)
+
+    if alerts:
+        write_alert(alerts)
+    else:
+        clear_alert()
+    log_ledger(out_rows)
+
+    # 节流时间戳与上轮对比值
+    st["last_audit_ts"] = time.time() if not ev["persona"].get("error") else st.get("last_audit_ts", 0)
+    st["last_score_ts"] = time.time() if not ev["score"].get("error") else st.get("last_score_ts", 0)
+    st["audit"] = ev["persona"]
+    st["score"] = ev["score"]
+    if ev["stale"].get("stale") is not None:
+        st["stale_prev_value"] = st.get("stale", {}).get("stale")
+        st["stale"] = ev["stale"]
+    save_state(st)
+
+    acted = sum(1 for r in out_rows if r[2] and not r[2] == "alert")
+    print("[%s] steward: %d 项判定，%d 项动作，%d 条告警"
+          % (_ts(), len(out_rows), acted, len(alerts)), flush=True)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

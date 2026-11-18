@@ -3933,6 +3933,14 @@ def due_citizens(cursor, batch, force=None):
                         _last = datetime.date.fromisoformat(str(c.get("last") or ""))
                         if (t - _last).days >= 7:
                             again.append(cid)
+                        elif str(c.get("next") or "") <= (t + datetime.timedelta(days=1)).isoformat() \
+                                and _last < t:
+                            # 2026-11-18 傍晚实锚：拒稿顺延把 next 推到「明天」，
+                            # 而 last 已过，于是下午 17:3x 全城 due 池被掏空——
+                            # 泵连续 11 批 wrote=0 due=None 空转 284 秒。
+                            # 顺延的本意是「别在同一天反复烧同一席」，用顺序表达
+                            # 就够（这些席排在队尾），不该把它们整天排除在外。
+                            again.append(cid)
                     except ValueError:
                         pass
             except Exception:
@@ -3951,7 +3959,11 @@ def due_citizens(cursor, batch, force=None):
     # (45 days). Sort least-recently-evolved first (cursor "last") so the daily
     # budget sweeps the whole city; repair `rank` still wins the head (R2385) and
     # cid stays as the deterministic tie-break.
+    # 2026-11-18: 被顺延到「明天」的席位排到队尾（不再整天排除），
+    # 顺序即节流——同一天不会反复烧同一席，但池子不会在傍晚被抽干。
+    _today_s = t.isoformat()
     again.sort(key=lambda c: (rank.get(c, len(rank)),
+                              str(cursor.get(c, {}).get("next") or "") > _today_s,
                               str(cursor.get(c, {}).get("last") or ""), c))
     quota = []
     if rank and batch > 1:
