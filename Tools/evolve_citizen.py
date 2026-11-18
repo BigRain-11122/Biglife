@@ -1410,7 +1410,16 @@ def ring_violations(line, sig):
     invented moon/celestial) are verified deterministically against sig
     (weather串/now) before落环."""
     v = []
-    # v0.65 T-20261112-08: skeleton-family quota. Only fires when the batch
+    # 2026-11-18 质量修复：分流席位（约定「本轮不写天气」）若仍然写天气 = 违规。
+    # 实测把分流写进 prompt 后风提及率仍 91.8%——prompt 中部的硬约束段仍给出
+    # 「风挺大/风不小」这类示例，模型照抄。必须在闸门事后强制。
+    # 只判天气断言词，先掩掉人设物件名（风铃/风信使/风车…），避免误伤。
+    if isinstance(sig, dict) and sig.get("_wx_skip"):
+        _wx_probe = re.sub(
+            r"风铃|风信使|风车|风筝|风扇|风衣|风箱|风镜|风灯|台风|风干|风湿|风油精|风门",
+            "", line or "")
+        if re.search(r"风|天阴|天晴|雨", _wx_probe):
+            v.append("wx-skip-weather")
     # pre-computed an over-quota family set (sig["today_ban_families"]); a
     # missing key/empty set keeps every other caller byte-identical (zero drift,
     # same law as #70/#71). The family is judged on the OPENING only, so a legal
@@ -3435,6 +3444,9 @@ def build_prompt(cid, text, sig):
                 "fluxgroup/crazycampus 等）都不是市民会说的话，一律换成生活化的中文说法。"
                 "同样严禁出现机房词汇的中文写法——「显存/显卡/服务器/线程」都不属于市民的生活，"
                 "写「显存稳了」「线程卡了」这类句子视为跑题，一律换成人能摸到的东西（灶火、雨水、门板、路口）。\n")
+    # 2026-11-18: 把「本席被分流为不写天气」写进 sig，供 ring_violations 事后强制。
+    # 单测：分流比例 2/3；未分流席仍照常带天气护栏（防编造雨/风）。
+    sig["_wx_skip"] = bool(wx_skip_block(cid, sig))
     return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
             f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
             f"语言风格：{p['language']}；日常：{p['behavior']}。\n{mem}"
