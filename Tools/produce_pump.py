@@ -160,16 +160,33 @@ def warm_probe(budget=90):
     把窗口让给下一轮——比闷头烧掉 9 分钟便宜得多。
     """
     import urllib.request
-    model = os.environ.get("BIGLIFE_MODEL", "qwen3.5:9b")
-    try:
+
+    def _ping(wait):
+        model = os.environ.get("BIGLIFE_MODEL", "qwen3.5:9b")
         body = json.dumps({"model": model, "prompt": "ping", "stream": False,
                            "think": False, "options": {"num_predict": 1}}).encode("utf-8")
         req = urllib.request.Request("http://127.0.0.1:11434/api/generate", data=body,
                                      headers={"Content-Type": "application/json"})
-        with urllib.request.urlopen(req, timeout=budget) as r:
+        with urllib.request.urlopen(req, timeout=wait) as r:
             r.read(64)
         return True
+
+    model = os.environ.get("BIGLIFE_MODEL", "qwen3.5:9b")
+    try:
+        return _ping(budget)
     except Exception:  # noqa: BLE001 - 探测失败就是信号，不是崩溃
+        # 2026-11-18 22:3x 实锚：ollama 在 20:02 死掉后，后续每一轮都在这里
+        # 直接 return False，产线连断 2.5 小时，而日志只有一行 warm-probe failed。
+        # 探针必须自带自愈：先拉起无头 serve，再重探一次。
+        try:
+            import resident_steward as _sw
+            _ok, _why = _sw.ensure_ollama(timeout_s=60)
+            if _ok:
+                rl.log("pump recover: ollama %s" % _why)
+                return _ping(budget)
+            rl.log("pump: ollama unavailable (%s)" % _why)
+        except Exception as _exc:  # noqa: BLE001
+            rl.log("pump: ollama self-heal error (%s)" % type(_exc).__name__)
         return False
 
 
@@ -214,6 +231,19 @@ def main():
         if time.time() >= deadline:
             gate_reason = "budget"
             break
+        # 2026-11-18 晚：ollama 两小时死两次，托盘版不稳。每批之前自愈一次
+        # （无头 serve + WMI 独立进程），窗口内死掉也不会把剩下几批全废掉。
+        try:
+            import resident_steward as _sw
+            _ok, _why = _sw.ensure_ollama(timeout_s=45)
+            if not _ok:
+                rl.log("pump stop: ollama unavailable (%s)" % _why)
+                gate_reason = "llm-down"
+                break
+            if _why != "已在线":
+                rl.log("pump recover: ollama %s" % _why)
+        except Exception as _exc:  # noqa: BLE001 - 自愈失败不该崩泵
+            rl.log("pump recover skipped (%s)" % type(_exc).__name__)
         ok, why = rl.admit()
         if not ok:
             gate_reason = "gate:" + why

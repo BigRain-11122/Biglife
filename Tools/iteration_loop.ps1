@@ -258,9 +258,18 @@ try {
     } catch { }
     if (Test-Path $__pump) {
         $__gateOpen = $false
+        $__gateWhy = ''
         try {
-            & $__py -X utf8 $__pump --dry-run 2>&1 | Out-Null
+            # 2026-11-18 22:4x: dry-run's own reason was thrown away, so a 1h45m
+            # closed gate left only "yield busy" in the heartbeat and no way to
+            # tell whether it was VRAM, memory, a foreign loaded model or swap.
+            # Capture it and ride it into the heartbeat (truncated, ASCII-safe path).
+            $__why = (& $__py -X utf8 $__pump --dry-run 2>&1 | Out-String).Trim()
             $__gateOpen = ($LASTEXITCODE -eq 0)
+            if (-not $__gateOpen) {
+                $__gateWhy = ($__why -replace "\s+", ' ')
+                if ($__gateWhy.Length -gt 120) { $__gateWhy = $__gateWhy.Substring(0, 120) }
+            }
         } catch { $__gateOpen = $false }
         if ($__gateOpen) {
             Log 'pump: gate open - filling window with deterministic batches (7x24)'
@@ -279,7 +288,7 @@ try {
                 Log "  det-face $($__job.n) rc=$LASTEXITCODE"
             } catch { Log "  det-face $($__job.n) failed" }
         }
-        Beat 'yield busy'
+        Beat "yield busy: $__gateWhy"
         exit 0
     }
     $codelyPath = (Get-Command codely -ErrorAction SilentlyContinue).Source

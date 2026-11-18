@@ -1176,7 +1176,8 @@ def llm_warm_probe(budget=None):
     Costs seconds when healthy and also warms the model for the seats.
     """
     budget = int(budget or os.environ.get("BIGLIVE_WARM_PROBE_SEC", "60"))
-    try:
+
+    def _ping(wait):
         url, model = seat()
         body = json.dumps({
             "model": model,
@@ -1186,10 +1187,23 @@ def llm_warm_probe(budget=None):
         }).encode("utf-8")
         req = urllib.request.Request(url, data=body,
                                      headers={"Content-Type": "application/json"})
-        with urllib.request.urlopen(req, timeout=budget) as r:
+        with urllib.request.urlopen(req, timeout=wait) as r:
             r.read(64)
         return True
+
+    try:
+        return _ping(budget)
     except Exception:  # noqa: BLE001 - a failed probe is the signal, never a crash
+        # 2026-11-18 晚实锚：ollama 会整段死掉（无 Windows 服务、三个相关任务
+        # 全被 CEO 禁用），探针失败后整批 0 席位，日志只剩一行 llm-starved。
+        # 这里先自愈一次再重探——把「等人工发现」压成一个批次内的自动恢复。
+        try:
+            import resident_steward as _sw
+            ok, _why = _sw.ensure_ollama(timeout_s=45)
+            if ok:
+                return _ping(budget)
+        except Exception:  # noqa: BLE001
+            pass
         return False
 
 

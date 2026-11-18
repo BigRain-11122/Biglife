@@ -322,6 +322,38 @@ def decide(ev, policy):
 
 
 # ---------------------------------------------------------------- 执行面
+def ensure_ollama(timeout_s=45):
+    """确保 11434 可用；不可用就用 WMI 起**无头** `ollama.exe serve` 并等到就绪。
+
+    为什么是无头 serve 而不是 `ollama app.exe`：2026-11-18 晚实测托盘版
+    两小时内两次死掉（无桌面/资源清理都会带走它），而 serve 是纯服务器进程，
+    不依赖 Explorer 与托盘生命周期。
+    WMI 创建的意义：父进程是 WmiPrvSE，不在任何计划任务或 CLI 会话的 job
+    object 里，任务结束 / 会话退出都不会连坐（本机实测有效）。
+    引号必须用 [char]34 拼——PS 5.1 多层引号会把 \\" 吃掉并抛 UnexpectedToken。
+    """
+    if (ev_ollama() or {}).get("up"):
+        return True, "已在线"
+    base = os.path.join(os.environ.get("LOCALAPPDATA") or "", "Programs", "Ollama")
+    exe = os.path.join(base, "ollama.exe")
+    if not os.path.exists(exe):
+        return False, "找不到 %s" % exe
+    ps = ("$e = Join-Path $env:LOCALAPPDATA 'Programs\\Ollama\\ollama.exe'; "
+          "if (Test-Path $e) { $q = [char]34 + $e + [char]34 + ' serve'; "
+          "$r = Invoke-CimMethod -ClassName Win32_Process -MethodName Create "
+          "-Arguments @{ CommandLine = $q }; $r.ReturnValue } else { -2 }")
+    r = _run(["powershell", "-NoProfile", "-Command", ps], timeout=120)
+    if r.returncode != 0 or (r.stdout or "").strip() not in ("0",):
+        return False, "启动失败 rc=%s out=%s" % (r.returncode, (r.stdout or r.stderr or "")[:80])
+    waited = 0.0
+    while waited < timeout_s:
+        time.sleep(1.5)
+        waited += 1.5
+        if (ev_ollama() or {}).get("up"):
+            return True, "已用无头 serve 拉起并就绪（%.0fs）" % waited
+    return False, "进程已起但 %.0fs 内 11434 仍未监听" % timeout_s
+
+
 def act(kind, detail, dry=False):
     """按宪章执行。返回 (ok, 结果说明)。"""
     if kind is None:
@@ -338,23 +370,7 @@ def act(kind, detail, dry=False):
             return False, "删锁失败：%s" % exc
 
     if kind == "start_ollama":
-        # WMI 创建：父进程是 WmiPrvSE，不属任何计划任务/CLI 的 job object，
-        # 因此不会被「任务结束即清子进程」或「CLI 退出连坐」杀掉。
-        # 引号一律用 [char]34 拼，避免 PS 5.1 在多层引号里把 \" 吃掉（实测会
-        # 抛 UnexpectedToken，自启变成哑弹）。
-        ps = ("$e = Join-Path $env:LOCALAPPDATA 'Programs\\Ollama\\ollama app.exe'; "
-              "if (Test-Path $e) { $q = [char]34 + $e + [char]34; "
-              "$r = Invoke-CimMethod -ClassName Win32_Process -MethodName Create "
-              "-Arguments @{ CommandLine = $q }; $r.ReturnValue } else { -2 }")
-        r = _run(["powershell", "-NoProfile", "-Command", ps], timeout=120)
-        if r.returncode != 0 or (r.stdout or "").strip() not in ("0",):
-            return False, "ollama 自启失败 rc=%s out=%s" % (
-                r.returncode, (r.stdout or r.stderr or "")[:80])
-        for _ in range(20):
-            time.sleep(1.5)
-            if (ev_ollama() or {}).get("up"):
-                return True, "ollama 已自启并就绪（WMI 独立进程）"
-        return False, "已拉起进程但 30 秒内 11434 仍未监听"
+        return ensure_ollama()
 
     if kind == "fix_persona":
         r = _run([sys.executable, "-X", "utf8",
