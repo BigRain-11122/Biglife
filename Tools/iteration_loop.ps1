@@ -32,6 +32,7 @@ $env:BIGLIFE_IGNORE_YIELD_WINDOW = '1'
 $env:BIGLIFE_MODEL = 'qwen3.5:9b'
 $env:BIGLIFE_LLM_URL = 'http://127.0.0.1:11434/v1/chat/completions'
 $env:BIGLIFE_VRAM_LIMIT = '0.85'
+$env:BIGLIFE_CONCURRENCY = '3'
 Set-Location $Project
 
 # 2026-11-17 CEO order: no cross-stealing. Layered schedule instead of a hard skip.

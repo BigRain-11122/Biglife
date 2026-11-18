@@ -189,7 +189,7 @@ def admit():
         # 2026-11-17 修 BUG：阈值必须区分「模型尚未加载」与「模型已在卡上」。
         # 原实现一律要求 6500 MiB 空闲，可 9B 自己就占 6.2G，加载完之后剩余
         # 只有 1.7G，于是下一轮永远判「vram 不足」——泵连续 0 rounds，生产停摆。
-        need = 900 if target in models_loaded() else VRAM_MIN_FREE_MB
+        need = 500 if target in models_loaded() else VRAM_MIN_FREE_MB   # 并发3实测余量~850MiB
         if free < need:
             return False, "vram %.0f MiB free < %d%s" % (
                 free, need, " (model resident)" if need == 1200 else "")
