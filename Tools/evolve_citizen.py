@@ -1191,7 +1191,7 @@ def llm_warm_probe(budget=None):
         return False
 
 
-def seat_call(prompt, sig, fuse=None, max_regens=3):
+def seat_call(prompt, sig, cid=None, fuse=None, max_regens=3):
     """T-20261113-06 ①: hard wall-clock fuse around one resident's seat.
 
     R2830 实锚: a stalled seat emitted nothing for 3.5 min and dragged the whole
@@ -1207,7 +1207,7 @@ def seat_call(prompt, sig, fuse=None, max_regens=3):
 
     def _work():
         try:
-            box["line"] = gated_llm(prompt, sig, max_regens=max_regens)
+            box["line"] = gated_llm(prompt, sig, cid=cid, max_regens=max_regens)
         except BaseException as exc:  # noqa: BLE001 - surfaces to the caller as-is
             box["err"] = exc
 
@@ -1402,7 +1402,7 @@ def scrub_machine_words(text):
     return t
 
 
-def ring_violations(line, sig):
+def ring_violations(line, sig, cid=None):
     """gap #12 honesty gate: machine-check an LLM ring against the fed signals.
 
     Prompt-side bans have a compliance ceiling, so the five recurring violation
@@ -1414,7 +1414,9 @@ def ring_violations(line, sig):
     # 实测把分流写进 prompt 后风提及率仍 91.8%——prompt 中部的硬约束段仍给出
     # 「风挺大/风不小」这类示例，模型照抄。必须在闸门事后强制。
     # 只判天气断言词，先掩掉人设物件名（风铃/风信使/风车…），避免误伤。
-    if isinstance(sig, dict) and sig.get("_wx_skip"):
+    # 2026-11-18: 按 cid 现算——共享 sig 在并发席位间会被交叉改写，
+    # 实测 skip=True 的席位 6/9 漏拦。现算后无竞态。
+    if cid and isinstance(sig, dict) and wx_skip_block(cid, sig):
         _wx_probe = re.sub(
             r"风铃|风信使|风车|风筝|风扇|风衣|风箱|风镜|风灯|台风|风干|风湿|风油精|风门",
             "", line or "")
@@ -2201,7 +2203,7 @@ def load_refusal_bans(env_path=None):
     return recent_refusal_bans()
 
 
-def gated_llm(prompt, sig, max_regens=3):
+def gated_llm(prompt, sig, cid=None, max_regens=3):
     """Generate with the honesty gate: regenerate on violations (<= max_regens),
     then give up -> None (caller skips; citizen stays due for the next round).
     v0.44 gap #65: max_regens 2->3 (persistent-skip disease, see weather_recap)
@@ -3069,7 +3071,16 @@ OPENING_SKELETONS = (
 # 只写手上营生，不涉天气/街景/人设专名）。
 _OPEN_A = ("我把手边的", "刚把", "正把", "手头这", "轮到我把", "我先把手里的",
            "方才还捏着", "这会儿手里", "摊上那", "案头这件", "手边那",
-           "才搁下的", "兜里揣的", "刚才那")
+           "才搁下的", "兜里揣的", "刚才那",
+           # 2026-11-18: 14 -> 40。实测 15 条里 15 条都以「这会儿手里」开头——
+           # 组合治了逐字重复，却造出前缀雷同。起手段必须前 4-6 字就分叉。
+           "摊子收了半截，", "歇了口气，", "把袖子挽起来，", "搓了搓手指，",
+           "灯下摊开那", "趁着光还亮，", "活儿做到一半，", "刚坐下又起来，",
+           "钥匙还插在锁上，", "茶续了第二遍，", "巷子里还没动静，", "对门刚开了门，",
+           "手里这点营生，", "一天里最闲的这会儿，", "把账翻到新页，", "旧本子翻到底，",
+           "手腕转了个圈，", "工具摆成一排，", "刚擦完的手，", "肩上还压着，",
+           "翻过这页就不干了，", "这半天还没抬头，", "把灯往近处挪了挪，", "边角料还没清，",
+           "数到一半停了手，", "活儿晾在一边，")
 _OPEN_B = ("工具", "账本", "茶壶", "扳手", "秤杆", "袖口", "活儿", "单据",
            "旧物", "钥匙串", "工具箱", "图纸", "料子", "秤盘", "铁盒",
            "铜扣", "线轴", "钳子", "笔杆", "布角")
@@ -3255,7 +3266,12 @@ def opening_seed_block(cid, sig=None):
     opening12 already appears in today's live counter before hashing, so each
     same-day ring gets a skeleton nobody has used yet today."""
     cid = cid or ""
-    n = sum((i + 1) * ord(ch) for i, ch in enumerate(cid))
+    # 2026-11-18 修：原来用 (i+1)*ord(ch) 求和，相邻 cid 只差 1 → 落到相邻索引；
+    # 而骨架池按「起手段×物件×收尾」连续排列，同一段起手占连续几百个索引，
+    # 于是连续 cid 长期撞同一段起手（实测 8 条里 7 条都是「这会儿手里…」）。
+    # 改 md5 散列，相邻 cid 落到池子的随机位置，起手段自然分叉。
+    import hashlib as _hl
+    n = int(_hl.md5(cid.encode("utf-8")).hexdigest()[:8], 16)
     skels = OPENING_SKELETONS
     # R3220 (2026-11-16): 拒稿回灌闸。v0.65 只拿「今日已采纳」的开口做排除，而
     # hard-refuse 的开头写进 state/ring-refusals.jsonl 后再没人读过——同一骨架
@@ -3463,7 +3479,6 @@ def build_prompt(cid, text, sig):
                 "写「显存稳了」「线程卡了」这类句子视为跑题，一律换成人能摸到的东西（灶火、雨水、门板、路口）。\n")
     # 2026-11-18: 把「本席被分流为不写天气」写进 sig，供 ring_violations 事后强制。
     # 单测：分流比例 2/3；未分流席仍照常带天气护栏（防编造雨/风）。
-    sig["_wx_skip"] = bool(wx_skip_block(cid, sig))
     # 2026-11-18 CEO「个性更强、各地的人都有」：注入稳定分配的来处与说话底子。
     # 实测 1750 条里口头禅几乎不出现、全城读起来像同一条弄堂——素材在但没用上。
     try:
@@ -3471,6 +3486,12 @@ def build_prompt(cid, text, sig):
         _region_blk = _om.block_for_prompt(cid, p.get("faction"))
     except Exception:  # noqa: BLE001 - 来处缺失不该阻断生成
         _region_blk = ""
+    # 2026-11-18 CEO「千篇一律」：按 cid 稳定分配体式，让形式本身分叉
+    try:
+        import ring_forms as _rf
+        _form_blk = _rf.block_for_prompt(cid)
+    except Exception:  # noqa: BLE001 - 体式缺失不该阻断生成
+        _form_blk = ''
     _voice_blk = (
         "你说话的样子：别用谁都能说的通用叙述腔（「我把手边的X挪了挪」这类），"
         "带上你语言风格里自己的说法——底色词、行话、口头禅，顺口用一个就够，"
@@ -3498,7 +3519,8 @@ def build_prompt(cid, text, sig):
             f"{family_blk}"
             f"{fog_blk}"
             f"{tech_blk}"
-            f"用你的口吻写 1-2 句你今天的近况或感想（30-80 字，含人味细节），只输出这几句话本身。")
+            f"{_form_blk}"
+            f"只输出正文本身：不要标题、不要解释、不要包引号、不要写日期。")
 
 def add_ring(path, cid, line, anchor_note):
     with open(path, encoding="utf-8") as f:
@@ -4496,7 +4518,7 @@ def main():
                     sig["city_digest"] = ""
             with SeatHeartbeat(cid):
                 # T-20261113-06 ①: per-resident wall-clock fuse (default 150s).
-                line = seat_call(build_prompt(cid, text, sig), sig)
+                line = seat_call(build_prompt(cid, text, sig), sig, cid=cid)
         except SeatTimeout:
             print("seat-fuse skip", cid, "(stays due, >%ss wall-clock)"
                   % os.environ.get("BIGLIVE_SEAT_FUSE", "150"), flush=True)
