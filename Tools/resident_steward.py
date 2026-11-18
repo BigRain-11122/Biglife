@@ -311,9 +311,11 @@ def decide(ev, policy):
                     "近 30 条 %.1f（动词 %.1f）"
                     % (sc.get("avg_total", 0), sc.get("verb_avg", 0))))
 
-    # R7 依赖
+    # R7 依赖：ollama 是本线自己的依赖，不是 CEO 禁用的那批 MiniGame 任务。
+    # 2026-11-18 晚实锚：三个 ollama 任务全 Disabled，服务挂着没人拉起，
+    # 产线整段空转；CLI 里起的子进程又会随会话退出被连坐 —— 故改用 WMI 独立创建。
     if not (ev.get("ollama") or {}).get("up"):
-        out.append(("R7 ollama", "不可达", "alert", "11434 无响应（产线会空转）"))
+        out.append(("R7 ollama", "不可达", "start_ollama", "11434 无响应，尝试自启"))
     else:
         out.append(("R7 ollama", "健康", None, "11434 在线"))
     return out
@@ -334,6 +336,25 @@ def act(kind, detail, dry=False):
             return True, "已删孤儿锁，下一批提交可恢复"
         except OSError as exc:
             return False, "删锁失败：%s" % exc
+
+    if kind == "start_ollama":
+        # WMI 创建：父进程是 WmiPrvSE，不属任何计划任务/CLI 的 job object，
+        # 因此不会被「任务结束即清子进程」或「CLI 退出连坐」杀掉。
+        # 引号一律用 [char]34 拼，避免 PS 5.1 在多层引号里把 \" 吃掉（实测会
+        # 抛 UnexpectedToken，自启变成哑弹）。
+        ps = ("$e = Join-Path $env:LOCALAPPDATA 'Programs\\Ollama\\ollama app.exe'; "
+              "if (Test-Path $e) { $q = [char]34 + $e + [char]34; "
+              "$r = Invoke-CimMethod -ClassName Win32_Process -MethodName Create "
+              "-Arguments @{ CommandLine = $q }; $r.ReturnValue } else { -2 }")
+        r = _run(["powershell", "-NoProfile", "-Command", ps], timeout=120)
+        if r.returncode != 0 or (r.stdout or "").strip() not in ("0",):
+            return False, "ollama 自启失败 rc=%s out=%s" % (
+                r.returncode, (r.stdout or r.stderr or "")[:80])
+        for _ in range(20):
+            time.sleep(1.5)
+            if (ev_ollama() or {}).get("up"):
+                return True, "ollama 已自启并就绪（WMI 独立进程）"
+        return False, "已拉起进程但 30 秒内 11434 仍未监听"
 
     if kind == "fix_persona":
         r = _run([sys.executable, "-X", "utf8",
