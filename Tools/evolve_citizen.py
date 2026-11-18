@@ -3493,6 +3493,9 @@ def build_prompt(cid, text, sig):
     except Exception:  # noqa: BLE001 - 体式缺失不该阻断生成
         _form_blk = ''
     _voice_blk = (
+        # 2026-11-18: 实测出现过「喂，C-08161，那把扇还差磕痕没」——真人不会用编号称呼邻居。
+        "称呼别人一律用名字或外号（老张/阿婆/小周/修鞋的老许），严禁用编号；"
+        "提自己也不许说编号。\n"
         "你说话的样子：别用谁都能说的通用叙述腔（「我把手边的X挪了挪」这类），"
         "带上你语言风格里自己的说法——底色词、行话、口头禅，顺口用一个就够，"
         "别解释、别硬塞、别一段话里堆三个。\n")
@@ -3520,7 +3523,8 @@ def build_prompt(cid, text, sig):
             f"{fog_blk}"
             f"{tech_blk}"
             f"{_form_blk}"
-            f"只输出正文本身：不要标题、不要解释、不要包引号、不要写日期。")
+            f"只输出正文本身：不要标题、不要解释、不要写日期。"
+            f"（整段话不要用引号包起来；正文内部的对话引号不受此限。）")
 
 def add_ring(path, cid, line, anchor_note):
     with open(path, encoding="utf-8") as f:
