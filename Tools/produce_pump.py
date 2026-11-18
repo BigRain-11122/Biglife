@@ -41,6 +41,53 @@ SKIP_RE = re.compile(r"gate: skip (C-\d+)")
 SOFT_RE = re.compile(r"soft-concession")
 
 
+def run_batch_parallel(batch, conc):
+    """并发跑：取 due -> 切 conc 段 -> 各进程 --force --no-commit --lock-name。"""
+    env = os.environ.copy()
+    env.setdefault("BIGLIFE_MODEL", "qwen3.5:9b")
+    env.setdefault("BIGLIFE_LLM_URL", "http://127.0.0.1:11434/v1/chat/completions")
+    env.setdefault("BIGLIFE_IGNORE_YIELD_WINDOW", "1")
+    env.setdefault("PYTHONIOENCODING", "utf-8")
+    r = subprocess.run([PY, "-X", "utf8", os.path.join(HERE, "due_list.py"),
+                        "--limit", str(batch * 4), "--chunks", str(conc)],
+                       capture_output=True, text=True, timeout=300,
+                       cwd=ROOT, env=env, creationflags=NO_WINDOW)
+    segs = [l.strip() for l in (r.stdout or "").splitlines() if l.strip()]
+    segs = [l for l in segs if l.split()]
+    if len(segs) < conc:
+        res = run_batch(batch)
+        res["conc"] = 1
+        return res
+    t0 = time.time()
+    procs = []
+    for i, seg in enumerate(segs):
+        cmd = [PY, "-X", "utf8", os.path.join(HERE, "evolve_citizen.py"),
+               "--force"] + seg.split() + ["--no-commit", "--lock-name", "pc%d" % i]
+        procs.append(subprocess.Popen(cmd, cwd=ROOT, env=env,
+                                      stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                      text=True, creationflags=NO_WINDOW))
+    outs = []
+    for pr in procs:
+        try:
+            outs.append(pr.communicate(timeout=1800)[0] or "")
+        except subprocess.TimeoutExpired:
+            pr.kill()
+            outs.append("")
+    el = time.time() - t0
+    written = 0; due_total = None; skipped = 0; soft = 0
+    for o in outs:
+        m = WRITTEN_RE.search(o)
+        if m: written += int(m.group(1))
+        m = DUE_RE.search(o)
+        if m: due_total = (due_total or 0) + int(m.group(2))
+        skipped += len(SKIP_RE.findall(o))
+        soft += len(SOFT_RE.findall(o))
+    return {"rc": 0, "written": written, "due": due_total, "skipped": skipped,
+            "soft": soft, "pass_rate": round(written / due_total, 3) if due_total else None,
+            "seconds": round(el, 1), "conc": conc,
+            "tail": "\n".join("\n".join(o.strip().splitlines()[-2:]) for o in outs)[:400]}
+
+
 def run_batch(batch):
     env = os.environ.copy()
     env.setdefault("BIGLIFE_MODEL", "qwen3.5:9b")
@@ -125,6 +172,7 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
+    conc = int(os.environ.get("BIGLIFE_CONCURRENCY", "1"))
     started = time.time()
     deadline = started + args.minutes * 60
     rounds = []
@@ -163,7 +211,7 @@ def main():
             rl.log("pump stop: %s" % why)
             break
         refresh_index()          # 0.25s：让选人面与磁盘同步（省下每批 10-15s 的 walk）
-        res = run_batch(args.batch)
+        res = run_batch_parallel(args.batch, conc) if conc > 1 else run_batch(args.batch)
         rounds.append(res)
         total_written += res["written"]
         rl.log("pump batch %d: wrote=%d due=%s rc=%d %.0fs" % (
@@ -208,6 +256,17 @@ def main():
             rl.log("pump audit batch_audit rc=%d" % ra.returncode)
         except Exception as exc:  # noqa: BLE001 - 审查失败不能停线
             rl.log("pump audit failed: %s" % exc)
+        # 并发子进程带 --no-commit，这里统一提交一次（避免 git 抢锁）
+        if conc > 1:
+            try:
+                _git = ["git", "-C", ROOT]
+                rl._run(_git + ["add", "--", "census/registry"], timeout=300)
+                rl._run(_git + ["commit", "-q", "-m",
+                                "年轮环(并发批) %s [via BigLife-Pump]" % datetime.date.today().isoformat(),
+                                "--", "census/registry"], timeout=300)
+                rl.log("pump commit: ok (conc=%d)" % conc)
+            except Exception as exc:  # noqa: BLE001
+                rl.log("pump commit failed: %s" % exc)
         # 消费接口（CEO「一定用的上」）：把今日年轮导出成下游可读流，约 0.3 秒。
         # 下游 = Unity 居民气泡 / HTML 看板 / 短视频取材，统一读 today-rings.jsonl。
         try:

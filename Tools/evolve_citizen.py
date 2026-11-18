@@ -669,6 +669,7 @@ _SEAT = None
 # stale_s 且持有者 PID 已不在即判陈旧回收，防被杀批次把产线锁死。获取失败=报
 # busy 退 0（不阻塞其它入口，也不产生任何 LLM 调用）。
 EVOLVE_LOCK = os.path.join(CO, ".codely-cli", "tmp", "evolve.lock")
+_NO_COMMIT = False   # --no-commit 置 True（并发子进程用）
 LOCK_STALE_S = float(os.environ.get("BIGLIFE_LOCK_STALE_SEC", "1800"))
 
 
@@ -1191,7 +1192,11 @@ def llm_warm_probe(budget=None):
         return False
 
 
-def seat_call(prompt, sig, cid=None, fuse=None, max_regens=3):
+def seat_call(prompt, sig, cid=None, fuse=None, max_regens=None):
+    # 2026-11-18: 重试次数改由 BIGLIFE_MAX_REGENS 控制。实测成功率仅 13%,
+    # 87% 算力烧在重试上; 3->2 把浪费砍掉三分之一而不显著降质。
+    if max_regens is None:
+        max_regens = int(os.environ.get("BIGLIFE_MAX_REGENS", "2"))
     """T-20261113-06 ①: hard wall-clock fuse around one resident's seat.
 
     R2830 实锚: a stalled seat emitted nothing for 3.5 min and dragged the whole
@@ -2203,7 +2208,9 @@ def load_refusal_bans(env_path=None):
     return recent_refusal_bans()
 
 
-def gated_llm(prompt, sig, cid=None, max_regens=3):
+def gated_llm(prompt, sig, cid=None, max_regens=None):
+    if max_regens is None:
+        max_regens = int(os.environ.get("BIGLIFE_MAX_REGENS", "2"))
     """Generate with the honesty gate: regenerate on violations (<= max_regens),
     then give up -> None (caller skips; citizen stays due for the next round).
     v0.44 gap #65: max_regens 2->3 (persistent-skip disease, see weather_recap)
@@ -3958,6 +3965,10 @@ def due_citizens(cursor, batch, force=None):
     return _pick_spread(picked, zones, batch)
 
 def commit_files(paths, msg):
+    # 2026-11-18: 进程级并发时，子进程只写盘不提交，由主进程统一 commit，
+    # 避免多个 git commit 抢 index.lock。
+    if _NO_COMMIT:
+        return True
     try:
         subprocess.run(["git", "-C", CO, "add", "--"] + paths, check=True,
                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -4191,6 +4202,10 @@ def main():
                          "meet write path (same-day pre-check / bidirectional assertion / "
                          "rollback), fixtures in a temp dir, exit 1 on any failure")
     ap.add_argument("--via", default=None, help="committer-identity tail, e.g. BigLife-OSLoop")
+    ap.add_argument("--no-commit", dest="no_commit", action="store_true",
+                    help="write cards but skip git commit (parallel children)")
+    ap.add_argument("--lock-name", default=None,
+                    help="custom batch-lock filename (parallel children)")
     args = ap.parse_args()
     if args.selftest_meet:
         sys.exit(selftest_meet())
@@ -4222,7 +4237,12 @@ def main():
     # path (including meet/batch early returns) drops it.
     if (args.batch or args.meet or args.reflect) and not args.audit_due:
         try:
-            _lockp = acquire_batch_lock()
+            if getattr(args, "no_commit", False):
+                global _NO_COMMIT
+                _NO_COMMIT = True
+            _ln = getattr(args, "lock_name", None)
+            _lockp = acquire_batch_lock(
+                os.path.join(os.path.dirname(EVOLVE_LOCK), _ln) if _ln else None)
         except BatchLockBusy as exc:
             print("busy: another instance holds the batch (T-20261115-02) - %s; "
                   "zero LLM burned, retry after it ends" % exc, flush=True)
