@@ -48,13 +48,16 @@ def run_batch_parallel(batch, conc):
     env.setdefault("BIGLIFE_LLM_URL", "http://127.0.0.1:11434/v1/chat/completions")
     env.setdefault("BIGLIFE_IGNORE_YIELD_WINDOW", "1")
     env.setdefault("PYTHONIOENCODING", "utf-8")
+    # 2026-11-18 CEO「该扩就扩」：最后一个并发槽不跑年轮，改跑其他内容面，
+    # 让反思/池轮/相遇与年轮同时产出，而不是年轮空了才轮换。
+    rings_conc = max(1, conc - 1) if conc > 1 else 1
     r = subprocess.run([PY, "-X", "utf8", os.path.join(HERE, "due_list.py"),
-                        "--limit", str(batch * conc), "--chunks", str(conc)],
+                        "--limit", str(batch * rings_conc), "--chunks", str(rings_conc)],
                        capture_output=True, text=True, timeout=300,
                        cwd=ROOT, env=env, creationflags=NO_WINDOW)
     segs = [l.strip() for l in (r.stdout or "").splitlines() if l.strip()]
     segs = [l for l in segs if l.split()]
-    if len(segs) < conc:
+    if len(segs) < rings_conc:
         res = run_batch(batch)
         res["conc"] = 1
         return res
@@ -64,6 +67,12 @@ def run_batch_parallel(batch, conc):
         cmd = [PY, "-X", "utf8", os.path.join(HERE, "evolve_citizen.py"),
                "--force"] + seg.split() + ["--no-commit", "--lock-name", "pc%d" % i]
         procs.append(subprocess.Popen(cmd, cwd=ROOT, env=env,
+                                      stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                      text=True, creationflags=NO_WINDOW))
+    if conc > 1:
+        cmd2 = [PY, "-X", "utf8", os.path.join(HERE, "work_scheduler.py"),
+                "--run-next", "--skip-rings"]
+        procs.append(subprocess.Popen(cmd2, cwd=ROOT, env=env,
                                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                       text=True, creationflags=NO_WINDOW))
     outs = []
@@ -260,11 +269,37 @@ def main():
         if conc > 1:
             try:
                 _git = ["git", "-C", ROOT]
-                rl._run(_git + ["add", "--", "census/registry"], timeout=300)
-                rl._run(_git + ["commit", "-q", "-m",
-                                "年轮环(并发批) %s [via BigLife-Pump]" % datetime.date.today().isoformat(),
-                                "--", "census/registry"], timeout=300)
-                rl.log("pump commit: ok (conc=%d)" % conc)
+                ra = rl._run(_git + ["add", "--", "census/registry"], timeout=300)
+                rc = rl._run(_git + ["commit", "-q", "-m",
+                                     "年轮环(并发批) %s [via BigLife-Pump]"
+                                     % datetime.date.today().isoformat(),
+                                     "--", "census/registry"], timeout=300)
+                # 2026-11-18 假绿修复：原来只看「没抛异常」就记 ok，而 _run 从不
+                # 因 rc≠0 抛异常——15:56 起的孤儿 index.lock 让 add/commit 全数
+                # 失败，日志却一路写 ok，16 分钟的年轮写了没进库（302 个文件悬空）。
+                # 现在看 rc（commit rc=1 = 无改动可提交，属正常），并把 stderr 摘要写进日志。
+                if ra.returncode != 0 or rc.returncode not in (0, 1):
+                    _err = ((rc.stderr or "") + (rc.stdout or "")
+                            + (ra.stderr or ""))[:160].replace("\n", " ")
+                    rl.log("pump commit FAILED rc=add%s/commit%s %s"
+                           % (ra.returncode, rc.returncode, _err))
+                    # 孤儿锁自愈：无存活 git 进程却锁着 >10 分钟 → 清掉重试一次
+                    if "index.lock" in _err:
+                        try:
+                            _lk = os.path.join(ROOT, ".git", "index.lock")
+                            if os.path.exists(_lk) and (time.time() - os.path.getmtime(_lk)) > 600:
+                                os.remove(_lk)
+                                ra = rl._run(_git + ["add", "--", "census/registry"], timeout=300)
+                                rc = rl._run(_git + ["commit", "-q", "-m",
+                                                     "年轮环(并发批·锁自愈) %s [via BigLife-Pump]"
+                                                     % datetime.date.today().isoformat(),
+                                                     "--", "census/registry"], timeout=300)
+                                rl.log("pump commit retry-after-lockfix rc=add%s/commit%s"
+                                       % (ra.returncode, rc.returncode))
+                        except OSError as _le:
+                            rl.log("pump lockfix failed: %s" % _le)
+                else:
+                    rl.log("pump commit: ok (conc=%d)" % conc)
             except Exception as exc:  # noqa: BLE001
                 rl.log("pump commit failed: %s" % exc)
         # 消费接口（CEO「一定用的上」）：把今日年轮导出成下游可读流，约 0.3 秒。

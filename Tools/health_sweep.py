@@ -153,11 +153,34 @@ def check_quality():
     except Exception:  # noqa: BLE001
         out["bad"].append("ring_score 读取失败")
 
-    r2 = _run([PY, "-X", "utf8", os.path.join(HERE, "ring_score.py"), "--selftest"], timeout=120)
+    # 2026-11-18: 120s 会在满载时超时 → stdout 空 → 误报「闸失去分辨力」
+    # （15:16 实锚：手动跑 SELFTEST PASS，体检侧 FAIL）。超时放宽到 300s，
+    # 失败时把 returncode 写进原因，区分「真 FAIL」与「没跑起来」。
+    r2 = _run([PY, "-X", "utf8", os.path.join(HERE, "ring_score.py"), "--selftest"], timeout=300)
     ok = "SELFTEST PASS" in ((r2.stdout or "") + (r2.stderr or ""))
     out["rows"].append("评分器负控/正控自检：%s" % ("PASS" if ok else "**FAIL**"))
     if not ok:
-        out["bad"].append("评分器自检 FAIL（闸可能已失去分辨力）")
+        out["bad"].append("评分器自检 FAIL（rc=%s；rc≠0 多为满载超时，非闸失效）"
+                          % getattr(r2, "returncode", "?"))
+    # 2026-11-18 新增：人设跨字段矛盾 + 口头禅复读率。
+    # 这两类问题此前只能靠人眼发现（男穿旗袍 150 份 / <40 岁戴老花镜 318 份 /
+    # 58% 的年轮逐字复用本卡口头禅），必须进自动体检，否则修完又会长回来。
+    r3 = _run([PY, "-X", "utf8", os.path.join(HERE, "fix_persona_consistency.py"),
+               "--audit", "--json"], timeout=300)
+    try:
+        p = json.loads((r3.stdout or "").strip())
+        out["rows"].append("人设矛盾 %d 份（男穿女装 %d / 幼龄老花镜 %d）" % (
+            p["cloth_contradictions"], p["male_feminine"], p["presbyopia_under40"]))
+        out["rows"].append("口头禅逐字复读：近 7 天 %.1f%%（全史 %.1f%%，复读≥2 次 %d 人）" % (
+            100 * p["tic_recent_ratio"], 100 * p["tic_ratio"], p["tic_citizens_repeat2plus"]))
+        if p["cloth_contradictions"] > 0:
+            out["bad"].append("人设硬矛盾 %d 份（跑 fix_persona_consistency.py --apply）"
+                              % p["cloth_contradictions"])
+        if p["tic_recent_ratio"] > 0.35:
+            out["bad"].append("近 7 天口头禅复读 %.0f%% 超 35%%（提示词里的口头禅诱因回潮）"
+                              % (100 * p["tic_recent_ratio"]))
+    except Exception:  # noqa: BLE001
+        out["rows"].append("人设一致性检查：读取失败")
     return out
 
 

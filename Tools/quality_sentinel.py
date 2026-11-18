@@ -23,6 +23,7 @@ import collections
 import datetime
 import json
 import os
+import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -85,13 +86,22 @@ def analyze(rows, prev_rows):
     return out
 
 
-def judge(st):
+def judge(st, wind_ms=None):
     bad = []
     if st.get("count", 0) < MIN_SAMPLE:
         return bad  # 样本不足不判定
     for w, v in (st.get("image_ratio") or {}).items():
-        if v > IMG_MAX_RATIO:
-            bad.append("意象「%s」覆盖 %.0f%% > %.0f%%（千人一面风险）" % (w, v * 100, IMG_MAX_RATIO * 100))
+        cap = IMG_MAX_RATIO
+        if w == "风" and wind_ms is not None and wind_ms >= 8:
+            # 2026-11-18：大风天全城都提风是**如实**，不是 AI 味。
+            # 当日实锚 wind 13.6m/s（7 级），73% 的年轮提风属正常；按固定
+            # 45% 判会让哨兵天天报警、我们去改一段本来说对的话。
+            # 顶随风力抬：8m/s→55%，此后每 1m/s +5%，封顶 85%。
+            cap = min(0.85, 0.55 + (wind_ms - 8) * 0.05)
+        if v > cap:
+            bad.append("意象「%s」覆盖 %.0f%% > %.0f%%（千人一面风险%s）" % (
+                w, v * 100, cap * 100,
+                "；今日实况 %.1fm/s 大风，已按风力抬顶" % wind_ms if cap != IMG_MAX_RATIO else ""))
     if st.get("short_ratio", 0) > 0.25:
         bad.append("过短句（<%d 字）占 %.0f%% > 25%%" % (SHORT_MIN, st["short_ratio"] * 100))
     if st.get("long_ratio", 0) > 0.15:
@@ -114,7 +124,17 @@ def main():
     prev_day = (datetime.date.fromisoformat(a.date) - datetime.timedelta(days=1)).isoformat()
     prev = [r for r in load(LEDGER) if r.get("date") == prev_day]
     st = analyze(rows, prev)
-    bad = judge(st)
+    # 今日实况风力（与生产提示词同一数据源），用于把「风」覆盖率阈值抬到合理位。
+    wind_ms = None
+    try:
+        import evolve_citizen as _ec
+        m = re.search(r"wind\s*([\d.]+)\s*m/s",
+                      _ec.real_signals().get("weather") or "")
+        if m:
+            wind_ms = float(m.group(1))
+    except Exception:  # noqa: BLE001 - 拿不到风力就退回固定阈值
+        wind_ms = None
+    bad = judge(st, wind_ms=wind_ms)
 
     stamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     if not bad:
