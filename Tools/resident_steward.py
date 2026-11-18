@@ -50,8 +50,10 @@ POLICY = os.path.join(HERE, "batch-policy.json")
 LOOPLOG = os.path.join(STATE, "resident-loop.log")
 TIMEOUT = 240
 
-# 预授权边界（超出即只报不做）
-BATCH_MIN, BATCH_MAX = 4, 10
+# 预授权边界（超出即只报不做）。批大小沿革 6→8→10→15→20（2026-11-17 夜 CEO
+# 「放开给你用」定 20），所以上界跟着现有策略走，**绝不擅自把 20 压回 10**——
+# 那等于用运维规则去覆盖 CEO 的排产令。
+BATCH_MIN, BATCH_MAX = 6, 20
 THROUGHPUT_FLOOR = 400.0     # 条/小时
 THROUGHPUT_CEIL = 1100.0     # 超过它就不再加批
 PASS_FLOOR = 0.80            # 批成功率下限
@@ -159,7 +161,9 @@ def ev_throughput():
 
 def ev_policy():
     try:
-        with open(POLICY, encoding="utf-8") as fh:
+        # utf-8-sig：策略文件历史上带过 BOM，用 utf-8 读会 JSONDecodeError
+        # 并被吞掉 → 批大小静默回落到 8（CEO 定的 20 一直没生效）。
+        with open(POLICY, encoding="utf-8-sig") as fh:
             return json.load(fh)
     except (OSError, ValueError):
         return {}

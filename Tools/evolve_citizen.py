@@ -4062,7 +4062,7 @@ def load_batch_policy():
     Missing/corrupt file = 0 = policy off (CLI value stands). Zero-LLM, pure config.
     """
     try:
-        with open(os.path.join(HERE, "batch-policy.json"), encoding="utf-8") as f:
+        with open(os.path.join(HERE, "batch-policy.json"), encoding="utf-8-sig") as f:
             return int(json.load(f).get("batch", 0))
     except Exception:
         return 0

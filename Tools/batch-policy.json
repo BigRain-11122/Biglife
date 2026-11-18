@@ -1,6 +1,6 @@
-﻿{
-    "batch":  20,
-    "source":  "2026-11-17 夜 CEO 下班令「GPU/内存/CPU 放开给你用」：15→20。前值沿革 6→8→10→15→20",
-    "registered":  "2026-11-17",
-    "note":  "策略面下限：effective_batch = max(CLI --batch, 本值)。单条实测 2-6 秒（瓶颈是 4939 字符 prompt 的 prefill，不是解码），batch 10 时固定开销（全库扫描+批量 commit）约 15 秒/批；15 席可摊薄到约 10 秒/批。上界约束：seat-fuse 150 秒/条，最坏 2 条卡死 = 300 秒，仍在 pump 单批预算内；若实测撞预算，回退 12。三闸不动：诚实门/audit/QC 全保留。"
+{
+ "batch": 20,
+ "source": "2026-11-17 夜 CEO 下班令「GPU/内存/CPU 放开给你用」：15→20。前值沿革 6→8→10→15→20",
+ "registered": "2026-11-17",
+ "note": "策略面下限：effective_batch = max(CLI --batch, 本值)。单条实测 2-6 秒（瓶颈是 4939 字符 prompt 的 prefill，不是解码），batch 10 时固定开销（全库扫描+批量 commit）约 15 秒/批；15 席可摊薄到约 10 秒/批。上界约束：seat-fuse 150 秒/条，最坏 2 条卡死 = 300 秒，仍在 pump 单批预算内；若实测撞预算，回退 12。三闸不动：诚实门/audit/QC 全保留。"
 }

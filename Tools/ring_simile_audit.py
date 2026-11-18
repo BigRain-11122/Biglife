@@ -107,7 +107,10 @@ def repair_quota() -> tuple[int, int]:
     """
     floor = 0
     try:
-        with io.open(os.path.join(ROOT, "Tools", "batch-policy.json"), encoding="utf-8") as f:
+        # 2026-11-18：策略文件曾带 UTF-8 BOM，encoding="utf-8" 会让 json.load
+        # 抛 ValueError 并被下面的 except 吞掉 → floor 恒 0，策略静默失效。
+        with io.open(os.path.join(ROOT, "Tools", "batch-policy.json"),
+                     encoding="utf-8-sig") as f:
             floor = int(json.load(f).get("batch", 0))
     except Exception:
         floor = 0
