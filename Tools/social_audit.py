@@ -157,6 +157,10 @@ def fix(edges, dry=False):
             nm = name_of(ta, a)
             if not nm:
                 continue
+            # 卡面里有的旧关系写法没有编号（「棋友=顾阿凤」），只查 a 会漏判，
+            # 于是又补一条「街坊 C-00010 顾阿凤」——同一行里出现同一个人两次。
+            if nm in cur or nm in "".join(ins):
+                continue
             label = "相识" if e["rel"] == "meet" else str(e.get("src") or "")
             label = re.split(r"[、,，/]", label)[0].strip()
             label = MIRROR.get(label, "街坊")
@@ -188,10 +192,103 @@ def fix(edges, dry=False):
     return added, skipped, len(touched)
 
 
+def dedupe(dry=False):
+    """清掉补关系时造成的同名重复（同一行里同一个人出现两次）。"""
+    fixed = scanned = 0
+    try:
+        with open(BACKUP, encoding="utf-8") as fh:
+            ids = list(json.load(fh))
+    except (OSError, ValueError):
+        ids = []
+    for cid in ids:
+        p, text = read_card(cid)
+        if not p:
+            continue
+        scanned += 1
+        cur = rel_line(text)
+        if not cur:
+            continue
+        segs = [s.strip() for s in cur.split("；") if s.strip()]
+        seen, keep = set(), []
+        for s in segs:
+            names = ID_RE.findall(s) or []
+            nm = ""
+            m = re.search(r"C-\d{5}\s+([^\s；。（），、]+)", s)
+            if m:
+                nm = m.group(1)
+            key = nm or s
+            if nm and nm in seen:
+                continue
+            if nm:
+                seen.add(nm)
+            else:
+                # 无编号的老写法（棋友=顾阿凤）：把名字也记进 seen
+                m2 = re.search(r"[=＝]\s*([^\s；。（），、]{2,6})", s)
+                if m2:
+                    seen.add(m2.group(1))
+            keep.append(s)
+        new = "。".join([]) or ("；".join(keep).rstrip("。") + "。")
+        if new == cur:
+            continue
+        new = "；".join(keep).rstrip("。") + "。"
+        if dry:
+            fixed += 1
+            continue
+        txt2 = REL_LINE_RE.sub("**关系** " + new, text, count=1)
+        try:
+            with open(p, "w", encoding="utf-8", newline="") as fh:
+                fh.write(txt2)
+            fixed += 1
+        except OSError:
+            pass
+    return fixed, scanned
+
+
+def repair_lines(dry=False):
+    """把被吞掉的换行补回来。
+
+    2026-11-19 实锚：`REL_LINE_RE` 的模式以 `(?:\\n|$)` 结尾，sub 时把它一起吃掉，
+    而替换串没带换行 → 4868 张卡的 `**关系** …。` 与下一行 `**钩子** …` 并成了一行。
+    判据：关系行里出现第二个 `**` 即视为粘连，在该处断开。
+    """
+    fixed = 0
+    try:
+        with open(BACKUP, encoding="utf-8") as fh:
+            ids = list(json.load(fh))
+    except (OSError, ValueError):
+        return 0, 0
+    for cid in ids:
+        p, text = read_card(cid)
+        if not p:
+            continue
+        lines = text.split("\n")
+        for i, ln in enumerate(lines):
+            if ln.startswith("**关系**") and ln.count("**") > 2:
+                body = ln[len("**关系**"):]
+                j = body.find("**")
+                if j < 0:
+                    continue
+                lines[i] = "**关系**" + body[:j].rstrip()
+                lines.insert(i + 1, body[j:])
+                if dry:
+                    fixed += 1
+                else:
+                    try:
+                        with open(p, "w", encoding="utf-8", newline="") as fh:
+                            fh.write("\n".join(lines))
+                        fixed += 1
+                    except OSError:
+                        pass
+                break
+    return fixed, len(ids)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--repair-lines", action="store_true")
     ap.add_argument("--fix", action="store_true")
+    ap.add_argument("--dedupe", action="store_true")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
@@ -199,11 +296,17 @@ def main():
     if not edges:
         print("没有真关系边（citizen-relations.jsonl 缺失或只有 block）")
         return 1
+    if a.repair_lines:
+        f, s = repair_lines(dry=a.dry_run)
+        print("修粘连行：扫描 %d 张卡，修 %d 张%s" % (s, f, "·dry-run" if a.dry_run else "·已写回"))
     if a.fix:
         added, skipped, cards = fix(edges, dry=a.dry_run)
         print("补反向关系：新增 %d 条，涉及 %d 张卡（跳过 %d）%s"
               % (added, cards, skipped, "·dry-run" if a.dry_run else "·已写回"))
         edges = load_edges()
+    if a.dedupe:
+        f, s = dedupe(dry=a.dry_run)
+        print("清同名重复：处理 %d 张卡，改 %d 张%s" % (s, f, "·dry-run" if a.dry_run else "·已写回"))
     st = audit(edges)
     if a.json:
         print(json.dumps(st, ensure_ascii=False))
