@@ -2487,23 +2487,46 @@ def reflect_due(cursor):
     due.sort()
     return due[:1]
 
-def reflect_violations(lesson, rings_corpus):
-    """V2-B traceability gate: <=40 chars AND at least one verbatim >=4-char
-    Chinese fragment of the citizen's own ring corpus (教训句锚定自环)."""
+REFLECT_MIN_LEN, REFLECT_MAX_LEN = 50, 160
+
+
+def reflect_violations(lesson, rings_corpus, creed=""):
+    """反思闸：长度 + 可溯源 + 不抄信条。
+
+    2026-11-19 改：旧闸是「≤40 字 + 逐字 4 字片段」。实测产物是
+    「风扯得旗子猎，差之毫秒谬以全城，对数校准方不负旧账本。」——40 字硬压
+    把年轮片段压碎了（"旗子猎"是从"猎猎响"截断），后半句直接抄了信条。
+    CEO 的原话是「不是数字，是数字生命体」：回看不该是一句压缩包，应该是
+    **第一人称、点得到具体事、说得出自己改了哪一点**的一段话。
+    新口径：50–160 字；必须含年轮原文连续 6 字以上；与信条连续 8 字重合即判照抄。
+    """
     v = []
-    if len(lesson) > 40:
+    n = len(lesson)
+    if n > REFLECT_MAX_LEN:
         v.append("lesson-too-long")
-    grams = {lesson[i:i + 4] for i in range(len(lesson) - 3)
-             if re.fullmatch(r"[\u4e00-\u9fff]{4}", lesson[i:i + 4])}
+    if n < REFLECT_MIN_LEN:
+        v.append("lesson-too-short")
+    grams = {lesson[i:i + 6] for i in range(n - 5)
+             if re.fullmatch(r"[\u4e00-\u9fff]{6}", lesson[i:i + 6])}
     if not grams or not any(g in rings_corpus for g in grams):
         v.append("lesson-untraceable")
+    if creed and len(creed) >= 8:
+        cg = {creed[i:i + 8] for i in range(len(creed) - 7)}
+        if any(g in lesson for g in cg):
+            v.append("creed-copied")
     return v
 
-def build_reflect_prompt(cid, ents):
+
+def build_reflect_prompt(cid, ents, creed=""):
     mem = "\n".join("- %s：%s" % (d, t.strip()) for d, t in ents)
-    return (f"你是超体宇宙城的叙事市民「{cid}」。以下是你年轮里的全部真实经历（原文）：\n{mem}\n"
-            f"请从这些亲身经历中提炼 1 句你「人生的教训」。硬约束：不超过 40 字；教训里的关键短语必须逐字取自上面年轮原文"
-            f"（可以拼接原文短语），严禁编造年轮中没有的事、人名、地点、事件；只输出这一句教训本身，不要引号，不要解释。")
+    cref = ("「" + creed + "」") if creed else "（你卡面里的信条）"
+    return (
+        f"你是超体宇宙城的叙事市民「{cid}」，下面是你自己年轮里记下的全部真实经历（原文）：\n{mem}\n\n"
+        f"现在回头看这些年，写一段**你自己的回想**（第一人称，50–160 字）：\n"
+        f"- 必须点到一件真实发生过的事：从上面年轮里**逐字**取一段话（连续 6 个字以上）嵌进去；\n"
+        f"- 重点不是复述经历，而是你后来**做事的方式改了哪一点**（先看什么、先等谁、肯不肯让一步、哪句话不再说了）；\n"
+        f"- 严禁抄你自己的信条{cref}，也严禁写成「人生道理」或安慰自己的鸡汤；\n"
+        f"- 只输出这段话本身，不要引号，不要解释，不要分段。")
 
 def add_reflection(path, lesson, note):
     with open(path, encoding="utf-8") as f:
@@ -2542,16 +2565,17 @@ def reflect_step(cursor, via):
         print("reflect: cursor/card ring-count mismatch, skip", cid)
         return
     lesson = ""
+    _creed = persona_digest(text).get("creed", "")
     for _ in range(3):  # <=2 regens, same contract as gated_llm
         try:
-            lesson = llm(build_reflect_prompt(cid, ents))
+            lesson = llm(build_reflect_prompt(cid, ents, _creed))
         except Exception:
             print("ollama down; reflect skipped")
             return
         lesson = re.sub(r"\s+", " ", lesson).strip().strip('「」"“”')
-        if not reflect_violations(lesson, corpus):
+        if not reflect_violations(lesson, corpus, _creed):
             break
-    v = reflect_violations(lesson, corpus)
+    v = reflect_violations(lesson, corpus, _creed)
     if v:
         print("gate: reflect skip", cid, "(stays due)", v)
         return
