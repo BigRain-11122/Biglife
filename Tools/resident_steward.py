@@ -453,13 +453,66 @@ def log_ledger(rows, note=""):
         pass
 
 
+def brief():
+    """一眼看「活没活」：最后一条年轮多久前、今日产量、覆盖率、近一小时速率。
+
+    用法：python -X utf8 Tools/resident_steward.py --brief
+    存在的理由：CEO 不该靠问人来确认产线是否在跑；这条命令 3 秒内给结论。
+    """
+    tp = ev_throughput()
+    today = _now().date().isoformat()
+    pat = re.compile(r"^\[%s \d{2}:\d{2}:\d{2}\] pump batch \d+: wrote=(\d+)" % today)
+    total = 0
+    try:
+        with open(LOOPLOG, encoding="utf-8", errors="replace") as fh:
+            for ln in fh:
+                m = pat.match(ln)
+                if m:
+                    total += int(m.group(1))
+    except OSError:
+        pass
+    # 覆盖率：今日有环的居民数
+    covered = tot = 0
+    rx = re.compile(r"^- %s " % today, re.M)
+    reg = os.path.join(CO, "census", "registry")
+    try:
+        for root, _, fs in os.walk(reg):
+            for f in fs:
+                if not (f.startswith("C-") and f.endswith(".md")):
+                    continue
+                tot += 1
+                try:
+                    with open(os.path.join(root, f), encoding="utf-8", errors="replace") as fh:
+                        if rx.search(fh.read()):
+                            covered += 1
+                except OSError:
+                    pass
+    except OSError:
+        pass
+    up = (ev_ollama() or {}).get("up")
+    age = tp.get("last_pump_min")
+    state = "在跑" if (age is not None and age <= 12 and up) else "停摆"
+    print("值守席判读：%s%s" % (state, "" if up else "（ollama 不可达）"))
+    print("  最后一批：%s" % ("%d 分钟前" % age if age is not None else "无记录"))
+    print("  今日产量：%d 条（覆盖 %d/%d = %.1f%%）"
+          % (total, covered, tot, 100.0 * covered / max(1, tot)))
+    if tp.get("due"):
+        print("  近一小时：%d/%d 成功（%.0f%%），%d 条" % (
+            tp.get("wrote", 0), tp["due"], tp["pass"] * 100, tp.get("wrote", 0)))
+    print("  提示：完整体检 = python -X utf8 Tools/health_sweep.py")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--decide", action="store_true")
     ap.add_argument("--status", action="store_true")
+    ap.add_argument("--brief", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force-audit", action="store_true")
     a = ap.parse_args()
+    if a.brief:
+        return brief()
     live = a.decide and not a.status
     st = load_state()
 
