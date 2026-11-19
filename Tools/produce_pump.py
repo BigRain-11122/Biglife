@@ -260,7 +260,10 @@ def main():
         #   必须如实记成 batch-failed，否则运维看回执会以为今天已经写完。
         #   rc==0 且 written=0  = 今天剩余的卡全被质量闸 defer（+1d），再跑也是拒，
         #   这才是真正的 no-progress。
-        if res["due"] is not None and res["written"] == 0:
+        # due=None 与「有 due 但全被拒」是同一件事：这轮年轮没活了。
+        # 2026-11-19 10:5x 实锚：池子被旧冷却值锁死时，泵在这里连转 120 批
+        # 空批（每批 1 秒）把整个窗口烧光，日志只有一行行 wrote=0 due=None。
+        if res["written"] == 0:
             if res["rc"] != 0:
                 gate_reason = "batch-failed"
                 break

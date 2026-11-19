@@ -3935,6 +3935,17 @@ def due_citizens(cursor, batch, force=None):
         if not c or not c.get("next"):
             fresh.append(cid)  # never evolved yet: anchors first (born earliest)
         else:
+            # 2026-11-19 10:5x 实锚：COOLDOWN_DAYS 从 7 改到 1 只改了常量，
+            # **存量游标里的 next 还是旧值**（实测 3438 人 next=last+7，锁到 11-24），
+            # 于是今日 due 池在 09:3x 被抽干，泵连续 120 批 wrote=0 due=None 空转。
+            # 正法=读游标时把 next 夹到 last+COOLDOWN_DAYS（自愈，写回同一个 dict）。
+            try:
+                _last_d = datetime.date.fromisoformat(str(c.get("last") or ""))
+                _cap = (_last_d + datetime.timedelta(days=COOLDOWN_DAYS)).isoformat()
+                if str(c.get("next") or "") > _cap:
+                    c["next"] = _cap
+            except ValueError:
+                pass
             try:
                 if datetime.date.fromisoformat(c["next"]) <= t:
                     again.append(cid)
