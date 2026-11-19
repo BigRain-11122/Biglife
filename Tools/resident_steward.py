@@ -479,12 +479,70 @@ def ev_cadence(n=4):
     return {"gaps": gaps, "bad": any(g > 780 for g in gaps), "last": ts[-1] if ts else None}
 
 
-def brief():
-    """一眼看「活没活」：最后一条年轮多久前、今日产量、覆盖率、近一小时速率。
+def night_report(force=False):
+    """夜间报告：每天早上自动写 state/NIGHT-REPORT.md，人不在也看得见。
 
-    用法：python -X utf8 Tools/resident_steward.py --brief
-    存在的理由：CEO 不该靠问人来确认产线是否在跑；这条命令 3 秒内给结论。
+    由值守席写而不是另起任务：CEO 早上只想知道三件事——昨晚断没断、产了多少、
+    有没有乱改东西。台账是排查用的流水，这份是给眼睛看的摘要。
     """
+    st = load_state()
+    today = _now().date().isoformat()
+    if not force and st.get("night_report_date") == today:
+        return ""
+    pat = re.compile(r"^\[(\d{4}-\d{2}-\d{2}) (\d{2}):\d{2}:\d{2}\] pump batch \d+: wrote=(\d+)")
+    per, last = {}, None
+    try:
+        with open(LOOPLOG, encoding="utf-8", errors="replace") as fh:
+            for ln in fh:
+                m = pat.match(ln)
+                if not m:
+                    continue
+                per[m.group(2)] = per.get(m.group(2), 0) + int(m.group(3))
+                last = m.group(1) + " " + m.group(2) + ":00"
+    except OSError:
+        return ""
+    gaps = []
+    try:
+        with open(LOOPLOG, encoding="utf-8", errors="replace") as fh:
+            done = [datetime.datetime.strptime(m.group(1), "%Y-%m-%d %H:%M:%S")
+                    for m in (re.match(r"^\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\] pump done", l)
+                              for l in fh) if m]
+        done = done[-14:]
+        gaps = [int((b - a).total_seconds()) for a, b in zip(done, done[1:])]
+    except OSError:
+        pass
+    bad = [g for g in gaps if g > 780]
+    rows = ["# 夜间报告 · %s" % _now().strftime("%Y-%m-%d %H:%M"), "",
+            "## 一句话", "",
+            "- 累计产出 **%d** 条；最后一批 %s" % (sum(per.values()), last or "无"),
+            "- 窗口节拍：%s 秒%s" % (
+                "/".join(str(g) for g in gaps[-5:]) or "无记录",
+                "（%d 次 >780s，触发被丢弃过）" % len(bad) if bad else "（正常）"),
+            "", "## 逐小时产量", "", "| 小时 | 条数 |", "|---|---|"]
+    for h in sorted(per)[-14:]:
+        rows.append("| %s:00 | %d |" % (h, per[h]))
+    rows += ["", "## 值守席", ""]
+    try:
+        with open(LEDGER, encoding="utf-8") as fh:
+            tail = [l for l in fh if l.startswith("| 2026-")]
+        acts = [l for l in tail[-400:] if l.count("|") >= 5 and "| - |" not in l]
+        rows.append("- 台账 %d 行，有动作 %d 条（明细 STEWARD-LEDGER.md）" % (len(tail), len(acts)))
+    except OSError:
+        rows.append("- 台账读取失败")
+    if os.path.exists(ALERT):
+        rows.append("- **有告警未清**：%s" % ALERT)
+    out = os.path.join(STATE, "NIGHT-REPORT.md")
+    try:
+        with open(out, "w", encoding="utf-8") as fh:
+            fh.write("\n".join(rows) + "\n")
+    except OSError:
+        return ""
+    st["night_report_date"] = today
+    save_state(st)
+    return out
+
+
+def brief():
     tp = ev_throughput()
     today = _now().date().isoformat()
     pat = re.compile(r"^\[%s \d{2}:\d{2}:\d{2}\] pump batch \d+: wrote=(\d+)" % today)
@@ -540,13 +598,24 @@ def main():
     ap.add_argument("--decide", action="store_true")
     ap.add_argument("--status", action="store_true")
     ap.add_argument("--brief", action="store_true")
+    ap.add_argument("--night-report", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force-audit", action="store_true")
     a = ap.parse_args()
     if a.brief:
         return brief()
+    if a.night_report:
+        p = night_report(force=True)
+        print(p or "夜间报告生成失败")
+        return 0
     live = a.decide and not a.status
     st = load_state()
+    # 早上 6–9 点自动出昨夜报告（每天一次），人不在也留一份可读的东西。
+    if live and 6 <= _now().hour <= 9:
+        try:
+            night_report()
+        except Exception:  # noqa: BLE001
+            pass
 
     policy = ev_policy()
     ev = {

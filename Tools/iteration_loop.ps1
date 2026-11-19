@@ -32,7 +32,11 @@ $env:BIGLIFE_IGNORE_YIELD_WINDOW = '1'
 $env:BIGLIFE_MODEL = 'qwen3.5:9b'
 $env:BIGLIFE_LLM_URL = 'http://127.0.0.1:11434/v1/chat/completions'
 $env:BIGLIFE_VRAM_LIMIT = '0.85'
-$env:BIGLIFE_CONCURRENCY = '3'
+# 2026-11-19 evening: 3 -> 4. GPU util sits at ~15% while two ring segments run,
+# i.e. the card is idle between requests, not saturated. One more in-flight ring
+# segment keeps the two ollama slots packed. VRAM is unchanged (same model, the
+# slots are fixed by OLLAMA_NUM_PARALLEL); revert to 3 if throughput does not rise.
+$env:BIGLIFE_CONCURRENCY = '4'
 Set-Location $Project
 
 # 2026-11-17 CEO order: no cross-stealing. Layered schedule instead of a hard skip.
