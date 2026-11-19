@@ -453,6 +453,32 @@ def log_ledger(rows, note=""):
         pass
 
 
+def ev_cadence(n=4):
+    """窗口节拍：最近 n 次「pump done」的间隔。
+
+    2026-11-19 13:1x 实锚：只看「最后一批几分钟前」判不出来——窗口本身是活的，
+    但**每隔一轮被 MultipleInstances=IgnoreNew 吃掉**（窗口 10-11 分钟 > 10 分钟
+    触发间隔），产能腰斩而判活显示「在跑」。所以节拍必须单独成一项证据。
+    正常应 ≈600s；>780s 视为隔轮丢失。
+    """
+    pat = re.compile(r"^\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\] pump done")
+    ts = []
+    try:
+        with open(LOOPLOG, encoding="utf-8", errors="replace") as fh:
+            for ln in fh:
+                m = pat.match(ln)
+                if m:
+                    try:
+                        ts.append(datetime.datetime.strptime(m.group(1), "%Y-%m-%d %H:%M:%S"))
+                    except ValueError:
+                        pass
+    except OSError:
+        return {"gaps": [], "bad": False}
+    ts = ts[-n:]
+    gaps = [int((b - a).total_seconds()) for a, b in zip(ts, ts[1:])]
+    return {"gaps": gaps, "bad": any(g > 780 for g in gaps), "last": ts[-1] if ts else None}
+
+
 def brief():
     """一眼看「活没活」：最后一条年轮多久前、今日产量、覆盖率、近一小时速率。
 
@@ -491,9 +517,15 @@ def brief():
         pass
     up = (ev_ollama() or {}).get("up")
     age = tp.get("last_pump_min")
+    cad = ev_cadence()
     state = "在跑" if (age is not None and age <= 12 and up) else "停摆"
+    if state == "在跑" and cad.get("bad"):
+        state = "在跑但节拍掉了一轮"
     print("值守席判读：%s%s" % (state, "" if up else "（ollama 不可达）"))
     print("  最后一批：%s" % ("%d 分钟前" % age if age is not None else "无记录"))
+    if cad.get("gaps"):
+        print("  窗口节拍：%s 秒（正常 ≈600；>780 = 有触发被丢弃）"
+              % "/".join(str(g) for g in cad["gaps"][-3:]))
     print("  今日产量：%d 条（覆盖 %d/%d = %.1f%%）"
           % (total, covered, tot, 100.0 * covered / max(1, tot)))
     if tp.get("due"):
