@@ -274,7 +274,15 @@ try {
         if ($__gateOpen) {
             Log 'pump: gate open - filling window with deterministic batches (7x24)'
             try {
-                & $__py -X utf8 $__pump --minutes 9 --batch $__batch 2>&1 |
+                # 2026-11-19 13:1x evidence: a 9-minute pump window plus pre-steps
+            # (steward/behavior/startup) and post-steps (commit/export) measured
+            # 10-11 minutes - LONGER than the 10-minute trigger interval - so the
+            # next trigger hit a still-running instance and was swallowed by
+            # MultipleInstances=IgnoreNew. Measured window gaps alternated between
+            # 599s and 1140-1221s: every second round was lost, halving throughput
+            # (what the user saw as "stopped again"). Fix is headroom, not length:
+            # shrink the window to 7 minutes so a whole round fits inside 10.
+            & $__py -X utf8 $__pump --minutes 7 --batch $__batch 2>&1 |
                     Out-File -FilePath $runLog -Append -Encoding UTF8
                 Log "pump finished rc=$LASTEXITCODE"
             } catch { Log "pump failed (non-blocking): $_" }
