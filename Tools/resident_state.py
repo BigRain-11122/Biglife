@@ -34,9 +34,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CO = os.path.dirname(HERE)
 NEEDS_PATH = os.path.join(CO, "census", "export", "citizen-needs.jsonl")
 
-REL_RE = re.compile(r"(?:C-\d{5}|[A-Z]-[A-Z0-9]+)\s+([^\s；。（），、]+)")
-# 只放行纯中文名：卡面里存在「应Kai」「龚Vivi」这类带拉丁的名字，而年轮的 hard
-# 约束禁拉丁字母——把这种名字喂进去等于给闸送拒稿（gate 会反复 defer 该席）。
+REL_RE = re.compile(r"C-\d{5}\s+([^\s；。（），、]+)")
+# 只放行 C- 编号后的人名：家户条目形如「家户 H-1002 老两口（…）」，把 H- 也当 id
+# 会抓出「老两口」「夫妻带娃」当名字，状态块就成了「常来往的是夫妻带娃」。
+# 另一条是纯中文名：卡面存在「应Kai」「龚Vivi」这类带拉丁的名字，而年轮禁拉丁
+# 字母——把这种名字喂进去等于给闸送拒稿（gate 会反复 defer 该席）。
 CN_NAME_RE = re.compile(r"^[\u4e00-\u9fa5·]{2,8}$")
 NEED_WORD = {
     "anwen": "安顿日子的事",

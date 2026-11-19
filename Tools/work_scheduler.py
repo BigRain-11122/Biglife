@@ -48,7 +48,11 @@ REFLECT_MIN_RINGS = 3
 REFLECT_COOLDOWN_DAYS = 30
 # 2026-11-17 实测供给: 反思 4085 人(年轮>=3 且过 30 天冷却)、相遇 60 对、池轮欠深桶。
 # 夜窗（CEO 下班放开）: reflect 20->60, pool 2->5；meet 受 evolve 脚本内 hard cap 3。
-DAILY_CAP = {"rings": 10 ** 9, "reflect": 60, "pool": 5, "meet": 3}
+# 2026-11-19 CEO「居民互相也要有联系和连接」：meet 3→12。
+# meet 是唯一会同时写进两张卡的关系事件（「与 X 相遇：…」），也是社交图里
+# 唯一真正的双向产物；实测全城只有 73 条 meet 边（cap 3/天、57 天累计），
+# 而单向 buddy 边 1.5 万条——城市看着热闹，其实谁也没真的见过谁。
+DAILY_CAP = {"rings": 10 ** 9, "reflect": 200, "pool": 15, "meet": 12}
 
 
 def _run(cmd, timeout=600, cwd=CO):
@@ -200,6 +204,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--probe", action="store_true")
     ap.add_argument("--run-next", action="store_true")
+    ap.add_argument("--skip-rings", action="store_true",
+                    help="only non-ring faces (parallel slot)")
     ap.add_argument("--stats", action="store_true")
     a = ap.parse_args()
 
@@ -214,7 +220,10 @@ def main():
 
     # 按优先级挑第一个「有活 且 未超配额」的面
     picked = None
+    skip = {"rings"} if getattr(a, "skip_rings", False) else set()
     for name, work, quota, note in rows:
+        if name in skip:
+            continue
         if work and quota > 0:
             picked = name
             break
