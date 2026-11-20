@@ -3722,8 +3722,18 @@ def add_ring(path, cid, line, anchor_note):
             text = text.replace(m.group(1), m.group(1) + entry + "\n", 1)
         else:
             text = re.sub(r"\*\*年轮\*\*\n", ring + "\n" + entry + "\n", text, count=1)
+            # 2026-11-20 22:4x 实锚：有的卡「年轮」段换行被吃掉（**年轮**- 2026-…），
+            # 上面两个分支都匹配不到，于是**静默 no-op 却 return True**——调用方看到
+            # "写成功"，卡上一个字节没长，106 人补产 4 小时补不进去。
+            # 兜底：标题后直接没换行时，按标题切开插入；仍失败则明确返回 False。
+            if entry not in text:
+                text = re.sub(r"\*\*年轮\*\*", ring + "\n" + entry + "\n", text, count=1)
     else:
         text = re.sub(r"(\n\*\*进化\*\*)", "\n" + ring + "\n" + entry + r"\n\1", text, count=1)
+    if entry not in text:
+        # 最后一道：没写进去就报失败，绝不假成功（这是本项目第四次踩「假绿」）
+        print("add_ring: entry did not land, refusing to report success", flush=True)
+        return False
     # v0.64 (2026-10-28): count only the 年轮 block. The old card-wide scan also
     # matched 反思 lines ("- 2026-10-15 ..." under **反思**), so every card carrying a
     # reflection declared one ring more than it had (C-00014 10 vs 9 / C-00015 9 vs 8,
