@@ -152,6 +152,27 @@ def refresh_index():
         return False
 
 
+GAME_LANE_PROCS = ("unity.exe", "tuanjie.exe", "unityhub.exe", "tuanjie hub.exe")
+
+
+def game_lane_active():
+    """游戏车道是否在跑（团结/Unity 编辑器）。命中就让路，不抢显存。
+
+    判据用进程名而不是显存读数：编辑器挂着不动也占着卡，而我们要让的是
+    "人在做游戏开发"这件事本身，不是"卡有多满"。
+    """
+    try:
+        # tasklist 输出是 GBK，rl._run 用 utf-8 解码会抛 UnicodeDecodeError，
+        # 被 except 吃掉后永远返回 False——闸就成了摆设（实测第一版即如此）。
+        # 这里直接起子进程并 errors="replace"，只关心进程名。
+        r = subprocess.run(["tasklist"], capture_output=True, text=True,
+                           encoding="utf-8", errors="replace", timeout=30)
+        low = (r.stdout or "").lower()
+        return any(p in low for p in GAME_LANE_PROCS)
+    except Exception:  # noqa: BLE001 - 探测失败按"没在跑"处理，不误伤产线
+        return False
+
+
 def warm_probe(budget=90):
     """一轮开始前用 1 token 确认模型能应答。
 
@@ -221,6 +242,15 @@ def main():
         return 0
     import atexit
     atexit.register(rl.drop_lock)   # 任何退出路径都放锁
+
+    # 2026-11-20 夜 CEO「游戏开发在并行，你们排单排队，不要互相杀进程」：
+    # 让路硬门。游戏车道（团结/Unity 编辑器）在跑时，本线**不碰 GPU**：
+    # 不烧推理、不抢显存，窗口直接让出；零 GPU 的确定性面与巡查照常。
+    # 原则：**只让路，不杀进程**——本线任何工具都不许 taskkill 他线进程。
+    if game_lane_active():
+        rl.log("pump yield: game lane active (Unity/Tuanjie) - window yielded, no GPU work")
+        print("PUMP yield: game lane active", flush=True)
+        return 0
 
     if not warm_probe():
         rl.log("pump stop: warm-probe failed (model cannot answer) - yield window")

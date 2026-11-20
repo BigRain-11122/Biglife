@@ -119,6 +119,19 @@ def main():
     ap.add_argument("--shard", type=int, default=0)
     ap.add_argument("--shards", type=int, default=1)
     a = ap.parse_args()
+    # 2026-11-20 夜 CEO「游戏开发在并行，排单排队，不要互相杀进程」：
+    # 重写是纯 GPU 活，游戏车道（团结/Unity 编辑器）在跑时直接让路，
+    # 不抢显存、不烧推理，等下一个窗口。只让路，不杀任何进程。
+    try:
+        import subprocess as _sp
+        _r = _sp.run(["tasklist"], capture_output=True, text=True,
+                     encoding="utf-8", errors="replace", timeout=30)
+        _low = (_r.stdout or "").lower()
+        if any(_p in _low for _p in ("unity.exe", "tuanjie.exe", "unityhub.exe")):
+            print("yield: game lane active (Unity/Tuanjie) - no GPU work this round")
+            return 0
+    except Exception:  # noqa: BLE001
+        pass
     done = tried = 0
     backup = {}
     for cid, p in _cards(shard=a.shard, shards=max(1, a.shards)):
