@@ -134,6 +134,7 @@ def ev_throughput():
     wrote = due = 0
     last_pump = None
     zero = 0
+    fails = []
     for ln in lines:
         m = pat.search(ln)
         if not m:
@@ -146,6 +147,12 @@ def ev_throughput():
         if t >= cut:
             w = int(m.group(3))
             wrote += w
+            # rc≠0 = 整批死掉（不是空池）。游标损坏就是这么被漏掉的。
+            try:
+                if int(m.group(5)) != 0:
+                    fails.append(t)
+            except (ValueError, IndexError):
+                pass
             try:
                 due += int(m.group(4))
             except ValueError:
@@ -156,6 +163,7 @@ def ev_throughput():
     return {"wrote": wrote, "due": due,
             "pass": (wrote / due) if due else 0.0,
             "zero_batches": zero,
+            "fail_batches": len(fails),
             "last_pump_min": int((_now() - last_pump).total_seconds() // 60)}
 
 
@@ -318,6 +326,14 @@ def decide(ev, policy):
         out.append(("R7 ollama", "不可达", "start_ollama", "11434 无响应，尝试自启"))
     else:
         out.append(("R7 ollama", "健康", None, "11434 在线"))
+
+    # R8 批次连续失败（2026-11-20 16:4x 实锚）：游标被并发写坏时，每一批都在
+    # 0 秒内 rc≠0 死掉，而 last_pump 是"刚刚"，R5 判「在跑」——真实停摆 2 小时
+    # 无人发现。判据＝最近 5 批里 ≥3 批 rc≠0，动作＝体检并自愈数据面。
+    tp2 = ev.get("throughput") or {}
+    if int(tp2.get("fail_batches") or 0) >= 3:
+        out.append(("R8 批连续失败", "需修", "repair_data",
+                    "近 5 批有 %d 批 rc≠0（多为游标/索引损坏）" % tp2["fail_batches"]))
     return out
 
 
@@ -377,6 +393,17 @@ def act(kind, detail, dry=False):
 
     if kind == "start_ollama":
         return ensure_ollama()
+
+    if kind == "repair_data":
+        # 数据面体检：load_cursor 自带"解析失败→切第一份完整对象→另存损坏件"的自愈，
+        # 这里只是把它触发一次，并回读条数确认可用。
+        r = _run([sys.executable, "-X", "utf8", "-c",
+                  "import sys;sys.path.insert(0,%r);import evolve_citizen as e;"
+                  "print(len(e.load_cursor()))" % HERE], timeout=300)
+        out = (r.stdout or "").strip()
+        if r.returncode == 0 and out.isdigit() and int(out) > 0:
+            return True, "数据面自愈完成，游标 %s 条" % out
+        return False, "数据面自愈失败 rc=%s %s" % (r.returncode, (r.stderr or "")[:80])
 
     if kind == "fix_persona":
         r = _run([sys.executable, "-X", "utf8",
