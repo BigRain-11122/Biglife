@@ -249,11 +249,15 @@ def main():
     # 原则：**只让路，不杀进程**——本线任何工具都不许 taskkill 他线进程。
     if game_lane_active():
         # CEO 2026-11-20 夜更正：「不是让路，是**共用大模型、排队**」。
-        # 所以这里不停产，只把并发压到 1 段：请求照样进 ollama 队列，
-        # 游戏车道那边要卡时先到先得，我们退到低优先级排队，不抢槽。
-        conc = 1
-        rl.log("pump shared-mode: game lane active -> concurrency 1 (queue, not yield)")
-        print("PUMP shared-mode: conc=1", flush=True)
+        # 但「工作日白天」才需要让：周末/节假日/工作日 19:00–09:00 CEO 已授权
+        # **全天全量占用**（resource_policy）。所以只有 shared 档才压到 1 段。
+        try:
+            import resource_policy as _rp
+            conc = int(_rp.limits().get("conc", 1))
+        except Exception:  # noqa: BLE001
+            conc = 1
+        rl.log("pump mode: game lane active -> policy conc=%d" % conc)
+        print("PUMP policy-mode: conc=%d" % conc, flush=True)
 
     if not warm_probe():
         rl.log("pump stop: warm-probe failed (model cannot answer) - yield window")
