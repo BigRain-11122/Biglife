@@ -806,10 +806,50 @@ def find_card(cid):
     return None
 
 def load_cursor():
-    if os.path.isfile(CURSOR):
+    """读游标；**损坏时自愈**，绝不把异常抛给产线。
+
+    2026-11-20 16:4x 实锚：固定名 tmp 被 6 段并发写坏 → 文件里粘了两份 JSON，
+    `json.load` 抛 `Extra data: line 60686`，于是每一批都在 0 秒内 rc=1 死掉，
+    全城停摆 2 小时，日志只有 `wrote=0 due=None rc=1 0s`——看不出是游标的问题。
+    这里改成：解析失败就按括号深度切出第一份完整对象，另存损坏件，继续跑。
+    """
+    if not os.path.isfile(CURSOR):
+        return {}
+    try:
         with open(CURSOR, encoding="utf-8") as f:
             return json.load(f)
-    return {}
+    except (ValueError, OSError) as exc:
+        try:
+            raw = open(CURSOR, encoding="utf-8", errors="replace").read()
+        except OSError:
+            return {}
+        depth, end = 0, -1
+        for i, ch in enumerate(raw):
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    end = i + 1
+                    break
+        if end > 0:
+            try:
+                data = json.loads(raw[:end])
+            except ValueError:
+                data = None
+            if isinstance(data, dict) and data:
+                try:
+                    bak = CURSOR + ".corrupt-%s" % datetime.datetime.now().strftime("%H%M%S")
+                    with open(bak, "w", encoding="utf-8") as fh:
+                        fh.write(raw)
+                    save_cursor(data)
+                    print("cursor self-heal: recovered %d entries (%s)"
+                          % (len(data), type(exc).__name__), flush=True)
+                except OSError:
+                    pass
+                return data
+        print("cursor unreadable, starting empty (%s)" % type(exc).__name__, flush=True)
+        return {}
 
 def save_cursor(c):
     # T-20261025-01: 原子写（tmp + os.replace）。批次被外部击杀时，
