@@ -252,7 +252,7 @@ try {
             Log "steward rc=$LASTEXITCODE"
         } catch { Log "steward failed (non-blocking): $_" }
     }
-    # Persona rewrite backlog (CEO 2026-11-20 "你可以重写，我要的是高质量").
+    # Persona rewrite backlog (CEO 2026-11-20: rewrite is allowed, quality first).
     # The "now/idea" pools hold only 123/511 sentences for 10k residents; rewriting
     # all of them needs ~10k LLM calls, so it runs in bounded slices here instead
     # of one long job: 40 cards per cycle (~240/hour) fills the whole city in a
