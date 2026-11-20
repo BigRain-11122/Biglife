@@ -2454,18 +2454,32 @@ def fit_ring_line(line, limit=90):
             line = line[1:-1].strip()
     if len(line) > limit:
         head = line[:limit]
-        for sep in ("。", "！", "？", "；", "，"):
+        cut = -1
+        for sep in ("。", "！", "？", "…"):
             i = head.rfind(sep)
             if i >= limit // 2:
-                head = head[:i + 1]
+                cut = i + 1
                 break
-        line = head.rstrip("，；、 ")
-    oc, cc = line.count("\u201c"), line.count("\u201d")
-    if oc != cc:
-        if oc == cc + 1 and line.endswith(("。", "！", "？", "…")):
-            line = line[:-1] + "\u201d" + line[-1]
-        else:
-            line = line.replace("\u201c", "").replace("\u201d", "")
+        if cut < 0:
+            for sep in ("；", "，"):
+                i = head.rfind(sep)
+                if i >= limit // 2:
+                    cut = i + 1
+                    break
+        line = (head[:cut] if cut > 0 else head).rstrip("，；、 ")
+    # 2026-11-19 实测：817 条（8.1%）年轮是半句话断在那里，形如
+    # 「老许，这弦松得不像样，——开引号没有闭合、结尾也没有句末标点。
+    # 旧实现只处理了 “ ”，没处理中文对话的 「」。这里两步收口：
+    #   ① 未闭合的引号 → 回退到开引号之前（不保留半句引语）
+    #   ② 结尾不是句末标点 → 去掉悬空的顿逗再补句号
+    for a, b in (("「", "」"), ("“", "”")):
+        if line.count(a) != line.count(b):
+            k = line.rfind(a)
+            if k > 0:
+                line = line[:k].rstrip("，；、 ")
+            line = line.replace(a, "").replace(b, "")
+    if line and line[-1] not in "。！？…」”":
+        line = line.rstrip("，；、 ") + "。"
     return line.strip()
 
 def reflect_due(cursor):
