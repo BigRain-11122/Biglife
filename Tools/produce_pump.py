@@ -282,16 +282,16 @@ def main():
                                   os.path.join(HERE, "evolve_citizen.py"),
                                   "--force"] + _ids.split() + ["--no-commit"],
                                  timeout=1800)
-                    landed = "OK evolved=" in (rr.stdout or "")
-                    rl.log("reconcile: forced pass rc=%d %s"
                     # 2026-11-20 21:1x 实锚：原来判 "OK evolved=" in stdout 就报 landed，
                     # 而 "OK evolved=0 of 8 due" 同样含这个子串——补产全被闸挡回，
                     # 日志一路写 landed、缺口 106 纹丝不动。这是假绿的第四例。
                     # 只认 written=N 且 >0。
-                    import re as _re
-                    _m = _re.search(r"written=(\d+)", rr.stdout or "")
+                    import re as _re2
+                    _m = _re2.search(r"written=(\d+)", rr.stdout or "")
                     landed = bool(_m and int(_m.group(1)) > 0)
                     rl.log("reconcile: forced pass rc=%d %s"
+                           % (getattr(rr, "returncode", -1),
+                              "landed" if landed else "no-land"))
                            % (getattr(rr, "returncode", -1),
                               "landed" if landed else "no-land"))
                 except Exception as _exc:  # noqa: BLE001
