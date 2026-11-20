@@ -252,6 +252,19 @@ try {
             Log "steward rc=$LASTEXITCODE"
         } catch { Log "steward failed (non-blocking): $_" }
     }
+    # Persona rewrite backlog (CEO 2026-11-20 "你可以重写，我要的是高质量").
+    # The "now/idea" pools hold only 123/511 sentences for 10k residents; rewriting
+    # all of them needs ~10k LLM calls, so it runs in bounded slices here instead
+    # of one long job: 40 cards per cycle (~240/hour) fills the whole city in a
+    # couple of days without starving ring production. Non-blocking, gate-safe.
+    $__rw = Join-Path $Project 'Tools\rewrite_persona.py'
+    if (Test-Path $__rw) {
+        try {
+            & $__py -X utf8 $__rw --limit 40 2>&1 |
+                Out-File -FilePath $runLog -Append -Encoding UTF8
+            Log "persona-rewrite rc=$LASTEXITCODE"
+        } catch { Log "persona-rewrite failed (non-blocking): $_" }
+    }
     # Batch size comes from batch-policy.json so the steward's decisions actually
     # land (before this, the pump was pinned to 8 and the policy was decorative).
     $__batch = 8
