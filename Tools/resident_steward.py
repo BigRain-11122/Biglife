@@ -279,7 +279,9 @@ def decide(ev, policy):
 
     # R5 产能与配比
     tp = ev.get("throughput") or {}
-    if tp.get("last_pump_min") is not None and tp["last_pump_min"] > 25:
+    # 2026-11-20 夜 CEO「巡查频率高一点，不要很久才发现」：判据从 25 分钟收到
+    # **12 分钟**＝一个触发周期。漏掉一轮就报，不再等三轮回合。
+    if tp.get("last_pump_min") is not None and tp["last_pump_min"] > 12:
         out.append(("R5 泵停摆", "疑似停", "start_task",
                     "最近一批在 %d 分钟前" % tp["last_pump_min"]))
     batch = int((policy.get("batch") or 8))
