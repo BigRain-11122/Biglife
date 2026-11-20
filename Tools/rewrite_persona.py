@@ -128,8 +128,12 @@ def main():
                      encoding="utf-8", errors="replace", timeout=30)
         _low = (_r.stdout or "").lower()
         if any(_p in _low for _p in ("unity.exe", "tuanjie.exe", "unityhub.exe")):
-            print("yield: game lane active (Unity/Tuanjie) - no GPU work this round")
-            return 0
+            # CEO 2026-11-20 夜更正：「不是让路，是共用大模型、排队」。
+            # 所以不停产：只把每轮张数压到 6 张、单分片，请求照常进 ollama 队列，
+            # 退到低优先级——游戏车道要卡时先到先得。
+            a.limit = min(a.limit, 6)
+            a.shards = 1
+            print("shared-mode: game lane active -> limit 6, single shard")
     except Exception:  # noqa: BLE001
         pass
     done = tried = 0

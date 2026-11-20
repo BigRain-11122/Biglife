@@ -248,9 +248,12 @@ def main():
     # 不烧推理、不抢显存，窗口直接让出；零 GPU 的确定性面与巡查照常。
     # 原则：**只让路，不杀进程**——本线任何工具都不许 taskkill 他线进程。
     if game_lane_active():
-        rl.log("pump yield: game lane active (Unity/Tuanjie) - window yielded, no GPU work")
-        print("PUMP yield: game lane active", flush=True)
-        return 0
+        # CEO 2026-11-20 夜更正：「不是让路，是**共用大模型、排队**」。
+        # 所以这里不停产，只把并发压到 1 段：请求照样进 ollama 队列，
+        # 游戏车道那边要卡时先到先得，我们退到低优先级排队，不抢槽。
+        conc = 1
+        rl.log("pump shared-mode: game lane active -> concurrency 1 (queue, not yield)")
+        print("PUMP shared-mode: conc=1", flush=True)
 
     if not warm_probe():
         rl.log("pump stop: warm-probe failed (model cannot answer) - yield window")
