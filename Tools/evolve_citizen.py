@@ -3569,6 +3569,9 @@ def build_prompt(cid, text, sig):
     # 2026-11-19：内在状态块（本周压在心头的那件事 + 身边熟人）。放在人设之后、
     # 禁令之前——它是「写什么」的正向输入，不是又一条禁令。
     _state_blk = sig.get("state") or ""
+    # 文笔档位（年龄决定呼吸、职业决定用词）：直接接在语言风格后面，
+    # 因为它是「怎么说」而不是「说什么」，与 _voice_blk 同一族但更硬（带长度区间）。
+    _reg_blk = sig.get("voice_reg") or ""
     _voice_blk = (
         "称呼别人一律用名字或外号（老张/阿婆/小周/修鞋的老许），严禁用编号；"
         "提自己也不许说编号。\n"
@@ -3584,7 +3587,7 @@ def build_prompt(cid, text, sig):
                    if _state_blk else "")
     return (f"你是超体宇宙城（一座赛博像素数字城市）的叙事市民「{cid}」。"
             f"你的人设：{p['species']}；职业：{p['prof']}；性格：{p['traits']}；信条：「{p['creed']}」；"
-            f"语言风格：{_lang}；日常：{p['behavior']}。\n{mem}{_state_blk}{_region_blk}{_voice_blk}{_tic_blk}"
+            f"语言风格：{_lang}；日常：{p['behavior']}。\n{_reg_blk}{mem}{_state_blk}{_region_blk}{_voice_blk}{_tic_blk}"
             f"你只能谈论以下真实发生的事（城市实况），禁止编造未列出的集团大事，禁止声称自己执行了集团任务：\n{ev}\n{life_blk}{rumor_blk}{city_blk}{goal_blk}{batch_blk}{bad_blk}{recent_blk}{today_blk}{opening_blk}"
             f"现在真实北京时间 {sig['now']}，今天{sig.get('weekday','')}（{'周末' if sig.get('weekend') else '工作日'}），上海实况天气：{wx}。\n"
             f"今天属于上面标明的工作日/周末：你人设里凡以「周末」或「工作日」为前置条件的习惯，只许写与今天同侧的进行态或完成态，另一侧只许作为未来打算句提及，写错侧视为编造。\n"
@@ -4677,6 +4680,14 @@ def main():
                 sig["state"] = _rs.block_for(cid, text)
             except Exception:
                 sig["state"] = ""
+            # 2026-11-19 夜 CEO「文笔风格要多样化，针对不同人群年龄」：
+            # 实测六个年龄带的中位长度 66–68 字、句读密度 8.97–9.15 几乎完全重合
+            # ——六岁和七十八岁用同一个呼吸写字。这里按年龄（职业微调）定文笔档位。
+            try:
+                import voice_register as _vr
+                sig["voice_reg"] = _vr.block_for(cid, text)
+            except Exception:
+                sig["voice_reg"] = ""
             # T-20260926-11 (L5 城市年谱·消费点 A): city-level digest, batch-level
             # (与 cid 无关, 每批一次). 谱未落盘/无窗内行 -> "" -> prompt 零漂移.
             if "city_digest" not in sig:

@@ -41,7 +41,7 @@ NO_WINDOW = 0x08000000 if os.name == "nt" else 0
 VRAM_MIN_FREE_MB = 6500     # 9B @8K 实测 6.1G
 MEM_MIN_FREE_GB = 8.0     # 2026-11-17 夜窗: CEO 下班放开 20->8
 SWAP_OUT_MAX = 800.0      # Pages Output/sec 上限（写盘速率）      # 低于此不再加载（swap 前置闸）
-LOCK_STALE_MIN = 40
+LOCK_STALE_MIN = 12
 
 
 def log(msg):
@@ -97,15 +97,49 @@ def training_running():
         return True
 
 
+def _pid_alive(pid):
+    """PID 是否还活着（Windows 用 tasklist，认命令行成本低）。"""
+    try:
+        r = subprocess.run(["tasklist", "/FI", "PID eq %d" % pid],
+                           capture_output=True, text=True, timeout=15)
+        return str(pid) in (r.stdout or "")
+    except Exception:  # noqa: BLE001
+        return True          # 探不到就当活着，宁可让路
+
+
 def take_lock():
-    """跨进程互斥（计划任务 MultipleInstances=IgnoreNew 之外的二道保险）。"""
+    """跨进程互斥（计划任务 MultipleInstances=IgnoreNew 之外的二道保险）。
+
+    2026-11-20 11:1x 实锚：上一实例被杀掉后锁留在盘上，而旧实现只看**文件龄**
+    （40 分钟才接管），于是产线白停 40 分钟——日志只有一行
+    `pump skip: lock held 30.0 min`，看上去像在正常让路。
+    现在锁里写 PID：**持有者进程已死就立刻接管**；文件龄 12 分钟只作兜底。
+    """
     try:
         if os.path.exists(LOCK):
-            age_min = (datetime.datetime.now().timestamp() - os.path.getmtime(LOCK)) / 60.0
-            if age_min < LOCK_STALE_MIN:
-                return False, "lock held %.1f min" % age_min
+            raw = ""
+            try:
+                with open(LOCK, encoding="utf-8") as f:
+                    raw = f.read().strip()
+            except OSError:
+                raw = ""
+            pid = None
+            if "|" in raw:
+                try:
+                    pid = int(raw.rsplit("|", 1)[1])
+                except ValueError:
+                    pid = None
+            if pid and not _pid_alive(pid):
+                try:
+                    os.remove(LOCK)
+                except OSError:
+                    pass
+            else:
+                age_min = (datetime.datetime.now().timestamp() - os.path.getmtime(LOCK)) / 60.0
+                if age_min < LOCK_STALE_MIN:
+                    return False, "lock held %.1f min" % age_min
         with open(LOCK, "w", encoding="utf-8") as f:
-            f.write(datetime.datetime.now().isoformat())
+            f.write("%s|%d" % (datetime.datetime.now().isoformat(), os.getpid()))
         return True, "ok"
     except OSError as exc:
         return True, "lock unreadable (%s), proceed" % exc
