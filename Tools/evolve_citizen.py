@@ -815,7 +815,11 @@ def save_cursor(c):
     # T-20261025-01: 原子写（tmp + os.replace）。批次被外部击杀时，
     # 半截 JSON 会让下一轮 load_cursor 直接抛错、整条年轮线卡死。
     os.makedirs(STATE_DIR, exist_ok=True)
-    tmp = CURSOR + ".tmp"
+    # 2026-11-20 16:4x 实锚：tmp 原为固定 CURSOR+".tmp"，并发 6 段各有自己的
+    # evolve 进程 → 两个进程同写一个 tmp，字节交错，replace 把「两份 JSON 粘
+    # 一起」的文件推上位，全城 `Extra data: line 60686`、泵 rc=1 停摆。
+    # tmp 必须按进程唯一。
+    tmp = "%s.%d.tmp" % (CURSOR, os.getpid())
     with open(tmp, "w", encoding="utf-8", newline="\n") as f:
         json.dump(c, f, ensure_ascii=False, indent=1)
         f.flush()
