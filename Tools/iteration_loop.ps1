@@ -253,21 +253,30 @@ try {
         } catch { Log "steward failed (non-blocking): $_" }
     }
     # Persona rewrite backlog (CEO 2026-11-20: all local compute into optimisation).
-    # The "now/idea" pools hold only 123/511 sentences for 10k residents. One
-    # sequential worker tops out near 240 cards/hour, so launch 3 sharded workers
-    # in parallel and do NOT wait for them: they run alongside the ring pump and
-    # are reaped when the window ends. 3 x 40 = 120 cards per round (~720/hour),
-    # whole city in roughly 14 hours of windows.
+    # Priority ladder (2026-11-20 data-driven, not fixed):
+    #   Today's rings are the baseline every resident must get -> they keep the
+    #   machine until the due pool runs dry. Only then does the one-off persona
+    #   backlog take all the capacity. Proxy for "rings done" = the loop log's
+    #   most recent window reported "rings exhausted" (the pump prints it when a
+    #   batch hands over to the scheduler).
+    #   rings still running -> 1 shard (240/h, leaves 2 ollama slots to the pump)
+    #   rings exhausted     -> 3 shards (720/h, backlog devours the window)
+    $__tail = ''
+    $__ringlog = Join-Path $Project 'state\resident-loop.log'
+    if (Test-Path $__ringlog) {
+        $__tail = (Get-Content $__ringlog -Tail 40 -Encoding UTF8 -ErrorAction SilentlyContinue) -join "`n"
+    }
+    if ($__tail -match 'rings exhausted') { $__shards = 3 } else { $__shards = 1 }
     $__rw = Join-Path $Project 'Tools\rewrite_persona.py'
     if (Test-Path $__rw) {
-        for ($__s = 0; $__s -lt 3; $__s++) {
+        for ($__s = 0; $__s -lt $__shards; $__s++) {
             try {
                 Start-Process -FilePath $__py -WindowStyle Hidden -ArgumentList @(
                     '-X', 'utf8', $__rw, '--limit', '40',
-                    '--shard', "$__s", '--shards', '3') | Out-Null
+                    '--shard', "$__s", '--shards', "$__shards") | Out-Null
             } catch { Log "persona-rewrite shard $__s failed: $_" }
         }
-        Log 'persona-rewrite: 3 shards launched async (120 cards/round)'
+        Log "persona-rewrite: $__shards shard(s) launched async"
     }
     # Batch size comes from batch-policy.json so the steward's decisions actually
     # land (before this, the pump was pinned to 8 and the policy was decorative).
