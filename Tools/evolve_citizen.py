@@ -4760,7 +4760,15 @@ def main():
             else:
                 print("gate: skip", cid, "(stays due)", flush=True)
             continue
-        line = fit_ring_line(line)  # v0.55 gap #74: trim before the dup gate
+        # 2026-11-20：按文笔档位给**硬**长度上限。只写在提示词里不够——实测
+        # 儿童档写 30–55 字的要求，落盘仍是 69 字（模型跟着更近的禁令走）。
+        # 所以长度必须由代码裁：儿童 55 / 老年 65 / 其余 90。
+        try:
+            import voice_register as _vrl
+            _lim = _vrl.limit_for(text)
+        except Exception:  # noqa: BLE001
+            _lim = 90
+        line = fit_ring_line(line, limit=_lim)  # v0.55 gap #74: trim before the dup gate
         if len(line) < 8:
             line = "今天照常出摊/上岗，江上的光点还是那么多。"
         # v0.45 gap #66 fallback face: the fixed default line can repeat too

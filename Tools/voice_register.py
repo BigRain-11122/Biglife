@@ -92,6 +92,21 @@ def block_for(cid, card_text):
         return ""
 
 
+def limit_for(card_text, default=90):
+    """该居民的**硬**长度上限（给 fit_ring_line 用）。
+
+    提示词里写「30–55 字」实测不管用（模型跟着更近的禁令走），所以档位必须
+    落到代码裁剪：儿童 55 / 老年 65 / 其余 90。裁剪本身会切在句末标点上，
+    不会切出半句（fit_ring_line 已带收口）。
+    """
+    try:
+        age = _age(card_text)
+        name, rng, _spec = band_of(age)
+        return rng[1] if rng else default
+    except Exception:  # noqa: BLE001
+        return default
+
+
 if __name__ == "__main__":
     import sys
     sys.path.insert(0, r"C:\Users\sjs20\Desktop\FluxGroup\life\BigLife\Tools")
