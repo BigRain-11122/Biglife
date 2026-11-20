@@ -58,6 +58,78 @@ PROF_TWEAK = [
     (("卖", "摊", "商", "店"), "成本与回头客挂在嘴上。"),
 ]
 
+# 性格 -> 落笔习惯（2026-11-20 CEO「颗粒度要更细，还有性格」）。
+# 只写**句法层**的差别，不写内容；命中即覆盖默认节奏。
+TRAIT_VOICE = [
+    (("较真", "认死理", "掘", "抠", "仔细", "清旧账"),
+     "较真性子：揪住一个细节不放，爱核对、爱说'不对'。"),
+    (("话少", "闷", "寡言", "不爱说", "沉默"),
+     "话少：句子短，省主语，能不解释就不解释。"),
+    (("热络", "爱说", "嘴碎", "健谈", "爱招呼"),
+     "嘴碎热络：多写两句对话，爱插话、爱劝人。"),
+    (("慢", "磨", "稳", "慢性子"),
+     "慢性子：句子长一点、停顿多，不催自己。"),
+    (("急", "躁", "火", "爆", "冲"),
+     "急脾气：短促断句，多用感叹和反问，话说一半就走。"),
+    (("好奇", "琢磨", "爱学", "新鲜"),
+     "好奇：爱问'这是怎么弄的'，爱拿别的东西作比。"),
+    (("冷", "硬", "横", "寡情"),
+     "冷硬：少修饰，直给结论，不解释理由。"),
+]
+
+TRAIT_RE = re.compile(r"\*\*\u6027\u683c\*\*\s*(.+?)(?:\n|$)")
+_M = None
+
+
+def _matrix():
+    global _M
+    if _M is None:
+        try:
+            import origin_matrix
+            _M = origin_matrix
+        except Exception:  # noqa: BLE001
+            _M = False
+    return _M or None
+
+
+def _trait_cue(text):
+    m = TRAIT_RE.search(text or "")
+    if not m:
+        return ""
+    traits = m.group(1)
+    for keys, cue in TRAIT_VOICE:
+        if any(k in traits for k in keys):
+            return cue
+    return ""
+
+
+def _origin_cue(cid):
+    """源流·语调 / 省份·咬字 / 域外：把已有的地域数据当**写法**用，不当内容用。"""
+    om = _matrix()
+    if not om:
+        return ""
+    try:
+        a = om.assign(cid)
+    except Exception:  # noqa: BLE001
+        return ""
+    out = ""
+    if a.get("outside"):
+        o = a["outside"]
+        nm = o.get("n") or ""
+        snd = o.get("sound") or ""
+        out = "\u4f60\u539f\u4e61\u4e0d\u5728\u8fd9\u57ce\uff08%s\uff09\uff1a\u6bd4\u55bb\u522b\u7528\u672c\u5730\u4fd7\u8bed\uff0c%s\u3002" % (nm, snd)
+    else:
+        p = a.get("people") or {}
+        pr = a.get("province") or {}
+        bits = []
+        if p.get("sound"):
+            bits.append(p["sound"])
+        if pr.get("taste"):
+            bits.append("\u54ac\u5b57" + pr["taste"])
+        if bits:
+            out = "\u4f60\u7684\u53e3\u97f3\u5e95\u5b50\uff1a" + "\uff1b".join(bits) + "\u3002"
+    return out
+
 
 def _age(text):
     m = AGE_RE.search(text or "")
@@ -72,22 +144,35 @@ def band_of(age):
 
 
 def block_for(cid, card_text):
-    """返回文笔档位块（可能为空串）。"""
+    """四轴合成一个文笔档位：年龄 → 性格 → 地域源流 → 职业。
+
+    2026-11-20 CEO「颗粒度要更细，不仅是年龄，还有不同人群、性格、人种、国别」。
+    数据本来就有（年龄/性格/源流·语调/省份·咬字/职业），但一直只当**内容**喂；
+    这里把它们改当**写法**用——同一件事，较真的人写起来在抠数字，急脾气的人
+    三句就撂挑子，关中人咬字重，域外的比喻不用本城俗语。
+    """
     try:
         age = _age(card_text)
         name, rng, spec = band_of(age)
         if not spec:
             return ""
-        line = "\u4f60\u4eca\u5e74 %d \u5c81\uff08%s\uff09\uff0c\u8fd9\u4e00\u6bb5%s\uff1a\u957f\u5ea6 %d\u2013%d \u5b57\u3002%s" % (
-            age, name, "\u5199\u6cd5", rng[0], rng[1], spec)
+        parts = ["\u4f60\u4eca\u5e74 %d \u5c81\uff08%s\uff09\uff0c\u8fd9\u4e00\u6bb5%s\uff1a\u957f\u5ea6 %d\u2013%d \u5b57\u3002%s" % (
+            age, name, "\u5199\u6cd5", rng[0], rng[1], spec)]
+        cue = _trait_cue(card_text)
+        if cue:
+            parts.append(cue)
+        oc = _origin_cue(cid)
+        if oc:
+            parts.append(oc)
         m = PROF_RE.search(card_text or "")
         prof = m.group(1) if m else ""
         for keys, tweak in PROF_TWEAK:
             if any(k in prof for k in keys):
-                line += tweak
+                parts.append(tweak)
                 break
-        line += "\u8fd9\u4e9b\u662f\u5199\u6cd5\u8981\u6c42\uff0c\u4e0d\u8981\u628a\u5b83\u4eec\u5199\u8fdb\u53e5\u5b50\u91cc\uff0c\u4e5f\u4e0d\u8981\u63d0\u4f60\u591a\u5927\u3002\n"
-        return line
+        parts.append("\u8fd9\u4e9b\u662f\u5199\u6cd5\u8981\u6c42\uff0c\u4e0d\u8981\u628a\u5b83\u4eec\u5199\u8fdb\u53e5\u5b50\u91cc\uff0c"
+                     "\u4e5f\u4e0d\u8981\u63d0\u4f60\u591a\u5927\u3001\u63d0\u4f60\u4ec0\u4e48\u6027\u5b50\u3002\n")
+        return "".join(parts)
     except Exception:  # noqa: BLE001 - 档位缺失绝不阻断生成
         return ""
 
