@@ -267,6 +267,28 @@ def main():
             if res["rc"] != 0:
                 gate_reason = "batch-failed"
                 break
+            # 2026-11-20 夜 CEO「从根本上解决摸鱼/自动化停」：**先拉齐，再换面**。
+            # 旧逻辑 due 空就问哨兵，哨兵也 NO-WORK 就收工——实测今日仍差 45 人
+            # 没环，机器却空转。这里先算目标态与实测态差值，缺口 >0 就把缺口席位
+            # 强制跑掉，缺口为 0 才允许切内容面。
+            _recon = rl._run([PY, "-X", "utf8", os.path.join(HERE, "reconcile.py"),
+                              "--ids", str(max(8, args.batch))], timeout=180)
+            _ids = (_recon.stdout or "").strip()
+            if getattr(_recon, "returncode", 0) == 2 and _ids:
+                rl.log("reconcile: deficit -> forcing %d seats (%s)"
+                       % (len(_ids.split()), _ids.split()[0]))
+                try:
+                    rr = rl._run([PY, "-X", "utf8",
+                                  os.path.join(HERE, "evolve_citizen.py"),
+                                  "--force"] + _ids.split() + ["--no-commit"],
+                                 timeout=1800)
+                    landed = "OK evolved=" in (rr.stdout or "")
+                    rl.log("reconcile: forced pass rc=%d %s"
+                           % (getattr(rr, "returncode", -1),
+                              "landed" if landed else "no-land"))
+                except Exception as _exc:  # noqa: BLE001
+                    rl.log("reconcile failed: %s" % _exc)
+                continue
             # 2026-11-17 CEO「没活闲着的时候排单」：年轮 due 空了不收工，
             # 问排单哨兵下一个内容面（反思/池轮/相遇），把窗口继续填满。
             rl.log("rings exhausted -> ask scheduler for next face")
