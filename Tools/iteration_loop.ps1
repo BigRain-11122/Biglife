@@ -252,18 +252,22 @@ try {
             Log "steward rc=$LASTEXITCODE"
         } catch { Log "steward failed (non-blocking): $_" }
     }
-    # Persona rewrite backlog (CEO 2026-11-20: rewrite is allowed, quality first).
-    # The "now/idea" pools hold only 123/511 sentences for 10k residents; rewriting
-    # all of them needs ~10k LLM calls, so it runs in bounded slices here instead
-    # of one long job: 40 cards per cycle (~240/hour) fills the whole city in a
-    # couple of days without starving ring production. Non-blocking, gate-safe.
+    # Persona rewrite backlog (CEO 2026-11-20: all local compute into optimisation).
+    # The "now/idea" pools hold only 123/511 sentences for 10k residents. One
+    # sequential worker tops out near 240 cards/hour, so launch 3 sharded workers
+    # in parallel and do NOT wait for them: they run alongside the ring pump and
+    # are reaped when the window ends. 3 x 40 = 120 cards per round (~720/hour),
+    # whole city in roughly 14 hours of windows.
     $__rw = Join-Path $Project 'Tools\rewrite_persona.py'
     if (Test-Path $__rw) {
-        try {
-            & $__py -X utf8 $__rw --limit 40 2>&1 |
-                Out-File -FilePath $runLog -Append -Encoding UTF8
-            Log "persona-rewrite rc=$LASTEXITCODE"
-        } catch { Log "persona-rewrite failed (non-blocking): $_" }
+        for ($__s = 0; $__s -lt 3; $__s++) {
+            try {
+                Start-Process -FilePath $__py -WindowStyle Hidden -ArgumentList @(
+                    '-X', 'utf8', $__rw, '--limit', '40',
+                    '--shard', "$__s", '--shards', '3') | Out-Null
+            } catch { Log "persona-rewrite shard $__s failed: $_" }
+        }
+        Log 'persona-rewrite: 3 shards launched async (120 cards/round)'
     }
     # Batch size comes from batch-policy.json so the steward's decisions actually
     # land (before this, the pump was pinned to 8 and the policy was decorative).

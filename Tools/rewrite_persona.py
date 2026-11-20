@@ -84,20 +84,31 @@ def _prompt(cid, p, cur_now, cur_idea, hook):
            p.get("traits", "")[:30], hook[:40], hook[:8], cur_now[:30], cur_idea[:30]))
 
 
-def _cards(fresh_skip=120):
+def _cards(fresh_skip=120, shard=0, shards=1):
+    """遍历居民卡；跳过最近 fresh_skip 秒内被动过的（泵正在写，避免互相覆盖）。
+
+    shard/shards：按 cid 取模分片，供车道并行起多条（每条一个进程）。
+    判据用 md5 而不是末尾数字，避免连续 cid 全落到同一片。
+    """
+    import hashlib
     import time
     now = time.time()
     for root, _, fs in os.walk(REG):
         for f in fs:
             if not (f.startswith("C-") and f.endswith(".md")):
                 continue
+            cid = f[:-3]
+            if shards > 1:
+                h = int(hashlib.md5(cid.encode("utf-8")).hexdigest()[:8], 16)
+                if h % shards != shard:
+                    continue
             p = os.path.join(root, f)
             try:
                 if now - os.path.getmtime(p) < fresh_skip:
                     continue
             except OSError:
                 continue
-            yield f[:-3], p
+            yield cid, p
 
 
 def main():
@@ -105,10 +116,12 @@ def main():
     ap.add_argument("--limit", type=int, default=20)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--only", default="")
+    ap.add_argument("--shard", type=int, default=0)
+    ap.add_argument("--shards", type=int, default=1)
     a = ap.parse_args()
     done = tried = 0
     backup = {}
-    for cid, p in _cards():
+    for cid, p in _cards(shard=a.shard, shards=max(1, a.shards)):
         if tried >= a.limit:
             break
         try:
