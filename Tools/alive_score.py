@@ -89,8 +89,8 @@ def write_md(st):
 def main():
     _day = next((a for a in sys.argv[1:] if not a.startswith("-")), None)
     st = score(_day)
-    # 跨日刚过时今天还没有环 → 回看昨天，别报一个 n=0 的空表（2026-11-21 实锚）
-    if st["n"] == 0 and not _day:
+    # 样本不足（跨日刚过时今天只有几条）→ 回看昨天，别用 2 条样本报百分比
+    if st["n"] < 50 and not _day:
         st = score((datetime.date.today() - datetime.timedelta(days=1)).isoformat())
     write_md(st)
     if "--json" in sys.argv:
