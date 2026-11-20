@@ -3516,8 +3516,18 @@ def build_prompt(cid, text, sig):
             # machine words; fed back as 记忆 they make the model echo them and
             # the gate rejects the ring forever (C-01624 skipped 3 rounds).
             # History stays untouched (#41) - only the feed is cleaned.
+            # 2026-11-20：从「最后 3 条」改成「新近×重要×相关」检索
+            # （Stanford Generative Agents 的 memory stream 公式，重要度用确定性
+            # 关键词代理，不为此多烧一次推理；判据见 memory_stream 文档）。
+            try:
+                import memory_stream as _ms
+                _ctx = "%s%s" % (sig.get("state") or "",
+                                 "".join(str(p.get(k) or "") for k in ("prof", "traits")))
+                _picked = _ms.select([(d, t) for d, t in ents], ctx=_ctx, k=3)
+            except Exception:  # noqa: BLE001
+                _picked = ents[-3:]
             mem = "\n".join("- %s：%s" % (d, scrub_machine_words(t.strip())[:60])
-                            for d, t in ents[-3:])
+                            for d, t in _picked)
             mem = ("你最近的记忆（都是你亲历过的日子，可自然延续你的生活，但今天是新的一天——"
                    "严禁重复这些旧事，一切具体事仍只许来自下面的今日清单与此刻实况；"
                    "旧环字句（含当时天气下的「云淡风轻/风不大」类措辞）只反映当天的旧实况，"
