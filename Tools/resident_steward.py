@@ -338,8 +338,14 @@ def ensure_ollama(timeout_s=45):
     exe = os.path.join(base, "ollama.exe")
     if not os.path.exists(exe):
         return False, "找不到 %s" % exe
+    # 2026-11-20 12:5x 实锚：自愈起的 serve **不带任何环境变量**，于是
+    # OLLAMA_NUM_PARALLEL 回落到默认、ctx 回到 8192——等于每次自愈都偷偷降级，
+    # 而进程还在、模型还驻留，看板只显示"显存占满、GPU 20%"。所以自启必须
+    # 复刻调优参数（并行 2、ctx 6144、常驻 30m），否则恢复=掉档。
     ps = ("$e = Join-Path $env:LOCALAPPDATA 'Programs\\Ollama\\ollama.exe'; "
           "if (Test-Path $e) { $q = [char]34 + $e + [char]34 + ' serve'; "
+          "$env:OLLAMA_NUM_PARALLEL='2'; $env:OLLAMA_NUM_CTX='6144'; "
+          "$env:OLLAMA_KEEP_ALIVE='30m'; $env:OLLAMA_MAX_LOADED_MODELS='1'; "
           "$r = Invoke-CimMethod -ClassName Win32_Process -MethodName Create "
           "-Arguments @{ CommandLine = $q }; $r.ReturnValue } else { -2 }")
     r = _run(["powershell", "-NoProfile", "-Command", ps], timeout=120)

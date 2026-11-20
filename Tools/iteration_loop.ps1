@@ -36,7 +36,12 @@ $env:BIGLIFE_VRAM_LIMIT = '0.85'
 # i.e. the card is idle between requests, not saturated. One more in-flight ring
 # segment keeps the two ollama slots packed. VRAM is unchanged (same model, the
 # slots are fixed by OLLAMA_NUM_PARALLEL); revert to 3 if throughput does not rise.
-$env:BIGLIFE_CONCURRENCY = '4'
+# 2026-11-20 13:0x measured with the tuned server: 2 parallel short generations
+# = 48/minute (~2,880/hour) wall-clock, while production only reached ~720/hour.
+# So the card is NOT the limit - the request feed is: two slots idle between
+# seats. Queued requests cost no VRAM, so raise the segment count to 6 (5 ring
+# segments + 1 other-face) and keep both slots permanently fed.
+$env:BIGLIFE_CONCURRENCY = '6'
 Set-Location $Project
 
 # 2026-11-17 CEO order: no cross-stealing. Layered schedule instead of a hard skip.
