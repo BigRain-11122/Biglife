@@ -292,8 +292,6 @@ def main():
                     rl.log("reconcile: forced pass rc=%d %s"
                            % (getattr(rr, "returncode", -1),
                               "landed" if landed else "no-land"))
-                           % (getattr(rr, "returncode", -1),
-                              "landed" if landed else "no-land"))
                 except Exception as _exc:  # noqa: BLE001
                     rl.log("reconcile failed: %s" % _exc)
                 continue
