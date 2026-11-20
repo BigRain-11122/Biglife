@@ -274,14 +274,27 @@ try {
     if ($__tail -match 'rings exhausted') { $__shards = 3 } else { $__shards = 1 }
     $__rw = Join-Path $Project 'Tools\rewrite_persona.py'
     if (Test-Path $__rw) {
+        # 2026-11-20 18:5x 实锚: with rings exhausted the pump exits after one
+        # empty round (~200s), the task instance ends and its job object KILLS the
+        # async shards mid-flight - the GPU then reads 16% and nothing is being
+        # generated. So: when the machine has nothing else to do (3 shards), run
+        # them with -Wait so the task lives until they finish; only the 1-shard
+        # case (rings still running) stays async.
+        $__wait = ($__shards -eq 3)
         for ($__s = 0; $__s -lt $__shards; $__s++) {
             try {
-                Start-Process -FilePath $__py -WindowStyle Hidden -ArgumentList @(
-                    '-X', 'utf8', $__rw, '--limit', '40',
-                    '--shard', "$__s", '--shards', "$__shards") | Out-Null
+                if ($__wait) {
+                    Start-Process -FilePath $__py -WindowStyle Hidden -Wait -ArgumentList @(
+                        '-X', 'utf8', $__rw, '--limit', '60',
+                        '--shard', "$__s", '--shards', "$__shards") | Out-Null
+                } else {
+                    Start-Process -FilePath $__py -WindowStyle Hidden -ArgumentList @(
+                        '-X', 'utf8', $__rw, '--limit', '40',
+                        '--shard', "$__s", '--shards', "$__shards") | Out-Null
+                }
             } catch { Log "persona-rewrite shard $__s failed: $_" }
         }
-        Log "persona-rewrite: $__shards shard(s) launched async"
+        Log "persona-rewrite: $__shards shard(s) done (wait=$__wait)"
     }
     # Batch size comes from batch-policy.json so the steward's decisions actually
     # land (before this, the pump was pinned to 8 and the policy was decorative).
