@@ -61,7 +61,9 @@ REFLECT_COOLDOWN_DAYS = 30
 #   reflect 200→300：抽查落盘句是「风扯得旗子猎，差之毫秒谬以全城…」——压缩过度、
 #     语句残缺。**宁可少产，不灌 800 条次品**，先限流，等修好压缩规则再放。
 #   pool 不动：pool_audit 判定 under_target=NONE（没有缺口可补）。
-DAILY_CAP = {"rings": 10 ** 9, "reflect": 300, "pool": 15, "meet": 48}
+DAILY_CAP = {"rings": 10 ** 9, "reflect": 900, "pool": 40, "meet": 150}
+# 2026-11-20 夜 CEO「把任务单排满到周一，高频率」：反思/相遇/池轮全部放开，
+# 这样环形跑完后队列里仍有活，机器不会空转等下一个整点。
 
 
 def _run(cmd, timeout=600, cwd=CO):
